@@ -217,7 +217,7 @@
     "battery": "Baterías",
     "construction": "Productos de construcción",
     "textiles": "Textiles y Calzado",
-    "wine": "Vinos y Licores",
+    "wine": "Vinos y Bebidas Espirituosas",
     "toys": "Juguetes",
     "electronics": "Electrónica y TIC",
     "iron_steel": "Hierro y Acero",
@@ -225,7 +225,7 @@
     "cosmetics": "Cosméticos",
     "furniture": "Muebles y Colchones",
     "tires": "Neumáticos",
-    "detergents": "Detergentes y Químicos",
+    "detergents": "Detergentes y Productos Químicos",
     "other": "Todos los demás productos"
   },
   "categoryDescriptions": {
@@ -333,7 +333,7 @@
     "per100ml": "por 100 ml",
     "selectCountry": "Seleccionar país",
     "selectClassification": "Seleccionar clasificación",
-    "manualOverride": "Anulación manual",
+    "manualOverride": "Corrección manual",
     "placeholders": {
       "productName": "ej. Château Margaux 2018",
       "grapeVariety": "ej. Cabernet Sauvignon, Merlot",
@@ -432,30 +432,6 @@
     "pea_protein": "Proteína de guisante",
     "potato_protein": "Proteína de patata",
     "pvpp": "PVPP – Polivinilpolipirrolidona (E1202)"
-  },
-  "recycling": {
-    "code": "Código",
-    "material": "Material",
-    "disposal": "Eliminación",
-    "componentTypes": {
-      "bottle": "Botella",
-      "closure": "Cierre",
-      "capsule": "Cápsula",
-      "label": "Etiqueta",
-      "box": "Caja"
-    },
-    "selectMaterial": "Seleccionar material",
-    "individualComponents": "Componentes individuales",
-    "compositeComponents": "Componentes compuestos",
-    "customMaterial": "Material personalizado",
-    "addCustomMaterial": "Añadir material personalizado",
-    "disposalAdvice": "Consejo de eliminación",
-    "addMaterial": "Añadir material",
-    "addPackagingMaterial": "Añadir material de embalaje",
-    "customType": "Tipo personalizado",
-    "addCustomType": "Añadir tipo de material personalizado",
-    "materialName": "Nombre del material",
-    "materialNamePlaceholder": "ej. Caja de madera"
   },
   "legal": {
     "title": "Menciones legales",
