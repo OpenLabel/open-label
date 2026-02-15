@@ -433,30 +433,6 @@
     "potato_protein": "Protéine de pomme de terre",
     "pvpp": "PVPP – Polyvinylpolypyrrolidone (E1202)"
   },
-  "recycling": {
-    "code": "Code",
-    "material": "Matériau",
-    "disposal": "Élimination",
-    "componentTypes": {
-      "bottle": "Bouteille",
-      "closure": "Bouchon",
-      "capsule": "Capsule",
-      "label": "Étiquette",
-      "box": "Boîte"
-    },
-    "selectMaterial": "Sélectionner le matériau",
-    "individualComponents": "Composants individuels",
-    "compositeComponents": "Composants composites",
-    "customMaterial": "Matériau personnalisé",
-    "addCustomMaterial": "Ajouter un matériau personnalisé",
-    "disposalAdvice": "Conseil d'élimination",
-    "addMaterial": "Ajouter un matériau",
-    "addPackagingMaterial": "Ajouter un matériau d'emballage",
-    "customType": "Type personnalisé",
-    "addCustomType": "Ajouter un type de matériau personnalisé",
-    "materialName": "Nom du matériau",
-    "materialNamePlaceholder": "ex. Caisse en bois"
-  },
   "legal": {
     "title": "Mentions légales",
     "legalMentions": "Mentions légales"

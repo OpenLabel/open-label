@@ -217,7 +217,7 @@
     "battery": "Batterie",
     "construction": "Prodotti da costruzione",
     "textiles": "Tessili e Calzature",
-    "wine": "Vini e Liquori",
+    "wine": "Vini e Bevande Spiritose",
     "toys": "Giocattoli",
     "electronics": "Elettronica e ICT",
     "iron_steel": "Ferro e Acciaio",
@@ -225,7 +225,7 @@
     "cosmetics": "Cosmetici",
     "furniture": "Mobili e Materassi",
     "tires": "Pneumatici",
-    "detergents": "Detersivi e Chimici",
+    "detergents": "Detergenti e Prodotti Chimici",
     "other": "Tutti gli altri prodotti"
   },
   "categoryDescriptions": {
@@ -333,7 +333,7 @@
     "per100ml": "per 100 ml",
     "selectCountry": "Seleziona paese",
     "selectClassification": "Seleziona classificazione",
-    "manualOverride": "Override manuale",
+    "manualOverride": "Inserimento manuale",
     "placeholders": {
       "productName": "es. Château Margaux 2018",
       "grapeVariety": "es. Cabernet Sauvignon, Merlot",
@@ -396,8 +396,8 @@
     "concentrated_grape_must": "Mosto d'uva concentrato",
     "grape_must": "Mosto d'uva",
     "rectified_concentrated_grape_must": "Mosto d'uva concentrato rettificato (MCR)",
-    "filling_dosage": "Liqueur de tirage (per rifermentazione)",
-    "expedition_dosage": "Liqueur d'expédition (dosaggio finale)",
+    "filling_dosage": "Sciroppo di tiraggio (per rifermentazione)",
+    "expedition_dosage": "Sciroppo di spedizione (dosaggio finale)",
     "argon": "Argon (E938)",
     "nitrogen": "Azoto (E941)",
     "carbon_dioxide": "Anidride carbonica (E290)",
@@ -432,30 +432,6 @@
     "pea_protein": "Proteine di pisello",
     "potato_protein": "Proteine di patata",
     "pvpp": "PVPP – Polivinilpolipirrolidone (E1202)"
-  },
-  "recycling": {
-    "code": "Codice",
-    "material": "Materiale",
-    "disposal": "Smaltimento",
-    "componentTypes": {
-      "bottle": "Bottiglia",
-      "closure": "Chiusura",
-      "capsule": "Capsula",
-      "label": "Etichetta",
-      "box": "Scatola"
-    },
-    "selectMaterial": "Seleziona materiale",
-    "individualComponents": "Componenti individuali",
-    "compositeComponents": "Componenti compositi",
-    "customMaterial": "Materiale personalizzato",
-    "addCustomMaterial": "Aggiungi materiale personalizzato",
-    "disposalAdvice": "Consiglio di smaltimento",
-    "addMaterial": "Aggiungi materiale",
-    "addPackagingMaterial": "Aggiungi materiale di imballaggio",
-    "customType": "Tipo personalizzato",
-    "addCustomType": "Aggiungi tipo di materiale personalizzato",
-    "materialName": "Nome materiale",
-    "materialNamePlaceholder": "es. Cassa di legno"
   },
   "legal": {
     "title": "Note legali",
