@@ -31,7 +31,7 @@
   },
   "landing": {
     "hero": {
-      "badge": "Conforme EU ESPR",
+      "badge": "Conforme UE ESPR",
       "euFunded": "🇪🇺 Fièrement financé par l'UE",
       "title": "Créez vos Passeports Numériques de Produits — Sans Limite",
       "subtitle": "Plateforme gratuite et open source pour la conformité au règlement européen sur l'écoconception (ESPR). Générez des passeports lisibles par machine avec codes QR pour batteries, textiles, produits de construction et 12+ catégories.",
@@ -121,7 +121,7 @@
       "active": {
         "title": "Actif maintenant",
         "badge": "En vigueur",
-        "description": "Les produits de construction (EU 2024/3110), Vins & Spiritueux (EU 2021/2117) et Jouets (EU 2025/2509) nécessitent déjà des déclarations numériques."
+        "description": "Les produits de construction (UE 2024/3110), Vins & Spiritueux (UE 2021/2117) et Jouets (UE 2025/2509) nécessitent déjà des déclarations numériques."
       },
       "rollout": {
         "title": "2027-2030 : Déploiement complet",
