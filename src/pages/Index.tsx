@@ -16,7 +16,7 @@ const productCategories = [
     description: 'Ingredients, nutrition, geographic indication',
     status: 'active' as const,
     regulation: 'EU 2021/2117',
-    deadline: 'Active'
+    deadline: 'active'
   },
   { 
     key: 'other',
@@ -328,7 +328,7 @@ export default function Index() {
                   <p className="text-xs text-muted-foreground mb-3">{t(`categoryDescriptions.${category.key}`)}</p>
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-muted-foreground">{category.regulation}</span>
-                    <span className="font-medium">{category.deadline}</span>
+                    <span className="font-medium">{category.deadline === 'active' ? t('landing.timeline.active.badge') : category.deadline}</span>
                   </div>
                 </CardContent>
               </Card>
