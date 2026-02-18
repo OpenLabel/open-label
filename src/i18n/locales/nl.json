@@ -567,7 +567,7 @@
     "quotaExceededBody": "Om eerlijke toegang voor alle gebruikers te waarborgen, beperken we AI-etiketscans tot 100 per maand. Uw quotum wordt aan het begin van volgende maand gereset.",
     "quotaContactBody": "Als u een hogere limiet nodig heeft voor uw bedrijf, neem dan contact met ons op.",
     "contactUs": "Neem contact op"
-  }
+  },
   "richText": {
     "enterUrl": "Voer URL in:"
   }

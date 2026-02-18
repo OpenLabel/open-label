@@ -567,7 +567,7 @@
     "quotaExceededBody": "Pour garantir un accès équitable à tous les utilisateurs, nous limitons les scans d'étiquettes IA à 100 par mois. Votre quota sera réinitialisé au début du mois prochain.",
     "quotaContactBody": "Si vous avez besoin d'une limite plus élevée pour votre entreprise, veuillez nous contacter.",
     "contactUs": "Contactez-nous"
-  }
+  },
   "richText": {
     "enterUrl": "Entrez l'URL :"
   }
