@@ -242,7 +242,7 @@ describe("Translation Audit", () => {
   });
 
   // Strict test: fully updated locales must have zero missing keys
-  const fullyUpdatedLocales = ["de", "fr", "es", "it", "pt", "nl", "pl", "sk", "sl", "hr", "hu", "lt", "et", "fi"];
+  const fullyUpdatedLocales = ["bg", "cs", "da", "de", "el", "es", "et", "fi", "fr", "ga", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "sk", "sl", "sv"];
 
   it.each(fullyUpdatedLocales)(
     "locale '%s' should have zero missing keys",
