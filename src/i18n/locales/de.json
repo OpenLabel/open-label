@@ -19,7 +19,8 @@
     "warning": "Warnung",
     "openSource": "Open Source",
     "language": "Sprache",
-    "custom": "Benutzerdefiniert"
+    "custom": "Benutzerdefiniert",
+    "selectOption": "Option auswählen"
   },
   "nav": {
     "signIn": "Anmelden",
@@ -172,7 +173,11 @@
     "accountCreated": "Konto erstellt!",
     "accountCreatedDesc": "Sie können sich jetzt anmelden.",
     "checkEmail": "E-Mail prüfen",
-    "resetLinkSent": "Link zum Zurücksetzen gesendet."
+    "resetLinkSent": "Link zum Zurücksetzen gesendet.",
+    "validation": {
+      "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+      "shortPassword": "Das Passwort muss mindestens 6 Zeichen lang sein"
+    }
   },
   "dashboard": {
     "title": "Ihre Pässe",
@@ -182,7 +187,8 @@
     "showQr": "QR-Code anzeigen",
     "duplicated": "Pass dupliziert",
     "deleted": "Pass gelöscht",
-    "confirmDelete": "Möchten Sie diesen Pass wirklich löschen?"
+    "confirmDelete": "Möchten Sie diesen Pass wirklich löschen?",
+    "dragToReorder": "Zum Neuordnen ziehen"
   },
   "passport": {
     "createTitle": "Neuen Pass erstellen",
@@ -211,7 +217,17 @@
     "notFoundDesc": "Dieser Digitale Produktpass existiert nicht oder wurde entfernt.",
     "productPassport": "Produktpass",
     "checkAuthenticity": "Echtheit prüfen",
-    "poweredBy": "Unterstützt von"
+    "poweredBy": "Unterstützt von",
+    "noAdditionalInfo": "Für diese Kategorie sind keine zusätzlichen Informationen erforderlich.",
+    "earlyAlpha": "Frühe Alpha-Version",
+    "earlyAlphaDesc": "Diese Vorlage befindet sich in einer frühen Alpha-Phase und entspricht möglicherweise nicht vollständig den aktuellen Vorschriften. Bitte überprüfen Sie alle Informationen anhand der offiziellen Anforderungen vor der Verwendung."
+  },
+  "imageUpload": {
+    "loginRequired": "Sie müssen angemeldet sein, um Bilder hochzuladen",
+    "invalidType": "Bitte laden Sie eine Bilddatei hoch",
+    "tooLarge": "Das Bild muss kleiner als 5MB sein",
+    "uploading": "Wird hochgeladen...",
+    "uploadButton": "Produktbild hochladen"
   },
   "categories": {
     "battery": "Batterien",
@@ -557,6 +573,21 @@
     "takePhoto": "Foto aufnehmen",
     "uploadFile": "Datei hochladen",
     "supportedFormats": "Unterstützt Fotos, PDFs und Word-Dokumente",
-    "multiUploadTip": "Mehrere Dateien? Nach jedem Upload erneut ausführen, um Daten zusammenzuführen."
+    "multiUploadTip": "Mehrere Dateien? Nach jedem Upload erneut ausführen, um Daten zusammenzuführen.",
+    "autofillButton": "Automatisch ausfüllen mit KI",
+    "experimental": "Experimentell",
+    "scannerTitle": "KI-Etikettenscanner",
+    "scannerDescription": "Laden Sie ein Foto eines Weinetiketts, PDF oder Dokument hoch und die KI extrahiert die Informationen automatisch.",
+    "experimentalWarning": "Bitte überprüfen Sie alle extrahierten Daten vor dem Speichern. KI kann Fehler machen.",
+    "autofillComplete": "✨ KI-Autofill abgeschlossen",
+    "autofillCompleteDesc": "Felder wurden ausgefüllt. Bitte überprüfen und verifizieren Sie die Daten vor dem Speichern.",
+    "noDataExtracted": "Keine Daten vom Etikett extrahiert",
+    "processingFailed": "Verarbeitung fehlgeschlagen",
+    "processingFailedDesc": "Daten konnten nicht vom Etikett extrahiert werden",
+    "quotaExceeded": "Kontingent für faire Nutzung überschritten",
+    "quotaExceededDesc": "Sie haben das monatliche Limit von 100 KI-Etikettenscans erreicht.",
+    "quotaExceededBody": "Um einen fairen Zugang für alle Nutzer zu gewährleisten, begrenzen wir KI-Etikettenscans auf 100 pro Monat. Ihr Kontingent wird zu Beginn des nächsten Monats zurückgesetzt.",
+    "quotaContactBody": "Wenn Sie ein höheres Limit für Ihr Unternehmen benötigen, kontaktieren Sie uns bitte.",
+    "contactUs": "Kontaktieren Sie uns"
   }
 }

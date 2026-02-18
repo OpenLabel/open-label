@@ -78,7 +78,7 @@ export function CategoryQuestions({ category, data, onChange }: CategoryQuestion
             onValueChange={(val) => handleChange(question.id, val)}
           >
             <SelectTrigger>
-              <SelectValue placeholder="Select an option" />
+              <SelectValue placeholder={t('common.selectOption')} />
             </SelectTrigger>
             <SelectContent>
               {question.options?.map((option) => (
@@ -97,7 +97,7 @@ export function CategoryQuestions({ category, data, onChange }: CategoryQuestion
   if (template.sections.length === 0) {
     return (
       <p className="text-muted-foreground text-center py-8">
-        No additional information required for this category.
+        {t('passport.noAdditionalInfo')}
       </p>
     );
   }
@@ -108,10 +108,9 @@ export function CategoryQuestions({ category, data, onChange }: CategoryQuestion
       {category !== 'wine' && (
         <Alert variant="destructive" className="bg-destructive/10 border-destructive/30">
           <AlertTriangle className="h-4 w-4" />
-          <AlertTitle>Early Alpha</AlertTitle>
+          <AlertTitle>{t('passport.earlyAlpha')}</AlertTitle>
           <AlertDescription>
-            This template is in early alpha and may not be fully compliant with current regulations. 
-            Please verify all information against official requirements before use.
+            {t('passport.earlyAlphaDesc')}
           </AlertDescription>
         </Alert>
       )}

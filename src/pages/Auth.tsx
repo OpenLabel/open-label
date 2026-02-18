@@ -12,8 +12,8 @@ import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { Link } from 'react-router-dom';
 import { z } from 'zod';
 
-const emailSchema = z.string().email('Please enter a valid email address');
-const passwordSchema = z.string().min(6, 'Password must be at least 6 characters');
+const emailSchema = z.string().email(); // validation message handled via i18n
+const passwordSchema = z.string().min(6); // validation message handled via i18n
 
 export default function Auth() {
   const { t } = useTranslation();
@@ -35,13 +35,13 @@ export default function Auth() {
   const validateInputs = () => {
     const emailResult = emailSchema.safeParse(email);
     if (!emailResult.success) {
-      toast({ title: t('common.error'), description: emailResult.error.errors[0].message, variant: 'destructive' });
+      toast({ title: t('common.error'), description: t('auth.validation.invalidEmail'), variant: 'destructive' });
       return false;
     }
     if (mode !== 'reset') {
       const passwordResult = passwordSchema.safeParse(password);
       if (!passwordResult.success) {
-        toast({ title: t('common.error'), description: passwordResult.error.errors[0].message, variant: 'destructive' });
+        toast({ title: t('common.error'), description: t('auth.validation.shortPassword'), variant: 'destructive' });
         return false;
       }
     }
@@ -61,11 +61,11 @@ export default function Auth() {
       } else if (mode === 'signup') {
         const { error } = await signUp(email, password, companyName);
         if (error) throw error;
-        toast({ title: 'Account created!', description: 'You can now sign in.' });
+        toast({ title: t('auth.accountCreated'), description: t('auth.accountCreatedDesc') });
       } else {
         const { error } = await resetPassword(email);
         if (error) throw error;
-        toast({ title: 'Check your email', description: 'Password reset link sent.' });
+        toast({ title: t('auth.checkEmail'), description: t('auth.resetLinkSent') });
       }
     } catch (error: any) {
       toast({ title: t('common.error'), description: error.message, variant: 'destructive' });
@@ -97,7 +97,7 @@ export default function Auth() {
         <CardHeader className="text-center">
           <CardTitle className="text-2xl">{t('auth.title')}</CardTitle>
           <CardDescription>
-            {mode === 'reset' ? 'Reset your password' : t('auth.subtitle')}
+            {mode === 'reset' ? t('auth.resetSubtitle') : t('auth.subtitle')}
           </CardDescription>
         </CardHeader>
         <CardContent>
@@ -108,10 +108,10 @@ export default function Auth() {
                 <Input id="email" type="email" value={email} onChange={(e) => setEmail(e.target.value)} required />
               </div>
               <Button type="submit" className="w-full" disabled={loading}>
-                {loading ? 'Sending...' : 'Send Reset Link'}
+                {loading ? t('auth.sending') : t('auth.sendResetLink')}
               </Button>
               <Button type="button" variant="link" className="w-full" onClick={() => setMode('signin')}>
-                {t('common.back')} to sign in
+                {t('auth.backToSignIn')}
               </Button>
             </form>
           ) : (
@@ -140,7 +140,7 @@ export default function Auth() {
                 </Button>
                 {mode === 'signin' && (
                   <Button type="button" variant="link" className="w-full" onClick={() => setMode('reset')}>
-                    Forgot password?
+                    {t('auth.forgotPassword')}
                   </Button>
                 )}
               </form>

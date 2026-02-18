@@ -22,7 +22,8 @@
     "warning": "Varning",
     "openSource": "Open Source",
     "language": "Språk",
-    "custom": "Anpassad"
+    "custom": "Anpassad",
+    "selectOption": "Välj ett alternativ"
   },
   "nav": {
     "signIn": "Logga in",
@@ -175,7 +176,11 @@
     "accountCreated": "Konto skapat!",
     "accountCreatedDesc": "Du kan nu logga in.",
     "checkEmail": "Kontrollera din e-post",
-    "resetLinkSent": "Länk för lösenordsåterställning skickad."
+    "resetLinkSent": "Länk för lösenordsåterställning skickad.",
+    "validation": {
+      "invalidEmail": "Ange en giltig e-postadress",
+      "shortPassword": "Lösenordet måste vara minst 6 tecken"
+    }
   },
   "dashboard": {
     "title": "Dina pass",
@@ -185,7 +190,8 @@
     "showQr": "Visa QR-kod",
     "duplicated": "Pass duplicerat",
     "deleted": "Pass raderat",
-    "confirmDelete": "Är du säker på att du vill radera detta pass?"
+    "confirmDelete": "Är du säker på att du vill radera detta pass?",
+    "dragToReorder": "Dra för att ändra ordning"
   },
   "passport": {
     "createTitle": "Skapa nytt pass",
@@ -214,7 +220,17 @@
     "notFoundDesc": "Detta digitala produktpass finns inte eller har tagits bort.",
     "productPassport": "Produktpass",
     "checkAuthenticity": "Kontrollera äkthet",
-    "poweredBy": "Drivs av"
+    "poweredBy": "Drivs av",
+    "noAdditionalInfo": "Ingen ytterligare information krävs för denna kategori.",
+    "earlyAlpha": "Tidig alfa",
+    "earlyAlphaDesc": "Denna mall är i tidig alfaversion och kanske inte helt överensstämmer med gällande föreskrifter. Vänligen verifiera all information mot officiella krav innan användning."
+  },
+  "imageUpload": {
+    "loginRequired": "Du måste vara inloggad för att ladda upp bilder",
+    "invalidType": "Ladda upp en bildfil",
+    "tooLarge": "Bilden måste vara mindre än 5MB",
+    "uploading": "Laddar upp...",
+    "uploadButton": "Ladda upp produktbild"
   },
   "categories": {
     "battery": "Batterier",
@@ -536,6 +552,21 @@
     "takePhoto": "Ta foto",
     "uploadFile": "Ladda upp fil",
     "supportedFormats": "Stöder foton, PDF:er och Word-dokument",
-    "multiUploadTip": "Har du flera filer? Kör detta igen efter varje uppladdning för att sammanfoga data från olika källor."
+    "multiUploadTip": "Har du flera filer? Kör detta igen efter varje uppladdning för att sammanfoga data från olika källor.",
+    "autofillButton": "Fyll i automatiskt med AI",
+    "experimental": "Experimentell",
+    "scannerTitle": "AI-etikettskanner",
+    "scannerDescription": "Ladda upp ett foto av en vinetikett, PDF eller dokument och AI extraherar informationen automatiskt.",
+    "experimentalWarning": "Vänligen dubbelkolla alla extraherade data innan du sparar. AI kan göra misstag.",
+    "autofillComplete": "✨ AI-ifyllning klar",
+    "autofillCompleteDesc": "Fält har fyllts i. Vänligen granska och verifiera data innan du sparar.",
+    "noDataExtracted": "Inga data extraherade från etiketten",
+    "processingFailed": "Bearbetning misslyckades",
+    "processingFailedDesc": "Kunde inte extrahera data från etiketten",
+    "quotaExceeded": "Kvoten för rättvis användning överskriden",
+    "quotaExceededDesc": "Du har nått månadsgränsen på 100 AI-etikettsskanningar.",
+    "quotaExceededBody": "För att säkerställa rättvis åtkomst för alla användare begränsar vi AI-etikettsskanningar till 100 per månad. Din kvot återställs i början av nästa månad.",
+    "quotaContactBody": "Om du behöver en högre gräns för ditt företag, vänligen kontakta oss.",
+    "contactUs": "Kontakta oss"
   }
 }
