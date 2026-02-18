@@ -13,14 +13,12 @@ import heroBg from '@/assets/hero-bg.jpg';
 const productCategories = [
   { 
     key: 'wine',
-    description: 'Ingredients, nutrition, geographic indication',
     status: 'active' as const,
     regulation: 'EU 2021/2117',
     deadline: 'active'
   },
   { 
     key: 'other',
-    description: 'Generic DPP template for any product type',
     status: 'active' as const,
     regulation: 'ESPR Framework',
     deadline: '2027'
