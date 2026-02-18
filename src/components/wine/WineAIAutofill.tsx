@@ -196,7 +196,6 @@ export function WineAIAutofill({ onAutofill, onAutofillMeta }: WineAIAutofillPro
               ref={fileInputRef}
               type="file"
               accept="image/*,.pdf,.doc,.docx"
-              capture="environment"
               onChange={handleFileSelect}
               className="hidden"
             />
