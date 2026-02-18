@@ -33,7 +33,7 @@
   },
   "landing": {
     "hero": {
-      "badge": "Compatível com EU ESPR",
+      "badge": "Compatível com o ESPR da UE",
       "euFunded": "🇪🇺 Financiado pela UE",
       "title": "Crie Passaportes Digitais de Produtos Ilimitados",
       "subtitle": "Plataforma gratuita e de código aberto para conformidade com o Regulamento de Ecodesign da UE (ESPR). Gere passaportes legíveis por máquina com códigos QR para baterias, têxteis, produtos de construção e mais de 12 categorias.",
@@ -69,7 +69,7 @@
         "description": "Não são PDFs estáticos. Dados JSON/XML estruturados para integração com BIM, sistemas de reciclagem e outro software."
       },
       "qr": {
-        "title": "QR e Portadores de Dados",
+        "title": "QR e suportes de dados",
         "description": "Cada passaporte obtém um URL único e código QR. Pronto para integração NFC/RFID conforme ISO 15459."
       }
     },
@@ -107,7 +107,7 @@
       "badge": "Âmbito do Regulamento UE",
       "title": "Categorias de Produtos Suportadas",
       "subtitle": "Modelos construídos a partir de regulamentos oficiais da UE e atos delegados. Regulamentos ativos estão em vigor, Grupos prioritários têm modelos prontos para requisitos futuros.",
-      "activeLaw": "Lei Ativa",
+      "activeLaw": "Regulamento em vigor",
       "priorityGroup": "Grupo Prioritário",
       "cta": "Comece a Criar Passaportes"
     },
@@ -216,7 +216,7 @@
     "notFoundDesc": "Este passaporte digital de produto não existe ou foi removido.",
     "productPassport": "Passaporte de Produto",
     "checkAuthenticity": "Verificar autenticidade",
-    "poweredBy": "Powered by",
+    "poweredBy": "Alimentado por",
     "noAdditionalInfo": "Não é necessária informação adicional para esta categoria.",
     "earlyAlpha": "Alfa inicial",
     "earlyAlphaDesc": "Este modelo está em fase alfa inicial e pode não estar totalmente em conformidade com os regulamentos atuais. Verifique todas as informações antes de usar."
@@ -261,7 +261,7 @@
     "country": "País de Origem",
     "region": "Região",
     "denomination": "Denominação / Apelação",
-    "sugarClassification": "Classificação de Açúcar",
+    "sugarClassification": "Classificação de doçura",
     "producerInfo": "Informação do Produtor",
     "producerInfoDesc": "Informações sobre o produtor de vinho",
     "producerName": "Nome do Produtor/Adega",
@@ -270,7 +270,7 @@
     "nutritionalValues": "Valores Nutricionais",
     "nutritionalValuesDesc": "Exigido pelo Regulamento UE 2021/2117",
     "alcohol": "Álcool",
-    "alcoholPercent": "Álcool (% Vol)",
+    "alcoholPercent": "Álcool (% vol.)",
     "residualSugar": "Açúcar Residual",
     "residualSugarGL": "Açúcar Residual (g/L)",
     "acidity": "Acidez",
@@ -441,30 +441,6 @@
     "potato_protein": "Proteína de batata",
     "pvpp": "PVPP (Polivinilpolipirrolidona)"
   },
-  "recycling": {
-    "code": "Código",
-    "material": "Material",
-    "disposal": "Eliminação",
-    "componentTypes": {
-      "bottle": "Garrafa",
-      "closure": "Fecho",
-      "capsule": "Cápsula",
-      "label": "Rótulo",
-      "box": "Caixa"
-    },
-    "selectMaterial": "Selecionar material",
-    "individualComponents": "Componentes Individuais",
-    "compositeComponents": "Componentes Compostos",
-    "customMaterial": "Material Personalizado",
-    "addCustomMaterial": "Adicionar material personalizado",
-    "disposalAdvice": "Conselho de eliminação",
-    "addMaterial": "Adicionar material",
-    "addPackagingMaterial": "Adicionar material de embalagem",
-    "customType": "Tipo personalizado",
-    "addCustomType": "Adicionar tipo de material personalizado",
-    "materialName": "Nome do material",
-    "materialNamePlaceholder": "ex., Caixa de madeira"
-  },
   "legal": {
     "title": "Menções Legais",
     "legalMentions": "Menções Legais"
@@ -488,11 +464,6 @@
     "errorNoEmail": "Não foi possível enviar o pedido - e-mail do utilizador não encontrado",
     "errorSaveFirst": "Por favor guarde o passaporte primeiro antes de ativar a proteção contra falsificação",
     "errorFailed": "Falha ao enviar pedido de proteção contra falsificação"
-  },
-  "qrDialog": {
-    "title": "Código QR",
-    "download": "Transferir Código QR",
-    "copyLink": "Copiar Link"
   },
   "customIngredient": {
     "title": "Definir um ingrediente personalizado",
@@ -547,7 +518,7 @@
     "compositeComponents": "Componentes compostos",
     "customMaterial": "Material personalizado",
     "addCustomMaterial": "Adicionar material personalizado",
-    "disposalAdvice": "Conselho de eliminação",
+    "disposalAdvice": "Instruções de reciclagem",
     "addMaterial": "Adicionar material",
     "addPackagingMaterial": "Adicionar material de embalagem",
     "customType": "Tipo personalizado",
