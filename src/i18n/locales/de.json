@@ -580,7 +580,7 @@
     "autofillButton": "Automatisch ausfüllen mit KI",
     "experimental": "Experimentell",
     "scannerTitle": "KI-Etikettenscanner",
-    "scannerDescription": "Laden Sie ein Foto eines Weinetiketts, PDF oder Dokument hoch und die KI extrahiert die Informationen automatisch.",
+    "scannerDescription": "Laden Sie ein Foto eines Weinetiketts, PDF oder Dokument hoch und die KI extrahiert die Informationen automatisch. Sie können auch ein Foto eines QR-Codes von einem bestehenden Digitalen Produktpass scannen.",
     "experimentalWarning": "Bitte überprüfen Sie alle extrahierten Daten vor dem Speichern. KI kann Fehler machen.",
     "autofillComplete": "✨ KI-Autofill abgeschlossen",
     "autofillCompleteDesc": "Felder wurden ausgefüllt. Bitte überprüfen und verifizieren Sie die Daten vor dem Speichern.",

@@ -556,7 +556,7 @@
     "autofillButton": "Fyll i automatiskt med AI",
     "experimental": "Experimentell",
     "scannerTitle": "AI-etikettskanner",
-    "scannerDescription": "Ladda upp ett foto av en vinetikett, PDF eller dokument och AI extraherar informationen automatiskt.",
+    "scannerDescription": "Ladda upp ett foto av en vinetikett, PDF eller dokument och AI extraherar informationen automatiskt. Du kan även skanna ett foto av en QR-kod från ett befintligt Digitalt produktpass.",
     "experimentalWarning": "Vänligen dubbelkolla alla extraherade data innan du sparar. AI kan göra misstag.",
     "autofillComplete": "✨ AI-ifyllning klar",
     "autofillCompleteDesc": "Fält har fyllts i. Vänligen granska och verifiera data innan du sparar.",

@@ -553,7 +553,7 @@
     "autofillButton": "Uzupełnij automatycznie z AI",
     "experimental": "Eksperymentalne",
     "scannerTitle": "Skaner etykiet AI",
-    "scannerDescription": "Prześlij zdjęcie etykiety, PDF lub dokument, a AI automatycznie wyodrębni informacje.",
+    "scannerDescription": "Prześlij zdjęcie etykiety, PDF lub dokument, a AI automatycznie wyodrębni informacje. Możesz również zeskanować zdjęcie kodu QR z istniejącego Cyfrowego Paszportu Produktu.",
     "experimentalWarning": "Funkcja eksperymentalna: sprawdź wszystkie wyodrębnione dane przed zapisaniem.",
     "autofillComplete": "✨ Automatyczne uzupełnianie AI zakończone",
     "autofillCompleteDesc": "Pola zostały wypełnione. Sprawdź i zweryfikuj dane przed zapisaniem.",

@@ -553,7 +553,7 @@
     "autofillButton": "Preencher com IA",
     "experimental": "Experimental",
     "scannerTitle": "Scanner de rótulos IA",
-    "scannerDescription": "Carregue uma foto do rótulo, PDF ou documento e a IA extrairá as informações automaticamente.",
+    "scannerDescription": "Carregue uma foto do rótulo, PDF ou documento e a IA extrairá as informações automaticamente. Também pode digitalizar uma foto de um código QR de um Passaporte Digital de Produto existente.",
     "experimentalWarning": "Funcionalidade experimental: verifique todos os dados extraídos antes de guardar.",
     "autofillComplete": "✨ Preenchimento IA concluído",
     "autofillCompleteDesc": "Os campos foram preenchidos. Reveja e verifique os dados antes de guardar.",
