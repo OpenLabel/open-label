@@ -33,15 +33,15 @@
   },
   "landing": {
     "hero": {
-      "badge": "Conforme con EU ESPR",
+      "badge": "Conforme con el ESPR de la UE",
       "euFunded": "🇪🇺 Orgullosamente financiado por la UE",
-      "title": "Crea Pasaportes Digitales de Producto — Sin límites",
+      "title": "Crea pasaportes digitales de producto — sin límites",
       "subtitle": "Plataforma gratuita y de código abierto para el cumplimiento del Reglamento de Ecodiseño de la UE (ESPR). Genera pasaportes legibles por máquina con códigos QR para baterías, textiles, productos de construcción y 12+ categorías.",
       "cta": "Crea tu primer pasaporte",
       "demo": "Ver pasaporte demo",
       "features": {
         "free": "100% Gratis y código abierto",
-        "selfHost": "Auto-hospedable",
+        "selfHost": "Alojamiento propio",
         "machineReadable": "JSON/XML legible por máquina",
         "categories": "12+ Categorías de productos"
       }
@@ -107,7 +107,7 @@
       "badge": "Ámbito de regulación UE",
       "title": "Categorías de productos soportadas",
       "subtitle": "Plantillas basadas en regulaciones oficiales de la UE. Las regulaciones activas están en vigor, los grupos prioritarios tienen plantillas listas.",
-      "activeLaw": "Ley activa",
+      "activeLaw": "Normativa vigente",
       "priorityGroup": "Grupo prioritario",
       "cta": "Empezar a crear pasaportes"
     },
@@ -135,7 +135,7 @@
       "title": "Ejecútalo en tus propios servidores",
       "subtitle": "Totalmente de código abierto. Auto-hospeda para soberanía total de datos, personaliza o contribuye al proyecto.",
       "deploy": {
-        "title": "Auto-hospedaje",
+        "title": "Alojamiento propio",
         "description": "Despliega en tus propios servidores. Control total sobre tus datos y documentación de cumplimiento."
       },
       "customize": {
@@ -270,7 +270,7 @@
     "nutritionalValues": "Valores nutricionales",
     "nutritionalValuesDesc": "Requerido según el Reglamento UE 2021/2117",
     "alcohol": "Alcohol",
-    "alcoholPercent": "Alcohol (% Vol)",
+    "alcoholPercent": "Alcohol (% vol.)",
     "residualSugar": "Azúcar residual",
     "residualSugarGL": "Azúcar residual (g/L)",
     "acidity": "Acidez",
@@ -345,7 +345,7 @@
     "placeholders": {
       "productName": "ej. Château Margaux 2018",
       "grapeVariety": "ej. Cabernet Sauvignon, Merlot",
-      "vintage": "ej. 2020, NV, Multi-cosecha",
+      "vintage": "ej. 2020, NV, varias cosechas",
       "volume": "ej. 750",
       "region": "ej. Burdeos, Borgoña, Champagne",
       "denomination": "ej. AOC, AOP, IGP",
@@ -518,7 +518,7 @@
     "compositeComponents": "Componentes compuestos",
     "customMaterial": "Material personalizado",
     "addCustomMaterial": "Añadir material personalizado",
-    "disposalAdvice": "Consejo de eliminación",
+    "disposalAdvice": "Instrucciones de eliminación",
     "addMaterial": "Añadir material",
     "addPackagingMaterial": "Añadir material de embalaje",
     "customType": "Tipo personalizado",
