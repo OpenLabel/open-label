@@ -236,10 +236,11 @@ describe("Translation Audit", () => {
     }
   );
 
-  // Reporting-only test: log untranslated values but don't fail the build
-  // Once translations are fixed, move locales to the strict list above
-  it("should report untranslated values for fully updated locales (non-blocking)", () => {
-    for (const code of fullyUpdatedLocales) {
+  // STRICT: fully updated locales MUST have zero untranslated values
+  // The build WILL FAIL if any locale has English values that should be translated
+  it.each(fullyUpdatedLocales)(
+    "locale '%s' MUST have no untranslated English values",
+    (code) => {
       const flat = flattenKeys(locales[code]);
       const untranslated: string[] = [];
 
@@ -249,13 +250,11 @@ describe("Translation Audit", () => {
         }
       }
 
-      if (untranslated.length > 0) {
-        console.warn(
-          `⚠️ Locale '${code}' has ${untranslated.length} untranslated values:\n  - ${untranslated.map(k => `${k}: "${enFlat[k]}"`).slice(0, 20).join("\n  - ")}`
-        );
-      }
+      expect(
+        untranslated,
+        `🚨 TRANSLATION ERROR: Locale '${code}' has ${untranslated.length} UNTRANSLATED values that are still in English!\n` +
+        `These MUST be translated before the build can succeed:\n  - ${untranslated.map(k => `${k}: "${enFlat[k]}"`).join("\n  - ")}`
+      ).toHaveLength(0);
     }
-    // This test always passes — it's a reporting tool until translations are fixed
-    expect(true).toBe(true);
-  });
+  );
 });
