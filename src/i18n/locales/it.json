@@ -33,15 +33,15 @@
   },
   "landing": {
     "hero": {
-      "badge": "Conforme EU ESPR",
+      "badge": "Conforme al regolamento ESPR UE",
       "euFunded": "🇪🇺 Orgogliosamente finanziato dall'UE",
-      "title": "Crea Passaporti Digitali di Prodotto — Senza limiti",
+      "title": "Crea passaporti digitali di prodotto — senza limiti",
       "subtitle": "Piattaforma gratuita e open source per la conformità al Regolamento Ecodesign UE (ESPR). Genera passaporti leggibili dalle macchine con codici QR per batterie, tessili, prodotti da costruzione e 12+ categorie.",
       "cta": "Crea il tuo primo passaporto",
       "demo": "Visualizza passaporto demo",
       "features": {
-        "free": "100% Gratuito e Open Source",
-        "selfHost": "Auto-ospitabile",
+        "free": "100% gratuito e open source",
+        "selfHost": "Installabile sui propri server",
         "machineReadable": "JSON/XML leggibile dalle macchine",
         "categories": "12+ Categorie di prodotti"
       }
@@ -69,7 +69,7 @@
         "description": "Niente PDF statici. Dati JSON/XML strutturati per integrazione con BIM, sistemi di riciclaggio e altri software."
       },
       "qr": {
-        "title": "QR e supporti dati",
+        "title": "QR e supporti digitali",
         "description": "Ogni passaporto ottiene un URL unico e codice QR. Pronto per NFC/RFID secondo ISO 15459."
       }
     },
@@ -107,7 +107,7 @@
       "badge": "Ambito regolamentazione UE",
       "title": "Categorie di prodotti supportate",
       "subtitle": "Template basati sui regolamenti ufficiali dell'UE. I regolamenti attivi sono in vigore, i gruppi prioritari hanno template pronti.",
-      "activeLaw": "Legge attiva",
+      "activeLaw": "Regolamento in vigore",
       "priorityGroup": "Gruppo prioritario",
       "cta": "Inizia a creare passaporti"
     },
@@ -149,7 +149,7 @@
     },
     "cta": {
       "title": "Pronto per la conformità?",
-      "subtitle": "Crea Passaporti Digitali di Prodotto conformi UE oggi. Gratuito, illimitato e open source.",
+      "subtitle": "Crea passaporti digitali di prodotto conformi UE oggi. Gratuito, illimitato e open source.",
       "button": "Inizia gratis oggi"
     },
     "footer": {
@@ -261,7 +261,7 @@
     "country": "Paese di origine",
     "region": "Regione",
     "denomination": "Denominazione / Denominazione di origine",
-    "sugarClassification": "Classificazione zucchero",
+    "sugarClassification": "Livello di dolcezza",
     "producerInfo": "Informazioni produttore",
     "producerInfoDesc": "Informazioni sul produttore di vino",
     "producerName": "Produttore/Cantina",
@@ -270,7 +270,7 @@
     "nutritionalValues": "Valori nutrizionali",
     "nutritionalValuesDesc": "Richiesto dal Regolamento UE 2021/2117",
     "alcohol": "Alcol",
-    "alcoholPercent": "Alcol (% Vol)",
+    "alcoholPercent": "Alcol (% vol.)",
     "residualSugar": "Zucchero residuo",
     "residualSugarGL": "Zucchero residuo (g/L)",
     "acidity": "Acidità",
@@ -518,7 +518,7 @@
     "compositeComponents": "Componenti compositi",
     "customMaterial": "Materiale personalizzato",
     "addCustomMaterial": "Aggiungi materiale personalizzato",
-    "disposalAdvice": "Consigli smaltimento",
+    "disposalAdvice": "Istruzioni di smaltimento",
     "addMaterial": "Aggiungi materiale",
     "addPackagingMaterial": "Aggiungi materiale di imballaggio",
     "customType": "Tipo personalizzato",
