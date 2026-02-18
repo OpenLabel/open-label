@@ -407,18 +407,16 @@ export default function PassportForm() {
                 </>
               )}
 
-              {/* Category-Specific Questions (for non-wine categories or additional wine fields) */}
-              <div>
-                <h2 className="text-lg font-semibold mb-4">
-                  {categoryList.find(c => c.value === formData.category)?.icon}{' '}
-                  {t(`categories.${formData.category}`)} {t('passport.details')}
-                </h2>
-                <CategoryQuestions
-                  category={formData.category}
-                  data={(formData.category_data as Record<string, unknown>) || {}}
-                  onChange={(data) => setFormData({ ...formData, category_data: data })}
-                />
-              </div>
+              {/* Category-Specific Questions (skip for wine - has its own WineFields) */}
+              {formData.category !== 'wine' && (
+                <div>
+                  <CategoryQuestions
+                    category={formData.category}
+                    data={(formData.category_data as Record<string, unknown>) || {}}
+                    onChange={(data) => setFormData({ ...formData, category_data: data })}
+                  />
+                </div>
+              )}
 
               {/* Counterfeit Protection - always last */}
               <CounterfeitProtection
