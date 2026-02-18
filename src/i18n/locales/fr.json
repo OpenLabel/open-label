@@ -468,7 +468,7 @@
     "addButton": "Ajouter l'ingrédient"
   },
   "certifications": {
-    "title": "Certifications & Labels"
+    "title": "Certifications et labels"
   },
   "qrDialog": {
     "title": "Code QR",
@@ -525,7 +525,7 @@
     "productName": "Nom du produit",
     "checkAuthenticity": "Vérifier l'authenticité",
     "productDescription": "Description du produit",
-    "certificationsLabels": "Certifications & Labels",
+    "certificationsLabels": "Certifications et labels",
     "poweredBy": "Propulsé par"
   },
   "ai": {
