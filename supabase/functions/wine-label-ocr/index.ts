@@ -1,16 +1,13 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
-import jsQR from "https://esm.sh/jsqr@1.4.0";
-import { decode as decodePng } from "https://deno.land/x/pngs@0.1.1/mod.ts";
-import { decode as decodeJpeg } from "https://deno.land/x/jpegts@1.1/mod.ts";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-// Input validation schema
+// Input validation schema — now accepts optional qrUrl from client-side QR decode
 const WineOCRSchema = z.object({
   image: z.string()
     .min(1, "Image is required")
@@ -19,6 +16,7 @@ const WineOCRSchema = z.object({
       (val) => /^data:image\/(png|jpeg|jpg|webp|gif);base64,/.test(val),
       "Invalid image format - must be a valid base64 data URL"
     ),
+  qrUrl: z.string().url().optional(),
 });
 
 const MONTHLY_LIMIT = 100;
@@ -111,79 +109,23 @@ Be conservative - only extract data you can clearly read. Do not guess or make u
 For analysis values, pay attention to units and convert to the expected format if needed.`;
 
 /**
- * Try to decode a QR code from a base64 data URL using jsQR.
- * Returns the decoded string or null.
- */
-async function decodeQrFromBase64(imageBase64: string): Promise<string | null> {
-  try {
-    // Strip data URL prefix to get raw base64
-    const mimeMatch = imageBase64.match(/^data:image\/(png|jpeg|jpg|webp|gif);base64,/);
-    const mimeType = mimeMatch?.[1] || "jpeg";
-    const base64Data = imageBase64.replace(/^data:image\/[^;]+;base64,/, "");
-    const binaryStr = atob(base64Data);
-    const bytes = new Uint8Array(binaryStr.length);
-    for (let i = 0; i < binaryStr.length; i++) {
-      bytes[i] = binaryStr.charCodeAt(i);
-    }
-
-    let width: number, height: number, rgbaData: Uint8Array;
-
-    if (mimeType === "png") {
-      const decoded = decodePng(bytes);
-      width = decoded.width;
-      height = decoded.height;
-      rgbaData = decoded.image;
-    } else {
-      // JPEG or other — use jpegts
-      const decoded = decodeJpeg(bytes);
-      width = decoded.width;
-      height = decoded.height;
-      // jpegts returns RGB, convert to RGBA
-      const rgb = decoded.data;
-      rgbaData = new Uint8Array(width * height * 4);
-      for (let i = 0; i < width * height; i++) {
-        rgbaData[i * 4] = rgb[i * 3];
-        rgbaData[i * 4 + 1] = rgb[i * 3 + 1];
-        rgbaData[i * 4 + 2] = rgb[i * 3 + 2];
-        rgbaData[i * 4 + 3] = 255;
-      }
-    }
-
-    console.log(`Image decoded: ${width}x${height} pixels (${mimeType})`);
-
-    // Run jsQR
-    const result = jsQR(new Uint8ClampedArray(rgbaData.buffer), width, height);
-    if (result && result.data) {
-      console.log("jsQR decoded:", result.data);
-      return result.data;
-    }
-
-    console.log("jsQR: no QR code found in image");
-    return null;
-  } catch (error) {
-    console.error("QR library decode error:", error);
-    return null;
-  }
-}
-
-/**
- * Attempt to detect a QR code URL in the image, then scrape that URL
- * with Firecrawl to get additional product data.
+ * Attempt to scrape a QR code URL with Firecrawl to get additional product data.
  *
- * Strategy: library-based decode first (fast, reliable), then AI fallback.
+ * If qrUrl is provided (client-side decode), use it directly.
+ * Otherwise, fall back to AI vision detection.
  */
 async function tryQrCodeScrape(
   imageBase64: string,
   lovableApiKey: string,
   firecrawlApiKey: string,
+  clientQrUrl?: string,
 ): Promise<Record<string, unknown> | null> {
   try {
-    // Step 1: Try library-based QR decode first
-    let qrUrl = await decodeQrFromBase64(imageBase64);
+    let qrUrl = clientQrUrl || null;
 
-    // Step 2: If library failed, fall back to AI vision
+    // If no client-side QR URL, fall back to AI vision
     if (!qrUrl) {
-      console.log("Library QR decode failed, trying AI fallback...");
+      console.log("No client-side QR URL, trying AI fallback...");
       const qrResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -224,6 +166,8 @@ async function tryQrCodeScrape(
         console.log("AI QR detection call failed:", qrResponse.status);
         await qrResponse.text();
       }
+    } else {
+      console.log("Using client-side QR URL:", qrUrl);
     }
 
     if (!qrUrl) {
@@ -233,7 +177,7 @@ async function tryQrCodeScrape(
 
     console.log("Scraping QR code URL:", qrUrl);
 
-    // Step 3: Use Firecrawl to scrape the QR code URL
+    // Use Firecrawl to scrape the QR code URL
     const scrapeResponse = await fetch("https://api.firecrawl.dev/v1/scrape", {
       method: "POST",
       headers: {
@@ -263,7 +207,7 @@ async function tryQrCodeScrape(
 
     console.log("Firecrawl scraped content length:", markdown.length);
 
-    // Step 4: Extract wine data from the scraped page content
+    // Extract wine data from the scraped page content
     const extractResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -393,14 +337,14 @@ serve(async (req) => {
       );
     }
 
-    const { image } = parseResult.data;
+    const { image, qrUrl: clientQrUrl } = parseResult.data;
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
       throw new Error("LOVABLE_API_KEY not configured. Please set it as a Supabase secret.");
     }
 
-    // ===== PARALLEL: Image extraction + QR code detection =====
+    // ===== PARALLEL: Image extraction + QR code scraping =====
     const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY");
 
     const imageExtractionPromise = fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -434,7 +378,7 @@ serve(async (req) => {
     });
 
     const qrScrapePromise = FIRECRAWL_API_KEY
-      ? tryQrCodeScrape(image, LOVABLE_API_KEY, FIRECRAWL_API_KEY)
+      ? tryQrCodeScrape(image, LOVABLE_API_KEY, FIRECRAWL_API_KEY, clientQrUrl)
       : Promise.resolve(null);
 
     const [imageResponse, qrData] = await Promise.all([imageExtractionPromise, qrScrapePromise]);
@@ -471,17 +415,14 @@ serve(async (req) => {
     const imageExtracted = JSON.parse(toolCall.function.arguments);
 
     // ===== MERGE: Image data (base) + QR data (override) =====
-    // QR-scraped data takes priority since it's more structured and reliable
     const mergedData: Record<string, unknown> = {};
 
-    // Start with image-extracted data as base
     for (const [key, value] of Object.entries(imageExtracted)) {
       if (value !== null && value !== undefined && value !== "") {
         mergedData[key] = value;
       }
     }
 
-    // Override with QR data (higher quality, structured source)
     if (qrData) {
       for (const [key, value] of Object.entries(qrData)) {
         if (value !== null && value !== undefined && value !== "") {

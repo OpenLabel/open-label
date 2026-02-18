@@ -6,6 +6,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Sparkles, Camera, Upload, Loader2, AlertTriangle, FileText, Mail } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { decodeQrFromDataUrl } from '@/lib/clientQrDecode';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 interface WineAIAutofillProps {
@@ -57,9 +58,12 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
         reader.readAsDataURL(file);
       });
 
-      // Call the edge function
+      // Client-side QR decode (uses Canvas API — no memory limits)
+      const qrUrl = file.type.startsWith('image/') ? await decodeQrFromDataUrl(base64) : null;
+
+      // Call the edge function with optional qrUrl
       const { data, error } = await supabase.functions.invoke('wine-label-ocr', {
-        body: { image: base64 }
+        body: { image: base64, ...(qrUrl ? { qrUrl } : {}) }
       });
 
       if (error) {
