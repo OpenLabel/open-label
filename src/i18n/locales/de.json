@@ -41,7 +41,7 @@
       "demo": "Demo-Pass ansehen",
       "features": {
         "free": "100% Kostenlos & Open Source",
-        "selfHost": "Selbst hostbar",
+        "selfHost": "Auf eigenen Servern betreibbar",
         "machineReadable": "Maschinenlesbares JSON/XML",
         "categories": "12+ Produktkategorien"
       }
@@ -54,7 +54,7 @@
     },
     "features": {
       "badge": "Funktionen",
-      "title": "Alles für die Compliance",
+      "title": "Alles für die Einhaltung der Vorschriften",
       "subtitle": "Nach EU-Standards gebaut: dezentrale Speicherung, ISO 15459-Kennungen, gestaffelte Zugriffsrechte und maschinenlesbare JSON/XML-Ausgabe.",
       "espr": {
         "title": "ESPR-konform",
@@ -107,14 +107,14 @@
       "badge": "EU-Regulierungsbereich",
       "title": "Unterstützte Produktkategorien",
       "subtitle": "Vorlagen basierend auf offiziellen EU-Verordnungen. Aktive Vorschriften sind in Kraft, Prioritätsgruppen haben Vorlagen für kommende Anforderungen.",
-      "activeLaw": "Aktives Gesetz",
+      "activeLaw": "Geltende Verordnung",
       "priorityGroup": "Prioritätsgruppe",
-      "cta": "Pässe erstellen starten"
+      "cta": "Jetzt Pässe erstellen"
     },
     "timeline": {
       "badge": "Regulierungszeitplan",
       "title": "EU DPP-Umsetzungsfristen",
-      "subtitle": "Die EU führt Digitaler Produktpass-Anforderungen schrittweise ein. Bereiten Sie sich jetzt vor.",
+      "subtitle": "Die EU führt Anforderungen an den Digitalen Produktpass schrittweise ein. Bereiten Sie sich jetzt vor.",
       "feb2027": {
         "title": "Februar 2027",
         "badge": "Erste Batterie-Frist",
@@ -219,7 +219,7 @@
     "notFoundDesc": "Dieser Digitale Produktpass existiert nicht oder wurde entfernt.",
     "productPassport": "Produktpass",
     "checkAuthenticity": "Echtheit prüfen",
-    "poweredBy": "Unterstützt von",
+    "poweredBy": "Bereitgestellt von",
     "noAdditionalInfo": "Für diese Kategorie sind keine zusätzlichen Informationen erforderlich.",
     "earlyAlpha": "Frühe Alpha-Version",
     "earlyAlphaDesc": "Diese Vorlage befindet sich in einer frühen Alpha-Phase und entspricht möglicherweise nicht vollständig den aktuellen Vorschriften. Bitte überprüfen Sie alle Informationen anhand der offiziellen Anforderungen vor der Verwendung."
@@ -281,7 +281,7 @@
     "nutritionalValues": "Nährwerte",
     "nutritionalValuesDesc": "Erforderlich gemäß EU-Verordnung 2021/2117",
     "alcohol": "Alkohol",
-    "alcoholPercent": "Alkohol (% Vol)",
+    "alcoholPercent": "Alkohol (% vol.)",
     "residualSugar": "Restzucker",
     "residualSugarGL": "Restzucker (g/L)",
     "acidity": "Säure",
@@ -356,7 +356,7 @@
     "placeholders": {
       "productName": "z.B. Château Margaux 2018",
       "grapeVariety": "z.B. Cabernet Sauvignon, Merlot",
-      "vintage": "z.B. 2020, NV, Mehrjahresgang",
+      "vintage": "z.B. 2020, NV, mehrere Jahrgänge",
       "volume": "z.B. 750",
       "region": "z.B. Bordeaux, Burgund, Champagne",
       "denomination": "z.B. AOC, AOP, IGP",
@@ -569,7 +569,7 @@
     "checkAuthenticity": "Authentizität prüfen",
     "productDescription": "Produktbeschreibung",
     "certificationsLabels": "Zertifizierungen & Labels",
-    "poweredBy": "Unterstützt von"
+    "poweredBy": "Bereitgestellt von"
   },
   "ai": {
     "analyzing": "Dokument wird analysiert...",
