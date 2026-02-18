@@ -317,21 +317,19 @@ export default function PassportForm() {
               </div>
 
               {/* Counterfeit Protection - always last */}
-              {isEditing && existingPassport && (
-                <CounterfeitProtection
-                  passportName={formData.name}
-                  passportSlug={existingPassport.public_slug}
-                  userEmail={user?.email}
-                  enabled={formData.category_data.counterfeit_protection_enabled === true}
-                  onChange={(enabled) => setFormData({
-                    ...formData,
-                    category_data: {
-                      ...formData.category_data,
-                      counterfeit_protection_enabled: enabled,
-                    },
-                  })}
-                />
-              )}
+              <CounterfeitProtection
+                passportName={formData.name}
+                passportSlug={existingPassport?.public_slug ?? null}
+                userEmail={user?.email}
+                enabled={formData.category_data.counterfeit_protection_enabled === true}
+                onChange={(enabled) => setFormData({
+                  ...formData,
+                  category_data: {
+                    ...formData.category_data,
+                    counterfeit_protection_enabled: enabled,
+                  },
+                })}
+              />
 
               {/* Actions - Mobile only */}
               <div className="flex gap-4 justify-end lg:hidden">

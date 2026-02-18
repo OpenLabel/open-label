@@ -19,7 +19,9 @@
     "warning": "Aviso",
     "openSource": "Código Aberto",
     "language": "Idioma",
-    "custom": "Personalizado"
+    "custom": "Personalizado",
+    "selectOption": "Selecione uma opção",
+    "confirmed": "Confirmado"
   },
   "nav": {
     "signIn": "Entrar",
@@ -172,7 +174,8 @@
     "accountCreated": "Conta criada!",
     "accountCreatedDesc": "Pode agora entrar.",
     "checkEmail": "Verifique o seu e-mail",
-    "resetLinkSent": "Link de redefinição de palavra-passe enviado."
+    "resetLinkSent": "Link de redefinição de palavra-passe enviado.",
+    "validation": { "invalidEmail": "Por favor introduza um endereço de e-mail válido", "shortPassword": "A palavra-passe deve ter pelo menos 6 caracteres" }
   },
   "dashboard": {
     "title": "Os Seus Passaportes",
@@ -182,7 +185,8 @@
     "showQr": "Mostrar Código QR",
     "duplicated": "Passaporte duplicado",
     "deleted": "Passaporte eliminado",
-    "confirmDelete": "Tem a certeza de que quer eliminar este passaporte?"
+    "confirmDelete": "Tem a certeza de que quer eliminar este passaporte?",
+    "dragToReorder": "Arraste para reordenar"
   },
   "passport": {
     "createTitle": "Criar Novo Passaporte",
@@ -211,7 +215,10 @@
     "notFoundDesc": "Este passaporte digital de produto não existe ou foi removido.",
     "productPassport": "Passaporte de Produto",
     "checkAuthenticity": "Verificar autenticidade",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "noAdditionalInfo": "Não é necessária informação adicional para esta categoria.",
+    "earlyAlpha": "Alfa inicial",
+    "earlyAlphaDesc": "Este modelo está em fase alfa inicial e pode não estar totalmente em conformidade com os regulamentos atuais. Verifique todas as informações antes de usar."
   },
   "categories": {
     "battery": "Baterias",

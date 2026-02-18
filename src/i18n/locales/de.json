@@ -20,7 +20,8 @@
     "openSource": "Open Source",
     "language": "Sprache",
     "custom": "Benutzerdefiniert",
-    "selectOption": "Option auswählen"
+    "selectOption": "Option auswählen",
+    "confirmed": "Bestätigt"
   },
   "nav": {
     "signIn": "Anmelden",
@@ -227,7 +228,8 @@
     "invalidType": "Bitte laden Sie eine Bilddatei hoch",
     "tooLarge": "Das Bild muss kleiner als 5MB sein",
     "uploading": "Wird hochgeladen...",
-    "uploadButton": "Produktbild hochladen"
+    "uploadButton": "Produktbild hochladen",
+    "uploadFailed": "Bild konnte nicht hochgeladen werden"
   },
   "categories": {
     "battery": "Batterien",
@@ -589,5 +591,8 @@
     "quotaExceededBody": "Um einen fairen Zugang für alle Nutzer zu gewährleisten, begrenzen wir KI-Etikettenscans auf 100 pro Monat. Ihr Kontingent wird zu Beginn des nächsten Monats zurückgesetzt.",
     "quotaContactBody": "Wenn Sie ein höheres Limit für Ihr Unternehmen benötigen, kontaktieren Sie uns bitte.",
     "contactUs": "Kontaktieren Sie uns"
+  }
+  "richText": {
+    "enterUrl": "URL eingeben:"
   }
 }

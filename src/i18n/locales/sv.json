@@ -23,7 +23,8 @@
     "openSource": "Open Source",
     "language": "Språk",
     "custom": "Anpassad",
-    "selectOption": "Välj ett alternativ"
+    "selectOption": "Välj ett alternativ",
+    "confirmed": "Bekräftad"
   },
   "nav": {
     "signIn": "Logga in",
@@ -230,7 +231,8 @@
     "invalidType": "Ladda upp en bildfil",
     "tooLarge": "Bilden måste vara mindre än 5MB",
     "uploading": "Laddar upp...",
-    "uploadButton": "Ladda upp produktbild"
+    "uploadButton": "Ladda upp produktbild",
+    "uploadFailed": "Det gick inte att ladda upp bilden"
   },
   "categories": {
     "battery": "Batterier",
@@ -568,5 +570,8 @@
     "quotaExceededBody": "För att säkerställa rättvis åtkomst för alla användare begränsar vi AI-etikettsskanningar till 100 per månad. Din kvot återställs i början av nästa månad.",
     "quotaContactBody": "Om du behöver en högre gräns för ditt företag, vänligen kontakta oss.",
     "contactUs": "Kontakta oss"
+  }
+  "richText": {
+    "enterUrl": "Ange URL:"
   }
 }

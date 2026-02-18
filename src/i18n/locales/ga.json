@@ -22,7 +22,9 @@
     "warning": "Rabhadh",
     "openSource": "Open Source",
     "language": "Teanga",
-    "custom": "Saincheaptha"
+    "custom": "Saincheaptha",
+    "selectOption": "Roghnaigh rogha",
+    "confirmed": "Deimhnithe"
   },
   "nav": {
     "signIn": "Sínigh isteach",
@@ -175,7 +177,8 @@
     "accountCreated": "Cuntas cruthaithe!",
     "accountCreatedDesc": "Is féidir leat síniú isteach anois.",
     "checkEmail": "Seiceáil do ríomhphost",
-    "resetLinkSent": "Nasc athshocraithe pasfhocail seolta."
+    "resetLinkSent": "Nasc athshocraithe pasfhocail seolta.",
+    "validation": { "invalidEmail": "Iontráil seoladh ríomhphoist bailí le do thoil", "shortPassword": "Caithfidh an pasfhocal a bheith 6 charachtar ar a laghad" }
   },
   "dashboard": {
     "title": "Do Phasanna",
@@ -185,7 +188,8 @@
     "showQr": "Taispeáin Cód QR",
     "duplicated": "Pas dúblaithe",
     "deleted": "Pas scriosta",
-    "confirmDelete": "An bhfuil tú cinnte gur mhaith leat an pas seo a scriosadh?"
+    "confirmDelete": "An bhfuil tú cinnte gur mhaith leat an pas seo a scriosadh?",
+    "dragToReorder": "Tarraing chun athordú"
   },
   "passport": {
     "createTitle": "Cruthaigh Pas Nua",
@@ -214,7 +218,10 @@
     "notFoundDesc": "Níl an pas táirge digiteach seo ann nó baineadh é.",
     "productPassport": "Pas Táirge",
     "checkAuthenticity": "Seiceáil fírinne",
-    "poweredBy": "Cumhachtaithe ag"
+    "poweredBy": "Cumhachtaithe ag",
+    "noAdditionalInfo": "Níl faisnéis bhreise ag teastáil don chatagóir seo.",
+    "earlyAlpha": "Alfa luath",
+    "earlyAlphaDesc": "Tá an teimpléad seo i bhfás alfa luath agus b'fhéidir nach gcomhlíonann sé na rialacháin reatha go hiomlán. Fíoraigh gach faisnéis roimh úsáid."
   },
   "categories": {
     "battery": "Cadhnraí",

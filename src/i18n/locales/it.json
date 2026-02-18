@@ -19,7 +19,9 @@
     "warning": "Avviso",
     "openSource": "Open Source",
     "language": "Lingua",
-    "custom": "Personalizzato"
+    "custom": "Personalizzato",
+    "selectOption": "Seleziona un'opzione",
+    "confirmed": "Confermato"
   },
   "nav": {
     "signIn": "Accedi",
@@ -172,7 +174,8 @@
     "accountCreated": "Account creato!",
     "accountCreatedDesc": "Ora puoi accedere.",
     "checkEmail": "Controlla la tua email",
-    "resetLinkSent": "Link di reset inviato."
+    "resetLinkSent": "Link di reset inviato.",
+    "validation": { "invalidEmail": "Inserisci un indirizzo email valido", "shortPassword": "La password deve essere di almeno 6 caratteri" }
   },
   "dashboard": {
     "title": "I tuoi passaporti",
@@ -182,7 +185,8 @@
     "showQr": "Mostra codice QR",
     "duplicated": "Passaporto duplicato",
     "deleted": "Passaporto eliminato",
-    "confirmDelete": "Sei sicuro di voler eliminare questo passaporto?"
+    "confirmDelete": "Sei sicuro di voler eliminare questo passaporto?",
+    "dragToReorder": "Trascina per riordinare"
   },
   "passport": {
     "createTitle": "Crea nuovo passaporto",
@@ -211,7 +215,10 @@
     "notFoundDesc": "Questo Passaporto Digitale di Prodotto non esiste o è stato rimosso.",
     "productPassport": "Passaporto prodotto",
     "checkAuthenticity": "Verifica autenticità",
-    "poweredBy": "Realizzato da"
+    "poweredBy": "Realizzato da",
+    "noAdditionalInfo": "Nessuna informazione aggiuntiva richiesta per questa categoria.",
+    "earlyAlpha": "Alfa iniziale",
+    "earlyAlphaDesc": "Questo template è in fase alfa iniziale e potrebbe non essere pienamente conforme alle normative attuali. Verificare tutte le informazioni prima dell'uso."
   },
   "categories": {
     "battery": "Batterie",
