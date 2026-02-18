@@ -564,6 +564,7 @@
     "quotaExceededDesc": "Hai raggiunto il limite mensile di 100 scansioni etichette IA.",
     "quotaExceededBody": "Per garantire un accesso equo, limitiamo le scansioni a 100 al mese. La quota si rinnoverà all'inizio del prossimo mese.",
     "quotaContactBody": "Se hai bisogno di un limite più alto per la tua azienda, contattaci.",
+    "qrCodeUsed": "È stato rilevato un codice QR e la pagina collegata è stata analizzata per dati aggiuntivi.",
     "contactUs": "Contattaci"
   },
   "richText": {

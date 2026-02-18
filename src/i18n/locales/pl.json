@@ -592,6 +592,7 @@
     "quotaExceededDesc": "Osiągnięto miesięczny limit 100 skanów etykiet AI.",
     "quotaExceededBody": "Aby zapewnić sprawiedliwy dostęp, ograniczamy skanowanie do 100 na miesiąc. Limit odnowi się na początku następnego miesiąca.",
     "quotaContactBody": "Jeśli potrzebujesz wyższego limitu dla swojej firmy, skontaktuj się z nami.",
+    "qrCodeUsed": "Wykryto kod QR, a powiązana strona została również przeanalizowana w celu uzyskania dodatkowych danych.",
     "contactUs": "Skontaktuj się z nami"
   },
   "richText": {

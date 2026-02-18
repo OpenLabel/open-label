@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useCallback } from 'react';
+import { getAllIngredients, getIngredientCategory } from '@/data/wineIngredients';
 import { useTranslation } from 'react-i18next';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -115,8 +116,43 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
   }, [data]);
 
   const handleAIAutofill = (extractedData: Record<string, unknown>) => {
-    // Merge AI-extracted data with existing data
-    const mergedData = { ...data, ...extractedData };
+    // Map detected_ingredients names to proper ingredient objects
+    const detectedNames = extractedData.detected_ingredients as string[] | undefined;
+    delete extractedData.detected_ingredients;
+
+    let ingredientsToSet = undefined;
+    if (detectedNames && detectedNames.length > 0) {
+      const allIngredients = getAllIngredients();
+      const matched = detectedNames
+        .map((name) => {
+          const lower = name.toLowerCase();
+          const found = allIngredients.find(
+            (ing) => ing.name.toLowerCase() === lower || ing.id === lower
+          );
+          if (found) {
+            return {
+              id: found.id,
+              name: found.name,
+              eNumber: found.eNumber,
+              isAllergen: found.isAllergen,
+              category: getIngredientCategory(found.id),
+            };
+          }
+          // Unknown ingredient → add as custom
+          return {
+            id: `custom_${name.toLowerCase().replace(/\s+/g, '_')}`,
+            name,
+            isCustom: true,
+          };
+        });
+      ingredientsToSet = matched;
+    }
+
+    const mergedData = {
+      ...data,
+      ...extractedData,
+      ...(ingredientsToSet ? { ingredients: ingredientsToSet } : {}),
+    };
     onChange(mergedData);
   };
 

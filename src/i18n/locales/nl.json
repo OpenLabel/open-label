@@ -567,6 +567,7 @@
     "quotaExceededDesc": "U heeft de maandelijkse limiet van 100 AI-etiketscans bereikt.",
     "quotaExceededBody": "Om eerlijke toegang voor alle gebruikers te waarborgen, beperken we AI-etiketscans tot 100 per maand. Uw quotum wordt aan het begin van volgende maand gereset.",
     "quotaContactBody": "Als u een hogere limiet nodig heeft voor uw bedrijf, neem dan contact met ons op.",
+    "qrCodeUsed": "Een QR-code werd gedetecteerd en de gekoppelde pagina werd ook geanalyseerd voor aanvullende gegevens.",
     "contactUs": "Neem contact op"
   },
   "richText": {

@@ -564,6 +564,7 @@
     "quotaExceededDesc": "Ha alcanzado el límite mensual de 100 escaneos de etiquetas con IA.",
     "quotaExceededBody": "Para garantizar un acceso justo, limitamos los escaneos a 100 por mes. Su cuota se restablecerá al inicio del próximo mes.",
     "quotaContactBody": "Si necesita un límite más alto para su empresa, contáctenos.",
+    "qrCodeUsed": "Se detectó un código QR y la página vinculada también fue analizada para obtener datos adicionales.",
     "contactUs": "Contáctenos"
   },
   "richText": {
