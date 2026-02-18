@@ -27,7 +27,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
   });
 
   const previewPassport = {
-    name: formData.name || 'Untitled Passport',
+    name: formData.name || t('preview.productName'),
     image_url: formData.image_url,
     description: formData.description,
     category_data: formData.category_data,
@@ -76,7 +76,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
 
   const getDisplayValue = (value: unknown): string => {
     if (value === null || value === undefined || value === '') return '';
-    if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+    if (typeof value === 'boolean') return value ? t('common.yes') : t('common.no');
     return String(value);
   };
 
@@ -105,7 +105,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                   {/* Header */}
                   <div className="text-center">
                     <Badge variant="secondary" className="mb-3">
-                      {categoryInfo?.icon} {categoryInfo?.label} {t('preview.productPassport')}
+                      {categoryInfo?.icon} {t(`categories.${formData.category}`)} {t('preview.productPassport')}
                     </Badge>
                     <h1 className="text-xl font-bold mb-2">{formData.name || t('preview.productName')}</h1>
                     

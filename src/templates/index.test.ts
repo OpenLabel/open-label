@@ -86,8 +86,8 @@ describe("templates", () => {
   });
 
   describe("categoryList", () => {
-    it("has all product categories", () => {
-      expect(categoryList.length).toBe(13);
+    it("has visible product categories (wine and other)", () => {
+      expect(categoryList.length).toBe(2);
     });
 
     it("each category has required properties", () => {
@@ -108,38 +108,21 @@ describe("templates", () => {
       });
     });
 
-    it("includes battery with correct regulation", () => {
-      const battery = categoryList.find((c) => c.value === "battery");
-      expect(battery).toBeDefined();
-      expect(battery?.regulation).toBe("EU 2023/1542");
-    });
-
     it("includes wine with correct regulation", () => {
       const wine = categoryList.find((c) => c.value === "wine");
       expect(wine).toBeDefined();
       expect(wine?.regulation).toBe("EU 2021/2117");
     });
 
-    it("includes toys with correct regulation", () => {
-      const toys = categoryList.find((c) => c.value === "toys");
-      expect(toys).toBeDefined();
-      expect(toys?.regulation).toBe("EU 2025/2509");
+    it("includes other with correct regulation", () => {
+      const other = categoryList.find((c) => c.value === "other");
+      expect(other).toBeDefined();
+      expect(other?.regulation).toBe("Generic DPP");
     });
 
     it("values match ProductCategory type", () => {
       const validCategories: ProductCategory[] = [
         "wine",
-        "battery",
-        "textiles",
-        "construction",
-        "electronics",
-        "iron_steel",
-        "aluminum",
-        "toys",
-        "cosmetics",
-        "furniture",
-        "tires",
-        "detergents",
         "other",
       ];
 
