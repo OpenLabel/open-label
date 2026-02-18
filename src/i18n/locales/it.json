@@ -553,7 +553,7 @@
     "autofillButton": "Compila con IA",
     "experimental": "Sperimentale",
     "scannerTitle": "Scanner etichette IA",
-    "scannerDescription": "Carica una foto dell'etichetta, PDF o documento e l'IA estrarrà le informazioni automaticamente.",
+    "scannerDescription": "Carica una foto dell'etichetta, PDF o documento e l'IA estrarrà le informazioni automaticamente. Puoi anche scansionare la foto di un codice QR di un Passaporto Digitale di Prodotto esistente.",
     "experimentalWarning": "Funzione sperimentale: controlla tutti i dati estratti prima di salvare.",
     "autofillComplete": "✨ Compilazione IA completata",
     "autofillCompleteDesc": "I campi sono stati compilati. Rivedi e verifica i dati prima di salvare.",

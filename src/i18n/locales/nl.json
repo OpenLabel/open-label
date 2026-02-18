@@ -556,7 +556,7 @@
     "autofillButton": "Automatisch invullen met AI",
     "experimental": "Experimenteel",
     "scannerTitle": "AI-etiketscanner",
-    "scannerDescription": "Upload een foto van een wijnetiket, PDF of document en AI extraheert de informatie automatisch.",
+    "scannerDescription": "Upload een foto van een wijnetiket, PDF of document en AI extraheert de informatie automatisch. U kunt ook een foto van een QR-code van een bestaand Digitaal Productpaspoort scannen.",
     "experimentalWarning": "Controleer alle geëxtraheerde gegevens voor het opslaan. AI kan fouten maken.",
     "autofillComplete": "✨ AI-invulling voltooid",
     "autofillCompleteDesc": "Velden zijn ingevuld. Controleer en verifieer de gegevens voor het opslaan.",

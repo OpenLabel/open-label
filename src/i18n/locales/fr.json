@@ -556,7 +556,7 @@
     "autofillButton": "Remplissage automatique par IA",
     "experimental": "Expérimental",
     "scannerTitle": "Scanner d'étiquettes IA",
-    "scannerDescription": "Téléchargez une photo d'étiquette de vin, un PDF ou un document et l'IA extraira les informations automatiquement.",
+    "scannerDescription": "Téléchargez une photo d'étiquette de vin, un PDF ou un document et l'IA extraira les informations automatiquement. Vous pouvez aussi scanner la photo d'un code QR d'un Passeport Numérique de Produit existant.",
     "experimentalWarning": "Veuillez vérifier toutes les données extraites avant de sauvegarder. L'IA peut faire des erreurs.",
     "autofillComplete": "✨ Remplissage IA terminé",
     "autofillCompleteDesc": "Les champs ont été remplis. Veuillez vérifier les données avant de sauvegarder.",

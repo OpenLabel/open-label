@@ -559,7 +559,7 @@
     "autofillButton": "Autofill with AI",
     "experimental": "Experimental",
     "scannerTitle": "AI Label Scanner",
-    "scannerDescription": "Upload a wine label photo, PDF, or document and AI will extract the information automatically.",
+    "scannerDescription": "Upload a wine label photo, PDF, or document and AI will extract the information automatically. You can also scan a photo of a QR code from an existing Digital Product Passport.",
     "experimentalWarning": "Experimental feature: Please double-check all extracted data before saving. AI may make mistakes.",
     "autofillComplete": "✨ AI Autofill Complete",
     "autofillCompleteDesc": "Fields have been populated. Please review and verify the data before saving.",
