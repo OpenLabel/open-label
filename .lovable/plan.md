@@ -1,68 +1,65 @@
 
 
-# Improve AI Label Scanner: Extract More Data with Multi-Pass
+# Autofill DPP Name and Product Image from AI Scanner
 
-## Problem
+## What Changes
 
-The AI scanner currently extracts only basic fields from the wine label. From your Pompon Rouge Rose image, visible data includes product name, alcohol %, volume, country, producer/bottler, energy values (260 kJ / 63 kcal), sulfites, and recycling symbols -- but the scanner misses most of it.
+Two things currently don't get filled by the AI scanner:
+1. **DPP Name** -- the top-level passport name field in PassportForm (not `category_data.product_name`)
+2. **Product Image** -- when a QR code page contains a product image, it should be downloaded and set as the DPP image
 
-Two root causes:
-1. The extraction schema is missing key fields (recycling/packaging info, product description, lot number)
-2. A single AI call often fails to extract everything, especially small-print details
+The root cause is architectural: `WineAIAutofill` sits inside `WineFields` and its `onAutofill` callback only updates `category_data`. The DPP `name` and `image_url` live one level up in `PassportForm`.
 
-## Solution
+## Technical Changes
 
-### 1. Expand the extraction schema
+### 1. Add `product_image_url` to the extraction schema (Edge Function)
 
-Add new fields to the extraction tool:
-- `packaging_components`: array of objects with `type` (bottle, capsule, cork, etc.), `material` (glass, plastic, etc.), and `material_code` (e.g., "GL 70")
-- `lot_number`: string for lot/batch number
-- `barcode`: string for EAN/UPC barcode
-- `description`: string for any marketing/tasting description text
-- `serving_temperature`: string for serving temperature if visible
+In `supabase/functions/wine-label-ocr/index.ts`:
+- Add a `product_image_url` field to `EXTRACTION_TOOL.function.parameters.properties` (string, URL of a product image found on a scraped web page)
+- Update the system prompt to instruct the AI to extract image URLs from scraped QR code pages (not from label photos themselves -- a label photo IS the product, not a URL)
+- Add it to `ALL_FIELD_KEYS` for second-pass coverage
 
-### 2. Add recycling/packaging symbol recognition to the prompt
+### 2. Lift the autofill callback to PassportForm
 
-Update SYSTEM_PROMPT to explicitly instruct the AI to:
-- Read recycling symbols (Triman, Mobius loop, Tidyman, glass recycling)
-- Identify packaging components and material codes (e.g., "GL 70" for green glass)
-- Read the "FR" sorting instructions text
+In `src/components/wine/WineAIAutofill.tsx`:
+- Add an optional `onAutofillMeta` prop: `(meta: { dppName?: string; imageUrl?: string }) => void`
+- After calling `onAutofill(data.extractedData)`, also call `onAutofillMeta` with `product_name` (as `dppName`) and `product_image_url` (as `imageUrl`) if they exist in the extracted data
 
-### 3. Improve ingredient name matching
+In `src/components/WineFields.tsx`:
+- Add an optional `onAutofillMeta` prop to `WineFieldsProps`
+- Pass it through to `WineAIAutofill`
 
-The current matching is exact. Add fuzzy matching:
-- "Sulphites" should match "Sulfites"
-- Case-insensitive already exists, but add common aliases (SO2, E 220, etc.)
+In `src/pages/PassportForm.tsx`:
+- Pass an `onAutofillMeta` callback to `WineFields` that sets `formData.name` (if currently empty) from `dppName`, and `formData.image_url` from `imageUrl`
+- For the image URL: download it to storage first (re-use the existing upload pattern from `ImageUpload`), then set the stored URL
 
-### 4. Multi-pass extraction for empty fields
+### 3. Download remote product image to storage
 
-After the first extraction, check which form fields are still empty. If many remain, run a second focused AI call with a prompt like "Look specifically for these missing details: [list of empty fields]". This catches small print the AI skimmed over.
+When the AI returns a `product_image_url` (from a QR-scraped page), the frontend needs to:
+- Fetch the image via a simple proxy (to avoid CORS) or directly if same-origin
+- Upload it to the existing storage bucket using the same pattern as `ImageUpload`
+- Set the resulting storage URL as `formData.image_url`
 
-Flow:
-1. First pass: current extraction (broad scan)
-2. Check which fields in the result are null/empty
-3. If more than 3 fields are empty, run a second pass with a focused prompt listing just the missing fields
-4. Merge results (second pass fills gaps, first pass values kept)
+To avoid CORS issues with arbitrary image URLs, add image downloading to the edge function itself:
+- In the edge function, after merging all data, if `product_image_url` exists, fetch it and convert to base64 data URL
+- Return it as `productImageBase64` alongside `extractedData`
+- On the frontend, convert the base64 to a File and upload via existing storage logic
 
-### 5. Map packaging data to recycling form
+### 4. Auto-set DPP Name from product_name
 
-In `handleAIAutofill` in WineFields.tsx, map the new `packaging_components` array to the recycling materials format used by WineRecycling component.
+The DPP `name` field is a convenience label. When it's empty and the AI extracts a `product_name`, auto-fill it. This is straightforward -- just check if `formData.name` is empty and set it.
 
-## Technical Details
+## Summary of File Changes
 
-### Edge function changes (`supabase/functions/wine-label-ocr/index.ts`)
+| File | Change |
+|------|--------|
+| `supabase/functions/wine-label-ocr/index.ts` | Add `product_image_url` to schema, prompt, and ALL_FIELD_KEYS. Add image download logic to return base64. |
+| `src/components/wine/WineAIAutofill.tsx` | Add `onAutofillMeta` prop, call it with `dppName` and image data |
+| `src/components/WineFields.tsx` | Pass through `onAutofillMeta` prop |
+| `src/pages/PassportForm.tsx` | Handle `onAutofillMeta` to set name and upload/set image |
 
-- Expand `EXTRACTION_TOOL.function.parameters.properties` with new fields
-- Update `SYSTEM_PROMPT` with packaging/recycling reading instructions
-- Add a `runSecondPass()` function that takes the image, the first-pass results, and re-prompts for missing fields only
-- Call second pass conditionally (if >3 fields still null)
+## Risk Assessment
 
-### Frontend changes (`src/components/WineFields.tsx`)
-
-- In `handleAIAutofill`, map `packaging_components` to `recycling_materials` format
-- Add alias mapping for ingredient matching (e.g., "Sulphites" to "sulfites" id)
-
-### No new dependencies needed
-
-All changes are within existing files. The multi-pass runs server-side within the same edge function invocation, so no additional API calls from the frontend.
-
+- **Low risk**: DPP name autofill is a simple string copy
+- **Medium risk**: Image download in edge function adds network dependency but is wrapped in try/catch with graceful fallback (no image = status quo)
+- **No regression**: If no product_image_url is found, behavior is unchanged
