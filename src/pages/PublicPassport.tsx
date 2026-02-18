@@ -63,7 +63,7 @@ export default function PublicPassport() {
 
   const getDisplayValue = (value: unknown, questionType: string): string => {
     if (value === null || value === undefined || value === '') return '';
-    if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+    if (typeof value === 'boolean') return value ? t('common.yes') : t('common.no');
     return String(value);
   };
 
@@ -74,7 +74,7 @@ export default function PublicPassport() {
           {/* Header */}
           <div className="text-center">
             <Badge variant="secondary" className="mb-4">
-              {categoryInfo?.icon} {categoryInfo?.label} Product Passport
+              {categoryInfo?.icon} {t(`categories.${passport.category}`)} {t('passport.productPassport')}
             </Badge>
             <h1 className="text-3xl font-bold mb-2">{passport.name}</h1>
             
@@ -84,10 +84,10 @@ export default function PublicPassport() {
                 href="https://app.cypheme.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-colors"
+                className="inline-flex items-center gap-2 mt-4 px-4 py-2 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-medium transition-colors"
               >
                 <ShieldCheck className="h-4 w-4" />
-                Check authenticity
+                {t('passport.checkAuthenticity')}
               </a>
             )}
           </div>
@@ -171,7 +171,7 @@ export default function PublicPassport() {
                               <dt className="text-muted-foreground text-sm">{question.label}</dt>
                               <dd className="text-sm font-medium">
                                 {question.type === 'checkbox' ? (
-                                  <Badge variant="secondary" className="text-xs">✓ Confirmed</Badge>
+                                  <Badge variant="secondary" className="text-xs">✓ {t('common.confirmed')}</Badge>
                                 ) : (
                                   displayLabel
                                 )}
@@ -191,7 +191,7 @@ export default function PublicPassport() {
           {!categoryData?.hide_promo && (
             <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center mt-6">
               <p className="text-sm text-foreground">
-                Powered by{' '}
+                {t('passport.poweredBy')}{' '}
                 <a 
                   href="https://www.digital-product-passports.com"
                   className="text-primary font-medium hover:underline"
@@ -207,7 +207,7 @@ export default function PublicPassport() {
           {/* Footer */}
           <div className="text-center text-xs text-muted-foreground py-8">
             <Link to="/legal" className="underline hover:text-foreground">
-              Legal Mentions
+              {t('legal.legalMentions')}
             </Link>
           </div>
         </div>

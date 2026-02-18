@@ -1,3 +1,4 @@
+import { useTranslation } from 'react-i18next';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
@@ -27,6 +28,7 @@ interface RichTextEditorProps {
 }
 
 export function RichTextEditor({ content, onChange, placeholder }: RichTextEditorProps) {
+  const { t } = useTranslation();
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -54,7 +56,7 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
   }
 
   const addLink = () => {
-    const url = window.prompt('Enter URL:');
+    const url = window.prompt(t('richText.enterUrl'));
     if (url) {
       editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
     }

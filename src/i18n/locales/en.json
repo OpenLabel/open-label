@@ -23,7 +23,8 @@
     "openSource": "Open Source",
     "language": "Language",
     "custom": "Custom",
-    "selectOption": "Select an option"
+    "selectOption": "Select an option",
+    "confirmed": "Confirmed"
   },
   "nav": {
     "signIn": "Sign In",
@@ -230,7 +231,8 @@
     "invalidType": "Please upload an image file",
     "tooLarge": "Image must be less than 5MB",
     "uploading": "Uploading...",
-    "uploadButton": "Upload Product Image"
+    "uploadButton": "Upload Product Image",
+    "uploadFailed": "Failed to upload image"
   },
   "categories": {
     "battery": "Batteries",
@@ -568,5 +570,8 @@
     "quotaExceededBody": "To ensure fair access for all users, we limit AI-powered label scanning to 100 scans per month. Your quota will reset at the beginning of next month.",
     "quotaContactBody": "If you need a higher limit for your business, please contact us and we'll be happy to discuss options.",
     "contactUs": "Contact Us"
+  },
+  "richText": {
+    "enterUrl": "Enter URL:"
   }
 }
