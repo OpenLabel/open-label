@@ -152,8 +152,23 @@ const ALL_FIELD_KEYS = [
   "product_image_url",
 ];
 
+// Field-specific hints for the second pass
+const FIELD_HINTS: Record<string, string> = {
+  product_name: "Look for the LARGEST or most prominent text on the front label. This is the marketing name of the wine, NOT the producer/winery name. Include the color/type (Rouge, Rosé, Blanc) if visible.",
+  alcohol_percent: "Look for '% vol', '% alc', or '% alc/vol' text, usually in small print on the back or bottom of the label. It's a legal requirement so it MUST be there.",
+  volume: "Look for 'ml', 'cl', or 'L' usually near the bottom of the label or near the barcode. Common values: 750ml, 75cl, 0.75L.",
+  volume_unit: "Same location as volume — determine the unit (ml, cl, or L).",
+  grape_variety: "Look for grape names like Merlot, Cabernet Sauvignon, Chardonnay, Syrah, etc. Often on the front label or back label.",
+  vintage: "Look for a 4-digit year (e.g., 2020, 2021, 2022). Usually prominently displayed on the front label.",
+  region: "Look for wine region names (e.g., Bordeaux, Loire, Languedoc, Côtes du Rhône). NOT the city from the bottler address.",
+  producer_name: "Look for 'Mis en bouteille par', 'Produit par', 'Élaboré par', or 'Produced by' followed by a company name.",
+  denomination: "Look for AOC, AOP, IGP, DOC, DOCG, VdF, Vin de France, or similar designations.",
+  description: "Look for any tasting notes, marketing description, or food pairing suggestions on the back label.",
+};
+
 /**
  * Run a second focused extraction pass for missing fields.
+ * Uses gemini-2.5-pro and includes first-pass context.
  */
 async function runSecondPass(
   imageBase64: string,
@@ -174,18 +189,38 @@ async function runSecondPass(
 
   console.log("Running second pass for", missingFields.length, "missing fields:", missingFields);
 
-  const focusedPrompt = `You already extracted some data from this wine label but MISSED several fields. Look VERY CAREFULLY at the image again, especially:
-- Small print and fine text
-- Back label information
-- Recycling symbols and material codes near the bottom
-- Ingredient lists and allergen warnings
-- Lot numbers (usually small text starting with "L")
-- Barcode numbers
+  // Build context of what was already found
+  const alreadyFoundSummary = ALL_FIELD_KEYS
+    .map((key) => {
+      const val = firstPassData[key];
+      if (val === null || val === undefined || val === "") return `- ${key}: (not found)`;
+      if (Array.isArray(val) && val.length === 0) return `- ${key}: (not found)`;
+      if (Array.isArray(val)) return `- ${key}: [${val.length} items]`;
+      return `- ${key}: ${JSON.stringify(val)}`;
+    })
+    .join("\n");
 
-The following fields are STILL MISSING and need your attention:
-${missingFields.map(f => `- ${f}`).join("\n")}
+  // Build field-specific instructions for missing fields
+  const fieldInstructions = missingFields
+    .map((f) => {
+      const hint = FIELD_HINTS[f];
+      return hint ? `- ${f}: ${hint}` : `- ${f}`;
+    })
+    .join("\n");
 
-Look harder at the image and extract these specific details. Check every corner, every small symbol, every line of text.`;
+  const focusedPrompt = `You are doing a SECOND PASS on this wine label. The first pass already extracted some data but MISSED several important fields.
+
+HERE IS WHAT WAS ALREADY EXTRACTED (do NOT re-extract these, focus only on what's missing):
+${alreadyFoundSummary}
+
+THE FOLLOWING FIELDS ARE STILL MISSING. Look VERY CAREFULLY at the image for each one:
+${fieldInstructions}
+
+INSTRUCTIONS:
+- Focus ONLY on the missing fields listed above.
+- Look at EVERY part of the image: front label, back label, small print, legal text, recycling symbols, bottom of the bottle.
+- Pay special attention to small text, fine print, and partially obscured text.
+- If you find a value, return it. If you truly cannot find it, do not guess.`;
 
   try {
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -195,7 +230,7 @@ Look harder at the image and extract these specific details. Check every corner,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
+        model: "google/gemini-2.5-pro",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           {
@@ -236,6 +271,84 @@ Look harder at the image and extract these specific details. Check every corner,
     return result;
   } catch (error) {
     console.error("Second pass error:", error);
+    return {};
+  }
+}
+
+/**
+ * Third pass: targeted extraction for critical fields still missing after two passes.
+ */
+async function runCriticalFieldsPass(
+  imageBase64: string,
+  mergedData: Record<string, unknown>,
+  apiKey: string,
+): Promise<Record<string, unknown>> {
+  const criticalFields = ["product_name", "alcohol_percent", "volume"];
+  const stillMissing = criticalFields.filter((key) => {
+    const val = mergedData[key];
+    return val === null || val === undefined || val === "";
+  });
+
+  if (stillMissing.length === 0) return {};
+
+  console.log("Running critical fields pass for:", stillMissing);
+
+  const instructions = stillMissing.map((f) => {
+    if (f === "product_name") return "- product_name: Find the LARGEST, most prominent text on the front of the label. This is the wine's marketing name. Include color (Rouge/Rosé/Blanc) if shown.";
+    if (f === "alcohol_percent") return "- alcohol_percent: Find the '% vol' or '% alc' number. This is legally required on every wine label. Check small print at the bottom, back label, or near the barcode.";
+    if (f === "volume") return "- volume: Find the bottle size (e.g., 750, 75, 0.75). Look near the bottom of the label, near the barcode, or in small print. Also return volume_unit (ml, cl, or L).";
+    return `- ${f}`;
+  }).join("\n");
+
+  try {
+    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-pro",
+        messages: [
+          {
+            role: "user",
+            content: [
+              {
+                type: "text",
+                text: `Look at this wine label image. I ONLY need you to find these specific fields:\n${instructions}\n\nThese are legally required on wine labels, so they MUST be visible somewhere. Look at every part of the image very carefully.`,
+              },
+              { type: "image_url", image_url: { url: imageBase64 } },
+            ],
+          },
+        ],
+        tools: [EXTRACTION_TOOL],
+        tool_choice: { type: "function", function: { name: "extract_wine_label_data" } },
+        temperature: 0.1,
+      }),
+    });
+
+    if (!response.ok) {
+      console.log("Critical fields pass failed:", response.status);
+      await response.text();
+      return {};
+    }
+
+    const data = await response.json();
+    const toolCall = data.choices?.[0]?.message?.tool_calls?.[0];
+    if (!toolCall || toolCall.function.name !== "extract_wine_label_data") return {};
+
+    const extracted = JSON.parse(toolCall.function.arguments);
+    const result: Record<string, unknown> = {};
+    for (const key of [...stillMissing, "volume_unit"]) {
+      const val = extracted[key];
+      if (val !== null && val !== undefined && val !== "") {
+        result[key] = val;
+      }
+    }
+    console.log("Critical fields pass found:", Object.keys(result));
+    return result;
+  } catch (error) {
+    console.error("Critical fields pass error:", error);
     return {};
   }
 }
@@ -553,7 +666,7 @@ serve(async (req) => {
     // ===== SECOND PASS: Fill in missing fields =====
     const secondPassData = await runSecondPass(image, imageExtracted, LOVABLE_API_KEY);
 
-    // ===== MERGE: Image first pass + second pass + QR data =====
+    // ===== MERGE: Image first pass + second pass =====
     const mergedData: Record<string, unknown> = {};
 
     // First pass as base
@@ -566,6 +679,14 @@ serve(async (req) => {
 
     // Second pass fills gaps only
     for (const [key, value] of Object.entries(secondPassData)) {
+      if (!(key in mergedData)) {
+        mergedData[key] = value;
+      }
+    }
+
+    // ===== THIRD PASS: Critical fields still missing =====
+    const criticalPassData = await runCriticalFieldsPass(image, mergedData, LOVABLE_API_KEY);
+    for (const [key, value] of Object.entries(criticalPassData)) {
       if (!(key in mergedData)) {
         mergedData[key] = value;
       }
