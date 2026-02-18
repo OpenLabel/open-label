@@ -200,6 +200,7 @@
     "dppNameHelp": "Ce nom est visible uniquement sur votre tableau de bord",
     "productName": "Nom du produit",
     "productNamePlaceholder": "Entrez un nom pour ce produit",
+    "productNameHelp": "C'est le nom que les consommateurs verront sur le passeport numérique public du produit",
     "category": "Catégorie de produit",
     "productImage": "Image du produit",
     "productDescription": "Description du produit",

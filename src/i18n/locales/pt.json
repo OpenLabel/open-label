@@ -197,6 +197,7 @@
     "dppNameHelp": "Este nome só é visível no seu painel de controlo",
     "productName": "Nome do Produto",
     "productNamePlaceholder": "Introduza um nome para este produto",
+    "productNameHelp": "Este é o nome que os consumidores verão no passaporte digital público do produto",
     "category": "Categoria do Produto",
     "productImage": "Imagem do Produto",
     "productDescription": "Descrição do Produto",
@@ -564,11 +565,37 @@
     "certificationsLabels": "Certificações e Rótulos",
     "poweredBy": "Alimentado por"
   },
+  "imageUpload": {
+    "loginRequired": "Deve iniciar sessão para carregar imagens",
+    "invalidType": "Carregue um ficheiro de imagem",
+    "tooLarge": "A imagem deve ter menos de 5MB",
+    "uploading": "A carregar...",
+    "uploadButton": "Carregar imagem do produto",
+    "uploadFailed": "Falha ao carregar imagem"
+  },
   "ai": {
     "analyzing": "A analisar documento...",
     "takePhoto": "Tirar foto",
     "uploadFile": "Carregar ficheiro",
     "supportedFormats": "Suporta fotos, PDFs e documentos Word",
-    "multiUploadTip": "Vários ficheiros? Execute novamente após cada carregamento para combinar dados."
+    "multiUploadTip": "Vários ficheiros? Execute novamente após cada carregamento para combinar dados.",
+    "autofillButton": "Preencher com IA",
+    "experimental": "Experimental",
+    "scannerTitle": "Scanner de rótulos IA",
+    "scannerDescription": "Carregue uma foto do rótulo, PDF ou documento e a IA extrairá as informações automaticamente.",
+    "experimentalWarning": "Funcionalidade experimental: verifique todos os dados extraídos antes de guardar.",
+    "autofillComplete": "✨ Preenchimento IA concluído",
+    "autofillCompleteDesc": "Os campos foram preenchidos. Reveja e verifique os dados antes de guardar.",
+    "noDataExtracted": "Nenhum dado extraído do rótulo",
+    "processingFailed": "Processamento falhou",
+    "processingFailedDesc": "Não foi possível extrair dados do rótulo",
+    "quotaExceeded": "Quota de utilização justa excedida",
+    "quotaExceededDesc": "Atingiu o limite mensal de 100 digitalizações de rótulos com IA.",
+    "quotaExceededBody": "Para garantir acesso justo, limitamos as digitalizações a 100 por mês. A quota será reposta no início do próximo mês.",
+    "quotaContactBody": "Se precisa de um limite mais elevado para a sua empresa, contacte-nos.",
+    "contactUs": "Contacte-nos"
+  },
+  "richText": {
+    "enterUrl": "Introduza URL:"
   }
 }

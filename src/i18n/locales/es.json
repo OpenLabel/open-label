@@ -197,6 +197,7 @@
     "dppNameHelp": "Este nombre solo es visible en tu panel de control",
     "productName": "Nombre del producto",
     "productNamePlaceholder": "Introduce un nombre para este producto",
+    "productNameHelp": "Este es el nombre que los consumidores verán en el pasaporte digital público del producto",
     "category": "Categoría de producto",
     "productImage": "Imagen del producto",
     "productDescription": "Descripción del producto",
@@ -535,11 +536,37 @@
     "certificationsLabels": "Certificaciones y Etiquetas",
     "poweredBy": "Impulsado por"
   },
+  "imageUpload": {
+    "loginRequired": "Debe iniciar sesión para subir imágenes",
+    "invalidType": "Por favor suba un archivo de imagen",
+    "tooLarge": "La imagen debe ser menor de 5MB",
+    "uploading": "Subiendo...",
+    "uploadButton": "Subir imagen del producto",
+    "uploadFailed": "Error al subir la imagen"
+  },
   "ai": {
     "analyzing": "Analizando documento...",
     "takePhoto": "Tomar foto",
     "uploadFile": "Subir archivo",
     "supportedFormats": "Compatible con fotos, PDFs y documentos Word",
-    "multiUploadTip": "¿Varios archivos? Ejecute de nuevo después de cada carga para combinar datos."
+    "multiUploadTip": "¿Varios archivos? Ejecute de nuevo después de cada carga para combinar datos.",
+    "autofillButton": "Autocompletar con IA",
+    "experimental": "Experimental",
+    "scannerTitle": "Escáner de etiquetas IA",
+    "scannerDescription": "Suba una foto de la etiqueta, PDF o documento y la IA extraerá la información automáticamente.",
+    "experimentalWarning": "Función experimental: revise todos los datos extraídos antes de guardar.",
+    "autofillComplete": "✨ Autocompletado IA completado",
+    "autofillCompleteDesc": "Los campos se han rellenado. Revise y verifique los datos antes de guardar.",
+    "noDataExtracted": "No se extrajeron datos de la etiqueta",
+    "processingFailed": "Procesamiento fallido",
+    "processingFailedDesc": "No se pudieron extraer datos de la etiqueta",
+    "quotaExceeded": "Cuota de uso justo excedida",
+    "quotaExceededDesc": "Ha alcanzado el límite mensual de 100 escaneos de etiquetas con IA.",
+    "quotaExceededBody": "Para garantizar un acceso justo, limitamos los escaneos a 100 por mes. Su cuota se restablecerá al inicio del próximo mes.",
+    "quotaContactBody": "Si necesita un límite más alto para su empresa, contáctenos.",
+    "contactUs": "Contáctenos"
+  },
+  "richText": {
+    "enterUrl": "Introduzca URL:"
   }
 }
