@@ -1,65 +1,57 @@
 
 
-# Autofill DPP Name and Product Image from AI Scanner
+# Fix Multi-Pass AI Extraction: Make Second Pass Actually Work
 
-## What Changes
+## Problem
 
-Two things currently don't get filled by the AI scanner:
-1. **DPP Name** -- the top-level passport name field in PassportForm (not `category_data.product_name`)
-2. **Product Image** -- when a QR code page contains a product image, it should be downloaded and set as the DPP image
+The second pass is ineffective (found 0-1 additional fields out of 12-17 missing). Root causes:
+- The second pass doesn't tell the AI what was already extracted, so it repeats the same blind spots
+- Both passes use the same model (gemini-2.5-flash), producing identical failures
+- The prompt is too generic ("look harder") instead of giving concrete guidance
 
-The root cause is architectural: `WineAIAutofill` sits inside `WineFields` and its `onAutofill` callback only updates `category_data`. The DPP `name` and `image_url` live one level up in `PassportForm`.
+## Changes
 
-## Technical Changes
+### Edge Function (`supabase/functions/wine-label-ocr/index.ts`)
 
-### 1. Add `product_image_url` to the extraction schema (Edge Function)
+**1. Include first-pass results in the second-pass prompt**
 
-In `supabase/functions/wine-label-ocr/index.ts`:
-- Add a `product_image_url` field to `EXTRACTION_TOOL.function.parameters.properties` (string, URL of a product image found on a scraped web page)
-- Update the system prompt to instruct the AI to extract image URLs from scraped QR code pages (not from label photos themselves -- a label photo IS the product, not a URL)
-- Add it to `ALL_FIELD_KEYS` for second-pass coverage
+Update `runSecondPass()` to pass the already-extracted data as context:
 
-### 2. Lift the autofill callback to PassportForm
+```
+You already extracted this data:
+- product_name: (not found)
+- country: "France"
+- energy_kcal: 63
+...
 
-In `src/components/wine/WineAIAutofill.tsx`:
-- Add an optional `onAutofillMeta` prop: `(meta: { dppName?: string; imageUrl?: string }) => void`
-- After calling `onAutofill(data.extractedData)`, also call `onAutofillMeta` with `product_name` (as `dppName`) and `product_image_url` (as `imageUrl`) if they exist in the extracted data
+Now focus ONLY on the missing fields listed below.
+```
 
-In `src/components/WineFields.tsx`:
-- Add an optional `onAutofillMeta` prop to `WineFieldsProps`
-- Pass it through to `WineAIAutofill`
+This gives the AI anchoring context so it knows what it already found and can look for what it missed.
 
-In `src/pages/PassportForm.tsx`:
-- Pass an `onAutofillMeta` callback to `WineFields` that sets `formData.name` (if currently empty) from `dppName`, and `formData.image_url` from `imageUrl`
-- For the image URL: download it to storage first (re-use the existing upload pattern from `ImageUpload`), then set the stored URL
+**2. Use a stronger model for the second pass**
 
-### 3. Download remote product image to storage
+Switch from `google/gemini-2.5-flash` to `google/gemini-2.5-pro` for the second pass only. The Pro model has stronger vision capabilities and is better at reading small print, which is exactly where the first pass fails.
 
-When the AI returns a `product_image_url` (from a QR-scraped page), the frontend needs to:
-- Fetch the image via a simple proxy (to avoid CORS) or directly if same-origin
-- Upload it to the existing storage bucket using the same pattern as `ImageUpload`
-- Set the resulting storage URL as `formData.image_url`
+**3. Improve the second-pass prompt to be more directive**
 
-To avoid CORS issues with arbitrary image URLs, add image downloading to the edge function itself:
-- In the edge function, after merging all data, if `product_image_url` exists, fetch it and convert to base64 data URL
-- Return it as `productImageBase64` alongside `extractedData`
-- On the frontend, convert the base64 to a File and upload via existing storage logic
+Replace the vague "look harder" prompt with specific, field-by-field instructions:
+- For `product_name`: "Look for the largest/most prominent text on the front label"
+- For `alcohol_percent`: "Look for '% vol' or '% alc' text, usually in small print"
+- For `volume`: "Look for 'ml', 'cl', or 'L' usually near the bottom of the label"
+- Generic fallback for other fields
 
-### 4. Auto-set DPP Name from product_name
+**4. Add a third pass for critical fields still missing**
 
-The DPP `name` field is a convenience label. When it's empty and the AI extracts a `product_name`, auto-fill it. This is straightforward -- just check if `formData.name` is empty and set it.
+If `product_name` or `alcohol_percent` are still empty after two passes, run a tiny targeted extraction for just those 1-2 critical fields using the Pro model.
 
-## Summary of File Changes
+## Summary of Changes
 
 | File | Change |
 |------|--------|
-| `supabase/functions/wine-label-ocr/index.ts` | Add `product_image_url` to schema, prompt, and ALL_FIELD_KEYS. Add image download logic to return base64. |
-| `src/components/wine/WineAIAutofill.tsx` | Add `onAutofillMeta` prop, call it with `dppName` and image data |
-| `src/components/WineFields.tsx` | Pass through `onAutofillMeta` prop |
-| `src/pages/PassportForm.tsx` | Handle `onAutofillMeta` to set name and upload/set image |
+| `supabase/functions/wine-label-ocr/index.ts` | Rewrite `runSecondPass()` with context-aware prompt, use Pro model, add optional third pass for critical fields |
 
-## Risk Assessment
+## No frontend changes needed
 
-- **Low risk**: DPP name autofill is a simple string copy
-- **Medium risk**: Image download in edge function adds network dependency but is wrapped in try/catch with graceful fallback (no image = status quo)
-- **No regression**: If no product_image_url is found, behavior is unchanged
+The response format stays the same. Only the server-side extraction quality improves.
+
