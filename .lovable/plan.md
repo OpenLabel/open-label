@@ -1,100 +1,62 @@
 
 
-# Cleanup: Per-Language Translation Exception Allowlist
+# Fix Build: Add Missing Locale Keys + Fix Hardcoded Strings
 
-## Problem
+## Current Status: Build FAILING
 
-The current `isLegitimateMatch` function in `audit.test.ts` uses a global `internationalTerms` list that blanket-allows 20 English words (like "Password", "Salt", "Vintage", "Error") to be identical across ALL 23 non-English locales. This is wrong -- "Password" is only legitimately "Password" in Italian and Maltese, not in German ("Passwort") or French ("Mot de passe").
+The audit tests fail because 15 locales are missing ~27 keys, and several components still contain hardcoded English text.
 
-## Solution
+## Part 1: Fix Hardcoded Strings in PublicPassport.tsx (Critical - Public-Facing)
 
-Replace the global `internationalTerms` array with a per-language map: `Record<string, string[]>` where each language code lists only the English values that are genuinely identical in that language.
+This is the page anyone sees when scanning a QR code. It has 7 hardcoded English strings:
 
-The `isLegitimateMatch` function signature changes to accept a `langCode` parameter so it can check language-specific exceptions.
+| Line | Hardcoded | Fix |
+|------|-----------|-----|
+| 66 | `'Yes' : 'No'` | `t('common.yes') : t('common.no')` |
+| 77 | `categoryInfo?.label` + `Product Passport` | `t('categories.${passport.category}')` + `t('preview.productPassport')` |
+| 90 | `Check authenticity` | `t('passport.checkAuthenticity')` |
+| 174 | `Confirmed` | New key `common.confirmed` |
+| 194 | `Powered by` | `t('passport.poweredBy')` |
+| 210 | `Legal Mentions` | `t('legal.legalMentions')` |
 
-## Data: Per-Language Allowlist
+## Part 2: Fix Minor Hardcoded Strings
 
-Based on a full audit of the actual locale files, here are the legitimate English-identical values per language:
+**ImageUpload.tsx line 63**: `'Failed to upload image'` fallback -- replace with new key `imageUpload.uploadFailed`
 
-| Language | Legitimately identical values |
-|----------|-------------------------------|
-| bg | "Open Source" |
-| cs | "Open Source" |
-| da | "Open Source" |
-| de | "Open Source" |
-| el | "Open Source", "Email" |
-| es | "Open Source", "Manual" |
-| et | "Open Source" |
-| fi | "Open Source" |
-| fr | "Open Source", "Volume" |
-| ga | "Open Source" |
-| hr | "Open Source" |
-| hu | "Open Source" |
-| it | "Open Source", "Email", "Password", "Volume" |
-| lt | "Open Source" |
-| lv | "Open Source" |
-| mt | "Open Source", "Email", "Password", "Powered by" |
-| nl | "Open Source", "Volume" |
-| pl | "Open Source" |
-| pt | "Open Source", "Volume", "Manual" |
-| ro | "Open Source", "Manual" |
-| sk | "Open Source" |
-| sl | "Open Source" |
-| sv | "Open Source" |
+**RichTextEditor.tsx line 57**: `window.prompt('Enter URL:')` -- replace with new key `richText.enterUrl`
 
-"Open Source" is universal (truly the same term in all EU languages). Everything else is per-language only.
+## Part 3: New i18n Keys to Add
 
-## Technical Changes
+Add to `en.json`:
+- `common.confirmed`: "Confirmed"
+- `imageUpload.uploadFailed`: "Failed to upload image"
+- `richText.enterUrl`: "Enter URL:"
 
-### File: `src/i18n/locales/audit.test.ts`
+## Part 4: Add All Missing Keys to 15 Locales
 
-1. **Add per-language exception map** (replaces `internationalTerms`):
+Add the ~27 keys from the previous task PLUS the 3 new keys above to these 15 locales:
+es, et, fi, ga, hr, hu, it, lt, lv, mt, pl, pt, ro, sk, sl
 
-```typescript
-const perLanguageAllowedValues: Record<string, string[]> = {
-  bg: ["Open Source"],
-  cs: ["Open Source"],
-  da: ["Open Source"],
-  de: ["Open Source"],
-  el: ["Open Source", "Email"],
-  es: ["Open Source", "Manual"],
-  et: ["Open Source"],
-  fi: ["Open Source"],
-  fr: ["Open Source", "Volume"],
-  ga: ["Open Source"],
-  hr: ["Open Source"],
-  hu: ["Open Source"],
-  it: ["Open Source", "Email", "Password", "Volume"],
-  lt: ["Open Source"],
-  lv: ["Open Source"],
-  mt: ["Open Source", "Email", "Password", "Powered by"],
-  nl: ["Open Source", "Volume"],
-  pl: ["Open Source"],
-  pt: ["Open Source", "Volume", "Manual"],
-  ro: ["Open Source", "Manual"],
-  sk: ["Open Source"],
-  sl: ["Open Source"],
-  sv: ["Open Source"],
-};
-```
+Total new keys per locale: ~30
 
-2. **Update `isLegitimateMatch` signature** to accept `langCode`:
-   - Change from `isLegitimateMatch(key, value)` to `isLegitimateMatch(key, value, langCode)`
-   - Replace `internationalTerms.includes(value.trim())` with `(perLanguageAllowedValues[langCode] || []).includes(value.trim())`
-   - Remove the global `internationalTerms` array entirely
-   - Remove the global `brandNames` array (move "Powered by" into mt's per-language list, "GitHub" and "Digital Product Passport" into `technicalTerms`)
+## Part 5: Intentionally Excluded (Not Bugs)
 
-3. **Update all call sites** of `isLegitimateMatch` to pass the language code:
-   - In the audit report loop (line 158): `isLegitimateMatch(key, enFlat[key], code)`
-   - In the strict test (line 269): `isLegitimateMatch(key, enFlat[key], code)`
+These are acceptable:
+- **QRCodeDialog.tsx**: "Place security seals here" + "cypheme.com" -- partner branding in SVG overlay, not translatable
+- **TranslationButton.tsx**: `EU_LANGUAGES[].name` -- English names used as metadata, only `nativeName` is displayed
+- **Legal pages** (Setup, Terms, Privacy, LegalMentions) -- intentionally excluded per prior decision
+- **Template files** (battery.ts, textiles.ts, etc.) -- deferred, Early Alpha, and now hidden from UI
 
-### No other files change
-This is purely a test-level refinement. No locale JSON files or components are modified.
+## Technical Details
 
-## Outcome
+### Files to modify: 18 total
+- 3 component files (PublicPassport.tsx, ImageUpload.tsx, RichTextEditor.tsx) -- fix hardcoded strings
+- `en.json` -- add 3 new keys
+- 15 locale JSON files -- add ~30 keys each (27 from previous task + 3 new)
+- Optionally: `RichTextEditor.tsx` needs `useTranslation` import added
 
-- Any locale that currently has "Password" as "Password" (and shouldn't) will be flagged as untranslated
-- If a locale legitimately uses the English word (e.g., Italian uses "Password"), it passes
-- Adding a new exception requires explicitly listing it for the specific language, not a blanket global pass
-- The allowlist is easy to audit: you can see at a glance exactly which English words each language accepts
+### After this change
+- All 72 audit tests should pass (24 locales x 3 tests each)
+- Zero hardcoded English in any non-legal component
+- PublicPassport.tsx fully internationalized for QR-code scanning users
 
