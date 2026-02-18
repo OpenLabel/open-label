@@ -1,77 +1,59 @@
 
 
-# Improve AI Autoscan: Fix Broken Inputs, Add Multilingual Support, Boost Quality
+# Final Polish: Fix Remaining Edge Cases in AI Autoscan
 
-## Issues Found
+## Issues
 
-### 1. PDF/Document uploads are silently rejected (Bug)
-The Zod validation schema only accepts `data:image/(png|jpeg|jpg|webp|gif)` but the upload dialog accepts `.pdf,.doc,.docx` files. Any non-image file will fail with a 400 error. This means the "Supported formats" hint in the UI is misleading.
+### 1. No timeouts on QR/Firecrawl fetch calls (Reliability)
+The `tryQrCodeScrape()` function has 3 fetch calls with no `AbortSignal.timeout()`. If Firecrawl or the AI gateway stalls, the entire request hangs until the Deno runtime kills it.
 
-**Fix**: Extend the Zod regex to also accept `data:application/pdf` and generic data URLs, or handle PDF conversion.
+**Fix**: Add `signal: AbortSignal.timeout(15000)` to the Firecrawl call, `signal: AbortSignal.timeout(30000)` to the two AI calls inside `tryQrCodeScrape`.
 
-### 2. French/multilingual ingredient names don't match (Major gap)
-Most wine labels are in French, Italian, German, etc. The AI often returns ingredient names in the label's language (e.g., "acide tartrique", "sulfites", "gomme arabique"). The `INGREDIENT_ALIASES` map only has English aliases, so these won't match and end up as unrecognized custom ingredients.
+### 2. QR data blindly overrides label data (Correctness)
+Lines 702-710: QR-scraped data overrides ALL first/second/third pass results. If the QR page has stale or wrong data (different vintage, wrong volume), it silently replaces correct label readings.
 
-**Fix**: Add ~40 French, Italian, German, and Spanish aliases to the `INGREDIENT_ALIASES` map (e.g., `"acide tartrique"` -> `tartaric_acid`, `"gomme arabique"` -> `gum_arabic`).
+**Fix**: Change QR merge to only fill gaps (same logic as second pass), not override. The label image is the ground truth; the QR page is supplementary.
 
-### 3. AI prompt doesn't instruct English-normalized ingredient output
-The system prompt should explicitly tell the AI to return ingredient names in English to maximize matching against the internal database.
+### 3. Missing nutritional fields in `ALL_FIELD_KEYS` (Completeness)
+`fat`, `saturated_fat`, `proteins`, `salt` exist in the extraction tool schema but are missing from `ALL_FIELD_KEYS`. The second pass never tries to recover them.
 
-**Fix**: Add instruction to SYSTEM_PROMPT: "Always return detected_ingredients names in English, even if the label is in another language."
+**Fix**: Add these 4 fields to `ALL_FIELD_KEYS`.
 
-### 4. First pass uses the weaker model
-The first pass (which does the most work) uses `gemini-2.5-flash` while only the second/third passes use `gemini-2.5-pro`. Since the first pass extracts the bulk of the data, upgrading it would have the biggest impact on quality.
+### 4. No size guard on product image download (Safety)
+If the scraped URL points to a very large image, it downloads entirely into edge function memory with no limit.
 
-**Fix**: Upgrade the first pass from `gemini-2.5-flash` to `gemini-2.5-pro`.
-
-### 5. No timeouts on AI calls
-The first pass `fetch()` has no `AbortSignal.timeout()`, so it could hang indefinitely if the AI gateway is slow.
-
-**Fix**: Add `signal: AbortSignal.timeout(60000)` to all AI fetch calls.
-
-### 6. E-number aliases are incomplete
-Common E-numbers like E 466 (carboxymethylcellulose), E 456 (potassium polyaspartate), E 938 (argon), E 941 (nitrogen), E 290 (carbon dioxide), E 516 (calcium sulfate), E 297 (fumaric acid) are missing from the alias map.
-
-**Fix**: Add all E-numbers from the `wineIngredients.ts` database to the alias map.
+**Fix**: Check `Content-Length` header before downloading; skip if larger than 5MB.
 
 ## Technical Changes
 
 ### File: `supabase/functions/wine-label-ocr/index.ts`
 
-1. Extend `WineOCRSchema` to accept PDF data URLs:
+1. Add timeouts to all 3 fetch calls inside `tryQrCodeScrape()`:
+   - AI QR detection: `AbortSignal.timeout(30000)`
+   - Firecrawl scrape: `AbortSignal.timeout(15000)`
+   - AI extraction from scraped content: `AbortSignal.timeout(30000)`
+
+2. Change QR merge logic (lines 702-710) from override to gap-fill:
    ```
-   .refine(val => /^data:(image\/(png|jpeg|jpg|webp|gif)|application\/pdf);base64,/.test(val), ...)
+   // Before: mergedData[key] = value (always overrides)
+   // After:  if (!(key in mergedData)) mergedData[key] = value (fill gaps only)
    ```
 
-2. Add to `SYSTEM_PROMPT`:
+3. Add missing fields to `ALL_FIELD_KEYS`:
    ```
-   - ALWAYS return detected_ingredients names in ENGLISH, even if the label is in French, Italian, German, or another language. For example: "acide tartrique" should be returned as "Tartaric acid", "gomme arabique" as "Gum arabic".
+   "fat", "saturated_fat", "proteins", "salt"
    ```
 
-3. Upgrade first pass model from `google/gemini-2.5-flash` to `google/gemini-2.5-pro`
-
-4. Add `signal: AbortSignal.timeout(60000)` to all three AI fetch calls (first pass, second pass, critical pass)
-
-### File: `src/components/WineFields.tsx`
-
-1. Expand `INGREDIENT_ALIASES` with:
-   - All E-numbers from `wineIngredients.ts` that aren't already covered
-   - French aliases (~15): `"acide tartrique"`, `"gomme arabique"`, `"acide citrique"`, `"acide malique"`, `"acide lactique"`, `"acide ascorbique"`, `"dioxyde de soufre"`, `"sorbate de potassium"`, `"metabisulfite de potassium"`, `"bisulfite de potassium"`, `"gelatine"`, `"bentonite"`, `"caséine"`, `"albumine"`, `"colle de poisson"`
-   - Italian aliases (~10): `"acido tartarico"`, `"gomma arabica"`, `"acido citrico"`, `"anidride solforosa"`, `"solfiti"`, `"acido ascorbico"`, `"acido malico"`, `"gelatina"`, `"caseina"`, `"albumina"`
-   - German aliases (~10): `"schwefeldioxid"`, `"weinsäure"`, `"zitronensäure"`, `"milchsäure"`, `"ascorbinsäure"`, `"gummi arabicum"`, `"kaliumsorbat"`, `"gelatine"`, `"kasein"`, `"hausenblase"`
-   - Spanish aliases (~8): `"sulfitos"`, `"ácido tartárico"`, `"goma arábiga"`, `"ácido cítrico"`, `"dióxido de azufre"`, `"ácido ascórbico"`, `"gelatina"`, `"caseína"`
-
-## Summary
-
-| File | Change |
-|------|--------|
-| `supabase/functions/wine-label-ocr/index.ts` | Accept PDF input, add English-output instruction, upgrade to Pro model, add timeouts |
-| `src/components/WineFields.tsx` | Add ~50 multilingual ingredient aliases and missing E-numbers |
+4. Add size guard before product image download:
+   ```
+   // HEAD or check Content-Length, skip if > 5MB
+   ```
 
 ## Impact
 
-- PDFs will no longer silently fail
-- French/Italian/German/Spanish labels will have much better ingredient matching
-- First pass extraction quality improves significantly with the Pro model
-- No regressions: all changes are additive or fallback-safe
+- Prevents hanging requests when Firecrawl is slow or down
+- Prevents QR page data from silently corrupting correct label readings
+- Allows the second pass to recover 4 additional nutritional fields
+- Prevents memory issues from oversized image downloads
+- All changes are defensive/additive -- no regressions possible
 
