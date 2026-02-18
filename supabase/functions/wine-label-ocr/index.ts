@@ -150,6 +150,7 @@ const ALL_FIELD_KEYS = [
   "country", "region", "denomination", "sugar_classification", "producer_name", "bottler_info",
   "alcohol_percent", "residual_sugar", "total_acidity", "glycerine",
   "energy_kcal", "energy_kj", "carbohydrates", "sugar",
+  "fat", "saturated_fat", "proteins", "salt",
   "detected_ingredients", "packaging_components",
   "lot_number", "barcode", "description", "serving_temperature",
   "product_image_url",
@@ -373,6 +374,7 @@ async function tryQrCodeScrape(
     if (!qrUrl) {
       console.log("No client-side QR URL, trying AI fallback...");
       const qrResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+        signal: AbortSignal.timeout(30000),
         method: "POST",
         headers: {
           Authorization: `Bearer ${lovableApiKey}`,
@@ -424,6 +426,7 @@ async function tryQrCodeScrape(
     console.log("Scraping QR code URL:", qrUrl);
 
     const scrapeResponse = await fetch("https://api.firecrawl.dev/v1/scrape", {
+      signal: AbortSignal.timeout(15000),
       method: "POST",
       headers: {
         "Authorization": `Bearer ${firecrawlApiKey}`,
@@ -463,6 +466,7 @@ async function tryQrCodeScrape(
       : "";
 
     const extractResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      signal: AbortSignal.timeout(30000),
       method: "POST",
       headers: {
         Authorization: `Bearer ${lovableApiKey}`,
@@ -698,15 +702,19 @@ serve(async (req) => {
       }
     }
 
-    // QR data overrides (most authoritative source)
+    // QR data fills gaps only (label image is ground truth; QR page is supplementary)
     if (qrData) {
+      let qrFilled = 0;
       for (const [key, value] of Object.entries(qrData)) {
         if (value !== null && value !== undefined && value !== "") {
           if (Array.isArray(value) && value.length === 0) continue;
-          mergedData[key] = value;
+          if (!(key in mergedData)) {
+            mergedData[key] = value;
+            qrFilled++;
+          }
         }
       }
-      console.log("QR data overrode with", Object.keys(qrData).length, "fields");
+      console.log("QR data filled", qrFilled, "gap fields (out of", Object.keys(qrData).length, "available)");
     }
 
     console.log("Final merged data for user", userId, ":", Object.keys(mergedData));
@@ -722,17 +730,26 @@ serve(async (req) => {
           signal: AbortSignal.timeout(10000),
         });
         if (imgResponse.ok) {
-          const contentType = imgResponse.headers.get("content-type") || "image/jpeg";
-          const arrayBuffer = await imgResponse.arrayBuffer();
-          const uint8 = new Uint8Array(arrayBuffer);
-          // Manual base64 encoding for Deno
-          let binary = "";
-          for (let i = 0; i < uint8.length; i++) {
-            binary += String.fromCharCode(uint8[i]);
+          // Size guard: skip images larger than 5MB to prevent memory issues
+          const contentLength = imgResponse.headers.get("content-length");
+          if (contentLength && parseInt(contentLength, 10) > 5 * 1024 * 1024) {
+            console.log("Product image too large, skipping:", contentLength, "bytes");
+          } else {
+            const contentType = imgResponse.headers.get("content-type") || "image/jpeg";
+            const arrayBuffer = await imgResponse.arrayBuffer();
+            if (arrayBuffer.byteLength > 5 * 1024 * 1024) {
+              console.log("Product image too large after download, skipping:", arrayBuffer.byteLength, "bytes");
+            } else {
+              const uint8 = new Uint8Array(arrayBuffer);
+              let binary = "";
+              for (let i = 0; i < uint8.length; i++) {
+                binary += String.fromCharCode(uint8[i]);
+              }
+              const b64 = btoa(binary);
+              productImageBase64 = `data:${contentType};base64,${b64}`;
+              console.log("Product image downloaded, size:", uint8.length);
+            }
           }
-          const b64 = btoa(binary);
-          productImageBase64 = `data:${contentType};base64,${b64}`;
-          console.log("Product image downloaded, size:", uint8.length);
         } else {
           console.log("Product image download failed:", imgResponse.status);
         }
