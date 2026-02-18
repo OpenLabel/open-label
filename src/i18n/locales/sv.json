@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Översätter..."
-  },
   "common": {
     "loading": "Laddar...",
     "save": "Spara",
@@ -38,7 +35,7 @@
     "hero": {
       "badge": "EU ESPR-kompatibel",
       "euFunded": "🇪🇺 Stolt EU-finansierad",
-      "title": "Skapa Obegränsade Digitala Produktpass",
+      "title": "Skapa obegränsade digitala produktpass",
       "subtitle": "Gratis plattform med öppen källkod för EU:s ekodesignförordning (ESPR). Generera maskinläsbara pass med QR-koder för batterier, textilier, byggprodukter och 12+ kategorier. Självhosta på egna servrar eller använd vår värdversion.",
       "cta": "Skapa ditt första pass",
       "demo": "Visa demopass",
@@ -110,7 +107,7 @@
       "badge": "EU-regleringens omfattning",
       "title": "Produktkategorier som stöds",
       "subtitle": "Mallar byggda från officiella EU-förordningar och delegerade akter. Aktiva regler gäller, prioritetsgrupper har mallar redo för kommande krav.",
-      "activeLaw": "Aktiv lag",
+      "activeLaw": "Gällande förordning",
       "priorityGroup": "Prioritetsgrupp",
       "cta": "Börja skapa pass"
     },
@@ -258,7 +255,7 @@
     "toys": "PFAS-fria, allergener, migreringstester",
     "electronics": "Reparerbarhetsindex, reservdelar, programuppdateringar",
     "iron_steel": "Koldioxidintensitet, skrothalt, legeringskemi",
-    "aluminum": "Smältningsenergi, rullbandssp spårbarhet",
+    "aluminum": "Smältningsenergi, rullbandsspårbarhet",
     "cosmetics": "INCI-lista, nanomaterial, förpackningsåtervinning",
     "furniture": "EUDR-ursprung trä, reservdelar, PFAS",
     "tires": "Slitagehastighet, regummering, mikroplast",
@@ -359,7 +356,7 @@
     "placeholders": {
       "productName": "t.ex. Château Margaux 2018",
       "grapeVariety": "t.ex. Cabernet Sauvignon, Merlot",
-      "vintage": "t.ex. 2020, NV, Multiårgång",
+      "vintage": "t.ex. 2020, NV, flera årgångar",
       "volume": "t.ex. 750",
       "region": "t.ex. Bordeaux, Bourgogne, Champagne",
       "denomination": "t.ex. AOC, AOP, IGP",
@@ -452,7 +449,7 @@
     "bentonite": "Bentonit (klarningslera)",
     "gelatin": "Gelatin (animaliskt ursprung)",
     "pea_protein": "Ärtprotein",
-    "potato_protein": "Potatisfprotein",
+    "potato_protein": "Potatisprotein",
     "pvpp": "PVPP – Polyvinylpolypyrrolidon (E1202)"
   },
   "recycling": {
@@ -471,7 +468,7 @@
     "compositeComponents": "Sammansatta komponenter",
     "customMaterial": "Anpassat material",
     "addCustomMaterial": "Lägg till anpassat material",
-    "disposalAdvice": "Kasseringsråd",
+    "disposalAdvice": "Sorteringsanvisningar",
     "addMaterial": "Lägg till material",
     "addPackagingMaterial": "Lägg till förpackningsmaterial",
     "customType": "Anpassad typ",
