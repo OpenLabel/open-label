@@ -19,7 +19,9 @@
     "warning": "Ostrzeżenie",
     "openSource": "Open Source",
     "language": "Język",
-    "custom": "Niestandardowe"
+    "custom": "Niestandardowe",
+    "selectOption": "Wybierz opcję",
+    "confirmed": "Potwierdzone"
   },
   "nav": {
     "signIn": "Zaloguj się",
@@ -172,7 +174,8 @@
     "accountCreated": "Konto utworzone!",
     "accountCreatedDesc": "Możesz się teraz zalogować.",
     "checkEmail": "Sprawdź e-mail",
-    "resetLinkSent": "Link do resetowania hasła wysłany."
+    "resetLinkSent": "Link do resetowania hasła wysłany.",
+    "validation": { "invalidEmail": "Proszę podać prawidłowy adres e-mail", "shortPassword": "Hasło musi mieć co najmniej 6 znaków" }
   },
   "dashboard": {
     "title": "Twoje Paszporty",
@@ -182,7 +185,8 @@
     "showQr": "Pokaż Kod QR",
     "duplicated": "Paszport zduplikowany",
     "deleted": "Paszport usunięty",
-    "confirmDelete": "Czy na pewno chcesz usunąć ten paszport?"
+    "confirmDelete": "Czy na pewno chcesz usunąć ten paszport?",
+    "dragToReorder": "Przeciągnij, aby zmienić kolejność"
   },
   "passport": {
     "createTitle": "Utwórz Nowy Paszport",
@@ -211,7 +215,10 @@
     "notFoundDesc": "Ten cyfrowy paszport produktu nie istnieje lub został usunięty.",
     "productPassport": "Paszport Produktu",
     "checkAuthenticity": "Sprawdź autentyczność",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "noAdditionalInfo": "Nie są wymagane dodatkowe informacje dla tej kategorii.",
+    "earlyAlpha": "Wczesna alfa",
+    "earlyAlphaDesc": "Ten szablon jest we wczesnej fazie alfa i może nie być w pełni zgodny z aktualnymi przepisami. Proszę zweryfikować wszystkie informacje przed użyciem."
   },
   "categories": {
     "battery": "Baterie",

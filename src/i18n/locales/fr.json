@@ -20,7 +20,8 @@
     "openSource": "Open Source",
     "language": "Langue",
     "custom": "Personnalisé",
-    "selectOption": "Sélectionner une option"
+    "selectOption": "Sélectionner une option",
+    "confirmed": "Confirmé"
   },
   "nav": {
     "signIn": "Connexion",
@@ -227,7 +228,8 @@
     "invalidType": "Veuillez télécharger un fichier image",
     "tooLarge": "L'image doit faire moins de 5 Mo",
     "uploading": "Téléchargement...",
-    "uploadButton": "Télécharger l'image du produit"
+    "uploadButton": "Télécharger l'image du produit",
+    "uploadFailed": "Échec du téléchargement de l'image"
   },
   "categories": {
     "battery": "Batteries",
@@ -565,5 +567,8 @@
     "quotaExceededBody": "Pour garantir un accès équitable à tous les utilisateurs, nous limitons les scans d'étiquettes IA à 100 par mois. Votre quota sera réinitialisé au début du mois prochain.",
     "quotaContactBody": "Si vous avez besoin d'une limite plus élevée pour votre entreprise, veuillez nous contacter.",
     "contactUs": "Contactez-nous"
+  }
+  "richText": {
+    "enterUrl": "Entrez l'URL :"
   }
 }
