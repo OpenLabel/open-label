@@ -459,7 +459,7 @@
   },
   "qrDialog": {
     "title": "QR Code",
-    "download": "Download QR Code",
+    "download": "QR-code downloaden",
     "copyLink": "Kopieer Link"
   },
   "customIngredient": {

@@ -65,6 +65,18 @@ function isLegitimateMatch(key: string, value: string): boolean {
   // Chemical formulas
   if (/^[A-Z][a-z]?\d*([A-Z][a-z]?\d*)*$/.test(value) && value.length <= 12) return true;
 
+  // Ingredient names are scientific/chemical terms — identical across EU languages
+  if (key.startsWith("ingredients.")) return true;
+
+  // Values containing E-numbers in parentheses (e.g., "Argon (E938)")
+  if (/\(E\d{3,4}[a-z]?\)/i.test(value)) return true;
+
+  // Measurement patterns: "Alcohol (% Vol)", "Glycerine (g/L)", "Salt (g)"
+  if (/\(.*(?:mg\/L|g\/L|g|ml|L|%\s*Vol|kcal|kJ).*\)/.test(value)) return true;
+
+  // Unit-like patterns: "per 100 ml", "per 100 g"
+  if (/^per \d+\s*(ml|g|L|kg)$/i.test(value)) return true;
+
   // Technical abbreviations and codes
   const technicalTerms = [
     "JSON/XML", "BIM", "NFC/RFID", "ISO 15459", "DPP", "ESPR", "PDF", "QR",
@@ -83,17 +95,26 @@ function isLegitimateMatch(key: string, value: string): boolean {
   if (/^\d+$/.test(value)) return true;
 
   // Placeholder patterns that use the same examples across languages
-  // e.g., "e.g., Château Margaux 2018", "e.g., 750" — these contain brand names
   if (/^e\.g\.,\s/.test(value)) return true;
 
   // Keys where English is expected/intentional
   const englishExpectedKeys = [
     "passport.poweredBy",
     "preview.poweredBy",
-    "wine.hints.displaySettingsHint", // may not need translation
-    "notFound.title", // "404"
+    "wine.hints.displaySettingsHint",
+    "notFound.title",
   ];
   if (englishExpectedKeys.includes(key)) return true;
+
+  // Latin/Greek-derived international terms used identically across EU languages
+  // These words are spelled the same in English and multiple EU languages
+  const internationalTerms = [
+    "Open Source", "Email", "Password", "QR Code",
+    "Alcohol", "Volume", "Manual", "General", "Error",
+    "Material", "Allergen", "Region", "Details", "Code",
+    "Capsule", "Batteries", "Protein", "Salt", "Vintage",
+  ];
+  if (internationalTerms.includes(value.trim())) return true;
 
   // Brand names and proper nouns that stay in English
   const brandNames = ["Powered by", "GitHub", "Digital Product Passport"];
