@@ -1,6 +1,7 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
+import { readBarcodes, type ReaderOptions } from "npm:zxing-wasm@2/reader";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -16,7 +17,6 @@ const WineOCRSchema = z.object({
       (val) => /^data:(image\/(png|jpeg|jpg|webp|gif)|application\/pdf);base64,/.test(val),
       "Invalid format - must be a valid base64 image or PDF data URL"
     ),
-  qrUrl: z.string().url().optional(),
 });
 
 const MONTHLY_LIMIT = 100;
@@ -360,66 +360,64 @@ async function runCriticalFieldsPass(
 }
 
 /**
+ * Decode QR code from image using zxing-wasm (ZXing C++ compiled to WASM).
+ * Works server-side in Deno — no Canvas or browser APIs needed.
+ */
+async function decodeQrFromBase64(imageBase64: string): Promise<string | null> {
+  try {
+    // Strip data URL prefix to get raw base64
+    const base64Data = imageBase64.replace(/^data:[^;]+;base64,/, "");
+    const binaryStr = atob(base64Data);
+    const bytes = new Uint8Array(binaryStr.length);
+    for (let i = 0; i < binaryStr.length; i++) {
+      bytes[i] = binaryStr.charCodeAt(i);
+    }
+
+    const blob = new Blob([bytes]);
+
+    const readerOptions: ReaderOptions = {
+      tryHarder: true,
+      tryRotate: true,
+      tryInvert: true,
+      tryDownscale: true,
+      formats: ["QRCode"],
+      maxNumberOfSymbols: 1,
+    };
+
+    const results = await readBarcodes(blob, readerOptions);
+
+    if (results.length > 0 && results[0].text) {
+      const text = results[0].text.trim();
+      if (text.startsWith("http")) {
+        console.log("QR code decoded server-side (zxing-wasm):", text);
+        return text;
+      }
+      console.log("QR code found but not a URL:", text);
+    } else {
+      console.log("No QR code detected by zxing-wasm");
+    }
+
+    return null;
+  } catch (error) {
+    console.warn("Server-side QR decode error:", error);
+    return null;
+  }
+}
+
+/**
  * Attempt to scrape a QR code URL with Firecrawl to get additional product data.
  */
 async function tryQrCodeScrape(
   imageBase64: string,
   lovableApiKey: string,
   firecrawlApiKey: string,
-  clientQrUrl?: string,
-): Promise<Record<string, unknown> | null> {
+): Promise<{ extracted: Record<string, unknown>; qrUrl: string } | null> {
   try {
-    let qrUrl = clientQrUrl || null;
+    // Step 1: Decode QR code from image using zxing-wasm
+    const qrUrl = await decodeQrFromBase64(imageBase64);
 
     if (!qrUrl) {
-      console.log("No client-side QR URL, trying AI fallback...");
-      const qrResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-        signal: AbortSignal.timeout(30000),
-        method: "POST",
-        headers: {
-          Authorization: `Bearer ${lovableApiKey}`,
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          model: "google/gemini-2.5-flash",
-          messages: [
-            {
-              role: "user",
-              content: [
-                {
-                  type: "text",
-                  text: 'Look at this image. Is there a QR code visible? If yes, what URL does it encode? Reply with ONLY the URL if found, or "NONE" if no QR code is visible or the URL cannot be read. Do not add any other text.'
-                },
-                {
-                  type: "image_url",
-                  image_url: { url: imageBase64 }
-                }
-              ]
-            }
-          ],
-          temperature: 0,
-        }),
-      });
-
-      if (qrResponse.ok) {
-        const qrData = await qrResponse.json();
-        const qrContent = qrData.choices?.[0]?.message?.content?.trim();
-        if (qrContent && qrContent !== "NONE" && qrContent.startsWith("http")) {
-          qrUrl = qrContent;
-          console.log("AI fallback detected QR URL:", qrUrl);
-        } else {
-          console.log("AI fallback: no QR code URL detected");
-        }
-      } else {
-        console.log("AI QR detection call failed:", qrResponse.status);
-        await qrResponse.text();
-      }
-    } else {
-      console.log("Using client-side QR URL:", qrUrl);
-    }
-
-    if (!qrUrl) {
-      console.log("No QR code URL found by any method");
+      console.log("No QR code URL found by server-side decoder");
       return null;
     }
 
@@ -502,7 +500,7 @@ async function tryQrCodeScrape(
 
     const extracted = JSON.parse(toolCall.function.arguments);
     console.log("Extracted data from QR code page:", Object.keys(extracted));
-    return extracted;
+    return { extracted, qrUrl };
 
   } catch (error) {
     console.error("QR code scrape error:", error);
@@ -595,7 +593,7 @@ serve(async (req) => {
       );
     }
 
-    const { image, qrUrl: clientQrUrl } = parseResult.data;
+    const { image } = parseResult.data;
 
     const LOVABLE_API_KEY = Deno.env.get("LOVABLE_API_KEY");
     if (!LOVABLE_API_KEY) {
@@ -637,10 +635,10 @@ serve(async (req) => {
     });
 
     const qrScrapePromise = FIRECRAWL_API_KEY
-      ? tryQrCodeScrape(image, LOVABLE_API_KEY, FIRECRAWL_API_KEY, clientQrUrl)
+      ? tryQrCodeScrape(image, LOVABLE_API_KEY, FIRECRAWL_API_KEY)
       : Promise.resolve(null);
 
-    const [imageResponse, qrData] = await Promise.all([imageExtractionPromise, qrScrapePromise]);
+    const [imageResponse, qrResult] = await Promise.all([imageExtractionPromise, qrScrapePromise]);
 
     if (!imageResponse.ok) {
       const errorText = await imageResponse.text();
@@ -703,6 +701,7 @@ serve(async (req) => {
     }
 
     // QR data fills gaps only (label image is ground truth; QR page is supplementary)
+    const qrData = qrResult?.extracted || null;
     if (qrData) {
       let qrFilled = 0;
       for (const [key, value] of Object.entries(qrData)) {
