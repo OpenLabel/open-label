@@ -38,7 +38,7 @@
     "hero": {
       "badge": "Comhoiriúnach le ESPR an AE",
       "euFunded": "🇪🇺 Maoinithe ag an AE go bródúil",
-      "title": "Cruthaigh Pasanna Táirge Digiteacha gan Teorainn",
+      "title": "Cruthaigh pasanna táirge digiteacha gan teorainn",
       "subtitle": "Ardán saor in aisce, foinse oscailte do Rialachán Éicidhearthóireachta an AE (ESPR). Gin pasanna inléite ag meaisíní le cóid QR do chadhnraí, teicstílí, táirgí tógála, agus 12+ catagóir. Féin-óstáil ar do fhreastalaithe féin nó úsáid ár leagan óstáilte.",
       "cta": "Cruthaigh do chéad phas",
       "demo": "Féach ar an bpas taispeána",
@@ -108,9 +108,9 @@
     },
     "categories": {
       "badge": "Raon Rialála an AE",
-      "title": "Catagóirí Táirge Tacaithe",
+      "title": "Catagóirí táirge tacaithe",
       "subtitle": "Teimpléid tógtha ó rialacháin oifigiúla an AE agus gníomhartha tarmligthe. Tá rialacháin ghníomhacha i bhfeidhm, tá teimpléid ag grúpaí tosaíochta réidh do riachtanais atá le teacht.",
-      "activeLaw": "Dlí Gníomhach",
+      "activeLaw": "Rialachán i bhfeidhm",
       "priorityGroup": "Grúpa Tosaíochta",
       "cta": "Tosaigh ag cruthú pasanna"
     },
@@ -156,7 +156,7 @@
       "button": "Tosaigh saor in aisce inniu"
     },
     "footer": {
-      "legal": "Tagairtí Dlíthiúla",
+      "legal": "Fógra Dlíthiúil",
       "github": "Féach ar GitHub"
     }
   },
@@ -218,8 +218,8 @@
     "notFound": "Pas gan Aimsiú",
     "notFoundDesc": "Níl an pas táirge digiteach seo ann nó baineadh é.",
     "productPassport": "Pas Táirge",
-    "checkAuthenticity": "Seiceáil fírinne",
-    "poweredBy": "Cumhachtaithe ag",
+    "checkAuthenticity": "Seiceáil barántúlacht",
+    "poweredBy": "Á chumhachtú ag",
     "noAdditionalInfo": "Níl faisnéis bhreise ag teastáil don chatagóir seo.",
     "earlyAlpha": "Alfa luath",
     "earlyAlphaDesc": "Tá an teimpléad seo i bhfás alfa luath agus b'fhéidir nach gcomhlíonann sé na rialacháin reatha go hiomlán. Fíoraigh gach faisnéis roimh úsáid."
@@ -234,7 +234,7 @@
     "iron_steel": "Iarann & Cruach",
     "aluminum": "Alúmanam",
     "cosmetics": "Cosmaidí",
-    "furniture": "Troscán & Tochaltáin",
+    "furniture": "Troscán & Tochtanna",
     "tires": "Boinn",
     "detergents": "Glantaigh & Ceimiceáin",
     "other": "Gach Táirge Eile"
@@ -417,8 +417,8 @@
     "malic_acid": "Aigéad málach (E296)",
     "lactic_acid": "Aigéad lachtach (E270)",
     "calcium_sulfate": "Sulfáit chailciam (E516)",
-    "citric_acid": "Aigéad citreonach (E330) – aigéadóir",
-    "citric_acid_stabilizer": "Aigéad citreonach (E330) – cobhsaitheoir",
+    "citric_acid": "Aigéad citreach (E330) – aigéadóir",
+    "citric_acid_stabilizer": "Aigéad citreach (E330) – cobhsaitheoir",
     "metatartaric_acid": "Aigéad méiteatartarach (E353)",
     "gum_arabic": "Guma Arabach (E414)",
     "yeast_mannoproteins": "Manapróitéiní giosta",
@@ -460,7 +460,7 @@
     "compositeComponents": "Comhpháirteanna Ilchodacha",
     "customMaterial": "Ábhar Saincheaptha",
     "addCustomMaterial": "Cuir ábhar saincheaptha leis",
-    "disposalAdvice": "Comhairle diúscairte",
+    "disposalAdvice": "Treoracha athchúrsála",
     "addMaterial": "Cuir ábhar leis",
     "addPackagingMaterial": "Cuir ábhar pacáistíochta leis",
     "customType": "Cineál saincheaptha",
@@ -470,8 +470,8 @@
     "materialNamePlaceholder": "m.sh., Cráta adhmaid"
   },
   "legal": {
-    "title": "Tagairtí Dlíthiúla",
-    "legalMentions": "Tagairtí Dlíthiúla"
+    "title": "Fógra Dlíthiúil",
+    "legalMentions": "Fógra Dlíthiúil"
   },
   "notFound": {
     "title": "404",
@@ -534,10 +534,10 @@
     "livePreview": "Réamhamharc Beo",
     "productPassport": "Pas Táirge",
     "productName": "Ainm an Táirge",
-    "checkAuthenticity": "Seiceáil fírinne",
+    "checkAuthenticity": "Seiceáil barántúlacht",
     "productDescription": "Cur Síos ar an Táirge",
     "certificationsLabels": "Deimhniúcháin & Lipéid",
-    "poweredBy": "Cumhachtaithe ag"
+    "poweredBy": "Á chumhachtú ag"
   },
   "imageUpload": {
     "loginRequired": "Caithfidh tú logáil isteach chun íomhánna a uaslódáil",
