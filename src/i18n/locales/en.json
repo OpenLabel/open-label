@@ -22,7 +22,8 @@
     "warning": "Warning",
     "openSource": "Open Source",
     "language": "Language",
-    "custom": "Custom"
+    "custom": "Custom",
+    "selectOption": "Select an option"
   },
   "nav": {
     "signIn": "Sign In",
@@ -175,7 +176,11 @@
     "accountCreated": "Account created!",
     "accountCreatedDesc": "You can now sign in.",
     "checkEmail": "Check your email",
-    "resetLinkSent": "Password reset link sent."
+    "resetLinkSent": "Password reset link sent.",
+    "validation": {
+      "invalidEmail": "Please enter a valid email address",
+      "shortPassword": "Password must be at least 6 characters"
+    }
   },
   "dashboard": {
     "title": "Your Passports",
@@ -185,7 +190,8 @@
     "showQr": "Show QR Code",
     "duplicated": "Passport duplicated",
     "deleted": "Passport deleted",
-    "confirmDelete": "Are you sure you want to delete this passport?"
+    "confirmDelete": "Are you sure you want to delete this passport?",
+    "dragToReorder": "Drag to reorder"
   },
   "passport": {
     "createTitle": "Create New Passport",
@@ -214,7 +220,17 @@
     "notFoundDesc": "This digital product passport doesn't exist or has been removed.",
     "productPassport": "Product Passport",
     "checkAuthenticity": "Check authenticity",
-    "poweredBy": "Powered by"
+    "poweredBy": "Powered by",
+    "noAdditionalInfo": "No additional information required for this category.",
+    "earlyAlpha": "Early Alpha",
+    "earlyAlphaDesc": "This template is in early alpha and may not be fully compliant with current regulations. Please verify all information against official requirements before use."
+  },
+  "imageUpload": {
+    "loginRequired": "You must be logged in to upload images",
+    "invalidType": "Please upload an image file",
+    "tooLarge": "Image must be less than 5MB",
+    "uploading": "Uploading...",
+    "uploadButton": "Upload Product Image"
   },
   "categories": {
     "battery": "Batteries",
@@ -536,6 +552,21 @@
     "takePhoto": "Take Photo",
     "uploadFile": "Upload File",
     "supportedFormats": "Supports photos, PDFs, and Word documents",
-    "multiUploadTip": "Have multiple files? Run this again after each upload to merge data from different sources."
+    "multiUploadTip": "Have multiple files? Run this again after each upload to merge data from different sources.",
+    "autofillButton": "Autofill with AI",
+    "experimental": "Experimental",
+    "scannerTitle": "AI Label Scanner",
+    "scannerDescription": "Upload a wine label photo, PDF, or document and AI will extract the information automatically.",
+    "experimentalWarning": "Experimental feature: Please double-check all extracted data before saving. AI may make mistakes.",
+    "autofillComplete": "✨ AI Autofill Complete",
+    "autofillCompleteDesc": "Fields have been populated. Please review and verify the data before saving.",
+    "noDataExtracted": "No data extracted from the label",
+    "processingFailed": "Processing Failed",
+    "processingFailedDesc": "Failed to extract data from the label",
+    "quotaExceeded": "Fair Usage Quota Exceeded",
+    "quotaExceededDesc": "You've reached the monthly limit of 100 AI label scans.",
+    "quotaExceededBody": "To ensure fair access for all users, we limit AI-powered label scanning to 100 scans per month. Your quota will reset at the beginning of next month.",
+    "quotaContactBody": "If you need a higher limit for your business, please contact us and we'll be happy to discuss options.",
+    "contactUs": "Contact Us"
   }
 }

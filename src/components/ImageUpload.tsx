@@ -1,4 +1,5 @@
 import { useState, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { Button } from '@/components/ui/button';
@@ -17,23 +18,24 @@ export function ImageUpload({ value, onChange, className }: ImageUploadProps) {
   const [error, setError] = useState<string | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const { user } = useAuth();
+  const { t } = useTranslation();
 
   const handleUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (!file) return;
 
     if (!user) {
-      setError('You must be logged in to upload images');
+      setError(t('imageUpload.loginRequired'));
       return;
     }
 
     if (!file.type.startsWith('image/')) {
-      setError('Please upload an image file');
+      setError(t('imageUpload.invalidType'));
       return;
     }
 
     if (file.size > 5 * 1024 * 1024) {
-      setError('Image must be less than 5MB');
+      setError(t('imageUpload.tooLarge'));
       return;
     }
 
@@ -110,12 +112,12 @@ export function ImageUpload({ value, onChange, className }: ImageUploadProps) {
           {uploading ? (
             <>
               <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-              Uploading...
+              {t('imageUpload.uploading')}
             </>
           ) : (
             <>
               <Upload className="h-4 w-4 mr-2" />
-              Upload Product Image
+              {t('imageUpload.uploadButton')}
             </>
           )}
         </Button>

@@ -111,7 +111,7 @@ export default function PassportForm() {
     e?.preventDefault();
     
     if (!formData.name.trim()) {
-      toast({ title: t('common.error'), description: 'Please enter a product name', variant: 'destructive' });
+      toast({ title: t('common.error'), description: t('passport.enterProductName'), variant: 'destructive' });
       return;
     }
 
@@ -123,12 +123,12 @@ export default function PassportForm() {
       };
       if (isEditing) {
         await updatePassport.mutateAsync({ id, ...submitData });
-        toast({ title: t('common.success'), description: 'Passport updated successfully' });
+        toast({ title: t('common.success'), description: t('passport.updated') });
         // Update saved state after successful save
         savedFormDataRef.current = JSON.stringify(formData);
       } else {
         const newPassport = await createPassport.mutateAsync(submitData);
-        toast({ title: t('common.success'), description: 'Passport created successfully' });
+        toast({ title: t('common.success'), description: t('passport.created') });
         // Update saved state after successful save
         savedFormDataRef.current = JSON.stringify(formData);
         // Navigate to edit mode for the newly created passport
@@ -307,7 +307,7 @@ export default function PassportForm() {
               <div>
                 <h2 className="text-lg font-semibold mb-4">
                   {categoryList.find(c => c.value === formData.category)?.icon}{' '}
-                  {t(`categories.${formData.category}`)} Details
+                  {t(`categories.${formData.category}`)} {t('passport.details')}
                 </h2>
                 <CategoryQuestions
                   category={formData.category}

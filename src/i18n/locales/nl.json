@@ -19,7 +19,8 @@
     "warning": "Waarschuwing",
     "openSource": "Open Source",
     "language": "Taal",
-    "custom": "Aangepast"
+    "custom": "Aangepast",
+    "selectOption": "Selecteer een optie"
   },
   "nav": {
     "signIn": "Inloggen",
@@ -172,7 +173,11 @@
     "accountCreated": "Account aangemaakt!",
     "accountCreatedDesc": "U kunt nu inloggen.",
     "checkEmail": "Controleer uw e-mail",
-    "resetLinkSent": "Wachtwoord reset link verzonden."
+    "resetLinkSent": "Wachtwoord reset link verzonden.",
+    "validation": {
+      "invalidEmail": "Voer een geldig e-mailadres in",
+      "shortPassword": "Wachtwoord moet minimaal 6 tekens bevatten"
+    }
   },
   "dashboard": {
     "title": "Uw Paspoorten",
@@ -182,7 +187,8 @@
     "showQr": "Toon QR Code",
     "duplicated": "Paspoort gedupliceerd",
     "deleted": "Paspoort verwijderd",
-    "confirmDelete": "Weet u zeker dat u dit paspoort wilt verwijderen?"
+    "confirmDelete": "Weet u zeker dat u dit paspoort wilt verwijderen?",
+    "dragToReorder": "Slepen om te herordenen"
   },
   "passport": {
     "createTitle": "Nieuw Paspoort Maken",
@@ -211,7 +217,17 @@
     "notFoundDesc": "Dit digitale productpaspoort bestaat niet of is verwijderd.",
     "productPassport": "Productpaspoort",
     "checkAuthenticity": "Authenticiteit controleren",
-    "poweredBy": "Mogelijk gemaakt door"
+    "poweredBy": "Mogelijk gemaakt door",
+    "noAdditionalInfo": "Geen aanvullende informatie vereist voor deze categorie.",
+    "earlyAlpha": "Vroege alfa",
+    "earlyAlphaDesc": "Dit sjabloon is in vroege alfa en voldoet mogelijk niet volledig aan de huidige regelgeving. Controleer alle informatie aan de hand van officiële vereisten voor gebruik."
+  },
+  "imageUpload": {
+    "loginRequired": "U moet ingelogd zijn om afbeeldingen te uploaden",
+    "invalidType": "Upload een afbeeldingsbestand",
+    "tooLarge": "Afbeelding moet kleiner zijn dan 5MB",
+    "uploading": "Uploaden...",
+    "uploadButton": "Productafbeelding uploaden"
   },
   "categories": {
     "battery": "Batterijen",
@@ -533,6 +549,21 @@
     "takePhoto": "Foto maken",
     "uploadFile": "Bestand uploaden",
     "supportedFormats": "Ondersteunt foto's, PDFs en Word-documenten",
-    "multiUploadTip": "Meerdere bestanden? Voer opnieuw uit na elke upload om gegevens samen te voegen."
+    "multiUploadTip": "Meerdere bestanden? Voer opnieuw uit na elke upload om gegevens samen te voegen.",
+    "autofillButton": "Automatisch invullen met AI",
+    "experimental": "Experimenteel",
+    "scannerTitle": "AI-etiketscanner",
+    "scannerDescription": "Upload een foto van een wijnetiket, PDF of document en AI extraheert de informatie automatisch.",
+    "experimentalWarning": "Controleer alle geëxtraheerde gegevens voor het opslaan. AI kan fouten maken.",
+    "autofillComplete": "✨ AI-invulling voltooid",
+    "autofillCompleteDesc": "Velden zijn ingevuld. Controleer en verifieer de gegevens voor het opslaan.",
+    "noDataExtracted": "Geen gegevens geëxtraheerd van het etiket",
+    "processingFailed": "Verwerking mislukt",
+    "processingFailedDesc": "Kan geen gegevens extraheren van het etiket",
+    "quotaExceeded": "Eerlijk gebruik quotum overschreden",
+    "quotaExceededDesc": "U heeft de maandelijkse limiet van 100 AI-etiketscans bereikt.",
+    "quotaExceededBody": "Om eerlijke toegang voor alle gebruikers te waarborgen, beperken we AI-etiketscans tot 100 per maand. Uw quotum wordt aan het begin van volgende maand gereset.",
+    "quotaContactBody": "Als u een hogere limiet nodig heeft voor uw bedrijf, neem dan contact met ons op.",
+    "contactUs": "Neem contact op"
   }
 }

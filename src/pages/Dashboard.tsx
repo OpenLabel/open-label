@@ -85,17 +85,17 @@ export default function Dashboard() {
   const handleDuplicate = async (passport: Passport) => {
     try {
       await duplicatePassport.mutateAsync(passport);
-      toast({ title: 'Passport duplicated' });
+      toast({ title: t('dashboard.duplicated') });
     } catch (error: any) {
       toast({ title: t('common.error'), description: error.message, variant: 'destructive' });
     }
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm('Are you sure you want to delete this passport?')) return;
+    if (!confirm(t('dashboard.confirmDelete'))) return;
     try {
       await deletePassport.mutateAsync(id);
-      toast({ title: 'Passport deleted' });
+      toast({ title: t('dashboard.deleted') });
     } catch (error: any) {
       toast({ title: t('common.error'), description: error.message, variant: 'destructive' });
     }

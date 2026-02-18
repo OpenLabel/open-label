@@ -19,7 +19,8 @@
     "warning": "Avertissement",
     "openSource": "Open Source",
     "language": "Langue",
-    "custom": "Personnalisé"
+    "custom": "Personnalisé",
+    "selectOption": "Sélectionner une option"
   },
   "nav": {
     "signIn": "Connexion",
@@ -172,7 +173,11 @@
     "accountCreated": "Compte créé !",
     "accountCreatedDesc": "Vous pouvez maintenant vous connecter.",
     "checkEmail": "Vérifiez votre e-mail",
-    "resetLinkSent": "Lien de réinitialisation envoyé."
+    "resetLinkSent": "Lien de réinitialisation envoyé.",
+    "validation": {
+      "invalidEmail": "Veuillez entrer une adresse e-mail valide",
+      "shortPassword": "Le mot de passe doit contenir au moins 6 caractères"
+    }
   },
   "dashboard": {
     "title": "Vos passeports",
@@ -182,7 +187,8 @@
     "showQr": "Afficher le code QR",
     "duplicated": "Passeport dupliqué",
     "deleted": "Passeport supprimé",
-    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce passeport ?"
+    "confirmDelete": "Êtes-vous sûr de vouloir supprimer ce passeport ?",
+    "dragToReorder": "Glisser pour réorganiser"
   },
   "passport": {
     "createTitle": "Créer un nouveau passeport",
@@ -211,7 +217,17 @@
     "notFoundDesc": "Ce passeport numérique de produit n'existe pas ou a été supprimé.",
     "productPassport": "Passeport produit",
     "checkAuthenticity": "Vérifier l'authenticité",
-    "poweredBy": "Propulsé par"
+    "poweredBy": "Propulsé par",
+    "noAdditionalInfo": "Aucune information supplémentaire requise pour cette catégorie.",
+    "earlyAlpha": "Alpha précoce",
+    "earlyAlphaDesc": "Ce modèle est en version alpha précoce et peut ne pas être entièrement conforme aux réglementations actuelles. Veuillez vérifier toutes les informations par rapport aux exigences officielles avant utilisation."
+  },
+  "imageUpload": {
+    "loginRequired": "Vous devez être connecté pour télécharger des images",
+    "invalidType": "Veuillez télécharger un fichier image",
+    "tooLarge": "L'image doit faire moins de 5 Mo",
+    "uploading": "Téléchargement...",
+    "uploadButton": "Télécharger l'image du produit"
   },
   "categories": {
     "battery": "Batteries",
@@ -533,6 +549,21 @@
     "takePhoto": "Prendre une photo",
     "uploadFile": "Télécharger un fichier",
     "supportedFormats": "Prend en charge les photos, PDF et documents Word",
-    "multiUploadTip": "Plusieurs fichiers ? Exécutez à nouveau après chaque téléchargement pour fusionner les données."
+    "multiUploadTip": "Plusieurs fichiers ? Exécutez à nouveau après chaque téléchargement pour fusionner les données.",
+    "autofillButton": "Remplissage automatique par IA",
+    "experimental": "Expérimental",
+    "scannerTitle": "Scanner d'étiquettes IA",
+    "scannerDescription": "Téléchargez une photo d'étiquette de vin, un PDF ou un document et l'IA extraira les informations automatiquement.",
+    "experimentalWarning": "Veuillez vérifier toutes les données extraites avant de sauvegarder. L'IA peut faire des erreurs.",
+    "autofillComplete": "✨ Remplissage IA terminé",
+    "autofillCompleteDesc": "Les champs ont été remplis. Veuillez vérifier les données avant de sauvegarder.",
+    "noDataExtracted": "Aucune donnée extraite de l'étiquette",
+    "processingFailed": "Échec du traitement",
+    "processingFailedDesc": "Impossible d'extraire les données de l'étiquette",
+    "quotaExceeded": "Quota d'utilisation équitable dépassé",
+    "quotaExceededDesc": "Vous avez atteint la limite mensuelle de 100 scans d'étiquettes IA.",
+    "quotaExceededBody": "Pour garantir un accès équitable à tous les utilisateurs, nous limitons les scans d'étiquettes IA à 100 par mois. Votre quota sera réinitialisé au début du mois prochain.",
+    "quotaContactBody": "Si vous avez besoin d'une limite plus élevée pour votre entreprise, veuillez nous contacter.",
+    "contactUs": "Contactez-nous"
   }
 }

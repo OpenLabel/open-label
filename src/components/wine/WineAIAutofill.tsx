@@ -86,13 +86,13 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
         const quotaInfo = data.quota ? ` (${data.quota.remaining} scans remaining this month)` : '';
         onAutofill(data.extractedData);
         toast({
-          title: '✨ AI Autofill Complete',
-          description: `Fields have been populated. Please review and verify the data before saving.${quotaInfo}`,
+          title: t('ai.autofillComplete'),
+          description: `${t('ai.autofillCompleteDesc')}${quotaInfo}`,
         });
         setIsOpen(false);
         setPreviewUrl(null);
       } else {
-        throw new Error('No data extracted from the label');
+        throw new Error(t('ai.noDataExtracted'));
       }
     } catch (error) {
       console.error('Error processing wine label:', error);
@@ -107,8 +107,8 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
       }
       
       toast({
-        title: 'Processing Failed',
-        description: errorMessage || 'Failed to extract data from the label',
+        title: t('ai.processingFailed'),
+        description: errorMessage || t('ai.processingFailedDesc'),
         variant: 'destructive',
       });
     } finally {
@@ -136,10 +136,10 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
         <div className="relative flex items-center justify-center gap-3 rounded-[10px] bg-background/95 px-6 py-4 backdrop-blur-sm transition-all group-hover:bg-background/90">
           <Sparkles className="h-5 w-5 text-purple-500" />
           <span className="font-semibold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
-            Autofill with AI
+            {t('ai.autofillButton')}
           </span>
           <span className="ml-2 rounded-full bg-gradient-to-r from-amber-500/20 to-orange-500/20 px-2 py-0.5 text-xs font-medium text-amber-600 dark:text-amber-400">
-            Experimental
+            {t('ai.experimental')}
           </span>
         </div>
       </button>
@@ -162,17 +162,17 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2">
               <Sparkles className="h-5 w-5 text-purple-500" />
-              AI Label Scanner
+              {t('ai.scannerTitle')}
             </DialogTitle>
             <DialogDescription>
-              Upload a wine label photo, PDF, or document and AI will extract the information automatically.
+              {t('ai.scannerDescription')}
             </DialogDescription>
           </DialogHeader>
 
           <Alert className="border-amber-500/50 bg-amber-500/10">
             <AlertTriangle className="h-4 w-4 text-amber-500" />
             <AlertDescription className="text-amber-700 dark:text-amber-300">
-              <strong>Experimental feature:</strong> Please double-check all extracted data before saving. AI may make mistakes.
+              <strong>{t('ai.experimental')}:</strong> {t('ai.experimentalWarning')}
             </AlertDescription>
           </Alert>
 
@@ -252,19 +252,19 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
           <DialogHeader>
             <DialogTitle className="flex items-center gap-2 text-amber-600">
               <AlertTriangle className="h-5 w-5" />
-              Fair Usage Quota Exceeded
+              {t('ai.quotaExceeded')}
             </DialogTitle>
             <DialogDescription>
-              You've reached the monthly limit of 100 AI label scans.
+              {t('ai.quotaExceededDesc')}
             </DialogDescription>
           </DialogHeader>
 
           <div className="space-y-4 py-4">
             <p className="text-sm text-muted-foreground">
-              To ensure fair access for all users, we limit AI-powered label scanning to 100 scans per month. Your quota will reset at the beginning of next month.
+              {t('ai.quotaExceededBody')}
             </p>
             <p className="text-sm text-muted-foreground">
-              If you need a higher limit for your business, please contact us and we'll be happy to discuss options.
+              {t('ai.quotaContactBody')}
             </p>
           </div>
 
@@ -274,7 +274,7 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
               onClick={() => setShowQuotaDialog(false)}
               className="w-full sm:w-auto"
             >
-              Close
+              {t('common.close')}
             </Button>
             <Button
               onClick={() => {
@@ -283,7 +283,7 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
               className="w-full sm:w-auto gap-2"
             >
               <Mail className="h-4 w-4" />
-              Contact Us
+              {t('ai.contactUs')}
             </Button>
           </DialogFooter>
         </DialogContent>

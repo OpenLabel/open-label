@@ -54,7 +54,7 @@ export function SortablePassportCard({
             {...attributes}
             {...listeners}
             className="cursor-grab active:cursor-grabbing p-1 text-muted-foreground hover:text-foreground touch-none flex-shrink-0 mt-1"
-            aria-label="Drag to reorder"
+            aria-label={t('dashboard.dragToReorder')}
           >
             <GripVertical className="h-5 w-5" />
           </button>
@@ -91,7 +91,7 @@ export function SortablePassportCard({
                     <QrCode className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>Show QR Code</TooltipContent>
+                <TooltipContent>{t('dashboard.showQr')}</TooltipContent>
               </Tooltip>
             )}
             <Tooltip>
@@ -118,7 +118,7 @@ export function SortablePassportCard({
                   <Copy className="h-4 w-4" />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Duplicate</TooltipContent>
+              <TooltipContent>{t('dashboard.duplicate')}</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
@@ -143,7 +143,7 @@ export function SortablePassportCard({
           {...attributes}
           {...listeners}
           className="cursor-grab active:cursor-grabbing p-1 text-muted-foreground hover:text-foreground touch-none flex-shrink-0"
-          aria-label="Drag to reorder"
+          aria-label={t('dashboard.dragToReorder')}
         >
           <GripVertical className="h-5 w-5" />
         </button>
@@ -179,7 +179,7 @@ export function SortablePassportCard({
                     <QrCode className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
-                <TooltipContent>Show QR Code</TooltipContent>
+                <TooltipContent>{t('dashboard.showQr')}</TooltipContent>
               </Tooltip>
             )}
             <Tooltip>
@@ -206,7 +206,7 @@ export function SortablePassportCard({
                   <Copy className="h-4 w-4" />
                 </Button>
               </TooltipTrigger>
-              <TooltipContent>Duplicate</TooltipContent>
+              <TooltipContent>{t('dashboard.duplicate')}</TooltipContent>
             </Tooltip>
             <Tooltip>
               <TooltipTrigger asChild>
