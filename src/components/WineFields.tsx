@@ -19,9 +19,10 @@ import { LabelWithHint, FieldHint } from '@/components/ui/field-hint';
 interface WineFieldsProps {
   data: Record<string, unknown>;
   onChange: (data: Record<string, unknown>) => void;
+  onAutofillMeta?: (meta: { dppName?: string; productImageBase64?: string }) => void;
 }
 
-export function WineFields({ data, onChange }: WineFieldsProps) {
+export function WineFields({ data, onChange, onAutofillMeta }: WineFieldsProps) {
   const { t, i18n } = useTranslation();
 
   const currentLanguage = i18n.language.split('-')[0]; // Get base language code
@@ -314,7 +315,7 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
   return (
     <div className="space-y-6">
       {/* AI Autofill Button */}
-      <WineAIAutofill onAutofill={handleAIAutofill} />
+      <WineAIAutofill onAutofill={handleAIAutofill} onAutofillMeta={onAutofillMeta} />
 
       {/* 1. Product Identity */}
       <Card>

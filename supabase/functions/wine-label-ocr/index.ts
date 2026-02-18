@@ -76,6 +76,7 @@ const EXTRACTION_TOOL = {
         barcode: { type: "string", description: "EAN/UPC barcode number" },
         description: { type: "string", description: "Marketing or tasting description text" },
         serving_temperature: { type: "string", description: "Recommended serving temperature" },
+        product_image_url: { type: "string", description: "URL of a product image found on a scraped web page (NOT from the label photo itself). Only extract this from web page content." },
       },
       additionalProperties: false
     }
@@ -148,6 +149,7 @@ const ALL_FIELD_KEYS = [
   "energy_kcal", "energy_kj", "carbohydrates", "sugar",
   "detected_ingredients", "packaging_components",
   "lot_number", "barcode", "description", "serving_temperature",
+  "product_image_url",
 ];
 
 /**
@@ -311,8 +313,8 @@ async function tryQrCodeScrape(
       },
       body: JSON.stringify({
         url: qrUrl,
-        formats: ["markdown"],
-        onlyMainContent: true,
+      formats: ["markdown", "links"],
+      onlyMainContent: true,
       }),
     });
 
@@ -332,6 +334,16 @@ async function tryQrCodeScrape(
 
     console.log("Firecrawl scraped content length:", markdown.length);
 
+    // Find product image URLs from scraped links
+    const links = scrapeData.data?.links || scrapeData.links || [];
+    const imageLinks = links.filter((link: string) =>
+      /\.(jpg|jpeg|png|webp|gif)(\?|$)/i.test(link) &&
+      !/logo|icon|favicon|banner|sprite|avatar/i.test(link)
+    );
+    const imageLinksHint = imageLinks.length > 0
+      ? `\n\nProduct image URLs found on the page (pick the most likely product photo, NOT logos/icons):\n${imageLinks.slice(0, 10).join("\n")}`
+      : "";
+
     const extractResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -344,7 +356,7 @@ async function tryQrCodeScrape(
           { role: "system", content: SYSTEM_PROMPT },
           {
             role: "user",
-            content: `This is the content of a wine product web page (scraped from a QR code on a wine label). Extract all wine product information you can find.\n\nPage content:\n${markdown.slice(0, 15000)}`
+            content: `This is the content of a wine product web page (scraped from a QR code on a wine label). Extract all wine product information you can find. If you find a product image URL, set it as product_image_url.\n\nPage content:\n${markdown.slice(0, 15000)}${imageLinksHint}`
           }
         ],
         tools: [EXTRACTION_TOOL],
@@ -572,6 +584,38 @@ serve(async (req) => {
 
     console.log("Final merged data for user", userId, ":", Object.keys(mergedData));
 
+    // ===== DOWNLOAD PRODUCT IMAGE IF FOUND =====
+    let productImageBase64: string | null = null;
+    const productImageUrl = mergedData.product_image_url as string | undefined;
+    if (productImageUrl) {
+      try {
+        console.log("Downloading product image:", productImageUrl);
+        const imgResponse = await fetch(productImageUrl, {
+          headers: { "Accept": "image/*" },
+          signal: AbortSignal.timeout(10000),
+        });
+        if (imgResponse.ok) {
+          const contentType = imgResponse.headers.get("content-type") || "image/jpeg";
+          const arrayBuffer = await imgResponse.arrayBuffer();
+          const uint8 = new Uint8Array(arrayBuffer);
+          // Manual base64 encoding for Deno
+          let binary = "";
+          for (let i = 0; i < uint8.length; i++) {
+            binary += String.fromCharCode(uint8[i]);
+          }
+          const b64 = btoa(binary);
+          productImageBase64 = `data:${contentType};base64,${b64}`;
+          console.log("Product image downloaded, size:", uint8.length);
+        } else {
+          console.log("Product image download failed:", imgResponse.status);
+        }
+      } catch (e) {
+        console.error("Product image download error:", e);
+      }
+      // Remove the URL from extractedData (frontend will use the base64)
+      delete mergedData.product_image_url;
+    }
+
     const remaining = usageData ? usageData.remaining : null;
 
     return new Response(
@@ -580,6 +624,7 @@ serve(async (req) => {
         extractedData: mergedData,
         qrCodeUsed: qrData !== null,
         secondPassUsed: Object.keys(secondPassData).length > 0,
+        ...(productImageBase64 && { productImageBase64 }),
         ...(remaining !== null && { quota: { remaining, limit: MONTHLY_LIMIT } })
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }

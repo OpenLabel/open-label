@@ -15,6 +15,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 import { RichTextEditor } from '@/components/RichTextEditor';
 import { ImageUpload } from '@/components/ImageUpload';
+import { supabase } from '@/integrations/supabase/client';
 import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { WineFields } from '@/components/WineFields';
 import { PassportPreview } from '@/components/PassportPreview';
@@ -334,6 +335,37 @@ export default function PassportForm() {
                 <WineFields
                   data={(formData.category_data as Record<string, unknown>) || {}}
                   onChange={(data) => setFormData({ ...formData, category_data: data })}
+                  onAutofillMeta={async (meta) => {
+                    const updates: Partial<FormData> = {};
+                    // Auto-set DPP name if empty
+                    if (meta.dppName && !formData.name.trim()) {
+                      updates.name = meta.dppName;
+                    }
+                    // Upload product image from base64
+                    if (meta.productImageBase64 && user) {
+                      try {
+                        const res = await fetch(meta.productImageBase64);
+                        const blob = await res.blob();
+                        const ext = blob.type.split('/')[1] || 'jpg';
+                        const fileName = `${Date.now()}-ai-product.${ext}`;
+                        const filePath = `${user.id}/${fileName}`;
+                        const { error: uploadError } = await supabase.storage
+                          .from('passport-images')
+                          .upload(filePath, blob);
+                        if (!uploadError) {
+                          const { data: urlData } = supabase.storage
+                            .from('passport-images')
+                            .getPublicUrl(filePath);
+                          updates.image_url = urlData.publicUrl;
+                        }
+                      } catch (e) {
+                        console.error('Failed to upload AI product image:', e);
+                      }
+                    }
+                    if (Object.keys(updates).length > 0) {
+                      setFormData(prev => ({ ...prev, ...updates }));
+                    }
+                  }}
                 />
               )}
 
