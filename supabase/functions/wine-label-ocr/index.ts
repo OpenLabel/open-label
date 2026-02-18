@@ -509,9 +509,9 @@ async function tryQrCodeScrape(
       },
       body: JSON.stringify({
         url: qrUrl,
-        formats: ["markdown", "links"],
+        formats: ["markdown", "html", "links"],
         onlyMainContent: true,
-        waitFor: 3000, // Wait for JS-rendered pages like u-label.io
+        waitFor: 5000, // Wait longer for JS-rendered pages like u-label.io
       }),
     });
 
@@ -522,7 +522,17 @@ async function tryQrCodeScrape(
     }
 
     const scrapeData = await scrapeResponse.json();
-    const markdown = scrapeData.data?.markdown || scrapeData.markdown;
+    let markdown = scrapeData.data?.markdown || scrapeData.markdown || "";
+
+    // If markdown is too short, fall back to HTML content (some JS-rendered pages
+    // like u-label.io return richer content in HTML than in markdown)
+    if (markdown.trim().length < 100) {
+      const html = scrapeData.data?.html || scrapeData.html || "";
+      if (html.trim().length > markdown.trim().length) {
+        console.log("Markdown too short, using HTML fallback (length:", html.length, ")");
+        markdown = html;
+      }
+    }
 
     if (!markdown || markdown.trim().length < 50) {
       console.log("Firecrawl returned insufficient content");
