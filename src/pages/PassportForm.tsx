@@ -56,7 +56,7 @@ export default function PassportForm() {
 
   const [formData, setFormData] = useState<FormData>({
     name: '',
-    category: 'other',
+    category: 'wine',
     image_url: null,
     description: '',
     language: 'en',
