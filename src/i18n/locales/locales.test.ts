@@ -71,7 +71,7 @@ describe("Translation files consistency", () => {
   const referenceKeyCount = referenceKeys.length;
 
   // Locales that have been fully updated to match English
-  const fullyUpdatedLocales = ["de", "fr", "es", "it", "pt", "nl", "pl", "sk", "sl", "hr", "hu", "lt", "et", "fi"];
+  const fullyUpdatedLocales = ["bg", "cs", "da", "de", "el", "es", "et", "fi", "fr", "ga", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "sk", "sl", "sv"];
 
   it("should have English as the reference with all keys", () => {
     expect(referenceKeyCount).toBeGreaterThan(0);
