@@ -33,15 +33,15 @@
   },
   "landing": {
     "hero": {
-      "badge": "Zgodny z EU ESPR",
+      "badge": "Zgodny z ESPR UE",
       "euFunded": "🇪🇺 Z dumą finansowany przez UE",
-      "title": "Twórz Nieograniczoną Liczbę Cyfrowych Paszportów Produktów",
+      "title": "Twórz nieograniczoną liczbę cyfrowych paszportów produktów",
       "subtitle": "Darmowa, open-source platforma do zgodności z Rozporządzeniem UE o Ekoprojektowaniu dla Zrównoważonych Produktów (ESPR). Generuj paszporty czytelne maszynowo z kodami QR dla baterii, tekstyliów, produktów budowlanych i ponad 12 kategorii.",
       "cta": "Utwórz Swój Pierwszy Paszport",
       "demo": "Zobacz Demo Paszportu",
       "features": {
         "free": "100% Darmowe i Open Source",
-        "selfHost": "Możliwość Self-Hostingu",
+        "selfHost": "Hostowanie na własnych serwerach",
         "machineReadable": "Maszynowo Czytelne JSON/XML",
         "categories": "12+ Kategorii Produktów"
       }
@@ -107,7 +107,7 @@
       "badge": "Zakres Regulacji UE",
       "title": "Obsługiwane Kategorie Produktów",
       "subtitle": "Szablony zbudowane na podstawie oficjalnych przepisów UE i aktów delegowanych. Aktywne przepisy obowiązują, Grupy priorytetowe mają szablony gotowe na nadchodzące wymagania.",
-      "activeLaw": "Aktywne Prawo",
+      "activeLaw": "Obowiązujące rozporządzenie",
       "priorityGroup": "Grupa Priorytetowa",
       "cta": "Zacznij Tworzyć Paszporty"
     },
@@ -216,7 +216,7 @@
     "notFoundDesc": "Ten cyfrowy paszport produktu nie istnieje lub został usunięty.",
     "productPassport": "Paszport Produktu",
     "checkAuthenticity": "Sprawdź autentyczność",
-    "poweredBy": "Powered by",
+    "poweredBy": "Obsługiwane przez",
     "noAdditionalInfo": "Nie są wymagane dodatkowe informacje dla tej kategorii.",
     "earlyAlpha": "Wczesna alfa",
     "earlyAlphaDesc": "Ten szablon jest we wczesnej fazie alfa i może nie być w pełni zgodny z aktualnymi przepisami. Proszę zweryfikować wszystkie informacje przed użyciem."
@@ -261,7 +261,7 @@
     "country": "Kraj Pochodzenia",
     "region": "Region",
     "denomination": "Denominacja / Apelacja",
-    "sugarClassification": "Klasyfikacja Cukru",
+    "sugarClassification": "Klasyfikacja słodkości",
     "producerInfo": "Informacje o Producencie",
     "producerInfoDesc": "Informacje o producencie wina",
     "producerName": "Nazwa Producenta/Winnicy",
@@ -308,10 +308,6 @@
     "displaySettings": "Ustawienia wyświetlania",
     "displaySettingsDesc": "Skonfiguruj, co będzie wyświetlane na publicznym Cyfrowym Paszporcie Produktu",
     "hidePromo": "Ukryj komunikat promocyjny 'Powered by Digital - Product - Passports .com'",
-    "displayOptions": "Opcje Wyświetlania",
-    "showAlcohol": "Pokaż Alkohol na etykiecie",
-    "showResidualSugar": "Pokaż Cukier Resztkowy na etykiecie",
-    "showTotalAcidity": "Pokaż Kwasowość Całkowitą na etykiecie",
     "ingredients": "Składniki",
     "addIngredients": "Dodaj Składniki",
     "addCustomIngredient": "Dodaj Niestandardowy",
@@ -349,7 +345,7 @@
     "placeholders": {
       "productName": "np. Château Margaux 2018",
       "grapeVariety": "np. Cabernet Sauvignon, Merlot",
-      "vintage": "np. 2020, NV, Multi-rocznik",
+      "vintage": "np. 2020, NV, z wielu roczników",
       "volume": "np. 750",
       "region": "np. Bordeaux, Burgundia, Champagne",
       "denomination": "np. AOC, AOP, IGP",
@@ -445,37 +441,13 @@
     "potato_protein": "Białko ziemniaczane",
     "pvpp": "PVPP (Poliwinylopirolidon)"
   },
-  "recycling": {
-    "code": "Kod",
-    "material": "Materiał",
-    "disposal": "Utylizacja",
-    "componentTypes": {
-      "bottle": "Butelka",
-      "closure": "Zamknięcie",
-      "capsule": "Kapsuła",
-      "label": "Etykieta",
-      "box": "Pudełko"
-    },
-    "selectMaterial": "Wybierz materiał",
-    "individualComponents": "Komponenty Indywidualne",
-    "compositeComponents": "Komponenty Złożone",
-    "customMaterial": "Niestandardowy Materiał",
-    "addCustomMaterial": "Dodaj niestandardowy materiał",
-    "disposalAdvice": "Porada dotycząca utylizacji",
-    "addMaterial": "Dodaj materiał",
-    "addPackagingMaterial": "Dodaj materiał opakowaniowy",
-    "customType": "Niestandardowy typ",
-    "addCustomType": "Dodaj niestandardowy typ materiału",
-    "materialName": "Nazwa materiału",
-    "materialNamePlaceholder": "np. Drewniana skrzynia"
-  },
   "legal": {
     "title": "Informacje Prawne",
     "legalMentions": "Informacje Prawne"
   },
   "notFound": {
     "title": "404",
-    "message": "Ups! Strona nie znaleziona",
+    "message": "Ups! Nie znaleziono strony",
     "returnHome": "Wróć do Strony Głównej"
   },
   "counterfeit": {
@@ -546,7 +518,7 @@
     "compositeComponents": "Komponenty złożone",
     "customMaterial": "Materiał niestandardowy",
     "addCustomMaterial": "Dodaj materiał niestandardowy",
-    "disposalAdvice": "Porada dotycząca utylizacji",
+    "disposalAdvice": "Instrukcje dotyczące utylizacji",
     "addMaterial": "Dodaj materiał",
     "addPackagingMaterial": "Dodaj materiał opakowania",
     "customType": "Typ niestandardowy",
