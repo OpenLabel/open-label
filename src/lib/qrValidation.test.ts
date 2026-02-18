@@ -38,4 +38,36 @@ describe("validateQrFromImageData", () => {
     );
     expect(res).toEqual({ ok: true, decodedUrl: "https://expected" });
   });
+
+  it("returns mismatch for empty expected URL", () => {
+    const img = makeImageData(10, 10);
+    const res = validateQrFromImageData(
+      img,
+      "",
+      () => ({ data: "https://anything" }),
+    );
+    expect(res.ok).toBe(false);
+    if (res.ok === false) expect(res.reason).toBe("url_mismatch");
+  });
+
+  it("returns mismatch for whitespace-only expected URL", () => {
+    const img = makeImageData(10, 10);
+    const res = validateQrFromImageData(
+      img,
+      "   ",
+      () => ({ data: "https://anything" }),
+    );
+    expect(res.ok).toBe(false);
+  });
+
+  it("handles very long URLs without crash", () => {
+    const img = makeImageData(10, 10);
+    const longUrl = "https://example.com/" + "a".repeat(10000);
+    const res = validateQrFromImageData(
+      img,
+      longUrl,
+      () => ({ data: longUrl }),
+    );
+    expect(res).toEqual({ ok: true, decodedUrl: longUrl });
+  });
 });
