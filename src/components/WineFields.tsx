@@ -10,6 +10,7 @@ import { volumeUnits, wineCountries } from '@/templates/wine';
 import { WineIngredients } from '@/components/wine/WineIngredients';
 import { WineRecycling } from '@/components/wine/WineRecycling';
 import { WineAIAutofill } from '@/components/wine/WineAIAutofill';
+import { packagingMaterialTypes, materialCompositions, disposalMethods } from '@/data/wineRecycling';
 import { calculateWineNutrition } from '@/lib/wineCalculations';
 import { TranslationButton, Translations } from '@/components/TranslationButton';
 import { useAutoTranslate } from '@/hooks/useAutoTranslate';
@@ -115,21 +116,145 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
     );
   }, [data]);
 
+  // Ingredient alias map for fuzzy matching from AI-detected names
+  const INGREDIENT_ALIASES: Record<string, string> = {
+    'sulphites': 'sulfites',
+    'sulphite': 'sulfites',
+    'sulfite': 'sulfites',
+    'so2': 'sulfites',
+    'sulfur dioxide': 'sulfur_dioxide',
+    'sulphur dioxide': 'sulfur_dioxide',
+    'e 220': 'sulfur_dioxide',
+    'e220': 'sulfur_dioxide',
+    'e 224': 'potassium_metabisulfite',
+    'e224': 'potassium_metabisulfite',
+    'e 202': 'potassium_sorbate',
+    'e202': 'potassium_sorbate',
+    'e 334': 'tartaric_acid',
+    'e334': 'tartaric_acid',
+    'e 330': 'citric_acid',
+    'e330': 'citric_acid',
+    'e 414': 'gum_arabic',
+    'e414': 'gum_arabic',
+    'e 300': 'ascorbic_acid',
+    'e300': 'ascorbic_acid',
+    'e 296': 'malic_acid',
+    'e296': 'malic_acid',
+    'e 270': 'lactic_acid',
+    'e270': 'lactic_acid',
+    'e 353': 'metatartaric_acid',
+    'e353': 'metatartaric_acid',
+    'e 1105': 'lysozyme',
+    'e1105': 'lysozyme',
+    'acacia gum': 'gum_arabic',
+    'arabic gum': 'gum_arabic',
+    'l-ascorbic acid': 'ascorbic_acid',
+    'ascorbic acid': 'ascorbic_acid',
+    'potassium metabisulphite': 'potassium_metabisulfite',
+    'potassium bisulphite': 'potassium_bisulfite',
+    'eggs': 'egg',
+    'egg white': 'egg',
+    'egg protein': 'egg',
+    'milk protein': 'milk',
+    'milk casein': 'casein',
+    'fish glue': 'isinglass',
+    'isinglass': 'isinglass',
+    'fish bladder': 'isinglass',
+  };
+
+  // Map AI material names to materialCompositions IDs
+  const mapPackagingComponents = (components: Array<{ type?: string; material?: string; material_code?: string; disposal?: string }>) => {
+    
+    return components.map((comp, index) => {
+      // Match type
+      const typeId = packagingMaterialTypes.find(
+        (t: { id: string; name: string }) => t.name.toLowerCase() === (comp.type || '').toLowerCase() || t.id === (comp.type || '').toLowerCase()
+      )?.id || comp.type || 'bottle';
+
+      // Match material code first, then material name
+      let compositionMatch = null;
+      if (comp.material_code) {
+        const codeNorm = comp.material_code.replace(/\s+/g, ' ').trim().toUpperCase();
+        compositionMatch = materialCompositions.find(
+          (m: { code: string }) => m.code.replace(/\s+/g, ' ').trim().toUpperCase() === codeNorm
+        );
+      }
+      if (!compositionMatch && comp.material) {
+        const matLower = comp.material.toLowerCase();
+        compositionMatch = materialCompositions.find(
+          (m: { name: string }) => m.name.toLowerCase().includes(matLower)
+        );
+      }
+
+      // Match disposal
+      let disposalMatch = null;
+      if (comp.disposal) {
+        const dispLower = comp.disposal.toLowerCase();
+        disposalMatch = disposalMethods.find(
+          (d: { name: string; id: string }) => d.name.toLowerCase().includes(dispLower) || d.id.includes(dispLower.replace(/\s+/g, '_'))
+        );
+      }
+
+      return {
+        id: `ai_${index}_${Date.now()}`,
+        typeId,
+        typeName: packagingMaterialTypes.find((t: { id: string; name: string }) => t.id === typeId)?.name || comp.type || 'Bottle',
+        ...(compositionMatch ? {
+          compositionId: compositionMatch.id,
+          compositionName: compositionMatch.name,
+          compositionCode: compositionMatch.code,
+        } : {}),
+        ...(disposalMatch ? {
+          disposalMethodId: disposalMatch.id,
+          disposalMethodName: disposalMatch.name,
+        } : {}),
+      };
+    });
+  };
+
   const handleAIAutofill = (extractedData: Record<string, unknown>) => {
     // Map detected_ingredients names to proper ingredient objects
     const detectedNames = extractedData.detected_ingredients as string[] | undefined;
     delete extractedData.detected_ingredients;
 
+    // Map packaging_components to recycling_materials format
+    const packagingComponents = extractedData.packaging_components as Array<{ type?: string; material?: string; material_code?: string; disposal?: string }> | undefined;
+    delete extractedData.packaging_components;
+
+    // Remove extra fields not used in the form
+    delete extractedData.lot_number;
+    delete extractedData.barcode;
+    delete extractedData.description;
+    delete extractedData.serving_temperature;
+
     let ingredientsToSet = undefined;
     if (detectedNames && detectedNames.length > 0) {
       const allIngredients = getAllIngredients();
+      const seen = new Set<string>();
       const matched = detectedNames
         .map((name) => {
-          const lower = name.toLowerCase();
+          const lower = name.toLowerCase().trim();
+          // Check alias map first
+          const aliasId = INGREDIENT_ALIASES[lower];
+          if (aliasId) {
+            const found = allIngredients.find((ing) => ing.id === aliasId);
+            if (found && !seen.has(found.id)) {
+              seen.add(found.id);
+              return {
+                id: found.id,
+                name: found.name,
+                eNumber: found.eNumber,
+                isAllergen: found.isAllergen,
+                category: getIngredientCategory(found.id),
+              };
+            }
+          }
+          // Direct name/id match
           const found = allIngredients.find(
             (ing) => ing.name.toLowerCase() === lower || ing.id === lower
           );
-          if (found) {
+          if (found && !seen.has(found.id)) {
+            seen.add(found.id);
             return {
               id: found.id,
               name: found.name,
@@ -138,20 +263,50 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
               category: getIngredientCategory(found.id),
             };
           }
+          // Partial match (e.g., "Tartaric acid" in "L-Tartaric acid")
+          const partial = allIngredients.find(
+            (ing) => lower.includes(ing.name.toLowerCase()) || ing.name.toLowerCase().includes(lower)
+          );
+          if (partial && !seen.has(partial.id)) {
+            seen.add(partial.id);
+            return {
+              id: partial.id,
+              name: partial.name,
+              eNumber: partial.eNumber,
+              isAllergen: partial.isAllergen,
+              category: getIngredientCategory(partial.id),
+            };
+          }
           // Unknown ingredient → add as custom
-          return {
-            id: `custom_${name.toLowerCase().replace(/\s+/g, '_')}`,
-            name,
-            isCustom: true,
-          };
-        });
+          const customId = `custom_${lower.replace(/\s+/g, '_')}`;
+          if (!seen.has(customId)) {
+            seen.add(customId);
+            return {
+              id: customId,
+              name,
+              isCustom: true,
+            };
+          }
+          return null;
+        })
+        .filter(Boolean);
       ingredientsToSet = matched;
+    }
+
+    let recyclingToSet = undefined;
+    if (packagingComponents && packagingComponents.length > 0) {
+      try {
+        recyclingToSet = mapPackagingComponents(packagingComponents);
+      } catch (e) {
+        console.error('Failed to map packaging components:', e);
+      }
     }
 
     const mergedData = {
       ...data,
       ...extractedData,
       ...(ingredientsToSet ? { ingredients: ingredientsToSet } : {}),
+      ...(recyclingToSet ? { recycling_materials: recyclingToSet } : {}),
     };
     onChange(mergedData);
   };

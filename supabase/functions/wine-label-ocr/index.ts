@@ -7,7 +7,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type, x-supabase-client-platform, x-supabase-client-platform-version, x-supabase-client-runtime, x-supabase-client-runtime-version",
 };
 
-// Input validation schema — now accepts optional qrUrl from client-side QR decode
+// Input validation schema
 const WineOCRSchema = z.object({
   image: z.string()
     .min(1, "Image is required")
@@ -21,7 +21,7 @@ const WineOCRSchema = z.object({
 
 const MONTHLY_LIMIT = 100;
 
-// All fields that can be extracted - matches WineFields.tsx form fields
+// All fields that can be extracted
 const EXTRACTION_TOOL = {
   type: "function" as const,
   function: {
@@ -59,6 +59,23 @@ const EXTRACTION_TOOL = {
           items: { type: "string" },
           description: "List of detected ingredient names (e.g., 'Sulfites', 'Tartaric acid', 'Gum arabic')"
         },
+        packaging_components: {
+          type: "array",
+          items: {
+            type: "object",
+            properties: {
+              type: { type: "string", description: "Component type: bottle, capsule, cage, cork, cardboard, bag, tap, label" },
+              material: { type: "string", description: "Material name (e.g., glass, plastic, aluminum, cork, paper)" },
+              material_code: { type: "string", description: "Material recycling code if visible (e.g., GL 71, PET 1, ALU 41, FOR 51, PAP 22)" },
+              disposal: { type: "string", description: "Disposal instruction if visible (e.g., glass collection, plastic collection)" },
+            },
+          },
+          description: "List of packaging components with their material and recycling info"
+        },
+        lot_number: { type: "string", description: "Lot or batch number (e.g., L23456)" },
+        barcode: { type: "string", description: "EAN/UPC barcode number" },
+        description: { type: "string", description: "Marketing or tasting description text" },
+        serving_temperature: { type: "string", description: "Recommended serving temperature" },
       },
       additionalProperties: false
     }
@@ -105,14 +122,124 @@ CALCULATED NUTRITIONAL VALUES (per 100ml - only if explicitly stated):
 INGREDIENTS:
 - detected_ingredients: List ingredient names found on the label or page (e.g., "Sulfites", "Tartaric acid", "Gum arabic", "Egg", "Milk")
 
+PACKAGING & RECYCLING:
+- Look for recycling symbols: Triman (French sorting logo), Mobius loop (♻), Green Dot, Tidyman, glass recycling symbol
+- Identify individual packaging components: bottle, capsule/cap, cork/stopper, cage (for sparkling), labels
+- Read material codes printed near recycling symbols (e.g., "GL 71" for green glass, "ALU 41" for aluminum)
+- Read French sorting instructions ("bac de tri", "poubelle", "à recycler", "à jeter")
+- Map disposal instructions: "bac de tri" → appropriate collection type, "poubelle" → residual waste
+- packaging_components: array of { type, material, material_code, disposal } for each identified component
+- Common wine packaging: bottle (glass GL 70-73), capsule (aluminum ALU 41 or plastic), cork (FOR 51), label (paper PAP 22)
+
+OTHER DETAILS:
+- lot_number: Lot/batch number (often starts with "L" followed by numbers)
+- barcode: EAN/UPC barcode digits if readable
+- description: Any marketing text, tasting notes, or product description
+- serving_temperature: Serving temperature recommendation (e.g., "8-10°C")
+
 Be conservative - only extract data you can clearly read. Do not guess or make up values.
 For analysis values, pay attention to units and convert to the expected format if needed.`;
 
+// List of all extractable field keys for second-pass gap detection
+const ALL_FIELD_KEYS = [
+  "product_name", "product_type", "grape_variety", "vintage", "volume", "volume_unit",
+  "country", "region", "denomination", "sugar_classification", "producer_name", "bottler_info",
+  "alcohol_percent", "residual_sugar", "total_acidity", "glycerine",
+  "energy_kcal", "energy_kj", "carbohydrates", "sugar",
+  "detected_ingredients", "packaging_components",
+  "lot_number", "barcode", "description", "serving_temperature",
+];
+
+/**
+ * Run a second focused extraction pass for missing fields.
+ */
+async function runSecondPass(
+  imageBase64: string,
+  firstPassData: Record<string, unknown>,
+  apiKey: string,
+): Promise<Record<string, unknown>> {
+  const missingFields = ALL_FIELD_KEYS.filter((key) => {
+    const val = firstPassData[key];
+    if (val === null || val === undefined || val === "") return true;
+    if (Array.isArray(val) && val.length === 0) return true;
+    return false;
+  });
+
+  if (missingFields.length <= 3) {
+    console.log("Second pass skipped: only", missingFields.length, "fields missing");
+    return {};
+  }
+
+  console.log("Running second pass for", missingFields.length, "missing fields:", missingFields);
+
+  const focusedPrompt = `You already extracted some data from this wine label but MISSED several fields. Look VERY CAREFULLY at the image again, especially:
+- Small print and fine text
+- Back label information
+- Recycling symbols and material codes near the bottom
+- Ingredient lists and allergen warnings
+- Lot numbers (usually small text starting with "L")
+- Barcode numbers
+
+The following fields are STILL MISSING and need your attention:
+${missingFields.map(f => `- ${f}`).join("\n")}
+
+Look harder at the image and extract these specific details. Check every corner, every small symbol, every line of text.`;
+
+  try {
+    const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        model: "google/gemini-2.5-flash",
+        messages: [
+          { role: "system", content: SYSTEM_PROMPT },
+          {
+            role: "user",
+            content: [
+              { type: "text", text: focusedPrompt },
+              { type: "image_url", image_url: { url: imageBase64 } },
+            ],
+          },
+        ],
+        tools: [EXTRACTION_TOOL],
+        tool_choice: { type: "function", function: { name: "extract_wine_label_data" } },
+        temperature: 0.1,
+      }),
+    });
+
+    if (!response.ok) {
+      console.log("Second pass AI call failed:", response.status);
+      await response.text();
+      return {};
+    }
+
+    const data = await response.json();
+    const toolCall = data.choices?.[0]?.message?.tool_calls?.[0];
+    if (!toolCall || toolCall.function.name !== "extract_wine_label_data") return {};
+
+    const extracted = JSON.parse(toolCall.function.arguments);
+    // Only return fields that were actually missing
+    const result: Record<string, unknown> = {};
+    for (const key of missingFields) {
+      const val = extracted[key];
+      if (val !== null && val !== undefined && val !== "") {
+        if (Array.isArray(val) && val.length === 0) continue;
+        result[key] = val;
+      }
+    }
+    console.log("Second pass found", Object.keys(result).length, "additional fields:", Object.keys(result));
+    return result;
+  } catch (error) {
+    console.error("Second pass error:", error);
+    return {};
+  }
+}
+
 /**
  * Attempt to scrape a QR code URL with Firecrawl to get additional product data.
- *
- * If qrUrl is provided (client-side decode), use it directly.
- * Otherwise, fall back to AI vision detection.
  */
 async function tryQrCodeScrape(
   imageBase64: string,
@@ -123,7 +250,6 @@ async function tryQrCodeScrape(
   try {
     let qrUrl = clientQrUrl || null;
 
-    // If no client-side QR URL, fall back to AI vision
     if (!qrUrl) {
       console.log("No client-side QR URL, trying AI fallback...");
       const qrResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -177,7 +303,6 @@ async function tryQrCodeScrape(
 
     console.log("Scraping QR code URL:", qrUrl);
 
-    // Use Firecrawl to scrape the QR code URL
     const scrapeResponse = await fetch("https://api.firecrawl.dev/v1/scrape", {
       method: "POST",
       headers: {
@@ -207,7 +332,6 @@ async function tryQrCodeScrape(
 
     console.log("Firecrawl scraped content length:", markdown.length);
 
-    // Extract wine data from the scraped page content
     const extractResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       method: "POST",
       headers: {
@@ -362,7 +486,7 @@ serve(async (req) => {
             content: [
               {
                 type: "text",
-                text: "Please analyze this wine label or document and extract all visible information. Read ALL text carefully including small print, allergen warnings, and ingredient lists. Return all fields you can identify."
+                text: "Please analyze this wine label or document and extract all visible information. Read ALL text carefully including small print, allergen warnings, ingredient lists, recycling symbols, material codes, lot numbers, and barcodes. Return all fields you can identify."
               },
               {
                 type: "image_url",
@@ -414,18 +538,32 @@ serve(async (req) => {
 
     const imageExtracted = JSON.parse(toolCall.function.arguments);
 
-    // ===== MERGE: Image data (base) + QR data (override) =====
+    // ===== SECOND PASS: Fill in missing fields =====
+    const secondPassData = await runSecondPass(image, imageExtracted, LOVABLE_API_KEY);
+
+    // ===== MERGE: Image first pass + second pass + QR data =====
     const mergedData: Record<string, unknown> = {};
 
+    // First pass as base
     for (const [key, value] of Object.entries(imageExtracted)) {
       if (value !== null && value !== undefined && value !== "") {
+        if (Array.isArray(value) && value.length === 0) continue;
         mergedData[key] = value;
       }
     }
 
+    // Second pass fills gaps only
+    for (const [key, value] of Object.entries(secondPassData)) {
+      if (!(key in mergedData)) {
+        mergedData[key] = value;
+      }
+    }
+
+    // QR data overrides (most authoritative source)
     if (qrData) {
       for (const [key, value] of Object.entries(qrData)) {
         if (value !== null && value !== undefined && value !== "") {
+          if (Array.isArray(value) && value.length === 0) continue;
           mergedData[key] = value;
         }
       }
@@ -441,6 +579,7 @@ serve(async (req) => {
         success: true, 
         extractedData: mergedData,
         qrCodeUsed: qrData !== null,
+        secondPassUsed: Object.keys(secondPassData).length > 0,
         ...(remaining !== null && { quota: { remaining, limit: MONTHLY_LIMIT } })
       }),
       { headers: { ...corsHeaders, "Content-Type": "application/json" } }
