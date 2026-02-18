@@ -200,6 +200,7 @@
     "dppNameHelp": "Ní fheictear an t-ainm seo ach ar do dheais",
     "productName": "Ainm an Táirge",
     "productNamePlaceholder": "Iontráil ainm don táirge seo",
+    "productNameHelp": "Seo an t-ainm a fheicfidh tomhaltóirí ar an bpas digiteach poiblí táirge",
     "category": "Catagóir Táirge",
     "productImage": "Íomhá Táirge",
     "productDescription": "Cur Síos ar an Táirge",
@@ -538,11 +539,37 @@
     "certificationsLabels": "Deimhniúcháin & Lipéid",
     "poweredBy": "Cumhachtaithe ag"
   },
+  "imageUpload": {
+    "loginRequired": "Caithfidh tú logáil isteach chun íomhánna a uaslódáil",
+    "invalidType": "Uaslódáil comhad íomhá le do thoil",
+    "tooLarge": "Caithfidh an íomhá a bheith níos lú ná 5MB",
+    "uploading": "Ag uaslódáil...",
+    "uploadButton": "Uaslódáil íomhá táirge",
+    "uploadFailed": "Theip ar uaslódáil na híomhá"
+  },
   "ai": {
     "analyzing": "Ag anailísiú doiciméid...",
     "takePhoto": "Tóg Grianghraf",
     "uploadFile": "Uaslódáil Comhad",
     "supportedFormats": "Tacaíonn le grianghraif, PDFanna, agus doiciméid Word",
-    "multiUploadTip": "An bhfuil comhaid iolracha agat? Rith arís tar éis gach uaslódáil chun sonraí ó fhoinsí difriúla a chumasc."
+    "multiUploadTip": "An bhfuil comhaid iolracha agat? Rith arís tar éis gach uaslódáil chun sonraí ó fhoinsí difriúla a chumasc.",
+    "autofillButton": "Uathlíon le IA",
+    "experimental": "Turgnamhach",
+    "scannerTitle": "Scanóir lipéad IA",
+    "scannerDescription": "Uaslódáil grianghraf lipéid, PDF nó doiciméad agus bainfidh an IA an fhaisnéis go huathoibríoch.",
+    "experimentalWarning": "Gné thurgnamhach: seiceáil na sonraí go léir roimh shábháil.",
+    "autofillComplete": "✨ Uathlíonadh IA críochnaithe",
+    "autofillCompleteDesc": "Líonadh na réimsí. Athbhreithnigh agus deimhnigh na sonraí roimh shábháil.",
+    "noDataExtracted": "Níor baineadh aon sonraí as an lipéad",
+    "processingFailed": "Theip ar phróiseáil",
+    "processingFailedDesc": "Níorbh fhéidir sonraí a bhaint as an lipéad",
+    "quotaExceeded": "Cuóta úsáide cothroime sáraithe",
+    "quotaExceededDesc": "Shroich tú an teorainn mhíosúil de 100 scanadh lipéad IA.",
+    "quotaExceededBody": "Chun rochtain chothrom a chinntiú, cuirimid teorainn le scanadh go 100 in aghaidh na míosa.",
+    "quotaContactBody": "Má theastaíonn teorainn níos airde uait do do ghnó, déan teagmháil linn.",
+    "contactUs": "Déan teagmháil linn"
+  },
+  "richText": {
+    "enterUrl": "Iontráil URL:"
   }
 }

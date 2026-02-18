@@ -197,6 +197,7 @@
     "dppNameHelp": "Questo nome è visibile solo nella tua dashboard",
     "productName": "Nome prodotto",
     "productNamePlaceholder": "Inserisci un nome per questo prodotto",
+    "productNameHelp": "Questo è il nome che i consumatori vedranno sul passaporto digitale pubblico del prodotto",
     "category": "Categoria prodotto",
     "productImage": "Immagine prodotto",
     "productDescription": "Descrizione prodotto",
@@ -535,11 +536,37 @@
     "certificationsLabels": "Certificazioni e Etichette",
     "poweredBy": "Alimentato da"
   },
+  "imageUpload": {
+    "loginRequired": "Devi effettuare l'accesso per caricare immagini",
+    "invalidType": "Carica un file immagine",
+    "tooLarge": "L'immagine deve essere inferiore a 5MB",
+    "uploading": "Caricamento...",
+    "uploadButton": "Carica immagine prodotto",
+    "uploadFailed": "Caricamento immagine fallito"
+  },
   "ai": {
     "analyzing": "Analisi documento...",
     "takePhoto": "Scatta foto",
     "uploadFile": "Carica file",
     "supportedFormats": "Supporta foto, PDF e documenti Word",
-    "multiUploadTip": "Più file? Esegui di nuovo dopo ogni caricamento per unire i dati."
+    "multiUploadTip": "Più file? Esegui di nuovo dopo ogni caricamento per unire i dati.",
+    "autofillButton": "Compila con IA",
+    "experimental": "Sperimentale",
+    "scannerTitle": "Scanner etichette IA",
+    "scannerDescription": "Carica una foto dell'etichetta, PDF o documento e l'IA estrarrà le informazioni automaticamente.",
+    "experimentalWarning": "Funzione sperimentale: controlla tutti i dati estratti prima di salvare.",
+    "autofillComplete": "✨ Compilazione IA completata",
+    "autofillCompleteDesc": "I campi sono stati compilati. Rivedi e verifica i dati prima di salvare.",
+    "noDataExtracted": "Nessun dato estratto dall'etichetta",
+    "processingFailed": "Elaborazione fallita",
+    "processingFailedDesc": "Impossibile estrarre dati dall'etichetta",
+    "quotaExceeded": "Quota di utilizzo equo superata",
+    "quotaExceededDesc": "Hai raggiunto il limite mensile di 100 scansioni etichette IA.",
+    "quotaExceededBody": "Per garantire un accesso equo, limitiamo le scansioni a 100 al mese. La quota si rinnoverà all'inizio del prossimo mese.",
+    "quotaContactBody": "Se hai bisogno di un limite più alto per la tua azienda, contattaci.",
+    "contactUs": "Contattaci"
+  },
+  "richText": {
+    "enterUrl": "Inserisci URL:"
   }
 }

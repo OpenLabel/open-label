@@ -200,6 +200,7 @@
     "dppNameHelp": "Dieser Name ist nur in Ihrem Dashboard sichtbar",
     "productName": "Produktname",
     "productNamePlaceholder": "Namen für dieses Produkt eingeben",
+    "productNameHelp": "Dies ist der Name, den Verbraucher auf dem öffentlichen digitalen Produktpass sehen werden",
     "category": "Produktkategorie",
     "productImage": "Produktbild",
     "productDescription": "Produktbeschreibung",

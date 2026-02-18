@@ -203,6 +203,7 @@
     "dppNameHelp": "Detta namn syns bara på din instrumentpanel",
     "productName": "Produktnamn",
     "productNamePlaceholder": "Ange ett namn för denna produkt",
+    "productNameHelp": "Detta är namnet som konsumenter kommer att se på det offentliga digitala produktpasset",
     "category": "Produktkategori",
     "productImage": "Produktbild",
     "productDescription": "Produktbeskrivning",

@@ -200,6 +200,7 @@
     "dppNameHelp": "Deze naam is alleen zichtbaar in uw dashboard",
     "productName": "Productnaam",
     "productNamePlaceholder": "Voer een naam in voor dit product",
+    "productNameHelp": "Dit is de naam die consumenten zien op het openbare digitale productpaspoort",
     "category": "Productcategorie",
     "productImage": "Productafbeelding",
     "productDescription": "Productbeschrijving",
