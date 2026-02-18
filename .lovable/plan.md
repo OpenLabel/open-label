@@ -1,154 +1,85 @@
 
-# Interactive Setup Script for Self-Hosting
 
-## Overview
+## Comprehensive Translation Audit Plan
 
-Create a single `setup.sh` bash script that automates the entire installation process and prompts the user for required values (API keys, project credentials). This is the standard approach for open-source self-hosted projects.
+### Problem Statement
+There are two distinct issues in the translation files:
+1. **Missing keys**: Several locale files (ga, sv) are severely truncated with only ~30-80 keys vs the ~438 in English. Greek (el) is also incomplete at ~46 lines.
+2. **Untranslated values**: Some "complete" locale files contain English words instead of proper translations -- words that were never actually translated.
 
-## What the Script Will Do
+### Approach: Enhanced Vitest Audit Test
 
-1. **Check prerequisites** (Node.js, npm, Supabase CLI)
-2. **Prompt for Supabase credentials** (Project ID, URL, Anon Key)
-3. **Prompt for API keys** (Resend required, Lovable optional)
-4. **Run all setup commands automatically**:
-   - `supabase login` (opens browser)
-   - `supabase link --project-ref <ID>`
-   - `supabase db push`
-   - `supabase secrets set RESEND_API_KEY=...`
-   - `supabase secrets set LOVABLE_API_KEY=...` (if provided)
-   - `supabase functions deploy` (all 3 functions)
-5. **Generate `.env` file** with frontend variables
-6. **Offer to build or start dev server**
+The best approach is to add a new comprehensive test file that runs as part of `vitest` and produces a detailed audit report. This is better than a runtime utility because:
+- It runs automatically in CI/CD
+- It catches regressions immediately
+- It produces a clear, actionable report
 
----
+### What the Audit Will Check
 
-## Files to Create/Modify
+**1. Missing Keys Detection (already partially exists)**
+- Compare every locale against the English reference
+- Report exact missing key paths per locale
 
-### 1. New File: `setup.sh`
+**2. Untranslated Value Detection (new)**
+- For every non-English locale, compare each value against the English value
+- If the value is identical to English, flag it as "potentially untranslated"
+- Exclude known legitimate matches from false positives:
+  - E-numbers (e.g., "E220", "E938")
+  - Chemical formulas (e.g., "C4H6O6")
+  - Proper nouns kept in original form (e.g., "Chateau Margaux", "AOC", "AOP", "IGP")
+  - Technical abbreviations (e.g., "JSON/XML", "BIM", "NFC/RFID", "ISO 15459", "DPP", "ESPR", "PDF", "QR")
+  - Number patterns and units (e.g., "750", "100", "kcal", "kJ", "g/L")
+  - Brand names (e.g., "GitHub", "Powered by")
+  - Single-character or very short values (1-2 chars)
+  - Values that are mostly numbers/symbols
 
-Interactive bash script with colored output and user prompts:
+**3. File Completeness Summary**
+- Total keys per locale vs English reference
+- Percentage completion per locale
+- Clear pass/fail per locale
 
-```bash
-#!/bin/bash
+### Implementation Details
 
-# Colors for output
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-RED='\033[0;31m'
-NC='\033[0m' # No Color
+**New file: `src/i18n/locales/audit.test.ts`**
 
-echo -e "${GREEN}"
-echo "╔═══════════════════════════════════════════════════════════╗"
-echo "║     Digital Product Passport - Self-Hosting Setup         ║"
-echo "╚═══════════════════════════════════════════════════════════╝"
-echo -e "${NC}"
+This test file will:
+1. Import all 24 locale JSON files
+2. Flatten all nested keys into dot-notation paths
+3. For each non-English locale:
+   - List all missing keys (keys in English but not in the locale)
+   - List all extra keys (keys in locale but not in English)
+   - List all values identical to English (excluding allowlist)
+4. Print a summary table to console
+5. Fail the test if any locale has untranslated values above a threshold
 
-# Check prerequisites
-command -v node >/dev/null 2>&1 || { echo -e "${RED}Node.js is required. Install from nodejs.org${NC}"; exit 1; }
-command -v supabase >/dev/null 2>&1 || { echo -e "${YELLOW}Installing Supabase CLI...${NC}"; npm install -g supabase; }
+The allowlist for legitimate English matches will include:
+- Values shorter than 3 characters
+- Values matching regex for E-numbers, chemical formulas, units
+- Values containing only numbers, punctuation, or technical codes
+- Specific known keys like `poweredBy`, `hidePromo` where English brand names are expected
 
-# Prompt for Supabase credentials
-echo -e "\n${YELLOW}Step 1: Supabase Credentials${NC}"
-echo "Get these from: supabase.com → Your Project → Settings → API"
-read -p "Project ID (from URL, e.g., 'abcdef'): " PROJECT_ID
-read -p "Project URL (e.g., https://abcdef.supabase.co): " SUPABASE_URL
-read -p "Anon/Public Key (starts with eyJ...): " ANON_KEY
+**Update to `locales.test.ts`**
+- Add `ga`, `sv`, `el` and remaining locales to the tracking so their incompleteness is visible (not necessarily enforced yet)
 
-# Prompt for Resend API key
-echo -e "\n${YELLOW}Step 2: Resend API Key (Required)${NC}"
-echo "Get yours at: resend.com/api-keys"
-read -sp "Resend API Key (re_...): " RESEND_KEY
-echo ""
+### Execution Order
+1. Create `src/i18n/locales/audit.test.ts` with the comprehensive audit logic
+2. Run tests to get the full report of:
+   - Which locales are missing keys (and which keys)
+   - Which locales have untranslated English strings (and which keys)
+3. Use that report to systematically fix each locale file
+4. Expand the severely truncated files (ga, sv) to full key parity
 
-# Prompt for optional Lovable key
-echo -e "\n${YELLOW}Step 3: Lovable API Key (Optional - for AI features)${NC}"
-read -p "Lovable API Key (press Enter to skip): " LOVABLE_KEY
-
-# Login and link
-echo -e "\n${GREEN}Connecting to Supabase...${NC}"
-supabase login
-supabase link --project-ref "$PROJECT_ID"
-
-# Push database schema
-echo -e "\n${GREEN}Setting up database...${NC}"
-supabase db push
-
-# Set secrets
-echo -e "\n${GREEN}Configuring secrets...${NC}"
-supabase secrets set RESEND_API_KEY="$RESEND_KEY"
-[ -n "$LOVABLE_KEY" ] && supabase secrets set LOVABLE_API_KEY="$LOVABLE_KEY"
-
-# Deploy edge functions
-echo -e "\n${GREEN}Deploying edge functions...${NC}"
-supabase functions deploy send-counterfeit-request
-supabase functions deploy wine-label-ocr
-supabase functions deploy get-public-passport
-
-# Generate .env file
-echo -e "\n${GREEN}Creating .env file...${NC}"
-cat > .env << EOF
-VITE_SUPABASE_URL=$SUPABASE_URL
-VITE_SUPABASE_PUBLISHABLE_KEY=$ANON_KEY
-VITE_SUPABASE_PROJECT_ID=$PROJECT_ID
-EOF
-
-# Install dependencies and offer next steps
-echo -e "\n${GREEN}Installing dependencies...${NC}"
-npm install
-
-echo -e "\n${GREEN}✅ Setup complete!${NC}"
-echo ""
-echo "Next steps:"
-echo "  1. Run 'npm run build' to build for production"
-echo "  2. Or run 'npm run dev' to start development server"
-echo "  3. Visit your app and complete the setup wizard"
+### Expected Output
+The test will print something like:
+```text
+=== Translation Audit Report ===
+bg: 438/438 keys, 3 potentially untranslated
+cs: 438/438 keys, 5 potentially untranslated  
+da: 438/438 keys, 2 potentially untranslated
+...
+ga: 32/438 keys, INCOMPLETE (7% coverage)
+sv: 28/438 keys, INCOMPLETE (6% coverage)
 ```
 
-### 2. Update: `README.md`
+And for each locale with issues, it will list the specific keys, making it easy to fix them one by one.
 
-Simplify to single-command installation:
-
-```markdown
-## 🚀 Quick Install (Self-Hosting)
-
-### Prerequisites
-
-1. Create a free [Supabase](https://supabase.com) project
-2. Create a free [Resend](https://resend.com) account and get an API key
-
-### One-Command Setup
-
-```bash
-git clone https://github.com/OpenLabel/digital-product-passports-com.git
-cd digital-product-passports-com
-chmod +x setup.sh
-./setup.sh
-```
-
-The script will:
-- ✅ Prompt you for all required credentials
-- ✅ Set up the database schema
-- ✅ Configure API keys securely
-- ✅ Deploy backend functions
-- ✅ Generate your `.env` file
-
-Then just run `npm run build` and deploy the `dist` folder!
-```
-
-### 3. Update: `.gitignore`
-
-Ensure `.env` is ignored (already should be, but verify).
-
----
-
-## Security Considerations
-
-- **API keys entered with `-s` flag** (silent mode) so they're not visible while typing
-- **Keys stored only in Supabase secrets** (not in local files except the safe anon key)
-- **Script validates inputs** before proceeding
-
----
-
-## Alternative: Windows Support
-
-For Windows users, we could also create a `setup.ps1` PowerShell script with equivalent functionality, or recommend using WSL (Windows Subsystem for Linux).
