@@ -11,9 +11,10 @@ import { useSiteConfig } from '@/hooks/useSiteConfig';
 
 interface WineAIAutofillProps {
   onAutofill: (data: Record<string, unknown>) => void;
+  onAutofillMeta?: (meta: { dppName?: string; productImageBase64?: string }) => void;
 }
 
-export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
+export function WineAIAutofill({ onAutofill, onAutofillMeta }: WineAIAutofillProps) {
   const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -89,6 +90,19 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
         const quotaInfo = data.quota ? ` (${data.quota.remaining} scans remaining this month)` : '';
         const qrInfo = data.qrCodeUsed ? ` ${t('ai.qrCodeUsed')}` : '';
         onAutofill(data.extractedData);
+        // Pass meta (DPP name + product image) up to PassportForm
+        if (onAutofillMeta) {
+          const meta: { dppName?: string; productImageBase64?: string } = {};
+          if (data.extractedData.product_name) {
+            meta.dppName = data.extractedData.product_name as string;
+          }
+          if (data.productImageBase64) {
+            meta.productImageBase64 = data.productImageBase64;
+          }
+          if (meta.dppName || meta.productImageBase64) {
+            onAutofillMeta(meta);
+          }
+        }
         toast({
           title: t('ai.autofillComplete'),
           description: `${t('ai.autofillCompleteDesc')}${qrInfo}${quotaInfo}`,
