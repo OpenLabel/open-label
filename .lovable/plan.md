@@ -1,117 +1,91 @@
 
-# Automated Tests: Bug Prevention and Security Only
 
-## Philosophy
-Only tests that catch real bugs or security vulnerabilities. No business logic validation (like alcohol content correctness). Every test answers: "What breaks or becomes dangerous if this goes wrong?"
+# Fix Wine Label AI Scanner
 
-## Test Categories
+## Problems Identified
 
-### 1. Edge Function Security Tests (Deno)
+1. **QR code detection never works**: The current approach asks an AI vision model to "decode" a QR code from an image. LLMs cannot reliably decode QR codes -- they can see them but can't read the encoded data. The logs confirm: no QR detection ever fired for this scan.
 
-These are the highest-value tests -- they protect the publicly exposed attack surface.
+2. **Merge priority is backwards**: When QR data IS available, image-extracted data currently overrides it. QR-linked pages typically have more complete, structured data and should take priority.
 
-**`supabase/functions/get-public-passport/index_test.ts`**
-- Rejects malformed slugs (SQL injection patterns, XSS payloads, wrong length) -- prevents data exfiltration
-- Rejects invalid JSON body -- prevents crashes
-- Returns 404 for nonexistent slug (not 500) -- prevents error leak
-- CORS preflight returns correct headers -- prevents browser blocking
+3. **AI extraction missed obvious label text**: "Rosé", "CONTIENT DES SULFITES", misread energy (63 kcal as 83), confused producer vs product name, and misidentified the bottler's town as a wine region.
 
-**`supabase/functions/send-counterfeit-request/index_test.ts`**
-- Rejects missing/invalid email -- prevents email injection
-- Rejects empty passport name -- prevents sending broken emails
-- Rejects invalid URL format -- prevents open redirect in email links
-- CORS preflight works correctly
+## Solution
 
-**`supabase/functions/translate-text/index_test.ts`**
-- Rejects empty text -- prevents wasting AI quota on empty calls
-- Rejects empty target languages array -- prevents crash
-- CORS preflight works
+### 1. Use a real QR code decoder (server-side)
 
-**`supabase/functions/wine-label-ocr/index_test.ts`**
-- Rejects request without auth header (401) -- prevents unauthorized AI usage
-- Rejects invalid image format -- prevents sending garbage to AI API
-- CORS preflight works
+Replace the AI-based QR detection with a proper image processing approach:
+- Decode the base64 image to raw pixel data using a Deno-compatible image library
+- Use a QR decoding library (e.g., `jsqr` via esm.sh or a Deno-native alternative) to find and decode QR codes
+- Fall back to AI-based detection only if the library fails (some photos have perspective distortion)
 
-### 2. Data Integrity Tests (prevent runtime crashes from bad static data)
+### 2. Reverse merge priority
 
-**`src/data/wineIngredients.integrity.test.ts`**
-- No duplicate ingredient IDs across all categories -- duplicates cause UI key collisions and wrong ingredient selection
-- Every ingredient has non-empty `id` and `name` -- missing values crash the ingredient picker
-- All category IDs are non-empty and unique -- prevents rendering bugs
+Change the merge logic so:
+- Image extraction provides the BASE data
+- QR-scraped page data OVERRIDES it (since it's more structured and reliable)
+- This means if QR gives `energy_kcal: 63` and image gives `energy_kcal: 83`, the correct QR value wins
 
-**`src/data/wineRecycling.integrity.test.ts`**
-- No duplicate IDs in `packagingMaterialTypes`, `materialCompositions`, `disposalMethods`
-- Every `materialComposition.categoryId` references a known category -- orphaned references cause filter bugs
-- All entries have non-empty `id` and `name` -- prevents crashes
+### 3. Improve system prompt for better extraction
 
-### 3. Template Structural Integrity (prevent form rendering crashes)
+Enhance the extraction prompt to:
+- Explicitly instruct: "Read ALL text on the label carefully, including small print"
+- Clarify product_name vs producer_name distinction
+- Emphasize allergen/ingredient detection ("CONTIENT DES SULFITES" = Sulfites)
+- Instruct to look for wine color/type (Rosé, Rouge, Blanc) and include it in product_name
+- Warn against confusing bottler address towns with wine regions
+- Stress exact number reading for energy values
 
-**`src/templates/allTemplates.test.ts`**
-- Every template section question has non-empty `id`, `label`, and valid `type`
-- Select-type questions always have a non-empty `options` array -- missing options crashes the Select component
-- No duplicate question IDs within any single template -- causes React key collisions and data overwrites
-- Question `type` is one of the valid enum values -- invalid type crashes CategoryQuestions renderer
+## Technical Changes
 
-### 4. i18n Configuration Integrity
+### File: `supabase/functions/wine-label-ocr/index.ts`
 
-**`src/i18n/config.test.ts`**
-- All 24 EU language codes are configured -- missing language = broken public passport for that locale
-- No duplicate language codes -- causes unpredictable language switching
-- Every language code is exactly 2 characters (ISO 639-1) -- invalid codes break the i18n system
+**A. Add image decoding + QR detection library**
 
-### 5. DOMPurify / XSS Prevention
+Add imports for image decoding and QR code scanning at the top. Use `esm.sh` to import `jsqr` and a PNG/JPEG decoder for Deno.
 
-**`src/pages/PublicPassport.security.test.ts`**
-- Verify that DOMPurify is used on passport description before rendering -- this is the only `dangerouslySetInnerHTML` in the codebase, so we test that the sanitization call exists and strips malicious payloads
-- Test that script tags, onerror handlers, and javascript: URLs are removed from description HTML
+Create a new `decodeQrFromBase64` function that:
+1. Strips the data URL prefix
+2. Decodes the base64 to binary
+3. Decodes the image to raw RGBA pixel data
+4. Runs jsQR on the pixel data
+5. Returns the decoded URL string or null
 
-### 6. QR Validation (extend existing -- prevent counterfeit QR codes)
+**B. Update `tryQrCodeScrape` function**
 
-**`src/lib/qrValidation.test.ts`** (extend)
-- Empty/whitespace expected URL returns mismatch -- prevents accepting any QR as valid
-- Very long URLs are handled without crash
+- First, try the library-based QR decoder (fast, reliable)
+- If it finds a URL, proceed directly to Firecrawl scraping
+- Only if the library fails, fall back to the existing AI vision approach (for perspective-distorted photos)
+- Add better logging throughout
 
-### 7. Route Protection
+**C. Reverse merge priority (lines ~397-417)**
 
-**`src/App.routing.test.ts`**
-- `/setup` redirects to `/` when setup is complete -- prevents re-running setup (security)
-- Public passport route `/p/:slug` works even during setup mode -- ensures published DPPs remain accessible
-- Unknown routes go to NotFound -- prevents information leakage
+Change from:
+```
+QR data = base, Image data = override
+```
+To:
+```
+Image data = base, QR data = override
+```
 
-## What We Are NOT Testing
-- Whether alcohol calculations are correct (business logic, not a bug)
-- Whether specific nutritional values are accurate (not our responsibility)
-- Visual appearance or styling
-- Component snapshots (brittle, low bug-prevention value)
+So QR-sourced data always wins when available.
 
-## Test Count Estimate
+**D. Improve SYSTEM_PROMPT**
 
-| Category | New Tests |
-|----------|-----------|
-| Edge function security (4 functions) | ~16 |
-| Data integrity (ingredients + recycling) | ~10 |
-| Template structural integrity | ~6 |
-| i18n config integrity | ~4 |
-| XSS/DOMPurify | ~4 |
-| QR validation extensions | ~2 |
-| Route protection | ~3 |
-| **Total new** | **~45** |
-| Existing | 200 |
-| **Grand total** | **~245** |
+Add explicit instructions:
+- "Read the wine type/color (Rouge, Rosé, Blanc, etc.) and include it in the product_name"
+- "product_name is the marketing name of the wine (e.g., 'Pompon Rouge Rosé'), not the producer/winery name"
+- "Look for allergen mentions like 'CONTIENT DES SULFITES' and map to detected_ingredients"
+- "The bottler address city is NOT the wine region"
+- "Read numbers very carefully -- double-check energy values against what is printed"
 
-## Implementation Order
-1. Edge function security tests (highest risk surface)
-2. XSS / DOMPurify tests (direct safety impact)
-3. Data integrity tests (prevent runtime crashes)
-4. Template structural tests (prevent form crashes)
-5. i18n config test (prevent broken locales)
-6. QR validation extensions
-7. Route protection tests
+### File: `supabase/functions/wine-label-ocr/index_test.ts`
 
-## Technical Details
+No changes needed -- existing tests cover auth, CORS, and validation, which remain the same.
 
-- Edge function tests use Deno test runner, call deployed functions via HTTP, load env from `.env` via `dotenv/load.ts`
-- Frontend tests use Vitest + React Testing Library
-- Data/template tests are pure logic -- no mocking needed, fast and reliable
-- XSS tests use DOMPurify directly to verify sanitization behavior
-- Route tests render `<App />` with `MemoryRouter` and mock Supabase client
+## Risk Assessment
+
+- **Low risk**: Prompt improvements and merge reorder are safe changes
+- **Medium risk**: Adding image decoding in Deno edge functions -- need to verify library compatibility with Deno runtime. If image decoding fails, the function gracefully falls back to AI-only detection (current behavior)
+- The function still works without a QR code (pure image extraction), so no regression for labels without QR codes
