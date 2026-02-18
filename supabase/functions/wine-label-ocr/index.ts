@@ -21,6 +21,85 @@ const WineOCRSchema = z.object({
 
 const MONTHLY_LIMIT = 100;
 
+/**
+ * Known ingredient IDs — mirrored from src/data/wineIngredients.ts.
+ * The AI must return these IDs instead of free-text names.
+ * If adding/removing ingredients, update BOTH this list and the frontend data file,
+ * and ensure the sync test in wineIngredients.integrity.test.ts passes.
+ */
+export const KNOWN_INGREDIENTS: { id: string; name: string; eNumber?: string; isAllergen?: boolean }[] = [
+  // General
+  { id: "grapes", name: "Grapes" },
+  { id: "saccharose", name: "Saccharose" },
+  { id: "aleppo_pine_resin", name: "Aleppo pine resin" },
+  { id: "caramel", name: "Caramel" },
+  { id: "concentrated_grape_must", name: "Concentrated grape must" },
+  { id: "grape_must", name: "Grape must" },
+  { id: "rectified_concentrated_grape_must", name: "Rectified concentrated grape must" },
+  { id: "filling_dosage", name: "Filling dosage" },
+  { id: "expedition_dosage", name: "Expedition dosage" },
+  // Gases
+  { id: "argon", name: "Argon", eNumber: "E 938" },
+  { id: "nitrogen", name: "Nitrogen", eNumber: "E 941" },
+  { id: "carbon_dioxide", name: "Carbon dioxide", eNumber: "E 290" },
+  { id: "protective_atmosphere", name: "Bottled under protective atmosphere" },
+  // Acidity regulators
+  { id: "tartaric_acid", name: "Tartaric acid", eNumber: "E 334" },
+  { id: "malic_acid", name: "Malic acid", eNumber: "E 296" },
+  { id: "lactic_acid", name: "Lactic acid", eNumber: "E 270" },
+  { id: "calcium_sulfate", name: "Calcium sulfate", eNumber: "E 516" },
+  { id: "citric_acid", name: "Citric acid", eNumber: "E 330" },
+  // Stabilizers
+  { id: "citric_acid_stabilizer", name: "Citric acid (stabilizer)", eNumber: "E 330" },
+  { id: "metatartaric_acid", name: "Metatartaric acid", eNumber: "E 353" },
+  { id: "gum_arabic", name: "Gum arabic", eNumber: "E 414" },
+  { id: "yeast_mannoproteins", name: "Yeast mannoproteins" },
+  { id: "carboxymethylcellulose", name: "Carboxymethylcellulose", eNumber: "E 466" },
+  { id: "potassium_polyaspartate", name: "Potassium polyaspartate", eNumber: "E 456" },
+  { id: "fumaric_acid", name: "Fumaric acid", eNumber: "E 297" },
+  // Preservatives
+  { id: "potassium_sorbate", name: "Potassium sorbate", eNumber: "E 202" },
+  { id: "lysozyme", name: "Lysozyme", eNumber: "E 1105" },
+  { id: "ascorbic_acid", name: "L-Ascorbic acid", eNumber: "E 300" },
+  { id: "dmdc", name: "Dimethyl dicarbonate (DMDC)" },
+  { id: "sulfites", name: "Sulfites" },
+  { id: "sulfur_dioxide", name: "Sulfur dioxide" },
+  { id: "potassium_bisulfite", name: "Potassium bisulfite" },
+  { id: "potassium_metabisulfite", name: "Potassium metabisulfite" },
+  // Processing aids
+  { id: "egg", name: "Egg", isAllergen: true },
+  { id: "milk", name: "Milk", isAllergen: true },
+  { id: "casein", name: "Casein", isAllergen: true },
+  { id: "albumin", name: "Albumin", isAllergen: true },
+  { id: "isinglass", name: "Isinglass (fish bladder)", isAllergen: true },
+  { id: "bentonite", name: "Bentonite" },
+  { id: "gelatin", name: "Gelatin" },
+  { id: "pea_protein", name: "Pea protein" },
+  { id: "potato_protein", name: "Potato protein" },
+  { id: "pvpp", name: "PVPP (Polyvinylpolypyrrolidone)" },
+];
+
+/** Build the ingredient reference section for the system prompt */
+function buildIngredientPromptSection(): string {
+  const lines = KNOWN_INGREDIENTS.map((ing) => {
+    let desc = `- ${ing.id} → "${ing.name}"`;
+    if (ing.eNumber) desc += ` (${ing.eNumber})`;
+    if (ing.isAllergen) desc += ` [ALLERGEN]`;
+    return desc;
+  });
+  return `INGREDIENTS — CRITICAL INSTRUCTIONS:
+When you detect ingredients, you MUST return their IDs from this known list:
+${lines.join("\n")}
+
+Rules:
+- Return the ingredient ID (e.g., "tartaric_acid"), NOT the display name.
+- Map E-number mentions to the correct ID (e.g., "E 334" → "tartaric_acid", "E 414" → "gum_arabic").
+- Map non-English names to the correct ID (e.g., "acide tartrique" → "tartaric_acid", "gomme arabique" → "gum_arabic", "dioxyde de soufre" → "sulfur_dioxide", "solfiti" → "sulfites", "Schwefeldioxid" → "sulfur_dioxide", "ácido tartárico" → "tartaric_acid").
+- "CONTIENT DES SULFITES" / "Contains Sulfites" / "Enthält Sulfite" → "sulfites"
+- If an ingredient is clearly present but doesn't match any known ID, return it prefixed with "custom:" (e.g., "custom:oak chips").
+- "Sulfites" is a generic term covering all sulfur compounds. If the label just says "sulfites"/"sulfites" use "sulfites". If it specifically says "sulfur dioxide" use "sulfur_dioxide". You can return both if both are mentioned.`;
+}
+
 // All fields that can be extracted
 const EXTRACTION_TOOL = {
   type: "function" as const,
@@ -57,7 +136,7 @@ const EXTRACTION_TOOL = {
         detected_ingredients: {
           type: "array",
           items: { type: "string" },
-          description: "List of detected ingredient names (e.g., 'Sulfites', 'Tartaric acid', 'Gum arabic')"
+          description: "List of ingredient IDs from the KNOWN_INGREDIENTS list (e.g., 'tartaric_acid', 'sulfites', 'gum_arabic'). Use 'custom:name' for unknown ingredients."
         },
         packaging_components: {
           type: "array",
@@ -92,8 +171,7 @@ CRITICAL READING INSTRUCTIONS:
 - producer_name is the winery, company, or château that makes the wine. These are often different from the product name.
 - Always include the wine COLOR/TYPE (Rouge, Rosé, Blanc, etc.) in the product_name if it appears on the label.
 - The bottler address city (e.g., "La Chapelle Heulin") is NOT the wine region. The region is a recognized wine-growing area (e.g., "Loire", "Bordeaux", "Val de Loire").
-- Look for allergen mentions like "CONTIENT DES SULFITES", "Contains Sulfites", "Enthält Sulfite" etc. Map these to detected_ingredients (e.g., "Sulfites").
-- Look for ingredient lists and map them to detected_ingredients.
+- Look for allergen mentions like "CONTIENT DES SULFITES", "Contains Sulfites", "Enthält Sulfite" etc.
 
 PRODUCT IDENTITY:
 - product_name: The full marketing name including color/type (e.g., "Pompon Rouge Rosé")
@@ -120,8 +198,7 @@ NUTRITIONAL & ANALYSIS VALUES (per liter or percentage):
 CALCULATED NUTRITIONAL VALUES (per 100ml - only if explicitly stated):
 - energy_kcal, energy_kj, carbohydrates, sugar, fat, saturated_fat, proteins, salt
 
-INGREDIENTS:
-- detected_ingredients: List ingredient names found on the label or page (e.g., "Sulfites", "Tartaric acid", "Gum arabic", "Egg", "Milk")
+${buildIngredientPromptSection()}
 
 PACKAGING & RECYCLING:
 - Look for recycling symbols: Triman (French sorting logo), Mobius loop (♻), Green Dot, Tidyman, glass recycling symbol
@@ -137,9 +214,6 @@ OTHER DETAILS:
 - barcode: EAN/UPC barcode digits if readable
 - description: Any marketing text, tasting notes, or product description
 - serving_temperature: Serving temperature recommendation (e.g., "8-10°C")
-
-LANGUAGE NORMALIZATION:
-- ALWAYS return detected_ingredients names in ENGLISH, even if the label is in French, Italian, German, or another language. For example: "acide tartrique" should be returned as "Tartaric acid", "gomme arabique" as "Gum arabic", "dioxyde de soufre" as "Sulfur dioxide", "solfiti" as "Sulfites".
 
 Be conservative - only extract data you can clearly read. Do not guess or make up values.
 For analysis values, pay attention to units and convert to the expected format if needed.`;
@@ -172,12 +246,12 @@ const FIELD_HINTS: Record<string, string> = {
 
 /**
  * Run a second focused extraction pass for missing fields.
- * Uses gemini-2.5-pro and includes first-pass context.
  */
 async function runSecondPass(
   imageBase64: string,
   firstPassData: Record<string, unknown>,
   apiKey: string,
+  qrText?: string,
 ): Promise<Record<string, unknown>> {
   const missingFields = ALL_FIELD_KEYS.filter((key) => {
     const val = firstPassData[key];
@@ -193,7 +267,6 @@ async function runSecondPass(
 
   console.log("Running second pass for", missingFields.length, "missing fields:", missingFields);
 
-  // Build context of what was already found
   const alreadyFoundSummary = ALL_FIELD_KEYS
     .map((key) => {
       const val = firstPassData[key];
@@ -204,13 +277,16 @@ async function runSecondPass(
     })
     .join("\n");
 
-  // Build field-specific instructions for missing fields
   const fieldInstructions = missingFields
     .map((f) => {
       const hint = FIELD_HINTS[f];
       return hint ? `- ${f}: ${hint}` : `- ${f}`;
     })
     .join("\n");
+
+  const qrContext = qrText
+    ? `\n\nADDITIONAL CONTEXT from a QR code on this label:\n${qrText.slice(0, 15000)}\n\nCross-reference this text with the image to find missing fields.`
+    : "";
 
   const focusedPrompt = `You are doing a SECOND PASS on this wine label. The first pass already extracted some data but MISSED several important fields.
 
@@ -224,7 +300,7 @@ INSTRUCTIONS:
 - Focus ONLY on the missing fields listed above.
 - Look at EVERY part of the image: front label, back label, small print, legal text, recycling symbols, bottom of the bottle.
 - Pay special attention to small text, fine print, and partially obscured text.
-- If you find a value, return it. If you truly cannot find it, do not guess.`;
+- If you find a value, return it. If you truly cannot find it, do not guess.${qrContext}`;
 
   try {
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
@@ -263,7 +339,6 @@ INSTRUCTIONS:
     if (!toolCall || toolCall.function.name !== "extract_wine_label_data") return {};
 
     const extracted = JSON.parse(toolCall.function.arguments);
-    // Only return fields that were actually missing
     const result: Record<string, unknown> = {};
     for (const key of missingFields) {
       const val = extracted[key];
@@ -287,6 +362,7 @@ async function runCriticalFieldsPass(
   imageBase64: string,
   mergedData: Record<string, unknown>,
   apiKey: string,
+  qrText?: string,
 ): Promise<Record<string, unknown>> {
   const criticalFields = ["product_name", "alcohol_percent", "volume"];
   const stillMissing = criticalFields.filter((key) => {
@@ -305,6 +381,10 @@ async function runCriticalFieldsPass(
     return `- ${f}`;
   }).join("\n");
 
+  const qrContext = qrText
+    ? `\n\nAdditional context from QR code:\n${qrText.slice(0, 5000)}`
+    : "";
+
   try {
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       signal: AbortSignal.timeout(60000),
@@ -321,7 +401,7 @@ async function runCriticalFieldsPass(
             content: [
               {
                 type: "text",
-                text: `Look at this wine label image. I ONLY need you to find these specific fields:\n${instructions}\n\nThese are legally required on wine labels, so they MUST be visible somewhere. Look at every part of the image very carefully.`,
+                text: `Look at this wine label image. I ONLY need you to find these specific fields:\n${instructions}\n\nThese are legally required on wine labels, so they MUST be visible somewhere. Look at every part of the image very carefully.${qrContext}`,
               },
               { type: "image_url", image_url: { url: imageBase64 } },
             ],
@@ -361,11 +441,9 @@ async function runCriticalFieldsPass(
 
 /**
  * Decode QR code from image using zxing-wasm (ZXing C++ compiled to WASM).
- * Works server-side in Deno — no Canvas or browser APIs needed.
  */
 async function decodeQrFromBase64(imageBase64: string): Promise<string | null> {
   try {
-    // Strip data URL prefix to get raw base64
     const base64Data = imageBase64.replace(/^data:[^;]+;base64,/, "");
     const binaryStr = atob(base64Data);
     const bytes = new Uint8Array(binaryStr.length);
@@ -405,15 +483,14 @@ async function decodeQrFromBase64(imageBase64: string): Promise<string | null> {
 }
 
 /**
- * Attempt to scrape a QR code URL with Firecrawl to get additional product data.
+ * Attempt to scrape a QR code URL with Firecrawl to get raw text content.
+ * Returns the raw markdown text and URL — does NOT run a separate AI extraction.
  */
 async function tryQrCodeScrape(
   imageBase64: string,
-  lovableApiKey: string,
   firecrawlApiKey: string,
-): Promise<{ extracted: Record<string, unknown>; qrUrl: string } | null> {
+): Promise<{ markdown: string; qrUrl: string; imageLinks: string[] } | null> {
   try {
-    // Step 1: Decode QR code from image using zxing-wasm
     const qrUrl = await decodeQrFromBase64(imageBase64);
 
     if (!qrUrl) {
@@ -424,7 +501,7 @@ async function tryQrCodeScrape(
     console.log("Scraping QR code URL:", qrUrl);
 
     const scrapeResponse = await fetch("https://api.firecrawl.dev/v1/scrape", {
-      signal: AbortSignal.timeout(15000),
+      signal: AbortSignal.timeout(20000),
       method: "POST",
       headers: {
         "Authorization": `Bearer ${firecrawlApiKey}`,
@@ -432,8 +509,9 @@ async function tryQrCodeScrape(
       },
       body: JSON.stringify({
         url: qrUrl,
-      formats: ["markdown", "links"],
-      onlyMainContent: true,
+        formats: ["markdown", "links"],
+        onlyMainContent: true,
+        waitFor: 3000, // Wait for JS-rendered pages like u-label.io
       }),
     });
 
@@ -453,54 +531,14 @@ async function tryQrCodeScrape(
 
     console.log("Firecrawl scraped content length:", markdown.length);
 
-    // Find product image URLs from scraped links
+    // Extract product image URLs from scraped links
     const links = scrapeData.data?.links || scrapeData.links || [];
     const imageLinks = links.filter((link: string) =>
       /\.(jpg|jpeg|png|webp|gif)(\?|$)/i.test(link) &&
       !/logo|icon|favicon|banner|sprite|avatar/i.test(link)
     );
-    const imageLinksHint = imageLinks.length > 0
-      ? `\n\nProduct image URLs found on the page (pick the most likely product photo, NOT logos/icons):\n${imageLinks.slice(0, 10).join("\n")}`
-      : "";
 
-    const extractResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
-      signal: AbortSignal.timeout(30000),
-      method: "POST",
-      headers: {
-        Authorization: `Bearer ${lovableApiKey}`,
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
-        messages: [
-          { role: "system", content: SYSTEM_PROMPT },
-          {
-            role: "user",
-            content: `This is the content of a wine product web page (scraped from a QR code on a wine label). Extract all wine product information you can find. If you find a product image URL, set it as product_image_url.\n\nPage content:\n${markdown.slice(0, 15000)}${imageLinksHint}`
-          }
-        ],
-        tools: [EXTRACTION_TOOL],
-        tool_choice: { type: "function", function: { name: "extract_wine_label_data" } },
-        temperature: 0.1,
-      }),
-    });
-
-    if (!extractResponse.ok) {
-      console.log("QR content extraction failed:", extractResponse.status);
-      await extractResponse.text();
-      return null;
-    }
-
-    const extractData = await extractResponse.json();
-    const toolCall = extractData.choices?.[0]?.message?.tool_calls?.[0];
-    
-    if (!toolCall || toolCall.function.name !== "extract_wine_label_data") {
-      return null;
-    }
-
-    const extracted = JSON.parse(toolCall.function.arguments);
-    console.log("Extracted data from QR code page:", Object.keys(extracted));
-    return { extracted, qrUrl };
+    return { markdown, qrUrl, imageLinks };
 
   } catch (error) {
     console.error("QR code scrape error:", error);
@@ -600,10 +638,29 @@ serve(async (req) => {
       throw new Error("LOVABLE_API_KEY not configured. Please set it as a Supabase secret.");
     }
 
-    // ===== PARALLEL: Image extraction + QR code scraping =====
+    // ===== PARALLEL: QR code scraping (returns raw text now, no AI call) =====
     const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY");
 
-    const imageExtractionPromise = fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+    const qrScrapePromise = FIRECRAWL_API_KEY
+      ? tryQrCodeScrape(image, FIRECRAWL_API_KEY)
+      : Promise.resolve(null);
+
+    // Start QR scrape first (it's I/O bound), then build the first AI call
+    const qrResult = await qrScrapePromise;
+
+    // Build the user prompt with optional QR context
+    let userPromptText = "Please analyze this wine label or document and extract all visible information. Read ALL text carefully including small print, allergen warnings, ingredient lists, recycling symbols, material codes, lot numbers, and barcodes. Return all fields you can identify.";
+
+    if (qrResult) {
+      const imageLinksHint = qrResult.imageLinks.length > 0
+        ? `\n\nProduct image URLs found on the page (pick the most likely product photo, NOT logos/icons):\n${qrResult.imageLinks.slice(0, 10).join("\n")}`
+        : "";
+
+      userPromptText += `\n\nADDITIONAL CONTEXT — Text scraped from a QR code found on this label (URL: ${qrResult.qrUrl}):\n${qrResult.markdown.slice(0, 15000)}${imageLinksHint}\n\nCross-reference the image and this scraped text to extract all fields. The label image is the primary source of truth; use the scraped text to fill in details that are hard to read on the image.`;
+    }
+
+    // ===== FIRST PASS: Image + QR context extraction =====
+    const imageResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       signal: AbortSignal.timeout(90000),
       method: "POST",
       headers: {
@@ -617,14 +674,8 @@ serve(async (req) => {
           {
             role: "user",
             content: [
-              {
-                type: "text",
-                text: "Please analyze this wine label or document and extract all visible information. Read ALL text carefully including small print, allergen warnings, ingredient lists, recycling symbols, material codes, lot numbers, and barcodes. Return all fields you can identify."
-              },
-              {
-                type: "image_url",
-                image_url: { url: image }
-              }
+              { type: "text", text: userPromptText },
+              { type: "image_url", image_url: { url: image } },
             ]
           }
         ],
@@ -633,12 +684,6 @@ serve(async (req) => {
         temperature: 0.1,
       }),
     });
-
-    const qrScrapePromise = FIRECRAWL_API_KEY
-      ? tryQrCodeScrape(image, LOVABLE_API_KEY, FIRECRAWL_API_KEY)
-      : Promise.resolve(null);
-
-    const [imageResponse, qrResult] = await Promise.all([imageExtractionPromise, qrScrapePromise]);
 
     if (!imageResponse.ok) {
       const errorText = await imageResponse.text();
@@ -671,13 +716,13 @@ serve(async (req) => {
 
     const imageExtracted = JSON.parse(toolCall.function.arguments);
 
-    // ===== SECOND PASS: Fill in missing fields =====
-    const secondPassData = await runSecondPass(image, imageExtracted, LOVABLE_API_KEY);
+    // ===== SECOND PASS: Fill in missing fields (with QR context) =====
+    const qrText = qrResult?.markdown;
+    const secondPassData = await runSecondPass(image, imageExtracted, LOVABLE_API_KEY, qrText);
 
     // ===== MERGE: Image first pass + second pass =====
     const mergedData: Record<string, unknown> = {};
 
-    // First pass as base
     for (const [key, value] of Object.entries(imageExtracted)) {
       if (value !== null && value !== undefined && value !== "") {
         if (Array.isArray(value) && value.length === 0) continue;
@@ -685,35 +730,18 @@ serve(async (req) => {
       }
     }
 
-    // Second pass fills gaps only
     for (const [key, value] of Object.entries(secondPassData)) {
       if (!(key in mergedData)) {
         mergedData[key] = value;
       }
     }
 
-    // ===== THIRD PASS: Critical fields still missing =====
-    const criticalPassData = await runCriticalFieldsPass(image, mergedData, LOVABLE_API_KEY);
+    // ===== THIRD PASS: Critical fields still missing (with QR context) =====
+    const criticalPassData = await runCriticalFieldsPass(image, mergedData, LOVABLE_API_KEY, qrText);
     for (const [key, value] of Object.entries(criticalPassData)) {
       if (!(key in mergedData)) {
         mergedData[key] = value;
       }
-    }
-
-    // QR data fills gaps only (label image is ground truth; QR page is supplementary)
-    const qrData = qrResult?.extracted || null;
-    if (qrData) {
-      let qrFilled = 0;
-      for (const [key, value] of Object.entries(qrData)) {
-        if (value !== null && value !== undefined && value !== "") {
-          if (Array.isArray(value) && value.length === 0) continue;
-          if (!(key in mergedData)) {
-            mergedData[key] = value;
-            qrFilled++;
-          }
-        }
-      }
-      console.log("QR data filled", qrFilled, "gap fields (out of", Object.keys(qrData).length, "available)");
     }
 
     console.log("Final merged data for user", userId, ":", Object.keys(mergedData));
@@ -729,7 +757,6 @@ serve(async (req) => {
           signal: AbortSignal.timeout(10000),
         });
         if (imgResponse.ok) {
-          // Size guard: skip images larger than 5MB to prevent memory issues
           const contentLength = imgResponse.headers.get("content-length");
           if (contentLength && parseInt(contentLength, 10) > 5 * 1024 * 1024) {
             console.log("Product image too large, skipping:", contentLength, "bytes");
@@ -755,7 +782,6 @@ serve(async (req) => {
       } catch (e) {
         console.error("Product image download error:", e);
       }
-      // Remove the URL from extractedData (frontend will use the base64)
       delete mergedData.product_image_url;
     }
 
@@ -765,7 +791,7 @@ serve(async (req) => {
       JSON.stringify({ 
         success: true, 
         extractedData: mergedData,
-        qrCodeUsed: qrData !== null,
+        qrCodeUsed: qrResult !== null,
         secondPassUsed: Object.keys(secondPassData).length > 0,
         ...(productImageBase64 && { productImageBase64 }),
         ...(remaining !== null && { quota: { remaining, limit: MONTHLY_LIMIT } })
