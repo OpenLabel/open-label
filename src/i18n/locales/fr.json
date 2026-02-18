@@ -33,15 +33,15 @@
   },
   "landing": {
     "hero": {
-      "badge": "Conforme UE ESPR",
+      "badge": "Conforme au règlement ESPR de l'UE",
       "euFunded": "🇪🇺 Fièrement financé par l'UE",
-      "title": "Créez vos Passeports Numériques de Produits — Sans Limite",
+      "title": "Créez vos passeports numériques de produits — sans limite",
       "subtitle": "Plateforme gratuite et open source pour la conformité au règlement européen sur l'écoconception (ESPR). Générez des passeports lisibles par machine avec codes QR pour batteries, textiles, produits de construction et 12+ catégories.",
       "cta": "Créer votre premier passeport",
       "demo": "Voir le passeport démo",
       "features": {
-        "free": "100% Gratuit & Open Source",
-        "selfHost": "Auto-hébergeable",
+        "free": "100 % gratuit et open source",
+        "selfHost": "Auto-hébergé",
         "machineReadable": "JSON/XML lisible par machine",
         "categories": "12+ Catégories de produits"
       }
@@ -69,7 +69,7 @@
         "description": "Pas de PDFs statiques. Données JSON/XML structurées pour l'intégration BIM, systèmes de recyclage et autres logiciels."
       },
       "qr": {
-        "title": "QR & Support de données",
+        "title": "QR & supports numériques",
         "description": "Chaque passeport reçoit une URL unique et un code QR. Prêt pour NFC/RFID selon ISO 15459."
       }
     },
@@ -107,7 +107,7 @@
       "badge": "Champ d'application UE",
       "title": "Catégories de produits supportées",
       "subtitle": "Modèles basés sur les règlements officiels de l'UE. Les règlements actifs sont en vigueur, les groupes prioritaires ont des modèles prêts.",
-      "activeLaw": "Loi active",
+      "activeLaw": "Règlement en vigueur",
       "priorityGroup": "Groupe prioritaire",
       "cta": "Commencer à créer des passeports"
     },
@@ -149,7 +149,7 @@
     },
     "cta": {
       "title": "Prêt pour la conformité ?",
-      "subtitle": "Créez des Passeports Numériques de Produits conformes UE dès aujourd'hui. Gratuit, illimité et open source.",
+      "subtitle": "Créez des passeports numériques de produits conformes UE dès aujourd'hui. Gratuit, illimité et open source.",
       "button": "Commencer gratuitement"
     },
     "footer": {
@@ -272,7 +272,7 @@
     "country": "Pays d'origine",
     "region": "Région",
     "denomination": "Dénomination / Appellation",
-    "sugarClassification": "Classification du sucre",
+    "sugarClassification": "Niveau de sucrosité",
     "producerInfo": "Informations producteur",
     "producerInfoDesc": "Informations sur le producteur de vin",
     "producerName": "Producteur/Domaine",
@@ -529,7 +529,7 @@
     "compositeComponents": "Composants composites",
     "customMaterial": "Matériau personnalisé",
     "addCustomMaterial": "Ajouter un matériau personnalisé",
-    "disposalAdvice": "Conseil d'élimination",
+    "disposalAdvice": "Consignes de tri",
     "addMaterial": "Ajouter un matériau",
     "addPackagingMaterial": "Ajouter un matériau d'emballage",
     "customType": "Type personnalisé",
