@@ -1,59 +1,69 @@
 
 
-# Final Polish: Fix Remaining Edge Cases in AI Autoscan
+# Replace jsQR with qr-scanner (ZXing-based) for Robust QR Detection
 
-## Issues
+## Problem
 
-### 1. No timeouts on QR/Firecrawl fetch calls (Reliability)
-The `tryQrCodeScrape()` function has 3 fetch calls with no `AbortSignal.timeout()`. If Firecrawl or the AI gateway stalls, the entire request hangs until the Deno runtime kills it.
+`jsQR` is a minimal QR decoder that fails on curved, distorted, or low-contrast QR codes -- exactly the kind found on wine bottles. Your test image has a perfectly visible QR code that `jsQR` simply cannot handle.
 
-**Fix**: Add `signal: AbortSignal.timeout(15000)` to the Firecrawl call, `signal: AbortSignal.timeout(30000)` to the two AI calls inside `tryQrCodeScrape`.
+## Solution
 
-### 2. QR data blindly overrides label data (Correctness)
-Lines 702-710: QR-scraped data overrides ALL first/second/third pass results. If the QR page has stale or wrong data (different vintage, wrong volume), it silently replaces correct label readings.
+Replace `jsQR` with **`qr-scanner`** (by Nimiq), which uses Google's ZXing library under the hood. ZXing is battle-tested and handles curved surfaces, perspective distortion, and varying contrast far better. The library provides a simple `QrScanner.scanImage()` static method for single-image decoding.
 
-**Fix**: Change QR merge to only fill gaps (same logic as second pass), not override. The label image is the ground truth; the QR page is supplementary.
+Additionally, we'll add a **multi-strategy approach**: try the browser's native `BarcodeDetector` API first (available in Chrome/Edge, uses the OS-level decoder which is even more robust), then fall back to `qr-scanner`.
 
-### 3. Missing nutritional fields in `ALL_FIELD_KEYS` (Completeness)
-`fat`, `saturated_fat`, `proteins`, `salt` exist in the extraction tool schema but are missing from `ALL_FIELD_KEYS`. The second pass never tries to recover them.
+## Changes
 
-**Fix**: Add these 4 fields to `ALL_FIELD_KEYS`.
+### 1. Install `qr-scanner`, remove `jsqr`
 
-### 4. No size guard on product image download (Safety)
-If the scraped URL points to a very large image, it downloads entirely into edge function memory with no limit.
+- Add dependency: `qr-scanner`
+- Remove dependency: `jsqr` and `@types/jsqr` (if present)
 
-**Fix**: Check `Content-Length` header before downloading; skip if larger than 5MB.
+### 2. Rewrite `src/lib/clientQrDecode.ts`
 
-## Technical Changes
+Replace the jsQR-based implementation with a multi-strategy decoder:
 
-### File: `supabase/functions/wine-label-ocr/index.ts`
+```
+Strategy 1: BarcodeDetector API (native, if available)
+Strategy 2: QrScanner.scanImage() (ZXing-based fallback)
+```
 
-1. Add timeouts to all 3 fetch calls inside `tryQrCodeScrape()`:
-   - AI QR detection: `AbortSignal.timeout(30000)`
-   - Firecrawl scrape: `AbortSignal.timeout(15000)`
-   - AI extraction from scraped content: `AbortSignal.timeout(30000)`
+The function signature stays the same (`decodeQrFromDataUrl(dataUrl) => Promise<string | null>`) so `WineAIAutofill.tsx` needs no changes.
 
-2. Change QR merge logic (lines 702-710) from override to gap-fill:
-   ```
-   // Before: mergedData[key] = value (always overrides)
-   // After:  if (!(key in mergedData)) mergedData[key] = value (fill gaps only)
-   ```
+### 3. Update `src/lib/qrValidation.ts`
 
-3. Add missing fields to `ALL_FIELD_KEYS`:
-   ```
-   "fat", "saturated_fat", "proteins", "salt"
-   ```
+- Remove `jsqr` import
+- The `validateQrFromImageData` function uses a dependency-injected `decoder` parameter, so it doesn't need to change structurally. The default decoder parameter will be updated to use `qr-scanner` instead of `jsQR`.
+- Since `qr-scanner` uses a different API (`scanImage` takes an image source, not raw pixel data), we'll adjust the default decoder to wrap `qr-scanner`'s static method, or simply keep the DI pattern with the raw-data interface for unit testing (tests already inject their own mock decoder).
 
-4. Add size guard before product image download:
-   ```
-   // HEAD or check Content-Length, skip if > 5MB
-   ```
+### 4. Update `src/lib/qrValidation.test.ts`
+
+- Remove any `jsqr` references
+- Tests already use mock decoders, so they should pass as-is
+
+### 5. Update `src/components/wine/WineAIAutofill.tsx`
+
+- No changes needed -- it calls `decodeQrFromDataUrl()` which keeps the same interface
+
+## Technical Detail
+
+```text
+Current flow:
+  Image -> Canvas -> getImageData -> jsQR(pixels) -> URL or null
+
+New flow:
+  Image -> BarcodeDetector.detect(image)  [if available]
+        -> QrScanner.scanImage(image)     [ZXing fallback]
+        -> URL or null
+```
+
+Both strategies work directly with image elements, avoiding the manual canvas pixel extraction step entirely, which also simplifies the code.
 
 ## Impact
 
-- Prevents hanging requests when Firecrawl is slow or down
-- Prevents QR page data from silently corrupting correct label readings
-- Allows the second pass to recover 4 additional nutritional fields
-- Prevents memory issues from oversized image downloads
-- All changes are defensive/additive -- no regressions possible
+- Dramatically better QR detection on curved bottle surfaces
+- Native `BarcodeDetector` gives near-perfect results in Chrome/Edge
+- ZXing fallback covers Firefox/Safari
+- No API changes -- drop-in replacement
+- All existing tests continue to work (they use mock decoders)
 
