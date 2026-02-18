@@ -9,7 +9,7 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { volumeUnits, wineCountries } from '@/templates/wine';
 import { WineIngredients } from '@/components/wine/WineIngredients';
 import { WineRecycling } from '@/components/wine/WineRecycling';
-import { WineAIAutofill } from '@/components/wine/WineAIAutofill';
+
 import { packagingMaterialTypes, materialCompositions, disposalMethods } from '@/data/wineRecycling';
 import { calculateWineNutrition } from '@/lib/wineCalculations';
 import { TranslationButton, Translations } from '@/components/TranslationButton';
@@ -19,10 +19,9 @@ import { LabelWithHint, FieldHint } from '@/components/ui/field-hint';
 interface WineFieldsProps {
   data: Record<string, unknown>;
   onChange: (data: Record<string, unknown>) => void;
-  onAutofillMeta?: (meta: { dppName?: string; productImageBase64?: string }) => void;
 }
 
-export function WineFields({ data, onChange, onAutofillMeta }: WineFieldsProps) {
+export function WineFields({ data, onChange }: WineFieldsProps) {
   const { t, i18n } = useTranslation();
 
   const currentLanguage = i18n.language.split('-')[0]; // Get base language code
@@ -312,10 +311,21 @@ export function WineFields({ data, onChange, onAutofillMeta }: WineFieldsProps) 
     onChange(mergedData);
   };
 
+  // Process AI autofill data passed from PassportForm via __ai_autofill sentinel
+  useEffect(() => {
+    if (data.__ai_autofill) {
+      const autofillData = { ...(data.__ai_autofill as Record<string, unknown>) };
+      // Remove sentinel immediately
+      const cleanData = { ...data };
+      delete cleanData.__ai_autofill;
+      onChange(cleanData);
+      // Process through handleAIAutofill
+      handleAIAutofill(autofillData);
+    }
+  }, [data.__ai_autofill]);
+
   return (
     <div className="space-y-6">
-      {/* AI Autofill Button */}
-      <WineAIAutofill onAutofill={handleAIAutofill} onAutofillMeta={onAutofillMeta} />
 
       {/* 1. Product Identity */}
       <Card>
