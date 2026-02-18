@@ -104,9 +104,11 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                 <div className="max-w-3xl mx-auto space-y-4">
                   {/* Header */}
                   <div className="text-center">
-                    <Badge variant="secondary" className="mb-3">
-                      {categoryInfo?.icon} {t(`categories.${formData.category}`)} {t('preview.productPassport')}
-                    </Badge>
+                    {formData.category !== 'other' && (
+                      <Badge variant="secondary" className="mb-3">
+                        {categoryInfo?.icon} {t(`categories.${formData.category}`)} {t('preview.productPassport')}
+                      </Badge>
+                    )}
                     <h1 className="text-xl font-bold mb-2">{formData.name || t('preview.productName')}</h1>
                     
                     {/* Check Authenticity Button (preview mode - non-clickable) */}

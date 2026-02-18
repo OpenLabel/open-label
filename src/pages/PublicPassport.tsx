@@ -73,9 +73,11 @@ export default function PublicPassport() {
         <div className="max-w-3xl mx-auto space-y-6">
           {/* Header */}
           <div className="text-center">
-            <Badge variant="secondary" className="mb-4">
-              {categoryInfo?.icon} {t(`categories.${passport.category}`)} {t('passport.productPassport')}
-            </Badge>
+            {passport.category !== 'other' && (
+              <Badge variant="secondary" className="mb-4">
+                {categoryInfo?.icon} {t(`categories.${passport.category}`)} {t('passport.productPassport')}
+              </Badge>
+            )}
             <h1 className="text-3xl font-bold mb-2">{passport.name}</h1>
             
             {/* Check Authenticity Button */}
