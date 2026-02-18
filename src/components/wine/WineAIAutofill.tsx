@@ -82,12 +82,12 @@ export function WineAIAutofill({ onAutofill }: WineAIAutofillProps) {
       }
 
       if (data?.extractedData) {
-        // Show remaining quota if available
         const quotaInfo = data.quota ? ` (${data.quota.remaining} scans remaining this month)` : '';
+        const qrInfo = data.qrCodeUsed ? ` ${t('ai.qrCodeUsed')}` : '';
         onAutofill(data.extractedData);
         toast({
           title: t('ai.autofillComplete'),
-          description: `${t('ai.autofillCompleteDesc')}${quotaInfo}`,
+          description: `${t('ai.autofillCompleteDesc')}${qrInfo}${quotaInfo}`,
         });
         setIsOpen(false);
         setPreviewUrl(null);

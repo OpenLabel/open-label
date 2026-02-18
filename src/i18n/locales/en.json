@@ -563,6 +563,7 @@
     "experimentalWarning": "Experimental feature: Please double-check all extracted data before saving. AI may make mistakes.",
     "autofillComplete": "✨ AI Autofill Complete",
     "autofillCompleteDesc": "Fields have been populated. Please review and verify the data before saving.",
+    "qrCodeUsed": "A QR code was detected and its linked page was also analyzed for additional data.",
     "noDataExtracted": "No data extracted from the label",
     "processingFailed": "Processing Failed",
     "processingFailedDesc": "Failed to extract data from the label",

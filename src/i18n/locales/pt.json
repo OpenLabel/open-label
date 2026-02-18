@@ -593,6 +593,7 @@
     "quotaExceededDesc": "Atingiu o limite mensal de 100 digitalizações de rótulos com IA.",
     "quotaExceededBody": "Para garantir acesso justo, limitamos as digitalizações a 100 por mês. A quota será reposta no início do próximo mês.",
     "quotaContactBody": "Se precisa de um limite mais elevado para a sua empresa, contacte-nos.",
+    "qrCodeUsed": "Foi detetado um código QR e a página associada também foi analisada para dados adicionais.",
     "contactUs": "Contacte-nos"
   },
   "richText": {

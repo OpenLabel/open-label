@@ -567,6 +567,7 @@
     "quotaExceededDesc": "Shroich tú an teorainn mhíosúil de 100 scanadh lipéad IA.",
     "quotaExceededBody": "Chun rochtain chothrom a chinntiú, cuirimid teorainn le scanadh go 100 in aghaidh na míosa.",
     "quotaContactBody": "Má theastaíonn teorainn níos airde uait do do ghnó, déan teagmháil linn.",
+    "qrCodeUsed": "Braitheadh cód QR agus rinneadh anailís ar an leathanach nasctha freisin le haghaidh sonraí breise.",
     "contactUs": "Déan teagmháil linn"
   },
   "richText": {

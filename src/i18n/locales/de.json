@@ -591,6 +591,7 @@
     "quotaExceededDesc": "Sie haben das monatliche Limit von 100 KI-Etikettenscans erreicht.",
     "quotaExceededBody": "Um einen fairen Zugang für alle Nutzer zu gewährleisten, begrenzen wir KI-Etikettenscans auf 100 pro Monat. Ihr Kontingent wird zu Beginn des nächsten Monats zurückgesetzt.",
     "quotaContactBody": "Wenn Sie ein höheres Limit für Ihr Unternehmen benötigen, kontaktieren Sie uns bitte.",
+    "qrCodeUsed": "Ein QR-Code wurde erkannt und die verlinkte Seite wurde ebenfalls für zusätzliche Daten analysiert.",
     "contactUs": "Kontaktieren Sie uns"
   },
   "richText": {
