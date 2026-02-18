@@ -18,6 +18,7 @@ import { ImageUpload } from '@/components/ImageUpload';
 import { supabase } from '@/integrations/supabase/client';
 import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { WineFields } from '@/components/WineFields';
+import { WineAIAutofill } from '@/components/wine/WineAIAutofill';
 import { PassportPreview } from '@/components/PassportPreview';
 import { CounterfeitProtection } from '@/components/CounterfeitProtection';
 import { TranslationButton, type Translations } from '@/components/TranslationButton';
@@ -317,31 +318,22 @@ export default function PassportForm() {
                 </CardContent>
               </Card>
 
-              {/* Product Image - right after basic information */}
-              <Card>
-                <CardHeader>
-                  <CardTitle>{t('passport.productImage')}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <ImageUpload
-                    value={formData.image_url}
-                    onChange={(url) => setFormData({ ...formData, image_url: url })}
-                  />
-                </CardContent>
-              </Card>
-
-              {/* Wine-specific fields */}
+              {/* AI Autofill Button - between Basic Info and Product Image (wine only) */}
               {formData.category === 'wine' && (
-                <WineFields
-                  data={(formData.category_data as Record<string, unknown>) || {}}
-                  onChange={(data) => setFormData({ ...formData, category_data: data })}
+                <WineAIAutofill
+                  onAutofill={(extractedData) => {
+                    // Delegate to WineFields' handler by updating category_data
+                    // We need to trigger WineFields' handleAIAutofill indirectly
+                    setFormData(prev => ({
+                      ...prev,
+                      category_data: { ...prev.category_data, __ai_autofill: extractedData },
+                    }));
+                  }}
                   onAutofillMeta={async (meta) => {
                     const updates: Partial<FormData> = {};
-                    // Auto-set DPP name if empty
                     if (meta.dppName && !formData.name.trim()) {
                       updates.name = meta.dppName;
                     }
-                    // Upload product image from base64
                     if (meta.productImageBase64 && user) {
                       try {
                         const res = await fetch(meta.productImageBase64);
@@ -366,6 +358,27 @@ export default function PassportForm() {
                       setFormData(prev => ({ ...prev, ...updates }));
                     }
                   }}
+                />
+              )}
+
+              {/* Product Image - right after basic information */}
+              <Card>
+                <CardHeader>
+                  <CardTitle>{t('passport.productImage')}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <ImageUpload
+                    value={formData.image_url}
+                    onChange={(url) => setFormData({ ...formData, image_url: url })}
+                  />
+                </CardContent>
+              </Card>
+
+              {/* Wine-specific fields */}
+              {formData.category === 'wine' && (
+                <WineFields
+                  data={(formData.category_data as Record<string, unknown>) || {}}
+                  onChange={(data) => setFormData({ ...formData, category_data: data })}
                 />
               )}
 
