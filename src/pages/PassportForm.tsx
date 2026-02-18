@@ -19,6 +19,8 @@ import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { WineFields } from '@/components/WineFields';
 import { PassportPreview } from '@/components/PassportPreview';
 import { CounterfeitProtection } from '@/components/CounterfeitProtection';
+import { TranslationButton, type Translations } from '@/components/TranslationButton';
+import { useAutoTranslate } from '@/hooks/useAutoTranslate';
 import { ArrowLeft, Save, Loader2 } from 'lucide-react';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import {
@@ -42,7 +44,8 @@ interface FormData {
 }
 
 export default function PassportForm() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language.split('-')[0];
   const { id } = useParams<{ id: string }>();
   const isEditing = id && id !== 'new';
   const navigate = useNavigate();
@@ -62,6 +65,53 @@ export default function PassportForm() {
   const [saving, setSaving] = useState(false);
   const [showUnsavedDialog, setShowUnsavedDialog] = useState(false);
   const savedFormDataRef = useRef<string>('');
+
+  // Helper to update category_data
+  const handleCategoryDataChange = useCallback((key: string, value: unknown) => {
+    setFormData(prev => ({
+      ...prev,
+      category_data: { ...prev.category_data, [key]: value },
+    }));
+  }, []);
+
+  // Auto-translate product name (for non-wine categories)
+  const isNonWine = formData.category !== 'wine';
+  const productNameValue = (formData.category_data.product_name as string) || '';
+  const productNameTranslations = (formData.category_data.product_name_translations as Translations) || {};
+
+  const handleProductNameTranslations = useCallback((translations: Translations) => {
+    setFormData(prev => ({
+      ...prev,
+      category_data: { ...prev.category_data, product_name_translations: translations },
+    }));
+  }, []);
+
+  const { isTranslating: isProductNameTranslating, markAsUserEdited: markProductNameEdited } = useAutoTranslate({
+    value: productNameValue,
+    sourceLanguage: currentLanguage,
+    existingTranslations: productNameTranslations,
+    onTranslationsGenerated: handleProductNameTranslations,
+    enabled: isNonWine && !!productNameValue.trim(),
+  });
+
+  // Auto-translate description (for non-wine categories)
+  const descriptionTranslations = (formData.category_data.description_translations as Translations) || {};
+
+  const handleDescriptionTranslations = useCallback((translations: Translations) => {
+    setFormData(prev => ({
+      ...prev,
+      category_data: { ...prev.category_data, description_translations: translations },
+    }));
+  }, []);
+
+  const { isTranslating: isDescriptionTranslating, markAsUserEdited: markDescriptionEdited } = useAutoTranslate({
+    value: formData.description,
+    sourceLanguage: currentLanguage,
+    existingTranslations: descriptionTranslations,
+    onTranslationsGenerated: handleDescriptionTranslations,
+    enabled: isNonWine && !!formData.description.trim(),
+    debounceMs: 3000,
+  });
 
   // Check if form has unsaved changes
   const hasUnsavedChanges = useCallback(() => {
@@ -287,20 +337,74 @@ export default function PassportForm() {
                 />
               )}
 
-              {/* Product Description - hidden for wine */}
+              {/* Product Name & Description for non-wine categories */}
               {formData.category !== 'wine' && (
-                <Card>
-                  <CardHeader>
-                    <CardTitle>{t('passport.productDescription')}</CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <RichTextEditor
-                      content={formData.description}
-                      onChange={(content) => setFormData({ ...formData, description: content })}
-                      placeholder={t('passport.descriptionPlaceholder')}
-                    />
-                  </CardContent>
-                </Card>
+                <>
+                  {/* Product Name with translations */}
+                  <Card>
+                    <CardHeader>
+                      <CardTitle>{t('passport.productName')}</CardTitle>
+                    </CardHeader>
+                    <CardContent className="space-y-2">
+                      <div className="flex items-center gap-1.5">
+                        <Label htmlFor="product_name">{t('passport.productName')}</Label>
+                        {isProductNameTranslating && <span className="text-xs text-muted-foreground animate-pulse">{t('translation.autoTranslating')}</span>}
+                      </div>
+                      <div className="flex gap-2">
+                        <Input
+                          id="product_name"
+                          value={productNameValue}
+                          onChange={(e) => handleCategoryDataChange('product_name', e.target.value)}
+                          placeholder={t('passport.productNamePlaceholder')}
+                          className="flex-1"
+                        />
+                        <TranslationButton
+                          value={productNameValue}
+                          sourceLanguage={currentLanguage}
+                          translations={productNameTranslations}
+                          onSave={(translations) => {
+                            Object.keys(translations).forEach(lang => markProductNameEdited(lang));
+                            handleCategoryDataChange('product_name_translations', translations);
+                          }}
+                          fieldLabel={t('passport.productName')}
+                          disabled={!productNameValue}
+                        />
+                      </div>
+                      <p className="text-xs text-muted-foreground">{t('passport.productNameHelp')}</p>
+                    </CardContent>
+                  </Card>
+
+                  {/* Product Description with translations */}
+                  <Card>
+                    <CardHeader>
+                      <div className="flex items-center gap-1.5">
+                        <CardTitle>{t('passport.productDescription')}</CardTitle>
+                        {isDescriptionTranslating && <span className="text-xs text-muted-foreground animate-pulse">{t('translation.autoTranslating')}</span>}
+                      </div>
+                    </CardHeader>
+                    <CardContent className="space-y-3">
+                      <RichTextEditor
+                        content={formData.description}
+                        onChange={(content) => setFormData({ ...formData, description: content })}
+                        placeholder={t('passport.descriptionPlaceholder')}
+                      />
+                      <div className="flex justify-end">
+                        <TranslationButton
+                          value={formData.description.replace(/<[^>]*>/g, '')}
+                          sourceLanguage={currentLanguage}
+                          translations={descriptionTranslations}
+                          onSave={(translations) => {
+                            Object.keys(translations).forEach(lang => markDescriptionEdited(lang));
+                            handleCategoryDataChange('description_translations', translations);
+                          }}
+                          fieldLabel={t('passport.productDescription')}
+                          disabled={!formData.description.trim()}
+                          size="sm"
+                        />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </>
               )}
 
               {/* Category-Specific Questions (for non-wine categories or additional wine fields) */}

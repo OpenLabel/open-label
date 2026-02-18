@@ -109,7 +109,9 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                         {categoryInfo?.icon} {t(`categories.${formData.category}`)} {t('preview.productPassport')}
                       </Badge>
                     )}
-                    <h1 className="text-xl font-bold mb-2">{formData.name || t('preview.productName')}</h1>
+                    <h1 className="text-xl font-bold mb-2">
+                      {(categoryData?.product_name as string) || formData.name || t('preview.productName')}
+                    </h1>
                     
                     {/* Check Authenticity Button (preview mode - non-clickable) */}
                     {categoryData?.counterfeit_protection_enabled && (

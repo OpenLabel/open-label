@@ -10,7 +10,8 @@ import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 
 export default function PublicPassport() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const displayLanguage = i18n.language.split('-')[0];
   const { slug } = useParams<{ slug: string }>();
   const { data: passport, isLoading, error } = usePassportBySlug(slug);
 
@@ -78,7 +79,9 @@ export default function PublicPassport() {
                 {categoryInfo?.icon} {t(`categories.${passport.category}`)} {t('passport.productPassport')}
               </Badge>
             )}
-            <h1 className="text-3xl font-bold mb-2">{passport.name}</h1>
+            <h1 className="text-3xl font-bold mb-2">
+              {(categoryData.product_name_translations as Record<string, string>)?.[displayLanguage] || (categoryData.product_name as string) || passport.name}
+            </h1>
             
             {/* Check Authenticity Button */}
             {categoryData?.counterfeit_protection_enabled && (
@@ -114,7 +117,9 @@ export default function PublicPassport() {
               <CardContent>
                 <div 
                   className="prose prose-sm max-w-none"
-                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(passport.description) }}
+                  dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(
+                    (categoryData.description_translations as Record<string, string>)?.[displayLanguage] || passport.description
+                  ) }}
                 />
               </CardContent>
             </Card>

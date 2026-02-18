@@ -203,6 +203,7 @@
     "dppNameHelp": "This name is only visible on your dashboard",
     "productName": "Product Name",
     "productNamePlaceholder": "Enter a name for this product",
+    "productNameHelp": "This is the name consumers will see on the public Digital Product Passport",
     "category": "Product Category",
     "productImage": "Product Image",
     "productDescription": "Product Description",
