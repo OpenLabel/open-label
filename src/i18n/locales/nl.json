@@ -27,7 +27,7 @@
     "signIn": "Inloggen",
     "signUp": "Registreren",
     "signOut": "Uitloggen",
-    "getStarted": "Gratis Beginnen",
+    "getStarted": "Gratis starten",
     "dashboard": "Ga naar Dashboard",
     "createNew": "Nieuw Maken"
   },
@@ -37,11 +37,11 @@
       "euFunded": "🇪🇺 Trots EU-gefinancierd",
       "title": "Maak Onbeperkt Digitale Productpaspoorten",
       "subtitle": "Gratis, open-source platform voor EU Ecodesign voor Duurzame Producten Verordening (ESPR) naleving. Genereer machineleesbare paspoorten met QR-codes voor batterijen, textiel, bouwproducten en 12+ categorieën.",
-      "cta": "Maak Uw Eerste Paspoort",
+      "cta": "Maak uw eerste paspoort",
       "demo": "Bekijk Demo Paspoort",
       "features": {
         "free": "100% Gratis & Open Source",
-        "selfHost": "Zelf te Hosten",
+        "selfHost": "Zelf hosten",
         "machineReadable": "Machineleesbaar JSON/XML",
         "categories": "12+ Productcategorieën"
       }
@@ -50,7 +50,7 @@
       "free": "Gratis & Open Source",
       "categories": "Productcategorieën",
       "deadline": "Eerste EU Deadline",
-      "qr": "+ Unieke URLs"
+      "qr": "+ Unieke URL's"
     },
     "features": {
       "badge": "Functies",
@@ -86,7 +86,7 @@
         "description": "PDF datasheets, Word documenten, Excel specs — upload elk bestand en wij halen de relevante data eruit."
       },
       "extract": {
-        "title": "AI Haalt Data Eruit",
+        "title": "AI extraheert gegevens",
         "description": "Onze vision AI leest en begrijpt uw documenten en vult automatisch alle paspoort velden in."
       },
       "multiUpload": {
@@ -107,7 +107,7 @@
       "badge": "EU Regelgeving Scope",
       "title": "Ondersteunde Productcategorieën",
       "subtitle": "Sjablonen gebouwd op basis van officiële EU regelgeving en gedelegeerde handelingen. Actieve regelgeving is van kracht, Prioriteitsgroepen hebben sjablonen klaar voor komende vereisten.",
-      "activeLaw": "Actieve Wet",
+      "activeLaw": "Geldende verordening",
       "priorityGroup": "Prioriteitsgroep",
       "cta": "Begin met Paspoorten Maken"
     },
@@ -281,7 +281,7 @@
     "nutritionalValues": "Voedingswaarden",
     "nutritionalValuesDesc": "Vereist door EU-verordening 2021/2117",
     "alcohol": "Alcohol",
-    "alcoholPercent": "Alcohol (% Vol)",
+    "alcoholPercent": "Alcohol (% vol.)",
     "residualSugar": "Restsuiker",
     "residualSugarGL": "Restsuiker (g/L)",
     "acidity": "Zuurgraad",
@@ -434,7 +434,7 @@
     "potassium_polyaspartate": "Kaliumpolyaspartaat (E456)",
     "fumaric_acid": "Fumaarzuur (E297)",
     "potassium_sorbate": "Kaliumsorbaat (E202)",
-    "lysozyme": "Lysozym (E1105) – bevat eiwitproteine",
+    "lysozyme": "Lysozym (E1105) – bevat ei-eiwit",
     "ascorbic_acid": "L-Ascorbinezuur (E300)",
     "dmdc": "Dimethyldicarbonaat – DMDC (E242)",
     "sulfites": "Sulfieten (>10 mg/L)",
@@ -529,7 +529,7 @@
     "compositeComponents": "Samengestelde componenten",
     "customMaterial": "Aangepast materiaal",
     "addCustomMaterial": "Aangepast materiaal toevoegen",
-    "disposalAdvice": "Afvoeradvies",
+    "disposalAdvice": "Recyclingadvies",
     "addMaterial": "Materiaal toevoegen",
     "addPackagingMaterial": "Verpakkingsmateriaal toevoegen",
     "customType": "Aangepast type",
