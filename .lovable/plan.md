@@ -1,122 +1,100 @@
 
 
-# Internationalize All Hardcoded Strings (Excluding Legal Pages)
+# Cleanup: Per-Language Translation Exception Allowlist
 
-## Goal
-Replace every hardcoded English string in non-legal pages/components with `t()` calls, add the corresponding keys to `en.json`, propagate them to all 23 other EU locale files, and ensure all tests pass.
+## Problem
 
-## Scope
+The current `isLegitimateMatch` function in `audit.test.ts` uses a global `internationalTerms` list that blanket-allows 20 English words (like "Password", "Salt", "Vintage", "Error") to be identical across ALL 23 non-English locales. This is wrong -- "Password" is only legitimately "Password" in Italian and Maltese, not in German ("Passwort") or French ("Mot de passe").
 
-**In scope:** Auth.tsx, Dashboard.tsx, PassportForm.tsx, SortablePassportCard.tsx, CategoryQuestions.tsx, ImageUpload.tsx, WineAIAutofill.tsx, and Zod validation messages in Auth.tsx.
+## Solution
 
-**Out of scope (intentionally static):** Setup.tsx, Terms.tsx, PrivacyPolicy.tsx, LegalMentions.tsx. Template files (battery.ts, textiles.ts, etc.) are also deferred -- they are "Early Alpha" and would require ~300+ keys across 11 files, which is a separate effort.
+Replace the global `internationalTerms` array with a per-language map: `Record<string, string[]>` where each language code lists only the English values that are genuinely identical in that language.
 
----
+The `isLegitimateMatch` function signature changes to accept a `langCode` parameter so it can check language-specific exceptions.
 
-## Hardcoded Strings to Fix
+## Data: Per-Language Allowlist
 
-### 1. Auth.tsx (6 fixes)
-| Line | Current hardcoded string | New i18n key |
-|------|--------------------------|-------------|
-| 15 | `'Please enter a valid email address'` | `auth.validation.invalidEmail` |
-| 16 | `'Password must be at least 6 characters'` | `auth.validation.shortPassword` |
-| 64 | `'Account created!'` / `'You can now sign in.'` | Already exists: `auth.accountCreated` / `auth.accountCreatedDesc` |
-| 68 | `'Check your email'` / `'Password reset link sent.'` | Already exists: `auth.checkEmail` / `auth.resetLinkSent` |
-| 100 | `'Reset your password'` | Already exists: `auth.resetSubtitle` |
-| 111 | `'Sending...'` / `'Send Reset Link'` | Already exists: `auth.sending` / `auth.sendResetLink` |
-| 114 | `'{t('common.back')} to sign in'` | Already exists: `auth.backToSignIn` |
-| 143 | `'Forgot password?'` | Already exists: `auth.forgotPassword` |
+Based on a full audit of the actual locale files, here are the legitimate English-identical values per language:
 
-Most already have keys -- they just aren't being used. Only 2 genuinely new keys needed (Zod messages).
+| Language | Legitimately identical values |
+|----------|-------------------------------|
+| bg | "Open Source" |
+| cs | "Open Source" |
+| da | "Open Source" |
+| de | "Open Source" |
+| el | "Open Source", "Email" |
+| es | "Open Source", "Manual" |
+| et | "Open Source" |
+| fi | "Open Source" |
+| fr | "Open Source", "Volume" |
+| ga | "Open Source" |
+| hr | "Open Source" |
+| hu | "Open Source" |
+| it | "Open Source", "Email", "Password", "Volume" |
+| lt | "Open Source" |
+| lv | "Open Source" |
+| mt | "Open Source", "Email", "Password", "Powered by" |
+| nl | "Open Source", "Volume" |
+| pl | "Open Source" |
+| pt | "Open Source", "Volume", "Manual" |
+| ro | "Open Source", "Manual" |
+| sk | "Open Source" |
+| sl | "Open Source" |
+| sv | "Open Source" |
 
-### 2. Dashboard.tsx (3 fixes)
-| Line | Current | Key (already exists) |
-|------|---------|---------------------|
-| 88 | `'Passport duplicated'` | `dashboard.duplicated` |
-| 95 | `'Are you sure you want to delete this passport?'` | `dashboard.confirmDelete` |
-| 98 | `'Passport deleted'` | `dashboard.deleted` |
+"Open Source" is universal (truly the same term in all EU languages). Everything else is per-language only.
 
-All keys already exist in en.json -- just need to replace hardcoded strings with `t()` calls.
+## Technical Changes
 
-### 3. PassportForm.tsx (3 fixes)
-| Line | Current | Key (already exists) |
-|------|---------|---------------------|
-| 114 | `'Please enter a product name'` | `passport.enterProductName` |
-| 126 | `'Passport updated successfully'` | `passport.updated` |
-| 131 | `'Passport created successfully'` | `passport.created` |
-| 310 | `Details` (partial hardcode) | `passport.details` |
+### File: `src/i18n/locales/audit.test.ts`
 
-All keys already exist.
+1. **Add per-language exception map** (replaces `internationalTerms`):
 
-### 4. SortablePassportCard.tsx (3 fixes)
-| Lines | Current | Key (already exists) |
-|-------|---------|---------------------|
-| 57, 146 | `aria-label="Drag to reorder"` | New: `dashboard.dragToReorder` |
-| 94, 182 | `Show QR Code` | `dashboard.showQr` |
-| 121, 209 | `Duplicate` | `dashboard.duplicate` |
+```typescript
+const perLanguageAllowedValues: Record<string, string[]> = {
+  bg: ["Open Source"],
+  cs: ["Open Source"],
+  da: ["Open Source"],
+  de: ["Open Source"],
+  el: ["Open Source", "Email"],
+  es: ["Open Source", "Manual"],
+  et: ["Open Source"],
+  fi: ["Open Source"],
+  fr: ["Open Source", "Volume"],
+  ga: ["Open Source"],
+  hr: ["Open Source"],
+  hu: ["Open Source"],
+  it: ["Open Source", "Email", "Password", "Volume"],
+  lt: ["Open Source"],
+  lv: ["Open Source"],
+  mt: ["Open Source", "Email", "Password", "Powered by"],
+  nl: ["Open Source", "Volume"],
+  pl: ["Open Source"],
+  pt: ["Open Source", "Volume", "Manual"],
+  ro: ["Open Source", "Manual"],
+  sk: ["Open Source"],
+  sl: ["Open Source"],
+  sv: ["Open Source"],
+};
+```
 
-1 new key needed (`dashboard.dragToReorder`).
+2. **Update `isLegitimateMatch` signature** to accept `langCode`:
+   - Change from `isLegitimateMatch(key, value)` to `isLegitimateMatch(key, value, langCode)`
+   - Replace `internationalTerms.includes(value.trim())` with `(perLanguageAllowedValues[langCode] || []).includes(value.trim())`
+   - Remove the global `internationalTerms` array entirely
+   - Remove the global `brandNames` array (move "Powered by" into mt's per-language list, "GitHub" and "Digital Product Passport" into `technicalTerms`)
 
-### 5. CategoryQuestions.tsx (3 fixes)
-| Line | Current | New key |
-|------|---------|---------|
-| 81 | `'Select an option'` | `common.selectOption` |
-| 100 | `'No additional information required...'` | `passport.noAdditionalInfo` |
-| 111 | `'Early Alpha'` + description paragraph | `passport.earlyAlpha` / `passport.earlyAlphaDesc` |
+3. **Update all call sites** of `isLegitimateMatch` to pass the language code:
+   - In the audit report loop (line 158): `isLegitimateMatch(key, enFlat[key], code)`
+   - In the strict test (line 269): `isLegitimateMatch(key, enFlat[key], code)`
 
-4 new keys needed.
+### No other files change
+This is purely a test-level refinement. No locale JSON files or components are modified.
 
-### 6. ImageUpload.tsx (5 fixes)
-| Line | Current | New key |
-|------|---------|---------|
-| 26 | `'You must be logged in to upload images'` | `imageUpload.loginRequired` |
-| 31 | `'Please upload an image file'` | `imageUpload.invalidType` |
-| 36 | `'Image must be less than 5MB'` | `imageUpload.tooLarge` |
-| 113 | `'Uploading...'` | `imageUpload.uploading` |
-| 118 | `'Upload Product Image'` | `imageUpload.uploadButton` |
+## Outcome
 
-5 new keys needed. Component needs `useTranslation` import.
-
-### 7. WineAIAutofill.tsx (10+ fixes)
-| Line | Current | New key |
-|------|---------|---------|
-| 139 | `'Autofill with AI'` | `ai.autofillButton` |
-| 142 | `'Experimental'` | `ai.experimental` |
-| 165 | `'AI Label Scanner'` | `ai.scannerTitle` |
-| 168 | `'Upload a wine label photo...'` | `ai.scannerDescription` |
-| 175 | `'Experimental feature: Please double-check...'` | `ai.experimentalWarning` |
-| 89 | `'AI Autofill Complete'` | `ai.autofillComplete` |
-| 90 | `'Fields have been populated...'` | `ai.autofillCompleteDesc` |
-| 95 | `'No data extracted from the label'` | `ai.noDataExtracted` |
-| 110 | `'Processing Failed'` | `ai.processingFailed` |
-| 111 | `'Failed to extract data from the label'` | `ai.processingFailedDesc` |
-| 255 | `'Fair Usage Quota Exceeded'` | `ai.quotaExceeded` |
-| 258 | `'You've reached the monthly limit...'` | `ai.quotaExceededDesc` |
-| 264 | quota body paragraph | `ai.quotaExceededBody` |
-| 267 | contact paragraph | `ai.quotaContactBody` |
-| 277 | `'Close'` | `common.close` (exists) |
-| 286 | `'Contact Us'` | `ai.contactUs` |
-
-~13 new keys needed.
-
----
-
-## Summary of Changes
-
-### New i18n keys to add: ~25 keys total
-- `auth.validation.*` (2)
-- `dashboard.dragToReorder` (1)
-- `common.selectOption` (1)
-- `passport.noAdditionalInfo`, `passport.earlyAlpha`, `passport.earlyAlphaDesc` (3)
-- `imageUpload.*` (5)
-- `ai.*` (13)
-
-### Files to modify: 7 component files + 24 locale JSON files
-
-### Implementation steps:
-1. Add all ~25 new keys to `en.json`
-2. Replace hardcoded strings with `t()` calls in each of the 7 component files
-3. Add `useTranslation` import to `ImageUpload.tsx` (only file missing it)
-4. Add matching translations to all 23 non-English locale files
-5. Run all tests to confirm 100% key parity and build passes
+- Any locale that currently has "Password" as "Password" (and shouldn't) will be flagged as untranslated
+- If a locale legitimately uses the English word (e.g., Italian uses "Password"), it passes
+- Adding a new exception requires explicitly listing it for the specific language, not a blanket global pass
+- The allowlist is easy to audit: you can see at a glance exactly which English words each language accepts
 
