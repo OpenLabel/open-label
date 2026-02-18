@@ -60,7 +60,7 @@ export function ImageUpload({ value, onChange, className }: ImageUploadProps) {
 
       onChange(data.publicUrl);
     } catch (err: any) {
-      setError(err.message || 'Failed to upload image');
+      setError(err.message || t('imageUpload.uploadFailed'));
     } finally {
       setUploading(false);
     }
