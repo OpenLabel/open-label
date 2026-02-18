@@ -25,19 +25,17 @@ export function CounterfeitProtection({
   const { toast } = useToast();
 
   const handleEnable = async () => {
+    // If passport hasn't been saved yet (no slug), just toggle the flag locally.
+    // The email notification will be sent when the user saves and a slug exists.
+    if (!passportSlug) {
+      onChange(true);
+      return;
+    }
+
     if (!userEmail) {
       toast({
         title: t('common.error'),
         description: t('counterfeit.errorNoEmail', 'Unable to send request - user email not found'),
-        variant: 'destructive',
-      });
-      return;
-    }
-
-    if (!passportSlug) {
-      toast({
-        title: t('common.error'),
-        description: t('counterfeit.errorSaveFirst', 'Please save the passport first before enabling counterfeit protection'),
         variant: 'destructive',
       });
       return;
