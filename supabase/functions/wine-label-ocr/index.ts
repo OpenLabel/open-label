@@ -13,8 +13,8 @@ const WineOCRSchema = z.object({
     .min(1, "Image is required")
     .max(10_000_000, "Image data too large (max ~7MB)")
     .refine(
-      (val) => /^data:image\/(png|jpeg|jpg|webp|gif);base64,/.test(val),
-      "Invalid image format - must be a valid base64 data URL"
+      (val) => /^data:(image\/(png|jpeg|jpg|webp|gif)|application\/pdf);base64,/.test(val),
+      "Invalid format - must be a valid base64 image or PDF data URL"
     ),
   qrUrl: z.string().url().optional(),
 });
@@ -138,6 +138,9 @@ OTHER DETAILS:
 - description: Any marketing text, tasting notes, or product description
 - serving_temperature: Serving temperature recommendation (e.g., "8-10°C")
 
+LANGUAGE NORMALIZATION:
+- ALWAYS return detected_ingredients names in ENGLISH, even if the label is in French, Italian, German, or another language. For example: "acide tartrique" should be returned as "Tartaric acid", "gomme arabique" as "Gum arabic", "dioxyde de soufre" as "Sulfur dioxide", "solfiti" as "Sulfites".
+
 Be conservative - only extract data you can clearly read. Do not guess or make up values.
 For analysis values, pay attention to units and convert to the expected format if needed.`;
 
@@ -224,6 +227,7 @@ INSTRUCTIONS:
 
   try {
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      signal: AbortSignal.timeout(60000),
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -302,6 +306,7 @@ async function runCriticalFieldsPass(
 
   try {
     const response = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      signal: AbortSignal.timeout(60000),
       method: "POST",
       headers: {
         Authorization: `Bearer ${apiKey}`,
@@ -597,13 +602,14 @@ serve(async (req) => {
     const FIRECRAWL_API_KEY = Deno.env.get("FIRECRAWL_API_KEY");
 
     const imageExtractionPromise = fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
+      signal: AbortSignal.timeout(90000),
       method: "POST",
       headers: {
         Authorization: `Bearer ${LOVABLE_API_KEY}`,
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        model: "google/gemini-2.5-flash",
+        model: "google/gemini-2.5-pro",
         messages: [
           { role: "system", content: SYSTEM_PROMPT },
           {
