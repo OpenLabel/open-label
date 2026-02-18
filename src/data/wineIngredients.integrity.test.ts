@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { wineIngredientCategories, getAllIngredients } from "./wineIngredients";
+import { KNOWN_INGREDIENT_IDS } from "./knownIngredientIds";
 
 describe("wineIngredients data integrity", () => {
   it("has no duplicate ingredient IDs across all categories", () => {
@@ -22,5 +23,24 @@ describe("wineIngredients data integrity", () => {
     for (const id of ids) {
       expect(id.trim().length).toBeGreaterThan(0);
     }
+  });
+
+  describe("edge function ingredient sync", () => {
+    const frontendIds = new Set(getAllIngredients().map((i) => i.id));
+    const backendIds = new Set(KNOWN_INGREDIENT_IDS);
+
+    it("every frontend ingredient ID exists in the backend KNOWN_INGREDIENT_IDS", () => {
+      const missingInBackend = [...frontendIds].filter((id) => !backendIds.has(id));
+      expect(missingInBackend).toEqual([]);
+    });
+
+    it("every backend KNOWN_INGREDIENT_ID exists in the frontend wineIngredients", () => {
+      const missingInFrontend = [...backendIds].filter((id) => !frontendIds.has(id));
+      expect(missingInFrontend).toEqual([]);
+    });
+
+    it("lists have the same count", () => {
+      expect(KNOWN_INGREDIENT_IDS.length).toBe(getAllIngredients().length);
+    });
   });
 });
