@@ -12,88 +12,11 @@ import heroBg from '@/assets/hero-bg.jpg';
 // Category data based on EU DPP research document
 const productCategories = [
   { 
-    key: 'battery',
-    description: 'Carbon footprint, recycling, supply chain due diligence',
-    status: 'active' as const,
-    regulation: 'EU 2023/1542',
-    deadline: 'Feb 2027'
-  },
-  { 
-    key: 'construction',
-    description: 'DoPC, GWP A1-A3, fire resistance',
-    status: 'active' as const,
-    regulation: 'EU 2024/3110',
-    deadline: '2024'
-  },
-  { 
-    key: 'textiles',
-    description: 'Fiber composition, durability, PFAS declaration',
-    status: 'active' as const,
-    regulation: 'ESPR Framework',
-    deadline: '2027-2030'
-  },
-  { 
     key: 'wine',
     description: 'Ingredients, nutrition, geographic indication',
     status: 'active' as const,
     regulation: 'EU 2021/2117',
     deadline: 'Active'
-  },
-  { 
-    key: 'toys',
-    description: 'PFAS-free, allergens, migration testing',
-    status: 'active' as const,
-    regulation: 'EU 2025/2509',
-    deadline: '2025'
-  },
-  { 
-    key: 'electronics',
-    description: 'Repairability index, spare parts, software updates',
-    status: 'priority' as const,
-    regulation: 'ESPR Priority',
-    deadline: '2027'
-  },
-  { 
-    key: 'iron_steel',
-    description: 'Carbon intensity, scrap content, alloy chemistry',
-    status: 'priority' as const,
-    regulation: 'CBAM aligned',
-    deadline: 'Q2 2026'
-  },
-  { 
-    key: 'aluminum',
-    description: 'Smelting energy source, coil traceability',
-    status: 'priority' as const,
-    regulation: 'ESPR 2025-2030',
-    deadline: '2027'
-  },
-  { 
-    key: 'cosmetics',
-    description: 'INCI list, nanomaterials, packaging recyclability',
-    status: 'priority' as const,
-    regulation: 'ESPR Priority',
-    deadline: '2027'
-  },
-  { 
-    key: 'furniture',
-    description: 'EUDR wood origin, spare parts, PFAS',
-    status: 'priority' as const,
-    regulation: 'ESPR + EUDR',
-    deadline: '2027'
-  },
-  { 
-    key: 'tires',
-    description: 'Abrasion rate, retreading history, microplastics',
-    status: 'priority' as const,
-    regulation: 'ESPR Priority',
-    deadline: '2027'
-  },
-  { 
-    key: 'detergents',
-    description: 'Digital SDS, biodegradability, dosage optimization',
-    status: 'priority' as const,
-    regulation: 'CLP/Detergents',
-    deadline: '2027'
   },
   { 
     key: 'other',
@@ -206,7 +129,7 @@ export default function Index() {
               <div className="text-sm text-muted-foreground">{t('landing.stats.free')}</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">12+</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">2</div>
               <div className="text-sm text-muted-foreground">{t('landing.stats.categories')}</div>
             </div>
             <div>

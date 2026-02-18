@@ -42,15 +42,30 @@ Create compliant Digital Product Passports in minutes. No installation, no credi
 | Feature | Description |
 |---------|-------------|
 | 🍷 **Wine E-Labels** | Full EU Regulation 2021/2117 compliance with ingredients, nutrition, allergens |
-| 🔋 **Battery Passports** | Carbon footprint, recycling info, manufacturer data |
-| 👕 **Textile Passports** | Care instructions, fiber composition, sustainability |
-| 🔌 **Electronics** | Repair information, hazardous substances, WEEE compliance |
-| 🧸 **Toys & More** | Safety certifications, age warnings, materials |
+| 📦 **Generic DPP** | Flexible template for any product type |
 | 📱 **QR Codes** | Generate scannable codes linking to each passport |
 | 🌍 **24 Languages** | All EU official languages supported |
 | 🤖 **AI Autofill** | Optional: scan wine labels to extract data automatically |
 | 🔒 **Self-Hosted** | Full data sovereignty — your data, your servers |
 | 📜 **Long-Term Storage** | Designed for 50+ year data retention (wine, etc.) |
+
+### 🚧 Early Alpha Categories (Available on Request)
+
+The following product categories are in early development and available on request only. They are not yet fully compliant with current regulatory standards and should not be used in production:
+
+- 🔋 **Battery Passports** — Carbon footprint, recycling info, manufacturer data (EU 2023/1542)
+- 👕 **Textile Passports** — Care instructions, fiber composition, sustainability (ESPR Framework)
+- 🏗️ **Construction** — DoPC, GWP A1-A3, fire resistance (EU 2024/3110)
+- 🔌 **Electronics** — Repair information, hazardous substances, WEEE compliance (ESPR Priority)
+- 🔩 **Iron & Steel** — Carbon intensity, scrap content, alloy chemistry (CBAM aligned)
+- 🥫 **Aluminum** — Smelting energy source, coil traceability (ESPR 2025-2030)
+- 🧸 **Toys** — Safety certifications, age warnings, materials (EU 2025/2509)
+- 💄 **Cosmetics** — INCI list, nanomaterials, packaging recyclability (ESPR Priority)
+- 🛋️ **Furniture** — EUDR wood origin, spare parts, PFAS (ESPR + EUDR)
+- 🛞 **Tires** — Abrasion rate, retreading history, microplastics (ESPR Priority)
+- 🧴 **Detergents** — Digital SDS, biodegradability, dosage optimization (CLP/Detergents Reg)
+
+> **Interested?** Open an issue on GitHub or contact us to discuss enabling early alpha categories for your deployment.
 
 ---
 
