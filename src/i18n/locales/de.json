@@ -96,9 +96,8 @@
       "cta": "KI-Autofill kostenlos testen",
       "tags": {
         "wineLabels": "Weinetiketten",
-        "batterySpecs": "Batterie-Specs",
-        "textileComposition": "Textilzusammensetzung",
-        "safetyDatasheets": "Sicherheitsdatenblätter",
+        "productLabels": "Product Labels",
+        "ingredientLists": "Ingredient Lists",
         "nutritionFacts": "Nährwertangaben",
         "technicalPdfs": "Technische PDFs"
       }
@@ -106,7 +105,7 @@
     "categories": {
       "badge": "EU-Regulierungsbereich",
       "title": "Unterstützte Produktkategorien",
-      "subtitle": "Vorlagen basierend auf offiziellen EU-Verordnungen. Aktive Vorschriften sind in Kraft, Prioritätsgruppen haben Vorlagen für kommende Anforderungen.",
+      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
       "activeLaw": "Geltende Verordnung",
       "priorityGroup": "Prioritätsgruppe",
       "cta": "Jetzt Pässe erstellen"
@@ -116,18 +115,18 @@
       "title": "EU DPP-Umsetzungsfristen",
       "subtitle": "Die EU führt Anforderungen an den Digitalen Produktpass schrittweise ein. Bereiten Sie sich jetzt vor.",
       "feb2027": {
-        "title": "Februar 2027",
-        "badge": "Erste Batterie-Frist",
+        "title": "Batteries — Coming Soon",
+        "badge": "February 2027",
         "description": "EV-, Industrie- und LMT-Batterien müssen Digitale Produktpässe mit Lebenszyklus-Daten, CO₂-Fußabdruck und Recyclinganteil für Kobalt, Lithium und Nickel haben."
       },
       "active": {
         "title": "Jetzt aktiv",
         "badge": "In Kraft",
-        "description": "Bauprodukte (EU 2024/3110), Wein & Spirituosen (EU 2021/2117) und Spielzeug (EU 2025/2509) erfordern bereits digitale Erklärungen."
+        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
       },
       "rollout": {
         "title": "2027-2030: Vollständige Einführung",
-        "description": "Textilien, Elektronik, Möbel, Eisen/Stahl, Aluminium, Kosmetik, Reifen und Reinigungsmittel werden DPPs benötigen."
+        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
       }
     },
     "selfHost": {

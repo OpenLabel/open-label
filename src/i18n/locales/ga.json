@@ -99,9 +99,8 @@
       "cta": "Bain triail as IS Uathphríomhlíon saor in aisce",
       "tags": {
         "wineLabels": "Lipéid Fíona",
-        "batterySpecs": "Sonraíochtaí Cadhnra",
-        "textileComposition": "Comhdhéanamh Teicstíle",
-        "safetyDatasheets": "Bileoga Sonraí Sábháilteachta",
+        "productLabels": "Product Labels",
+        "ingredientLists": "Ingredient Lists",
         "nutritionFacts": "Fíricí Cothaitheacha",
         "technicalPdfs": "PDFanna Teicniúla"
       }
@@ -109,7 +108,7 @@
     "categories": {
       "badge": "Raon Rialála an AE",
       "title": "Catagóirí táirge tacaithe",
-      "subtitle": "Teimpléid tógtha ó rialacháin oifigiúla an AE agus gníomhartha tarmligthe. Tá rialacháin ghníomhacha i bhfeidhm, tá teimpléid ag grúpaí tosaíochta réidh do riachtanais atá le teacht.",
+      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
       "activeLaw": "Rialachán i bhfeidhm",
       "priorityGroup": "Grúpa Tosaíochta",
       "cta": "Tosaigh ag cruthú pasanna"
@@ -119,18 +118,18 @@
       "title": "Spriocdháta Chur i bhFeidhm DPP an AE",
       "subtitle": "Tá an AE ag tabhairt isteach riachtanais Pas Táirge Digiteach de réir a chéile. Tosaigh ag ullmhú anois.",
       "feb2027": {
-        "title": "Feabhra 2027",
-        "badge": "Céad Spriocdháta Cadhnra",
+        "title": "Batteries — Coming Soon",
+        "badge": "February 2027",
         "description": "Caithfidh cadhnraí EV, tionsclaíocha agus LMT Pasanna Táirge Digiteacha a bheith acu le sonraí saolré iomlán, dearbhuithe lorg carbóin (kg CO₂e/kWh le rátáil Rang A-D), agus céatadáin ábhar athchúrsáilte do chóbalt, lítiam agus nicil."
       },
       "active": {
         "title": "Gníomhach anois",
         "badge": "I bhfeidhm",
-        "description": "Éilíonn Táirgí Tógála (AE 2024/3110), Fíon & Biotáillí (AE 2021/2117), agus Bréagáin (AE 2025/2509) dearbhuithe digiteacha cheana féin."
+        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
       },
       "rollout": {
         "title": "2027-2030: Leathadh iomlán",
-        "description": "Beidh DPPanna ag teastáil ó theicstílí, leictreonaic, troscán, iarann/cruach, alúmanam, cosmaidí, boinn agus glantaigh."
+        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
       }
     },
     "selfHost": {

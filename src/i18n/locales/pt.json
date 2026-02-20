@@ -96,9 +96,8 @@
       "cta": "Experimente IA Grátis",
       "tags": {
         "wineLabels": "Etiquetas de Vinho",
-        "batterySpecs": "Especificações de Baterias",
-        "textileComposition": "Composição Têxtil",
-        "safetyDatasheets": "Fichas de Segurança",
+        "productLabels": "Product Labels",
+        "ingredientLists": "Ingredient Lists",
         "nutritionFacts": "Informação Nutricional",
         "technicalPdfs": "PDFs Técnicos"
       }
@@ -106,7 +105,7 @@
     "categories": {
       "badge": "Âmbito do Regulamento UE",
       "title": "Categorias de Produtos Suportadas",
-      "subtitle": "Modelos construídos a partir de regulamentos oficiais da UE e atos delegados. Regulamentos ativos estão em vigor, Grupos prioritários têm modelos prontos para requisitos futuros.",
+      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
       "activeLaw": "Regulamento em vigor",
       "priorityGroup": "Grupo Prioritário",
       "cta": "Comece a Criar Passaportes"
@@ -116,18 +115,18 @@
       "title": "Prazos de Implementação do DPP da UE",
       "subtitle": "A UE está a implementar os requisitos do Passaporte Digital de Produto por fases. Comece a preparar-se agora para garantir a conformidade.",
       "feb2027": {
-        "title": "Fevereiro 2027",
-        "badge": "Primeiro Prazo para Baterias",
+        "title": "Batteries — Coming Soon",
+        "badge": "February 2027",
         "description": "Baterias de VE, industriais e LMT devem ter Passaportes Digitais de Produto com dados de ciclo de vida completos, declarações de pegada de carbono (kg CO₂e/kWh com classificação A-D) e percentagens de conteúdo reciclado para cobalto, lítio e níquel."
       },
       "active": {
         "title": "Ativo Agora",
         "badge": "Em Vigor",
-        "description": "Produtos de Construção (EU 2024/3110), Vinho e Bebidas Espirituosas (EU 2021/2117) e Brinquedos (EU 2025/2509) já requerem declarações digitais. Modelos disponíveis agora."
+        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
       },
       "rollout": {
         "title": "2027-2030: Implementação Completa",
-        "description": "Têxteis, eletrónica, mobiliário, ferro/aço, alumínio, cosméticos, pneus e detergentes vão requerer DPPs à medida que os atos delegados são publicados. Modelos de grupo prioritário prontos agora."
+        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
       }
     },
     "selfHost": {
