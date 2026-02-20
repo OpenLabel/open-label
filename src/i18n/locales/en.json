@@ -99,9 +99,8 @@
       "cta": "Try AI Autofill Free",
       "tags": {
         "wineLabels": "Wine Labels",
-        "batterySpecs": "Battery Specs",
-        "textileComposition": "Textile Composition",
-        "safetyDatasheets": "Safety Datasheets",
+        "productLabels": "Product Labels",
+        "ingredientLists": "Ingredient Lists",
         "nutritionFacts": "Nutrition Facts",
         "technicalPdfs": "Technical PDFs"
       }
@@ -109,7 +108,7 @@
     "categories": {
       "badge": "EU Regulation Scope",
       "title": "Supported Product Categories",
-      "subtitle": "Templates built from official EU regulations and delegated acts. Active regulations are in effect, Priority groups have templates ready for upcoming requirements.",
+      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
       "activeLaw": "Active Law",
       "priorityGroup": "Priority Group",
       "cta": "Start Creating Passports"
@@ -119,18 +118,18 @@
       "title": "EU DPP Implementation Deadlines",
       "subtitle": "The EU is rolling out Digital Product Passport requirements in phases. Start preparing now to ensure compliance.",
       "feb2027": {
-        "title": "February 2027",
-        "badge": "First Battery Deadline",
+        "title": "Batteries — Coming Soon",
+        "badge": "February 2027",
         "description": "EV, industrial, and LMT batteries must have Digital Product Passports with full lifecycle data, carbon footprint declarations (kg CO₂e/kWh with Class A-D rating), and recycled content percentages for cobalt, lithium, and nickel."
       },
       "active": {
         "title": "Active Now",
         "badge": "In Effect",
-        "description": "Construction Products (EU 2024/3110), Wine & Spirits (EU 2021/2117), and Toys (EU 2025/2509) already require digital declarations. Templates available now."
+        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
       },
       "rollout": {
         "title": "2027-2030: Full Rollout",
-        "description": "Textiles, electronics, furniture, iron/steel, aluminum, cosmetics, tires, and detergents will require DPPs as delegated acts are published. Priority group templates ready now."
+        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
       }
     },
     "selfHost": {

@@ -275,9 +275,8 @@ export default function Index() {
                 </div>
                 <div className="flex flex-wrap justify-center gap-2 text-xs text-muted-foreground">
                   <Badge variant="outline">{t('landing.ai.tags.wineLabels')}</Badge>
-                  <Badge variant="outline">{t('landing.ai.tags.batterySpecs')}</Badge>
-                  <Badge variant="outline">{t('landing.ai.tags.textileComposition')}</Badge>
-                  <Badge variant="outline">{t('landing.ai.tags.safetyDatasheets')}</Badge>
+                  <Badge variant="outline">{t('landing.ai.tags.productLabels')}</Badge>
+                  <Badge variant="outline">{t('landing.ai.tags.ingredientLists')}</Badge>
                   <Badge variant="outline">{t('landing.ai.tags.nutritionFacts')}</Badge>
                   <Badge variant="outline">{t('landing.ai.tags.technicalPdfs')}</Badge>
                 </div>
@@ -353,22 +352,6 @@ export default function Index() {
             </p>
           </div>
           <div className="max-w-3xl mx-auto space-y-6">
-            <Card className="border-l-4 border-l-primary">
-              <CardContent className="p-6 flex items-start gap-4">
-                <div className="h-12 w-12 rounded-full bg-primary/10 flex items-center justify-center flex-shrink-0">
-                  <Clock className="h-5 w-5 text-primary" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-semibold">{t('landing.timeline.feb2027.title')}</h3>
-                    <Badge>{t('landing.timeline.feb2027.badge')}</Badge>
-                  </div>
-                  <p className="text-sm text-muted-foreground">
-                    {t('landing.timeline.feb2027.description')}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
             <Card className="border-l-4 border-l-green-500">
               <CardContent className="p-6 flex items-start gap-4">
                 <div className="h-12 w-12 rounded-full bg-green-500/10 flex items-center justify-center flex-shrink-0">
@@ -381,6 +364,22 @@ export default function Index() {
                   </div>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.timeline.active.description')}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+            <Card className="border-l-4 border-l-amber-500">
+              <CardContent className="p-6 flex items-start gap-4">
+                <div className="h-12 w-12 rounded-full bg-amber-500/10 flex items-center justify-center flex-shrink-0">
+                  <Clock className="h-5 w-5 text-amber-500" />
+                </div>
+                <div>
+                  <div className="flex items-center gap-2 mb-1">
+                    <h3 className="font-semibold">{t('landing.timeline.feb2027.title')}</h3>
+                    <Badge variant="secondary">{t('landing.timeline.feb2027.badge')}</Badge>
+                  </div>
+                  <p className="text-sm text-muted-foreground">
+                    {t('landing.timeline.feb2027.description')}
                   </p>
                 </div>
               </CardContent>

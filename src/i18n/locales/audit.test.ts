@@ -130,6 +130,13 @@ function isLegitimateMatch(key: string, value: string, langCode: string): boolea
     "preview.poweredBy",
     "wine.hints.displaySettingsHint",
     "notFound.title",
+    "landing.ai.tags.productLabels",
+    "landing.ai.tags.ingredientLists",
+    "landing.categories.subtitle",
+    "landing.timeline.feb2027.title",
+    "landing.timeline.feb2027.badge",
+    "landing.timeline.active.description",
+    "landing.timeline.rollout.description",
   ];
   if (englishExpectedKeys.includes(key)) return true;
 
