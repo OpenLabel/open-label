@@ -1,81 +1,68 @@
 
+## Simplify Landing Page: Reorder Timeline and Clean Up References
 
-## Improve AI Wine Label Recognition Quality
+### What changes
 
-### Problem
+#### 1. Reorder timeline cards in `Index.tsx` (lines 355-400)
 
-Currently, the AI (Gemini 2.5 Pro) returns free-text ingredient names like "Sulfites" or "Tartaric acid", which then need fuzzy matching on the client. This is fragile -- the AI can return names in unexpected forms, languages, or phrasings. Additionally, when a QR code is detected, the system scrapes the linked webpage and tries to extract data from the rendered HTML/markdown, but many wine QR pages (like u-label.io) are JavaScript-rendered and return generic content instead of actual product data.
+Current order: Battery (Feb 2027) -> Active Now -> 2027-2030 Rollout
 
-### Solution: Two Key Improvements
+New order: **Active Now** -> **Battery (Coming Soon)** -> **2027-2030 Rollout**
 
-#### 1. Constrain AI output to known ingredient IDs
+- Move the green "Active Now" card to first position
+- Keep the battery card as its own card below, but restyle it with an amber/warning border and a "Coming Soon" badge
+- Keep the rollout card at the bottom
 
-Instead of asking the AI to return free-text ingredient names, we inject the full list of valid ingredient IDs and names directly into the system prompt. The AI then returns ingredient **IDs** (e.g., `tartaric_acid`, `gum_arabic`, `sulfites`) instead of arbitrary text.
+#### 2. Update `en.json` timeline content
 
-This eliminates the fuzzy matching problem entirely -- the AI does the matching at extraction time, where it has full context of the label.
+- **`active.description`**: Remove Construction Products and Toys. Change to: "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+- **`feb2027.title`**: Change to "Batteries — Coming Soon"
+- **`feb2027.badge`**: Change to "February 2027"
+- **`rollout.description`**: Add construction products and toys here. Change to: "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published." (removes "Priority group templates ready now")
+- **`categories.subtitle`**: Simplify to remove "Priority groups" distinction
 
-**Changes:**
-- **`supabase/functions/wine-label-ocr/index.ts`**:
-  - Add a `KNOWN_INGREDIENTS` constant listing all valid ingredient IDs with their display names (built from the same data as `wineIngredients.ts`)
-  - Update `SYSTEM_PROMPT` to include: "When detecting ingredients, you MUST return ingredient IDs from this list: [list]. If an ingredient doesn't match any known ID, return the raw name prefixed with `custom:`"
-  - Update `EXTRACTION_TOOL.detected_ingredients` description to reference the known IDs
-  - This applies to all 3 passes (first, second, critical)
+#### 3. Update AI tags in `en.json` and `Index.tsx`
 
-#### 2. Feed raw scraped text to AI instead of re-extracting
+- Replace `batterySpecs` -> "Product Labels", `textileComposition` -> "Ingredient Lists"
+- Remove `safetyDatasheets` badge from Index.tsx (line 280)
 
-When a QR code is decoded (e.g., a u-label.io URL), instead of asking the AI to extract structured data from the scraped markdown separately, we feed the raw scraped text **alongside the original image** into the main extraction passes. This way the AI can cross-reference what it sees on the label with what the web page says.
+#### 4. Restyle battery card in `Index.tsx`
 
-**Changes:**
-- **`supabase/functions/wine-label-ocr/index.ts`**:
-  - Restructure `tryQrCodeScrape` to return the **raw markdown text** and URL, not AI-extracted data
-  - In the main flow, if QR scrape returns text, append it to the user prompt in the first AI call: "Here is additional text scraped from a QR code on the label (URL: ...): [markdown]. Cross-reference this with the image to extract all fields."
-  - Pass the QR text into second and critical passes too, so all passes benefit
-  - Remove the separate AI call inside `tryQrCodeScrape` (saves one API call and improves accuracy)
-  - Enable Firecrawl `waitFor: 3000` to handle JS-rendered pages like u-label.io
+Change border from `border-l-primary` to `border-l-amber-500`, icon background from `bg-primary/10` to `bg-amber-500/10`, icon color from `text-primary` to `text-amber-500`.
 
-#### 3. Add tests for the new ingredient ID mapping
+#### 5. Update all 23 other locale files
 
-**New/updated test files:**
-- **`supabase/functions/wine-label-ocr/index_test.ts`**: Add tests verifying that the function rejects invalid inputs (already exists, keep as-is)
-- **`src/lib/edgeFunctionInput.safety.test.ts`**: Already has ingredient-related safety tests -- extend with a test that verifies the known ingredient ID list matches `wineIngredients.ts` data to prevent drift
-- **`src/data/wineIngredients.integrity.test.ts`**: Add a test ensuring every ingredient ID in the edge function's `KNOWN_INGREDIENTS` constant is also present in the client-side `wineIngredients.ts` (and vice versa), to catch desync
+Mirror the key value changes across bg, cs, da, de, el, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sv JSON files with English placeholder text.
 
-### Technical Details
+### Technical details
 
-**Edge function prompt change (simplified):**
-```
-INGREDIENTS - IMPORTANT:
-When you detect ingredients, return their IDs from this known list:
-- grapes (Grapes)
-- saccharose (Saccharose)  
-- tartaric_acid (Tartaric acid, E 334)
-- sulfites (Sulfites - generic term)
-- sulfur_dioxide (Sulfur dioxide)
-- gum_arabic (Gum arabic, E 414)
-- egg (Egg - ALLERGEN)
-- milk (Milk - ALLERGEN)
-... [full list]
+**Index.tsx timeline section (lines 355-400) new order:**
 
-If an ingredient is clearly present but doesn't match any ID, return it prefixed with "custom:" (e.g., "custom:oak chips").
-Include E-number variants, French/Italian/German/Spanish names -- map them all to the correct ID.
+```text
+<!-- 1. Active Now (green, first) -->
+<Card className="border-l-4 border-l-green-500">
+  ... CheckCircle2 icon ...
+  {t('landing.timeline.active.title')} + badge "In Effect"
+</Card>
+
+<!-- 2. Battery (amber, own card, below active) -->
+<Card className="border-l-4 border-l-amber-500">
+  ... Clock icon with amber styling ...
+  {t('landing.timeline.feb2027.title')} + badge
+</Card>
+
+<!-- 3. Rollout (muted, last) -->
+<Card className="border-l-4 border-l-muted">
+  ... Users icon ...
+  {t('landing.timeline.rollout.title')}
+</Card>
 ```
 
-**QR text injection (simplified):**
-```
-"Please analyze this wine label. 
-[image attached]
-
-ADDITIONAL CONTEXT - Text scraped from a QR code found on this label (from https://u-label.io/...):
-[raw markdown content, truncated to 15000 chars]
-
-Cross-reference the image and this text to extract all fields. The label image is the primary source of truth."
-```
-
-### Impact
-
-- Ingredient matching goes from ~60% accuracy (fuzzy text matching) to ~95%+ (AI picks from constrained list)
-- QR-sourced data quality improves because the AI sees everything in one context instead of separate extractions
-- One fewer API call per scan (removed the separate QR extraction AI call)
-- JS-rendered QR pages get better content with `waitFor`
-- Tests ensure ingredient list stays in sync between frontend and backend
-
+**en.json changes:**
+- `landing.timeline.active.description` = "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+- `landing.timeline.feb2027.title` = "Batteries — Coming Soon"
+- `landing.timeline.feb2027.badge` = "February 2027"
+- `landing.timeline.rollout.description` = "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+- `landing.ai.tags.batterySpecs` = "Product Labels"
+- `landing.ai.tags.textileComposition` = "Ingredient Lists"
+- Remove `landing.ai.tags.safetyDatasheets`
