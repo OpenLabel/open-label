@@ -104,6 +104,7 @@ Do not include the source language in the response.`;
           },
         ],
         temperature: 0.3,
+        max_tokens: 16000,
       }),
     });
 
@@ -125,10 +126,28 @@ Do not include the source language in the response.`;
     try {
       // Handle potential markdown code blocks
       const jsonMatch = content.match(/```(?:json)?\s*([\s\S]*?)\s*```/);
-      const jsonStr = jsonMatch ? jsonMatch[1] : content;
-      translations = JSON.parse(jsonStr.trim());
+      let jsonStr = jsonMatch ? jsonMatch[1] : content;
+      jsonStr = jsonStr.trim();
+      
+      // If JSON is truncated (no closing brace), try to recover
+      if (!jsonStr.endsWith("}")) {
+        // Find the last complete key-value pair and close the object
+        const lastCompleteQuote = jsonStr.lastIndexOf('",');
+        if (lastCompleteQuote > 0) {
+          jsonStr = jsonStr.substring(0, lastCompleteQuote + 1) + "}";
+        } else {
+          // Try finding the last complete value without trailing comma
+          const lastQuote = jsonStr.lastIndexOf('"');
+          const bracePos = jsonStr.lastIndexOf('{');
+          if (lastQuote > bracePos) {
+            jsonStr = jsonStr.substring(0, lastQuote + 1) + "}";
+          }
+        }
+      }
+      
+      translations = JSON.parse(jsonStr);
     } catch (parseError) {
-      console.error("Failed to parse AI response:", content);
+      console.error("Failed to parse AI response:", content.substring(0, 500));
       throw new Error("Failed to parse translation response");
     }
 
