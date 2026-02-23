@@ -1,49 +1,54 @@
 
 
-## Add Translation Buttons to Missing Fields
+## Fix: Build Timeout Due to Test Suite Size
 
-### Problem
-Several text fields that appear on the public DPP lack translation buttons:
+### Root Cause
 
-**Wine category** -- these three fields in `WineFields.tsx` are missing translation icons:
-- Grape Variety
-- Vintage
-- Region
+The build is **not failing due to a code error** -- all visible tests pass. The build output is truncated at the exact same point across 3 retry attempts (during the translation audit report), which indicates either:
 
-**Non-wine categories** -- Product Name and Description already have translation buttons (they are in `PassportForm.tsx`). If you are not seeing them, it may be because you are looking at a wine passport (wine has its own separate Name field without a translation button in the Product Identity card). Let me know if you see another field missing.
+1. **Test suite timeout** -- the test run exceeds the build server's time limit
+2. **Output buffer overflow** -- the verbose translation audit output fills the build log buffer
 
-### Plan
+The translation audit test (`src/i18n/locales/audit.test.ts`) prints a large report for all 24 EU languages, and when combined with the other 300+ tests, this may push the build past its limits.
 
-**File: `src/components/WineFields.tsx`**
+### Fix Plan
 
-For each of the 3 fields (Grape Variety, Vintage, Region):
+**1. Reduce test output verbosity** (`src/i18n/locales/audit.test.ts`)
+- Suppress the large audit report from stdout (it prints a full table for 24 languages every build)
+- Keep the test assertions but remove or conditionally gate the `console.log` that prints the full report
+- This reduces build log size significantly
 
-1. Add auto-translate hooks (similar to existing denomination/sugar classification pattern):
-   - `grape_variety_translations`, `vintage_translations`, `region_translations` state handling
-   - `useAutoTranslate` hook for each field
+**2. Add missing translation fields to the data contract** (`src/components/wine/WinePublicPassport.tsx` and `src/components/wine/WinePublicPassport.test.ts`)
+- Add `grape_variety_translations`, `vintage_translations`, `region_translations` to `WINE_PASSPORT_FIELDS.productInfo`
+- Add the same 3 fields to `CANONICAL_WINE_FIELDS.productInfo` in the test
+- Add the 3 fields to `exampleCategoryData` in the test
+- This ensures the data contract is complete and consistent (important for DPP safety -- if fields exist but aren't documented, they could be silently dropped)
 
-2. Wrap each `<Input>` in a `<div className="flex gap-2">` with a `<TranslationButton>` next to it, following the exact same pattern used for Denomination (lines 590-609)
+### Technical Details
 
-3. Store translations in `data.grape_variety_translations`, `data.vintage_translations`, `data.region_translations`
+**File: `src/i18n/locales/audit.test.ts`**
+- Wrap the large `console.log` report in a condition so it only prints when explicitly requested (e.g., via env var `VERBOSE_AUDIT=1`), or remove the stdout output entirely and keep only the assertions
 
-### Fields affected
+**File: `src/components/wine/WinePublicPassport.tsx` (line 574)**
+- Change `productInfo` array from 10 items to 13:
+  ```
+  productInfo: ['volume', 'volume_unit', 'grape_variety', 'vintage', 'country', 'region', 
+    'denomination', 'sugar_classification', 'denomination_translations', 
+    'sugar_classification_translations', 'grape_variety_translations', 
+    'vintage_translations', 'region_translations'],
+  ```
 
-| Field | Data key | Translations key |
-|---|---|---|
-| Grape Variety | `grape_variety` | `grape_variety_translations` |
-| Vintage | `vintage` | `vintage_translations` |
-| Region | `region` | `region_translations` |
-
-### Technical details
-
-Each field gets:
-- A `useCallback` for handling translation saves
-- A `useAutoTranslate` hook for auto-translating on input change
-- A translating indicator next to the label
-- A `TranslationButton` next to the input
-- The same user-edit precedence logic already used by Denomination
-
-The public passport component (`WinePublicPassport.tsx`) and the edge function (`get-public-passport`) will also need to be checked to ensure translated values for these fields are displayed when a viewer selects a different language.
-
-No new dependencies needed. No database changes.
+**File: `src/components/wine/WinePublicPassport.test.ts`**
+- Add 3 entries to `CANONICAL_WINE_FIELDS.productInfo` (around line 28):
+  ```
+  'grape_variety_translations',
+  'vintage_translations', 
+  'region_translations',
+  ```
+- Add 3 entries to `exampleCategoryData` (around line 338):
+  ```
+  grape_variety_translations: { de: 'Cabernet Sauvignon', fr: 'Cabernet Sauvignon' },
+  vintage_translations: { de: '2020', fr: '2020' },
+  region_translations: { de: 'Bordeaux', fr: 'Bordeaux' },
+  ```
 
