@@ -64,10 +64,19 @@ export function WinePublicPassport({
   const productName = (categoryData.product_name as string) || passport.name;
   const volume = categoryData.volume as number | undefined;
   const volumeUnit = (categoryData.volume_unit as string) || 'ml';
-  const grapeVariety = categoryData.grape_variety as string | undefined;
-  const vintage = categoryData.vintage as string | undefined;
+  const grapeVarietyRaw = categoryData.grape_variety as string | undefined;
+  const grapeVarietyTranslations = categoryData.grape_variety_translations as Record<string, string> | undefined;
+  const grapeVariety = grapeVarietyTranslations?.[displayLanguage] || grapeVarietyRaw;
+
+  const vintageRaw = categoryData.vintage as string | undefined;
+  const vintageTranslations = categoryData.vintage_translations as Record<string, string> | undefined;
+  const vintage = vintageTranslations?.[displayLanguage] || vintageRaw;
+
   const country = categoryData.country as string | undefined;
-  const region = categoryData.region as string | undefined;
+
+  const regionRaw = categoryData.region as string | undefined;
+  const regionTranslations = categoryData.region_translations as Record<string, string> | undefined;
+  const region = regionTranslations?.[displayLanguage] || regionRaw;
   
   // Denomination with translations
   const denominationRaw = categoryData.denomination as string | undefined;

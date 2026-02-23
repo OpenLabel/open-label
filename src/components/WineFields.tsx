@@ -62,6 +62,54 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
     enabled: !!sugarClassificationValue.trim(),
   });
 
+  // Auto-translate grape variety
+  const grapeVarietyValue = (data.grape_variety as string) || '';
+  const grapeVarietyTranslations = (data.grape_variety_translations as Translations) || {};
+  
+  const handleGrapeVarietyTranslations = useCallback((translations: Translations) => {
+    onChange({ ...data, grape_variety_translations: translations });
+  }, [data, onChange]);
+
+  const { isTranslating: isGrapeVarietyTranslating, markAsUserEdited: markGrapeVarietyEdited } = useAutoTranslate({
+    value: grapeVarietyValue,
+    sourceLanguage: currentLanguage,
+    existingTranslations: grapeVarietyTranslations,
+    onTranslationsGenerated: handleGrapeVarietyTranslations,
+    enabled: !!grapeVarietyValue.trim(),
+  });
+
+  // Auto-translate vintage
+  const vintageValue = (data.vintage as string) || '';
+  const vintageTranslations = (data.vintage_translations as Translations) || {};
+  
+  const handleVintageTranslations = useCallback((translations: Translations) => {
+    onChange({ ...data, vintage_translations: translations });
+  }, [data, onChange]);
+
+  const { isTranslating: isVintageTranslating, markAsUserEdited: markVintageEdited } = useAutoTranslate({
+    value: vintageValue,
+    sourceLanguage: currentLanguage,
+    existingTranslations: vintageTranslations,
+    onTranslationsGenerated: handleVintageTranslations,
+    enabled: !!vintageValue.trim(),
+  });
+
+  // Auto-translate region
+  const regionValue = (data.region as string) || '';
+  const regionTranslations = (data.region_translations as Translations) || {};
+  
+  const handleRegionTranslations = useCallback((translations: Translations) => {
+    onChange({ ...data, region_translations: translations });
+  }, [data, onChange]);
+
+  const { isTranslating: isRegionTranslating, markAsUserEdited: markRegionEdited } = useAutoTranslate({
+    value: regionValue,
+    sourceLanguage: currentLanguage,
+    existingTranslations: regionTranslations,
+    onTranslationsGenerated: handleRegionTranslations,
+    enabled: !!regionValue.trim(),
+  });
+
   // Calculate nutritional values using the utility function
   const calculatedValues = useMemo(() => {
     const alcohol = Number(data.alcohol_percent) || 0;
@@ -478,32 +526,66 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
           </div>
           
           <div className="space-y-2">
-            <LabelWithHint 
-              label={t('wine.grapeVariety')} 
-              htmlFor="grape_variety" 
-              tooltip={t('wine.hints.grapeVarietyTooltip')} 
-            />
-            <Input
-              id="grape_variety"
-              value={(data.grape_variety as string) || ''}
-              onChange={(e) => handleChange('grape_variety', e.target.value)}
-              placeholder={t('wine.placeholders.grapeVariety')}
-            />
+            <div className="flex items-center gap-1.5">
+              <LabelWithHint 
+                label={t('wine.grapeVariety')} 
+                htmlFor="grape_variety" 
+                tooltip={t('wine.hints.grapeVarietyTooltip')} 
+              />
+              {isGrapeVarietyTranslating && <span className="text-xs text-muted-foreground animate-pulse">{t('translation.autoTranslating', 'Translating...')}</span>}
+            </div>
+            <div className="flex gap-2">
+              <Input
+                id="grape_variety"
+                value={(data.grape_variety as string) || ''}
+                onChange={(e) => handleChange('grape_variety', e.target.value)}
+                placeholder={t('wine.placeholders.grapeVariety')}
+                className="flex-1"
+              />
+              <TranslationButton
+                value={(data.grape_variety as string) || ''}
+                sourceLanguage={currentLanguage}
+                translations={grapeVarietyTranslations}
+                onSave={(translations) => {
+                  Object.keys(translations).forEach(lang => markGrapeVarietyEdited(lang));
+                  handleChange('grape_variety_translations', translations);
+                }}
+                fieldLabel={t('wine.grapeVariety')}
+                disabled={!data.grape_variety}
+              />
+            </div>
             <FieldHint hint={t('wine.hints.grapeVariety')} />
           </div>
 
           <div className="space-y-2">
-            <LabelWithHint 
-              label={t('wine.vintage')} 
-              htmlFor="vintage" 
-              tooltip={t('wine.hints.vintageTooltip')} 
-            />
-            <Input
-              id="vintage"
-              value={(data.vintage as string) || ''}
-              onChange={(e) => handleChange('vintage', e.target.value)}
-              placeholder={t('wine.placeholders.vintage')}
-            />
+            <div className="flex items-center gap-1.5">
+              <LabelWithHint 
+                label={t('wine.vintage')} 
+                htmlFor="vintage" 
+                tooltip={t('wine.hints.vintageTooltip')} 
+              />
+              {isVintageTranslating && <span className="text-xs text-muted-foreground animate-pulse">{t('translation.autoTranslating', 'Translating...')}</span>}
+            </div>
+            <div className="flex gap-2">
+              <Input
+                id="vintage"
+                value={(data.vintage as string) || ''}
+                onChange={(e) => handleChange('vintage', e.target.value)}
+                placeholder={t('wine.placeholders.vintage')}
+                className="flex-1"
+              />
+              <TranslationButton
+                value={(data.vintage as string) || ''}
+                sourceLanguage={currentLanguage}
+                translations={vintageTranslations}
+                onSave={(translations) => {
+                  Object.keys(translations).forEach(lang => markVintageEdited(lang));
+                  handleChange('vintage_translations', translations);
+                }}
+                fieldLabel={t('wine.vintage')}
+                disabled={!data.vintage}
+              />
+            </div>
             <FieldHint hint={t('wine.hints.vintage')} />
           </div>
 
@@ -564,17 +646,34 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
           </div>
 
           <div className="space-y-2">
-            <LabelWithHint 
-              label={t('wine.region')} 
-              htmlFor="region" 
-              tooltip={t('wine.hints.regionTooltip')} 
-            />
-            <Input
-              id="region"
-              value={(data.region as string) || ''}
-              onChange={(e) => handleChange('region', e.target.value)}
-              placeholder={t('wine.placeholders.region')}
-            />
+            <div className="flex items-center gap-1.5">
+              <LabelWithHint 
+                label={t('wine.region')} 
+                htmlFor="region" 
+                tooltip={t('wine.hints.regionTooltip')} 
+              />
+              {isRegionTranslating && <span className="text-xs text-muted-foreground animate-pulse">{t('translation.autoTranslating', 'Translating...')}</span>}
+            </div>
+            <div className="flex gap-2">
+              <Input
+                id="region"
+                value={(data.region as string) || ''}
+                onChange={(e) => handleChange('region', e.target.value)}
+                placeholder={t('wine.placeholders.region')}
+                className="flex-1"
+              />
+              <TranslationButton
+                value={(data.region as string) || ''}
+                sourceLanguage={currentLanguage}
+                translations={regionTranslations}
+                onSave={(translations) => {
+                  Object.keys(translations).forEach(lang => markRegionEdited(lang));
+                  handleChange('region_translations', translations);
+                }}
+                fieldLabel={t('wine.region')}
+                disabled={!data.region}
+              />
+            </div>
             <FieldHint hint={t('wine.hints.region')} />
           </div>
 
