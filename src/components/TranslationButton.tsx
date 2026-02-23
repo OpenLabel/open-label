@@ -203,10 +203,11 @@ export function TranslationButton({
             </div>
             <Button
               type="button"
-              variant="outline"
+              variant="default"
               size="sm"
               onClick={handleGenerateTranslations}
               disabled={loading || !value.trim()}
+              className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-sm"
             >
               {loading ? (
                 <Loader2 className="h-4 w-4 mr-2 animate-spin" />
