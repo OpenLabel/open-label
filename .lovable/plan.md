@@ -1,23 +1,23 @@
-## Emphasize "Free Forever" in the Landing Page Hero Title
 
-### Change
 
-Update the hero title translation key across all 24 locale files to make "free" prominent in the main heading.
+## Fix Translation Dialog Scrolling
 
-**Current title:** "Create Unlimited Digital Product Passports"
+### Problem
+The translation dialog uses Radix UI's `ScrollArea` component, which requires a fixed height on its viewport to enable scrolling. The current CSS (`flex-1 min-h-0 max-h-[50vh]`) doesn't reliably constrain the viewport height, so all 24 language rows render but you can only see the first ~6 and cannot scroll to the rest.
 
-**New title:** "Unlimited Digital Product Passports 100% Free"
-
-This keeps the existing message while adding the strong "Free Forever" commitment. The em dash separates it cleanly and makes it scannable.
+### Solution
+Replace the `ScrollArea` wrapper with a plain `div` using `overflow-y-auto`, which handles overflow scrolling natively and reliably.
 
 ### Technical Details
 
-#### 1. Update `src/i18n/locales/en.json`
+**File: `src/components/TranslationButton.tsx`**
 
-- Change `landing.hero.title` from `"Create Unlimited Digital Product Passports"` to `"Create Unlimited Digital Product Passports — Free Forever"`
+1. Remove the `ScrollArea` import (line 16):
+   - Remove `import { ScrollArea } from '@/components/ui/scroll-area';`
 
-#### 2. Update all 23 other locale files
+2. Replace the `ScrollArea` wrapper (line 220) with a simple scrollable div:
+   - **From**: `<ScrollArea className="flex-1 min-h-0 max-h-[50vh] -mx-6 px-6">`
+   - **To**: `<div className="flex-1 min-h-0 max-h-[50vh] overflow-y-auto -mx-6 px-6">`
+   - Close tag (line 243): change `</ScrollArea>` to `</div>`
 
-Mirror the same change with English placeholder text (bg, cs, da, de, el, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sl, sv).
-
-No changes needed in `Index.tsx` — the component already renders `{t('landing.hero.title')}` as a single string in the `<h1>` tag.
+That is the only change needed. No other files are affected.
