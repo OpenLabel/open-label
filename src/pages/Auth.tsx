@@ -88,6 +88,7 @@ export default function Auth() {
             <span className="hidden sm:inline">Passports</span>
             <span className="hidden sm:inline text-muted-foreground font-normal">.com</span>
           </Link>
+          <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           <LanguageSwitcher />
         </div>
       </header>

@@ -40,6 +40,7 @@ export default function Index() {
               <span className="text-primary-foreground font-bold text-sm">DPP</span>
             </div>
             <h1 className="hidden sm:block text-lg font-semibold">Digital <span className="text-muted-foreground/60 font-normal">-</span> Product <span className="text-muted-foreground/60 font-normal">-</span> Passports <span className="text-muted-foreground font-normal">.com</span></h1>
+            <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
           <div className="flex gap-1.5 sm:gap-2 items-center min-w-0">
             <LanguageSwitcher />
@@ -464,6 +465,7 @@ export default function Index() {
                 <span className="text-primary-foreground font-bold text-xs">DPP</span>
               </div>
               <span className="text-sm font-medium">Digital <span className="text-muted-foreground/60 font-normal">-</span> Product <span className="text-muted-foreground/60 font-normal">-</span> Passports <span className="text-muted-foreground font-normal">.com</span></span>
+              <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
               <Badge variant="outline" className="text-xs">
                 {t('common.openSource')}
               </Badge>
