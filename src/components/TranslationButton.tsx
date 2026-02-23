@@ -201,21 +201,28 @@ export function TranslationButton({
             <div className="flex-1 text-sm text-muted-foreground">
               {t('translation.sourceText', 'Source text')}: <strong>{value || t('translation.empty', '(empty)')}</strong>
             </div>
-            <Button
+            <button
               type="button"
-              variant="default"
-              size="sm"
               onClick={handleGenerateTranslations}
               disabled={loading || !value.trim()}
-              className="bg-gradient-to-r from-violet-600 to-fuchsia-600 hover:from-violet-700 hover:to-fuchsia-700 text-white shadow-sm"
+              className="group relative overflow-hidden rounded-lg p-[2px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none"
+              style={{
+                background: 'linear-gradient(135deg, #FF6B6B 0%, #FF8E53 15%, #FEC89A 30%, #98D8AA 50%, #7EB6FF 70%, #A78BFA 85%, #F472B6 100%)',
+                backgroundSize: '200% 200%',
+                animation: 'gradient-shift 4s ease infinite',
+              }}
             >
-              {loading ? (
-                <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-              ) : (
-                <Sparkles className="h-4 w-4 mr-2" />
-              )}
-              {t('translation.generateWithAI', 'Generate with AI')}
-            </Button>
+              <div className="relative flex items-center justify-center gap-2 rounded-[6px] bg-background/95 px-4 py-2 backdrop-blur-sm transition-all group-hover:bg-background/90">
+                {loading ? (
+                  <Loader2 className="h-4 w-4 animate-spin text-purple-500" />
+                ) : (
+                  <Sparkles className="h-4 w-4 text-purple-500" />
+                )}
+                <span className="text-sm font-semibold bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 bg-clip-text text-transparent">
+                  {t('translation.generateWithAI', 'Generate with AI')}
+                </span>
+              </div>
+            </button>
           </div>
 
           <div className="flex-1 min-h-0 max-h-[50vh] overflow-y-auto -mx-6 px-6">
