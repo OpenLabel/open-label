@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/dialog';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
-import { ScrollArea } from '@/components/ui/scroll-area';
+
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
@@ -217,7 +217,7 @@ export function TranslationButton({
             </Button>
           </div>
 
-          <ScrollArea className="flex-1 min-h-0 max-h-[50vh] -mx-6 px-6">
+          <div className="flex-1 min-h-0 max-h-[50vh] overflow-y-auto -mx-6 px-6">
             <div className="grid gap-3 py-4 pr-4">
               {EU_LANGUAGES.map((lang) => (
                 <div key={lang.code} className="grid grid-cols-[140px_1fr] gap-3 items-center">
@@ -240,7 +240,7 @@ export function TranslationButton({
                 </div>
               ))}
             </div>
-          </ScrollArea>
+          </div>
 
           <DialogFooter className="pt-4 border-t">
             <Button type="button" variant="outline" onClick={() => setOpen(false)}>
