@@ -571,7 +571,7 @@ export function WinePublicPassport({
 
 // Export field keys for testing - these are the ONLY fields that should be saved/displayed
 export const WINE_PASSPORT_FIELDS = {
-  productInfo: ['volume', 'volume_unit', 'grape_variety', 'vintage', 'country', 'region', 'denomination', 'sugar_classification', 'denomination_translations', 'sugar_classification_translations'],
+  productInfo: ['volume', 'volume_unit', 'grape_variety', 'vintage', 'country', 'region', 'denomination', 'sugar_classification', 'denomination_translations', 'sugar_classification_translations', 'grape_variety_translations', 'vintage_translations', 'region_translations'],
   producer: ['producer_name', 'bottler_info'],
   nutritional: ['alcohol_percent', 'energy_kcal', 'energy_kj', 'carbohydrates', 'sugar', 'residual_sugar', 'total_acidity', 'glycerine', 'fat', 'saturated_fat', 'proteins', 'salt'],
   manualOverrides: ['energy_kcal_manual', 'energy_kj_manual', 'carbohydrates_manual', 'sugar_manual'],

@@ -25,6 +25,9 @@ const CANONICAL_WINE_FIELDS = {
     'sugar_classification', // text input - Sugar Classification (Brut, Sec, etc.)
     'denomination_translations', // object - translations for denomination
     'sugar_classification_translations', // object - translations for sugar classification
+    'grape_variety_translations', // object - translations for grape variety
+    'vintage_translations', // object - translations for vintage
+    'region_translations', // object - translations for region
   ],
   
   // Producer Information (wine.ts template - Producer Information section)
@@ -336,6 +339,9 @@ describe("Wine Field Save/Load Contract", () => {
       sugar_classification: 'Sec',
       denomination_translations: { de: 'AOC Bordeaux', fr: 'AOC Bordeaux' },
       sugar_classification_translations: { de: 'Trocken', fr: 'Sec' },
+      grape_variety_translations: { de: 'Cabernet Sauvignon', fr: 'Cabernet Sauvignon' },
+      vintage_translations: { de: '2020', fr: '2020' },
+      region_translations: { de: 'Bordeaux', fr: 'Bordeaux' },
       
       // Producer Info
       producer_name: 'Château Example',
