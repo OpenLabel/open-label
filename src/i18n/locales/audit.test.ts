@@ -151,11 +151,9 @@ describe("Translation Audit", () => {
   const enKeys = Object.keys(enFlat);
   const enKeyCount = enKeys.length;
 
-  it("should print a comprehensive audit report", () => {
-    console.log(`\n${"=".repeat(60)}`);
-    console.log("  TRANSLATION AUDIT REPORT");
-    console.log(`${"=".repeat(60)}`);
-    console.log(`Reference (en): ${enKeyCount} keys\n`);
+  // Audit report is only printed when VERBOSE_AUDIT=1 to avoid build log overflow
+  it("should validate all locales exist and can be parsed", () => {
+    const verbose = typeof process !== 'undefined' && process.env?.VERBOSE_AUDIT === '1';
 
     const allLocaleResults: Array<{
       code: string;
@@ -174,94 +172,51 @@ describe("Translation Audit", () => {
       const missingKeys = enKeys.filter(k => !(k in flat));
       const extraKeys = localeKeys.filter(k => !(k in enFlat));
 
-      // Find values identical to English (potentially untranslated)
       const untranslatedKeys: string[] = [];
       for (const key of enKeys) {
         if (key in flat && flat[key] === enFlat[key]) {
-        if (!isLegitimateMatch(key, enFlat[key], code)) {
+          if (!isLegitimateMatch(key, enFlat[key], code)) {
             untranslatedKeys.push(key);
           }
         }
       }
 
-      allLocaleResults.push({
-        code,
-        totalKeys: localeKeys.length,
-        missingKeys,
-        extraKeys,
-        untranslatedKeys,
-      });
+      allLocaleResults.push({ code, totalKeys: localeKeys.length, missingKeys, extraKeys, untranslatedKeys });
     }
 
-    // Summary table
-    console.log("LOCALE  KEYS       MISSING  EXTRA  UNTRANSLATED  STATUS");
-    console.log("-".repeat(65));
+    if (verbose) {
+      console.log(`\n${"=".repeat(60)}`);
+      console.log("  TRANSLATION AUDIT REPORT");
+      console.log(`${"=".repeat(60)}`);
+      console.log(`Reference (en): ${enKeyCount} keys\n`);
 
-    for (const r of allLocaleResults) {
-      const pct = Math.round((r.totalKeys / enKeyCount) * 100);
-      const status =
-        r.missingKeys.length === 0 && r.untranslatedKeys.length === 0
-          ? "✅ PASS"
-          : r.missingKeys.length > 50
-          ? "❌ INCOMPLETE"
-          : r.untranslatedKeys.length > 0
-          ? "⚠️  UNTRANSLATED"
-          : "⚠️  MISSING KEYS";
+      console.log("LOCALE  KEYS       MISSING  EXTRA  UNTRANSLATED  STATUS");
+      console.log("-".repeat(65));
 
-      console.log(
-        `${r.code.padEnd(8)}${`${r.totalKeys}/${enKeyCount} (${pct}%)`.padEnd(16)}${
-          String(r.missingKeys.length).padEnd(9)
-        }${String(r.extraKeys.length).padEnd(7)}${
-          String(r.untranslatedKeys.length).padEnd(14)
-        }${status}`
-      );
+      for (const r of allLocaleResults) {
+        const pct = Math.round((r.totalKeys / enKeyCount) * 100);
+        const status =
+          r.missingKeys.length === 0 && r.untranslatedKeys.length === 0
+            ? "✅ PASS"
+            : r.missingKeys.length > 50
+            ? "❌ INCOMPLETE"
+            : r.untranslatedKeys.length > 0
+            ? "⚠️  UNTRANSLATED"
+            : "⚠️  MISSING KEYS";
+
+        console.log(
+          `${r.code.padEnd(8)}${`${r.totalKeys}/${enKeyCount} (${pct}%)`.padEnd(16)}${
+            String(r.missingKeys.length).padEnd(9)
+          }${String(r.extraKeys.length).padEnd(7)}${
+            String(r.untranslatedKeys.length).padEnd(14)
+          }${status}`
+        );
+      }
+      console.log(`\n${"=".repeat(60)}\n`);
     }
 
-    // Detailed report for locales with issues
-    console.log(`\n${"=".repeat(60)}`);
-    console.log("  DETAILED ISSUES");
-    console.log(`${"=".repeat(60)}`);
-
-    for (const r of allLocaleResults) {
-      if (r.missingKeys.length === 0 && r.extraKeys.length === 0 && r.untranslatedKeys.length === 0) continue;
-
-      console.log(`\n--- ${r.code.toUpperCase()} ---`);
-
-      if (r.missingKeys.length > 0) {
-        console.log(`  Missing keys (${r.missingKeys.length}):`);
-        for (const key of r.missingKeys.slice(0, 30)) {
-          console.log(`    - ${key}`);
-        }
-        if (r.missingKeys.length > 30) {
-          console.log(`    ... and ${r.missingKeys.length - 30} more`);
-        }
-      }
-
-      if (r.extraKeys.length > 0) {
-        console.log(`  Extra keys (${r.extraKeys.length}):`);
-        for (const key of r.extraKeys.slice(0, 10)) {
-          console.log(`    - ${key}`);
-        }
-        if (r.extraKeys.length > 10) {
-          console.log(`    ... and ${r.extraKeys.length - 10} more`);
-        }
-      }
-
-      if (r.untranslatedKeys.length > 0) {
-        console.log(`  Potentially untranslated (${r.untranslatedKeys.length}):`);
-        for (const key of r.untranslatedKeys.slice(0, 30)) {
-          console.log(`    - ${key}: "${enFlat[key]}"`);
-        }
-        if (r.untranslatedKeys.length > 30) {
-          console.log(`    ... and ${r.untranslatedKeys.length - 30} more`);
-        }
-      }
-    }
-
-    console.log(`\n${"=".repeat(60)}\n`);
-
-    // This test always passes — it's a reporting tool
-    expect(true).toBe(true);
+    // Validate all locales were processed
+    expect(allLocaleResults.length).toBe(Object.keys(locales).length - 1);
   });
 
   // Strict test: fully updated locales must have zero missing keys
