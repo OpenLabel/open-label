@@ -15,7 +15,7 @@ export type QrValidationResult =
  * Kept as a pure function so it can be covered by unit tests.
  *
  * The default decoder is a no-op (returns null) since real decoding now
- * happens via qr-scanner / BarcodeDetector in clientQrDecode.ts.
+ * happens via zxing-wasm / BarcodeDetector on the server side.
  * In production the caller should pass a real decoder or use decodeQrFromDataUrl directly.
  */
 export function validateQrFromImageData(
