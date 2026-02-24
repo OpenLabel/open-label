@@ -1,88 +1,42 @@
 
 
-## Add Tests to Reach 50%+ Code Coverage
+## Remove Dead Code & Verify Server-Side QR Config
 
-The current coverage is at ~29.69%. To reach 50%+, we need to add tests for the many untested source files. The strategy focuses on **pure logic and data files** (no React component rendering needed) to maximize coverage with simple, fast tests.
+### What's happening now
 
-### New Test Files to Create
+- `src/lib/clientQrDecode.ts` is **dead code** — never imported anywhere in the project
+- The `qr-scanner` npm package (~400KB) is installed solely for this dead file
+- The server-side QR decoding in `wine-label-ocr/index.ts` **already uses all the "try hard" options**: `tryHarder: true`, `tryRotate: true`, `tryInvert: true`, `tryDownscale: true`
+- The comment in `src/lib/qrValidation.ts` (line 18) still references `qr-scanner`
 
-**1. `src/templates/wine.test.ts`** -- Test WineTemplate class
-- Verify `id`, `name`, `description`, `icon` properties
-- Verify `sections` is empty (uses custom component)
-- Verify `getRequiredLogos()` returns empty array
-- Test `volumeUnits` and `wineCountries` exports for completeness and no duplicates
+### What needs to change
 
-**2. `src/templates/battery.test.ts`** -- Test BatteryTemplate class
-- Verify template properties (`id`, `name`, `description`, `icon`)
-- Verify all 6 sections exist with correct titles
-- Verify all question IDs are unique
-- Test `getRequiredLogos()` with various data inputs (separate_collection_required, carbon_footprint_class)
-- Verify required fields are marked as such
+**No server-side changes needed** — the edge function already has all zxing-wasm aggressive detection options enabled.
 
-**3. `src/templates/textiles.test.ts`** -- Test TextilesTemplate
-- Same pattern: properties, sections, question uniqueness, required fields
+**Dead code removal:**
 
-**4. `src/templates/construction.test.ts`** -- Test ConstructionTemplate
+1. **Delete `src/lib/clientQrDecode.ts`** — entire file, never imported
+2. **Remove `qr-scanner` from `package.json`** — no longer needed
+3. **Update comment in `src/lib/qrValidation.ts`** (line 18) — change "qr-scanner / BarcodeDetector" to "zxing-wasm / BarcodeDetector" to reflect the actual server-side implementation
 
-**5. `src/templates/electronics.test.ts`** -- Test ElectronicsTemplate
+### Files changed
 
-**6. `src/templates/cosmetics.test.ts`** -- Test CosmeticsTemplate
+| File | Action |
+|------|--------|
+| `src/lib/clientQrDecode.ts` | Delete |
+| `package.json` | Remove `qr-scanner` dependency |
+| `src/lib/qrValidation.ts` | Update comment on line 18 |
 
-**7. `src/templates/furniture.test.ts`** -- Test FurnitureTemplate
+### Server-side confirmation
 
-**8. `src/templates/tires.test.ts`** -- Test TiresTemplate
+The edge function at `supabase/functions/wine-label-ocr/index.ts` (lines 456-463) already has:
+```text
+tryHarder: true
+tryRotate: true
+tryInvert: true
+tryDownscale: true
+formats: ["QRCode"]
+```
 
-**9. `src/templates/toys.test.ts`** -- Test ToysTemplate
-
-**10. `src/templates/detergents.test.ts`** -- Test DetergentsTemplate
-
-**11. `src/templates/iron_steel.test.ts`** -- Test IronSteelTemplate
-
-**12. `src/templates/aluminum.test.ts`** -- Test AluminumTemplate
-
-Each template test will follow a consistent pattern:
-- Verify class properties match expected values
-- Verify all section titles are present
-- Verify no duplicate question IDs across sections
-- Verify all questions have valid types (`text`, `textarea`, `select`, `checkbox`, `number`)
-- Verify select questions have options arrays
-- Test `getRequiredLogos()` if defined
-
-**13. `src/data/wineIngredients.additional.test.ts`** -- Test utility functions
-- `getAllIngredients()` returns flat list, correct count
-- `getIngredientById()` finds known IDs, returns undefined for unknown
-- `getIngredientCategory()` maps ingredients to categories correctly
-- `wineProductTypes` has expected entries
-
-**14. `src/data/wineRecycling.additional.test.ts`** -- Test utility functions
-- `getCompositionsByCategory()` returns correct structure
-- `disposalMethods` has no duplicate IDs
-- `materialCategories` structure
-- `packagingMaterialTypes` has no duplicate IDs
-
-**15. `src/data/knownIngredientIds.test.ts`** -- Test canonical ID list
-- All IDs are unique
-- All IDs are snake_case
-- No empty strings
-
-**16. `src/i18n/config.additional.test.ts`** -- Test i18n config exports
-- `supportedLanguages` has `code`, `name`, `nativeName` for each entry
-- Default export is the i18n instance
-- `SupportedLanguage` type covers all 24 codes
-
-**17. `src/components/TranslationButton.test.ts`** -- Test EU_LANGUAGES constant
-- 24 entries, no duplicates, all ISO 639-1 codes
-- Matches `supportedLanguages` from i18n config
-
-### Coverage Thresholds Update
-
-**File: `vitest.config.ts`**
-- Raise thresholds to enforce the new minimum:
-  ```
-  lines: 50, branches: 35, functions: 30, statements: 50
-  ```
-
-### Estimated Impact
-
-Currently ~311 tests covering ~29.69%. Adding ~150-200 new tests covering all 12 template files, data utility functions, and configuration exports should push coverage well above 50% since these are pure TypeScript files with no JSX rendering needed.
+No server-side changes required.
 
