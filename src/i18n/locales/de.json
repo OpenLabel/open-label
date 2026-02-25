@@ -177,7 +177,14 @@
     "validation": {
       "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
       "shortPassword": "Das Passwort muss mindestens 6 Zeichen lang sein"
-    }
+    },
+    "setNewPassword": "Neues Passwort festlegen",
+    "setNewPasswordDesc": "Geben Sie unten Ihr neues Passwort ein",
+    "newPassword": "Neues Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "updatePassword": "Passwort aktualisieren",
+    "passwordMismatch": "Passwörter stimmen nicht überein",
+    "passwordUpdated": "Passwort erfolgreich aktualisiert!"
   },
   "dashboard": {
     "title": "Ihre Pässe",

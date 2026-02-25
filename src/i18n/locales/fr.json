@@ -177,7 +177,14 @@
     "validation": {
       "invalidEmail": "Veuillez entrer une adresse e-mail valide",
       "shortPassword": "Le mot de passe doit contenir au moins 6 caractères"
-    }
+    },
+    "setNewPassword": "Définir un nouveau mot de passe",
+    "setNewPasswordDesc": "Entrez votre nouveau mot de passe ci-dessous",
+    "newPassword": "Nouveau mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "updatePassword": "Mettre à jour le mot de passe",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "passwordUpdated": "Mot de passe mis à jour avec succès !"
   },
   "dashboard": {
     "title": "Vos passeports",

@@ -15,6 +15,7 @@ import LegalMentions from "./pages/LegalMentions";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
 import Setup from "./pages/Setup";
+import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 import { Skeleton } from "@/components/ui/skeleton";
 
@@ -50,6 +51,7 @@ function AppRoutes() {
     <Routes>
       <Route path="/" element={<Index />} />
       <Route path="/auth" element={<Auth />} />
+      <Route path="/reset-password" element={<ResetPassword />} />
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/passport/new" element={<PassportForm />} />
       <Route path="/passport/:id/edit" element={<PassportForm />} />

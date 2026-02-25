@@ -180,7 +180,14 @@
     "validation": {
       "invalidEmail": "Please enter a valid email address",
       "shortPassword": "Password must be at least 6 characters"
-    }
+    },
+    "setNewPassword": "Set New Password",
+    "setNewPasswordDesc": "Enter your new password below",
+    "newPassword": "New Password",
+    "confirmPassword": "Confirm Password",
+    "updatePassword": "Update Password",
+    "passwordMismatch": "Passwords do not match",
+    "passwordUpdated": "Password updated successfully!"
   },
   "dashboard": {
     "title": "Your Passports",

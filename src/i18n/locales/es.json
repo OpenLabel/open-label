@@ -174,7 +174,14 @@
     "accountCreatedDesc": "Ya puedes iniciar sesión.",
     "checkEmail": "Revisa tu correo",
     "resetLinkSent": "Enlace de restablecimiento enviado.",
-    "validation": { "invalidEmail": "Por favor ingrese un correo electrónico válido", "shortPassword": "La contraseña debe tener al menos 6 caracteres" }
+    "validation": { "invalidEmail": "Por favor ingrese un correo electrónico válido", "shortPassword": "La contraseña debe tener al menos 6 caracteres" },
+    "setNewPassword": "Establecer nueva contraseña",
+    "setNewPasswordDesc": "Ingrese su nueva contraseña a continuación",
+    "newPassword": "Nueva contraseña",
+    "confirmPassword": "Confirmar contraseña",
+    "updatePassword": "Actualizar contraseña",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "passwordUpdated": "¡Contraseña actualizada exitosamente!"
   },
   "dashboard": {
     "title": "Tus pasaportes",

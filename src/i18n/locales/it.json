@@ -174,7 +174,14 @@
     "accountCreatedDesc": "Ora puoi accedere.",
     "checkEmail": "Controlla la tua email",
     "resetLinkSent": "Link di reset inviato.",
-    "validation": { "invalidEmail": "Inserisci un indirizzo email valido", "shortPassword": "La password deve essere di almeno 6 caratteri" }
+    "validation": { "invalidEmail": "Inserisci un indirizzo email valido", "shortPassword": "La password deve essere di almeno 6 caratteri" },
+    "setNewPassword": "Imposta nuova password",
+    "setNewPasswordDesc": "Inserisci la tua nuova password qui sotto",
+    "newPassword": "Nuova password",
+    "confirmPassword": "Conferma password",
+    "updatePassword": "Aggiorna password",
+    "passwordMismatch": "Le password non corrispondono",
+    "passwordUpdated": "Password aggiornata con successo!"
   },
   "dashboard": {
     "title": "I tuoi passaporti",

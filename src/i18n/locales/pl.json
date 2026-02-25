@@ -174,7 +174,14 @@
     "accountCreatedDesc": "Możesz się teraz zalogować.",
     "checkEmail": "Sprawdź e-mail",
     "resetLinkSent": "Link do resetowania hasła wysłany.",
-    "validation": { "invalidEmail": "Proszę podać prawidłowy adres e-mail", "shortPassword": "Hasło musi mieć co najmniej 6 znaków" }
+    "validation": { "invalidEmail": "Proszę podać prawidłowy adres e-mail", "shortPassword": "Hasło musi mieć co najmniej 6 znaków" },
+    "setNewPassword": "Ustaw nowe hasło",
+    "setNewPasswordDesc": "Wprowadź nowe hasło poniżej",
+    "newPassword": "Nowe hasło",
+    "confirmPassword": "Potwierdź hasło",
+    "updatePassword": "Zaktualizuj hasło",
+    "passwordMismatch": "Hasła nie są zgodne",
+    "passwordUpdated": "Hasło zostało pomyślnie zaktualizowane!"
   },
   "dashboard": {
     "title": "Twoje Paszporty",
