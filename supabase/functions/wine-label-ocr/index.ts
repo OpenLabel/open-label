@@ -532,6 +532,14 @@ async function tryQrCodeScrape(
     // Log first 200 chars for quick diagnosis
     console.log("Firecrawl content preview:", markdown.slice(0, 200));
 
+    // Content relevance filter: discard scraped content that has no wine-related keywords
+    // (e.g. when u-label.io redirects to CDC health warning pages)
+    const WINE_KEYWORDS = /\b(wine|vin|vino|wein|ingredients|nutrition|kcal|kj|allergen|sulfite|carbohydrate|glucides|sucre|sugar|zucchero|zucker|alcool|alcohol)\b/i;
+    if (markdown && !WINE_KEYWORDS.test(markdown)) {
+      console.warn("Scraped content appears irrelevant (no wine keywords found). Discarding", markdown.length, "chars from", actualUrl);
+      markdown = "";
+    }
+
     // If markdown is too short, fall back to HTML content (some JS-rendered pages
     // like u-label.io return richer content in HTML than in markdown)
     if (markdown.trim().length < 100) {
