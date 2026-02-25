@@ -1,53 +1,39 @@
 
 
-## Log Full AI Input & Save Debug Screenshot on Poor Extraction
+## Fix Debug Screenshot Upload
+
+### Root cause
+
+Two bugs in the screenshot capture code:
+
+1. **Wrong data path**: Firecrawl v1 nests content under `data.data`, so `screenshotData?.data?.screenshot` resolves correctly but `screenshotData?.screenshot` is the fallback and may not work. Need to check `screenshotData?.data?.screenshot` first.
+
+2. **Data URL prefix**: Firecrawl returns screenshots as data URLs (`data:image/png;base64,iVBOR...`). The code passes this directly to `atob()`, which fails because `atob()` expects raw base64 without the prefix. Need to strip the `data:...;base64,` prefix before decoding.
 
 ### What changes
 
-**1. Log the full content sent to the AI (first pass)**
+In `supabase/functions/wine-label-ocr/index.ts`, in the debug screenshot block (~line 790):
 
-After building `userPromptText` (line ~669), log it in full so you can see exactly what the AI received — including the scraped QR text.
-
-Add at line ~671 (after userPromptText is finalized):
-```
-console.log("=== FULL AI INPUT ===");
-console.log("User prompt text length:", userPromptText.length);
-console.log("User prompt text:", userPromptText);
-console.log("=== END FULL AI INPUT ===");
-```
-
-Also log the raw AI response (tool call arguments) right after parsing at line ~727:
-```
-console.log("=== RAW AI TOOL CALL RESPONSE ===");
-console.log(toolCall.function.arguments);
-console.log("=== END RAW AI TOOL CALL RESPONSE ===");
-```
-
-**2. Save a Firecrawl screenshot when extraction yields fewer than 10 fields**
-
-After the final merge (line ~757), count the extracted fields. If fewer than 10 and a QR URL was found, re-scrape the QR URL with `formats: ["screenshot"]` and upload the screenshot to the `passport-images` storage bucket under a debug path like `debug-screenshots/{userId}/{timestamp}.png`.
-
-Then log the public URL so you can find it.
-
-```text
-Flow:
-  mergedData has < 10 keys
-  AND qrResult?.qrUrl exists
-  → Firecrawl scrape with formats: ["screenshot"]
-  → Upload base64 screenshot to storage: passport-images/debug-screenshots/{userId}/{timestamp}.png
-  → Log the public URL
-```
+1. Fix the data access path to prioritize `screenshotData?.data?.screenshot`
+2. Strip the data URL prefix before calling `atob()`:
+   ```
+   let base64 = screenshotBase64;
+   if (base64.startsWith('data:')) {
+     base64 = base64.split(',')[1];
+   }
+   const raw = atob(base64);
+   ```
 
 ### Files changed
 
 | File | Change |
 |------|--------|
-| `supabase/functions/wine-label-ocr/index.ts` | Add logging of full AI input text + raw response; add screenshot capture & storage upload on poor extraction (<10 fields) |
+| `supabase/functions/wine-label-ocr/index.ts` | Fix base64 decoding by stripping data URL prefix; fix Firecrawl response data path |
 
 ### Technical details
 
-- The screenshot is saved to the existing `passport-images` public bucket under `debug-screenshots/` so you can access it via the public URL logged in the edge function logs
-- Firecrawl screenshot format returns a base64 image in `data.screenshot`
-- The storage upload uses the service role client (already instantiated as `supabaseService`) to bypass RLS
-- No new secrets or dependencies needed — Firecrawl and storage are already configured
+- The Firecrawl v1 API returns screenshots as data URLs with a `data:image/...;base64,` prefix
+- `atob()` in Deno strictly expects raw base64 characters only
+- The fix splits on `,` and takes the second part, which is the raw base64 payload
+- No other files or dependencies affected
 
