@@ -1,39 +1,34 @@
 
 
-## Fix Debug Screenshot Upload
-
-### Root cause
-
-Two bugs in the screenshot capture code:
-
-1. **Wrong data path**: Firecrawl v1 nests content under `data.data`, so `screenshotData?.data?.screenshot` resolves correctly but `screenshotData?.screenshot` is the fallback and may not work. Need to check `screenshotData?.data?.screenshot` first.
-
-2. **Data URL prefix**: Firecrawl returns screenshots as data URLs (`data:image/png;base64,iVBOR...`). The code passes this directly to `atob()`, which fails because `atob()` expects raw base64 without the prefix. Need to strip the `data:...;base64,` prefix before decoding.
+## Add Drag & Drop to AI Autofill Upload Dialog
 
 ### What changes
 
-In `supabase/functions/wine-label-ocr/index.ts`, in the debug screenshot block (~line 790):
+Replace the two-button grid (Take Photo / Upload File) with a drag-and-drop zone that also supports click-to-browse. When a file is dragged over the zone, it highlights visually.
 
-1. Fix the data access path to prioritize `screenshotData?.data?.screenshot`
-2. Strip the data URL prefix before calling `atob()`:
-   ```
-   let base64 = screenshotBase64;
-   if (base64.startsWith('data:')) {
-     base64 = base64.split(',')[1];
-   }
-   const raw = atob(base64);
-   ```
+### Implementation
+
+**File: `src/components/wine/WineAIAutofill.tsx`**
+
+1. Add drag state: `const [isDragging, setIsDragging] = useState(false);`
+
+2. Add drag event handlers:
+   - `onDragOver` / `onDragEnter`: prevent default, set `isDragging = true`
+   - `onDragLeave`: set `isDragging = false`
+   - `onDrop`: prevent default, extract `e.dataTransfer.files[0]`, set preview + call `processImage(file)`
+
+3. Replace the two-button grid (lines 227-246) with a single drop zone `div` that:
+   - Has the drag event handlers
+   - Clicks to trigger `fileInputRef`
+   - Shows a dashed border (highlighted on drag-over via `isDragging` state)
+   - Displays Camera + Upload icons with text like "Drag & drop or click to upload"
+   - Keeps the same `accept` types validation before processing
 
 ### Files changed
 
 | File | Change |
 |------|--------|
-| `supabase/functions/wine-label-ocr/index.ts` | Fix base64 decoding by stripping data URL prefix; fix Firecrawl response data path |
+| `src/components/wine/WineAIAutofill.tsx` | Add drag state + handlers; replace button grid with drop zone |
 
-### Technical details
-
-- The Firecrawl v1 API returns screenshots as data URLs with a `data:image/...;base64,` prefix
-- `atob()` in Deno strictly expects raw base64 characters only
-- The fix splits on `,` and takes the second part, which is the raw base64 payload
-- No other files or dependencies affected
+No new dependencies or translations needed — reuses existing `t('ai.takePhoto')` / `t('ai.uploadFile')` keys or combines them.
 
