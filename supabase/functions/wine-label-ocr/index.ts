@@ -787,8 +787,12 @@ serve(async (req) => {
         const screenshotData = await screenshotResponse.json();
         const screenshotBase64 = screenshotData?.data?.screenshot || screenshotData?.screenshot;
         if (screenshotBase64) {
-          // Decode base64 and upload to storage
-          const raw = atob(screenshotBase64);
+          // Decode base64 and upload to storage (strip data URL prefix if present)
+          let base64Raw = screenshotBase64;
+          if (base64Raw.startsWith('data:')) {
+            base64Raw = base64Raw.split(',')[1];
+          }
+          const raw = atob(base64Raw);
           const uint8 = new Uint8Array(raw.length);
           for (let i = 0; i < raw.length; i++) uint8[i] = raw.charCodeAt(i);
           const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
