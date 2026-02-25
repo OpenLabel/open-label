@@ -522,7 +522,15 @@ async function tryQrCodeScrape(
     }
 
     const scrapeData = await scrapeResponse.json();
+
+    // Log the actual URL Firecrawl landed on (detects redirects like u-label.io → CDC)
+    const actualUrl = scrapeData.data?.metadata?.sourceURL || scrapeData.data?.metadata?.url || "(unknown)";
+    console.log("Firecrawl requested URL:", qrUrl, "→ actual URL:", actualUrl);
+
     let markdown = scrapeData.data?.markdown || scrapeData.markdown || "";
+
+    // Log first 200 chars for quick diagnosis
+    console.log("Firecrawl content preview:", markdown.slice(0, 200));
 
     // If markdown is too short, fall back to HTML content (some JS-rendered pages
     // like u-label.io return richer content in HTML than in markdown)
