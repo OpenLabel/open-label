@@ -6,6 +6,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Sparkles, Camera, Upload, Loader2, AlertTriangle, FileText, Mail } from 'lucide-react';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
+import { cn } from '@/lib/utils';
 
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 
@@ -20,6 +21,7 @@ export function WineAIAutofill({ onAutofill, onAutofillMeta }: WineAIAutofillPro
   const [isProcessing, setIsProcessing] = useState(false);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
   const [showQuotaDialog, setShowQuotaDialog] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const { toast } = useToast();
   const { config } = useSiteConfig();
@@ -224,25 +226,38 @@ export function WineAIAutofill({ onAutofill, onAutofillMeta }: WineAIAutofillPro
                 )}
               </div>
             ) : (
-              <div className="grid grid-cols-2 gap-3">
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={triggerFileInput}
-                  className="h-24 flex-col gap-2"
-                >
-                  <Camera className="h-6 w-6" />
-                  <span className="text-sm">{t('ai.takePhoto')}</span>
-                </Button>
-                <Button
-                  type="button"
-                  variant="outline"
-                  onClick={triggerFileInput}
-                  className="h-24 flex-col gap-2"
-                >
-                  <Upload className="h-6 w-6" />
-                  <span className="text-sm">{t('ai.uploadFile')}</span>
-                </Button>
+              <div
+                onClick={triggerFileInput}
+                onDragOver={(e) => { e.preventDefault(); setIsDragging(true); }}
+                onDragEnter={(e) => { e.preventDefault(); setIsDragging(true); }}
+                onDragLeave={() => setIsDragging(false)}
+                onDrop={(e) => {
+                  e.preventDefault();
+                  setIsDragging(false);
+                  const file = e.dataTransfer.files?.[0];
+                  if (!file) return;
+                  const reader = new FileReader();
+                  reader.onload = (ev) => setPreviewUrl(ev.target?.result as string);
+                  reader.readAsDataURL(file);
+                  processImage(file);
+                }}
+                className={cn(
+                  "flex h-32 cursor-pointer flex-col items-center justify-center gap-3 rounded-lg border-2 border-dashed transition-colors",
+                  isDragging
+                    ? "border-primary bg-primary/10"
+                    : "border-muted-foreground/30 hover:border-primary/50 hover:bg-muted/50"
+                )}
+              >
+                <div className="flex items-center gap-3">
+                  <Camera className="h-6 w-6 text-muted-foreground" />
+                  <Upload className="h-6 w-6 text-muted-foreground" />
+                </div>
+                <span className="text-sm text-muted-foreground">
+                  {t('ai.takePhoto')} / {t('ai.uploadFile')}
+                </span>
+                <span className="text-xs text-muted-foreground/70">
+                  {isDragging ? '↓ Drop here' : 'Drag & drop or click'}
+                </span>
               </div>
             )}
 
