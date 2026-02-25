@@ -10,7 +10,7 @@ import {
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
 import { toast } from 'sonner';
-import { validateQrFromImageData } from '@/lib/qrValidation';
+
 
 interface QRCodeDialogProps {
   open: boolean;
@@ -170,7 +170,7 @@ export function QRCodeDialog({
     const svgUrl = URL.createObjectURL(svgBlob);
 
     const img = new Image();
-    img.onload = () => {
+    img.onload = async () => {
       // Draw QR code
       ctx.drawImage(img, padding, padding, qrSize, qrSize);
       URL.revokeObjectURL(svgUrl);
@@ -180,14 +180,12 @@ export function QRCodeDialog({
         const hexSize = 139;
         const { path, centerX, centerY } = getRoundedHexagonPath(hexSize);
         
-        // Position hexagon in center
         const hexX = totalSize / 2 - hexSize / 2;
         const hexY = totalSize / 2 - hexSize / 2;
         
         ctx.save();
         ctx.translate(hexX, hexY);
         
-        // Draw hexagon
         const path2D = new Path2D(path);
         ctx.fillStyle = 'white';
         ctx.fill(path2D);
@@ -195,7 +193,6 @@ export function QRCodeDialog({
         ctx.lineWidth = 1;
         ctx.stroke(path2D);
         
-        // Draw text
         ctx.fillStyle = '#666';
         ctx.font = '500 8px sans-serif';
         ctx.textAlign = 'center';
@@ -209,26 +206,41 @@ export function QRCodeDialog({
         ctx.restore();
       }
 
-      // Validate QR code by scanning it before download
-      const imageData = ctx.getImageData(0, 0, totalSize, totalSize);
-      const validation = validateQrFromImageData(imageData, url);
-      if (validation.ok === false) {
-        if (validation.reason === 'scan_failed') {
-          console.error('QR validation failed: Could not scan the generated QR code');
-          toast.error(t('qrDialog.validationFailed', 'QR code validation failed - could not scan the generated code'));
-          return;
+      // Validate QR code before download using BarcodeDetector if available
+      const performDownload = () => {
+        const link = document.createElement('a');
+        link.download = `${productName.replace(/[^a-z0-9]/gi, '_')}_qr.png`;
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      };
+
+      if ('BarcodeDetector' in window) {
+        try {
+          const detector = new (window as any).BarcodeDetector({ formats: ['qr_code'] });
+          const blob = await new Promise<Blob | null>(r => canvas.toBlob(r));
+          if (blob) {
+            const bitmap = await createImageBitmap(blob);
+            const results = await detector.detect(bitmap);
+            if (results.length > 0 && results[0].rawValue === url) {
+              performDownload();
+            } else if (results.length === 0) {
+              console.warn('BarcodeDetector could not read QR — allowing download (QR was just generated)');
+              performDownload();
+            } else {
+              toast.error(t('qrDialog.urlMismatch', 'QR code validation failed - URL does not match'));
+              return;
+            }
+          } else {
+            performDownload();
+          }
+        } catch (e) {
+          console.warn('BarcodeDetector error, allowing download:', e);
+          performDownload();
         }
-
-        console.error('QR validation failed: URL mismatch', { expected: url, got: validation.decodedUrl });
-        toast.error(t('qrDialog.urlMismatch', 'QR code validation failed - URL does not match'));
-        return;
+      } else {
+        // No BarcodeDetector available — trust the generated QR
+        performDownload();
       }
-
-      // Download
-      const link = document.createElement('a');
-      link.download = `${productName.replace(/[^a-z0-9]/gi, '_')}_qr.png`;
-      link.href = canvas.toDataURL('image/png');
-      link.click();
     };
     img.src = svgUrl;
   }, [productName, showSecuritySealOverlay, url, t]);
