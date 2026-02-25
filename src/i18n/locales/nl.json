@@ -177,7 +177,14 @@
     "validation": {
       "invalidEmail": "Voer een geldig e-mailadres in",
       "shortPassword": "Wachtwoord moet minimaal 6 tekens bevatten"
-    }
+    },
+    "setNewPassword": "Nieuw wachtwoord instellen",
+    "setNewPasswordDesc": "Voer hieronder uw nieuwe wachtwoord in",
+    "newPassword": "Nieuw wachtwoord",
+    "confirmPassword": "Bevestig wachtwoord",
+    "updatePassword": "Wachtwoord bijwerken",
+    "passwordMismatch": "Wachtwoorden komen niet overeen",
+    "passwordUpdated": "Wachtwoord succesvol bijgewerkt!"
   },
   "dashboard": {
     "title": "Uw Paspoorten",

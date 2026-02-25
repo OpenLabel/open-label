@@ -177,7 +177,14 @@
     "validation": {
       "invalidEmail": "Ange en giltig e-postadress",
       "shortPassword": "Lösenordet måste vara minst 6 tecken"
-    }
+    },
+    "setNewPassword": "Ange nytt lösenord",
+    "setNewPasswordDesc": "Ange ditt nya lösenord nedan",
+    "newPassword": "Nytt lösenord",
+    "confirmPassword": "Bekräfta lösenord",
+    "updatePassword": "Uppdatera lösenord",
+    "passwordMismatch": "Lösenorden stämmer inte överens",
+    "passwordUpdated": "Lösenordet har uppdaterats!"
   },
   "dashboard": {
     "title": "Dina pass",

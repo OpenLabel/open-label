@@ -177,7 +177,14 @@
     "accountCreatedDesc": "Is féidir leat síniú isteach anois.",
     "checkEmail": "Seiceáil do ríomhphost",
     "resetLinkSent": "Nasc athshocraithe pasfhocail seolta.",
-    "validation": { "invalidEmail": "Iontráil seoladh ríomhphoist bailí le do thoil", "shortPassword": "Caithfidh an pasfhocal a bheith 6 charachtar ar a laghad" }
+    "validation": { "invalidEmail": "Iontráil seoladh ríomhphoist bailí le do thoil", "shortPassword": "Caithfidh an pasfhocal a bheith 6 charachtar ar a laghad" },
+    "setNewPassword": "Socraigh pasfhocal nua",
+    "setNewPasswordDesc": "Cuir isteach do phasfhocal nua thíos",
+    "newPassword": "Pasfhocal nua",
+    "confirmPassword": "Deimhnigh pasfhocal",
+    "updatePassword": "Nuashonraigh pasfhocal",
+    "passwordMismatch": "Ní hionann na pasfhocail",
+    "passwordUpdated": "Pasfhocal nuashonraithe go rathúil!"
   },
   "dashboard": {
     "title": "Do Phasanna",

@@ -174,7 +174,14 @@
     "accountCreatedDesc": "Pode agora entrar.",
     "checkEmail": "Verifique o seu e-mail",
     "resetLinkSent": "Link de redefinição de palavra-passe enviado.",
-    "validation": { "invalidEmail": "Por favor introduza um endereço de e-mail válido", "shortPassword": "A palavra-passe deve ter pelo menos 6 caracteres" }
+    "validation": { "invalidEmail": "Por favor introduza um endereço de e-mail válido", "shortPassword": "A palavra-passe deve ter pelo menos 6 caracteres" },
+    "setNewPassword": "Definir nova palavra-passe",
+    "setNewPasswordDesc": "Introduza a sua nova palavra-passe abaixo",
+    "newPassword": "Nova palavra-passe",
+    "confirmPassword": "Confirmar palavra-passe",
+    "updatePassword": "Atualizar palavra-passe",
+    "passwordMismatch": "As palavras-passe não coincidem",
+    "passwordUpdated": "Palavra-passe atualizada com sucesso!"
   },
   "dashboard": {
     "title": "Os Seus Passaportes",
