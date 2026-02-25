@@ -669,6 +669,12 @@ serve(async (req) => {
       userPromptText += `\n\nADDITIONAL CONTEXT — Text scraped from a QR code found on this label (URL: ${qrResult.qrUrl}):\n${qrResult.markdown.slice(0, 15000)}${imageLinksHint}\n\nCross-reference the image and this scraped text to extract all fields. The label image is the primary source of truth; use the scraped text to fill in details that are hard to read on the image.`;
     }
 
+    // === DEBUG: Log full AI input ===
+    console.log("=== FULL AI INPUT ===");
+    console.log("User prompt text length:", userPromptText.length);
+    console.log("User prompt text:", userPromptText);
+    console.log("=== END FULL AI INPUT ===");
+
     // ===== FIRST PASS: Image + QR context extraction =====
     const imageResponse = await fetch("https://ai.gateway.lovable.dev/v1/chat/completions", {
       signal: AbortSignal.timeout(90000),
@@ -726,6 +732,11 @@ serve(async (req) => {
 
     const imageExtracted = JSON.parse(toolCall.function.arguments);
 
+    // === DEBUG: Log raw AI response ===
+    console.log("=== RAW AI TOOL CALL RESPONSE ===");
+    console.log(toolCall.function.arguments);
+    console.log("=== END RAW AI TOOL CALL RESPONSE ===");
+
     // ===== SECOND PASS: Fill in missing fields (with QR context) =====
     const qrText = qrResult?.markdown;
     const secondPassData = await runSecondPass(image, imageExtracted, LOVABLE_API_KEY, qrText);
@@ -755,6 +766,53 @@ serve(async (req) => {
     }
 
     console.log("Final merged data for user", userId, ":", Object.keys(mergedData));
+
+    // === DEBUG: Save screenshot when extraction is poor ===
+    const mergedFieldCount = Object.keys(mergedData).length;
+    if (mergedFieldCount < 10 && qrResult?.qrUrl && FIRECRAWL_API_KEY) {
+      console.log(`Poor extraction (${mergedFieldCount} fields). Capturing debug screenshot of ${qrResult.qrUrl}`);
+      try {
+        const screenshotResponse = await fetch("https://api.firecrawl.dev/v1/scrape", {
+          method: "POST",
+          headers: {
+            "Authorization": `Bearer ${FIRECRAWL_API_KEY}`,
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            url: qrResult.qrUrl,
+            formats: ["screenshot"],
+            waitFor: 5000,
+          }),
+        });
+        const screenshotData = await screenshotResponse.json();
+        const screenshotBase64 = screenshotData?.data?.screenshot || screenshotData?.screenshot;
+        if (screenshotBase64) {
+          // Decode base64 and upload to storage
+          const raw = atob(screenshotBase64);
+          const uint8 = new Uint8Array(raw.length);
+          for (let i = 0; i < raw.length; i++) uint8[i] = raw.charCodeAt(i);
+          const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+          const path = `debug-screenshots/${userId}/${timestamp}.png`;
+          const { error: uploadError } = await supabaseService.storage
+            .from("passport-images")
+            .upload(path, uint8, { contentType: "image/png", upsert: true });
+          if (uploadError) {
+            console.error("Debug screenshot upload failed:", uploadError);
+          } else {
+            const { data: publicUrlData } = supabaseService.storage
+              .from("passport-images")
+              .getPublicUrl(path);
+            console.log("=== DEBUG SCREENSHOT URL ===");
+            console.log(publicUrlData.publicUrl);
+            console.log("=== END DEBUG SCREENSHOT URL ===");
+          }
+        } else {
+          console.log("No screenshot data returned from Firecrawl");
+        }
+      } catch (screenshotErr) {
+        console.error("Debug screenshot capture failed:", screenshotErr);
+      }
+    }
 
     // ===== DOWNLOAD PRODUCT IMAGE IF FOUND =====
     let productImageBase64: string | null = null;
