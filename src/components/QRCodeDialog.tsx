@@ -1,7 +1,7 @@
 import { useState, useRef, useCallback } from 'react';
 import { useTranslation } from 'react-i18next';
 import { QRCodeSVG } from 'qrcode.react';
-import { Copy, Check, Download, ExternalLink } from 'lucide-react';
+import { Copy, Check, Download, ExternalLink, ChevronDown } from 'lucide-react';
 import {
   Dialog,
   DialogContent,
@@ -9,6 +9,12 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import { toast } from 'sonner';
 
 
@@ -142,10 +148,9 @@ export function QRCodeDialog({
     setTimeout(() => setCopied(false), 2000);
   };
 
-  const handleDownload = useCallback(() => {
+  const handleDownloadPng = useCallback(() => {
     if (!qrContainerRef.current) return;
 
-    // Get the QR code SVG
     const qrSvg = qrContainerRef.current.querySelector('svg');
     if (!qrSvg) return;
 
@@ -153,60 +158,48 @@ export function QRCodeDialog({
     const padding = 16;
     const totalSize = qrSize + padding * 2;
     
-    // Create a canvas to render the QR code
     const canvas = document.createElement('canvas');
     canvas.width = totalSize;
     canvas.height = totalSize;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
-    // White background
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, totalSize, totalSize);
 
-    // Convert QR SVG to image
     const svgData = new XMLSerializer().serializeToString(qrSvg);
     const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
     const svgUrl = URL.createObjectURL(svgBlob);
 
     const img = new Image();
     img.onload = async () => {
-      // Draw QR code
       ctx.drawImage(img, padding, padding, qrSize, qrSize);
       URL.revokeObjectURL(svgUrl);
 
-      // If security seal overlay is enabled, draw it on top
       if (showSecuritySealOverlay) {
         const hexSize = 139;
         const { path, centerX, centerY } = getRoundedHexagonPath(hexSize);
-        
         const hexX = totalSize / 2 - hexSize / 2;
         const hexY = totalSize / 2 - hexSize / 2;
-        
         ctx.save();
         ctx.translate(hexX, hexY);
-        
         const path2D = new Path2D(path);
         ctx.fillStyle = 'white';
         ctx.fill(path2D);
         ctx.strokeStyle = '#e5e5e5';
         ctx.lineWidth = 1;
         ctx.stroke(path2D);
-        
         ctx.fillStyle = '#666';
         ctx.font = '500 8px sans-serif';
         ctx.textAlign = 'center';
         ctx.fillText('Place security', centerX, centerY - 12);
         ctx.fillText('seals here', centerX, centerY);
-        
         ctx.fillStyle = '#999';
         ctx.font = '6.5px sans-serif';
         ctx.fillText('cypheme.com', centerX, centerY + 18);
-        
         ctx.restore();
       }
 
-      // Validate QR code before download using BarcodeDetector if available
       const performDownload = () => {
         const link = document.createElement('a');
         link.download = `${productName.replace(/[^a-z0-9]/gi, '_')}_qr.png`;
@@ -224,7 +217,7 @@ export function QRCodeDialog({
             if (results.length > 0 && results[0].rawValue === url) {
               performDownload();
             } else if (results.length === 0) {
-              console.warn('BarcodeDetector could not read QR — allowing download (QR was just generated)');
+              console.warn('BarcodeDetector could not read QR — allowing download');
               performDownload();
             } else {
               toast.error(t('qrDialog.urlMismatch', 'QR code validation failed - URL does not match'));
@@ -238,12 +231,94 @@ export function QRCodeDialog({
           performDownload();
         }
       } else {
-        // No BarcodeDetector available — trust the generated QR
         performDownload();
       }
     };
     img.src = svgUrl;
   }, [productName, showSecuritySealOverlay, url, t]);
+
+  const handleDownloadSvg = useCallback(() => {
+    if (!qrContainerRef.current) return;
+
+    const qrSvg = qrContainerRef.current.querySelector('svg');
+    if (!qrSvg) return;
+
+    // Clone the QR SVG and build a standalone SVG for download
+    const clone = qrSvg.cloneNode(true) as SVGSVGElement;
+    const qrSize = 250;
+    const padding = 16;
+    const totalSize = qrSize + padding * 2;
+
+    // Create wrapper SVG with white background
+    const wrapper = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    wrapper.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    wrapper.setAttribute('width', String(totalSize));
+    wrapper.setAttribute('height', String(totalSize));
+    wrapper.setAttribute('viewBox', `0 0 ${totalSize} ${totalSize}`);
+
+    // White background rect
+    const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+    bg.setAttribute('width', String(totalSize));
+    bg.setAttribute('height', String(totalSize));
+    bg.setAttribute('fill', 'white');
+    wrapper.appendChild(bg);
+
+    // Nest the QR code SVG inside a <g> with offset
+    const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+    g.setAttribute('transform', `translate(${padding}, ${padding})`);
+    // Move children from clone into g
+    while (clone.childNodes.length > 0) {
+      g.appendChild(clone.childNodes[0]);
+    }
+    // Copy viewBox-related attributes
+    clone.getAttribute('viewBox') && g.setAttribute('data-viewbox', clone.getAttribute('viewBox')!);
+    wrapper.appendChild(g);
+
+    // Add security seal overlay if enabled
+    if (showSecuritySealOverlay) {
+      const hexSize = 139;
+      const { path, centerX, centerY } = getRoundedHexagonPath(hexSize);
+      const hexX = totalSize / 2 - hexSize / 2;
+      const hexY = totalSize / 2 - hexSize / 2;
+
+      const sealGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+      sealGroup.setAttribute('transform', `translate(${hexX}, ${hexY})`);
+
+      const hexPath = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+      hexPath.setAttribute('d', path);
+      hexPath.setAttribute('fill', 'white');
+      hexPath.setAttribute('stroke', '#e5e5e5');
+      hexPath.setAttribute('stroke-width', '1');
+      sealGroup.appendChild(hexPath);
+
+      const addText = (content: string, x: number, y: number, size: string, weight: string, color: string) => {
+        const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        text.setAttribute('x', String(x));
+        text.setAttribute('y', String(y));
+        text.setAttribute('text-anchor', 'middle');
+        text.setAttribute('font-size', size);
+        text.setAttribute('font-weight', weight);
+        text.setAttribute('fill', color);
+        text.textContent = content;
+        sealGroup.appendChild(text);
+      };
+
+      addText('Place security', centerX, centerY - 12, '8', '500', '#666');
+      addText('seals here', centerX, centerY, '8', '500', '#666');
+      addText('cypheme.com', centerX, centerY + 18, '6.5', '400', '#999');
+
+      wrapper.appendChild(sealGroup);
+    }
+
+    const svgData = new XMLSerializer().serializeToString(wrapper);
+    const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    const blobUrl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.download = `${productName.replace(/[^a-z0-9]/gi, '_')}_qr.svg`;
+    link.href = blobUrl;
+    link.click();
+    URL.revokeObjectURL(blobUrl);
+  }, [productName, showSecuritySealOverlay]);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -296,15 +371,26 @@ export function QRCodeDialog({
                 <Copy className="h-4 w-4" />
               )}
             </Button>
-            <Button
-              variant="outline"
-              size="icon"
-              onClick={handleDownload}
-              className="flex-shrink-0"
-              title={t('qrDialog.download')}
-            >
-              <Download className="h-4 w-4" />
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="flex-shrink-0"
+                  title={t('qrDialog.download')}
+                >
+                  <Download className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={handleDownloadSvg}>
+                  {t('qrDialog.downloadSvg', 'SVG (print)')}
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={handleDownloadPng}>
+                  {t('qrDialog.downloadPng', 'PNG (web)')}
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
           </div>
         </div>
       </DialogContent>
