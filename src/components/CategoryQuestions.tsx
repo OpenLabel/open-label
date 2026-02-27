@@ -97,30 +97,8 @@ export function CategoryQuestions({ category, data, onChange }: CategoryQuestion
   if (template.sections.length === 0) {
     // Still render display settings for categories with no specific questions
     return (
-      <div className="space-y-6">
-        {category !== 'wine' && (
-          <Card>
-            <CardHeader>
-              <CardTitle className="text-lg">{t('wine.displaySettings')}</CardTitle>
-              <CardDescription>
-                {t('wine.displaySettingsDesc')}
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <div className="flex items-center gap-2">
-                <Checkbox
-                  id="hide_promo"
-                  checked={(data.hide_promo as boolean) || false}
-                  onCheckedChange={(checked) => handleChange('hide_promo', checked)}
-                />
-                <Label htmlFor="hide_promo" className="text-sm font-normal cursor-pointer">
-                  {t('wine.hidePromo')}
-                </Label>
-              </div>
-            </CardContent>
-          </Card>
-        )}
-      </div>
+      <div className="space-y-6" />
+    
     );
   }
 
@@ -164,29 +142,8 @@ export function CategoryQuestions({ category, data, onChange }: CategoryQuestion
         </Card>
       ))}
 
-      {/* Display Settings - Promotional (skip for wine, it has its own in WineFields) */}
-      {category !== 'wine' && (
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-lg">{t('wine.displaySettings')}</CardTitle>
-            <CardDescription>
-              {t('wine.displaySettingsDesc')}
-            </CardDescription>
-          </CardHeader>
-          <CardContent>
-            <div className="flex items-center gap-2">
-              <Checkbox
-                id="hide_promo"
-                checked={(data.hide_promo as boolean) || false}
-                onCheckedChange={(checked) => handleChange('hide_promo', checked)}
-              />
-              <Label htmlFor="hide_promo" className="text-sm font-normal cursor-pointer">
-                {t('wine.hidePromo')}
-              </Label>
-            </div>
-          </CardContent>
-        </Card>
-      )}
+
+
     </div>
   );
 }

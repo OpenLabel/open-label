@@ -1086,28 +1086,8 @@ export function WineFields({ data, onChange }: WineFieldsProps) {
       {/* 7. Recycling Information */}
       <WineRecycling data={data} onChange={onChange} />
 
-      {/* Promotional Settings */}
-      <Card>
-        <CardHeader>
-          <CardTitle className="text-lg">{t('wine.displaySettings')}</CardTitle>
-          <CardDescription>
-            {t('wine.displaySettingsDesc')}
-          </CardDescription>
-        </CardHeader>
-        <CardContent>
-          <FieldHint hint={t('wine.hints.displaySettingsHint')} className="mb-4" />
-          <div className="flex items-center gap-2">
-            <Checkbox
-              id="hide_promo"
-              checked={(data.hide_promo as boolean) || false}
-              onCheckedChange={(checked) => handleChange('hide_promo', checked)}
-            />
-            <Label htmlFor="hide_promo" className="text-sm font-normal cursor-pointer">
-              {t('wine.hidePromo')}
-            </Label>
-          </div>
-        </CardContent>
-      </Card>
+
+
     </div>
   );
 }
