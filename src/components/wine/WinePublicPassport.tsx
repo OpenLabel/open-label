@@ -538,7 +538,7 @@ export function WinePublicPassport({
         )}
 
         {/* Promotional Footer */}
-        {!categoryData.hide_promo && (
+        
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center">
             <p className="text-sm text-foreground">
               {t('passport.poweredBy')}{' '}
@@ -552,7 +552,8 @@ export function WinePublicPassport({
               </a>
             </p>
           </div>
-        )}
+
+
 
         {/* Footer */}
         <footer className="text-center text-xs text-muted-foreground py-4 border-t">

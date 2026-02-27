@@ -195,7 +195,7 @@ export default function PublicPassport() {
           )}
 
           {/* Promotional Footer */}
-          {!categoryData?.hide_promo && (
+          
             <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center mt-6">
               <p className="text-sm text-foreground">
                 {t('passport.poweredBy')}{' '}
@@ -209,7 +209,8 @@ export default function PublicPassport() {
                 </a>
               </p>
             </div>
-          )}
+
+
 
           {/* Footer */}
           <div className="text-center text-xs text-muted-foreground py-8">
