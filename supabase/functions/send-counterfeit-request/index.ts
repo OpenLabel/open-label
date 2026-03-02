@@ -123,7 +123,7 @@ const handler = async (req: Request): Promise<Response> => {
       },
       body: JSON.stringify({
         from: `${companyName} <${senderEmail}>`,
-        to: ["contact@cypheme.com"],
+        to: ["contact@cypheme.org"],
         cc: [userEmail],
         subject: `Counterfeit Protection Request - ${safePassportName}`,
         html: `
