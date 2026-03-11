@@ -18,6 +18,7 @@ import Terms from "./pages/Terms";
 import Setup from "./pages/Setup";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
+import ReferralStats from "./pages/ReferralStats";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
@@ -45,6 +46,7 @@ function AppRoutes() {
       <Routes>
         <Route path="/setup" element={<Setup />} />
         <Route path="/p/:slug" element={<PublicPassport />} />
+        <Route path="/referral/:code" element={<ReferralStats />} />
         <Route path="/legal" element={<LegalMentions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
@@ -62,6 +64,7 @@ function AppRoutes() {
       <Route path="/passport/new" element={<PassportForm />} />
       <Route path="/passport/:id/edit" element={<PassportForm />} />
       <Route path="/p/:slug" element={<PublicPassport />} />
+      <Route path="/referral/:code" element={<ReferralStats />} />
       <Route path="/legal" element={<LegalMentions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<Terms />} />
