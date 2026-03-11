@@ -21,6 +21,11 @@ import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
 
+function ReferralCapture() {
+  useReferral();
+  return null;
+}
+
 function AppRoutes() {
   const { loading, isSetupRequired } = useSiteConfig();
 
