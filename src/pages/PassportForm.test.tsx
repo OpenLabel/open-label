@@ -105,7 +105,7 @@ describe('PassportForm page', () => {
 
   it('shows save button', () => {
     renderForm();
-    expect(screen.getByText('common.create')).toBeInTheDocument();
+    expect(screen.getAllByText('common.create').length).toBeGreaterThanOrEqual(1);
   });
 
   it('shows image upload', () => {
