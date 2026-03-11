@@ -96,8 +96,8 @@
       "cta": "KI-Autofill kostenlos testen",
       "tags": {
         "wineLabels": "Weinetiketten",
-        "productLabels": "Product Labels",
-        "ingredientLists": "Ingredient Lists",
+        "productLabels": "Produktetiketten",
+        "ingredientLists": "Zutatenlisten",
         "nutritionFacts": "Nährwertangaben",
         "technicalPdfs": "Technische PDFs"
       }
@@ -105,7 +105,7 @@
     "categories": {
       "badge": "EU-Regulierungsbereich",
       "title": "Unterstützte Produktkategorien",
-      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
+      "subtitle": "Vorlagen auf Basis offizieller EU-Verordnungen und delegierter Rechtsakte. Weitere Kategorien werden hinzugefügt, sobald delegierte Rechtsakte veröffentlicht werden.",
       "activeLaw": "Geltende Verordnung",
       "priorityGroup": "Prioritätsgruppe",
       "cta": "Jetzt Pässe erstellen"
@@ -115,18 +115,18 @@
       "title": "EU DPP-Umsetzungsfristen",
       "subtitle": "Die EU führt Anforderungen an den Digitalen Produktpass schrittweise ein. Bereiten Sie sich jetzt vor.",
       "feb2027": {
-        "title": "Batteries — Coming Soon",
-        "badge": "February 2027",
+        "title": "Batterien — Demnächst verfügbar",
+        "badge": "Februar 2027",
         "description": "EV-, Industrie- und LMT-Batterien müssen Digitale Produktpässe mit Lebenszyklus-Daten, CO₂-Fußabdruck und Recyclinganteil für Kobalt, Lithium und Nickel haben."
       },
       "active": {
         "title": "Jetzt aktiv",
         "badge": "In Kraft",
-        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+        "description": "Wein und Spirituosen (EU-Verordnung 2021/2117) erfordern bereits digitale Deklarationen einschließlich Zutatenlisten und Nährwertangaben."
       },
       "rollout": {
         "title": "2027-2030: Vollständige Einführung",
-        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+        "description": "Textilien, Elektronik, Möbel, Eisen/Stahl, Aluminium, Bauprodukte, Spielzeug, Kosmetik, Reifen und Waschmittel werden DPPs benötigen, sobald delegierte Rechtsakte veröffentlicht werden."
       }
     },
     "selfHost": {

@@ -96,8 +96,8 @@
       "cta": "Prova AI-autofyll gratis",
       "tags": {
         "wineLabels": "Vinetiketter",
-        "productLabels": "Product Labels",
-        "ingredientLists": "Ingredient Lists",
+        "productLabels": "Produktetiketter",
+        "ingredientLists": "Ingrediensförteckningar",
         "nutritionFacts": "Näringsfakta",
         "technicalPdfs": "Tekniska PDF:er"
       }
@@ -105,7 +105,7 @@
     "categories": {
       "badge": "EU-regleringens omfattning",
       "title": "Produktkategorier som stöds",
-      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
+      "subtitle": "Mallar baserade på officiella EU-förordningar och delegerade akter. Fler kategorier läggs till i takt med att delegerade akter publiceras.",
       "activeLaw": "Gällande förordning",
       "priorityGroup": "Prioritetsgrupp",
       "cta": "Börja skapa pass"
@@ -115,18 +115,18 @@
       "title": "EU DPP-implementeringsdeadlines",
       "subtitle": "EU inför krav på digitala produktpass stegvis. Börja förbereda dig nu för att säkerställa efterlevnad.",
       "feb2027": {
-        "title": "Batteries — Coming Soon",
-        "badge": "February 2027",
+        "title": "Batterier — Kommer snart",
+        "badge": "Februari 2027",
         "description": "EV-, industri- och LMT-batterier måste ha digitala produktpass med fullständiga livscykeldata, koldioxidavtrycksdeklarationer (kg CO₂e/kWh med klass A-D-betyg) och återvunna materialandelar för kobolt, litium och nickel."
       },
       "active": {
         "title": "Aktiv nu",
         "badge": "Gällande",
-        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+        "description": "Vin och spritdrycker (EU-förordning 2021/2117) kräver redan digitala deklarationer inklusive ingrediensförteckningar och näringsinformation."
       },
       "rollout": {
         "title": "2027-2030: Fullständig utrullning",
-        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+        "description": "Textilier, elektronik, möbler, järn/stål, aluminium, byggprodukter, leksaker, kosmetika, däck och tvättmedel kommer att kräva DPP:er i takt med att delegerade akter publiceras."
       }
     },
     "selfHost": {

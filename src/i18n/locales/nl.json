@@ -96,8 +96,8 @@
       "cta": "Probeer AI Gratis",
       "tags": {
         "wineLabels": "Wijnlabels",
-        "productLabels": "Product Labels",
-        "ingredientLists": "Ingredient Lists",
+        "productLabels": "Productetiketten",
+        "ingredientLists": "Ingrediëntenlijsten",
         "nutritionFacts": "Voedingswaarden",
         "technicalPdfs": "Technische PDFs"
       }
@@ -105,7 +105,7 @@
     "categories": {
       "badge": "EU Regelgeving Scope",
       "title": "Ondersteunde Productcategorieën",
-      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
+      "subtitle": "Sjablonen gebaseerd op officiële EU-verordeningen en gedelegeerde handelingen. Meer categorieën worden toegevoegd naarmate gedelegeerde handelingen worden gepubliceerd.",
       "activeLaw": "Geldende verordening",
       "priorityGroup": "Prioriteitsgroep",
       "cta": "Begin met Paspoorten Maken"
@@ -115,18 +115,18 @@
       "title": "EU DPP Implementatie Deadlines",
       "subtitle": "De EU rolt Digital Product Passport vereisten gefaseerd uit. Begin nu met voorbereiden om naleving te garanderen.",
       "feb2027": {
-        "title": "Batteries — Coming Soon",
-        "badge": "February 2027",
+        "title": "Batterijen — Binnenkort",
+        "badge": "Februari 2027",
         "description": "EV, industriële en LMT batterijen moeten Digitale Productpaspoorten hebben met volledige levenscyclusdata, koolstofvoetafdruk declaraties (kg CO₂e/kWh met klasse A-D rating) en gerecycled materiaal percentages voor kobalt, lithium en nikkel."
       },
       "active": {
         "title": "Nu Actief",
         "badge": "Van Kracht",
-        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+        "description": "Wijn en gedistilleerde dranken (EU-verordening 2021/2117) vereist al digitale verklaringen inclusief ingrediëntenlijsten en voedingswaarde-informatie."
       },
       "rollout": {
         "title": "2027-2030: Volledige Uitrol",
-        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+        "description": "Textiel, elektronica, meubels, ijzer/staal, aluminium, bouwproducten, speelgoed, cosmetica, banden en wasmiddelen vereisen DPP's naarmate gedelegeerde handelingen worden gepubliceerd."
       }
     },
     "selfHost": {

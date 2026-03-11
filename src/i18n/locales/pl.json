@@ -96,8 +96,8 @@
       "cta": "Wypróbuj AI za Darmo",
       "tags": {
         "wineLabels": "Etykiety Win",
-        "productLabels": "Product Labels",
-        "ingredientLists": "Ingredient Lists",
+        "productLabels": "Etykiety produktów",
+        "ingredientLists": "Wykazy składników",
         "nutritionFacts": "Wartości Odżywcze",
         "technicalPdfs": "Techniczne PDF-y"
       }
@@ -105,7 +105,7 @@
     "categories": {
       "badge": "Zakres Regulacji UE",
       "title": "Obsługiwane Kategorie Produktów",
-      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
+      "subtitle": "Szablony opracowane na podstawie oficjalnych rozporządzeń UE i aktów delegowanych. Kolejne kategorie będą dodawane w miarę publikacji aktów delegowanych.",
       "activeLaw": "Obowiązujące rozporządzenie",
       "priorityGroup": "Grupa Priorytetowa",
       "cta": "Zacznij Tworzyć Paszporty"
@@ -115,18 +115,18 @@
       "title": "Terminy Wdrożenia DPP UE",
       "subtitle": "UE wprowadza wymagania Digital Product Passport etapami. Zacznij przygotowania już teraz, aby zapewnić zgodność.",
       "feb2027": {
-        "title": "Batteries — Coming Soon",
-        "badge": "February 2027",
+        "title": "Baterie — Wkrótce",
+        "badge": "Luty 2027",
         "description": "Baterie EV, przemysłowe i LMT muszą mieć Cyfrowe Paszporty Produktów z pełnymi danymi cyklu życia, deklaracjami śladu węglowego (kg CO₂e/kWh z oceną klasy A-D) i procentami zawartości materiałów z recyklingu dla kobaltu, litu i niklu."
       },
       "active": {
         "title": "Aktywne Teraz",
         "badge": "Obowiązuje",
-        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+        "description": "Wina i napoje spirytusowe (rozporządzenie UE 2021/2117) już wymagają deklaracji cyfrowych, w tym wykazów składników i informacji o wartościach odżywczych."
       },
       "rollout": {
         "title": "2027-2030: Pełne Wdrożenie",
-        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+        "description": "Tekstylia, elektronika, meble, żelazo/stal, aluminium, produkty budowlane, zabawki, kosmetyki, opony i detergenty będą wymagać DPP w miarę publikacji aktów delegowanych."
       }
     },
     "selfHost": {
