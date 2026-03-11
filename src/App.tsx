@@ -18,6 +18,7 @@ import Terms from "./pages/Terms";
 import Setup from "./pages/Setup";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
+import ReferralStats from "./pages/ReferralStats";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
