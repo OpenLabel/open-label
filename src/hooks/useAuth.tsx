@@ -1,6 +1,7 @@
 import { useEffect, useState, createContext, useContext, ReactNode } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
+import { getReferralCode, clearReferralCode } from '@/hooks/useReferral';
 
 interface AuthContextType {
   user: User | null;
