@@ -64,6 +64,7 @@ function AppRoutes() {
       <Route path="/passport/new" element={<PassportForm />} />
       <Route path="/passport/:id/edit" element={<PassportForm />} />
       <Route path="/p/:slug" element={<PublicPassport />} />
+      <Route path="/referral/:code" element={<ReferralStats />} />
       <Route path="/legal" element={<LegalMentions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<Terms />} />
