@@ -28,4 +28,18 @@ describe('CategoryQuestions', () => {
     );
     expect(container).toBeTruthy();
   });
+
+  it('renders without crashing for other category', () => {
+    const { container } = render(
+      <CategoryQuestions category="other" data={{}} onChange={vi.fn()} />
+    );
+    expect(container).toBeTruthy();
+  });
+
+  it('renders without crashing for tires category', () => {
+    const { container } = render(
+      <CategoryQuestions category="tires" data={{}} onChange={vi.fn()} />
+    );
+    expect(container).toBeTruthy();
+  });
 });

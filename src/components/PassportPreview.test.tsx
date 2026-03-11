@@ -34,7 +34,8 @@ describe('PassportPreview', () => {
     render(
       <PassportPreview formData={{ name: 'My Battery', category: 'battery', image_url: null, description: '', category_data: {} }} />
     );
-    expect(screen.getByText('preview.productName')).toBeInTheDocument();
+    // When no product_name in category_data, it falls back to formData.name
+    expect(screen.getByText('My Battery')).toBeInTheDocument();
   });
 
   it('renders description when provided', () => {

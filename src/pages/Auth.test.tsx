@@ -34,8 +34,9 @@ describe('Auth page', () => {
 
   it('shows sign in and sign up tabs', () => {
     renderAuth();
-    expect(screen.getByText('auth.signIn')).toBeInTheDocument();
-    expect(screen.getByText('auth.signUp')).toBeInTheDocument();
+    // There are multiple because the tab trigger and submit button both say signIn
+    expect(screen.getAllByText('auth.signIn').length).toBeGreaterThanOrEqual(1);
+    expect(screen.getByRole('tab', { name: 'auth.signUp' })).toBeInTheDocument();
   });
 
   it('shows email and password fields', () => {

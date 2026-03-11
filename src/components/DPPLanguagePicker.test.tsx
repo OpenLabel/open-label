@@ -11,6 +11,7 @@ vi.mock('@/components/TranslationButton', () => ({
     { code: 'fr', name: 'French', nativeName: 'Français' },
     { code: 'de', name: 'German', nativeName: 'Deutsch' },
   ],
+  initReactI18next: { type: '3rdParty', init: vi.fn() },
 }));
 
 import { DPPLanguagePicker } from './DPPLanguagePicker';
