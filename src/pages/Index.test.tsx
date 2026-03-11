@@ -88,6 +88,6 @@ describe('Index page', () => {
 
   it('renders footer', () => {
     renderIndex();
-    expect(screen.getByText('landing.footer.copyright')).toBeInTheDocument();
+    expect(screen.getByText('landing.footer.legal')).toBeInTheDocument();
   });
 });
