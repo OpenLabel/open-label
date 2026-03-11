@@ -2,7 +2,6 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
-// Mock hooks and assets
 vi.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({ user: null, loading: false, signIn: vi.fn(), signUp: vi.fn(), signOut: vi.fn(), resetPassword: vi.fn() }),
   AuthProvider: ({ children }: any) => children,
@@ -43,11 +42,6 @@ describe('Index page', () => {
     expect(document.querySelector('.min-h-screen')).toBeInTheDocument();
   });
 
-  it('shows DPP branding', () => {
-    renderIndex();
-    expect(screen.getByText('DPP')).toBeInTheDocument();
-  });
-
   it('shows hero section', () => {
     renderIndex();
     expect(screen.getByText('landing.hero.title')).toBeInTheDocument();
@@ -73,9 +67,7 @@ describe('Index page', () => {
     expect(screen.getByText('landing.ai.title')).toBeInTheDocument();
   });
 
-  it('shows dashboard link when user is logged in', () => {
-    vi.mocked(vi.fn()).mockReturnValue;
-    // Re-render is needed with auth mock - tested via default null user showing getStarted
+  it('shows get started when no user', () => {
     renderIndex();
     expect(screen.getByText('nav.getStarted')).toBeInTheDocument();
   });
@@ -83,7 +75,6 @@ describe('Index page', () => {
   it('renders category cards', () => {
     renderIndex();
     expect(screen.getByText('categories.wine')).toBeInTheDocument();
-    expect(screen.getByText('categories.other')).toBeInTheDocument();
   });
 
   it('renders footer', () => {

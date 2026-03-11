@@ -62,7 +62,8 @@ describe('Dashboard page', () => {
 
   it('shows create button', () => {
     render(<MemoryRouter><Dashboard /></MemoryRouter>);
-    expect(screen.getByText('nav.createNew')).toBeInTheDocument();
+    // Multiple create buttons exist (header + empty state)
+    expect(screen.getAllByText('nav.createNew').length).toBeGreaterThanOrEqual(1);
   });
 
   it('shows user email', () => {
