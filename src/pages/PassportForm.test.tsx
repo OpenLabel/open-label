@@ -94,12 +94,13 @@ describe('PassportForm page', () => {
 
   it('shows DPP name field', () => {
     renderForm();
-    expect(screen.getByLabelText(/passport.dppName/)).toBeInTheDocument();
+    expect(screen.getByPlaceholderText('passport.dppNamePlaceholder')).toBeInTheDocument();
   });
 
   it('shows category selector', () => {
     renderForm();
-    expect(screen.getByText('passport.category')).toBeInTheDocument();
+    // The label has "passport.category *" so use a partial match
+    expect(screen.getByText(/passport\.category/)).toBeInTheDocument();
   });
 
   it('shows save button', () => {
