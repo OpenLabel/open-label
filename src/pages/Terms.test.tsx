@@ -27,7 +27,7 @@ describe('Terms page', () => {
 
   it('displays company info', () => {
     render(<MemoryRouter><Terms /></MemoryRouter>);
-    expect(screen.getByText(/Test Co/)).toBeInTheDocument();
+    expect(screen.getAllByText(/Test Co/).length).toBeGreaterThanOrEqual(1);
   });
 
   it('shows navigation links', () => {

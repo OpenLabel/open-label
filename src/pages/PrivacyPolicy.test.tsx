@@ -26,8 +26,7 @@ describe('PrivacyPolicy page', () => {
 
   it('shows company info in contact section', () => {
     render(<MemoryRouter><PrivacyPolicy /></MemoryRouter>);
-    // Company name appears inside a multi-line paragraph with <br>
-    expect(screen.getByText(/Test Co/)).toBeInTheDocument();
+    expect(screen.getAllByText(/Test Co/).length).toBeGreaterThanOrEqual(1);
   });
 
   it('shows footer links', () => {
