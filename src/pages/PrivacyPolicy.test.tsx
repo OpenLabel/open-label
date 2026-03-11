@@ -24,9 +24,10 @@ describe('PrivacyPolicy page', () => {
     expect(screen.getByText('8. Changes to This Policy')).toBeInTheDocument();
   });
 
-  it('shows company info', () => {
+  it('shows company info in contact section', () => {
     render(<MemoryRouter><PrivacyPolicy /></MemoryRouter>);
-    expect(screen.getByText('Test Co')).toBeInTheDocument();
+    // Company name appears inside a multi-line paragraph with <br>
+    expect(screen.getByText(/Test Co/)).toBeInTheDocument();
   });
 
   it('shows footer links', () => {
