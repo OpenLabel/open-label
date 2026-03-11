@@ -1,6 +1,7 @@
 import { useEffect, useState, createContext, useContext, ReactNode } from 'react';
 import { User, Session } from '@supabase/supabase-js';
 import { supabase } from '@/integrations/supabase/client';
+import { getReferralCode, clearReferralCode } from '@/hooks/useReferral';
 
 interface AuthContextType {
   user: User | null;
@@ -41,8 +42,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const signUp = async (email: string, password: string, companyName?: string) => {
     const redirectUrl = `${window.location.origin}/`;
+    const referralCode = getReferralCode();
     
-    const { error } = await supabase.auth.signUp({
+    const { data, error } = await supabase.auth.signUp({
       email,
       password,
       options: {
@@ -52,6 +54,16 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         },
       },
     });
+
+    // Save referral association if a code was captured
+    if (!error && data.user && referralCode) {
+      await supabase.from('referrals').insert({
+        user_id: data.user.id,
+        referral_code: referralCode,
+      });
+      clearReferralCode();
+    }
+
     return { error };
   };
 
