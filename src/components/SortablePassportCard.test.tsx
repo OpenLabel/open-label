@@ -21,7 +21,6 @@ const mockPassport: Passport = {
   language: 'en',
   category_data: {},
   public_slug: 'test-slug',
-  display_order: 0,
   created_at: '2024-01-01',
   updated_at: '2024-01-01',
 };
