@@ -22,7 +22,7 @@ describe("QR download safety – URL matching", () => {
 
   it("blocks download when QR encodes a phishing domain", () => {
     const phishingDecoder: QrDecoder = () => ({
-      data: "https://digital-product-passports.evil.com/p/abc123def456",
+      data: "https://open-label.evil.com/p/abc123def456",
     });
     const result = validateQrFromImageData(makeImageData(10, 10), PASSPORT_URL, phishingDecoder);
     expect(result.ok).toBe(false);
