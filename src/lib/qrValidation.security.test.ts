@@ -135,11 +135,11 @@ describe("QR download safety – scan failures", () => {
 describe("QR download safety – edge cases", () => {
   it("blocks HTTP downgrade (expected HTTPS, QR encodes HTTP)", () => {
     const httpDecoder: QrDecoder = () => ({
-      data: "http://digital-product-passports.example.com/p/abc123",
+      data: "http://open-label.example.com/p/abc123",
     });
     const result = validateQrFromImageData(
       makeImageData(10, 10),
-      "https://digital-product-passports.example.com/p/abc123",
+      "https://open-label.example.com/p/abc123",
       httpDecoder,
     );
     expect(result.ok).toBe(false);
