@@ -81,4 +81,50 @@ describe('Index page', () => {
     renderIndex();
     expect(screen.getByText('landing.footer.legal')).toBeInTheDocument();
   });
+
+  it('shows demo button', () => {
+    renderIndex();
+    expect(screen.getByText('landing.hero.demo')).toBeInTheDocument();
+  });
+
+  it('shows feature cards', () => {
+    renderIndex();
+    expect(screen.getByText('landing.features.espr.title')).toBeInTheDocument();
+    expect(screen.getByText('landing.features.openSource.title')).toBeInTheDocument();
+    expect(screen.getByText('landing.features.machineReadable.title')).toBeInTheDocument();
+    expect(screen.getByText('landing.features.qr.title')).toBeInTheDocument();
+  });
+
+  it('shows hero feature badges', () => {
+    renderIndex();
+    expect(screen.getByText('landing.hero.features.free')).toBeInTheDocument();
+    expect(screen.getByText('landing.hero.features.selfHost')).toBeInTheDocument();
+  });
+
+  it('shows timeline section', () => {
+    renderIndex();
+    expect(screen.getByText('landing.timeline.title')).toBeInTheDocument();
+  });
+
+  it('shows categories section', () => {
+    renderIndex();
+    expect(screen.getByText('landing.categories.title')).toBeInTheDocument();
+  });
+
+  it('shows AI snap/upload/extract cards', () => {
+    renderIndex();
+    expect(screen.getByText('landing.ai.snap.title')).toBeInTheDocument();
+    expect(screen.getByText('landing.ai.upload.title')).toBeInTheDocument();
+    expect(screen.getByText('landing.ai.extract.title')).toBeInTheDocument();
+  });
+
+  it('shows language switcher', () => {
+    renderIndex();
+    expect(screen.getByTestId('lang-switcher')).toBeInTheDocument();
+  });
+
+  it('shows open source badge', () => {
+    renderIndex();
+    expect(screen.getByText('common.openSource')).toBeInTheDocument();
+  });
 });

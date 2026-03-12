@@ -23,6 +23,7 @@ vi.mock('@/components/LanguageSwitcher', () => ({
 }));
 
 import Auth from './Auth';
+import userEvent from '@testing-library/user-event';
 
 describe('Auth page', () => {
   const renderAuth = () => render(<MemoryRouter><Auth /></MemoryRouter>);
@@ -34,7 +35,6 @@ describe('Auth page', () => {
 
   it('shows sign in and sign up tabs', () => {
     renderAuth();
-    // There are multiple because the tab trigger and submit button both say signIn
     expect(screen.getAllByText('auth.signIn').length).toBeGreaterThanOrEqual(1);
     expect(screen.getByRole('tab', { name: 'auth.signUp' })).toBeInTheDocument();
   });
@@ -53,5 +53,35 @@ describe('Auth page', () => {
   it('shows DPP branding link', () => {
     renderAuth();
     expect(screen.getByText('OL')).toBeInTheDocument();
+  });
+
+  it('shows subtitle', () => {
+    renderAuth();
+    expect(screen.getByText('auth.subtitle')).toBeInTheDocument();
+  });
+
+  it('shows company name field when signup tab clicked', async () => {
+    renderAuth();
+    const signUpTab = screen.getByRole('tab', { name: 'auth.signUp' });
+    await userEvent.click(signUpTab);
+    expect(screen.getByLabelText('auth.companyName')).toBeInTheDocument();
+  });
+
+  it('shows reset mode when forgot password clicked', async () => {
+    renderAuth();
+    await userEvent.click(screen.getByText('auth.forgotPassword'));
+    expect(screen.getByText('auth.resetSubtitle')).toBeInTheDocument();
+    expect(screen.getByText('auth.sendResetLink')).toBeInTheDocument();
+  });
+
+  it('shows back to sign in link in reset mode', async () => {
+    renderAuth();
+    await userEvent.click(screen.getByText('auth.forgotPassword'));
+    expect(screen.getByText('auth.backToSignIn')).toBeInTheDocument();
+  });
+
+  it('shows language switcher', () => {
+    renderAuth();
+    expect(screen.getByTestId('lang-switcher')).toBeInTheDocument();
   });
 });
