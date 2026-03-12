@@ -307,7 +307,7 @@ export function WineAIAutofill({ onAutofill, onAutofillMeta }: WineAIAutofillPro
             </Button>
             <Button
               onClick={() => {
-                window.location.href = 'mailto:contact@digital-product-passports.com?subject=AI%20Label%20Scan%20Quota%20Increase%20Request';
+                window.location.href = 'mailto:contact@open-label.eu?subject=AI%20Label%20Scan%20Quota%20Increase%20Request';
               }}
               className="w-full sm:w-auto gap-2"
             >

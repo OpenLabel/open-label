@@ -65,13 +65,9 @@ export default function ResetPassword() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-1.5 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
-            <span className="bg-primary text-primary-foreground px-2 py-0.5 rounded text-sm font-black">DPP</span>
-            <span className="hidden sm:inline">Digital</span>
-            <span className="hidden sm:inline text-muted-foreground font-normal">-</span>
-            <span className="hidden sm:inline">Product</span>
-            <span className="hidden sm:inline text-muted-foreground font-normal">-</span>
-            <span className="hidden sm:inline">Passports</span>
-            <span className="hidden sm:inline text-muted-foreground font-normal">.com</span>
+            <span className="bg-primary text-primary-foreground px-2 py-0.5 rounded text-sm font-black">OL</span>
+            <span className="hidden sm:inline">Open Label</span>
+            <span className="hidden sm:inline text-muted-foreground font-normal">.eu</span>
           </Link>
           <LanguageSwitcher />
         </div>

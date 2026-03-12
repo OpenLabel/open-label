@@ -480,7 +480,7 @@ export default function Index() {
                 {t('landing.footer.github')}
               </a>
               <span className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} {config?.company_name || 'Digital - Product - Passports .com'}
+                © {new Date().getFullYear()} {config?.company_name || 'Open Label .eu'}
               </span>
             </div>
           </div>
