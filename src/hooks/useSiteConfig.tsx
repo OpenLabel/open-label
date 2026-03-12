@@ -27,7 +27,7 @@ const defaultConfig: SiteConfig = {
   terms_conditions_url: '',
   ai_enabled: true,
   sender_email: '',
-  short_url: '',
+  site_url: '',
   setup_complete: false,
 };
 
