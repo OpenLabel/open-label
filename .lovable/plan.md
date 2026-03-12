@@ -1,21 +1,27 @@
 
 
-## Why the Banner Isn't Showing
 
-The `BuildStatusBanner` reads from a Vite virtual module (`virtual:build-status`) that checks **code coverage percentages** in `coverage/coverage-summary.json` — not whether individual tests pass or fail.
+## Simplify Wine QR Code — Label Above, Energy Below ✅
 
-The missing `testKey` causes the **locale audit tests to fail**, but those test failures don't reduce coverage percentages. Coverage measures "how much code is executed by tests," not "how many tests pass." So coverage stays above 50% and the banner reports `"pass"`.
+### Layout
+- **Above QR**: Just the translated word "Ingredients" (single centered word)
+- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
+- **No full ingredients list** anywhere in the QR image
 
-### To make the banner react to test failures, two options:
+### Changes Made
+| File | Change |
+|------|--------|
+| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
+| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
 
-**Option A — Extend the plugin to also check test results (recommended)**
-- Modify `buildStatusPlugin()` in `vite.config.ts` to also look for a test results file (e.g., a JSON reporter output)
-- If any tests failed in the last run, set status to `"fail"` with a message listing the failure count
+## Build Status Banner — Test Failures Detection ✅
 
-**Option B — Make the banner check translations at runtime**
-- Instead of relying on the build plugin, have `BuildStatusBanner` import the locale files directly and compare keys at runtime
-- This would catch missing keys without needing a test run, but adds bundle size
+### Problem
+Banner only checked coverage thresholds, not test pass/fail results.
 
-### Cleanup reminder
-The `testKey: "AHAHA THIS IS A TEST"` in `en.json` should be removed once testing is complete — it's currently causing 23+ locale test failures.
-
+### Changes Made
+| File | Change |
+|------|--------|
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
+| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
