@@ -62,12 +62,32 @@ describe('Dashboard page', () => {
 
   it('shows create button', () => {
     render(<MemoryRouter><Dashboard /></MemoryRouter>);
-    // Multiple create buttons exist (header + empty state)
     expect(screen.getAllByText('nav.createNew').length).toBeGreaterThanOrEqual(1);
   });
 
   it('shows user email', () => {
     render(<MemoryRouter><Dashboard /></MemoryRouter>);
     expect(screen.getByText('test@test.com')).toBeInTheDocument();
+  });
+
+  it('shows OL branding', () => {
+    render(<MemoryRouter><Dashboard /></MemoryRouter>);
+    expect(screen.getByText('OL')).toBeInTheDocument();
+  });
+
+  it('shows language switcher', () => {
+    render(<MemoryRouter><Dashboard /></MemoryRouter>);
+    expect(screen.getByTestId('lang-switcher')).toBeInTheDocument();
+  });
+
+  it('shows logout button', () => {
+    render(<MemoryRouter><Dashboard /></MemoryRouter>);
+    const logoutBtn = document.querySelector('.lucide-log-out');
+    expect(logoutBtn).toBeInTheDocument();
+  });
+
+  it('shows beta badge', () => {
+    render(<MemoryRouter><Dashboard /></MemoryRouter>);
+    expect(screen.getByText('beta')).toBeInTheDocument();
   });
 });
