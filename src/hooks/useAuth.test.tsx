@@ -10,20 +10,20 @@ const mockGetSession = vi.fn(() =>
   Promise.resolve({ data: { session: null } })
 );
 
-const mockSignUp = vi.fn(() => Promise.resolve({ data: { user: { id: 'u1' } }, error: null }));
-const mockSignInWithPassword = vi.fn(() => Promise.resolve({ error: null }));
-const mockSignOut = vi.fn(() => Promise.resolve());
-const mockResetPasswordForEmail = vi.fn(() => Promise.resolve({ error: null }));
+const mockSignUp = vi.fn().mockResolvedValue({ data: { user: { id: 'u1' } }, error: null });
+const mockSignInWithPassword = vi.fn().mockResolvedValue({ error: null });
+const mockSignOut = vi.fn().mockResolvedValue(undefined);
+const mockResetPasswordForEmail = vi.fn().mockResolvedValue({ error: null });
 
 vi.mock('@/integrations/supabase/client', () => ({
   supabase: {
     auth: {
-      onAuthStateChange: (...args: any[]) => mockOnAuthStateChange(...args),
+      onAuthStateChange: (cb: any) => mockOnAuthStateChange(cb),
       getSession: () => mockGetSession(),
-      signUp: (...args: any[]) => mockSignUp(...args),
-      signInWithPassword: (...args: any[]) => mockSignInWithPassword(...args),
+      signUp: (opts: any) => mockSignUp(opts),
+      signInWithPassword: (opts: any) => mockSignInWithPassword(opts),
       signOut: () => mockSignOut(),
-      resetPasswordForEmail: (...args: any[]) => mockResetPasswordForEmail(...args),
+      resetPasswordForEmail: (email: string, opts: any) => mockResetPasswordForEmail(email, opts),
     },
     from: () => ({ insert: vi.fn(() => Promise.resolve({ error: null })) }),
   },
@@ -47,9 +47,8 @@ describe('useAuth', () => {
     }).toThrow('useAuth must be used within an AuthProvider');
   });
 
-  it('starts with loading state', () => {
+  it('starts with null user', () => {
     const { result } = renderHook(() => useAuth(), { wrapper });
-    // After initial render it will be loading=false because getSession resolves
     expect(result.current.user).toBeNull();
   });
 

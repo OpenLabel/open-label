@@ -15,11 +15,11 @@ import { WinePublicPassport } from './WinePublicPassport';
 describe('WinePublicPassport render', () => {
   const basePassport = {
     name: 'Test Wine',
-    image_url: null,
-    description: null,
+    image_url: null as string | null,
+    description: null as string | null,
     category_data: {
       product_name: 'Château Test',
-    },
+    } as Record<string, unknown>,
     updated_at: '2024-01-01',
   };
 
@@ -53,7 +53,7 @@ describe('WinePublicPassport render', () => {
   it('shows volume when provided', () => {
     renderComp({
       ...basePassport,
-      category_data: { ...basePassport.category_data, volume: 750, volume_unit: 'ml' },
+      category_data: { product_name: 'Test', volume: 750, volume_unit: 'ml' },
     });
     expect(screen.getByText('750 ml')).toBeInTheDocument();
   });
@@ -61,7 +61,7 @@ describe('WinePublicPassport render', () => {
   it('shows vintage when provided', () => {
     renderComp({
       ...basePassport,
-      category_data: { ...basePassport.category_data, vintage: '2020' },
+      category_data: { product_name: 'Test', vintage: '2020' },
     });
     expect(screen.getByText('2020')).toBeInTheDocument();
   });
@@ -69,7 +69,7 @@ describe('WinePublicPassport render', () => {
   it('shows grape variety when provided', () => {
     renderComp({
       ...basePassport,
-      category_data: { ...basePassport.category_data, grape_variety: 'Merlot' },
+      category_data: { product_name: 'Test', grape_variety: 'Merlot' },
     });
     expect(screen.getByText('Merlot')).toBeInTheDocument();
   });
@@ -90,7 +90,7 @@ describe('WinePublicPassport render', () => {
   it('shows nutritional section when data present', () => {
     renderComp({
       ...basePassport,
-      category_data: { ...basePassport.category_data, energy_kcal: 70, energy_kj: 293 },
+      category_data: { product_name: 'Test', energy_kcal: 70, energy_kj: 293 },
     });
     expect(screen.getByTestId('nutritional-section')).toBeInTheDocument();
   });
@@ -104,7 +104,7 @@ describe('WinePublicPassport render', () => {
     renderComp({
       ...basePassport,
       category_data: {
-        ...basePassport.category_data,
+        product_name: 'Test',
         ingredients: [{ id: 'grapes', name: 'Grapes', isAllergen: false, category: 'general' }],
       },
     });
@@ -115,7 +115,7 @@ describe('WinePublicPassport render', () => {
     renderComp({
       ...basePassport,
       category_data: {
-        ...basePassport.category_data,
+        product_name: 'Test',
         ingredients: [{ id: 'sulfites', name: 'Sulfites', isAllergen: true, category: 'general' }],
       },
     });
@@ -128,7 +128,7 @@ describe('WinePublicPassport render', () => {
     renderComp({
       ...basePassport,
       category_data: {
-        ...basePassport.category_data,
+        product_name: 'Test',
         packaging_materials: [
           { id: 'mat_1', typeId: 'bottle', typeName: 'Bottle', compositionName: 'Glass', compositionCode: 'GL 70' },
         ],
@@ -140,7 +140,7 @@ describe('WinePublicPassport render', () => {
   it('shows producer info when provided', () => {
     renderComp({
       ...basePassport,
-      category_data: { ...basePassport.category_data, producer_name: 'Domaine Test' },
+      category_data: { product_name: 'Test', producer_name: 'Domaine Test' },
     });
     expect(screen.getByTestId('producer-section')).toBeInTheDocument();
     expect(screen.getByText('Domaine Test')).toBeInTheDocument();
@@ -149,7 +149,7 @@ describe('WinePublicPassport render', () => {
   it('shows check authenticity button when counterfeit protection enabled', () => {
     renderComp({
       ...basePassport,
-      category_data: { ...basePassport.category_data, counterfeit_protection_enabled: true },
+      category_data: { product_name: 'Test', counterfeit_protection_enabled: true },
     });
     expect(screen.getByText('passport.checkAuthenticity')).toBeInTheDocument();
   });
@@ -158,7 +158,7 @@ describe('WinePublicPassport render', () => {
     renderComp({
       ...basePassport,
       category_data: {
-        ...basePassport.category_data,
+        product_name: 'Test',
         energy_kcal: 70,
         energy_kj: 293,
         fat: 0,
@@ -174,7 +174,7 @@ describe('WinePublicPassport render', () => {
     renderComp({
       ...basePassport,
       category_data: {
-        ...basePassport.category_data,
+        product_name: 'Test',
         alcohol_percent: 13.5,
         show_alcohol_on_label: true,
         residual_sugar: 2.0,
@@ -192,7 +192,7 @@ describe('WinePublicPassport render', () => {
     renderComp({
       ...basePassport,
       category_data: {
-        ...basePassport.category_data,
+        product_name: 'Test',
         ingredients: [
           { id: 'nitrogen', name: 'Nitrogen', isAllergen: false, category: 'gases' },
         ],
@@ -203,7 +203,6 @@ describe('WinePublicPassport render', () => {
 
   it('uses preview mode correctly', () => {
     renderComp(basePassport, { isPreview: true });
-    // In preview, legal mentions should be a span not a link
     const legal = screen.getByText('legal.legalMentions');
     expect(legal.tagName).toBe('SPAN');
   });
@@ -212,7 +211,7 @@ describe('WinePublicPassport render', () => {
     renderComp({
       ...basePassport,
       category_data: {
-        ...basePassport.category_data,
+        product_name: 'Test',
         denomination: 'AOP Original',
         denomination_translations: { en: 'PDO Translated' },
       },
