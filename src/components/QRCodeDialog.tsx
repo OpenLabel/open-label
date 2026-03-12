@@ -279,11 +279,9 @@ export function QRCodeDialog({
     const padding = 16;
     const fontSize = 9;
     const lineHeight = 13;
-    const maxCharsPerLine = 45;
 
-    const ingredientLines = wineIngredientsText ? wrapTextSvg(wineIngredientsText, maxCharsPerLine) : [];
-    const ingredientsHeight = ingredientLines.length > 0 ? ingredientLines.length * lineHeight + 8 : 0;
-    const energyHeight = wineEnergyText ? lineHeight + 8 : 0;
+    const ingredientsHeight = wineIngredientsText ? lineHeight + 4 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 4 : 0;
 
     const totalWidth = qrSize + padding * 2;
     const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
@@ -300,21 +298,19 @@ export function QRCodeDialog({
     bg.setAttribute('fill', 'white');
     wrapper.appendChild(bg);
 
-    // Draw ingredients text above QR
+    // Draw ingredients label above QR (single centered word)
     let yOffset = padding;
-    if (ingredientLines.length > 0) {
-      for (const line of ingredientLines) {
-        const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        textEl.setAttribute('x', String(padding));
-        textEl.setAttribute('y', String(yOffset + fontSize));
-        textEl.setAttribute('font-size', String(fontSize));
-        textEl.setAttribute('fill', '#333');
-        textEl.setAttribute('font-family', 'sans-serif');
-        textEl.textContent = line;
-        wrapper.appendChild(textEl);
-        yOffset += lineHeight;
-      }
-      yOffset += 4;
+    if (wineIngredientsText) {
+      const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      textEl.setAttribute('x', String(totalWidth / 2));
+      textEl.setAttribute('y', String(yOffset + fontSize));
+      textEl.setAttribute('text-anchor', 'middle');
+      textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('fill', '#333');
+      textEl.setAttribute('font-family', 'sans-serif');
+      textEl.textContent = wineIngredientsText;
+      wrapper.appendChild(textEl);
+      yOffset += lineHeight + 4;
     }
 
     // QR code
