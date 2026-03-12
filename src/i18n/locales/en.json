@@ -527,7 +527,8 @@
     "title": "QR Code",
     "download": "Download QR Code",
     "copyLink": "Copy Link",
-    "printSizeInstructionWine": "Print at 1.8 cm wide. Height varies with content. The hexagon corresponds to 1 cm for the security seal."
+    "printSizeInstructionWine": "Print at 1.8 cm wide. Height varies with content. The hexagon corresponds to 1 cm for the security seal.",
+    "testKey": "AHAHA THIS IS A TEST"
   },
   "translation": {
     "title": "Translations",
