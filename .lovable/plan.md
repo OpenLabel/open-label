@@ -1,27 +1,25 @@
 
 
+## Update BuildStatusBanner instructions and prompt
 
-## Simplify Wine QR Code — Label Above, Energy Below ✅
+### Changes to `src/components/BuildStatusBanner.tsx`
 
-### Layout
-- **Above QR**: Just the translated word "Ingredients" (single centered word)
-- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
-- **No full ingredients list** anywhere in the QR image
+**1. Update the `buildPrompt` function** (lines 14-23) to emphasize fixing the root cause, not the tests:
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
-| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
+```
+The build quality check failed with this error: "${errorMessage}".
+Fix this by following these rules:
+1. Fix the actual error causing the failure — do NOT just fix or delete the tests.
+2. If translations are missing, add them to ALL 24 locale files.
+3. If coverage is below threshold, add more tests to increase coverage.
+DO NOT lower any thresholds in vite.config.ts or vitest.config.ts.
+DO NOT modify the English locale audit match rules.
+DO NOT skip or delete existing tests.
+```
 
-## Build Status Banner — Test Failures Detection ✅
+**2. Update the instruction text** (line 71) from:
+> "Copy this prompt and send it to Lovable:"
 
-### Problem
-Banner only checked coverage thresholds, not test pass/fail results.
+To:
+> "Copy this prompt, send it to Lovable, then re-publish the website:"
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
-| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
