@@ -15,7 +15,7 @@ export function BuildStatusBanner() {
   const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
   const isDevOrPreview = import.meta.env.DEV || hostname.includes('lovableproject.com') || hostname.includes('preview');
   if (!isDevOrPreview) return null;
-  if (!isPreview) return null;
+  if (!isDevOrPreview) return null;
 
   // Only show when build status indicates a problem
   if (buildStatus.status === 'pass') return null;
