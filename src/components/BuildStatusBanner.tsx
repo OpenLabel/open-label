@@ -93,6 +93,9 @@ export function BuildStatusBanner() {
         <CollapsibleContent>
           <AlertDescription className="mt-3 space-y-3 pl-7">
             <p className="font-medium">{resolved?.message ?? 'Fetching build status…'}</p>
+            <p className="text-sm text-muted-foreground italic">
+              This banner is only visible in preview mode — it will not appear on your published website.
+            </p>
             {!isLoading && (
               <div className="rounded-md bg-destructive/5 border border-destructive/20 p-3">
                 <p className="text-sm mb-2 font-medium">Copy this prompt, send it to Lovable, then re-publish the website:</p>
