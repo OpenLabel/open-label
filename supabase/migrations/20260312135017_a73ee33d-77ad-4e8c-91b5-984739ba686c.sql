@@ -1,0 +1,1 @@
+UPDATE site_config SET value = 'https://open-label.eu' WHERE key = 'short_url';
