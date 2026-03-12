@@ -226,6 +226,8 @@ export default function Dashboard() {
           url={selectedPassport ? getPublicUrl(selectedPassport.slug) : ''}
           productName={selectedPassport?.name || ''}
           showSecuritySealOverlay={selectedPassport?.counterfeitProtection || false}
+          wineIngredientsText={selectedPassport?.wineIngredientsText}
+          wineEnergyText={selectedPassport?.wineEnergyText}
         />
       </main>
     </div>
