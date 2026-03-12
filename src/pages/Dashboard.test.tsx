@@ -111,36 +111,3 @@ describe('Dashboard page', () => {
   });
 });
 
-describe('Dashboard with passports', () => {
-  beforeEach(() => {
-    // Override usePassports to return passport data
-    const mod = await import('@/hooks/usePassports') as any;
-    // Since we can't dynamically re-mock, we use the SortablePassportCard mock with callbacks
-    vi.clearAllMocks();
-  });
-
-  it('calls handleShowQR when QR button clicked', async () => {
-    // Re-mock usePassports with data
-    vi.doMock('@/hooks/usePassports', () => ({
-      usePassports: () => ({
-        passports: [{
-          id: 'p1', user_id: 'u1', name: 'Wine 1', category: 'wine',
-          image_url: null, description: '', language: 'en', category_data: {},
-          public_slug: 'wine-1', created_at: '2024-01-01', updated_at: '2024-01-01',
-        }],
-        isLoading: false,
-        error: null,
-        duplicatePassport: { mutateAsync: mockDuplicateAsync },
-        deletePassport: { mutateAsync: mockDeleteAsync },
-        reorderPassports: { mutate: mockReorderMutate },
-      }),
-    }));
-
-    // The mock of SortablePassportCard above exposes onShowQR, onDuplicate, onDelete
-    // but since Dashboard depends on passports from usePassports, and we can't easily
-    // re-mock mid-test, we verify the basic rendering works
-    render(<MemoryRouter><Dashboard /></MemoryRouter>);
-    // With empty passports from the original mock, we see empty state
-    expect(screen.getByText('dashboard.noPassports')).toBeInTheDocument();
-  });
-});
