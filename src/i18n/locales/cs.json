@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Překládá se..."
-  },
   "common": { "loading": "Načítání...", "save": "Uložit", "cancel": "Zrušit", "delete": "Smazat", "edit": "Upravit", "create": "Vytvořit", "back": "Zpět", "next": "Další", "search": "Hledat", "apply": "Použít", "close": "Zavřít", "confirm": "Potvrdit", "yes": "Ano", "no": "Ne", "error": "Chyba", "success": "Úspěch", "warning": "Varování", "openSource": "Open Source", "language": "Jazyk", "custom": "Vlastní", "selectOption": "Vyberte možnost", "confirmed": "Potvrzeno" },
   "nav": { "signIn": "Přihlásit se", "signUp": "Registrovat", "signOut": "Odhlásit se", "getStarted": "Začít zdarma", "dashboard": "Přejít na panel", "createNew": "Vytvořit nový" },
   "landing": {

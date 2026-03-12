@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Oversætter..."
-  },
   "common": { "loading": "Indlæser...", "save": "Gem", "cancel": "Annuller", "delete": "Slet", "edit": "Rediger", "create": "Opret", "back": "Tilbage", "next": "Næste", "search": "Søg", "apply": "Anvend", "close": "Luk", "confirm": "Bekræft", "yes": "Ja", "no": "Nej", "error": "Fejl", "success": "Succes", "warning": "Advarsel", "openSource": "Open Source", "language": "Sprog", "custom": "Brugerdefineret", "selectOption": "Vælg en mulighed", "confirmed": "Bekræftet" },
   "nav": { "signIn": "Log ind", "signUp": "Tilmeld", "signOut": "Log ud", "getStarted": "Kom i gang gratis", "dashboard": "Gå til dashboard", "createNew": "Opret nyt" },
   "landing": {

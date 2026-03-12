@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Qed jittraduċi..."
-  },
   "common": { "loading": "Jitgħabba...", "save": "Issejvja", "cancel": "Ikkanċella", "delete": "Ħassar", "edit": "Editja", "create": "Oħloq", "back": "Lura", "next": "Li jmiss", "search": "Fittex", "apply": "Applika", "close": "Agħlaq", "confirm": "Ikkonferma", "yes": "Iva", "no": "Le", "error": "Żball", "success": "Suċċess", "warning": "Twissija", "openSource": "Sors Miftuħ", "language": "Lingwa", "custom": "Personalizzat", "selectOption": "Agħżel għażla", "confirmed": "Ikkonfermat" },
   "nav": { "signIn": "Idħol", "signUp": "Irreġistra", "signOut": "Oħroġ", "getStarted": "Ibda b'xejn", "dashboard": "Mur għad-Dashboard", "createNew": "Oħloq ġdid" },
   "landing": {
