@@ -161,11 +161,11 @@ export function QRCodeDialog({
 
     const qrSize = 250;
     const padding = 16;
-    const fontSize = 9;
-    const lineHeight = 13;
+    const fontSize = 14;
+    const lineHeight = 18;
 
-    const ingredientsHeight = wineIngredientsText ? lineHeight + 4 : 0;
-    const energyHeight = wineEnergyText ? lineHeight + 4 : 0;
+    const ingredientsHeight = wineIngredientsText ? lineHeight + 6 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 6 : 0;
     
     const totalWidth = qrSize + padding * 2;
     const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
@@ -183,10 +183,10 @@ export function QRCodeDialog({
     let yOffset = padding;
     if (wineIngredientsText) {
       ctx.fillStyle = '#333';
-      ctx.font = `${fontSize}px sans-serif`;
+      ctx.font = `bold ${fontSize}px sans-serif`;
       ctx.textAlign = 'center';
       ctx.fillText(wineIngredientsText, totalWidth / 2, yOffset + fontSize);
-      yOffset += lineHeight + 4;
+      yOffset += lineHeight + 6;
     }
 
     const svgData = new XMLSerializer().serializeToString(qrSvg);
@@ -226,9 +226,9 @@ export function QRCodeDialog({
       // Draw energy text below QR code
       if (wineEnergyText) {
         ctx.fillStyle = '#333';
-        ctx.font = `${fontSize}px sans-serif`;
+        ctx.font = `bold ${fontSize}px sans-serif`;
         ctx.textAlign = 'center';
-        ctx.fillText(wineEnergyText, totalWidth / 2, qrY + qrSize + 4 + fontSize);
+        ctx.fillText(wineEnergyText, totalWidth / 2, qrY + qrSize + 6 + fontSize);
       }
 
       const performDownload = () => {
@@ -277,11 +277,11 @@ export function QRCodeDialog({
     const clone = qrSvg.cloneNode(true) as SVGSVGElement;
     const qrSize = 250;
     const padding = 16;
-    const fontSize = 9;
-    const lineHeight = 13;
+    const fontSize = 14;
+    const lineHeight = 18;
 
-    const ingredientsHeight = wineIngredientsText ? lineHeight + 4 : 0;
-    const energyHeight = wineEnergyText ? lineHeight + 4 : 0;
+    const ingredientsHeight = wineIngredientsText ? lineHeight + 6 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 6 : 0;
 
     const totalWidth = qrSize + padding * 2;
     const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
@@ -306,11 +306,12 @@ export function QRCodeDialog({
       textEl.setAttribute('y', String(yOffset + fontSize));
       textEl.setAttribute('text-anchor', 'middle');
       textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('font-weight', 'bold');
       textEl.setAttribute('fill', '#333');
       textEl.setAttribute('font-family', 'sans-serif');
       textEl.textContent = wineIngredientsText;
       wrapper.appendChild(textEl);
-      yOffset += lineHeight + 4;
+      yOffset += lineHeight + 6;
     }
 
     // QR code
@@ -362,9 +363,10 @@ export function QRCodeDialog({
     if (wineEnergyText) {
       const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       textEl.setAttribute('x', String(totalWidth / 2));
-      textEl.setAttribute('y', String(yOffset + qrSize + 4 + fontSize));
+      textEl.setAttribute('y', String(yOffset + qrSize + 6 + fontSize));
       textEl.setAttribute('text-anchor', 'middle');
       textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('font-weight', 'bold');
       textEl.setAttribute('fill', '#333');
       textEl.setAttribute('font-family', 'sans-serif');
       textEl.textContent = wineEnergyText;
@@ -392,7 +394,7 @@ export function QRCodeDialog({
             <div ref={qrContainerRef} className="rounded-lg border p-4 bg-white relative">
               {/* Wine ingredients label above QR code */}
               {wineIngredientsText && (
-                <p className="text-[9px] leading-tight text-gray-700 mb-2 text-center max-w-[250px]">
+                <p className="text-sm font-bold leading-tight text-gray-700 mb-2 text-center w-[250px]">
                   {wineIngredientsText}
                 </p>
               )}
@@ -407,7 +409,7 @@ export function QRCodeDialog({
               {showSecuritySealOverlay && <RoundedHexagonWithText size={139} />}
               {/* Wine energy text below QR code */}
               {wineEnergyText && (
-                <p className="text-[9px] leading-tight text-gray-700 mt-2 text-center max-w-[250px]">
+                <p className="text-sm font-bold leading-tight text-gray-700 mt-2 text-center w-[250px]">
                   {wineEnergyText}
                 </p>
               )}
