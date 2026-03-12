@@ -8,7 +8,7 @@ export interface SiteConfig {
   terms_conditions_url: string;
   ai_enabled: boolean;
   sender_email: string;
-  short_url: string;
+  site_url: string;
   setup_complete: boolean;
 }
 
@@ -27,7 +27,7 @@ const defaultConfig: SiteConfig = {
   terms_conditions_url: '',
   ai_enabled: true,
   sender_email: '',
-  short_url: '',
+  site_url: '',
   setup_complete: false,
 };
 
@@ -65,7 +65,7 @@ export function SiteConfigProvider({ children }: { children: ReactNode }) {
         terms_conditions_url: configObj.terms_conditions_url || '',
         ai_enabled: configObj.ai_enabled !== 'false', // Default to true
         sender_email: configObj.sender_email || '',
-        short_url: configObj.short_url || '',
+        site_url: configObj.site_url || '',
         setup_complete: configObj.setup_complete === 'true',
       });
     } catch (error) {

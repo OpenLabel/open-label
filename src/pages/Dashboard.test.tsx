@@ -29,7 +29,7 @@ vi.mock('@/hooks/usePassports', () => ({
 
 vi.mock('@/hooks/useSiteConfig', () => ({
   useSiteConfig: () => ({
-    config: { company_name: 'Test', setup_complete: true, short_url: 'https://open-label.eu' },
+    config: { company_name: 'Test', setup_complete: true, site_url: 'https://open-label.eu' },
     loading: false,
     isSetupRequired: false,
   }),

@@ -9,7 +9,7 @@ vi.mock('@/hooks/useAuth', () => ({
 
 vi.mock('@/hooks/useSiteConfig', () => ({
   useSiteConfig: () => ({
-    config: { company_name: 'Test Co', setup_complete: true, ai_enabled: true, sender_email: '', short_url: '', company_address: '', privacy_policy_url: '', terms_conditions_url: '' },
+    config: { company_name: 'Test Co', setup_complete: true, ai_enabled: true, sender_email: '', site_url: '', company_address: '', privacy_policy_url: '', terms_conditions_url: '' },
     loading: false,
     isSetupRequired: false,
   }),

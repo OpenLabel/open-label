@@ -32,7 +32,7 @@ export function BuildStatusBanner() {
   useEffect(() => {
     if (resolved.status !== 'unknown') return;
 
-    const baseUrl = config?.short_url?.replace(/\/+$/, '');
+    const baseUrl = config?.site_url?.replace(/\/+$/, '');
     const fetchUrl = baseUrl
       ? `${baseUrl}/build-status.json`
       : '/build-status.json';
@@ -47,7 +47,7 @@ export function BuildStatusBanner() {
       .catch(() => {
         // CORS blocked or file doesn't exist — keep unknown, banner stays hidden
       });
-  }, [resolved.status, config?.short_url]);
+  }, [resolved.status, config?.site_url]);
 
   // Hide only on pass
   if (resolved.status === 'pass') return null;

@@ -1,40 +1,27 @@
 
 
-## Rename `short_url` → `site_url` Across Codebase and Database
 
-The `short_url` field was originally for an optional short domain for QR codes, but it's now the main published website URL. We'll rename it to `site_url` and update the form labels/descriptions accordingly.
+## Simplify Wine QR Code — Label Above, Energy Below ✅
 
-### Database Migration
+### Layout
+- **Above QR**: Just the translated word "Ingredients" (single centered word)
+- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
+- **No full ingredients list** anywhere in the QR image
 
-Rename the existing `short_url` key in `site_config` to `site_url`:
+### Changes Made
+| File | Change |
+|------|--------|
+| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
+| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
 
-```sql
-UPDATE site_config SET key = 'site_url' WHERE key = 'short_url';
-```
+## Build Status Banner — Test Failures Detection ✅
 
-Also update the RLS policy that whitelists readable keys to include `site_url` instead of `short_url`.
+### Problem
+Banner only checked coverage thresholds, not test pass/fail results.
 
-### Code Changes
-
-**`src/hooks/useSiteConfig.tsx`** — Rename `short_url` to `site_url` in the `SiteConfig` interface, default config, and the config mapping logic.
-
-**`src/pages/Setup.tsx`** — Rename state variable `shortUrl` → `siteUrl`. Update the form section:
-- Section title: "Website URL" instead of "QR Code Optimization"
-- Label: "Published Website URL *" (make it required)
-- Icon: `Globe` instead of `QrCode`
-- Badge: "Required" instead of "Optional"
-- Placeholder: `https://open-label.eu`
-- Description: "The URL where this app is published. Used for QR codes and build status checks."
-- Add validation requiring this field
-- Move section up near the other required fields (provider info section)
-
-**`src/pages/Dashboard.tsx`** — Update `config?.short_url` → `config?.site_url` in `getPublicUrl`.
-
-**`src/components/BuildStatusBanner.tsx`** — Update `config?.short_url` → `config?.site_url`.
-
-**Tests** (4 files) — Update all mock config objects replacing `short_url` with `site_url`:
-- `src/hooks/useSiteConfig.test.tsx`
-- `src/App.test.tsx`
-- `src/pages/Index.test.tsx`
-- `src/pages/Dashboard.test.tsx`
-
+### Changes Made
+| File | Change |
+|------|--------|
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
+| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |

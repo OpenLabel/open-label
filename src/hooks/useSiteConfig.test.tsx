@@ -8,7 +8,7 @@ const mockSelect = vi.fn(() =>
       { key: 'company_name', value: 'Test Corp' },
       { key: 'setup_complete', value: 'true' },
       { key: 'ai_enabled', value: 'true' },
-      { key: 'short_url', value: 'https://short.test' },
+      { key: 'site_url', value: 'https://short.test' },
     ],
     error: null,
   })

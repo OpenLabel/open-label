@@ -102,9 +102,9 @@ export default function Dashboard() {
     }
   };
 
-  // Use short URL for QR codes if configured, otherwise use current origin
+  // Use site URL for QR codes if configured, otherwise use current origin
   const getPublicUrl = (slug: string) => {
-    const baseUrl = config?.short_url?.trim() || window.location.origin;
+    const baseUrl = config?.site_url?.trim() || window.location.origin;
     return `${baseUrl}/p/${slug}`;
   };
 

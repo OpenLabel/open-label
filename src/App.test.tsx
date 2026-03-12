@@ -16,7 +16,7 @@ vi.mock('@/hooks/useAuth', () => ({
 
 vi.mock('@/hooks/useSiteConfig', () => ({
   useSiteConfig: () => ({
-    config: { company_name: 'Test', setup_complete: true, short_url: '' },
+    config: { company_name: 'Test', setup_complete: true, site_url: '' },
     loading: false,
     isSetupRequired: false,
     refetch: vi.fn(),
