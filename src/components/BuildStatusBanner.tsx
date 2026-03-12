@@ -25,6 +25,9 @@ DO NOT skip or delete existing tests.`;
 }
 
 export function BuildStatusBanner() {
+  const isPreview = import.meta.env.DEV || window.location.hostname.includes('id-preview--');
+  if (!isPreview) return null;
+
   const [resolved, setResolved] = useState<BuildStatus | null>(null);
   const [copied, setCopied] = useState(false);
   const [open, setOpen] = useState(false);
