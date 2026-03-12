@@ -169,19 +169,17 @@ function runTestsOnBuild(): Plugin {
         });
       } catch (err: unknown) {
         const execError = err as { stderr?: Buffer; stdout?: Buffer; status?: number };
-        const stderr = execError.stderr?.toString().slice(-500) || "";
-        const stdout = execError.stdout?.toString().slice(-500) || "";
+        testRunStderr = execError.stderr?.toString().slice(-3000) || null;
+        testRunStdout = execError.stdout?.toString().slice(-3000) || null;
 
         // Check if test artifacts were produced despite non-zero exit
         const hasResults = fs.existsSync(path.resolve(testResultsDir, "results.json"));
         const hasCoverage = fs.existsSync(path.resolve(coverageDir, "coverage-summary.json"));
 
         if (hasResults || hasCoverage) {
-          // Tests ran but some failed — artifacts exist, let buildStatusPlugin parse them
           console.warn("[run-tests-on-build] Tests finished with failures. Artifacts available for analysis.");
         } else {
-          // Tests could not run at all
-          testRunError = `Vitest failed to execute during build. Exit code: ${execError.status ?? "unknown"}. ${stderr || stdout || "No output captured."}`.trim();
+          testRunError = `Vitest failed to execute during build. Exit code: ${execError.status ?? "unknown"}. ${testRunStderr || testRunStdout || "No output captured."}`.trim();
           console.error("[run-tests-on-build]", testRunError);
         }
       }
