@@ -13,6 +13,82 @@ let testRunAttempted = false;
 let testRunStderr: string | null = null;
 let testRunStdout: string | null = null;
 
+/** Extract up to `max` failed test names from vitest JSON reporter output */
+function extractFailedTests(resultsPath: string, max = 50): string[] {
+  if (!fs.existsSync(resultsPath)) return [];
+  try {
+    const data = JSON.parse(fs.readFileSync(resultsPath, "utf-8"));
+    const failed: string[] = [];
+    for (const suite of data.testResults ?? []) {
+      for (const assertion of suite.assertionResults ?? []) {
+        if (assertion.status === "failed") {
+          const name = assertion.fullName || assertion.ancestorTitles?.join(" > ") + " > " + assertion.title || "unknown";
+          const msg = (assertion.failureMessages ?? []).join(" ").slice(0, 200);
+          failed.push(msg ? `${name} — ${msg}` : name);
+          if (failed.length >= max) return failed;
+        }
+      }
+    }
+    return failed;
+  } catch {
+    return [];
+  }
+}
+
+/** Build a verbose status object from test artifacts + captured output */
+function buildVerboseStatus(testResultsDir: string, coverageDir: string): object {
+  const problems: string[] = [];
+  const trPath = path.resolve(testResultsDir, "results.json");
+  const cvPath = path.resolve(coverageDir, "coverage-summary.json");
+  const trExists = fs.existsSync(trPath);
+  const cvExists = fs.existsSync(cvPath);
+  let failedTests: string[] = [];
+
+  if (trExists) {
+    try {
+      const td = JSON.parse(fs.readFileSync(trPath, "utf-8"));
+      const numFailed = td.numFailedTests ?? 0;
+      if (numFailed > 0) {
+        problems.push(`${numFailed} test(s) failed`);
+        failedTests = extractFailedTests(trPath);
+      }
+    } catch {}
+  }
+  if (cvExists) {
+    try {
+      const raw = JSON.parse(fs.readFileSync(cvPath, "utf-8"));
+      for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
+        const actual = raw.total[metric]?.pct ?? 0;
+        if (actual < (threshold as number)) problems.push(`${metric}: ${actual}% < ${threshold}%`);
+      }
+    } catch {}
+  }
+
+  if (testRunError) {
+    return {
+      status: "fail",
+      message: testRunError,
+      stderr: testRunStderr?.slice(-3000) || undefined,
+      stdout: testRunStdout?.slice(-3000) || undefined,
+    };
+  }
+  if (problems.length > 0) {
+    return {
+      status: "fail",
+      message: problems.join("; "),
+      failedTests: failedTests.length > 0 ? failedTests : undefined,
+      stderr: testRunStderr?.slice(-3000) || undefined,
+    };
+  }
+  if (testRunAttempted && !trExists && !cvExists) {
+    return { status: "fail", message: "No test artifacts generated.", stderr: testRunStderr?.slice(-3000) || undefined };
+  }
+  if (!trExists && !cvExists) {
+    return { status: "unknown", message: "No test artifacts." };
+  }
+  return { status: "pass" };
+}
+
 function buildStatusPlugin(): Plugin {
   const watchedFiles = [
     path.resolve(__dirname, "test-results/results.json"),
@@ -26,131 +102,28 @@ function buildStatusPlugin(): Plugin {
     },
     load(id) {
       if (id !== "\0virtual:build-status") return;
-
-      const problems: string[] = [];
-
-      // Priority 1: If test execution itself failed
-      if (testRunError) {
-        return `export default ${JSON.stringify({ status: "fail", message: testRunError })}`;
-      }
-
-      // 2. Check test results
-      const testResultsPath = watchedFiles[0];
-      let testResultsExist = false;
-      if (fs.existsSync(testResultsPath)) {
-        testResultsExist = true;
-        try {
-          const testData = JSON.parse(fs.readFileSync(testResultsPath, "utf-8"));
-          const failed = testData.numFailedTests ?? 0;
-          if (failed > 0) {
-            problems.push(`${failed} test(s) failed`);
-          }
-        } catch {
-          // ignore parse errors
-        }
-      }
-
-      // 3. Check coverage thresholds
-      const coveragePath = watchedFiles[1];
-      let coverageExists = false;
-      if (fs.existsSync(coveragePath)) {
-        coverageExists = true;
-        try {
-          const raw = JSON.parse(fs.readFileSync(coveragePath, "utf-8"));
-          const total = raw.total;
-          for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
-            const actual = total[metric]?.pct ?? 0;
-            if (actual < threshold) {
-              problems.push(`${metric}: ${actual}% < ${threshold}%`);
-            }
-          }
-        } catch {
-          // ignore parse errors
-        }
-      }
-
-      // Return fail if any problems found
-      if (problems.length > 0) {
-        return `export default ${JSON.stringify({ status: "fail", message: problems.join("; ") })}`;
-      }
-
-      // Priority 4: If build ran tests but no artifacts were produced → fail
-      if (testRunAttempted && !testResultsExist && !coverageExists) {
-        return `export default ${JSON.stringify({ status: "fail", message: "Test run completed but no test/coverage artifacts were generated. Check vitest configuration." })}`;
-      }
-
-      // Only unknown if in dev/preview with no artifacts and no build context
-      if (!testResultsExist && !coverageExists) {
-        return `export default ${JSON.stringify({ status: "unknown", message: "No local test artifacts found. Publish builds run tests in an isolated build environment." })}`;
-      }
-
-      return `export default ${JSON.stringify({ status: "pass" })}`;
+      const status = buildVerboseStatus(
+        path.resolve(__dirname, "test-results"),
+        path.resolve(__dirname, "coverage"),
+      );
+      return `export default ${JSON.stringify(status)}`;
     },
-    // Write build-status.json to dist/ so the banner can fetch it at runtime
     writeBundle(options) {
       const dir = options.dir ?? path.resolve(__dirname, "dist");
-      const status = testRunError
-        ? { status: "fail", message: testRunError }
-        : (() => {
-            const problems: string[] = [];
-            const trPath = path.resolve(__dirname, "test-results/results.json");
-            const cvPath = path.resolve(__dirname, "coverage/coverage-summary.json");
-            const trExists = fs.existsSync(trPath);
-            const cvExists = fs.existsSync(cvPath);
-
-            if (trExists) {
-              try {
-                const td = JSON.parse(fs.readFileSync(trPath, "utf-8"));
-                if ((td.numFailedTests ?? 0) > 0) problems.push(`${td.numFailedTests} test(s) failed`);
-              } catch {}
-            }
-            if (cvExists) {
-              try {
-                const raw = JSON.parse(fs.readFileSync(cvPath, "utf-8"));
-                for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
-                  const actual = raw.total[metric]?.pct ?? 0;
-                  if (actual < (threshold as number)) problems.push(`${metric}: ${actual}% < ${threshold}%`);
-                }
-              } catch {}
-            }
-
-            if (problems.length > 0) return { status: "fail", message: problems.join("; ") };
-            if (testRunAttempted && !trExists && !cvExists) return { status: "fail", message: "No test artifacts generated." };
-            if (!trExists && !cvExists) return { status: "unknown", message: "No test artifacts." };
-            return { status: "pass" };
-          })();
-
+      const status = buildVerboseStatus(
+        path.resolve(__dirname, "test-results"),
+        path.resolve(__dirname, "coverage"),
+      );
       fs.writeFileSync(path.join(dir, "build-status.json"), JSON.stringify(status));
-      console.log("[build-status] Wrote build-status.json:", JSON.stringify(status));
+      console.log("[build-status] Wrote build-status.json:", JSON.stringify(status).slice(0, 500));
     },
     configureServer(server) {
-      // Serve /build-status.json dynamically in dev/preview
       server.middlewares.use((req, res, next) => {
         if (req.url !== "/build-status.json") return next();
-        const problems: string[] = [];
-        const trPath = watchedFiles[0];
-        const cvPath = watchedFiles[1];
-        const trExists = fs.existsSync(trPath);
-        const cvExists = fs.existsSync(cvPath);
-        if (trExists) {
-          try {
-            const td = JSON.parse(fs.readFileSync(trPath, "utf-8"));
-            if ((td.numFailedTests ?? 0) > 0) problems.push(`${td.numFailedTests} test(s) failed`);
-          } catch {}
-        }
-        if (cvExists) {
-          try {
-            const raw = JSON.parse(fs.readFileSync(cvPath, "utf-8"));
-            for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
-              const actual = raw.total[metric]?.pct ?? 0;
-              if (actual < (threshold as number)) problems.push(`${metric}: ${actual}% < ${threshold}%`);
-            }
-          } catch {}
-        }
-        let status: object;
-        if (problems.length > 0) status = { status: "fail", message: problems.join("; ") };
-        else if (!trExists && !cvExists) status = { status: "unknown", message: "No test artifacts." };
-        else status = { status: "pass" };
+        const status = buildVerboseStatus(
+          path.resolve(__dirname, "test-results"),
+          path.resolve(__dirname, "coverage"),
+        );
         res.setHeader("Content-Type", "application/json");
         res.end(JSON.stringify(status));
       });
