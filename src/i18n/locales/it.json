@@ -487,7 +487,8 @@
   "qrDialog": {
     "title": "Codice QR",
     "download": "Scarica codice QR",
-    "copyLink": "Copia link"
+    "copyLink": "Copia link",
+    "printSizeInstructionWine": "Stampare con una larghezza di 1,8 cm. L'altezza varia in base al contenuto. L'esagono corrisponde a 1 cm per il sigillo di sicurezza."
   },
   "translation": {
     "title": "Traduzioni",

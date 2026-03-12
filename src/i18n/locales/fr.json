@@ -498,7 +498,8 @@
   "qrDialog": {
     "title": "Code QR",
     "download": "Télécharger le code QR",
-    "copyLink": "Copier le lien"
+    "copyLink": "Copier le lien",
+    "printSizeInstructionWine": "Imprimez avec une largeur de 1,8 cm. La hauteur varie selon le contenu. L'hexagone correspond à 1 cm pour le sceau de sécurité."
   },
   "translation": {
     "title": "Traductions",

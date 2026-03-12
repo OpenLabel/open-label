@@ -523,7 +523,8 @@
   "qrDialog": {
     "title": "QR-kod",
     "download": "Ladda ner QR-kod",
-    "copyLink": "Kopiera länk"
+    "copyLink": "Kopiera länk",
+    "printSizeInstructionWine": "Skriv ut med en bredd på 1,8 cm. Höjden varierar beroende på innehållet. Hexagonen motsvarar 1 cm för säkerhetssigillet."
   },
   "translation": {
     "title": "Översättningar",

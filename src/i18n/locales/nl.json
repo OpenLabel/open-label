@@ -485,7 +485,8 @@
   "qrDialog": {
     "title": "QR Code",
     "download": "QR-code downloaden",
-    "copyLink": "Kopieer Link"
+    "copyLink": "Kopieer Link",
+    "printSizeInstructionWine": "Print met een breedte van 1,8 cm. De hoogte varieert afhankelijk van de inhoud. De zeshoek komt overeen met 1 cm voor het veiligheidszegel."
   },
   "customIngredient": {
     "title": "Definieer een aangepast ingrediënt",

@@ -487,7 +487,8 @@
   "qrDialog": {
     "title": "Código QR",
     "download": "Baixar código QR",
-    "copyLink": "Copiar link"
+    "copyLink": "Copiar link",
+    "printSizeInstructionWine": "Imprima com uma largura de 1,8 cm. A altura varia conforme o conteúdo. O hexágono corresponde a 1 cm para o selo de segurança."
   },
   "translation": {
     "title": "Traduções",

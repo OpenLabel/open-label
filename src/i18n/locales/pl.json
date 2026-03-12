@@ -474,7 +474,8 @@
   "qrDialog": {
     "title": "Kod QR",
     "download": "Pobierz Kod QR",
-    "copyLink": "Kopiuj Link"
+    "copyLink": "Kopiuj Link",
+    "printSizeInstructionWine": "Drukuj z szerokością 1,8 cm. Wysokość zmienia się w zależności od treści. Sześciokąt odpowiada 1 cm na pieczęć bezpieczeństwa."
   },
   "customIngredient": {
     "title": "Zdefiniuj własny składnik",

@@ -24,6 +24,8 @@ interface QRCodeDialogProps {
   url: string;
   productName: string;
   showSecuritySealOverlay?: boolean;
+  wineIngredientsText?: string;
+  wineEnergyText?: string;
 }
 
 // Generate rounded hexagon path
@@ -131,12 +133,52 @@ function RoundedHexagonWithText({ size = 104 }: { size?: number }) {
   );
 }
 
+// Wrap text to fit within a given width using canvas context
+function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
+  const words = text.split(' ');
+  const lines: string[] = [];
+  let currentLine = '';
+
+  for (const word of words) {
+    const testLine = currentLine ? `${currentLine} ${word}` : word;
+    if (ctx.measureText(testLine).width > maxWidth && currentLine) {
+      lines.push(currentLine);
+      currentLine = word;
+    } else {
+      currentLine = testLine;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+  return lines;
+}
+
+// Wrap text for SVG (approximate character-based wrapping)
+function wrapTextSvg(text: string, maxCharsPerLine: number): string[] {
+  const words = text.split(' ');
+  const lines: string[] = [];
+  let currentLine = '';
+
+  for (const word of words) {
+    const testLine = currentLine ? `${currentLine} ${word}` : word;
+    if (testLine.length > maxCharsPerLine && currentLine) {
+      lines.push(currentLine);
+      currentLine = word;
+    } else {
+      currentLine = testLine;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+  return lines;
+}
+
 export function QRCodeDialog({ 
   open, 
   onOpenChange, 
   url, 
   productName,
   showSecuritySealOverlay = false,
+  wineIngredientsText,
+  wineEnergyText,
 }: QRCodeDialogProps) {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
@@ -151,21 +193,48 @@ export function QRCodeDialog({
   const handleDownloadPng = useCallback(() => {
     if (!qrContainerRef.current) return;
 
-    const qrSvg = qrContainerRef.current.querySelector('svg');
+    const qrSvg = qrContainerRef.current.querySelector('svg.qr-code-svg') || qrContainerRef.current.querySelector('svg');
     if (!qrSvg) return;
 
     const qrSize = 250;
     const padding = 16;
-    const totalSize = qrSize + padding * 2;
+    const fontSize = 9;
+    const lineHeight = 13;
+    const contentWidth = qrSize;
+
+    // Pre-calculate ingredient lines to determine canvas height
+    const tempCanvas = document.createElement('canvas');
+    const tempCtx = tempCanvas.getContext('2d')!;
+    tempCtx.font = `${fontSize}px sans-serif`;
+    
+    const ingredientLines = wineIngredientsText ? wrapText(tempCtx, wineIngredientsText, contentWidth) : [];
+    const ingredientsHeight = ingredientLines.length > 0 ? ingredientLines.length * lineHeight + 8 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 8 : 0;
+    
+    const totalWidth = qrSize + padding * 2;
+    const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
     
     const canvas = document.createElement('canvas');
-    canvas.width = totalSize;
-    canvas.height = totalSize;
+    canvas.width = totalWidth;
+    canvas.height = totalHeight;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     ctx.fillStyle = 'white';
-    ctx.fillRect(0, 0, totalSize, totalSize);
+    ctx.fillRect(0, 0, totalWidth, totalHeight);
+
+    // Draw ingredients text above QR code
+    let yOffset = padding;
+    if (ingredientLines.length > 0) {
+      ctx.fillStyle = '#333';
+      ctx.font = `${fontSize}px sans-serif`;
+      ctx.textAlign = 'left';
+      for (const line of ingredientLines) {
+        ctx.fillText(line, padding, yOffset + fontSize);
+        yOffset += lineHeight;
+      }
+      yOffset += 4; // small gap
+    }
 
     const svgData = new XMLSerializer().serializeToString(qrSvg);
     const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
@@ -173,14 +242,15 @@ export function QRCodeDialog({
 
     const img = new Image();
     img.onload = async () => {
-      ctx.drawImage(img, padding, padding, qrSize, qrSize);
+      const qrY = yOffset;
+      ctx.drawImage(img, padding, qrY, qrSize, qrSize);
       URL.revokeObjectURL(svgUrl);
 
       if (showSecuritySealOverlay) {
         const hexSize = 139;
         const { path, centerX, centerY } = getRoundedHexagonPath(hexSize);
-        const hexX = totalSize / 2 - hexSize / 2;
-        const hexY = totalSize / 2 - hexSize / 2;
+        const hexX = totalWidth / 2 - hexSize / 2;
+        const hexY = qrY + qrSize / 2 - hexSize / 2;
         ctx.save();
         ctx.translate(hexX, hexY);
         const path2D = new Path2D(path);
@@ -198,6 +268,14 @@ export function QRCodeDialog({
         ctx.font = '6.5px sans-serif';
         ctx.fillText('cypheme.com', centerX, centerY + 18);
         ctx.restore();
+      }
+
+      // Draw energy text below QR code
+      if (wineEnergyText) {
+        ctx.fillStyle = '#333';
+        ctx.font = `${fontSize}px sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(wineEnergyText, totalWidth / 2, qrY + qrSize + 4 + fontSize);
       }
 
       const performDownload = () => {
@@ -235,51 +313,72 @@ export function QRCodeDialog({
       }
     };
     img.src = svgUrl;
-  }, [productName, showSecuritySealOverlay, url, t]);
+  }, [productName, showSecuritySealOverlay, url, t, wineIngredientsText, wineEnergyText]);
 
   const handleDownloadSvg = useCallback(() => {
     if (!qrContainerRef.current) return;
 
-    const qrSvg = qrContainerRef.current.querySelector('svg');
+    const qrSvg = qrContainerRef.current.querySelector('svg.qr-code-svg') || qrContainerRef.current.querySelector('svg');
     if (!qrSvg) return;
 
-    // Clone the QR SVG and build a standalone SVG for download
     const clone = qrSvg.cloneNode(true) as SVGSVGElement;
     const qrSize = 250;
     const padding = 16;
-    const totalSize = qrSize + padding * 2;
+    const fontSize = 9;
+    const lineHeight = 13;
+    const maxCharsPerLine = 45;
 
-    // Create wrapper SVG with white background
+    const ingredientLines = wineIngredientsText ? wrapTextSvg(wineIngredientsText, maxCharsPerLine) : [];
+    const ingredientsHeight = ingredientLines.length > 0 ? ingredientLines.length * lineHeight + 8 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 8 : 0;
+
+    const totalWidth = qrSize + padding * 2;
+    const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
+
     const wrapper = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     wrapper.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    wrapper.setAttribute('width', String(totalSize));
-    wrapper.setAttribute('height', String(totalSize));
-    wrapper.setAttribute('viewBox', `0 0 ${totalSize} ${totalSize}`);
+    wrapper.setAttribute('width', String(totalWidth));
+    wrapper.setAttribute('height', String(totalHeight));
+    wrapper.setAttribute('viewBox', `0 0 ${totalWidth} ${totalHeight}`);
 
-    // White background rect
     const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    bg.setAttribute('width', String(totalSize));
-    bg.setAttribute('height', String(totalSize));
+    bg.setAttribute('width', String(totalWidth));
+    bg.setAttribute('height', String(totalHeight));
     bg.setAttribute('fill', 'white');
     wrapper.appendChild(bg);
 
-    // Nest the QR code SVG inside a <g> with offset
+    // Draw ingredients text above QR
+    let yOffset = padding;
+    if (ingredientLines.length > 0) {
+      for (const line of ingredientLines) {
+        const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        textEl.setAttribute('x', String(padding));
+        textEl.setAttribute('y', String(yOffset + fontSize));
+        textEl.setAttribute('font-size', String(fontSize));
+        textEl.setAttribute('fill', '#333');
+        textEl.setAttribute('font-family', 'sans-serif');
+        textEl.textContent = line;
+        wrapper.appendChild(textEl);
+        yOffset += lineHeight;
+      }
+      yOffset += 4;
+    }
+
+    // QR code
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    g.setAttribute('transform', `translate(${padding}, ${padding})`);
-    // Move children from clone into g
+    g.setAttribute('transform', `translate(${padding}, ${yOffset})`);
     while (clone.childNodes.length > 0) {
       g.appendChild(clone.childNodes[0]);
     }
-    // Copy viewBox-related attributes
     clone.getAttribute('viewBox') && g.setAttribute('data-viewbox', clone.getAttribute('viewBox')!);
     wrapper.appendChild(g);
 
-    // Add security seal overlay if enabled
+    // Security seal overlay
     if (showSecuritySealOverlay) {
       const hexSize = 139;
       const { path, centerX, centerY } = getRoundedHexagonPath(hexSize);
-      const hexX = totalSize / 2 - hexSize / 2;
-      const hexY = totalSize / 2 - hexSize / 2;
+      const hexX = totalWidth / 2 - hexSize / 2;
+      const hexY = yOffset + qrSize / 2 - hexSize / 2;
 
       const sealGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
       sealGroup.setAttribute('transform', `translate(${hexX}, ${hexY})`);
@@ -310,6 +409,19 @@ export function QRCodeDialog({
       wrapper.appendChild(sealGroup);
     }
 
+    // Energy text below QR
+    if (wineEnergyText) {
+      const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      textEl.setAttribute('x', String(totalWidth / 2));
+      textEl.setAttribute('y', String(yOffset + qrSize + 4 + fontSize));
+      textEl.setAttribute('text-anchor', 'middle');
+      textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('fill', '#333');
+      textEl.setAttribute('font-family', 'sans-serif');
+      textEl.textContent = wineEnergyText;
+      wrapper.appendChild(textEl);
+    }
+
     const svgData = new XMLSerializer().serializeToString(wrapper);
     const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
     const blobUrl = URL.createObjectURL(blob);
@@ -318,7 +430,7 @@ export function QRCodeDialog({
     link.href = blobUrl;
     link.click();
     URL.revokeObjectURL(blobUrl);
-  }, [productName, showSecuritySealOverlay]);
+  }, [productName, showSecuritySealOverlay, wineIngredientsText, wineEnergyText]);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -329,20 +441,35 @@ export function QRCodeDialog({
         <div className="flex flex-col items-center gap-4 py-4">
           {url && (
             <div ref={qrContainerRef} className="rounded-lg border p-4 bg-white relative">
+              {/* Wine ingredients text above QR code */}
+              {wineIngredientsText && (
+                <p className="text-[9px] leading-tight text-gray-700 mb-2 max-w-[250px] break-words">
+                  {wineIngredientsText}
+                </p>
+              )}
               <QRCodeSVG
                 value={url}
                 size={250}
                 level="H"
                 includeMargin={false}
+                className="qr-code-svg"
               />
               {/* Only show security seal placeholder when counterfeit protection is enabled */}
               {showSecuritySealOverlay && <RoundedHexagonWithText size={139} />}
+              {/* Wine energy text below QR code */}
+              {wineEnergyText && (
+                <p className="text-[9px] leading-tight text-gray-700 mt-2 text-center max-w-[250px]">
+                  {wineEnergyText}
+                </p>
+              )}
             </div>
           )}
-          {/* Print size instruction when security seal is enabled */}
+          {/* Print size instruction */}
           {showSecuritySealOverlay && (
             <p className="text-xs text-muted-foreground text-center max-w-[250px]">
-              {t('qrDialog.printSizeInstruction', 'Print at 1.8 × 1.8 cm. The hexagon corresponds to 1 cm for the security seal.')}
+              {(wineIngredientsText || wineEnergyText)
+                ? t('qrDialog.printSizeInstructionWine', 'Print at 1.8 cm wide. Height varies with content. The hexagon corresponds to 1 cm for the security seal.')
+                : t('qrDialog.printSizeInstruction', 'Print at 1.8 × 1.8 cm. The hexagon corresponds to 1 cm for the security seal.')}
             </p>
           )}
           <div className="flex items-center gap-2 w-full max-w-sm">

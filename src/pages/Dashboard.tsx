@@ -32,9 +32,9 @@ import {
 import type { Passport } from '@/types/passport';
 
 export default function Dashboard() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [qrDialogOpen, setQrDialogOpen] = useState(false);
-  const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; counterfeitProtection: boolean } | null>(null);
+  const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; counterfeitProtection: boolean; wineIngredientsText?: string; wineEnergyText?: string } | null>(null);
   const [localPassports, setLocalPassports] = useState<Passport[]>([]);
   const { user, loading: authLoading, signOut } = useAuth();
   const { passports, isLoading, duplicatePassport, deletePassport, reorderPassports } = usePassports();
@@ -112,7 +112,36 @@ export default function Dashboard() {
     if (!passport.public_slug) return;
     const categoryData = (passport.category_data as Record<string, unknown>) || {};
     const counterfeitProtection = categoryData.counterfeit_protection_enabled === true;
-    setSelectedPassport({ name: passport.name, slug: passport.public_slug, counterfeitProtection });
+
+    let wineIngredientsText: string | undefined;
+    let wineEnergyText: string | undefined;
+
+    if (passport.category === 'wine') {
+      // Build ingredients text
+      const ingredients = (categoryData.ingredients as Array<{ id: string; name: string; isCustom?: boolean; nameTranslations?: Record<string, string> }>) || [];
+      if (ingredients.length > 0) {
+        const lang = i18n.language;
+        const translatedNames = ingredients.map(ing => {
+          if (ing.isCustom) {
+            const translations = ing.nameTranslations as Record<string, string> | undefined;
+            return translations?.[lang] || ing.name;
+          }
+          const key = `ingredients.${ing.id}`;
+          const translated = t(key);
+          return translated === key ? ing.name : translated;
+        });
+        wineIngredientsText = `${t('wine.ingredients')}: ${translatedNames.join(', ')}`;
+      }
+
+      // Build energy text
+      const energyKj = categoryData.energy_kj;
+      const energyKcal = categoryData.energy_kcal;
+      if (energyKj != null && energyKcal != null) {
+        wineEnergyText = `E 100ml : ${energyKj} kJ / ${energyKcal} kcal`;
+      }
+    }
+
+    setSelectedPassport({ name: passport.name, slug: passport.public_slug, counterfeitProtection, wineIngredientsText, wineEnergyText });
     setQrDialogOpen(true);
   };
 
@@ -197,6 +226,8 @@ export default function Dashboard() {
           url={selectedPassport ? getPublicUrl(selectedPassport.slug) : ''}
           productName={selectedPassport?.name || ''}
           showSecuritySealOverlay={selectedPassport?.counterfeitProtection || false}
+          wineIngredientsText={selectedPassport?.wineIngredientsText}
+          wineEnergyText={selectedPassport?.wineEnergyText}
         />
       </main>
     </div>
