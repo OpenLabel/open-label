@@ -147,11 +147,11 @@ describe("QR download safety – edge cases", () => {
 
   it("blocks case-manipulated URLs", () => {
     const caseDecoder: QrDecoder = () => ({
-      data: "https://Digital-Product-Passports.example.com/p/abc123",
+      data: "https://Open-Label.example.com/p/abc123",
     });
     const result = validateQrFromImageData(
       makeImageData(10, 10),
-      "https://digital-product-passports.example.com/p/abc123",
+      "https://open-label.example.com/p/abc123",
       caseDecoder,
     );
     // Strict string equality means case differences are caught
