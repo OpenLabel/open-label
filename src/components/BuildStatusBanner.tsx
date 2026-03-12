@@ -11,8 +11,10 @@ const LOVABLE_PROMPT =
 export function BuildStatusBanner() {
   const [copied, setCopied] = useState(false);
 
-  // Only show in Lovable preview, never on published site
-  const isPreview = typeof window !== 'undefined' && window.location.hostname.includes('preview');
+  // Show in dev mode or Lovable preview, never on published site
+  const hostname = typeof window !== 'undefined' ? window.location.hostname : '';
+  const isDevOrPreview = import.meta.env.DEV || hostname.includes('lovableproject.com') || hostname.includes('preview');
+  if (!isDevOrPreview) return null;
   if (!isPreview) return null;
 
   // Only show when build status indicates a problem

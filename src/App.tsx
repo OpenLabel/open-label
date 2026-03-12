@@ -84,6 +84,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <BuildStatusBanner />
             <ReferralCapture />
             <AppRoutes />
           </BrowserRouter>

@@ -7,6 +7,11 @@ import fs from "fs";
 const THRESHOLDS = { lines: 50, branches: 50, functions: 50, statements: 50 };
 
 function buildStatusPlugin(): Plugin {
+  const watchedFiles = [
+    path.resolve(__dirname, "test-results/results.json"),
+    path.resolve(__dirname, "coverage/coverage-summary.json"),
+  ];
+
   return {
     name: "build-status",
     resolveId(id) {
@@ -17,9 +22,11 @@ function buildStatusPlugin(): Plugin {
 
       const problems: string[] = [];
 
-      // 1. Check test results
-      const testResultsPath = path.resolve(__dirname, "test-results/results.json");
+      // 1. Check test results (prioritize failures)
+      const testResultsPath = watchedFiles[0];
+      let testResultsExist = false;
       if (fs.existsSync(testResultsPath)) {
+        testResultsExist = true;
         try {
           const testData = JSON.parse(fs.readFileSync(testResultsPath, "utf-8"));
           const failed = testData.numFailedTests ?? 0;
@@ -32,8 +39,10 @@ function buildStatusPlugin(): Plugin {
       }
 
       // 2. Check coverage thresholds
-      const coveragePath = path.resolve(__dirname, "coverage/coverage-summary.json");
+      const coveragePath = watchedFiles[1];
+      let coverageExists = false;
       if (fs.existsSync(coveragePath)) {
+        coverageExists = true;
         try {
           const raw = JSON.parse(fs.readFileSync(coveragePath, "utf-8"));
           const total = raw.total;
@@ -46,15 +55,36 @@ function buildStatusPlugin(): Plugin {
         } catch {
           // ignore parse errors
         }
-      } else {
-        return `export default ${JSON.stringify({ status: "unknown", message: "No coverage report found. Run tests before building." })}`;
       }
 
+      // Return fail if any problems found
       if (problems.length > 0) {
         return `export default ${JSON.stringify({ status: "fail", message: problems.join("; ") })}`;
       }
 
+      // Only unknown if no artifacts exist at all
+      if (!testResultsExist && !coverageExists) {
+        return `export default ${JSON.stringify({ status: "unknown", message: "No test/coverage reports found. Run tests before building." })}`;
+      }
+
       return `export default ${JSON.stringify({ status: "pass" })}`;
+    },
+    configureServer(server) {
+      // Watch test result files for HMR updates
+      for (const file of watchedFiles) {
+        if (fs.existsSync(file)) {
+          server.watcher.add(file);
+        }
+      }
+      server.watcher.on("change", (changedPath) => {
+        if (watchedFiles.some((f) => changedPath === f)) {
+          const mod = server.moduleGraph.getModuleById("\0virtual:build-status");
+          if (mod) {
+            server.moduleGraph.invalidateModule(mod);
+            server.ws.send({ type: "full-reload" });
+          }
+        }
+      });
     },
   };
 }
