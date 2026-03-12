@@ -166,6 +166,7 @@ function runTestsOnBuild(): Plugin {
           stdio: "pipe",
           cwd: __dirname,
           timeout: 300_000, // 5 min timeout
+          env: { ...process.env, NODE_ENV: "test" },
         });
       } catch (err: unknown) {
         const execError = err as { stderr?: Buffer; stdout?: Buffer; status?: number };
