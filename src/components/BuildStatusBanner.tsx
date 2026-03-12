@@ -22,6 +22,8 @@ import { supabase } from '@/integrations/supabase/client';
 interface BuildStatus {
   status: 'pass' | 'fail' | 'unknown';
   message?: string;
+  failedTests?: string[];
+  stderr?: string;
 }
 
 function buildPrompt(errorMessage: string): string {
@@ -107,6 +109,22 @@ export function BuildStatusBanner() {
             <p className="text-sm text-muted-foreground italic">
               This banner is only visible in preview mode — it will not appear on your published website.
             </p>
+            {!isLoading && resolved?.failedTests && resolved.failedTests.length > 0 && (
+              <div className="rounded-md bg-destructive/5 border border-destructive/20 p-3">
+                <p className="text-sm font-medium mb-2">Failed tests ({resolved.failedTests.length}):</p>
+                <div className="max-h-60 overflow-y-auto space-y-1">
+                  {resolved.failedTests.map((test, i) => (
+                    <p key={i} className="text-xs font-mono text-muted-foreground break-all">• {test}</p>
+                  ))}
+                </div>
+              </div>
+            )}
+            {!isLoading && resolved?.stderr && (
+              <div className="rounded-md bg-destructive/5 border border-destructive/20 p-3">
+                <p className="text-sm font-medium mb-2">Build output (last 3000 chars):</p>
+                <pre className="text-xs whitespace-pre-wrap text-muted-foreground font-mono max-h-40 overflow-y-auto">{resolved.stderr}</pre>
+              </div>
+            )}
             {!isLoading && (
               <div className="rounded-md bg-destructive/5 border border-destructive/20 p-3">
                 <p className="text-sm mb-2 font-medium">Copy this prompt, send it to Lovable, then re-publish the website:</p>
