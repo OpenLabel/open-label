@@ -33,7 +33,7 @@ describe("QR download safety – URL matching", () => {
 
   it("blocks download when QR encodes a typosquat domain", () => {
     const typosquatDecoder: QrDecoder = () => ({
-      data: "https://digital-product-passports.examp1e.com/p/abc123def456",
+      data: "https://open-label.examp1e.com/p/abc123def456",
     });
     const result = validateQrFromImageData(makeImageData(10, 10), PASSPORT_URL, typosquatDecoder);
     expect(result.ok).toBe(false);
