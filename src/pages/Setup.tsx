@@ -18,7 +18,7 @@ export default function Setup() {
   const [termsConditionsUrl, setTermsConditionsUrl] = useState('/terms');
   const [aiEnabled, setAiEnabled] = useState(true);
   const [senderEmail, setSenderEmail] = useState('');
-  const [shortUrl, setShortUrl] = useState('');
+  const [siteUrl, setSiteUrl] = useState('');
   const [saving, setSaving] = useState(false);
   const { saveConfig } = useSiteConfig();
   const { toast } = useToast();
