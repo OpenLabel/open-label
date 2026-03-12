@@ -318,46 +318,67 @@ export function QRCodeDialog({
   const handleDownloadSvg = useCallback(() => {
     if (!qrContainerRef.current) return;
 
-    const qrSvg = qrContainerRef.current.querySelector('svg');
+    const qrSvg = qrContainerRef.current.querySelector('svg.qr-code-svg') || qrContainerRef.current.querySelector('svg');
     if (!qrSvg) return;
 
-    // Clone the QR SVG and build a standalone SVG for download
     const clone = qrSvg.cloneNode(true) as SVGSVGElement;
     const qrSize = 250;
     const padding = 16;
-    const totalSize = qrSize + padding * 2;
+    const fontSize = 9;
+    const lineHeight = 13;
+    const maxCharsPerLine = 45;
 
-    // Create wrapper SVG with white background
+    const ingredientLines = wineIngredientsText ? wrapTextSvg(wineIngredientsText, maxCharsPerLine) : [];
+    const ingredientsHeight = ingredientLines.length > 0 ? ingredientLines.length * lineHeight + 8 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 8 : 0;
+
+    const totalWidth = qrSize + padding * 2;
+    const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
+
     const wrapper = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
     wrapper.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    wrapper.setAttribute('width', String(totalSize));
-    wrapper.setAttribute('height', String(totalSize));
-    wrapper.setAttribute('viewBox', `0 0 ${totalSize} ${totalSize}`);
+    wrapper.setAttribute('width', String(totalWidth));
+    wrapper.setAttribute('height', String(totalHeight));
+    wrapper.setAttribute('viewBox', `0 0 ${totalWidth} ${totalHeight}`);
 
-    // White background rect
     const bg = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
-    bg.setAttribute('width', String(totalSize));
-    bg.setAttribute('height', String(totalSize));
+    bg.setAttribute('width', String(totalWidth));
+    bg.setAttribute('height', String(totalHeight));
     bg.setAttribute('fill', 'white');
     wrapper.appendChild(bg);
 
-    // Nest the QR code SVG inside a <g> with offset
+    // Draw ingredients text above QR
+    let yOffset = padding;
+    if (ingredientLines.length > 0) {
+      for (const line of ingredientLines) {
+        const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+        textEl.setAttribute('x', String(padding));
+        textEl.setAttribute('y', String(yOffset + fontSize));
+        textEl.setAttribute('font-size', String(fontSize));
+        textEl.setAttribute('fill', '#333');
+        textEl.setAttribute('font-family', 'sans-serif');
+        textEl.textContent = line;
+        wrapper.appendChild(textEl);
+        yOffset += lineHeight;
+      }
+      yOffset += 4;
+    }
+
+    // QR code
     const g = document.createElementNS('http://www.w3.org/2000/svg', 'g');
-    g.setAttribute('transform', `translate(${padding}, ${padding})`);
-    // Move children from clone into g
+    g.setAttribute('transform', `translate(${padding}, ${yOffset})`);
     while (clone.childNodes.length > 0) {
       g.appendChild(clone.childNodes[0]);
     }
-    // Copy viewBox-related attributes
     clone.getAttribute('viewBox') && g.setAttribute('data-viewbox', clone.getAttribute('viewBox')!);
     wrapper.appendChild(g);
 
-    // Add security seal overlay if enabled
+    // Security seal overlay
     if (showSecuritySealOverlay) {
       const hexSize = 139;
       const { path, centerX, centerY } = getRoundedHexagonPath(hexSize);
-      const hexX = totalSize / 2 - hexSize / 2;
-      const hexY = totalSize / 2 - hexSize / 2;
+      const hexX = totalWidth / 2 - hexSize / 2;
+      const hexY = yOffset + qrSize / 2 - hexSize / 2;
 
       const sealGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
       sealGroup.setAttribute('transform', `translate(${hexX}, ${hexY})`);
@@ -388,6 +409,19 @@ export function QRCodeDialog({
       wrapper.appendChild(sealGroup);
     }
 
+    // Energy text below QR
+    if (wineEnergyText) {
+      const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      textEl.setAttribute('x', String(totalWidth / 2));
+      textEl.setAttribute('y', String(yOffset + qrSize + 4 + fontSize));
+      textEl.setAttribute('text-anchor', 'middle');
+      textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('fill', '#333');
+      textEl.setAttribute('font-family', 'sans-serif');
+      textEl.textContent = wineEnergyText;
+      wrapper.appendChild(textEl);
+    }
+
     const svgData = new XMLSerializer().serializeToString(wrapper);
     const blob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
     const blobUrl = URL.createObjectURL(blob);
@@ -396,7 +430,7 @@ export function QRCodeDialog({
     link.href = blobUrl;
     link.click();
     URL.revokeObjectURL(blobUrl);
-  }, [productName, showSecuritySealOverlay]);
+  }, [productName, showSecuritySealOverlay, wineIngredientsText, wineEnergyText]);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
