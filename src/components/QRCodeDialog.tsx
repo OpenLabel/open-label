@@ -161,11 +161,11 @@ export function QRCodeDialog({
 
     const qrSize = 250;
     const padding = 16;
-    const fontSize = 9;
-    const lineHeight = 13;
+    const fontSize = 14;
+    const lineHeight = 18;
 
-    const ingredientsHeight = wineIngredientsText ? lineHeight + 4 : 0;
-    const energyHeight = wineEnergyText ? lineHeight + 4 : 0;
+    const ingredientsHeight = wineIngredientsText ? lineHeight + 6 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 6 : 0;
     
     const totalWidth = qrSize + padding * 2;
     const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
