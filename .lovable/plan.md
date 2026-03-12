@@ -1,27 +1,20 @@
 
 
+## Serve `build-status.json` in Dev/Preview via Middleware
 
-## Simplify Wine QR Code — Label Above, Energy Below ✅
+**Problem**: `writeBundle` only runs during `vite build` (publish). The dev server has no `dist/` folder, so `fetch('/build-status.json')` returns Vite's SPA fallback HTML.
 
-### Layout
-- **Above QR**: Just the translated word "Ingredients" (single centered word)
-- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
-- **No full ingredients list** anywhere in the QR image
+**Solution**: Add a dev server middleware in the existing `configureServer` hook that intercepts `GET /build-status.json` and returns the resolved status dynamically by reading the same `test-results/results.json` and `coverage/coverage-summary.json` artifacts from disk.
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
-| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
+### Changes
 
-## Build Status Banner — Test Failures Detection ✅
+**`vite.config.ts`** — inside `configureServer(server)`:
 
-### Problem
-Banner only checked coverage thresholds, not test pass/fail results.
+Add `server.middlewares.use()` before the watcher setup. When a request hits `/build-status.json`, compute the status from the local test/coverage artifacts (same logic as `writeBundle`) and return it as JSON. This means:
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
-| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
+- If you've run `npx vitest run --coverage` locally, the banner will pick up pass/fail from those artifacts.
+- If no artifacts exist, it returns `{"status":"unknown","message":"No test artifacts."}`.
+- The file watcher already invalidates the virtual module on artifact changes, so both the virtual module and the middleware stay in sync.
+
+This is ~15 lines added to the existing `configureServer` block. No new files needed.
+
