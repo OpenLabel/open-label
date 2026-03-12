@@ -1,36 +1,61 @@
 
 
-## Fix: 234 test failures from reverted locale files
+## Add duplicate JSON key detection test
 
-### Root Cause
+### What
+Create `src/i18n/locales/duplicateKeys.test.ts` — a Vitest test that reads each of the 24 locale `.json` files as raw text and detects duplicate top-level keys. This catches the known `"translation"` duplicate (lines 2-4 vs lines 532-549 in `en.json`) and prevents future regressions.
 
-The revert rolled back **14 locale files** to a compact format (~48-218 lines) while en.json has 586 lines with fully expanded structure. The remaining 9 non-English locales (de, es, fr, ga, it, nl, pl, pt, sv) are already fully expanded (~580+ lines).
+### How
+- Use `fs.readFileSync` + `path.resolve` to read each `.json` file as a string
+- Use a regex to extract all top-level keys (keys at 2-space indent: `"keyName":`)
+- Count occurrences; fail if any key appears more than once
+- Test each of the 24 locale files via `it.each`
 
-The compact locales technically have all keys compressed onto single lines, but some values remain as untranslated English. The audit test (`audit.test.ts`) strictly enforces that no locale has English values unless explicitly allowlisted. The key consistency test (`locales.test.ts`) checks that every locale has the exact same leaf keys as English.
+### New file: `src/i18n/locales/duplicateKeys.test.ts`
 
-### Files that need to be fully expanded with proper translations
+```typescript
+import { describe, it, expect } from "vitest";
+import fs from "fs";
+import path from "path";
 
-14 locale files in compact/incomplete format:
-- **el.json** — 48 lines (most broken)
-- **bg.json, cs.json, da.json, et.json, fi.json, hr.json, hu.json, lt.json, lv.json, mt.json, sk.json** — ~218 lines each
-- **ro.json, sl.json** — ~215 lines each
+const localeDir = path.resolve(__dirname);
+const localeCodes = [
+  "bg","cs","da","de","el","en","es","et","fi","fr",
+  "ga","hr","hu","it","lt","lv","mt","nl","pl","pt",
+  "ro","sk","sl","sv",
+];
 
-### Approach
+function findDuplicateTopLevelKeys(jsonString: string): string[] {
+  const seen = new Map<string, number>();
+  const duplicates: string[] = [];
+  // Match top-level keys: exactly 2-space indent followed by quoted key
+  const regex = /^  "([^"]+)":/gm;
+  let match: RegExpExecArray | null;
+  while ((match = regex.exec(jsonString)) !== null) {
+    const key = match[1];
+    const count = (seen.get(key) || 0) + 1;
+    seen.set(key, count);
+    if (count === 2) duplicates.push(key);
+  }
+  return duplicates;
+}
 
-For each of the 14 locale files:
-1. Rewrite to match en.json's exact structure (same nesting, same key order)
-2. Ensure every leaf key has a properly translated value in the target language
-3. Match the formatting style of the already-expanded locales (de, fr, etc.) — proper JSON indentation, one key per line for nested sections
-4. Preserve existing translated values from the compact format (they are correct, just compressed)
-5. Ensure no English values remain except those explicitly allowed by the audit test's `isLegitimateMatch` function and `perLanguageAllowedValues`
+describe("Locale files: no duplicate JSON keys", () => {
+  it.each(localeCodes)("locale '%s' should have no duplicate top-level keys", (code) => {
+    const filePath = path.join(localeDir, `${code}.json`);
+    const content = fs.readFileSync(filePath, "utf-8");
+    const duplicates = findDuplicateTopLevelKeys(content);
+    expect(
+      duplicates,
+      `${code}.json has duplicate top-level keys: ${duplicates.join(", ")}. ` +
+      `JSON.parse silently drops the first occurrence — merge them manually.`
+    ).toHaveLength(0);
+  });
+});
+```
 
-### What NOT to change
-- Do not modify en.json
-- Do not modify the 9 already-expanded locale files (de, es, fr, ga, it, nl, pl, pt, sv)
-- Do not modify test files or lower thresholds
-- Do not modify the audit allowlists
-
-### Execution
-
-This requires generating ~14 complete locale files (~580 lines each) with professional translations. Each file will be rewritten using `code--write` to ensure clean formatting and complete coverage. The translations must use professional regulatory terminology consistent with the project's standards.
+### Behavior
+- Catches the existing `"translation"` duplicate in en.json and any other affected locales
+- Acts as a guardrail — fails the build with a clear message telling you which key is duplicated
+- Does not modify any locale files, tests, or thresholds
 
