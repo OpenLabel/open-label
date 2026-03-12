@@ -183,10 +183,10 @@ export function QRCodeDialog({
     let yOffset = padding;
     if (wineIngredientsText) {
       ctx.fillStyle = '#333';
-      ctx.font = `${fontSize}px sans-serif`;
+      ctx.font = `bold ${fontSize}px sans-serif`;
       ctx.textAlign = 'center';
       ctx.fillText(wineIngredientsText, totalWidth / 2, yOffset + fontSize);
-      yOffset += lineHeight + 4;
+      yOffset += lineHeight + 6;
     }
 
     const svgData = new XMLSerializer().serializeToString(qrSvg);
