@@ -52,6 +52,6 @@ describe('Auth page', () => {
 
   it('shows DPP branding link', () => {
     renderAuth();
-    expect(screen.getByText('DPP')).toBeInTheDocument();
+    expect(screen.getByText('OL')).toBeInTheDocument();
   });
 });

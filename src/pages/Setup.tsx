@@ -214,7 +214,7 @@ export default function Setup() {
                     />
                     <p className="text-xs text-muted-foreground">
                       Optional: Use a short domain for smaller QR codes. Set up a redirect from this URL to your full DPP URL.
-                      Example: <code className="bg-muted px-1 rounded">https://dpp.co/p/abc123</code> → <code className="bg-muted px-1 rounded">https://digital-product-passports.com/p/abc123</code>
+                      Example: <code className="bg-muted px-1 rounded">https://ol.eu/p/abc123</code> → <code className="bg-muted px-1 rounded">https://open-label.eu/p/abc123</code>
                     </p>
                   </div>
                 </div>

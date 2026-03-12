@@ -18,7 +18,7 @@ function makeImageData(width: number, height: number): ImageData {
 }
 
 describe("QR code generation → validation → download contract", () => {
-  const VALID_URL = "https://digital-product-passports-com.lovable.app/p/abc123def456";
+  const VALID_URL = "https://open-label.eu/p/abc123def456";
 
   it("MUST validate before download — matching URL proceeds", () => {
     const goodDecoder: QrDecoder = () => ({ data: VALID_URL });
@@ -47,7 +47,7 @@ describe("QR code generation → validation → download contract", () => {
 
   it("validates with actual passport URL format", () => {
     // Real URL format used in production
-    const realUrl = "https://digital-product-passports-com.lovable.app/p/a1b2c3d4e5f67890";
+    const realUrl = "https://open-label.eu/p/a1b2c3d4e5f67890";
     const decoder: QrDecoder = () => ({ data: realUrl });
     const result = validateQrFromImageData(makeImageData(250, 250), realUrl, decoder);
     expect(result.ok).toBe(true);

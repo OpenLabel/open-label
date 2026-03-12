@@ -18,11 +18,11 @@ function makeImageData(width: number, height: number): ImageData {
 }
 
 describe("QR download safety – URL matching", () => {
-  const PASSPORT_URL = "https://digital-product-passports.example.com/p/abc123def456";
+  const PASSPORT_URL = "https://open-label.example.com/p/abc123def456";
 
   it("blocks download when QR encodes a phishing domain", () => {
     const phishingDecoder: QrDecoder = () => ({
-      data: "https://digital-product-passports.evil.com/p/abc123def456",
+      data: "https://open-label.evil.com/p/abc123def456",
     });
     const result = validateQrFromImageData(makeImageData(10, 10), PASSPORT_URL, phishingDecoder);
     expect(result.ok).toBe(false);
@@ -33,7 +33,7 @@ describe("QR download safety – URL matching", () => {
 
   it("blocks download when QR encodes a typosquat domain", () => {
     const typosquatDecoder: QrDecoder = () => ({
-      data: "https://digital-product-passports.examp1e.com/p/abc123def456",
+      data: "https://open-label.examp1e.com/p/abc123def456",
     });
     const result = validateQrFromImageData(makeImageData(10, 10), PASSPORT_URL, typosquatDecoder);
     expect(result.ok).toBe(false);
@@ -41,7 +41,7 @@ describe("QR download safety – URL matching", () => {
 
   it("blocks download when QR encodes a different passport slug", () => {
     const wrongSlugDecoder: QrDecoder = () => ({
-      data: "https://digital-product-passports.example.com/p/DIFFERENT_SLUG",
+      data: "https://open-label.example.com/p/DIFFERENT_SLUG",
     });
     const result = validateQrFromImageData(makeImageData(10, 10), PASSPORT_URL, wrongSlugDecoder);
     expect(result.ok).toBe(false);
@@ -135,11 +135,11 @@ describe("QR download safety – scan failures", () => {
 describe("QR download safety – edge cases", () => {
   it("blocks HTTP downgrade (expected HTTPS, QR encodes HTTP)", () => {
     const httpDecoder: QrDecoder = () => ({
-      data: "http://digital-product-passports.example.com/p/abc123",
+      data: "http://open-label.example.com/p/abc123",
     });
     const result = validateQrFromImageData(
       makeImageData(10, 10),
-      "https://digital-product-passports.example.com/p/abc123",
+      "https://open-label.example.com/p/abc123",
       httpDecoder,
     );
     expect(result.ok).toBe(false);
@@ -147,11 +147,11 @@ describe("QR download safety – edge cases", () => {
 
   it("blocks case-manipulated URLs", () => {
     const caseDecoder: QrDecoder = () => ({
-      data: "https://Digital-Product-Passports.example.com/p/abc123",
+      data: "https://Open-Label.example.com/p/abc123",
     });
     const result = validateQrFromImageData(
       makeImageData(10, 10),
-      "https://digital-product-passports.example.com/p/abc123",
+      "https://open-label.example.com/p/abc123",
       caseDecoder,
     );
     // Strict string equality means case differences are caught
@@ -165,7 +165,7 @@ describe("QR download safety – edge cases", () => {
     });
     const result = validateQrFromImageData(
       makeImageData(10, 10),
-      "https://digital-product-passports.example.com/p/abc123",
+      "https://open-label.example.com/p/abc123",
       homoglyphDecoder,
     );
     expect(result.ok).toBe(false);

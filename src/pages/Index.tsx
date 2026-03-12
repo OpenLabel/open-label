@@ -37,9 +37,9 @@ export default function Index() {
         <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-              <span className="text-primary-foreground font-bold text-sm">DPP</span>
+              <span className="text-primary-foreground font-bold text-sm">OL</span>
             </div>
-            <h1 className="hidden sm:block text-lg font-semibold">Digital <span className="text-muted-foreground/60 font-normal">-</span> Product <span className="text-muted-foreground/60 font-normal">-</span> Passports <span className="text-muted-foreground font-normal">.com</span></h1>
+            <h1 className="hidden sm:block text-lg font-semibold">Open Label <span className="text-muted-foreground font-normal">.eu</span></h1>
             <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
           <div className="flex gap-1.5 sm:gap-2 items-center min-w-0">
@@ -462,9 +462,9 @@ export default function Index() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <div className="h-6 w-6 rounded bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xs">DPP</span>
+              <span className="text-primary-foreground font-bold text-xs">OL</span>
               </div>
-              <span className="text-sm font-medium">Digital <span className="text-muted-foreground/60 font-normal">-</span> Product <span className="text-muted-foreground/60 font-normal">-</span> Passports <span className="text-muted-foreground font-normal">.com</span></span>
+              <span className="text-sm font-medium">Open Label <span className="text-muted-foreground font-normal">.eu</span></span>
               <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
               <Badge variant="outline" className="text-xs">
                 {t('common.openSource')}
@@ -475,12 +475,12 @@ export default function Index() {
               <Link to="/legal" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 {t('landing.footer.legal')}
               </Link>
-              <a href="https://github.com/OpenLabel/digital-product-passports-com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://github.com/OpenLabel/open-label" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Github className="h-4 w-4" />
                 {t('landing.footer.github')}
               </a>
               <span className="text-sm text-muted-foreground">
-                © {new Date().getFullYear()} {config?.company_name || 'Digital - Product - Passports .com'}
+                © {new Date().getFullYear()} {config?.company_name || 'Open Label .eu'}
               </span>
             </div>
           </div>
