@@ -441,20 +441,35 @@ export function QRCodeDialog({
         <div className="flex flex-col items-center gap-4 py-4">
           {url && (
             <div ref={qrContainerRef} className="rounded-lg border p-4 bg-white relative">
+              {/* Wine ingredients text above QR code */}
+              {wineIngredientsText && (
+                <p className="text-[9px] leading-tight text-gray-700 mb-2 max-w-[250px] break-words">
+                  {wineIngredientsText}
+                </p>
+              )}
               <QRCodeSVG
                 value={url}
                 size={250}
                 level="H"
                 includeMargin={false}
+                className="qr-code-svg"
               />
               {/* Only show security seal placeholder when counterfeit protection is enabled */}
               {showSecuritySealOverlay && <RoundedHexagonWithText size={139} />}
+              {/* Wine energy text below QR code */}
+              {wineEnergyText && (
+                <p className="text-[9px] leading-tight text-gray-700 mt-2 text-center max-w-[250px]">
+                  {wineEnergyText}
+                </p>
+              )}
             </div>
           )}
-          {/* Print size instruction when security seal is enabled */}
+          {/* Print size instruction */}
           {showSecuritySealOverlay && (
             <p className="text-xs text-muted-foreground text-center max-w-[250px]">
-              {t('qrDialog.printSizeInstruction', 'Print at 1.8 × 1.8 cm. The hexagon corresponds to 1 cm for the security seal.')}
+              {(wineIngredientsText || wineEnergyText)
+                ? t('qrDialog.printSizeInstructionWine', 'Print at 1.8 cm wide. Height varies with content. The hexagon corresponds to 1 cm for the security seal.')
+                : t('qrDialog.printSizeInstruction', 'Print at 1.8 × 1.8 cm. The hexagon corresponds to 1 cm for the security seal.')}
             </p>
           )}
           <div className="flex items-center gap-2 w-full max-w-sm">
