@@ -462,9 +462,9 @@ export default function Index() {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
               <div className="h-6 w-6 rounded bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-bold text-xs">DPP</span>
+              <span className="text-primary-foreground font-bold text-xs">OL</span>
               </div>
-              <span className="text-sm font-medium">Digital <span className="text-muted-foreground/60 font-normal">-</span> Product <span className="text-muted-foreground/60 font-normal">-</span> Passports <span className="text-muted-foreground font-normal">.com</span></span>
+              <span className="text-sm font-medium">Open Label <span className="text-muted-foreground font-normal">.eu</span></span>
               <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
               <Badge variant="outline" className="text-xs">
                 {t('common.openSource')}
