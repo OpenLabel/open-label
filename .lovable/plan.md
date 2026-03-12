@@ -1,18 +1,27 @@
 
 
-## Update threshold instruction in BuildStatusBanner
 
-**Change in `src/components/BuildStatusBanner.tsx`** (line 20):
+## Simplify Wine QR Code — Label Above, Energy Below ✅
 
-Replace:
-```
-DO NOT lower any thresholds in vite.config.ts or vitest.config.ts.
-```
+### Layout
+- **Above QR**: Just the translated word "Ingredients" (single centered word)
+- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
+- **No full ingredients list** anywhere in the QR image
 
-With:
-```
-DO NOT lower any thresholds in vite.config.ts or vitest.config.ts — they should all be set to 50.
-```
+### Changes Made
+| File | Change |
+|------|--------|
+| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
+| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
 
-Single line change, no other files affected.
+## Build Status Banner — Test Failures Detection ✅
 
+### Problem
+Banner only checked coverage thresholds, not test pass/fail results.
+
+### Changes Made
+| File | Change |
+|------|--------|
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
+| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
