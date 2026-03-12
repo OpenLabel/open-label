@@ -18,7 +18,7 @@ function makeImageData(width: number, height: number): ImageData {
 }
 
 describe("QR download safety – URL matching", () => {
-  const PASSPORT_URL = "https://digital-product-passports.example.com/p/abc123def456";
+  const PASSPORT_URL = "https://open-label.example.com/p/abc123def456";
 
   it("blocks download when QR encodes a phishing domain", () => {
     const phishingDecoder: QrDecoder = () => ({
