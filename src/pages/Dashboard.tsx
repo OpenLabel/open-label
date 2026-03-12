@@ -13,7 +13,7 @@ import { categoryList } from '@/templates';
 import { QRCodeDialog } from '@/components/QRCodeDialog';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { SortablePassportCard } from '@/components/SortablePassportCard';
-import { BuildStatusBanner } from '@/components/BuildStatusBanner';
+
 import {
   DndContext,
   closestCenter,
@@ -165,7 +165,7 @@ export default function Dashboard() {
       </header>
       
       <main className="container mx-auto px-4 py-8">
-        <BuildStatusBanner />
+        
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">{t('dashboard.title')}</h2>
           <Button asChild>

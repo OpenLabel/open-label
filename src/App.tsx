@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { useReferral } from "@/hooks/useReferral";
 import { AuthProvider } from "@/hooks/useAuth";
 import { SiteConfigProvider, useSiteConfig } from "@/hooks/useSiteConfig";
+import { BuildStatusBanner } from "@/components/BuildStatusBanner";
 import Index from "./pages/Index";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/Dashboard";
@@ -83,6 +84,7 @@ const App = () => (
           <Toaster />
           <Sonner />
           <BrowserRouter>
+            <BuildStatusBanner />
             <ReferralCapture />
             <AppRoutes />
           </BrowserRouter>
