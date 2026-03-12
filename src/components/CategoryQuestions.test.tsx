@@ -47,8 +47,8 @@ describe('CategoryQuestions', () => {
   it('calls onChange when typing in a text input', async () => {
     const onChange = vi.fn();
     render(<CategoryQuestions category="battery" data={{}} onChange={onChange} />);
-    // battery template has manufacturer_name as a text input
-    const input = screen.getByLabelText('Manufacturer Name *');
+    // Use the id-based selector since label includes * in a separate span
+    const input = document.getElementById('manufacturer_name') as HTMLInputElement;
     await userEvent.type(input, 'A');
     expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ manufacturer_name: 'A' }));
   });
@@ -56,7 +56,7 @@ describe('CategoryQuestions', () => {
   it('calls onChange when typing in a number input', async () => {
     const onChange = vi.fn();
     render(<CategoryQuestions category="battery" data={{}} onChange={onChange} />);
-    const input = screen.getByLabelText('Rated Capacity (kWh) *');
+    const input = document.getElementById('capacity_kwh') as HTMLInputElement;
     await userEvent.type(input, '5');
     expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ capacity_kwh: 5 }));
   });
@@ -64,7 +64,8 @@ describe('CategoryQuestions', () => {
   it('calls onChange when clicking a checkbox', async () => {
     const onChange = vi.fn();
     render(<CategoryQuestions category="battery" data={{}} onChange={onChange} />);
-    const checkbox = screen.getByLabelText('Has carbon footprint been calculated and declared?');
+    // Checkbox label is rendered alongside the checkbox
+    const checkbox = screen.getByText('Has carbon footprint been calculated and declared?');
     await userEvent.click(checkbox);
     expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ carbon_footprint_declared: true }));
   });
@@ -72,7 +73,7 @@ describe('CategoryQuestions', () => {
   it('calls onChange when typing in a textarea', async () => {
     const onChange = vi.fn();
     render(<CategoryQuestions category="battery" data={{}} onChange={onChange} />);
-    const textarea = screen.getByLabelText('Recycling Instructions');
+    const textarea = document.getElementById('recycling_instructions') as HTMLTextAreaElement;
     await userEvent.type(textarea, 'R');
     expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ recycling_instructions: 'R' }));
   });

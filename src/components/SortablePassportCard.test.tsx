@@ -71,25 +71,24 @@ describe('SortablePassportCard', () => {
   it('calls onShowQR when QR button clicked', () => {
     const onShowQR = vi.fn();
     renderCard(mockPassport, { onShowQR });
-    // Desktop QR button
-    const qrButtons = screen.getAllByRole('button').filter(b => b.querySelector('.lucide-qr-code'));
-    fireEvent.click(qrButtons[0]);
+    const qrButtons = document.querySelectorAll('.lucide-qr-code');
+    fireEvent.click(qrButtons[0].closest('button')!);
     expect(onShowQR).toHaveBeenCalledWith(mockPassport);
   });
 
   it('calls onDuplicate when duplicate button clicked', () => {
     const onDuplicate = vi.fn();
     renderCard(mockPassport, { onDuplicate });
-    const copyButtons = screen.getAllByRole('button').filter(b => b.querySelector('.lucide-copy'));
-    fireEvent.click(copyButtons[0]);
+    const copyButtons = document.querySelectorAll('.lucide-copy');
+    fireEvent.click(copyButtons[0].closest('button')!);
     expect(onDuplicate).toHaveBeenCalledWith(mockPassport);
   });
 
   it('calls onDelete when delete button clicked', () => {
     const onDelete = vi.fn();
     renderCard(mockPassport, { onDelete });
-    const deleteButtons = screen.getAllByRole('button').filter(b => b.querySelector('.lucide-trash-2'));
-    fireEvent.click(deleteButtons[0]);
+    const deleteButtons = document.querySelectorAll('.lucide-trash-2');
+    fireEvent.click(deleteButtons[0].closest('button')!);
     expect(onDelete).toHaveBeenCalledWith('p1');
   });
 
