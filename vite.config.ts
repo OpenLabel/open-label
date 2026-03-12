@@ -122,6 +122,37 @@ function buildStatusPlugin(): Plugin {
       console.log("[build-status] Wrote build-status.json:", JSON.stringify(status));
     },
     configureServer(server) {
+      // Serve /build-status.json dynamically in dev/preview
+      server.middlewares.use((req, res, next) => {
+        if (req.url !== "/build-status.json") return next();
+        const problems: string[] = [];
+        const trPath = watchedFiles[0];
+        const cvPath = watchedFiles[1];
+        const trExists = fs.existsSync(trPath);
+        const cvExists = fs.existsSync(cvPath);
+        if (trExists) {
+          try {
+            const td = JSON.parse(fs.readFileSync(trPath, "utf-8"));
+            if ((td.numFailedTests ?? 0) > 0) problems.push(`${td.numFailedTests} test(s) failed`);
+          } catch {}
+        }
+        if (cvExists) {
+          try {
+            const raw = JSON.parse(fs.readFileSync(cvPath, "utf-8"));
+            for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
+              const actual = raw.total[metric]?.pct ?? 0;
+              if (actual < (threshold as number)) problems.push(`${metric}: ${actual}% < ${threshold}%`);
+            }
+          } catch {}
+        }
+        let status: object;
+        if (problems.length > 0) status = { status: "fail", message: problems.join("; ") };
+        else if (!trExists && !cvExists) status = { status: "unknown", message: "No test artifacts." };
+        else status = { status: "pass" };
+        res.setHeader("Content-Type", "application/json");
+        res.end(JSON.stringify(status));
+      });
+
       for (const file of watchedFiles) {
         if (fs.existsSync(file)) {
           server.watcher.add(file);
