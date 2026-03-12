@@ -38,15 +38,21 @@ export function BuildStatusBanner() {
       ? `${baseUrl}/build-status.json`
       : '/build-status.json';
 
-    fetch(fetchUrl, { mode: 'cors' })
-      .then((r) => (r.ok ? r.json() : null))
-      .then((data: BuildStatus | null) => {
-        if (data && (data.status === 'pass' || data.status === 'fail')) {
-          setResolved(data);
+    // Use edge function proxy to avoid CORS issues
+    supabase.functions
+      .invoke('get-build-status', { body: { url: fetchUrl } })
+      .then(({ data, error }) => {
+        if (error) {
+          console.warn('[BuildStatusBanner] Edge function error:', error.message);
+          return;
+        }
+        const parsed = data as BuildStatus | null;
+        if (parsed && (parsed.status === 'pass' || parsed.status === 'fail')) {
+          setResolved(parsed);
         }
       })
-      .catch(() => {
-        // CORS blocked or file doesn't exist — keep unknown, banner stays hidden
+      .catch((err) => {
+        console.warn('[BuildStatusBanner] Could not fetch build-status.json:', err);
       });
   }, [resolved.status, config?.site_url]);
 
