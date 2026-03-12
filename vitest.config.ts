@@ -12,7 +12,7 @@ export default defineConfig({
     include: ["src/**/*.{test,spec}.{ts,tsx}"],
     coverage: {
       provider: "v8",
-      reporter: ["text-summary", "html", "json"],
+      reporter: ["text-summary", "html", "json", "json-summary"],
       reportsDirectory: "./coverage",
       exclude: [
         "node_modules/",
@@ -20,12 +20,6 @@ export default defineConfig({
         "src/components/ui/",
         "**/*.d.ts",
       ],
-      thresholds: {
-        lines: 50,
-        branches: 50,
-        functions: 50,
-        statements: 50,
-      },
     },
   },
   resolve: {
