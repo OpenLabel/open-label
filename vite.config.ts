@@ -15,32 +15,46 @@ function buildStatusPlugin(): Plugin {
     load(id) {
       if (id !== "\0virtual:build-status") return;
 
+      const problems: string[] = [];
+
+      // 1. Check test results
+      const testResultsPath = path.resolve(__dirname, "test-results/results.json");
+      if (fs.existsSync(testResultsPath)) {
+        try {
+          const testData = JSON.parse(fs.readFileSync(testResultsPath, "utf-8"));
+          const failed = testData.numFailedTests ?? 0;
+          if (failed > 0) {
+            problems.push(`${failed} test(s) failed`);
+          }
+        } catch {
+          // ignore parse errors
+        }
+      }
+
+      // 2. Check coverage thresholds
       const coveragePath = path.resolve(__dirname, "coverage/coverage-summary.json");
-      
-      if (!fs.existsSync(coveragePath)) {
+      if (fs.existsSync(coveragePath)) {
+        try {
+          const raw = JSON.parse(fs.readFileSync(coveragePath, "utf-8"));
+          const total = raw.total;
+          for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
+            const actual = total[metric]?.pct ?? 0;
+            if (actual < threshold) {
+              problems.push(`${metric}: ${actual}% < ${threshold}%`);
+            }
+          }
+        } catch {
+          // ignore parse errors
+        }
+      } else {
         return `export default ${JSON.stringify({ status: "unknown", message: "No coverage report found. Run tests before building." })}`;
       }
 
-      try {
-        const raw = JSON.parse(fs.readFileSync(coveragePath, "utf-8"));
-        const total = raw.total;
-        const failures: string[] = [];
-
-        for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
-          const actual = total[metric]?.pct ?? 0;
-          if (actual < threshold) {
-            failures.push(`${metric}: ${actual}% < ${threshold}%`);
-          }
-        }
-
-        if (failures.length > 0) {
-          return `export default ${JSON.stringify({ status: "fail", message: `Coverage thresholds not met: ${failures.join(", ")}` })}`;
-        }
-
-        return `export default ${JSON.stringify({ status: "pass" })}`;
-      } catch (e) {
-        return `export default ${JSON.stringify({ status: "unknown", message: "Failed to parse coverage report." })}`;
+      if (problems.length > 0) {
+        return `export default ${JSON.stringify({ status: "fail", message: problems.join("; ") })}`;
       }
+
+      return `export default ${JSON.stringify({ status: "pass" })}`;
     },
   };
 }
