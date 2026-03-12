@@ -56,4 +56,14 @@ describe('PublicPassport page', () => {
     renderPage();
     expect(screen.getByText('legal.legalMentions')).toBeInTheDocument();
   });
+
+  it('shows powered by section', () => {
+    renderPage();
+    expect(screen.getByText('passport.poweredBy')).toBeInTheDocument();
+  });
+
+  it('shows product name from category_data', () => {
+    renderPage();
+    expect(screen.getByText('Widget')).toBeInTheDocument();
+  });
 });
