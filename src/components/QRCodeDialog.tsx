@@ -409,7 +409,7 @@ export function QRCodeDialog({
               {showSecuritySealOverlay && <RoundedHexagonWithText size={139} />}
               {/* Wine energy text below QR code */}
               {wineEnergyText && (
-                <p className="text-[9px] leading-tight text-gray-700 mt-2 text-center max-w-[250px]">
+                <p className="text-sm font-bold leading-tight text-gray-700 mt-2 text-center w-[250px]">
                   {wineEnergyText}
                 </p>
               )}
