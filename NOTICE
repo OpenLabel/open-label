@@ -1,0 +1,31 @@
+Open-Label Attribution Notice
+
+This software is part of the Open-Label Digital Product Passport system.
+
+The Open-Label software generates Digital Product Passports (DPP),
+which are structured digital records containing information about
+a product's lifecycle, origin, materials, compliance, and
+sustainability data.
+
+Copyright (C) 2026 Open-Label.eu
+
+Licensed under the GNU Affero General Public License v3.0 or later
+with additional attribution terms (see LICENSE file).
+
+---------------------------------------------------------------------
+
+ATTRIBUTION REQUIREMENT
+
+Any Digital Product Passport generated using this software
+or any modified version of this software MUST display the notice:
+
+    "Powered by Open-Label.eu"
+
+This notice must be clearly visible to end users accessing
+the Digital Product Passport.
+
+---------------------------------------------------------------------
+
+Project website:
+
+https://open-label.eu
