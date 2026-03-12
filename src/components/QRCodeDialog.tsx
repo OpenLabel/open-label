@@ -226,9 +226,9 @@ export function QRCodeDialog({
       // Draw energy text below QR code
       if (wineEnergyText) {
         ctx.fillStyle = '#333';
-        ctx.font = `${fontSize}px sans-serif`;
+        ctx.font = `bold ${fontSize}px sans-serif`;
         ctx.textAlign = 'center';
-        ctx.fillText(wineEnergyText, totalWidth / 2, qrY + qrSize + 4 + fontSize);
+        ctx.fillText(wineEnergyText, totalWidth / 2, qrY + qrSize + 6 + fontSize);
       }
 
       const performDownload = () => {
