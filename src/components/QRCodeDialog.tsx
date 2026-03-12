@@ -133,43 +133,6 @@ function RoundedHexagonWithText({ size = 104 }: { size?: number }) {
   );
 }
 
-// Wrap text to fit within a given width using canvas context
-function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
-  const words = text.split(' ');
-  const lines: string[] = [];
-  let currentLine = '';
-
-  for (const word of words) {
-    const testLine = currentLine ? `${currentLine} ${word}` : word;
-    if (ctx.measureText(testLine).width > maxWidth && currentLine) {
-      lines.push(currentLine);
-      currentLine = word;
-    } else {
-      currentLine = testLine;
-    }
-  }
-  if (currentLine) lines.push(currentLine);
-  return lines;
-}
-
-// Wrap text for SVG (approximate character-based wrapping)
-function wrapTextSvg(text: string, maxCharsPerLine: number): string[] {
-  const words = text.split(' ');
-  const lines: string[] = [];
-  let currentLine = '';
-
-  for (const word of words) {
-    const testLine = currentLine ? `${currentLine} ${word}` : word;
-    if (testLine.length > maxCharsPerLine && currentLine) {
-      lines.push(currentLine);
-      currentLine = word;
-    } else {
-      currentLine = testLine;
-    }
-  }
-  if (currentLine) lines.push(currentLine);
-  return lines;
-}
 
 export function QRCodeDialog({ 
   open, 
@@ -200,16 +163,9 @@ export function QRCodeDialog({
     const padding = 16;
     const fontSize = 9;
     const lineHeight = 13;
-    const contentWidth = qrSize;
 
-    // Pre-calculate ingredient lines to determine canvas height
-    const tempCanvas = document.createElement('canvas');
-    const tempCtx = tempCanvas.getContext('2d')!;
-    tempCtx.font = `${fontSize}px sans-serif`;
-    
-    const ingredientLines = wineIngredientsText ? wrapText(tempCtx, wineIngredientsText, contentWidth) : [];
-    const ingredientsHeight = ingredientLines.length > 0 ? ingredientLines.length * lineHeight + 8 : 0;
-    const energyHeight = wineEnergyText ? lineHeight + 8 : 0;
+    const ingredientsHeight = wineIngredientsText ? lineHeight + 4 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 4 : 0;
     
     const totalWidth = qrSize + padding * 2;
     const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
@@ -223,17 +179,14 @@ export function QRCodeDialog({
     ctx.fillStyle = 'white';
     ctx.fillRect(0, 0, totalWidth, totalHeight);
 
-    // Draw ingredients text above QR code
+    // Draw ingredients label above QR code (single centered word)
     let yOffset = padding;
-    if (ingredientLines.length > 0) {
+    if (wineIngredientsText) {
       ctx.fillStyle = '#333';
       ctx.font = `${fontSize}px sans-serif`;
-      ctx.textAlign = 'left';
-      for (const line of ingredientLines) {
-        ctx.fillText(line, padding, yOffset + fontSize);
-        yOffset += lineHeight;
-      }
-      yOffset += 4; // small gap
+      ctx.textAlign = 'center';
+      ctx.fillText(wineIngredientsText, totalWidth / 2, yOffset + fontSize);
+      yOffset += lineHeight + 4;
     }
 
     const svgData = new XMLSerializer().serializeToString(qrSvg);
@@ -326,11 +279,9 @@ export function QRCodeDialog({
     const padding = 16;
     const fontSize = 9;
     const lineHeight = 13;
-    const maxCharsPerLine = 45;
 
-    const ingredientLines = wineIngredientsText ? wrapTextSvg(wineIngredientsText, maxCharsPerLine) : [];
-    const ingredientsHeight = ingredientLines.length > 0 ? ingredientLines.length * lineHeight + 8 : 0;
-    const energyHeight = wineEnergyText ? lineHeight + 8 : 0;
+    const ingredientsHeight = wineIngredientsText ? lineHeight + 4 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 4 : 0;
 
     const totalWidth = qrSize + padding * 2;
     const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
@@ -347,21 +298,19 @@ export function QRCodeDialog({
     bg.setAttribute('fill', 'white');
     wrapper.appendChild(bg);
 
-    // Draw ingredients text above QR
+    // Draw ingredients label above QR (single centered word)
     let yOffset = padding;
-    if (ingredientLines.length > 0) {
-      for (const line of ingredientLines) {
-        const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
-        textEl.setAttribute('x', String(padding));
-        textEl.setAttribute('y', String(yOffset + fontSize));
-        textEl.setAttribute('font-size', String(fontSize));
-        textEl.setAttribute('fill', '#333');
-        textEl.setAttribute('font-family', 'sans-serif');
-        textEl.textContent = line;
-        wrapper.appendChild(textEl);
-        yOffset += lineHeight;
-      }
-      yOffset += 4;
+    if (wineIngredientsText) {
+      const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      textEl.setAttribute('x', String(totalWidth / 2));
+      textEl.setAttribute('y', String(yOffset + fontSize));
+      textEl.setAttribute('text-anchor', 'middle');
+      textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('fill', '#333');
+      textEl.setAttribute('font-family', 'sans-serif');
+      textEl.textContent = wineIngredientsText;
+      wrapper.appendChild(textEl);
+      yOffset += lineHeight + 4;
     }
 
     // QR code
@@ -441,9 +390,9 @@ export function QRCodeDialog({
         <div className="flex flex-col items-center gap-4 py-4">
           {url && (
             <div ref={qrContainerRef} className="rounded-lg border p-4 bg-white relative">
-              {/* Wine ingredients text above QR code */}
+              {/* Wine ingredients label above QR code */}
               {wineIngredientsText && (
-                <p className="text-[9px] leading-tight text-gray-700 mb-2 max-w-[250px] break-words">
+                <p className="text-[9px] leading-tight text-gray-700 mb-2 text-center max-w-[250px]">
                   {wineIngredientsText}
                 </p>
               )}
