@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Verčiama..."
-  },
   "common": { "loading": "Kraunama...", "save": "Išsaugoti", "cancel": "Atšaukti", "delete": "Ištrinti", "edit": "Redaguoti", "create": "Sukurti", "back": "Atgal", "next": "Kitas", "search": "Ieškoti", "apply": "Taikyti", "close": "Uždaryti", "confirm": "Patvirtinti", "yes": "Taip", "no": "Ne", "error": "Klaida", "success": "Pavyko", "warning": "Įspėjimas", "openSource": "Atviras kodas", "language": "Kalba", "custom": "Pasirinktinis", "selectOption": "Pasirinkite parinktį", "confirmed": "Patvirtinta" },
   "nav": { "signIn": "Prisijungti", "signUp": "Registruotis", "signOut": "Atsijungti", "getStarted": "Pradėti nemokamai", "dashboard": "Eiti į valdymo skydą", "createNew": "Sukurti naują" },
   "landing": {

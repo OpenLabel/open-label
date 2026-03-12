@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Fordítás..."
-  },
   "common": { "loading": "Betöltés...", "save": "Mentés", "cancel": "Mégse", "delete": "Törlés", "edit": "Szerkesztés", "create": "Létrehozás", "back": "Vissza", "next": "Következő", "search": "Keresés", "apply": "Alkalmaz", "close": "Bezárás", "confirm": "Megerősítés", "yes": "Igen", "no": "Nem", "error": "Hiba", "success": "Sikeres", "warning": "Figyelmeztetés", "openSource": "Nyílt forráskód", "language": "Nyelv", "custom": "Egyéni", "selectOption": "Válasszon egy lehetőséget", "confirmed": "Megerősítve" },
   "nav": { "signIn": "Bejelentkezés", "signUp": "Regisztráció", "signOut": "Kijelentkezés", "getStarted": "Ingyenes kezdés", "dashboard": "Irányítópult", "createNew": "Új létrehozása" },
   "landing": {

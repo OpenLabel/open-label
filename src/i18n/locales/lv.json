@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Tulko..."
-  },
   "common": { "loading": "Ielādē...", "save": "Saglabāt", "cancel": "Atcelt", "delete": "Dzēst", "edit": "Rediģēt", "create": "Izveidot", "back": "Atpakaļ", "next": "Tālāk", "search": "Meklēt", "apply": "Lietot", "close": "Aizvērt", "confirm": "Apstiprināt", "yes": "Jā", "no": "Nē", "error": "Kļūda", "success": "Veiksmīgi", "warning": "Brīdinājums", "openSource": "Atvērtā koda", "language": "Valoda", "custom": "Pielāgots", "selectOption": "Izvēlieties opciju", "confirmed": "Apstiprināts" },
   "nav": { "signIn": "Ieiet", "signUp": "Reģistrēties", "signOut": "Iziet", "getStarted": "Sākt bez maksas", "dashboard": "Uz paneli", "createNew": "Izveidot jaunu" },
   "landing": {

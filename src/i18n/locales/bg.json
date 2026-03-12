@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Превежда се..."
-  },
   "common": { "loading": "Зареждане...", "save": "Запази", "cancel": "Отказ", "delete": "Изтрий", "edit": "Редактирай", "create": "Създай", "back": "Назад", "next": "Напред", "search": "Търсене", "apply": "Приложи", "close": "Затвори", "confirm": "Потвърди", "yes": "Да", "no": "Не", "error": "Грешка", "success": "Успех", "warning": "Предупреждение", "openSource": "Отворен код", "language": "Език", "custom": "Персонализирано", "selectOption": "Изберете опция", "confirmed": "Потвърдено" },
   "nav": { "signIn": "Вход", "signUp": "Регистрация", "signOut": "Изход", "getStarted": "Започни безплатно", "dashboard": "Табло", "createNew": "Създай нов" },
   "landing": {

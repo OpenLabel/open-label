@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Prevođenje..."
-  },
   "common": { "loading": "Učitavanje...", "save": "Spremi", "cancel": "Odustani", "delete": "Obriši", "edit": "Uredi", "create": "Stvori", "back": "Natrag", "next": "Dalje", "search": "Pretraži", "apply": "Primijeni", "close": "Zatvori", "confirm": "Potvrdi", "yes": "Da", "no": "Ne", "error": "Greška", "success": "Uspjeh", "warning": "Upozorenje", "openSource": "Otvoreni kod", "language": "Jezik", "custom": "Prilagođeno", "selectOption": "Odaberite opciju", "confirmed": "Potvrđeno" },
   "nav": { "signIn": "Prijava", "signUp": "Registracija", "signOut": "Odjava", "getStarted": "Započni besplatno", "dashboard": "Na nadzornu ploču", "createNew": "Stvori novo" },
   "landing": {

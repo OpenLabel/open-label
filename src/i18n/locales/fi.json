@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Käännetään..."
-  },
   "common": { "loading": "Ladataan...", "save": "Tallenna", "cancel": "Peruuta", "delete": "Poista", "edit": "Muokkaa", "create": "Luo", "back": "Takaisin", "next": "Seuraava", "search": "Etsi", "apply": "Käytä", "close": "Sulje", "confirm": "Vahvista", "yes": "Kyllä", "no": "Ei", "error": "Virhe", "success": "Onnistui", "warning": "Varoitus", "openSource": "Avoin lähdekoodi", "language": "Kieli", "custom": "Mukautettu", "selectOption": "Valitse vaihtoehto", "confirmed": "Vahvistettu" },
   "nav": { "signIn": "Kirjaudu", "signUp": "Rekisteröidy", "signOut": "Kirjaudu ulos", "getStarted": "Aloita ilmaiseksi", "dashboard": "Hallintapaneeliin", "createNew": "Luo uusi" },
   "landing": {

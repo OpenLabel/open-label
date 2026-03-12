@@ -1,7 +1,4 @@
 {
-  "translation": {
-    "autoTranslating": "Μετάφραση σε εξέλιξη..."
-  },
   "common": { "loading": "Φόρτωση...", "save": "Αποθήκευση", "cancel": "Ακύρωση", "delete": "Διαγραφή", "edit": "Επεξεργασία", "create": "Δημιουργία", "back": "Πίσω", "next": "Επόμενο", "search": "Αναζήτηση", "apply": "Εφαρμογή", "close": "Κλείσιμο", "confirm": "Επιβεβαίωση", "yes": "Ναι", "no": "Όχι", "error": "Σφάλμα", "success": "Επιτυχία", "warning": "Προειδοποίηση", "openSource": "Ανοιχτός Κώδικας", "language": "Γλώσσα", "custom": "Προσαρμοσμένο", "selectOption": "Επιλέξτε μια επιλογή", "confirmed": "Επιβεβαιωμένο" },
   "nav": { "signIn": "Σύνδεση", "signUp": "Εγγραφή", "signOut": "Αποσύνδεση", "getStarted": "Ξεκινήστε δωρεάν", "dashboard": "Πίνακας ελέγχου", "createNew": "Δημιουργία νέου" },
   "landing": {
