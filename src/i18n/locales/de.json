@@ -458,30 +458,6 @@
     "potato_protein": "Kartoffelprotein",
     "pvpp": "PVPP – Polyvinylpolypyrrolidon (E1202)"
   },
-  "recycling": {
-    "code": "Code",
-    "material": "Material",
-    "disposal": "Entsorgung",
-    "componentTypes": {
-      "bottle": "Flasche",
-      "closure": "Verschluss",
-      "capsule": "Kapsel",
-      "label": "Etikett",
-      "box": "Karton"
-    },
-    "selectMaterial": "Material auswählen",
-    "individualComponents": "Einzelkomponenten",
-    "compositeComponents": "Verbundkomponenten",
-    "customMaterial": "Benutzerdefiniertes Material",
-    "addCustomMaterial": "Benutzerdefiniertes Material hinzufügen",
-    "disposalAdvice": "Entsorgungshinweis",
-    "addMaterial": "Material hinzufügen",
-    "addPackagingMaterial": "Verpackungsmaterial hinzufügen",
-    "customType": "Benutzerdefinierter Typ",
-    "addCustomType": "Benutzerdefinierten Materialtyp hinzufügen",
-    "materialName": "Materialname",
-    "materialNamePlaceholder": "z.B. Holzkiste"
-  },
   "legal": {
     "title": "Impressum",
     "legalMentions": "Impressum"
