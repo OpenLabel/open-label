@@ -1,27 +1,22 @@
 
 
-
-## Simplify Wine QR Code — Label Above, Energy Below ✅
-
-### Layout
-- **Above QR**: Just the translated word "Ingredients" (single centered word)
-- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
-- **No full ingredients list** anywhere in the QR image
-
-### Changes Made
-| File | Change |
-|------|--------|
-| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
-| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
-
-## Build Status Banner — Test Failures Detection ✅
+## Fix: Proxy build-status.json fetch through a backend function to avoid CORS
 
 ### Problem
-Banner only checked coverage thresholds, not test pass/fail results.
+The preview and published sites are on different origins. When `virtual:build-status` returns "unknown" (no local test artifacts), the banner tries to fetch `build-status.json` from the published `site_url`, but the cross-origin fetch fails silently due to CORS.
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
-| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
+### Solution
+Create a backend function `get-build-status` that fetches the `build-status.json` from the published URL server-side (no CORS restrictions), then returns the result to the client.
+
+### Changes
+
+**1. New edge function `supabase/functions/get-build-status/index.ts`**
+- Accepts a `url` query parameter (the published site URL + `/build-status.json`)
+- Fetches it server-side and returns the JSON
+- Includes CORS headers for the client
+
+**2. Update `src/components/BuildStatusBanner.tsx`**
+- Instead of fetching `build-status.json` directly, call the `get-build-status` edge function with the target URL
+- Use `supabase.functions.invoke('get-build-status', { body: { url } })` 
+- Keep the same resolution logic: update `resolved` state if the response contains a valid status
+
