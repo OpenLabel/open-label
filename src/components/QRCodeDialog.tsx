@@ -363,9 +363,10 @@ export function QRCodeDialog({
     if (wineEnergyText) {
       const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
       textEl.setAttribute('x', String(totalWidth / 2));
-      textEl.setAttribute('y', String(yOffset + qrSize + 4 + fontSize));
+      textEl.setAttribute('y', String(yOffset + qrSize + 6 + fontSize));
       textEl.setAttribute('text-anchor', 'middle');
       textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('font-weight', 'bold');
       textEl.setAttribute('fill', '#333');
       textEl.setAttribute('font-family', 'sans-serif');
       textEl.textContent = wineEnergyText;
