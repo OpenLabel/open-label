@@ -1,33 +1,27 @@
 
 
-## Make BuildStatusBanner collapsible
 
-Wrap the banner content in a `Collapsible` component (already available via `@radix-ui/react-collapsible`). The title bar with the warning icon stays always visible; the details (error message, prompt, copy button) are hidden by default and expand on click.
+## Simplify Wine QR Code — Label Above, Energy Below ✅
 
-### Changes to `src/components/BuildStatusBanner.tsx`
+### Layout
+- **Above QR**: Just the translated word "Ingredients" (single centered word)
+- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
+- **No full ingredients list** anywhere in the QR image
 
-1. Import `Collapsible`, `CollapsibleTrigger`, `CollapsibleContent` from `@/components/ui/collapsible` and `ChevronDown` from lucide-react.
+### Changes Made
+| File | Change |
+|------|--------|
+| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
+| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
 
-2. Wrap the `Alert` internals so:
-   - The `AlertTitle` line becomes a `CollapsibleTrigger` with a chevron icon that rotates when open.
-   - The `AlertDescription` (error message, prompt, copy button) goes inside `CollapsibleContent`.
-   - Default state: `open={false}` (collapsed).
+## Build Status Banner — Test Failures Detection ✅
 
-3. Add a state `const [open, setOpen] = useState(false)` and pass to `Collapsible`.
+### Problem
+Banner only checked coverage thresholds, not test pass/fail results.
 
-4. Add a rotation transition on the chevron: `className={cn("h-4 w-4 transition-transform", open && "rotate-180")}`.
-
-Structure:
-```
-<Alert>
-  <Collapsible open={open} onOpenChange={setOpen}>
-    <CollapsibleTrigger className="flex items-center gap-2 w-full cursor-pointer">
-      <AlertTriangle /> ⚠️ Build Quality Check Failed <ChevronDown />
-    </CollapsibleTrigger>
-    <CollapsibleContent>
-      <AlertDescription>...existing content...</AlertDescription>
-    </CollapsibleContent>
-  </Collapsible>
-</Alert>
-```
-
+### Changes Made
+| File | Change |
+|------|--------|
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
+| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |

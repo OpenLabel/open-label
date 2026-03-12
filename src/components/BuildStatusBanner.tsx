@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
-import { AlertTriangle, Copy, Check } from 'lucide-react';
+import { AlertTriangle, Copy, Check, ChevronDown } from 'lucide-react';
+import { Collapsible, CollapsibleTrigger, CollapsibleContent } from '@/components/ui/collapsible';
+import { cn } from '@/lib/utils';
 import { useToast } from '@/hooks/use-toast';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import { supabase } from '@/integrations/supabase/client';
@@ -25,6 +27,7 @@ DO NOT skip or delete existing tests.`;
 
 export function BuildStatusBanner() {
   const [copied, setCopied] = useState(false);
+  const [open, setOpen] = useState(false);
   const [resolved, setResolved] = useState<BuildStatus>(buildStatus as BuildStatus);
   const { toast } = useToast();
   const { config } = useSiteConfig();
@@ -70,27 +73,34 @@ export function BuildStatusBanner() {
 
   return (
     <Alert variant="destructive" className="mb-6 border-destructive bg-destructive/10">
-      <AlertTriangle className="h-5 w-5" />
-      <AlertTitle className="text-lg font-bold">⚠️ Build Quality Check Failed</AlertTitle>
-      <AlertDescription className="mt-2 space-y-3">
-        <p className="font-medium">{resolved.message}</p>
-        <div className="rounded-md bg-destructive/5 border border-destructive/20 p-3">
-          <p className="text-sm mb-2 font-medium">Copy this prompt, send it to Lovable, then re-publish the website:</p>
-          <pre className="text-sm whitespace-pre-wrap text-muted-foreground select-all font-mono bg-muted/50 rounded p-2">{prompt}</pre>
-          <Button
-            variant="outline"
-            size="sm"
-            className="mt-2"
-            onClick={handleCopy}
-          >
-            {copied ? (
-              <><Check className="h-3 w-3 mr-1" /> Copied!</>
-            ) : (
-              <><Copy className="h-3 w-3 mr-1" /> Copy prompt</>
-            )}
-          </Button>
-        </div>
-      </AlertDescription>
+      <Collapsible open={open} onOpenChange={setOpen}>
+        <CollapsibleTrigger className="flex items-center gap-2 w-full cursor-pointer text-left">
+          <AlertTriangle className="h-5 w-5 shrink-0" />
+          <AlertTitle className="text-lg font-bold flex-1 mb-0">⚠️ Build Quality Check Failed</AlertTitle>
+          <ChevronDown className={cn("h-4 w-4 shrink-0 transition-transform", open && "rotate-180")} />
+        </CollapsibleTrigger>
+        <CollapsibleContent>
+          <AlertDescription className="mt-3 space-y-3 pl-7">
+            <p className="font-medium">{resolved.message}</p>
+            <div className="rounded-md bg-destructive/5 border border-destructive/20 p-3">
+              <p className="text-sm mb-2 font-medium">Copy this prompt, send it to Lovable, then re-publish the website:</p>
+              <pre className="text-sm whitespace-pre-wrap text-muted-foreground select-all font-mono bg-muted/50 rounded p-2">{prompt}</pre>
+              <Button
+                variant="outline"
+                size="sm"
+                className="mt-2"
+                onClick={handleCopy}
+              >
+                {copied ? (
+                  <><Check className="h-3 w-3 mr-1" /> Copied!</>
+                ) : (
+                  <><Copy className="h-3 w-3 mr-1" /> Copy prompt</>
+                )}
+              </Button>
+            </div>
+          </AlertDescription>
+        </CollapsibleContent>
+      </Collapsible>
     </Alert>
   );
 }
