@@ -27,6 +27,7 @@ DO NOT skip or delete existing tests.`;
 
 export function BuildStatusBanner() {
   const [copied, setCopied] = useState(false);
+  const [open, setOpen] = useState(false);
   const [resolved, setResolved] = useState<BuildStatus>(buildStatus as BuildStatus);
   const { toast } = useToast();
   const { config } = useSiteConfig();
