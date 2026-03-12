@@ -84,6 +84,43 @@ function buildStatusPlugin(): Plugin {
 
       return `export default ${JSON.stringify({ status: "pass" })}`;
     },
+    // Write build-status.json to dist/ so the banner can fetch it at runtime
+    writeBundle(options) {
+      const dir = options.dir ?? path.resolve(__dirname, "dist");
+      const status = testRunError
+        ? { status: "fail", message: testRunError }
+        : (() => {
+            const problems: string[] = [];
+            const trPath = path.resolve(__dirname, "test-results/results.json");
+            const cvPath = path.resolve(__dirname, "coverage/coverage-summary.json");
+            const trExists = fs.existsSync(trPath);
+            const cvExists = fs.existsSync(cvPath);
+
+            if (trExists) {
+              try {
+                const td = JSON.parse(fs.readFileSync(trPath, "utf-8"));
+                if ((td.numFailedTests ?? 0) > 0) problems.push(`${td.numFailedTests} test(s) failed`);
+              } catch {}
+            }
+            if (cvExists) {
+              try {
+                const raw = JSON.parse(fs.readFileSync(cvPath, "utf-8"));
+                for (const [metric, threshold] of Object.entries(THRESHOLDS)) {
+                  const actual = raw.total[metric]?.pct ?? 0;
+                  if (actual < (threshold as number)) problems.push(`${metric}: ${actual}% < ${threshold}%`);
+                }
+              } catch {}
+            }
+
+            if (problems.length > 0) return { status: "fail", message: problems.join("; ") };
+            if (testRunAttempted && !trExists && !cvExists) return { status: "fail", message: "No test artifacts generated." };
+            if (!trExists && !cvExists) return { status: "unknown", message: "No test artifacts." };
+            return { status: "pass" };
+          })();
+
+      fs.writeFileSync(path.join(dir, "build-status.json"), JSON.stringify(status));
+      console.log("[build-status] Wrote build-status.json:", JSON.stringify(status));
+    },
     configureServer(server) {
       for (const file of watchedFiles) {
         if (fs.existsSync(file)) {

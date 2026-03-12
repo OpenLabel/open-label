@@ -1,24 +1,27 @@
 
 
-## Make Build Status Banner Work
 
-**Root cause**: In dev/preview, `runTestsOnBuild` has `apply: "build"` so tests never run — the virtual module always resolves to "unknown". On publish, the virtual module approach works but only if the build environment can run vitest successfully.
+## Simplify Wine QR Code — Label Above, Energy Below ✅
 
-**Solution**: Two changes to make it reliable everywhere.
+### Layout
+- **Above QR**: Just the translated word "Ingredients" (single centered word)
+- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
+- **No full ingredients list** anywhere in the QR image
 
-### 1. `vite.config.ts` — Write `build-status.json` to `dist/` after build
+### Changes Made
+| File | Change |
+|------|--------|
+| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
+| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
 
-Add a `writeBundle` hook to the `buildStatusPlugin` that writes the resolved status as a static JSON file (`build-status.json`) into the output directory. This creates a fetchable artifact that survives independently of the virtual module.
+## Build Status Banner — Test Failures Detection ✅
 
-### 2. `src/components/BuildStatusBanner.tsx` — Fetch fallback + hide when irrelevant
+### Problem
+Banner only checked coverage thresholds, not test pass/fail results.
 
-- On mount, if the virtual module says `"unknown"`, fetch `/build-status.json` and use that status instead.
-- If still unknown after fetch attempt (e.g., in dev where the file doesn't exist), **hide the banner entirely** — showing "unknown" in dev provides no value.
-- Use `useState` + `useEffect` for the async fetch.
-
-### 3. Hide banner in dev/preview when no useful info
-
-The banner should only show when status is `"fail"`. Both `"pass"` and `"unknown"` (after fallback attempt) should hide it. This eliminates the confusing "unknown" state entirely.
-
-**Files changed**: `vite.config.ts`, `src/components/BuildStatusBanner.tsx`
-
+### Changes Made
+| File | Change |
+|------|--------|
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
+| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
