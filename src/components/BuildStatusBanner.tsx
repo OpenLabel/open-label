@@ -14,7 +14,7 @@ interface BuildStatus {
 function buildPrompt(errorMessage: string): string {
   return `The build quality check failed with this error: "${errorMessage}".
 Fix this by following these rules:
-1. If tests are failing, fix the failing tests or add missing ones.
+1. Fix the actual error causing the failure — do NOT just fix or delete the tests.
 2. If translations are missing, add them to ALL 24 locale files.
 3. If coverage is below threshold, add more tests to increase coverage.
 DO NOT lower any thresholds in vite.config.ts or vitest.config.ts.
