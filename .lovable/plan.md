@@ -1,33 +1,27 @@
 
 
-## Improve the BuildStatusBanner Prompt
 
-**Problem**: The current prompt is vague ("Check why the build fail") and doesn't include the actual error details, making it easy for the AI to misinterpret or take wrong actions.
+## Simplify Wine QR Code — Label Above, Energy Below ✅
 
-**Changes to `src/components/BuildStatusBanner.tsx`**:
+### Layout
+- **Above QR**: Just the translated word "Ingredients" (single centered word)
+- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
+- **No full ingredients list** anywhere in the QR image
 
-1. **Include build error details in the prompt** — Embed `buildStatus.message` into the copied text so the AI gets the exact failure reason without the user needing to describe it.
+### Changes Made
+| File | Change |
+|------|--------|
+| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
+| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
 
-2. **Make the prompt more structured and failproof** — Rewrite with clear numbered rules:
-   - State the exact error from build status
-   - Explicit "DO" and "DO NOT" instructions
-   - Cover all failure scenarios (missing tests, missing translations, coverage below threshold)
+## Build Status Banner — Test Failures Detection ✅
 
-3. **Fix duplicate guard** — Remove the duplicated `if (!isDevOrPreview) return null;` on line 18.
+### Problem
+Banner only checked coverage thresholds, not test pass/fail results.
 
-4. **Improve copy UX** — Make the prompt text selectable in a `<pre>` or `<code>` block so users can also manually select it, and add a toast confirmation on copy.
-
-**New prompt template**:
-```
-The build quality check failed with this error: "{buildStatus.message}". 
-Fix this by following these rules:
-1. If tests are failing, fix the failing tests or add missing ones.
-2. If translations are missing, add them to ALL 24 locale files.
-3. If coverage is below threshold, add more tests to increase coverage.
-DO NOT lower any thresholds in vite.config.ts or vitest.config.ts.
-DO NOT modify the English locale audit match rules.
-DO NOT skip or delete existing tests.
-```
-
-This makes the prompt self-contained — the AI gets the exact error message and clear, unambiguous instructions regardless of the failure type.
-
+### Changes Made
+| File | Change |
+|------|--------|
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
+| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
