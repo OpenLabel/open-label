@@ -515,7 +515,8 @@
   "qrDialog": {
     "title": "Cód QR",
     "download": "Íoslódáil Cód QR",
-    "copyLink": "Cóipeáil Nasc"
+    "copyLink": "Cóipeáil Nasc",
+    "printSizeInstructionWine": "Priontáil le leithead 1.8 cm. Athraíonn an airde de réir an ábhair. Comhfhreagraíonn an heicseagán do 1 cm don séala slándála."
   },
   "translation": {
     "title": "Aistriúcháin",

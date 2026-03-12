@@ -522,7 +522,8 @@
   "qrDialog": {
     "title": "QR-Code",
     "download": "QR-Code herunterladen",
-    "copyLink": "Link kopieren"
+    "copyLink": "Link kopieren",
+    "printSizeInstructionWine": "Drucken Sie in einer Breite von 1,8 cm. Die Höhe variiert je nach Inhalt. Das Sechseck entspricht 1 cm für das Sicherheitssiegel."
   },
   "translation": {
     "title": "Übersetzungen",
