@@ -146,6 +146,7 @@ export default function Dashboard() {
       </header>
       
       <main className="container mx-auto px-4 py-8">
+        <BuildStatusBanner />
         <div className="flex justify-between items-center mb-6">
           <h2 className="text-2xl font-bold">{t('dashboard.title')}</h2>
           <Button asChild>

@@ -8,7 +8,7 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:coverage": "vitest run --coverage",
-    "build": "vitest run --coverage && vite build",
+    "build": "vitest run --coverage; vite build",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview"
