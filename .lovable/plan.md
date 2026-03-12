@@ -17,11 +17,11 @@
 ## Build Status Banner — Test Failures Detection ✅
 
 ### Problem
-Banner only checked coverage thresholds, not test pass/fail results. Failing tests (e.g. missing translation keys) wouldn't trigger the banner.
+Banner only checked coverage thresholds, not test pass/fail results.
 
 ### Changes Made
 | File | Change |
 |------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now reads `test-results/results.json` for failed test count in addition to coverage thresholds |
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
 | `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing 23+ locale test failures |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
