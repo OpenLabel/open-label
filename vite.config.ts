@@ -7,6 +7,10 @@ import { execSync } from "child_process";
 
 const THRESHOLDS = { lines: 50, branches: 50, functions: 50, statements: 50 };
 
+// Module-level variable to pass test-run errors from runTestsOnBuild → buildStatusPlugin
+let testRunError: string | null = null;
+let testRunAttempted = false;
+
 function buildStatusPlugin(): Plugin {
   const watchedFiles = [
     path.resolve(__dirname, "test-results/results.json"),
@@ -23,7 +27,12 @@ function buildStatusPlugin(): Plugin {
 
       const problems: string[] = [];
 
-      // 1. Check test results (prioritize failures)
+      // Priority 1: If test execution itself failed
+      if (testRunError) {
+        return `export default ${JSON.stringify({ status: "fail", message: testRunError })}`;
+      }
+
+      // 2. Check test results
       const testResultsPath = watchedFiles[0];
       let testResultsExist = false;
       if (fs.existsSync(testResultsPath)) {
@@ -39,7 +48,7 @@ function buildStatusPlugin(): Plugin {
         }
       }
 
-      // 2. Check coverage thresholds
+      // 3. Check coverage thresholds
       const coveragePath = watchedFiles[1];
       let coverageExists = false;
       if (fs.existsSync(coveragePath)) {
@@ -63,15 +72,19 @@ function buildStatusPlugin(): Plugin {
         return `export default ${JSON.stringify({ status: "fail", message: problems.join("; ") })}`;
       }
 
-      // Only unknown if no artifacts exist at all
+      // Priority 4: If build ran tests but no artifacts were produced → fail
+      if (testRunAttempted && !testResultsExist && !coverageExists) {
+        return `export default ${JSON.stringify({ status: "fail", message: "Test run completed but no test/coverage artifacts were generated. Check vitest configuration." })}`;
+      }
+
+      // Only unknown if in dev/preview with no artifacts and no build context
       if (!testResultsExist && !coverageExists) {
-        return `export default ${JSON.stringify({ status: "unknown", message: "No test/coverage reports found. Run tests before building." })}`;
+        return `export default ${JSON.stringify({ status: "unknown", message: "No local test artifacts found. Publish builds run tests in an isolated build environment." })}`;
       }
 
       return `export default ${JSON.stringify({ status: "pass" })}`;
     },
     configureServer(server) {
-      // Watch test result files for HMR updates
       for (const file of watchedFiles) {
         if (fs.existsSync(file)) {
           server.watcher.add(file);
@@ -95,15 +108,39 @@ function runTestsOnBuild(): Plugin {
     name: "run-tests-on-build",
     apply: "build",
     buildStart() {
+      testRunAttempted = true;
+      testRunError = null;
+
+      // Ensure output directories exist
+      const testResultsDir = path.resolve(__dirname, "test-results");
+      const coverageDir = path.resolve(__dirname, "coverage");
+      if (!fs.existsSync(testResultsDir)) fs.mkdirSync(testResultsDir, { recursive: true });
+      if (!fs.existsSync(coverageDir)) fs.mkdirSync(coverageDir, { recursive: true });
+
       try {
         console.log("[run-tests-on-build] Running vitest...");
         execSync("npx vitest run --coverage", {
-          stdio: "inherit",
+          stdio: "pipe",
           cwd: __dirname,
+          timeout: 300_000, // 5 min timeout
         });
-      } catch {
-        // Tests failed — artifacts are still written, buildStatusPlugin will detect failures
-        console.warn("[run-tests-on-build] Tests finished with failures.");
+      } catch (err: unknown) {
+        const execError = err as { stderr?: Buffer; stdout?: Buffer; status?: number };
+        const stderr = execError.stderr?.toString().slice(-500) || "";
+        const stdout = execError.stdout?.toString().slice(-500) || "";
+
+        // Check if test artifacts were produced despite non-zero exit
+        const hasResults = fs.existsSync(path.resolve(testResultsDir, "results.json"));
+        const hasCoverage = fs.existsSync(path.resolve(coverageDir, "coverage-summary.json"));
+
+        if (hasResults || hasCoverage) {
+          // Tests ran but some failed — artifacts exist, let buildStatusPlugin parse them
+          console.warn("[run-tests-on-build] Tests finished with failures. Artifacts available for analysis.");
+        } else {
+          // Tests could not run at all
+          testRunError = `Vitest failed to execute during build. Exit code: ${execError.status ?? "unknown"}. ${stderr || stdout || "No output captured."}`.trim();
+          console.error("[run-tests-on-build]", testRunError);
+        }
       }
     },
   };
