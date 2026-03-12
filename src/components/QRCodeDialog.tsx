@@ -193,21 +193,48 @@ export function QRCodeDialog({
   const handleDownloadPng = useCallback(() => {
     if (!qrContainerRef.current) return;
 
-    const qrSvg = qrContainerRef.current.querySelector('svg');
+    const qrSvg = qrContainerRef.current.querySelector('svg.qr-code-svg') || qrContainerRef.current.querySelector('svg');
     if (!qrSvg) return;
 
     const qrSize = 250;
     const padding = 16;
-    const totalSize = qrSize + padding * 2;
+    const fontSize = 9;
+    const lineHeight = 13;
+    const contentWidth = qrSize;
+
+    // Pre-calculate ingredient lines to determine canvas height
+    const tempCanvas = document.createElement('canvas');
+    const tempCtx = tempCanvas.getContext('2d')!;
+    tempCtx.font = `${fontSize}px sans-serif`;
+    
+    const ingredientLines = wineIngredientsText ? wrapText(tempCtx, wineIngredientsText, contentWidth) : [];
+    const ingredientsHeight = ingredientLines.length > 0 ? ingredientLines.length * lineHeight + 8 : 0;
+    const energyHeight = wineEnergyText ? lineHeight + 8 : 0;
+    
+    const totalWidth = qrSize + padding * 2;
+    const totalHeight = padding + ingredientsHeight + qrSize + energyHeight + padding;
     
     const canvas = document.createElement('canvas');
-    canvas.width = totalSize;
-    canvas.height = totalSize;
+    canvas.width = totalWidth;
+    canvas.height = totalHeight;
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     ctx.fillStyle = 'white';
-    ctx.fillRect(0, 0, totalSize, totalSize);
+    ctx.fillRect(0, 0, totalWidth, totalHeight);
+
+    // Draw ingredients text above QR code
+    let yOffset = padding;
+    if (ingredientLines.length > 0) {
+      ctx.fillStyle = '#333';
+      ctx.font = `${fontSize}px sans-serif`;
+      ctx.textAlign = 'left';
+      for (const line of ingredientLines) {
+        ctx.fillText(line, padding, yOffset + fontSize);
+        yOffset += lineHeight;
+      }
+      yOffset += 4; // small gap
+    }
 
     const svgData = new XMLSerializer().serializeToString(qrSvg);
     const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
@@ -215,14 +242,15 @@ export function QRCodeDialog({
 
     const img = new Image();
     img.onload = async () => {
-      ctx.drawImage(img, padding, padding, qrSize, qrSize);
+      const qrY = yOffset;
+      ctx.drawImage(img, padding, qrY, qrSize, qrSize);
       URL.revokeObjectURL(svgUrl);
 
       if (showSecuritySealOverlay) {
         const hexSize = 139;
         const { path, centerX, centerY } = getRoundedHexagonPath(hexSize);
-        const hexX = totalSize / 2 - hexSize / 2;
-        const hexY = totalSize / 2 - hexSize / 2;
+        const hexX = totalWidth / 2 - hexSize / 2;
+        const hexY = qrY + qrSize / 2 - hexSize / 2;
         ctx.save();
         ctx.translate(hexX, hexY);
         const path2D = new Path2D(path);
@@ -240,6 +268,14 @@ export function QRCodeDialog({
         ctx.font = '6.5px sans-serif';
         ctx.fillText('cypheme.com', centerX, centerY + 18);
         ctx.restore();
+      }
+
+      // Draw energy text below QR code
+      if (wineEnergyText) {
+        ctx.fillStyle = '#333';
+        ctx.font = `${fontSize}px sans-serif`;
+        ctx.textAlign = 'center';
+        ctx.fillText(wineEnergyText, totalWidth / 2, qrY + qrSize + 4 + fontSize);
       }
 
       const performDownload = () => {
@@ -277,7 +313,7 @@ export function QRCodeDialog({
       }
     };
     img.src = svgUrl;
-  }, [productName, showSecuritySealOverlay, url, t]);
+  }, [productName, showSecuritySealOverlay, url, t, wineIngredientsText, wineEnergyText]);
 
   const handleDownloadSvg = useCallback(() => {
     if (!qrContainerRef.current) return;
