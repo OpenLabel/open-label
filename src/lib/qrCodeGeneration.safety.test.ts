@@ -18,7 +18,7 @@ function makeImageData(width: number, height: number): ImageData {
 }
 
 describe("QR code generation → validation → download contract", () => {
-  const VALID_URL = "https://digital-product-passports-com.lovable.app/p/abc123def456";
+  const VALID_URL = "https://open-label.eu/p/abc123def456";
 
   it("MUST validate before download — matching URL proceeds", () => {
     const goodDecoder: QrDecoder = () => ({ data: VALID_URL });
