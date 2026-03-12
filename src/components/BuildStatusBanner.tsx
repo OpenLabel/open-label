@@ -31,8 +31,10 @@ export function BuildStatusBanner() {
   const { toast } = useToast();
   const { config, loading: configLoading } = useSiteConfig();
 
+  const isPreview = import.meta.env.DEV || window.location.hostname.includes('id-preview--');
+
   useEffect(() => {
-    if (configLoading) return;
+    if (!isPreview || configLoading) return;
 
     const baseUrl = config?.site_url?.replace(/\/+$/, '');
     if (!baseUrl) {
@@ -59,10 +61,10 @@ export function BuildStatusBanner() {
       .catch((err) => {
         setResolved({ status: 'unknown', message: `Could not fetch build status: ${err?.message ?? 'Network error'}` });
       });
-  }, [configLoading, config?.site_url]);
+  }, [isPreview, configLoading, config?.site_url]);
 
-  // Only hide if we confirmed pass
-  if (resolved?.status === 'pass') return null;
+  // Hide on published site or if build passed
+  if (!isPreview || resolved?.status === 'pass') return null;
 
   const isLoading = resolved === null;
   const prompt = buildPrompt(resolved?.message ?? 'Unknown error');
