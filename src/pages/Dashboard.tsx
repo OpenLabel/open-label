@@ -32,7 +32,7 @@ import {
 import type { Passport } from '@/types/passport';
 
 export default function Dashboard() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [qrDialogOpen, setQrDialogOpen] = useState(false);
   const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; counterfeitProtection: boolean; wineIngredientsText?: string; wineEnergyText?: string } | null>(null);
   const [localPassports, setLocalPassports] = useState<Passport[]>([]);
