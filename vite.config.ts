@@ -3,6 +3,7 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 import fs from "fs";
+import { execSync } from "child_process";
 
 const THRESHOLDS = { lines: 50, branches: 50, functions: 50, statements: 50 };
 
