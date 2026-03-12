@@ -68,7 +68,7 @@ export function BuildStatusBanner() {
       <AlertDescription className="mt-2 space-y-3">
         <p className="font-medium">{resolved.message}</p>
         <div className="rounded-md bg-destructive/5 border border-destructive/20 p-3">
-          <p className="text-sm mb-2 font-medium">Copy this prompt and send it to Lovable:</p>
+          <p className="text-sm mb-2 font-medium">Copy this prompt, send it to Lovable, then re-publish the website:</p>
           <pre className="text-sm whitespace-pre-wrap text-muted-foreground select-all font-mono bg-muted/50 rounded p-2">{prompt}</pre>
           <Button
             variant="outline"
