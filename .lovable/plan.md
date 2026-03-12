@@ -1,27 +1,32 @@
 
 
-
-## Simplify Wine QR Code — Label Above, Energy Below ✅
-
-### Layout
-- **Above QR**: Just the translated word "Ingredients" (single centered word)
-- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
-- **No full ingredients list** anywhere in the QR image
-
-### Changes Made
-| File | Change |
-|------|--------|
-| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
-| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
-
-## Build Status Banner — Test Failures Detection ✅
+## Fix: Only show BuildStatusBanner in Lovable preview, never on published site
 
 ### Problem
-Banner only checked coverage thresholds, not test pass/fail results.
+The `BuildStatusBanner` is a developer tool that should only appear in the Lovable preview environment. It currently renders on the published site too, which is unacceptable.
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
-| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
+### Solution
+Add an environment check at the top of the component. Lovable preview URLs contain `lovableproject.com` or `id-preview--` patterns, but the simplest reliable check is `window.location.hostname`. However, the most robust approach is to check for the Lovable preview indicator:
+
+- In Vite dev mode: `import.meta.env.DEV` is `true`
+- In Lovable preview: the hostname contains `lovable` (e.g. `id-preview--xxx.lovable.app`)
+- On the published site: the hostname is the custom domain (e.g. `open-label.eu` or `digital-product-passports-com.lovable.app`)
+
+The banner should show when:
+- `import.meta.env.DEV` is true (local dev), OR
+- The hostname includes `id-preview--` (Lovable preview)
+
+### Changes to `src/components/BuildStatusBanner.tsx`
+
+Add an early return at the top of the component:
+
+```tsx
+export function BuildStatusBanner() {
+  const isPreview = import.meta.env.DEV || window.location.hostname.includes('id-preview--');
+  if (!isPreview) return null;
+  // ... rest unchanged
+}
+```
+
+Single line addition — the banner will never render on the published site.
+
