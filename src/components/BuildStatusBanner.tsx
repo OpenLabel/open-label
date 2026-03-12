@@ -3,6 +3,7 @@ import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { Button } from '@/components/ui/button';
 import { AlertTriangle, Copy, Check } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 import buildStatus from 'virtual:build-status';
 
 interface BuildStatus {
@@ -25,12 +26,18 @@ export function BuildStatusBanner() {
   const [copied, setCopied] = useState(false);
   const [resolved, setResolved] = useState<BuildStatus>(buildStatus as BuildStatus);
   const { toast } = useToast();
+  const { config } = useSiteConfig();
 
-  // If virtual module returned "unknown", try fetching the static artifact
+  // Fetch build-status.json from published URL (or fallback to relative)
   useEffect(() => {
     if (resolved.status !== 'unknown') return;
 
-    fetch('/build-status.json')
+    const baseUrl = config?.short_url?.replace(/\/+$/, '');
+    const fetchUrl = baseUrl
+      ? `${baseUrl}/build-status.json`
+      : '/build-status.json';
+
+    fetch(fetchUrl, { mode: 'cors' })
       .then((r) => (r.ok ? r.json() : null))
       .then((data: BuildStatus | null) => {
         if (data && (data.status === 'pass' || data.status === 'fail')) {
@@ -38,9 +45,9 @@ export function BuildStatusBanner() {
         }
       })
       .catch(() => {
-        // File doesn't exist (dev mode) — keep unknown, banner stays hidden
+        // CORS blocked or file doesn't exist — keep unknown, banner stays hidden
       });
-  }, [resolved.status]);
+  }, [resolved.status, config?.short_url]);
 
   // Hide only on pass
   if (resolved.status === 'pass') return null;
