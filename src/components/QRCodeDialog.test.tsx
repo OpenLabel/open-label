@@ -55,7 +55,7 @@ describe('QRCodeDialog', () => {
     render(
       <QRCodeDialog open={true} onOpenChange={vi.fn()} url="https://example.com/p/abc" productName="Test Wine" />
     );
-    const copyBtn = screen.getByTitle('Copy Link');
+    const copyBtn = screen.getByTitle('qrDialog.copyLink');
     fireEvent.click(copyBtn);
     expect(mockWriteText).toHaveBeenCalledWith('https://example.com/p/abc');
   });
