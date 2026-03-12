@@ -8,7 +8,7 @@ export interface SiteConfig {
   terms_conditions_url: string;
   ai_enabled: boolean;
   sender_email: string;
-  short_url: string;
+  site_url: string;
   setup_complete: boolean;
 }
 
