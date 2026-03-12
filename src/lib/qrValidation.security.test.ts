@@ -41,7 +41,7 @@ describe("QR download safety – URL matching", () => {
 
   it("blocks download when QR encodes a different passport slug", () => {
     const wrongSlugDecoder: QrDecoder = () => ({
-      data: "https://digital-product-passports.example.com/p/DIFFERENT_SLUG",
+      data: "https://open-label.example.com/p/DIFFERENT_SLUG",
     });
     const result = validateQrFromImageData(makeImageData(10, 10), PASSPORT_URL, wrongSlugDecoder);
     expect(result.ok).toBe(false);
