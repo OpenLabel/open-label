@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { AlertTriangle, Copy, Check } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
+import { supabase } from '@/integrations/supabase/client';
 import buildStatus from 'virtual:build-status';
 
 interface BuildStatus {
