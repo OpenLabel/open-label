@@ -117,20 +117,10 @@ export default function Dashboard() {
     let wineEnergyText: string | undefined;
 
     if (passport.category === 'wine') {
-      // Build ingredients text
-      const ingredients = (categoryData.ingredients as Array<{ id: string; name: string; isCustom?: boolean; nameTranslations?: Record<string, string> }>) || [];
+      // Show just the translated "Ingredients" label above QR (no full list)
+      const ingredients = (categoryData.ingredients as Array<{ id: string }>) || [];
       if (ingredients.length > 0) {
-        const lang = i18n.language;
-        const translatedNames = ingredients.map(ing => {
-          if (ing.isCustom) {
-            const translations = ing.nameTranslations as Record<string, string> | undefined;
-            return translations?.[lang] || ing.name;
-          }
-          const key = `ingredients.${ing.id}`;
-          const translated = t(key);
-          return translated === key ? ing.name : translated;
-        });
-        wineIngredientsText = `${t('wine.ingredients')}: ${translatedNames.join(', ')}`;
+        wineIngredientsText = t('wine.ingredients');
       }
 
       // Build energy text
