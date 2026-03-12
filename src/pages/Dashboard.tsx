@@ -13,7 +13,7 @@ import { categoryList } from '@/templates';
 import { QRCodeDialog } from '@/components/QRCodeDialog';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { SortablePassportCard } from '@/components/SortablePassportCard';
-import { BuildStatusBanner } from '@/components/BuildStatusBanner';
+
 import {
   DndContext,
   closestCenter,
