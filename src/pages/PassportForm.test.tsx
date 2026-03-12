@@ -1,5 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
 
 vi.mock('@/hooks/useAuth', () => ({
@@ -12,7 +13,7 @@ vi.mock('@/hooks/useAuth', () => ({
 
 vi.mock('@/hooks/usePassports', () => ({
   usePassports: () => ({
-    createPassport: { mutateAsync: vi.fn() },
+    createPassport: { mutateAsync: vi.fn().mockResolvedValue({ id: 'new-id' }) },
     updatePassport: { mutateAsync: vi.fn() },
   }),
   usePassportById: () => ({ data: null, isLoading: false }),
@@ -99,7 +100,6 @@ describe('PassportForm page', () => {
 
   it('shows category selector', () => {
     renderForm();
-    // The label has "passport.category *" so use a partial match
     expect(screen.getByText(/passport\.category/)).toBeInTheDocument();
   });
 
@@ -116,5 +116,23 @@ describe('PassportForm page', () => {
   it('shows preview', () => {
     renderForm();
     expect(screen.getByTestId('preview')).toBeInTheDocument();
+  });
+
+  it('allows typing in the DPP name field', async () => {
+    renderForm();
+    const nameInput = screen.getByPlaceholderText('passport.dppNamePlaceholder');
+    await userEvent.type(nameInput, 'My Product');
+    expect(nameInput).toHaveValue('My Product');
+  });
+
+  it('shows back button', () => {
+    renderForm();
+    const backBtn = document.querySelector('.lucide-arrow-left')?.closest('button');
+    expect(backBtn).toBeInTheDocument();
+  });
+
+  it('shows wine fields for wine category (default)', () => {
+    renderForm();
+    expect(screen.getByTestId('wine-fields')).toBeInTheDocument();
   });
 });
