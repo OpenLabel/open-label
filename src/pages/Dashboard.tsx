@@ -34,7 +34,7 @@ import type { Passport } from '@/types/passport';
 export default function Dashboard() {
   const { t } = useTranslation();
   const [qrDialogOpen, setQrDialogOpen] = useState(false);
-  const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; counterfeitProtection: boolean } | null>(null);
+  const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; counterfeitProtection: boolean; wineIngredientsText?: string; wineEnergyText?: string } | null>(null);
   const [localPassports, setLocalPassports] = useState<Passport[]>([]);
   const { user, loading: authLoading, signOut } = useAuth();
   const { passports, isLoading, duplicatePassport, deletePassport, reorderPassports } = usePassports();
