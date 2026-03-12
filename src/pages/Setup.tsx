@@ -9,7 +9,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { useToast } from '@/hooks/use-toast';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import { Badge } from '@/components/ui/badge';
-import { Building2, MapPin, CheckCircle2, Server, Link2, FileText, Sparkles, Mail, QrCode } from 'lucide-react';
+import { Building2, MapPin, CheckCircle2, Server, Link2, FileText, Sparkles, Mail, Globe } from 'lucide-react';
 
 export default function Setup() {
   const [companyName, setCompanyName] = useState('');
