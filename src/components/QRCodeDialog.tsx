@@ -306,11 +306,12 @@ export function QRCodeDialog({
       textEl.setAttribute('y', String(yOffset + fontSize));
       textEl.setAttribute('text-anchor', 'middle');
       textEl.setAttribute('font-size', String(fontSize));
+      textEl.setAttribute('font-weight', 'bold');
       textEl.setAttribute('fill', '#333');
       textEl.setAttribute('font-family', 'sans-serif');
       textEl.textContent = wineIngredientsText;
       wrapper.appendChild(textEl);
-      yOffset += lineHeight + 4;
+      yOffset += lineHeight + 6;
     }
 
     // QR code
