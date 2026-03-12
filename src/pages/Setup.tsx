@@ -197,29 +197,29 @@ export default function Setup() {
                   </div>
                 </div>
 
-                {/* Short URL Section (Optional) */}
+                {/* Website URL Section */}
                 <div className="border-t pt-6 space-y-4">
                   <div className="flex items-center gap-2">
-                    <QrCode className="h-5 w-5 text-primary" />
-                    <h3 className="font-medium">QR Code Optimization</h3>
-                    <Badge variant="outline" className="text-xs">Optional</Badge>
+                    <Globe className="h-5 w-5 text-primary" />
+                    <h3 className="font-medium">Website URL</h3>
+                    <Badge variant="default" className="text-xs">Required</Badge>
                   </div>
                   
                   <div className="space-y-2">
-                    <Label htmlFor="shortUrl" className="flex items-center gap-2">
-                      <Link2 className="h-4 w-4" />
-                      Short URL Base
+                    <Label htmlFor="siteUrl" className="flex items-center gap-2">
+                      <Globe className="h-4 w-4" />
+                      Published Website URL *
                     </Label>
                     <Input
-                      id="shortUrl"
+                      id="siteUrl"
                       type="url"
-                      value={shortUrl}
-                      onChange={(e) => setShortUrl(e.target.value)}
-                      placeholder="https://dpp.co"
+                      value={siteUrl}
+                      onChange={(e) => setSiteUrl(e.target.value)}
+                      placeholder="https://open-label.eu"
+                      required
                     />
                     <p className="text-xs text-muted-foreground">
-                      Optional: Use a short domain for smaller QR codes. Set up a redirect from this URL to your full DPP URL.
-                      Example: <code className="bg-muted px-1 rounded">https://ol.eu/p/abc123</code> → <code className="bg-muted px-1 rounded">https://open-label.eu/p/abc123</code>
+                      The URL where this app is published. Used for QR codes and build status checks.
                     </p>
                   </div>
                 </div>
