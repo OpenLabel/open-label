@@ -37,9 +37,9 @@ export default function Index() {
         <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-              <span className="text-primary-foreground font-bold text-sm">DPP</span>
+              <span className="text-primary-foreground font-bold text-sm">OL</span>
             </div>
-            <h1 className="hidden sm:block text-lg font-semibold">Digital <span className="text-muted-foreground/60 font-normal">-</span> Product <span className="text-muted-foreground/60 font-normal">-</span> Passports <span className="text-muted-foreground font-normal">.com</span></h1>
+            <h1 className="hidden sm:block text-lg font-semibold">Open Label <span className="text-muted-foreground font-normal">.eu</span></h1>
             <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
           <div className="flex gap-1.5 sm:gap-2 items-center min-w-0">
