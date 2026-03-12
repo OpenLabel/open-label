@@ -24,6 +24,8 @@ interface QRCodeDialogProps {
   url: string;
   productName: string;
   showSecuritySealOverlay?: boolean;
+  wineIngredientsText?: string;
+  wineEnergyText?: string;
 }
 
 // Generate rounded hexagon path
