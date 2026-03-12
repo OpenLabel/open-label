@@ -63,4 +63,45 @@ describe('useAutoTranslate', () => {
     );
     expect(onTranslations).not.toHaveBeenCalled();
   });
+
+  it('returns error=null initially', () => {
+    const { result } = renderHook(() =>
+      useAutoTranslate({
+        value: '',
+        sourceLanguage: 'en',
+        onTranslationsGenerated: vi.fn(),
+        enabled: true,
+      })
+    );
+    expect(result.current.error).toBeNull();
+  });
+
+  it('exposes retryTranslation function', () => {
+    const { result } = renderHook(() =>
+      useAutoTranslate({
+        value: 'hello',
+        sourceLanguage: 'en',
+        onTranslationsGenerated: vi.fn(),
+        enabled: true,
+      })
+    );
+    expect(typeof result.current.retryTranslation).toBe('function');
+  });
+
+  it('marks multiple languages as edited independently', () => {
+    const { result } = renderHook(() =>
+      useAutoTranslate({
+        value: 'hello',
+        sourceLanguage: 'en',
+        onTranslationsGenerated: vi.fn(),
+        enabled: true,
+      })
+    );
+    act(() => {
+      result.current.markAsUserEdited('fr');
+      result.current.markAsUserEdited('de');
+    });
+    expect(result.current.isUserEdited('fr')).toBe(true);
+    expect(result.current.isUserEdited('de')).toBe(true);
+  });
 });

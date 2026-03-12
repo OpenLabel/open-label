@@ -34,7 +34,6 @@ describe('PassportPreview', () => {
     render(
       <PassportPreview formData={{ name: 'My Battery', category: 'battery', image_url: null, description: '', category_data: {} }} />
     );
-    // When no product_name in category_data, it falls back to formData.name
     expect(screen.getByText('My Battery')).toBeInTheDocument();
   });
 
@@ -50,5 +49,56 @@ describe('PassportPreview', () => {
       <PassportPreview formData={{ name: 'Test', category: 'other', image_url: 'https://example.com/img.jpg', description: '', category_data: {} }} />
     );
     expect(document.querySelector('img')).toBeInTheDocument();
+  });
+
+  it('shows counterfeit protection badge when enabled', () => {
+    render(
+      <PassportPreview formData={{
+        name: 'Test', category: 'battery', image_url: null, description: '',
+        category_data: { counterfeit_protection_enabled: true },
+      }} />
+    );
+    expect(screen.getByText('preview.checkAuthenticity')).toBeInTheDocument();
+  });
+
+  it('shows required logos when category data triggers them', () => {
+    render(
+      <PassportPreview formData={{
+        name: 'Test', category: 'battery', image_url: null, description: '',
+        category_data: { separate_collection_required: true },
+      }} />
+    );
+    expect(screen.getByText('Weee')).toBeInTheDocument();
+  });
+
+  it('renders category-specific data when section has values', () => {
+    render(
+      <PassportPreview formData={{
+        name: 'Test', category: 'battery', image_url: null, description: '',
+        category_data: { manufacturer_name: 'Acme Corp', capacity_kwh: 50 },
+      }} />
+    );
+    expect(screen.getByText('Acme Corp')).toBeInTheDocument();
+  });
+
+  it('displays boolean true as common.yes', () => {
+    render(
+      <PassportPreview formData={{
+        name: 'Test', category: 'battery', image_url: null, description: '',
+        category_data: { carbon_footprint_declared: true },
+      }} />
+    );
+    // checkbox type shows ✓ badge, not text
+    expect(screen.getByText('✓')).toBeInTheDocument();
+  });
+
+  it('uses product_name from category_data when available', () => {
+    render(
+      <PassportPreview formData={{
+        name: 'DPP Name', category: 'battery', image_url: null, description: '',
+        category_data: { product_name: 'Custom Product Name' },
+      }} />
+    );
+    expect(screen.getByText('Custom Product Name')).toBeInTheDocument();
   });
 });

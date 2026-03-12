@@ -1,12 +1,17 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
+
+const mockSignOut = vi.fn();
+const mockDuplicateAsync = vi.fn();
+const mockDeleteAsync = vi.fn();
+const mockReorderMutate = vi.fn();
 
 vi.mock('@/hooks/useAuth', () => ({
   useAuth: () => ({
     user: { id: 'u1', email: 'test@test.com' },
     loading: false,
-    signOut: vi.fn(),
+    signOut: mockSignOut,
   }),
   AuthProvider: ({ children }: any) => children,
 }));
@@ -16,15 +21,15 @@ vi.mock('@/hooks/usePassports', () => ({
     passports: [],
     isLoading: false,
     error: null,
-    duplicatePassport: { mutateAsync: vi.fn() },
-    deletePassport: { mutateAsync: vi.fn() },
-    reorderPassports: { mutate: vi.fn() },
+    duplicatePassport: { mutateAsync: mockDuplicateAsync },
+    deletePassport: { mutateAsync: mockDeleteAsync },
+    reorderPassports: { mutate: mockReorderMutate },
   }),
 }));
 
 vi.mock('@/hooks/useSiteConfig', () => ({
   useSiteConfig: () => ({
-    config: { company_name: 'Test', setup_complete: true, short_url: '' },
+    config: { company_name: 'Test', setup_complete: true, short_url: 'https://open-label.eu' },
     loading: false,
     isSetupRequired: false,
   }),
@@ -44,7 +49,14 @@ vi.mock('@/components/QRCodeDialog', () => ({
 }));
 
 vi.mock('@/components/SortablePassportCard', () => ({
-  SortablePassportCard: () => <div data-testid="passport-card" />,
+  SortablePassportCard: ({ passport, onShowQR, onDuplicate, onDelete }: any) => (
+    <div data-testid="passport-card">
+      <span>{passport.name}</span>
+      <button data-testid="qr-btn" onClick={() => onShowQR(passport)}>QR</button>
+      <button data-testid="dup-btn" onClick={() => onDuplicate(passport)}>Dup</button>
+      <button data-testid="del-btn" onClick={() => onDelete(passport.id)}>Del</button>
+    </div>
+  ),
 }));
 
 import Dashboard from './Dashboard';
@@ -90,4 +102,12 @@ describe('Dashboard page', () => {
     render(<MemoryRouter><Dashboard /></MemoryRouter>);
     expect(screen.getByText('beta')).toBeInTheDocument();
   });
+
+  it('calls signOut when logout button clicked', async () => {
+    render(<MemoryRouter><Dashboard /></MemoryRouter>);
+    const logoutBtn = document.querySelector('.lucide-log-out')!.closest('button')!;
+    fireEvent.click(logoutBtn);
+    expect(mockSignOut).toHaveBeenCalled();
+  });
 });
+

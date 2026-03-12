@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { DndContext } from '@dnd-kit/core';
 import { SortableContext, verticalListSortingStrategy } from '@dnd-kit/sortable';
@@ -25,23 +25,33 @@ const mockPassport: Passport = {
   updated_at: '2024-01-01',
 };
 
+const mockPassportNoSlug: Passport = {
+  ...mockPassport,
+  id: 'p2',
+  public_slug: null,
+};
+
 describe('SortablePassportCard', () => {
-  const renderCard = () =>
-    render(
+  const renderCard = (passport = mockPassport, overrides = {}) => {
+    const props = {
+      passport,
+      getCategoryIcon: () => '🍷',
+      onShowQR: vi.fn(),
+      onDuplicate: vi.fn(),
+      onDelete: vi.fn(),
+      ...overrides,
+    };
+    const result = render(
       <MemoryRouter>
         <DndContext>
-          <SortableContext items={['p1']} strategy={verticalListSortingStrategy}>
-            <SortablePassportCard
-              passport={mockPassport}
-              getCategoryIcon={() => '🍷'}
-              onShowQR={vi.fn()}
-              onDuplicate={vi.fn()}
-              onDelete={vi.fn()}
-            />
+          <SortableContext items={[passport.id]} strategy={verticalListSortingStrategy}>
+            <SortablePassportCard {...props} />
           </SortableContext>
         </DndContext>
       </MemoryRouter>
     );
+    return { ...result, props };
+  };
 
   it('renders passport name', () => {
     renderCard();
@@ -56,5 +66,44 @@ describe('SortablePassportCard', () => {
   it('shows drag handle', () => {
     renderCard();
     expect(screen.getAllByLabelText('dashboard.dragToReorder').length).toBeGreaterThan(0);
+  });
+
+  it('calls onShowQR when QR button clicked', () => {
+    const onShowQR = vi.fn();
+    renderCard(mockPassport, { onShowQR });
+    const qrButtons = document.querySelectorAll('.lucide-qr-code');
+    fireEvent.click(qrButtons[0].closest('button')!);
+    expect(onShowQR).toHaveBeenCalledWith(mockPassport);
+  });
+
+  it('calls onDuplicate when duplicate button clicked', () => {
+    const onDuplicate = vi.fn();
+    renderCard(mockPassport, { onDuplicate });
+    const copyButtons = document.querySelectorAll('.lucide-copy');
+    fireEvent.click(copyButtons[0].closest('button')!);
+    expect(onDuplicate).toHaveBeenCalledWith(mockPassport);
+  });
+
+  it('calls onDelete when delete button clicked', () => {
+    const onDelete = vi.fn();
+    renderCard(mockPassport, { onDelete });
+    // Delete buttons have text-destructive class
+    const deleteButtons = document.querySelectorAll('button.text-destructive');
+    expect(deleteButtons.length).toBeGreaterThan(0);
+    fireEvent.click(deleteButtons[0]);
+    expect(onDelete).toHaveBeenCalledWith('p1');
+  });
+
+  it('hides QR button when no public slug', () => {
+    renderCard(mockPassportNoSlug);
+    const qrButtons = screen.getAllByRole('button').filter(b => b.querySelector('.lucide-qr-code'));
+    expect(qrButtons.length).toBe(0);
+  });
+
+  it('shows image when image_url is set', () => {
+    const withImage = { ...mockPassport, image_url: 'https://example.com/img.jpg' };
+    renderCard(withImage);
+    const images = document.querySelectorAll('img');
+    expect(images.length).toBeGreaterThan(0);
   });
 });
