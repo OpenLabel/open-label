@@ -394,7 +394,7 @@ export function QRCodeDialog({
             <div ref={qrContainerRef} className="rounded-lg border p-4 bg-white relative">
               {/* Wine ingredients label above QR code */}
               {wineIngredientsText && (
-                <p className="text-[9px] leading-tight text-gray-700 mb-2 text-center max-w-[250px]">
+                <p className="text-sm font-bold leading-tight text-gray-700 mb-2 text-center w-[250px]">
                   {wineIngredientsText}
                 </p>
               )}
