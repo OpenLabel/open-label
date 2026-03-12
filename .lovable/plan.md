@@ -1,27 +1,20 @@
 
 
+## Fix BuildStatusBanner: Show by default, hide only on confirmed "pass"
 
-## Simplify Wine QR Code — Label Above, Energy Below ✅
+### Logic
+- Banner is **always visible** by default (including during loading)
+- Fetch published build status via edge function proxy
+- **Only hide** if the fetch succeeds AND returns `status: 'pass'`
+- All other cases (loading, fetch error, unknown, fail, no site_url) → show the banner
 
-### Layout
-- **Above QR**: Just the translated word "Ingredients" (single centered word)
-- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
-- **No full ingredients list** anywhere in the QR image
+### Changes to `src/components/BuildStatusBanner.tsx`
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
-| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
+1. State: `resolved` starts as `null` (loading)
+2. Remove the `virtual:build-status` import — not needed anymore
+3. `useEffect`: always fetch from `config?.site_url` via edge function. On success, set `resolved`. On error, set `resolved` to `{ status: 'unknown', message: 'Could not fetch build status' }`.
+4. If no `site_url` configured, set `resolved` to `{ status: 'unknown', message: 'No site URL configured' }`.
+5. Early return: `if (resolved?.status === 'pass') return null;` — this is the **only** case that hides the banner.
+6. While `resolved` is `null`, show the banner in a loading state (collapsed, title says "⚠️ Checking build status…").
+7. Once resolved to fail/unknown, show the existing collapsed error banner.
 
-## Build Status Banner — Test Failures Detection ✅
-
-### Problem
-Banner only checked coverage thresholds, not test pass/fail results.
-
-### Changes Made
-| File | Change |
-|------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
-| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
