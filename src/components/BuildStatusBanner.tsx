@@ -42,8 +42,8 @@ export function BuildStatusBanner() {
       });
   }, [resolved.status]);
 
-  // Only show banner on explicit failure
-  if (resolved.status !== 'fail') return null;
+  // Hide only on pass
+  if (resolved.status === 'pass') return null;
 
   const prompt = buildPrompt(resolved.message ?? 'Unknown error');
 
