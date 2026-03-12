@@ -1,27 +1,43 @@
 
 
+## Add Source Header to All Project Source Files
 
-## Simplify Wine QR Code — Label Above, Energy Below ✅
+### Scope
 
-### Layout
-- **Above QR**: Just the translated word "Ingredients" (single centered word)
-- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
-- **No full ingredients list** anywhere in the QR image
+Add the following license header comment to all `.ts` and `.tsx` source files in the project:
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
-| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
+```typescript
+// Open-Label Digital Product Passport Engine
+// Copyright (C) 2026 Open-Label.eu
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program includes additional attribution requirements.
+// See the LICENSE and NOTICE files for details.
+```
 
-## Build Status Banner — Test Failures Detection ✅
+### Files affected
 
-### Problem
-Banner only checked coverage thresholds, not test pass/fail results.
+**192 files** in `src/` (excluding `src/integrations/supabase/` which is auto-generated) plus **10 files** in `supabase/functions/`. Each file gets the header prepended before existing content.
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
-| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
+### Exclusions
+
+- `src/integrations/supabase/client.ts` -- auto-generated, must not edit
+- `src/integrations/supabase/types.ts` -- auto-generated, must not edit
+- `src/vite-env.d.ts` -- Vite declaration file
+- UI component files in `src/components/ui/` -- these are shadcn/ui generated components; including them is optional
+
+### Approach
+
+For Deno edge functions (`supabase/functions/`), the same header applies since they are TypeScript.
+
+### Questions to clarify
+
+I want to confirm scope before proceeding with ~190 file edits:
+
+- Should the header go on **all source files** including tests, shadcn UI components, and config files (`vite.config.ts`, `tailwind.config.ts`, etc.)?
+- Or only on **project-authored files** (pages, components, hooks, templates, data, lib, edge functions) excluding UI library components and test files?
+
