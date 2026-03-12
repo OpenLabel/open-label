@@ -2,7 +2,7 @@ import { describe, it, expect, vi } from 'vitest';
 import { renderHook, waitFor } from '@testing-library/react';
 import { ReactNode } from 'react';
 
-const mockOnAuthStateChange = vi.fn(() => ({
+const mockOnAuthStateChange = vi.fn((_cb: any) => ({
   data: { subscription: { unsubscribe: vi.fn() } },
 }));
 
