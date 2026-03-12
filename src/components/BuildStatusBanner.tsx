@@ -22,6 +22,8 @@ import { supabase } from '@/integrations/supabase/client';
 interface BuildStatus {
   status: 'pass' | 'fail' | 'unknown';
   message?: string;
+  failedTests?: string[];
+  stderr?: string;
 }
 
 function buildPrompt(errorMessage: string): string {

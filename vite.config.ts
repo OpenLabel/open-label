@@ -7,9 +7,11 @@ import { execSync } from "child_process";
 
 const THRESHOLDS = { lines: 50, branches: 50, functions: 50, statements: 50 };
 
-// Module-level variable to pass test-run errors from runTestsOnBuild → buildStatusPlugin
+// Module-level variables to pass test-run context from runTestsOnBuild → buildStatusPlugin
 let testRunError: string | null = null;
 let testRunAttempted = false;
+let testRunStderr: string | null = null;
+let testRunStdout: string | null = null;
 
 function buildStatusPlugin(): Plugin {
   const watchedFiles = [
