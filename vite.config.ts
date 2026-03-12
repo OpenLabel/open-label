@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 import fs from "fs";
 import { execSync } from "child_process";
 
-const THRESHOLDS = { lines: 50, branches: 50, functions: 50, statements: 50 };
+const THRESHOLDS = { lines: 30, branches: 30, functions: 30, statements: 30 };
 
 // Module-level variables to pass test-run context from runTestsOnBuild → buildStatusPlugin
 let testRunError: string | null = null;

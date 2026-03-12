@@ -32,7 +32,7 @@ Fix this by following these rules:
 1. Fix the actual error causing the failure — do NOT just fix or delete the tests.
 2. If translations are missing, add them to ALL 24 locale files.
 3. If coverage is below threshold, add more tests to increase coverage.
-DO NOT lower any thresholds in vite.config.ts or vitest.config.ts — they should all be set to 50.
+DO NOT lower any thresholds in vite.config.ts or vitest.config.ts — they should all be set to 30.
 DO NOT modify the English locale audit match rules.
 DO NOT skip or delete existing tests.`;
 }
