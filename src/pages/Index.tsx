@@ -39,7 +39,7 @@ export default function Index() {
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
               <span className="text-primary-foreground font-bold text-sm">OL</span>
             </div>
-            <h1 className="hidden sm:block text-lg font-semibold"><h1 className="hidden sm:block text-lg font-semibold">Open Label <span className="text-primary font-bold">.eu</span></h1>
+            <h1 className="hidden sm:block text-lg font-semibold">Open Label <span className="text-primary font-bold">.eu</span></h1>
             <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
           <div className="flex gap-1.5 sm:gap-2 items-center min-w-0">
