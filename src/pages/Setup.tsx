@@ -42,6 +42,11 @@ export default function Setup() {
       return;
     }
 
+    if (!siteUrl.trim()) {
+      toast({ title: 'Error', description: 'Website URL is required', variant: 'destructive' });
+      return;
+    }
+
     setSaving(true);
     try {
       await saveConfig({
