@@ -1,19 +1,27 @@
 
 
-## Add preview-only notice to BuildStatusBanner
 
-### Change
-Add a small reassuring note inside the banner's `CollapsibleContent` that tells the user this banner is only visible in preview mode and will not appear on the published website.
+## Simplify Wine QR Code — Label Above, Energy Below ✅
 
-### Edit in `src/components/BuildStatusBanner.tsx`
+### Layout
+- **Above QR**: Just the translated word "Ingredients" (single centered word)
+- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
+- **No full ingredients list** anywhere in the QR image
 
-Add a muted text line right after the error message paragraph (line 95), before the prompt box:
+### Changes Made
+| File | Change |
+|------|--------|
+| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
+| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
 
-```tsx
-<p className="text-sm text-muted-foreground italic">
-  This banner is only visible in preview mode — it will not appear on your published website.
-</p>
-```
+## Build Status Banner — Test Failures Detection ✅
 
-Single line addition, no logic changes needed.
+### Problem
+Banner only checked coverage thresholds, not test pass/fail results.
 
+### Changes Made
+| File | Change |
+|------|--------|
+| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
+| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
+| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
