@@ -56,7 +56,7 @@ export default function Setup() {
         terms_conditions_url: termsConditionsUrl.trim(),
         ai_enabled: aiEnabled,
         sender_email: senderEmail.trim(),
-        short_url: shortUrl.trim(),
+        site_url: siteUrl.trim(),
         setup_complete: true,
       });
       toast({ title: 'Setup complete!', description: 'Your instance is now configured.' });
