@@ -82,7 +82,7 @@ const handler = async (req: Request): Promise<Response> => {
     });
 
     const senderEmail = config.sender_email;
-    const companyName = config.company_name || "Digital - Product - Passports .com";
+    const companyName = config.company_name || "Open Label .eu";
 
     if (!senderEmail) {
       throw new Error("Sender email not configured. Please set it up in the Setup page.");

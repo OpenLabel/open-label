@@ -165,7 +165,7 @@ describe("QR download safety – edge cases", () => {
     });
     const result = validateQrFromImageData(
       makeImageData(10, 10),
-      "https://digital-product-passports.example.com/p/abc123",
+      "https://open-label.example.com/p/abc123",
       homoglyphDecoder,
     );
     expect(result.ok).toBe(false);
