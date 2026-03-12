@@ -143,7 +143,7 @@ describe('WineFields', () => {
 
   it('renders alcohol percent input', () => {
     render(<WineFields data={{}} onChange={onChange} />);
-    expect(screen.getByText('wine.alcohol')).toBeInTheDocument();
+    expect(screen.getByText('wine.alcoholPercent *')).toBeInTheDocument();
   });
 
   it('renders producer info section', () => {
