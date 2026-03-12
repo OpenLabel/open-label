@@ -82,7 +82,7 @@ export default function Auth() {
           <Link to="/" className="flex items-center gap-1.5 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
             <span className="bg-primary text-primary-foreground px-2 py-0.5 rounded text-sm font-black">OL</span>
             <span className="hidden sm:inline">Open Label</span>
-            <span className="hidden sm:inline text-muted-foreground font-normal">.eu</span>
+            <span className="hidden sm:inline text-primary font-bold">.eu</span>
           </Link>
           <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           <LanguageSwitcher />

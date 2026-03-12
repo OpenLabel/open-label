@@ -222,7 +222,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                     <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 text-center">
                       <p className="text-xs text-foreground">
                         {t('preview.poweredBy')}{' '}
-                        <span className="text-primary font-medium">Open Label <span className="text-muted-foreground font-normal">.eu</span></span>
+                        <span className="text-primary font-medium">Open Label <span className="text-primary font-bold">.eu</span></span>
                       </p>
                     </div>
 

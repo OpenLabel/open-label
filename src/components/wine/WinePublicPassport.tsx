@@ -548,7 +548,7 @@ export function WinePublicPassport({
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Open Label <span className="text-muted-foreground font-normal">.eu</span>
+                Open Label <span className="text-primary font-bold">.eu</span>
               </a>
             </p>
           </div>
