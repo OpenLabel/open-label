@@ -87,8 +87,10 @@ describe('SortablePassportCard', () => {
   it('calls onDelete when delete button clicked', () => {
     const onDelete = vi.fn();
     renderCard(mockPassport, { onDelete });
-    const deleteButtons = document.querySelectorAll('.lucide-trash-2');
-    fireEvent.click(deleteButtons[0].closest('button')!);
+    // Delete buttons have text-destructive class
+    const deleteButtons = document.querySelectorAll('button.text-destructive');
+    expect(deleteButtons.length).toBeGreaterThan(0);
+    fireEvent.click(deleteButtons[0]);
     expect(onDelete).toHaveBeenCalledWith('p1');
   });
 
