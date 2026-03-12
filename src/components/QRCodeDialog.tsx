@@ -133,12 +133,52 @@ function RoundedHexagonWithText({ size = 104 }: { size?: number }) {
   );
 }
 
+// Wrap text to fit within a given width using canvas context
+function wrapText(ctx: CanvasRenderingContext2D, text: string, maxWidth: number): string[] {
+  const words = text.split(' ');
+  const lines: string[] = [];
+  let currentLine = '';
+
+  for (const word of words) {
+    const testLine = currentLine ? `${currentLine} ${word}` : word;
+    if (ctx.measureText(testLine).width > maxWidth && currentLine) {
+      lines.push(currentLine);
+      currentLine = word;
+    } else {
+      currentLine = testLine;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+  return lines;
+}
+
+// Wrap text for SVG (approximate character-based wrapping)
+function wrapTextSvg(text: string, maxCharsPerLine: number): string[] {
+  const words = text.split(' ');
+  const lines: string[] = [];
+  let currentLine = '';
+
+  for (const word of words) {
+    const testLine = currentLine ? `${currentLine} ${word}` : word;
+    if (testLine.length > maxCharsPerLine && currentLine) {
+      lines.push(currentLine);
+      currentLine = word;
+    } else {
+      currentLine = testLine;
+    }
+  }
+  if (currentLine) lines.push(currentLine);
+  return lines;
+}
+
 export function QRCodeDialog({ 
   open, 
   onOpenChange, 
   url, 
   productName,
   showSecuritySealOverlay = false,
+  wineIngredientsText,
+  wineEnergyText,
 }: QRCodeDialogProps) {
   const { t } = useTranslation();
   const [copied, setCopied] = useState(false);
