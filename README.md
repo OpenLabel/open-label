@@ -39,15 +39,15 @@ Create compliant Digital Product Passports in minutes. No installation, no credi
 
 ## ✨ Features
 
-| Feature | Description |
-|---------|-------------|
-| 🍷 **Wine E-Labels** | Full EU Regulation 2021/2117 compliance with ingredients, nutrition, allergens |
-| 📦 **Generic DPP** | Flexible template for any product type |
-| 📱 **QR Codes** | Generate scannable codes linking to each passport |
-| 🌍 **24 Languages** | All EU official languages supported |
-| 🤖 **AI Autofill** | Optional: scan wine labels to extract data automatically |
-| 🔒 **Self-Hosted** | Full data sovereignty — your data, your servers |
-| 📜 **Long-Term Storage** | Designed for 50+ year data retention (wine, etc.) |
+| Feature                  | Description                                                                    |
+| ------------------------ | ------------------------------------------------------------------------------ |
+| 🍷 **Wine E-Labels**     | Full EU Regulation 2021/2117 compliance with ingredients, nutrition, allergens |
+| 📦 **Generic DPP**       | Flexible template for any product type                                         |
+| 📱 **QR Codes**          | Generate scannable codes linking to each passport                              |
+| 🌍 **24 Languages**      | All EU official languages supported                                            |
+| 🤖 **AI Autofill**       | Optional: scan wine labels to extract data automatically                       |
+| 🔒 **Self-Hosted**       | Full data sovereignty — your data, your servers                                |
+| 📜 **Long-Term Storage** | Designed for 50+ year data retention (wine, etc.)                              |
 
 ### 🚧 Early Alpha Categories (Available on Request)
 
@@ -107,15 +107,16 @@ The platform supports two backend configurations:
 
 **Best for:** Most users, quick setup, minimal maintenance
 
-| Pros | Cons |
-|------|------|
-| ✅ 5-minute setup | ❌ Data on Supabase servers |
-| ✅ Free tier (500MB DB, 1GB storage) | ❌ Requires internet |
-| ✅ Automatic backups | ❌ Rate limits on free tier |
-| ✅ Managed security updates | |
-| ✅ Global CDN | |
+| Pros                                 | Cons                        |
+| ------------------------------------ | --------------------------- |
+| ✅ 5-minute setup                    | ❌ Data on Supabase servers |
+| ✅ Free tier (500MB DB, 1GB storage) | ❌ Requires internet        |
+| ✅ Automatic backups                 | ❌ Rate limits on free tier |
+| ✅ Managed security updates          |                             |
+| ✅ Global CDN                        |                             |
 
 **Free tier includes:**
+
 - 500 MB database
 - 1 GB file storage
 - 50,000 monthly active users
@@ -126,15 +127,16 @@ The platform supports two backend configurations:
 
 **Best for:** Enterprise, air-gapped environments, full control
 
-| Pros | Cons |
-|------|------|
-| ✅ 100% data sovereignty | ❌ More complex setup |
-| ✅ Air-gapped deployments | ❌ You manage backups |
-| ✅ No vendor lock-in | ❌ Requires Docker knowledge |
-| ✅ Unlimited resources | ❌ You manage security updates |
-| ✅ Full infrastructure control | ❌ Needs 2-4GB RAM minimum |
+| Pros                           | Cons                           |
+| ------------------------------ | ------------------------------ |
+| ✅ 100% data sovereignty       | ❌ More complex setup          |
+| ✅ Air-gapped deployments      | ❌ You manage backups          |
+| ✅ No vendor lock-in           | ❌ Requires Docker knowledge   |
+| ✅ Unlimited resources         | ❌ You manage security updates |
+| ✅ Full infrastructure control | ❌ Needs 2-4GB RAM minimum     |
 
 **Requirements:**
+
 - Docker & Docker Compose
 - 2-4 GB RAM minimum
 - 10+ GB disk space
@@ -161,11 +163,11 @@ The platform supports two backend configurations:
 
 Navigate to **Settings → API** and note:
 
-| Credential | Where to Find |
-|------------|---------------|
-| **Project ID** | The subdomain in your URL (e.g., `abcdef` from `https://abcdef.supabase.co`) |
-| **Project URL** | Full URL: `https://abcdef.supabase.co` |
-| **Anon Key** | Under "Project API keys" → `anon` `public` (starts with `eyJ...`) |
+| Credential      | Where to Find                                                                |
+| --------------- | ---------------------------------------------------------------------------- |
+| **Project ID**  | The subdomain in your URL (e.g., `abcdef` from `https://abcdef.supabase.co`) |
+| **Project URL** | Full URL: `https://abcdef.supabase.co`                                       |
+| **Anon Key**    | Under "Project API keys" → `anon` `public` (starts with `eyJ...`)            |
 
 #### Step 3: Get a Resend API Key
 
@@ -209,6 +211,7 @@ Select **[1] Supabase Cloud** and enter your credentials when prompted.
 Select **[2] Self-Hosted Supabase (Docker)**.
 
 The script will:
+
 1. Clone the Supabase Docker setup
 2. Generate secure credentials
 3. Start all services (PostgreSQL, GoTrue, PostgREST, Storage, etc.)
@@ -219,11 +222,11 @@ The script will:
 
 After setup completes:
 
-| Service | URL |
-|---------|-----|
-| **API** | `http://localhost:8000` |
+| Service                | URL                     |
+| ---------------------- | ----------------------- |
+| **API**                | `http://localhost:8000` |
 | **Studio (Dashboard)** | `http://localhost:3000` |
-| **Database** | `localhost:5432` |
+| **Database**           | `localhost:5432`        |
 
 #### Step 3: Managing Docker Services
 
@@ -348,6 +351,7 @@ docker run -p 80:80 \
 ### Static Hosting
 
 Upload the contents of `dist/` to any static host:
+
 - Nginx
 - Apache
 - AWS S3 + CloudFront
@@ -360,20 +364,20 @@ Upload the contents of `dist/` to any static host:
 
 ### Environment Variables
 
-| Variable | Required | Description |
-|----------|----------|-------------|
-| `VITE_SUPABASE_URL` | ✅ | Your Supabase project URL |
-| `VITE_SUPABASE_PUBLISHABLE_KEY` | ✅ | Your Supabase anon/public key |
-| `VITE_SUPABASE_PROJECT_ID` | ✅ | Your Supabase project ID |
+| Variable                        | Required | Description                   |
+| ------------------------------- | -------- | ----------------------------- |
+| `VITE_SUPABASE_URL`             | ✅       | Your Supabase project URL     |
+| `VITE_SUPABASE_PUBLISHABLE_KEY` | ✅       | Your Supabase anon/public key |
+| `VITE_SUPABASE_PROJECT_ID`      | ✅       | Your Supabase project ID      |
 
 ### Supabase Secrets
 
 Set via `supabase secrets set KEY=value`:
 
-| Secret | Required | Description |
-|--------|----------|-------------|
-| `RESEND_API_KEY` | ✅ | For email notifications |
-| `LOVABLE_API_KEY` | ❌ | For AI wine label scanning |
+| Secret            | Required | Description                |
+| ----------------- | -------- | -------------------------- |
+| `RESEND_API_KEY`  | ✅       | For email notifications    |
+| `LOVABLE_API_KEY` | ❌       | For AI wine label scanning |
 
 ### First-Time Setup Wizard
 
@@ -500,12 +504,12 @@ npm run preview
 
 ### Database Schema
 
-| Table | Purpose |
-|-------|---------|
-| `passports` | Product passport data |
-| `profiles` | User profiles linked to auth |
-| `site_config` | Instance configuration |
-| `api_usage` | Usage tracking for rate limits |
+| Table         | Purpose                        |
+| ------------- | ------------------------------ |
+| `passports`   | Product passport data          |
+| `profiles`    | User profiles linked to auth   |
+| `site_config` | Instance configuration         |
+| `api_usage`   | Usage tracking for rate limits |
 
 ---
 
@@ -533,13 +537,14 @@ We welcome contributions! Please:
 This project is licensed under the **Open-Label Public License (OLPL)**.
 
 Key conditions:
+
 - ✅ The software may be used commercially
 - ⚠️ Modifications must be open if the software is run as a service
 - ⚠️ Interfaces displaying Digital Product Passports must show: **Powered by Open-Label.eu**
 
 See [LICENSE](LICENSE) for full text.
 
-> **Note:** The OLPL is a source-available license and is not yet OSI-compatible. It is our goal to move towards a fully OSI-compatible open-source license in the near future.
+> **Note:** The OLPL is a source-available license and is not yet OSI-compatible. It is our goal to move towards a fully OSI-compatible open-source license in the very near future, if our license is not permissible enough for your purpose, please contact us and we will make sure to find a solution.
 
 ---
 
