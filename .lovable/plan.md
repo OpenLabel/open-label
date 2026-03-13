@@ -1,8 +1,8 @@
-## Add Source-Available Notice to README
 
-**1. After line 540** (after `See [LICENSE](LICENSE) for full text.`), add:
 
-```
+## Update Source File Headers to OLPL v1.0 ✅
 
-> **Note:** The OLPL is a source-available license and is not yet OSI-compatible. It is our goal to move towards a fully OSI-compatible open-source license in the near future.
-```
+### Changes
+- Replaced old 10-line `//`-comment AGPLv3 header with new 15-line `/* */` block-comment OLPL header in all 70 project-authored source files
+- Updated Terms page (`src/pages/Terms.tsx`) to reference "Open-Label Public License (OLPL) v1.0" instead of "GNU Affero General Public License version 3 (AGPL-3.0)"
+- All 752 tests pass
