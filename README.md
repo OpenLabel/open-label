@@ -332,7 +332,7 @@ After running `npm run build`, deploy the `dist` folder:
 
 ### Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OpenLabel/digital-product-passports-com)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OpenLabel/open-label)
 
 ### Docker
 
