@@ -96,12 +96,24 @@ export function BuildStatusBanner() {
     setTimeout(() => setCopied(false), 2000);
   };
 
+  const isSuccess = resolved?.status === 'pass';
+  const isGreen = isLoading || isSuccess;
+
+  if (isSuccess) {
+    return (
+      <Alert className="mb-6 border-green-500 bg-green-500/10 text-green-700">
+        <Check className="h-5 w-5 text-green-600" />
+        <AlertTitle className="text-lg font-bold mb-0">✅ All checks passed!</AlertTitle>
+      </Alert>
+    );
+  }
+
   return (
-    <Alert variant="destructive" className="mb-6 border-destructive bg-destructive/10">
+    <Alert variant={isGreen ? undefined : "destructive"} className={cn("mb-6", isGreen ? "border-green-500 bg-green-500/10 text-green-700" : "border-destructive bg-destructive/10")}>
       <Collapsible open={open} onOpenChange={setOpen}>
         <CollapsibleTrigger className="flex items-center gap-2 w-full cursor-pointer text-left">
           {isLoading ? (
-            <Loader2 className="h-5 w-5 shrink-0 animate-spin" />
+            <Loader2 className="h-5 w-5 shrink-0 animate-spin text-green-600" />
           ) : (
             <AlertTriangle className="h-5 w-5 shrink-0" />
           )}

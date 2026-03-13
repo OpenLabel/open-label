@@ -1,5 +1,5 @@
-import { describe, it, expect, vi, beforeEach } from 'vitest';
-import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
+import { render, screen, fireEvent, waitFor, act } from '@testing-library/react';
 
 const mockInvoke = vi.fn();
 
@@ -28,12 +28,19 @@ import { BuildStatusBanner } from './BuildStatusBanner';
 describe('BuildStatusBanner', () => {
   beforeEach(() => {
     vi.clearAllMocks();
+    vi.useFakeTimers();
   });
 
-  it('renders loading state initially', () => {
+  afterEach(() => {
+    vi.useRealTimers();
+  });
+
+  it('renders loading state with green styling', () => {
     mockInvoke.mockReturnValue(new Promise(() => {})); // never resolves
     render(<BuildStatusBanner />);
     expect(screen.getByText(/Checking build status/)).toBeInTheDocument();
+    const alert = screen.getByRole('alert');
+    expect(alert.className).toContain('green');
   });
 
   it('shows fail state with error message', async () => {
@@ -52,19 +59,25 @@ describe('BuildStatusBanner', () => {
     });
     render(<BuildStatusBanner />);
     await waitFor(() => expect(screen.getByText(/Build Quality Check Failed/)).toBeInTheDocument());
-    // Expand the collapsible
     fireEvent.click(screen.getByText(/Build Quality Check Failed/));
     expect(screen.getByText(/test-a/)).toBeInTheDocument();
     expect(screen.getByText(/test-b/)).toBeInTheDocument();
   });
 
-  it('returns null when status is pass', async () => {
+  it('shows success banner then auto-dismisses after 4 seconds', async () => {
     mockInvoke.mockResolvedValue({
       data: { status: 'pass' },
       error: null,
     });
     const { container } = render(<BuildStatusBanner />);
-    await waitFor(() => expect(container.querySelector('[role="alert"]')).not.toBeInTheDocument());
+    await waitFor(() => expect(screen.getByText(/All checks passed/)).toBeInTheDocument());
+    expect(container.querySelector('[role="alert"]')).toBeInTheDocument();
+
+    // After 4 seconds it should dismiss
+    act(() => {
+      vi.advanceTimersByTime(4000);
+    });
+    expect(container.querySelector('[role="alert"]')).not.toBeInTheDocument();
   });
 
   it('shows unknown state on invoke error', async () => {
