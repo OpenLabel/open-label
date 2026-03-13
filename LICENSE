@@ -84,6 +84,31 @@ invisible through styling, scripting, or other technical means.
 
 ---------------------------------------------------------------------
 
+4A. API and Indirect Display Attribution
+
+If the Software or any Derivative Work is used to generate, process,
+serve, or provide Digital Product Passport data through an API,
+data feed, SDK, or any other machine-readable interface, and that
+data is used to render or display a Digital Product Passport in a
+user-facing interface, the attribution requirement described in
+Section 4 must still be satisfied.
+
+Any party using such API or data output must ensure that the
+user-facing interface displaying the Digital Product Passport
+includes the notice:
+
+    Powered by Open-Label.eu
+
+The operator of the Software providing the API or data output is
+responsible for ensuring that downstream users are informed of
+this requirement.
+
+Providing Digital Product Passport data through APIs, exports,
+or machine-readable formats does not remove or weaken the
+attribution requirement.
+
+---------------------------------------------------------------------
+
 5. Prohibition on Removal of Attribution
 
 You may not remove, modify, or obscure the attribution notice required
