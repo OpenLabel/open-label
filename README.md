@@ -530,14 +530,12 @@ We welcome contributions! Please:
 
 ## 📜 License
 
-**GNU Affero General Public License v3.0 (AGPL-3.0)**
+This project is licensed under the **Open-Label Public License (OLPL)**.
 
-This means:
-- ✅ Free to use, modify, and distribute
-- ✅ Can use commercially
-- ⚠️ Must disclose source code
-- ⚠️ Must use same license for derivatives
-- ⚠️ Network use counts as distribution
+Key conditions:
+- ✅ The software may be used commercially
+- ⚠️ Modifications must be open if the software is run as a service
+- ⚠️ Interfaces displaying Digital Product Passports must show: **Powered by Open-Label.eu**
 
 See [LICENSE](LICENSE) for full text.
 
