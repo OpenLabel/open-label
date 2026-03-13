@@ -47,12 +47,12 @@ export default function Terms() {
             <h2 className="text-xl font-semibold mb-4">2. Open Source License</h2>
             <p className="text-muted-foreground mb-2">
               This platform is open source software licensed under the{' '}
-              <strong>GNU Affero General Public License version 3 (AGPL-3.0)</strong>. 
+              <strong>Open-Label Public License (OLPL) v1.0</strong>. 
               This means you are free to use, modify, and distribute the software, provided that:
             </p>
             <ul className="list-disc pl-6 text-muted-foreground space-y-1 mb-2">
-              <li>Any modifications you make must also be licensed under AGPL-3.0</li>
-              <li>If you run a modified version on a server and let others use it, you must make the source code available to them</li>
+              <li>Any modifications you make must also be licensed under the OLPL</li>
+              <li>Interfaces displaying Digital Product Passports generated using this software must display "Powered by Open-Label.eu"</li>
               <li>You must include the original copyright notice and license</li>
             </ul>
             <p className="text-muted-foreground">
