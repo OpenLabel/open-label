@@ -1,27 +1,49 @@
 
 
+## Update Source File Headers to New OLPL Template
 
-## Simplify Wine QR Code — Label Above, Energy Below ✅
+Replace the old 10-line `//`-comment AGPLv3 header with the new `/* */` block-comment OLPL header in all 70 project-authored source files.
 
-### Layout
-- **Above QR**: Just the translated word "Ingredients" (single centered word)
-- **Below QR**: Just `E 100ml : XXX kJ / YY kcal` (single centered line)
-- **No full ingredients list** anywhere in the QR image
+### Old header (lines 1-10):
+```
+// Open-Label Digital Product Passport Engine
+// Copyright (C) 2026 Open-Label.eu
+//
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU Affero General Public License as
+// published by the Free Software Foundation, either version 3 of the
+// License, or (at your option) any later version.
+//
+// This program includes additional attribution requirements.
+// See the LICENSE and NOTICE files for details.
+```
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `src/pages/Dashboard.tsx` | `handleShowQR` now passes just `t('wine.ingredients')` as `wineIngredientsText` instead of the full comma-separated list |
-| `src/components/QRCodeDialog.tsx` | Removed `wrapText`/`wrapTextSvg` helpers. Both PNG and SVG downloads render single centered lines. Preview also centers the label. |
+### New header:
+```
+/*
+ * Open-Label Digital Product Passport Engine
+ * Copyright (C) 2026 Open-Label.eu
+ *
+ * Licensed under the Open-Label Public License (OLPL) v1.0.
+ * You may use, modify, and distribute this software under the terms
+ * of the OLPL license.
+ *
+ * Interfaces displaying Digital Product Passports generated using
+ * this software must display:
+ *
+ *     Powered by Open-Label.eu
+ *
+ * See LICENSE and NOTICE files for details.
+ */
+```
 
-## Build Status Banner — Test Failures Detection ✅
+### Scope
+All 70 files across `src/` and `supabase/functions/` that currently have the old header. Excluded: auto-generated files (`client.ts`, `types.ts`), UI library components, config files, test files, and `.json`/`.css` files (same exclusions as before).
 
-### Problem
-Banner only checked coverage thresholds, not test pass/fail results.
+### Approach
+- Replace lines 1-10 in each file with the new block comment
+- No other changes to file content
 
-### Changes Made
-| File | Change |
-|------|--------|
-| `vite.config.ts` | `buildStatusPlugin()` now also reads `test-results/results.json` for failed test count |
-| `vitest.config.ts` | Added `json` reporter outputting to `./test-results/results.json` |
-| `src/i18n/locales/en.json` | Removed `testKey` that was causing locale test failures |
+### Note on Terms page
+`src/pages/Terms.tsx` also references "GNU Affero General Public License version 3" in its rendered content — this should also be updated to reference the "Open-Label Public License (OLPL) v1.0" to stay consistent.
+
