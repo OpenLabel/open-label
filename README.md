@@ -550,8 +550,8 @@ See [LICENSE](LICENSE) for full text.
 
 ## ❓ Support
 
-- **GitHub Issues:** [Report bugs](https://github.com/OpenLabel/digital-product-passports-com/issues)
-- **Discussions:** [Ask questions](https://github.com/OpenLabel/digital-product-passports-com/discussions)
+- **GitHub Issues:** [Report bugs](https://github.com/OpenLabel/open-label/issues)
+- **Discussions:** [Ask questions](https://github.com/OpenLabel/open-label/discussions)
 - **Email:** See repository for contact info
 
 ---
