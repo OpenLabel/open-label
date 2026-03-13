@@ -491,7 +491,7 @@ export default function Index() {
               <Link to="/legal" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 {t('landing.footer.legal')}
               </Link>
-              <a href="https://github.com/OpenLabel/open-label" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <a href="https://github.com/OpenLabel/digital-product-passports-com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors">
                 <Github className="h-4 w-4" />
                 {t('landing.footer.github')}
               </a>
