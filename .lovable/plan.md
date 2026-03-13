@@ -1,27 +1,8 @@
 
 
-## Update README License References to OLPL
+## Update Source File Headers to OLPL v1.0 ✅
 
-Three changes in `README.md`:
-
-**1. Badge (line 3):** Replace the AGPL badge/link with an OLPL badge pointing to the LICENSE file:
-```
-[![License: OLPL v1.0](https://img.shields.io/badge/License-OLPL%20v1.0-blue.svg)](LICENSE)
-```
-
-**2. License section (lines 531-542):** Replace the full AGPL block with:
-```
-## 📜 License
-
-This project is licensed under the **Open-Label Public License (OLPL)**.
-
-Key conditions:
-- ✅ The software may be used commercially
-- ⚠️ Modifications must be open if the software is run as a service
-- ⚠️ Interfaces displaying Digital Product Passports must show: **Powered by Open-Label.eu**
-
-See [LICENSE](LICENSE) for full text.
-```
-
-**3. No other files need changes** — `Terms.tsx`, `LICENSE`, `NOTICE`, and `TRADEMARKS.md` were already updated in prior steps.
-
+### Changes
+- Replaced old 10-line `//`-comment AGPLv3 header with new 15-line `/* */` block-comment OLPL header in all 70 project-authored source files
+- Updated Terms page (`src/pages/Terms.tsx`) to reference "Open-Label Public License (OLPL) v1.0" instead of "GNU Affero General Public License version 3 (AGPL-3.0)"
+- All 752 tests pass
