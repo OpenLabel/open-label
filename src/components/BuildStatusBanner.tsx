@@ -41,6 +41,7 @@ export function BuildStatusBanner() {
   const [resolved, setResolved] = useState<BuildStatus | null>(null);
   const [copied, setCopied] = useState(false);
   const [open, setOpen] = useState(false);
+  const [dismissed, setDismissed] = useState(false);
   const { toast } = useToast();
   const { config, loading: configLoading } = useSiteConfig();
 
@@ -76,8 +77,14 @@ export function BuildStatusBanner() {
       });
   }, [isPreview, configLoading, config?.site_url]);
 
-  // Hide on published site or if build passed
-  if (!isPreview || resolved?.status === 'pass') return null;
+  useEffect(() => {
+    if (resolved?.status === 'pass') {
+      const timer = setTimeout(() => setDismissed(true), 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [resolved?.status]);
+
+  if (!isPreview || dismissed) return null;
 
   const isLoading = resolved === null;
   const prompt = buildPrompt(resolved?.message ?? 'Unknown error');
