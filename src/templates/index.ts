@@ -1,13 +1,18 @@
-// Open-Label Digital Product Passport Engine
-// Copyright (C) 2026 Open-Label.eu
-//
-// This program is free software: you can redistribute it and/or modify
-// it under the terms of the GNU Affero General Public License as
-// published by the Free Software Foundation, either version 3 of the
-// License, or (at your option) any later version.
-//
-// This program includes additional attribution requirements.
-// See the LICENSE and NOTICE files for details.
+/*
+ * Open-Label Digital Product Passport Engine
+ * Copyright (C) 2026 Open-Label.eu
+ *
+ * Licensed under the Open-Label Public License (OLPL) v1.0.
+ * You may use, modify, and distribute this software under the terms
+ * of the OLPL license.
+ *
+ * Interfaces displaying Digital Product Passports generated using
+ * this software must display:
+ *
+ *     Powered by Open-Label.eu
+ *
+ * See LICENSE and NOTICE files for details.
+ */
 
 import { CategoryTemplate } from './base';
 import { wineTemplate } from './wine';
