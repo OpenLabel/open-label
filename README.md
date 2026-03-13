@@ -79,8 +79,8 @@ The following product categories are in early development and available on reque
 ### One-Command Setup
 
 ```bash
-git clone https://github.com/OpenLabel/digital-product-passports-com.git
-cd digital-product-passports-com
+git clone https://github.com/OpenLabel/open-label.git
+cd open-label
 chmod +x setup.sh
 ./setup.sh
 ```
