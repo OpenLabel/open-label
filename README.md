@@ -1,7 +1,7 @@
 # Digital Product Passport
 
 [![License: OLPL v1.0](https://img.shields.io/badge/License-OLPL%20v1.0-blue.svg)](LICENSE)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)](https://github.com/OpenLabel/digital-product-passports-com)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)](https://github.com/OpenLabel/open-label)
 
 An **open-source, self-hostable** platform for creating legally compliant Digital Product Passports (DPPs) for EU regulations.
 
@@ -79,8 +79,8 @@ The following product categories are in early development and available on reque
 ### One-Command Setup
 
 ```bash
-git clone https://github.com/OpenLabel/digital-product-passports-com.git
-cd digital-product-passports-com
+git clone https://github.com/OpenLabel/open-label.git
+cd open-label
 chmod +x setup.sh
 ./setup.sh
 ```
@@ -328,11 +328,11 @@ After running `npm run build`, deploy the `dist` folder:
 
 ### Vercel (Recommended)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOpenLabel%2Fdigital-product-passports-com&env=VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY,VITE_SUPABASE_PROJECT_ID)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FOpenLabel%2Fopen-label&env=VITE_SUPABASE_URL,VITE_SUPABASE_PUBLISHABLE_KEY,VITE_SUPABASE_PROJECT_ID)
 
 ### Netlify
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OpenLabel/digital-product-passports-com)
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/OpenLabel/open-label)
 
 ### Docker
 
@@ -550,8 +550,8 @@ See [LICENSE](LICENSE) for full text.
 
 ## ❓ Support
 
-- **GitHub Issues:** [Report bugs](https://github.com/OpenLabel/digital-product-passports-com/issues)
-- **Discussions:** [Ask questions](https://github.com/OpenLabel/digital-product-passports-com/discussions)
+- **GitHub Issues:** [Report bugs](https://github.com/OpenLabel/open-label/issues)
+- **Discussions:** [Ask questions](https://github.com/OpenLabel/open-label/discussions)
 - **Email:** See repository for contact info
 
 ---
