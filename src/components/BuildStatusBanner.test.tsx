@@ -20,7 +20,6 @@ vi.mock('@/hooks/useSiteConfig', () => ({
   }),
 }));
 
-// Mock import.meta.env.DEV
 vi.stubGlobal('location', { ...window.location, hostname: 'id-preview--test.lovable.app' });
 
 import { BuildStatusBanner } from './BuildStatusBanner';
@@ -28,15 +27,10 @@ import { BuildStatusBanner } from './BuildStatusBanner';
 describe('BuildStatusBanner', () => {
   beforeEach(() => {
     vi.clearAllMocks();
-    vi.useFakeTimers();
-  });
-
-  afterEach(() => {
-    vi.useRealTimers();
   });
 
   it('renders loading state with green styling', () => {
-    mockInvoke.mockReturnValue(new Promise(() => {})); // never resolves
+    mockInvoke.mockReturnValue(new Promise(() => {}));
     render(<BuildStatusBanner />);
     expect(screen.getByText(/Checking build status/)).toBeInTheDocument();
     const alert = screen.getByRole('alert');
@@ -65,19 +59,27 @@ describe('BuildStatusBanner', () => {
   });
 
   it('shows success banner then auto-dismisses after 4 seconds', async () => {
+    vi.useFakeTimers();
     mockInvoke.mockResolvedValue({
       data: { status: 'pass' },
       error: null,
     });
     const { container } = render(<BuildStatusBanner />);
-    await waitFor(() => expect(screen.getByText(/All checks passed/)).toBeInTheDocument());
+
+    // Flush the promise
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(0);
+    });
+
+    expect(screen.getByText(/All checks passed/)).toBeInTheDocument();
     expect(container.querySelector('[role="alert"]')).toBeInTheDocument();
 
     // After 4 seconds it should dismiss
-    act(() => {
-      vi.advanceTimersByTime(4000);
+    await act(async () => {
+      await vi.advanceTimersByTimeAsync(4000);
     });
     expect(container.querySelector('[role="alert"]')).not.toBeInTheDocument();
+    vi.useRealTimers();
   });
 
   it('shows unknown state on invoke error', async () => {
