@@ -1,7 +1,7 @@
 # Digital Product Passport
 
 [![License: OLPL v1.0](https://img.shields.io/badge/License-OLPL%20v1.0-blue.svg)](LICENSE)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)](https://github.com/OpenLabel/digital-product-passports-com)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Yes-brightgreen.svg)](https://github.com/OpenLabel/open-label)
 
 An **open-source, self-hostable** platform for creating legally compliant Digital Product Passports (DPPs) for EU regulations.
 
