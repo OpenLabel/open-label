@@ -36,6 +36,7 @@ import Setup from "./pages/Setup";
 import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 import ReferralStats from "./pages/ReferralStats";
+import ReferralLeaderboard from "./pages/ReferralLeaderboard";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
@@ -64,6 +65,7 @@ function AppRoutes() {
         <Route path="/setup" element={<Setup />} />
         <Route path="/p/:slug" element={<PublicPassport />} />
         <Route path="/referral/:code" element={<ReferralStats />} />
+        <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
         <Route path="/legal" element={<LegalMentions />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms" element={<Terms />} />
@@ -82,6 +84,7 @@ function AppRoutes() {
       <Route path="/passport/:id/edit" element={<PassportForm />} />
       <Route path="/p/:slug" element={<PublicPassport />} />
       <Route path="/referral/:code" element={<ReferralStats />} />
+      <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
       <Route path="/legal" element={<LegalMentions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<Terms />} />
