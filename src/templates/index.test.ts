@@ -86,8 +86,8 @@ describe("templates", () => {
   });
 
   describe("categoryList", () => {
-    it("has visible product categories (wine and other)", () => {
-      expect(categoryList.length).toBe(2);
+    it("has visible product categories (wine, toys, and other)", () => {
+      expect(categoryList.length).toBe(3);
     });
 
     it("each category has required properties", () => {
@@ -120,9 +120,16 @@ describe("templates", () => {
       expect(other?.regulation).toBe("Generic DPP");
     });
 
+    it("includes toys with correct regulation", () => {
+      const toys = categoryList.find((c) => c.value === "toys");
+      expect(toys).toBeDefined();
+      expect(toys?.regulation).toContain("2025/2509");
+    });
+
     it("values match ProductCategory type", () => {
       const validCategories: ProductCategory[] = [
         "wine",
+        "toys",
         "other",
       ];
 
