@@ -1,0 +1,17 @@
+# Open Label .eu
+
+> Free, open-source platform for generating EU ESPR-compliant Digital Product Passports (DPPs) with QR codes for wine, batteries, textiles, electronics and other product categories.
+
+Open Label .eu lets companies create unlimited Digital Product Passports for free. Each passport gets a public, long-lived URL and printable QR code so end consumers can access regulatory product information.
+
+## Pages
+
+- [Home](/): Overview of the DPP generator and supported categories.
+- [Referral Leaderboard](/referral-leaderboard): Public ranking of referral codes by valid signups.
+- [Legal Mentions](/legal): Publisher and legal information.
+- [Privacy Policy](/privacy-policy): How user data is handled.
+- [Terms & Conditions](/terms): Terms of use for the platform.
+
+## Optional
+
+- [Sign in](/auth): Account access for DPP authors.
