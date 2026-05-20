@@ -1,183 +1,101 @@
-import { describe, it, expect } from "vitest";
-import type { TemplateQuestion, TemplateSection, CategoryTemplate } from "./base";
-import { BaseTemplate } from "./base";
+import { describe, it, expect } from 'vitest';
+import type { TemplateQuestion, TemplateSection, CategoryTemplate } from './base';
+import { BaseTemplate, evaluateShowWhen } from './base';
 
-describe("base template types", () => {
-  describe("TemplateQuestion interface", () => {
-    it("accepts valid text question", () => {
-      const question: TemplateQuestion = {
-        id: "test",
-        label: "Test Question",
-        type: "text",
-      };
-      expect(question.type).toBe("text");
-    });
-
-    it("accepts valid textarea question", () => {
-      const question: TemplateQuestion = {
-        id: "description",
-        label: "Description",
-        type: "textarea",
-        placeholder: "Enter description",
-      };
-      expect(question.type).toBe("textarea");
-      expect(question.placeholder).toBe("Enter description");
-    });
-
-    it("accepts valid select question with options", () => {
-      const question: TemplateQuestion = {
-        id: "category",
-        label: "Category",
-        type: "select",
-        options: [
-          { value: "a", label: "Option A" },
-          { value: "b", label: "Option B" },
-        ],
-      };
-      expect(question.type).toBe("select");
-      expect(question.options).toHaveLength(2);
-    });
-
-    it("accepts valid checkbox question", () => {
-      const question: TemplateQuestion = {
-        id: "agree",
-        label: "I agree",
-        type: "checkbox",
-        required: true,
-      };
-      expect(question.type).toBe("checkbox");
-      expect(question.required).toBe(true);
-    });
-
-    it("accepts valid number question", () => {
-      const question: TemplateQuestion = {
-        id: "quantity",
-        label: "Quantity",
-        type: "number",
-        helpText: "Enter the quantity",
-      };
-      expect(question.type).toBe("number");
-      expect(question.helpText).toBe("Enter the quantity");
-    });
-
-    it("handles all optional properties", () => {
-      const question: TemplateQuestion = {
-        id: "full",
-        label: "Full Question",
-        type: "select",
-        options: [{ value: "1", label: "One" }],
-        placeholder: "Select one",
-        required: true,
-        helpText: "Help text here",
-      };
-      expect(question.options).toBeDefined();
-      expect(question.placeholder).toBeDefined();
-      expect(question.required).toBeDefined();
-      expect(question.helpText).toBeDefined();
-    });
+describe('base template types', () => {
+  it('accepts the base set of question types', () => {
+    const q: TemplateQuestion = { id: 't', label: 'T', type: 'text' };
+    expect(q.type).toBe('text');
+    const m: TemplateQuestion = {
+      id: 'm',
+      label: 'M',
+      type: 'multi_select',
+      options: [{ value: 'a', label: 'A' }],
+    };
+    expect(m.type).toBe('multi_select');
   });
 
-  describe("TemplateSection interface", () => {
-    it("accepts valid section with questions", () => {
-      const section: TemplateSection = {
-        title: "Basic Info",
-        questions: [
-          { id: "name", label: "Name", type: "text" },
-          { id: "email", label: "Email", type: "text" },
-        ],
-      };
-      expect(section.title).toBe("Basic Info");
-      expect(section.questions).toHaveLength(2);
-    });
-
-    it("accepts section with description", () => {
-      const section: TemplateSection = {
-        title: "Advanced",
-        description: "Advanced configuration options",
-        questions: [],
-      };
-      expect(section.description).toBe("Advanced configuration options");
-    });
-
-    it("accepts section with empty questions array", () => {
-      const section: TemplateSection = {
-        title: "Empty Section",
-        questions: [],
-      };
-      expect(section.questions).toHaveLength(0);
-    });
+  it('accepts showWhen and badge', () => {
+    const q: TemplateQuestion = {
+      id: 'x',
+      label: 'X',
+      type: 'text',
+      showWhen: { field: 'y', equals: 'yes' },
+      badge: 'where_applicable',
+    };
+    expect(q.showWhen?.equals).toBe('yes');
+    expect(q.badge).toBe('where_applicable');
   });
 
-  describe("CategoryTemplate interface", () => {
-    it("accepts valid template structure", () => {
-      const template: CategoryTemplate = {
-        id: "test",
-        name: "Test Template",
-        description: "A test template",
-        icon: "📦",
-        sections: [],
-      };
-      expect(template.id).toBe("test");
-      expect(template.name).toBe("Test Template");
-      expect(template.icon).toBe("📦");
-    });
-
-    it("accepts template with getRequiredLogos function", () => {
-      const template: CategoryTemplate = {
-        id: "test",
-        name: "Test",
-        description: "Test description",
-        icon: "🔧",
-        sections: [],
-        getRequiredLogos: (data) => {
-          if (data.hasLogo) return ["logo1", "logo2"];
-          return [];
-        },
-      };
-      expect(template.getRequiredLogos?.({ hasLogo: true })).toEqual(["logo1", "logo2"]);
-      expect(template.getRequiredLogos?.({ hasLogo: false })).toEqual([]);
-    });
+  it('evaluateShowWhen handles undefined (always visible)', () => {
+    expect(evaluateShowWhen(undefined, {})).toBe(true);
   });
 
-  describe("BaseTemplate abstract class", () => {
-    it("can be extended with concrete implementation", () => {
-      class TestTemplate extends BaseTemplate {
-        id = "test";
-        name = "Test";
-        description = "Test description";
-        icon = "🧪";
-        sections: TemplateSection[] = [
-          {
-            title: "Test Section",
-            questions: [{ id: "q1", label: "Question 1", type: "text" }],
-          },
-        ];
+  it('evaluateShowWhen matches equality', () => {
+    expect(
+      evaluateShowWhen({ field: 'a', equals: 'yes' }, { a: 'yes' }),
+    ).toBe(true);
+    expect(
+      evaluateShowWhen({ field: 'a', equals: 'yes' }, { a: 'no' }),
+    ).toBe(false);
+  });
 
-        getRequiredLogos(): string[] {
-          return ["test-logo"];
-        }
-      }
+  it('evaluateShowWhen with array of allowed values', () => {
+    expect(
+      evaluateShowWhen({ field: 'a', equals: ['x', 'y'] }, { a: 'y' }),
+    ).toBe(true);
+    expect(
+      evaluateShowWhen({ field: 'a', equals: ['x', 'y'] }, { a: 'z' }),
+    ).toBe(false);
+  });
 
-      const template = new TestTemplate();
-      expect(template.id).toBe("test");
-      expect(template.name).toBe("Test");
-      expect(template.sections).toHaveLength(1);
-      expect(template.getRequiredLogos?.()).toEqual(["test-logo"]);
-    });
+  it('evaluateShowWhen with includes=true on array values', () => {
+    expect(
+      evaluateShowWhen(
+        { field: 'a', equals: 'x', includes: true },
+        { a: ['x', 'y'] },
+      ),
+    ).toBe(true);
+    expect(
+      evaluateShowWhen(
+        { field: 'a', equals: 'z', includes: true },
+        { a: ['x', 'y'] },
+      ),
+    ).toBe(false);
+    expect(
+      evaluateShowWhen(
+        { field: 'a', equals: ['z', 'x'], includes: true },
+        { a: ['x'] },
+      ),
+    ).toBe(true);
+  });
 
-    it("extended class without getRequiredLogos is valid", () => {
-      class MinimalTemplate extends BaseTemplate {
-        id = "minimal";
-        name = "Minimal";
-        description = "Minimal template";
-        icon = "📋";
-        sections: TemplateSection[] = [];
-        getRequiredLogos = undefined;
-      }
+  it('TemplateSection accepts questions', () => {
+    const s: TemplateSection = { title: 'S', questions: [] };
+    expect(s.questions).toEqual([]);
+  });
 
-      const template = new MinimalTemplate();
-      expect(template.id).toBe("minimal");
-      expect(template.getRequiredLogos).toBeUndefined();
-    });
+  it('CategoryTemplate accepts getRequiredLogos', () => {
+    const tpl: CategoryTemplate = {
+      id: 't',
+      name: 'T',
+      description: 'd',
+      icon: '📦',
+      sections: [],
+      getRequiredLogos: () => ['x'],
+    };
+    expect(tpl.getRequiredLogos!({})).toEqual(['x']);
+  });
+
+  it('BaseTemplate can be extended', () => {
+    class Test extends BaseTemplate {
+      id = 'x';
+      name = 'X';
+      description = 'd';
+      icon = '🔧';
+      sections: TemplateSection[] = [];
+    }
+    const t = new Test();
+    expect(t.id).toBe('x');
   });
 });
