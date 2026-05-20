@@ -397,6 +397,19 @@ export function ToyPublicPassport({
                         : ''}
                     </div>
                   )}
+                  {(d.notified_body_certificate_url as string) && (
+                    <div className="text-xs">
+                      <a
+                        href={d.notified_body_certificate_url as string}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-primary underline inline-flex items-center gap-1"
+                      >
+                        {t('toys.public.certificateDownload', 'Download conformity certificate')}
+                        <ExternalLink className="h-3 w-3" />
+                      </a>
+                    </div>
+                  )}
                 </div>
               }
             />
