@@ -17,6 +17,7 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { WinePublicPassport } from './wine/WinePublicPassport';
+import { ToyPublicPassport } from './toys/ToyPublicPassport';
 import { getTemplate, categoryList } from '@/templates';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -76,6 +77,33 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                 previewLanguage={previewLanguage}
                 onPreviewLanguageChange={setPreviewLanguage}
               />
+            </div>
+          </div>
+        </div>
+        <p className="text-xs text-center text-muted-foreground mt-2">{t('preview.livePreview')}</p>
+      </div>
+    );
+  }
+
+  // Use specialized view for toy passports
+  if (formData.category === 'toys') {
+    return (
+      <div className="sticky top-8">
+        <div className="bg-background shadow-lg overflow-hidden max-w-[280px] mx-auto rounded-2xl border">
+          <div className="bg-muted/50 p-2 flex justify-center">
+            <div className="w-20 h-1 bg-muted-foreground/20 rounded-full" />
+          </div>
+          <div className="h-[500px] overflow-hidden">
+            <div
+              className="overflow-y-auto origin-top"
+              style={{
+                transform: 'scale(0.65)',
+                width: '154%',
+                height: '154%',
+                transformOrigin: 'top left',
+              }}
+            >
+              <ToyPublicPassport passport={previewPassport} isPreview />
             </div>
           </div>
         </div>

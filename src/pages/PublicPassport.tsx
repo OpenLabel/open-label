@@ -22,6 +22,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
 import { WinePublicPassport } from '@/components/wine/WinePublicPassport';
+import { ToyPublicPassport } from '@/components/toys/ToyPublicPassport';
 import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 
@@ -62,6 +63,21 @@ export default function PublicPassport() {
   if (passport.category === 'wine') {
     return (
       <WinePublicPassport
+        passport={{
+          name: passport.name,
+          image_url: passport.image_url,
+          description: passport.description,
+          category_data: (passport.category_data as Record<string, unknown>) || {},
+          updated_at: passport.updated_at,
+        }}
+      />
+    );
+  }
+
+  // Use specialized view for toy passports
+  if (passport.category === 'toys') {
+    return (
+      <ToyPublicPassport
         passport={{
           name: passport.name,
           image_url: passport.image_url,

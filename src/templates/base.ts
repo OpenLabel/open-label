@@ -14,20 +14,45 @@
  * See LICENSE and NOTICE files for details.
  */
 
+export type QuestionType =
+  | 'text'
+  | 'textarea'
+  | 'select'
+  | 'checkbox'
+  | 'number'
+  | 'multi_select';
+
+export type QuestionBadge = 'required' | 'where_applicable' | 'tbd';
+
+export interface ShowWhenCondition {
+  field: string;
+  equals: unknown | unknown[];
+  /** When true, condition matches if the field's array value INCLUDES `equals` */
+  includes?: boolean;
+}
+
 export interface TemplateQuestion {
   id: string;
   label: string;
-  type: 'text' | 'textarea' | 'select' | 'checkbox' | 'number';
+  type: QuestionType;
   options?: { value: string; label: string }[];
   placeholder?: string;
   required?: boolean;
   helpText?: string;
+  /** Conditional reveal — render only when condition matches */
+  showWhen?: ShowWhenCondition;
+  /** Optional badge displayed next to the field label */
+  badge?: QuestionBadge;
+  /** Pre-selected values for multi_select / default value */
+  defaultValue?: unknown;
 }
 
 export interface TemplateSection {
   title: string;
   description?: string;
   questions: TemplateQuestion[];
+  /** Conditional reveal for whole section */
+  showWhen?: ShowWhenCondition;
 }
 
 export interface CategoryTemplate {
@@ -45,6 +70,27 @@ export abstract class BaseTemplate implements CategoryTemplate {
   abstract description: string;
   abstract icon: string;
   abstract sections: TemplateSection[];
-  
+
   getRequiredLogos?(data: Record<string, unknown>): string[];
+}
+
+/** Evaluate a showWhen condition against current form data */
+export function evaluateShowWhen(
+  condition: ShowWhenCondition | undefined,
+  data: Record<string, unknown>,
+): boolean {
+  if (!condition) return true;
+  const value = data[condition.field];
+  if (condition.includes) {
+    if (!Array.isArray(value)) return false;
+    const target = condition.equals;
+    if (Array.isArray(target)) {
+      return target.some((t) => (value as unknown[]).includes(t));
+    }
+    return (value as unknown[]).includes(target);
+  }
+  if (Array.isArray(condition.equals)) {
+    return (condition.equals as unknown[]).includes(value);
+  }
+  return value === condition.equals;
 }
