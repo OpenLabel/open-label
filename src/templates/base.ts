@@ -20,7 +20,8 @@ export type QuestionType =
   | 'select'
   | 'checkbox'
   | 'number'
-  | 'multi_select';
+  | 'multi_select'
+  | 'file';
 
 export type QuestionBadge = 'required' | 'where_applicable' | 'tbd';
 
@@ -31,25 +32,50 @@ export interface ShowWhenCondition {
   includes?: boolean;
 }
 
+export interface TemplateOption {
+  value: string;
+  /** English fallback label */
+  label: string;
+  /** i18n key for translated label (preferred over `label` when present) */
+  labelKey?: string;
+}
+
 export interface TemplateQuestion {
   id: string;
+  /** English fallback label */
   label: string;
+  /** i18n key for translated label (preferred over `label` when present) */
+  labelKey?: string;
   type: QuestionType;
-  options?: { value: string; label: string }[];
+  options?: TemplateOption[];
   placeholder?: string;
+  /** i18n key for translated placeholder */
+  placeholderKey?: string;
   required?: boolean;
   helpText?: string;
+  /** i18n key for translated help text */
+  helpKey?: string;
   /** Conditional reveal — render only when condition matches */
   showWhen?: ShowWhenCondition;
   /** Optional badge displayed next to the field label */
   badge?: QuestionBadge;
   /** Pre-selected values for multi_select / default value */
   defaultValue?: unknown;
+  /** For 'file' questions: accepted MIME types (defaults to image/*,application/pdf) */
+  accept?: string;
+  /** For 'file' questions: max size in bytes (defaults to 5 MB) */
+  maxBytes?: number;
 }
 
 export interface TemplateSection {
+  /** Optional stable id used for translation keys */
+  id?: string;
   title: string;
+  /** i18n key for translated section title */
+  titleKey?: string;
   description?: string;
+  /** i18n key for translated section description */
+  descriptionKey?: string;
   questions: TemplateQuestion[];
   /** Conditional reveal for whole section */
   showWhen?: ShowWhenCondition;
