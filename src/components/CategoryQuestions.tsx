@@ -14,13 +14,15 @@
  * See LICENSE and NOTICE files for details.
  */
 
-import { useEffect } from 'react';
+import { useEffect, useRef, useState } from 'react';
+import type { TFunction } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { getTemplate } from '@/templates';
 import type { ProductCategory } from '@/types/passport';
 import {
   evaluateShowWhen,
   type QuestionBadge,
+  type TemplateOption,
   type TemplateQuestion,
 } from '@/templates/base';
 import {
@@ -32,10 +34,13 @@ import {
   type SelectedFragrance,
 } from '@/data/toyFragrances';
 import { FragrancePicker } from '@/components/toys/FragrancePicker';
+import { supabase } from '@/integrations/supabase/client';
+import { useAuth } from '@/hooks/useAuth';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Checkbox } from '@/components/ui/checkbox';
+import { Button } from '@/components/ui/button';
 import {
   Select,
   SelectContent,
@@ -56,7 +61,14 @@ import {
   AlertTitle,
 } from '@/components/ui/alert';
 import { Badge } from '@/components/ui/badge';
-import { AlertTriangle, Info } from 'lucide-react';
+import {
+  AlertTriangle,
+  ExternalLink,
+  Info,
+  Loader2,
+  Upload,
+  X,
+} from 'lucide-react';
 
 interface CategoryQuestionsProps {
   category: ProductCategory;
@@ -64,7 +76,13 @@ interface CategoryQuestionsProps {
   onChange: (data: Record<string, unknown>) => void;
 }
 
-const BADGE_LABELS: Record<QuestionBadge, string> = {
+const BADGE_KEY: Record<QuestionBadge, string> = {
+  required: 'common.required',
+  where_applicable: 'common.whereApplicable',
+  tbd: 'common.tbdImplementingAct',
+};
+
+const BADGE_FALLBACK: Record<QuestionBadge, string> = {
   required: 'Required',
   where_applicable: 'Where applicable',
   tbd: 'TBD — implementing act',
@@ -78,6 +96,146 @@ const BADGE_VARIANTS: Record<
   where_applicable: 'secondary',
   tbd: 'outline',
 };
+
+/** Lookup translated label for a question, falling back to inline `label`. */
+function tLabel(t: TFunction, q: { label: string; labelKey?: string }): string {
+  return q.labelKey ? t(q.labelKey, q.label) : q.label;
+}
+
+function tHelp(
+  t: TFunction,
+  q: { helpText?: string; helpKey?: string },
+): string | undefined {
+  if (!q.helpText && !q.helpKey) return undefined;
+  return q.helpKey ? t(q.helpKey, q.helpText ?? '') : q.helpText;
+}
+
+function tPlaceholder(
+  t: TFunction,
+  q: { placeholder?: string; placeholderKey?: string },
+): string | undefined {
+  if (!q.placeholder && !q.placeholderKey) return undefined;
+  return q.placeholderKey
+    ? t(q.placeholderKey, q.placeholder ?? '')
+    : q.placeholder;
+}
+
+function tOption(t: TFunction, o: TemplateOption): string {
+  return o.labelKey ? t(o.labelKey, o.label) : o.label;
+}
+
+/** File-upload renderer for `file` question type. */
+function FileUploadField({
+  question,
+  value,
+  onChange,
+}: {
+  question: TemplateQuestion;
+  value: string | undefined;
+  onChange: (url: string | null) => void;
+}) {
+  const { t } = useTranslation();
+  const { user } = useAuth();
+  const inputRef = useRef<HTMLInputElement>(null);
+  const [uploading, setUploading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+
+  const accept = question.accept ?? 'application/pdf,image/*';
+  const maxBytes = question.maxBytes ?? 5 * 1024 * 1024;
+
+  const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    if (!user) {
+      setError(t('toys.certificate.errors.loginRequired', 'You must be signed in to upload files.'));
+      return;
+    }
+    if (file.size > maxBytes) {
+      setError(t('toys.certificate.errors.tooLarge', 'File is too large. Maximum size is 5 MB.'));
+      return;
+    }
+    setUploading(true);
+    setError(null);
+    try {
+      const ext = file.name.split('.').pop() ?? 'bin';
+      const fileName = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
+      const path = `${user.id}/certificates/${fileName}`;
+      const { error: uploadError } = await supabase.storage
+        .from('passport-images')
+        .upload(path, file);
+      if (uploadError) throw uploadError;
+      const { data } = supabase.storage.from('passport-images').getPublicUrl(path);
+      onChange(data.publicUrl);
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : t('toys.certificate.errors.uploadFailed', 'Upload failed.'),
+      );
+    } finally {
+      setUploading(false);
+    }
+  };
+
+  return (
+    <div className="space-y-2">
+      <input
+        ref={inputRef}
+        type="file"
+        accept={accept}
+        onChange={handleUpload}
+        className="hidden"
+        id={`file-${question.id}`}
+      />
+      {value ? (
+        <div className="flex items-center gap-2 border rounded-md p-2 bg-muted/30">
+          <a
+            href={value}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-primary underline inline-flex items-center gap-1 flex-1 truncate"
+          >
+            {t('toys.certificate.viewFile', 'View uploaded file')}
+            <ExternalLink className="h-3 w-3 shrink-0" />
+          </a>
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            onClick={() => {
+              onChange(null);
+              if (inputRef.current) inputRef.current.value = '';
+            }}
+            aria-label={t('toys.certificate.remove', 'Remove file')}
+          >
+            <X className="h-4 w-4" />
+          </Button>
+        </div>
+      ) : (
+        <Button
+          type="button"
+          variant="outline"
+          onClick={() => inputRef.current?.click()}
+          disabled={uploading}
+          className="w-full border-dashed"
+        >
+          {uploading ? (
+            <>
+              <Loader2 className="h-4 w-4 mr-2 animate-spin" />
+              {t('toys.certificate.uploading', 'Uploading...')}
+            </>
+          ) : (
+            <>
+              <Upload className="h-4 w-4 mr-2" />
+              {t('toys.certificate.uploadButton', 'Upload certificate')}
+            </>
+          )}
+        </Button>
+      )}
+      {error && <p className="text-sm text-destructive">{error}</p>}
+    </div>
+  );
+}
 
 export function CategoryQuestions({
   category,
@@ -95,7 +253,6 @@ export function CategoryQuestions({
     const current = data.customs_code as string | undefined;
     if (!chapter || chapter === 'other') return;
     const generated = `9880${chapter.padStart(2, '0')}00`;
-    // Only auto-fill when empty or previously auto-generated (8-digit numeric starting with 9880)
     if (!current || /^9880\d{4}$/.test(current)) {
       if (current !== generated) {
         onChange({ ...data, customs_code: generated });
@@ -131,7 +288,6 @@ export function CategoryQuestions({
     const fragrances = (data.allergenic_fragrances as SelectedFragrance[]) || [];
     const next = generateAllergenDeclaration(hasAllergens, fragrances);
     const existing = data.allergen_declaration_text as string | undefined;
-    // Only overwrite when empty or matches a previously-generated declaration
     if (
       !existing ||
       existing.startsWith('No allergenic fragrances') ||
@@ -155,7 +311,7 @@ export function CategoryQuestions({
         variant={BADGE_VARIANTS[badge]}
         className="ml-2 text-[10px] font-normal align-middle"
       >
-        {BADGE_LABELS[badge]}
+        {t(BADGE_KEY[badge], BADGE_FALLBACK[badge])}
       </Badge>
     );
   };
@@ -180,7 +336,7 @@ export function CategoryQuestions({
             id={question.id}
             value={(value as string) || ''}
             onChange={(e) => handleChange(question.id, e.target.value)}
-            placeholder={question.placeholder}
+            placeholder={tPlaceholder(t, question)}
           />
         );
       case 'textarea':
@@ -189,7 +345,7 @@ export function CategoryQuestions({
             id={question.id}
             value={(value as string) || ''}
             onChange={(e) => handleChange(question.id, e.target.value)}
-            placeholder={question.placeholder}
+            placeholder={tPlaceholder(t, question)}
             rows={3}
           />
         );
@@ -205,7 +361,7 @@ export function CategoryQuestions({
                 e.target.value ? Number(e.target.value) : '',
               )
             }
-            placeholder={question.placeholder}
+            placeholder={tPlaceholder(t, question)}
           />
         );
       case 'checkbox':
@@ -222,7 +378,7 @@ export function CategoryQuestions({
               htmlFor={question.id}
               className="font-normal cursor-pointer"
             >
-              {question.label}
+              {tLabel(t, question)}
               {renderBadge(question.badge)}
             </Label>
           </div>
@@ -239,7 +395,7 @@ export function CategoryQuestions({
             <SelectContent>
               {question.options?.map((option) => (
                 <SelectItem key={option.value} value={option.value}>
-                  {option.label}
+                  {tOption(t, option)}
                 </SelectItem>
               ))}
             </SelectContent>
@@ -265,13 +421,21 @@ export function CategoryQuestions({
                       handleChange(question.id, next);
                     }}
                   />
-                  <span>{option.label}</span>
+                  <span>{tOption(t, option)}</span>
                 </label>
               );
             })}
           </div>
         );
       }
+      case 'file':
+        return (
+          <FileUploadField
+            question={question}
+            value={value as string | undefined}
+            onChange={(url) => handleChange(question.id, url ?? '')}
+          />
+        );
       default:
         return null;
     }
@@ -287,24 +451,41 @@ export function CategoryQuestions({
     const age = data.age_group as string | undefined;
     if (age && YOUNG_CHILD_AGES.includes(age)) {
       toyWarnings.push(
-        'This toy is intended for children under 36 months. Stricter allergenic fragrance restrictions apply, and any small parts must be assessed against choking hazards.',
+        t(
+          'toys.warnings.youngChild',
+          'This toy is intended for children under 36 months. Stricter allergenic fragrance restrictions apply, and any small parts must be assessed against choking hazards.',
+        ),
+      );
+    }
+    if (data.mouth_contact === 'yes') {
+      toyWarnings.push(
+        t(
+          'toys.warnings.mouthContact',
+          'This toy is intended to be placed in the mouth. Stricter allergenic fragrance and chemical migration restrictions apply.',
+        ),
       );
     }
     if (data.has_allergenic_fragrances === 'unknown') {
       toyWarnings.push(
-        'This DPP may be incomplete because allergenic fragrance information is mandatory when applicable. Replace "Unknown" with Yes or No before publishing.',
+        t(
+          'toys.warnings.unknownAllergens',
+          'This DPP may be incomplete because allergenic fragrance information is mandatory when applicable. Replace "Unknown" with Yes or No before publishing.',
+        ),
       );
     }
     const toyCat = data.toy_category as string | undefined;
     if (toyCat && TOY_CATEGORY_LEGISLATION_HINTS[toyCat]) {
-      const legislation =
-        (data.applicable_legislation as string[]) || [];
+      const legislation = (data.applicable_legislation as string[]) || [];
       const missing = TOY_CATEGORY_LEGISLATION_HINTS[toyCat].filter(
         (l) => !legislation.includes(l),
       );
       if (missing.length > 0) {
         toyWarnings.push(
-          `Based on the selected toy category, also consider ticking: ${missing.join(', ')}.`,
+          t(
+            'toys.warnings.suggestLegislation',
+            'Based on the selected toy category, also consider ticking: {{list}}.',
+            { list: missing.join(', ') },
+          ),
         );
       }
     }
@@ -316,13 +497,14 @@ export function CategoryQuestions({
       {isToys && (
         <Alert>
           <Info className="h-4 w-4" />
-          <AlertTitle>Toys DPP — compliance disclaimer</AlertTitle>
+          <AlertTitle>
+            {t('toys.disclaimer.title', 'Toys DPP — compliance disclaimer')}
+          </AlertTitle>
           <AlertDescription className="text-sm">
-            The exact EU Digital Product Passport data model and API
-            specifications for toys are still TBD and are expected to be
-            defined in the implementing act due by the end of 2026. This
-            tool is a first version based on Regulation (EU) 2025/2509 and
-            should not be treated as final legal advice.
+            {t(
+              'toys.disclaimer.body',
+              'The exact EU Digital Product Passport data model and API specifications for toys are still TBD and are expected to be defined in the implementing act due by the end of 2026. This tool is a first version based on Regulation (EU) 2025/2509 and should not be treated as final legal advice.',
+            )}
           </AlertDescription>
         </Alert>
       )}
@@ -358,34 +540,40 @@ export function CategoryQuestions({
         );
         if (visibleQuestions.length === 0) return null;
 
+        const title = section.titleKey
+          ? t(section.titleKey, section.title)
+          : section.title;
+        const description = section.descriptionKey
+          ? t(section.descriptionKey, section.description ?? '')
+          : section.description;
+
         return (
           <Card key={sectionIndex}>
             <CardHeader>
-              <CardTitle className="text-lg">{section.title}</CardTitle>
-              {section.description && (
-                <CardDescription>{section.description}</CardDescription>
-              )}
+              <CardTitle className="text-lg">{title}</CardTitle>
+              {description && <CardDescription>{description}</CardDescription>}
             </CardHeader>
             <CardContent className="space-y-4">
-              {visibleQuestions.map((question) => (
-                <div key={question.id} className="space-y-2">
-                  {question.type !== 'checkbox' && (
-                    <Label htmlFor={question.id}>
-                      {question.label}
-                      {question.required && (
-                        <span className="text-destructive ml-1">*</span>
-                      )}
-                      {renderBadge(question.badge)}
-                    </Label>
-                  )}
-                  {renderQuestion(question)}
-                  {question.helpText && (
-                    <p className="text-xs text-muted-foreground">
-                      {question.helpText}
-                    </p>
-                  )}
-                </div>
-              ))}
+              {visibleQuestions.map((question) => {
+                const help = tHelp(t, question);
+                return (
+                  <div key={question.id} className="space-y-2">
+                    {question.type !== 'checkbox' && (
+                      <Label htmlFor={question.id}>
+                        {tLabel(t, question)}
+                        {question.required && (
+                          <span className="text-destructive ml-1">*</span>
+                        )}
+                        {renderBadge(question.badge)}
+                      </Label>
+                    )}
+                    {renderQuestion(question)}
+                    {help && (
+                      <p className="text-xs text-muted-foreground">{help}</p>
+                    )}
+                  </div>
+                );
+              })}
             </CardContent>
           </Card>
         );
@@ -395,9 +583,14 @@ export function CategoryQuestions({
       {isToys && (
         <Alert>
           <Info className="h-4 w-4" />
-          <AlertTitle>EU Safety Gate</AlertTitle>
+          <AlertTitle>
+            {t('toys.safetyGate.title', 'EU Safety Gate')}
+          </AlertTitle>
           <AlertDescription className="text-sm">
-            Report unsafe products through the EU Safety Gate Portal:{' '}
+            {t(
+              'toys.safetyGate.body',
+              'Report unsafe products through the EU Safety Gate Portal:',
+            )}{' '}
             <a
               href="https://ec.europa.eu/safety-gate-alerts/screen/webReport"
               target="_blank"
@@ -406,7 +599,11 @@ export function CategoryQuestions({
             >
               ec.europa.eu/safety-gate-alerts
             </a>
-            . This link is always shown on the public passport.
+            .{' '}
+            {t(
+              'toys.safetyGate.alwaysShown',
+              'This link is always shown on the public passport.',
+            )}
           </AlertDescription>
         </Alert>
       )}

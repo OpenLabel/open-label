@@ -14,11 +14,21 @@
  * See LICENSE and NOTICE files for details.
  */
 
-import { BaseTemplate, TemplateSection } from './base';
+import { BaseTemplate, TemplateOption, TemplateSection } from './base';
 
-// Public constants reused by UI helpers (warnings, customs autofill, etc.)
+// Helper: build option lists with labelKey wired up to a namespace.
+function opts(
+  ns: string,
+  entries: { value: string; label: string }[],
+): TemplateOption[] {
+  return entries.map((e) => ({
+    value: e.value,
+    label: e.label,
+    labelKey: `toys.options.${ns}.${e.value}`,
+  }));
+}
 
-export const TOY_OPERATOR_ID_TYPES = [
+export const TOY_OPERATOR_ID_TYPES = opts('operatorIdType', [
   { value: 'EORI', label: 'EORI' },
   { value: 'GLN', label: 'GLN' },
   { value: 'LEI', label: 'LEI' },
@@ -27,9 +37,9 @@ export const TOY_OPERATOR_ID_TYPES = [
   { value: 'DUNS', label: 'DUNS' },
   { value: 'ESPR', label: 'ESPR / DPP operator identifier' },
   { value: 'other', label: 'Other' },
-];
+]);
 
-export const TOY_CATEGORIES = [
+export const TOY_CATEGORIES = opts('toyCategory', [
   { value: 'baby', label: 'Baby toy' },
   { value: 'plush', label: 'Plush toy' },
   { value: 'doll', label: 'Doll' },
@@ -57,7 +67,7 @@ export const TOY_CATEGORIES = [
   { value: 'drone', label: 'Toy drone' },
   { value: 'toy_in_food', label: 'Toy in food' },
   { value: 'other', label: 'Other' },
-];
+]);
 
 /** Toy categories that should suggest extra EU legislation */
 export const TOY_CATEGORY_LEGISLATION_HINTS: Record<string, string[]> = {
@@ -73,7 +83,7 @@ export const TOY_CATEGORY_LEGISLATION_HINTS: Record<string, string[]> = {
 /** Toy categories where age <= 36 months triggers warning */
 export const YOUNG_CHILD_AGES = ['0_6m', '6_12m', '12_18m', '18_36m'];
 
-export const TOY_AGE_GROUPS = [
+export const TOY_AGE_GROUPS = opts('ageGroup', [
   { value: '0_6m', label: '0–6 months' },
   { value: '6_12m', label: '6–12 months' },
   { value: '12_18m', label: '12–18 months' },
@@ -88,9 +98,9 @@ export const TOY_AGE_GROUPS = [
   { value: '12plus', label: '12+ years' },
   { value: '14', label: '14 years' },
   { value: 'other', label: 'Other' },
-];
+]);
 
-export const TOY_IDENTIFIER_TYPES = [
+export const TOY_IDENTIFIER_TYPES = opts('identifierType', [
   { value: 'GTIN', label: 'GTIN' },
   { value: 'GS1_DL', label: 'GS1 Digital Link' },
   { value: 'EPC', label: 'EPC' },
@@ -99,9 +109,9 @@ export const TOY_IDENTIFIER_TYPES = [
   { value: 'MODEL', label: 'Model number' },
   { value: 'ISO_15459', label: 'ISO/IEC 15459-compatible identifier' },
   { value: 'other', label: 'Other' },
-];
+]);
 
-export const TOY_CN_CHAPTERS = [
+export const TOY_CN_CHAPTERS = opts('cnChapter', [
   { value: '32', label: '32 — Paints, pigments, inks, dyes' },
   { value: '33', label: '33 — Essential oils, perfumes, cosmetics' },
   { value: '34', label: '34 — Soaps, waxes, modelling pastes' },
@@ -123,9 +133,9 @@ export const TOY_CN_CHAPTERS = [
   { value: '90', label: '90 — Optical, measuring, checking instruments' },
   { value: '95', label: '95 — Toys, games and sports requisites' },
   { value: 'other', label: 'Other' },
-];
+]);
 
-export const TOY_LEGISLATION = [
+export const TOY_LEGISLATION = opts('legislation', [
   { value: 'TSR', label: 'Regulation (EU) 2025/2509 — Toy Safety Regulation' },
   { value: 'GPSR', label: 'Regulation (EU) 2023/988 — General Product Safety Regulation' },
   { value: 'MSR', label: 'Regulation (EU) 2019/1020 — Market surveillance' },
@@ -141,9 +151,9 @@ export const TOY_LEGISLATION = [
   { value: 'REACH', label: 'Regulation (EC) No 1907/2006 — REACH' },
   { value: 'CLP', label: 'Regulation (EC) No 1272/2008 — CLP' },
   { value: 'other', label: 'Other' },
-];
+]);
 
-export const TOY_STANDARDS = [
+export const TOY_STANDARDS = opts('standards', [
   { value: 'EN71_1', label: 'EN 71-1 — Mechanical and physical properties' },
   { value: 'EN71_2', label: 'EN 71-2 — Flammability' },
   { value: 'EN71_3', label: 'EN 71-3 — Migration of certain elements' },
@@ -157,36 +167,64 @@ export const TOY_STANDARDS = [
   { value: 'EN_IEC_62115', label: 'EN IEC 62115 — Electric toys' },
   { value: 'other', label: 'Other harmonised standard' },
   { value: 'common_spec', label: 'Common specification instead of harmonised standard' },
-];
+]);
 
-export const TOY_SAFETY_CHANNELS = [
+export const TOY_SAFETY_CHANNELS = opts('safetyChannel', [
   { value: 'phone', label: 'Telephone' },
   { value: 'email', label: 'Email' },
   { value: 'website', label: 'Dedicated website' },
   { value: 'form', label: 'Contact form' },
-];
+]);
 
-export const TOY_EU_OPERATOR_ROLES = [
+export const TOY_EU_OPERATOR_ROLES = opts('euOperatorRole', [
   { value: 'importer', label: 'Importer' },
   { value: 'auth_rep', label: 'Authorised representative' },
   { value: 'fulfilment', label: 'Fulfilment service provider' },
   { value: 'distributor', label: 'Distributor acting as responsible economic operator' },
   { value: 'other', label: 'Other EU-based responsible person (Reg. 2019/1020 Art. 4)' },
-];
+]);
 
-const YES_NO = [
+const YES_NO = opts('yesNo', [
   { value: 'yes', label: 'Yes' },
   { value: 'no', label: 'No' },
-];
+]);
 
-const YES_NO_UNKNOWN = [
+const YES_NO_UNKNOWN = opts('yesNoUnknown', [
   { value: 'yes', label: 'Yes' },
   { value: 'no', label: 'No' },
   { value: 'unknown', label: 'Unknown' },
-];
+]);
 
 export const EU_SAFETY_GATE_URL =
   'https://ec.europa.eu/safety-gate-alerts/screen/webReport';
+
+// Helper to attach standard labelKey/helpKey/placeholderKey to a question
+type FieldDef = Omit<import('./base').TemplateQuestion, 'labelKey' | 'helpKey' | 'placeholderKey'>;
+function f(q: FieldDef): import('./base').TemplateQuestion {
+  const out: import('./base').TemplateQuestion = {
+    ...q,
+    labelKey: `toys.fields.${q.id}.label`,
+  };
+  if (q.helpText) out.helpKey = `toys.fields.${q.id}.help`;
+  if (q.placeholder) out.placeholderKey = `toys.fields.${q.id}.placeholder`;
+  return out;
+}
+
+function section(
+  id: string,
+  title: string,
+  description: string | undefined,
+  questions: import('./base').TemplateQuestion[],
+): TemplateSection {
+  return {
+    id,
+    title,
+    titleKey: `toys.sections.${id}.title`,
+    description,
+    descriptionKey: description ? `toys.sections.${id}.description` : undefined,
+    questions,
+  };
+}
 
 export class ToysTemplate extends BaseTemplate {
   id = 'toys';
@@ -196,40 +234,29 @@ export class ToysTemplate extends BaseTemplate {
   icon = '🧸';
 
   sections: TemplateSection[] = [
-    {
-      title: 'Manufacturer responsibility',
-      description:
-        'This Digital Product Passport is issued under the sole responsibility of the manufacturer.',
-      questions: [
-        {
+    section(
+      'manufacturer_responsibility',
+      'Manufacturer responsibility',
+      'This Digital Product Passport is issued under the sole responsibility of the manufacturer.',
+      [
+        f({
           id: 'manufacturer_responsibility_confirmed',
           label:
             'I confirm this DPP is issued under the sole responsibility of the manufacturer.',
           type: 'checkbox',
           required: true,
           badge: 'required',
-        },
+        }),
       ],
-    },
-    {
-      title: 'Product identity',
-      description: 'Each toy model or variant needs its own DPP.',
-      questions: [
-        {
-          id: 'brand_name',
-          label: 'Brand name',
-          type: 'text',
-          required: true,
-          badge: 'required',
-        },
-        {
-          id: 'model_name',
-          label: 'Model name or model number',
-          type: 'text',
-          required: true,
-          badge: 'required',
-        },
-        {
+    ),
+    section(
+      'product_identity',
+      'Product identity',
+      'Each toy model or variant needs its own DPP.',
+      [
+        f({ id: 'brand_name', label: 'Brand name', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'model_name', label: 'Model name or model number', type: 'text', required: true, badge: 'required' }),
+        f({
           id: 'sku',
           label: 'SKU or variant ID',
           type: 'text',
@@ -237,36 +264,22 @@ export class ToysTemplate extends BaseTemplate {
           badge: 'required',
           helpText:
             'Use a separate DPP for each variant (colour, size, material, electronic version, bundled version).',
-        },
-        {
-          id: 'toy_category',
-          label: 'Toy category',
+        }),
+        f({ id: 'toy_category', label: 'Toy category', type: 'select', required: true, badge: 'required', options: TOY_CATEGORIES }),
+        f({ id: 'toy_category_other', label: 'Toy category (specify)', type: 'text', showWhen: { field: 'toy_category', equals: 'other' } }),
+        f({ id: 'age_group', label: 'Intended age group', type: 'select', required: true, badge: 'required', options: TOY_AGE_GROUPS }),
+        f({ id: 'age_group_other', label: 'Age group (specify)', type: 'text', showWhen: { field: 'age_group', equals: 'other' } }),
+        f({
+          id: 'mouth_contact',
+          label: 'Is this toy intended to be placed in the mouth?',
           type: 'select',
           required: true,
           badge: 'required',
-          options: TOY_CATEGORIES,
-        },
-        {
-          id: 'toy_category_other',
-          label: 'Toy category (specify)',
-          type: 'text',
-          showWhen: { field: 'toy_category', equals: 'other' },
-        },
-        {
-          id: 'age_group',
-          label: 'Intended age group',
-          type: 'select',
-          required: true,
-          badge: 'required',
-          options: TOY_AGE_GROUPS,
-        },
-        {
-          id: 'age_group_other',
-          label: 'Age group (specify)',
-          type: 'text',
-          showWhen: { field: 'age_group', equals: 'other' },
-        },
-        {
+          options: YES_NO,
+          helpText:
+            'Stricter allergenic fragrance and chemical restrictions apply for mouth-contact toys.',
+        }),
+        f({
           id: 'unique_product_identifier',
           label: 'Unique product identifier',
           type: 'text',
@@ -274,78 +287,24 @@ export class ToysTemplate extends BaseTemplate {
           badge: 'required',
           helpText:
             'Persistent identifier for this toy model/SKU/variant. Should be compatible with ESPR / ISO IEC 15459-style identification when final specs are confirmed.',
-        },
-        {
-          id: 'identifier_type',
-          label: 'Identifier type',
-          type: 'select',
-          required: true,
-          badge: 'required',
-          options: TOY_IDENTIFIER_TYPES,
-        },
-        {
-          id: 'identifier_type_other',
-          label: 'Identifier type (specify)',
-          type: 'text',
-          showWhen: { field: 'identifier_type', equals: 'other' },
-        },
+        }),
+        f({ id: 'identifier_type', label: 'Identifier type', type: 'select', required: true, badge: 'required', options: TOY_IDENTIFIER_TYPES }),
+        f({ id: 'identifier_type_other', label: 'Identifier type (specify)', type: 'text', showWhen: { field: 'identifier_type', equals: 'other' } }),
       ],
-    },
-    {
-      title: 'Manufacturer',
-      description: 'Legal entity responsible for placing the toy on the market.',
-      questions: [
-        {
-          id: 'manufacturer_legal_name',
-          label: 'Manufacturer legal name',
-          type: 'text',
-          required: true,
-          badge: 'required',
-        },
-        {
-          id: 'manufacturer_street',
-          label: 'Street address',
-          type: 'text',
-          required: true,
-          badge: 'required',
-        },
-        {
-          id: 'manufacturer_city',
-          label: 'City',
-          type: 'text',
-          required: true,
-          badge: 'required',
-        },
-        {
-          id: 'manufacturer_postal_code',
-          label: 'Postal code',
-          type: 'text',
-          required: true,
-          badge: 'required',
-        },
-        {
-          id: 'manufacturer_country',
-          label: 'Country',
-          type: 'text',
-          required: true,
-          badge: 'required',
-        },
-        {
-          id: 'manufacturer_email',
-          label: 'Electronic address (email)',
-          type: 'text',
-          required: true,
-          badge: 'required',
-          placeholder: 'name@company.com',
-        },
-        {
-          id: 'manufacturer_website',
-          label: 'Website',
-          type: 'text',
-          placeholder: 'https://...',
-          badge: 'where_applicable',
-        },
-        {
+    ),
+    section(
+      'manufacturer',
+      'Manufacturer',
+      'Legal entity responsible for placing the toy on the market.',
+      [
+        f({ id: 'manufacturer_legal_name', label: 'Manufacturer legal name', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'manufacturer_street', label: 'Street address', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'manufacturer_city', label: 'City', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'manufacturer_postal_code', label: 'Postal code', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'manufacturer_country', label: 'Country', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'manufacturer_email', label: 'Electronic address (email)', type: 'text', required: true, badge: 'required', placeholder: 'name@company.com' }),
+        f({ id: 'manufacturer_website', label: 'Website', type: 'text', placeholder: 'https://...', badge: 'where_applicable' }),
+        f({
           id: 'manufacturer_operator_id',
           label: 'Unique operator identifier',
           type: 'text',
@@ -353,267 +312,79 @@ export class ToysTemplate extends BaseTemplate {
           badge: 'required',
           helpText:
             'Use the best available operator identifier now; final required format may be defined by the implementing act.',
-        },
-        {
-          id: 'manufacturer_operator_id_type',
-          label: 'Operator identifier type',
-          type: 'select',
-          required: true,
-          badge: 'required',
-          options: TOY_OPERATOR_ID_TYPES,
-        },
+        }),
+        f({ id: 'manufacturer_operator_id_type', label: 'Operator identifier type', type: 'select', required: true, badge: 'required', options: TOY_OPERATOR_ID_TYPES }),
       ],
-    },
-    {
-      title: 'Authorised representative',
-      description: 'Where applicable.',
-      questions: [
-        {
-          id: 'has_auth_rep',
-          label: 'Does the manufacturer have an authorised representative?',
-          type: 'select',
-          required: true,
-          options: YES_NO,
-          badge: 'required',
-        },
-        {
-          id: 'auth_rep_legal_name',
-          label: 'Authorised representative legal name',
-          type: 'text',
-          badge: 'where_applicable',
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
-        {
-          id: 'auth_rep_street',
-          label: 'Street address',
-          type: 'text',
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
-        {
-          id: 'auth_rep_city',
-          label: 'City',
-          type: 'text',
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
-        {
-          id: 'auth_rep_postal_code',
-          label: 'Postal code',
-          type: 'text',
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
-        {
-          id: 'auth_rep_country',
-          label: 'Country',
-          type: 'text',
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
-        {
-          id: 'auth_rep_email',
-          label: 'Electronic address (email)',
-          type: 'text',
-          placeholder: 'name@company.com',
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
-        {
-          id: 'auth_rep_operator_id',
-          label: 'Unique operator identifier',
-          type: 'text',
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
-        {
-          id: 'auth_rep_operator_id_type',
-          label: 'Operator identifier type',
-          type: 'select',
-          options: TOY_OPERATOR_ID_TYPES,
-          showWhen: { field: 'has_auth_rep', equals: 'yes' },
-        },
+    ),
+    section('auth_rep', 'Authorised representative', 'Where applicable.', [
+      f({ id: 'has_auth_rep', label: 'Does the manufacturer have an authorised representative?', type: 'select', required: true, options: YES_NO, badge: 'required' }),
+      f({ id: 'auth_rep_legal_name', label: 'Authorised representative legal name', type: 'text', badge: 'where_applicable', showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+      f({ id: 'auth_rep_street', label: 'Street address', type: 'text', showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+      f({ id: 'auth_rep_city', label: 'City', type: 'text', showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+      f({ id: 'auth_rep_postal_code', label: 'Postal code', type: 'text', showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+      f({ id: 'auth_rep_country', label: 'Country', type: 'text', showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+      f({ id: 'auth_rep_email', label: 'Electronic address (email)', type: 'text', placeholder: 'name@company.com', showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+      f({ id: 'auth_rep_operator_id', label: 'Unique operator identifier', type: 'text', showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+      f({ id: 'auth_rep_operator_id_type', label: 'Operator identifier type', type: 'select', options: TOY_OPERATOR_ID_TYPES, showWhen: { field: 'has_auth_rep', equals: 'yes' } }),
+    ]),
+    section(
+      'eu_operator',
+      'EU responsible economic operator',
+      'Required when the manufacturer is established outside the EU.',
+      [
+        f({ id: 'manufacturer_non_eu', label: 'Is the manufacturer established outside the EU?', type: 'select', required: true, options: YES_NO, badge: 'required' }),
+        f({ id: 'eu_op_legal_name', label: 'EU responsible operator legal name', type: 'text', badge: 'where_applicable', showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_role', label: 'Role', type: 'select', options: TOY_EU_OPERATOR_ROLES, showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_street', label: 'Street address', type: 'text', showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_city', label: 'City', type: 'text', showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_postal_code', label: 'Postal code', type: 'text', showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_country', label: 'Country', type: 'text', showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_email', label: 'Electronic address (email)', type: 'text', placeholder: 'name@company.com', showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_operator_id', label: 'Unique operator identifier', type: 'text', showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
+        f({ id: 'eu_op_operator_id_type', label: 'Operator identifier type', type: 'select', options: TOY_OPERATOR_ID_TYPES, showWhen: { field: 'manufacturer_non_eu', equals: 'yes' } }),
       ],
-    },
-    {
-      title: 'EU responsible economic operator',
-      description: 'Required when the manufacturer is established outside the EU.',
-      questions: [
-        {
-          id: 'manufacturer_non_eu',
-          label: 'Is the manufacturer established outside the EU?',
-          type: 'select',
-          required: true,
-          options: YES_NO,
-          badge: 'required',
-        },
-        {
-          id: 'eu_op_legal_name',
-          label: 'EU responsible operator legal name',
-          type: 'text',
-          badge: 'where_applicable',
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_role',
-          label: 'Role',
-          type: 'select',
-          options: TOY_EU_OPERATOR_ROLES,
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_street',
-          label: 'Street address',
-          type: 'text',
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_city',
-          label: 'City',
-          type: 'text',
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_postal_code',
-          label: 'Postal code',
-          type: 'text',
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_country',
-          label: 'Country',
-          type: 'text',
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_email',
-          label: 'Electronic address (email)',
-          type: 'text',
-          placeholder: 'name@company.com',
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_operator_id',
-          label: 'Unique operator identifier',
-          type: 'text',
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
-        {
-          id: 'eu_op_operator_id_type',
-          label: 'Operator identifier type',
-          type: 'select',
-          options: TOY_OPERATOR_ID_TYPES,
-          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
-        },
+    ),
+    section(
+      'compliance',
+      'Compliance',
+      'CE marking, applicable EU legislation and standards.',
+      [
+        f({ id: 'ce_marked', label: 'CE marked (mandatory for toys sold in the EU)', type: 'checkbox', required: true, badge: 'required' }),
+        f({ id: 'applicable_legislation', label: 'Applicable EU legislation', type: 'multi_select', required: true, badge: 'required', options: TOY_LEGISLATION, defaultValue: ['TSR'] }),
+        f({ id: 'harmonised_standards', label: 'Harmonised standards used', type: 'multi_select', required: true, badge: 'required', options: TOY_STANDARDS }),
+        f({ id: 'common_specifications', label: 'Common specifications used', type: 'textarea', badge: 'where_applicable', placeholder: 'Describe the common specifications applied.', showWhen: { field: 'harmonised_standards', equals: 'common_spec', includes: true } }),
+        f({ id: 'other_standards', label: 'Other standards used (one per line)', type: 'textarea', badge: 'where_applicable', showWhen: { field: 'harmonised_standards', equals: 'other', includes: true } }),
       ],
-    },
-    {
-      title: 'Compliance',
-      description: 'CE marking, applicable EU legislation and standards.',
-      questions: [
-        {
-          id: 'ce_marked',
-          label: 'CE marked (mandatory for toys sold in the EU)',
-          type: 'checkbox',
-          required: true,
-          badge: 'required',
-        },
-        {
-          id: 'applicable_legislation',
-          label: 'Applicable EU legislation',
-          type: 'multi_select',
-          required: true,
-          badge: 'required',
-          options: TOY_LEGISLATION,
-          defaultValue: ['TSR'],
-        },
-        {
-          id: 'harmonised_standards',
-          label: 'Harmonised standards used',
-          type: 'multi_select',
-          required: true,
-          badge: 'required',
-          options: TOY_STANDARDS,
-        },
-        {
-          id: 'common_specifications',
-          label: 'Common specifications used',
-          type: 'textarea',
+    ),
+    section(
+      'notified_body',
+      'Conformity assessment & notified body',
+      'Where applicable.',
+      [
+        f({ id: 'notified_body_involved', label: 'Was a notified body involved?', type: 'select', required: true, options: YES_NO, badge: 'required' }),
+        f({ id: 'notified_body_name', label: 'Notified body name', type: 'text', badge: 'where_applicable', showWhen: { field: 'notified_body_involved', equals: 'yes' } }),
+        f({ id: 'notified_body_number', label: 'Notified body number', type: 'text', placeholder: 'e.g., 0123', showWhen: { field: 'notified_body_involved', equals: 'yes' } }),
+        f({ id: 'certificate_reference', label: 'Certificate reference', type: 'text', showWhen: { field: 'notified_body_involved', equals: 'yes' } }),
+        f({ id: 'certificate_issue_date', label: 'Certificate issue date (YYYY-MM-DD)', type: 'text', placeholder: 'YYYY-MM-DD', showWhen: { field: 'notified_body_involved', equals: 'yes' } }),
+        f({
+          id: 'notified_body_certificate_url',
+          label: 'Conformity certificate (PDF or image)',
+          type: 'file',
           badge: 'where_applicable',
-          placeholder: 'Describe the common specifications applied.',
-          showWhen: {
-            field: 'harmonised_standards',
-            equals: 'common_spec',
-            includes: true,
-          },
-        },
-        {
-          id: 'other_standards',
-          label: 'Other standards used (one per line)',
-          type: 'textarea',
-          badge: 'where_applicable',
-          showWhen: {
-            field: 'harmonised_standards',
-            equals: 'other',
-            includes: true,
-          },
-        },
+          helpText: 'Optional. The uploaded file is publicly accessible from the DPP.',
+          accept: 'application/pdf,image/*',
+          maxBytes: 5 * 1024 * 1024,
+          showWhen: { field: 'notified_body_involved', equals: 'yes' },
+        }),
       ],
-    },
-    {
-      title: 'Conformity assessment & notified body',
-      description: 'Where applicable.',
-      questions: [
-        {
-          id: 'notified_body_involved',
-          label: 'Was a notified body involved?',
-          type: 'select',
-          required: true,
-          options: YES_NO,
-          badge: 'required',
-        },
-        {
-          id: 'notified_body_name',
-          label: 'Notified body name',
-          type: 'text',
-          badge: 'where_applicable',
-          showWhen: { field: 'notified_body_involved', equals: 'yes' },
-        },
-        {
-          id: 'notified_body_number',
-          label: 'Notified body number',
-          type: 'text',
-          placeholder: 'e.g., 0123',
-          showWhen: { field: 'notified_body_involved', equals: 'yes' },
-        },
-        {
-          id: 'certificate_reference',
-          label: 'Certificate reference',
-          type: 'text',
-          showWhen: { field: 'notified_body_involved', equals: 'yes' },
-        },
-        {
-          id: 'certificate_issue_date',
-          label: 'Certificate issue date (YYYY-MM-DD)',
-          type: 'text',
-          placeholder: 'YYYY-MM-DD',
-          showWhen: { field: 'notified_body_involved', equals: 'yes' },
-        },
-        {
-          id: 'certificate_uploaded',
-          label: 'Certificate file kept on record (upload UI coming soon)',
-          type: 'checkbox',
-          showWhen: { field: 'notified_body_involved', equals: 'yes' },
-        },
-      ],
-    },
-    {
-      title: 'Customs commodity code',
-      description: 'Generated as 9880 + CN chapter + 00. Editable.',
-      questions: [
-        {
-          id: 'cn_chapter',
-          label: 'CN chapter',
-          type: 'select',
-          required: true,
-          badge: 'required',
-          options: TOY_CN_CHAPTERS,
-        },
-        {
+    ),
+    section(
+      'customs',
+      'Customs commodity code',
+      'Generated as 9880 + CN chapter + 00. Editable.',
+      [
+        f({ id: 'cn_chapter', label: 'CN chapter', type: 'select', required: true, badge: 'required', options: TOY_CN_CHAPTERS }),
+        f({
           id: 'customs_code',
           label: 'Customs commodity code',
           type: 'text',
@@ -621,14 +392,15 @@ export class ToysTemplate extends BaseTemplate {
           helpText:
             'Auto-filled from CN chapter. Override if your customs classification differs.',
           badge: 'where_applicable',
-        },
+        }),
       ],
-    },
-    {
-      title: 'Allergenic fragrances',
-      description: 'Substances subject to labelling requirements at ≥10 mg/kg.',
-      questions: [
-        {
+    ),
+    section(
+      'allergenic_fragrances',
+      'Allergenic fragrances',
+      'Substances subject to labelling requirements at ≥10 mg/kg.',
+      [
+        f({
           id: 'has_allergenic_fragrances',
           label:
             'Does the toy or any component contain allergenic fragrances at ≥10 mg/kg?',
@@ -636,70 +408,34 @@ export class ToysTemplate extends BaseTemplate {
           required: true,
           options: YES_NO_UNKNOWN,
           badge: 'required',
-        },
-        {
+        }),
+        f({
           id: 'allergenic_fragrances',
           label: 'Allergenic fragrances present',
           type: 'multi_select',
           badge: 'where_applicable',
           options: [], // Rendered by FragrancePicker custom component
           showWhen: { field: 'has_allergenic_fragrances', equals: 'yes' },
-        },
-        {
+        }),
+        f({
           id: 'allergen_declaration_text',
           label: 'Allergen declaration (auto-generated, editable)',
           type: 'textarea',
           showWhen: { field: 'has_allergenic_fragrances', equals: 'yes' },
-        },
+        }),
       ],
-    },
-    {
-      title: 'Safety incident reporting',
-      description: 'Channels available to consumers and authorities.',
-      questions: [
-        {
-          id: 'safety_channels',
-          label: 'Public safety reporting channels',
-          type: 'multi_select',
-          required: true,
-          badge: 'required',
-          options: TOY_SAFETY_CHANNELS,
-        },
-        {
-          id: 'safety_phone',
-          label: 'Safety reporting telephone',
-          type: 'text',
-          placeholder: '+33 ...',
-          showWhen: {
-            field: 'safety_channels',
-            equals: 'phone',
-            includes: true,
-          },
-        },
-        {
-          id: 'safety_email',
-          label: 'Safety reporting email',
-          type: 'text',
-          placeholder: 'safety@company.com',
-          showWhen: {
-            field: 'safety_channels',
-            equals: 'email',
-            includes: true,
-          },
-        },
-        {
-          id: 'safety_website',
-          label: 'Safety reporting website / contact form URL',
-          type: 'text',
-          placeholder: 'https://...',
-          showWhen: {
-            field: 'safety_channels',
-            equals: ['website', 'form'],
-            includes: true,
-          },
-        },
+    ),
+    section(
+      'safety_reporting',
+      'Safety incident reporting',
+      'Channels available to consumers and authorities.',
+      [
+        f({ id: 'safety_channels', label: 'Public safety reporting channels', type: 'multi_select', required: true, badge: 'required', options: TOY_SAFETY_CHANNELS }),
+        f({ id: 'safety_phone', label: 'Safety reporting telephone', type: 'text', placeholder: '+33 ...', showWhen: { field: 'safety_channels', equals: 'phone', includes: true } }),
+        f({ id: 'safety_email', label: 'Safety reporting email', type: 'text', placeholder: 'safety@company.com', showWhen: { field: 'safety_channels', equals: 'email', includes: true } }),
+        f({ id: 'safety_website', label: 'Safety reporting website / contact form URL', type: 'text', placeholder: 'https://...', showWhen: { field: 'safety_channels', equals: ['website', 'form'], includes: true } }),
       ],
-    },
+    ),
   ];
 
   getRequiredLogos(data: Record<string, unknown>): string[] {

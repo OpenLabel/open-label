@@ -1,99 +1,79 @@
-## Add "Toys" category to the DPP maker (simplified)
+## Toys DPP — finalize spec compliance (revised)
 
-You're right — most of what I proposed can be collapsed. Here's the leaner version.
+All five gap fixes you approved, plus two updates you requested:
+- Question labels in `toys.ts` (and category templates generally) **will** be translated, not left hardcoded English.
+- The translation script uses a stronger model with full regulatory context, not Flash.
 
-### Field types: only ONE new type
+### 1. `mouth_contact` question
 
-Keep the existing 5 (`text`, `textarea`, `select`, `checkbox`, `number`) and add **just one** new type:
+Add a yes/no `mouth_contact` field to the Product identity section of `src/templates/toys.ts` (required, badge `required`). In `src/components/CategoryQuestions.tsx`, broaden the existing under-36-months warning trigger so `mouth_contact === 'yes'` also fires the stricter-restrictions banner.
 
-- **`multi_select`** — needed for: Applicable EU legislation, Harmonised standards, Safety reporting channel types, Allergenic fragrance picker. No clean way to fake this with existing types without a bad UX.
+### 2. Real certificate upload (replaces checkbox)
 
-Everything else maps to existing types:
+- Add a new `file` question type to `src/templates/base.ts`.
+- In `toys.ts`, replace `certificate_uploaded` (checkbox) with `notified_body_certificate_url` (type `file`, badge `where_applicable`, `showWhen` notified body = yes).
+- In `CategoryQuestions.tsx`, add a `case 'file'` renderer that uploads to the existing `passport-images` bucket under `{user.id}/certificates/`, accepts `application/pdf,image/*`, enforces a 5 MB limit, and stores the resulting public URL in `category_data[question.id]`. Show preview link + remove button.
+- In `ToyPublicPassport.tsx`, render the URL as a "Conformity certificate" download link when present.
 
-| Spec asks for | We use |
-|---|---|
-| email | `text` + `placeholder="name@company.com"` + helper text |
-| URL | `text` + `placeholder="https://..."` |
-| phone | `text` + `placeholder="+33 ..."` |
-| date | `text` + `placeholder="YYYY-MM-DD"` |
-| yes/no | `select` with two options `yes` / `no` |
-| yes/no/unknown | `select` with three options |
-| structured address | 4 separate `text` questions (street, city, postal, country) inside one section |
-| repeatable text (other standards) | one `textarea`, "one entry per line" |
-| file upload (certificates, supplier decl., test reports) | dropped for v1 — booleans via `checkbox` instead, with helper text "file upload coming soon" |
+### 3. Toys-specific required-field validation
 
-### Two small additions to `TemplateQuestion`
+In `src/pages/PassportForm.tsx`, when `formData.category === 'toys'`, block save on empty `image_url` (toast `toys.validation.imageRequired`) or empty `description` (toast `toys.validation.descriptionRequired`).
 
-Both purely additive, both default to "no behavior change":
+### 4. Refactor: translatable category-template content (NEW SCOPE)
 
-- `showWhen?: { field: string; equals: string | string[] }` — conditional reveal. Used by gated sections (auth rep, EU operator, notified body) and gated fields (phone shown only when "telephone" is picked in safety channels). Without it we'd need 5+ duplicated yes_no branches in code.
-- `badge?: 'required' | 'where_applicable' | 'tbd'` — small label next to the field name. The spec explicitly asks for these badges. Cheap to add.
+The current engine renders `question.label`, `question.helpText`, and `option.label` as raw English strings. This will be refactored so all template-defined text flows through `t()`.
 
-That's the entire engine change: 1 new type + 2 optional fields.
+- Extend `src/templates/base.ts` `Question` and option types with optional `labelKey`, `helpKey`, and per-option `labelKey` (string i18n keys). Backward compatible: when `labelKey` is absent, fall back to the literal `label`.
+- Add a single helper `tLabel(t, q)` / `tOption(t, o)` used by `CategoryQuestions.tsx` (and any other template renderer) so all template text passes through i18n at one chokepoint.
+- For every question, option, and section in `src/templates/toys.ts`, set a `labelKey` / `helpKey` under a clear namespace, e.g. `toys.fields.<question_id>.label`, `toys.fields.<question_id>.help`, `toys.fields.<question_id>.options.<value>`, `toys.sections.<section_id>.title`. Same treatment for `src/templates/wine.ts` so the engine is consistent (no behavior change for wine if the English strings stay byte-identical, but locales will then translate them).
+- Update the existing `validTypes` / template tests to assert that every question has a `labelKey` for `toys` and `wine`.
 
-### Customs code helper
+### 5. UI-string translations
 
-Auto-fill `customs_code` from chosen CN chapter (`9880` + chapter + `00`) using a small `useEffect` in `CategoryQuestions` when `category === 'toys'`. No new type needed; it's just a controlled `text` field the parent updates.
+- Add a `toys` namespace to `src/i18n/locales/en.json` covering:
+  - Section titles and every question label/help/option from `toys.ts` (per §4 above).
+  - Form-side banners: disclaimer, three warnings (under-36-months, mouth contact, unknown allergens), suggest-legislation list, EU Safety Gate notice, validation toasts, certificate upload labels.
+  - `FragrancePicker.tsx` UI: empty state, add button, dialog title, search placeholder, column labels, the three checkbox labels, done/remove/no-results.
+  - `ToyPublicPassport.tsx`: every row label (Brand, Model, SKU, Toy category, Age group, Identifier, Manufacturer, Address, Email, Website, Operator identifier, Role, Legal name, CE marking / marked / not declared, Applicable legislation, Harmonised standards, Common specifications, Other standards, Notified body, Number, Certificate, Customs code, DPP service provider, Backup reference, DPP version, Last updated, Status, Published), section titles, sole-responsibility paragraph, fragrance table headers (Substance, CAS, Concentration, Component) and safety-reporting labels (Telephone, Email, Web, EU Safety Gate Portal, Report an unsafe product).
+- Switch every hardcoded English string in `CategoryQuestions.tsx`, `FragrancePicker.tsx`, and `ToyPublicPassport.tsx` to `t('toys.…')` calls.
 
-### Allergenic fragrance picker
+### 6. Translate to 23 EU locales — stronger model, full context
 
-Still needs a custom component because each picked fragrance has 5 sub-fields. Render it inline in `CategoryQuestions` when it sees `question.id === 'allergenic_fragrances'` and `category === 'toys'`. The picker itself is a searchable dialog (mirroring `IngredientPickerDialog`), data in `src/data/toyFragrances.ts` seeded from spec lines 390–460. No new generic type — just a special-cased component.
+A one-off script at `scripts/translate-toys-keys.ts`:
+- Loads the new `toys` subtree from `en.json` and the full text of the toys regulation spec (`Regulation (EU) 2025/2509` summary kept alongside the script as a context file).
+- For each of the 23 target locales (bg/cs/da/de/el/es/et/fi/fr/ga/hr/hu/it/lt/lv/mt/nl/pl/pt/ro/sk/sl/sv), calls the Lovable AI Gateway with **`google/gemini-2.5-pro`** (no Flash), `responseFormat: json_schema` mirroring the EN structure, and a system prompt that includes:
+  - The full regulatory context (toy-safety terminology, CE marking, notified body, GPSR, TSR, harmonised standards, allergenic fragrances, mouth-contact restrictions).
+  - The target language's ISO code, native name, and official EU regulatory register conventions for that language.
+  - Instructions to preserve placeholder syntax (`{{list}}`), keep accepted English acronyms (CE, GPSR, TSR, CAS, EU, DPP, ISO, IEC, CN), and produce translations consistent with the existing locale's regulatory wording (script reads a few representative existing keys per locale to anchor tone).
+- Writes results into each `src/i18n/locales/<code>.json` at the same nested path, preserving order and surrounding keys.
+- Failures (rate limit, validation mismatch, missing key) are retried per-locale with exponential backoff and surfaced loudly; the script exits non-zero if any locale ends up with < 100% of the EN keys.
+- Script is committed so we can regenerate translations when the toys text evolves.
+- `src/i18n/locales/locales.test.ts`, `audit.test.ts`, and `duplicateKeys.test.ts` enforce key parity and untranslated-string detection on the resulting files.
 
-### Reordered toys form (more natural flow for the user)
+### 7. Verification
 
-1. **Compliance disclaimer banner** (TBD warning + per-SKU note).
-2. **Product identity** — name (top-level passport field), brand, model, SKU, toy category (with "Other" free-text), age group (with "Other" free-text), unique identifier + identifier type, description (top-level field), image (top-level upload). Putting identity first matches what the user sees on the product.
-3. **Manufacturer** — legal name, structured address (4 fields), email, website, operator id + type.
-4. **EU operator information** (collapsible-feel via `showWhen`):
-   - yes/no "Manufacturer based outside EU?" → reveals EU responsible operator block.
-   - yes/no "Has authorised representative?" → reveals auth-rep block.
-5. **Compliance** — CE marking checkbox, applicable legislation (multi-select, EU 2025/2509 pre-selected), harmonised standards (multi-select), common specs textarea (only if "common spec" picked, via `showWhen`), other standards textarea.
-6. **Conformity assessment** — yes/no "Notified body involved?" → reveals body name/number/cert ref/cert date.
-7. **Customs** — CN chapter select + auto-generated customs code (editable).
-8. **Allergenic fragrances** — yes/no/unknown → reveals fragrance picker + auto-generated declaration textarea.
-9. **Safety incident reporting** — multi-select channels → reveals phone/email/url + fixed EU Safety Gate link (display-only).
+- `bunx vitest run` — keep all current tests green and verify the new template-engine translation test and translation completeness tests pass.
+- Manual: create a toys passport, leave image empty → blocked; upload a certificate → public view shows the download link; switch UI language to FR and DE → all toy section titles, field labels, and warnings render translated.
 
-### Inline warnings (rendered by `CategoryQuestions`)
-
-- Age ≤ 36 months → mouth-contact / stricter fragrance warning.
-- "Unknown" fragrance answer → "DPP may be incomplete" warning.
-- Electronic / radio / AI / battery / drone / cosmetic toy chosen → soft hint to also tick the matching legislation.
-
-### Public toy passport view
-
-New `src/components/toys/ToyPublicPassport.tsx` mirroring `WinePublicPassport`, sections per spec §14. Wired into `PublicPassport.tsx` and `PassportPreview.tsx` via a `category === 'toys'` branch. DPP infrastructure section pulls site_config via `useSiteConfig`.
-
-### Files touched
+### Files changed
 
 ```text
-src/templates/base.ts                          (+ multi_select, + showWhen, + badge)
-src/templates/index.ts                         (Toys in categoryList)
-src/templates/toys.ts                          (full rewrite, ordered as above)
-src/templates/toys.test.ts                     (rewrite)
-src/data/toyFragrances.ts                      (new — seeded list)
-src/data/toyFragrances.test.ts                 (new)
-src/components/CategoryQuestions.tsx           (+ multi_select rendering, + showWhen, + badges,
-                                                + toys disclaimer banner, + warning hooks,
-                                                + customs auto-fill, + fragrance picker mount)
-src/components/CategoryQuestions.test.tsx      (extend)
-src/components/toys/FragrancePicker.tsx        (new — searchable dialog)
-src/components/toys/FragrancePicker.test.tsx   (new)
-src/components/toys/ToyPublicPassport.tsx      (new)
-src/components/toys/ToyPublicPassport.render.test.tsx (new)
-src/pages/PublicPassport.tsx                   (toys branch)
-src/components/PassportPreview.tsx             (toys branch)
-src/i18n/locales/*.json  (×24)                 (disclaimer, badges, warnings)
+src/templates/base.ts                          (file type, labelKey/helpKey support)
+src/templates/toys.ts                          (mouth_contact, file cert, labelKey on every field)
+src/templates/wine.ts                          (labelKey on every field, for consistency)
+src/components/CategoryQuestions.tsx           (file renderer, mouth-contact warning, tLabel/tOption)
+src/components/toys/FragrancePicker.tsx        (t() calls)
+src/components/toys/ToyPublicPassport.tsx      (t() calls + certificate link)
+src/pages/PassportForm.tsx                     (toys image+description validation)
+src/i18n/locales/en.json                       (toys.* namespace + template field keys)
+src/i18n/locales/{bg,cs,da,de,el,es,et,fi,fr,ga,hr,hu,it,lt,lv,mt,nl,pl,pt,ro,sk,sl,sv}.json
+scripts/translate-toys-keys.ts                 (gemini-2.5-pro batch translator with regulatory context)
+scripts/toys-regulatory-context.md             (context file injected into the translation prompt)
+src/templates/toys.test.ts, base.test.ts, allTemplates.test.ts  (labelKey assertions, file type)
 ```
 
-### Out of scope for v1
+### Out of scope
 
-- File uploads (certificates, supplier declarations, test reports, conformity cert PDF).
+- Collapsible sections and progress bar (you declined).
+- File uploads for supplier declaration and per-fragrance test reports (still boolean flags).
 - AI autofill for toys.
-- Progress bar / animated collapsibles (sections render expanded; `showWhen` handles conditional reveal).
-- Customs code edge cases beyond `9880` + chapter + `00`.
-
-### Memory updates after build
-
-- Add `mem://features/toys-passport-schema`.
-- Update `mem://architecture/category-template-system` (Wine + Toys + Other active).
-- Update `mem://style/landing-page-categories` (Toys now active).

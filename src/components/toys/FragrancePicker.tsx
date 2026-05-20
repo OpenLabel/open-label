@@ -15,6 +15,7 @@
  */
 
 import { useMemo, useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import { Plus, Search, Trash2, X } from 'lucide-react';
 import {
   Dialog,
@@ -39,6 +40,7 @@ interface FragrancePickerProps {
 }
 
 export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
+  const { t } = useTranslation();
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState('');
 
@@ -91,14 +93,17 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
     onChange(selected.filter((s) => s.id !== id));
   };
 
+  const summary =
+    selected.length === 0
+      ? t('toys.fragrancePicker.empty', 'No allergenic fragrances added yet.')
+      : t('toys.fragrancePicker.summary', '{{count}} fragrance(s) declared.', {
+          count: selected.length,
+        });
+
   return (
     <div className="space-y-4">
       <div className="flex items-center justify-between gap-2">
-        <p className="text-sm text-muted-foreground">
-          {selected.length === 0
-            ? 'No allergenic fragrances added yet.'
-            : `${selected.length} fragrance${selected.length === 1 ? '' : 's'} declared.`}
-        </p>
+        <p className="text-sm text-muted-foreground">{summary}</p>
         <Button
           type="button"
           variant="outline"
@@ -106,7 +111,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
           onClick={() => setOpen(true)}
         >
           <Plus className="h-4 w-4 mr-1" />
-          Add fragrance
+          {t('toys.fragrancePicker.addButton', 'Add fragrance')}
         </Button>
       </div>
 
@@ -121,7 +126,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                 <div>
                   <p className="font-medium text-sm">{s.name}</p>
                   <p className="text-xs text-muted-foreground">
-                    CAS {s.cas}
+                    {t('toys.fragrancePicker.cas', 'CAS')} {s.cas}
                   </p>
                 </div>
                 <Button
@@ -129,7 +134,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                   variant="ghost"
                   size="icon"
                   onClick={() => remove(s.id)}
-                  aria-label={`Remove ${s.name}`}
+                  aria-label={t('toys.fragrancePicker.removeAria', 'Remove {{name}}', { name: s.name })}
                 >
                   <Trash2 className="h-4 w-4" />
                 </Button>
@@ -138,7 +143,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div className="space-y-1">
                   <Label htmlFor={`conc-${s.id}`} className="text-xs">
-                    Concentration (mg/kg)
+                    {t('toys.fragrancePicker.concentrationLabel', 'Concentration (mg/kg)')}
                   </Label>
                   <Input
                     id={`conc-${s.id}`}
@@ -156,7 +161,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                 </div>
                 <div className="space-y-1">
                   <Label htmlFor={`comp-${s.id}`} className="text-xs">
-                    Component / material
+                    {t('toys.fragrancePicker.componentLabel', 'Component / material')}
                   </Label>
                   <Input
                     id={`comp-${s.id}`}
@@ -164,7 +169,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                     onChange={(e) =>
                       updateField(s.id, 'component', e.target.value)
                     }
-                    placeholder="e.g., plush filling"
+                    placeholder={t('toys.fragrancePicker.componentPlaceholder', 'e.g., plush filling')}
                   />
                 </div>
               </div>
@@ -177,20 +182,16 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                       updateField(s.id, 'above_threshold', Boolean(c))
                     }
                   />
-                  Concentration ≥10 mg/kg
+                  {t('toys.fragrancePicker.aboveThreshold', 'Concentration ≥10 mg/kg')}
                 </label>
                 <label className="flex items-center gap-2 text-xs">
                   <Checkbox
                     checked={s.supplier_declaration_uploaded ?? false}
                     onCheckedChange={(c) =>
-                      updateField(
-                        s.id,
-                        'supplier_declaration_uploaded',
-                        Boolean(c),
-                      )
+                      updateField(s.id, 'supplier_declaration_uploaded', Boolean(c))
                     }
                   />
-                  Supplier declaration on file
+                  {t('toys.fragrancePicker.supplierDeclaration', 'Supplier declaration on file')}
                 </label>
                 <label className="flex items-center gap-2 text-xs">
                   <Checkbox
@@ -199,7 +200,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                       updateField(s.id, 'test_report_uploaded', Boolean(c))
                     }
                   />
-                  Test report on file
+                  {t('toys.fragrancePicker.testReport', 'Test report on file')}
                 </label>
               </div>
             </div>
@@ -210,12 +211,14 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="max-w-lg max-h-[85vh] h-[85vh] flex flex-col overflow-hidden">
           <DialogHeader>
-            <DialogTitle>Select allergenic fragrances</DialogTitle>
+            <DialogTitle>
+              {t('toys.fragrancePicker.dialogTitle', 'Select allergenic fragrances')}
+            </DialogTitle>
           </DialogHeader>
           <div className="relative">
             <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search by name, CAS, or id..."
+              placeholder={t('toys.fragrancePicker.searchPlaceholder', 'Search by name, CAS, or id...')}
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               className="pl-9"
@@ -225,7 +228,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                 type="button"
                 onClick={() => setSearch('')}
                 className="absolute right-3 top-1/2 -translate-y-1/2"
-                aria-label="Clear search"
+                aria-label={t('toys.fragrancePicker.clearSearch', 'Clear search')}
               >
                 <X className="h-4 w-4 text-muted-foreground" />
               </button>
@@ -242,7 +245,7 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
                   <div>
                     <p className="text-sm">{f.name}</p>
                     <p className="text-xs text-muted-foreground">
-                      CAS {f.cas}
+                      {t('toys.fragrancePicker.cas', 'CAS')} {f.cas}
                     </p>
                   </div>
                   <Checkbox
@@ -254,13 +257,15 @@ export function FragrancePicker({ selected, onChange }: FragrancePickerProps) {
               ))}
               {filtered.length === 0 && (
                 <p className="text-center text-muted-foreground py-8 text-sm">
-                  No fragrances match "{search}".
+                  {t('toys.fragrancePicker.noResults', 'No fragrances match "{{q}}".', { q: search })}
                 </p>
               )}
             </div>
           </ScrollArea>
           <div className="flex justify-end pt-4 border-t">
-            <Button onClick={() => setOpen(false)}>Done</Button>
+            <Button onClick={() => setOpen(false)}>
+              {t('toys.fragrancePicker.done', 'Done')}
+            </Button>
           </div>
         </DialogContent>
       </Dialog>
