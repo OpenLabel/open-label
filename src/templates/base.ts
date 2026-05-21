@@ -65,6 +65,23 @@ export interface TemplateQuestion {
   accept?: string;
   /** For 'file' questions: max size in bytes (defaults to 5 MB) */
   maxBytes?: number;
+  /**
+   * When true, this field's value (typically an uploaded file URL or sensitive text)
+   * is collected for the manufacturer's internal records and MUST NOT be rendered
+   * on the public DPP. The form should display an "Internal — not shown publicly" badge.
+   */
+  internal?: boolean;
+  /**
+   * Inline warning shown under the field when its current value matches any of `equals`.
+   * Use for non-blocking regulatory advisories (e.g. "complete this before relying on the DPP").
+   */
+  warnWhen?: {
+    equals: unknown[];
+    /** English fallback message */
+    message: string;
+    /** i18n key for translated message */
+    messageKey?: string;
+  };
 }
 
 export interface TemplateSection {
