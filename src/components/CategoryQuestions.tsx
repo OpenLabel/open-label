@@ -393,6 +393,24 @@ export function CategoryQuestions({
 
     switch (question.type) {
       case 'text':
+        if (question.translatable) {
+          return (
+            <TranslatableField
+              id={question.id}
+              value={(value as string) || ''}
+              onChange={(v) => handleChange(question.id, v)}
+              translations={
+                (data[`${question.id}_translations`] as Record<string, string>) || {}
+              }
+              onTranslationsChange={(tr) =>
+                handleChange(`${question.id}_translations`, tr)
+              }
+              fieldLabel={tLabel(t, question)}
+              placeholder={tPlaceholder(t, question)}
+              autoTranslate={question.autoTranslate !== false}
+            />
+          );
+        }
         return (
           <Input
             id={question.id}
@@ -402,6 +420,25 @@ export function CategoryQuestions({
           />
         );
       case 'textarea':
+        if (question.translatable) {
+          return (
+            <TranslatableField
+              id={question.id}
+              value={(value as string) || ''}
+              onChange={(v) => handleChange(question.id, v)}
+              translations={
+                (data[`${question.id}_translations`] as Record<string, string>) || {}
+              }
+              onTranslationsChange={(tr) =>
+                handleChange(`${question.id}_translations`, tr)
+              }
+              fieldLabel={tLabel(t, question)}
+              placeholder={tPlaceholder(t, question)}
+              multiline
+              autoTranslate={question.autoTranslate !== false}
+            />
+          );
+        }
         return (
           <Textarea
             id={question.id}
