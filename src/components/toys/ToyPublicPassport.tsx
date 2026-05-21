@@ -87,9 +87,18 @@ export function ToyPublicPassport({
   passport,
   isPreview = false,
 }: ToyPublicPassportProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { config } = useSiteConfig();
   const d = passport.category_data || {};
+  const currentLang = (i18n.language || 'en').split('-')[0];
+
+  /** Prefer per-language translation, fall back to the source value. */
+  const tr = (id: string): string => {
+    const map = d[`${id}_translations`] as Record<string, string> | undefined;
+    const t = map?.[currentLang];
+    if (t && t.trim()) return t;
+    return (d[id] as string) || '';
+  };
 
   const toyCategoryLabel =
     d.toy_category === 'other'
