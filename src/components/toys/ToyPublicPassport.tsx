@@ -95,7 +95,7 @@ export function ToyPublicPassport({
   previewLanguage,
   onPreviewLanguageChange,
 }: ToyPublicPassportProps) {
-  const { t: tBase, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const { config } = useSiteConfig();
   const d = passport.category_data || {};
   const displayLanguage = previewLanguage || (i18n.language || 'en').split('-')[0];
