@@ -54,6 +54,10 @@ vi.mock('@/components/wine/WineAIAutofill', () => ({
   WineAIAutofill: () => <div data-testid="wine-ai" />,
 }));
 
+vi.mock('@/components/toys/ToyAIAutofill', () => ({
+  ToyAIAutofill: () => <div data-testid="toy-ai" />,
+}));
+
 vi.mock('@/components/PassportPreview', () => ({
   PassportPreview: () => <div data-testid="preview" />,
 }));
