@@ -644,6 +644,37 @@ export function CategoryQuestions({
         </Alert>
       )}
 
+      {/* Missing mandatory fields summary — non-blocking */}
+      {missingRequired.length > 0 && (
+        <Alert
+          variant="destructive"
+          className="bg-amber-50 border-amber-300 text-amber-900 dark:bg-amber-950/40 dark:border-amber-700 dark:text-amber-100"
+        >
+          <AlertTriangle className="h-4 w-4" />
+          <AlertTitle>
+            {t(
+              'passport.missingRequiredTitle',
+              'Some mandatory fields are not filled',
+            )}
+          </AlertTitle>
+          <AlertDescription className="text-sm">
+            <p className="mb-2">
+              {t(
+                'passport.missingRequiredBody',
+                'You can still save and publish this DPP, but the following fields are required for full regulatory compliance:',
+              )}
+            </p>
+            <ul className="list-disc ml-5 space-y-0.5">
+              {missingRequired.map((m, i) => (
+                <li key={i}>
+                  <span className="font-medium">{m.section}</span> — {m.label}
+                </li>
+              ))}
+            </ul>
+          </AlertDescription>
+        </Alert>
+      )}
+
       {/* Alpha warning for non-wine, non-toys categories */}
       {category !== 'wine' && category !== 'toys' && (
         <Alert
