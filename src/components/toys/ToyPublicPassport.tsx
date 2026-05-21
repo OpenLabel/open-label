@@ -129,6 +129,14 @@ export function ToyPublicPassport({
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main className="max-w-3xl mx-auto px-5 py-8">
+        {/* Language Switcher - Top Right */}
+        <div className="flex justify-end mb-4">
+          <DPPLanguagePicker
+            localOnly={isPreview}
+            currentLanguage={previewLanguage}
+            onLanguageChange={onPreviewLanguageChange}
+          />
+        </div>
         {/* Header */}
         <div className="flex flex-col sm:flex-row gap-5 items-start">
           {passport.image_url && (
