@@ -290,6 +290,24 @@ export class ToysTemplate extends BaseTemplate {
         }),
         f({ id: 'identifier_type', label: 'Identifier type', type: 'select', required: true, badge: 'required', options: TOY_IDENTIFIER_TYPES }),
         f({ id: 'identifier_type_other', label: 'Identifier type (specify)', type: 'text', showWhen: { field: 'identifier_type', equals: 'other' } }),
+        f({
+          id: 'has_instructions_warnings',
+          label: 'Does this toy require instructions, warnings, or safety information?',
+          type: 'select',
+          required: true,
+          badge: 'required',
+          options: YES_NO,
+        }),
+        f({
+          id: 'public_instructions_warnings',
+          label: 'Public instructions and warnings',
+          type: 'textarea',
+          required: true,
+          badge: 'required',
+          helpText:
+            'Add the warnings, instructions, and safety information that accompany the toy.',
+          showWhen: { field: 'has_instructions_warnings', equals: 'yes' },
+        }),
       ],
     ),
     section(
@@ -349,7 +367,95 @@ export class ToysTemplate extends BaseTemplate {
       'Compliance',
       'CE marking, applicable EU legislation and standards.',
       [
-        f({ id: 'ce_marked', label: 'CE marked (mandatory for toys sold in the EU)', type: 'checkbox', required: true, badge: 'required' }),
+        f({
+          id: 'ce_declaration_ack',
+          label:
+            'The manufacturer declares that this toy complies with the applicable EU safety requirements and bears or will bear the CE marking where required before being placed on the EU market.',
+          type: 'checkbox',
+          required: true,
+          badge: 'required',
+          helpText:
+            'Only toys bearing CE marking can be placed on the EU market. This declaration should be consistent with the manufacturer\u2019s conformity assessment.',
+        }),
+        
+        f({
+          id: 'eu_doc_available',
+          label: 'EU Declaration of Conformity available?',
+          type: 'select',
+          required: true,
+          badge: 'required',
+          options: YES_NO_UNKNOWN,
+          warnWhen: {
+            equals: ['no', 'unknown'],
+            message:
+              'The EU Declaration of Conformity is expected as part of the toy conformity framework. Complete this before relying on the DPP for market-facing use.',
+            messageKey: 'toys.fields.eu_doc_available.warn',
+          },
+        }),
+        f({
+          id: 'eu_doc_reference',
+          label: 'Declaration of Conformity reference',
+          type: 'text',
+          required: true,
+          badge: 'required',
+          showWhen: { field: 'eu_doc_available', equals: 'yes' },
+        }),
+        f({
+          id: 'eu_doc_upload',
+          label: 'Declaration of Conformity upload',
+          type: 'file',
+          badge: 'where_applicable',
+          accept: 'application/pdf,image/*',
+          maxBytes: 5 * 1024 * 1024,
+          internal: true,
+          helpText:
+            'Internal record only. The uploaded file is kept for the manufacturer and is not shown on the public DPP.',
+          showWhen: { field: 'eu_doc_available', equals: 'yes' },
+        }),
+        f({
+          id: 'safety_assessment_completed',
+          label: 'Safety assessment completed?',
+          type: 'select',
+          required: true,
+          badge: 'required',
+          options: YES_NO_UNKNOWN,
+          helpText:
+            'Toy manufacturers must assess chemical, physical, mechanical, electrical, flammability, hygiene, radioactivity and exposure risks where relevant.',
+          warnWhen: {
+            equals: ['no', 'unknown'],
+            message:
+              'Safety assessment information should be completed before relying on this DPP.',
+            messageKey: 'toys.fields.safety_assessment_completed.warn',
+          },
+        }),
+        f({
+          id: 'technical_documentation_available',
+          label: 'Technical documentation available?',
+          type: 'select',
+          required: true,
+          badge: 'required',
+          options: YES_NO_UNKNOWN,
+          helpText:
+            'Technical documentation supports the demonstration that the toy complies with applicable safety requirements.',
+          warnWhen: {
+            equals: ['no', 'unknown'],
+            message:
+              'Technical documentation may be required by market surveillance authorities.',
+            messageKey: 'toys.fields.technical_documentation_available.warn',
+          },
+        }),
+        f({
+          id: 'technical_documentation_upload',
+          label: 'Technical documentation upload',
+          type: 'file',
+          badge: 'where_applicable',
+          accept: 'application/pdf,image/*',
+          maxBytes: 5 * 1024 * 1024,
+          internal: true,
+          helpText:
+            'Internal record only. The uploaded file is kept for the manufacturer and is not shown on the public DPP.',
+          showWhen: { field: 'technical_documentation_available', equals: 'yes' },
+        }),
         f({ id: 'applicable_legislation', label: 'Applicable EU legislation', type: 'multi_select', required: true, badge: 'required', options: TOY_LEGISLATION, defaultValue: ['TSR'] }),
         f({ id: 'harmonised_standards', label: 'Harmonised standards used', type: 'multi_select', required: true, badge: 'required', options: TOY_STANDARDS }),
         f({ id: 'common_specifications', label: 'Common specifications used', type: 'textarea', badge: 'where_applicable', placeholder: 'Describe the common specifications applied.', showWhen: { field: 'harmonised_standards', equals: 'common_spec', includes: true } }),
@@ -440,7 +546,7 @@ export class ToysTemplate extends BaseTemplate {
 
   getRequiredLogos(data: Record<string, unknown>): string[] {
     const logos: string[] = [];
-    if (data.ce_marked) logos.push('ce');
+    if (data.ce_declaration_ack || data.ce_marked) logos.push('ce');
     return logos;
   }
 }

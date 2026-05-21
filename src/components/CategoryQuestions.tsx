@@ -618,6 +618,16 @@ export function CategoryQuestions({
             <CardContent className="space-y-4">
               {visibleQuestions.map((question) => {
                 const help = tHelp(t, question);
+                const value = data[question.id];
+                const showWarn = !!(
+                  question.warnWhen &&
+                  question.warnWhen.equals.includes(value)
+                );
+                const warnMessage = question.warnWhen
+                  ? question.warnWhen.messageKey
+                    ? t(question.warnWhen.messageKey, question.warnWhen.message)
+                    : question.warnWhen.message
+                  : '';
                 return (
                   <div key={question.id} className="space-y-2">
                     {question.type !== 'checkbox' && (
@@ -627,11 +637,31 @@ export function CategoryQuestions({
                           <span className="text-destructive ml-1">*</span>
                         )}
                         {renderBadge(question.badge)}
+                        {question.internal && (
+                          <Badge
+                            variant="outline"
+                            className="ml-2 text-[10px] font-normal align-middle"
+                          >
+                            {t(
+                              'toys.internalBadge',
+                              'Internal \u2014 not shown publicly',
+                            )}
+                          </Badge>
+                        )}
                       </Label>
                     )}
                     {renderQuestion(question)}
                     {help && (
                       <p className="text-xs text-muted-foreground">{help}</p>
+                    )}
+                    {showWarn && (
+                      <Alert
+                        variant="destructive"
+                        className="bg-amber-50 border-amber-300 text-amber-900 dark:bg-amber-950/40 dark:border-amber-700 dark:text-amber-100"
+                      >
+                        <AlertTriangle className="h-4 w-4" />
+                        <AlertDescription>{warnMessage}</AlertDescription>
+                      </Alert>
                     )}
                   </div>
                 );
