@@ -72,6 +72,18 @@ export interface TemplateQuestion {
    */
   internal?: boolean;
   /**
+   * When true, this field shows the wine-style translation UI:
+   * inline manual TranslationButton plus debounced AI auto-translation.
+   * Translations live under `<id>_translations` in category_data.
+   */
+  translatable?: boolean;
+  /**
+   * When `translatable` is true, controls whether AI auto-translate fires on
+   * debounced changes. Defaults to true. Set false to keep only the manual
+   * button (e.g. brand names).
+   */
+  autoTranslate?: boolean;
+  /**
    * Inline warning shown under the field when its current value matches any of `equals`.
    * Use for non-blocking regulatory advisories (e.g. "complete this before relying on the DPP").
    */
