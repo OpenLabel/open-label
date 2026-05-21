@@ -31,6 +31,7 @@ import {
 } from '@/templates/toys';
 import {
   generateAllergenDeclaration,
+  getFragranceById,
   type SelectedFragrance,
 } from '@/data/toyFragrances';
 import { FragrancePicker } from '@/components/toys/FragrancePicker';
