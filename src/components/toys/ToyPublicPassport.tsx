@@ -87,9 +87,18 @@ export function ToyPublicPassport({
   passport,
   isPreview = false,
 }: ToyPublicPassportProps) {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const { config } = useSiteConfig();
   const d = passport.category_data || {};
+  const currentLang = (i18n.language || 'en').split('-')[0];
+
+  /** Prefer per-language translation, fall back to the source value. */
+  const tr = (id: string): string => {
+    const map = d[`${id}_translations`] as Record<string, string> | undefined;
+    const t = map?.[currentLang];
+    if (t && t.trim()) return t;
+    return (d[id] as string) || '';
+  };
 
   const toyCategoryLabel =
     d.toy_category === 'other'
@@ -129,7 +138,7 @@ export function ToyPublicPassport({
             </h1>
             {Boolean(d.brand_name) && (
               <p className="text-sm text-muted-foreground mt-1">
-                {d.brand_name as string}
+                {tr('brand_name')}
                 {d.model_name ? ` · ${d.model_name as string}` : ''}
                 {d.sku ? ` · SKU ${d.sku as string}` : ''}
               </p>
@@ -168,7 +177,7 @@ export function ToyPublicPassport({
         {/* Product identity */}
         <SectionTitle>Product identity</SectionTitle>
         <dl>
-          <Row label="Brand" value={d.brand_name as string} />
+          <Row label="Brand" value={tr('brand_name')} />
           <Row label="Model" value={d.model_name as string} />
           <Row label="SKU / variant" value={d.sku as string} />
           <Row label="Toy category" value={toyCategoryLabel} />
@@ -191,7 +200,7 @@ export function ToyPublicPassport({
                 {t('toys.public.instructionsTitle', 'Instructions and warnings')}
               </SectionTitle>
               <p className="text-sm whitespace-pre-wrap">
-                {d.public_instructions_warnings as string}
+                {tr('public_instructions_warnings')}
               </p>
             </>
           )}
@@ -426,7 +435,7 @@ export function ToyPublicPassport({
               label="Common specifications"
               value={
                 <p className="whitespace-pre-wrap">
-                  {d.common_specifications as string}
+                  {tr('common_specifications')}
                 </p>
               }
             />
@@ -436,7 +445,7 @@ export function ToyPublicPassport({
               label="Other standards"
               value={
                 <p className="whitespace-pre-wrap">
-                  {d.other_standards as string}
+                  {tr('other_standards')}
                 </p>
               }
             />
@@ -497,7 +506,7 @@ export function ToyPublicPassport({
         <SectionTitle>Safety &amp; chemical information</SectionTitle>
         <div className="space-y-3 text-sm">
           <p>
-            {(d.allergen_declaration_text as string) ||
+            {tr('allergen_declaration_text') ||
               'No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.'}
           </p>
           {fragrances.length > 0 && (

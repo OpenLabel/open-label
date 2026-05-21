@@ -254,7 +254,7 @@ export class ToysTemplate extends BaseTemplate {
       'Product identity',
       'Each toy model or variant needs its own DPP.',
       [
-        f({ id: 'brand_name', label: 'Brand name', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'brand_name', label: 'Brand name', type: 'text', required: true, badge: 'required', translatable: true, autoTranslate: false }),
         f({ id: 'model_name', label: 'Model name or model number', type: 'text', required: true, badge: 'required' }),
         f({
           id: 'sku',
@@ -304,6 +304,7 @@ export class ToysTemplate extends BaseTemplate {
           type: 'textarea',
           required: true,
           badge: 'required',
+          translatable: true,
           helpText:
             'Add the warnings, instructions, and safety information that accompany the toy.',
           showWhen: { field: 'has_instructions_warnings', equals: 'yes' },
@@ -458,8 +459,8 @@ export class ToysTemplate extends BaseTemplate {
         }),
         f({ id: 'applicable_legislation', label: 'Applicable EU legislation', type: 'multi_select', required: true, badge: 'required', options: TOY_LEGISLATION, defaultValue: ['TSR'] }),
         f({ id: 'harmonised_standards', label: 'Harmonised standards used', type: 'multi_select', required: true, badge: 'required', options: TOY_STANDARDS }),
-        f({ id: 'common_specifications', label: 'Common specifications used', type: 'textarea', badge: 'where_applicable', placeholder: 'Describe the common specifications applied.', showWhen: { field: 'harmonised_standards', equals: 'common_spec', includes: true } }),
-        f({ id: 'other_standards', label: 'Other standards used (one per line)', type: 'textarea', badge: 'where_applicable', showWhen: { field: 'harmonised_standards', equals: 'other', includes: true } }),
+        f({ id: 'common_specifications', label: 'Common specifications used', type: 'textarea', badge: 'where_applicable', translatable: true, placeholder: 'Describe the common specifications applied.', showWhen: { field: 'harmonised_standards', equals: 'common_spec', includes: true } }),
+        f({ id: 'other_standards', label: 'Other standards used (one per line)', type: 'textarea', badge: 'where_applicable', translatable: true, showWhen: { field: 'harmonised_standards', equals: 'other', includes: true } }),
       ],
     ),
     section(
@@ -527,6 +528,7 @@ export class ToysTemplate extends BaseTemplate {
           id: 'allergen_declaration_text',
           label: 'Allergen declaration (auto-generated, editable)',
           type: 'textarea',
+          translatable: true,
           showWhen: { field: 'has_allergenic_fragrances', equals: 'yes' },
         }),
       ],
