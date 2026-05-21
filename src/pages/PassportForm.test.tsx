@@ -17,6 +17,7 @@ vi.mock('@/hooks/usePassports', () => ({
     updatePassport: { mutateAsync: vi.fn() },
   }),
   usePassportById: () => ({ data: null, isLoading: false }),
+  useLatestPassportDefaults: () => ({ data: null, isLoading: false }),
 }));
 
 vi.mock('react-i18next', () => ({
