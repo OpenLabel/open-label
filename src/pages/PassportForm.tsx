@@ -513,6 +513,23 @@ export default function PassportForm() {
                     category={formData.category}
                     data={(formData.category_data as Record<string, unknown>) || {}}
                     onChange={(data) => setFormData({ ...formData, category_data: data })}
+                    extraMissingRequired={(() => {
+                      const extras: { section: string; label: string }[] = [];
+                      const productSection = t('passport.productInfo', 'Product information');
+                      if (!formData.name.trim()) {
+                        extras.push({ section: productSection, label: t('passport.productName', 'Product Name') });
+                      }
+                      if (formData.category === 'toys') {
+                        if (!formData.image_url) {
+                          extras.push({ section: productSection, label: t('passport.productImage', 'Product Image') });
+                        }
+                        const descPlain = formData.description.replace(/<[^>]*>/g, '').trim();
+                        if (!descPlain) {
+                          extras.push({ section: productSection, label: t('passport.description', 'Description') });
+                        }
+                      }
+                      return extras;
+                    })()}
                   />
                 </div>
               )}
