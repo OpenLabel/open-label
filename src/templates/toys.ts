@@ -290,6 +290,24 @@ export class ToysTemplate extends BaseTemplate {
         }),
         f({ id: 'identifier_type', label: 'Identifier type', type: 'select', required: true, badge: 'required', options: TOY_IDENTIFIER_TYPES }),
         f({ id: 'identifier_type_other', label: 'Identifier type (specify)', type: 'text', showWhen: { field: 'identifier_type', equals: 'other' } }),
+        f({
+          id: 'has_instructions_warnings',
+          label: 'Does this toy require instructions, warnings, or safety information?',
+          type: 'select',
+          required: true,
+          badge: 'required',
+          options: YES_NO,
+        }),
+        f({
+          id: 'public_instructions_warnings',
+          label: 'Public instructions and warnings',
+          type: 'textarea',
+          required: true,
+          badge: 'required',
+          helpText:
+            'Add the warnings, instructions, and safety information that accompany the toy.',
+          showWhen: { field: 'has_instructions_warnings', equals: 'yes' },
+        }),
       ],
     ),
     section(
