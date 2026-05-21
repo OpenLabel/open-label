@@ -301,6 +301,67 @@ export function CategoryQuestions({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [data.has_allergenic_fragrances, data.allergenic_fragrances, isToys]);
 
+  // ---- Toys AI autofill: merge sanitized fields from edge function ----
+  useEffect(() => {
+    if (!isToys) return;
+    const payload = data.__ai_autofill as Record<string, unknown> | undefined;
+    if (!payload) return;
+
+    // Build allowed-id sets from the template
+    const allowedIds = new Set<string>();
+    const optionValues: Record<string, Set<string>> = {};
+    for (const section of template.sections) {
+      for (const q of section.questions) {
+        allowedIds.add(q.id);
+        if (q.options && q.options.length > 0) {
+          optionValues[q.id] = new Set(q.options.map((o) => o.value));
+        }
+      }
+    }
+
+    const updates: Record<string, unknown> = {};
+    for (const [key, raw] of Object.entries(payload)) {
+      if (key === 'product_name' || key === 'productImageBase64') continue;
+      if (raw === null || raw === undefined || raw === '') continue;
+
+      // Translate allergenic_fragrance_ids → SelectedFragrance[] for the picker
+      if (key === 'allergenic_fragrance_ids' && Array.isArray(raw)) {
+        const fragrances: SelectedFragrance[] = (raw as string[])
+          .map((id) => {
+            const f = getFragranceById(id);
+            return f ? { id: f.id, name: f.name, cas: f.cas } : null;
+          })
+          .filter((v): v is SelectedFragrance => v !== null);
+        if (fragrances.length > 0) {
+          updates.allergenic_fragrances = fragrances;
+        }
+        continue;
+      }
+
+      if (!allowedIds.has(key)) continue;
+
+      // Validate enum values
+      if (typeof raw === 'string' && optionValues[key]) {
+        if (!optionValues[key].has(raw)) continue;
+      }
+      if (Array.isArray(raw) && optionValues[key]) {
+        const filtered = raw.filter(
+          (v) => typeof v === 'string' && optionValues[key].has(v),
+        );
+        if (filtered.length === 0) continue;
+        updates[key] = filtered;
+        continue;
+      }
+
+      updates[key] = raw;
+    }
+
+    const next = { ...data, ...updates };
+    delete (next as Record<string, unknown>).__ai_autofill;
+    onChange(next);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [data.__ai_autofill, isToys]);
+
   const handleChange = (id: string, value: unknown) => {
     onChange({ ...data, [id]: value });
   };
