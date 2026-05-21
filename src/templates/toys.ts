@@ -304,6 +304,7 @@ export class ToysTemplate extends BaseTemplate {
           type: 'textarea',
           required: true,
           badge: 'required',
+          translatable: true,
           helpText:
             'Add the warnings, instructions, and safety information that accompany the toy.',
           showWhen: { field: 'has_instructions_warnings', equals: 'yes' },
