@@ -546,7 +546,7 @@ export class ToysTemplate extends BaseTemplate {
 
   getRequiredLogos(data: Record<string, unknown>): string[] {
     const logos: string[] = [];
-    if (data.ce_marked) logos.push('ce');
+    if (data.ce_declaration_ack || data.ce_marked) logos.push('ce');
     return logos;
   }
 }
