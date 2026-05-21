@@ -377,7 +377,7 @@ export class ToysTemplate extends BaseTemplate {
           helpText:
             'Only toys bearing CE marking can be placed on the EU market. This declaration should be consistent with the manufacturer\u2019s conformity assessment.',
         }),
-        f({ id: 'ce_marked', label: 'CE marked (mandatory for toys sold in the EU)', type: 'checkbox', required: true, badge: 'required' }),
+        
         f({
           id: 'eu_doc_available',
           label: 'EU Declaration of Conformity available?',
