@@ -34,6 +34,8 @@ import {
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import type { SelectedFragrance } from '@/data/toyFragrances';
 
+import { DPPLanguagePicker } from '@/components/DPPLanguagePicker';
+
 interface ToyPublicPassportProps {
   passport: {
     name: string;
@@ -43,6 +45,10 @@ interface ToyPublicPassportProps {
     updated_at: string;
   };
   isPreview?: boolean;
+  /** For preview mode: current preview language */
+  previewLanguage?: string;
+  /** For preview mode: callback when language changes */
+  onPreviewLanguageChange?: (lang: string) => void;
 }
 
 function labelFor(
@@ -86,17 +92,20 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 export function ToyPublicPassport({
   passport,
   isPreview = false,
+  previewLanguage,
+  onPreviewLanguageChange,
 }: ToyPublicPassportProps) {
-  const { t, i18n } = useTranslation();
+  const { i18n } = useTranslation();
   const { config } = useSiteConfig();
   const d = passport.category_data || {};
-  const currentLang = (i18n.language || 'en').split('-')[0];
+  const displayLanguage = previewLanguage || (i18n.language || 'en').split('-')[0];
+  const t = i18n.getFixedT(displayLanguage);
 
   /** Prefer per-language translation, fall back to the source value. */
   const tr = (id: string): string => {
     const map = d[`${id}_translations`] as Record<string, string> | undefined;
-    const t = map?.[currentLang];
-    if (t && t.trim()) return t;
+    const v = map?.[displayLanguage];
+    if (v && v.trim()) return v;
     return (d[id] as string) || '';
   };
 
@@ -120,6 +129,14 @@ export function ToyPublicPassport({
   return (
     <div className="min-h-screen bg-background text-foreground">
       <main className="max-w-3xl mx-auto px-5 py-8">
+        {/* Language Switcher - Top Right */}
+        <div className="flex justify-end mb-4">
+          <DPPLanguagePicker
+            localOnly={isPreview}
+            currentLanguage={previewLanguage}
+            onLanguageChange={onPreviewLanguageChange}
+          />
+        </div>
         {/* Header */}
         <div className="flex flex-col sm:flex-row gap-5 items-start">
           {passport.image_url && (
