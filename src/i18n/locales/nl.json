@@ -228,7 +228,9 @@
     "poweredBy": "Mogelijk gemaakt door",
     "noAdditionalInfo": "Geen aanvullende informatie vereist voor deze categorie.",
     "earlyAlpha": "Vroege alfa",
-    "earlyAlphaDesc": "Dit sjabloon is in vroege alfa en voldoet mogelijk niet volledig aan de huidige regelgeving. Controleer alle informatie aan de hand van officiële vereisten voor gebruik."
+    "earlyAlphaDesc": "Dit sjabloon is in vroege alfa en voldoet mogelijk niet volledig aan de huidige regelgeving. Controleer alle informatie aan de hand van officiële vereisten voor gebruik.",
+    "missingRequiredTitle": "Sommige verplichte velden zijn niet ingevuld",
+    "missingRequiredBody": "U kunt deze DPP nog steeds opslaan en publiceren, maar de volgende velden zijn vereist voor volledige naleving van de regelgeving:"
   },
   "imageUpload": {
     "loginRequired": "U moet ingelogd zijn om afbeeldingen te uploaden",

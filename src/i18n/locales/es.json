@@ -174,7 +174,10 @@
     "accountCreatedDesc": "Ya puedes iniciar sesión.",
     "checkEmail": "Revisa tu correo",
     "resetLinkSent": "Enlace de restablecimiento enviado.",
-    "validation": { "invalidEmail": "Por favor ingrese un correo electrónico válido", "shortPassword": "La contraseña debe tener al menos 6 caracteres" },
+    "validation": {
+      "invalidEmail": "Por favor ingrese un correo electrónico válido",
+      "shortPassword": "La contraseña debe tener al menos 6 caracteres"
+    },
     "setNewPassword": "Establecer nueva contraseña",
     "setNewPasswordDesc": "Ingrese su nueva contraseña a continuación",
     "newPassword": "Nueva contraseña",
@@ -225,7 +228,9 @@
     "poweredBy": "Impulsado por",
     "noAdditionalInfo": "No se requiere información adicional para esta categoría.",
     "earlyAlpha": "Alfa temprana",
-    "earlyAlphaDesc": "Esta plantilla está en fase alfa temprana y puede no cumplir completamente con las regulaciones actuales. Verifique toda la información antes de usarla."
+    "earlyAlphaDesc": "Esta plantilla está en fase alfa temprana y puede no cumplir completamente con las regulaciones actuales. Verifique toda la información antes de usarla.",
+    "missingRequiredTitle": "Algunos campos obligatorios no están completos",
+    "missingRequiredBody": "Aún puede guardar y publicar este DPP, pero los siguientes campos son obligatorios para el cumplimiento normativo completo:"
   },
   "categories": {
     "battery": "Baterías",

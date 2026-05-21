@@ -76,6 +76,12 @@ interface CategoryQuestionsProps {
   category: ProductCategory;
   data: Record<string, unknown>;
   onChange: (data: Record<string, unknown>) => void;
+  /**
+   * Extra missing-required entries (not part of the template) to include in the
+   * "Missing mandatory fields" warning, e.g. top-level passport fields like
+   * product name, image, description.
+   */
+  extraMissingRequired?: { section: string; label: string }[];
 }
 
 const BADGE_KEY: Record<QuestionBadge, string> = {
@@ -243,10 +249,39 @@ export function CategoryQuestions({
   category,
   data,
   onChange,
+  extraMissingRequired,
 }: CategoryQuestionsProps) {
   const { t } = useTranslation();
   const template = getTemplate(category);
   const isToys = category === 'toys';
+
+  // Build the list of unfilled required fields (template-required + extras).
+  // Hidden conditional fields (showWhen evaluating false) are excluded.
+  const missingRequired: { section: string; label: string }[] = [];
+  for (const section of template.sections) {
+    if (!evaluateShowWhen(section.showWhen, data)) continue;
+    const sectionTitle = section.titleKey
+      ? t(section.titleKey, section.title)
+      : section.title;
+    for (const q of section.questions) {
+      if (!q.required) continue;
+      if (!evaluateShowWhen(q.showWhen, data)) continue;
+      const value = data[q.id];
+      const empty =
+        value === undefined ||
+        value === null ||
+        value === '' ||
+        (q.type === 'checkbox' && value === false) ||
+        (Array.isArray(value) && value.length === 0);
+      if (empty) {
+        missingRequired.push({ section: sectionTitle, label: tLabel(t, q) });
+      }
+    }
+  }
+  if (extraMissingRequired) {
+    missingRequired.push(...extraMissingRequired);
+  }
+
 
   // Auto-fill customs commodity code for toys: 9880 + CN chapter + 00
   useEffect(() => {
@@ -605,6 +640,37 @@ export function CategoryQuestions({
               'toys.disclaimer.body',
               'The exact EU Digital Product Passport data model and API specifications for toys are still TBD and are expected to be defined in the implementing act due by the end of 2026. This tool is a first version based on Regulation (EU) 2025/2509 and should not be treated as final legal advice.',
             )}
+          </AlertDescription>
+        </Alert>
+      )}
+
+      {/* Missing mandatory fields summary — non-blocking */}
+      {missingRequired.length > 0 && (
+        <Alert
+          variant="destructive"
+          className="bg-amber-50 border-amber-300 text-amber-900 dark:bg-amber-950/40 dark:border-amber-700 dark:text-amber-100"
+        >
+          <AlertTriangle className="h-4 w-4" />
+          <AlertTitle>
+            {t(
+              'passport.missingRequiredTitle',
+              'Some mandatory fields are not filled',
+            )}
+          </AlertTitle>
+          <AlertDescription className="text-sm">
+            <p className="mb-2">
+              {t(
+                'passport.missingRequiredBody',
+                'You can still save and publish this DPP, but the following fields are required for full regulatory compliance:',
+              )}
+            </p>
+            <ul className="list-disc ml-5 space-y-0.5">
+              {missingRequired.map((m, i) => (
+                <li key={i}>
+                  <span className="font-medium">{m.section}</span> — {m.label}
+                </li>
+              ))}
+            </ul>
           </AlertDescription>
         </Alert>
       )}

@@ -231,7 +231,9 @@
     "poweredBy": "Poganja",
     "noAdditionalInfo": "Za to kategorijo niso potrebne dodatne informacije.",
     "earlyAlpha": "Zgodnja alfa",
-    "earlyAlphaDesc": "Ta predloga je v zgodnji alfa različici in morda ni skladna s predpisi. Pred uporabo preverite informacije."
+    "earlyAlphaDesc": "Ta predloga je v zgodnji alfa različici in morda ni skladna s predpisi. Pred uporabo preverite informacije.",
+    "missingRequiredTitle": "Nekatera obvezna polja niso izpolnjena",
+    "missingRequiredBody": "Ta DPP lahko še vedno shranite in objavite, vendar so naslednja polja obvezna za popolno regulativno skladnost:"
   },
   "categories": {
     "battery": "Baterije",

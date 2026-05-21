@@ -231,7 +231,9 @@
     "poweredBy": "Drivs av",
     "noAdditionalInfo": "Ingen ytterligare information krävs för denna kategori.",
     "earlyAlpha": "Tidig alfa",
-    "earlyAlphaDesc": "Denna mall är i tidig alfaversion och kanske inte helt överensstämmer med gällande föreskrifter. Vänligen verifiera all information mot officiella krav innan användning."
+    "earlyAlphaDesc": "Denna mall är i tidig alfaversion och kanske inte helt överensstämmer med gällande föreskrifter. Vänligen verifiera all information mot officiella krav innan användning.",
+    "missingRequiredTitle": "Vissa obligatoriska fält är inte ifyllda",
+    "missingRequiredBody": "Du kan fortfarande spara och publicera detta DPP, men följande fält krävs för fullständig regelefterlevnad:"
   },
   "imageUpload": {
     "loginRequired": "Du måste vara inloggad för att ladda upp bilder",
