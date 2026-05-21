@@ -28,6 +28,16 @@ describe('ToysTemplate', () => {
     expect(new Set(ids).size).toBe(ids.length);
   });
 
+  it('marks public free-text fields as translatable', () => {
+    const all = toysTemplate.sections.flatMap((s) => s.questions);
+    const byId = (id: string) => all.find((q) => q.id === id);
+    expect(byId('brand_name')?.translatable).toBe(true);
+    expect(byId('public_instructions_warnings')?.translatable).toBe(true);
+    expect(byId('common_specifications')?.translatable).toBe(true);
+    expect(byId('other_standards')?.translatable).toBe(true);
+    expect(byId('allergen_declaration_text')?.translatable).toBe(true);
+  });
+
   it('select questions have options', () => {
     for (const s of toysTemplate.sections) {
       for (const q of s.questions) {
