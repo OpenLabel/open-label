@@ -103,7 +103,12 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                 transformOrigin: 'top left',
               }}
             >
-              <ToyPublicPassport passport={previewPassport} isPreview />
+              <ToyPublicPassport
+                passport={previewPassport}
+                isPreview
+                previewLanguage={previewLanguage}
+                onPreviewLanguageChange={setPreviewLanguage}
+              />
             </div>
           </div>
         </div>
