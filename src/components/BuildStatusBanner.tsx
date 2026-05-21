@@ -51,6 +51,16 @@ export function BuildStatusBanner() {
   const { config, loading: configLoading } = useSiteConfig();
 
   const isPreview = import.meta.env.DEV || window.location.hostname.includes('id-preview--');
+  // Never render on public-facing routes (DPP, referral, legal, setup) — those pages
+  // are shown to end customers / regulators and must stay free of dev/admin chrome.
+  const path = typeof window !== 'undefined' ? window.location.pathname : '';
+  const isPublicRoute =
+    path.startsWith('/p/') ||
+    path.startsWith('/referral') ||
+    path.startsWith('/legal') ||
+    path.startsWith('/privacy-policy') ||
+    path.startsWith('/terms') ||
+    path.startsWith('/setup');
 
   useEffect(() => {
     if (!isPreview || configLoading) return;
@@ -89,7 +99,7 @@ export function BuildStatusBanner() {
     }
   }, [resolved?.status]);
 
-  if (!isPreview || dismissed) return null;
+  if (!isPreview || isPublicRoute || dismissed) return null;
 
   const isLoading = resolved === null;
   const prompt = buildPrompt(resolved?.message ?? 'Unknown error');
