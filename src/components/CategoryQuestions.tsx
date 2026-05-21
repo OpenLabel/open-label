@@ -35,6 +35,7 @@ import {
   type SelectedFragrance,
 } from '@/data/toyFragrances';
 import { FragrancePicker } from '@/components/toys/FragrancePicker';
+import { TranslatableField } from '@/components/TranslatableField';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
 import { Input } from '@/components/ui/input';
