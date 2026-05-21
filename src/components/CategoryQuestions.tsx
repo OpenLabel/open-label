@@ -76,6 +76,12 @@ interface CategoryQuestionsProps {
   category: ProductCategory;
   data: Record<string, unknown>;
   onChange: (data: Record<string, unknown>) => void;
+  /**
+   * Extra missing-required entries (not part of the template) to include in the
+   * "Missing mandatory fields" warning, e.g. top-level passport fields like
+   * product name, image, description.
+   */
+  extraMissingRequired?: { section: string; label: string }[];
 }
 
 const BADGE_KEY: Record<QuestionBadge, string> = {
