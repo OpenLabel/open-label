@@ -67,9 +67,46 @@ describe('ToysTemplate', () => {
     ).toBe(true);
   });
 
-  it('getRequiredLogos returns ce when ce_marked', () => {
+  it('getRequiredLogos returns ce when ce_declaration_ack or ce_marked', () => {
+    expect(toysTemplate.getRequiredLogos!({ ce_declaration_ack: true })).toContain('ce');
     expect(toysTemplate.getRequiredLogos!({ ce_marked: true })).toContain('ce');
     expect(toysTemplate.getRequiredLogos!({})).toEqual([]);
+  });
+
+  it('has CE declaration, EU DoC, safety assessment and technical documentation fields', () => {
+    const ids = toysTemplate.sections.flatMap((s) => s.questions.map((q) => q.id));
+    expect(ids).toContain('ce_declaration_ack');
+    expect(ids).toContain('eu_doc_available');
+    expect(ids).toContain('eu_doc_reference');
+    expect(ids).toContain('eu_doc_upload');
+    expect(ids).toContain('safety_assessment_completed');
+    expect(ids).toContain('technical_documentation_available');
+    expect(ids).toContain('technical_documentation_upload');
+    expect(ids).toContain('has_instructions_warnings');
+    expect(ids).toContain('public_instructions_warnings');
+  });
+
+  it('internal uploads are flagged internal', () => {
+    const all = toysTemplate.sections.flatMap((s) => s.questions);
+    const docUpload = all.find((q) => q.id === 'eu_doc_upload');
+    const techUpload = all.find((q) => q.id === 'technical_documentation_upload');
+    expect(docUpload?.internal).toBe(true);
+    expect(techUpload?.internal).toBe(true);
+  });
+
+  it('eu_doc_available warns on no/unknown', () => {
+    const q = toysTemplate.sections
+      .flatMap((s) => s.questions)
+      .find((q) => q.id === 'eu_doc_available');
+    expect(q?.warnWhen?.equals).toEqual(['no', 'unknown']);
+  });
+
+  it('public_instructions_warnings shown only when has_instructions_warnings === yes', () => {
+    const q = toysTemplate.sections
+      .flatMap((s) => s.questions)
+      .find((q) => q.id === 'public_instructions_warnings');
+    expect(evaluateShowWhen(q?.showWhen, { has_instructions_warnings: 'no' })).toBe(false);
+    expect(evaluateShowWhen(q?.showWhen, { has_instructions_warnings: 'yes' })).toBe(true);
   });
 
   it('TOY_CATEGORIES includes mandatory entries', () => {
