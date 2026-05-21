@@ -138,7 +138,7 @@ export function ToyPublicPassport({
             </h1>
             {Boolean(d.brand_name) && (
               <p className="text-sm text-muted-foreground mt-1">
-                {d.brand_name as string}
+                {tr('brand_name')}
                 {d.model_name ? ` · ${d.model_name as string}` : ''}
                 {d.sku ? ` · SKU ${d.sku as string}` : ''}
               </p>
