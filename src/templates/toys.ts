@@ -254,7 +254,7 @@ export class ToysTemplate extends BaseTemplate {
       'Product identity',
       'Each toy model or variant needs its own DPP.',
       [
-        f({ id: 'brand_name', label: 'Brand name', type: 'text', required: true, badge: 'required' }),
+        f({ id: 'brand_name', label: 'Brand name', type: 'text', required: true, badge: 'required', translatable: true, autoTranslate: false }),
         f({ id: 'model_name', label: 'Model name or model number', type: 'text', required: true, badge: 'required' }),
         f({
           id: 'sku',
