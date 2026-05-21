@@ -249,10 +249,39 @@ export function CategoryQuestions({
   category,
   data,
   onChange,
+  extraMissingRequired,
 }: CategoryQuestionsProps) {
   const { t } = useTranslation();
   const template = getTemplate(category);
   const isToys = category === 'toys';
+
+  // Build the list of unfilled required fields (template-required + extras).
+  // Hidden conditional fields (showWhen evaluating false) are excluded.
+  const missingRequired: { section: string; label: string }[] = [];
+  for (const section of template.sections) {
+    if (!evaluateShowWhen(section.showWhen, data)) continue;
+    const sectionTitle = section.titleKey
+      ? t(section.titleKey, section.title)
+      : section.title;
+    for (const q of section.questions) {
+      if (!q.required) continue;
+      if (!evaluateShowWhen(q.showWhen, data)) continue;
+      const value = data[q.id];
+      const empty =
+        value === undefined ||
+        value === null ||
+        value === '' ||
+        (q.type === 'checkbox' && value === false) ||
+        (Array.isArray(value) && value.length === 0);
+      if (empty) {
+        missingRequired.push({ section: sectionTitle, label: tLabel(t, q) });
+      }
+    }
+  }
+  if (extraMissingRequired) {
+    missingRequired.push(...extraMissingRequired);
+  }
+
 
   // Auto-fill customs commodity code for toys: 9880 + CN chapter + 00
   useEffect(() => {
