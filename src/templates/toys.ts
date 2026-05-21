@@ -459,8 +459,8 @@ export class ToysTemplate extends BaseTemplate {
         }),
         f({ id: 'applicable_legislation', label: 'Applicable EU legislation', type: 'multi_select', required: true, badge: 'required', options: TOY_LEGISLATION, defaultValue: ['TSR'] }),
         f({ id: 'harmonised_standards', label: 'Harmonised standards used', type: 'multi_select', required: true, badge: 'required', options: TOY_STANDARDS }),
-        f({ id: 'common_specifications', label: 'Common specifications used', type: 'textarea', badge: 'where_applicable', placeholder: 'Describe the common specifications applied.', showWhen: { field: 'harmonised_standards', equals: 'common_spec', includes: true } }),
-        f({ id: 'other_standards', label: 'Other standards used (one per line)', type: 'textarea', badge: 'where_applicable', showWhen: { field: 'harmonised_standards', equals: 'other', includes: true } }),
+        f({ id: 'common_specifications', label: 'Common specifications used', type: 'textarea', badge: 'where_applicable', translatable: true, placeholder: 'Describe the common specifications applied.', showWhen: { field: 'harmonised_standards', equals: 'common_spec', includes: true } }),
+        f({ id: 'other_standards', label: 'Other standards used (one per line)', type: 'textarea', badge: 'where_applicable', translatable: true, showWhen: { field: 'harmonised_standards', equals: 'other', includes: true } }),
       ],
     ),
     section(
