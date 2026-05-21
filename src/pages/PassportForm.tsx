@@ -18,7 +18,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
-import { usePassports, usePassportById } from '@/hooks/usePassports';
+import { usePassports, usePassportById, useLatestPassportDefaults } from '@/hooks/usePassports';
 import { categoryList } from '@/templates';
 import type { ProductCategory } from '@/types/passport';
 import type { Json } from '@/integrations/supabase/types';
@@ -175,6 +175,36 @@ export default function PassportForm() {
       savedFormDataRef.current = JSON.stringify(formData);
     }
   }, [isEditing, formData]);
+
+  // Prefill identity fields (brand, manufacturer, auth rep, EU operator) from
+  // the user's most recent passport when creating a new one. Per-category, and
+  // never overwrites values the user has already entered.
+  const { data: identityDefaults } = useLatestPassportDefaults(
+    !isEditing ? formData.category : undefined
+  );
+  const prefilledForCategoryRef = useRef<string | null>(null);
+  useEffect(() => {
+    if (isEditing || !identityDefaults) return;
+    if (prefilledForCategoryRef.current === formData.category) return;
+    prefilledForCategoryRef.current = formData.category;
+
+    setFormData(prev => {
+      const merged = { ...prev.category_data };
+      let changed = false;
+      for (const [key, value] of Object.entries(identityDefaults)) {
+        const current = merged[key];
+        if (current === undefined || current === null || current === '') {
+          merged[key] = value;
+          changed = true;
+        }
+      }
+      if (!changed) return prev;
+      const next = { ...prev, category_data: merged };
+      savedFormDataRef.current = JSON.stringify(next);
+      return next;
+    });
+  }, [identityDefaults, isEditing, formData.category]);
+
 
   const handleSubmit = async (e?: React.FormEvent) => {
     e?.preventDefault();

@@ -204,3 +204,83 @@ export function usePassportById(id: string | undefined) {
     enabled: !!id,
   });
 }
+
+// Identity field keys prefilled from the user's last passport when creating a new one.
+// Product-specific fields are intentionally excluded.
+export const PREFILL_IDENTITY_KEYS = [
+  'brand_name',
+  'manufacturer_legal_name',
+  'manufacturer_street',
+  'manufacturer_postal_code',
+  'manufacturer_city',
+  'manufacturer_country',
+  'manufacturer_email',
+  'manufacturer_website',
+  'manufacturer_operator_id',
+  'manufacturer_operator_id_type',
+  'manufacturer_non_eu',
+  'has_auth_rep',
+  'auth_rep_legal_name',
+  'auth_rep_street',
+  'auth_rep_postal_code',
+  'auth_rep_city',
+  'auth_rep_country',
+  'auth_rep_email',
+  'auth_rep_operator_id',
+  'auth_rep_operator_id_type',
+  'eu_op_legal_name',
+  'eu_op_role',
+  'eu_op_street',
+  'eu_op_postal_code',
+  'eu_op_city',
+  'eu_op_country',
+  'eu_op_email',
+  'eu_op_operator_id',
+  'eu_op_operator_id_type',
+] as const;
+
+export function useLatestPassportDefaults(category: ProductCategory | undefined) {
+  const { user } = useAuth();
+
+  return useQuery({
+    queryKey: ['passport', 'latest-defaults', user?.id, category],
+    queryFn: async () => {
+      if (!user || !category) return null;
+
+      const sameCategory = await supabase
+        .from('passports')
+        .select('category_data')
+        .eq('user_id', user.id)
+        .eq('category', category)
+        .order('updated_at', { ascending: false })
+        .limit(1)
+        .maybeSingle();
+
+      let source = sameCategory.data?.category_data as Record<string, unknown> | undefined;
+
+      if (!source) {
+        const anyCategory = await supabase
+          .from('passports')
+          .select('category_data')
+          .eq('user_id', user.id)
+          .order('updated_at', { ascending: false })
+          .limit(1)
+          .maybeSingle();
+        source = anyCategory.data?.category_data as Record<string, unknown> | undefined;
+      }
+
+      if (!source) return null;
+
+      const defaults: Record<string, unknown> = {};
+      for (const key of PREFILL_IDENTITY_KEYS) {
+        const val = source[key];
+        if (val !== undefined && val !== null && val !== '') {
+          defaults[key] = val;
+        }
+      }
+      return defaults;
+    },
+    enabled: !!user && !!category,
+    staleTime: 5 * 60 * 1000,
+  });
+}
