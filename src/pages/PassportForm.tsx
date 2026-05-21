@@ -214,25 +214,11 @@ export default function PassportForm() {
       return;
     }
 
-    if (formData.category === 'toys') {
-      if (!formData.image_url) {
-        toast({
-          title: t('common.error'),
-          description: t('toys.validation.imageRequired', 'A colour image of the toy is required.'),
-          variant: 'destructive',
-        });
-        return;
-      }
-      const descriptionPlain = formData.description.replace(/<[^>]*>/g, '').trim();
-      if (!descriptionPlain) {
-        toast({
-          title: t('common.error'),
-          description: t('toys.validation.descriptionRequired', 'A product description is required for toys.'),
-          variant: 'destructive',
-        });
-        return;
-      }
-    }
+    // Template-`required` fields and toys image/description are NOT hard-blocks:
+    // the form surfaces them via the "Missing mandatory fields" warning so the
+    // user can still save and publish an incomplete DPP and iterate later.
+
+
 
     setSaving(true);
     try {
