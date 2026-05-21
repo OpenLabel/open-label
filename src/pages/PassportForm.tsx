@@ -35,6 +35,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { WineFields } from '@/components/WineFields';
 import { WineAIAutofill } from '@/components/wine/WineAIAutofill';
+import { ToyAIAutofill } from '@/components/toys/ToyAIAutofill';
 import { PassportPreview } from '@/components/PassportPreview';
 import { CounterfeitProtection } from '@/components/CounterfeitProtection';
 import { TranslationButton, type Translations } from '@/components/TranslationButton';
