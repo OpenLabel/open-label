@@ -18,7 +18,7 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
-import { usePassports, usePassportById } from '@/hooks/usePassports';
+import { usePassports, usePassportById, useLatestPassportDefaults } from '@/hooks/usePassports';
 import { categoryList } from '@/templates';
 import type { ProductCategory } from '@/types/passport';
 import type { Json } from '@/integrations/supabase/types';
