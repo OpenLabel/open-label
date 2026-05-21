@@ -177,7 +177,7 @@ export function ToyPublicPassport({
         {/* Product identity */}
         <SectionTitle>Product identity</SectionTitle>
         <dl>
-          <Row label="Brand" value={d.brand_name as string} />
+          <Row label="Brand" value={tr('brand_name')} />
           <Row label="Model" value={d.model_name as string} />
           <Row label="SKU / variant" value={d.sku as string} />
           <Row label="Toy category" value={toyCategoryLabel} />
@@ -200,7 +200,7 @@ export function ToyPublicPassport({
                 {t('toys.public.instructionsTitle', 'Instructions and warnings')}
               </SectionTitle>
               <p className="text-sm whitespace-pre-wrap">
-                {d.public_instructions_warnings as string}
+                {tr('public_instructions_warnings')}
               </p>
             </>
           )}
@@ -435,7 +435,7 @@ export function ToyPublicPassport({
               label="Common specifications"
               value={
                 <p className="whitespace-pre-wrap">
-                  {d.common_specifications as string}
+                  {tr('common_specifications')}
                 </p>
               }
             />
@@ -445,7 +445,7 @@ export function ToyPublicPassport({
               label="Other standards"
               value={
                 <p className="whitespace-pre-wrap">
-                  {d.other_standards as string}
+                  {tr('other_standards')}
                 </p>
               }
             />
@@ -506,7 +506,7 @@ export function ToyPublicPassport({
         <SectionTitle>Safety &amp; chemical information</SectionTitle>
         <div className="space-y-3 text-sm">
           <p>
-            {(d.allergen_declaration_text as string) ||
+            {tr('allergen_declaration_text') ||
               'No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.'}
           </p>
           {fragrances.length > 0 && (
