@@ -92,17 +92,20 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 export function ToyPublicPassport({
   passport,
   isPreview = false,
+  previewLanguage,
+  onPreviewLanguageChange,
 }: ToyPublicPassportProps) {
-  const { t, i18n } = useTranslation();
+  const { t: tBase, i18n } = useTranslation();
   const { config } = useSiteConfig();
   const d = passport.category_data || {};
-  const currentLang = (i18n.language || 'en').split('-')[0];
+  const displayLanguage = previewLanguage || (i18n.language || 'en').split('-')[0];
+  const t = i18n.getFixedT(displayLanguage);
 
   /** Prefer per-language translation, fall back to the source value. */
   const tr = (id: string): string => {
     const map = d[`${id}_translations`] as Record<string, string> | undefined;
-    const t = map?.[currentLang];
-    if (t && t.trim()) return t;
+    const v = map?.[displayLanguage];
+    if (v && v.trim()) return v;
     return (d[id] as string) || '';
   };
 
