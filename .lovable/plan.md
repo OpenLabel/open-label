@@ -1,89 +1,29 @@
-## Goal
 
-Bring AI-powered photo autofill to the **Toys** category, mirroring the existing Wine autofill: snap or upload a picture of the toy / its packaging, and let Gemini extract the regulated fields defined in `src/templates/toys.ts` into `category_data`.
+# Fix toys i18n + live preview language picker
 
-## 1. New edge function: `toy-label-ocr`
+## 1. Toys i18n — populate all keys in 24 locales
 
-Create `supabase/functions/toy-label-ocr/index.ts`, modeled on `wine-label-ocr`:
+**Root cause:** `toys.ts` references `toys.fields.*`, `toys.sections.*`, `toys.options.*`, `toys.ai.*`, `toys.warnings.*`, `toys.public.*` keys that don't exist in any locale file, so every label falls back to its hardcoded English default.
 
-- Same CORS, JWT-auth, Zod validation, fair-usage quota (`increment_api_usage`, monthly limit 100, `QUOTA_EXCEEDED` code).
-- Same input shape: `{ image: base64 data URL }`, ~7 MB cap, PNG/JPEG/WebP/GIF/PDF.
-- Server-side QR / barcode decode via `zxing-wasm` (treated as `unique_product_identifier` candidate with `identifier_type = ean13`/`gtin` when detected, otherwise left blank).
-- Model: `google/gemini-2.5-pro` via Lovable AI Gateway, multimodal (image + system prompt).
-- **System prompt** = strict regulatory extraction brief covering GPSR (2023/988), Toy Safety Regulation, EN 71, mouth-contact restrictions, CE marking, notified-body number, allergenic fragrances (Annex II/III), age grading, warnings. Tells the model: return only what it can read from the image, never invent, prefer `null` over guessing, return canonical IDs for allergenic fragrances from a `KNOWN_TOY_FRAGRANCES` list mirrored from `src/data/toyFragrances.ts`.
-- **Structured output** via `response_format: json_schema` keyed exactly to the `Question.id`s currently in `src/templates/toys.ts`, e.g.:
-  - `product_name`, `description`, `manufacturer_name`, `manufacturer_address`, `eu_representative_name`, `eu_representative_address`, `model_number`, `batch_serial`, `unique_product_identifier`, `identifier_type`
-  - `age_grading`, `under_36_months`, `mouth_contact`
-  - `ce_marked`, `notified_body_involved`, `notified_body_number`
-  - `warnings[]` (small parts, magnets, button cells, projectiles, long cords, etc., from a fixed enum)
-  - `materials[]`, `contains_fragrance`, `fragrance_ids[]` (canonical IDs only)
-  - `intended_use`, `instructions_summary`
-- Returns `{ extractedData, productImageBase64 (cropped front shot when available), qrCodeUsed, quota }` exactly like the wine function so `PassportForm` reuses the same `onAutofillMeta` handler unchanged.
-- Hard-coded `KNOWN_TOY_FRAGRANCES` list mirrored from `src/data/toyFragrances.ts`; add a sync test (see §5).
-- Reject anything outside the schema; strip unknown keys before returning.
+**Fix:**
+1. **Source of truth — `en.json`:** generate the full `toys.*` subtree from `src/templates/toys.ts` itself (one-off script walks `sections[]`, `questions[]`, each `opts(...)` block) plus the hand-written `toys.ai.*`, `toys.warnings.mouth_contact`, `toys.public.*`, and certificate upload strings used in `CategoryQuestions.tsx` / `ToyPublicPassport.tsx`. Guarantees zero drift between template and locale.
+2. **Translate to the 23 other EU languages** using the existing `translate-text` edge function (gemini-2.5-pro, batched — same pipeline used for wine). Write results into each `src/i18n/locales/{code}.json`. Keep professional regulatory acronyms per language (e.g. `UE` not `EU` in FR/IT/ES/PT/RO).
+3. **Lock it in** by extending `src/i18n/locales/audit.test.ts` so the `toys.*` namespace is part of the strict-completeness check — future drift fails the build (per i18n audit policy).
 
-Config: deploys with default `verify_jwt = false` (matches wine function), JWT validated in code.
+## 4. Live Preview language picker is a no-op
 
-## 2. New component: `src/components/toys/ToyAIAutofill.tsx`
+**Root cause:** the toys preview (and `PassportPreview` wrapper) reads labels via the global `useTranslation()` bound to `i18n.language`. The `DPPLanguagePicker` updates local state but no translation rebinds.
 
-Copy `WineAIAutofill.tsx` 1:1, change:
+**Fix:** thread the selected preview language into the preview subtree using the same pattern wine already uses — wrap the preview in `<I18nextProvider i18n={previewI18n}>` (a cloned instance pinned via `i18n.cloneInstance({ lng })`), or pass `t = i18n.getFixedT(lang)` down. Re-renders all labels when the picker changes. After #1 lands, the toys preview will visibly switch across all 24 locales.
 
-- Edge function name → `toy-label-ocr`.
-- Translation namespace → `toys.ai.*` (with sensible fallbacks to existing `ai.*` keys so nothing breaks before translations land).
-- Dialog copy: "Scan your toy or its packaging — works best on the box face showing CE mark, age warning, and manufacturer info."
-- Keep the Apple-Intelligence gradient button, drag-and-drop zone, quota dialog, experimental badge — all identical to wine.
-- Keep the `useSiteConfig().ai_enabled` gate.
+## Technical details
 
-Add `ToyAIAutofill.test.tsx` mirroring `WineAIAutofill.test.tsx` (render gated by `ai_enabled`, button click opens dialog, file select triggers `supabase.functions.invoke('toy-label-ocr', …)`, quota dialog on `QUOTA_EXCEEDED`).
+- **Files touched:** `src/i18n/locales/*.json` (24, generated), `src/i18n/locales/audit.test.ts`, `src/components/PassportPreview.tsx` and/or `src/components/toys/ToyPublicPassport.tsx` (preview wrapper).
+- **Tooling:** one-shot `scripts/generate-toys-i18n.ts` reads `toys.ts`, emits the `toys.*` subtree, then calls `translate-text` per locale. Idempotent and re-runnable when toys fields change.
+- **No DB / no edge function changes** beyond reusing `translate-text`.
+- **Tests:** duplicate-key, locales-audit, and toys-template tests must pass; coverage threshold stays at 30%.
 
-## 3. Toy autofill consumer in `ToyFields`
+## Out of scope
 
-There is currently no `ToyFields` equivalent of `WineFields.handleAIAutofill`. Two options, picking the simpler one:
-
-- The toys form is fully driven by the generic `CategoryQuestions` renderer over `toys.ts`. So we wire autofill **directly in `CategoryQuestions.tsx`**: when `value.__ai_autofill` is present, merge known question-`id` keys into `category_data`, normalize enums (e.g. `age_grading` must be one of the allowed options, `warnings[]` filtered against the question's option list, `fragrance_ids[]` filtered against `toyFragrances.ts`), then strip the sentinel. This keeps wine's `WineFields` path untouched.
-- Unknown / unrecognized keys are dropped silently (logged in dev).
-
-## 4. Wire into `PassportForm.tsx`
-
-Mirror the wine block right below it:
-
-```tsx
-{formData.category === 'toys' && (
-  <ToyAIAutofill
-    onAutofill={(extractedData) => {
-      setFormData(prev => ({
-        ...prev,
-        category_data: { ...prev.category_data, __ai_autofill: extractedData },
-      }));
-    }}
-    onAutofillMeta={/* identical to wine: sets name + uploads productImageBase64 to passport-images */}
-  />
-)}
-```
-
-Refactor the shared `onAutofillMeta` body into a small local helper to avoid duplication.
-
-Update `PassportForm.test.tsx` to mock `@/components/toys/ToyAIAutofill` the same way the wine one is mocked.
-
-## 5. Data integrity & tests (mandatory per project rules)
-
-- New `src/data/toyFragrances.integrity.test.ts` asserting `KNOWN_TOY_FRAGRANCES` in the edge function stays in sync with `src/data/toyFragrances.ts` (same pattern as the wine ingredients sync test).
-- Extend the existing template tests so each `toys.ts` question id used by the AI schema actually exists (prevents schema drift if `toys.ts` is renamed).
-- Component tests for `ToyAIAutofill` (see §2).
-- Keep global coverage threshold untouched (never lower it).
-
-## 6. Translations
-
-Add an English `toys.ai.*` block to `src/i18n/locales/en.json` (button label, dialog title/description, regulatory warning copy specific to toys, quota dialog). Per project policy, translate to all 23 other EU locales in the same change using `google/gemini-2.5-pro` with the full toys regulatory context document already created in the previous step (`scripts/toys-regulatory-context.md`). Existing `locales.test.ts`, `audit.test.ts`, and `duplicateKeys.test.ts` will fail the build if any locale is incomplete.
-
-## 7. Out of scope
-
-- No collapsible sections / progress bar.
-- No file-upload of supplier declaration or per-fragrance test reports (still boolean flags).
-- No changes to wine autofill behavior.
-- No new storage bucket (reuse `passport-images`).
-
-## Files touched
-
-- **New**: `supabase/functions/toy-label-ocr/index.ts`, `src/components/toys/ToyAIAutofill.tsx`, `src/components/toys/ToyAIAutofill.test.tsx`, `src/data/toyFragrances.integrity.test.ts`
-- **Edited**: `src/pages/PassportForm.tsx`, `src/pages/PassportForm.test.tsx`, `src/components/CategoryQuestions.tsx`, `src/i18n/locales/*.json` (24 locales)
+- Stale signup toast (#2) and en.json en-US/en-GB sweep (#3) — explicitly skipped per user.
+- Recycling-table data-vs-i18n decision — separate pass.
