@@ -34,6 +34,8 @@ import {
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import type { SelectedFragrance } from '@/data/toyFragrances';
 
+import { DPPLanguagePicker } from '@/components/DPPLanguagePicker';
+
 interface ToyPublicPassportProps {
   passport: {
     name: string;
@@ -43,6 +45,10 @@ interface ToyPublicPassportProps {
     updated_at: string;
   };
   isPreview?: boolean;
+  /** For preview mode: current preview language */
+  previewLanguage?: string;
+  /** For preview mode: callback when language changes */
+  onPreviewLanguageChange?: (lang: string) => void;
 }
 
 function labelFor(
