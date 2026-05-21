@@ -99,7 +99,7 @@ export function BuildStatusBanner() {
     }
   }, [resolved?.status]);
 
-  if (!isPreview || dismissed) return null;
+  if (!isPreview || isPublicRoute || dismissed) return null;
 
   const isLoading = resolved === null;
   const prompt = buildPrompt(resolved?.message ?? 'Unknown error');
