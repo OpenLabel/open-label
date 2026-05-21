@@ -35,6 +35,7 @@ import { supabase } from '@/integrations/supabase/client';
 import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { WineFields } from '@/components/WineFields';
 import { WineAIAutofill } from '@/components/wine/WineAIAutofill';
+import { ToyAIAutofill } from '@/components/toys/ToyAIAutofill';
 import { PassportPreview } from '@/components/PassportPreview';
 import { CounterfeitProtection } from '@/components/CounterfeitProtection';
 import { TranslationButton, type Translations } from '@/components/TranslationButton';
@@ -354,48 +355,49 @@ export default function PassportForm() {
                 </CardContent>
               </Card>
 
-              {/* AI Autofill Button - between Basic Info and Product Image (wine only) */}
-              {formData.category === 'wine' && (
-                <WineAIAutofill
-                  onAutofill={(extractedData) => {
-                    // Delegate to WineFields' handler by updating category_data
-                    // We need to trigger WineFields' handleAIAutofill indirectly
-                    setFormData(prev => ({
-                      ...prev,
-                      category_data: { ...prev.category_data, __ai_autofill: extractedData },
-                    }));
-                  }}
-                  onAutofillMeta={async (meta) => {
-                    const updates: Partial<FormData> = {};
-                    if (meta.dppName && !formData.name.trim()) {
-                      updates.name = meta.dppName;
-                    }
-                    if (meta.productImageBase64 && user) {
-                      try {
-                        const res = await fetch(meta.productImageBase64);
-                        const blob = await res.blob();
-                        const ext = blob.type.split('/')[1] || 'jpg';
-                        const fileName = `${Date.now()}-ai-product.${ext}`;
-                        const filePath = `${user.id}/${fileName}`;
-                        const { error: uploadError } = await supabase.storage
+              {/* AI Autofill Button - between Basic Info and Product Image */}
+              {(formData.category === 'wine' || formData.category === 'toys') && (() => {
+                const handleAutofill = (extractedData: Record<string, unknown>) => {
+                  setFormData(prev => ({
+                    ...prev,
+                    category_data: { ...prev.category_data, __ai_autofill: extractedData },
+                  }));
+                };
+                const handleAutofillMeta = async (meta: { dppName?: string; productImageBase64?: string }) => {
+                  const updates: Partial<FormData> = {};
+                  if (meta.dppName && !formData.name.trim()) {
+                    updates.name = meta.dppName;
+                  }
+                  if (meta.productImageBase64 && user) {
+                    try {
+                      const res = await fetch(meta.productImageBase64);
+                      const blob = await res.blob();
+                      const ext = blob.type.split('/')[1] || 'jpg';
+                      const fileName = `${Date.now()}-ai-product.${ext}`;
+                      const filePath = `${user.id}/${fileName}`;
+                      const { error: uploadError } = await supabase.storage
+                        .from('passport-images')
+                        .upload(filePath, blob);
+                      if (!uploadError) {
+                        const { data: urlData } = supabase.storage
                           .from('passport-images')
-                          .upload(filePath, blob);
-                        if (!uploadError) {
-                          const { data: urlData } = supabase.storage
-                            .from('passport-images')
-                            .getPublicUrl(filePath);
-                          updates.image_url = urlData.publicUrl;
-                        }
-                      } catch (e) {
-                        console.error('Failed to upload AI product image:', e);
+                          .getPublicUrl(filePath);
+                        updates.image_url = urlData.publicUrl;
                       }
+                    } catch (e) {
+                      console.error('Failed to upload AI product image:', e);
                     }
-                    if (Object.keys(updates).length > 0) {
-                      setFormData(prev => ({ ...prev, ...updates }));
-                    }
-                  }}
-                />
-              )}
+                  }
+                  if (Object.keys(updates).length > 0) {
+                    setFormData(prev => ({ ...prev, ...updates }));
+                  }
+                };
+                return formData.category === 'wine' ? (
+                  <WineAIAutofill onAutofill={handleAutofill} onAutofillMeta={handleAutofillMeta} />
+                ) : (
+                  <ToyAIAutofill onAutofill={handleAutofill} onAutofillMeta={handleAutofillMeta} />
+                );
+              })()}
 
               {/* Product Image - right after basic information */}
               <Card>
