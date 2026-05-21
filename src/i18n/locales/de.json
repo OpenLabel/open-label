@@ -228,7 +228,9 @@
     "poweredBy": "Bereitgestellt von",
     "noAdditionalInfo": "Für diese Kategorie sind keine zusätzlichen Informationen erforderlich.",
     "earlyAlpha": "Frühe Alpha-Version",
-    "earlyAlphaDesc": "Diese Vorlage befindet sich in einer frühen Alpha-Phase und entspricht möglicherweise nicht vollständig den aktuellen Vorschriften. Bitte überprüfen Sie alle Informationen anhand der offiziellen Anforderungen vor der Verwendung."
+    "earlyAlphaDesc": "Diese Vorlage befindet sich in einer frühen Alpha-Phase und entspricht möglicherweise nicht vollständig den aktuellen Vorschriften. Bitte überprüfen Sie alle Informationen anhand der offiziellen Anforderungen vor der Verwendung.",
+    "missingRequiredTitle": "Einige Pflichtfelder sind nicht ausgefüllt",
+    "missingRequiredBody": "Sie können diesen DPP weiterhin speichern und veröffentlichen, aber die folgenden Felder sind für die vollständige regulatorische Konformität erforderlich:"
   },
   "imageUpload": {
     "loginRequired": "Sie müssen angemeldet sein, um Bilder hochzuladen",

@@ -1,22 +1,267 @@
 {
-  "common": { "loading": "Ielādē...", "save": "Saglabāt", "cancel": "Atcelt", "delete": "Dzēst", "edit": "Rediģēt", "create": "Izveidot", "back": "Atpakaļ", "next": "Tālāk", "search": "Meklēt", "apply": "Lietot", "close": "Aizvērt", "confirm": "Apstiprināt", "yes": "Jā", "no": "Nē", "error": "Kļūda", "success": "Veiksmīgi", "warning": "Brīdinājums", "openSource": "Atvērtā koda", "language": "Valoda", "custom": "Pielāgots", "selectOption": "Izvēlieties opciju", "confirmed": "Apstiprināts" },
-  "nav": { "signIn": "Ieiet", "signUp": "Reģistrēties", "signOut": "Iziet", "getStarted": "Sākt bez maksas", "dashboard": "Uz paneli", "createNew": "Izveidot jaunu" },
-  "landing": {
-    "hero": { "badge": "ES ESPR saderīgs", "euFunded": "🇪🇺 Lepni finansēts no ES", "title": "Neierobežotas digitālās produktu pases — 100% Bez maksas", "subtitle": "Bezmaksas atvērtā koda platforma ES Ekodizaina ilgtspējīgu produktu regulējuma (ESPR) atbilstībai. Ģenerējiet mašīnlasāmas pases ar QR kodiem baterijām, tekstilam, būvmateriāliem un 12+ kategorijām.", "cta": "Izveidojiet pirmo pasi", "demo": "Skatīt demo pasi", "features": { "free": "100% bezmaksas un atvērtā koda", "selfHost": "Pašmitināms", "machineReadable": "Mašīnlasāms JSON/XML", "categories": "12+ Produktu kategorijas" } },
-    "stats": { "free": "Bezmaksas un atvērtā koda", "categories": "Produktu kategorijas", "deadline": "Pirmais ES termiņš", "qr": "+ Unikāli URL" },
-    "features": { "badge": "Funkcijas", "title": "Viss nepieciešamais atbilstībai", "subtitle": "Veidots pēc ES tehniskajiem standartiem: decentralizēta glabātuve, ISO 15459 identifikatori, pakāpeniski piekļuves tiesību līmeņi un mašīnlasāma JSON/XML izvade.", "espr": { "title": "ESPR saderīgs", "description": "Iepriekš konfigurētas veidnes atbilstoši ES Ekodizaina ilgtspējīgu produktu regulējuma prasībām pa kategorijām." }, "openSource": { "title": "Atvērtā koda", "description": "Pilnībā atvērtā koda. Mitiniet uz saviem serveriem pilnīgai datu kontrolei vai izmantojiet mūsu mitināto versiju bez maksas." }, "machineReadable": { "title": "Mašīnlasāms", "description": "Nav statiski PDF. Strukturēti JSON/XML dati integrācijai ar BIM, pārstrādes sistēmām un citu programmatūru." }, "qr": { "title": "QR un datu nesēji", "description": "Katra pase saņem unikālu URL un QR kodu. Gatavs NFC/RFID integrācijai pēc ISO 15459." } },
-    "ai": { "badge": "AI darbināts", "title": "Automātiska aizpildīšana ar AI", "subtitle": "Beidziet rakstīt manuāli. Augšupielādējiet produkta etiķetes fotoattēlu vai dokumentu, un mūsu AI automātiski iegūs visus datus.", "snap": { "title": "Nofotografējiet", "description": "Nofotografējiet vīna etiķeti, produkta iepakojumu vai jebkuru etiķeti ar produkta informāciju." }, "upload": { "title": "Augšupielādējiet dokumentus", "description": "PDF datu lapas, Word dokumenti, Excel specifikācijas — augšupielādējiet jebkuru failu un mēs iegūsim datus." }, "extract": { "title": "AI iegūst datus", "description": "Mūsu vizuālais AI lasa un saprot jūsu dokumentus, automātiski aizpildot visus pases laukus." }, "multiUpload": { "title": "Darbojas ar vairākiem failiem", "description": "Augšupielādējiet vairākus fotoattēlus vai dokumentus secīgi — AI inteliģenti apvieno datus" }, "cta": "Izmēģiniet AI bez maksas", "tags": { "wineLabels": "Vīna etiķetes", "productLabels": "Product Labels", "ingredientLists": "Ingredient Lists", "nutritionFacts": "Uzturvērtība", "technicalPdfs": "Tehniskie PDF" } },
-    "categories": { "badge": "ES regulējuma tvērums", "title": "Atbalstītās produktu kategorijas", "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.", "activeLaw": "Spēkā esošais regulējums", "priorityGroup": "Prioritārā grupa", "cta": "Sākt veidot pases" },
-    "timeline": { "badge": "Regulējuma laika grafiks", "title": "ES DPP ieviešanas termiņi", "subtitle": "ES ievieš digitālās produktu pases prasības pakāpeniski. Sāciet gatavoties jau tagad.", "feb2027": { "title": "Batteries — Coming Soon", "badge": "February 2027", "description": "EV, rūpnieciskajām un LMT baterijām jābūt DPP ar dzīves cikla datiem, oglekļa pēdas deklarācijām (kg CO₂e/kWh ar A-D klasi) un pārstrādāta satura procentiem kobaltam, litijam un niķelim." }, "active": { "title": "Aktīvs tagad", "badge": "Spēkā", "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information." }, "rollout": { "title": "2027-2030: Pilnīga ieviešana", "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published." } },
-    "selfHost": { "badge": "Atvērtā koda", "title": "Darbiniet uz saviem serveriem", "subtitle": "Projekts ir pilnībā atvērtā koda. Mitiniet uz savas infrastruktūras pilnīgai datu suverenitātei, modificējiet kodu vai dodiet savu ieguldījumu.", "deploy": { "title": "Pašmitināšana", "description": "Izvietojiet uz saviem serveriem. Pilnīga kontrole pār datiem un atbilstības dokumentāciju." }, "customize": { "title": "Pielāgojiet", "description": "Pievienojiet pielāgotus laukus, integrējiet ar ERP/PLM sistēmām vai veidojiet baltās etiķetes risinājumus." }, "contribute": { "title": "Ieguldiet", "description": "Palīdziet uzlabot veidnes, regulējumiem attīstoties. Kopienas vadīti atjauninājumi." } },
-    "cta": { "title": "Gatavi atbilstībai?", "subtitle": "Sāciet veidot ES saderīgas digitālās produktu pases jau šodien. Bezmaksas, neierobežoti un atvērtā koda.", "button": "Sākt bezmaksas šodien" },
-    "footer": { "legal": "Juridiskā informācija", "github": "Skatīt GitHub" }
+  "common": {
+    "loading": "Ielādē...",
+    "save": "Saglabāt",
+    "cancel": "Atcelt",
+    "delete": "Dzēst",
+    "edit": "Rediģēt",
+    "create": "Izveidot",
+    "back": "Atpakaļ",
+    "next": "Tālāk",
+    "search": "Meklēt",
+    "apply": "Lietot",
+    "close": "Aizvērt",
+    "confirm": "Apstiprināt",
+    "yes": "Jā",
+    "no": "Nē",
+    "error": "Kļūda",
+    "success": "Veiksmīgi",
+    "warning": "Brīdinājums",
+    "openSource": "Atvērtā koda",
+    "language": "Valoda",
+    "custom": "Pielāgots",
+    "selectOption": "Izvēlieties opciju",
+    "confirmed": "Apstiprināts"
   },
-  "auth": { "title": "Digitālā produkta pase", "subtitle": "Ieejiet vai izveidojiet kontu", "resetSubtitle": "Atjaunojiet paroli", "signIn": "Ieiet", "signUp": "Reģistrēties", "email": "E-pasts", "password": "Parole", "companyName": "Uzņēmuma nosaukums", "sendResetLink": "Sūtīt atjaunošanas saiti", "sending": "Sūta...", "backToSignIn": "Atpakaļ uz pieteikšanos", "forgotPassword": "Aizmirsta parole?", "welcomeBack": "Laipni lūdzam atpakaļ!", "accountCreated": "Konts izveidots!", "accountCreatedDesc": "Tagad varat pieteikties.", "checkEmail": "Pārbaudiet e-pastu", "resetLinkSent": "Paroles atjaunošanas saite nosūtīta.", "validation": { "invalidEmail": "Lūdzu ievadiet derīgu e-pasta adresi", "shortPassword": "Parolei jābūt vismaz 6 rakstzīmēm" }, "setNewPassword": "Iestatīt jaunu paroli", "setNewPasswordDesc": "Ievadiet jauno paroli zemāk", "newPassword": "Jaunā parole", "confirmPassword": "Apstiprināt paroli", "updatePassword": "Atjaunināt paroli", "passwordMismatch": "Paroles nesakrīt", "passwordUpdated": "Parole veiksmīgi atjaunināta!" },
-  "dashboard": { "title": "Jūsu pases", "noPassports": "Vēl nav pasu. Izveidojiet pirmo!", "updated": "Atjaunināts", "duplicate": "Dublēt", "showQr": "Rādīt QR kodu", "duplicated": "Pase dublēta", "deleted": "Pase dzēsta", "confirmDelete": "Vai tiešām vēlaties dzēst šo pasi?", "dragToReorder": "Velciet, lai pārkārtotu" },
-  "passport": { "createTitle": "Izveidot jaunu pasi", "editTitle": "Rediģēt pasi", "basicInfo": "Pamatinformācija", "dppName": "DPP nosaukums (tikai iekšējs)", "dppNamePlaceholder": "Ievadiet iekšējo nosaukumu šai pasei", "dppNameHelp": "Šis nosaukums ir redzams tikai jūsu panelī", "productName": "Produkta nosaukums", "productNamePlaceholder": "Ievadiet produkta nosaukumu", "productNameHelp": "Šis ir nosaukums, ko patērētāji redzēs publiskajā digitālajā produkta pasē", "category": "Produkta kategorija", "productImage": "Produkta attēls", "productDescription": "Produkta apraksts", "descriptionPlaceholder": "Aprakstiet savu produktu...", "details": "Detaļas", "saving": "Saglabā...", "saveChanges": "Saglabāt izmaiņas", "createPassport": "Izveidot pasi", "updated": "Pase veiksmīgi atjaunināta", "created": "Pase veiksmīgi izveidota", "unsavedChanges": "Nesaglabātas izmaiņas", "unsavedChangesDesc": "Jums ir nesaglabātas izmaiņas. Vai tiešām vēlaties aiziet? Izmaiņas tiks zaudētas.", "leaveWithoutSaving": "Aiziet nesaglabājot", "enterProductName": "Lūdzu ievadiet produkta nosaukumu", "notFound": "Pase nav atrasta", "notFoundDesc": "Šī digitālā produkta pase neeksistē vai ir noņemta.", "productPassport": "Produkta pase", "checkAuthenticity": "Pārbaudīt autentiskumu", "poweredBy": "Darbina", "noAdditionalInfo": "Šai kategorijai nav nepieciešama papildu informācija.", "earlyAlpha": "Agrīnā alfa", "earlyAlphaDesc": "Šī veidne ir agrīnā alfa versijā un var neatbilst noteikumiem. Pārbaudiet informāciju pirms izmantošanas." },
-  "categories": { "battery": "Baterijas", "construction": "Būvizstrādājumi", "textiles": "Tekstilizstrādājumi un apavi", "wine": "Vīns un stiprie dzērieni", "toys": "Rotaļlietas", "electronics": "Elektronika un IKT", "iron_steel": "Dzelzs un tērauds", "aluminum": "Alumīnijs", "cosmetics": "Kosmētika", "furniture": "Mēbeles un matrači", "tires": "Riepas", "detergents": "Mazgāšanas līdzekļi un ķīmiskās vielas", "other": "Visi pārējie produkti" },
-  "categoryDescriptions": { "battery": "Oglekļa pēda, pārstrāde, piegādes ķēdes pienācīga pārbaude", "construction": "DoPC, GWP A1-A3, ugunsizturība", "textiles": "Šķiedru sastāvs, izturība, PFAS deklarācija", "wine": "Sastāvdaļas, uzturvērtība, ģeogrāfiskā norāde", "toys": "Bez PFAS, alergēni, migrācijas testēšana", "electronics": "Remontējamības indekss, rezerves daļas, programmatūras atjauninājumi", "iron_steel": "Oglekļa intensitāte, metāllūžņu saturs, sakausējuma ķīmija", "aluminum": "Kausēšanas enerģijas avots, ruļļu izsekojamība", "cosmetics": "INCI saraksts, nanomateriāli, iepakojuma pārstrādājamība", "furniture": "EUDR koksnes izcelsme, rezerves daļas, PFAS", "tires": "Nodiluma ātrums, atjaunošanas vēsture, mikroplastmasa", "detergents": "Digitālā DDL, bionoārdāmība, dozēšanas optimizācija", "other": "Vispārīga DPP veidne jebkuram produkta tipam" },
+  "nav": {
+    "signIn": "Ieiet",
+    "signUp": "Reģistrēties",
+    "signOut": "Iziet",
+    "getStarted": "Sākt bez maksas",
+    "dashboard": "Uz paneli",
+    "createNew": "Izveidot jaunu"
+  },
+  "landing": {
+    "hero": {
+      "badge": "ES ESPR saderīgs",
+      "euFunded": "🇪🇺 Lepni finansēts no ES",
+      "title": "Neierobežotas digitālās produktu pases — 100% Bez maksas",
+      "subtitle": "Bezmaksas atvērtā koda platforma ES Ekodizaina ilgtspējīgu produktu regulējuma (ESPR) atbilstībai. Ģenerējiet mašīnlasāmas pases ar QR kodiem baterijām, tekstilam, būvmateriāliem un 12+ kategorijām.",
+      "cta": "Izveidojiet pirmo pasi",
+      "demo": "Skatīt demo pasi",
+      "features": {
+        "free": "100% bezmaksas un atvērtā koda",
+        "selfHost": "Pašmitināms",
+        "machineReadable": "Mašīnlasāms JSON/XML",
+        "categories": "12+ Produktu kategorijas"
+      }
+    },
+    "stats": {
+      "free": "Bezmaksas un atvērtā koda",
+      "categories": "Produktu kategorijas",
+      "deadline": "Pirmais ES termiņš",
+      "qr": "+ Unikāli URL"
+    },
+    "features": {
+      "badge": "Funkcijas",
+      "title": "Viss nepieciešamais atbilstībai",
+      "subtitle": "Veidots pēc ES tehniskajiem standartiem: decentralizēta glabātuve, ISO 15459 identifikatori, pakāpeniski piekļuves tiesību līmeņi un mašīnlasāma JSON/XML izvade.",
+      "espr": {
+        "title": "ESPR saderīgs",
+        "description": "Iepriekš konfigurētas veidnes atbilstoši ES Ekodizaina ilgtspējīgu produktu regulējuma prasībām pa kategorijām."
+      },
+      "openSource": {
+        "title": "Atvērtā koda",
+        "description": "Pilnībā atvērtā koda. Mitiniet uz saviem serveriem pilnīgai datu kontrolei vai izmantojiet mūsu mitināto versiju bez maksas."
+      },
+      "machineReadable": {
+        "title": "Mašīnlasāms",
+        "description": "Nav statiski PDF. Strukturēti JSON/XML dati integrācijai ar BIM, pārstrādes sistēmām un citu programmatūru."
+      },
+      "qr": {
+        "title": "QR un datu nesēji",
+        "description": "Katra pase saņem unikālu URL un QR kodu. Gatavs NFC/RFID integrācijai pēc ISO 15459."
+      }
+    },
+    "ai": {
+      "badge": "AI darbināts",
+      "title": "Automātiska aizpildīšana ar AI",
+      "subtitle": "Beidziet rakstīt manuāli. Augšupielādējiet produkta etiķetes fotoattēlu vai dokumentu, un mūsu AI automātiski iegūs visus datus.",
+      "snap": {
+        "title": "Nofotografējiet",
+        "description": "Nofotografējiet vīna etiķeti, produkta iepakojumu vai jebkuru etiķeti ar produkta informāciju."
+      },
+      "upload": {
+        "title": "Augšupielādējiet dokumentus",
+        "description": "PDF datu lapas, Word dokumenti, Excel specifikācijas — augšupielādējiet jebkuru failu un mēs iegūsim datus."
+      },
+      "extract": {
+        "title": "AI iegūst datus",
+        "description": "Mūsu vizuālais AI lasa un saprot jūsu dokumentus, automātiski aizpildot visus pases laukus."
+      },
+      "multiUpload": {
+        "title": "Darbojas ar vairākiem failiem",
+        "description": "Augšupielādējiet vairākus fotoattēlus vai dokumentus secīgi — AI inteliģenti apvieno datus"
+      },
+      "cta": "Izmēģiniet AI bez maksas",
+      "tags": {
+        "wineLabels": "Vīna etiķetes",
+        "productLabels": "Product Labels",
+        "ingredientLists": "Ingredient Lists",
+        "nutritionFacts": "Uzturvērtība",
+        "technicalPdfs": "Tehniskie PDF"
+      }
+    },
+    "categories": {
+      "badge": "ES regulējuma tvērums",
+      "title": "Atbalstītās produktu kategorijas",
+      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
+      "activeLaw": "Spēkā esošais regulējums",
+      "priorityGroup": "Prioritārā grupa",
+      "cta": "Sākt veidot pases"
+    },
+    "timeline": {
+      "badge": "Regulējuma laika grafiks",
+      "title": "ES DPP ieviešanas termiņi",
+      "subtitle": "ES ievieš digitālās produktu pases prasības pakāpeniski. Sāciet gatavoties jau tagad.",
+      "feb2027": {
+        "title": "Batteries — Coming Soon",
+        "badge": "February 2027",
+        "description": "EV, rūpnieciskajām un LMT baterijām jābūt DPP ar dzīves cikla datiem, oglekļa pēdas deklarācijām (kg CO₂e/kWh ar A-D klasi) un pārstrādāta satura procentiem kobaltam, litijam un niķelim."
+      },
+      "active": {
+        "title": "Aktīvs tagad",
+        "badge": "Spēkā",
+        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+      },
+      "rollout": {
+        "title": "2027-2030: Pilnīga ieviešana",
+        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+      }
+    },
+    "selfHost": {
+      "badge": "Atvērtā koda",
+      "title": "Darbiniet uz saviem serveriem",
+      "subtitle": "Projekts ir pilnībā atvērtā koda. Mitiniet uz savas infrastruktūras pilnīgai datu suverenitātei, modificējiet kodu vai dodiet savu ieguldījumu.",
+      "deploy": {
+        "title": "Pašmitināšana",
+        "description": "Izvietojiet uz saviem serveriem. Pilnīga kontrole pār datiem un atbilstības dokumentāciju."
+      },
+      "customize": {
+        "title": "Pielāgojiet",
+        "description": "Pievienojiet pielāgotus laukus, integrējiet ar ERP/PLM sistēmām vai veidojiet baltās etiķetes risinājumus."
+      },
+      "contribute": {
+        "title": "Ieguldiet",
+        "description": "Palīdziet uzlabot veidnes, regulējumiem attīstoties. Kopienas vadīti atjauninājumi."
+      }
+    },
+    "cta": {
+      "title": "Gatavi atbilstībai?",
+      "subtitle": "Sāciet veidot ES saderīgas digitālās produktu pases jau šodien. Bezmaksas, neierobežoti un atvērtā koda.",
+      "button": "Sākt bezmaksas šodien"
+    },
+    "footer": {
+      "legal": "Juridiskā informācija",
+      "github": "Skatīt GitHub"
+    }
+  },
+  "auth": {
+    "title": "Digitālā produkta pase",
+    "subtitle": "Ieejiet vai izveidojiet kontu",
+    "resetSubtitle": "Atjaunojiet paroli",
+    "signIn": "Ieiet",
+    "signUp": "Reģistrēties",
+    "email": "E-pasts",
+    "password": "Parole",
+    "companyName": "Uzņēmuma nosaukums",
+    "sendResetLink": "Sūtīt atjaunošanas saiti",
+    "sending": "Sūta...",
+    "backToSignIn": "Atpakaļ uz pieteikšanos",
+    "forgotPassword": "Aizmirsta parole?",
+    "welcomeBack": "Laipni lūdzam atpakaļ!",
+    "accountCreated": "Konts izveidots!",
+    "accountCreatedDesc": "Tagad varat pieteikties.",
+    "checkEmail": "Pārbaudiet e-pastu",
+    "resetLinkSent": "Paroles atjaunošanas saite nosūtīta.",
+    "validation": {
+      "invalidEmail": "Lūdzu ievadiet derīgu e-pasta adresi",
+      "shortPassword": "Parolei jābūt vismaz 6 rakstzīmēm"
+    },
+    "setNewPassword": "Iestatīt jaunu paroli",
+    "setNewPasswordDesc": "Ievadiet jauno paroli zemāk",
+    "newPassword": "Jaunā parole",
+    "confirmPassword": "Apstiprināt paroli",
+    "updatePassword": "Atjaunināt paroli",
+    "passwordMismatch": "Paroles nesakrīt",
+    "passwordUpdated": "Parole veiksmīgi atjaunināta!"
+  },
+  "dashboard": {
+    "title": "Jūsu pases",
+    "noPassports": "Vēl nav pasu. Izveidojiet pirmo!",
+    "updated": "Atjaunināts",
+    "duplicate": "Dublēt",
+    "showQr": "Rādīt QR kodu",
+    "duplicated": "Pase dublēta",
+    "deleted": "Pase dzēsta",
+    "confirmDelete": "Vai tiešām vēlaties dzēst šo pasi?",
+    "dragToReorder": "Velciet, lai pārkārtotu"
+  },
+  "passport": {
+    "createTitle": "Izveidot jaunu pasi",
+    "editTitle": "Rediģēt pasi",
+    "basicInfo": "Pamatinformācija",
+    "dppName": "DPP nosaukums (tikai iekšējs)",
+    "dppNamePlaceholder": "Ievadiet iekšējo nosaukumu šai pasei",
+    "dppNameHelp": "Šis nosaukums ir redzams tikai jūsu panelī",
+    "productName": "Produkta nosaukums",
+    "productNamePlaceholder": "Ievadiet produkta nosaukumu",
+    "productNameHelp": "Šis ir nosaukums, ko patērētāji redzēs publiskajā digitālajā produkta pasē",
+    "category": "Produkta kategorija",
+    "productImage": "Produkta attēls",
+    "productDescription": "Produkta apraksts",
+    "descriptionPlaceholder": "Aprakstiet savu produktu...",
+    "details": "Detaļas",
+    "saving": "Saglabā...",
+    "saveChanges": "Saglabāt izmaiņas",
+    "createPassport": "Izveidot pasi",
+    "updated": "Pase veiksmīgi atjaunināta",
+    "created": "Pase veiksmīgi izveidota",
+    "unsavedChanges": "Nesaglabātas izmaiņas",
+    "unsavedChangesDesc": "Jums ir nesaglabātas izmaiņas. Vai tiešām vēlaties aiziet? Izmaiņas tiks zaudētas.",
+    "leaveWithoutSaving": "Aiziet nesaglabājot",
+    "enterProductName": "Lūdzu ievadiet produkta nosaukumu",
+    "notFound": "Pase nav atrasta",
+    "notFoundDesc": "Šī digitālā produkta pase neeksistē vai ir noņemta.",
+    "productPassport": "Produkta pase",
+    "checkAuthenticity": "Pārbaudīt autentiskumu",
+    "poweredBy": "Darbina",
+    "noAdditionalInfo": "Šai kategorijai nav nepieciešama papildu informācija.",
+    "earlyAlpha": "Agrīnā alfa",
+    "earlyAlphaDesc": "Šī veidne ir agrīnā alfa versijā un var neatbilst noteikumiem. Pārbaudiet informāciju pirms izmantošanas.",
+    "missingRequiredTitle": "Daži obligātie lauki nav aizpildīti",
+    "missingRequiredBody": "Jūs joprojām varat saglabāt un publicēt šo DPP, taču šie lauki ir nepieciešami pilnīgai regulatīvai atbilstībai:"
+  },
+  "categories": {
+    "battery": "Baterijas",
+    "construction": "Būvizstrādājumi",
+    "textiles": "Tekstilizstrādājumi un apavi",
+    "wine": "Vīns un stiprie dzērieni",
+    "toys": "Rotaļlietas",
+    "electronics": "Elektronika un IKT",
+    "iron_steel": "Dzelzs un tērauds",
+    "aluminum": "Alumīnijs",
+    "cosmetics": "Kosmētika",
+    "furniture": "Mēbeles un matrači",
+    "tires": "Riepas",
+    "detergents": "Mazgāšanas līdzekļi un ķīmiskās vielas",
+    "other": "Visi pārējie produkti"
+  },
+  "categoryDescriptions": {
+    "battery": "Oglekļa pēda, pārstrāde, piegādes ķēdes pienācīga pārbaude",
+    "construction": "DoPC, GWP A1-A3, ugunsizturība",
+    "textiles": "Šķiedru sastāvs, izturība, PFAS deklarācija",
+    "wine": "Sastāvdaļas, uzturvērtība, ģeogrāfiskā norāde",
+    "toys": "Bez PFAS, alergēni, migrācijas testēšana",
+    "electronics": "Remontējamības indekss, rezerves daļas, programmatūras atjauninājumi",
+    "iron_steel": "Oglekļa intensitāte, metāllūžņu saturs, sakausējuma ķīmija",
+    "aluminum": "Kausēšanas enerģijas avots, ruļļu izsekojamība",
+    "cosmetics": "INCI saraksts, nanomateriāli, iepakojuma pārstrādājamība",
+    "furniture": "EUDR koksnes izcelsme, rezerves daļas, PFAS",
+    "tires": "Nodiluma ātrums, atjaunošanas vēsture, mikroplastmasa",
+    "detergents": "Digitālā DDL, bionoārdāmība, dozēšanas optimizācija",
+    "other": "Vispārīga DPP veidne jebkuram produkta tipam"
+  },
   "wine": {
     "productIdentity": "Produkta identitāte",
     "productIdentityDesc": "Vīna produkta pamatinformācija",
@@ -78,7 +323,14 @@
     "addIngredients": "Pievienot sastāvdaļas",
     "addCustomIngredient": "Pievienot pielāgotu",
     "noIngredients": "Nav pievienotu sastāvdaļu",
-    "ingredientCategories": { "general": "Vispārīgi", "gases": "Gāzes un iepakojuma gāzes", "acidity_regulators": "Skābuma regulatori", "stabilizers": "Stabilizatori", "preservatives": "Konservanti un antioksidanti", "processing_aids": "Apstrādes palīglīdzekļi" },
+    "ingredientCategories": {
+      "general": "Vispārīgi",
+      "gases": "Gāzes un iepakojuma gāzes",
+      "acidity_regulators": "Skābuma regulatori",
+      "stabilizers": "Stabilizatori",
+      "preservatives": "Konservanti un antioksidanti",
+      "processing_aids": "Apstrādes palīglīdzekļi"
+    },
     "bottledProtectiveAtmosphere": "Pudelēts aizsargātmosfērā",
     "ingredientsDescription": "Izvēlieties sastāvdaļas no vīna sastāvdaļu saraksta vai pievienojiet pielāgotas. Sakārtojiet pēc daudzuma (lielākais vispirms).",
     "chooseIngredients": "Izvēlēties vīna sastāvdaļas",
@@ -200,16 +452,134 @@
     "potato_protein": "Kartupeļu olbaltumviela",
     "pvpp": "PVPP – Polivinilpolipirolidons (E1202)"
   },
-  "recycling": { "code": "Kods", "material": "Materiāls", "disposal": "Utilizācija", "componentTypes": { "bottle": "Pudele", "closure": "Aizbāznis", "capsule": "Kapsula", "label": "Etiķete", "box": "Kaste" }, "selectMaterial": "Izvēlēties materiālu", "individualComponents": "Atsevišķi komponenti", "compositeComponents": "Kompozītmateriālu komponenti", "customMaterial": "Pielāgots materiāls", "addCustomMaterial": "Pievienot pielāgotu materiālu", "disposalAdvice": "Utilizācijas norādījumi", "addMaterial": "Pievienot materiālu", "addPackagingMaterial": "Pievienot iepakojuma materiālu", "customType": "Pielāgots tips", "addCustomType": "Pievienot pielāgotu materiāla tipu", "editCustomType": "Rediģēt pielāgotu materiāla tipu", "materialName": "Materiāla nosaukums", "materialNamePlaceholder": "piem., Koka kaste" },
-  "legal": { "title": "Juridiskā informācija", "legalMentions": "Juridiskā informācija" },
-  "notFound": { "title": "404", "message": "Ups! Lapa nav atrasta", "returnHome": "Atgriezties sākumā" },
-  "counterfeit": { "title": "Aizsardzība pret viltojumiem", "enable": "Iespējot", "disable": "Atspējot", "description": "Aizsargājiet savu produktu pret viltošanu ar mūsu partnera drošības plombu.", "addProtection": "Pievienot aizsardzību pret viltojumiem (neobligāti)", "enabled": "Aizsardzība pret viltojumiem iespējota", "enabledDescription": "E-pasts nosūtīts mūsu partnerim. Viņi sazināsies ar jums par drošības plombas piegādi.", "requestSent": "Pieprasījums nosūtīts!", "requestSentDescription": "E-pasts nosūtīts mūsu aizsardzības pret viltojumiem partnerim.", "sending": "Sūta...", "errorNoEmail": "Nevar nosūtīt pieprasījumu – lietotāja e-pasts nav atrasts", "errorSaveFirst": "Lūdzu vispirms saglabājiet pasi pirms aizsardzības iespējošanas", "errorFailed": "Neizdevās nosūtīt aizsardzības pieprasījumu" },
-  "customIngredient": { "title": "Definēt pielāgotu sastāvdaļu", "editTitle": "Rediģēt pielāgotu sastāvdaļu", "ingredientName": "Sastāvdaļas nosaukums", "eNumber": "E-numurs (neobligāts)", "eNumberPlaceholder": "piem., E 123", "ingredientPlaceholder": "piem., Ozola skaidas", "isAllergen": "Šis ir alergēns", "addButton": "Pievienot sastāvdaļu" },
-  "certifications": { "title": "Sertifikāti un marķējumi" },
-  "qrDialog": { "title": "QR kods", "download": "Lejupielādēt QR kodu", "copyLink": "Kopēt saiti", "printSizeInstructionWine": "Drukājiet 1,8 cm platumā. Augstums mainās atkarībā no satura. Sešstūris atbilst 1 cm drošības zīmogam." },
-  "translation": { "title": "Tulkojumi", "description": "Sniedziet tulkojumus visām ES valodām. Izmantojiet AI sākotnējo tulkojumu ģenerēšanai, pēc tam pārskatiet un rediģējiet.", "manageTranslations": "Pārvaldīt tulkojumus", "translate": "Tulkot", "sourceText": "Avota teksts", "empty": "(tukšs)", "generateWithAI": "Ģenerēt ar AI", "enterTranslation": "Ievadiet tulkojumu...", "saveTranslations": "Saglabāt tulkojumus", "noSourceText": "Nav avota teksta", "enterTextFirst": "Lūdzu vispirms ievadiet tekstu laukā pirms tulkojumu ģenerēšanas.", "generated": "Tulkojumi ģenerēti", "reviewAndEdit": "Pārskatiet un rediģējiet tulkojumus pēc nepieciešamības.", "error": "Tulkošanas kļūda", "errorDesc": "Neizdevās ģenerēt tulkojumus. Lūdzu mēģiniet vēlreiz.", "saved": "Tulkojumi saglabāti", "autoTranslating": "Tulko..." },
-  "preview": { "livePreview": "Tiešraides priekšskatījums", "productPassport": "Produkta pase", "productName": "Produkta nosaukums", "checkAuthenticity": "Pārbaudīt autentiskumu", "productDescription": "Produkta apraksts", "certificationsLabels": "Sertifikāti un marķējumi", "poweredBy": "Darbina" },
-  "ai": { "analyzing": "Analizē dokumentu...", "takePhoto": "Uzņemt fotoattēlu", "uploadFile": "Augšupielādēt failu", "supportedFormats": "Atbalsta fotoattēlus, PDF un Word dokumentus", "multiUploadTip": "Ir vairāki faili? Palaidiet vēlreiz pēc katras augšupielādes, lai apvienotu datus no dažādiem avotiem.", "autofillButton": "Automātiskā aizpilde ar AI", "experimental": "Eksperimentāls", "scannerTitle": "AI etiķešu skeneris", "scannerDescription": "Augšupielādējiet vīna etiķetes fotoattēlu, PDF vai dokumentu un AI automātiski izvilks informāciju. Varat arī skenēt esoša Digitālā produkta pases QR koda fotoattēlu.", "experimentalWarning": "Pārbaudiet visus izgūtos datus pirms saglabāšanas. AI var kļūdīties.", "autofillComplete": "✨ AI aizpilde pabeigta", "autofillCompleteDesc": "Lauki ir aizpildīti. Pārbaudiet datus pirms saglabāšanas.", "noDataExtracted": "No etiķetes netika izgūti dati", "processingFailed": "Apstrāde neizdevās", "processingFailedDesc": "Neizdevās izgūt datus no etiķetes", "quotaExceeded": "Godīgas lietošanas kvota pārsniegta", "quotaExceededDesc": "Esat sasniedzis ikmēneša 100 AI skenēšanas limitu.", "quotaExceededBody": "Lai nodrošinātu godīgu piekļuvi, mēs ierobežojam AI skenēšanu līdz 100 mēnesī. Jūsu kvota tiks atjaunota nākamā mēneša sākumā.", "quotaContactBody": "Ja nepieciešams augstāks limits, lūdzu, sazinieties ar mums.", "qrCodeUsed": "Tika atklāts QR kods un saistītā lapa arī tika analizēta papildu datiem.", "contactUs": "Sazinieties ar mums" },
-  "imageUpload": { "loginRequired": "Lai augšupielādētu attēlus, jums jābūt pieteicies", "invalidType": "Augšupielādējiet attēla failu", "tooLarge": "Attēlam jābūt mazākam par 5MB", "uploading": "Augšupielāde...", "uploadButton": "Augšupielādēt produkta attēlu", "uploadFailed": "Attēla augšupielāde neizdevās" },
-  "richText": { "enterUrl": "Ievadiet URL:" }
+  "recycling": {
+    "code": "Kods",
+    "material": "Materiāls",
+    "disposal": "Utilizācija",
+    "componentTypes": {
+      "bottle": "Pudele",
+      "closure": "Aizbāznis",
+      "capsule": "Kapsula",
+      "label": "Etiķete",
+      "box": "Kaste"
+    },
+    "selectMaterial": "Izvēlēties materiālu",
+    "individualComponents": "Atsevišķi komponenti",
+    "compositeComponents": "Kompozītmateriālu komponenti",
+    "customMaterial": "Pielāgots materiāls",
+    "addCustomMaterial": "Pievienot pielāgotu materiālu",
+    "disposalAdvice": "Utilizācijas norādījumi",
+    "addMaterial": "Pievienot materiālu",
+    "addPackagingMaterial": "Pievienot iepakojuma materiālu",
+    "customType": "Pielāgots tips",
+    "addCustomType": "Pievienot pielāgotu materiāla tipu",
+    "editCustomType": "Rediģēt pielāgotu materiāla tipu",
+    "materialName": "Materiāla nosaukums",
+    "materialNamePlaceholder": "piem., Koka kaste"
+  },
+  "legal": {
+    "title": "Juridiskā informācija",
+    "legalMentions": "Juridiskā informācija"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Ups! Lapa nav atrasta",
+    "returnHome": "Atgriezties sākumā"
+  },
+  "counterfeit": {
+    "title": "Aizsardzība pret viltojumiem",
+    "enable": "Iespējot",
+    "disable": "Atspējot",
+    "description": "Aizsargājiet savu produktu pret viltošanu ar mūsu partnera drošības plombu.",
+    "addProtection": "Pievienot aizsardzību pret viltojumiem (neobligāti)",
+    "enabled": "Aizsardzība pret viltojumiem iespējota",
+    "enabledDescription": "E-pasts nosūtīts mūsu partnerim. Viņi sazināsies ar jums par drošības plombas piegādi.",
+    "requestSent": "Pieprasījums nosūtīts!",
+    "requestSentDescription": "E-pasts nosūtīts mūsu aizsardzības pret viltojumiem partnerim.",
+    "sending": "Sūta...",
+    "errorNoEmail": "Nevar nosūtīt pieprasījumu – lietotāja e-pasts nav atrasts",
+    "errorSaveFirst": "Lūdzu vispirms saglabājiet pasi pirms aizsardzības iespējošanas",
+    "errorFailed": "Neizdevās nosūtīt aizsardzības pieprasījumu"
+  },
+  "customIngredient": {
+    "title": "Definēt pielāgotu sastāvdaļu",
+    "editTitle": "Rediģēt pielāgotu sastāvdaļu",
+    "ingredientName": "Sastāvdaļas nosaukums",
+    "eNumber": "E-numurs (neobligāts)",
+    "eNumberPlaceholder": "piem., E 123",
+    "ingredientPlaceholder": "piem., Ozola skaidas",
+    "isAllergen": "Šis ir alergēns",
+    "addButton": "Pievienot sastāvdaļu"
+  },
+  "certifications": {
+    "title": "Sertifikāti un marķējumi"
+  },
+  "qrDialog": {
+    "title": "QR kods",
+    "download": "Lejupielādēt QR kodu",
+    "copyLink": "Kopēt saiti",
+    "printSizeInstructionWine": "Drukājiet 1,8 cm platumā. Augstums mainās atkarībā no satura. Sešstūris atbilst 1 cm drošības zīmogam."
+  },
+  "translation": {
+    "title": "Tulkojumi",
+    "description": "Sniedziet tulkojumus visām ES valodām. Izmantojiet AI sākotnējo tulkojumu ģenerēšanai, pēc tam pārskatiet un rediģējiet.",
+    "manageTranslations": "Pārvaldīt tulkojumus",
+    "translate": "Tulkot",
+    "sourceText": "Avota teksts",
+    "empty": "(tukšs)",
+    "generateWithAI": "Ģenerēt ar AI",
+    "enterTranslation": "Ievadiet tulkojumu...",
+    "saveTranslations": "Saglabāt tulkojumus",
+    "noSourceText": "Nav avota teksta",
+    "enterTextFirst": "Lūdzu vispirms ievadiet tekstu laukā pirms tulkojumu ģenerēšanas.",
+    "generated": "Tulkojumi ģenerēti",
+    "reviewAndEdit": "Pārskatiet un rediģējiet tulkojumus pēc nepieciešamības.",
+    "error": "Tulkošanas kļūda",
+    "errorDesc": "Neizdevās ģenerēt tulkojumus. Lūdzu mēģiniet vēlreiz.",
+    "saved": "Tulkojumi saglabāti",
+    "autoTranslating": "Tulko..."
+  },
+  "preview": {
+    "livePreview": "Tiešraides priekšskatījums",
+    "productPassport": "Produkta pase",
+    "productName": "Produkta nosaukums",
+    "checkAuthenticity": "Pārbaudīt autentiskumu",
+    "productDescription": "Produkta apraksts",
+    "certificationsLabels": "Sertifikāti un marķējumi",
+    "poweredBy": "Darbina"
+  },
+  "ai": {
+    "analyzing": "Analizē dokumentu...",
+    "takePhoto": "Uzņemt fotoattēlu",
+    "uploadFile": "Augšupielādēt failu",
+    "supportedFormats": "Atbalsta fotoattēlus, PDF un Word dokumentus",
+    "multiUploadTip": "Ir vairāki faili? Palaidiet vēlreiz pēc katras augšupielādes, lai apvienotu datus no dažādiem avotiem.",
+    "autofillButton": "Automātiskā aizpilde ar AI",
+    "experimental": "Eksperimentāls",
+    "scannerTitle": "AI etiķešu skeneris",
+    "scannerDescription": "Augšupielādējiet vīna etiķetes fotoattēlu, PDF vai dokumentu un AI automātiski izvilks informāciju. Varat arī skenēt esoša Digitālā produkta pases QR koda fotoattēlu.",
+    "experimentalWarning": "Pārbaudiet visus izgūtos datus pirms saglabāšanas. AI var kļūdīties.",
+    "autofillComplete": "✨ AI aizpilde pabeigta",
+    "autofillCompleteDesc": "Lauki ir aizpildīti. Pārbaudiet datus pirms saglabāšanas.",
+    "noDataExtracted": "No etiķetes netika izgūti dati",
+    "processingFailed": "Apstrāde neizdevās",
+    "processingFailedDesc": "Neizdevās izgūt datus no etiķetes",
+    "quotaExceeded": "Godīgas lietošanas kvota pārsniegta",
+    "quotaExceededDesc": "Esat sasniedzis ikmēneša 100 AI skenēšanas limitu.",
+    "quotaExceededBody": "Lai nodrošinātu godīgu piekļuvi, mēs ierobežojam AI skenēšanu līdz 100 mēnesī. Jūsu kvota tiks atjaunota nākamā mēneša sākumā.",
+    "quotaContactBody": "Ja nepieciešams augstāks limits, lūdzu, sazinieties ar mums.",
+    "qrCodeUsed": "Tika atklāts QR kods un saistītā lapa arī tika analizēta papildu datiem.",
+    "contactUs": "Sazinieties ar mums"
+  },
+  "imageUpload": {
+    "loginRequired": "Lai augšupielādētu attēlus, jums jābūt pieteicies",
+    "invalidType": "Augšupielādējiet attēla failu",
+    "tooLarge": "Attēlam jābūt mazākam par 5MB",
+    "uploading": "Augšupielāde...",
+    "uploadButton": "Augšupielādēt produkta attēlu",
+    "uploadFailed": "Attēla augšupielāde neizdevās"
+  },
+  "richText": {
+    "enterUrl": "Ievadiet URL:"
+  }
 }

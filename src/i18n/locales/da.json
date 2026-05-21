@@ -1,22 +1,267 @@
 {
-  "common": { "loading": "Indlæser...", "save": "Gem", "cancel": "Annuller", "delete": "Slet", "edit": "Rediger", "create": "Opret", "back": "Tilbage", "next": "Næste", "search": "Søg", "apply": "Anvend", "close": "Luk", "confirm": "Bekræft", "yes": "Ja", "no": "Nej", "error": "Fejl", "success": "Succes", "warning": "Advarsel", "openSource": "Open Source", "language": "Sprog", "custom": "Brugerdefineret", "selectOption": "Vælg en mulighed", "confirmed": "Bekræftet" },
-  "nav": { "signIn": "Log ind", "signUp": "Tilmeld", "signOut": "Log ud", "getStarted": "Kom i gang gratis", "dashboard": "Gå til dashboard", "createNew": "Opret nyt" },
-  "landing": {
-    "hero": { "badge": "EU ESPR-kompatibel", "euFunded": "🇪🇺 Stolt EU-finansieret", "title": "Ubegrænsede digitale produktpas — 100% Gratis", "subtitle": "Gratis open source-platform til overholdelse af EU's forordning om økodesign for bæredygtige produkter (ESPR). Generer maskinlæsbare pas med QR-koder til batterier, tekstiler, byggeprodukter og 12+ kategorier.", "cta": "Opret dit første pas", "demo": "Se demo pas", "features": { "free": "100% Gratis og Open Source", "selfHost": "Host selv", "machineReadable": "Maskinlæsbar JSON/XML", "categories": "12+ Produktkategorier" } },
-    "stats": { "free": "Gratis og Open Source", "categories": "Produktkategorier", "deadline": "Første EU-frist", "qr": "+ Unikke URL'er" },
-    "features": { "badge": "Funktioner", "title": "Alt hvad du behøver til overholdelse af reglerne", "subtitle": "Bygget efter EU's tekniske standarder: decentraliseret lagring, ISO 15459-identifikatorer, lagdelte adgangsrettigheder og maskinlæsbar JSON/XML-output.", "espr": { "title": "ESPR-kompatibel", "description": "Forudkonfigurerede skabeloner baseret på EU's forordning om økodesign for bæredygtige produkter pr. kategori." }, "openSource": { "title": "Open Source", "description": "Fuldt open source. Selvhost på dine egne servere for fuld datakontrol, eller brug vores hostede version gratis." }, "machineReadable": { "title": "Maskinlæsbar", "description": "Ikke statiske PDF'er. Struktureret JSON/XML-data til integration med BIM, genbrugssystemer og anden software." }, "qr": { "title": "QR og databærere", "description": "Hvert pas får en unik URL og QR-kode. Klar til NFC/RFID-integration iht. ISO 15459." } },
-    "ai": { "badge": "AI-drevet", "title": "Auto-udfyld med AI", "subtitle": "Stop med at skrive manuelt. Upload et foto af din produktetiket eller et dokument, og vores AI udtrækker alle data automatisk på få sekunder.", "snap": { "title": "Tag et billede", "description": "Fotografér din vinetiket, produktemballage eller enhver etiket med produktinformation." }, "upload": { "title": "Upload dokumenter", "description": "PDF-datablade, Word-dokumenter, Excel-specifikationer — upload en vilkårlig fil, og vi udtrækker de relevante data." }, "extract": { "title": "AI udtrækker data", "description": "Vores visuelle AI læser og forstår dine dokumenter og udfylder automatisk alle pasfelter." }, "multiUpload": { "title": "Fungerer med flere uploads", "description": "Upload flere fotos eller dokumenter sekventielt — AI fusionerer data intelligent" }, "cta": "Prøv AI gratis", "tags": { "wineLabels": "Vinetiketter", "productLabels": "Product Labels", "ingredientLists": "Ingredient Lists", "nutritionFacts": "Næringsoplysninger", "technicalPdfs": "Tekniske PDF'er" } },
-    "categories": { "badge": "EU-reguleringsområde", "title": "Understøttede produktkategorier", "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.", "activeLaw": "Gældende forordning", "priorityGroup": "Prioritetsgruppe", "cta": "Begynd at oprette pas" },
-    "timeline": { "badge": "Regulatorisk tidsplan", "title": "EU DPP-implementeringsfrister", "subtitle": "EU udruller kravene til digitalt produktpas (DPP) i faser. Begynd forberedelserne nu.", "feb2027": { "title": "Batteries — Coming Soon", "badge": "February 2027", "description": "EV-, industri- og LMT-batterier skal have DPP med livscyklusdata, kulstofaftryksdeklarationer (kg CO₂e/kWh med klasse A-D) og genanvendt indhold af kobolt, lithium og nikkel." }, "active": { "title": "Aktiv nu", "badge": "I kraft", "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information." }, "rollout": { "title": "2027-2030: Fuld udrulning", "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published." } },
-    "selfHost": { "badge": "Open Source", "title": "Kør på egne servere", "subtitle": "Projektet er fuldt open source. Selvhost på din egen infrastruktur for fuld datasuverænitet, tilpas koden eller bidrag.", "deploy": { "title": "Host selv", "description": "Implementer på egne servere. Fuld kontrol over dine data og compliance-dokumentation." }, "customize": { "title": "Tilpas", "description": "Tilføj tilpassede felter, integrer med ERP/PLM-systemer eller byg white-label-løsninger." }, "contribute": { "title": "Bidrag", "description": "Hjælp med at forbedre skabeloner efterhånden som regler udvikler sig. Fællesskabsdrevne opdateringer." } },
-    "cta": { "title": "Klar til compliance?", "subtitle": "Opret EU-kompatible digitale produktpas i dag. Gratis, ubegrænset og open source.", "button": "Start gratis i dag" },
-    "footer": { "legal": "Juridiske oplysninger", "github": "Se på GitHub" }
+  "common": {
+    "loading": "Indlæser...",
+    "save": "Gem",
+    "cancel": "Annuller",
+    "delete": "Slet",
+    "edit": "Rediger",
+    "create": "Opret",
+    "back": "Tilbage",
+    "next": "Næste",
+    "search": "Søg",
+    "apply": "Anvend",
+    "close": "Luk",
+    "confirm": "Bekræft",
+    "yes": "Ja",
+    "no": "Nej",
+    "error": "Fejl",
+    "success": "Succes",
+    "warning": "Advarsel",
+    "openSource": "Open Source",
+    "language": "Sprog",
+    "custom": "Brugerdefineret",
+    "selectOption": "Vælg en mulighed",
+    "confirmed": "Bekræftet"
   },
-  "auth": { "title": "Digitalt Produktpas", "subtitle": "Log ind eller opret konto", "resetSubtitle": "Nulstil adgangskode", "signIn": "Log ind", "signUp": "Tilmeld", "email": "E-mail", "password": "Adgangskode", "companyName": "Firmanavn", "sendResetLink": "Send nulstillingslink", "sending": "Sender...", "backToSignIn": "Tilbage til login", "forgotPassword": "Glemt adgangskode?", "welcomeBack": "Velkommen tilbage!", "accountCreated": "Konto oprettet!", "accountCreatedDesc": "Du kan nu logge ind.", "checkEmail": "Tjek din e-mail", "resetLinkSent": "Nulstillingslink sendt.", "validation": { "invalidEmail": "Indtast en gyldig e-mailadresse", "shortPassword": "Adgangskoden skal være mindst 6 tegn" }, "setNewPassword": "Indstil ny adgangskode", "setNewPasswordDesc": "Indtast din nye adgangskode nedenfor", "newPassword": "Ny adgangskode", "confirmPassword": "Bekræft adgangskode", "updatePassword": "Opdater adgangskode", "passwordMismatch": "Adgangskoderne stemmer ikke overens", "passwordUpdated": "Adgangskoden er opdateret!" },
-  "dashboard": { "title": "Dine pas", "noPassports": "Ingen pas endnu. Opret det første!", "updated": "Opdateret", "duplicate": "Dupliker", "showQr": "Vis QR-kode", "duplicated": "Pas duplikeret", "deleted": "Pas slettet", "confirmDelete": "Er du sikker på, at du vil slette dette pas?", "dragToReorder": "Træk for at ændre rækkefølge" },
-  "passport": { "createTitle": "Opret nyt pas", "editTitle": "Rediger pas", "basicInfo": "Grundlæggende info", "dppName": "DPP-navn (kun internt)", "dppNamePlaceholder": "Indtast et internt navn til dette pas", "dppNameHelp": "Dette navn er kun synligt på dit dashboard", "productName": "Produktnavn", "productNamePlaceholder": "Indtast produktnavn", "productNameHelp": "Dette er navnet, forbrugerne vil se på det offentlige digitale produktpas", "category": "Produktkategori", "productImage": "Produktbillede", "productDescription": "Produktbeskrivelse", "descriptionPlaceholder": "Beskriv dit produkt...", "details": "Detaljer", "saving": "Gemmer...", "saveChanges": "Gem ændringer", "createPassport": "Opret pas", "updated": "Pas opdateret", "created": "Pas oprettet", "unsavedChanges": "Ikke-gemte ændringer", "unsavedChangesDesc": "Du har ikke-gemte ændringer. Er du sikker på, at du vil forlade? Ændringerne går tabt.", "leaveWithoutSaving": "Forlad uden at gemme", "enterProductName": "Indtast produktnavn", "notFound": "Pas ikke fundet", "notFoundDesc": "Dette digitale produktpas eksisterer ikke eller er fjernet.", "productPassport": "Produktpas", "checkAuthenticity": "Tjek ægthed", "poweredBy": "Drevet af", "noAdditionalInfo": "Ingen yderligere oplysninger krævet for denne kategori.", "earlyAlpha": "Tidlig alfa", "earlyAlphaDesc": "Denne skabelon er i tidlig alfa og er muligvis ikke fuldt i overensstemmelse med gældende regler. Verificer alle oplysninger mod officielle krav." },
-  "categories": { "battery": "Batterier", "construction": "Byggeprodukter", "textiles": "Tekstiler og fodtøj", "wine": "Vin og spiritus", "toys": "Legetøj", "electronics": "Elektronik og IKT", "iron_steel": "Jern og stål", "aluminum": "Aluminium", "cosmetics": "Kosmetik", "furniture": "Møbler og madrasser", "tires": "Dæk", "detergents": "Rengøringsmidler og kemikalier", "other": "Alle andre produkter" },
-  "categoryDescriptions": { "battery": "CO₂-fodaftryk, genbrug, forsyningskæde-due diligence", "construction": "DoPC, GWP A1-A3, brandmodstand", "textiles": "Fibersammensætning, holdbarhed, PFAS-erklæring", "wine": "Ingredienser, ernæring, geografisk betegnelse", "toys": "PFAS-fri, allergener, migrationstest", "electronics": "Reparerbarhedsindeks, reservedele, softwareopdateringer", "iron_steel": "Kulstofintensitet, skrotindhold, legeringskemi", "aluminum": "Smelteenergikilde, spole-sporbarhed", "cosmetics": "INCI-liste, nanomaterialer, emballage-genanvendelighed", "furniture": "EUDR træoprindelse, reservedele, PFAS", "tires": "Slidhastighed, regummeringshistorik, mikroplast", "detergents": "Digitalt SDS, bionedbrydning, doseringsoptimering", "other": "Generisk DPP-skabelon til enhver produkttype" },
+  "nav": {
+    "signIn": "Log ind",
+    "signUp": "Tilmeld",
+    "signOut": "Log ud",
+    "getStarted": "Kom i gang gratis",
+    "dashboard": "Gå til dashboard",
+    "createNew": "Opret nyt"
+  },
+  "landing": {
+    "hero": {
+      "badge": "EU ESPR-kompatibel",
+      "euFunded": "🇪🇺 Stolt EU-finansieret",
+      "title": "Ubegrænsede digitale produktpas — 100% Gratis",
+      "subtitle": "Gratis open source-platform til overholdelse af EU's forordning om økodesign for bæredygtige produkter (ESPR). Generer maskinlæsbare pas med QR-koder til batterier, tekstiler, byggeprodukter og 12+ kategorier.",
+      "cta": "Opret dit første pas",
+      "demo": "Se demo pas",
+      "features": {
+        "free": "100% Gratis og Open Source",
+        "selfHost": "Host selv",
+        "machineReadable": "Maskinlæsbar JSON/XML",
+        "categories": "12+ Produktkategorier"
+      }
+    },
+    "stats": {
+      "free": "Gratis og Open Source",
+      "categories": "Produktkategorier",
+      "deadline": "Første EU-frist",
+      "qr": "+ Unikke URL'er"
+    },
+    "features": {
+      "badge": "Funktioner",
+      "title": "Alt hvad du behøver til overholdelse af reglerne",
+      "subtitle": "Bygget efter EU's tekniske standarder: decentraliseret lagring, ISO 15459-identifikatorer, lagdelte adgangsrettigheder og maskinlæsbar JSON/XML-output.",
+      "espr": {
+        "title": "ESPR-kompatibel",
+        "description": "Forudkonfigurerede skabeloner baseret på EU's forordning om økodesign for bæredygtige produkter pr. kategori."
+      },
+      "openSource": {
+        "title": "Open Source",
+        "description": "Fuldt open source. Selvhost på dine egne servere for fuld datakontrol, eller brug vores hostede version gratis."
+      },
+      "machineReadable": {
+        "title": "Maskinlæsbar",
+        "description": "Ikke statiske PDF'er. Struktureret JSON/XML-data til integration med BIM, genbrugssystemer og anden software."
+      },
+      "qr": {
+        "title": "QR og databærere",
+        "description": "Hvert pas får en unik URL og QR-kode. Klar til NFC/RFID-integration iht. ISO 15459."
+      }
+    },
+    "ai": {
+      "badge": "AI-drevet",
+      "title": "Auto-udfyld med AI",
+      "subtitle": "Stop med at skrive manuelt. Upload et foto af din produktetiket eller et dokument, og vores AI udtrækker alle data automatisk på få sekunder.",
+      "snap": {
+        "title": "Tag et billede",
+        "description": "Fotografér din vinetiket, produktemballage eller enhver etiket med produktinformation."
+      },
+      "upload": {
+        "title": "Upload dokumenter",
+        "description": "PDF-datablade, Word-dokumenter, Excel-specifikationer — upload en vilkårlig fil, og vi udtrækker de relevante data."
+      },
+      "extract": {
+        "title": "AI udtrækker data",
+        "description": "Vores visuelle AI læser og forstår dine dokumenter og udfylder automatisk alle pasfelter."
+      },
+      "multiUpload": {
+        "title": "Fungerer med flere uploads",
+        "description": "Upload flere fotos eller dokumenter sekventielt — AI fusionerer data intelligent"
+      },
+      "cta": "Prøv AI gratis",
+      "tags": {
+        "wineLabels": "Vinetiketter",
+        "productLabels": "Product Labels",
+        "ingredientLists": "Ingredient Lists",
+        "nutritionFacts": "Næringsoplysninger",
+        "technicalPdfs": "Tekniske PDF'er"
+      }
+    },
+    "categories": {
+      "badge": "EU-reguleringsområde",
+      "title": "Understøttede produktkategorier",
+      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
+      "activeLaw": "Gældende forordning",
+      "priorityGroup": "Prioritetsgruppe",
+      "cta": "Begynd at oprette pas"
+    },
+    "timeline": {
+      "badge": "Regulatorisk tidsplan",
+      "title": "EU DPP-implementeringsfrister",
+      "subtitle": "EU udruller kravene til digitalt produktpas (DPP) i faser. Begynd forberedelserne nu.",
+      "feb2027": {
+        "title": "Batteries — Coming Soon",
+        "badge": "February 2027",
+        "description": "EV-, industri- og LMT-batterier skal have DPP med livscyklusdata, kulstofaftryksdeklarationer (kg CO₂e/kWh med klasse A-D) og genanvendt indhold af kobolt, lithium og nikkel."
+      },
+      "active": {
+        "title": "Aktiv nu",
+        "badge": "I kraft",
+        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+      },
+      "rollout": {
+        "title": "2027-2030: Fuld udrulning",
+        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+      }
+    },
+    "selfHost": {
+      "badge": "Open Source",
+      "title": "Kør på egne servere",
+      "subtitle": "Projektet er fuldt open source. Selvhost på din egen infrastruktur for fuld datasuverænitet, tilpas koden eller bidrag.",
+      "deploy": {
+        "title": "Host selv",
+        "description": "Implementer på egne servere. Fuld kontrol over dine data og compliance-dokumentation."
+      },
+      "customize": {
+        "title": "Tilpas",
+        "description": "Tilføj tilpassede felter, integrer med ERP/PLM-systemer eller byg white-label-løsninger."
+      },
+      "contribute": {
+        "title": "Bidrag",
+        "description": "Hjælp med at forbedre skabeloner efterhånden som regler udvikler sig. Fællesskabsdrevne opdateringer."
+      }
+    },
+    "cta": {
+      "title": "Klar til compliance?",
+      "subtitle": "Opret EU-kompatible digitale produktpas i dag. Gratis, ubegrænset og open source.",
+      "button": "Start gratis i dag"
+    },
+    "footer": {
+      "legal": "Juridiske oplysninger",
+      "github": "Se på GitHub"
+    }
+  },
+  "auth": {
+    "title": "Digitalt Produktpas",
+    "subtitle": "Log ind eller opret konto",
+    "resetSubtitle": "Nulstil adgangskode",
+    "signIn": "Log ind",
+    "signUp": "Tilmeld",
+    "email": "E-mail",
+    "password": "Adgangskode",
+    "companyName": "Firmanavn",
+    "sendResetLink": "Send nulstillingslink",
+    "sending": "Sender...",
+    "backToSignIn": "Tilbage til login",
+    "forgotPassword": "Glemt adgangskode?",
+    "welcomeBack": "Velkommen tilbage!",
+    "accountCreated": "Konto oprettet!",
+    "accountCreatedDesc": "Du kan nu logge ind.",
+    "checkEmail": "Tjek din e-mail",
+    "resetLinkSent": "Nulstillingslink sendt.",
+    "validation": {
+      "invalidEmail": "Indtast en gyldig e-mailadresse",
+      "shortPassword": "Adgangskoden skal være mindst 6 tegn"
+    },
+    "setNewPassword": "Indstil ny adgangskode",
+    "setNewPasswordDesc": "Indtast din nye adgangskode nedenfor",
+    "newPassword": "Ny adgangskode",
+    "confirmPassword": "Bekræft adgangskode",
+    "updatePassword": "Opdater adgangskode",
+    "passwordMismatch": "Adgangskoderne stemmer ikke overens",
+    "passwordUpdated": "Adgangskoden er opdateret!"
+  },
+  "dashboard": {
+    "title": "Dine pas",
+    "noPassports": "Ingen pas endnu. Opret det første!",
+    "updated": "Opdateret",
+    "duplicate": "Dupliker",
+    "showQr": "Vis QR-kode",
+    "duplicated": "Pas duplikeret",
+    "deleted": "Pas slettet",
+    "confirmDelete": "Er du sikker på, at du vil slette dette pas?",
+    "dragToReorder": "Træk for at ændre rækkefølge"
+  },
+  "passport": {
+    "createTitle": "Opret nyt pas",
+    "editTitle": "Rediger pas",
+    "basicInfo": "Grundlæggende info",
+    "dppName": "DPP-navn (kun internt)",
+    "dppNamePlaceholder": "Indtast et internt navn til dette pas",
+    "dppNameHelp": "Dette navn er kun synligt på dit dashboard",
+    "productName": "Produktnavn",
+    "productNamePlaceholder": "Indtast produktnavn",
+    "productNameHelp": "Dette er navnet, forbrugerne vil se på det offentlige digitale produktpas",
+    "category": "Produktkategori",
+    "productImage": "Produktbillede",
+    "productDescription": "Produktbeskrivelse",
+    "descriptionPlaceholder": "Beskriv dit produkt...",
+    "details": "Detaljer",
+    "saving": "Gemmer...",
+    "saveChanges": "Gem ændringer",
+    "createPassport": "Opret pas",
+    "updated": "Pas opdateret",
+    "created": "Pas oprettet",
+    "unsavedChanges": "Ikke-gemte ændringer",
+    "unsavedChangesDesc": "Du har ikke-gemte ændringer. Er du sikker på, at du vil forlade? Ændringerne går tabt.",
+    "leaveWithoutSaving": "Forlad uden at gemme",
+    "enterProductName": "Indtast produktnavn",
+    "notFound": "Pas ikke fundet",
+    "notFoundDesc": "Dette digitale produktpas eksisterer ikke eller er fjernet.",
+    "productPassport": "Produktpas",
+    "checkAuthenticity": "Tjek ægthed",
+    "poweredBy": "Drevet af",
+    "noAdditionalInfo": "Ingen yderligere oplysninger krævet for denne kategori.",
+    "earlyAlpha": "Tidlig alfa",
+    "earlyAlphaDesc": "Denne skabelon er i tidlig alfa og er muligvis ikke fuldt i overensstemmelse med gældende regler. Verificer alle oplysninger mod officielle krav.",
+    "missingRequiredTitle": "Nogle obligatoriske felter er ikke udfyldt",
+    "missingRequiredBody": "Du kan stadig gemme og publicere dette DPP, men følgende felter er påkrævet for fuld regulatorisk overholdelse:"
+  },
+  "categories": {
+    "battery": "Batterier",
+    "construction": "Byggeprodukter",
+    "textiles": "Tekstiler og fodtøj",
+    "wine": "Vin og spiritus",
+    "toys": "Legetøj",
+    "electronics": "Elektronik og IKT",
+    "iron_steel": "Jern og stål",
+    "aluminum": "Aluminium",
+    "cosmetics": "Kosmetik",
+    "furniture": "Møbler og madrasser",
+    "tires": "Dæk",
+    "detergents": "Rengøringsmidler og kemikalier",
+    "other": "Alle andre produkter"
+  },
+  "categoryDescriptions": {
+    "battery": "CO₂-fodaftryk, genbrug, forsyningskæde-due diligence",
+    "construction": "DoPC, GWP A1-A3, brandmodstand",
+    "textiles": "Fibersammensætning, holdbarhed, PFAS-erklæring",
+    "wine": "Ingredienser, ernæring, geografisk betegnelse",
+    "toys": "PFAS-fri, allergener, migrationstest",
+    "electronics": "Reparerbarhedsindeks, reservedele, softwareopdateringer",
+    "iron_steel": "Kulstofintensitet, skrotindhold, legeringskemi",
+    "aluminum": "Smelteenergikilde, spole-sporbarhed",
+    "cosmetics": "INCI-liste, nanomaterialer, emballage-genanvendelighed",
+    "furniture": "EUDR træoprindelse, reservedele, PFAS",
+    "tires": "Slidhastighed, regummeringshistorik, mikroplast",
+    "detergents": "Digitalt SDS, bionedbrydning, doseringsoptimering",
+    "other": "Generisk DPP-skabelon til enhver produkttype"
+  },
   "wine": {
     "productIdentity": "Produktidentitet",
     "productIdentityDesc": "Grundlæggende vinproduktinformation",
@@ -78,7 +323,14 @@
     "addIngredients": "Tilføj ingredienser",
     "addCustomIngredient": "Tilføj brugerdefineret",
     "noIngredients": "Ingen ingredienser tilføjet",
-    "ingredientCategories": { "general": "Generelt", "gases": "Gasser og emballagegasser", "acidity_regulators": "Syreregulatorer", "stabilizers": "Stabiliserende midler", "preservatives": "Konserveringsmidler og antioxidanter", "processing_aids": "Proceshjælpemidler" },
+    "ingredientCategories": {
+      "general": "Generelt",
+      "gases": "Gasser og emballagegasser",
+      "acidity_regulators": "Syreregulatorer",
+      "stabilizers": "Stabiliserende midler",
+      "preservatives": "Konserveringsmidler og antioxidanter",
+      "processing_aids": "Proceshjælpemidler"
+    },
     "bottledProtectiveAtmosphere": "Aftappet i beskyttende atmosfære",
     "ingredientsDescription": "Vælg ingredienser fra viningredienslisten eller tilføj brugerdefinerede. Sortér dem efter mængde (størst til mindst).",
     "chooseIngredients": "Vælg viningredienser",
@@ -200,16 +452,134 @@
     "potato_protein": "Kartoffelprotein",
     "pvpp": "PVPP – Polyvinylpolypyrrolidon (E1202)"
   },
-  "recycling": { "code": "Kode", "material": "Materiale", "disposal": "Bortskaffelse", "componentTypes": { "bottle": "Flaske", "closure": "Lukning", "capsule": "Kapsel", "label": "Etiket", "box": "Kasse" }, "selectMaterial": "Vælg materiale", "individualComponents": "Individuelle komponenter", "compositeComponents": "Sammensatte komponenter", "customMaterial": "Brugerdefineret materiale", "addCustomMaterial": "Tilføj brugerdefineret materiale", "disposalAdvice": "Bortskaffelsesråd", "addMaterial": "Tilføj materiale", "addPackagingMaterial": "Tilføj emballagemateriale", "customType": "Brugerdefineret type", "addCustomType": "Tilføj brugerdefineret materialetype", "editCustomType": "Rediger brugerdefineret materialetype", "materialName": "Materialenavn", "materialNamePlaceholder": "f.eks. Trækasse" },
-  "legal": { "title": "Juridiske oplysninger", "legalMentions": "Juridiske oplysninger" },
-  "notFound": { "title": "404", "message": "Ups! Side ikke fundet", "returnHome": "Tilbage til forsiden" },
-  "counterfeit": { "title": "Beskyttelse mod forfalskning", "enable": "Aktivér", "disable": "Deaktivér", "description": "Beskyt dit produkt mod forfalskning med et sikkerhedssegl fra vores partner.", "addProtection": "Tilføj beskyttelse mod forfalskning (valgfrit)", "enabled": "Beskyttelse mod forfalskning aktiveret", "enabledDescription": "En e-mail er sendt til vores partner. De vil kontakte dig for levering af sikkerhedsseglet.", "requestSent": "Anmodning sendt!", "requestSentDescription": "En e-mail er sendt til vores partner for beskyttelse mod forfalskning.", "sending": "Sender...", "errorNoEmail": "Kan ikke sende anmodning – brugerens e-mail ikke fundet", "errorSaveFirst": "Gem venligst passet først, inden du aktiverer beskyttelsen", "errorFailed": "Kunne ikke sende anmodning om beskyttelse mod forfalskning" },
-  "customIngredient": { "title": "Definér en brugerdefineret ingrediens", "editTitle": "Rediger brugerdefineret ingrediens", "ingredientName": "Ingrediensnavn", "eNumber": "E-nummer (valgfrit)", "eNumberPlaceholder": "f.eks. E 123", "ingredientPlaceholder": "f.eks. Egetræsflis", "isAllergen": "Dette er et allergen", "addButton": "Tilføj ingrediens" },
-  "certifications": { "title": "Certificeringer og mærker" },
-  "qrDialog": { "title": "QR-kode", "download": "Download QR-kode", "copyLink": "Kopiér link", "printSizeInstructionWine": "Udskriv med en bredde på 1,8 cm. Højden varierer efter indhold. Sekskanten svarer til 1 cm til sikkerhedsseglet." },
-  "translation": { "title": "Oversættelser", "description": "Angiv oversættelser for alle EU-sprog. Brug AI til at generere indledende oversættelser, gennemgå og rediger derefter.", "manageTranslations": "Administrer oversættelser", "translate": "Oversæt", "sourceText": "Kildetekst", "empty": "(tom)", "generateWithAI": "Generér med AI", "enterTranslation": "Indtast oversættelse...", "saveTranslations": "Gem oversættelser", "noSourceText": "Ingen kildetekst", "enterTextFirst": "Indtast tekst i feltet, inden du genererer oversættelser.", "generated": "Oversættelser genereret", "reviewAndEdit": "Gennemgå og rediger oversættelserne efter behov.", "error": "Oversættelsesfejl", "errorDesc": "Kunne ikke generere oversættelser. Prøv venligst igen.", "saved": "Oversættelser gemt", "autoTranslating": "Oversætter..." },
-  "preview": { "livePreview": "Live forhåndsvisning", "productPassport": "Produktpas", "productName": "Produktnavn", "checkAuthenticity": "Tjek ægthed", "productDescription": "Produktbeskrivelse", "certificationsLabels": "Certificeringer og mærker", "poweredBy": "Drevet af" },
-  "ai": { "analyzing": "Analyserer dokument...", "takePhoto": "Tag foto", "uploadFile": "Upload fil", "supportedFormats": "Understøtter fotos, PDF'er og Word-dokumenter", "multiUploadTip": "Har du flere filer? Kør igen efter hver upload for at fusionere data fra forskellige kilder.", "autofillButton": "Autoudfyld med AI", "experimental": "Eksperimentel", "scannerTitle": "AI-etiketscanner", "scannerDescription": "Upload et foto af en vinetiket, PDF eller dokument, og AI vil automatisk udtrække informationen. Du kan også scanne et foto af en QR-kode fra et eksisterende Digitalt Produktpas.", "experimentalWarning": "Tjek venligst alle udtrukne data inden gemning. AI kan lave fejl.", "autofillComplete": "✨ AI-udfyldning fuldført", "autofillCompleteDesc": "Felter er udfyldt. Gennemgå og verificer data inden gemning.", "noDataExtracted": "Ingen data udtrukket fra etiketten", "processingFailed": "Behandling mislykkedes", "processingFailedDesc": "Kunne ikke udtrække data fra etiketten", "quotaExceeded": "Kvote for fair brug overskredet", "quotaExceededDesc": "Du har nået den månedlige grænse på 100 AI-etiketsscanninger.", "quotaExceededBody": "For at sikre fair adgang begrænser vi AI-etiketsscanninger til 100 pr. måned. Din kvote nulstilles i begyndelsen af næste måned.", "quotaContactBody": "Hvis du har brug for en højere grænse til din virksomhed, kontakt os venligst.", "qrCodeUsed": "En QR-kode blev fundet, og den tilknyttede side blev også analyseret for yderligere data.", "contactUs": "Kontakt os" },
-  "imageUpload": { "loginRequired": "Du skal være logget ind for at uploade billeder", "invalidType": "Upload venligst en billedfil", "tooLarge": "Billedet skal være under 5MB", "uploading": "Uploader...", "uploadButton": "Upload produktbillede", "uploadFailed": "Upload af billede mislykkedes" },
-  "richText": { "enterUrl": "Indtast URL:" }
+  "recycling": {
+    "code": "Kode",
+    "material": "Materiale",
+    "disposal": "Bortskaffelse",
+    "componentTypes": {
+      "bottle": "Flaske",
+      "closure": "Lukning",
+      "capsule": "Kapsel",
+      "label": "Etiket",
+      "box": "Kasse"
+    },
+    "selectMaterial": "Vælg materiale",
+    "individualComponents": "Individuelle komponenter",
+    "compositeComponents": "Sammensatte komponenter",
+    "customMaterial": "Brugerdefineret materiale",
+    "addCustomMaterial": "Tilføj brugerdefineret materiale",
+    "disposalAdvice": "Bortskaffelsesråd",
+    "addMaterial": "Tilføj materiale",
+    "addPackagingMaterial": "Tilføj emballagemateriale",
+    "customType": "Brugerdefineret type",
+    "addCustomType": "Tilføj brugerdefineret materialetype",
+    "editCustomType": "Rediger brugerdefineret materialetype",
+    "materialName": "Materialenavn",
+    "materialNamePlaceholder": "f.eks. Trækasse"
+  },
+  "legal": {
+    "title": "Juridiske oplysninger",
+    "legalMentions": "Juridiske oplysninger"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Ups! Side ikke fundet",
+    "returnHome": "Tilbage til forsiden"
+  },
+  "counterfeit": {
+    "title": "Beskyttelse mod forfalskning",
+    "enable": "Aktivér",
+    "disable": "Deaktivér",
+    "description": "Beskyt dit produkt mod forfalskning med et sikkerhedssegl fra vores partner.",
+    "addProtection": "Tilføj beskyttelse mod forfalskning (valgfrit)",
+    "enabled": "Beskyttelse mod forfalskning aktiveret",
+    "enabledDescription": "En e-mail er sendt til vores partner. De vil kontakte dig for levering af sikkerhedsseglet.",
+    "requestSent": "Anmodning sendt!",
+    "requestSentDescription": "En e-mail er sendt til vores partner for beskyttelse mod forfalskning.",
+    "sending": "Sender...",
+    "errorNoEmail": "Kan ikke sende anmodning – brugerens e-mail ikke fundet",
+    "errorSaveFirst": "Gem venligst passet først, inden du aktiverer beskyttelsen",
+    "errorFailed": "Kunne ikke sende anmodning om beskyttelse mod forfalskning"
+  },
+  "customIngredient": {
+    "title": "Definér en brugerdefineret ingrediens",
+    "editTitle": "Rediger brugerdefineret ingrediens",
+    "ingredientName": "Ingrediensnavn",
+    "eNumber": "E-nummer (valgfrit)",
+    "eNumberPlaceholder": "f.eks. E 123",
+    "ingredientPlaceholder": "f.eks. Egetræsflis",
+    "isAllergen": "Dette er et allergen",
+    "addButton": "Tilføj ingrediens"
+  },
+  "certifications": {
+    "title": "Certificeringer og mærker"
+  },
+  "qrDialog": {
+    "title": "QR-kode",
+    "download": "Download QR-kode",
+    "copyLink": "Kopiér link",
+    "printSizeInstructionWine": "Udskriv med en bredde på 1,8 cm. Højden varierer efter indhold. Sekskanten svarer til 1 cm til sikkerhedsseglet."
+  },
+  "translation": {
+    "title": "Oversættelser",
+    "description": "Angiv oversættelser for alle EU-sprog. Brug AI til at generere indledende oversættelser, gennemgå og rediger derefter.",
+    "manageTranslations": "Administrer oversættelser",
+    "translate": "Oversæt",
+    "sourceText": "Kildetekst",
+    "empty": "(tom)",
+    "generateWithAI": "Generér med AI",
+    "enterTranslation": "Indtast oversættelse...",
+    "saveTranslations": "Gem oversættelser",
+    "noSourceText": "Ingen kildetekst",
+    "enterTextFirst": "Indtast tekst i feltet, inden du genererer oversættelser.",
+    "generated": "Oversættelser genereret",
+    "reviewAndEdit": "Gennemgå og rediger oversættelserne efter behov.",
+    "error": "Oversættelsesfejl",
+    "errorDesc": "Kunne ikke generere oversættelser. Prøv venligst igen.",
+    "saved": "Oversættelser gemt",
+    "autoTranslating": "Oversætter..."
+  },
+  "preview": {
+    "livePreview": "Live forhåndsvisning",
+    "productPassport": "Produktpas",
+    "productName": "Produktnavn",
+    "checkAuthenticity": "Tjek ægthed",
+    "productDescription": "Produktbeskrivelse",
+    "certificationsLabels": "Certificeringer og mærker",
+    "poweredBy": "Drevet af"
+  },
+  "ai": {
+    "analyzing": "Analyserer dokument...",
+    "takePhoto": "Tag foto",
+    "uploadFile": "Upload fil",
+    "supportedFormats": "Understøtter fotos, PDF'er og Word-dokumenter",
+    "multiUploadTip": "Har du flere filer? Kør igen efter hver upload for at fusionere data fra forskellige kilder.",
+    "autofillButton": "Autoudfyld med AI",
+    "experimental": "Eksperimentel",
+    "scannerTitle": "AI-etiketscanner",
+    "scannerDescription": "Upload et foto af en vinetiket, PDF eller dokument, og AI vil automatisk udtrække informationen. Du kan også scanne et foto af en QR-kode fra et eksisterende Digitalt Produktpas.",
+    "experimentalWarning": "Tjek venligst alle udtrukne data inden gemning. AI kan lave fejl.",
+    "autofillComplete": "✨ AI-udfyldning fuldført",
+    "autofillCompleteDesc": "Felter er udfyldt. Gennemgå og verificer data inden gemning.",
+    "noDataExtracted": "Ingen data udtrukket fra etiketten",
+    "processingFailed": "Behandling mislykkedes",
+    "processingFailedDesc": "Kunne ikke udtrække data fra etiketten",
+    "quotaExceeded": "Kvote for fair brug overskredet",
+    "quotaExceededDesc": "Du har nået den månedlige grænse på 100 AI-etiketsscanninger.",
+    "quotaExceededBody": "For at sikre fair adgang begrænser vi AI-etiketsscanninger til 100 pr. måned. Din kvote nulstilles i begyndelsen af næste måned.",
+    "quotaContactBody": "Hvis du har brug for en højere grænse til din virksomhed, kontakt os venligst.",
+    "qrCodeUsed": "En QR-kode blev fundet, og den tilknyttede side blev også analyseret for yderligere data.",
+    "contactUs": "Kontakt os"
+  },
+  "imageUpload": {
+    "loginRequired": "Du skal være logget ind for at uploade billeder",
+    "invalidType": "Upload venligst en billedfil",
+    "tooLarge": "Billedet skal være under 5MB",
+    "uploading": "Uploader...",
+    "uploadButton": "Upload produktbillede",
+    "uploadFailed": "Upload af billede mislykkedes"
+  },
+  "richText": {
+    "enterUrl": "Indtast URL:"
+  }
 }

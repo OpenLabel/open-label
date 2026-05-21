@@ -174,7 +174,10 @@
     "accountCreatedDesc": "Is féidir leat síniú isteach anois.",
     "checkEmail": "Seiceáil do ríomhphost",
     "resetLinkSent": "Nasc athshocraithe pasfhocail seolta.",
-    "validation": { "invalidEmail": "Iontráil seoladh ríomhphoist bailí le do thoil", "shortPassword": "Caithfidh an pasfhocal a bheith 6 charachtar ar a laghad" },
+    "validation": {
+      "invalidEmail": "Iontráil seoladh ríomhphoist bailí le do thoil",
+      "shortPassword": "Caithfidh an pasfhocal a bheith 6 charachtar ar a laghad"
+    },
     "setNewPassword": "Socraigh pasfhocal nua",
     "setNewPasswordDesc": "Cuir isteach do phasfhocal nua thíos",
     "newPassword": "Pasfhocal nua",
@@ -225,7 +228,9 @@
     "poweredBy": "Á chumhachtú ag",
     "noAdditionalInfo": "Níl faisnéis bhreise ag teastáil don chatagóir seo.",
     "earlyAlpha": "Alfa luath",
-    "earlyAlphaDesc": "Tá an teimpléad seo i bhfás alfa luath agus b'fhéidir nach gcomhlíonann sé na rialacháin reatha go hiomlán. Fíoraigh gach faisnéis roimh úsáid."
+    "earlyAlphaDesc": "Tá an teimpléad seo i bhfás alfa luath agus b'fhéidir nach gcomhlíonann sé na rialacháin reatha go hiomlán. Fíoraigh gach faisnéis roimh úsáid.",
+    "missingRequiredTitle": "Níl roinnt réimsí éigeantacha líonta isteach",
+    "missingRequiredBody": "Is féidir leat an DPP seo a shábháil agus a fhoilsiú fós, ach tá na réimsí seo a leanas riachtanach le haghaidh comhlíonadh rialála iomlán:"
   },
   "categories": {
     "battery": "Cadhnraí",

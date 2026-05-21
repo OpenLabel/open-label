@@ -1,22 +1,267 @@
 {
-  "common": { "loading": "Ladataan...", "save": "Tallenna", "cancel": "Peruuta", "delete": "Poista", "edit": "Muokkaa", "create": "Luo", "back": "Takaisin", "next": "Seuraava", "search": "Etsi", "apply": "Käytä", "close": "Sulje", "confirm": "Vahvista", "yes": "Kyllä", "no": "Ei", "error": "Virhe", "success": "Onnistui", "warning": "Varoitus", "openSource": "Avoin lähdekoodi", "language": "Kieli", "custom": "Mukautettu", "selectOption": "Valitse vaihtoehto", "confirmed": "Vahvistettu" },
-  "nav": { "signIn": "Kirjaudu", "signUp": "Rekisteröidy", "signOut": "Kirjaudu ulos", "getStarted": "Aloita ilmaiseksi", "dashboard": "Hallintapaneeliin", "createNew": "Luo uusi" },
-  "landing": {
-    "hero": { "badge": "EU ESPR -yhteensopiva", "euFunded": "🇪🇺 Ylpeästi EU:n rahoittama", "title": "Rajattomat digitaaliset tuotepassit — 100% Ilmainen", "subtitle": "Ilmainen avoimen lähdekoodin alusta EU:n kestävien tuotteiden ekosuunnitteluasetuksen (ESPR) noudattamiseen. Luo koneellisesti luettavia passeja QR-koodeilla akuille, tekstiileille, rakennustuotteille ja 12+ kategorialle.", "cta": "Luo ensimmäinen passisi", "demo": "Katso demopassi", "features": { "free": "100% ilmainen ja avoin lähdekoodi", "selfHost": "Itse ylläpidettävä", "machineReadable": "Koneellisesti luettava JSON/XML", "categories": "12+ tuotekategoriaa" } },
-    "stats": { "free": "Ilmainen ja avoin lähdekoodi", "categories": "Tuotekategoriaa", "deadline": "Ensimmäinen EU-määräaika", "qr": "+ Uniikkeja URL-osoitteita" },
-    "features": { "badge": "Ominaisuudet", "title": "Kaikki vaatimustenmukaisuuteen", "subtitle": "Rakennettu EU:n teknisten standardien mukaan: hajautettu tallennus, ISO 15459 -tunnisteet, porrastetut käyttöoikeudet ja koneellisesti luettava JSON/XML-tuloste.", "espr": { "title": "ESPR-yhteensopiva", "description": "Esikonfiguroidut mallit ekosuunnitteluasetuksen vaatimusten mukaan kategorioittain." }, "openSource": { "title": "Avoin lähdekoodi", "description": "Täysin avoin lähdekoodi. Isännöi omilla palvelimillasi täyden tiedonhallinnan saamiseksi tai käytä isännöityä versiota ilmaiseksi." }, "machineReadable": { "title": "Koneellisesti luettava", "description": "Ei staattisia PDF-tiedostoja. Rakenteiset JSON/XML-tiedot integrointiin BIM:n, kierrätysjärjestelmien ja muiden ohjelmistojen kanssa." }, "qr": { "title": "QR ja datankantajat", "description": "Jokainen passi saa uniikin URL-osoitteen ja QR-koodin. Valmis NFC/RFID-integrointiin ISO 15459:n mukaan." } },
-    "ai": { "badge": "Tekoälykäyttöinen", "title": "Automaattinen täyttö tekoälyllä", "subtitle": "Lopeta manuaalinen kirjoittaminen. Lataa kuva tuote-etiketistä tai asiakirja ja tekoälymme poimii kaikki tiedot automaattisesti.", "snap": { "title": "Ota valokuva", "description": "Valokuvaa viinietiketti, tuotepakkaus tai mikä tahansa tuotetietomerkintä." }, "upload": { "title": "Lataa asiakirjoja", "description": "PDF-datalehdet, Word-dokumentit, Excel-spesifikaatiot — lataa mikä tahansa tiedosto ja poimimme tiedot." }, "extract": { "title": "Tekoäly poimii tiedot", "description": "Visuaalinen tekoälymme lukee ja ymmärtää asiakirjasi, täyttäen automaattisesti kaikki passin kentät." }, "multiUpload": { "title": "Toimii useilla tiedostoilla", "description": "Lataa useita valokuvia tai asiakirjoja peräkkäin — tekoäly yhdistää tiedot älykkäästi" }, "cta": "Kokeile tekoälyä ilmaiseksi", "tags": { "wineLabels": "Viinietiketit", "productLabels": "Product Labels", "ingredientLists": "Ingredient Lists", "nutritionFacts": "Ravintosisältö", "technicalPdfs": "Tekniset PDF:t" } },
-    "categories": { "badge": "EU-asetuksen soveltamisala", "title": "Tuetut tuotekategoriat", "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.", "activeLaw": "Voimassa oleva asetus", "priorityGroup": "Prioriteettiryhmä", "cta": "Aloita passien luominen" },
-    "timeline": { "badge": "Sääntelyaikataulu", "title": "EU DPP -käyttöönoton määräajat", "subtitle": "EU ottaa käyttöön digitaalisen tuotepassin (DPP) vaatimukset vaiheittain. Aloita valmistautuminen nyt.", "feb2027": { "title": "Batteries — Coming Soon", "badge": "February 2027", "description": "EV-, teollisuus- ja LMT-akuilla on oltava DPP elinkaari­tiedoilla, hiilijalanjälki­ilmoituksilla (kg CO₂e/kWh A-D-luokituksella) ja kierrätetyn sisällön osuuksilla koboltille, litiumille ja nikkelille." }, "active": { "title": "Voimassa nyt", "badge": "Käytössä", "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information." }, "rollout": { "title": "2027-2030: Täysi käyttöönotto", "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published." } },
-    "selfHost": { "badge": "Avoin lähdekoodi", "title": "Käytä omilla palvelimillasi", "subtitle": "Projekti on täysin avointa lähdekoodia. Isännöi omalla infrastruktuurillasi täyden datasuvereeniteetin varmistamiseksi, muokkaa koodia tai osallistu.", "deploy": { "title": "Oma isännöinti", "description": "Asenna omille palvelimille. Täysi hallinta tiedoista ja vaatimustenmukaisuusdokumentaatiosta." }, "customize": { "title": "Muokkaa", "description": "Lisää mukautettuja kenttiä, integroi ERP/PLM-järjestelmiisi tai rakenna white-label-ratkaisuja." }, "contribute": { "title": "Osallistu", "description": "Auta parantamaan malleja sääntelyn kehittyessä. Yhteisövetoisia päivityksiä." } },
-    "cta": { "title": "Valmis vaatimustenmukaisuuteen?", "subtitle": "Aloita EU-yhteensopivien digitaalisten tuotepassien luominen jo tänään. Ilmainen, rajaton ja avointa lähdekoodia.", "button": "Aloita ilmaiseksi tänään" },
-    "footer": { "legal": "Oikeudelliset tiedot", "github": "Katso GitHubissa" }
+  "common": {
+    "loading": "Ladataan...",
+    "save": "Tallenna",
+    "cancel": "Peruuta",
+    "delete": "Poista",
+    "edit": "Muokkaa",
+    "create": "Luo",
+    "back": "Takaisin",
+    "next": "Seuraava",
+    "search": "Etsi",
+    "apply": "Käytä",
+    "close": "Sulje",
+    "confirm": "Vahvista",
+    "yes": "Kyllä",
+    "no": "Ei",
+    "error": "Virhe",
+    "success": "Onnistui",
+    "warning": "Varoitus",
+    "openSource": "Avoin lähdekoodi",
+    "language": "Kieli",
+    "custom": "Mukautettu",
+    "selectOption": "Valitse vaihtoehto",
+    "confirmed": "Vahvistettu"
   },
-  "auth": { "title": "Digitaalinen tuotepassi", "subtitle": "Kirjaudu tai luo tili", "resetSubtitle": "Nollaa salasana", "signIn": "Kirjaudu", "signUp": "Rekisteröidy", "email": "Sähköposti", "password": "Salasana", "companyName": "Yrityksen nimi", "sendResetLink": "Lähetä nollauslinkki", "sending": "Lähetetään...", "backToSignIn": "Takaisin kirjautumiseen", "forgotPassword": "Unohditko salasanan?", "welcomeBack": "Tervetuloa takaisin!", "accountCreated": "Tili luotu!", "accountCreatedDesc": "Voit nyt kirjautua sisään.", "checkEmail": "Tarkista sähköpostisi", "resetLinkSent": "Salasanan nollauslinkki lähetetty.", "validation": { "invalidEmail": "Anna kelvollinen sähköpostiosoite", "shortPassword": "Salasanan on oltava vähintään 6 merkkiä" }, "setNewPassword": "Aseta uusi salasana", "setNewPasswordDesc": "Syötä uusi salasanasi alle", "newPassword": "Uusi salasana", "confirmPassword": "Vahvista salasana", "updatePassword": "Päivitä salasana", "passwordMismatch": "Salasanat eivät täsmää", "passwordUpdated": "Salasana päivitetty onnistuneesti!" },
-  "dashboard": { "title": "Passisi", "noPassports": "Ei vielä passeja. Luo ensimmäinen!", "updated": "Päivitetty", "duplicate": "Kopioi", "showQr": "Näytä QR-koodi", "duplicated": "Passi kopioitu", "deleted": "Passi poistettu", "confirmDelete": "Haluatko varmasti poistaa tämän passin?", "dragToReorder": "Vedä järjestääksesi" },
-  "passport": { "createTitle": "Luo uusi passi", "editTitle": "Muokkaa passia", "basicInfo": "Perustiedot", "dppName": "DPP-nimi (vain sisäinen)", "dppNamePlaceholder": "Anna tälle passille sisäinen nimi", "dppNameHelp": "Tämä nimi näkyy vain hallintapaneelissasi", "productName": "Tuotteen nimi", "productNamePlaceholder": "Anna tuotteen nimi", "productNameHelp": "Tämä on nimi, jonka kuluttajat näkevät julkisessa digitaalisessa tuotepassissa", "category": "Tuotekategoria", "productImage": "Tuotekuva", "productDescription": "Tuotekuvaus", "descriptionPlaceholder": "Kuvaa tuotteesi...", "details": "Yksityiskohdat", "saving": "Tallennetaan...", "saveChanges": "Tallenna muutokset", "createPassport": "Luo passi", "updated": "Passi päivitetty onnistuneesti", "created": "Passi luotu onnistuneesti", "unsavedChanges": "Tallentamattomat muutokset", "unsavedChangesDesc": "Sinulla on tallentamattomia muutoksia. Haluatko varmasti poistua? Muutokset menetetään.", "leaveWithoutSaving": "Poistu tallentamatta", "enterProductName": "Anna tuotteen nimi", "notFound": "Passia ei löydy", "notFoundDesc": "Tätä digitaalista tuotepassia ei ole olemassa tai se on poistettu.", "productPassport": "Tuotepassi", "checkAuthenticity": "Tarkista aitous", "poweredBy": "Powered by", "noAdditionalInfo": "Tälle kategorialle ei tarvita lisätietoja.", "earlyAlpha": "Varhainen alfa", "earlyAlphaDesc": "Tämä malli on varhaisessa alfavaiheessa eikä välttämättä ole täysin säädösten mukainen. Tarkista tiedot ennen käyttöä." },
-  "categories": { "battery": "Akut", "construction": "Rakennustuotteet", "textiles": "Tekstiilit ja jalkineet", "wine": "Viinit ja väkevät", "toys": "Lelut", "electronics": "Elektroniikka ja ICT", "iron_steel": "Rauta ja teräs", "aluminum": "Alumiini", "cosmetics": "Kosmetiikka", "furniture": "Huonekalut ja patjat", "tires": "Renkaat", "detergents": "Pesuaineet ja kemikaalit", "other": "Kaikki muut tuotteet" },
-  "categoryDescriptions": { "battery": "Hiilijalanjälki, kierrätys, toimitusketjun huolellisuusvelvoite", "construction": "DoPC, GWP A1-A3, palonkestävyys", "textiles": "Kuitukoostumus, kestävyys, PFAS-ilmoitus", "wine": "Ainesosat, ravinto, maantieteellinen merkintä", "toys": "PFAS-vapaa, allergeenit, migraatiotestaus", "electronics": "Korjattavuusindeksi, varaosat, ohjelmistopäivitykset", "iron_steel": "Hiili-intensiteetti, romupitoisuus, seoksen kemia", "aluminum": "Sulatuksen energialähde, kelan jäljitettävyys", "cosmetics": "INCI-luettelo, nanomateriaalit, pakkauksen kierrätettävyys", "furniture": "Puun alkuperä EUDR:n mukaan, varaosat, PFAS", "tires": "Kulumisnopeus, pinnoitushistoria, mikromuovit", "detergents": "Digitaalinen KTT, biohajoavuus, annostelun optimointi", "other": "Yleinen DPP-malli mille tahansa tuotetyypille" },
+  "nav": {
+    "signIn": "Kirjaudu",
+    "signUp": "Rekisteröidy",
+    "signOut": "Kirjaudu ulos",
+    "getStarted": "Aloita ilmaiseksi",
+    "dashboard": "Hallintapaneeliin",
+    "createNew": "Luo uusi"
+  },
+  "landing": {
+    "hero": {
+      "badge": "EU ESPR -yhteensopiva",
+      "euFunded": "🇪🇺 Ylpeästi EU:n rahoittama",
+      "title": "Rajattomat digitaaliset tuotepassit — 100% Ilmainen",
+      "subtitle": "Ilmainen avoimen lähdekoodin alusta EU:n kestävien tuotteiden ekosuunnitteluasetuksen (ESPR) noudattamiseen. Luo koneellisesti luettavia passeja QR-koodeilla akuille, tekstiileille, rakennustuotteille ja 12+ kategorialle.",
+      "cta": "Luo ensimmäinen passisi",
+      "demo": "Katso demopassi",
+      "features": {
+        "free": "100% ilmainen ja avoin lähdekoodi",
+        "selfHost": "Itse ylläpidettävä",
+        "machineReadable": "Koneellisesti luettava JSON/XML",
+        "categories": "12+ tuotekategoriaa"
+      }
+    },
+    "stats": {
+      "free": "Ilmainen ja avoin lähdekoodi",
+      "categories": "Tuotekategoriaa",
+      "deadline": "Ensimmäinen EU-määräaika",
+      "qr": "+ Uniikkeja URL-osoitteita"
+    },
+    "features": {
+      "badge": "Ominaisuudet",
+      "title": "Kaikki vaatimustenmukaisuuteen",
+      "subtitle": "Rakennettu EU:n teknisten standardien mukaan: hajautettu tallennus, ISO 15459 -tunnisteet, porrastetut käyttöoikeudet ja koneellisesti luettava JSON/XML-tuloste.",
+      "espr": {
+        "title": "ESPR-yhteensopiva",
+        "description": "Esikonfiguroidut mallit ekosuunnitteluasetuksen vaatimusten mukaan kategorioittain."
+      },
+      "openSource": {
+        "title": "Avoin lähdekoodi",
+        "description": "Täysin avoin lähdekoodi. Isännöi omilla palvelimillasi täyden tiedonhallinnan saamiseksi tai käytä isännöityä versiota ilmaiseksi."
+      },
+      "machineReadable": {
+        "title": "Koneellisesti luettava",
+        "description": "Ei staattisia PDF-tiedostoja. Rakenteiset JSON/XML-tiedot integrointiin BIM:n, kierrätysjärjestelmien ja muiden ohjelmistojen kanssa."
+      },
+      "qr": {
+        "title": "QR ja datankantajat",
+        "description": "Jokainen passi saa uniikin URL-osoitteen ja QR-koodin. Valmis NFC/RFID-integrointiin ISO 15459:n mukaan."
+      }
+    },
+    "ai": {
+      "badge": "Tekoälykäyttöinen",
+      "title": "Automaattinen täyttö tekoälyllä",
+      "subtitle": "Lopeta manuaalinen kirjoittaminen. Lataa kuva tuote-etiketistä tai asiakirja ja tekoälymme poimii kaikki tiedot automaattisesti.",
+      "snap": {
+        "title": "Ota valokuva",
+        "description": "Valokuvaa viinietiketti, tuotepakkaus tai mikä tahansa tuotetietomerkintä."
+      },
+      "upload": {
+        "title": "Lataa asiakirjoja",
+        "description": "PDF-datalehdet, Word-dokumentit, Excel-spesifikaatiot — lataa mikä tahansa tiedosto ja poimimme tiedot."
+      },
+      "extract": {
+        "title": "Tekoäly poimii tiedot",
+        "description": "Visuaalinen tekoälymme lukee ja ymmärtää asiakirjasi, täyttäen automaattisesti kaikki passin kentät."
+      },
+      "multiUpload": {
+        "title": "Toimii useilla tiedostoilla",
+        "description": "Lataa useita valokuvia tai asiakirjoja peräkkäin — tekoäly yhdistää tiedot älykkäästi"
+      },
+      "cta": "Kokeile tekoälyä ilmaiseksi",
+      "tags": {
+        "wineLabels": "Viinietiketit",
+        "productLabels": "Product Labels",
+        "ingredientLists": "Ingredient Lists",
+        "nutritionFacts": "Ravintosisältö",
+        "technicalPdfs": "Tekniset PDF:t"
+      }
+    },
+    "categories": {
+      "badge": "EU-asetuksen soveltamisala",
+      "title": "Tuetut tuotekategoriat",
+      "subtitle": "Templates built from official EU regulations and delegated acts. More categories will be added as delegated acts are published.",
+      "activeLaw": "Voimassa oleva asetus",
+      "priorityGroup": "Prioriteettiryhmä",
+      "cta": "Aloita passien luominen"
+    },
+    "timeline": {
+      "badge": "Sääntelyaikataulu",
+      "title": "EU DPP -käyttöönoton määräajat",
+      "subtitle": "EU ottaa käyttöön digitaalisen tuotepassin (DPP) vaatimukset vaiheittain. Aloita valmistautuminen nyt.",
+      "feb2027": {
+        "title": "Batteries — Coming Soon",
+        "badge": "February 2027",
+        "description": "EV-, teollisuus- ja LMT-akuilla on oltava DPP elinkaari­tiedoilla, hiilijalanjälki­ilmoituksilla (kg CO₂e/kWh A-D-luokituksella) ja kierrätetyn sisällön osuuksilla koboltille, litiumille ja nikkelille."
+      },
+      "active": {
+        "title": "Voimassa nyt",
+        "badge": "Käytössä",
+        "description": "Wine & Spirits (EU 2021/2117) already requires digital declarations including ingredient lists and nutritional information."
+      },
+      "rollout": {
+        "title": "2027-2030: Täysi käyttöönotto",
+        "description": "Textiles, electronics, furniture, iron/steel, aluminum, construction products, toys, cosmetics, tires, and detergents will require DPPs as delegated acts are published."
+      }
+    },
+    "selfHost": {
+      "badge": "Avoin lähdekoodi",
+      "title": "Käytä omilla palvelimillasi",
+      "subtitle": "Projekti on täysin avointa lähdekoodia. Isännöi omalla infrastruktuurillasi täyden datasuvereeniteetin varmistamiseksi, muokkaa koodia tai osallistu.",
+      "deploy": {
+        "title": "Oma isännöinti",
+        "description": "Asenna omille palvelimille. Täysi hallinta tiedoista ja vaatimustenmukaisuusdokumentaatiosta."
+      },
+      "customize": {
+        "title": "Muokkaa",
+        "description": "Lisää mukautettuja kenttiä, integroi ERP/PLM-järjestelmiisi tai rakenna white-label-ratkaisuja."
+      },
+      "contribute": {
+        "title": "Osallistu",
+        "description": "Auta parantamaan malleja sääntelyn kehittyessä. Yhteisövetoisia päivityksiä."
+      }
+    },
+    "cta": {
+      "title": "Valmis vaatimustenmukaisuuteen?",
+      "subtitle": "Aloita EU-yhteensopivien digitaalisten tuotepassien luominen jo tänään. Ilmainen, rajaton ja avointa lähdekoodia.",
+      "button": "Aloita ilmaiseksi tänään"
+    },
+    "footer": {
+      "legal": "Oikeudelliset tiedot",
+      "github": "Katso GitHubissa"
+    }
+  },
+  "auth": {
+    "title": "Digitaalinen tuotepassi",
+    "subtitle": "Kirjaudu tai luo tili",
+    "resetSubtitle": "Nollaa salasana",
+    "signIn": "Kirjaudu",
+    "signUp": "Rekisteröidy",
+    "email": "Sähköposti",
+    "password": "Salasana",
+    "companyName": "Yrityksen nimi",
+    "sendResetLink": "Lähetä nollauslinkki",
+    "sending": "Lähetetään...",
+    "backToSignIn": "Takaisin kirjautumiseen",
+    "forgotPassword": "Unohditko salasanan?",
+    "welcomeBack": "Tervetuloa takaisin!",
+    "accountCreated": "Tili luotu!",
+    "accountCreatedDesc": "Voit nyt kirjautua sisään.",
+    "checkEmail": "Tarkista sähköpostisi",
+    "resetLinkSent": "Salasanan nollauslinkki lähetetty.",
+    "validation": {
+      "invalidEmail": "Anna kelvollinen sähköpostiosoite",
+      "shortPassword": "Salasanan on oltava vähintään 6 merkkiä"
+    },
+    "setNewPassword": "Aseta uusi salasana",
+    "setNewPasswordDesc": "Syötä uusi salasanasi alle",
+    "newPassword": "Uusi salasana",
+    "confirmPassword": "Vahvista salasana",
+    "updatePassword": "Päivitä salasana",
+    "passwordMismatch": "Salasanat eivät täsmää",
+    "passwordUpdated": "Salasana päivitetty onnistuneesti!"
+  },
+  "dashboard": {
+    "title": "Passisi",
+    "noPassports": "Ei vielä passeja. Luo ensimmäinen!",
+    "updated": "Päivitetty",
+    "duplicate": "Kopioi",
+    "showQr": "Näytä QR-koodi",
+    "duplicated": "Passi kopioitu",
+    "deleted": "Passi poistettu",
+    "confirmDelete": "Haluatko varmasti poistaa tämän passin?",
+    "dragToReorder": "Vedä järjestääksesi"
+  },
+  "passport": {
+    "createTitle": "Luo uusi passi",
+    "editTitle": "Muokkaa passia",
+    "basicInfo": "Perustiedot",
+    "dppName": "DPP-nimi (vain sisäinen)",
+    "dppNamePlaceholder": "Anna tälle passille sisäinen nimi",
+    "dppNameHelp": "Tämä nimi näkyy vain hallintapaneelissasi",
+    "productName": "Tuotteen nimi",
+    "productNamePlaceholder": "Anna tuotteen nimi",
+    "productNameHelp": "Tämä on nimi, jonka kuluttajat näkevät julkisessa digitaalisessa tuotepassissa",
+    "category": "Tuotekategoria",
+    "productImage": "Tuotekuva",
+    "productDescription": "Tuotekuvaus",
+    "descriptionPlaceholder": "Kuvaa tuotteesi...",
+    "details": "Yksityiskohdat",
+    "saving": "Tallennetaan...",
+    "saveChanges": "Tallenna muutokset",
+    "createPassport": "Luo passi",
+    "updated": "Passi päivitetty onnistuneesti",
+    "created": "Passi luotu onnistuneesti",
+    "unsavedChanges": "Tallentamattomat muutokset",
+    "unsavedChangesDesc": "Sinulla on tallentamattomia muutoksia. Haluatko varmasti poistua? Muutokset menetetään.",
+    "leaveWithoutSaving": "Poistu tallentamatta",
+    "enterProductName": "Anna tuotteen nimi",
+    "notFound": "Passia ei löydy",
+    "notFoundDesc": "Tätä digitaalista tuotepassia ei ole olemassa tai se on poistettu.",
+    "productPassport": "Tuotepassi",
+    "checkAuthenticity": "Tarkista aitous",
+    "poweredBy": "Powered by",
+    "noAdditionalInfo": "Tälle kategorialle ei tarvita lisätietoja.",
+    "earlyAlpha": "Varhainen alfa",
+    "earlyAlphaDesc": "Tämä malli on varhaisessa alfavaiheessa eikä välttämättä ole täysin säädösten mukainen. Tarkista tiedot ennen käyttöä.",
+    "missingRequiredTitle": "Joitakin pakollisia kenttiä ei ole täytetty",
+    "missingRequiredBody": "Voit silti tallentaa ja julkaista tämän DPP:n, mutta seuraavat kentät vaaditaan täydellistä sääntelyn noudattamista varten:"
+  },
+  "categories": {
+    "battery": "Akut",
+    "construction": "Rakennustuotteet",
+    "textiles": "Tekstiilit ja jalkineet",
+    "wine": "Viinit ja väkevät",
+    "toys": "Lelut",
+    "electronics": "Elektroniikka ja ICT",
+    "iron_steel": "Rauta ja teräs",
+    "aluminum": "Alumiini",
+    "cosmetics": "Kosmetiikka",
+    "furniture": "Huonekalut ja patjat",
+    "tires": "Renkaat",
+    "detergents": "Pesuaineet ja kemikaalit",
+    "other": "Kaikki muut tuotteet"
+  },
+  "categoryDescriptions": {
+    "battery": "Hiilijalanjälki, kierrätys, toimitusketjun huolellisuusvelvoite",
+    "construction": "DoPC, GWP A1-A3, palonkestävyys",
+    "textiles": "Kuitukoostumus, kestävyys, PFAS-ilmoitus",
+    "wine": "Ainesosat, ravinto, maantieteellinen merkintä",
+    "toys": "PFAS-vapaa, allergeenit, migraatiotestaus",
+    "electronics": "Korjattavuusindeksi, varaosat, ohjelmistopäivitykset",
+    "iron_steel": "Hiili-intensiteetti, romupitoisuus, seoksen kemia",
+    "aluminum": "Sulatuksen energialähde, kelan jäljitettävyys",
+    "cosmetics": "INCI-luettelo, nanomateriaalit, pakkauksen kierrätettävyys",
+    "furniture": "Puun alkuperä EUDR:n mukaan, varaosat, PFAS",
+    "tires": "Kulumisnopeus, pinnoitushistoria, mikromuovit",
+    "detergents": "Digitaalinen KTT, biohajoavuus, annostelun optimointi",
+    "other": "Yleinen DPP-malli mille tahansa tuotetyypille"
+  },
   "wine": {
     "productIdentity": "Tuotteen identiteetti",
     "productIdentityDesc": "Viinituotteen perustiedot",
@@ -78,7 +323,14 @@
     "addIngredients": "Lisää ainesosia",
     "addCustomIngredient": "Lisää mukautettu",
     "noIngredients": "Ei lisättyjä ainesosia",
-    "ingredientCategories": { "general": "Yleinen", "gases": "Kaasut ja pakkauskaasut", "acidity_regulators": "Happamuudensäätöaine", "stabilizers": "Stabilointiaineet", "preservatives": "Säilöntäaineet ja hapettumisenestoaineet", "processing_aids": "Valmistuksen apuaineet" },
+    "ingredientCategories": {
+      "general": "Yleinen",
+      "gases": "Kaasut ja pakkauskaasut",
+      "acidity_regulators": "Happamuudensäätöaine",
+      "stabilizers": "Stabilointiaineet",
+      "preservatives": "Säilöntäaineet ja hapettumisenestoaineet",
+      "processing_aids": "Valmistuksen apuaineet"
+    },
     "bottledProtectiveAtmosphere": "Pullotettu suojakaasun avulla",
     "ingredientsDescription": "Valitse ainesosat viinin ainesosaluettelosta tai lisää mukautettuja. Järjestä määrän mukaan (suurin ensin).",
     "chooseIngredients": "Valitse viinin ainesosat",
@@ -200,16 +452,134 @@
     "potato_protein": "Perunaproteiini",
     "pvpp": "PVPP – polyvinyylipolypyrrolidoni (E1202)"
   },
-  "recycling": { "code": "Koodi", "material": "Materiaali", "disposal": "Hävittäminen", "componentTypes": { "bottle": "Pullo", "closure": "Korkki", "capsule": "Kapseli", "label": "Etiketti", "box": "Laatikko" }, "selectMaterial": "Valitse materiaali", "individualComponents": "Yksittäiset osat", "compositeComponents": "Komposiittiosat", "customMaterial": "Mukautettu materiaali", "addCustomMaterial": "Lisää mukautettu materiaali", "disposalAdvice": "Hävittämisohje", "addMaterial": "Lisää materiaali", "addPackagingMaterial": "Lisää pakkausmateriaali", "customType": "Mukautettu tyyppi", "addCustomType": "Lisää mukautettu materiaalityyppi", "editCustomType": "Muokkaa mukautettua materiaalityyppiä", "materialName": "Materiaalin nimi", "materialNamePlaceholder": "esim. Puulaatikko" },
-  "legal": { "title": "Oikeudelliset tiedot", "legalMentions": "Oikeudelliset tiedot" },
-  "notFound": { "title": "404", "message": "Hups! Sivua ei löydy", "returnHome": "Takaisin etusivulle" },
-  "counterfeit": { "title": "Väärennössuojaus", "enable": "Ota käyttöön", "disable": "Poista käytöstä", "description": "Suojaa tuotteesi väärennöksiltä kumppanimme turvasinetillä.", "addProtection": "Lisää väärennössuojaus (valinnainen)", "enabled": "Väärennössuojaus käytössä", "enabledDescription": "Sähköposti lähetetty väärennössuojakumppanillemme. He ottavat sinuun yhteyttä turvasinetin toimitusta varten.", "requestSent": "Pyyntö lähetetty!", "requestSentDescription": "Sähköposti lähetetty väärennössuojakumppanillemme.", "sending": "Lähetetään...", "errorNoEmail": "Pyyntöä ei voida lähettää – käyttäjän sähköpostia ei löydy", "errorSaveFirst": "Tallenna passi ensin ennen suojauksen käyttöönottoa", "errorFailed": "Väärennössuojauspyynnön lähettäminen epäonnistui" },
-  "customIngredient": { "title": "Määritä mukautettu ainesosa", "editTitle": "Muokkaa mukautettua ainesosaa", "ingredientName": "Ainesosan nimi", "eNumber": "E-numero (valinnainen)", "eNumberPlaceholder": "esim. E 123", "ingredientPlaceholder": "esim. Tammilastu", "isAllergen": "Tämä on allergeeni", "addButton": "Lisää ainesosa" },
-  "certifications": { "title": "Sertifikaatit ja merkinnät" },
-  "qrDialog": { "title": "QR-koodi", "download": "Lataa QR-koodi", "copyLink": "Kopioi linkki", "printSizeInstructionWine": "Tulosta 1,8 cm leveänä. Korkeus vaihtelee sisällön mukaan. Kuusikulmio vastaa 1 cm:ä turvasinetille." },
-  "translation": { "title": "Käännökset", "description": "Anna käännökset kaikilla EU-kielillä. Käytä tekoälyä alkukäännösten luomiseen, tarkista ja muokkaa tarvittaessa.", "manageTranslations": "Käännösten hallinta", "translate": "Käännä", "sourceText": "Lähdeteksti", "empty": "(tyhjä)", "generateWithAI": "Luo tekoälyllä", "enterTranslation": "Syötä käännös...", "saveTranslations": "Tallenna käännökset", "noSourceText": "Ei lähdetekstiä", "enterTextFirst": "Syötä teksti kenttään ennen käännösten luomista.", "generated": "Käännökset luotu", "reviewAndEdit": "Tarkista ja muokkaa käännöksiä tarvittaessa.", "error": "Käännösvirhe", "errorDesc": "Käännösten luominen epäonnistui. Yritä uudelleen.", "saved": "Käännökset tallennettu", "autoTranslating": "Käännetään..." },
-  "preview": { "livePreview": "Reaaliaikainen esikatselu", "productPassport": "Tuotepassi", "productName": "Tuotteen nimi", "checkAuthenticity": "Tarkista aitous", "productDescription": "Tuotekuvaus", "certificationsLabels": "Sertifikaatit ja merkinnät", "poweredBy": "Powered by" },
-  "ai": { "analyzing": "Analysoidaan asiakirjaa...", "takePhoto": "Ota valokuva", "uploadFile": "Lataa tiedosto", "supportedFormats": "Tukee valokuvia, PDF:iä ja Word-dokumentteja", "multiUploadTip": "Useita tiedostoja? Suorita uudelleen jokaisen latauksen jälkeen yhdistääksesi tiedot eri lähteistä.", "autofillButton": "Täytä automaattisesti tekoälyllä", "experimental": "Kokeellinen", "scannerTitle": "Tekoäly-etiketinlukija", "scannerDescription": "Lataa kuva viininetiketistä, PDF tai asiakirja ja tekoäly poimii tiedot automaattisesti. Voit myös skannata kuvan olemassa olevan Digitaalisen tuotepassin QR-koodista.", "experimentalWarning": "Tarkista kaikki poimitut tiedot ennen tallentamista. Tekoäly voi tehdä virheitä.", "autofillComplete": "✨ Tekoälytäyttö valmis", "autofillCompleteDesc": "Kentät on täytetty. Tarkista ja vahvista tiedot ennen tallentamista.", "noDataExtracted": "Etiketistä ei poimittu tietoja", "processingFailed": "Käsittely epäonnistui", "processingFailedDesc": "Tietojen poimiminen etiketistä epäonnistui", "quotaExceeded": "Reilun käytön kiintiö ylitetty", "quotaExceededDesc": "Olet saavuttanut kuukausittaisen 100 tekoälyskannauksen rajan.", "quotaExceededBody": "Reilun käytön takaamiseksi rajoitamme tekoälyskannaukset 100:aan kuukaudessa. Kiintiösi nollautuu seuraavan kuukauden alussa.", "quotaContactBody": "Jos tarvitset korkeamman rajan yrityksellesi, ota yhteyttä.", "qrCodeUsed": "QR-koodi havaittiin ja linkitetty sivu analysoitiin myös lisätietojen saamiseksi.", "contactUs": "Ota yhteyttä" },
-  "imageUpload": { "loginRequired": "Sinun on kirjauduttava sisään ladataksesi kuvia", "invalidType": "Lataa kuvatiedosto", "tooLarge": "Kuvan on oltava alle 5MB", "uploading": "Ladataan...", "uploadButton": "Lataa tuotekuva", "uploadFailed": "Kuvan lataus epäonnistui" },
-  "richText": { "enterUrl": "Syötä URL:" }
+  "recycling": {
+    "code": "Koodi",
+    "material": "Materiaali",
+    "disposal": "Hävittäminen",
+    "componentTypes": {
+      "bottle": "Pullo",
+      "closure": "Korkki",
+      "capsule": "Kapseli",
+      "label": "Etiketti",
+      "box": "Laatikko"
+    },
+    "selectMaterial": "Valitse materiaali",
+    "individualComponents": "Yksittäiset osat",
+    "compositeComponents": "Komposiittiosat",
+    "customMaterial": "Mukautettu materiaali",
+    "addCustomMaterial": "Lisää mukautettu materiaali",
+    "disposalAdvice": "Hävittämisohje",
+    "addMaterial": "Lisää materiaali",
+    "addPackagingMaterial": "Lisää pakkausmateriaali",
+    "customType": "Mukautettu tyyppi",
+    "addCustomType": "Lisää mukautettu materiaalityyppi",
+    "editCustomType": "Muokkaa mukautettua materiaalityyppiä",
+    "materialName": "Materiaalin nimi",
+    "materialNamePlaceholder": "esim. Puulaatikko"
+  },
+  "legal": {
+    "title": "Oikeudelliset tiedot",
+    "legalMentions": "Oikeudelliset tiedot"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "Hups! Sivua ei löydy",
+    "returnHome": "Takaisin etusivulle"
+  },
+  "counterfeit": {
+    "title": "Väärennössuojaus",
+    "enable": "Ota käyttöön",
+    "disable": "Poista käytöstä",
+    "description": "Suojaa tuotteesi väärennöksiltä kumppanimme turvasinetillä.",
+    "addProtection": "Lisää väärennössuojaus (valinnainen)",
+    "enabled": "Väärennössuojaus käytössä",
+    "enabledDescription": "Sähköposti lähetetty väärennössuojakumppanillemme. He ottavat sinuun yhteyttä turvasinetin toimitusta varten.",
+    "requestSent": "Pyyntö lähetetty!",
+    "requestSentDescription": "Sähköposti lähetetty väärennössuojakumppanillemme.",
+    "sending": "Lähetetään...",
+    "errorNoEmail": "Pyyntöä ei voida lähettää – käyttäjän sähköpostia ei löydy",
+    "errorSaveFirst": "Tallenna passi ensin ennen suojauksen käyttöönottoa",
+    "errorFailed": "Väärennössuojauspyynnön lähettäminen epäonnistui"
+  },
+  "customIngredient": {
+    "title": "Määritä mukautettu ainesosa",
+    "editTitle": "Muokkaa mukautettua ainesosaa",
+    "ingredientName": "Ainesosan nimi",
+    "eNumber": "E-numero (valinnainen)",
+    "eNumberPlaceholder": "esim. E 123",
+    "ingredientPlaceholder": "esim. Tammilastu",
+    "isAllergen": "Tämä on allergeeni",
+    "addButton": "Lisää ainesosa"
+  },
+  "certifications": {
+    "title": "Sertifikaatit ja merkinnät"
+  },
+  "qrDialog": {
+    "title": "QR-koodi",
+    "download": "Lataa QR-koodi",
+    "copyLink": "Kopioi linkki",
+    "printSizeInstructionWine": "Tulosta 1,8 cm leveänä. Korkeus vaihtelee sisällön mukaan. Kuusikulmio vastaa 1 cm:ä turvasinetille."
+  },
+  "translation": {
+    "title": "Käännökset",
+    "description": "Anna käännökset kaikilla EU-kielillä. Käytä tekoälyä alkukäännösten luomiseen, tarkista ja muokkaa tarvittaessa.",
+    "manageTranslations": "Käännösten hallinta",
+    "translate": "Käännä",
+    "sourceText": "Lähdeteksti",
+    "empty": "(tyhjä)",
+    "generateWithAI": "Luo tekoälyllä",
+    "enterTranslation": "Syötä käännös...",
+    "saveTranslations": "Tallenna käännökset",
+    "noSourceText": "Ei lähdetekstiä",
+    "enterTextFirst": "Syötä teksti kenttään ennen käännösten luomista.",
+    "generated": "Käännökset luotu",
+    "reviewAndEdit": "Tarkista ja muokkaa käännöksiä tarvittaessa.",
+    "error": "Käännösvirhe",
+    "errorDesc": "Käännösten luominen epäonnistui. Yritä uudelleen.",
+    "saved": "Käännökset tallennettu",
+    "autoTranslating": "Käännetään..."
+  },
+  "preview": {
+    "livePreview": "Reaaliaikainen esikatselu",
+    "productPassport": "Tuotepassi",
+    "productName": "Tuotteen nimi",
+    "checkAuthenticity": "Tarkista aitous",
+    "productDescription": "Tuotekuvaus",
+    "certificationsLabels": "Sertifikaatit ja merkinnät",
+    "poweredBy": "Powered by"
+  },
+  "ai": {
+    "analyzing": "Analysoidaan asiakirjaa...",
+    "takePhoto": "Ota valokuva",
+    "uploadFile": "Lataa tiedosto",
+    "supportedFormats": "Tukee valokuvia, PDF:iä ja Word-dokumentteja",
+    "multiUploadTip": "Useita tiedostoja? Suorita uudelleen jokaisen latauksen jälkeen yhdistääksesi tiedot eri lähteistä.",
+    "autofillButton": "Täytä automaattisesti tekoälyllä",
+    "experimental": "Kokeellinen",
+    "scannerTitle": "Tekoäly-etiketinlukija",
+    "scannerDescription": "Lataa kuva viininetiketistä, PDF tai asiakirja ja tekoäly poimii tiedot automaattisesti. Voit myös skannata kuvan olemassa olevan Digitaalisen tuotepassin QR-koodista.",
+    "experimentalWarning": "Tarkista kaikki poimitut tiedot ennen tallentamista. Tekoäly voi tehdä virheitä.",
+    "autofillComplete": "✨ Tekoälytäyttö valmis",
+    "autofillCompleteDesc": "Kentät on täytetty. Tarkista ja vahvista tiedot ennen tallentamista.",
+    "noDataExtracted": "Etiketistä ei poimittu tietoja",
+    "processingFailed": "Käsittely epäonnistui",
+    "processingFailedDesc": "Tietojen poimiminen etiketistä epäonnistui",
+    "quotaExceeded": "Reilun käytön kiintiö ylitetty",
+    "quotaExceededDesc": "Olet saavuttanut kuukausittaisen 100 tekoälyskannauksen rajan.",
+    "quotaExceededBody": "Reilun käytön takaamiseksi rajoitamme tekoälyskannaukset 100:aan kuukaudessa. Kiintiösi nollautuu seuraavan kuukauden alussa.",
+    "quotaContactBody": "Jos tarvitset korkeamman rajan yrityksellesi, ota yhteyttä.",
+    "qrCodeUsed": "QR-koodi havaittiin ja linkitetty sivu analysoitiin myös lisätietojen saamiseksi.",
+    "contactUs": "Ota yhteyttä"
+  },
+  "imageUpload": {
+    "loginRequired": "Sinun on kirjauduttava sisään ladataksesi kuvia",
+    "invalidType": "Lataa kuvatiedosto",
+    "tooLarge": "Kuvan on oltava alle 5MB",
+    "uploading": "Ladataan...",
+    "uploadButton": "Lataa tuotekuva",
+    "uploadFailed": "Kuvan lataus epäonnistui"
+  },
+  "richText": {
+    "enterUrl": "Syötä URL:"
+  }
 }

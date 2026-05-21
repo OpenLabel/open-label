@@ -231,7 +231,9 @@
     "poweredBy": "Poháňané",
     "noAdditionalInfo": "Pre túto kategóriu nie sú potrebné ďalšie informácie.",
     "earlyAlpha": "Skorá alfa",
-    "earlyAlphaDesc": "Táto šablóna je v skorej alfa verzii a nemusí byť v súlade s predpismi. Pred použitím overte informácie."
+    "earlyAlphaDesc": "Táto šablóna je v skorej alfa verzii a nemusí byť v súlade s predpismi. Pred použitím overte informácie.",
+    "missingRequiredTitle": "Niektoré povinné polia nie sú vyplnené",
+    "missingRequiredBody": "Tento DPP môžete stále uložiť a publikovať, ale nasledujúce polia sú povinné pre úplný regulačný súlad:"
   },
   "categories": {
     "battery": "Batérie",

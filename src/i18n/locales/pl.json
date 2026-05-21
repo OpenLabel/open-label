@@ -174,7 +174,10 @@
     "accountCreatedDesc": "Możesz się teraz zalogować.",
     "checkEmail": "Sprawdź e-mail",
     "resetLinkSent": "Link do resetowania hasła wysłany.",
-    "validation": { "invalidEmail": "Proszę podać prawidłowy adres e-mail", "shortPassword": "Hasło musi mieć co najmniej 6 znaków" },
+    "validation": {
+      "invalidEmail": "Proszę podać prawidłowy adres e-mail",
+      "shortPassword": "Hasło musi mieć co najmniej 6 znaków"
+    },
     "setNewPassword": "Ustaw nowe hasło",
     "setNewPasswordDesc": "Wprowadź nowe hasło poniżej",
     "newPassword": "Nowe hasło",
@@ -225,7 +228,9 @@
     "poweredBy": "Obsługiwane przez",
     "noAdditionalInfo": "Nie są wymagane dodatkowe informacje dla tej kategorii.",
     "earlyAlpha": "Wczesna alfa",
-    "earlyAlphaDesc": "Ten szablon jest we wczesnej fazie alfa i może nie być w pełni zgodny z aktualnymi przepisami. Proszę zweryfikować wszystkie informacje przed użyciem."
+    "earlyAlphaDesc": "Ten szablon jest we wczesnej fazie alfa i może nie być w pełni zgodny z aktualnymi przepisami. Proszę zweryfikować wszystkie informacje przed użyciem.",
+    "missingRequiredTitle": "Niektóre pola obowiązkowe nie są wypełnione",
+    "missingRequiredBody": "Możesz nadal zapisać i opublikować ten DPP, ale następujące pola są wymagane do pełnej zgodności regulacyjnej:"
   },
   "categories": {
     "battery": "Baterie",

@@ -228,7 +228,9 @@
     "poweredBy": "Propulsé par",
     "noAdditionalInfo": "Aucune information supplémentaire requise pour cette catégorie.",
     "earlyAlpha": "Alpha précoce",
-    "earlyAlphaDesc": "Ce modèle est en version alpha précoce et peut ne pas être entièrement conforme aux réglementations actuelles. Veuillez vérifier toutes les informations par rapport aux exigences officielles avant utilisation."
+    "earlyAlphaDesc": "Ce modèle est en version alpha précoce et peut ne pas être entièrement conforme aux réglementations actuelles. Veuillez vérifier toutes les informations par rapport aux exigences officielles avant utilisation.",
+    "missingRequiredTitle": "Certains champs obligatoires ne sont pas remplis",
+    "missingRequiredBody": "Vous pouvez tout de même enregistrer et publier ce DPP, mais les champs suivants sont requis pour une conformité réglementaire complète :"
   },
   "imageUpload": {
     "loginRequired": "Vous devez être connecté pour télécharger des images",

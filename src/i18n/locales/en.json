@@ -228,7 +228,9 @@
     "poweredBy": "Powered by",
     "noAdditionalInfo": "No additional information required for this category.",
     "earlyAlpha": "Early Alpha",
-    "earlyAlphaDesc": "This template is in early alpha and may not be fully compliant with current regulations. Please verify all information against official requirements before use."
+    "earlyAlphaDesc": "This template is in early alpha and may not be fully compliant with current regulations. Please verify all information against official requirements before use.",
+    "missingRequiredTitle": "Some mandatory fields are not filled",
+    "missingRequiredBody": "You can still save and publish this DPP, but the following fields are required for full regulatory compliance:"
   },
   "imageUpload": {
     "loginRequired": "You must be logged in to upload images",
