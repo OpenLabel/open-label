@@ -183,6 +183,19 @@ export function ToyPublicPassport({
           />
         </dl>
 
+        {/* Instructions and warnings */}
+        {d.has_instructions_warnings === 'yes' &&
+          Boolean(d.public_instructions_warnings) && (
+            <>
+              <SectionTitle>
+                {t('toys.public.instructionsTitle', 'Instructions and warnings')}
+              </SectionTitle>
+              <p className="text-sm whitespace-pre-wrap">
+                {d.public_instructions_warnings as string}
+              </p>
+            </>
+          )}
+
         {/* Manufacturer responsibility */}
         <SectionTitle>Manufacturer responsibility</SectionTitle>
         <p className="text-sm italic text-muted-foreground mb-3">
