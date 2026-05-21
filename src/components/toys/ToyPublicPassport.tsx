@@ -197,11 +197,7 @@ export function ToyPublicPassport({
           )}
 
         {/* Manufacturer responsibility */}
-        <SectionTitle>Manufacturer responsibility</SectionTitle>
-        <p className="text-sm italic text-muted-foreground mb-3">
-          This Digital Product Passport is issued under the sole
-          responsibility of the manufacturer.
-        </p>
+        <SectionTitle>Manufacturer</SectionTitle>
         <dl>
           <Row
             label="Manufacturer"
