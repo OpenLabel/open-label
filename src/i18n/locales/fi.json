@@ -195,7 +195,9 @@
     "duplicated": "Passi kopioitu",
     "deleted": "Passi poistettu",
     "confirmDelete": "Haluatko varmasti poistaa tämän passin?",
-    "dragToReorder": "Vedä järjestääksesi"
+    "dragToReorder": "Vedä järjestääksesi",
+    "createSampleToy": "Luo mallilelu",
+    "sampleToyCreated": "Mallileluasiakirja luotu"
   },
   "passport": {
     "createTitle": "Luo uusi passi",

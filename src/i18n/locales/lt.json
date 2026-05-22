@@ -195,7 +195,9 @@
     "duplicated": "Pasas dubliuotas",
     "deleted": "Pasas ištrintas",
     "confirmDelete": "Ar tikrai norite ištrinti šį pasą?",
-    "dragToReorder": "Vilkite norėdami pertvarkyti"
+    "dragToReorder": "Vilkite norėdami pertvarkyti",
+    "createSampleToy": "Sukurti pavyzdinį žaislą",
+    "sampleToyCreated": "Pavyzdinis žaislo pasas sukurtas"
   },
   "passport": {
     "createTitle": "Sukurti naują pasą",

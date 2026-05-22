@@ -195,7 +195,9 @@
     "duplicated": "Pașaport duplicat",
     "deleted": "Pașaport șters",
     "confirmDelete": "Ești sigur că vrei să ștergi acest pașaport?",
-    "dragToReorder": "Trageți pentru a reordona"
+    "dragToReorder": "Trageți pentru a reordona",
+    "createSampleToy": "Creează jucărie exemplu",
+    "sampleToyCreated": "Pașaport jucărie exemplu creat"
   },
   "passport": {
     "createTitle": "Creează pașaport nou",

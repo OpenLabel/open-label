@@ -195,7 +195,9 @@
     "duplicated": "Passport duplicated",
     "deleted": "Passport deleted",
     "confirmDelete": "Are you sure you want to delete this passport?",
-    "dragToReorder": "Drag to reorder"
+    "dragToReorder": "Drag to reorder",
+    "createSampleToy": "Create sample toy",
+    "sampleToyCreated": "Sample toy passport created"
   },
   "passport": {
     "createTitle": "Create New Passport",

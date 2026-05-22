@@ -195,7 +195,9 @@
     "duplicated": "Putovnica duplicirana",
     "deleted": "Putovnica obrisana",
     "confirmDelete": "Jeste li sigurni da želite obrisati ovu putovnicu?",
-    "dragToReorder": "Povucite za promjenu redoslijeda"
+    "dragToReorder": "Povucite za promjenu redoslijeda",
+    "createSampleToy": "Stvori uzorak igračke",
+    "sampleToyCreated": "Stvorena putovnica uzorka igračke"
   },
   "passport": {
     "createTitle": "Stvori novu putovnicu",
