@@ -21,6 +21,7 @@ vi.mock('@/hooks/usePassports', () => ({
     passports: [],
     isLoading: false,
     error: null,
+    createPassport: { mutateAsync: vi.fn(), isPending: false },
     duplicatePassport: { mutateAsync: mockDuplicateAsync },
     deletePassport: { mutateAsync: mockDeleteAsync },
     reorderPassports: { mutate: mockReorderMutate },
