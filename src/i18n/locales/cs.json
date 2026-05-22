@@ -195,7 +195,9 @@
     "duplicated": "Pas duplikován",
     "deleted": "Pas smazán",
     "confirmDelete": "Opravdu chcete smazat tento pas?",
-    "dragToReorder": "Přetáhněte pro změnu pořadí"
+    "dragToReorder": "Přetáhněte pro změnu pořadí",
+    "createSampleToy": "Vytvořit ukázkovou hračku",
+    "sampleToyCreated": "Ukázkový pas hračky vytvořen"
   },
   "passport": {
     "createTitle": "Vytvořit nový pas",

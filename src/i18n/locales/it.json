@@ -195,7 +195,9 @@
     "duplicated": "Passaporto duplicato",
     "deleted": "Passaporto eliminato",
     "confirmDelete": "Sei sicuro di voler eliminare questo passaporto?",
-    "dragToReorder": "Trascina per riordinare"
+    "dragToReorder": "Trascina per riordinare",
+    "createSampleToy": "Crea giocattolo di esempio",
+    "sampleToyCreated": "Passaporto giocattolo di esempio creato"
   },
   "passport": {
     "createTitle": "Crea nuovo passaporto",

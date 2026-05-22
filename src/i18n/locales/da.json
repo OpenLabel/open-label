@@ -195,7 +195,9 @@
     "duplicated": "Pas duplikeret",
     "deleted": "Pas slettet",
     "confirmDelete": "Er du sikker på, at du vil slette dette pas?",
-    "dragToReorder": "Træk for at ændre rækkefølge"
+    "dragToReorder": "Træk for at ændre rækkefølge",
+    "createSampleToy": "Opret eksempellegetøj",
+    "sampleToyCreated": "Eksempelpas for legetøj oprettet"
   },
   "passport": {
     "createTitle": "Opret nyt pas",

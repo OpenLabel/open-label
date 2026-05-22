@@ -195,7 +195,9 @@
     "duplicated": "Pass dubleeritud",
     "deleted": "Pass kustutatud",
     "confirmDelete": "Kas oled kindel, et soovid selle passi kustutada?",
-    "dragToReorder": "Lohistage järjestamiseks"
+    "dragToReorder": "Lohistage järjestamiseks",
+    "createSampleToy": "Loo näidismänguasi",
+    "sampleToyCreated": "Näidismänguasja pass loodud"
   },
   "passport": {
     "createTitle": "Loo uus pass",

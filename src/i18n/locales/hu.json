@@ -195,7 +195,9 @@
     "duplicated": "Útlevél duplikálva",
     "deleted": "Útlevél törölve",
     "confirmDelete": "Biztosan törölni szeretné ezt az útlevelet?",
-    "dragToReorder": "Húzza az átrendezéshez"
+    "dragToReorder": "Húzza az átrendezéshez",
+    "createSampleToy": "Mintajáték létrehozása",
+    "sampleToyCreated": "Mintajáték útlevél létrehozva"
   },
   "passport": {
     "createTitle": "Új útlevél létrehozása",

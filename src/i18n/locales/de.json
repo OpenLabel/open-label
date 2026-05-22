@@ -195,7 +195,9 @@
     "duplicated": "Pass dupliziert",
     "deleted": "Pass gelöscht",
     "confirmDelete": "Möchten Sie diesen Pass wirklich löschen?",
-    "dragToReorder": "Zum Neuordnen ziehen"
+    "dragToReorder": "Zum Neuordnen ziehen",
+    "createSampleToy": "Beispielspielzeug erstellen",
+    "sampleToyCreated": "Beispielspielzeug-Pass erstellt"
   },
   "passport": {
     "createTitle": "Neuen Pass erstellen",

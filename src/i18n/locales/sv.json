@@ -195,7 +195,9 @@
     "duplicated": "Pass duplicerat",
     "deleted": "Pass raderat",
     "confirmDelete": "Är du säker på att du vill radera detta pass?",
-    "dragToReorder": "Dra för att ändra ordning"
+    "dragToReorder": "Dra för att ändra ordning",
+    "createSampleToy": "Skapa exempelleksak",
+    "sampleToyCreated": "Exempelleksakspass skapat"
   },
   "passport": {
     "createTitle": "Skapa nytt pass",

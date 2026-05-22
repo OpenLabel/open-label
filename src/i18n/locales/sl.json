@@ -195,7 +195,9 @@
     "duplicated": "Potni list podvojen",
     "deleted": "Potni list izbrisan",
     "confirmDelete": "Ali ste prepričani, da želite izbrisati ta potni list?",
-    "dragToReorder": "Povlecite za prerazporeditev"
+    "dragToReorder": "Povlecite za prerazporeditev",
+    "createSampleToy": "Ustvari vzorčno igračo",
+    "sampleToyCreated": "Ustvarjen potni list vzorčne igrače"
   },
   "passport": {
     "createTitle": "Ustvari nov potni list",

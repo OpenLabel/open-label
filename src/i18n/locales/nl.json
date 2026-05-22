@@ -195,7 +195,9 @@
     "duplicated": "Paspoort gedupliceerd",
     "deleted": "Paspoort verwijderd",
     "confirmDelete": "Weet u zeker dat u dit paspoort wilt verwijderen?",
-    "dragToReorder": "Slepen om te herordenen"
+    "dragToReorder": "Slepen om te herordenen",
+    "createSampleToy": "Voorbeeldspeelgoed maken",
+    "sampleToyCreated": "Voorbeeldspeelgoedpaspoort gemaakt"
   },
   "passport": {
     "createTitle": "Nieuw Paspoort Maken",

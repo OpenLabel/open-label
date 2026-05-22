@@ -195,7 +195,9 @@
     "duplicated": "Pase dublēta",
     "deleted": "Pase dzēsta",
     "confirmDelete": "Vai tiešām vēlaties dzēst šo pasi?",
-    "dragToReorder": "Velciet, lai pārkārtotu"
+    "dragToReorder": "Velciet, lai pārkārtotu",
+    "createSampleToy": "Izveidot rotaļlietas paraugu",
+    "sampleToyCreated": "Rotaļlietas parauga pase izveidota"
   },
   "passport": {
     "createTitle": "Izveidot jaunu pasi",

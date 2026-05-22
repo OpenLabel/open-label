@@ -24,11 +24,12 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
-import { Plus, LogOut } from 'lucide-react';
+import { Plus, LogOut, Sparkles } from 'lucide-react';
 import { categoryList } from '@/templates';
 import { QRCodeDialog } from '@/components/QRCodeDialog';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { SortablePassportCard } from '@/components/SortablePassportCard';
+import { buildSampleToyPassport } from '@/data/sampleToyPassport';
 
 import {
   DndContext,
@@ -53,7 +54,7 @@ export default function Dashboard() {
   const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; counterfeitProtection: boolean; wineIngredientsText?: string; wineEnergyText?: string } | null>(null);
   const [localPassports, setLocalPassports] = useState<Passport[]>([]);
   const { user, loading: authLoading, signOut } = useAuth();
-  const { passports, isLoading, duplicatePassport, deletePassport, reorderPassports } = usePassports();
+  const { passports, isLoading, createPassport, duplicatePassport, deletePassport, reorderPassports } = usePassports();
   const { config } = useSiteConfig();
   const navigate = useNavigate();
   const { toast } = useToast();
@@ -113,6 +114,16 @@ export default function Dashboard() {
     try {
       await deletePassport.mutateAsync(id);
       toast({ title: t('dashboard.deleted') });
+    } catch (error: any) {
+      toast({ title: t('common.error'), description: error.message, variant: 'destructive' });
+    }
+  };
+
+  const handleCreateSampleToy = async () => {
+    try {
+      const created = await createPassport.mutateAsync(buildSampleToyPassport());
+      toast({ title: t('dashboard.sampleToyCreated') });
+      navigate(`/passport/${created.id}/edit`);
     } catch (error: any) {
       toast({ title: t('common.error'), description: error.message, variant: 'destructive' });
     }
@@ -182,11 +193,16 @@ export default function Dashboard() {
       
       <main className="container mx-auto px-4 py-8">
         
-        <div className="flex justify-between items-center mb-6">
+        <div className="flex justify-between items-center mb-6 gap-2 flex-wrap">
           <h2 className="text-2xl font-bold">{t('dashboard.title')}</h2>
-          <Button asChild>
-            <Link to="/passport/new"><Plus className="h-4 w-4 mr-2" /> {t('nav.createNew')}</Link>
-          </Button>
+          <div className="flex items-center gap-2 flex-wrap">
+            <Button variant="outline" onClick={handleCreateSampleToy} disabled={createPassport.isPending}>
+              <Sparkles className="h-4 w-4 mr-2" /> {t('dashboard.createSampleToy')}
+            </Button>
+            <Button asChild>
+              <Link to="/passport/new"><Plus className="h-4 w-4 mr-2" /> {t('nav.createNew')}</Link>
+            </Button>
+          </div>
         </div>
 
         {isLoading ? (
