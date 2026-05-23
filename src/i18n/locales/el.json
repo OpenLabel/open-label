@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Εισάγετε URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Παιχνίδι — Ψηφιακό Διαβατήριο Προϊόντος",
+    "sections": {
+      "productIdentity": "Ταυτότητα προϊόντος",
+      "instructionsAndWarnings": "Οδηγίες και προειδοποιήσεις",
+      "manufacturer": "Κατασκευαστής",
+      "euOperator": "Πληροφορίες οικονομικού φορέα στην ΕΕ",
+      "compliance": "Συμμόρφωση",
+      "safetyChemical": "Πληροφορίες ασφάλειας & χημικών",
+      "dppInfrastructure": "Υποδομή ΨΔΠ"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Εξουσιοδοτημένος αντιπρόσωπος",
+      "euResponsibleEconomicOperator": "Υπεύθυνος οικονομικός φορέας στην ΕΕ",
+      "safetyIncidentReporting": "Αναφορά περιστατικών ασφάλειας"
+    },
+    "rows": {
+      "brand": "Εμπορικό σήμα",
+      "model": "Μοντέλο",
+      "skuVariant": "Κωδικός προϊόντος / παραλλαγή",
+      "toyCategory": "Κατηγορία παιχνιδιού",
+      "intendedAgeGroup": "Προβλεπόμενη ηλικιακή ομάδα",
+      "uniqueIdentifier": "Μοναδικό αναγνωριστικό",
+      "manufacturer": "Κατασκευαστής",
+      "address": "Διεύθυνση",
+      "email": "Ηλεκτρονικό ταχυδρομείο",
+      "website": "Ιστοσελίδα",
+      "operatorIdentifier": "Αναγνωριστικό φορέα",
+      "legalName": "Επωνυμία",
+      "role": "Ρόλος",
+      "ceMarking": "Σήμανση CE",
+      "applicableLegislation": "Εφαρμοστέα νομοθεσία",
+      "harmonisedStandards": "Εναρμονισμένα πρότυπα",
+      "commonSpecifications": "Κοινές προδιαγραφές",
+      "otherStandards": "Άλλα πρότυπα",
+      "notifiedBody": "Κοινοποιημένος οργανισμός",
+      "customsCode": "Τελωνειακός κωδικός",
+      "dppServiceProvider": "Πάροχος υπηρεσιών ΨΔΠ",
+      "backupCopyReference": "Αναφορά εφεδρικού αντιγράφου",
+      "dppVersion": "Έκδοση ΨΔΠ",
+      "lastUpdated": "Τελευταία ενημέρωση",
+      "status": "Κατάσταση"
+    },
+    "values": {
+      "ceMarked": "Με σήμανση CE",
+      "notDeclared": "Δεν έχει δηλωθεί",
+      "published": "Δημοσιεύθηκε",
+      "noFragrancesDeclared": "Δεν έχουν δηλωθεί αλλεργιογόνες ουσίες αρωματικές που να υπόκεινται σε απαιτήσεις επισήμανσης οι οποίες να είναι παρούσες σε συγκέντρωση ίση ή ανώτερη των 10 mg/kg.",
+      "mirroredAt": "Αντικατοπτρίζεται στο {{url}}",
+      "mirroredOnOpenLabel": "Αντικατοπτρίζεται στην υποδομή Open-Label.eu",
+      "numberPrefix": "Αριθμός {{value}}",
+      "certificatePrefix": "Πιστοποιητικό: {{value}}",
+      "issuedSuffix": " (εκδόθηκε {{date}})"
+    },
+    "table": {
+      "substance": "Ουσία",
+      "cas": "CAS",
+      "concentration": "Συγκέντρωση",
+      "component": "Συστατικό"
+    },
+    "safety": {
+      "telephone": "Τηλέφωνο",
+      "email": "Ηλεκτρονικό ταχυδρομείο",
+      "web": "Διαδίκτυο",
+      "safetyGatePortal": "Πύλη Safety Gate της ΕΕ",
+      "reportUnsafe": "Αναφορά μη ασφαλούς προϊόντος"
+    },
+    "poweredBy": "Με την υποστήριξη της"
   }
 }

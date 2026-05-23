@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Įveskite URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Žaislas — skaitmeninis gaminio pasas",
+    "sections": {
+      "productIdentity": "Gaminio tapatybė",
+      "instructionsAndWarnings": "Instrukcijos ir įspėjimai",
+      "manufacturer": "Gamintojas",
+      "euOperator": "ES ekonominės veiklos vykdytojo informacija",
+      "compliance": "Atitiktis",
+      "safetyChemical": "Saugos ir cheminė informacija",
+      "dppInfrastructure": "SDP infrastruktūra"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Įgaliotasis atstovas",
+      "euResponsibleEconomicOperator": "Už ES atsakingas ekonominės veiklos vykdytojas",
+      "safetyIncidentReporting": "Pranešimas apie saugos incidentą"
+    },
+    "rows": {
+      "brand": "Prekės ženklas",
+      "model": "Modelis",
+      "skuVariant": "SKU / variantas",
+      "toyCategory": "Žaislų kategorija",
+      "intendedAgeGroup": "Skirta amžiaus grupė",
+      "uniqueIdentifier": "Unikalus identifikatorius",
+      "manufacturer": "Gamintojas",
+      "address": "Adresas",
+      "email": "El. paštas",
+      "website": "Svetainė",
+      "operatorIdentifier": "Ekonominės veiklos vykdytojo identifikatorius",
+      "legalName": "Juridinis pavadinimas",
+      "role": "Paskirtis",
+      "ceMarking": "CE ženklas",
+      "applicableLegislation": "Taikomi teisės aktai",
+      "harmonisedStandards": "Darnieji standartai",
+      "commonSpecifications": "Bendrosios specifikacijos",
+      "otherStandards": "Kiti standartai",
+      "notifiedBody": "Notifikuotoji įstaiga",
+      "customsCode": "Muitinės kodas",
+      "dppServiceProvider": "SDP paslaugų teikėjas",
+      "backupCopyReference": "Atsarginės kopijos nuoroda",
+      "dppVersion": "SDP versija",
+      "lastUpdated": "Paskutinį kartą atnaujinta",
+      "status": "Būsena"
+    },
+    "values": {
+      "ceMarked": "Pažymėtas CE ženklu",
+      "notDeclared": "Nenurodyta",
+      "published": "Paskelbta",
+      "noFragrancesDeclared": "Nėra deklaruotų alergiją sukeliančių kvapiųjų medžiagų, kurių kiekis būtų ≥ 10 mg/kg ir kurios turėtų būti ženklinamos.",
+      "mirroredAt": "Atspindėta „{{url}}“",
+      "mirroredOnOpenLabel": "Atspindėta Open-Label.eu infrastruktūroje",
+      "numberPrefix": "Numeris {{value}}",
+      "certificatePrefix": "Sertifikatas: {{value}}",
+      "issuedSuffix": " (išduotas {{date}})"
+    },
+    "table": {
+      "substance": "Medžiaga",
+      "cas": "CAS",
+      "concentration": "Koncentracija",
+      "component": "Sudėtinė dalis"
+    },
+    "safety": {
+      "telephone": "Telefonas",
+      "email": "El. paštas",
+      "web": "Interneto svetainė",
+      "safetyGatePortal": "ES „Safety Gate“ portalas",
+      "reportUnsafe": "Pranešti apie nesaugų gaminį"
+    },
+    "poweredBy": "Teikia"
   }
 }

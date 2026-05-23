@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Sisestage URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Mänguasi — digitaalne tootepass",
+    "sections": {
+      "productIdentity": "Toote identiteet",
+      "instructionsAndWarnings": "Juhised ja hoiatused",
+      "manufacturer": "Tootja",
+      "euOperator": "ELi ettevõtja teave",
+      "compliance": "Nõuetele vastavus",
+      "safetyChemical": "Ohutus ja keemiateave",
+      "dppInfrastructure": "DPP infrastruktuur"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Volitatud esindaja",
+      "euResponsibleEconomicOperator": "ELis asuv vastutav majandustegevuses osaleja",
+      "safetyIncidentReporting": "Ohutusjuhtumitest teatamine"
+    },
+    "rows": {
+      "brand": "Kaubamärk",
+      "model": "Mudel",
+      "skuVariant": "Tootekood / variant",
+      "toyCategory": "Mänguasja kategooria",
+      "intendedAgeGroup": "Ettenähtud vanuserühm",
+      "uniqueIdentifier": "Kordumatu identifikaator",
+      "manufacturer": "Tootja",
+      "address": "Aadress",
+      "email": "E-post",
+      "website": "Veebisait",
+      "operatorIdentifier": "Ettevõtja identifikaator",
+      "legalName": "Juriidiline nimi",
+      "role": "Roll",
+      "ceMarking": "CE-märgis",
+      "applicableLegislation": "Kohaldatavad õigusaktid",
+      "harmonisedStandards": "Ühtlustatud standardid",
+      "commonSpecifications": "Ühised spetsifikatsioonid",
+      "otherStandards": "Muud standardid",
+      "notifiedBody": "Teavitatud asutus",
+      "customsCode": "Tollikood",
+      "dppServiceProvider": "DPP teenusepakkuja",
+      "backupCopyReference": "Varukoopia viide",
+      "dppVersion": "DPP versioon",
+      "lastUpdated": "Viimati uuendatud",
+      "status": "Olek"
+    },
+    "values": {
+      "ceMarked": "CE-märgisega",
+      "notDeclared": "Ei ole deklareeritud",
+      "published": "Avaldatud",
+      "noFragrancesDeclared": "Allergeenseid lõhnaaineid, mille märgistamise nõue on kehtestatud, ei ole deklareeritud sisaldusega 10 mg/kg või rohkem.",
+      "mirroredAt": "Peegeldatud aadressil {{url}}",
+      "mirroredOnOpenLabel": "Peegeldatud Open-Label.eu infrastruktuuris",
+      "numberPrefix": "Nr {{value}}",
+      "certificatePrefix": "Sertifikaat: {{value}}",
+      "issuedSuffix": " (välja antud {{date}})"
+    },
+    "table": {
+      "substance": "Aine",
+      "cas": "CAS",
+      "concentration": "Kontsentratsioon",
+      "component": "Komponent"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-post",
+      "web": "Veeb",
+      "safetyGatePortal": "ELi ohtlike toodete kiirhoiatussüsteemi portaal (Safety Gate)",
+      "reportUnsafe": "Teata ohtlikust tootest"
+    },
+    "poweredBy": "Toetab"
   }
 }

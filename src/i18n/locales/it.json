@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Inserisci URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Giocattolo — Passaporto Digitale del Prodotto",
+    "sections": {
+      "productIdentity": "Identità del prodotto",
+      "instructionsAndWarnings": "Istruzioni e avvertenze",
+      "manufacturer": "Fabbricante",
+      "euOperator": "Informazioni sull'operatore dell'UE",
+      "compliance": "Conformità",
+      "safetyChemical": "Sicurezza e informazioni chimiche",
+      "dppInfrastructure": "Infrastruttura DPP"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Rappresentante autorizzato",
+      "euResponsibleEconomicOperator": "Operatore economico responsabile dell'UE",
+      "safetyIncidentReporting": "Segnalazione di incidenti di sicurezza"
+    },
+    "rows": {
+      "brand": "Marchio",
+      "model": "Modello",
+      "skuVariant": "SKU / variante",
+      "toyCategory": "Categoria di giocattoli",
+      "intendedAgeGroup": "Fascia d'età prevista",
+      "uniqueIdentifier": "Identificatore unico",
+      "manufacturer": "Fabbricante",
+      "address": "Indirizzo",
+      "email": "E-mail",
+      "website": "Sito web",
+      "operatorIdentifier": "Identificatore dell'operatore",
+      "legalName": "Denominazione sociale",
+      "role": "Ruolo",
+      "ceMarking": "Marcatura CE",
+      "applicableLegislation": "Legislazione applicabile",
+      "harmonisedStandards": "Norme armonizzate",
+      "commonSpecifications": "Specifiche comuni",
+      "otherStandards": "Altre norme",
+      "notifiedBody": "Organismo notificato",
+      "customsCode": "Codice doganale",
+      "dppServiceProvider": "Fornitore di servizi DPP",
+      "backupCopyReference": "Riferimento copia di backup",
+      "dppVersion": "Versione DPP",
+      "lastUpdated": "Ultimo aggiornamento",
+      "status": "Stato"
+    },
+    "values": {
+      "ceMarked": "Marcatura CE apposta",
+      "notDeclared": "Non dichiarato",
+      "published": "Pubblicato",
+      "noFragrancesDeclared": "Non sono dichiarate fragranze allergeniche soggette a requisiti di etichettatura presenti a o al di sopra di 10 mg/kg.",
+      "mirroredAt": "Replicato su {{url}}",
+      "mirroredOnOpenLabel": "Replicato sull'infrastruttura Open-Label.eu",
+      "numberPrefix": "Numero {{value}}",
+      "certificatePrefix": "Certificato: {{value}}",
+      "issuedSuffix": " (rilasciato il {{date}})"
+    },
+    "table": {
+      "substance": "Sostanza",
+      "cas": "CAS",
+      "concentration": "Concentrazione",
+      "component": "Componente"
+    },
+    "safety": {
+      "telephone": "Telefono",
+      "email": "E-mail",
+      "web": "Sito web",
+      "safetyGatePortal": "Portale Safety Gate dell'UE",
+      "reportUnsafe": "Segnalare un prodotto non sicuro"
+    },
+    "poweredBy": "Realizzato da"
   }
 }

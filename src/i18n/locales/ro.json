@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Introduceți URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Jucărie — Pașaport digital al produsului",
+    "sections": {
+      "productIdentity": "Identitatea produsului",
+      "instructionsAndWarnings": "Instrucțiuni și avertismente",
+      "manufacturer": "Fabricant",
+      "euOperator": "Informații despre operatorul din UE",
+      "compliance": "Conformitate",
+      "safetyChemical": "Siguranță și informații chimice",
+      "dppInfrastructure": "Infrastructura pașaportului digital al produsului"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Reprezentant autorizat",
+      "euResponsibleEconomicOperator": "Operator economic responsabil din UE",
+      "safetyIncidentReporting": "Raportarea incidentelor de siguranță"
+    },
+    "rows": {
+      "brand": "Marcă",
+      "model": "Model",
+      "skuVariant": "SKU / variantă",
+      "toyCategory": "Categorie de jucărie",
+      "intendedAgeGroup": "Grupa de vârstă vizată",
+      "uniqueIdentifier": "Identificator unic",
+      "manufacturer": "Fabricant",
+      "address": "Adresă",
+      "email": "E-mail",
+      "website": "Site web",
+      "operatorIdentifier": "Identificator operator",
+      "legalName": "Denumire legală",
+      "role": "Rol",
+      "ceMarking": "Marcaj CE",
+      "applicableLegislation": "Legislație aplicabilă",
+      "harmonisedStandards": "Standarde armonizate",
+      "commonSpecifications": "Specificații comune",
+      "otherStandards": "Alte standarde",
+      "notifiedBody": "Organism notificat",
+      "customsCode": "Cod vamal",
+      "dppServiceProvider": "Furnizor de servicii DPP",
+      "backupCopyReference": "Referință copie de rezervă",
+      "dppVersion": "Versiune DPP",
+      "lastUpdated": "Ultima actualizare",
+      "status": "Statut"
+    },
+    "values": {
+      "ceMarked": "Marcat CE",
+      "notDeclared": "Nedeclarat",
+      "published": "Publicat",
+      "noFragrancesDeclared": "Nu sunt declarate a fi prezente la o concentrație egală sau mai mare de 10 mg/kg parfumuri alergene care fac obiectul cerințelor de etichetare.",
+      "mirroredAt": "Oglindit la {{url}}",
+      "mirroredOnOpenLabel": "Oglindit pe infrastructura Open-Label.eu",
+      "numberPrefix": "Numărul {{value}}",
+      "certificatePrefix": "Certificat: {{value}}",
+      "issuedSuffix": " (emis la {{date}})"
+    },
+    "table": {
+      "substance": "Substanță",
+      "cas": "CAS",
+      "concentration": "Concentrație",
+      "component": "Componentă"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-mail",
+      "web": "Site web",
+      "safetyGatePortal": "Portalul european Safety Gate",
+      "reportUnsafe": "Raportați un produs nesigur"
+    },
+    "poweredBy": "Susținut de"
   }
 }

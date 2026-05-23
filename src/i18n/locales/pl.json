@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Wprowadź URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Zabawka — Cyfrowy Paszport Produktu",
+    "sections": {
+      "productIdentity": "Identyfikacja produktu",
+      "instructionsAndWarnings": "Instrukcje i ostrzeżenia",
+      "manufacturer": "Producent",
+      "euOperator": "Informacje o podmiocie gospodarczym z UE",
+      "compliance": "Zgodność",
+      "safetyChemical": "Informacje dotyczące bezpieczeństwa i substancji chemicznych",
+      "dppInfrastructure": "Infrastruktura DPP"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Upoważniony przedstawiciel",
+      "euResponsibleEconomicOperator": "Podmiot gospodarczy z UE odpowiedzialny za produkt",
+      "safetyIncidentReporting": "Zgłaszanie incydentów związanych z bezpieczeństwem"
+    },
+    "rows": {
+      "brand": "Marka",
+      "model": "Oznaczenie modelu",
+      "skuVariant": "Numer SKU / wariant",
+      "toyCategory": "Kategoria zabawki",
+      "intendedAgeGroup": "Przewidywana grupa wiekowa",
+      "uniqueIdentifier": "Jednoznaczny identyfikator",
+      "manufacturer": "Producent",
+      "address": "Adres",
+      "email": "E-mail",
+      "website": "Strona internetowa",
+      "operatorIdentifier": "Identyfikator podmiotu",
+      "legalName": "Nazwa prawna",
+      "role": "Rola",
+      "ceMarking": "Oznakowanie CE",
+      "applicableLegislation": "Obowiązujące prawodawstwo",
+      "harmonisedStandards": "Normy zharmonizowane",
+      "commonSpecifications": "Wspólne specyfikacje",
+      "otherStandards": "Inne normy",
+      "notifiedBody": "Jednostka notyfikowana",
+      "customsCode": "Kod celny",
+      "dppServiceProvider": "Dostawca usług DPP",
+      "backupCopyReference": "Numer referencyjny kopii zapasowej",
+      "dppVersion": "Wersja DPP",
+      "lastUpdated": "Ostatnia aktualizacja",
+      "status": "Stan"
+    },
+    "values": {
+      "ceMarked": "Z oznakowaniem CE",
+      "notDeclared": "Nie zadeklarowano",
+      "published": "Opublikowano",
+      "noFragrancesDeclared": "Nie zadeklarowano obecności substancji zapachowych wywołujących alergie, podlegających wymogom etykietowania, w stężeniu równym lub wyższym niż 10 mg/kg.",
+      "mirroredAt": "Odzwierciedlono na {{url}}",
+      "mirroredOnOpenLabel": "Odzwierciedlono w infrastrukturze Open-Label.eu",
+      "numberPrefix": "Numer {{value}}",
+      "certificatePrefix": "Certyfikat: {{value}}",
+      "issuedSuffix": " (wydano {{date}})"
+    },
+    "table": {
+      "substance": "Substancja",
+      "cas": "Numer CAS",
+      "concentration": "Stężenie",
+      "component": "Składnik"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-mail",
+      "web": "Strona internetowa",
+      "safetyGatePortal": "Portal Safety Gate UE",
+      "reportUnsafe": "Zgłoś niebezpieczny produkt"
+    },
+    "poweredBy": "Obsługiwane przez"
   }
 }

@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Въведете URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Играчка — цифров паспорт на продукта",
+    "sections": {
+      "productIdentity": "Идентичност на продукта",
+      "instructionsAndWarnings": "Инструкции и предупреждения",
+      "manufacturer": "Производител",
+      "euOperator": "Информация за оператор в ЕС",
+      "compliance": "Съответствие",
+      "safetyChemical": "Информация за безопасност и химични вещества",
+      "dppInfrastructure": "Инфраструктура на цифровия паспорт на продукта (DPP)"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Упълномощен представител",
+      "euResponsibleEconomicOperator": "Отговорен икономически оператор в ЕС",
+      "safetyIncidentReporting": "Докладване на инциденти за безопасност"
+    },
+    "rows": {
+      "brand": "Марка",
+      "model": "Модел",
+      "skuVariant": "SKU / вариант",
+      "toyCategory": "Категория на играчката",
+      "intendedAgeGroup": "Предназначена възрастова група",
+      "uniqueIdentifier": "Уникален идентификатор",
+      "manufacturer": "Производител",
+      "address": "Адрес",
+      "email": "Имейл",
+      "website": "Уебсайт",
+      "operatorIdentifier": "Идентификатор на оператора",
+      "legalName": "Юридическо наименование",
+      "role": "Роля",
+      "ceMarking": "Маркировка CE",
+      "applicableLegislation": "Приложимо законодателство",
+      "harmonisedStandards": "Хармонизирани стандарти",
+      "commonSpecifications": "Общи спецификации",
+      "otherStandards": "Други стандарти",
+      "notifiedBody": "Нотифициран орган",
+      "customsCode": "Митнически код",
+      "dppServiceProvider": "Доставчик на услугата DPP",
+      "backupCopyReference": "Референтен номер на резервно копие",
+      "dppVersion": "Версия на DPP",
+      "lastUpdated": "Последна актуализация",
+      "status": "Статус"
+    },
+    "values": {
+      "ceMarked": "Маркирано с CE",
+      "notDeclared": "Не е декларирано",
+      "published": "Публикувано",
+      "noFragrancesDeclared": "Не са декларирани ароматни вещества, предизвикващи алергии, които подлежат на етикетиране при концентрация ≥ 10 mg/kg.",
+      "mirroredAt": "Дублирано на {{url}}",
+      "mirroredOnOpenLabel": "Дублирано в инфраструктурата на Open-Label.eu",
+      "numberPrefix": "Номер {{value}}",
+      "certificatePrefix": "Сертификат: {{value}}",
+      "issuedSuffix": " (издадено {{date}})"
+    },
+    "table": {
+      "substance": "Вещество",
+      "cas": "CAS номер",
+      "concentration": "Концентрация",
+      "component": "Компонент"
+    },
+    "safety": {
+      "telephone": "Телефон",
+      "email": "Имейл",
+      "web": "Уеб",
+      "safetyGatePortal": "Портал на ЕС Safety Gate",
+      "reportUnsafe": "Докладване на опасен продукт"
+    },
+    "poweredBy": "Задвижвано от"
   }
 }

@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Ievadiet URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Rotaļlieta — Digitālā produkta pase",
+    "sections": {
+      "productIdentity": "Produkta identitāte",
+      "instructionsAndWarnings": "Instrukcijas un brīdinājumi",
+      "manufacturer": "Ražotājs",
+      "euOperator": "ES operatora informācija",
+      "compliance": "Atbilstība",
+      "safetyChemical": "Drošības un ķīmiskā informācija",
+      "dppInfrastructure": "DPP infrastruktūra"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Pilnvarotais pārstāvis",
+      "euResponsibleEconomicOperator": "ES atbildīgais ekonomikas operators",
+      "safetyIncidentReporting": "Ziņošana par drošības incidentiem"
+    },
+    "rows": {
+      "brand": "Zīmols",
+      "model": "Modelis",
+      "skuVariant": "SKU / variants",
+      "toyCategory": "Rotaļlietu kategorija",
+      "intendedAgeGroup": "Paredzētā vecuma grupa",
+      "uniqueIdentifier": "Unikālais identifikators",
+      "manufacturer": "Ražotājs",
+      "address": "Adrese",
+      "email": "E-pasts",
+      "website": "Tīmekļa vietne",
+      "operatorIdentifier": "Operatora identifikators",
+      "legalName": "Juridiskais nosaukums",
+      "role": "Loma",
+      "ceMarking": "CE marķējums",
+      "applicableLegislation": "Piemērojamie tiesību akti",
+      "harmonisedStandards": "Saskaņotie standarti",
+      "commonSpecifications": "Kopīgās specifikācijas",
+      "otherStandards": "Citi standarti",
+      "notifiedBody": "Paziņotā iestāde",
+      "customsCode": "Muitas kods",
+      "dppServiceProvider": "DPP pakalpojumu sniedzējs",
+      "backupCopyReference": "Rezerves kopijas atsauce",
+      "dppVersion": "DPP versija",
+      "lastUpdated": "Pēdējo reizi atjaunināts",
+      "status": "Statuss"
+    },
+    "values": {
+      "ceMarked": "Ar CE marķējumu",
+      "notDeclared": "Nav deklarēts",
+      "published": "Publicēts",
+      "noFragrancesDeclared": "Nav deklarēti alergēni aromāti, kuriem piemēro marķēšanas prasības un kuri ir klātesoši 10 mg/kg vai vairāk.",
+      "mirroredAt": "Spoguļots vietnē {{url}}",
+      "mirroredOnOpenLabel": "Spoguļots Open-Label.eu infrastruktūrā",
+      "numberPrefix": "Numurs {{value}}",
+      "certificatePrefix": "Sertifikāts: {{value}}",
+      "issuedSuffix": " (izdots {{date}})"
+    },
+    "table": {
+      "substance": "Viela",
+      "cas": "CAS",
+      "concentration": "Koncentrācija",
+      "component": "Komponents"
+    },
+    "safety": {
+      "telephone": "Tālrunis",
+      "email": "E-pasts",
+      "web": "Tīmeklis",
+      "safetyGatePortal": "ES drošības vārtu portāls",
+      "reportUnsafe": "Ziņot par nedrošu produktu"
+    },
+    "poweredBy": "Darbina"
   }
 }

@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Iontráil URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Bréagán — Pas Digiteach Táirgí",
+    "sections": {
+      "productIdentity": "Féiniúlacht an táirge",
+      "instructionsAndWarnings": "Treoracha agus rabhaidh",
+      "manufacturer": "Monaróir",
+      "euOperator": "Faisnéis oibreora san AE",
+      "compliance": "Comhlíonadh",
+      "safetyChemical": "Faisnéis sábháilteachta & cheimiceach",
+      "dppInfrastructure": "Bonneagar DPP"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Ionadaí údaraithe",
+      "euResponsibleEconomicOperator": "Oibreoir eacnamaíoch freagrach san AE",
+      "safetyIncidentReporting": "Tuairisciú teagmhas sábháilteachta"
+    },
+    "rows": {
+      "brand": "Branda",
+      "model": "Múnla",
+      "skuVariant": "SKU / malairt",
+      "toyCategory": "Catagóir bréagán",
+      "intendedAgeGroup": "Aoisghrúpa beartaithe",
+      "uniqueIdentifier": "Aitheantóir uathúil",
+      "manufacturer": "Monaróir",
+      "address": "Seoladh",
+      "email": "Ríomhphost",
+      "website": "Suíomh Gréasáin",
+      "operatorIdentifier": "Aitheantóir oibreora",
+      "legalName": "Ainm dlíthiúil",
+      "role": "Ról",
+      "ceMarking": "Marcáil CE",
+      "applicableLegislation": "Reachtaíocht is infheidhme",
+      "harmonisedStandards": "Caighdeáin chomhchuibhithe",
+      "commonSpecifications": "Sonraíochtaí comhchoiteanna",
+      "otherStandards": "Caighdeáin eile",
+      "notifiedBody": "Comhlacht dáréagtha",
+      "customsCode": "Cód custaim",
+      "dppServiceProvider": "Soláthraí seirbhíse DPP",
+      "backupCopyReference": "Tagairt cóipe cúltaca",
+      "dppVersion": "Leagan DPP",
+      "lastUpdated": "Nuashonraithe go deireanach",
+      "status": "Stádas"
+    },
+    "values": {
+      "ceMarked": "Marcáil CE",
+      "notDeclared": "Gan dearbhú",
+      "published": "Foilsithe",
+      "noFragrancesDeclared": "Ní dhearbhaítear aon chumhráin ailléirgineacha atá faoi réir ceanglais lipéadaithe a bheith i láthair ag nó os cionn 10 mg/kg.",
+      "mirroredAt": "Scáthánaithe ag {{url}}",
+      "mirroredOnOpenLabel": "Scáthánaithe ar bhonneagar Open-Label.eu",
+      "numberPrefix": "Uimhir {{value}}",
+      "certificatePrefix": "Deimhniú: {{value}}",
+      "issuedSuffix": " (eisithe {{date}})"
+    },
+    "table": {
+      "substance": "Substaint",
+      "cas": "CAS",
+      "concentration": "Tiúchan",
+      "component": "Comhpháirt"
+    },
+    "safety": {
+      "telephone": "Teileafón",
+      "email": "Ríomhphost",
+      "web": "Gréasán",
+      "safetyGatePortal": "Tairseach Geata Sábháilteachta an AE",
+      "reportUnsafe": "Tuairiscigh táirge neamhshábháilte"
+    },
+    "poweredBy": "Cumhachtaithe ag"
   }
 }

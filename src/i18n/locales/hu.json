@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Adja meg az URL-t:"
+  },
+  "toyPublic": {
+    "headerBadge": "Játék – digitális termékútlevél",
+    "sections": {
+      "productIdentity": "Termékazonosító adatok",
+      "instructionsAndWarnings": "Útmutató és figyelmeztetések",
+      "manufacturer": "Gyártó",
+      "euOperator": "EU gazdasági szereplő adatai",
+      "compliance": "Megfelelőség",
+      "safetyChemical": "Biztonsági és vegyi információk",
+      "dppInfrastructure": "DPP infrastruktúra"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Meghatalmazott képviselő",
+      "euResponsibleEconomicOperator": "EU felelős gazdasági szereplő",
+      "safetyIncidentReporting": "Biztonsági események bejelentése"
+    },
+    "rows": {
+      "brand": "Márka",
+      "model": "Modell",
+      "skuVariant": "SKU / változat",
+      "toyCategory": "Játékkategória",
+      "intendedAgeGroup": "Javasolt korosztály",
+      "uniqueIdentifier": "Egyedi azonosító",
+      "manufacturer": "Gyártó",
+      "address": "Cím",
+      "email": "E-mail",
+      "website": "Weboldal",
+      "operatorIdentifier": "Gazdasági szereplő azonosítója",
+      "legalName": "Cégjegyzésre jogosult neve",
+      "role": "Szerep",
+      "ceMarking": "CE jelölés",
+      "applicableLegislation": "Alkalmazandó jogszabályok",
+      "harmonisedStandards": "Harmonizált szabványok",
+      "commonSpecifications": "Közös előírások",
+      "otherStandards": "Egyéb szabványok",
+      "notifiedBody": "Bejelentett szervezet",
+      "customsCode": "Vámtarifaszám",
+      "dppServiceProvider": "DPP szolgáltató",
+      "backupCopyReference": "Biztonsági másolat hivatkozása",
+      "dppVersion": "DPP verzió",
+      "lastUpdated": "Utolsó frissítés",
+      "status": "Állapot"
+    },
+    "values": {
+      "ceMarked": "CE jelöléssel ellátva",
+      "notDeclared": "Nincs bejelentve",
+      "published": "Közzétéve",
+      "noFragrancesDeclared": "Nincsenek feltüntetve olyan allergén illatanyagok, amelyek címkézési kötelezettség alá esnek, és amelyek koncentrációja eléri vagy meghaladja a 10 mg/kg-ot.",
+      "mirroredAt": "Tükrözve a következő helyen: {{url}}",
+      "mirroredOnOpenLabel": "Tükrözve az Open-Label.eu infrastruktúráján",
+      "numberPrefix": "Szám: {{value}}",
+      "certificatePrefix": "Tanúsítvány: {{value}}",
+      "issuedSuffix": " (kiadás dátuma: {{date}})"
+    },
+    "table": {
+      "substance": "Anyag",
+      "cas": "CAS",
+      "concentration": "Koncentráció",
+      "component": "Összetevő"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-mail",
+      "web": "Weboldal",
+      "safetyGatePortal": "EU Safety Gate portál",
+      "reportUnsafe": "Bejelentés nem biztonságos termékről"
+    },
+    "poweredBy": "Üzemelteti:"
   }
 }

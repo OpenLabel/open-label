@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Daħħal URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Ġugarell — Passaport Diġitali tal-Prodott",
+    "sections": {
+      "productIdentity": "Identità tal-prodott",
+      "instructionsAndWarnings": "Istruzzjonijiet u twissijiet",
+      "manufacturer": "Manifattur",
+      "euOperator": "Informazzjoni dwar l-operatur tal-UE",
+      "compliance": "Konformità",
+      "safetyChemical": "Sigurtà u informazzjoni kimika",
+      "dppInfrastructure": "Infrastruttura tal-Passaport Diġitali tal-Prodott (DPP)"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Rappreżentant awtorizzat",
+      "euResponsibleEconomicOperator": "Operatur ekonomiku responsabbli fl-UE",
+      "safetyIncidentReporting": "Rappurtar ta' inċidenti ta' sigurtà"
+    },
+    "rows": {
+      "brand": "Marka",
+      "model": "Mudell",
+      "skuVariant": "SKU / varjant",
+      "toyCategory": "Kategorija tal-ġugarell",
+      "intendedAgeGroup": "Grupp ta' età maħsub",
+      "uniqueIdentifier": "Identifikatur uniku",
+      "manufacturer": "Manifattur",
+      "address": "Indirizz",
+      "email": "Email",
+      "website": "Sit web",
+      "operatorIdentifier": "Identifikatur tal-operatur",
+      "legalName": "Isem legali",
+      "role": "Rwol",
+      "ceMarking": "Marka CE",
+      "applicableLegislation": "Leġislazzjoni applikabbli",
+      "harmonisedStandards": "Standards armonizzati",
+      "commonSpecifications": "Speċifikazzjonijiet komuni",
+      "otherStandards": "Standards oħra",
+      "notifiedBody": "Korp notifikat",
+      "customsCode": "Kodiċi doganali",
+      "dppServiceProvider": "Fornitur tas-servizz tad-DPP",
+      "backupCopyReference": "Referenza tal-kopja ta' riżerva",
+      "dppVersion": "Verżjoni tad-DPP",
+      "lastUpdated": "L-aħħar aġġornament",
+      "status": "Stat"
+    },
+    "values": {
+      "ceMarked": "B'marka CE",
+      "notDeclared": "Mhux iddikjarat",
+      "published": "Ippubblikat",
+      "noFragrancesDeclared": "L-ebda fwejjaħ allerġeniċi soġġetti għar-rekwiżiti tat-tikkettar mhumiex iddikjarati bħala preżenti f'10 mg/kg jew aktar.",
+      "mirroredAt": "Rifless fi {{url}}",
+      "mirroredOnOpenLabel": "Rifless fuq l-infrastruttura ta' Open-Label.eu",
+      "numberPrefix": "Numru {{value}}",
+      "certificatePrefix": "Ċertifikat: {{value}}",
+      "issuedSuffix": " (maħruġ fil-{{date}})"
+    },
+    "table": {
+      "substance": "Sustanzi",
+      "cas": "CAS",
+      "concentration": "Konċentrazzjoni",
+      "component": "Komponent"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "Email",
+      "web": "Websajt",
+      "safetyGatePortal": "Portal tas-Safety Gate tal-UE",
+      "reportUnsafe": "Irrapporta prodott mhux sikur"
+    },
+    "poweredBy": "Mħaddem minn"
   }
 }

@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Syötä URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Lelu – Digitaalinen tuotepassi",
+    "sections": {
+      "productIdentity": "Tuotteen tunnistetiedot",
+      "instructionsAndWarnings": "Ohjeet ja varoitukset",
+      "manufacturer": "Valmistaja",
+      "euOperator": "EU-toimijan tiedot",
+      "compliance": "Vaatimustenmukaisuus",
+      "safetyChemical": "Turvallisuus- ja kemikaalitiedot",
+      "dppInfrastructure": "Digitaalisen tuotepassin infrastruktuuri"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Valtuutettu edustaja",
+      "euResponsibleEconomicOperator": "EU:n vastuullinen talouden toimija",
+      "safetyIncidentReporting": "Vaaratapahtumien ilmoittaminen"
+    },
+    "rows": {
+      "brand": "Tuotemerkki",
+      "model": "Malli",
+      "skuVariant": "SKU / variantti",
+      "toyCategory": "Lelukategoria",
+      "intendedAgeGroup": "Tarkoitettu ikäryhmä",
+      "uniqueIdentifier": "Yksilöllinen tunniste",
+      "manufacturer": "Valmistaja",
+      "address": "Osoite",
+      "email": "Sähköposti",
+      "website": "Verkkosivusto",
+      "operatorIdentifier": "Toimijan tunniste",
+      "legalName": "Toiminimi",
+      "role": "Rooli",
+      "ceMarking": "CE-merkintä",
+      "applicableLegislation": "Sovellettava lainsäädäntö",
+      "harmonisedStandards": "Yhdenmukaistetut standardit",
+      "commonSpecifications": "Yhteiset eritelmät",
+      "otherStandards": "Muut standardit",
+      "notifiedBody": "Ilmoitettu laitos",
+      "customsCode": "Tullikoodi",
+      "dppServiceProvider": "Digitaalisen tuotepassin palveluntarjoaja",
+      "backupCopyReference": "Varmuuskopion viite",
+      "dppVersion": "Digitaalisen tuotepassin versio",
+      "lastUpdated": "Viimeksi päivitetty",
+      "status": "Tila"
+    },
+    "values": {
+      "ceMarked": "CE-merkitty",
+      "notDeclared": "Ei ilmoitettu",
+      "published": "Julkaistu",
+      "noFragrancesDeclared": "Allergeenisia hajusteita, jotka ovat merkintävaatimusten alaisia, ei ole ilmoitettu olevan yli 10 mg/kg pitoisuudessa.",
+      "mirroredAt": "Peilattu osoitteessa {{url}}",
+      "mirroredOnOpenLabel": "Peilattu Open-Label.eu-infrastruktuuriin",
+      "numberPrefix": "Numero {{value}}",
+      "certificatePrefix": "Sertifikaatti: {{value}}",
+      "issuedSuffix": " (myönnetty {{date}})"
+    },
+    "table": {
+      "substance": "Aine",
+      "cas": "CAS",
+      "concentration": "Pitoisuus",
+      "component": "Komponentti"
+    },
+    "safety": {
+      "telephone": "Puhelin",
+      "email": "Sähköposti",
+      "web": "Verkko",
+      "safetyGatePortal": "EU:n Safety Gate -portaali",
+      "reportUnsafe": "Ilmoita turvattomasta tuotteesta"
+    },
+    "poweredBy": "Tarjoaa"
   }
 }

@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Zadajte URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Hračka – Digitálny pas výrobku",
+    "sections": {
+      "productIdentity": "Identita výrobku",
+      "instructionsAndWarnings": "Návod a varovania",
+      "manufacturer": "Výrobca",
+      "euOperator": "Informácie o prevádzkovateľovi v EÚ",
+      "compliance": "Súlad",
+      "safetyChemical": "Bezpečnostné a chemické informácie",
+      "dppInfrastructure": "Infraštruktúra DPP"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Splnomocnený zástupca",
+      "euResponsibleEconomicOperator": "Hospodársky subjekt zodpovedný v EÚ",
+      "safetyIncidentReporting": "Nahlasovanie bezpečnostných incidentov"
+    },
+    "rows": {
+      "brand": "Značka",
+      "model": "Typ modelu",
+      "skuVariant": "Kód produktu / varianta",
+      "toyCategory": "Kategória hračky",
+      "intendedAgeGroup": "Zamýšľaná veková skupina",
+      "uniqueIdentifier": "Jedinečný identifikátor",
+      "manufacturer": "Výrobca",
+      "address": "Adresa",
+      "email": "E-mail",
+      "website": "Webová stránka",
+      "operatorIdentifier": "Identifikátor prevádzkovateľa",
+      "legalName": "Názov právnickej osoby",
+      "role": "Úloha",
+      "ceMarking": "Označenie CE",
+      "applicableLegislation": "Uplatniteľné právne predpisy",
+      "harmonisedStandards": "Harmonizované normy",
+      "commonSpecifications": "Spoločné špecifikácie",
+      "otherStandards": "Iné normy",
+      "notifiedBody": "Notifikovaný orgán",
+      "customsCode": "Colný kód",
+      "dppServiceProvider": "Poskytovateľ služieb DPP",
+      "backupCopyReference": "Odkaz na záložnú kópiu",
+      "dppVersion": "Verzia DPP",
+      "lastUpdated": "Posledná aktualizácia",
+      "status": "Stav"
+    },
+    "values": {
+      "ceMarked": "Označenie CE",
+      "notDeclared": "Neuvedené",
+      "published": "Zverejnené",
+      "noFragrancesDeclared": "Nie sú deklarované žiadne alergénne vône podliehajúce požiadavkám na označovanie, ktoré sa nachádzajú v koncentrácii 10 mg/kg alebo vyššej.",
+      "mirroredAt": "Zrkadlené na {{url}}",
+      "mirroredOnOpenLabel": "Zrkadlené na infraštruktúre Open-Label.eu",
+      "numberPrefix": "Číslo {{value}}",
+      "certificatePrefix": "Certifikát: {{value}}",
+      "issuedSuffix": " (vydané {{date}})"
+    },
+    "table": {
+      "substance": "Látka",
+      "cas": "CAS",
+      "concentration": "Koncentrácia",
+      "component": "Komponent"
+    },
+    "safety": {
+      "telephone": "Telefón",
+      "email": "E-mail",
+      "web": "Webová stránka",
+      "safetyGatePortal": "Portál EÚ Safety Gate",
+      "reportUnsafe": "Nahláste nebezpečný výrobok"
+    },
+    "poweredBy": "Používa technológiu"
   }
 }

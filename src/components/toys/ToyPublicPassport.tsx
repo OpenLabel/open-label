@@ -148,7 +148,7 @@ export function ToyPublicPassport({
           )}
           <div className="flex-1">
             <Badge variant="secondary" className="mb-2">
-              🧸 Toy — Digital Product Passport
+              🧸 {t('toyPublic.headerBadge')}
             </Badge>
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight">
               {passport.name}
@@ -192,15 +192,15 @@ export function ToyPublicPassport({
         )}
 
         {/* Product identity */}
-        <SectionTitle>Product identity</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.productIdentity')}</SectionTitle>
         <dl>
-          <Row label="Brand" value={tr('brand_name')} />
-          <Row label="Model" value={d.model_name as string} />
-          <Row label="SKU / variant" value={d.sku as string} />
-          <Row label="Toy category" value={toyCategoryLabel} />
-          <Row label="Intended age group" value={ageLabel} />
+          <Row label={t('toyPublic.rows.brand')} value={tr('brand_name')} />
+          <Row label={t('toyPublic.rows.model')} value={d.model_name as string} />
+          <Row label={t('toyPublic.rows.skuVariant')} value={d.sku as string} />
+          <Row label={t('toyPublic.rows.toyCategory')} value={toyCategoryLabel} />
+          <Row label={t('toyPublic.rows.intendedAgeGroup')} value={ageLabel} />
           <Row
-            label="Unique identifier"
+            label={t('toyPublic.rows.uniqueIdentifier')}
             value={
               d.unique_product_identifier && identifierTypeLabel
                 ? `${d.unique_product_identifier as string} (${identifierTypeLabel})`
@@ -223,14 +223,14 @@ export function ToyPublicPassport({
           )}
 
         {/* Manufacturer responsibility */}
-        <SectionTitle>Manufacturer</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.manufacturer')}</SectionTitle>
         <dl>
           <Row
-            label="Manufacturer"
+            label={t('toyPublic.rows.manufacturer')}
             value={d.manufacturer_legal_name as string}
           />
           <Row
-            label="Address"
+            label={t('toyPublic.rows.address')}
             value={[
               d.manufacturer_street,
               d.manufacturer_postal_code,
@@ -240,9 +240,9 @@ export function ToyPublicPassport({
               .filter(Boolean)
               .join(', ')}
           />
-          <Row label="Email" value={d.manufacturer_email as string} />
+          <Row label={t('toyPublic.rows.email')} value={d.manufacturer_email as string} />
           <Row
-            label="Website"
+            label={t('toyPublic.rows.website')}
             value={
               d.manufacturer_website ? (
                 <a
@@ -260,7 +260,7 @@ export function ToyPublicPassport({
             }
           />
           <Row
-            label="Operator identifier"
+            label={t('toyPublic.rows.operatorIdentifier')}
             value={
               d.manufacturer_operator_id && d.manufacturer_operator_id_type
                 ? `${d.manufacturer_operator_id as string} (${labelFor(
@@ -275,19 +275,19 @@ export function ToyPublicPassport({
         {/* EU operator information */}
         {(d.has_auth_rep === 'yes' || d.manufacturer_non_eu === 'yes') && (
           <>
-            <SectionTitle>EU operator information</SectionTitle>
+            <SectionTitle>{t('toyPublic.sections.euOperator')}</SectionTitle>
             {d.has_auth_rep === 'yes' && (
               <div className="mb-4">
                 <h3 className="text-sm font-semibold mb-2">
-                  Authorised representative
+                  {t('toyPublic.subsections.authorisedRepresentative')}
                 </h3>
                 <dl>
                   <Row
-                    label="Legal name"
+                    label={t('toyPublic.rows.legalName')}
                     value={d.auth_rep_legal_name as string}
                   />
                   <Row
-                    label="Address"
+                    label={t('toyPublic.rows.address')}
                     value={[
                       d.auth_rep_street,
                       d.auth_rep_postal_code,
@@ -297,9 +297,9 @@ export function ToyPublicPassport({
                       .filter(Boolean)
                       .join(', ')}
                   />
-                  <Row label="Email" value={d.auth_rep_email as string} />
+                  <Row label={t('toyPublic.rows.email')} value={d.auth_rep_email as string} />
                   <Row
-                    label="Operator identifier"
+                    label={t('toyPublic.rows.operatorIdentifier')}
                     value={
                       d.auth_rep_operator_id &&
                       d.auth_rep_operator_id_type
@@ -316,19 +316,19 @@ export function ToyPublicPassport({
             {d.manufacturer_non_eu === 'yes' && (
               <div>
                 <h3 className="text-sm font-semibold mb-2">
-                  EU responsible economic operator
+                  {t('toyPublic.subsections.euResponsibleEconomicOperator')}
                 </h3>
                 <dl>
                   <Row
-                    label="Legal name"
+                    label={t('toyPublic.rows.legalName')}
                     value={d.eu_op_legal_name as string}
                   />
                   <Row
-                    label="Role"
+                    label={t('toyPublic.rows.role')}
                     value={labelFor(TOY_EU_OPERATOR_ROLES, d.eu_op_role)}
                   />
                   <Row
-                    label="Address"
+                    label={t('toyPublic.rows.address')}
                     value={[
                       d.eu_op_street,
                       d.eu_op_postal_code,
@@ -338,9 +338,9 @@ export function ToyPublicPassport({
                       .filter(Boolean)
                       .join(', ')}
                   />
-                  <Row label="Email" value={d.eu_op_email as string} />
+                  <Row label={t('toyPublic.rows.email')} value={d.eu_op_email as string} />
                   <Row
-                    label="Operator identifier"
+                    label={t('toyPublic.rows.operatorIdentifier')}
                     value={
                       d.eu_op_operator_id && d.eu_op_operator_id_type
                         ? `${d.eu_op_operator_id as string} (${labelFor(
@@ -357,7 +357,7 @@ export function ToyPublicPassport({
         )}
 
         {/* Compliance */}
-        <SectionTitle>Compliance</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.compliance')}</SectionTitle>
         {(d.ce_declaration_ack || d.ce_marked) && (
           <p className="text-sm italic text-muted-foreground mb-3">
             {t(
@@ -368,12 +368,12 @@ export function ToyPublicPassport({
         )}
         <dl>
           <Row
-            label="CE marking"
+            label={t('toyPublic.rows.ceMarking')}
             value={
               d.ce_declaration_ack || d.ce_marked ? (
-                <Badge variant="secondary">✓ CE marked</Badge>
+                <Badge variant="secondary">✓ {t('toyPublic.values.ceMarked')}</Badge>
               ) : (
-                <span className="text-destructive">Not declared</span>
+                <span className="text-destructive">{t('toyPublic.values.notDeclared')}</span>
               )
             }
           />
@@ -426,7 +426,7 @@ export function ToyPublicPassport({
             />
           )}
           <Row
-            label="Applicable legislation"
+            label={t('toyPublic.rows.applicableLegislation')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
                 {labelsFor(TOY_LEGISLATION, d.applicable_legislation).map(
@@ -438,7 +438,7 @@ export function ToyPublicPassport({
             }
           />
           <Row
-            label="Harmonised standards"
+            label={t('toyPublic.rows.harmonisedStandards')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
                 {labelsFor(TOY_STANDARDS, d.harmonised_standards).map((l) => (
@@ -449,7 +449,7 @@ export function ToyPublicPassport({
           />
           {Boolean(d.common_specifications) && (
             <Row
-              label="Common specifications"
+              label={t('toyPublic.rows.commonSpecifications')}
               value={
                 <p className="whitespace-pre-wrap">
                   {tr('common_specifications')}
@@ -459,7 +459,7 @@ export function ToyPublicPassport({
           )}
           {Boolean(d.other_standards) && (
             <Row
-              label="Other standards"
+              label={t('toyPublic.rows.otherStandards')}
               value={
                 <p className="whitespace-pre-wrap">
                   {tr('other_standards')}
@@ -469,7 +469,7 @@ export function ToyPublicPassport({
           )}
           {d.notified_body_involved === 'yes' && (
             <Row
-              label="Notified body"
+              label={t('toyPublic.rows.notifiedBody')}
               value={
                 <div className="space-y-0.5">
                   {(d.notified_body_name as string) && (
@@ -477,14 +477,14 @@ export function ToyPublicPassport({
                   )}
                   {(d.notified_body_number as string) && (
                     <div className="text-xs text-muted-foreground">
-                      Number {d.notified_body_number as string}
+                      {t('toyPublic.values.numberPrefix', { value: d.notified_body_number as string })}
                     </div>
                   )}
                   {(d.certificate_reference as string) && (
                     <div className="text-xs">
-                      Certificate: {d.certificate_reference as string}
+                      {t('toyPublic.values.certificatePrefix', { value: d.certificate_reference as string })}
                       {d.certificate_issue_date
-                        ? ` (issued ${d.certificate_issue_date as string})`
+                        ? t('toyPublic.values.issuedSuffix', { date: d.certificate_issue_date as string })
                         : ''}
                     </div>
                   )}
@@ -506,7 +506,7 @@ export function ToyPublicPassport({
             />
           )}
           <Row
-            label="Customs code"
+            label={t('toyPublic.rows.customsCode')}
             value={
               d.customs_code
                 ? `${d.customs_code as string}${
@@ -520,21 +520,21 @@ export function ToyPublicPassport({
         </dl>
 
         {/* Safety & chemical information */}
-        <SectionTitle>Safety &amp; chemical information</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.safetyChemical')}</SectionTitle>
         <div className="space-y-3 text-sm">
           <p>
             {tr('allergen_declaration_text') ||
-              'No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.'}
+              t('toyPublic.values.noFragrancesDeclared')}
           </p>
           {fragrances.length > 0 && (
             <div className="border rounded-md overflow-hidden">
               <table className="w-full text-xs">
                 <thead className="bg-muted/50">
                   <tr>
-                    <th className="text-left p-2">Substance</th>
-                    <th className="text-left p-2">CAS</th>
-                    <th className="text-left p-2">Concentration</th>
-                    <th className="text-left p-2">Component</th>
+                    <th className="text-left p-2">{t('toyPublic.table.substance')}</th>
+                    <th className="text-left p-2">{t('toyPublic.table.cas')}</th>
+                    <th className="text-left p-2">{t('toyPublic.table.concentration')}</th>
+                    <th className="text-left p-2">{t('toyPublic.table.component')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -558,7 +558,7 @@ export function ToyPublicPassport({
 
           <div>
             <h3 className="text-sm font-semibold mt-4 mb-1">
-              Safety incident reporting
+              {t('toyPublic.subsections.safetyIncidentReporting')}
             </h3>
             <ul className="space-y-1 text-sm">
               {labelsFor(TOY_SAFETY_CHANNELS, d.safety_channels).map((c) => (
@@ -566,7 +566,7 @@ export function ToyPublicPassport({
               ))}
               {Boolean(d.safety_phone) && (
                 <li>
-                  Telephone:{' '}
+                  {t('toyPublic.safety.telephone')}:{' '}
                   <a
                     href={`tel:${d.safety_phone as string}`}
                     className="text-primary underline"
@@ -577,7 +577,7 @@ export function ToyPublicPassport({
               )}
               {Boolean(d.safety_email) && (
                 <li>
-                  Email:{' '}
+                  {t('toyPublic.safety.email')}:{' '}
                   <a
                     href={`mailto:${d.safety_email as string}`}
                     className="text-primary underline"
@@ -588,7 +588,7 @@ export function ToyPublicPassport({
               )}
               {Boolean(d.safety_website) && (
                 <li>
-                  Web:{' '}
+                  {t('toyPublic.safety.web')}:{' '}
                   <a
                     href={d.safety_website as string}
                     target="_blank"
@@ -600,14 +600,14 @@ export function ToyPublicPassport({
                 </li>
               )}
               <li>
-                EU Safety Gate Portal:{' '}
+                {t('toyPublic.safety.safetyGatePortal')}:{' '}
                 <a
                   href="https://ec.europa.eu/safety-gate-alerts/screen/webReport"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary underline"
                 >
-                  Report an unsafe product
+                  {t('toyPublic.safety.reportUnsafe')}
                 </a>
               </li>
             </ul>
@@ -615,28 +615,28 @@ export function ToyPublicPassport({
         </div>
 
         {/* DPP infrastructure */}
-        <SectionTitle>DPP infrastructure</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.dppInfrastructure')}</SectionTitle>
         <dl>
           <Row
-            label="DPP service provider"
+            label={t('toyPublic.rows.dppServiceProvider')}
             value={config?.company_name || 'Open-Label.eu'}
           />
           <Row
-            label="Backup copy reference"
+            label={t('toyPublic.rows.backupCopyReference')}
             value={
               config?.site_url
-                ? `Mirrored at ${config.site_url}`
-                : 'Mirrored on Open-Label.eu infrastructure'
+                ? t('toyPublic.values.mirroredAt', { url: config.site_url })
+                : t('toyPublic.values.mirroredOnOpenLabel')
             }
           />
-          <Row label="DPP version" value="1.0" />
+          <Row label={t('toyPublic.rows.dppVersion')} value="1.0" />
           <Row
-            label="Last updated"
-            value={new Date(passport.updated_at).toLocaleDateString()}
+            label={t('toyPublic.rows.lastUpdated')}
+            value={new Date(passport.updated_at).toLocaleDateString(displayLanguage)}
           />
           <Row
-            label="Status"
-            value={<Badge variant="secondary">Published</Badge>}
+            label={t('toyPublic.rows.status')}
+            value={<Badge variant="secondary">{t('toyPublic.values.published')}</Badge>}
           />
         </dl>
 
@@ -645,7 +645,7 @@ export function ToyPublicPassport({
         {/* Powered by — mandatory attribution */}
         <div className="text-center text-xs text-muted-foreground space-y-2">
           <p>
-            Powered by{' '}
+            {t('toyPublic.poweredBy')}{' '}
             <a
               href="https://www.open-label.eu"
               target="_blank"

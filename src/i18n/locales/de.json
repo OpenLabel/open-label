@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "URL eingeben:"
+  },
+  "toyPublic": {
+    "headerBadge": "Spielzeug – Digitaler Produktpass",
+    "sections": {
+      "productIdentity": "Produktidentität",
+      "instructionsAndWarnings": "Anweisungen und Warnhinweise",
+      "manufacturer": "Hersteller",
+      "euOperator": "Informationen zum EU-Akteur",
+      "compliance": "Konformität",
+      "safetyChemical": "Sicherheits- und Chemieinformationen",
+      "dppInfrastructure": "DPP-Infrastruktur"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Bevollmächtigter",
+      "euResponsibleEconomicOperator": "Verantwortlicher Wirtschaftsakteur in der EU",
+      "safetyIncidentReporting": "Meldung von Sicherheitsvorfällen"
+    },
+    "rows": {
+      "brand": "Marke",
+      "model": "Modell",
+      "skuVariant": "SKU / Variante",
+      "toyCategory": "Spielzeugkategorie",
+      "intendedAgeGroup": "Vorgesehene Altersgruppe",
+      "uniqueIdentifier": "Eindeutiger Identifikator",
+      "manufacturer": "Hersteller",
+      "address": "Adresse",
+      "email": "E-Mail",
+      "website": "Webseite",
+      "operatorIdentifier": "Betreiber-Identifikator",
+      "legalName": "Rechtlicher Name",
+      "role": "Rolle",
+      "ceMarking": "CE-Kennzeichnung",
+      "applicableLegislation": "Anwendbare Rechtsvorschriften",
+      "harmonisedStandards": "Harmonisierte Normen",
+      "commonSpecifications": "Gemeinsame Spezifikationen",
+      "otherStandards": "Andere Normen",
+      "notifiedBody": "Benannte Stelle",
+      "customsCode": "Zolltarifnummer",
+      "dppServiceProvider": "DPP-Dienstanbieter",
+      "backupCopyReference": "Referenz der Sicherungskopie",
+      "dppVersion": "DPP-Version",
+      "lastUpdated": "Zuletzt aktualisiert",
+      "status": "Status"
+    },
+    "values": {
+      "ceMarked": "CE-gekennzeichnet",
+      "notDeclared": "Nicht deklariert",
+      "published": "Veröffentlicht",
+      "noFragrancesDeclared": "Es sind keine kennzeichnungspflichtigen allergenen Duftstoffe in einer Konzentration von 10 mg/kg oder mehr angegeben.",
+      "mirroredAt": "Gespiegelt unter {{url}}",
+      "mirroredOnOpenLabel": "Gespiegelt auf der Open-Label.eu Infrastruktur",
+      "numberPrefix": "Nummer {{value}}",
+      "certificatePrefix": "Zertifikat: {{value}}",
+      "issuedSuffix": " (ausgestellt am {{date}})"
+    },
+    "table": {
+      "substance": "Substanz",
+      "cas": "CAS",
+      "concentration": "Konzentration",
+      "component": "Komponente"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-Mail",
+      "web": "Webseite",
+      "safetyGatePortal": "EU-Sicherheitsportal",
+      "reportUnsafe": "Meldung eines unsicheren Produkts"
+    },
+    "poweredBy": "Bereitgestellt von"
   }
 }

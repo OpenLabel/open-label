@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Vnesite URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Igrača – Digitalni potni list izdelka",
+    "sections": {
+      "productIdentity": "Identifikacija izdelka",
+      "instructionsAndWarnings": "Navodila in opozorila",
+      "manufacturer": "Proizvajalec",
+      "euOperator": "Podatki o subjektu s sedežem v EU",
+      "compliance": "Skladnost",
+      "safetyChemical": "Varnostni in kemični podatki",
+      "dppInfrastructure": "Infrastruktura DPP"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Pooblaščeni zastopnik",
+      "euResponsibleEconomicOperator": "Gospodarski subjekt s sedežem v EU, odgovoren za izdelek",
+      "safetyIncidentReporting": "Poročanje o varnostnih incidentih"
+    },
+    "rows": {
+      "brand": "Blagovna znamka",
+      "model": "Model izdelka",
+      "skuVariant": "Šifra/različica izdelka (SKU)",
+      "toyCategory": "Kategorija igrače",
+      "intendedAgeGroup": "Predvidena starostna skupina",
+      "uniqueIdentifier": "Edinstveni identifikator",
+      "manufacturer": "Proizvajalec",
+      "address": "Naslov",
+      "email": "E-pošta",
+      "website": "Spletišče",
+      "operatorIdentifier": "Identifikator subjekta",
+      "legalName": "Pravno ime",
+      "role": "Vloga",
+      "ceMarking": "Oznaka CE",
+      "applicableLegislation": "Veljavna zakonodaja",
+      "harmonisedStandards": "Harmonizirani standardi",
+      "commonSpecifications": "Skupne specifikacije",
+      "otherStandards": "Drugi standardi",
+      "notifiedBody": "Priglašeni organ",
+      "customsCode": "Oznaka carinske tarife",
+      "dppServiceProvider": "Ponudnik storitev DPP",
+      "backupCopyReference": "Referenca varnostne kopije",
+      "dppVersion": "Različica DPP",
+      "lastUpdated": "Zadnja posodobitev",
+      "status": "Stanje"
+    },
+    "values": {
+      "ceMarked": "Oznaka CE",
+      "notDeclared": "Ni navedeno",
+      "published": "Objavljeno",
+      "noFragrancesDeclared": "Ni prijavljenih alergenih dišav, za katere veljajo zahteve glede označevanja, prisotnih v koncentraciji 10 mg/kg ali več.",
+      "mirroredAt": "Zrcaljeno na {{url}}",
+      "mirroredOnOpenLabel": "Zrcaljeno na infrastrukturi Open-Label.eu",
+      "numberPrefix": "Številka {{value}}",
+      "certificatePrefix": "Certifikat: {{value}}",
+      "issuedSuffix": " (izdano {{date}})"
+    },
+    "table": {
+      "substance": "Snov",
+      "cas": "CAS",
+      "concentration": "Koncentracija",
+      "component": "Sestavni del"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-pošta",
+      "web": "Spletišče",
+      "safetyGatePortal": "Portal EU Safety Gate",
+      "reportUnsafe": "Prijavite nevaren izdelek"
+    },
+    "poweredBy": "Poganja"
   }
 }

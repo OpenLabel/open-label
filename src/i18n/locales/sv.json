@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Ange URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Leksak — Digitalt produktpass",
+    "sections": {
+      "productIdentity": "Produktidentitet",
+      "instructionsAndWarnings": "Instruktioner och varningar",
+      "manufacturer": "Tillverkare",
+      "euOperator": "EU-aktörsinformation",
+      "compliance": "Överensstämmelse",
+      "safetyChemical": "Säkerhets- och kemikalieinformation",
+      "dppInfrastructure": "DPP-infrastruktur"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Auktoriserad representant",
+      "euResponsibleEconomicOperator": "Ansvarig ekonomisk aktör i EU",
+      "safetyIncidentReporting": "Rapportering av säkerhetsincidenter"
+    },
+    "rows": {
+      "brand": "Varumärke",
+      "model": "Modell",
+      "skuVariant": "Artikelnummer / variant",
+      "toyCategory": "Leksakskategori",
+      "intendedAgeGroup": "Avsedd åldersgrupp",
+      "uniqueIdentifier": "Unik identifierare",
+      "manufacturer": "Tillverkare",
+      "address": "Adress",
+      "email": "E-post",
+      "website": "Webbplats",
+      "operatorIdentifier": "Aktörsidentifierare",
+      "legalName": "Juridiskt namn",
+      "role": "Roll",
+      "ceMarking": "CE-märkning",
+      "applicableLegislation": "Tillämplig lagstiftning",
+      "harmonisedStandards": "Harmoniserade standarder",
+      "commonSpecifications": "Gemensamma specifikationer",
+      "otherStandards": "Andra standarder",
+      "notifiedBody": "Anmält organ",
+      "customsCode": "Tullkodex",
+      "dppServiceProvider": "DPP-tjänsteleverantör",
+      "backupCopyReference": "Referens för säkerhetskopia",
+      "dppVersion": "DPP-version",
+      "lastUpdated": "Senast uppdaterad",
+      "status": "Status"
+    },
+    "values": {
+      "ceMarked": "CE-märkt",
+      "notDeclared": "Ej deklarerat",
+      "published": "Publicerad",
+      "noFragrancesDeclared": "Inga allergiframkallande doftämnen som omfattas av märkningskrav deklareras finnas i en koncentration på eller över 10 mg/kg.",
+      "mirroredAt": "Speglad på {{url}}",
+      "mirroredOnOpenLabel": "Speglad på Open-Label.eu-infrastruktur",
+      "numberPrefix": "Nummer {{value}}",
+      "certificatePrefix": "Certifikat: {{value}}",
+      "issuedSuffix": " (utfärdat {{date}})"
+    },
+    "table": {
+      "substance": "Ämne",
+      "cas": "CAS",
+      "concentration": "Koncentration",
+      "component": "Komponent"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-post",
+      "web": "Webb",
+      "safetyGatePortal": "EU:s portal för produktvarningar",
+      "reportUnsafe": "Rapportera en osäker produkt"
+    },
+    "poweredBy": "Drivs av"
   }
 }

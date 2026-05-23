@@ -56,7 +56,7 @@ const perLanguageAllowedValues: Record<string, string[]> = {
   bg: ["Open Source"],
   cs: ["Open Source", "Region"],
   da: ["Open Source", "Region", "Protein", "Salt", "Allergen"],
-  de: ["Open Source", "Details", "Region", "Allergen", "Code", "Material"],
+  de: ["Open Source", "Details", "Region", "Allergen", "Code", "Material", "Status"],
   el: ["Open Source", "Email"],
   es: ["Open Source", "Manual", "Error", "Alcohol", "General", "Material", "Experimental"],
   et: ["Open Source"],
@@ -72,10 +72,10 @@ const perLanguageAllowedValues: Record<string, string[]> = {
   nl: ["Open Source", "Volume", "Details", "Alcohol", "Code", "Capsule", "QR Code"],
   pl: ["Open Source", "Region"],
   pt: ["Open Source", "Volume", "Manual", "Material", "Experimental"],
-  ro: ["Open Source", "Manual", "General", "Material", "Experimental"],
+  ro: ["Open Source", "Manual", "General", "Material", "Experimental", "Model"],
   sk: ["Open Source"],
   sl: ["Open Source", "Material"],
-  sv: ["Open Source", "Region", "Protein", "Salt", "Allergen", "Material"],
+  sv: ["Open Source", "Region", "Protein", "Salt", "Allergen", "Material", "Status"],
 };
 
 // Check if a value is legitimately the same across languages (not untranslated)
