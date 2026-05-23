@@ -602,8 +602,8 @@
     },
     "rows": {
       "brand": "Značka",
-      "model": "Model",
-      "skuVariant": "SKU / variant",
+      "model": "Typ modelu",
+      "skuVariant": "Kód produktu / varianta",
       "toyCategory": "Kategória hračky",
       "intendedAgeGroup": "Zamýšľaná veková skupina",
       "uniqueIdentifier": "Jedinečný identifikátor",
@@ -647,7 +647,7 @@
     "safety": {
       "telephone": "Telefón",
       "email": "E-mail",
-      "web": "Web",
+      "web": "Webová stránka",
       "safetyGatePortal": "Portál EÚ Safety Gate",
       "reportUnsafe": "Nahláste nebezpečný výrobok"
     },

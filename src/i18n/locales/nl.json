@@ -602,15 +602,15 @@
     },
     "rows": {
       "brand": "Merk",
-      "model": "Model",
-      "skuVariant": "SKU / variant",
+      "model": "Modelnaam",
+      "skuVariant": "Artikelnummer / variant",
       "toyCategory": "Speelgoedcategorie",
       "intendedAgeGroup": "Beoogde leeftijdsgroep",
       "uniqueIdentifier": "Unieke identificatiecode",
       "manufacturer": "Fabrikant",
       "address": "Adres",
       "email": "E-mail",
-      "website": "Website",
+      "website": "Websiteadres",
       "operatorIdentifier": "Identificatiecode marktdeelnemer",
       "legalName": "Juridische naam",
       "role": "Rol",
@@ -625,7 +625,7 @@
       "backupCopyReference": "Referentie back-upkopie",
       "dppVersion": "DPP-versie",
       "lastUpdated": "Laatst bijgewerkt",
-      "status": "Status"
+      "status": "Huidige status"
     },
     "values": {
       "ceMarked": "CE-gemarkeerd",
@@ -647,8 +647,8 @@
     "safety": {
       "telephone": "Telefoon",
       "email": "E-mail",
-      "web": "Web",
-      "safetyGatePortal": "EU Safety Gate Portal",
+      "web": "Internet",
+      "safetyGatePortal": "EU-veiligheidsportaal",
       "reportUnsafe": "Meld een onveilig product"
     },
     "poweredBy": "Mogelijk gemaakt door"

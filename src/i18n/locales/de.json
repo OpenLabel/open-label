@@ -647,10 +647,10 @@
     "safety": {
       "telephone": "Telefon",
       "email": "E-Mail",
-      "web": "Web",
-      "safetyGatePortal": "EU Safety Gate Portal",
+      "web": "Webseite",
+      "safetyGatePortal": "EU-Sicherheitsportal",
       "reportUnsafe": "Meldung eines unsicheren Produkts"
     },
-    "poweredBy": "Powered by"
+    "poweredBy": "Bereitgestellt von"
   }
 }

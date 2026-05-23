@@ -602,7 +602,7 @@
     },
     "rows": {
       "brand": "Značka",
-      "model": "Model",
+      "model": "Typ",
       "skuVariant": "SKU / varianta",
       "toyCategory": "Kategorie hračky",
       "intendedAgeGroup": "Předpokládaná věková skupina",
@@ -613,7 +613,7 @@
       "website": "Internetové stránky",
       "operatorIdentifier": "Identifikátor provozovatele",
       "legalName": "Obchodní jméno",
-      "role": "Role",
+      "role": "Úloha",
       "ceMarking": "Označení CE",
       "applicableLegislation": "Použitelné právní předpisy",
       "harmonisedStandards": "Harmonizované normy",
@@ -647,7 +647,7 @@
     "safety": {
       "telephone": "Telefon",
       "email": "E-mail",
-      "web": "Web",
+      "web": "Webové stránky",
       "safetyGatePortal": "Portál EU Safety Gate",
       "reportUnsafe": "Nahlásit nebezpečný výrobek"
     },

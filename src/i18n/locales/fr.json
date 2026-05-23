@@ -639,15 +639,15 @@
       "issuedSuffix": " (délivré le {{date}})"
     },
     "table": {
-      "substance": "Substance",
+      "substance": "Substance chimique",
       "cas": "CAS",
-      "concentration": "Concentration",
+      "concentration": "Teneur",
       "component": "Composant"
     },
     "safety": {
       "telephone": "Téléphone",
       "email": "Courriel",
-      "web": "Web",
+      "web": "Site web",
       "safetyGatePortal": "Portail Safety Gate de l'UE",
       "reportUnsafe": "Signaler un produit dangereux"
     },

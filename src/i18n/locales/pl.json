@@ -602,7 +602,7 @@
     },
     "rows": {
       "brand": "Marka",
-      "model": "Model",
+      "model": "Oznaczenie modelu",
       "skuVariant": "Numer SKU / wariant",
       "toyCategory": "Kategoria zabawki",
       "intendedAgeGroup": "Przewidywana grupa wiekowa",
@@ -625,7 +625,7 @@
       "backupCopyReference": "Numer referencyjny kopii zapasowej",
       "dppVersion": "Wersja DPP",
       "lastUpdated": "Ostatnia aktualizacja",
-      "status": "Status"
+      "status": "Stan"
     },
     "values": {
       "ceMarked": "Z oznakowaniem CE",

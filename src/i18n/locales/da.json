@@ -602,7 +602,7 @@
     },
     "rows": {
       "brand": "Mærke",
-      "model": "Model",
+      "model": "Modelbetegnelse",
       "skuVariant": "SKU/variant",
       "toyCategory": "Legetøjskategori",
       "intendedAgeGroup": "Tilsigtet aldersgruppe",
@@ -620,12 +620,12 @@
       "commonSpecifications": "Fælles specifikationer",
       "otherStandards": "Andre standarder",
       "notifiedBody": "Bemyndiget organ",
-      "customsCode": "Customs code",
+      "customsCode": "Toldkode",
       "dppServiceProvider": "DPP-tjenesteudbyder",
       "backupCopyReference": "Reference til sikkerhedskopi",
       "dppVersion": "DPP-version",
       "lastUpdated": "Sidst opdateret",
-      "status": "Status"
+      "status": "Tilstand"
     },
     "values": {
       "ceMarked": "CE-mærket",
@@ -647,8 +647,8 @@
     "safety": {
       "telephone": "Telefon",
       "email": "E-mail",
-      "web": "Web",
-      "safetyGatePortal": "EU Safety Gate Portal",
+      "web": "Hjemmeside",
+      "safetyGatePortal": "EU's sikkerhedsportal",
       "reportUnsafe": "Indberet et usikkert produkt"
     },
     "poweredBy": "Leveres af"

@@ -625,7 +625,7 @@
       "backupCopyReference": "Referenza tal-kopja ta' riżerva",
       "dppVersion": "Verżjoni tad-DPP",
       "lastUpdated": "L-aħħar aġġornament",
-      "status": "Status"
+      "status": "Stat"
     },
     "values": {
       "ceMarked": "B'marka CE",
@@ -647,7 +647,7 @@
     "safety": {
       "telephone": "Telefon",
       "email": "Email",
-      "web": "Web",
+      "web": "Websajt",
       "safetyGatePortal": "Portal tas-Safety Gate tal-UE",
       "reportUnsafe": "Irrapporta prodott mhux sikur"
     },

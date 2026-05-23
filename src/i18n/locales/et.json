@@ -603,7 +603,7 @@
     "rows": {
       "brand": "Kaubamärk",
       "model": "Mudel",
-      "skuVariant": "SKU / variant",
+      "skuVariant": "Tootekood / variant",
       "toyCategory": "Mänguasja kategooria",
       "intendedAgeGroup": "Ettenähtud vanuserühm",
       "uniqueIdentifier": "Kordumatu identifikaator",
@@ -634,7 +634,7 @@
       "noFragrancesDeclared": "Allergeenseid lõhnaaineid, mille märgistamise nõue on kehtestatud, ei ole deklareeritud sisaldusega 10 mg/kg või rohkem.",
       "mirroredAt": "Peegeldatud aadressil {{url}}",
       "mirroredOnOpenLabel": "Peegeldatud Open-Label.eu infrastruktuuris",
-      "numberPrefix": "Number {{value}}",
+      "numberPrefix": "Nr {{value}}",
       "certificatePrefix": "Sertifikaat: {{value}}",
       "issuedSuffix": " (välja antud {{date}})"
     },
@@ -651,6 +651,6 @@
       "safetyGatePortal": "ELi ohtlike toodete kiirhoiatussüsteemi portaal (Safety Gate)",
       "reportUnsafe": "Teata ohtlikust tootest"
     },
-    "poweredBy": "Powered by"
+    "poweredBy": "Toetab"
   }
 }

@@ -602,7 +602,7 @@
     },
     "rows": {
       "brand": "Robna marka",
-      "model": "Model",
+      "model": "Naziv modela",
       "skuVariant": "SKU / varijanta",
       "toyCategory": "Kategorija igračke",
       "intendedAgeGroup": "Namijenjena dobna skupina",
@@ -625,7 +625,7 @@
       "backupCopyReference": "Referenca sigurnosne kopije",
       "dppVersion": "Verzija DPP-a",
       "lastUpdated": "Posljednje ažuriranje",
-      "status": "Status"
+      "status": "Stanje"
     },
     "values": {
       "ceMarked": "Označeno oznakom CE",

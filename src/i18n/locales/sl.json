@@ -602,7 +602,7 @@
     },
     "rows": {
       "brand": "Blagovna znamka",
-      "model": "Model",
+      "model": "Model izdelka",
       "skuVariant": "Šifra/različica izdelka (SKU)",
       "toyCategory": "Kategorija igrače",
       "intendedAgeGroup": "Predvidena starostna skupina",
@@ -625,7 +625,7 @@
       "backupCopyReference": "Referenca varnostne kopije",
       "dppVersion": "Različica DPP",
       "lastUpdated": "Zadnja posodobitev",
-      "status": "Status"
+      "status": "Stanje"
     },
     "values": {
       "ceMarked": "Oznaka CE",

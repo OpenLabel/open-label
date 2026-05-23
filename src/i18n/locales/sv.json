@@ -603,7 +603,7 @@
     "rows": {
       "brand": "Varumärke",
       "model": "Modell",
-      "skuVariant": "SKU / variant",
+      "skuVariant": "Artikelnummer / variant",
       "toyCategory": "Leksakskategori",
       "intendedAgeGroup": "Avsedd åldersgrupp",
       "uniqueIdentifier": "Unik identifierare",
@@ -648,7 +648,7 @@
       "telephone": "Telefon",
       "email": "E-post",
       "web": "Webb",
-      "safetyGatePortal": "EU Safety Gate Portal",
+      "safetyGatePortal": "EU:s portal för produktvarningar",
       "reportUnsafe": "Rapportera en osäker produkt"
     },
     "poweredBy": "Drivs av"
