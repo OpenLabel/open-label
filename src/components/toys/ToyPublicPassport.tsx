@@ -357,7 +357,7 @@ export function ToyPublicPassport({
         )}
 
         {/* Compliance */}
-        <SectionTitle>Compliance</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.compliance')}</SectionTitle>
         {(d.ce_declaration_ack || d.ce_marked) && (
           <p className="text-sm italic text-muted-foreground mb-3">
             {t(
@@ -368,12 +368,12 @@ export function ToyPublicPassport({
         )}
         <dl>
           <Row
-            label="CE marking"
+            label={t('toyPublic.rows.ceMarking')}
             value={
               d.ce_declaration_ack || d.ce_marked ? (
-                <Badge variant="secondary">✓ CE marked</Badge>
+                <Badge variant="secondary">✓ {t('toyPublic.values.ceMarked')}</Badge>
               ) : (
-                <span className="text-destructive">Not declared</span>
+                <span className="text-destructive">{t('toyPublic.values.notDeclared')}</span>
               )
             }
           />
