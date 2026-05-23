@@ -223,14 +223,14 @@ export function ToyPublicPassport({
           )}
 
         {/* Manufacturer responsibility */}
-        <SectionTitle>Manufacturer</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.manufacturer')}</SectionTitle>
         <dl>
           <Row
-            label="Manufacturer"
+            label={t('toyPublic.rows.manufacturer')}
             value={d.manufacturer_legal_name as string}
           />
           <Row
-            label="Address"
+            label={t('toyPublic.rows.address')}
             value={[
               d.manufacturer_street,
               d.manufacturer_postal_code,
@@ -240,9 +240,9 @@ export function ToyPublicPassport({
               .filter(Boolean)
               .join(', ')}
           />
-          <Row label="Email" value={d.manufacturer_email as string} />
+          <Row label={t('toyPublic.rows.email')} value={d.manufacturer_email as string} />
           <Row
-            label="Website"
+            label={t('toyPublic.rows.website')}
             value={
               d.manufacturer_website ? (
                 <a
@@ -260,7 +260,7 @@ export function ToyPublicPassport({
             }
           />
           <Row
-            label="Operator identifier"
+            label={t('toyPublic.rows.operatorIdentifier')}
             value={
               d.manufacturer_operator_id && d.manufacturer_operator_id_type
                 ? `${d.manufacturer_operator_id as string} (${labelFor(
