@@ -192,15 +192,15 @@ export function ToyPublicPassport({
         )}
 
         {/* Product identity */}
-        <SectionTitle>Product identity</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.productIdentity')}</SectionTitle>
         <dl>
-          <Row label="Brand" value={tr('brand_name')} />
-          <Row label="Model" value={d.model_name as string} />
-          <Row label="SKU / variant" value={d.sku as string} />
-          <Row label="Toy category" value={toyCategoryLabel} />
-          <Row label="Intended age group" value={ageLabel} />
+          <Row label={t('toyPublic.rows.brand')} value={tr('brand_name')} />
+          <Row label={t('toyPublic.rows.model')} value={d.model_name as string} />
+          <Row label={t('toyPublic.rows.skuVariant')} value={d.sku as string} />
+          <Row label={t('toyPublic.rows.toyCategory')} value={toyCategoryLabel} />
+          <Row label={t('toyPublic.rows.intendedAgeGroup')} value={ageLabel} />
           <Row
-            label="Unique identifier"
+            label={t('toyPublic.rows.uniqueIdentifier')}
             value={
               d.unique_product_identifier && identifierTypeLabel
                 ? `${d.unique_product_identifier as string} (${identifierTypeLabel})`
