@@ -148,7 +148,7 @@ export function ToyPublicPassport({
           )}
           <div className="flex-1">
             <Badge variant="secondary" className="mb-2">
-              🧸 Toy — Digital Product Passport
+              🧸 {t('toyPublic.headerBadge')}
             </Badge>
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight">
               {passport.name}
