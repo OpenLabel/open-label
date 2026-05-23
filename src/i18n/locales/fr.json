@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Entrez l'URL :"
+  },
+  "toyPublic": {
+    "headerBadge": "Jouet — Passeport numérique des produits",
+    "sections": {
+      "productIdentity": "Identité du produit",
+      "instructionsAndWarnings": "Instructions et avertissements",
+      "manufacturer": "Fabricant",
+      "euOperator": "Informations sur l'opérateur dans l'UE",
+      "compliance": "Conformité",
+      "safetyChemical": "Informations sur la sécurité et les substances chimiques",
+      "dppInfrastructure": "Infrastructure du DPP"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Mandataire",
+      "euResponsibleEconomicOperator": "Opérateur économique responsable dans l'UE",
+      "safetyIncidentReporting": "Signalement des incidents de sécurité"
+    },
+    "rows": {
+      "brand": "Marque",
+      "model": "Modèle",
+      "skuVariant": "SKU / variante",
+      "toyCategory": "Catégorie de jouet",
+      "intendedAgeGroup": "Groupe d'âge visé",
+      "uniqueIdentifier": "Identifiant unique",
+      "manufacturer": "Fabricant",
+      "address": "Adresse",
+      "email": "Courriel",
+      "website": "Site web",
+      "operatorIdentifier": "Identifiant de l'opérateur",
+      "legalName": "Dénomination sociale",
+      "role": "Rôle",
+      "ceMarking": "Marquage CE",
+      "applicableLegislation": "Législation applicable",
+      "harmonisedStandards": "Normes harmonisées",
+      "commonSpecifications": "Spécifications communes",
+      "otherStandards": "Autres normes",
+      "notifiedBody": "Organisme notifié",
+      "customsCode": "Code douanier",
+      "dppServiceProvider": "Prestataire de services DPP",
+      "backupCopyReference": "Référence de la copie de sauvegarde",
+      "dppVersion": "Version du DPP",
+      "lastUpdated": "Dernière mise à jour",
+      "status": "Statut"
+    },
+    "values": {
+      "ceMarked": "Marqué CE",
+      "notDeclared": "Non déclaré",
+      "published": "Publié",
+      "noFragrancesDeclared": "Aucun parfum allergénique soumis aux exigences d'étiquetage n'est déclaré présent à une concentration égale ou supérieure à 10 mg/kg.",
+      "mirroredAt": "Dupliqué sur {{url}}",
+      "mirroredOnOpenLabel": "Dupliqué sur l'infrastructure Open-Label.eu",
+      "numberPrefix": "Numéro {{value}}",
+      "certificatePrefix": "Certificat : {{value}}",
+      "issuedSuffix": " (délivré le {{date}})"
+    },
+    "table": {
+      "substance": "Substance",
+      "cas": "CAS",
+      "concentration": "Concentration",
+      "component": "Composant"
+    },
+    "safety": {
+      "telephone": "Téléphone",
+      "email": "Courriel",
+      "web": "Web",
+      "safetyGatePortal": "Portail Safety Gate de l'UE",
+      "reportUnsafe": "Signaler un produit dangereux"
+    },
+    "poweredBy": "Optimisé par"
   }
 }

@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Voer URL in:"
+  },
+  "toyPublic": {
+    "headerBadge": "Speelgoed — Digitaal Productpaspoort",
+    "sections": {
+      "productIdentity": "Productidentiteit",
+      "instructionsAndWarnings": "Instructies en waarschuwingen",
+      "manufacturer": "Fabrikant",
+      "euOperator": "Informatie over EU-marktdeelnemer",
+      "compliance": "Conformiteit",
+      "safetyChemical": "Veiligheids- en chemische informatie",
+      "dppInfrastructure": "DPP-infrastructuur"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Gemachtigde",
+      "euResponsibleEconomicOperator": "Verantwoordelijke economische operator in de EU",
+      "safetyIncidentReporting": "Melding van veiligheidsincidenten"
+    },
+    "rows": {
+      "brand": "Merk",
+      "model": "Model",
+      "skuVariant": "SKU / variant",
+      "toyCategory": "Speelgoedcategorie",
+      "intendedAgeGroup": "Beoogde leeftijdsgroep",
+      "uniqueIdentifier": "Unieke identificatiecode",
+      "manufacturer": "Fabrikant",
+      "address": "Adres",
+      "email": "E-mail",
+      "website": "Website",
+      "operatorIdentifier": "Identificatiecode marktdeelnemer",
+      "legalName": "Juridische naam",
+      "role": "Rol",
+      "ceMarking": "CE-markering",
+      "applicableLegislation": "Toepasselijke wetgeving",
+      "harmonisedStandards": "Geharmoniseerde normen",
+      "commonSpecifications": "Gemeenschappelijke specificaties",
+      "otherStandards": "Overige normen",
+      "notifiedBody": "Aangemelde instantie",
+      "customsCode": "Douanecode",
+      "dppServiceProvider": "DPP-dienstverlener",
+      "backupCopyReference": "Referentie back-upkopie",
+      "dppVersion": "DPP-versie",
+      "lastUpdated": "Laatst bijgewerkt",
+      "status": "Status"
+    },
+    "values": {
+      "ceMarked": "CE-gemarkeerd",
+      "notDeclared": "Niet aangegeven",
+      "published": "Gepubliceerd",
+      "noFragrancesDeclared": "Geen allergene geurstoffen waarvoor etiketteringsvereisten gelden, zijn aangegeven als aanwezig in een concentratie van 10 mg/kg of meer.",
+      "mirroredAt": "Gepiegeld op {{url}}",
+      "mirroredOnOpenLabel": "Gepiegeld op Open-Label.eu-infrastructuur",
+      "numberPrefix": "Nummer {{value}}",
+      "certificatePrefix": "Certificaat: {{value}}",
+      "issuedSuffix": " (uitgegeven op {{date}})"
+    },
+    "table": {
+      "substance": "Stof",
+      "cas": "CAS",
+      "concentration": "Concentratie",
+      "component": "Onderdeel"
+    },
+    "safety": {
+      "telephone": "Telefoon",
+      "email": "E-mail",
+      "web": "Web",
+      "safetyGatePortal": "EU Safety Gate Portal",
+      "reportUnsafe": "Meld een onveilig product"
+    },
+    "poweredBy": "Mogelijk gemaakt door"
   }
 }

@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Unesite URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Igračka – Digitalna putovnica proizvoda",
+    "sections": {
+      "productIdentity": "Identitet proizvoda",
+      "instructionsAndWarnings": "Upute i upozorenja",
+      "manufacturer": "Proizvođač",
+      "euOperator": "Informacije o gospodarskom subjektu u EU-u",
+      "compliance": "Usklađenost",
+      "safetyChemical": "Sigurnost i kemijske informacije",
+      "dppInfrastructure": "Infrastruktura DPP-a"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Ovlašteni zastupnik",
+      "euResponsibleEconomicOperator": "Odgovorni gospodarski subjekt u EU-u",
+      "safetyIncidentReporting": "Izvješćivanje o sigurnosnim incidentima"
+    },
+    "rows": {
+      "brand": "Robna marka",
+      "model": "Model",
+      "skuVariant": "SKU / varijanta",
+      "toyCategory": "Kategorija igračke",
+      "intendedAgeGroup": "Namijenjena dobna skupina",
+      "uniqueIdentifier": "Jedinstveni identifikator",
+      "manufacturer": "Proizvođač",
+      "address": "Adresa",
+      "email": "E-pošta",
+      "website": "Internetska stranica",
+      "operatorIdentifier": "Identifikator gospodarskog subjekta",
+      "legalName": "Puni naziv tvrtke",
+      "role": "Uloga",
+      "ceMarking": "Oznaka CE",
+      "applicableLegislation": "Primjenjivo zakonodavstvo",
+      "harmonisedStandards": "Usklađene norme",
+      "commonSpecifications": "Zajedničke specifikacije",
+      "otherStandards": "Ostale norme",
+      "notifiedBody": "Prijavljeno tijelo",
+      "customsCode": "Carinska oznaka",
+      "dppServiceProvider": "Pružatelj usluge DPP-a",
+      "backupCopyReference": "Referenca sigurnosne kopije",
+      "dppVersion": "Verzija DPP-a",
+      "lastUpdated": "Posljednje ažuriranje",
+      "status": "Status"
+    },
+    "values": {
+      "ceMarked": "Označeno oznakom CE",
+      "notDeclared": "Nije prijavljeno",
+      "published": "Objavljeno",
+      "noFragrancesDeclared": "Nema prijavljenih alergenih mirisa podložnih zahtjevima označivanja prisutnih u koncentraciji od 10 mg/kg ili više.",
+      "mirroredAt": "Preslikano na {{url}}",
+      "mirroredOnOpenLabel": "Preslikano na infrastrukturu Open-Label.eu",
+      "numberPrefix": "Broj: {{value}}",
+      "certificatePrefix": "Potvrda: {{value}}",
+      "issuedSuffix": " (izdano {{date}})"
+    },
+    "table": {
+      "substance": "Tvar",
+      "cas": "CAS",
+      "concentration": "Koncentracija",
+      "component": "Komponenta"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-pošta",
+      "web": "Internet",
+      "safetyGatePortal": "Portal EU Safety Gate",
+      "reportUnsafe": "Prijavite nesiguran proizvod"
+    },
+    "poweredBy": "Omogućuje"
   }
 }

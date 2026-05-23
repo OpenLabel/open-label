@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Indtast URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Legetøj – Digitalt produktpas",
+    "sections": {
+      "productIdentity": "Kalejdoskop",
+      "instructionsAndWarnings": "Instruktioner og advarsler",
+      "manufacturer": "Fabrikant",
+      "euOperator": "Oplysninger om EU-operatør",
+      "compliance": "Overensstemmelse",
+      "safetyChemical": "Sikkerhed og kemiske oplysninger",
+      "dppInfrastructure": "DPP-infrastruktur"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Bemyndiget repræsentant",
+      "euResponsibleEconomicOperator": "Ansvarlig økonomisk aktør i EU",
+      "safetyIncidentReporting": "Indberetning af sikkerhedshændelser"
+    },
+    "rows": {
+      "brand": "Mærke",
+      "model": "Model",
+      "skuVariant": "SKU/variant",
+      "toyCategory": "Legetøjskategori",
+      "intendedAgeGroup": "Tilsigtet aldersgruppe",
+      "uniqueIdentifier": "Unik identifikator",
+      "manufacturer": "Fabrikant",
+      "address": "Adresse",
+      "email": "E-mail",
+      "website": "Websted",
+      "operatorIdentifier": "Operatøridentifikator",
+      "legalName": "Juridisk navn",
+      "role": "Rolle",
+      "ceMarking": "CE-mærkning",
+      "applicableLegislation": "Gældende lovgivning",
+      "harmonisedStandards": "Harmoniserede standarder",
+      "commonSpecifications": "Fælles specifikationer",
+      "otherStandards": "Andre standarder",
+      "notifiedBody": "Bemyndiget organ",
+      "customsCode": "Customs code",
+      "dppServiceProvider": "DPP-tjenesteudbyder",
+      "backupCopyReference": "Reference til sikkerhedskopi",
+      "dppVersion": "DPP-version",
+      "lastUpdated": "Sidst opdateret",
+      "status": "Status"
+    },
+    "values": {
+      "ceMarked": "CE-mærket",
+      "notDeclared": "Ikke angivet",
+      "published": "Offentliggjort",
+      "noFragrancesDeclared": "Ingen allergifremkaldende duftstoffer, der er omfattet af mærkningskravene, er angivet som værende til stede med 10 mg/kg eller derover.",
+      "mirroredAt": "Spejlet på {{url}}",
+      "mirroredOnOpenLabel": "Spejlet på Open-Label.eu infrastruktur",
+      "numberPrefix": "Nummer {{value}}",
+      "certificatePrefix": "Certifikat: {{value}}",
+      "issuedSuffix": " (udstedt den {{date}})"
+    },
+    "table": {
+      "substance": "Stof",
+      "cas": "CAS",
+      "concentration": "Koncentration",
+      "component": "Komponent"
+    },
+    "safety": {
+      "telephone": "Telefon",
+      "email": "E-mail",
+      "web": "Web",
+      "safetyGatePortal": "EU Safety Gate Portal",
+      "reportUnsafe": "Indberet et usikkert produkt"
+    },
+    "poweredBy": "Leveres af"
   }
 }

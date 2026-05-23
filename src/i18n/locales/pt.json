@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Introduza URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Brinquedo — Passaporte Digital do Produto",
+    "sections": {
+      "productIdentity": "Identidade do produto",
+      "instructionsAndWarnings": "Instruções e advertências",
+      "manufacturer": "Fabricante",
+      "euOperator": "Informações do operador da UE",
+      "compliance": "Conformidade",
+      "safetyChemical": "Informações de segurança e químicas",
+      "dppInfrastructure": "Infraestrutura DPP"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Mandaratário autorizado",
+      "euResponsibleEconomicOperator": "Operador económico responsável na UE",
+      "safetyIncidentReporting": "Comunicação de incidentes de segurança"
+    },
+    "rows": {
+      "brand": "Marca",
+      "model": "Modelo",
+      "skuVariant": "SKU / variante",
+      "toyCategory": "Categoria de brinquedo",
+      "intendedAgeGroup": "Grupo etário previsto",
+      "uniqueIdentifier": "Identificador único",
+      "manufacturer": "Fabricante",
+      "address": "Endereço",
+      "email": "Endereço de correio eletrónico",
+      "website": "Sítio Web",
+      "operatorIdentifier": "Identificador do operador",
+      "legalName": "Denominação social",
+      "role": "Função",
+      "ceMarking": "Marcação CE",
+      "applicableLegislation": "Legislação aplicável",
+      "harmonisedStandards": "Normas harmonizadas",
+      "commonSpecifications": "Especificações comuns",
+      "otherStandards": "Outras normas",
+      "notifiedBody": "Organismo notificado",
+      "customsCode": "Código aduaneiro",
+      "dppServiceProvider": "Prestador de serviços DPP",
+      "backupCopyReference": "Referência da cópia de segurança",
+      "dppVersion": "Versão DPP",
+      "lastUpdated": "Última atualização",
+      "status": "Estado"
+    },
+    "values": {
+      "ceMarked": "Marcação CE",
+      "notDeclared": "Não declarado",
+      "published": "Publicado",
+      "noFragrancesDeclared": "Não são declaradas fragrâncias alergénicas sujeitas a requisitos de rotulagem presentes em concentrações iguais ou superiores a 10 mg/kg.",
+      "mirroredAt": "Espelhado em {{url}}",
+      "mirroredOnOpenLabel": "Espelhado na infraestrutura Open-Label.eu",
+      "numberPrefix": "Número {{value}}",
+      "certificatePrefix": "Certificado: {{value}}",
+      "issuedSuffix": " (emitido em {{date}})"
+    },
+    "table": {
+      "substance": "Substância",
+      "cas": "CAS",
+      "concentration": "Concentração",
+      "component": "Componente"
+    },
+    "safety": {
+      "telephone": "Telefone",
+      "email": "Correio eletrónico",
+      "web": "Web",
+      "safetyGatePortal": "Portal Safety Gate da UE",
+      "reportUnsafe": "Comunicar um produto não seguro"
+    },
+    "poweredBy": "Desenvolvido por"
   }
 }
