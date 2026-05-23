@@ -275,19 +275,19 @@ export function ToyPublicPassport({
         {/* EU operator information */}
         {(d.has_auth_rep === 'yes' || d.manufacturer_non_eu === 'yes') && (
           <>
-            <SectionTitle>EU operator information</SectionTitle>
+            <SectionTitle>{t('toyPublic.sections.euOperator')}</SectionTitle>
             {d.has_auth_rep === 'yes' && (
               <div className="mb-4">
                 <h3 className="text-sm font-semibold mb-2">
-                  Authorised representative
+                  {t('toyPublic.subsections.authorisedRepresentative')}
                 </h3>
                 <dl>
                   <Row
-                    label="Legal name"
+                    label={t('toyPublic.rows.legalName')}
                     value={d.auth_rep_legal_name as string}
                   />
                   <Row
-                    label="Address"
+                    label={t('toyPublic.rows.address')}
                     value={[
                       d.auth_rep_street,
                       d.auth_rep_postal_code,
@@ -297,9 +297,9 @@ export function ToyPublicPassport({
                       .filter(Boolean)
                       .join(', ')}
                   />
-                  <Row label="Email" value={d.auth_rep_email as string} />
+                  <Row label={t('toyPublic.rows.email')} value={d.auth_rep_email as string} />
                   <Row
-                    label="Operator identifier"
+                    label={t('toyPublic.rows.operatorIdentifier')}
                     value={
                       d.auth_rep_operator_id &&
                       d.auth_rep_operator_id_type
@@ -316,19 +316,19 @@ export function ToyPublicPassport({
             {d.manufacturer_non_eu === 'yes' && (
               <div>
                 <h3 className="text-sm font-semibold mb-2">
-                  EU responsible economic operator
+                  {t('toyPublic.subsections.euResponsibleEconomicOperator')}
                 </h3>
                 <dl>
                   <Row
-                    label="Legal name"
+                    label={t('toyPublic.rows.legalName')}
                     value={d.eu_op_legal_name as string}
                   />
                   <Row
-                    label="Role"
+                    label={t('toyPublic.rows.role')}
                     value={labelFor(TOY_EU_OPERATOR_ROLES, d.eu_op_role)}
                   />
                   <Row
-                    label="Address"
+                    label={t('toyPublic.rows.address')}
                     value={[
                       d.eu_op_street,
                       d.eu_op_postal_code,
@@ -338,9 +338,9 @@ export function ToyPublicPassport({
                       .filter(Boolean)
                       .join(', ')}
                   />
-                  <Row label="Email" value={d.eu_op_email as string} />
+                  <Row label={t('toyPublic.rows.email')} value={d.eu_op_email as string} />
                   <Row
-                    label="Operator identifier"
+                    label={t('toyPublic.rows.operatorIdentifier')}
                     value={
                       d.eu_op_operator_id && d.eu_op_operator_id_type
                         ? `${d.eu_op_operator_id as string} (${labelFor(
