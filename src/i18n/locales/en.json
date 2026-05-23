@@ -583,5 +583,74 @@
   },
   "richText": {
     "enterUrl": "Enter URL:"
+  },
+  "toyPublic": {
+    "headerBadge": "Toy — Digital Product Passport",
+    "sections": {
+      "productIdentity": "Product identity",
+      "instructionsAndWarnings": "Instructions and warnings",
+      "manufacturer": "Manufacturer",
+      "euOperator": "EU operator information",
+      "compliance": "Compliance",
+      "safetyChemical": "Safety & chemical information",
+      "dppInfrastructure": "DPP infrastructure"
+    },
+    "subsections": {
+      "authorisedRepresentative": "Authorised representative",
+      "euResponsibleEconomicOperator": "EU responsible economic operator",
+      "safetyIncidentReporting": "Safety incident reporting"
+    },
+    "rows": {
+      "brand": "Brand",
+      "model": "Model",
+      "skuVariant": "SKU / variant",
+      "toyCategory": "Toy category",
+      "intendedAgeGroup": "Intended age group",
+      "uniqueIdentifier": "Unique identifier",
+      "manufacturer": "Manufacturer",
+      "address": "Address",
+      "email": "Email",
+      "website": "Website",
+      "operatorIdentifier": "Operator identifier",
+      "legalName": "Legal name",
+      "role": "Role",
+      "ceMarking": "CE marking",
+      "applicableLegislation": "Applicable legislation",
+      "harmonisedStandards": "Harmonised standards",
+      "commonSpecifications": "Common specifications",
+      "otherStandards": "Other standards",
+      "notifiedBody": "Notified body",
+      "customsCode": "Customs code",
+      "dppServiceProvider": "DPP service provider",
+      "backupCopyReference": "Backup copy reference",
+      "dppVersion": "DPP version",
+      "lastUpdated": "Last updated",
+      "status": "Status"
+    },
+    "values": {
+      "ceMarked": "CE marked",
+      "notDeclared": "Not declared",
+      "published": "Published",
+      "noFragrancesDeclared": "No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.",
+      "mirroredAt": "Mirrored at {{url}}",
+      "mirroredOnOpenLabel": "Mirrored on Open-Label.eu infrastructure",
+      "numberPrefix": "Number {{value}}",
+      "certificatePrefix": "Certificate: {{value}}",
+      "issuedSuffix": " (issued {{date}})"
+    },
+    "table": {
+      "substance": "Substance",
+      "cas": "CAS",
+      "concentration": "Concentration",
+      "component": "Component"
+    },
+    "safety": {
+      "telephone": "Telephone",
+      "email": "Email",
+      "web": "Web",
+      "safetyGatePortal": "EU Safety Gate Portal",
+      "reportUnsafe": "Report an unsafe product"
+    },
+    "poweredBy": "Powered by"
   }
 }
