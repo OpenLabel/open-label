@@ -524,17 +524,17 @@ export function ToyPublicPassport({
         <div className="space-y-3 text-sm">
           <p>
             {tr('allergen_declaration_text') ||
-              'No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.'}
+              t('toyPublic.values.noFragrancesDeclared')}
           </p>
           {fragrances.length > 0 && (
             <div className="border rounded-md overflow-hidden">
               <table className="w-full text-xs">
                 <thead className="bg-muted/50">
                   <tr>
-                    <th className="text-left p-2">Substance</th>
-                    <th className="text-left p-2">CAS</th>
-                    <th className="text-left p-2">Concentration</th>
-                    <th className="text-left p-2">Component</th>
+                    <th className="text-left p-2">{t('toyPublic.table.substance')}</th>
+                    <th className="text-left p-2">{t('toyPublic.table.cas')}</th>
+                    <th className="text-left p-2">{t('toyPublic.table.concentration')}</th>
+                    <th className="text-left p-2">{t('toyPublic.table.component')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -558,7 +558,7 @@ export function ToyPublicPassport({
 
           <div>
             <h3 className="text-sm font-semibold mt-4 mb-1">
-              Safety incident reporting
+              {t('toyPublic.subsections.safetyIncidentReporting')}
             </h3>
             <ul className="space-y-1 text-sm">
               {labelsFor(TOY_SAFETY_CHANNELS, d.safety_channels).map((c) => (
@@ -566,7 +566,7 @@ export function ToyPublicPassport({
               ))}
               {Boolean(d.safety_phone) && (
                 <li>
-                  Telephone:{' '}
+                  {t('toyPublic.safety.telephone')}:{' '}
                   <a
                     href={`tel:${d.safety_phone as string}`}
                     className="text-primary underline"
@@ -577,7 +577,7 @@ export function ToyPublicPassport({
               )}
               {Boolean(d.safety_email) && (
                 <li>
-                  Email:{' '}
+                  {t('toyPublic.safety.email')}:{' '}
                   <a
                     href={`mailto:${d.safety_email as string}`}
                     className="text-primary underline"
@@ -588,7 +588,7 @@ export function ToyPublicPassport({
               )}
               {Boolean(d.safety_website) && (
                 <li>
-                  Web:{' '}
+                  {t('toyPublic.safety.web')}:{' '}
                   <a
                     href={d.safety_website as string}
                     target="_blank"
@@ -600,14 +600,14 @@ export function ToyPublicPassport({
                 </li>
               )}
               <li>
-                EU Safety Gate Portal:{' '}
+                {t('toyPublic.safety.safetyGatePortal')}:{' '}
                 <a
                   href="https://ec.europa.eu/safety-gate-alerts/screen/webReport"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary underline"
                 >
-                  Report an unsafe product
+                  {t('toyPublic.safety.reportUnsafe')}
                 </a>
               </li>
             </ul>
@@ -615,28 +615,28 @@ export function ToyPublicPassport({
         </div>
 
         {/* DPP infrastructure */}
-        <SectionTitle>DPP infrastructure</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.dppInfrastructure')}</SectionTitle>
         <dl>
           <Row
-            label="DPP service provider"
+            label={t('toyPublic.rows.dppServiceProvider')}
             value={config?.company_name || 'Open-Label.eu'}
           />
           <Row
-            label="Backup copy reference"
+            label={t('toyPublic.rows.backupCopyReference')}
             value={
               config?.site_url
-                ? `Mirrored at ${config.site_url}`
-                : 'Mirrored on Open-Label.eu infrastructure'
+                ? t('toyPublic.values.mirroredAt', { url: config.site_url })
+                : t('toyPublic.values.mirroredOnOpenLabel')
             }
           />
-          <Row label="DPP version" value="1.0" />
+          <Row label={t('toyPublic.rows.dppVersion')} value="1.0" />
           <Row
-            label="Last updated"
-            value={new Date(passport.updated_at).toLocaleDateString()}
+            label={t('toyPublic.rows.lastUpdated')}
+            value={new Date(passport.updated_at).toLocaleDateString(displayLanguage)}
           />
           <Row
-            label="Status"
-            value={<Badge variant="secondary">Published</Badge>}
+            label={t('toyPublic.rows.status')}
+            value={<Badge variant="secondary">{t('toyPublic.values.published')}</Badge>}
           />
         </dl>
 
@@ -645,7 +645,7 @@ export function ToyPublicPassport({
         {/* Powered by — mandatory attribution */}
         <div className="text-center text-xs text-muted-foreground space-y-2">
           <p>
-            Powered by{' '}
+            {t('toyPublic.poweredBy')}{' '}
             <a
               href="https://www.open-label.eu"
               target="_blank"
