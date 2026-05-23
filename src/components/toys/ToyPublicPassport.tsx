@@ -426,7 +426,7 @@ export function ToyPublicPassport({
             />
           )}
           <Row
-            label="Applicable legislation"
+            label={t('toyPublic.rows.applicableLegislation')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
                 {labelsFor(TOY_LEGISLATION, d.applicable_legislation).map(
@@ -438,7 +438,7 @@ export function ToyPublicPassport({
             }
           />
           <Row
-            label="Harmonised standards"
+            label={t('toyPublic.rows.harmonisedStandards')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
                 {labelsFor(TOY_STANDARDS, d.harmonised_standards).map((l) => (
@@ -449,7 +449,7 @@ export function ToyPublicPassport({
           />
           {Boolean(d.common_specifications) && (
             <Row
-              label="Common specifications"
+              label={t('toyPublic.rows.commonSpecifications')}
               value={
                 <p className="whitespace-pre-wrap">
                   {tr('common_specifications')}
@@ -459,7 +459,7 @@ export function ToyPublicPassport({
           )}
           {Boolean(d.other_standards) && (
             <Row
-              label="Other standards"
+              label={t('toyPublic.rows.otherStandards')}
               value={
                 <p className="whitespace-pre-wrap">
                   {tr('other_standards')}
@@ -469,7 +469,7 @@ export function ToyPublicPassport({
           )}
           {d.notified_body_involved === 'yes' && (
             <Row
-              label="Notified body"
+              label={t('toyPublic.rows.notifiedBody')}
               value={
                 <div className="space-y-0.5">
                   {(d.notified_body_name as string) && (
@@ -477,14 +477,14 @@ export function ToyPublicPassport({
                   )}
                   {(d.notified_body_number as string) && (
                     <div className="text-xs text-muted-foreground">
-                      Number {d.notified_body_number as string}
+                      {t('toyPublic.values.numberPrefix', { value: d.notified_body_number as string })}
                     </div>
                   )}
                   {(d.certificate_reference as string) && (
                     <div className="text-xs">
-                      Certificate: {d.certificate_reference as string}
+                      {t('toyPublic.values.certificatePrefix', { value: d.certificate_reference as string })}
                       {d.certificate_issue_date
-                        ? ` (issued ${d.certificate_issue_date as string})`
+                        ? t('toyPublic.values.issuedSuffix', { date: d.certificate_issue_date as string })
                         : ''}
                     </div>
                   )}
@@ -506,7 +506,7 @@ export function ToyPublicPassport({
             />
           )}
           <Row
-            label="Customs code"
+            label={t('toyPublic.rows.customsCode')}
             value={
               d.customs_code
                 ? `${d.customs_code as string}${
@@ -520,7 +520,7 @@ export function ToyPublicPassport({
         </dl>
 
         {/* Safety & chemical information */}
-        <SectionTitle>Safety &amp; chemical information</SectionTitle>
+        <SectionTitle>{t('toyPublic.sections.safetyChemical')}</SectionTitle>
         <div className="space-y-3 text-sm">
           <p>
             {tr('allergen_declaration_text') ||
