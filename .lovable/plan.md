@@ -1,35 +1,20 @@
-## Goal
+# Audit Toy form in Italian, fix English leftovers
 
-Wrap up the toy i18n work: (1) visually verify FR form + DE preview show no English, (2) add a targeted template-keys audit test.
+## Steps
 
-## Step 1 — Browser verification
-
-1. `navigate_to_sandbox` to the dashboard, log into the existing preview session.
-2. Switch app language to **Français**.
-3. Create or open a Toy DPP → screenshot the form sections (Identity, Manufacturer, Compliance, Safety, Allergens, Warnings).
-4. Open the preview/public passport, switch preview language to **Deutsch**, screenshot.
-5. Report any English leftovers (excluding user-entered free text and the allow-listed proper nouns already documented in `audit.test.ts`).
-
-## Step 2 — Template-keys audit test
-
-Add `src/i18n/locales/templateKeys.test.ts` that:
-
-- Imports `categoryTemplates` (or directly `toysTemplate`) from `src/templates/toys.ts`.
-- Walks every field and section, derives the required i18n keys:
-  - `toys.fields.<id>.label` (always)
-  - `toys.fields.<id>.hint` (only if `hint` / `hintKey` is set on the field)
-  - `toys.fields.<id>.options.<value>` (for each enum option)
-  - `toys.sections.<id>.title`
-  - `toys.disclaimer.*` keys referenced via `disclaimerKey`
-- For each of the 24 EU locales, asserts every required key resolves to a non-empty string.
-- Fails with a clear message listing the locale + missing key path.
-
-Test is **additive**: it doesn't change the existing `audit.test.ts`, just narrows the scope to template-derived keys so a future field addition without translations is caught immediately.
+1. **Browse in Italian**: Switch app language to Italiano, open "Crea un giocattolo d'esempio" (toy creation form). Walk every section: Identity, Manufacturer, Authorised representative, Responsible economic operator, Compliance, Safety Gate, Instructions & warnings, Allergens/fragrances, Counterfeit protection, Disclaimer, action buttons, toasts.
+2. **Capture leftovers**: Screenshot each section. List every English string found, with its DOM location and likely source (i18n key missing in `it.json`, hardcoded string in a `.tsx`, or generator like `generateAllergenDeclaration`).
+3. **Classify**:
+   - Missing `it` translation for an existing key → add to `src/i18n/locales/it.json` (and mirror to the other 23 locales if the key is also missing there).
+   - Hardcoded English in a component → replace with `t('toys.…')` and add the key to all 24 locales.
+   - Generator output (e.g. `toyFragrances.ts::generateAllergenDeclaration`) → make it i18n-aware using the already-existing `toys.allergens.*` keys, in all 24 locales.
+4. **Re-verify in Italian**: Reload the form, confirm zero English leftovers (excluding user-entered free text and allow-listed proper nouns like "EU Safety Gate", "CE", brand names).
+5. **Run tests**: `bunx vitest run src/i18n/locales/templateKeys.test.ts` plus any nearby i18n audits to confirm no regression. Do not lower thresholds.
 
 ## Out of scope
+- DE preview re-check (already verified last turn).
+- Schema/edge function changes.
+- The known `generateAllergenDeclaration` issue will only be touched if it actually surfaces in the Italian form during the audit; otherwise left for a separate task.
 
-- No production code or template changes.
-- No re-running of `translate-toys-i18n.ts` (all 24 locales are already complete per `bun -e` field count check).
-- No threshold/coverage changes.
-
-After implementation, I run the new test (and the full audit test) and report results.
+## Deliverable
+Updated locale files + minimal component edits so the Italian Toy form renders with no English leftovers, plus a short report listing what was fixed.
