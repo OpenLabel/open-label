@@ -164,11 +164,18 @@ const EXTRACTION_TOOL = {
           description: "EN 71 / EN IEC 62115 standards visible on the packaging or declaration.",
         },
 
-        notified_body_involved: { type: "string", enum: YES_NO, description: "yes if a 4-digit notified body number is shown next to the CE mark." },
+        notified_body_involved: { type: "string", enum: YES_NO, description: "yes if a 4-digit notified body number is shown next to the CE mark. If CE is visible but no 4-digit number is present, set 'no' (do not omit)." },
         notified_body_number: { type: "string", description: "4-digit notified body number (e.g., 0123)." },
         notified_body_name: { type: "string" },
-        certificate_reference: { type: "string" },
+        certificate_reference: { type: "string", description: "Notified-body certificate reference (e.g., EC type-examination certificate number). Distinct from the EU Declaration of Conformity reference." },
         certificate_issue_date: { type: "string", description: "YYYY-MM-DD format." },
+
+        has_instructions_warnings: { type: "string", enum: YES_NO, description: "yes if any safety warning or instruction is visible on the packaging (e.g., 'WARNING:…', 'Not suitable for children under 36 months', 'Choking hazard', 'Adult supervision required')." },
+        public_instructions_warnings: { type: "string", description: "Verbatim warning / instruction text shown on the packaging, to be displayed to consumers on the DPP. Only fill when has_instructions_warnings='yes'." },
+        eu_doc_available: { type: "string", enum: YES_NO, description: "yes if the packaging or document explicitly states an EU Declaration of Conformity exists (e.g., 'EU DECLARATION OF CONFORMITY: yes', 'DoC available')." },
+        eu_doc_reference: { type: "string", description: "EU Declaration of Conformity reference / identifier (e.g., 'DoC-2025-001'). Distinct from notified-body certificate_reference." },
+        safety_assessment_completed: { type: "string", enum: YES_NO, description: "yes if the document/packaging explicitly states a safety assessment has been completed (e.g., 'SAFETY ASSESSMENT: yes')." },
+        technical_documentation_available: { type: "string", enum: YES_NO, description: "yes if the document/packaging explicitly states technical documentation is available (e.g., 'TECHNICAL DOCUMENTATION: yes')." },
 
         cn_chapter: { type: "string", enum: CN_CHAPTER_VALUES, description: "Combined Nomenclature chapter. Default '95' for toys; '85' for electronic toys; '87' for ride-ons/scooters; '95' otherwise." },
 
@@ -212,6 +219,14 @@ WARNINGS visible on the toy that imply controls:
 - Battery icon / "Contains batteries" → add BATTERIES to applicable_legislation.
 - Bluetooth/Wi-Fi / antenna icon → add RED.
 - Magnets / strong magnets warning → toy_category may be 'magnets'.
+- Any visible safety warning / instruction text ("WARNING:…", "Not suitable for children under 36 months", "Choking hazard", "Adult supervision required", etc.) → set has_instructions_warnings="yes" AND copy the verbatim text into public_instructions_warnings.
+
+COMPLIANCE STATEMENTS (explicit yes/no patterns on technical sheets or DPP printouts):
+- "EU DECLARATION OF CONFORMITY: yes/no" or "DoC available: yes/no" → eu_doc_available.
+- "SAFETY ASSESSMENT: yes/no" → safety_assessment_completed.
+- "TECHNICAL DOCUMENTATION: yes/no" → technical_documentation_available.
+- A reference/number printed next to "EU Declaration of Conformity" goes into eu_doc_reference (not certificate_reference).
+- When CE marking is detected but no 4-digit notified body number is visible, set notified_body_involved="no" explicitly (do not omit).
 `;
 
 async function decodeBarcodeFromBase64(imageBase64: string): Promise<{ text: string; format: string } | null> {
