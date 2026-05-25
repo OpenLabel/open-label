@@ -115,13 +115,19 @@ export function getFragranceById(id: string): ToyFragrance | undefined {
   return TOY_FRAGRANCES.find((f) => f.id === id);
 }
 
-export function generateAllergenDeclaration(
-  hasAllergens: string | undefined,
-  selected: SelectedFragrance[] = [],
-): string {
-  if (hasAllergens !== 'yes' || selected.length === 0) {
-    return 'No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.';
-  }
-  const names = selected.map((s) => s.name).join(', ');
-  return `The following allergenic fragrances subject to labelling requirements are present at or above 10 mg/kg: ${names}.`;
+/**
+ * Legacy English allergen declaration prefixes. Older DPPs stored an
+ * auto-generated English sentence in `allergen_declaration_text`; we now
+ * render a localized i18n key instead, but still need to recognise these
+ * legacy values so we can ignore them at render time.
+ */
+export const LEGACY_ALLERGEN_DECLARATION_PREFIXES = [
+  'No allergenic fragrances',
+  'The following allergenic fragrances',
+] as const;
+
+export function isLegacyAllergenDeclaration(value: unknown): boolean {
+  if (typeof value !== 'string') return false;
+  const v = value.trim();
+  return LEGACY_ALLERGEN_DECLARATION_PREFIXES.some((p) => v.startsWith(p));
 }
