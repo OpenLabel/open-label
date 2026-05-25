@@ -21,7 +21,10 @@
     "language": "Lingwa",
     "custom": "Personalizzat",
     "selectOption": "Agħżel għażla",
-    "confirmed": "Ikkonfermat"
+    "confirmed": "Ikkonfermat",
+    "required": "Meħtieġ",
+    "whereApplicable": "Fejn applikabbli",
+    "tbdImplementingAct": "TBD — att ta’ implimentazzjoni"
   },
   "nav": {
     "signIn": "Idħol",
@@ -666,13 +669,287 @@
     "poweredBy": "Mħaddem minn"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Responsabbiltà tal-manifattur",
+        "description": "Dan il-Passaport Diġitali tal-Prodott jinħareġ taħt ir-responsabbiltà unika tal-manifattur."
+      },
+      "product_identity": {
+        "title": "Identità tal-prodott",
+        "description": "Kull mudell jew varjant ta’ ġugarell jeħtieġ id-DPP tiegħu stess."
+      },
+      "manufacturer": {
+        "title": "Manifattur",
+        "description": "Entità legali responsabbli għat-tqegħid tal-ġugarell fis-suq."
+      },
+      "auth_rep": {
+        "title": "Rappreżentant awtorizzat",
+        "description": "Fejn applikabbli."
+      },
+      "eu_operator": {
+        "title": "Operatur ekonomiku responsabbli tal-UE",
+        "description": "Meħtieġ meta l-manifattur ikun stabbilit barra mill-UE."
+      },
+      "compliance": {
+        "title": "Konformità",
+        "description": "Marka CE, leġiżlazzjoni u standards applikabbli tal-UE."
+      },
+      "notified_body": {
+        "title": "Valutazzjoni tal-konformità u korp notifikat",
+        "description": "Fejn applikabbli."
+      },
+      "customs": {
+        "title": "Kodiċi tal-komodità doganali",
+        "description": "Iġġenerat bħala 9880 + kapitlu CN + 00. Jista’ jiġi editjat."
+      },
+      "allergenic_fragrances": {
+        "title": "Fwejjaħ allerġeniċi",
+        "description": "Sustanzi soġġetti għal rekwiżiti ta’ ttikkettar f’konċentrazzjoni ta’ ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Rappurtar ta’ inċidenti tas-sigurtà",
+        "description": "Kanali disponibbli għall-konsumaturi u l-awtoritajiet."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Nikkonferma li dan id-DPP jinħareġ taħt ir-responsabbiltà unika tal-manifattur."
+      },
+      "brand_name": {
+        "label": "Isem tad-ditta"
+      },
+      "model_name": {
+        "label": "Isem tal-mudell jew numru tal-mudell"
+      },
+      "sku": {
+        "label": "SKU jew ID tal-varjant",
+        "help": "Uża DPP separat għal kull varjant (kulur, daqs, materjal, verżjoni elettronika, verżjoni f’pakkett)."
+      },
+      "toy_category": {
+        "label": "Kategorija tal-ġugarell"
+      },
+      "toy_category_other": {
+        "label": "Kategorija tal-ġugarell (speċifika)"
+      },
+      "age_group": {
+        "label": "Grupp ta’ età maħsub"
+      },
+      "age_group_other": {
+        "label": "Grupp ta’ età (speċifika)"
+      },
+      "mouth_contact": {
+        "label": "Dan il-ġugarell huwa maħsub biex jitqiegħed fil-ħalq?",
+        "help": "Japplikaw restrizzjonijiet aktar stretti fuq il-fwejjaħ allerġeniċi u s-sustanzi kimiċi għall-ġugarelli li jiġu f’kuntatt mal-ħalq."
+      },
+      "unique_product_identifier": {
+        "label": "Identifikatur uniku tal-prodott",
+        "help": "Identifikatur persistenti għal dan il-mudell/SKU/varjant tal-ġugarell. Għandu jkun kompatibbli mal-identifikazzjoni tal-istil ESPR / ISO IEC 15459 meta l-ispeċifikazzjonijiet finali jiġu kkonfermati."
+      },
+      "identifier_type": {
+        "label": "Tip ta’ identifikatur"
+      },
+      "identifier_type_other": {
+        "label": "Tip ta’ identifikatur (speċifika)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Isem legali tal-manifattur"
+      },
+      "manufacturer_street": {
+        "label": "Indirizz tat-triq"
+      },
+      "manufacturer_city": {
+        "label": "Belt"
+      },
+      "manufacturer_postal_code": {
+        "label": "Kodiċi postali"
+      },
+      "manufacturer_country": {
+        "label": "Pajjiż"
+      },
+      "manufacturer_email": {
+        "label": "Indirizz elettroniku (email)",
+        "placeholder": "isem@kumpanija.com"
+      },
+      "manufacturer_website": {
+        "label": "Sit elettroniku",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Identifikatur uniku tal-operatur",
+        "help": "Uża l-aħjar identifikatur tal-operatur disponibbli issa; il-format finali meħtieġ jista’ jiġi definit mill-att ta’ implimentazzjoni."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Tip ta’ identifikatur tal-operatur"
+      },
+      "has_auth_rep": {
+        "label": "Il-manifattur għandu rappreżentant awtorizzat?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Isem legali tar-rappreżentant awtorizzat"
+      },
+      "auth_rep_street": {
+        "label": "Indirizz tat-triq"
+      },
+      "auth_rep_city": {
+        "label": "Belt"
+      },
+      "auth_rep_postal_code": {
+        "label": "Kodiċi postali"
+      },
+      "auth_rep_country": {
+        "label": "Pajjiż"
+      },
+      "auth_rep_email": {
+        "label": "Indirizz elettroniku (email)",
+        "placeholder": "isem@kumpanija.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Identifikatur uniku tal-operatur"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Tip ta’ identifikatur tal-operatur"
+      },
+      "manufacturer_non_eu": {
+        "label": "Il-manifattur huwa stabbilit barra mill-UE?"
+      },
+      "eu_op_legal_name": {
+        "label": "Isem legali tal-operatur responsabbli tal-UE"
+      },
+      "eu_op_role": {
+        "label": "Rwol"
+      },
+      "eu_op_street": {
+        "label": "Indirizz tat-triq"
+      },
+      "eu_op_city": {
+        "label": "Belt"
+      },
+      "eu_op_postal_code": {
+        "label": "Kodiċi postali"
+      },
+      "eu_op_country": {
+        "label": "Pajjiż"
+      },
+      "eu_op_email": {
+        "label": "Indirizz elettroniku (email)",
+        "placeholder": "isem@kumpanija.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Identifikatur uniku tal-operatur"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Tip ta’ identifikatur tal-operatur"
+      },
+      "has_instructions_warnings": {
+        "label": "Dan il-ġugarell jeħtieġ struzzjonijiet, twissijiet, jew informazzjoni dwar is-sigurtà?"
+      },
+      "public_instructions_warnings": {
+        "label": "Struzzjonijiet u twissijiet pubbliċi",
+        "help": "Żid it-twissijiet, l-istruzzjonijiet, u l-informazzjoni dwar is-sigurtà li jakkumpanjaw il-ġugarell."
+      },
+      "ce_declaration_ack": {
+        "label": "Il-manifattur jiddikjara li dan il-ġugarell jikkonforma mar-rekwiżiti applikabbli tas-sigurtà tal-UE u għandu jew se jkollu l-marka CE fejn meħtieġ qabel ma jitqiegħed fis-suq tal-UE.",
+        "help": "Ġugarelli li għandhom il-marka CE biss jistgħu jitqiegħdu fis-suq tal-UE. Din id-dikjarazzjoni għandha tkun konsistenti mal-valutazzjoni tal-konformità tal-manifattur."
+      },
+      "eu_doc_available": {
+        "label": "Id-Dikjarazzjoni ta’ Konformità tal-UE hija disponibbli?",
+        "warn": "Id-Dikjarazzjoni ta’ Konformità tal-UE hija mistennija bħala parti mill-qafas tal-konformità tal-ġugarelli. Imla dan qabel ma tiddependi fuq id-DPP għall-użu fis-suq."
+      },
+      "eu_doc_reference": {
+        "label": "Referenza tad-Dikjarazzjoni ta’ Konformità"
+      },
+      "eu_doc_upload": {
+        "label": "Tlugħ tad-Dikjarazzjoni ta’ Konformità",
+        "help": "Reġistrazzjoni interna biss. Il-fajl li jittella’ jinżamm għall-manifattur u ma jintweriex fid-DPP pubbliku."
+      },
+      "safety_assessment_completed": {
+        "label": "Valutazzjoni tas-sigurtà tlestiet?",
+        "help": "Il-manifatturi tal-ġugarelli għandhom jivvalutaw ir-riskji kimiċi, fiżiċi, mekkaniċi, elettriċi, tal-fjammabbiltà, tal-iġjene, tar-radjuattività u tal-esponiment fejn rilevanti.",
+        "warn": "L-informazzjoni dwar il-valutazzjoni tas-sigurtà għandha timtela qabel ma tiddependi fuq dan id-DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Dokumentazzjoni teknika disponibbli?",
+        "help": "Id-dokumentazzjoni teknika tappoġġja d-dimostrazzjoni li l-ġugarell jikkonforma mar-rekwiżiti applikabbli tas-sigurtà.",
+        "warn": "Id-dokumentazzjoni teknika tista’ tkun meħtieġa mill-awtoritajiet tas-sorveljanza tas-suq."
+      },
+      "technical_documentation_upload": {
+        "label": "Tlugħ tad-dokumentazzjoni teknika",
+        "help": "Reġistrazzjoni interna biss. Il-fajl li jittella’ jinżamm għall-manifattur u ma jintweriex fid-DPP pubbliku."
+      },
+      "applicable_legislation": {
+        "label": "Leġiżlazzjoni applikabbli tal-UE"
+      },
+      "harmonised_standards": {
+        "label": "Standards armonizzati użati"
+      },
+      "common_specifications": {
+        "label": "Speċifikazzjonijiet komuni użati",
+        "placeholder": "Iddeskrivi l-ispeċifikazzjonijiet komuni applikati."
+      },
+      "other_standards": {
+        "label": "Standards oħra użati (wieħed għal kull linja)"
+      },
+      "notified_body_involved": {
+        "label": "Kien hemm involut korp notifikat?"
+      },
+      "notified_body_name": {
+        "label": "Isem tal-korp notifikat"
+      },
+      "notified_body_number": {
+        "label": "Numru tal-korp notifikat",
+        "placeholder": "eż., 0123"
+      },
+      "certificate_reference": {
+        "label": "Referenza taċ-ċertifikat"
+      },
+      "certificate_issue_date": {
+        "label": "Data tal-ħruġ taċ-ċertifikat (SSSS-XX-JJ)",
+        "placeholder": "SSSS-XX-JJ"
+      },
+      "notified_body_certificate_url": {
+        "label": "Ċertifikat ta’ konformità (PDF jew immaġni)",
+        "help": "Fakultattiv. Il-fajl li jittella’ huwa aċċessibbli pubblikament mid-DPP."
+      },
+      "cn_chapter": {
+        "label": "Kapitlu CN"
+      },
+      "customs_code": {
+        "label": "Kodiċi tal-komodità doganali",
+        "placeholder": "98809500",
+        "help": "Mimli awtomatikament mill-kapitlu CN. Ibdel jekk il-klassifikazzjoni doganali tiegħek hija differenti."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Il-ġugarell jew xi komponent fih fwejjaħ allerġeniċi f’konċentrazzjoni ta’ ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Fwejjaħ allerġeniċi preżenti"
+      },
+      "allergen_declaration_text": {
+        "label": "Dikjarazzjoni tal-allerġeni (iġġenerata awtomatikament, tista’ tiġi editjata)"
+      },
+      "safety_channels": {
+        "label": "Kanali pubbliċi għar-rappurtar tas-sigurtà"
+      },
+      "safety_phone": {
+        "label": "Telefon għar-rappurtar tas-sigurtà",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "Email għar-rappurtar tas-sigurtà",
+        "placeholder": "sigurta@kumpanija.com"
+      },
+      "safety_website": {
+        "label": "Sit elettroniku / URL tal-formola ta’ kuntatt għar-rappurtar tas-sigurtà",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
         "VAT": "Numru tal-VAT",
-        "NATIONAL": "Numru ta' reġistrazzjoni nazzjonali tal-kumpanija",
+        "NATIONAL": "Numru nazzjonali tar-reġistrazzjoni tal-kumpanija",
         "DUNS": "DUNS",
         "ESPR": "Identifikatur tal-operatur ESPR / DPP",
         "other": "Oħrajn"
@@ -681,25 +958,25 @@
         "baby": "Ġugarell tat-trabi",
         "plush": "Ġugarell tal-filpa",
         "doll": "Pupa",
-        "action_figure": "Pupazz tal-azzjoni",
-        "construction": "Ġugarell tal-kostruzzjoni / blokki",
+        "action_figure": "Pupa tal-azzjoni",
+        "construction": "Ġugarell tal-kostruzzjoni / blokok",
         "puzzle": "Puzzle",
         "board_game": "Logħba tal-bord",
-        "arts_crafts": "Ġugarell tal-arti u s-snajja'",
+        "arts_crafts": "Ġugarell tal-arti u s-snajja’",
         "slime": "Slime / stokk / kompost tal-immudellar",
-        "chemical_set": "Sett ta' ġugarell kimiku",
-        "cosmetic": "Ġugarell kosmetiku / make-up tal-logħob",
-        "olfactory": "Logħba tal-bord olfattiva",
-        "gustative": "Logħba gustattiva",
-        "outdoor": "Ġugarell ta' barra",
+        "chemical_set": "Sett ta’ ġugarelli kimiċi",
+        "cosmetic": "Ġugarell kożmetiku / make-up tal-logħob",
+        "olfactory": "Logħba tal-bord tax-xamm",
+        "gustative": "Logħba tat-togħma",
+        "outdoor": "Ġugarell ta’ barra",
         "activity": "Ġugarell tal-attività",
         "ride_on": "Ġugarell li tirkeb fuqu",
-        "wheeled": "Scooter / skate / ġugarell bir-roti",
+        "wheeled": "Skuter / skejt / ġugarell bir-roti",
         "aquatic": "Ġugarell akkwatiku",
         "electronic": "Ġugarell elettroniku",
-        "radio": "Ġugarell imqabbad bir-radju",
-        "internet": "Ġugarell imqabbad mal-internet",
-        "ai": "Ġugarell bl-IA",
+        "radio": "Ġugarell konness bir-radju",
+        "internet": "Ġugarell konness mal-internet",
+        "ai": "Ġugarell bl-AI",
         "battery": "Ġugarell bil-batterija",
         "magnets": "Ġugarell bil-kalamiti",
         "drone": "Drone tal-logħob",
@@ -726,7 +1003,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "GTIN Serializzat",
+        "SGTIN": "GTIN serjalizzat",
         "SKU": "SKU",
         "MODEL": "Numru tal-mudell",
         "ISO_15459": "Identifikatur kompatibbli mal-ISO/IEC 15459",
@@ -735,24 +1012,24 @@
       "cnChapter": {
         "32": "32 — Żebgħa, pigmenti, linka, żebgħat",
         "33": "33 — Żjut essenzjali, fwejjaħ, kożmetiċi",
-        "34": "34 — Sapun, xemgħat, pasti tal-immudellar",
-        "39": "39 — Plastik u oġġetti magħmula minnu",
-        "40": "40 — Lastiku u oġġetti magħmula minnu",
+        "34": "34 — Sapun, xama’, pejsts tal-immudellar",
+        "39": "39 — Plastik u oġġetti tiegħu",
+        "40": "40 — Lastiku u oġġetti tiegħu",
         "42": "42 — Oġġetti tal-ġilda",
         "44": "44 — Injam u oġġetti tal-injam",
-        "48": "48 — Karta u kartunċin",
+        "48": "48 — Karta u kartun",
         "49": "49 — Kotba stampati, stampi, kartolini",
         "61": "61 — Ħwejjeġ maħdumin bil-labar / aċċessorji tat-tessuti",
         "62": "62 — Ħwejjeġ mhux maħdumin bil-labar / aċċessorji tat-tessuti",
-        "63": "63 — Oġġetti oħra tat-tessuti magħmula lesti",
+        "63": "63 — Oġġetti oħra tat-tessuti magħmula",
         "69": "69 — Prodotti taċ-ċeramika",
         "70": "70 — Ħġieġ u oġġetti tal-ħġieġ",
         "73": "73 — Oġġetti tal-ħadid jew tal-azzar",
         "76": "76 — Oġġetti tal-aluminju",
         "85": "85 — Makkinarju u tagħmir elettriku",
         "87": "87 — Vetturi u partijiet",
-        "90": "90 — Strumenti ottiċi, tal-kejl, tal-kontroll",
-        "95": "95 — Ġugarelli, logħob u oġġetti sportivi",
+        "90": "90 — Strumenti ottiċi, tal-kejl, tal-verifika",
+        "95": "95 — Ġugarelli, logħob u rekwiżiti sportivi",
         "other": "Oħrajn"
       },
       "legislation": {
@@ -763,7 +1040,7 @@
         "CRA": "Regolament (UE) 2024/2847 — Att dwar iċ-Ċiberreżiljenza",
         "RED": "Direttiva 2014/53/UE — Direttiva dwar it-Tagħmir tar-Radju",
         "LVD": "Direttiva 2014/35/UE — Direttiva dwar il-Vultaġġ Baxx",
-        "EMC": "Direttiva 2014/30/UE — Direttiva dwar l-EMC",
+        "EMC": "Direttiva 2014/30/UE — Direttiva EMC",
         "RoHS": "Direttiva 2011/65/UE — RoHS",
         "BATTERIES": "Regolament (UE) 2023/1542 — Regolament dwar il-Batteriji",
         "DRONES": "Regolament Delegat (UE) 2019/945 — UAS / drones",
@@ -775,28 +1052,28 @@
       "standards": {
         "EN71_1": "EN 71-1 — Proprjetajiet mekkaniċi u fiżiċi",
         "EN71_2": "EN 71-2 — Fjammabbiltà",
-        "EN71_3": "EN 71-3 — Migrazzjoni ta' ċerti elementi",
+        "EN71_3": "EN 71-3 — Migrazzjoni ta’ ċerti elementi",
         "EN71_4": "EN 71-4 — Settijiet sperimentali għall-kimika",
-        "EN71_5": "EN 71-5 — Ġugarelli kimiċi li mhumiex settijiet sperimentali",
-        "EN71_7": "EN 71-7 — Żebgħa tas-swaba'",
+        "EN71_5": "EN 71-5 — Ġugarelli kimiċi minbarra settijiet sperimentali",
+        "EN71_7": "EN 71-7 — Żebgħa tas-swaba’",
         "EN71_8": "EN 71-8 — Ġugarelli tal-attività għall-użu domestiku",
         "EN71_12": "EN 71-12 — N-nitrosamini u sustanzi N-nitrosatabbli",
-        "EN71_13": "EN 71-13 — Logħob tal-bord olfattiv, kitts kożmetiċi u logħob gustattiv",
+        "EN71_13": "EN 71-13 — Logħob tal-bord tax-xamm, kitts kożmetiċi u logħob tat-togħma",
         "EN71_14": "EN 71-14 — Trampolini għall-użu domestiku",
         "EN_IEC_62115": "EN IEC 62115 — Ġugarelli elettriċi",
         "other": "Standard armonizzat ieħor",
         "common_spec": "Speċifikazzjoni komuni minflok standard armonizzat"
       },
       "safetyChannel": {
-        "phone": "Telefown",
+        "phone": "Telefon",
         "email": "Email",
-        "website": "Sit web iddedikat",
-        "form": "Formola ta' kuntatt"
+        "website": "Sit elettroniku ddedikat",
+        "form": "Formola ta’ kuntatt"
       },
       "euOperatorRole": {
         "importer": "Importatur",
         "auth_rep": "Rappreżentant awtorizzat",
-        "fulfilment": "Fornitur ta' servizz ta' fulfilment",
+        "fulfilment": "Fornitur tas-servizz ta’ eżekuzzjoni",
         "distributor": "Distributur li jaġixxi bħala operatur ekonomiku responsabbli",
         "other": "Persuna responsabbli oħra bbażata fl-UE (Reg. 2019/1020 Art. 4)"
       },
@@ -808,6 +1085,138 @@
         "yes": "Iva",
         "no": "Le",
         "unknown": "Mhux magħruf"
+      }
+    },
+    "ai": {
+      "scannerTitle": "Skaner tat-Tikketti tal-Ġugarelli bl-AI",
+      "scannerDescription": "Ħu jew tella’ ritratt tal-imballaġġ tal-ġugarell — l-AI se taqra l-marka CE, it-twissijiet dwar l-età, il-blokka tal-manifattur, il-barcode, u l-fwejjaħ allerġeniċi elenkati.",
+      "dropHere": "↓ Itlaq hawn",
+      "dragOrClick": "Kaxkar u itlaq jew ikklikkja"
+    },
+    "warnings": {
+      "youngChild": "Dan il-ġugarell huwa maħsub għal tfal taħt is-36 xahar. Japplikaw restrizzjonijiet aktar stretti fuq il-fwejjaħ allerġeniċi, u kwalunkwe parti żgħira trid tiġi vvalutata kontra l-perikli ta’ fgar.",
+      "mouthContact": "Dan il-ġugarell huwa maħsub biex jitqiegħed fil-ħalq. Japplikaw restrizzjonijiet aktar stretti fuq il-fwejjaħ allerġeniċi u l-migrazzjoni kimika.",
+      "unknownAllergens": "Dan id-DPP jista’ jkun inkomplet minħabba li l-informazzjoni dwar il-fwejjaħ allerġeniċi hija obbligatorja fejn applikabbli. Ibdel \"Mhux magħruf\" b’Iva jew Le qabel ma tippubblika.",
+      "suggestLegislation": "Abbażi tal-kategorija tal-ġugarell magħżula, ikkunsidra wkoll li timmarka: {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP tal-Ġugarelli — ċaħda ta’ responsabbiltà dwar il-konformità",
+      "body": "Il-mudell eżatt tad-dejta tal-Passaport Diġitali tal-Prodott tal-UE u l-ispeċifikazzjonijiet tal-API għall-ġugarelli għadhom iridu jiġu ddeterminati u huma mistennija li jiġu definiti fl-att ta’ implimentazzjoni sa tmiem l-2026. Din l-għodda hija l-ewwel verżjoni bbażata fuq ir-Regolament (UE) 2025/2509 u m’għandhiex titqies bħala parir legali finali."
+    },
+    "internalBadge": "Intern — ma jintweriex pubblikament",
+    "safetyGate": {
+      "title": "Safety Gate tal-UE",
+      "body": "Irrapporta prodotti mhux sikuri permezz tal-Portal tas-Safety Gate tal-UE:",
+      "alwaysShown": "Din il-link dejjem tintwera fil-passaport pubbliku."
+    },
+    "certificate": {
+      "viewFile": "Ara l-fajl li ttella’",
+      "remove": "Neħħi l-fajl",
+      "uploading": "Qed jittella’...",
+      "uploadButton": "Tella’ ċ-ċertifikat",
+      "errors": {
+        "loginRequired": "Trid tkun illoggjat biex ittella’ l-fajls.",
+        "tooLarge": "Il-fajl huwa kbir wisq. Id-daqs massimu huwa 5 MB.",
+        "uploadFailed": "It-tlugħ tal-fajl ma rnexxiex."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Għad ma żdiedu l-ebda fwejjaħ allerġeniċi.",
+      "summary": "{{count}} fwieħa(i) ddikjarati.",
+      "addButton": "Żid fwieħa",
+      "cas": "CAS",
+      "removeAria": "Neħħi {{name}}",
+      "concentrationLabel": "Konċentrazzjoni (mg/kg)",
+      "componentLabel": "Komponent / materjal",
+      "componentPlaceholder": "eż., mili tal-filpa",
+      "aboveThreshold": "Konċentrazzjoni ≥10 mg/kg",
+      "supplierDeclaration": "Dikjarazzjoni tal-fornitur fil-fajl",
+      "testReport": "Rapport tat-test fil-fajl",
+      "dialogTitle": "Agħżel fwejjaħ allerġeniċi",
+      "searchPlaceholder": "Fittex bl-isem, CAS, jew id...",
+      "clearSearch": "Neħħi t-tfittxija",
+      "noResults": "L-ebda fwieħa ma taqbel ma’ \"{{q}}\".",
+      "done": "Lest"
+    },
+    "validation": {
+      "imageRequired": "Hija meħtieġa immaġni bil-kulur tal-ġugarell.",
+      "descriptionRequired": "Hija meħtieġa deskrizzjoni tal-prodott għall-ġugarelli."
+    },
+    "public": {
+      "badge": "🧸 Ġugarell — Passaport Diġitali tal-Prodott",
+      "otherFallback": "Oħrajn",
+      "notDeclared": "Mhux iddikjarat",
+      "ceMarked": "✓ Marka CE",
+      "statusPublished": "Ippubblikat",
+      "noAllergens": "L-ebda fwieħa allerġenika soġġetta għar-rekwiżiti tal-ittikkettar mhi ddikjarata bħala preżenti f’konċentrazzjoni ta’ 10 mg/kg jew aktar.",
+      "certificateDownload": "Niżżel iċ-ċertifikat ta’ konformità",
+      "reportUnsafe": "Irrapporta prodott mhux sikur",
+      "mirroredAt": "Immirat fuq {{url}}",
+      "mirroredDefault": "Immirat fuq l-infrastruttura ta’ Open-Label.eu",
+      "nbNumber": "Numru {{n}}",
+      "nbCertificate": "Ċertifikat: {{ref}}",
+      "nbIssued": "(maħruġ {{date}})",
+      "instructionsTitle": "Struzzjonijiet u twissijiet",
+      "ceDeclarationStatement": "Il-manifattur jiddikjara li dan il-ġugarell jikkonforma mar-rekwiżiti applikabbli tas-sigurtà tal-UE u għandu jew se jkollu l-marka CE fejn meħtieġ qabel ma jitqiegħed fis-suq tal-UE.",
+      "docLabel": "Dikjarazzjoni ta’ Konformità tal-UE",
+      "docReference": "Referenza",
+      "safetyAssessmentLabel": "Valutazzjoni tas-sigurtà",
+      "technicalDocsLabel": "Dokumentazzjoni teknika",
+      "yesNoUnknown": {
+        "yes": "Iva",
+        "no": "Le",
+        "unknown": "Mhux magħruf"
+      },
+      "sections": {
+        "identity": "Identità tal-prodott",
+        "manufacturer": "Responsabbiltà tal-manifattur",
+        "manufacturerNote": "Dan il-Passaport Diġitali tal-Prodott jinħareġ taħt ir-responsabbiltà unika tal-manifattur.",
+        "euOperator": "Informazzjoni dwar l-operatur tal-UE",
+        "authRep": "Rappreżentant awtorizzat",
+        "euResponsible": "Operatur ekonomiku responsabbli tal-UE",
+        "compliance": "Konformità",
+        "safety": "Informazzjoni dwar is-sigurtà u s-sustanzi kimiċi",
+        "safetyReporting": "Rappurtar ta’ inċidenti tas-sigurtà",
+        "infrastructure": "Infrastruttura tad-DPP"
+      },
+      "rows": {
+        "brand": "Ditta",
+        "model": "Mudell",
+        "sku": "SKU / varjant",
+        "toyCategory": "Kategorija tal-ġugarell",
+        "age": "Grupp ta’ età maħsub",
+        "uid": "Identifikatur uniku",
+        "manufacturer": "Manifattur",
+        "address": "Indirizz",
+        "email": "Email",
+        "website": "Sit elettroniku",
+        "operatorId": "Identifikatur tal-operatur",
+        "legalName": "Isem legali",
+        "role": "Rwol",
+        "ce": "Marka CE",
+        "applicableLeg": "Leġiżlazzjoni applikabbli",
+        "standards": "Standards armonizzati",
+        "commonSpecs": "Speċifikazzjonijiet komuni",
+        "otherStandards": "Standards oħra",
+        "notifiedBody": "Korp notifikat",
+        "customs": "Kodiċi doganali",
+        "dppProvider": "Fornitur tas-servizz tad-DPP",
+        "backup": "Referenza tal-kopja ta’ riżerva",
+        "dppVersion": "Verżjoni tad-DPP",
+        "lastUpdated": "Aġġornat l-aħħar",
+        "status": "Status"
+      },
+      "table": {
+        "substance": "Sustanza",
+        "cas": "CAS",
+        "concentration": "Konċentrazzjoni",
+        "component": "Komponent"
+      },
+      "safety": {
+        "telephone": "Telefon",
+        "emailLabel": "Email",
+        "web": "Web",
+        "gatePortal": "Portal tas-Safety Gate tal-UE"
       }
     }
   }
