@@ -315,6 +315,7 @@ const TOYS: Record<string, any> = {
     title: 'Toys DPP — compliance disclaimer',
     body: 'The exact EU Digital Product Passport data model and API specifications for toys are still TBD and are expected to be defined in the implementing act due by the end of 2026. This tool is a first version based on Regulation (EU) 2025/2509 and should not be treated as final legal advice.',
   },
+  internalBadge: 'Internal — not shown publicly',
   safetyGate: {
     title: 'EU Safety Gate',
     body: 'Report unsafe products through the EU Safety Gate Portal:',
