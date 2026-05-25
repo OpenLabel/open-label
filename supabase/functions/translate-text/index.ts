@@ -51,11 +51,12 @@ const languageNames: Record<string, string> = {
   sv: "Swedish",
 };
 
-interface TranslateRequest {
-  text: string;
-  sourceLanguage: string;
-  targetLanguages: string[];
-}
+const EU_LANG_CODES = Object.keys(languageNames) as [string, ...string[]];
+const TranslateSchema = z.object({
+  text: z.string().trim().min(1).max(50_000),
+  sourceLanguage: z.enum(EU_LANG_CODES),
+  targetLanguages: z.array(z.enum(EU_LANG_CODES)).min(1).max(23),
+});
 
 serve(async (req) => {
   // Handle CORS preflight
@@ -85,22 +86,45 @@ serve(async (req) => {
         { status: 401, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+    const userId = claimsData.claims.sub as string;
 
-    const { text, sourceLanguage, targetLanguages }: TranslateRequest = await req.json();
-
-    if (!text?.trim()) {
+    let rawBody: unknown;
+    try {
+      rawBody = await req.json();
+    } catch {
       return new Response(
-        JSON.stringify({ error: "No text provided" }),
+        JSON.stringify({ error: "Invalid JSON body" }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
-
-    if (!targetLanguages?.length) {
+    const parsed = TranslateSchema.safeParse(rawBody);
+    if (!parsed.success) {
       return new Response(
-        JSON.stringify({ error: "No target languages provided" }),
+        JSON.stringify({ error: "Invalid input", details: parsed.error.flatten().fieldErrors }),
         { status: 400, headers: { ...corsHeaders, "Content-Type": "application/json" } }
       );
     }
+    const { text, sourceLanguage, targetLanguages } = parsed.data;
+
+    // Per-user monthly quota (same pattern as OCR functions).
+    const supabaseService = createClient(
+      Deno.env.get("SUPABASE_URL")!,
+      Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!,
+    );
+    const { data: quotaResult, error: quotaError } = await supabaseService.rpc("increment_api_usage", {
+      p_user_id: userId,
+      p_function_name: "translate-text",
+      p_limit: 500,
+    });
+    if (quotaError) {
+      console.error("Quota check failed:", quotaError);
+    } else if (quotaResult && (quotaResult as { allowed?: boolean }).allowed === false) {
+      return new Response(
+        JSON.stringify({ error: (quotaResult as { message?: string }).message || "Quota exceeded" }),
+        { status: 429, headers: { ...corsHeaders, "Content-Type": "application/json" } }
+      );
+    }
+
 
     const sourceLangName = languageNames[sourceLanguage] || sourceLanguage;
     const targetLangList = targetLanguages
