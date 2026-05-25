@@ -52,9 +52,9 @@ interface ToyPublicPassportProps {
 }
 
 type LocalizedOption = { value: string; label: string; labelKey?: string };
-// i18next's TFunction has many overloads; use a permissive function type here.
+// i18next's TFunction has many overloads; accept any callable that returns something stringifiable.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type TFn = (...args: any[]) => string;
+type TFn = (...args: any[]) => any;
 
 function labelFor(
   options: LocalizedOption[],
