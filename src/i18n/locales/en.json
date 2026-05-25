@@ -21,7 +21,10 @@
     "language": "Language",
     "custom": "Custom",
     "selectOption": "Select an option",
-    "confirmed": "Confirmed"
+    "confirmed": "Confirmed",
+    "required": "Required",
+    "whereApplicable": "Where applicable",
+    "tbdImplementingAct": "TBD — implementing act"
   },
   "nav": {
     "signIn": "Sign In",
@@ -666,6 +669,280 @@
     "poweredBy": "Powered by"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Manufacturer responsibility",
+        "description": "This Digital Product Passport is issued under the sole responsibility of the manufacturer."
+      },
+      "product_identity": {
+        "title": "Product identity",
+        "description": "Each toy model or variant needs its own DPP."
+      },
+      "manufacturer": {
+        "title": "Manufacturer",
+        "description": "Legal entity responsible for placing the toy on the market."
+      },
+      "auth_rep": {
+        "title": "Authorised representative",
+        "description": "Where applicable."
+      },
+      "eu_operator": {
+        "title": "EU responsible economic operator",
+        "description": "Required when the manufacturer is established outside the EU."
+      },
+      "compliance": {
+        "title": "Compliance",
+        "description": "CE marking, applicable EU legislation and standards."
+      },
+      "notified_body": {
+        "title": "Conformity assessment & notified body",
+        "description": "Where applicable."
+      },
+      "customs": {
+        "title": "Customs commodity code",
+        "description": "Generated as 9880 + CN chapter + 00. Editable."
+      },
+      "allergenic_fragrances": {
+        "title": "Allergenic fragrances",
+        "description": "Substances subject to labelling requirements at ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Safety incident reporting",
+        "description": "Channels available to consumers and authorities."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "I confirm this DPP is issued under the sole responsibility of the manufacturer."
+      },
+      "brand_name": {
+        "label": "Brand name"
+      },
+      "model_name": {
+        "label": "Model name or model number"
+      },
+      "sku": {
+        "label": "SKU or variant ID",
+        "help": "Use a separate DPP for each variant (colour, size, material, electronic version, bundled version)."
+      },
+      "toy_category": {
+        "label": "Toy category"
+      },
+      "toy_category_other": {
+        "label": "Toy category (specify)"
+      },
+      "age_group": {
+        "label": "Intended age group"
+      },
+      "age_group_other": {
+        "label": "Age group (specify)"
+      },
+      "mouth_contact": {
+        "label": "Is this toy intended to be placed in the mouth?",
+        "help": "Stricter allergenic fragrance and chemical restrictions apply for mouth-contact toys."
+      },
+      "unique_product_identifier": {
+        "label": "Unique product identifier",
+        "help": "Persistent identifier for this toy model/SKU/variant. Should be compatible with ESPR / ISO IEC 15459-style identification when final specs are confirmed."
+      },
+      "identifier_type": {
+        "label": "Identifier type"
+      },
+      "identifier_type_other": {
+        "label": "Identifier type (specify)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Manufacturer legal name"
+      },
+      "manufacturer_street": {
+        "label": "Street address"
+      },
+      "manufacturer_city": {
+        "label": "City"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postal code"
+      },
+      "manufacturer_country": {
+        "label": "Country"
+      },
+      "manufacturer_email": {
+        "label": "Electronic address (email)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_website": {
+        "label": "Website",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Unique operator identifier",
+        "help": "Use the best available operator identifier now; final required format may be defined by the implementing act."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Operator identifier type"
+      },
+      "has_auth_rep": {
+        "label": "Does the manufacturer have an authorised representative?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Authorised representative legal name"
+      },
+      "auth_rep_street": {
+        "label": "Street address"
+      },
+      "auth_rep_city": {
+        "label": "City"
+      },
+      "auth_rep_postal_code": {
+        "label": "Postal code"
+      },
+      "auth_rep_country": {
+        "label": "Country"
+      },
+      "auth_rep_email": {
+        "label": "Electronic address (email)",
+        "placeholder": "name@company.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Unique operator identifier"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Operator identifier type"
+      },
+      "manufacturer_non_eu": {
+        "label": "Is the manufacturer established outside the EU?"
+      },
+      "eu_op_legal_name": {
+        "label": "EU responsible operator legal name"
+      },
+      "eu_op_role": {
+        "label": "Role"
+      },
+      "eu_op_street": {
+        "label": "Street address"
+      },
+      "eu_op_city": {
+        "label": "City"
+      },
+      "eu_op_postal_code": {
+        "label": "Postal code"
+      },
+      "eu_op_country": {
+        "label": "Country"
+      },
+      "eu_op_email": {
+        "label": "Electronic address (email)",
+        "placeholder": "name@company.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Unique operator identifier"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Operator identifier type"
+      },
+      "has_instructions_warnings": {
+        "label": "Does this toy require instructions, warnings, or safety information?"
+      },
+      "public_instructions_warnings": {
+        "label": "Public instructions and warnings",
+        "help": "Add the warnings, instructions, and safety information that accompany the toy."
+      },
+      "ce_declaration_ack": {
+        "label": "The manufacturer declares that this toy complies with the applicable EU safety requirements and bears or will bear the CE marking where required before being placed on the EU market.",
+        "help": "Only toys bearing CE marking can be placed on the EU market. This declaration should be consistent with the manufacturer’s conformity assessment."
+      },
+      "eu_doc_available": {
+        "label": "EU Declaration of Conformity available?",
+        "warn": "The EU Declaration of Conformity is expected as part of the toy conformity framework. Complete this before relying on the DPP for market-facing use."
+      },
+      "eu_doc_reference": {
+        "label": "Declaration of Conformity reference"
+      },
+      "eu_doc_upload": {
+        "label": "Declaration of Conformity upload",
+        "help": "Internal record only. The uploaded file is kept for the manufacturer and is not shown on the public DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Safety assessment completed?",
+        "help": "Toy manufacturers must assess chemical, physical, mechanical, electrical, flammability, hygiene, radioactivity and exposure risks where relevant.",
+        "warn": "Safety assessment information should be completed before relying on this DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Technical documentation available?",
+        "help": "Technical documentation supports the demonstration that the toy complies with applicable safety requirements.",
+        "warn": "Technical documentation may be required by market surveillance authorities."
+      },
+      "technical_documentation_upload": {
+        "label": "Technical documentation upload",
+        "help": "Internal record only. The uploaded file is kept for the manufacturer and is not shown on the public DPP."
+      },
+      "applicable_legislation": {
+        "label": "Applicable EU legislation"
+      },
+      "harmonised_standards": {
+        "label": "Harmonised standards used"
+      },
+      "common_specifications": {
+        "label": "Common specifications used",
+        "placeholder": "Describe the common specifications applied."
+      },
+      "other_standards": {
+        "label": "Other standards used (one per line)"
+      },
+      "notified_body_involved": {
+        "label": "Was a notified body involved?"
+      },
+      "notified_body_name": {
+        "label": "Notified body name"
+      },
+      "notified_body_number": {
+        "label": "Notified body number",
+        "placeholder": "e.g., 0123"
+      },
+      "certificate_reference": {
+        "label": "Certificate reference"
+      },
+      "certificate_issue_date": {
+        "label": "Certificate issue date (YYYY-MM-DD)",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Conformity certificate (PDF or image)",
+        "help": "Optional. The uploaded file is publicly accessible from the DPP."
+      },
+      "cn_chapter": {
+        "label": "CN chapter"
+      },
+      "customs_code": {
+        "label": "Customs commodity code",
+        "placeholder": "98809500",
+        "help": "Auto-filled from CN chapter. Override if your customs classification differs."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Does the toy or any component contain allergenic fragrances at ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Allergenic fragrances present"
+      },
+      "allergen_declaration_text": {
+        "label": "Allergen declaration (auto-generated, editable)"
+      },
+      "safety_channels": {
+        "label": "Public safety reporting channels"
+      },
+      "safety_phone": {
+        "label": "Safety reporting telephone",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "Safety reporting email",
+        "placeholder": "safety@company.com"
+      },
+      "safety_website": {
+        "label": "Safety reporting website / contact form URL",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
@@ -808,6 +1085,138 @@
         "yes": "Yes",
         "no": "No",
         "unknown": "Unknown"
+      }
+    },
+    "ai": {
+      "scannerTitle": "AI Toy Label Scanner",
+      "scannerDescription": "Snap or upload a picture of the toy packaging — the AI will read the CE mark, age warnings, manufacturer block, barcode, and listed allergenic fragrances.",
+      "dropHere": "↓ Drop here",
+      "dragOrClick": "Drag & drop or click"
+    },
+    "warnings": {
+      "youngChild": "This toy is intended for children under 36 months. Stricter allergenic fragrance restrictions apply, and any small parts must be assessed against choking hazards.",
+      "mouthContact": "This toy is intended to be placed in the mouth. Stricter allergenic fragrance and chemical migration restrictions apply.",
+      "unknownAllergens": "This DPP may be incomplete because allergenic fragrance information is mandatory when applicable. Replace \"Unknown\" with Yes or No before publishing.",
+      "suggestLegislation": "Based on the selected toy category, also consider ticking: {{list}}."
+    },
+    "disclaimer": {
+      "title": "Toys DPP — compliance disclaimer",
+      "body": "The exact EU Digital Product Passport data model and API specifications for toys are still TBD and are expected to be defined in the implementing act due by the end of 2026. This tool is a first version based on Regulation (EU) 2025/2509 and should not be treated as final legal advice."
+    },
+    "internalBadge": "Internal — not shown publicly",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Report unsafe products through the EU Safety Gate Portal:",
+      "alwaysShown": "This link is always shown on the public passport."
+    },
+    "certificate": {
+      "viewFile": "View uploaded file",
+      "remove": "Remove file",
+      "uploading": "Uploading...",
+      "uploadButton": "Upload certificate",
+      "errors": {
+        "loginRequired": "You must be signed in to upload files.",
+        "tooLarge": "File is too large. Maximum size is 5 MB.",
+        "uploadFailed": "Upload failed."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "No allergenic fragrances added yet.",
+      "summary": "{{count}} fragrance(s) declared.",
+      "addButton": "Add fragrance",
+      "cas": "CAS",
+      "removeAria": "Remove {{name}}",
+      "concentrationLabel": "Concentration (mg/kg)",
+      "componentLabel": "Component / material",
+      "componentPlaceholder": "e.g., plush filling",
+      "aboveThreshold": "Concentration ≥10 mg/kg",
+      "supplierDeclaration": "Supplier declaration on file",
+      "testReport": "Test report on file",
+      "dialogTitle": "Select allergenic fragrances",
+      "searchPlaceholder": "Search by name, CAS, or id...",
+      "clearSearch": "Clear search",
+      "noResults": "No fragrances match \"{{q}}\".",
+      "done": "Done"
+    },
+    "validation": {
+      "imageRequired": "A colour image of the toy is required.",
+      "descriptionRequired": "A product description is required for toys."
+    },
+    "public": {
+      "badge": "🧸 Toy — Digital Product Passport",
+      "otherFallback": "Other",
+      "notDeclared": "Not declared",
+      "ceMarked": "✓ CE marked",
+      "statusPublished": "Published",
+      "noAllergens": "No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.",
+      "certificateDownload": "Download conformity certificate",
+      "reportUnsafe": "Report an unsafe product",
+      "mirroredAt": "Mirrored at {{url}}",
+      "mirroredDefault": "Mirrored on Open-Label.eu infrastructure",
+      "nbNumber": "Number {{n}}",
+      "nbCertificate": "Certificate: {{ref}}",
+      "nbIssued": "(issued {{date}})",
+      "instructionsTitle": "Instructions and warnings",
+      "ceDeclarationStatement": "The manufacturer declares that this toy complies with the applicable EU safety requirements and bears or will bear the CE marking where required before being placed on the EU market.",
+      "docLabel": "EU Declaration of Conformity",
+      "docReference": "Reference",
+      "safetyAssessmentLabel": "Safety assessment",
+      "technicalDocsLabel": "Technical documentation",
+      "yesNoUnknown": {
+        "yes": "Yes",
+        "no": "No",
+        "unknown": "Unknown"
+      },
+      "sections": {
+        "identity": "Product identity",
+        "manufacturer": "Manufacturer responsibility",
+        "manufacturerNote": "This Digital Product Passport is issued under the sole responsibility of the manufacturer.",
+        "euOperator": "EU operator information",
+        "authRep": "Authorised representative",
+        "euResponsible": "EU responsible economic operator",
+        "compliance": "Compliance",
+        "safety": "Safety & chemical information",
+        "safetyReporting": "Safety incident reporting",
+        "infrastructure": "DPP infrastructure"
+      },
+      "rows": {
+        "brand": "Brand",
+        "model": "Model",
+        "sku": "SKU / variant",
+        "toyCategory": "Toy category",
+        "age": "Intended age group",
+        "uid": "Unique identifier",
+        "manufacturer": "Manufacturer",
+        "address": "Address",
+        "email": "Email",
+        "website": "Website",
+        "operatorId": "Operator identifier",
+        "legalName": "Legal name",
+        "role": "Role",
+        "ce": "CE marking",
+        "applicableLeg": "Applicable legislation",
+        "standards": "Harmonised standards",
+        "commonSpecs": "Common specifications",
+        "otherStandards": "Other standards",
+        "notifiedBody": "Notified body",
+        "customs": "Customs code",
+        "dppProvider": "DPP service provider",
+        "backup": "Backup copy reference",
+        "dppVersion": "DPP version",
+        "lastUpdated": "Last updated",
+        "status": "Status"
+      },
+      "table": {
+        "substance": "Substance",
+        "cas": "CAS",
+        "concentration": "Concentration",
+        "component": "Component"
+      },
+      "safety": {
+        "telephone": "Telephone",
+        "emailLabel": "Email",
+        "web": "Web",
+        "gatePortal": "EU Safety Gate Portal"
       }
     }
   }
