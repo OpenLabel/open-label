@@ -625,7 +625,10 @@
       "backupCopyReference": "Reference til sikkerhedskopi",
       "dppVersion": "DPP-version",
       "lastUpdated": "Sidst opdateret",
-      "status": "Tilstand"
+      "status": "Tilstand",
+      "euDoc": "EU-overensstemmelseserklæring",
+      "safetyAssessment": "Sikkerhedsvurdering",
+      "technicalDocumentation": "Teknisk dokumentation"
     },
     "values": {
       "ceMarked": "CE-mærket",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Spejlet på Open-Label.eu infrastruktur",
       "numberPrefix": "Nummer {{value}}",
       "certificatePrefix": "Certifikat: {{value}}",
-      "issuedSuffix": " (udstedt den {{date}})"
+      "issuedSuffix": " (udstedt den {{date}})",
+      "other": "Andet",
+      "reference": "Reference",
+      "certificateDownload": "Download overensstemmelsescertifikat",
+      "ceDeclarationStatement": "Producenten erklærer, at dette legetøj overholder de gældende EU-sikkerhedskrav og bærer eller vil bære CE-mærkningen, hvor det er påkrævet, inden det bringes i omsætning på EU-markedet.",
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Ukendt"
+      }
     },
     "table": {
       "substance": "Stof",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Indberet et usikkert produkt"
     },
     "poweredBy": "Leveres af"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "Momsnummer",
+        "NATIONAL": "Nationalt virksomhedsregistreringsnummer",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP-operatøridentifikator",
+        "other": "Andet"
+      },
+      "toyCategory": {
+        "baby": "Babylegetøj",
+        "plush": "Tøjdyr",
+        "doll": "Dukke",
+        "action_figure": "Actionfigur",
+        "construction": "Konstruktionslegetøj / byggeklodser",
+        "puzzle": "Puslespil",
+        "board_game": "Brætspil",
+        "arts_crafts": "Kreativt legetøj",
+        "slime": "Slim / modellervoks / formmasse",
+        "chemical_set": "Kemisk legetøjssæt",
+        "cosmetic": "Kosmetisk legetøj / legesminke",
+        "olfactory": "Lugtebrætspil",
+        "gustative": "Smagsspil",
+        "outdoor": "Udendørslegetøj",
+        "activity": "Aktivitetslegetøj",
+        "ride_on": "Kørelegetøj",
+        "wheeled": "Løbehjul / rulleskøjter / legetøj på hjul",
+        "aquatic": "Vandlegetøj",
+        "electronic": "Elektronisk legetøj",
+        "radio": "Radioforbundet legetøj",
+        "internet": "Internetforbundet legetøj",
+        "ai": "Legetøj med AI",
+        "battery": "Legetøj med batteri",
+        "magnets": "Legetøj med magneter",
+        "drone": "Legetøjsdrone",
+        "toy_in_food": "Legetøj i fødevarer",
+        "other": "Andet"
+      },
+      "ageGroup": {
+        "14": "14 år",
+        "0_6m": "0-6 måneder",
+        "6_12m": "6-12 måneder",
+        "12_18m": "12-18 måneder",
+        "18_36m": "18-36 måneder",
+        "3plus": "3+ år",
+        "4plus": "4+ år",
+        "5plus": "5+ år",
+        "6plus": "6+ år",
+        "7plus": "7+ år",
+        "8plus": "8+ år",
+        "10plus": "10+ år",
+        "12plus": "12+ år",
+        "other": "Andet"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "Serialiseret GTIN",
+        "SKU": "SKU",
+        "MODEL": "Modelnummer",
+        "ISO_15459": "ISO/IEC 15459-kompatibel identifikator",
+        "other": "Andet"
+      },
+      "cnChapter": {
+        "32": "32 — Maling, pigmenter, blæk, farvestoffer",
+        "33": "33 — Æteriske olier, parfume, kosmetik",
+        "34": "34 — Sæber, voks, modellermasse",
+        "39": "39 — Plast og varer deraf",
+        "40": "40 — Gummi og varer deraf",
+        "42": "42 — Lædervarer",
+        "44": "44 — Træ og varer af træ",
+        "48": "48 — Papir og pap",
+        "49": "49 — Trykte bøger, billeder, kort",
+        "61": "61 — Strikket beklædning / tekstiltilbehør",
+        "62": "62 — Ikke-strikket beklædning / tekstiltilbehør",
+        "63": "63 — Andre konfektionerede tekstilvarer",
+        "69": "69 — Keramiske produkter",
+        "70": "70 — Glas og glasvarer",
+        "73": "73 — Varer af jern eller stål",
+        "76": "76 — Varer af aluminium",
+        "85": "85 — Elektriske maskiner og apparater",
+        "87": "87 — Køretøjer og dele",
+        "90": "90 — Optiske, måle-, kontrolinstrumenter",
+        "95": "95 — Legetøj, spil og sportsrekvisitter",
+        "other": "Andet"
+      },
+      "legislation": {
+        "TSR": "Forordning (EU) 2025/2509 — Legetøjssikkerhedsforordningen",
+        "GPSR": "Forordning (EU) 2023/988 — Forordningen om generel produktsikkerhed",
+        "MSR": "Forordning (EU) 2019/1020 — Markedsovervågning",
+        "AI_ACT": "Forordning (EU) 2024/1689 — Forordningen om kunstig intelligens",
+        "CRA": "Forordning (EU) 2024/2847 — Forordningen om cyberrobusthed",
+        "RED": "Direktiv 2014/53/EU — Radioudstyrsdirektivet",
+        "LVD": "Direktiv 2014/35/EU — Lavspændingsdirektivet",
+        "EMC": "Direktiv 2014/30/EU — EMC-direktivet",
+        "RoHS": "Direktiv 2011/65/EU — RoHS",
+        "BATTERIES": "Forordning (EU) 2023/1542 — Batteriforordningen",
+        "DRONES": "Delegeret forordning (EU) 2019/945 — UAS / droner",
+        "COSMETICS": "Forordning (EF) nr. 1223/2009 — Kosmetikforordningen",
+        "REACH": "Forordning (EF) nr. 1907/2006 — REACH",
+        "CLP": "Forordning (EF) nr. 1272/2008 — CLP",
+        "other": "Andet"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Mekaniske og fysiske egenskaber",
+        "EN71_2": "EN 71-2 — Antændelighed",
+        "EN71_3": "EN 71-3 — Migration af visse grundstoffer",
+        "EN71_4": "EN 71-4 — Eksperimentalsæt til kemi",
+        "EN71_5": "EN 71-5 — Kemisk legetøj, undtagen eksperimentalsæt",
+        "EN71_7": "EN 71-7 — Fingermaling",
+        "EN71_8": "EN 71-8 — Aktivitetslegetøj til husholdningsbrug",
+        "EN71_12": "EN 71-12 — N-nitrosaminer og N-nitrosérbare stoffer",
+        "EN71_13": "EN 71-13 — Lugtebrætspil, kosmetiksæt og smagsspil",
+        "EN71_14": "EN 71-14 — Trampoliner til husholdningsbrug",
+        "EN_IEC_62115": "EN IEC 62115 — Elektrisk legetøj",
+        "other": "Anden harmoniseret standard",
+        "common_spec": "Fælles specifikation i stedet for harmoniseret standard"
+      },
+      "safetyChannel": {
+        "phone": "Telefon",
+        "email": "E-mail",
+        "website": "Dedikeret websted",
+        "form": "Kontaktformular"
+      },
+      "euOperatorRole": {
+        "importer": "Importør",
+        "auth_rep": "Bemyndiget repræsentant",
+        "fulfilment": "Fulfilment-tjenesteudbyder",
+        "distributor": "Distributør, der fungerer som ansvarlig erhvervsdrivende",
+        "other": "Anden EU-baseret ansvarlig person (Forordning 2019/1020, art. 4)"
+      },
+      "yesNo": {
+        "yes": "Ja",
+        "no": "Nej"
+      },
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Ukendt"
+      }
+    }
   }
 }

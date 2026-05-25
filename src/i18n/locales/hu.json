@@ -625,7 +625,10 @@
       "backupCopyReference": "Biztonsági másolat hivatkozása",
       "dppVersion": "DPP verzió",
       "lastUpdated": "Utolsó frissítés",
-      "status": "Állapot"
+      "status": "Állapot",
+      "euDoc": "EU-megfelelőségi nyilatkozat",
+      "safetyAssessment": "Biztonsági értékelés",
+      "technicalDocumentation": "Műszaki dokumentáció"
     },
     "values": {
       "ceMarked": "CE jelöléssel ellátva",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Tükrözve az Open-Label.eu infrastruktúráján",
       "numberPrefix": "Szám: {{value}}",
       "certificatePrefix": "Tanúsítvány: {{value}}",
-      "issuedSuffix": " (kiadás dátuma: {{date}})"
+      "issuedSuffix": " (kiadás dátuma: {{date}})",
+      "other": "Egyéb",
+      "reference": "Hivatkozás",
+      "certificateDownload": "Megfelelőségi tanúsítvány letöltése",
+      "ceDeclarationStatement": "A gyártó kijelenti, hogy ez a játék megfelel az alkalmazandó uniós biztonsági követelményeknek, és az uniós piacon történő forgalomba hozatal előtt viseli vagy viselni fogja a CE-jelölést, amennyiben az előírás.",
+      "yesNoUnknown": {
+        "yes": "Igen",
+        "no": "Nem",
+        "unknown": "Ismeretlen"
+      }
     },
     "table": {
       "substance": "Anyag",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Bejelentés nem biztonságos termékről"
     },
     "poweredBy": "Üzemelteti:"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "ÁFA-szám",
+        "NATIONAL": "Nemzeti cégjegyzékszám",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP gazdasági szereplő azonosító",
+        "other": "Egyéb"
+      },
+      "toyCategory": {
+        "baby": "Bébijáték",
+        "plush": "Plüssjáték",
+        "doll": "Játékbaba",
+        "action_figure": "Akciófigura",
+        "construction": "Építőjáték / kockák",
+        "puzzle": "Kirakós játék",
+        "board_game": "Társasjáték",
+        "arts_crafts": "Kreatív és kézműves játék",
+        "slime": "Slime / gyurma / modellező anyag",
+        "chemical_set": "Kémiai játékkészlet",
+        "cosmetic": "Kozmetikai játék / játék smink",
+        "olfactory": "Szagló-társasjáték",
+        "gustative": "Ízlelő játék",
+        "outdoor": "Kültéri játék",
+        "activity": "Mozgásfejlesztő játék",
+        "ride_on": "Ráülős játék",
+        "wheeled": "Roller / gördeszka / kerekes játék",
+        "aquatic": "Vízi játék",
+        "electronic": "Elektronikus játék",
+        "radio": "Rádiókapcsolattal rendelkező játék",
+        "internet": "Internethez csatlakoztatott játék",
+        "ai": "MI-képes játék",
+        "battery": "Elemes játék",
+        "magnets": "Mágneses játék",
+        "drone": "Játékdrón",
+        "toy_in_food": "Élelmiszerbe rejtett játék",
+        "other": "Egyéb"
+      },
+      "ageGroup": {
+        "14": "14 év",
+        "0_6m": "0–6 hónap",
+        "6_12m": "6–12 hónap",
+        "12_18m": "12–18 hónap",
+        "18_36m": "18–36 hónap",
+        "3plus": "3+ év",
+        "4plus": "4+ év",
+        "5plus": "5+ év",
+        "6plus": "6+ év",
+        "7plus": "7+ év",
+        "8plus": "8+ év",
+        "10plus": "10+ év",
+        "12plus": "12+ év",
+        "other": "Egyéb"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "SGTIN (sorosított GTIN)",
+        "SKU": "SKU",
+        "MODEL": "Modellszám",
+        "ISO_15459": "ISO/IEC 15459-kompatibilis azonosító",
+        "other": "Egyéb"
+      },
+      "cnChapter": {
+        "32": "32 — Festékek, pigmentek, tinták, színezékek",
+        "33": "33 — Illóolajok, parfümök, kozmetikumok",
+        "34": "34 — Szappanok, viaszok, modellező paszták",
+        "39": "39 — Műanyagok és műanyagból készült áruk",
+        "40": "40 — Gumi és gumiáruk",
+        "42": "42 — Bőráruk",
+        "44": "44 — Fa és faipari termékek",
+        "48": "48 — Papír és karton",
+        "49": "49 — Nyomtatott könyvek, képek, kártyák",
+        "61": "61 — Kötött ruházat / textil kiegészítők",
+        "62": "62 — Nem kötött ruházat / textil kiegészítők",
+        "63": "63 — Egyéb konfekcionált textiláruk",
+        "69": "69 — Kerámiatermékek",
+        "70": "70 — Üveg és üvegáruk",
+        "73": "73 — Vas- és acéláruk",
+        "76": "76 — Alumíniumáruk",
+        "85": "85 — Elektromos gépek és berendezések",
+        "87": "87 — Járművek és alkatrészek",
+        "90": "90 — Optikai, mérő-, ellenőrző műszerek",
+        "95": "95 — Játékok, játékszerek és sporteszközök",
+        "other": "Egyéb"
+      },
+      "legislation": {
+        "TSR": "(EU) 2025/2509 rendelet – A játékok biztonságáról szóló rendelet",
+        "GPSR": "(EU) 2023/988 rendelet – Általános termékbiztonsági rendelet",
+        "MSR": "(EU) 2019/1020 rendelet – Piacfelügyelet",
+        "AI_ACT": "(EU) 2024/1689 rendelet – A mesterséges intelligenciáról szóló jogszabály",
+        "CRA": "(EU) 2024/2847 rendelet – Kiberrezilienciáról szóló jogszabály",
+        "RED": "2014/53/EU irányelv – Rádióberendezésekről szóló irányelv",
+        "LVD": "2014/35/EU irányelv – Kisfeszültségű berendezésekről szóló irányelv",
+        "EMC": "2014/30/EU irányelv – EMC-irányelv",
+        "RoHS": "2011/65/EU irányelv – RoHS",
+        "BATTERIES": "(EU) 2023/1542 rendelet – Elemekről és akkumulátorokról szóló rendelet",
+        "DRONES": "(EU) 2019/945 felhatalmazáson alapuló rendelet – UAS / drónok",
+        "COSMETICS": "1223/2009/EK rendelet – Kozmetikai termékek",
+        "REACH": "1907/2006/EK rendelet – REACH",
+        "CLP": "1272/2008/EK rendelet – CLP",
+        "other": "Egyéb"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 – Mechanikai és fizikai tulajdonságok",
+        "EN71_2": "EN 71-2 – Tűzveszélyesség",
+        "EN71_3": "EN 71-3 – Bizonyos elemek kioldódása",
+        "EN71_4": "EN 71-4 – Kémiai kísérletező készletek",
+        "EN71_5": "EN 71-5 – Kémiai játékok a kísérletező készleteken kívül",
+        "EN71_7": "EN 71-7 – Ujjfestékek",
+        "EN71_8": "EN 71-8 – Háztartási használatra szánt mozgásfejlesztő játékok",
+        "EN71_12": "EN 71-12 – N-nitrózaminok és N-nitrózálható anyagok",
+        "EN71_13": "EN 71-13 – Szagló-társasjátékok, kozmetikai készletek és ízlelő játékok",
+        "EN71_14": "EN 71-14 – Háztartási használatra szánt trambulinok",
+        "EN_IEC_62115": "EN IEC 62115 – Elektromos játékok",
+        "other": "Egyéb harmonizált szabvány",
+        "common_spec": "Közös műszaki előírás harmonizált szabvány helyett"
+      },
+      "safetyChannel": {
+        "phone": "Telefon",
+        "email": "E-mail",
+        "website": "Dedikált weboldal",
+        "form": "Kapcsolatfelvételi űrlap"
+      },
+      "euOperatorRole": {
+        "importer": "Importőr",
+        "auth_rep": "Meghatalmazott képviselő",
+        "fulfilment": "Logisztikai szolgáltató",
+        "distributor": "Forgalmazó, mint felelős gazdasági szereplő",
+        "other": "Egyéb EU-székhelyű felelős személy ((EU) 2019/1020 rendelet 4. cikk)"
+      },
+      "yesNo": {
+        "yes": "Igen",
+        "no": "Nem"
+      },
+      "yesNoUnknown": {
+        "yes": "Igen",
+        "no": "Nem",
+        "unknown": "Ismeretlen"
+      }
+    }
   }
 }

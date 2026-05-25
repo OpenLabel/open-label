@@ -625,7 +625,10 @@
       "backupCopyReference": "Varmuuskopion viite",
       "dppVersion": "Digitaalisen tuotepassin versio",
       "lastUpdated": "Viimeksi päivitetty",
-      "status": "Tila"
+      "status": "Tila",
+      "euDoc": "EU-vaatimustenmukaisuusvakuutus",
+      "safetyAssessment": "Turvallisuusarviointi",
+      "technicalDocumentation": "Tekniset asiakirjat"
     },
     "values": {
       "ceMarked": "CE-merkitty",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Peilattu Open-Label.eu-infrastruktuuriin",
       "numberPrefix": "Numero {{value}}",
       "certificatePrefix": "Sertifikaatti: {{value}}",
-      "issuedSuffix": " (myönnetty {{date}})"
+      "issuedSuffix": " (myönnetty {{date}})",
+      "other": "Muu",
+      "reference": "Viite",
+      "certificateDownload": "Lataa vaatimustenmukaisuustodistus",
+      "ceDeclarationStatement": "Valmistaja vakuuttaa, että tämä lelu on sovellettavien EU:n turvallisuusvaatimusten mukainen ja että siinä on tai tulee olemaan CE-merkintä vaadituissa tapauksissa ennen sen saattamista EU:n markkinoille.",
+      "yesNoUnknown": {
+        "yes": "Kyllä",
+        "no": "Ei",
+        "unknown": "Tuntematon"
+      }
     },
     "table": {
       "substance": "Aine",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Ilmoita turvattomasta tuotteesta"
     },
     "poweredBy": "Tarjoaa"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "ALV-numero",
+        "NATIONAL": "Kansallinen yritysrekisterinumero",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP-toimijatunniste",
+        "other": "Muu"
+      },
+      "toyCategory": {
+        "baby": "Vauvan lelu",
+        "plush": "Pehmolelu",
+        "doll": "Nukke",
+        "action_figure": "Toimintahahmo",
+        "construction": "Rakennuslelu / palikat",
+        "puzzle": "Palapeli",
+        "board_game": "Lautapeli",
+        "arts_crafts": "Askartelulelu",
+        "slime": "Lima / muovailuvaha / muovailumassa",
+        "chemical_set": "Kemiallinen lelusarja",
+        "cosmetic": "Kosmeettinen lelu / leikkimeikki",
+        "olfactory": "Hajuaistiin perustuva lautapeli",
+        "gustative": "Makuaistiin perustuva peli",
+        "outdoor": "Ulkoilulelu",
+        "activity": "Aktiviteettilelu",
+        "ride_on": "Päällä ajettava lelu",
+        "wheeled": "Potkulauta / rullalauta / pyörillä varustettu lelu",
+        "aquatic": "Vesilelu",
+        "electronic": "Elektroninen lelu",
+        "radio": "Radioyhteydellä toimiva lelu",
+        "internet": "Internet-yhteydellä toimiva lelu",
+        "ai": "Tekoälyä hyödyntävä lelu",
+        "battery": "Paristokäyttöinen lelu",
+        "magnets": "Magneetteja sisältävä lelu",
+        "drone": "Leludrone",
+        "toy_in_food": "Elintarvikkeen sisällä oleva lelu",
+        "other": "Muu"
+      },
+      "ageGroup": {
+        "14": "14 vuotta",
+        "0_6m": "0–6 kuukautta",
+        "6_12m": "6–12 kuukautta",
+        "12_18m": "12–18 kuukautta",
+        "18_36m": "18–36 kuukautta",
+        "3plus": "3+ vuotta",
+        "4plus": "4+ vuotta",
+        "5plus": "5+ vuotta",
+        "6plus": "6+ vuotta",
+        "7plus": "7+ vuotta",
+        "8plus": "8+ vuotta",
+        "10plus": "10+ vuotta",
+        "12plus": "12+ vuotta",
+        "other": "Muu"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "Sarjoitettu GTIN",
+        "SKU": "SKU",
+        "MODEL": "Mallinumero",
+        "ISO_15459": "ISO/IEC 15459 -yhteensopiva tunniste",
+        "other": "Muu"
+      },
+      "cnChapter": {
+        "32": "32 — Maalit, pigmentit, musteet, väriaineet",
+        "33": "33 — Eteeriset öljyt, hajuvedet, kosmetiikka",
+        "34": "34 — Saippuat, vahat, muovailutahnat",
+        "39": "39 — Muovit ja muovituotteet",
+        "40": "40 — Kumi ja kumituotteet",
+        "42": "42 — Nahkatuotteet",
+        "44": "44 — Puu ja puutavarat",
+        "48": "48 — Paperi ja kartonki",
+        "49": "49 — Painetut kirjat, kuvat, kortit",
+        "61": "61 — Neulotut vaatteet / tekstiiliasusteet",
+        "62": "62 — Muut kuin neulotut vaatteet / tekstiiliasusteet",
+        "63": "63 — Muut tekstiilituotteet",
+        "69": "69 — Keraamiset tuotteet",
+        "70": "70 — Lasi ja lasitavarat",
+        "73": "73 — Rauta- ja terästuotteet",
+        "76": "76 — Alumiinituotteet",
+        "85": "85 — Sähkökoneet ja -laitteet",
+        "87": "87 — Ajoneuvot ja niiden osat",
+        "90": "90 — Optiset, mittaus- ja tarkastuslaitteet",
+        "95": "95 — Lelut, pelit ja urheiluvälineet",
+        "other": "Muu"
+      },
+      "legislation": {
+        "TSR": "Asetus (EU) 2025/2509 — Lelujen turvallisuudesta annettu asetus",
+        "GPSR": "Asetus (EU) 2023/988 — Yleinen tuoteturvallisuusasetus",
+        "MSR": "Asetus (EU) 2019/1020 — Markkinavalvonta",
+        "AI_ACT": "Asetus (EU) 2024/1689 — Tekoälyasetus",
+        "CRA": "Asetus (EU) 2024/2847 — Kyberkestävyysasetus",
+        "RED": "Direktiivi 2014/53/EU — Radiolaitedirektiivi",
+        "LVD": "Direktiivi 2014/35/EU — Pienjännitedirektiivi",
+        "EMC": "Direktiivi 2014/30/EU — EMC-direktiivi",
+        "RoHS": "Direktiivi 2011/65/EU — RoHS",
+        "BATTERIES": "Asetus (EU) 2023/1542 — Paristoasetus",
+        "DRONES": "Delegoitu asetus (EU) 2019/945 — UAS / droonit",
+        "COSMETICS": "Asetus (EY) N:o 1223/2009 — Kosmeettiset valmisteet",
+        "REACH": "Asetus (EY) N:o 1907/2006 — REACH",
+        "CLP": "Asetus (EY) N:o 1272/2008 — CLP",
+        "other": "Muu"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Mekaaniset ja fysikaaliset ominaisuudet",
+        "EN71_2": "EN 71-2 — Syttyvyys",
+        "EN71_3": "EN 71-3 — Tiettyjen alkuaineiden siirtyminen",
+        "EN71_4": "EN 71-4 — Kemialliset kokeilupakkaukset",
+        "EN71_5": "EN 71-5 — Muut kemialliset lelut kuin kokeilupakkaukset",
+        "EN71_7": "EN 71-7 — Sormivärit",
+        "EN71_8": "EN 71-8 — Kotikäyttöön tarkoitetut aktiviteettilelut",
+        "EN71_12": "EN 71-12 — N-nitrosamiinit ja N-nitrosoituvat aineet",
+        "EN71_13": "EN 71-13 — Hajuaistiin perustuvat lautapelit, kosmetiikkapakkaukset ja makuaistiin perustuvat pelit",
+        "EN71_14": "EN 71-14 — Kotikäyttöön tarkoitetut trampoliinit",
+        "EN_IEC_62115": "EN IEC 62115 — Sähkökäyttöiset lelut",
+        "other": "Muu yhdenmukaistettu standardi",
+        "common_spec": "Yhteinen eritelmä yhdenmukaistetun standardin sijaan"
+      },
+      "safetyChannel": {
+        "phone": "Puhelin",
+        "email": "Sähköposti",
+        "website": "Erillinen verkkosivusto",
+        "form": "Yhteydenottolomake"
+      },
+      "euOperatorRole": {
+        "importer": "Maahantuoja",
+        "auth_rep": "Valtuutettu edustaja",
+        "fulfilment": "Jakelupalvelun tarjoaja",
+        "distributor": "Jakelija, joka toimii vastuullisena talouden toimijana",
+        "other": "Muu EU:hun sijoittautunut vastuullinen henkilö (asetuksen 2019/1020 4 artikla)"
+      },
+      "yesNo": {
+        "yes": "Kyllä",
+        "no": "Ei"
+      },
+      "yesNoUnknown": {
+        "yes": "Kyllä",
+        "no": "Ei",
+        "unknown": "Tuntematon"
+      }
+    }
   }
 }

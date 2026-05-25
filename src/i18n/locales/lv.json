@@ -625,7 +625,10 @@
       "backupCopyReference": "Rezerves kopijas atsauce",
       "dppVersion": "DPP versija",
       "lastUpdated": "Pēdējo reizi atjaunināts",
-      "status": "Statuss"
+      "status": "Statuss",
+      "euDoc": "ES atbilstības deklarācija",
+      "safetyAssessment": "Drošuma novērtējums",
+      "technicalDocumentation": "Tehniskā dokumentācija"
     },
     "values": {
       "ceMarked": "Ar CE marķējumu",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Spoguļots Open-Label.eu infrastruktūrā",
       "numberPrefix": "Numurs {{value}}",
       "certificatePrefix": "Sertifikāts: {{value}}",
-      "issuedSuffix": " (izdots {{date}})"
+      "issuedSuffix": " (izdots {{date}})",
+      "other": "Cits",
+      "reference": "Atsauce",
+      "certificateDownload": "Lejupielādēt atbilstības sertifikātu",
+      "ceDeclarationStatement": "Ražotājs apliecina, ka šī rotaļlieta atbilst piemērojamajām ES drošuma prasībām un tai ir vai būs CE marķējums, ja nepieciešams, pirms laišanas ES tirgū.",
+      "yesNoUnknown": {
+        "yes": "Jā",
+        "no": "Nē",
+        "unknown": "Nezināms"
+      }
     },
     "table": {
       "substance": "Viela",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Ziņot par nedrošu produktu"
     },
     "poweredBy": "Darbina"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "PVN numurs",
+        "NATIONAL": "Valsts uzņēmuma reģistrācijas numurs",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP operatora identifikators",
+        "other": "Cits"
+      },
+      "toyCategory": {
+        "baby": "Rotaļlieta zīdaiņiem",
+        "plush": "Mīkstā rotaļlieta",
+        "doll": "Lelle",
+        "action_figure": "Darbības figūriņa",
+        "construction": "Konstruktors / klucīši",
+        "puzzle": "Puzle",
+        "board_game": "Galda spēle",
+        "arts_crafts": "Mākslas un rokdarbu rotaļlieta",
+        "slime": "Gļotas / plastilīns / veidošanas masa",
+        "chemical_set": "Ķīmisko eksperimentu komplekts",
+        "cosmetic": "Kosmētikas rotaļlieta / rotaļu kosmētika",
+        "olfactory": "Ožas galda spēle",
+        "gustative": "Garšas spēle",
+        "outdoor": "Āra rotaļlieta",
+        "activity": "Aktivitāšu rotaļlieta",
+        "ride_on": "Uzsēžama rotaļlieta",
+        "wheeled": "Skrejritenis / skrituļslidas / rotaļlieta ar riteņiem",
+        "aquatic": "Ūdens rotaļlieta",
+        "electronic": "Elektroniska rotaļlieta",
+        "radio": "Ar radiosavienojumu aprīkota rotaļlieta",
+        "internet": "Ar interneta savienojumu aprīkota rotaļlieta",
+        "ai": "Rotaļlieta ar mākslīgo intelektu",
+        "battery": "Rotaļlieta ar bateriju",
+        "magnets": "Rotaļlieta ar magnētiem",
+        "drone": "Rotaļu drons",
+        "toy_in_food": "Rotaļlieta pārtikas produktā",
+        "other": "Cits"
+      },
+      "ageGroup": {
+        "14": "14 gadi",
+        "0_6m": "0–6 mēneši",
+        "6_12m": "6–12 mēneši",
+        "12_18m": "12–18 mēneši",
+        "18_36m": "18–36 mēneši",
+        "3plus": "3+ gadi",
+        "4plus": "4+ gadi",
+        "5plus": "5+ gadi",
+        "6plus": "6+ gadi",
+        "7plus": "7+ gadi",
+        "8plus": "8+ gadi",
+        "10plus": "10+ gadi",
+        "12plus": "12+ gadi",
+        "other": "Cits"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "SGTIN",
+        "SKU": "SKU",
+        "MODEL": "Modeļa numurs",
+        "ISO_15459": "Ar ISO/IEC 15459 saderīgs identifikators",
+        "other": "Cits"
+      },
+      "cnChapter": {
+        "32": "32 — Krāsas, pigmenti, tintes, krāsvielas",
+        "33": "33 — Ēteriskās eļļas, smaržas, kosmētika",
+        "34": "34 — Ziepes, vaski, veidošanas pastas",
+        "39": "39 — Plastmasas un to izstrādājumi",
+        "40": "40 — Kaučuks un tā izstrādājumi",
+        "42": "42 — Ādas izstrādājumi",
+        "44": "44 — Koks un koka izstrādājumi",
+        "48": "48 — Papīrs un kartons",
+        "49": "49 — Iespiestas grāmatas, attēli, kartītes",
+        "61": "61 — Trikotāžas apģērbi / tekstila piederumi",
+        "62": "62 — Neadīti apģērbi / tekstila piederumi",
+        "63": "63 — Citi gatavi tekstilizstrādājumi",
+        "69": "69 — Keramikas izstrādājumi",
+        "70": "70 — Stikls un stikla trauki",
+        "73": "73 — Dzelzs vai tērauda izstrādājumi",
+        "76": "76 — Alumīnija izstrādājumi",
+        "85": "85 — Elektriskās mašīnas un iekārtas",
+        "87": "87 — Transportlīdzekļi un to daļas",
+        "90": "90 — Optiskie, mērīšanas, pārbaudes instrumenti",
+        "95": "95 — Rotaļlietas, spēles un sporta piederumi",
+        "other": "Cits"
+      },
+      "legislation": {
+        "TSR": "Regula (ES) 2025/2509 — Rotaļlietu drošuma regula",
+        "GPSR": "Regula (ES) 2023/988 — Vispārīgā produktu drošuma regula",
+        "MSR": "Regula (ES) 2019/1020 — Tirgus uzraudzība",
+        "AI_ACT": "Regula (ES) 2024/1689 — Mākslīgā intelekta akts",
+        "CRA": "Regula (ES) 2024/2847 — Kibernoturības akts",
+        "RED": "Direktīva 2014/53/ES — Radioiekārtu direktīva",
+        "LVD": "Direktīva 2014/35/ES — Zemsprieguma direktīva",
+        "EMC": "Direktīva 2014/30/ES — EMS direktīva",
+        "RoHS": "Direktīva 2011/65/ES — RoHS",
+        "BATTERIES": "Regula (ES) 2023/1542 — Bateriju regula",
+        "DRONES": "Deleģētā regula (ES) 2019/945 — UAS / droni",
+        "COSMETICS": "Regula (EK) Nr. 1223/2009 — Kosmētikas līdzekļi",
+        "REACH": "Regula (EK) Nr. 1907/2006 — REACH",
+        "CLP": "Regula (EK) Nr. 1272/2008 — CLP",
+        "other": "Cits"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Mehāniskās un fizikālās īpašības",
+        "EN71_2": "EN 71-2 — Uzliesmojamība",
+        "EN71_3": "EN 71-3 — Noteiktu elementu migrācija",
+        "EN71_4": "EN 71-4 — Eksperimentu komplekti ķīmijā",
+        "EN71_5": "EN 71-5 — Ķīmiskās rotaļlietas, kas nav eksperimentu komplekti",
+        "EN71_7": "EN 71-7 — Pirkstiņkrāsas",
+        "EN71_8": "EN 71-8 — Aktivitāšu rotaļlietas mājas lietošanai",
+        "EN71_12": "EN 71-12 — N-nitrozamīni un N-nitrozējamās vielas",
+        "EN71_13": "EN 71-13 — Ožas galda spēles, kosmētikas komplekti un garšas spēles",
+        "EN71_14": "EN 71-14 — Batuti mājas lietošanai",
+        "EN_IEC_62115": "EN IEC 62115 — Elektriskās rotaļlietas",
+        "other": "Cits saskaņotais standarts",
+        "common_spec": "Kopīgā specifikācija saskaņotā standarta vietā"
+      },
+      "safetyChannel": {
+        "phone": "Tālrunis",
+        "email": "E-pasts",
+        "website": "Īpaša tīmekļa vietne",
+        "form": "Saziņas veidlapa"
+      },
+      "euOperatorRole": {
+        "importer": "Importētājs",
+        "auth_rep": "Pilnvarotais pārstāvis",
+        "fulfilment": "Pasūtījumu izpildes pakalpojumu sniedzējs",
+        "distributor": "Izplatītājs, kas darbojas kā atbildīgais saimnieciskās darbības subjekts",
+        "other": "Cita ES bāzēta atbildīgā persona (Regulas 2019/1020 4. pants)"
+      },
+      "yesNo": {
+        "yes": "Jā",
+        "no": "Nē"
+      },
+      "yesNoUnknown": {
+        "yes": "Jā",
+        "no": "Nē",
+        "unknown": "Nezināms"
+      }
+    }
   }
 }

@@ -625,7 +625,10 @@
       "backupCopyReference": "Referentie back-upkopie",
       "dppVersion": "DPP-versie",
       "lastUpdated": "Laatst bijgewerkt",
-      "status": "Huidige status"
+      "status": "Huidige status",
+      "euDoc": "EU-conformiteitsverklaring",
+      "safetyAssessment": "Veiligheidsbeoordeling",
+      "technicalDocumentation": "Technische documentatie"
     },
     "values": {
       "ceMarked": "CE-gemarkeerd",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Gepiegeld op Open-Label.eu-infrastructuur",
       "numberPrefix": "Nummer {{value}}",
       "certificatePrefix": "Certificaat: {{value}}",
-      "issuedSuffix": " (uitgegeven op {{date}})"
+      "issuedSuffix": " (uitgegeven op {{date}})",
+      "other": "Overig",
+      "reference": "Referentie",
+      "certificateDownload": "Conformiteitscertificaat downloaden",
+      "ceDeclarationStatement": "De fabrikant verklaart dat dit speelgoed voldoet aan de toepasselijke EU-veiligheidseisen en de CE-markering draagt of zal dragen waar vereist voordat het op de EU-markt wordt gebracht.",
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nee",
+        "unknown": "Onbekend"
+      }
     },
     "table": {
       "substance": "Stof",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Meld een onveilig product"
     },
     "poweredBy": "Mogelijk gemaakt door"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "Btw-nummer",
+        "NATIONAL": "Nationaal bedrijfsregistratienummer",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP-operatoridentificatie",
+        "other": "Overig"
+      },
+      "toyCategory": {
+        "baby": "Babyspeelgoed",
+        "plush": "Knuffel",
+        "doll": "Pop",
+        "action_figure": "Actiefiguur",
+        "construction": "Bouwspeelgoed / blokken",
+        "puzzle": "Puzzel",
+        "board_game": "Bordspel",
+        "arts_crafts": "Knutsel- en hobbyspeelgoed",
+        "slime": "Slijm / kneedgum / boetseerklei",
+        "chemical_set": "Chemische speelgoedset",
+        "cosmetic": "Cosmetisch speelgoed / speelmake-up",
+        "olfactory": "Geurbordspel",
+        "gustative": "Smaakspel",
+        "outdoor": "Buitenspeelgoed",
+        "activity": "Activiteitenspeelgoed",
+        "ride_on": "Rijspeelgoed",
+        "wheeled": "Step / skate / speelgoed op wielen",
+        "aquatic": "Waterspeelgoed",
+        "electronic": "Elektronisch speelgoed",
+        "radio": "Radiografisch bestuurbaar speelgoed",
+        "internet": "Met internet verbonden speelgoed",
+        "ai": "Speelgoed met AI",
+        "battery": "Speelgoed met batterij",
+        "magnets": "Speelgoed met magneten",
+        "drone": "Speelgoeddrone",
+        "toy_in_food": "Speelgoed in levensmiddelen",
+        "other": "Overig"
+      },
+      "ageGroup": {
+        "14": "14 jaar",
+        "0_6m": "0–6 maanden",
+        "6_12m": "6–12 maanden",
+        "12_18m": "12–18 maanden",
+        "18_36m": "18–36 maanden",
+        "3plus": "3+ jaar",
+        "4plus": "4+ jaar",
+        "5plus": "5+ jaar",
+        "6plus": "6+ jaar",
+        "7plus": "7+ jaar",
+        "8plus": "8+ jaar",
+        "10plus": "10+ jaar",
+        "12plus": "12+ jaar",
+        "other": "Overig"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "Geserialiseerde GTIN",
+        "SKU": "SKU",
+        "MODEL": "Modelnummer",
+        "ISO_15459": "ISO/IEC 15459-compatibele identificatie",
+        "other": "Overig"
+      },
+      "cnChapter": {
+        "32": "32 — Verf, pigmenten, inkt, kleurstoffen",
+        "33": "33 — Etherische oliën, parfums, cosmetica",
+        "34": "34 — Zeep, was, boetseerpasta's",
+        "39": "39 — Kunststoffen en werken daarvan",
+        "40": "40 — Rubber en werken daarvan",
+        "42": "42 — Lederwaren",
+        "44": "44 — Hout en houtwaren",
+        "48": "48 — Papier en karton",
+        "49": "49 — Gedrukte boeken, afbeeldingen, kaarten",
+        "61": "61 — Gebreide kleding / textielaccessoires",
+        "62": "62 — Niet-gebreide kleding / textielaccessoires",
+        "63": "63 — Andere geconfectioneerde textielartikelen",
+        "69": "69 — Keramische producten",
+        "70": "70 — Glas en glaswerk",
+        "73": "73 — Werken van ijzer of staal",
+        "76": "76 — Aluminium en werken daarvan",
+        "85": "85 — Elektrische machines en apparaten",
+        "87": "87 — Voertuigen en onderdelen",
+        "90": "90 — Optische, meet- en controle-instrumenten",
+        "95": "95 — Speelgoed, spellen en sportartikelen",
+        "other": "Overig"
+      },
+      "legislation": {
+        "TSR": "Verordening (EU) 2025/2509 — Speelgoedveiligheidsverordening",
+        "GPSR": "Verordening (EU) 2023/988 — Algemene productveiligheidsverordening",
+        "MSR": "Verordening (EU) 2019/1020 — Markttoezicht",
+        "AI_ACT": "Verordening (EU) 2024/1689 — Wet op de artificiële intelligentie",
+        "CRA": "Verordening (EU) 2024/2847 — Cyberresilientiewet",
+        "RED": "Richtlijn 2014/53/EU — Richtlijn radioapparatuur",
+        "LVD": "Richtlijn 2014/35/EU — Laagspanningsrichtlijn",
+        "EMC": "Richtlijn 2014/30/EU — EMC-richtlijn",
+        "RoHS": "Richtlijn 2011/65/EU — RoHS",
+        "BATTERIES": "Verordening (EU) 2023/1542 — Batterijenverordening",
+        "DRONES": "Gedelegeerde Verordening (EU) 2019/945 — UAS / drones",
+        "COSMETICS": "Verordening (EG) nr. 1223/2009 — Cosmetische producten",
+        "REACH": "Verordening (EG) nr. 1907/2006 — REACH",
+        "CLP": "Verordening (EG) nr. 1272/2008 — CLP",
+        "other": "Overig"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Mechanische en fysische eigenschappen",
+        "EN71_2": "EN 71-2 — Ontvlambaarheid",
+        "EN71_3": "EN 71-3 — Migratie van bepaalde elementen",
+        "EN71_4": "EN 71-4 — Experimenteersets voor scheikunde",
+        "EN71_5": "EN 71-5 — Chemisch speelgoed, anders dan experimenteersets",
+        "EN71_7": "EN 71-7 — Vingerverf",
+        "EN71_8": "EN 71-8 — Activiteitenspeelgoed voor huishoudelijk gebruik",
+        "EN71_12": "EN 71-12 — N-nitrosaminen en N-nitroseerbare stoffen",
+        "EN71_13": "EN 71-13 — Geurbordspellen, cosmeticakits en smaakspellen",
+        "EN71_14": "EN 71-14 — Trampolines voor huishoudelijk gebruik",
+        "EN_IEC_62115": "EN IEC 62115 — Elektrisch speelgoed",
+        "other": "Andere geharmoniseerde norm",
+        "common_spec": "Gemeenschappelijke specificatie in plaats van geharmoniseerde norm"
+      },
+      "safetyChannel": {
+        "phone": "Telefoon",
+        "email": "E-mail",
+        "website": "Specifieke website",
+        "form": "Contactformulier"
+      },
+      "euOperatorRole": {
+        "importer": "Importeur",
+        "auth_rep": "Gevolmachtigde",
+        "fulfilment": "Fulfilmentdienstverlener",
+        "distributor": "Distributeur die optreedt als verantwoordelijke marktdeelnemer",
+        "other": "Andere in de EU gevestigde verantwoordelijke persoon (Ver. 2019/1020 Art. 4)"
+      },
+      "yesNo": {
+        "yes": "Ja",
+        "no": "Nee"
+      },
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nee",
+        "unknown": "Onbekend"
+      }
+    }
   }
 }

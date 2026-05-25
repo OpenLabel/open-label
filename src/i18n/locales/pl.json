@@ -625,7 +625,10 @@
       "backupCopyReference": "Numer referencyjny kopii zapasowej",
       "dppVersion": "Wersja DPP",
       "lastUpdated": "Ostatnia aktualizacja",
-      "status": "Stan"
+      "status": "Stan",
+      "euDoc": "Deklaracja zgodności UE",
+      "safetyAssessment": "Ocena bezpieczeństwa",
+      "technicalDocumentation": "Dokumentacja techniczna"
     },
     "values": {
       "ceMarked": "Z oznakowaniem CE",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Odzwierciedlono w infrastrukturze Open-Label.eu",
       "numberPrefix": "Numer {{value}}",
       "certificatePrefix": "Certyfikat: {{value}}",
-      "issuedSuffix": " (wydano {{date}})"
+      "issuedSuffix": " (wydano {{date}})",
+      "other": "Inne",
+      "reference": "Referencja",
+      "certificateDownload": "Pobierz certyfikat zgodności",
+      "ceDeclarationStatement": "Producent oświadcza, że ta zabawka jest zgodna z obowiązującymi unijnymi wymogami bezpieczeństwa i nosi lub będzie nosić oznakowanie CE, jeśli jest to wymagane, przed wprowadzeniem na rynek UE.",
+      "yesNoUnknown": {
+        "yes": "Tak",
+        "no": "Nie",
+        "unknown": "Nieznany"
+      }
     },
     "table": {
       "substance": "Substancja",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Zgłoś niebezpieczny produkt"
     },
     "poweredBy": "Obsługiwane przez"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "Numer VAT",
+        "NATIONAL": "Krajowy numer rejestracyjny firmy",
+        "DUNS": "DUNS",
+        "ESPR": "Identyfikator operatora ESPR / DPP",
+        "other": "Inny"
+      },
+      "toyCategory": {
+        "baby": "Zabawka dla niemowląt",
+        "plush": "Zabawka pluszowa",
+        "doll": "Lalka",
+        "action_figure": "Figurka akcji",
+        "construction": "Zabawka konstrukcyjna / klocki",
+        "puzzle": "Puzzle",
+        "board_game": "Gra planszowa",
+        "arts_crafts": "Zabawka artystyczna i rzemieślnicza",
+        "slime": "Slime / kit / masa do modelowania",
+        "chemical_set": "Zestaw chemiczny",
+        "cosmetic": "Zabawka kosmetyczna / makijaż do zabawy",
+        "olfactory": "Gra planszowa zapachowa",
+        "gustative": "Gra smakowa",
+        "outdoor": "Zabawka na zewnątrz",
+        "activity": "Zabawka aktywizująca",
+        "ride_on": "Zabawka do jeżdżenia",
+        "wheeled": "Hulajnoga / rolki / zabawka na kółkach",
+        "aquatic": "Zabawka do wody",
+        "electronic": "Zabawka elektroniczna",
+        "radio": "Zabawka połączona radiowo",
+        "internet": "Zabawka połączona z internetem",
+        "ai": "Zabawka z funkcją AI",
+        "battery": "Zabawka z baterią",
+        "magnets": "Zabawka z magnesami",
+        "drone": "Dron-zabawka",
+        "toy_in_food": "Zabawka w jedzeniu",
+        "other": "Inna"
+      },
+      "ageGroup": {
+        "14": "14 lat",
+        "0_6m": "0–6 miesięcy",
+        "6_12m": "6–12 miesięcy",
+        "12_18m": "12–18 miesięcy",
+        "18_36m": "18–36 miesięcy",
+        "3plus": "3+ lat",
+        "4plus": "4+ lat",
+        "5plus": "5+ lat",
+        "6plus": "6+ lat",
+        "7plus": "7+ lat",
+        "8plus": "8+ lat",
+        "10plus": "10+ lat",
+        "12plus": "12+ lat",
+        "other": "Inne"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "Seryjny GTIN",
+        "SKU": "SKU",
+        "MODEL": "Numer modelu",
+        "ISO_15459": "Identyfikator zgodny z ISO/IEC 15459",
+        "other": "Inny"
+      },
+      "cnChapter": {
+        "32": "32 — Farby, pigmenty, tusze, barwniki",
+        "33": "33 — Olejki eteryczne, perfumy, kosmetyki",
+        "34": "34 — Mydła, woski, pasty do modelowania",
+        "39": "39 — Tworzywa sztuczne i artykuły z nich",
+        "40": "40 — Kauczuk i artykuły z niego",
+        "42": "42 — Artykuły skórzane",
+        "44": "44 — Drewno i artykuły z drewna",
+        "48": "48 — Papier i tektura",
+        "49": "49 — Drukowane książki, obrazy, karty",
+        "61": "61 — Dziana odzież / akcesoria tekstylne",
+        "62": "62 — Niedziały odzież / akcesoria tekstylne",
+        "63": "63 — Inne gotowe artykuły tekstylne",
+        "69": "69 — Produkty ceramiczne",
+        "70": "70 — Szkło i wyroby szklane",
+        "73": "73 — Artykuły z żeliwa lub stali",
+        "76": "76 — Artykuły z aluminium",
+        "85": "85 — Maszyny i urządzenia elektryczne",
+        "87": "87 — Pojazdy i części",
+        "90": "90 — Przyrządy optyczne, pomiarowe, kontrolne",
+        "95": "95 — Zabawki, gry i artykuły sportowe",
+        "other": "Inne"
+      },
+      "legislation": {
+        "TSR": "Rozporządzenie (UE) 2025/2509 — Rozporządzenie w sprawie bezpieczeństwa zabawek",
+        "GPSR": "Rozporządzenie (UE) 2023/988 — Rozporządzenie w sprawie ogólnego bezpieczeństwa produktów",
+        "MSR": "Rozporządzenie (UE) 2019/1020 — Nadzór rynku",
+        "AI_ACT": "Rozporządzenie (UE) 2024/1689 — Akt w sprawie sztucznej inteligencji",
+        "CRA": "Rozporządzenie (UE) 2024/2847 — Akt o cyberodporności",
+        "RED": "Dyrektywa 2014/53/UE — Dyrektywa w sprawie urządzeń radiowych",
+        "LVD": "Dyrektywa 2014/35/UE — Dyrektywa niskonapięciowa",
+        "EMC": "Dyrektywa 2014/30/UE — Dyrektywa EMC",
+        "RoHS": "Dyrektywa 2011/65/UE — RoHS",
+        "BATTERIES": "Rozporządzenie (UE) 2023/1542 — Rozporządzenie w sprawie baterii",
+        "DRONES": "Rozporządzenie delegowane (UE) 2019/945 — UAS / drony",
+        "COSMETICS": "Rozporządzenie (WE) nr 1223/2009 — Produkty kosmetyczne",
+        "REACH": "Rozporządzenie (WE) nr 1907/2006 — REACH",
+        "CLP": "Rozporządzenie (WE) nr 1272/2008 — CLP",
+        "other": "Inne"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Właściwości mechaniczne i fizyczne",
+        "EN71_2": "EN 71-2 — Palność",
+        "EN71_3": "EN 71-3 — Migracja określonych pierwiastków",
+        "EN71_4": "EN 71-4 — Zestawy do eksperymentów chemicznych",
+        "EN71_5": "EN 71-5 — Zabawki chemiczne inne niż zestawy do eksperymentów",
+        "EN71_7": "EN 71-7 — Farby do malowania palcami",
+        "EN71_8": "EN 71-8 — Zabawki aktywizujące do użytku domowego",
+        "EN71_12": "EN 71-12 — N-nitrozoaminy i substancje N-nitrozujące",
+        "EN71_13": "EN 71-13 — Gry planszowe zapachowe, zestawy kosmetyczne i gry smakowe",
+        "EN71_14": "EN 71-14 — Trampoliny do użytku domowego",
+        "EN_IEC_62115": "EN IEC 62115 — Zabawki elektryczne",
+        "other": "Inna norma zharmonizowana",
+        "common_spec": "Wspólna specyfikacja zamiast normy zharmonizowanej"
+      },
+      "safetyChannel": {
+        "phone": "Telefon",
+        "email": "E-mail",
+        "website": "Dedykowana strona internetowa",
+        "form": "Formularz kontaktowy"
+      },
+      "euOperatorRole": {
+        "importer": "Importer",
+        "auth_rep": "Upoważniony przedstawiciel",
+        "fulfilment": "Dostawca usług realizacji zamówień",
+        "distributor": "Dystrybutor działający jako odpowiedzialny podmiot gospodarczy",
+        "other": "Inna osoba odpowiedzialna z siedzibą w UE (Rozp. 2019/1020 Art. 4)"
+      },
+      "yesNo": {
+        "yes": "Tak",
+        "no": "Nie"
+      },
+      "yesNoUnknown": {
+        "yes": "Tak",
+        "no": "Nie",
+        "unknown": "Nieznany"
+      }
+    }
   }
 }
