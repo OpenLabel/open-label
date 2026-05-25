@@ -117,17 +117,17 @@ export function ToyPublicPassport({
 
   const toyCategoryLabel =
     d.toy_category === 'other'
-      ? (d.toy_category_other as string) || 'Other'
+      ? (d.toy_category_other as string) || t('toyPublic.values.other', 'Other')
       : labelFor(TOY_CATEGORIES, d.toy_category, t);
 
   const ageLabel =
     d.age_group === 'other'
-      ? (d.age_group_other as string) || 'Other'
+      ? (d.age_group_other as string) || t('toyPublic.values.other', 'Other')
       : labelFor(TOY_AGE_GROUPS, d.age_group, t);
 
   const identifierTypeLabel =
     d.identifier_type === 'other'
-      ? (d.identifier_type_other as string) || 'Other'
+      ? (d.identifier_type_other as string) || t('toyPublic.values.other', 'Other')
       : labelFor(TOY_IDENTIFIER_TYPES, d.identifier_type, t);
 
   const fragrances = (d.allergenic_fragrances as SelectedFragrance[]) || [];
@@ -220,7 +220,7 @@ export function ToyPublicPassport({
           Boolean(d.public_instructions_warnings) && (
             <>
               <SectionTitle>
-                {t('toys.public.instructionsTitle', 'Instructions and warnings')}
+                {t('toyPublic.sections.instructionsAndWarnings')}
               </SectionTitle>
               <p className="text-sm whitespace-pre-wrap">
                 {tr('public_instructions_warnings')}
@@ -357,10 +357,7 @@ export function ToyPublicPassport({
         <SectionTitle>{t('toyPublic.sections.compliance')}</SectionTitle>
         {(d.ce_declaration_ack || d.ce_marked) && (
           <p className="text-sm italic text-muted-foreground mb-3">
-            {t(
-              'toys.public.ceDeclarationStatement',
-              'The manufacturer declares that this toy complies with the applicable EU safety requirements and bears or will bear the CE marking where required before being placed on the EU market.',
-            )}
+            {t('toyPublic.values.ceDeclarationStatement')}
           </p>
         )}
         <dl>
@@ -376,21 +373,15 @@ export function ToyPublicPassport({
           />
           {d.eu_doc_available && (
             <Row
-              label={t(
-                'toys.public.docLabel',
-                'EU Declaration of Conformity',
-              )}
+              label={t('toyPublic.rows.euDoc')}
               value={
                 <div className="space-y-0.5">
                   <div>
-                    {t(
-                      `toys.public.yesNoUnknown.${d.eu_doc_available as string}`,
-                      String(d.eu_doc_available),
-                    )}
+                    {t(`toyPublic.values.yesNoUnknown.${d.eu_doc_available as string}`, String(d.eu_doc_available))}
                   </div>
                   {Boolean(d.eu_doc_reference) && (
                     <div className="text-xs text-muted-foreground">
-                      {t('toys.public.docReference', 'Reference')}:{' '}
+                      {t('toyPublic.values.reference')}:{' '}
                       {d.eu_doc_reference as string}
                     </div>
                   )}
@@ -400,26 +391,14 @@ export function ToyPublicPassport({
           )}
           {d.safety_assessment_completed && (
             <Row
-              label={t(
-                'toys.public.safetyAssessmentLabel',
-                'Safety assessment',
-              )}
-              value={t(
-                `toys.public.yesNoUnknown.${d.safety_assessment_completed as string}`,
-                String(d.safety_assessment_completed),
-              )}
+              label={t('toyPublic.rows.safetyAssessment')}
+              value={t(`toyPublic.values.yesNoUnknown.${d.safety_assessment_completed as string}`, String(d.safety_assessment_completed))}
             />
           )}
           {d.technical_documentation_available && (
             <Row
-              label={t(
-                'toys.public.technicalDocsLabel',
-                'Technical documentation',
-              )}
-              value={t(
-                `toys.public.yesNoUnknown.${d.technical_documentation_available as string}`,
-                String(d.technical_documentation_available),
-              )}
+              label={t('toyPublic.rows.technicalDocumentation')}
+              value={t(`toyPublic.values.yesNoUnknown.${d.technical_documentation_available as string}`, String(d.technical_documentation_available))}
             />
           )}
           <Row
@@ -493,7 +472,7 @@ export function ToyPublicPassport({
                         rel="noopener noreferrer"
                         className="text-primary underline inline-flex items-center gap-1"
                       >
-                        {t('toys.public.certificateDownload', 'Download conformity certificate')}
+                        {t('toyPublic.values.certificateDownload')}
                         <ExternalLink className="h-3 w-3" />
                       </a>
                     </div>
