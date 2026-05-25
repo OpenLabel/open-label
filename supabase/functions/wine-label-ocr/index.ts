@@ -502,6 +502,26 @@ async function decodeQrFromBase64(imageBase64: string): Promise<string | null> {
  * Attempt to scrape a QR code URL with Firecrawl to get raw text content.
  * Returns the raw markdown text and URL — does NOT run a separate AI extraction.
  */
+const QR_PRIVATE_IP_PATTERNS: RegExp[] = [
+  /^10\./, /^127\./, /^169\.254\./,
+  /^172\.(1[6-9]|2[0-9]|3[0-1])\./,
+  /^192\.168\./, /^0\./,
+  /^::1$/, /^fc00:/i, /^fd00:/i, /^fe80:/i,
+];
+
+function isSafeQrUrl(raw: string): boolean {
+  try {
+    const u = new URL(raw);
+    if (u.protocol !== "https:") return false;
+    const host = u.hostname.toLowerCase();
+    if (host === "localhost" || host.endsWith(".localhost")) return false;
+    if (QR_PRIVATE_IP_PATTERNS.some((re) => re.test(host))) return false;
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 async function tryQrCodeScrape(
   imageBase64: string,
   firecrawlApiKey: string,
@@ -511,6 +531,11 @@ async function tryQrCodeScrape(
 
     if (!qrUrl) {
       console.log("No QR code URL found by server-side decoder");
+      return null;
+    }
+
+    if (!isSafeQrUrl(qrUrl)) {
+      console.log("QR URL blocked by SSRF guard:", qrUrl);
       return null;
     }
 
