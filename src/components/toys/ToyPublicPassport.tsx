@@ -64,7 +64,7 @@ function labelFor(
   if (typeof value !== 'string') return '';
   const opt = options.find((o) => o.value === value);
   if (!opt) return value;
-  return opt.labelKey ? t(opt.labelKey, opt.label) : opt.label;
+  return opt.labelKey ? String(t(opt.labelKey, opt.label)) : opt.label;
 }
 
 function labelsFor(
