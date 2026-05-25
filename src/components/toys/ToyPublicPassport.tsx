@@ -502,8 +502,12 @@ export function ToyPublicPassport({
         <SectionTitle>{t('toyPublic.sections.safetyChemical')}</SectionTitle>
         <div className="space-y-3 text-sm">
           <p>
-            {tr('allergen_declaration_text') ||
-              t('toyPublic.values.noFragrancesDeclared')}
+            {d.has_allergenic_fragrances === 'yes' && fragrances.length > 0
+              ? tr('allergen_declaration_text') ||
+                t('toyPublic.values.fragrancesDeclared', {
+                  names: fragrances.map((f) => f.name).join(', '),
+                })
+              : t('toyPublic.values.noFragrancesDeclared')}
           </p>
           {fragrances.length > 0 && (
             <div className="border rounded-md overflow-hidden">
