@@ -99,6 +99,18 @@ const handler = async (req: Request): Promise<Response> => {
 
     const { userEmail, passportName, passportUrl, requestedAt } = parseResult.data;
 
+    // Enforce that the userEmail in the payload matches the JWT-authenticated user.
+    // This blocks attackers from CC'ing arbitrary victims via the relay.
+    if (
+      !authenticatedUserEmail ||
+      authenticatedUserEmail.toLowerCase() !== userEmail.toLowerCase()
+    ) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Email does not match authenticated user" }),
+        { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     // Get Resend API key from environment (Supabase secrets)
     const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
     
@@ -110,6 +122,29 @@ const handler = async (req: Request): Promise<Response> => {
     const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
     const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
     const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+    // Verify the authenticated user actually owns a passport matching the
+    // submitted passport URL (slug) — prevents abuse of the relay with arbitrary URLs.
+    const slugMatch = passportUrl.match(/\/p\/([a-f0-9]{16})(?:[/?#]|$)/i);
+    if (!slugMatch) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Invalid passport URL" }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+    const { data: ownedPassport } = await supabase
+      .from("passports")
+      .select("id")
+      .eq("public_slug", slugMatch[1])
+      .eq("user_id", authenticatedUserId)
+      .maybeSingle();
+    if (!ownedPassport) {
+      return new Response(
+        JSON.stringify({ success: false, error: "Passport not found for this user" }),
+        { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
 
     const { data: configData } = await supabase
       .from("site_config")
