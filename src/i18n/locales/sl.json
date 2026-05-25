@@ -926,7 +926,8 @@
         "label": "Prisotne alergene dišave"
       },
       "allergen_declaration_text": {
-        "label": "Izjava o alergenih (samodejno ustvarjena, možno urejati)"
+        "label": "Izjava o alergenih (neobvezna nadomestitev)",
+        "help": "Pustite prazno, da se samodejno prikaže standardna lokalizirana izjava. Izpolnite samo, če želite navesti prilagojeno besedilo; za različice po jezikih uporabite urejevalnik prevodov."
       },
       "safety_channels": {
         "label": "Javni kanali za poročanje o varnosti"
@@ -1182,7 +1183,7 @@
       },
       "rows": {
         "brand": "Blagovna znamka",
-        "model": "Model",
+        "model": "Model (tip)",
         "sku": "SKU / različica",
         "toyCategory": "Kategorija igrače",
         "age": "Predvidena starostna skupina",

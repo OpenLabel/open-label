@@ -926,7 +926,8 @@
         "label": "Esošās alergēnās smaržvielas"
       },
       "allergen_declaration_text": {
-        "label": "Alergēnu deklarācija (automātiski ģenerēta, rediģējama)"
+        "label": "Alergēnu deklarācija (izvēles aizstāšana)",
+        "help": "Atstājiet tukšu, lai automātiski tiktu parādīta standarta lokalizētā deklarācija. Aizpildiet tikai tad, ja vēlaties pielāgotu formulējumu; izmantojiet tulkojumu redaktoru valodu versijām."
       },
       "safety_channels": {
         "label": "Publiskie ziņošanas kanāli par drošību"

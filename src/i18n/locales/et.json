@@ -926,7 +926,8 @@
         "label": "Esinevad allergeensed lõhnaained"
       },
       "allergen_declaration_text": {
-        "label": "Allergeenide deklaratsioon (automaatselt genereeritud, muudetav)"
+        "label": "Allergeenide deklaratsioon (valikuline ülekirjutus)",
+        "help": "Jätke tühjaks, et kuvada automaatselt standardne lokaliseeritud deklaratsioon. Täitke ainult juhul, kui soovite kohandatud sõnastust; keelepõhiste versioonide jaoks kasutage tõlke redaktorit."
       },
       "safety_channels": {
         "label": "Avalikud ohutusjuhtumitest teavitamise kanalid"
@@ -1154,7 +1155,7 @@
       "reportUnsafe": "Teata ohtlikust tootest",
       "mirroredAt": "Peegeldatud aadressil {{url}}",
       "mirroredDefault": "Peegeldatud Open-Label.eu taristus",
-      "nbNumber": "Number {{n}}",
+      "nbNumber": "Number {{n}} (nr.)",
       "nbCertificate": "Sertifikaat: {{ref}}",
       "nbIssued": "(välja antud {{date}})",
       "instructionsTitle": "Juhised ja hoiatused",
@@ -1183,7 +1184,7 @@
       "rows": {
         "brand": "Kaubamärk",
         "model": "Mudel",
-        "sku": "SKU / variant",
+        "sku": "SKU / variant (toode)",
         "toyCategory": "Mänguasja kategooria",
         "age": "Sihtvanuserühm",
         "uid": "Kordumatu identifikaator",

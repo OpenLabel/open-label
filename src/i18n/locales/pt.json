@@ -926,7 +926,8 @@
         "label": "Fragrâncias alergénicas presentes"
       },
       "allergen_declaration_text": {
-        "label": "Declaração de alergénios (gerada automaticamente, editável)"
+        "label": "Declaração de alergénios (substituição opcional)",
+        "help": "Deixe em branco para apresentar automaticamente a declaração localizada padrão. Preencha apenas para fornecer uma redação personalizada; utilize o editor de traduções para as versões por idioma."
       },
       "safety_channels": {
         "label": "Canais públicos de comunicação de segurança"
@@ -961,7 +962,7 @@
         "doll": "Boneca",
         "action_figure": "Figura de ação",
         "construction": "Brinquedo de construção / blocos",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzle (quebra-cabeças)",
         "board_game": "Jogo de tabuleiro",
         "arts_crafts": "Brinquedo de artes e ofícios",
         "slime": "Slime / plasticina / massa de modelar",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefone",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Sítio web",
         "gatePortal": "Portal Safety Gate da UE"
       }
     }

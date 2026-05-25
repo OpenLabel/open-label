@@ -926,7 +926,8 @@
         "label": "Närvarande allergena doftämnen"
       },
       "allergen_declaration_text": {
-        "label": "Allergendeklaration (autogenererad, redigerbar)"
+        "label": "Allergendeklaration (valfri åsidosättning)",
+        "help": "Lämna tomt för att automatiskt visa den standardiserade lokaliserade deklarationen. Fyll endast i för att ange en anpassad formulering; använd översättningsredigeraren för språkspecifika versioner."
       },
       "safety_channels": {
         "label": "Offentliga kanaler för säkerhetsrapportering"
@@ -1183,7 +1184,7 @@
       "rows": {
         "brand": "Varumärke",
         "model": "Modell",
-        "sku": "SKU / variant",
+        "sku": "SKU / variant (artikel)",
         "toyCategory": "Leksakskategori",
         "age": "Avsedd åldersgrupp",
         "uid": "Unik identifierare",

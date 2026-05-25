@@ -926,7 +926,8 @@
         "label": "Fwejjaħ allerġeniċi preżenti"
       },
       "allergen_declaration_text": {
-        "label": "Dikjarazzjoni tal-allerġeni (iġġenerata awtomatikament, tista’ tiġi editjata)"
+        "label": "Dikjarazzjoni tal-allergeni (sostituzzjoni fakultattiva)",
+        "help": "Ħalli vojt biex tintwera awtomatikament id-dikjarazzjoni lokalizzata standard. Imla biss biex tipprovdi formulazzjoni personalizzata; uża l-editur tat-traduzzjonijiet għall-verżjonijiet skont il-lingwa."
       },
       "safety_channels": {
         "label": "Kanali pubbliċi għar-rappurtar tas-sigurtà"
@@ -961,7 +962,7 @@
         "doll": "Pupa",
         "action_figure": "Pupa tal-azzjoni",
         "construction": "Ġugarell tal-kostruzzjoni / blokok",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzle (rompicapo)",
         "board_game": "Logħba tal-bord",
         "arts_crafts": "Ġugarell tal-arti u s-snajja’",
         "slime": "Slime / stokk / kompost tal-immudellar",
@@ -1205,7 +1206,7 @@
         "backup": "Referenza tal-kopja ta’ riżerva",
         "dppVersion": "Verżjoni tad-DPP",
         "lastUpdated": "Aġġornat l-aħħar",
-        "status": "Status"
+        "status": "Status (stat)"
       },
       "table": {
         "substance": "Sustanza",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefon",
         "emailLabel": "Email",
-        "web": "Web",
+        "web": "Sit elettroniku",
         "gatePortal": "Portal tas-Safety Gate tal-UE"
       }
     }

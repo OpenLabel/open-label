@@ -645,7 +645,7 @@
       "certificatePrefix": "Certifikát: {{value}}",
       "issuedSuffix": " (vydáno {{date}})",
       "other": "Ostatní",
-      "reference": "Reference",
+      "reference": "Reference (odkaz)",
       "certificateDownload": "Stáhnout certifikát shody",
       "ceDeclarationStatement": "Výrobce prohlašuje, že tato hračka splňuje platné bezpečnostní požadavky EU a nese nebo ponese označení CE, je-li to požadováno, před uvedením na trh EU.",
       "yesNoUnknown": {
@@ -817,7 +817,7 @@
         "label": "Právní název odpovědného hospodářského subjektu v EU"
       },
       "eu_op_role": {
-        "label": "Role"
+        "label": "Úloha"
       },
       "eu_op_street": {
         "label": "Ulice a číslo popisné"
@@ -926,7 +926,8 @@
         "label": "Přítomné alergenní vonné látky"
       },
       "allergen_declaration_text": {
-        "label": "Prohlášení o alergenech (automaticky generované, lze upravit)"
+        "label": "Prohlášení o alergenech (volitelné, přepíše výchozí znění)",
+        "help": "Ponechte prázdné, aby se automaticky zobrazilo standardní lokalizované prohlášení. Vyplňte pouze pokud chcete vlastní znění; pro jednotlivé jazyky použijte editor překladů."
       },
       "safety_channels": {
         "label": "Veřejné kanály pro hlášení bezpečnosti"
@@ -961,7 +962,7 @@
         "doll": "Panenka",
         "action_figure": "Akční figurka",
         "construction": "Stavebnice / kostky",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzle (skládačka)",
         "board_game": "Stolní hra",
         "arts_crafts": "Výtvarná a kreativní hračka",
         "slime": "Sliz / tmel / modelovací hmota",
@@ -1182,7 +1183,7 @@
       },
       "rows": {
         "brand": "Značka",
-        "model": "Model",
+        "model": "Model (typ)",
         "sku": "SKU / varianta",
         "toyCategory": "Kategorie hračky",
         "age": "Určená věková skupina",
@@ -1193,7 +1194,7 @@
         "website": "Webová stránka",
         "operatorId": "Identifikátor hospodářského subjektu",
         "legalName": "Právní název",
-        "role": "Role",
+        "role": "Úloha",
         "ce": "Označení CE",
         "applicableLeg": "Platné právní předpisy",
         "standards": "Harmonizované normy",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefon",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Webová stránka",
         "gatePortal": "Portál EU Safety Gate"
       }
     }

@@ -926,7 +926,8 @@
         "label": "Esančios alergeninės kvapiosios medžiagos"
       },
       "allergen_declaration_text": {
-        "label": "Alergenų deklaracija (automatiškai sugeneruota, redaguojama)"
+        "label": "Alergenų deklaracija (neprivalomas pakeitimas)",
+        "help": "Palikite tuščią, kad būtų automatiškai rodoma standartinė lokalizuota deklaracija. Užpildykite tik tuo atveju, jei norite pateikti pasirinktinę formuluotę; kalbomis pateikiamoms versijoms naudokite vertimų redaktorių."
       },
       "safety_channels": {
         "label": "Vieši pranešimų apie saugą kanalai"

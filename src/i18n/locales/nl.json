@@ -772,7 +772,7 @@
         "placeholder": "naam@bedrijf.com"
       },
       "manufacturer_website": {
-        "label": "Website",
+        "label": "Website (URL)",
         "placeholder": "https://..."
       },
       "manufacturer_operator_id": {
@@ -926,7 +926,8 @@
         "label": "Aanwezige allergene geurstoffen"
       },
       "allergen_declaration_text": {
-        "label": "Allergenenverklaring (automatisch gegenereerd, bewerkbaar)"
+        "label": "Allergeenverklaring (optionele overschrijving)",
+        "help": "Laat leeg om automatisch de standaard gelokaliseerde verklaring weer te geven. Vul alleen in als u een aangepaste formulering wilt opgeven; gebruik de vertaaleditor voor taalspecifieke versies."
       },
       "safety_channels": {
         "label": "Openbare kanalen voor veiligheidsmeldingen"
@@ -1182,15 +1183,15 @@
       },
       "rows": {
         "brand": "Merk",
-        "model": "Model",
-        "sku": "SKU / variant",
+        "model": "Modelnaam",
+        "sku": "SKU / variant (artikel)",
         "toyCategory": "Speelgoedcategorie",
         "age": "Beoogde leeftijdsgroep",
         "uid": "Unieke identificatiecode",
         "manufacturer": "Fabrikant",
         "address": "Adres",
         "email": "E-mail",
-        "website": "Website",
+        "website": "Website (URL)",
         "operatorId": "Identificatiecode van de marktdeelnemer",
         "legalName": "Wettelijke naam",
         "role": "Rol",
@@ -1205,18 +1206,18 @@
         "backup": "Referentie reservekopie",
         "dppVersion": "DPP-versie",
         "lastUpdated": "Laatst bijgewerkt",
-        "status": "Status"
+        "status": "Status (toestand)"
       },
       "table": {
         "substance": "Stof",
         "cas": "CAS",
         "concentration": "Concentratie",
-        "component": "Component"
+        "component": "Onderdeel"
       },
       "safety": {
         "telephone": "Telefoon",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Webpagina",
         "gatePortal": "EU Safety Gate-portaal"
       }
     }

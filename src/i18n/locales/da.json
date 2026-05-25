@@ -645,7 +645,7 @@
       "certificatePrefix": "Certifikat: {{value}}",
       "issuedSuffix": " (udstedt den {{date}})",
       "other": "Andet",
-      "reference": "Reference",
+      "reference": "Reference (henvisning)",
       "certificateDownload": "Download overensstemmelsescertifikat",
       "ceDeclarationStatement": "Producenten erklærer, at dette legetøj overholder de gældende EU-sikkerhedskrav og bærer eller vil bære CE-mærkningen, hvor det er påkrævet, inden det bringes i omsætning på EU-markedet.",
       "yesNoUnknown": {
@@ -926,7 +926,8 @@
         "label": "Tilstedeværende allergifremkaldende duftstoffer"
       },
       "allergen_declaration_text": {
-        "label": "Allergendeklaration (automatisk genereret, kan redigeres)"
+        "label": "Allergenerklæring (valgfri tilsidesættelse)",
+        "help": "Lad feltet være tomt for at vise den standardiserede lokaliserede erklæring automatisk. Udfyld kun for at angive en brugerdefineret formulering; brug oversættelseseditoren til sprogspecifikke versioner."
       },
       "safety_channels": {
         "label": "Offentlige kanaler for sikkerhedsindberetning"
@@ -1160,7 +1161,7 @@
       "instructionsTitle": "Brugsanvisninger og advarsler",
       "ceDeclarationStatement": "Producenten erklærer, at dette legetøj overholder de gældende EU-sikkerhedskrav og bærer eller vil bære CE-mærkningen, hvor det er påkrævet, før det bringes i omsætning på EU-markedet.",
       "docLabel": "EU-overensstemmelseserklæring",
-      "docReference": "Reference",
+      "docReference": "Reference (henvisning)",
       "safetyAssessmentLabel": "Sikkerhedsvurdering",
       "technicalDocsLabel": "Teknisk dokumentation",
       "yesNoUnknown": {
@@ -1182,8 +1183,8 @@
       },
       "rows": {
         "brand": "Mærke",
-        "model": "Model",
-        "sku": "SKU / variant",
+        "model": "Modelnavn",
+        "sku": "SKU / variant (vare)",
         "toyCategory": "Legetøjskategori",
         "age": "Tilsigtet aldersgruppe",
         "uid": "Unik identifikator",
@@ -1205,7 +1206,7 @@
         "backup": "Reference til sikkerhedskopi",
         "dppVersion": "DPP-version",
         "lastUpdated": "Sidst opdateret",
-        "status": "Status"
+        "status": "Status (tilstand)"
       },
       "table": {
         "substance": "Stof",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefon",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Websted",
         "gatePortal": "EU Safety Gate-portal"
       }
     }

@@ -926,7 +926,8 @@
         "label": "Prítomné alergénne vonné látky"
       },
       "allergen_declaration_text": {
-        "label": "Vyhlásenie o alergénoch (automaticky generované, možnosť úpravy)"
+        "label": "Vyhlásenie o alergénoch (voliteľné prepísanie)",
+        "help": "Ponechajte prázdne, aby sa automaticky zobrazilo štandardné lokalizované vyhlásenie. Vyplňte iba ak chcete vlastné znenie; pre jazykové verzie použite editor prekladov."
       },
       "safety_channels": {
         "label": "Verejné kanály na hlásenie bezpečnosti"
@@ -1182,8 +1183,8 @@
       },
       "rows": {
         "brand": "Značka",
-        "model": "Model",
-        "sku": "SKU / variant",
+        "model": "Model (typ)",
+        "sku": "SKU / variant (tovar)",
         "toyCategory": "Kategória hračky",
         "age": "Určená veková skupina",
         "uid": "Jedinečný identifikátor",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefón",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Webová stránka",
         "gatePortal": "Portál EU Safety Gate"
       }
     }

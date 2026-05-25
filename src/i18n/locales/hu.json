@@ -926,7 +926,8 @@
         "label": "Jelen lévő allergén illatanyagok"
       },
       "allergen_declaration_text": {
-        "label": "Allergénnyilatkozat (automatikusan generált, szerkeszthető)"
+        "label": "Allergén nyilatkozat (opcionális felülírás)",
+        "help": "Hagyja üresen, hogy automatikusan a szabványos lokalizált nyilatkozat jelenjen meg. Csak akkor töltse ki, ha egyéni megfogalmazást szeretne; nyelvenkénti verziókhoz használja a fordításszerkesztőt."
       },
       "safety_channels": {
         "label": "Nyilvános biztonsági bejelentési csatornák"
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefon",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Webhely",
         "gatePortal": "EU Safety Gate portál"
       }
     }
