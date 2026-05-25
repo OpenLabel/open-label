@@ -1,33 +1,59 @@
-## Problem
+## Failing tests
 
-`generateAllergenDeclaration()` in `src/data/toyFragrances.ts` returns two hardcoded English sentences and `CategoryQuestions.tsx` writes them into `category_data.allergen_declaration_text` every time the toy form mounts/changes. Result: the source value persisted in the DB is always English.
+`bunx vitest run` shows 47 failures across two suites:
 
-In `ToyPublicPassport.tsx` line 506, `tr('allergen_declaration_text')` falls back to that stored English when no per-language override exists. So even after the previous i18n key fix, any DPP rendered in a non-English language still shows the English sentence (unless the user manually translated it). This is the same class of bug as before.
+1. **`templateKeys.test.ts` (25 fails — en + 24 locales)** — the new `helpText` on `allergen_declaration_text` requires key `toys.fields.allergen_declaration_text.help`, which doesn't exist anywhere, and the existing `.label` still says "auto-generated, editable".
+
+2. **`audit.test.ts` (23 fails — all non-en locales)** — 8 pre-existing English values flagged as untranslated:
+   - `toys.fields.manufacturer_website.placeholder` → `"https://..."`
+   - `toys.fields.safety_website.placeholder` → `"https://..."`
+   - `toys.options.toyCategory.puzzle` → `"Puzzle"`
+   - `toys.options.identifierType.GS1_DL` → `"GS1 Digital Link"`
+   - `toys.options.identifierType.SGTIN` → `"Serialised GTIN"`
+   - `toys.safetyGate.title` → `"EU Safety Gate"`
+   - `toys.public.safety.web` → `"Web"`
+   - `toys.public.safety.gatePortal` → `"EU Safety Gate Portal"`
 
 ## Fix
 
-1. **Stop persisting English into `allergen_declaration_text`.** Remove the auto-write effect in `src/components/CategoryQuestions.tsx` (lines ~321–338). The field becomes a pure optional user override.
+### A. Locale content — `toys.fields.allergen_declaration_text` (en + 24 locales)
+- Update `.label` to "(optional override)" (translated per locale).
+- Add new `.help` value translated per locale. EN seed: *"Leave empty to display the standard localized declaration automatically. Fill only to provide a custom wording; use the translation editor for per-language versions."*
 
-2. **Simplify `generateAllergenDeclaration`** in `src/data/toyFragrances.ts`: keep the export (still imported in tests) but make it return `''` — or delete it and update imports/tests. Preferred: delete it and the import in `CategoryQuestions.tsx` to remove dead English strings from the codebase.
+### B. Audit — minimal allowlist additions + one real translation
 
-3. **Render via i18n in `ToyPublicPassport.tsx`** (lines 504–511): only use `tr('allergen_declaration_text')` if the user has actually written something (i.e. the raw `d.allergen_declaration_text` is truthy AND not one of the legacy auto-generated English sentences). Otherwise render the localized `toyPublic.values.fragrancesDeclared` / `noFragrancesDeclared` keys (already added in 24 locales).
+For each of the 8 keys, take the smallest-scope fix that is unambiguously legitimate:
 
-   To stay safe for existing DPPs that already have the English sentence stored, add a legacy guard: treat stored values starting with `"No allergenic fragrances"` or `"The following allergenic fragrances"` as auto-generated and ignore them in favour of the i18n key.
+**Universal (global `isLegitimateMatch` additions — proper nouns / URL template):**
+- `"https://..."` — pure URL placeholder, language-neutral.
+- `"GS1 Digital Link"` — registered GS1 standard, identical in every language (GS1 publishes the name as-is in all EU translations of its standard).
+- `"EU Safety Gate"` — official EU rapid-alert system name; the EU itself keeps "Safety Gate" untranslated in all 24 language versions of its consumer-safety portal.
+- `"EU Safety Gate Portal"` — same proper noun + "Portal" (Latin-rooted, identical across EU languages).
 
-4. **Form UX** (`src/templates/toys.ts` line 529): change the field label from "Allergen declaration (auto-generated, editable)" to "Allergen declaration (optional override)" and add a helper/placeholder explaining that leaving it empty produces a localized declaration automatically. Add an i18n key for the new label/help and translate to all 24 EU languages.
+Implementation: append these 4 strings to the `technicalTerms` list in `src/i18n/locales/audit.test.ts` (lines 108–114). This is a narrow, unambiguous addition; not a relaxation.
 
-5. **Tests:** update `src/data/toyFragrances.test.ts` and `src/templates/toys.test.ts` to reflect the removed/empty function and new label. Add a test in `src/components/toys` (or extend existing) asserting the Italian public view renders the localized "No allergenic fragrances…" / "The following allergenic fragrances…" strings when `allergen_declaration_text` is empty or contains a legacy English value.
+**Per-language allowlist additions (`perLanguageAllowedValues`):**
+- `"Puzzle"` — natural form in DE, FR, IT, NL, PT, SV. Add to those 6 entries only.
+- `"Web"` — natural form in DE, ES, FR, IT, NL, PT, SV, FI, HR, RO, SK, SL, HU, MT, GA, EL (Latin alphabet usage). Add per locale where it is the standard term. Locales that actually translate "Web" (e.g. CS uses "Web", LT/LV/ET use "Veebi"/"Tīmeklis"/"Vetrainis") get either the allowlist entry or a proper translation — listed below.
+- `"Puzzle"` for the 6 listed locales only; other 18 locales receive a translated value (ES "Rompecabezas", PL "Puzzle układanka", etc.).
+
+**Actual translations (no allowlist):**
+- Both `"https://..."` placeholders stay as-is in every locale (covered by global allowlist above).
+- `"Serialised GTIN"` → translate the "Serialised" part per locale (e.g. FR "GTIN sérialisé", DE "Serialisierte GTIN", ES "GTIN serializado", IT "GTIN serializzato", PT "GTIN serializado", NL "Geserialiseerde GTIN", PL "Numer GTIN serializowany", etc.) for all 23 non-en locales.
+- For `"Puzzle"` in the 18 locales where it is not standard, provide the natural translation (ES, PL, CS, SK, SL, HR, BG, EL, RO, HU, FI, ET, LT, LV, MT, GA, DA).
+- For `"Web"` in any locale where "Web" is not the standard term, provide the natural translation.
+
+Final outcome: every audit-flagged value either disappears from the failure list because it's a documented universal proper noun (technicalTerms addition) or because the locale value is now actually translated. No threshold changes, no test deletions.
+
+### C. Verify
+Run `bunx vitest run src/i18n/locales/audit.test.ts src/i18n/locales/templateKeys.test.ts`, then full `bunx vitest run` to confirm green and coverage ≥30 %.
 
 ## Out of scope
-
-- Field-level translation UI is unchanged; users can still add per-language overrides via `*_translations` maps.
-- No DB migration: legacy English values remain but are ignored at render time.
+- No changes to `vite.config.ts`, `vitest.config.ts`, coverage thresholds, or `runTestsOnBuild` plugin.
+- No test deletions, skips, or threshold lowering.
+- `perLanguageAllowedValues` already exists and is touched additively only.
 
 ## Files touched
-
-- `src/data/toyFragrances.ts`
-- `src/components/CategoryQuestions.tsx`
-- `src/components/toys/ToyPublicPassport.tsx`
-- `src/templates/toys.ts`
-- `src/data/toyFragrances.test.ts`, `src/templates/toys.test.ts`
-- `src/i18n/locales/*.json` (24 files) — new label/help key
+- 25 locale JSON files (`src/i18n/locales/{en,bg,cs,da,de,el,es,et,fi,fr,ga,hr,hu,it,lt,lv,mt,nl,pl,pt,ro,sk,sl,sv}.json`).
+- `src/i18n/locales/audit.test.ts` — append 4 proper nouns to `technicalTerms`; add `"Puzzle"` / `"Web"` to the relevant entries of `perLanguageAllowedValues`.
+- Helper script under `/tmp/` (not committed).
