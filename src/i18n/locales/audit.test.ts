@@ -111,6 +111,11 @@ function isLegitimateMatch(key: string, value: string, langCode: string): boolea
     "ICT", "ERP", "PLM", "PFAS", "GWP", "DoPC", "SDS", "EUDR",
     "CO₂e/kWh", "C₄H₆O₆", "GitHub", "Digital Product Passport",
     "404",
+    // URL / email placeholder templates — language-neutral
+    "https://...", "name@company.com", "safety@company.com",
+    // Official EU / GS1 proper nouns — kept untranslated in the EU's own
+    // multilingual publications (e.g. ec.europa.eu/safety-gate, gs1.org)
+    "GS1 Digital Link", "EU Safety Gate", "EU Safety Gate Portal",
   ];
   if (technicalTerms.includes(value.trim())) return true;
 
