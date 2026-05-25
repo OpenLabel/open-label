@@ -638,6 +638,7 @@
       "notDeclared": "Ikke angivet",
       "published": "Offentliggjort",
       "noFragrancesDeclared": "Ingen allergifremkaldende duftstoffer, der er omfattet af mærkningskravene, er angivet som værende til stede med 10 mg/kg eller derover.",
+      "fragrancesDeclared": "Følgende allergifremkaldende duftstoffer, der er omfattet af mærkningskrav, er til stede i en koncentration på 10 mg/kg eller derover: {{names}}.",
       "mirroredAt": "Spejlet på {{url}}",
       "mirroredOnOpenLabel": "Spejlet på Open-Label.eu infrastruktur",
       "numberPrefix": "Nummer {{value}}",

@@ -638,6 +638,7 @@
       "notDeclared": "Nedeclarat",
       "published": "Publicat",
       "noFragrancesDeclared": "Nu sunt declarate a fi prezente la o concentrație egală sau mai mare de 10 mg/kg parfumuri alergene care fac obiectul cerințelor de etichetare.",
+      "fragrancesDeclared": "Următoarele parfumuri alergene supuse cerințelor de etichetare sunt prezente într-o concentrație de 10 mg/kg sau mai mare: {{names}}.",
       "mirroredAt": "Oglindit la {{url}}",
       "mirroredOnOpenLabel": "Oglindit pe infrastructura Open-Label.eu",
       "numberPrefix": "Numărul {{value}}",

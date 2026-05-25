@@ -638,6 +638,7 @@
       "notDeclared": "Nije prijavljeno",
       "published": "Objavljeno",
       "noFragrancesDeclared": "Nema prijavljenih alergenih mirisa podložnih zahtjevima označivanja prisutnih u koncentraciji od 10 mg/kg ili više.",
+      "fragrancesDeclared": "Sljedeći alergeni mirisi koji podliježu zahtjevima označavanja prisutni su u koncentraciji od 10 mg/kg ili većoj: {{names}}.",
       "mirroredAt": "Preslikano na {{url}}",
       "mirroredOnOpenLabel": "Preslikano na infrastrukturu Open-Label.eu",
       "numberPrefix": "Broj: {{value}}",

@@ -638,6 +638,7 @@
       "notDeclared": "Nicht deklariert",
       "published": "Veröffentlicht",
       "noFragrancesDeclared": "Es sind keine kennzeichnungspflichtigen allergenen Duftstoffe in einer Konzentration von 10 mg/kg oder mehr angegeben.",
+      "fragrancesDeclared": "Die folgenden kennzeichnungspflichtigen allergenen Duftstoffe sind in einer Konzentration von 10 mg/kg oder mehr enthalten: {{names}}.",
       "mirroredAt": "Gespiegelt unter {{url}}",
       "mirroredOnOpenLabel": "Gespiegelt auf der Open-Label.eu Infrastruktur",
       "numberPrefix": "Nummer {{value}}",

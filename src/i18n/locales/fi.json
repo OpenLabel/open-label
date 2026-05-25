@@ -638,6 +638,7 @@
       "notDeclared": "Ei ilmoitettu",
       "published": "Julkaistu",
       "noFragrancesDeclared": "Allergeenisia hajusteita, jotka ovat merkintävaatimusten alaisia, ei ole ilmoitettu olevan yli 10 mg/kg pitoisuudessa.",
+      "fragrancesDeclared": "Seuraavat merkintävaatimusten alaiset allergeeniset hajusteet ovat läsnä pitoisuutena 10 mg/kg tai enemmän: {{names}}.",
       "mirroredAt": "Peilattu osoitteessa {{url}}",
       "mirroredOnOpenLabel": "Peilattu Open-Label.eu-infrastruktuuriin",
       "numberPrefix": "Numero {{value}}",

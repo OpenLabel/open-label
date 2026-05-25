@@ -638,6 +638,7 @@
       "notDeclared": "Not declared",
       "published": "Published",
       "noFragrancesDeclared": "No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.",
+      "fragrancesDeclared": "The following allergenic fragrances subject to labelling requirements are present at or above 10 mg/kg: {{names}}.",
       "mirroredAt": "Mirrored at {{url}}",
       "mirroredOnOpenLabel": "Mirrored on Open-Label.eu infrastructure",
       "numberPrefix": "Number {{value}}",

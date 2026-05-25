@@ -638,6 +638,7 @@
       "notDeclared": "Não declarado",
       "published": "Publicado",
       "noFragrancesDeclared": "Não são declaradas fragrâncias alergénicas sujeitas a requisitos de rotulagem presentes em concentrações iguais ou superiores a 10 mg/kg.",
+      "fragrancesDeclared": "As seguintes fragrâncias alergénicas sujeitas a requisitos de rotulagem estão presentes numa concentração igual ou superior a 10 mg/kg: {{names}}.",
       "mirroredAt": "Espelhado em {{url}}",
       "mirroredOnOpenLabel": "Espelhado na infraestrutura Open-Label.eu",
       "numberPrefix": "Número {{value}}",

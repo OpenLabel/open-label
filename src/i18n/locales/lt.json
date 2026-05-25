@@ -638,6 +638,7 @@
       "notDeclared": "Nenurodyta",
       "published": "Paskelbta",
       "noFragrancesDeclared": "Nėra deklaruotų alergiją sukeliančių kvapiųjų medžiagų, kurių kiekis būtų ≥ 10 mg/kg ir kurios turėtų būti ženklinamos.",
+      "fragrancesDeclared": "Šios žymėjimo reikalavimams taikomos alergeninės kvapiosios medžiagos yra 10 mg/kg ar didesnėje koncentracijoje: {{names}}.",
       "mirroredAt": "Atspindėta „{{url}}“",
       "mirroredOnOpenLabel": "Atspindėta Open-Label.eu infrastruktūroje",
       "numberPrefix": "Numeris {{value}}",

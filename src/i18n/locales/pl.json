@@ -638,6 +638,7 @@
       "notDeclared": "Nie zadeklarowano",
       "published": "Opublikowano",
       "noFragrancesDeclared": "Nie zadeklarowano obecności substancji zapachowych wywołujących alergie, podlegających wymogom etykietowania, w stężeniu równym lub wyższym niż 10 mg/kg.",
+      "fragrancesDeclared": "Następujące alergenne substancje zapachowe podlegające wymogom oznakowania są obecne w stężeniu równym lub większym niż 10 mg/kg: {{names}}.",
       "mirroredAt": "Odzwierciedlono na {{url}}",
       "mirroredOnOpenLabel": "Odzwierciedlono w infrastrukturze Open-Label.eu",
       "numberPrefix": "Numer {{value}}",

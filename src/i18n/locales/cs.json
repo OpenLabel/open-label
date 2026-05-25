@@ -638,6 +638,7 @@
       "notDeclared": "Neprohlášeno",
       "published": "Zveřejněno",
       "noFragrancesDeclared": "Nejsou deklarovány žádné alergenní vonné látky podléhající požadavkům na označování, které by byly přítomny v koncentraci 10 mg/kg nebo vyšší.",
+      "fragrancesDeclared": "Následující alergenní vonné látky podléhající požadavkům na označování jsou přítomny v koncentraci 10 mg/kg nebo vyšší: {{names}}.",
       "mirroredAt": "Zrcadleno na {{url}}",
       "mirroredOnOpenLabel": "Zrcadleno na infrastruktuře Open-Label.eu",
       "numberPrefix": "Číslo {{value}}",
