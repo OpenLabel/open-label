@@ -1,31 +1,35 @@
 ## Goal
 
-Close the toy AI autofill schema gaps identified in the previous test, then re-run against the same PDF.
+Wrap up the toy i18n work: (1) visually verify FR form + DE preview show no English, (2) add a targeted template-keys audit test.
 
-## Changes
+## Step 1 — Browser verification
 
-**File: `supabase/functions/toy-label-ocr/index.ts`**
+1. `navigate_to_sandbox` to the dashboard, log into the existing preview session.
+2. Switch app language to **Français**.
+3. Create or open a Toy DPP → screenshot the form sections (Identity, Manufacturer, Compliance, Safety, Allergens, Warnings).
+4. Open the preview/public passport, switch preview language to **Deutsch**, screenshot.
+5. Report any English leftovers (excluding user-entered free text and the allow-listed proper nouns already documented in `audit.test.ts`).
 
-1. Add 6 properties to `EXTRACTION_TOOL.function.parameters.properties`:
-   - `has_instructions_warnings` — enum `yes`/`no`
-   - `public_instructions_warnings` — string (the warning text itself)
-   - `eu_doc_available` — enum `yes`/`no`
-   - `eu_doc_reference` — string (DoC reference — distinct from `certificate_reference`, which is the notified-body certificate)
-   - `safety_assessment_completed` — enum `yes`/`no`
-   - `technical_documentation_available` — enum `yes`/`no`
+## Step 2 — Template-keys audit test
 
-2. Extend `SYSTEM_PROMPT` with two short rules:
-   - When the packaging/document literally states "EU Declaration of Conformity: yes", "Safety assessment: yes", "Technical documentation: yes" → populate the matching yes/no field. Same for an explicit "no".
-   - When `ce_marked=true` but no 4-digit notified body number is visible, set `notified_body_involved="no"` (instead of omitting).
+Add `src/i18n/locales/templateKeys.test.ts` that:
 
-3. Also instruct the model to copy any visible warning text ("Not suitable for children under 36 months…", "Choking hazard", "WARNING:…") into `public_instructions_warnings` and set `has_instructions_warnings="yes"`.
+- Imports `categoryTemplates` (or directly `toysTemplate`) from `src/templates/toys.ts`.
+- Walks every field and section, derives the required i18n keys:
+  - `toys.fields.<id>.label` (always)
+  - `toys.fields.<id>.hint` (only if `hint` / `hintKey` is set on the field)
+  - `toys.fields.<id>.options.<value>` (for each enum option)
+  - `toys.sections.<id>.title`
+  - `toys.disclaimer.*` keys referenced via `disclaimerKey`
+- For each of the 24 EU locales, asserts every required key resolves to a non-empty string.
+- Fails with a clear message listing the locale + missing key path.
+
+Test is **additive**: it doesn't change the existing `audit.test.ts`, just narrows the scope to template-derived keys so a future field addition without translations is caught immediately.
 
 ## Out of scope
 
-- No rename of `certificate_reference` — the form template has BOTH `certificate_reference` (NB cert, shown when `notified_body_involved=yes`) and `eu_doc_reference` (DoC ref). They are intentionally distinct.
-- No file-size cap change — the toy OCR function has no explicit cap; the original 7 MB note was inaccurate.
-- No form/UI/i18n changes — all 6 fields already exist in `src/templates/toys.ts` with full 24-language coverage.
+- No production code or template changes.
+- No re-running of `translate-toys-i18n.ts` (all 24 locales are already complete per `bun -e` field count check).
+- No threshold/coverage changes.
 
-## Validation
-
-Re-run the same gateway extraction against `/tmp/sample-wine-dpp.pdf`… wait, that's wine. Re-run against the toy PDF (`Open_Label_.eu_-_Free_Digital_Product_Passports.pdf` from the previous turn — `/tmp/sample-toy-dpp.pdf`) and report the new coverage (expected ~32/36 visible fields, up from 27).
+After implementation, I run the new test (and the full audit test) and report results.
