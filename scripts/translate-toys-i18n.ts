@@ -127,7 +127,40 @@ const TOYS: Record<string, any> = {
     eu_op_email: { label: 'Electronic address (email)', placeholder: 'name@company.com' },
     eu_op_operator_id: { label: 'Unique operator identifier' },
     eu_op_operator_id_type: { label: 'Operator identifier type' },
-    ce_marked: { label: 'CE marked (mandatory for toys sold in the EU)' },
+    has_instructions_warnings: {
+      label: 'Does this toy require instructions, warnings, or safety information?',
+    },
+    public_instructions_warnings: {
+      label: 'Public instructions and warnings',
+      help: 'Add the warnings, instructions, and safety information that accompany the toy.',
+    },
+    ce_declaration_ack: {
+      label: 'The manufacturer declares that this toy complies with the applicable EU safety requirements and bears or will bear the CE marking where required before being placed on the EU market.',
+      help: "Only toys bearing CE marking can be placed on the EU market. This declaration should be consistent with the manufacturer\u2019s conformity assessment.",
+    },
+    eu_doc_available: {
+      label: 'EU Declaration of Conformity available?',
+      warn: 'The EU Declaration of Conformity is expected as part of the toy conformity framework. Complete this before relying on the DPP for market-facing use.',
+    },
+    eu_doc_reference: { label: 'Declaration of Conformity reference' },
+    eu_doc_upload: {
+      label: 'Declaration of Conformity upload',
+      help: 'Internal record only. The uploaded file is kept for the manufacturer and is not shown on the public DPP.',
+    },
+    safety_assessment_completed: {
+      label: 'Safety assessment completed?',
+      help: 'Toy manufacturers must assess chemical, physical, mechanical, electrical, flammability, hygiene, radioactivity and exposure risks where relevant.',
+      warn: 'Safety assessment information should be completed before relying on this DPP.',
+    },
+    technical_documentation_available: {
+      label: 'Technical documentation available?',
+      help: 'Technical documentation supports the demonstration that the toy complies with applicable safety requirements.',
+      warn: 'Technical documentation may be required by market surveillance authorities.',
+    },
+    technical_documentation_upload: {
+      label: 'Technical documentation upload',
+      help: 'Internal record only. The uploaded file is kept for the manufacturer and is not shown on the public DPP.',
+    },
     applicable_legislation: { label: 'Applicable EU legislation' },
     harmonised_standards: { label: 'Harmonised standards used' },
     common_specifications: {
