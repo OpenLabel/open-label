@@ -1,32 +1,31 @@
 ## Goal
 
-Run the Wine AI Autofill against the uploaded PDF (a printout of the demo Chateau Example 2022 DPP) and report coverage + improvement recommendations — same methodology as the toy test.
+Close the toy AI autofill schema gaps identified in the previous test, then re-run against the same PDF.
 
-## How I will run it
+## Changes
 
-1. Copy the PDF to `/tmp/sample-wine-dpp.pdf`.
-2. Call `google/gemini-2.5-pro` via the Lovable AI Gateway with the **exact same prompt and `extract_wine_label_data` tool schema** the `wine-label-ocr` edge function uses (browser file upload isn't supported by the automation harness, so a direct gateway call is the cleanest way to reproduce the autofill output).
-3. Pretty-print the returned JSON and diff against the PDF's ground truth.
+**File: `supabase/functions/toy-label-ocr/index.ts`**
 
-## Ground truth in the PDF (19 expected fields)
+1. Add 6 properties to `EXTRACTION_TOOL.function.parameters.properties`:
+   - `has_instructions_warnings` — enum `yes`/`no`
+   - `public_instructions_warnings` — string (the warning text itself)
+   - `eu_doc_available` — enum `yes`/`no`
+   - `eu_doc_reference` — string (DoC reference — distinct from `certificate_reference`, which is the notified-body certificate)
+   - `safety_assessment_completed` — enum `yes`/`no`
+   - `technical_documentation_available` — enum `yes`/`no`
 
-- product_name "Chateau Example 2022", product_type "wine"
-- vintage 2022, volume 750 ml
-- grape_variety "Merlot, Cabernet Sauvignon"
-- alcohol_percent 13.5
-- country France, region Bordeaux, denomination "Bordeaux AOC"
-- sugar_classification Dry
-- energy_kj 322, energy_kcal 77, carbohydrates 0.3, sugar 0.3 (fat/sat/protein/salt: "negligible")
-- detected_ingredients: grapes, sulfites, tartaric_acid
-- packaging_components: bottle GL 70 / colorless glass / glass collection, cork CORK / natural cork / general waste
-- producer_name "Domaine Example" (only on page 2 in the Legal Information block)
+2. Extend `SYSTEM_PROMPT` with two short rules:
+   - When the packaging/document literally states "EU Declaration of Conformity: yes", "Safety assessment: yes", "Technical documentation: yes" → populate the matching yes/no field. Same for an explicit "no".
+   - When `ce_marked=true` but no 4-digit notified body number is visible, set `notified_body_involved="no"` (instead of omitting).
 
-## What I will report
+3. Also instruct the model to copy any visible warning text ("Not suitable for children under 36 months…", "Choking hazard", "WARNING:…") into `public_instructions_warnings` and set `has_instructions_warnings="yes"`.
 
-- Hit / miss / wrong table
-- Coverage %
-- Concrete improvement recommendations (e.g. prompt hints for the "Dry/Sec" sugar classification, handling of "negligible" → 0 for fat/sat/protein/salt, multi-page PDF reading for producer_name on page 2, ingredient ID matching for tartaric acid E334)
+## Out of scope
 
-## Out of scope this turn
+- No rename of `certificate_reference` — the form template has BOTH `certificate_reference` (NB cert, shown when `notified_body_involved=yes`) and `eu_doc_reference` (DoC ref). They are intentionally distinct.
+- No file-size cap change — the toy OCR function has no explicit cap; the original 7 MB note was inaccurate.
+- No form/UI/i18n changes — all 6 fields already exist in `src/templates/toys.ts` with full 24-language coverage.
 
-- Shipping any fix — diagnosis only. I'll offer to implement the recommended changes after you read the report.
+## Validation
+
+Re-run the same gateway extraction against `/tmp/sample-wine-dpp.pdf`… wait, that's wine. Re-run against the toy PDF (`Open_Label_.eu_-_Free_Digital_Product_Passports.pdf` from the previous turn — `/tmp/sample-toy-dpp.pdf`) and report the new coverage (expected ~32/36 visible fields, up from 27).
