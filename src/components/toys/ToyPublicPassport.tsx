@@ -52,7 +52,9 @@ interface ToyPublicPassportProps {
 }
 
 type LocalizedOption = { value: string; label: string; labelKey?: string };
-type TFn = (key: string, fallback?: string) => string;
+// Loose t type so it accepts both i18next's overloaded TFunction and getFixedT result.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TFn = (key: string, fallback?: any) => string;
 
 function labelFor(
   options: LocalizedOption[],
@@ -73,6 +75,7 @@ function labelsFor(
   if (!Array.isArray(values)) return [];
   return (values as string[]).map((v) => labelFor(options, v, t));
 }
+
 
 
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
