@@ -118,17 +118,17 @@ export function ToyPublicPassport({
   const toyCategoryLabel =
     d.toy_category === 'other'
       ? (d.toy_category_other as string) || 'Other'
-      : labelFor(TOY_CATEGORIES, d.toy_category);
+      : labelFor(TOY_CATEGORIES, d.toy_category, t);
 
   const ageLabel =
     d.age_group === 'other'
       ? (d.age_group_other as string) || 'Other'
-      : labelFor(TOY_AGE_GROUPS, d.age_group);
+      : labelFor(TOY_AGE_GROUPS, d.age_group, t);
 
   const identifierTypeLabel =
     d.identifier_type === 'other'
       ? (d.identifier_type_other as string) || 'Other'
-      : labelFor(TOY_IDENTIFIER_TYPES, d.identifier_type);
+      : labelFor(TOY_IDENTIFIER_TYPES, d.identifier_type, t);
 
   const fragrances = (d.allergenic_fragrances as SelectedFragrance[]) || [];
 
@@ -331,7 +331,7 @@ export function ToyPublicPassport({
                   />
                   <Row
                     label={t('toyPublic.rows.role')}
-                    value={labelFor(TOY_EU_OPERATOR_ROLES, d.eu_op_role)}
+                    value={labelFor(TOY_EU_OPERATOR_ROLES, d.eu_op_role, t)}
                   />
                   <Row
                     label={t('toyPublic.rows.address')}
@@ -435,7 +435,7 @@ export function ToyPublicPassport({
             label={t('toyPublic.rows.applicableLegislation')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
-                {labelsFor(TOY_LEGISLATION, d.applicable_legislation).map(
+                {labelsFor(TOY_LEGISLATION, d.applicable_legislation, t).map(
                   (l) => (
                     <li key={l}>{l}</li>
                   ),
@@ -447,7 +447,7 @@ export function ToyPublicPassport({
             label={t('toyPublic.rows.harmonisedStandards')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
-                {labelsFor(TOY_STANDARDS, d.harmonised_standards).map((l) => (
+                {labelsFor(TOY_STANDARDS, d.harmonised_standards, t).map((l) => (
                   <li key={l}>{l}</li>
                 ))}
               </ul>
@@ -517,7 +517,7 @@ export function ToyPublicPassport({
               d.customs_code
                 ? `${d.customs_code as string}${
                     d.cn_chapter
-                      ? ` · ${labelFor(TOY_CN_CHAPTERS, d.cn_chapter)}`
+                      ? ` · ${labelFor(TOY_CN_CHAPTERS, d.cn_chapter, t)}`
                       : ''
                   }`
                 : ''
@@ -567,7 +567,7 @@ export function ToyPublicPassport({
               {t('toyPublic.subsections.safetyIncidentReporting')}
             </h3>
             <ul className="space-y-1 text-sm">
-              {labelsFor(TOY_SAFETY_CHANNELS, d.safety_channels).map((c) => (
+              {labelsFor(TOY_SAFETY_CHANNELS, d.safety_channels, t).map((c) => (
                 <li key={c}>· {c}</li>
               ))}
               {Boolean(d.safety_phone) && (
