@@ -21,7 +21,10 @@
     "language": "Nyelv",
     "custom": "Egyéni",
     "selectOption": "Válasszon egy lehetőséget",
-    "confirmed": "Megerősítve"
+    "confirmed": "Megerősítve",
+    "required": "Kötelező",
+    "whereApplicable": "Adott esetben",
+    "tbdImplementingAct": "Később meghatározandó – végrehajtási jogi aktus"
   },
   "nav": {
     "signIn": "Bejelentkezés",
@@ -666,34 +669,308 @@
     "poweredBy": "Üzemelteti:"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Gyártói felelősség",
+        "description": "Ezt a digitális termékútlevelet a gyártó kizárólagos felelősségére adják ki."
+      },
+      "product_identity": {
+        "title": "Termékazonosító",
+        "description": "Minden játékmodellnek vagy változatnak saját DPP-re van szüksége."
+      },
+      "manufacturer": {
+        "title": "Gyártó",
+        "description": "A játék forgalomba hozataláért felelős jogi személy."
+      },
+      "auth_rep": {
+        "title": "Meghatalmazott képviselő",
+        "description": "Adott esetben."
+      },
+      "eu_operator": {
+        "title": "EU-beli felelős gazdasági szereplő",
+        "description": "Akkor kötelező, ha a gyártó az EU-n kívül telepedett le."
+      },
+      "compliance": {
+        "title": "Megfelelőség",
+        "description": "CE-jelölés, alkalmazandó uniós jogszabályok és szabványok."
+      },
+      "notified_body": {
+        "title": "Megfelelőségértékelés és bejelentett szervezet",
+        "description": "Adott esetben."
+      },
+      "customs": {
+        "title": "Vámtarifaszám",
+        "description": "Generálva: 9880 + CN-kód + 00. Szerkeszthető."
+      },
+      "allergenic_fragrances": {
+        "title": "Allergén illatanyagok",
+        "description": "≥10 mg/kg koncentráció esetén címkézési kötelezettség alá eső anyagok."
+      },
+      "safety_reporting": {
+        "title": "Biztonsági események bejelentése",
+        "description": "A fogyasztók és a hatóságok számára elérhető csatornák."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Megerősítem, hogy ezt a DPP-t a gyártó kizárólagos felelősségére adják ki."
+      },
+      "brand_name": {
+        "label": "Márkanév"
+      },
+      "model_name": {
+        "label": "Modellnév vagy modellszám"
+      },
+      "sku": {
+        "label": "SKU vagy változat azonosító",
+        "help": "Használjon külön DPP-t minden egyes változathoz (szín, méret, anyag, elektronikus verzió, csomagolt verzió)."
+      },
+      "toy_category": {
+        "label": "Játékkategória"
+      },
+      "toy_category_other": {
+        "label": "Játékkategória (kérjük, adja meg)"
+      },
+      "age_group": {
+        "label": "Ajánlott korosztály"
+      },
+      "age_group_other": {
+        "label": "Korosztály (kérjük, adja meg)"
+      },
+      "mouth_contact": {
+        "label": "Szánják-e ezt a játékot arra, hogy a szájba vegyék?",
+        "help": "A szájba vehető játékokra szigorúbb allergén illatanyag- és vegyianyag-korlátozások vonatkoznak."
+      },
+      "unique_product_identifier": {
+        "label": "Egyedi termékazonosító",
+        "help": "Tartós azonosító ehhez a játékmodellhez/SKU-hoz/változathoz. A végleges specifikációk megerősítése után kompatibilisnek kell lennie az ESPR / ISO IEC 15459 stílusú azonosítással."
+      },
+      "identifier_type": {
+        "label": "Azonosító típusa"
+      },
+      "identifier_type_other": {
+        "label": "Azonosító típusa (kérjük, adja meg)"
+      },
+      "manufacturer_legal_name": {
+        "label": "A gyártó hivatalos neve"
+      },
+      "manufacturer_street": {
+        "label": "Utca, házszám"
+      },
+      "manufacturer_city": {
+        "label": "Város"
+      },
+      "manufacturer_postal_code": {
+        "label": "Irányítószám"
+      },
+      "manufacturer_country": {
+        "label": "Ország"
+      },
+      "manufacturer_email": {
+        "label": "Elektronikus cím (e-mail)",
+        "placeholder": "nev@ceg.com"
+      },
+      "manufacturer_website": {
+        "label": "Weboldal",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Egyedi gazdasági szereplői azonosító",
+        "help": "Használja a jelenleg elérhető legjobb gazdasági szereplői azonosítót; a véglegesen megkövetelt formátumot a végrehajtási jogi aktus határozhatja meg."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Gazdasági szereplői azonosító típusa"
+      },
+      "has_auth_rep": {
+        "label": "Van a gyártónak meghatalmazott képviselője?"
+      },
+      "auth_rep_legal_name": {
+        "label": "A meghatalmazott képviselő hivatalos neve"
+      },
+      "auth_rep_street": {
+        "label": "Utca, házszám"
+      },
+      "auth_rep_city": {
+        "label": "Város"
+      },
+      "auth_rep_postal_code": {
+        "label": "Irányítószám"
+      },
+      "auth_rep_country": {
+        "label": "Ország"
+      },
+      "auth_rep_email": {
+        "label": "Elektronikus cím (e-mail)",
+        "placeholder": "nev@ceg.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Egyedi gazdasági szereplői azonosító"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Gazdasági szereplői azonosító típusa"
+      },
+      "manufacturer_non_eu": {
+        "label": "A gyártó az EU-n kívül telepedett le?"
+      },
+      "eu_op_legal_name": {
+        "label": "Az EU-beli felelős gazdasági szereplő hivatalos neve"
+      },
+      "eu_op_role": {
+        "label": "Szerepkör"
+      },
+      "eu_op_street": {
+        "label": "Utca, házszám"
+      },
+      "eu_op_city": {
+        "label": "Város"
+      },
+      "eu_op_postal_code": {
+        "label": "Irányítószám"
+      },
+      "eu_op_country": {
+        "label": "Ország"
+      },
+      "eu_op_email": {
+        "label": "Elektronikus cím (e-mail)",
+        "placeholder": "nev@ceg.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Egyedi gazdasági szereplői azonosító"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Gazdasági szereplői azonosító típusa"
+      },
+      "has_instructions_warnings": {
+        "label": "Szükséges-e ehhez a játékhoz használati utasítás, figyelmeztetés vagy biztonsági információ?"
+      },
+      "public_instructions_warnings": {
+        "label": "Nyilvános használati utasítások és figyelmeztetések",
+        "help": "Adja hozzá a játékhoz mellékelt figyelmeztetéseket, használati utasításokat és biztonsági információkat."
+      },
+      "ce_declaration_ack": {
+        "label": "A gyártó kijelenti, hogy ez a játék megfelel az alkalmazandó uniós biztonsági követelményeknek, és viseli vagy viselni fogja a CE-jelölést, ahol az az uniós piacon történő forgalomba hozatal előtt szükséges.",
+        "help": "Csak CE-jelöléssel ellátott játékok hozhatók forgalomba az EU piacán. Ennek a nyilatkozatnak összhangban kell lennie a gyártó megfelelőségértékelésével."
+      },
+      "eu_doc_available": {
+        "label": "Elérhető az EU-megfelelőségi nyilatkozat?",
+        "warn": "Az EU-megfelelőségi nyilatkozat a játékok megfelelőségi keretrendszerének elvárt része. Töltse ki ezt, mielőtt a DPP-re támaszkodna a piaci felhasználás során."
+      },
+      "eu_doc_reference": {
+        "label": "Megfelelőségi nyilatkozat hivatkozási száma"
+      },
+      "eu_doc_upload": {
+        "label": "Megfelelőségi nyilatkozat feltöltése",
+        "help": "Csak belső nyilvántartásra. A feltöltött fájlt a gyártó őrzi, és nem jelenik meg a nyilvános DPP-n."
+      },
+      "safety_assessment_completed": {
+        "label": "Befejeződött a biztonsági értékelés?",
+        "help": "A játékgyártóknak adott esetben értékelniük kell a kémiai, fizikai, mechanikai, elektromos, gyúlékonysági, higiéniai, radioaktivitási és expozíciós kockázatokat.",
+        "warn": "A biztonsági értékelési információkat ki kell tölteni, mielőtt erre a DPP-re támaszkodna."
+      },
+      "technical_documentation_available": {
+        "label": "Elérhető a műszaki dokumentáció?",
+        "help": "A műszaki dokumentáció alátámasztja annak bizonyítását, hogy a játék megfelel az alkalmazandó biztonsági követelményeknek.",
+        "warn": "A piacfelügyeleti hatóságok kérhetik a műszaki dokumentációt."
+      },
+      "technical_documentation_upload": {
+        "label": "Műszaki dokumentáció feltöltése",
+        "help": "Csak belső nyilvántartásra. A feltöltött fájlt a gyártó őrzi, és nem jelenik meg a nyilvános DPP-n."
+      },
+      "applicable_legislation": {
+        "label": "Alkalmazandó uniós jogszabályok"
+      },
+      "harmonised_standards": {
+        "label": "Alkalmazott harmonizált szabványok"
+      },
+      "common_specifications": {
+        "label": "Alkalmazott közös műszaki előírások",
+        "placeholder": "Írja le az alkalmazott közös műszaki előírásokat."
+      },
+      "other_standards": {
+        "label": "Egyéb alkalmazott szabványok (soronként egy)"
+      },
+      "notified_body_involved": {
+        "label": "Bevontak bejelentett szervezetet?"
+      },
+      "notified_body_name": {
+        "label": "A bejelentett szervezet neve"
+      },
+      "notified_body_number": {
+        "label": "A bejelentett szervezet száma",
+        "placeholder": "pl. 0123"
+      },
+      "certificate_reference": {
+        "label": "Tanúsítvány hivatkozási száma"
+      },
+      "certificate_issue_date": {
+        "label": "Tanúsítvány kiállítási dátuma (ÉÉÉÉ-HH-NN)",
+        "placeholder": "ÉÉÉÉ-HH-NN"
+      },
+      "notified_body_certificate_url": {
+        "label": "Megfelelőségi tanúsítvány (PDF vagy kép)",
+        "help": "Opcionális. A feltöltött fájl nyilvánosan elérhető a DPP-ből."
+      },
+      "cn_chapter": {
+        "label": "CN-kód"
+      },
+      "customs_code": {
+        "label": "Vámtarifaszám",
+        "placeholder": "98809500",
+        "help": "Automatikusan kitöltve a CN-kód alapján. Írja felül, ha a vámügyi besorolása eltér."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Tartalmaz-e a játék vagy bármely alkatrésze allergén illatanyagokat ≥10 mg/kg koncentrációban?"
+      },
+      "allergenic_fragrances": {
+        "label": "Jelen lévő allergén illatanyagok"
+      },
+      "allergen_declaration_text": {
+        "label": "Allergénnyilatkozat (automatikusan generált, szerkeszthető)"
+      },
+      "safety_channels": {
+        "label": "Nyilvános biztonsági bejelentési csatornák"
+      },
+      "safety_phone": {
+        "label": "Biztonsági bejelentések telefonszáma",
+        "placeholder": "+36 ..."
+      },
+      "safety_email": {
+        "label": "Biztonsági bejelentések e-mail címe",
+        "placeholder": "biztonsag@ceg.com"
+      },
+      "safety_website": {
+        "label": "Biztonsági bejelentések weboldala / kapcsolatfelvételi űrlap URL-je",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
-        "VAT": "ÁFA-szám",
+        "VAT": "Adószám",
         "NATIONAL": "Nemzeti cégjegyzékszám",
         "DUNS": "DUNS",
-        "ESPR": "ESPR / DPP gazdasági szereplő azonosító",
+        "ESPR": "ESPR / DPP gazdasági szereplői azonosító",
         "other": "Egyéb"
       },
       "toyCategory": {
-        "baby": "Bébijáték",
+        "baby": "Csecsemőjáték",
         "plush": "Plüssjáték",
         "doll": "Játékbaba",
         "action_figure": "Akciófigura",
         "construction": "Építőjáték / kockák",
-        "puzzle": "Kirakós játék",
+        "puzzle": "Kirakó",
         "board_game": "Társasjáték",
         "arts_crafts": "Kreatív és kézműves játék",
-        "slime": "Slime / gyurma / modellező anyag",
+        "slime": "Slime / gyurma / modellezőanyag",
         "chemical_set": "Kémiai játékkészlet",
         "cosmetic": "Kozmetikai játék / játék smink",
-        "olfactory": "Szagló-társasjáték",
+        "olfactory": "Szagló társasjáték",
         "gustative": "Ízlelő játék",
         "outdoor": "Kültéri játék",
         "activity": "Mozgásfejlesztő játék",
-        "ride_on": "Ráülős játék",
+        "ride_on": "Lábon hajtós játék",
         "wheeled": "Roller / gördeszka / kerekes játék",
         "aquatic": "Vízi játék",
         "electronic": "Elektronikus játék",
@@ -726,7 +1003,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "SGTIN (sorosított GTIN)",
+        "SGTIN": "SGTIN",
         "SKU": "SKU",
         "MODEL": "Modellszám",
         "ISO_15459": "ISO/IEC 15459-kompatibilis azonosító",
@@ -735,19 +1012,19 @@
       "cnChapter": {
         "32": "32 — Festékek, pigmentek, tinták, színezékek",
         "33": "33 — Illóolajok, parfümök, kozmetikumok",
-        "34": "34 — Szappanok, viaszok, modellező paszták",
-        "39": "39 — Műanyagok és műanyagból készült áruk",
+        "34": "34 — Szappanok, viaszok, modellezőpaszták",
+        "39": "39 — Műanyagok és műanyag áruk",
         "40": "40 — Gumi és gumiáruk",
         "42": "42 — Bőráruk",
-        "44": "44 — Fa és faipari termékek",
+        "44": "44 — Fa és faáruk",
         "48": "48 — Papír és karton",
         "49": "49 — Nyomtatott könyvek, képek, kártyák",
-        "61": "61 — Kötött ruházat / textil kiegészítők",
-        "62": "62 — Nem kötött ruházat / textil kiegészítők",
+        "61": "61 — Kötött ruházat / textilkiegészítők",
+        "62": "62 — Nem kötött ruházat / textilkiegészítők",
         "63": "63 — Egyéb konfekcionált textiláruk",
         "69": "69 — Kerámiatermékek",
         "70": "70 — Üveg és üvegáruk",
-        "73": "73 — Vas- és acéláruk",
+        "73": "73 — Vas- vagy acéláruk",
         "76": "76 — Alumíniumáruk",
         "85": "85 — Elektromos gépek és berendezések",
         "87": "87 — Járművek és alkatrészek",
@@ -757,31 +1034,31 @@
       },
       "legislation": {
         "TSR": "(EU) 2025/2509 rendelet – A játékok biztonságáról szóló rendelet",
-        "GPSR": "(EU) 2023/988 rendelet – Általános termékbiztonsági rendelet",
+        "GPSR": "(EU) 2023/988 rendelet – Az általános termékbiztonságról szóló rendelet",
         "MSR": "(EU) 2019/1020 rendelet – Piacfelügyelet",
         "AI_ACT": "(EU) 2024/1689 rendelet – A mesterséges intelligenciáról szóló jogszabály",
-        "CRA": "(EU) 2024/2847 rendelet – Kiberrezilienciáról szóló jogszabály",
-        "RED": "2014/53/EU irányelv – Rádióberendezésekről szóló irányelv",
-        "LVD": "2014/35/EU irányelv – Kisfeszültségű berendezésekről szóló irányelv",
-        "EMC": "2014/30/EU irányelv – EMC-irányelv",
+        "CRA": "(EU) 2024/2847 rendelet – A kiberrezilienciáról szóló jogszabály",
+        "RED": "2014/53/EU irányelv – A rádióberendezésekről szóló irányelv",
+        "LVD": "2014/35/EU irányelv – A kisfeszültségű berendezésekről szóló irányelv",
+        "EMC": "2014/30/EU irányelv – Az elektromágneses összeférhetőségről szóló irányelv",
         "RoHS": "2011/65/EU irányelv – RoHS",
-        "BATTERIES": "(EU) 2023/1542 rendelet – Elemekről és akkumulátorokról szóló rendelet",
+        "BATTERIES": "(EU) 2023/1542 rendelet – Az elemekről és akkumulátorokról szóló rendelet",
         "DRONES": "(EU) 2019/945 felhatalmazáson alapuló rendelet – UAS / drónok",
-        "COSMETICS": "1223/2009/EK rendelet – Kozmetikai termékek",
+        "COSMETICS": "1223/2009/EK rendelet – A kozmetikai termékekről",
         "REACH": "1907/2006/EK rendelet – REACH",
         "CLP": "1272/2008/EK rendelet – CLP",
         "other": "Egyéb"
       },
       "standards": {
         "EN71_1": "EN 71-1 – Mechanikai és fizikai tulajdonságok",
-        "EN71_2": "EN 71-2 – Tűzveszélyesség",
+        "EN71_2": "EN 71-2 – Gyúlékonyság",
         "EN71_3": "EN 71-3 – Bizonyos elemek kioldódása",
         "EN71_4": "EN 71-4 – Kémiai kísérletező készletek",
         "EN71_5": "EN 71-5 – Kémiai játékok a kísérletező készleteken kívül",
         "EN71_7": "EN 71-7 – Ujjfestékek",
         "EN71_8": "EN 71-8 – Háztartási használatra szánt mozgásfejlesztő játékok",
         "EN71_12": "EN 71-12 – N-nitrózaminok és N-nitrózálható anyagok",
-        "EN71_13": "EN 71-13 – Szagló-társasjátékok, kozmetikai készletek és ízlelő játékok",
+        "EN71_13": "EN 71-13 – Szagló társasjátékok, kozmetikai készletek és ízlelő játékok",
         "EN71_14": "EN 71-14 – Háztartási használatra szánt trambulinok",
         "EN_IEC_62115": "EN IEC 62115 – Elektromos játékok",
         "other": "Egyéb harmonizált szabvány",
@@ -797,8 +1074,8 @@
         "importer": "Importőr",
         "auth_rep": "Meghatalmazott képviselő",
         "fulfilment": "Logisztikai szolgáltató",
-        "distributor": "Forgalmazó, mint felelős gazdasági szereplő",
-        "other": "Egyéb EU-székhelyű felelős személy ((EU) 2019/1020 rendelet 4. cikk)"
+        "distributor": "Felelős gazdasági szereplőként eljáró forgalmazó",
+        "other": "Egyéb EU-beli felelős személy (2019/1020 rendelet 4. cikk)"
       },
       "yesNo": {
         "yes": "Igen",
@@ -808,6 +1085,138 @@
         "yes": "Igen",
         "no": "Nem",
         "unknown": "Ismeretlen"
+      }
+    },
+    "ai": {
+      "scannerTitle": "MI játékcímke-szkenner",
+      "scannerDescription": "Készítsen vagy töltsön fel egy képet a játék csomagolásáról – a mesterséges intelligencia leolvassa a CE-jelölést, a korhatár-figyelmeztetéseket, a gyártói adatokat, a vonalkódot és a felsorolt allergén illatanyagokat.",
+      "dropHere": "↓ Húzza ide",
+      "dragOrClick": "Húzza ide vagy kattintson"
+    },
+    "warnings": {
+      "youngChild": "Ez a játék 36 hónaposnál fiatalabb gyermekek számára készült. Szigorúbb allergén illatanyag-korlátozások vonatkoznak rá, és minden apró alkatrészt a fulladásveszély szempontjából értékelni kell.",
+      "mouthContact": "Ez a játék arra készült, hogy a szájba vegyék. Szigorúbb allergén illatanyag- és vegyianyag-kioldódási korlátozások vonatkoznak rá.",
+      "unknownAllergens": "Ez a DPP hiányos lehet, mivel az allergén illatanyagokra vonatkozó információk megadása adott esetben kötelező. A közzététel előtt cserélje ki az „Ismeretlen” értéket „Igen”-re vagy „Nem”-re.",
+      "suggestLegislation": "A kiválasztott játékkategória alapján fontolja meg a következők bejelölését is: {{list}}."
+    },
+    "disclaimer": {
+      "title": "Játékok DPP – megfelelőségi felelősségkizáró nyilatkozat",
+      "body": "A játékokra vonatkozó pontos uniós digitális termékútlevél-adatmodell és API-specifikációk még kidolgozás alatt állnak, és várhatóan a 2026 végéig esedékes végrehajtási jogi aktusban kerülnek meghatározásra. Ez az eszköz egy, az (EU) 2025/2509 rendeleten alapuló első verzió, és nem tekinthető végleges jogi tanácsadásnak."
+    },
+    "internalBadge": "Belső – nyilvánosan nem látható",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Jelentse a nem biztonságos termékeket az EU Safety Gate portálon keresztül:",
+      "alwaysShown": "Ez a link mindig megjelenik a nyilvános útlevélen."
+    },
+    "certificate": {
+      "viewFile": "Feltöltött fájl megtekintése",
+      "remove": "Fájl eltávolítása",
+      "uploading": "Feltöltés...",
+      "uploadButton": "Tanúsítvány feltöltése",
+      "errors": {
+        "loginRequired": "A fájlok feltöltéséhez be kell jelentkeznie.",
+        "tooLarge": "A fájl túl nagy. A maximális méret 5 MB.",
+        "uploadFailed": "A feltöltés sikertelen."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Még nem adtak hozzá allergén illatanyagokat.",
+      "summary": "{{count}} illatanyag deklarálva.",
+      "addButton": "Illatanyag hozzáadása",
+      "cas": "CAS",
+      "removeAria": "{{name}} eltávolítása",
+      "concentrationLabel": "Koncentráció (mg/kg)",
+      "componentLabel": "Összetevő / anyag",
+      "componentPlaceholder": "pl. plüss töltelék",
+      "aboveThreshold": "Koncentráció ≥10 mg/kg",
+      "supplierDeclaration": "Beszállítói nyilatkozat iktatva",
+      "testReport": "Vizsgálati jegyzőkönyv iktatva",
+      "dialogTitle": "Allergén illatanyagok kiválasztása",
+      "searchPlaceholder": "Keresés név, CAS vagy azonosító alapján...",
+      "clearSearch": "Keresés törlése",
+      "noResults": "Nincs a „{{q}}” keresésnek megfelelő illatanyag.",
+      "done": "Kész"
+    },
+    "validation": {
+      "imageRequired": "A játékról színes kép szükséges.",
+      "descriptionRequired": "A játékokhoz termékleírás szükséges."
+    },
+    "public": {
+      "badge": "🧸 Játék – Digitális termékútlevél",
+      "otherFallback": "Egyéb",
+      "notDeclared": "Nincs deklarálva",
+      "ceMarked": "✓ CE-jelöléssel ellátva",
+      "statusPublished": "Közzétéve",
+      "noAllergens": "Nincs olyan, címkézési kötelezettség alá eső allergén illatanyag deklarálva, amely 10 mg/kg vagy annál nagyobb koncentrációban lenne jelen.",
+      "certificateDownload": "Megfelelőségi tanúsítvány letöltése",
+      "reportUnsafe": "Nem biztonságos termék bejelentése",
+      "mirroredAt": "Tükrözve itt: {{url}}",
+      "mirroredDefault": "Tükrözve az Open-Label.eu infrastruktúrán",
+      "nbNumber": "Szám: {{n}}",
+      "nbCertificate": "Tanúsítvány: {{ref}}",
+      "nbIssued": "(kiadva: {{date}})",
+      "instructionsTitle": "Használati utasítások és figyelmeztetések",
+      "ceDeclarationStatement": "A gyártó kijelenti, hogy ez a játék megfelel az alkalmazandó uniós biztonsági követelményeknek, és viseli vagy viselni fogja a CE-jelölést, ahol az az uniós piacon történő forgalomba hozatal előtt szükséges.",
+      "docLabel": "EU-megfelelőségi nyilatkozat",
+      "docReference": "Hivatkozási szám",
+      "safetyAssessmentLabel": "Biztonsági értékelés",
+      "technicalDocsLabel": "Műszaki dokumentáció",
+      "yesNoUnknown": {
+        "yes": "Igen",
+        "no": "Nem",
+        "unknown": "Ismeretlen"
+      },
+      "sections": {
+        "identity": "Termékazonosító",
+        "manufacturer": "Gyártói felelősség",
+        "manufacturerNote": "Ezt a digitális termékútlevelet a gyártó kizárólagos felelősségére adják ki.",
+        "euOperator": "EU-beli gazdasági szereplő adatai",
+        "authRep": "Meghatalmazott képviselő",
+        "euResponsible": "EU-beli felelős gazdasági szereplő",
+        "compliance": "Megfelelőség",
+        "safety": "Biztonsági és kémiai információk",
+        "safetyReporting": "Biztonsági események bejelentése",
+        "infrastructure": "DPP-infrastruktúra"
+      },
+      "rows": {
+        "brand": "Márka",
+        "model": "Modell",
+        "sku": "SKU / változat",
+        "toyCategory": "Játékkategória",
+        "age": "Ajánlott korosztály",
+        "uid": "Egyedi azonosító",
+        "manufacturer": "Gyártó",
+        "address": "Cím",
+        "email": "E-mail",
+        "website": "Weboldal",
+        "operatorId": "Gazdasági szereplői azonosító",
+        "legalName": "Hivatalos név",
+        "role": "Szerepkör",
+        "ce": "CE-jelölés",
+        "applicableLeg": "Alkalmazandó jogszabályok",
+        "standards": "Harmonizált szabványok",
+        "commonSpecs": "Közös műszaki előírások",
+        "otherStandards": "Egyéb szabványok",
+        "notifiedBody": "Bejelentett szervezet",
+        "customs": "Vámkód",
+        "dppProvider": "DPP-szolgáltató",
+        "backup": "Biztonsági másolat hivatkozása",
+        "dppVersion": "DPP-verzió",
+        "lastUpdated": "Utoljára frissítve",
+        "status": "Állapot"
+      },
+      "table": {
+        "substance": "Anyag",
+        "cas": "CAS",
+        "concentration": "Koncentráció",
+        "component": "Összetevő"
+      },
+      "safety": {
+        "telephone": "Telefon",
+        "emailLabel": "E-mail",
+        "web": "Web",
+        "gatePortal": "EU Safety Gate portál"
       }
     }
   }
