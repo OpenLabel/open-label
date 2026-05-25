@@ -88,8 +88,27 @@ serve(async (req) => {
 
     const { url } = parseResult.data;
 
+    // SSRF protection: only allow fetches to known public hosts, never to
+    // private networks or arbitrary user-supplied hosts.
+    let parsedUrl: URL;
+    try {
+      parsedUrl = new URL(url);
+    } catch {
+      return new Response(
+        JSON.stringify({ error: "Invalid URL" }),
+        { status: 400, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+    if (parsedUrl.protocol !== "https:" || !isAllowedHost(parsedUrl.hostname)) {
+      return new Response(
+        JSON.stringify({ error: "Host not allowed" }),
+        { status: 403, headers: { "Content-Type": "application/json", ...corsHeaders } }
+      );
+    }
+
     const response = await fetch(url, {
       headers: { "Accept": "application/json" },
+      redirect: "error",
     });
 
     if (!response.ok) {
