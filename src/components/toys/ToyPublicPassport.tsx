@@ -269,10 +269,7 @@ export function ToyPublicPassport({
             label={t('toyPublic.rows.operatorIdentifier')}
             value={
               d.manufacturer_operator_id && d.manufacturer_operator_id_type
-                ? `${d.manufacturer_operator_id as string} (${labelFor(
-                    TOY_OPERATOR_ID_TYPES,
-                    d.manufacturer_operator_id_type,
-                  )})`
+                ? `${d.manufacturer_operator_id as string} (${labelFor(TOY_OPERATOR_ID_TYPES, d.manufacturer_operator_id_type, t)})`
                 : (d.manufacturer_operator_id as string)
             }
           />
@@ -309,10 +306,7 @@ export function ToyPublicPassport({
                     value={
                       d.auth_rep_operator_id &&
                       d.auth_rep_operator_id_type
-                        ? `${d.auth_rep_operator_id as string} (${labelFor(
-                            TOY_OPERATOR_ID_TYPES,
-                            d.auth_rep_operator_id_type,
-                          )})`
+                        ? `${d.auth_rep_operator_id as string} (${labelFor(TOY_OPERATOR_ID_TYPES, d.auth_rep_operator_id_type, t)})`
                         : (d.auth_rep_operator_id as string)
                     }
                   />
@@ -349,10 +343,7 @@ export function ToyPublicPassport({
                     label={t('toyPublic.rows.operatorIdentifier')}
                     value={
                       d.eu_op_operator_id && d.eu_op_operator_id_type
-                        ? `${d.eu_op_operator_id as string} (${labelFor(
-                            TOY_OPERATOR_ID_TYPES,
-                            d.eu_op_operator_id_type,
-                          )})`
+                        ? `${d.eu_op_operator_id as string} (${labelFor(TOY_OPERATOR_ID_TYPES, d.eu_op_operator_id_type, t)})`
                         : (d.eu_op_operator_id as string)
                     }
                   />
