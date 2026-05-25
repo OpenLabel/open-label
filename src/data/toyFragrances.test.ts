@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import {
   TOY_FRAGRANCES,
   getFragranceById,
-  generateAllergenDeclaration,
+  isLegacyAllergenDeclaration,
 } from './toyFragrances';
 
 describe('toyFragrances', () => {
@@ -27,19 +27,19 @@ describe('toyFragrances', () => {
     expect(getFragranceById('does-not-exist')).toBeUndefined();
   });
 
-  it('generates a "no fragrances" declaration when none', () => {
-    expect(generateAllergenDeclaration('no', [])).toContain('No allergenic');
-    expect(generateAllergenDeclaration('unknown', [])).toContain('No allergenic');
-    expect(generateAllergenDeclaration(undefined, [])).toContain('No allergenic');
-  });
-
-  it('generates a list declaration when yes + selections', () => {
-    const text = generateAllergenDeclaration('yes', [
-      { id: 'linalool', name: 'Linalool', cas: '78-70-6' },
-      { id: 'vanillin', name: 'Vanillin', cas: '121-33-5' },
-    ]);
-    expect(text).toContain('Linalool');
-    expect(text).toContain('Vanillin');
-    expect(text).toContain('10 mg/kg');
+  it('detects legacy English allergen declarations', () => {
+    expect(
+      isLegacyAllergenDeclaration(
+        'No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg.',
+      ),
+    ).toBe(true);
+    expect(
+      isLegacyAllergenDeclaration(
+        'The following allergenic fragrances subject to labelling requirements are present at or above 10 mg/kg: Linalool.',
+      ),
+    ).toBe(true);
+    expect(isLegacyAllergenDeclaration('A custom user-written declaration.')).toBe(false);
+    expect(isLegacyAllergenDeclaration('')).toBe(false);
+    expect(isLegacyAllergenDeclaration(undefined)).toBe(false);
   });
 });

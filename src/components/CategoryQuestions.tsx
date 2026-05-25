@@ -30,8 +30,8 @@ import {
   YOUNG_CHILD_AGES,
 } from '@/templates/toys';
 import {
-  generateAllergenDeclaration,
   getFragranceById,
+  isLegacyAllergenDeclaration,
   type SelectedFragrance,
 } from '@/data/toyFragrances';
 import { FragrancePicker } from '@/components/toys/FragrancePicker';
@@ -318,24 +318,16 @@ export function CategoryQuestions({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [category]);
 
-  // Auto-regenerate allergen declaration for toys
+  // Clear legacy English allergen declaration text written by older versions
+  // so the public DPP falls back to the localized i18n string.
   useEffect(() => {
     if (!isToys) return;
-    const hasAllergens = data.has_allergenic_fragrances as string | undefined;
-    const fragrances = (data.allergenic_fragrances as SelectedFragrance[]) || [];
-    const next = generateAllergenDeclaration(hasAllergens, fragrances);
     const existing = data.allergen_declaration_text as string | undefined;
-    if (
-      !existing ||
-      existing.startsWith('No allergenic fragrances') ||
-      existing.startsWith('The following allergenic fragrances')
-    ) {
-      if (existing !== next) {
-        onChange({ ...data, allergen_declaration_text: next });
-      }
+    if (existing && isLegacyAllergenDeclaration(existing)) {
+      onChange({ ...data, allergen_declaration_text: '' });
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data.has_allergenic_fragrances, data.allergenic_fragrances, isToys]);
+  }, [isToys]);
 
   // ---- Toys AI autofill: merge sanitized fields from edge function ----
   useEffect(() => {
