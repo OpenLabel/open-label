@@ -851,40 +851,71 @@ serve(async (req) => {
     }
 
     // ===== DOWNLOAD PRODUCT IMAGE IF FOUND =====
+    // SSRF protection: only allow HTTPS public hosts; block private/loopback/link-local
+    // IPs and metadata endpoints so attacker-influenced AI extraction cannot turn this
+    // server-side fetch into a request against internal infrastructure.
+    const PRIVATE_IP_PATTERNS: RegExp[] = [
+      /^10\./, /^127\./, /^169\.254\./,
+      /^172\.(1[6-9]|2[0-9]|3[0-1])\./,
+      /^192\.168\./, /^0\./,
+      /^::1$/, /^fc00:/i, /^fd00:/i, /^fe80:/i,
+    ];
+    const isSafePublicUrl = (raw: string): boolean => {
+      try {
+        const u = new URL(raw);
+        if (u.protocol !== "https:") return false;
+        const host = u.hostname.toLowerCase();
+        if (host === "localhost" || host.endsWith(".localhost")) return false;
+        if (PRIVATE_IP_PATTERNS.some((re) => re.test(host))) return false;
+        return true;
+      } catch {
+        return false;
+      }
+    };
+
     let productImageBase64: string | null = null;
     const productImageUrl = mergedData.product_image_url as string | undefined;
     if (productImageUrl) {
-      try {
-        console.log("Downloading product image:", productImageUrl);
-        const imgResponse = await fetch(productImageUrl, {
-          headers: { "Accept": "image/*" },
-          signal: AbortSignal.timeout(10000),
-        });
-        if (imgResponse.ok) {
-          const contentLength = imgResponse.headers.get("content-length");
-          if (contentLength && parseInt(contentLength, 10) > 5 * 1024 * 1024) {
-            console.log("Product image too large, skipping:", contentLength, "bytes");
-          } else {
-            const contentType = imgResponse.headers.get("content-type") || "image/jpeg";
-            const arrayBuffer = await imgResponse.arrayBuffer();
-            if (arrayBuffer.byteLength > 5 * 1024 * 1024) {
-              console.log("Product image too large after download, skipping:", arrayBuffer.byteLength, "bytes");
+      if (!isSafePublicUrl(productImageUrl)) {
+        console.log("Product image URL blocked by SSRF guard:", productImageUrl);
+      } else {
+        try {
+          console.log("Downloading product image:", productImageUrl);
+          const imgResponse = await fetch(productImageUrl, {
+            headers: { "Accept": "image/*" },
+            signal: AbortSignal.timeout(10000),
+            redirect: "error",
+          });
+          if (imgResponse.ok) {
+            const contentLength = imgResponse.headers.get("content-length");
+            if (contentLength && parseInt(contentLength, 10) > 5 * 1024 * 1024) {
+              console.log("Product image too large, skipping:", contentLength, "bytes");
             } else {
-              const uint8 = new Uint8Array(arrayBuffer);
-              let binary = "";
-              for (let i = 0; i < uint8.length; i++) {
-                binary += String.fromCharCode(uint8[i]);
+              const contentType = imgResponse.headers.get("content-type") || "image/jpeg";
+              if (!/^image\//i.test(contentType)) {
+                console.log("Product image rejected, non-image content-type:", contentType);
+              } else {
+                const arrayBuffer = await imgResponse.arrayBuffer();
+                if (arrayBuffer.byteLength > 5 * 1024 * 1024) {
+                  console.log("Product image too large after download, skipping:", arrayBuffer.byteLength, "bytes");
+                } else {
+                  const uint8 = new Uint8Array(arrayBuffer);
+                  let binary = "";
+                  for (let i = 0; i < uint8.length; i++) {
+                    binary += String.fromCharCode(uint8[i]);
+                  }
+                  const b64 = btoa(binary);
+                  productImageBase64 = `data:${contentType};base64,${b64}`;
+                  console.log("Product image downloaded, size:", uint8.length);
+                }
               }
-              const b64 = btoa(binary);
-              productImageBase64 = `data:${contentType};base64,${b64}`;
-              console.log("Product image downloaded, size:", uint8.length);
             }
+          } else {
+            console.log("Product image download failed:", imgResponse.status);
           }
-        } else {
-          console.log("Product image download failed:", imgResponse.status);
+        } catch (e) {
+          console.error("Product image download error:", e);
         }
-      } catch (e) {
-        console.error("Product image download error:", e);
       }
       delete mergedData.product_image_url;
     }
