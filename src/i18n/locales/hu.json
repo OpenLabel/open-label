@@ -638,6 +638,7 @@
       "notDeclared": "Nincs bejelentve",
       "published": "Közzétéve",
       "noFragrancesDeclared": "Nincsenek feltüntetve olyan allergén illatanyagok, amelyek címkézési kötelezettség alá esnek, és amelyek koncentrációja eléri vagy meghaladja a 10 mg/kg-ot.",
+      "fragrancesDeclared": "A következő, címkézési követelmények hatálya alá tartozó allergén illatanyagok 10 mg/kg vagy magasabb koncentrációban vannak jelen: {{names}}.",
       "mirroredAt": "Tükrözve a következő helyen: {{url}}",
       "mirroredOnOpenLabel": "Tükrözve az Open-Label.eu infrastruktúráján",
       "numberPrefix": "Szám: {{value}}",

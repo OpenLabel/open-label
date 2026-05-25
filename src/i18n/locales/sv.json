@@ -638,6 +638,7 @@
       "notDeclared": "Ej deklarerat",
       "published": "Publicerad",
       "noFragrancesDeclared": "Inga allergiframkallande doftämnen som omfattas av märkningskrav deklareras finnas i en koncentration på eller över 10 mg/kg.",
+      "fragrancesDeclared": "Följande allergiframkallande doftämnen som omfattas av märkningskrav förekommer i en koncentration på 10 mg/kg eller mer: {{names}}.",
       "mirroredAt": "Speglad på {{url}}",
       "mirroredOnOpenLabel": "Speglad på Open-Label.eu-infrastruktur",
       "numberPrefix": "Nummer {{value}}",

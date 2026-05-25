@@ -638,6 +638,7 @@
       "notDeclared": "Mhux iddikjarat",
       "published": "Ippubblikat",
       "noFragrancesDeclared": "L-ebda fwejjaħ allerġeniċi soġġetti għar-rekwiżiti tat-tikkettar mhumiex iddikjarati bħala preżenti f'10 mg/kg jew aktar.",
+      "fragrancesDeclared": "Il-fwejjaħ allerġeniċi li ġejjin soġġetti għar-rekwiżiti tat-tikketta huma preżenti f'konċentrazzjoni ta' 10 mg/kg jew aktar: {{names}}.",
       "mirroredAt": "Rifless fi {{url}}",
       "mirroredOnOpenLabel": "Rifless fuq l-infrastruttura ta' Open-Label.eu",
       "numberPrefix": "Numru {{value}}",

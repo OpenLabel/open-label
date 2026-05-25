@@ -638,6 +638,7 @@
       "notDeclared": "Niet aangegeven",
       "published": "Gepubliceerd",
       "noFragrancesDeclared": "Geen allergene geurstoffen waarvoor etiketteringsvereisten gelden, zijn aangegeven als aanwezig in een concentratie van 10 mg/kg of meer.",
+      "fragrancesDeclared": "De volgende allergene geurstoffen die onderworpen zijn aan etiketteringsvereisten zijn aanwezig in een concentratie van 10 mg/kg of meer: {{names}}.",
       "mirroredAt": "Gepiegeld op {{url}}",
       "mirroredOnOpenLabel": "Gepiegeld op Open-Label.eu-infrastructuur",
       "numberPrefix": "Nummer {{value}}",

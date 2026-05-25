@@ -638,6 +638,7 @@
       "notDeclared": "Ni navedeno",
       "published": "Objavljeno",
       "noFragrancesDeclared": "Ni prijavljenih alergenih dišav, za katere veljajo zahteve glede označevanja, prisotnih v koncentraciji 10 mg/kg ali več.",
+      "fragrancesDeclared": "Naslednje alergene dišave, za katere veljajo zahteve glede označevanja, so prisotne v koncentraciji 10 mg/kg ali več: {{names}}.",
       "mirroredAt": "Zrcaljeno na {{url}}",
       "mirroredOnOpenLabel": "Zrcaljeno na infrastrukturi Open-Label.eu",
       "numberPrefix": "Številka {{value}}",

@@ -638,6 +638,7 @@
       "notDeclared": "Gan dearbhú",
       "published": "Foilsithe",
       "noFragrancesDeclared": "Ní dhearbhaítear aon chumhráin ailléirgineacha atá faoi réir ceanglais lipéadaithe a bheith i láthair ag nó os cionn 10 mg/kg.",
+      "fragrancesDeclared": "Tá na cumhráin ailléirgineacha seo a leanas atá faoi réir cheanglais lipéadaithe i láthair ag tiúchan 10 mg/kg nó níos airde: {{names}}.",
       "mirroredAt": "Scáthánaithe ag {{url}}",
       "mirroredOnOpenLabel": "Scáthánaithe ar bhonneagar Open-Label.eu",
       "numberPrefix": "Uimhir {{value}}",

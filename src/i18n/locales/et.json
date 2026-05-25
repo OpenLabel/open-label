@@ -638,6 +638,7 @@
       "notDeclared": "Ei ole deklareeritud",
       "published": "Avaldatud",
       "noFragrancesDeclared": "Allergeenseid lõhnaaineid, mille märgistamise nõue on kehtestatud, ei ole deklareeritud sisaldusega 10 mg/kg või rohkem.",
+      "fragrancesDeclared": "Järgmised märgistusnõuetele alluvad allergeensed lõhnaained on koguses 10 mg/kg või rohkem: {{names}}.",
       "mirroredAt": "Peegeldatud aadressil {{url}}",
       "mirroredOnOpenLabel": "Peegeldatud Open-Label.eu infrastruktuuris",
       "numberPrefix": "Nr {{value}}",

@@ -638,6 +638,7 @@
       "notDeclared": "Nav deklarēts",
       "published": "Publicēts",
       "noFragrancesDeclared": "Nav deklarēti alergēni aromāti, kuriem piemēro marķēšanas prasības un kuri ir klātesoši 10 mg/kg vai vairāk.",
+      "fragrancesDeclared": "Šādas marķēšanas prasībām pakļautās alerģiskās smaržvielas ir klāt koncentrācijā 10 mg/kg vai vairāk: {{names}}.",
       "mirroredAt": "Spoguļots vietnē {{url}}",
       "mirroredOnOpenLabel": "Spoguļots Open-Label.eu infrastruktūrā",
       "numberPrefix": "Numurs {{value}}",
