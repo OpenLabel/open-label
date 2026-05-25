@@ -51,23 +51,29 @@ interface ToyPublicPassportProps {
   onPreviewLanguageChange?: (lang: string) => void;
 }
 
+type LocalizedOption = { value: string; label: string; labelKey?: string };
+type TFn = (key: string, fallback?: string) => string;
+
 function labelFor(
-  options: { value: string; label: string }[],
+  options: LocalizedOption[],
   value: unknown,
+  t: TFn,
 ): string {
   if (typeof value !== 'string') return '';
-  return options.find((o) => o.value === value)?.label ?? value;
+  const opt = options.find((o) => o.value === value);
+  if (!opt) return value;
+  return opt.labelKey ? t(opt.labelKey, opt.label) : opt.label;
 }
 
 function labelsFor(
-  options: { value: string; label: string }[],
+  options: LocalizedOption[],
   values: unknown,
+  t: TFn,
 ): string[] {
   if (!Array.isArray(values)) return [];
-  return (values as string[]).map(
-    (v) => options.find((o) => o.value === v)?.label ?? v,
-  );
+  return (values as string[]).map((v) => labelFor(options, v, t));
 }
+
 
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
   if (value === null || value === undefined || value === '' ) return null;
