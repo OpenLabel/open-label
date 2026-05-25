@@ -21,7 +21,10 @@
     "language": "Språk",
     "custom": "Anpassad",
     "selectOption": "Välj ett alternativ",
-    "confirmed": "Bekräftad"
+    "confirmed": "Bekräftad",
+    "required": "Obligatorisk",
+    "whereApplicable": "I tillämpliga fall",
+    "tbdImplementingAct": "Ej fastställd — genomförandeakt"
   },
   "nav": {
     "signIn": "Logga in",
@@ -666,6 +669,280 @@
     "poweredBy": "Drivs av"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Tillverkarens ansvar",
+        "description": "Detta digitala produktpass utfärdas på tillverkarens eget ansvar."
+      },
+      "product_identity": {
+        "title": "Produktidentitet",
+        "description": "Varje leksaksmodell eller variant behöver ett eget DPP."
+      },
+      "manufacturer": {
+        "title": "Tillverkare",
+        "description": "Juridisk person som ansvarar för att släppa ut leksaken på marknaden."
+      },
+      "auth_rep": {
+        "title": "Auktoriserad representant",
+        "description": "I tillämpliga fall."
+      },
+      "eu_operator": {
+        "title": "Ansvarig ekonomisk aktör i EU",
+        "description": "Krävs när tillverkaren är etablerad utanför EU."
+      },
+      "compliance": {
+        "title": "Regelefterlevnad",
+        "description": "CE-märkning, tillämplig EU-lagstiftning och standarder."
+      },
+      "notified_body": {
+        "title": "Bedömning av överensstämmelse och anmält organ",
+        "description": "I tillämpliga fall."
+      },
+      "customs": {
+        "title": "Varukod enligt tulltaxan",
+        "description": "Genereras som 9880 + KN-kapitel + 00. Redigerbar."
+      },
+      "allergenic_fragrances": {
+        "title": "Allergena doftämnen",
+        "description": "Ämnen som omfattas av märkningskrav vid ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Rapportering av säkerhetsincidenter",
+        "description": "Kanaler tillgängliga för konsumenter och myndigheter."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Jag bekräftar att detta DPP utfärdas på tillverkarens eget ansvar."
+      },
+      "brand_name": {
+        "label": "Varumärke"
+      },
+      "model_name": {
+        "label": "Modellnamn eller modellnummer"
+      },
+      "sku": {
+        "label": "SKU eller variant-ID",
+        "help": "Använd ett separat DPP för varje variant (färg, storlek, material, elektronisk version, paketerad version)."
+      },
+      "toy_category": {
+        "label": "Leksakskategori"
+      },
+      "toy_category_other": {
+        "label": "Leksakskategori (specificera)"
+      },
+      "age_group": {
+        "label": "Avsedd åldersgrupp"
+      },
+      "age_group_other": {
+        "label": "Åldersgrupp (specificera)"
+      },
+      "mouth_contact": {
+        "label": "Är leksaken avsedd att stoppas i munnen?",
+        "help": "Strängare restriktioner för allergena doftämnen och kemikalier gäller för leksaker avsedda att stoppas i munnen."
+      },
+      "unique_product_identifier": {
+        "label": "Unik produktidentifierare",
+        "help": "Beständig identifierare för denna leksaksmodell/SKU/variant. Bör vara kompatibel med ESPR / ISO IEC 15459-liknande identifiering när de slutliga specifikationerna har bekräftats."
+      },
+      "identifier_type": {
+        "label": "Identifierartyp"
+      },
+      "identifier_type_other": {
+        "label": "Identifierartyp (specificera)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Tillverkarens juridiska namn"
+      },
+      "manufacturer_street": {
+        "label": "Gatuadress"
+      },
+      "manufacturer_city": {
+        "label": "Stad"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postnummer"
+      },
+      "manufacturer_country": {
+        "label": "Land"
+      },
+      "manufacturer_email": {
+        "label": "Elektronisk adress (e-post)",
+        "placeholder": "namn@foretag.com"
+      },
+      "manufacturer_website": {
+        "label": "Webbplats",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Unik aktörsidentifierare",
+        "help": "Använd den bästa tillgängliga aktörsidentifieraren nu; det slutliga format som krävs kan komma att definieras i genomförandeakten."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Typ av aktörsidentifierare"
+      },
+      "has_auth_rep": {
+        "label": "Har tillverkaren en auktoriserad representant?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Auktoriserad representants juridiska namn"
+      },
+      "auth_rep_street": {
+        "label": "Gatuadress"
+      },
+      "auth_rep_city": {
+        "label": "Stad"
+      },
+      "auth_rep_postal_code": {
+        "label": "Postnummer"
+      },
+      "auth_rep_country": {
+        "label": "Land"
+      },
+      "auth_rep_email": {
+        "label": "Elektronisk adress (e-post)",
+        "placeholder": "namn@foretag.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Unik aktörsidentifierare"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Typ av aktörsidentifierare"
+      },
+      "manufacturer_non_eu": {
+        "label": "Är tillverkaren etablerad utanför EU?"
+      },
+      "eu_op_legal_name": {
+        "label": "Ansvarig EU-aktörs juridiska namn"
+      },
+      "eu_op_role": {
+        "label": "Roll"
+      },
+      "eu_op_street": {
+        "label": "Gatuadress"
+      },
+      "eu_op_city": {
+        "label": "Stad"
+      },
+      "eu_op_postal_code": {
+        "label": "Postnummer"
+      },
+      "eu_op_country": {
+        "label": "Land"
+      },
+      "eu_op_email": {
+        "label": "Elektronisk adress (e-post)",
+        "placeholder": "namn@foretag.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Unik aktörsidentifierare"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Typ av aktörsidentifierare"
+      },
+      "has_instructions_warnings": {
+        "label": "Kräver denna leksak instruktioner, varningar eller säkerhetsinformation?"
+      },
+      "public_instructions_warnings": {
+        "label": "Offentliga instruktioner och varningar",
+        "help": "Lägg till de varningar, instruktioner och säkerhetsinformation som medföljer leksaken."
+      },
+      "ce_declaration_ack": {
+        "label": "Tillverkaren försäkrar att denna leksak uppfyller tillämpliga EU-säkerhetskrav och bär eller kommer att bära CE-märkningen där det krävs innan den släpps ut på EU-marknaden.",
+        "help": "Endast leksaker med CE-märkning får släppas ut på EU-marknaden. Denna försäkran ska överensstämma med tillverkarens bedömning av överensstämmelse."
+      },
+      "eu_doc_available": {
+        "label": "Finns EU-försäkran om överensstämmelse tillgänglig?",
+        "warn": "EU-försäkran om överensstämmelse förväntas vara en del av ramverket för leksakers överensstämmelse. Komplettera detta innan du förlitar dig på DPP för marknadsföring."
+      },
+      "eu_doc_reference": {
+        "label": "Referens till försäkran om överensstämmelse"
+      },
+      "eu_doc_upload": {
+        "label": "Ladda upp försäkran om överensstämmelse",
+        "help": "Endast för internt bruk. Den uppladdade filen sparas för tillverkaren och visas inte i det offentliga DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Är säkerhetsbedömningen slutförd?",
+        "help": "Leksakstillverkare måste bedöma kemiska, fysikaliska, mekaniska, elektriska, brandfarlighets-, hygien-, radioaktivitets- och exponeringsrisker där det är relevant.",
+        "warn": "Information om säkerhetsbedömning bör kompletteras innan du förlitar dig på detta DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Finns teknisk dokumentation tillgänglig?",
+        "help": "Teknisk dokumentation stöder bevisningen att leksaken uppfyller tillämpliga säkerhetskrav.",
+        "warn": "Teknisk dokumentation kan krävas av marknadskontrollmyndigheter."
+      },
+      "technical_documentation_upload": {
+        "label": "Ladda upp teknisk dokumentation",
+        "help": "Endast för internt bruk. Den uppladdade filen sparas för tillverkaren och visas inte i det offentliga DPP."
+      },
+      "applicable_legislation": {
+        "label": "Tillämplig EU-lagstiftning"
+      },
+      "harmonised_standards": {
+        "label": "Använda harmoniserade standarder"
+      },
+      "common_specifications": {
+        "label": "Använda gemensamma specifikationer",
+        "placeholder": "Beskriv de gemensamma specifikationer som tillämpats."
+      },
+      "other_standards": {
+        "label": "Andra använda standarder (en per rad)"
+      },
+      "notified_body_involved": {
+        "label": "Var ett anmält organ involverat?"
+      },
+      "notified_body_name": {
+        "label": "Anmält organs namn"
+      },
+      "notified_body_number": {
+        "label": "Anmält organs nummer",
+        "placeholder": "t.ex. 0123"
+      },
+      "certificate_reference": {
+        "label": "Intygsreferens"
+      },
+      "certificate_issue_date": {
+        "label": "Intygets utfärdandedatum (ÅÅÅÅ-MM-DD)",
+        "placeholder": "ÅÅÅÅ-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Intyg om överensstämmelse (PDF eller bild)",
+        "help": "Valfritt. Den uppladdade filen är allmänt tillgänglig från DPP."
+      },
+      "cn_chapter": {
+        "label": "KN-kapitel"
+      },
+      "customs_code": {
+        "label": "Varukod enligt tulltaxan",
+        "placeholder": "98809500",
+        "help": "Fylls i automatiskt från KN-kapitel. Åsidosätt om din tullklassificering skiljer sig."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Innehåller leksaken eller någon komponent allergena doftämnen i en koncentration på ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Närvarande allergena doftämnen"
+      },
+      "allergen_declaration_text": {
+        "label": "Allergendeklaration (autogenererad, redigerbar)"
+      },
+      "safety_channels": {
+        "label": "Offentliga kanaler för säkerhetsrapportering"
+      },
+      "safety_phone": {
+        "label": "Telefon för säkerhetsrapportering",
+        "placeholder": "+46 ..."
+      },
+      "safety_email": {
+        "label": "E-post för säkerhetsrapportering",
+        "placeholder": "sakerhet@foretag.com"
+      },
+      "safety_website": {
+        "label": "Webbplats/kontaktformulär för säkerhetsrapportering (URL)",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
@@ -674,8 +951,8 @@
         "VAT": "Momsregistreringsnummer",
         "NATIONAL": "Nationellt organisationsnummer",
         "DUNS": "DUNS",
-        "ESPR": "ESPR / DPP-operatörsidentifierare",
-        "other": "Annat"
+        "ESPR": "ESPR / DPP-aktörsidentifierare",
+        "other": "Annan"
       },
       "toyCategory": {
         "baby": "Babyleksak",
@@ -687,14 +964,14 @@
         "board_game": "Brädspel",
         "arts_crafts": "Pysselleksak",
         "slime": "Slime / lera / modellmassa",
-        "chemical_set": "Kemisk leksakssats",
-        "cosmetic": "Kosmetisk leksak / leksakssmink",
-        "olfactory": "Luktbrädspel",
+        "chemical_set": "Kemileksak",
+        "cosmetic": "Kosmetisk leksak / leksmink",
+        "olfactory": "Luktspel",
         "gustative": "Smakspel",
         "outdoor": "Utomhusleksak",
         "activity": "Aktivitetsleksak",
         "ride_on": "Åkleksak",
-        "wheeled": "Sparkcykel / skate / hjulleksak",
+        "wheeled": "Sparkcykel / skridsko / hjulleksak",
         "aquatic": "Vattenleksak",
         "electronic": "Elektronisk leksak",
         "radio": "Radiouppkopplad leksak",
@@ -704,7 +981,7 @@
         "magnets": "Leksak med magneter",
         "drone": "Leksaksdrönare",
         "toy_in_food": "Leksak i livsmedel",
-        "other": "Annat"
+        "other": "Annan"
       },
       "ageGroup": {
         "14": "14 år",
@@ -720,7 +997,7 @@
         "8plus": "8+ år",
         "10plus": "10+ år",
         "12plus": "12+ år",
-        "other": "Annat"
+        "other": "Annan"
       },
       "identifierType": {
         "GTIN": "GTIN",
@@ -730,43 +1007,43 @@
         "SKU": "SKU",
         "MODEL": "Modellnummer",
         "ISO_15459": "ISO/IEC 15459-kompatibel identifierare",
-        "other": "Annat"
+        "other": "Annan"
       },
       "cnChapter": {
         "32": "32 — Färger, pigment, bläck, färgämnen",
         "33": "33 — Eteriska oljor, parfymer, kosmetika",
-        "34": "34 — Tvålar, vaxer, modelleringspastor",
-        "39": "39 — Plast och plastartiklar",
-        "40": "40 — Gummi och gummiartiklar",
-        "42": "42 — Läderartiklar",
-        "44": "44 — Trä och träartiklar",
+        "34": "34 — Tvål, vaxer, modelleringspastor",
+        "39": "39 — Plast och plastvaror",
+        "40": "40 — Gummi och gummivaror",
+        "42": "42 — Lädervaror",
+        "44": "44 — Trä och trävaror",
         "48": "48 — Papper och papp",
         "49": "49 — Tryckta böcker, bilder, kort",
-        "61": "61 — Stickade kläder / textiltillbehör",
-        "62": "62 — Icke-stickade kläder / textiltillbehör",
-        "63": "63 — Andra konfektionerade textilartiklar",
+        "61": "61 — Kläder och tillbehör av trikå",
+        "62": "62 — Kläder och tillbehör, ej av trikå",
+        "63": "63 — Andra konfektionerade textilvaror",
         "69": "69 — Keramiska produkter",
         "70": "70 — Glas och glasvaror",
-        "73": "73 — Artiklar av järn eller stål",
-        "76": "76 — Aluminiumartiklar",
-        "85": "85 — Elektriska maskiner och utrustning",
+        "73": "73 — Varor av järn eller stål",
+        "76": "76 — Varor av aluminium",
+        "85": "85 — Elektriska maskiner och apparater",
         "87": "87 — Fordon och delar",
-        "90": "90 — Optiska instrument, mätinstrument, kontrollinstrument",
+        "90": "90 — Optiska instrument, mät- och kontrollinstrument",
         "95": "95 — Leksaker, spel och sportartiklar",
         "other": "Annat"
       },
       "legislation": {
         "TSR": "Förordning (EU) 2025/2509 — Leksakssäkerhetsförordningen",
-        "GPSR": "Förordning (EU) 2023/988 — Allmänna produktsäkerhetsförordningen",
+        "GPSR": "Förordning (EU) 2023/988 — Förordningen om allmän produktsäkerhet",
         "MSR": "Förordning (EU) 2019/1020 — Marknadskontroll",
         "AI_ACT": "Förordning (EU) 2024/1689 — AI-akten",
         "CRA": "Förordning (EU) 2024/2847 — Cybersäkerhetsakten",
-        "RED": "Direktiv 2014/53/EU — Radioutrustningsdirektivet",
+        "RED": "Direktiv 2014/53/EU — Direktivet om radioutrustning",
         "LVD": "Direktiv 2014/35/EU — Lågspänningsdirektivet",
         "EMC": "Direktiv 2014/30/EU — EMC-direktivet",
-        "RoHS": "Direktiv 2011/65/EU — RoHS",
+        "RoHS": "Direktiv 2011/65/EU — RoHS-direktivet",
         "BATTERIES": "Förordning (EU) 2023/1542 — Batteriförordningen",
-        "DRONES": "Delegerad förordning (EU) 2019/945 — UAS / drönare",
+        "DRONES": "Delegerad förordning (EU) 2019/945 — UAS/drönare",
         "COSMETICS": "Förordning (EG) nr 1223/2009 — Kosmetiska produkter",
         "REACH": "Förordning (EG) nr 1907/2006 — REACH",
         "CLP": "Förordning (EG) nr 1272/2008 — CLP",
@@ -774,14 +1051,14 @@
       },
       "standards": {
         "EN71_1": "EN 71-1 — Mekaniska och fysikaliska egenskaper",
-        "EN71_2": "EN 71-2 — Brännbarhet",
+        "EN71_2": "EN 71-2 — Antändlighet",
         "EN71_3": "EN 71-3 — Migration av vissa grundämnen",
-        "EN71_4": "EN 71-4 — Experimentlådor för kemi",
+        "EN71_4": "EN 71-4 — Experimentlådor för kemiska försök",
         "EN71_5": "EN 71-5 — Kemiska leksaker (ej experimentlådor)",
         "EN71_7": "EN 71-7 — Fingerfärger",
         "EN71_8": "EN 71-8 — Aktivitetsleksaker för hemmabruk",
         "EN71_12": "EN 71-12 — N-nitrosaminer och N-nitroserbara ämnen",
-        "EN71_13": "EN 71-13 — Luktbrädspel, kosmetiska set och smakspel",
+        "EN71_13": "EN 71-13 — Luktspel, kosmetiska leksaker och smakspel",
         "EN71_14": "EN 71-14 — Studsmattor för hemmabruk",
         "EN_IEC_62115": "EN IEC 62115 — Elektriska leksaker",
         "other": "Annan harmoniserad standard",
@@ -796,7 +1073,7 @@
       "euOperatorRole": {
         "importer": "Importör",
         "auth_rep": "Auktoriserad representant",
-        "fulfilment": "Logistiktjänstleverantör",
+        "fulfilment": "Fullgörandetjänstleverantör",
         "distributor": "Distributör som agerar som ansvarig ekonomisk aktör",
         "other": "Annan EU-baserad ansvarig person (förordning 2019/1020 art. 4)"
       },
@@ -807,7 +1084,139 @@
       "yesNoUnknown": {
         "yes": "Ja",
         "no": "Nej",
-        "unknown": "Okänd"
+        "unknown": "Okänt"
+      }
+    },
+    "ai": {
+      "scannerTitle": "AI-skanner för leksaksmärkning",
+      "scannerDescription": "Ta eller ladda upp en bild av leksaksförpackningen – AI:n läser av CE-märkningen, åldersvarningar, tillverkarinformation, streckkod och angivna allergena doftämnen.",
+      "dropHere": "↓ Släpp här",
+      "dragOrClick": "Dra och släpp eller klicka"
+    },
+    "warnings": {
+      "youngChild": "Denna leksak är avsedd för barn under 36 månader. Strängare restriktioner för allergena doftämnen gäller, och eventuella smådelar måste bedömas med avseende på kvävningsrisk.",
+      "mouthContact": "Denna leksak är avsedd att stoppas i munnen. Strängare restriktioner för allergena doftämnen och kemisk migration gäller.",
+      "unknownAllergens": "Detta DPP kan vara ofullständigt eftersom information om allergena doftämnen är obligatorisk i tillämpliga fall. Ersätt \"Okänt\" med Ja eller Nej innan publicering.",
+      "suggestLegislation": "Baserat på den valda leksakskategorin, överväg även att kryssa i: {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP för leksaker — ansvarsfriskrivning för regelefterlevnad",
+      "body": "Den exakta datamodellen och API-specifikationerna för EU:s digitala produktpass för leksaker är ännu inte fastställda och förväntas definieras i genomförandeakten som ska vara klar i slutet av 2026. Detta verktyg är en första version baserad på förordning (EU) 2025/2509 och ska inte betraktas som slutgiltig juridisk rådgivning."
+    },
+    "internalBadge": "Internt — visas inte offentligt",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Rapportera osäkra produkter via EU:s Safety Gate-portal:",
+      "alwaysShown": "Denna länk visas alltid i det offentliga passet."
+    },
+    "certificate": {
+      "viewFile": "Visa uppladdad fil",
+      "remove": "Ta bort fil",
+      "uploading": "Laddar upp...",
+      "uploadButton": "Ladda upp intyg",
+      "errors": {
+        "loginRequired": "Du måste vara inloggad för att ladda upp filer.",
+        "tooLarge": "Filen är för stor. Maximal storlek är 5 MB.",
+        "uploadFailed": "Uppladdningen misslyckades."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Inga allergena doftämnen har lagts till ännu.",
+      "summary": "{{count}} doftämnen deklarerade.",
+      "addButton": "Lägg till doftämne",
+      "cas": "CAS",
+      "removeAria": "Ta bort {{name}}",
+      "concentrationLabel": "Koncentration (mg/kg)",
+      "componentLabel": "Komponent / material",
+      "componentPlaceholder": "t.ex. mjukdjursfyllning",
+      "aboveThreshold": "Koncentration ≥10 mg/kg",
+      "supplierDeclaration": "Leverantörsdeklaration finns",
+      "testReport": "Testrapport finns",
+      "dialogTitle": "Välj allergena doftämnen",
+      "searchPlaceholder": "Sök på namn, CAS eller id...",
+      "clearSearch": "Rensa sökning",
+      "noResults": "Inga doftämnen matchar \"{{q}}\".",
+      "done": "Klar"
+    },
+    "validation": {
+      "imageRequired": "En färgbild av leksaken krävs.",
+      "descriptionRequired": "En produktbeskrivning krävs för leksaker."
+    },
+    "public": {
+      "badge": "🧸 Leksak — Digitalt produktpass",
+      "otherFallback": "Annat",
+      "notDeclared": "Ej deklarerat",
+      "ceMarked": "✓ CE-märkt",
+      "statusPublished": "Publicerad",
+      "noAllergens": "Inga allergena doftämnen som omfattas av märkningskrav har deklarerats som närvarande i en koncentration på eller över 10 mg/kg.",
+      "certificateDownload": "Ladda ner intyg om överensstämmelse",
+      "reportUnsafe": "Rapportera en osäker produkt",
+      "mirroredAt": "Speglad på {{url}}",
+      "mirroredDefault": "Speglad på Open-Label.eu-infrastruktur",
+      "nbNumber": "Nummer {{n}}",
+      "nbCertificate": "Intyg: {{ref}}",
+      "nbIssued": "(utfärdat {{date}})",
+      "instructionsTitle": "Instruktioner och varningar",
+      "ceDeclarationStatement": "Tillverkaren försäkrar att denna leksak uppfyller tillämpliga EU-säkerhetskrav och bär eller kommer att bära CE-märkningen där det krävs innan den släpps ut på EU-marknaden.",
+      "docLabel": "EU-försäkran om överensstämmelse",
+      "docReference": "Referens",
+      "safetyAssessmentLabel": "Säkerhetsbedömning",
+      "technicalDocsLabel": "Teknisk dokumentation",
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Okänt"
+      },
+      "sections": {
+        "identity": "Produktidentitet",
+        "manufacturer": "Tillverkarens ansvar",
+        "manufacturerNote": "Detta digitala produktpass utfärdas på tillverkarens eget ansvar.",
+        "euOperator": "Information om EU-aktör",
+        "authRep": "Auktoriserad representant",
+        "euResponsible": "Ansvarig ekonomisk aktör i EU",
+        "compliance": "Regelefterlevnad",
+        "safety": "Säkerhets- och kemikalieinformation",
+        "safetyReporting": "Rapportering av säkerhetsincidenter",
+        "infrastructure": "DPP-infrastruktur"
+      },
+      "rows": {
+        "brand": "Varumärke",
+        "model": "Modell",
+        "sku": "SKU / variant",
+        "toyCategory": "Leksakskategori",
+        "age": "Avsedd åldersgrupp",
+        "uid": "Unik identifierare",
+        "manufacturer": "Tillverkare",
+        "address": "Adress",
+        "email": "E-post",
+        "website": "Webbplats",
+        "operatorId": "Aktörsidentifierare",
+        "legalName": "Juridiskt namn",
+        "role": "Roll",
+        "ce": "CE-märkning",
+        "applicableLeg": "Tillämplig lagstiftning",
+        "standards": "Harmoniserade standarder",
+        "commonSpecs": "Gemensamma specifikationer",
+        "otherStandards": "Andra standarder",
+        "notifiedBody": "Anmält organ",
+        "customs": "Varukod",
+        "dppProvider": "DPP-tjänsteleverantör",
+        "backup": "Referens till säkerhetskopia",
+        "dppVersion": "DPP-version",
+        "lastUpdated": "Senast uppdaterad",
+        "status": "Status"
+      },
+      "table": {
+        "substance": "Ämne",
+        "cas": "CAS",
+        "concentration": "Koncentration",
+        "component": "Komponent"
+      },
+      "safety": {
+        "telephone": "Telefon",
+        "emailLabel": "E-post",
+        "web": "Webb",
+        "gatePortal": "EU Safety Gate-portalen"
       }
     }
   }

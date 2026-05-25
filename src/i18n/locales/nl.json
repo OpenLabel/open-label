@@ -21,7 +21,10 @@
     "language": "Taal",
     "custom": "Aangepast",
     "selectOption": "Selecteer een optie",
-    "confirmed": "Bevestigd"
+    "confirmed": "Bevestigd",
+    "required": "Vereist",
+    "whereApplicable": "Indien van toepassing",
+    "tbdImplementingAct": "Nader te bepalen — uitvoeringshandeling"
   },
   "nav": {
     "signIn": "Inloggen",
@@ -666,6 +669,280 @@
     "poweredBy": "Mogelijk gemaakt door"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Verantwoordelijkheid van de fabrikant",
+        "description": "Dit digitaal productpaspoort wordt verstrekt onder de uitsluitende verantwoordelijkheid van de fabrikant."
+      },
+      "product_identity": {
+        "title": "Productidentiteit",
+        "description": "Elk speelgoedmodel of elke variant heeft een eigen DPP nodig."
+      },
+      "manufacturer": {
+        "title": "Fabrikant",
+        "description": "Rechtspersoon die verantwoordelijk is voor het in de handel brengen van het speelgoed."
+      },
+      "auth_rep": {
+        "title": "Gevolmachtigde",
+        "description": "Indien van toepassing."
+      },
+      "eu_operator": {
+        "title": "Verantwoordelijke marktdeelnemer in de EU",
+        "description": "Vereist wanneer de fabrikant buiten de EU is gevestigd."
+      },
+      "compliance": {
+        "title": "Conformiteit",
+        "description": "CE-markering, toepasselijke EU-wetgeving en -normen."
+      },
+      "notified_body": {
+        "title": "Conformiteitsbeoordeling & aangemelde instantie",
+        "description": "Indien van toepassing."
+      },
+      "customs": {
+        "title": "Goederencode douane",
+        "description": "Gegenereerd als 9880 + GN-hoofdstuk + 00. Bewerkbaar."
+      },
+      "allergenic_fragrances": {
+        "title": "Allergene geurstoffen",
+        "description": "Stoffen die onderworpen zijn aan etiketteringsvereisten bij ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Melding van veiligheidsincidenten",
+        "description": "Kanalen beschikbaar voor consumenten en autoriteiten."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Ik bevestig dat dit DPP wordt verstrekt onder de uitsluitende verantwoordelijkheid van de fabrikant."
+      },
+      "brand_name": {
+        "label": "Merknaam"
+      },
+      "model_name": {
+        "label": "Modelnaam of modelnummer"
+      },
+      "sku": {
+        "label": "SKU of variant-ID",
+        "help": "Gebruik een afzonderlijk DPP voor elke variant (kleur, maat, materiaal, elektronische versie, gebundelde versie)."
+      },
+      "toy_category": {
+        "label": "Speelgoedcategorie"
+      },
+      "toy_category_other": {
+        "label": "Speelgoedcategorie (specificeren)"
+      },
+      "age_group": {
+        "label": "Beoogde leeftijdsgroep"
+      },
+      "age_group_other": {
+        "label": "Leeftijdsgroep (specificeren)"
+      },
+      "mouth_contact": {
+        "label": "Is dit speelgoed bedoeld om in de mond te worden gestopt?",
+        "help": "Voor speelgoed dat in de mond wordt gestopt, gelden strengere beperkingen voor allergene geurstoffen en chemicaliën."
+      },
+      "unique_product_identifier": {
+        "label": "Unieke productidentificatiecode",
+        "help": "Permanente identificatiecode voor dit speelgoedmodel/SKU/variant. Moet compatibel zijn met ESPR / ISO IEC 15459-stijl identificatie wanneer de definitieve specificaties zijn bevestigd."
+      },
+      "identifier_type": {
+        "label": "Type identificatiecode"
+      },
+      "identifier_type_other": {
+        "label": "Type identificatiecode (specificeren)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Wettelijke naam van de fabrikant"
+      },
+      "manufacturer_street": {
+        "label": "Straat en huisnummer"
+      },
+      "manufacturer_city": {
+        "label": "Stad"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postcode"
+      },
+      "manufacturer_country": {
+        "label": "Land"
+      },
+      "manufacturer_email": {
+        "label": "Elektronisch adres (e-mail)",
+        "placeholder": "naam@bedrijf.com"
+      },
+      "manufacturer_website": {
+        "label": "Website",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Unieke identificatiecode van de marktdeelnemer",
+        "help": "Gebruik nu de best beschikbare identificatiecode van de marktdeelnemer; het definitieve vereiste formaat kan worden vastgelegd in de uitvoeringshandeling."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Type identificatiecode van de marktdeelnemer"
+      },
+      "has_auth_rep": {
+        "label": "Heeft de fabrikant een gevolmachtigde?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Wettelijke naam van de gevolmachtigde"
+      },
+      "auth_rep_street": {
+        "label": "Straat en huisnummer"
+      },
+      "auth_rep_city": {
+        "label": "Stad"
+      },
+      "auth_rep_postal_code": {
+        "label": "Postcode"
+      },
+      "auth_rep_country": {
+        "label": "Land"
+      },
+      "auth_rep_email": {
+        "label": "Elektronisch adres (e-mail)",
+        "placeholder": "naam@bedrijf.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Unieke identificatiecode van de marktdeelnemer"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Type identificatiecode van de marktdeelnemer"
+      },
+      "manufacturer_non_eu": {
+        "label": "Is de fabrikant buiten de EU gevestigd?"
+      },
+      "eu_op_legal_name": {
+        "label": "Wettelijke naam van de verantwoordelijke marktdeelnemer in de EU"
+      },
+      "eu_op_role": {
+        "label": "Rol"
+      },
+      "eu_op_street": {
+        "label": "Straat en huisnummer"
+      },
+      "eu_op_city": {
+        "label": "Stad"
+      },
+      "eu_op_postal_code": {
+        "label": "Postcode"
+      },
+      "eu_op_country": {
+        "label": "Land"
+      },
+      "eu_op_email": {
+        "label": "Elektronisch adres (e-mail)",
+        "placeholder": "naam@bedrijf.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Unieke identificatiecode van de marktdeelnemer"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Type identificatiecode van de marktdeelnemer"
+      },
+      "has_instructions_warnings": {
+        "label": "Zijn er voor dit speelgoed instructies, waarschuwingen of veiligheidsinformatie vereist?"
+      },
+      "public_instructions_warnings": {
+        "label": "Openbare instructies en waarschuwingen",
+        "help": "Voeg de waarschuwingen, instructies en veiligheidsinformatie toe die bij het speelgoed horen."
+      },
+      "ce_declaration_ack": {
+        "label": "De fabrikant verklaart dat dit speelgoed voldoet aan de toepasselijke EU-veiligheidseisen en, waar vereist, de CE-markering draagt of zal dragen voordat het op de EU-markt wordt gebracht.",
+        "help": "Alleen speelgoed met CE-markering mag op de EU-markt worden gebracht. Deze verklaring moet in overeenstemming zijn met de conformiteitsbeoordeling van de fabrikant."
+      },
+      "eu_doc_available": {
+        "label": "EU-conformiteitsverklaring beschikbaar?",
+        "warn": "De EU-conformiteitsverklaring wordt verwacht als onderdeel van het conformiteitskader voor speelgoed. Vul dit in voordat u het DPP gebruikt voor marktgerichte doeleinden."
+      },
+      "eu_doc_reference": {
+        "label": "Referentie conformiteitsverklaring"
+      },
+      "eu_doc_upload": {
+        "label": "Upload conformiteitsverklaring",
+        "help": "Alleen voor intern gebruik. Het geüploade bestand wordt bewaard voor de fabrikant en wordt niet getoond op het openbare DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Veiligheidsbeoordeling voltooid?",
+        "help": "Speelgoedfabrikanten moeten, waar relevant, de chemische, fysische, mechanische, elektrische, ontvlambaarheids-, hygiëne-, radioactiviteits- en blootstellingsrisico's beoordelen.",
+        "warn": "Informatie over de veiligheidsbeoordeling moet worden ingevuld voordat u op dit DPP vertrouwt."
+      },
+      "technical_documentation_available": {
+        "label": "Technische documentatie beschikbaar?",
+        "help": "Technische documentatie ondersteunt het bewijs dat het speelgoed voldoet aan de toepasselijke veiligheidseisen.",
+        "warn": "Technische documentatie kan worden opgevraagd door markttoezichtautoriteiten."
+      },
+      "technical_documentation_upload": {
+        "label": "Upload technische documentatie",
+        "help": "Alleen voor intern gebruik. Het geüploade bestand wordt bewaard voor de fabrikant en wordt niet getoond op het openbare DPP."
+      },
+      "applicable_legislation": {
+        "label": "Toepasselijke EU-wetgeving"
+      },
+      "harmonised_standards": {
+        "label": "Gebruikte geharmoniseerde normen"
+      },
+      "common_specifications": {
+        "label": "Gebruikte gemeenschappelijke specificaties",
+        "placeholder": "Beschrijf de toegepaste gemeenschappelijke specificaties."
+      },
+      "other_standards": {
+        "label": "Andere gebruikte normen (één per regel)"
+      },
+      "notified_body_involved": {
+        "label": "Was er een aangemelde instantie bij betrokken?"
+      },
+      "notified_body_name": {
+        "label": "Naam van de aangemelde instantie"
+      },
+      "notified_body_number": {
+        "label": "Nummer van de aangemelde instantie",
+        "placeholder": "bijv. 0123"
+      },
+      "certificate_reference": {
+        "label": "Certificaatreferentie"
+      },
+      "certificate_issue_date": {
+        "label": "Datum van afgifte certificaat (JJJJ-MM-DD)",
+        "placeholder": "JJJJ-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Conformiteitscertificaat (PDF of afbeelding)",
+        "help": "Optioneel. Het geüploade bestand is openbaar toegankelijk via het DPP."
+      },
+      "cn_chapter": {
+        "label": "GN-hoofdstuk"
+      },
+      "customs_code": {
+        "label": "Goederencode douane",
+        "placeholder": "98809500",
+        "help": "Automatisch ingevuld vanuit GN-hoofdstuk. Overschrijf als uw douane-indeling afwijkt."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Bevat het speelgoed of een onderdeel ervan allergene geurstoffen in een concentratie van ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Aanwezige allergene geurstoffen"
+      },
+      "allergen_declaration_text": {
+        "label": "Allergenenverklaring (automatisch gegenereerd, bewerkbaar)"
+      },
+      "safety_channels": {
+        "label": "Openbare kanalen voor veiligheidsmeldingen"
+      },
+      "safety_phone": {
+        "label": "Telefoonnummer voor veiligheidsmeldingen",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "E-mailadres voor veiligheidsmeldingen",
+        "placeholder": "safety@company.com"
+      },
+      "safety_website": {
+        "label": "Website / URL contactformulier voor veiligheidsmeldingen",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
@@ -674,37 +951,37 @@
         "VAT": "Btw-nummer",
         "NATIONAL": "Nationaal bedrijfsregistratienummer",
         "DUNS": "DUNS",
-        "ESPR": "ESPR / DPP-operatoridentificatie",
-        "other": "Overig"
+        "ESPR": "ESPR / DPP-identificatiecode van de marktdeelnemer",
+        "other": "Andere"
       },
       "toyCategory": {
         "baby": "Babyspeelgoed",
-        "plush": "Knuffel",
+        "plush": "Pluchen speelgoed",
         "doll": "Pop",
         "action_figure": "Actiefiguur",
-        "construction": "Bouwspeelgoed / blokken",
+        "construction": "Constructiespeelgoed / blokken",
         "puzzle": "Puzzel",
         "board_game": "Bordspel",
         "arts_crafts": "Knutsel- en hobbyspeelgoed",
         "slime": "Slijm / kneedgum / boetseerklei",
         "chemical_set": "Chemische speelgoedset",
         "cosmetic": "Cosmetisch speelgoed / speelmake-up",
-        "olfactory": "Geurbordspel",
+        "olfactory": "Reukbordspel",
         "gustative": "Smaakspel",
         "outdoor": "Buitenspeelgoed",
         "activity": "Activiteitenspeelgoed",
-        "ride_on": "Rijspeelgoed",
+        "ride_on": "Zitspeelgoed",
         "wheeled": "Step / skate / speelgoed op wielen",
         "aquatic": "Waterspeelgoed",
         "electronic": "Elektronisch speelgoed",
-        "radio": "Radiografisch bestuurbaar speelgoed",
-        "internet": "Met internet verbonden speelgoed",
+        "radio": "Speelgoed met radioverbinding",
+        "internet": "Speelgoed met internetverbinding",
         "ai": "Speelgoed met AI",
         "battery": "Speelgoed met batterij",
         "magnets": "Speelgoed met magneten",
         "drone": "Speelgoeddrone",
-        "toy_in_food": "Speelgoed in levensmiddelen",
-        "other": "Overig"
+        "toy_in_food": "Speelgoed in levensmiddel",
+        "other": "Andere"
       },
       "ageGroup": {
         "14": "14 jaar",
@@ -720,7 +997,7 @@
         "8plus": "8+ jaar",
         "10plus": "10+ jaar",
         "12plus": "12+ jaar",
-        "other": "Overig"
+        "other": "Andere"
       },
       "identifierType": {
         "GTIN": "GTIN",
@@ -729,13 +1006,13 @@
         "SGTIN": "Geserialiseerde GTIN",
         "SKU": "SKU",
         "MODEL": "Modelnummer",
-        "ISO_15459": "ISO/IEC 15459-compatibele identificatie",
-        "other": "Overig"
+        "ISO_15459": "ISO/IEC 15459-compatibele identificatiecode",
+        "other": "Andere"
       },
       "cnChapter": {
-        "32": "32 — Verf, pigmenten, inkt, kleurstoffen",
+        "32": "32 — Verf, pigmenten, inkten, kleurstoffen",
         "33": "33 — Etherische oliën, parfums, cosmetica",
-        "34": "34 — Zeep, was, boetseerpasta's",
+        "34": "34 — Zeep, was, boetseerpastas",
         "39": "39 — Kunststoffen en werken daarvan",
         "40": "40 — Rubber en werken daarvan",
         "42": "42 — Lederwaren",
@@ -744,7 +1021,7 @@
         "49": "49 — Gedrukte boeken, afbeeldingen, kaarten",
         "61": "61 — Gebreide kleding / textielaccessoires",
         "62": "62 — Niet-gebreide kleding / textielaccessoires",
-        "63": "63 — Andere geconfectioneerde textielartikelen",
+        "63": "63 — Andere geconfectioneerde textielwaren",
         "69": "69 — Keramische producten",
         "70": "70 — Glas en glaswerk",
         "73": "73 — Werken van ijzer of staal",
@@ -753,11 +1030,11 @@
         "87": "87 — Voertuigen en onderdelen",
         "90": "90 — Optische, meet- en controle-instrumenten",
         "95": "95 — Speelgoed, spellen en sportartikelen",
-        "other": "Overig"
+        "other": "Andere"
       },
       "legislation": {
         "TSR": "Verordening (EU) 2025/2509 — Speelgoedveiligheidsverordening",
-        "GPSR": "Verordening (EU) 2023/988 — Algemene productveiligheidsverordening",
+        "GPSR": "Verordening (EU) 2023/988 — Verordening algemene productveiligheid",
         "MSR": "Verordening (EU) 2019/1020 — Markttoezicht",
         "AI_ACT": "Verordening (EU) 2024/1689 — Wet op de artificiële intelligentie",
         "CRA": "Verordening (EU) 2024/2847 — Cyberresilientiewet",
@@ -770,18 +1047,18 @@
         "COSMETICS": "Verordening (EG) nr. 1223/2009 — Cosmetische producten",
         "REACH": "Verordening (EG) nr. 1907/2006 — REACH",
         "CLP": "Verordening (EG) nr. 1272/2008 — CLP",
-        "other": "Overig"
+        "other": "Andere"
       },
       "standards": {
         "EN71_1": "EN 71-1 — Mechanische en fysische eigenschappen",
         "EN71_2": "EN 71-2 — Ontvlambaarheid",
         "EN71_3": "EN 71-3 — Migratie van bepaalde elementen",
-        "EN71_4": "EN 71-4 — Experimenteersets voor scheikunde",
-        "EN71_5": "EN 71-5 — Chemisch speelgoed, anders dan experimenteersets",
+        "EN71_4": "EN 71-4 — Experimenteerdozen voor chemische proeven",
+        "EN71_5": "EN 71-5 — Chemisch speelgoed, niet zijnde experimenteerdozen",
         "EN71_7": "EN 71-7 — Vingerverf",
         "EN71_8": "EN 71-8 — Activiteitenspeelgoed voor huishoudelijk gebruik",
         "EN71_12": "EN 71-12 — N-nitrosaminen en N-nitroseerbare stoffen",
-        "EN71_13": "EN 71-13 — Geurbordspellen, cosmeticakits en smaakspellen",
+        "EN71_13": "EN 71-13 — Reukbordspellen, cosmeticadozen en smaakspellen",
         "EN71_14": "EN 71-14 — Trampolines voor huishoudelijk gebruik",
         "EN_IEC_62115": "EN IEC 62115 — Elektrisch speelgoed",
         "other": "Andere geharmoniseerde norm",
@@ -808,6 +1085,138 @@
         "yes": "Ja",
         "no": "Nee",
         "unknown": "Onbekend"
+      }
+    },
+    "ai": {
+      "scannerTitle": "AI-scanner voor speelgoedlabels",
+      "scannerDescription": "Maak of upload een foto van de speelgoedverpakking — de AI leest de CE-markering, leeftijdswaarschuwingen, fabrikantgegevens, barcode en vermelde allergene geurstoffen.",
+      "dropHere": "↓ Hier neerzetten",
+      "dragOrClick": "Sleep & zet neer of klik"
+    },
+    "warnings": {
+      "youngChild": "Dit speelgoed is bedoeld voor kinderen jonger dan 36 maanden. Er gelden strengere beperkingen voor allergene geurstoffen en eventuele kleine onderdelen moeten worden beoordeeld op verstikkingsgevaar.",
+      "mouthContact": "Dit speelgoed is bedoeld om in de mond te worden gestopt. Er gelden strengere beperkingen voor allergene geurstoffen en de migratie van chemicaliën.",
+      "unknownAllergens": "Dit DPP is mogelijk onvolledig omdat informatie over allergene geurstoffen verplicht is indien van toepassing. Vervang \"Onbekend\" door Ja of Nee alvorens te publiceren.",
+      "suggestLegislation": "Overweeg op basis van de geselecteerde speelgoedcategorie ook het volgende aan te vinken: {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP voor speelgoed — conformiteitsdisclaimer",
+      "body": "Het exacte datamodel en de API-specificaties van het EU digitaal productpaspoort voor speelgoed moeten nog worden bepaald en zullen naar verwachting worden vastgelegd in de uitvoeringshandeling die eind 2026 wordt verwacht. Deze tool is een eerste versie gebaseerd op Verordening (EU) 2025/2509 en mag niet worden beschouwd als definitief juridisch advies."
+    },
+    "internalBadge": "Intern — niet openbaar getoond",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Meld onveilige producten via het EU Safety Gate-portaal:",
+      "alwaysShown": "Deze link wordt altijd getoond op het openbare paspoort."
+    },
+    "certificate": {
+      "viewFile": "Bekijk geüpload bestand",
+      "remove": "Verwijder bestand",
+      "uploading": "Uploaden...",
+      "uploadButton": "Certificaat uploaden",
+      "errors": {
+        "loginRequired": "U moet ingelogd zijn om bestanden te uploaden.",
+        "tooLarge": "Bestand is te groot. Maximale grootte is 5 MB.",
+        "uploadFailed": "Uploaden mislukt."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Nog geen allergene geurstoffen toegevoegd.",
+      "summary": "{{count}} geurstof(fen) aangegeven.",
+      "addButton": "Geurstof toevoegen",
+      "cas": "CAS",
+      "removeAria": "{{name}} verwijderen",
+      "concentrationLabel": "Concentratie (mg/kg)",
+      "componentLabel": "Component / materiaal",
+      "componentPlaceholder": "bijv. pluchen vulling",
+      "aboveThreshold": "Concentratie ≥10 mg/kg",
+      "supplierDeclaration": "Leveranciersverklaring in dossier",
+      "testReport": "Testrapport in dossier",
+      "dialogTitle": "Selecteer allergene geurstoffen",
+      "searchPlaceholder": "Zoek op naam, CAS of ID...",
+      "clearSearch": "Zoekopdracht wissen",
+      "noResults": "Geen geurstoffen gevonden voor \"{{q}}\".",
+      "done": "Klaar"
+    },
+    "validation": {
+      "imageRequired": "Een kleurenafbeelding van het speelgoed is vereist.",
+      "descriptionRequired": "Een productbeschrijving is vereist voor speelgoed."
+    },
+    "public": {
+      "badge": "🧸 Speelgoed — Digitaal Productpaspoort",
+      "otherFallback": "Andere",
+      "notDeclared": "Niet aangegeven",
+      "ceMarked": "✓ CE-gemarkeerd",
+      "statusPublished": "Gepubliceerd",
+      "noAllergens": "Er zijn geen allergene geurstoffen die onderworpen zijn aan etiketteringsvereisten aangegeven als aanwezig in een concentratie van 10 mg/kg of meer.",
+      "certificateDownload": "Download conformiteitscertificaat",
+      "reportUnsafe": "Meld een onveilig product",
+      "mirroredAt": "Gespiegeld op {{url}}",
+      "mirroredDefault": "Gespiegeld op Open-Label.eu-infrastructuur",
+      "nbNumber": "Nummer {{n}}",
+      "nbCertificate": "Certificaat: {{ref}}",
+      "nbIssued": "(afgegeven {{date}})",
+      "instructionsTitle": "Instructies en waarschuwingen",
+      "ceDeclarationStatement": "De fabrikant verklaart dat dit speelgoed voldoet aan de toepasselijke EU-veiligheidseisen en, waar vereist, de CE-markering draagt of zal dragen voordat het op de EU-markt wordt gebracht.",
+      "docLabel": "EU-conformiteitsverklaring",
+      "docReference": "Referentie",
+      "safetyAssessmentLabel": "Veiligheidsbeoordeling",
+      "technicalDocsLabel": "Technische documentatie",
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nee",
+        "unknown": "Onbekend"
+      },
+      "sections": {
+        "identity": "Productidentiteit",
+        "manufacturer": "Verantwoordelijkheid van de fabrikant",
+        "manufacturerNote": "Dit digitaal productpaspoort wordt verstrekt onder de uitsluitende verantwoordelijkheid van de fabrikant.",
+        "euOperator": "Informatie over de EU-marktdeelnemer",
+        "authRep": "Gevolmachtigde",
+        "euResponsible": "Verantwoordelijke marktdeelnemer in de EU",
+        "compliance": "Conformiteit",
+        "safety": "Veiligheids- & chemische informatie",
+        "safetyReporting": "Melding van veiligheidsincidenten",
+        "infrastructure": "DPP-infrastructuur"
+      },
+      "rows": {
+        "brand": "Merk",
+        "model": "Model",
+        "sku": "SKU / variant",
+        "toyCategory": "Speelgoedcategorie",
+        "age": "Beoogde leeftijdsgroep",
+        "uid": "Unieke identificatiecode",
+        "manufacturer": "Fabrikant",
+        "address": "Adres",
+        "email": "E-mail",
+        "website": "Website",
+        "operatorId": "Identificatiecode van de marktdeelnemer",
+        "legalName": "Wettelijke naam",
+        "role": "Rol",
+        "ce": "CE-markering",
+        "applicableLeg": "Toepasselijke wetgeving",
+        "standards": "Geharmoniseerde normen",
+        "commonSpecs": "Gemeenschappelijke specificaties",
+        "otherStandards": "Andere normen",
+        "notifiedBody": "Aangemelde instantie",
+        "customs": "Douanecode",
+        "dppProvider": "DPP-dienstverlener",
+        "backup": "Referentie reservekopie",
+        "dppVersion": "DPP-versie",
+        "lastUpdated": "Laatst bijgewerkt",
+        "status": "Status"
+      },
+      "table": {
+        "substance": "Stof",
+        "cas": "CAS",
+        "concentration": "Concentratie",
+        "component": "Component"
+      },
+      "safety": {
+        "telephone": "Telefoon",
+        "emailLabel": "E-mail",
+        "web": "Web",
+        "gatePortal": "EU Safety Gate-portaal"
       }
     }
   }

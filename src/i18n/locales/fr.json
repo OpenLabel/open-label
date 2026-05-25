@@ -21,7 +21,10 @@
     "language": "Langue",
     "custom": "Personnalisé",
     "selectOption": "Sélectionner une option",
-    "confirmed": "Confirmé"
+    "confirmed": "Confirmé",
+    "required": "Requis",
+    "whereApplicable": "Le cas échéant",
+    "tbdImplementingAct": "À déterminer — acte d'exécution"
   },
   "nav": {
     "signIn": "Connexion",
@@ -666,6 +669,280 @@
     "poweredBy": "Optimisé par"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Responsabilité du fabricant",
+        "description": "Ce passeport numérique de produit est délivré sous la seule responsabilité du fabricant."
+      },
+      "product_identity": {
+        "title": "Identité du produit",
+        "description": "Chaque modèle ou variante de jouet nécessite son propre DPP."
+      },
+      "manufacturer": {
+        "title": "Fabricant",
+        "description": "Entité juridique responsable de la mise sur le marché du jouet."
+      },
+      "auth_rep": {
+        "title": "Mandataire",
+        "description": "Le cas échéant."
+      },
+      "eu_operator": {
+        "title": "Opérateur économique responsable dans l'UE",
+        "description": "Requis lorsque le fabricant est établi en dehors de l'UE."
+      },
+      "compliance": {
+        "title": "Conformité",
+        "description": "Marquage CE, législation et normes européennes applicables."
+      },
+      "notified_body": {
+        "title": "Évaluation de la conformité et organisme notifié",
+        "description": "Le cas échéant."
+      },
+      "customs": {
+        "title": "Code de marchandise douanier",
+        "description": "Généré sous la forme 9880 + chapitre NC + 00. Modifiable."
+      },
+      "allergenic_fragrances": {
+        "title": "Parfums allergènes",
+        "description": "Substances soumises à des exigences d'étiquetage à une concentration ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Signalement d'incidents de sécurité",
+        "description": "Canaux disponibles pour les consommateurs et les autorités."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Je confirme que ce DPP est délivré sous la seule responsabilité du fabricant."
+      },
+      "brand_name": {
+        "label": "Nom de la marque"
+      },
+      "model_name": {
+        "label": "Nom ou numéro du modèle"
+      },
+      "sku": {
+        "label": "SKU ou ID de la variante",
+        "help": "Utilisez un DPP distinct pour chaque variante (couleur, taille, matériau, version électronique, version groupée)."
+      },
+      "toy_category": {
+        "label": "Catégorie de jouet"
+      },
+      "toy_category_other": {
+        "label": "Catégorie de jouet (préciser)"
+      },
+      "age_group": {
+        "label": "Tranche d'âge prévue"
+      },
+      "age_group_other": {
+        "label": "Tranche d'âge (préciser)"
+      },
+      "mouth_contact": {
+        "label": "Ce jouet est-il destiné à être mis en bouche ?",
+        "help": "Des restrictions plus strictes sur les parfums allergènes et les produits chimiques s'appliquent aux jouets destinés à être mis en bouche."
+      },
+      "unique_product_identifier": {
+        "label": "Identifiant unique du produit",
+        "help": "Identifiant persistant pour ce modèle/SKU/variante de jouet. Devrait être compatible avec l'identification de type ESPR / ISO IEC 15459 lorsque les spécifications finales seront confirmées."
+      },
+      "identifier_type": {
+        "label": "Type d'identifiant"
+      },
+      "identifier_type_other": {
+        "label": "Type d'identifiant (préciser)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Raison sociale du fabricant"
+      },
+      "manufacturer_street": {
+        "label": "Adresse (rue)"
+      },
+      "manufacturer_city": {
+        "label": "Ville"
+      },
+      "manufacturer_postal_code": {
+        "label": "Code postal"
+      },
+      "manufacturer_country": {
+        "label": "Pays"
+      },
+      "manufacturer_email": {
+        "label": "Adresse électronique (e-mail)",
+        "placeholder": "nom@entreprise.com"
+      },
+      "manufacturer_website": {
+        "label": "Site web",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Identifiant unique de l'opérateur",
+        "help": "Utilisez le meilleur identifiant d'opérateur disponible actuellement ; le format final requis pourra être défini par l'acte d'exécution."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Type d'identifiant de l'opérateur"
+      },
+      "has_auth_rep": {
+        "label": "Le fabricant a-t-il un mandataire ?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Raison sociale du mandataire"
+      },
+      "auth_rep_street": {
+        "label": "Adresse (rue)"
+      },
+      "auth_rep_city": {
+        "label": "Ville"
+      },
+      "auth_rep_postal_code": {
+        "label": "Code postal"
+      },
+      "auth_rep_country": {
+        "label": "Pays"
+      },
+      "auth_rep_email": {
+        "label": "Adresse électronique (e-mail)",
+        "placeholder": "nom@entreprise.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Identifiant unique de l'opérateur"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Type d'identifiant de l'opérateur"
+      },
+      "manufacturer_non_eu": {
+        "label": "Le fabricant est-il établi en dehors de l'UE ?"
+      },
+      "eu_op_legal_name": {
+        "label": "Raison sociale de l'opérateur responsable dans l'UE"
+      },
+      "eu_op_role": {
+        "label": "Rôle"
+      },
+      "eu_op_street": {
+        "label": "Adresse (rue)"
+      },
+      "eu_op_city": {
+        "label": "Ville"
+      },
+      "eu_op_postal_code": {
+        "label": "Code postal"
+      },
+      "eu_op_country": {
+        "label": "Pays"
+      },
+      "eu_op_email": {
+        "label": "Adresse électronique (e-mail)",
+        "placeholder": "nom@entreprise.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Identifiant unique de l'opérateur"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Type d'identifiant de l'opérateur"
+      },
+      "has_instructions_warnings": {
+        "label": "Ce jouet nécessite-t-il des instructions, des avertissements ou des informations de sécurité ?"
+      },
+      "public_instructions_warnings": {
+        "label": "Instructions et avertissements publics",
+        "help": "Ajoutez les avertissements, les instructions et les informations de sécurité qui accompagnent le jouet."
+      },
+      "ce_declaration_ack": {
+        "label": "Le fabricant déclare que ce jouet est conforme aux exigences de sécurité de l'UE applicables et porte ou portera le marquage CE, si requis, avant sa mise sur le marché de l'UE.",
+        "help": "Seuls les jouets portant le marquage CE peuvent être mis sur le marché de l'UE. Cette déclaration doit être cohérente avec l'évaluation de la conformité effectuée par le fabricant."
+      },
+      "eu_doc_available": {
+        "label": "Déclaration UE de conformité disponible ?",
+        "warn": "La déclaration UE de conformité est attendue dans le cadre de la conformité des jouets. Complétez cette information avant d'utiliser le DPP pour le marché."
+      },
+      "eu_doc_reference": {
+        "label": "Référence de la déclaration de conformité"
+      },
+      "eu_doc_upload": {
+        "label": "Téléchargement de la déclaration de conformité",
+        "help": "Enregistrement interne uniquement. Le fichier téléchargé est conservé pour le fabricant et n'est pas affiché sur le DPP public."
+      },
+      "safety_assessment_completed": {
+        "label": "Évaluation de la sécurité terminée ?",
+        "help": "Les fabricants de jouets doivent évaluer les risques chimiques, physiques, mécaniques, électriques, d'inflammabilité, d'hygiène, de radioactivité et d'exposition, le cas échéant.",
+        "warn": "Les informations sur l'évaluation de la sécurité doivent être complétées avant de se fier à ce DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Documentation technique disponible ?",
+        "help": "La documentation technique sert à démontrer que le jouet est conforme aux exigences de sécurité applicables.",
+        "warn": "La documentation technique peut être exigée par les autorités de surveillance du marché."
+      },
+      "technical_documentation_upload": {
+        "label": "Téléchargement de la documentation technique",
+        "help": "Enregistrement interne uniquement. Le fichier téléchargé est conservé pour le fabricant et n'est pas affiché sur le DPP public."
+      },
+      "applicable_legislation": {
+        "label": "Législation européenne applicable"
+      },
+      "harmonised_standards": {
+        "label": "Normes harmonisées utilisées"
+      },
+      "common_specifications": {
+        "label": "Spécifications communes utilisées",
+        "placeholder": "Décrivez les spécifications communes appliquées."
+      },
+      "other_standards": {
+        "label": "Autres normes utilisées (une par ligne)"
+      },
+      "notified_body_involved": {
+        "label": "Un organisme notifié a-t-il été impliqué ?"
+      },
+      "notified_body_name": {
+        "label": "Nom de l'organisme notifié"
+      },
+      "notified_body_number": {
+        "label": "Numéro de l'organisme notifié",
+        "placeholder": "ex: 0123"
+      },
+      "certificate_reference": {
+        "label": "Référence du certificat"
+      },
+      "certificate_issue_date": {
+        "label": "Date d'émission du certificat (AAAA-MM-JJ)",
+        "placeholder": "AAAA-MM-JJ"
+      },
+      "notified_body_certificate_url": {
+        "label": "Certificat de conformité (PDF ou image)",
+        "help": "Facultatif. Le fichier téléchargé est accessible au public depuis le DPP."
+      },
+      "cn_chapter": {
+        "label": "Chapitre NC"
+      },
+      "customs_code": {
+        "label": "Code de marchandise douanier",
+        "placeholder": "98809500",
+        "help": "Rempli automatiquement à partir du chapitre NC. Modifiez si votre classification douanière diffère."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Le jouet ou l'un de ses composants contient-il des parfums allergènes à une concentration ≥10 mg/kg ?"
+      },
+      "allergenic_fragrances": {
+        "label": "Parfums allergènes présents"
+      },
+      "allergen_declaration_text": {
+        "label": "Déclaration d'allergènes (générée automatiquement, modifiable)"
+      },
+      "safety_channels": {
+        "label": "Canaux publics de signalement de sécurité"
+      },
+      "safety_phone": {
+        "label": "Téléphone pour le signalement de sécurité",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "E-mail pour le signalement de sécurité",
+        "placeholder": "securite@entreprise.com"
+      },
+      "safety_website": {
+        "label": "Site web / URL du formulaire de contact pour le signalement de sécurité",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
@@ -685,9 +962,9 @@
         "construction": "Jouet de construction / blocs",
         "puzzle": "Puzzle",
         "board_game": "Jeu de société",
-        "arts_crafts": "Jouet d'art et d'artisanat",
-        "slime": "Slime / pâte à modeler / mastic",
-        "chemical_set": "Jeu de chimie",
+        "arts_crafts": "Jouet d'activités créatives",
+        "slime": "Slime / pâte / pâte à modeler",
+        "chemical_set": "Coffret de chimie",
         "cosmetic": "Jouet cosmétique / maquillage pour enfants",
         "olfactory": "Jeu de société olfactif",
         "gustative": "Jeu gustatif",
@@ -733,7 +1010,7 @@
         "other": "Autre"
       },
       "cnChapter": {
-        "32": "32 — Peintures, pigments, encres, colorants",
+        "32": "32 — Peintures, pigments, encres, teintures",
         "33": "33 — Huiles essentielles, parfums, cosmétiques",
         "34": "34 — Savons, cires, pâtes à modeler",
         "39": "39 — Matières plastiques et ouvrages en ces matières",
@@ -752,7 +1029,7 @@
         "85": "85 — Machines et appareils électriques",
         "87": "87 — Véhicules et leurs parties",
         "90": "90 — Instruments d'optique, de mesure, de contrôle",
-        "95": "95 — Jouets, jeux et articles pour divertissements ou pour sports",
+        "95": "95 — Jouets, jeux, articles pour divertissements ou pour sports",
         "other": "Autre"
       },
       "legislation": {
@@ -808,6 +1085,138 @@
         "yes": "Oui",
         "no": "Non",
         "unknown": "Inconnu"
+      }
+    },
+    "ai": {
+      "scannerTitle": "Scanner d'étiquettes de jouets par IA",
+      "scannerDescription": "Prenez ou téléchargez une photo de l'emballage du jouet — l'IA lira le marquage CE, les avertissements d'âge, le bloc fabricant, le code-barres et les parfums allergènes listés.",
+      "dropHere": "↓ Déposer ici",
+      "dragOrClick": "Glisser-déposer ou cliquer"
+    },
+    "warnings": {
+      "youngChild": "Ce jouet est destiné aux enfants de moins de 36 mois. Des restrictions plus strictes sur les parfums allergènes s'appliquent, et toute petite pièce doit être évaluée pour les risques d'étouffement.",
+      "mouthContact": "Ce jouet est destiné à être mis en bouche. Des restrictions plus strictes sur les parfums allergènes et la migration des produits chimiques s'appliquent.",
+      "unknownAllergens": "Ce DPP peut être incomplet car les informations sur les parfums allergènes sont obligatoires le cas échéant. Remplacez \"Inconnu\" par Oui ou Non avant de publier.",
+      "suggestLegislation": "En fonction de la catégorie de jouet sélectionnée, envisagez également de cocher : {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP pour jouets — clause de non-responsabilité de conformité",
+      "body": "Le modèle de données exact du passeport numérique de produit de l'UE et les spécifications de l'API pour les jouets sont encore à déterminer et devraient être définis dans l'acte d'exécution prévu pour la fin de 2026. Cet outil est une première version basée sur le Règlement (UE) 2025/2509 et ne doit pas être considéré comme un avis juridique final."
+    },
+    "internalBadge": "Interne — non affiché publiquement",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Signalez les produits dangereux via le portail EU Safety Gate :",
+      "alwaysShown": "Ce lien est toujours affiché sur le passeport public."
+    },
+    "certificate": {
+      "viewFile": "Voir le fichier téléchargé",
+      "remove": "Supprimer le fichier",
+      "uploading": "Téléchargement en cours...",
+      "uploadButton": "Télécharger le certificat",
+      "errors": {
+        "loginRequired": "Vous devez être connecté pour télécharger des fichiers.",
+        "tooLarge": "Le fichier est trop volumineux. La taille maximale est de 5 Mo.",
+        "uploadFailed": "Le téléchargement a échoué."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Aucun parfum allergène ajouté pour le moment.",
+      "summary": "{{count}} parfum(s) déclaré(s).",
+      "addButton": "Ajouter un parfum",
+      "cas": "CAS",
+      "removeAria": "Supprimer {{name}}",
+      "concentrationLabel": "Concentration (mg/kg)",
+      "componentLabel": "Composant / matériau",
+      "componentPlaceholder": "ex: rembourrage de peluche",
+      "aboveThreshold": "Concentration ≥10 mg/kg",
+      "supplierDeclaration": "Déclaration du fournisseur archivée",
+      "testReport": "Rapport de test archivé",
+      "dialogTitle": "Sélectionner les parfums allergènes",
+      "searchPlaceholder": "Rechercher par nom, CAS ou id...",
+      "clearSearch": "Effacer la recherche",
+      "noResults": "Aucun parfum ne correspond à \"{{q}}\".",
+      "done": "Terminé"
+    },
+    "validation": {
+      "imageRequired": "Une image en couleur du jouet est requise.",
+      "descriptionRequired": "Une description du produit est requise pour les jouets."
+    },
+    "public": {
+      "badge": "🧸 Jouet — Passeport numérique de produit",
+      "otherFallback": "Autre",
+      "notDeclared": "Non déclaré",
+      "ceMarked": "✓ Marquage CE",
+      "statusPublished": "Publié",
+      "noAllergens": "Aucun parfum allergène soumis à des exigences d'étiquetage n'est déclaré comme présent à une concentration égale ou supérieure à 10 mg/kg.",
+      "certificateDownload": "Télécharger le certificat de conformité",
+      "reportUnsafe": "Signaler un produit dangereux",
+      "mirroredAt": "Copie miroir sur {{url}}",
+      "mirroredDefault": "Copie miroir sur l'infrastructure Open-Label.eu",
+      "nbNumber": "Numéro {{n}}",
+      "nbCertificate": "Certificat : {{ref}}",
+      "nbIssued": "(délivré le {{date}})",
+      "instructionsTitle": "Instructions et avertissements",
+      "ceDeclarationStatement": "Le fabricant déclare que ce jouet est conforme aux exigences de sécurité de l'UE applicables et porte ou portera le marquage CE, si requis, avant sa mise sur le marché de l'UE.",
+      "docLabel": "Déclaration UE de conformité",
+      "docReference": "Référence",
+      "safetyAssessmentLabel": "Évaluation de la sécurité",
+      "technicalDocsLabel": "Documentation technique",
+      "yesNoUnknown": {
+        "yes": "Oui",
+        "no": "Non",
+        "unknown": "Inconnu"
+      },
+      "sections": {
+        "identity": "Identité du produit",
+        "manufacturer": "Responsabilité du fabricant",
+        "manufacturerNote": "Ce passeport numérique de produit est délivré sous la seule responsabilité du fabricant.",
+        "euOperator": "Informations sur l'opérateur de l'UE",
+        "authRep": "Mandataire",
+        "euResponsible": "Opérateur économique responsable dans l'UE",
+        "compliance": "Conformité",
+        "safety": "Sécurité et informations chimiques",
+        "safetyReporting": "Signalement d'incidents de sécurité",
+        "infrastructure": "Infrastructure du DPP"
+      },
+      "rows": {
+        "brand": "Marque",
+        "model": "Modèle",
+        "sku": "SKU / variante",
+        "toyCategory": "Catégorie de jouet",
+        "age": "Tranche d'âge prévue",
+        "uid": "Identifiant unique",
+        "manufacturer": "Fabricant",
+        "address": "Adresse",
+        "email": "E-mail",
+        "website": "Site web",
+        "operatorId": "Identifiant de l'opérateur",
+        "legalName": "Raison sociale",
+        "role": "Rôle",
+        "ce": "Marquage CE",
+        "applicableLeg": "Législation applicable",
+        "standards": "Normes harmonisées",
+        "commonSpecs": "Spécifications communes",
+        "otherStandards": "Autres normes",
+        "notifiedBody": "Organisme notifié",
+        "customs": "Code douanier",
+        "dppProvider": "Fournisseur de service DPP",
+        "backup": "Référence de la copie de sauvegarde",
+        "dppVersion": "Version du DPP",
+        "lastUpdated": "Dernière mise à jour",
+        "status": "Statut"
+      },
+      "table": {
+        "substance": "Substance",
+        "cas": "CAS",
+        "concentration": "Concentration",
+        "component": "Composant"
+      },
+      "safety": {
+        "telephone": "Téléphone",
+        "emailLabel": "E-mail",
+        "web": "Web",
+        "gatePortal": "Portail EU Safety Gate"
       }
     }
   }

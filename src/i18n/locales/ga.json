@@ -21,7 +21,10 @@
     "language": "Teanga",
     "custom": "Saincheaptha",
     "selectOption": "Roghnaigh rogha",
-    "confirmed": "Deimhnithe"
+    "confirmed": "Deimhnithe",
+    "required": "Riachtanach",
+    "whereApplicable": "I gcás inarb infheidhme",
+    "tbdImplementingAct": "Le cinneadh — gníomh cur chun feidhme"
   },
   "nav": {
     "signIn": "Sínigh isteach",
@@ -666,13 +669,287 @@
     "poweredBy": "Cumhachtaithe ag"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Freagracht an mhonaróra",
+        "description": "Eisítear an Pas Táirge Digiteach seo faoi fhreagracht an mhonaróra amháin."
+      },
+      "product_identity": {
+        "title": "Aitheantas an táirge",
+        "description": "Teastaíonn a DPP féin ó gach múnla nó leagan den bhréagán."
+      },
+      "manufacturer": {
+        "title": "Monaróir",
+        "description": "An t-eintiteas dlíthiúil atá freagrach as an bréagán a chur ar an margadh."
+      },
+      "auth_rep": {
+        "title": "Ionadaí údaraithe",
+        "description": "I gcás inarb infheidhme."
+      },
+      "eu_operator": {
+        "title": "Oibreoir eacnamaíoch freagrach an AE",
+        "description": "Riachtanach nuair atá an monaróir bunaithe lasmuigh den AE."
+      },
+      "compliance": {
+        "title": "Comhlíonadh",
+        "description": "Marcáil CE, reachtaíocht agus caighdeáin infheidhme an AE."
+      },
+      "notified_body": {
+        "title": "Measúnú comhréireachta & comhlacht dá dtugtar fógra",
+        "description": "I gcás inarb infheidhme."
+      },
+      "customs": {
+        "title": "Cód tráchtearraí custaim",
+        "description": "Ginte mar 9880 + caibidil CN + 00. Ineagarthóireachta."
+      },
+      "allergenic_fragrances": {
+        "title": "Cumhráin ailléirgineacha",
+        "description": "Substaintí atá faoi réir ceanglas lipéadaithe ag ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Tuairisciú teagmhas sábháilteachta",
+        "description": "Bealaí atá ar fáil do thomhaltóirí agus d'údaráis."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Deimhním go n-eisítear an DPP seo faoi fhreagracht an mhonaróra amháin."
+      },
+      "brand_name": {
+        "label": "Ainm an bhranda"
+      },
+      "model_name": {
+        "label": "Ainm an mhúnla nó uimhir an mhúnla"
+      },
+      "sku": {
+        "label": "SKU nó aitheantas an leagain",
+        "help": "Bain úsáid as DPP ar leith do gach leagan (dath, méid, ábhar, leagan leictreonach, leagan cuachta)."
+      },
+      "toy_category": {
+        "label": "Catagóir an bhréagáin"
+      },
+      "toy_category_other": {
+        "label": "Catagóir an bhréagáin (sonraigh)"
+      },
+      "age_group": {
+        "label": "Aoisghrúpa beartaithe"
+      },
+      "age_group_other": {
+        "label": "Aoisghrúpa (sonraigh)"
+      },
+      "mouth_contact": {
+        "label": "An bhfuil an bréagán seo ceaptha le cur sa bhéal?",
+        "help": "Tá srianta níos déine ar chumhráin ailléirgineacha agus ar cheimiceáin i bhfeidhm maidir le bréagáin a chuirtear sa bhéal."
+      },
+      "unique_product_identifier": {
+        "label": "Aitheantóir uathúil táirge",
+        "help": "Aitheantóir marthanach don mhúnla/SKU/leagan seo den bhréagán. Ba cheart go mbeadh sé ag teacht le haitheantas stíl ESPR / ISO IEC 15459 nuair a dheimhnítear na sonraíochtaí deiridh."
+      },
+      "identifier_type": {
+        "label": "Cineál an aitheantóra"
+      },
+      "identifier_type_other": {
+        "label": "Cineál an aitheantóra (sonraigh)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Ainm dlíthiúil an mhonaróra"
+      },
+      "manufacturer_street": {
+        "label": "Seoladh sráide"
+      },
+      "manufacturer_city": {
+        "label": "Cathair"
+      },
+      "manufacturer_postal_code": {
+        "label": "Cód poist"
+      },
+      "manufacturer_country": {
+        "label": "Tír"
+      },
+      "manufacturer_email": {
+        "label": "Seoladh leictreonach (ríomhphost)",
+        "placeholder": "ainm@cuideachta.com"
+      },
+      "manufacturer_website": {
+        "label": "Suíomh gréasáin",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Aitheantóir uathúil oibreora",
+        "help": "Bain úsáid as an aitheantóir oibreora is fearr atá ar fáil anois; d'fhéadfadh an fhormáid riachtanach deiridh a bheith sainithe ag an ngníomh cur chun feidhme."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Cineál aitheantóra oibreora"
+      },
+      "has_auth_rep": {
+        "label": "An bhfuil ionadaí údaraithe ag an monaróir?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Ainm dlíthiúil an ionadaí údaraithe"
+      },
+      "auth_rep_street": {
+        "label": "Seoladh sráide"
+      },
+      "auth_rep_city": {
+        "label": "Cathair"
+      },
+      "auth_rep_postal_code": {
+        "label": "Cód poist"
+      },
+      "auth_rep_country": {
+        "label": "Tír"
+      },
+      "auth_rep_email": {
+        "label": "Seoladh leictreonach (ríomhphost)",
+        "placeholder": "ainm@cuideachta.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Aitheantóir uathúil oibreora"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Cineál aitheantóra oibreora"
+      },
+      "manufacturer_non_eu": {
+        "label": "An bhfuil an monaróir bunaithe lasmuigh den AE?"
+      },
+      "eu_op_legal_name": {
+        "label": "Ainm dlíthiúil an oibreora fhreagraigh san AE"
+      },
+      "eu_op_role": {
+        "label": "Ról"
+      },
+      "eu_op_street": {
+        "label": "Seoladh sráide"
+      },
+      "eu_op_city": {
+        "label": "Cathair"
+      },
+      "eu_op_postal_code": {
+        "label": "Cód poist"
+      },
+      "eu_op_country": {
+        "label": "Tír"
+      },
+      "eu_op_email": {
+        "label": "Seoladh leictreonach (ríomhphost)",
+        "placeholder": "ainm@cuideachta.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Aitheantóir uathúil oibreora"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Cineál aitheantóra oibreora"
+      },
+      "has_instructions_warnings": {
+        "label": "An dteastaíonn treoracha, rabhaidh, nó faisnéis sábháilteachta leis an mbréagán seo?"
+      },
+      "public_instructions_warnings": {
+        "label": "Treoracha agus rabhaidh poiblí",
+        "help": "Cuir leis na rabhaidh, na treoracha, agus an fhaisnéis sábháilteachta a ghabhann leis an mbréagán."
+      },
+      "ce_declaration_ack": {
+        "label": "Dearbhaíonn an monaróir go gcomhlíonann an bréagán seo na ceanglais sábháilteachta infheidhme de chuid an AE agus go bhfuil nó go mbeidh an mharcáil CE air i gcás ina bhfuil sin riachtanach sula gcuirtear ar mhargadh an AE é.",
+        "help": "Ní féidir ach bréagáin a bhfuil an mharcáil CE orthu a chur ar mhargadh an AE. Ba cheart go mbeadh an dearbhú seo ag teacht le measúnú comhréireachta an mhonaróra."
+      },
+      "eu_doc_available": {
+        "label": "Dearbhú Comhréireachta an AE ar fáil?",
+        "warn": "Táthar ag súil le Dearbhú Comhréireachta an AE mar chuid de chreat comhréireachta na mbréagán. Comhlánaigh é seo sula mbraitheann tú ar an DPP le haghaidh úsáide atá dírithe ar an margadh."
+      },
+      "eu_doc_reference": {
+        "label": "Tagairt an Dearbhaithe Comhréireachta"
+      },
+      "eu_doc_upload": {
+        "label": "Uaslódáil an Dearbhaithe Comhréireachta",
+        "help": "Taifead inmheánach amháin. Coimeádtar an comhad uaslódáilte don mhonaróir agus ní thaispeántar ar an DPP poiblí é."
+      },
+      "safety_assessment_completed": {
+        "label": "Measúnú sábháilteachta curtha i gcrích?",
+        "help": "Ní mór do mhonaróirí bréagán measúnú a dhéanamh ar rioscaí ceimiceacha, fisiceacha, meicniúla, leictreacha, inadhainteachta, sláinteachais, radaighníomhaíochta agus nochta i gcás inarb ábhartha.",
+        "warn": "Ba cheart faisnéis an mheasúnaithe sábháilteachta a chomhlánú sula mbraitheann tú ar an DPP seo."
+      },
+      "technical_documentation_available": {
+        "label": "Doiciméadacht theicniúil ar fáil?",
+        "help": "Tacaíonn doiciméadacht theicniúil leis an léiriú go gcomhlíonann an bréagán na ceanglais sábháilteachta is infheidhme.",
+        "warn": "D'fhéadfadh údaráis faireachais mhargaidh doiciméadacht theicniúil a éileamh."
+      },
+      "technical_documentation_upload": {
+        "label": "Uaslódáil na doiciméadachta teicniúla",
+        "help": "Taifead inmheánach amháin. Coimeádtar an comhad uaslódáilte don mhonaróir agus ní thaispeántar ar an DPP poiblí é."
+      },
+      "applicable_legislation": {
+        "label": "Reachtaíocht infheidhme an AE"
+      },
+      "harmonised_standards": {
+        "label": "Caighdeáin chomhchuibhithe a úsáideadh"
+      },
+      "common_specifications": {
+        "label": "Sonraíochtaí coiteanna a úsáideadh",
+        "placeholder": "Déan cur síos ar na sonraíochtaí coiteanna a cuireadh i bhfeidhm."
+      },
+      "other_standards": {
+        "label": "Caighdeáin eile a úsáideadh (ceann in aghaidh na líne)"
+      },
+      "notified_body_involved": {
+        "label": "An raibh comhlacht dá dtugtar fógra páirteach?"
+      },
+      "notified_body_name": {
+        "label": "Ainm an chomhlachta dá dtugtar fógra"
+      },
+      "notified_body_number": {
+        "label": "Uimhir an chomhlachta dá dtugtar fógra",
+        "placeholder": "e.g., 0123"
+      },
+      "certificate_reference": {
+        "label": "Tagairt an deimhnithe"
+      },
+      "certificate_issue_date": {
+        "label": "Dáta eisiúna an deimhnithe (BBBB-MM-LL)",
+        "placeholder": "BBBB-MM-LL"
+      },
+      "notified_body_certificate_url": {
+        "label": "Deimhniú comhréireachta (PDF nó íomhá)",
+        "help": "Roghnach. Tá an comhad uaslódáilte inrochtana go poiblí ón DPP."
+      },
+      "cn_chapter": {
+        "label": "Caibidil CN"
+      },
+      "customs_code": {
+        "label": "Cód tráchtearraí custaim",
+        "placeholder": "98809500",
+        "help": "Líonta go huathoibríoch ó chaibidil CN. Sáraigh má tá d'aicmiú custaim difriúil."
+      },
+      "has_allergenic_fragrances": {
+        "label": "An bhfuil cumhráin ailléirgineacha ag an mbréagán nó ag aon chomhpháirt de ag ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Cumhráin ailléirgineacha i láthair"
+      },
+      "allergen_declaration_text": {
+        "label": "Dearbhú ailléirginí (ginte go huathoibríoch, ineagarthóireachta)"
+      },
+      "safety_channels": {
+        "label": "Bealaí poiblí chun tuairisc a thabhairt ar shábháilteacht"
+      },
+      "safety_phone": {
+        "label": "Teileafón tuairiscithe sábháilteachta",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "Ríomhphost tuairiscithe sábháilteachta",
+        "placeholder": "sabhailteacht@cuideachta.com"
+      },
+      "safety_website": {
+        "label": "Suíomh gréasáin tuairiscithe sábháilteachta / URL na foirme teagmhála",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
         "VAT": "Uimhir CBL",
-        "NATIONAL": "Uimhir chláraithe cuideachta náisiúnta",
+        "NATIONAL": "Uimhir chláraithe náisiúnta na cuideachta",
         "DUNS": "DUNS",
         "ESPR": "Aitheantóir oibreora ESPR / DPP",
         "other": "Eile"
@@ -683,10 +960,10 @@
         "doll": "Bábóg",
         "action_figure": "Figiúr aicsin",
         "construction": "Bréagán tógála / bloic",
-        "puzzle": "Puzal",
+        "puzzle": "Míreanna mearaí",
         "board_game": "Cluiche boird",
         "arts_crafts": "Bréagán ealaíon agus ceardaíochta",
-        "slime": "Slaod / putóg / cumasc samhaltúcháin",
+        "slime": "Slaod / putóg / cumasc múnlaithe",
         "chemical_set": "Foireann bréagán ceimiceach",
         "cosmetic": "Bréagán cosmaideach / smideadh súgartha",
         "olfactory": "Cluiche boird boltanach",
@@ -699,7 +976,7 @@
         "electronic": "Bréagán leictreonach",
         "radio": "Bréagán raidió-nasctha",
         "internet": "Bréagán idirlíon-nasctha",
-        "ai": "Bréagán IS-chumasaithe",
+        "ai": "Bréagán AI-chumasaithe",
         "battery": "Bréagán le ceallra",
         "magnets": "Bréagán le maighnéid",
         "drone": "Drón bréagáin",
@@ -724,23 +1001,23 @@
       },
       "identifierType": {
         "GTIN": "GTIN",
-        "GS1_DL": "GS1 Digital Link",
+        "GS1_DL": "Nasc Digiteach GS1",
         "EPC": "EPC",
-        "SGTIN": "SGTIN",
+        "SGTIN": "GTIN Srathaithe",
         "SKU": "SKU",
-        "MODEL": "Uimhir mhúnla",
+        "MODEL": "Uimhir an mhúnla",
         "ISO_15459": "Aitheantóir atá comhoiriúnach le ISO/IEC 15459",
         "other": "Eile"
       },
       "cnChapter": {
         "32": "32 — Péinteanna, líocha, dúigh, ruaimeanna",
         "33": "33 — Blátholaí, cumhráin, cosmaidí",
-        "34": "34 — Gallúnacha, céaracha, taosanna samhaltúcháin",
+        "34": "34 — Gallúnacha, céireacha, taos múnlaithe",
         "39": "39 — Plaistigh agus earraí díobh",
         "40": "40 — Rubar agus earraí díobh",
         "42": "42 — Earraí leathair",
         "44": "44 — Adhmad agus earraí adhmaid",
-        "48": "48 — Páipéar agus páipéarchlár",
+        "48": "48 — Páipéar agus cairtchlár",
         "49": "49 — Leabhair chlóite, pictiúir, cártaí",
         "61": "61 — Éadaí cniotáilte / gabhálais teicstíle",
         "62": "62 — Éadaí neamhchniotáilte / gabhálais teicstíle",
@@ -762,7 +1039,7 @@
         "AI_ACT": "Rialachán (AE) 2024/1689 — An Gníomh um an Intleacht Shaorga",
         "CRA": "Rialachán (AE) 2024/2847 — An Gníomh um Chibear-athléimneacht",
         "RED": "Treoir 2014/53/AE — An Treoir maidir le Trealamh Raidió",
-        "LVD": "Treoir 2014/35/AE — An Treoir maidir le Voltas Íseal",
+        "LVD": "Treoir 2014/35/AE — An Treoir maidir le hÍsealvoltas",
         "EMC": "Treoir 2014/30/AE — An Treoir EMC",
         "RoHS": "Treoir 2011/65/AE — RoHS",
         "BATTERIES": "Rialachán (AE) 2023/1542 — An Rialachán maidir le Cadhnraí",
@@ -776,16 +1053,16 @@
         "EN71_1": "EN 71-1 — Airíonna meicniúla agus fisiceacha",
         "EN71_2": "EN 71-2 — Inadhainteacht",
         "EN71_3": "EN 71-3 — Imirce dúl áirithe",
-        "EN71_4": "EN 71-4 — Foirneacha turgnamhacha don cheimic",
-        "EN71_5": "EN 71-5 — Bréagáin cheimiceacha seachas foirneacha turgnamhacha",
+        "EN71_4": "EN 71-4 — Foirne turgnamhacha don cheimic",
+        "EN71_5": "EN 71-5 — Bréagáin cheimiceacha seachas foirne turgnamhacha",
         "EN71_7": "EN 71-7 — Méarphéinteanna",
-        "EN71_8": "EN 71-8 — Bréagáin ghníomhaíochta le haghaidh úsáid teaghlaigh",
+        "EN71_8": "EN 71-8 — Bréagáin ghníomhaíochta le húsáid sa bhaile",
         "EN71_12": "EN 71-12 — N-níotróisaimíní agus substaintí N-níotróisáitithe",
-        "EN71_13": "EN 71-13 — Cluichí boird boltanacha, foirneacha cosmaideacha agus cluichí blaiseadh",
-        "EN71_14": "EN 71-14 — Trampailíní le haghaidh úsáid teaghlaigh",
+        "EN71_13": "EN 71-13 — Cluichí boird boltanacha, trealamh cosmaideach agus cluichí blaiseadh",
+        "EN71_14": "EN 71-14 — Trampailíní le húsáid sa bhaile",
         "EN_IEC_62115": "EN IEC 62115 — Bréagáin leictreacha",
         "other": "Caighdeán comhchuibhithe eile",
-        "common_spec": "Sonraíocht choiteann in ionad caighdeán comhchuibhithe"
+        "common_spec": "Sonraíocht choiteann in ionad caighdeáin chomhchuibhithe"
       },
       "safetyChannel": {
         "phone": "Teileafón",
@@ -808,6 +1085,138 @@
         "yes": "Tá",
         "no": "Níl",
         "unknown": "Anaithnid"
+      }
+    },
+    "ai": {
+      "scannerTitle": "Scanóir Lipéad Bréagán AI",
+      "scannerDescription": "Tóg nó uaslódáil pictiúr de phacáistíocht an bhréagáin — léifidh an AI an mharcáil CE, na rabhaidh aoise, bloc an mhonaróra, an barrachód, agus na cumhráin ailléirgineacha atá liostaithe.",
+      "dropHere": "↓ Scaoil anseo",
+      "dragOrClick": "Tarraing & scaoil nó cliceáil"
+    },
+    "warnings": {
+      "youngChild": "Tá an bréagán seo ceaptha do leanaí faoi 36 mhí d'aois. Tá srianta níos déine ar chumhráin ailléirgineacha i bhfeidhm, agus ní mór measúnú a dhéanamh ar aon pháirteanna beaga i gcoinne guaiseacha tachtaithe.",
+      "mouthContact": "Tá an bréagán seo ceaptha le cur sa bhéal. Tá srianta níos déine ar chumhráin ailléirgineacha agus ar imirce cheimiceach i bhfeidhm.",
+      "unknownAllergens": "D'fhéadfadh an DPP seo a bheith neamhiomlán toisc go bhfuil faisnéis faoi chumhráin ailléirgineacha éigeantach nuair is infheidhme. Cuir Tá nó Níl in ionad \"Anaithnid\" sula bhfoilsítear é.",
+      "suggestLegislation": "Bunaithe ar an gcatagóir bréagán roghnaithe, smaoinigh freisin ar na nithe seo a leanas a thiceáil: {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP Bréagán — séanadh comhlíonta",
+      "body": "Tá an tsamhail sonraí agus sonraíochtaí API cruinne don Phas Táirge Digiteach AE do bhréagáin fós le cinneadh agus táthar ag súil go saineofar iad sa ghníomh cur chun feidhme atá dlite faoi dheireadh 2026. Is é an uirlis seo an chéad leagan bunaithe ar Rialachán (AE) 2025/2509 agus níor cheart caitheamh léi mar chomhairle dlí deiridh."
+    },
+    "internalBadge": "Inmheánach — ní thaispeántar go poiblí",
+    "safetyGate": {
+      "title": "Tairseach Sábháilteachta an AE",
+      "body": "Tuairiscigh táirgí neamhshábháilte trí Thairseach Sábháilteachta an AE:",
+      "alwaysShown": "Taispeántar an nasc seo i gcónaí ar an bpas poiblí."
+    },
+    "certificate": {
+      "viewFile": "Féach ar an gcomhad uaslódáilte",
+      "remove": "Bain an comhad",
+      "uploading": "Á uaslódáil...",
+      "uploadButton": "Uaslódáil an deimhniú",
+      "errors": {
+        "loginRequired": "Ní mór duit a bheith logáilte isteach chun comhaid a uaslódáil.",
+        "tooLarge": "Tá an comhad ró-mhór. Is é 5 MB an t-uasmhéid.",
+        "uploadFailed": "Theip ar an uaslódáil."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Níl aon chumhrán ailléirgineach curtha leis go fóill.",
+      "summary": "{{count}} cumhrán dearbhaithe.",
+      "addButton": "Cuir cumhrán leis",
+      "cas": "CAS",
+      "removeAria": "Bain {{name}}",
+      "concentrationLabel": "Tiúchan (mg/kg)",
+      "componentLabel": "Comhpháirt / ábhar",
+      "componentPlaceholder": "m.sh., líonadh pluise",
+      "aboveThreshold": "Tiúchan ≥10 mg/kg",
+      "supplierDeclaration": "Dearbhú an tsoláthraí ar comhad",
+      "testReport": "Tuarascáil tástála ar comhad",
+      "dialogTitle": "Roghnaigh cumhráin ailléirgineacha",
+      "searchPlaceholder": "Cuardaigh de réir ainm, CAS, nó aitheantais...",
+      "clearSearch": "Glan an cuardach",
+      "noResults": "Ní mheaitseálann aon chumhrán \"{{q}}\".",
+      "done": "Déanta"
+    },
+    "validation": {
+      "imageRequired": "Teastaíonn íomhá daite den bhréagán.",
+      "descriptionRequired": "Teastaíonn cur síos ar an táirge do bhréagáin."
+    },
+    "public": {
+      "badge": "🧸 Bréagán — Pas Táirge Digiteach",
+      "otherFallback": "Eile",
+      "notDeclared": "Níor dearbhaíodh",
+      "ceMarked": "✓ Marcáil CE",
+      "statusPublished": "Foilsithe",
+      "noAllergens": "Ní dhearbhaítear go bhfuil aon chumhrán ailléirgineach atá faoi réir ceanglas lipéadaithe i láthair ag 10 mg/kg nó os a chionn.",
+      "certificateDownload": "Íoslódáil an deimhniú comhréireachta",
+      "reportUnsafe": "Tuairiscigh táirge neamhshábháilte",
+      "mirroredAt": "Scáthánaithe ag {{url}}",
+      "mirroredDefault": "Scáthánaithe ar bhonneagar Open-Label.eu",
+      "nbNumber": "Uimhir {{n}}",
+      "nbCertificate": "Deimhniú: {{ref}}",
+      "nbIssued": "(eisithe {{date}})",
+      "instructionsTitle": "Treoracha agus rabhaidh",
+      "ceDeclarationStatement": "Dearbhaíonn an monaróir go gcomhlíonann an bréagán seo na ceanglais sábháilteachta infheidhme de chuid an AE agus go bhfuil nó go mbeidh an mharcáil CE air i gcás ina bhfuil sin riachtanach sula gcuirtear ar mhargadh an AE é.",
+      "docLabel": "Dearbhú Comhréireachta an AE",
+      "docReference": "Tagairt",
+      "safetyAssessmentLabel": "Measúnú sábháilteachta",
+      "technicalDocsLabel": "Doiciméadacht theicniúil",
+      "yesNoUnknown": {
+        "yes": "Tá",
+        "no": "Níl",
+        "unknown": "Anaithnid"
+      },
+      "sections": {
+        "identity": "Aitheantas an táirge",
+        "manufacturer": "Freagracht an mhonaróra",
+        "manufacturerNote": "Eisítear an Pas Táirge Digiteach seo faoi fhreagracht an mhonaróra amháin.",
+        "euOperator": "Faisnéis oibreora an AE",
+        "authRep": "Ionadaí údaraithe",
+        "euResponsible": "Oibreoir eacnamaíoch freagrach an AE",
+        "compliance": "Comhlíonadh",
+        "safety": "Faisnéis sábháilteachta & cheimiceach",
+        "safetyReporting": "Tuairisciú teagmhas sábháilteachta",
+        "infrastructure": "Bonneagar DPP"
+      },
+      "rows": {
+        "brand": "Branda",
+        "model": "Múnla",
+        "sku": "SKU / leagan",
+        "toyCategory": "Catagóir an bhréagáin",
+        "age": "Aoisghrúpa beartaithe",
+        "uid": "Aitheantóir uathúil",
+        "manufacturer": "Monaróir",
+        "address": "Seoladh",
+        "email": "Ríomhphost",
+        "website": "Suíomh gréasáin",
+        "operatorId": "Aitheantóir oibreora",
+        "legalName": "Ainm dlíthiúil",
+        "role": "Ról",
+        "ce": "Marcáil CE",
+        "applicableLeg": "Reachtaíocht infheidhme",
+        "standards": "Caighdeáin chomhchuibhithe",
+        "commonSpecs": "Sonraíochtaí coiteanna",
+        "otherStandards": "Caighdeáin eile",
+        "notifiedBody": "Comhlacht dá dtugtar fógra",
+        "customs": "Cód custaim",
+        "dppProvider": "Soláthraí seirbhíse DPP",
+        "backup": "Tagairt don chóip chúltaca",
+        "dppVersion": "Leagan DPP",
+        "lastUpdated": "Nuashonraithe is déanaí",
+        "status": "Stádas"
+      },
+      "table": {
+        "substance": "Substaint",
+        "cas": "CAS",
+        "concentration": "Tiúchan",
+        "component": "Comhpháirt"
+      },
+      "safety": {
+        "telephone": "Teileafón",
+        "emailLabel": "Ríomhphost",
+        "web": "Gréasán",
+        "gatePortal": "Tairseach Sábháilteachta an AE"
       }
     }
   }

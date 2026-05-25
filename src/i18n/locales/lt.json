@@ -21,7 +21,10 @@
     "language": "Kalba",
     "custom": "Pasirinktinis",
     "selectOption": "Pasirinkite parinktį",
-    "confirmed": "Patvirtinta"
+    "confirmed": "Patvirtinta",
+    "required": "Privaloma",
+    "whereApplicable": "Kai taikoma",
+    "tbdImplementingAct": "Bus nustatyta – įgyvendinimo aktas"
   },
   "nav": {
     "signIn": "Prisijungti",
@@ -666,6 +669,280 @@
     "poweredBy": "Teikia"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Gamintojo atsakomybė",
+        "description": "Šis skaitmeninis gaminio pasas išduodamas išskirtine gamintojo atsakomybe."
+      },
+      "product_identity": {
+        "title": "Gaminio tapatybė",
+        "description": "Kiekvienam žaislo modeliui ar variantui reikalingas atskiras DPP."
+      },
+      "manufacturer": {
+        "title": "Gamintojas",
+        "description": "Juridinis asmuo, atsakingas už žaislo pateikimą rinkai."
+      },
+      "auth_rep": {
+        "title": "Įgaliotasis atstovas",
+        "description": "Kai taikoma."
+      },
+      "eu_operator": {
+        "title": "ES atsakingas ekonominės veiklos vykdytojas",
+        "description": "Būtina, kai gamintojas yra įsisteigęs ne ES."
+      },
+      "compliance": {
+        "title": "Atitiktis",
+        "description": "CE ženklas, taikomi ES teisės aktai ir standartai."
+      },
+      "notified_body": {
+        "title": "Atitikties vertinimas ir notifikuotoji įstaiga",
+        "description": "Kai taikoma."
+      },
+      "customs": {
+        "title": "Muitinės prekės kodas",
+        "description": "Sugeneruotas kaip 9880 + KN skyrius + 00. Redaguojamas."
+      },
+      "allergenic_fragrances": {
+        "title": "Alergeninės kvapiosios medžiagos",
+        "description": "Medžiagos, kurioms taikomi ženklinimo reikalavimai, kai koncentracija ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Pranešimai apie saugos incidentus",
+        "description": "Kanalai, prieinami vartotojams ir institucijoms."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Patvirtinu, kad šis DPP išduodamas išskirtine gamintojo atsakomybe."
+      },
+      "brand_name": {
+        "label": "Prekės ženklas"
+      },
+      "model_name": {
+        "label": "Modelio pavadinimas arba numeris"
+      },
+      "sku": {
+        "label": "SKU arba varianto ID",
+        "help": "Kiekvienam variantui (spalvai, dydžiui, medžiagai, elektroninei versijai, rinkinio versijai) naudokite atskirą DPP."
+      },
+      "toy_category": {
+        "label": "Žaislo kategorija"
+      },
+      "toy_category_other": {
+        "label": "Žaislo kategorija (patikslinkite)"
+      },
+      "age_group": {
+        "label": "Numatyta amžiaus grupė"
+      },
+      "age_group_other": {
+        "label": "Amžiaus grupė (patikslinkite)"
+      },
+      "mouth_contact": {
+        "label": "Ar šis žaislas skirtas dėti į burną?",
+        "help": "Žaislams, skirtiems dėti į burną, taikomi griežtesni alergeninių kvapiųjų medžiagų ir cheminių medžiagų apribojimai."
+      },
+      "unique_product_identifier": {
+        "label": "Unikalus gaminio identifikatorius",
+        "help": "Ilgalaikis šio žaislo modelio / SKU / varianto identifikatorius. Turėtų būti suderinamas su ESPR / ISO IEC 15459 stiliaus identifikavimu, kai bus patvirtintos galutinės specifikacijos."
+      },
+      "identifier_type": {
+        "label": "Identifikatoriaus tipas"
+      },
+      "identifier_type_other": {
+        "label": "Identifikatoriaus tipas (patikslinkite)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Gamintojo juridinis pavadinimas"
+      },
+      "manufacturer_street": {
+        "label": "Gatvė ir namo numeris"
+      },
+      "manufacturer_city": {
+        "label": "Miestas"
+      },
+      "manufacturer_postal_code": {
+        "label": "Pašto kodas"
+      },
+      "manufacturer_country": {
+        "label": "Šalis"
+      },
+      "manufacturer_email": {
+        "label": "Elektroninis adresas (el. paštas)",
+        "placeholder": "vardas@imone.com"
+      },
+      "manufacturer_website": {
+        "label": "Svetainė",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Unikalus veiklos vykdytojo identifikatorius",
+        "help": "Naudokite geriausią šiuo metu turimą veiklos vykdytojo identifikatorių; galutinis privalomas formatas gali būti apibrėžtas įgyvendinimo akte."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Veiklos vykdytojo identifikatoriaus tipas"
+      },
+      "has_auth_rep": {
+        "label": "Ar gamintojas turi įgaliotąjį atstovą?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Įgaliotojo atstovo juridinis pavadinimas"
+      },
+      "auth_rep_street": {
+        "label": "Gatvė ir namo numeris"
+      },
+      "auth_rep_city": {
+        "label": "Miestas"
+      },
+      "auth_rep_postal_code": {
+        "label": "Pašto kodas"
+      },
+      "auth_rep_country": {
+        "label": "Šalis"
+      },
+      "auth_rep_email": {
+        "label": "Elektroninis adresas (el. paštas)",
+        "placeholder": "vardas@imone.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Unikalus veiklos vykdytojo identifikatorius"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Veiklos vykdytojo identifikatoriaus tipas"
+      },
+      "manufacturer_non_eu": {
+        "label": "Ar gamintojas įsisteigęs ne ES?"
+      },
+      "eu_op_legal_name": {
+        "label": "ES atsakingo veiklos vykdytojo juridinis pavadinimas"
+      },
+      "eu_op_role": {
+        "label": "Vaidmuo"
+      },
+      "eu_op_street": {
+        "label": "Gatvė ir namo numeris"
+      },
+      "eu_op_city": {
+        "label": "Miestas"
+      },
+      "eu_op_postal_code": {
+        "label": "Pašto kodas"
+      },
+      "eu_op_country": {
+        "label": "Šalis"
+      },
+      "eu_op_email": {
+        "label": "Elektroninis adresas (el. paštas)",
+        "placeholder": "vardas@imone.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Unikalus veiklos vykdytojo identifikatorius"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Veiklos vykdytojo identifikatoriaus tipas"
+      },
+      "has_instructions_warnings": {
+        "label": "Ar šiam žaislui reikalingos instrukcijos, įspėjimai ar saugos informacija?"
+      },
+      "public_instructions_warnings": {
+        "label": "Viešos instrukcijos ir įspėjimai",
+        "help": "Pridėkite prie žaislo pridedamus įspėjimus, instrukcijas ir saugos informaciją."
+      },
+      "ce_declaration_ack": {
+        "label": "Gamintojas pareiškia, kad šis žaislas atitinka taikomus ES saugos reikalavimus ir yra arba bus paženklintas CE ženklu, kai to reikalaujama, prieš pateikiant jį į ES rinką.",
+        "help": "Į ES rinką galima teikti tik CE ženklu pažymėtus žaislus. Ši deklaracija turi atitikti gamintojo atliktą atitikties vertinimą."
+      },
+      "eu_doc_available": {
+        "label": "Ar yra ES atitikties deklaracija?",
+        "warn": "ES atitikties deklaracija yra privaloma žaislų atitikties sistemos dalis. Užpildykite šią dalį prieš naudodami DPP rinkai skirtiems tikslams."
+      },
+      "eu_doc_reference": {
+        "label": "Atitikties deklaracijos nuoroda"
+      },
+      "eu_doc_upload": {
+        "label": "Atitikties deklaracijos įkėlimas",
+        "help": "Tik vidiniam naudojimui. Įkeltas failas saugomas gamintojui ir nerodomas viešame DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Ar atliktas saugos vertinimas?",
+        "help": "Žaislų gamintojai privalo įvertinti cheminę, fizinę, mechaninę, elektrinę, degumo, higienos, radioaktyvumo ir poveikio riziką, kai tai yra aktualu.",
+        "warn": "Saugos vertinimo informacija turi būti užpildyta prieš pasikliaujant šiuo DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Ar yra techninė dokumentacija?",
+        "help": "Techninė dokumentacija padeda įrodyti, kad žaislas atitinka taikomus saugos reikalavimus.",
+        "warn": "Techninės dokumentacijos gali pareikalauti rinkos priežiūros institucijos."
+      },
+      "technical_documentation_upload": {
+        "label": "Techninės dokumentacijos įkėlimas",
+        "help": "Tik vidiniam naudojimui. Įkeltas failas saugomas gamintojui ir nerodomas viešame DPP."
+      },
+      "applicable_legislation": {
+        "label": "Taikomi ES teisės aktai"
+      },
+      "harmonised_standards": {
+        "label": "Naudoti darnieji standartai"
+      },
+      "common_specifications": {
+        "label": "Naudotos bendrosios specifikacijos",
+        "placeholder": "Aprašykite taikytas bendrąsias specifikacijas."
+      },
+      "other_standards": {
+        "label": "Kiti naudoti standartai (po vieną eilutėje)"
+      },
+      "notified_body_involved": {
+        "label": "Ar dalyvavo notifikuotoji įstaiga?"
+      },
+      "notified_body_name": {
+        "label": "Notifikuotosios įstaigos pavadinimas"
+      },
+      "notified_body_number": {
+        "label": "Notifikuotosios įstaigos numeris",
+        "placeholder": "pvz., 0123"
+      },
+      "certificate_reference": {
+        "label": "Sertifikato nuoroda"
+      },
+      "certificate_issue_date": {
+        "label": "Sertifikato išdavimo data (MMMM-MM-DD)",
+        "placeholder": "MMMM-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Atitikties sertifikatas (PDF arba paveikslėlis)",
+        "help": "Neprivaloma. Įkeltas failas yra viešai prieinamas iš DPP."
+      },
+      "cn_chapter": {
+        "label": "KN skyrius"
+      },
+      "customs_code": {
+        "label": "Muitinės prekės kodas",
+        "placeholder": "98809500",
+        "help": "Automatiškai užpildoma pagal KN skyrių. Pakeiskite, jei jūsų muitinės klasifikacija skiriasi."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Ar žaisle ar bet kurioje jo sudedamojoje dalyje yra alergeninių kvapiųjų medžiagų, kurių koncentracija ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Esančios alergeninės kvapiosios medžiagos"
+      },
+      "allergen_declaration_text": {
+        "label": "Alergenų deklaracija (automatiškai sugeneruota, redaguojama)"
+      },
+      "safety_channels": {
+        "label": "Vieši pranešimų apie saugą kanalai"
+      },
+      "safety_phone": {
+        "label": "Telefonas pranešimams apie saugą",
+        "placeholder": "+370 ..."
+      },
+      "safety_email": {
+        "label": "El. paštas pranešimams apie saugą",
+        "placeholder": "sauga@imone.com"
+      },
+      "safety_website": {
+        "label": "Svetainės / kontaktinės formos URL pranešimams apie saugą",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
@@ -682,12 +959,12 @@
         "plush": "Minkštas žaislas",
         "doll": "Lėlė",
         "action_figure": "Veiksmo figūrėlė",
-        "construction": "Konstrukcinis žaislas / kaladėlės",
+        "construction": "Konstruktorius / kaladėlės",
         "puzzle": "Dėlionė",
         "board_game": "Stalo žaidimas",
         "arts_crafts": "Meno ir amatų žaislas",
         "slime": "Gleivės / glaistas / modeliavimo masė",
-        "chemical_set": "Cheminių žaislų rinkinys",
+        "chemical_set": "Cheminių bandymų rinkinys",
         "cosmetic": "Kosmetinis žaislas / žaidimų makiažas",
         "olfactory": "Uoslės stalo žaidimas",
         "gustative": "Skonio žaidimas",
@@ -697,36 +974,36 @@
         "wheeled": "Paspirtukas / riedlentė / ratuotas žaislas",
         "aquatic": "Vandens žaislas",
         "electronic": "Elektroninis žaislas",
-        "radio": "Radijo ryšiu prijungtas žaislas",
-        "internet": "Prie interneto prijungtas žaislas",
+        "radio": "Radijo ryšiu valdomas žaislas",
+        "internet": "Prie interneto jungiamas žaislas",
         "ai": "Žaislas su dirbtiniu intelektu",
         "battery": "Žaislas su baterija",
         "magnets": "Žaislas su magnetais",
         "drone": "Žaislinis dronas",
-        "toy_in_food": "Žaislas maiste",
+        "toy_in_food": "Žaislas maisto produkte",
         "other": "Kita"
       },
       "ageGroup": {
         "14": "14 metų",
-        "0_6m": "0–6 mėnesiai",
+        "0_6m": "0–6 mėnesių",
         "6_12m": "6–12 mėnesių",
         "12_18m": "12–18 mėnesių",
-        "18_36m": "18–36 mėnesiai",
-        "3plus": "3+ metai",
-        "4plus": "4+ metai",
-        "5plus": "5+ metai",
-        "6plus": "6+ metai",
-        "7plus": "7+ metai",
-        "8plus": "8+ metai",
-        "10plus": "10+ metai",
-        "12plus": "12+ metai",
+        "18_36m": "18–36 mėnesių",
+        "3plus": "3+ metų",
+        "4plus": "4+ metų",
+        "5plus": "5+ metų",
+        "6plus": "6+ metų",
+        "7plus": "7+ metų",
+        "8plus": "8+ metų",
+        "10plus": "10+ metų",
+        "12plus": "12+ metų",
         "other": "Kita"
       },
       "identifierType": {
         "GTIN": "GTIN",
         "GS1_DL": "GS1 skaitmeninė nuoroda",
         "EPC": "EPC",
-        "SGTIN": "Serijinis GTIN",
+        "SGTIN": "Serializuotas GTIN",
         "SKU": "SKU",
         "MODEL": "Modelio numeris",
         "ISO_15459": "Su ISO/IEC 15459 suderinamas identifikatorius",
@@ -734,7 +1011,7 @@
       },
       "cnChapter": {
         "32": "32 — Dažai, pigmentai, rašalai, dažikliai",
-        "33": "33 — Eteriniai aliejai, kvepalai, kosmetika",
+        "33": "33 — Eteriniai aliejai, parfumerija, kosmetika",
         "34": "34 — Muilai, vaškai, modeliavimo pastos",
         "39": "39 — Plastikai ir jų dirbiniai",
         "40": "40 — Kaučiukas, guma ir jų dirbiniai",
@@ -744,14 +1021,14 @@
         "49": "49 — Spausdintos knygos, paveikslai, kortelės",
         "61": "61 — Megzti drabužiai / tekstilės priedai",
         "62": "62 — Nemegzti drabužiai / tekstilės priedai",
-        "63": "63 — Kiti gatavi tekstilės gaminiai",
-        "69": "69 — Keramikos gaminiai",
+        "63": "63 — Kiti gatavi tekstilės dirbiniai",
+        "69": "69 — Keramikos dirbiniai",
         "70": "70 — Stiklas ir stiklo dirbiniai",
         "73": "73 — Geležies arba plieno dirbiniai",
         "76": "76 — Aliuminio dirbiniai",
         "85": "85 — Elektros mašinos ir įrenginiai",
         "87": "87 — Transporto priemonės ir jų dalys",
-        "90": "90 — Optikos, matavimo, tikrinimo prietaisai",
+        "90": "90 — Optikos, matavimo, kontrolės prietaisai",
         "95": "95 — Žaislai, žaidimai ir sporto reikmenys",
         "other": "Kita"
       },
@@ -776,7 +1053,7 @@
         "EN71_1": "EN 71-1 — Mechaninės ir fizikinės savybės",
         "EN71_2": "EN 71-2 — Degumas",
         "EN71_3": "EN 71-3 — Tam tikrų elementų migracija",
-        "EN71_4": "EN 71-4 — Chemijos bandymų rinkiniai",
+        "EN71_4": "EN 71-4 — Cheminių bandymų rinkiniai",
         "EN71_5": "EN 71-5 — Cheminiai žaislai, išskyrus bandymų rinkinius",
         "EN71_7": "EN 71-7 — Pirštų dažai",
         "EN71_8": "EN 71-8 — Aktyvumo žaislai, skirti naudoti namuose",
@@ -791,7 +1068,7 @@
         "phone": "Telefonas",
         "email": "El. paštas",
         "website": "Speciali svetainė",
-        "form": "Kontaktų forma"
+        "form": "Kontaktinė forma"
       },
       "euOperatorRole": {
         "importer": "Importuotojas",
@@ -808,6 +1085,138 @@
         "yes": "Taip",
         "no": "Ne",
         "unknown": "Nežinoma"
+      }
+    },
+    "ai": {
+      "scannerTitle": "DI žaislų etikečių skaitytuvas",
+      "scannerDescription": "Nufotografuokite arba įkelkite žaislo pakuotės nuotrauką – DI nuskaitys CE ženklą, amžiaus įspėjimus, gamintojo informaciją, brūkšninį kodą ir nurodytas alergenines kvapiąsias medžiagas.",
+      "dropHere": "↓ Vilkite čia",
+      "dragOrClick": "Vilkite ir paleiskite arba spustelėkite"
+    },
+    "warnings": {
+      "youngChild": "Šis žaislas skirtas vaikams iki 36 mėnesių. Taikomi griežtesni alergeninių kvapiųjų medžiagų apribojimai, o visos smulkios detalės turi būti įvertintos dėl užspringimo pavojaus.",
+      "mouthContact": "Šis žaislas skirtas dėti į burną. Taikomi griežtesni alergeninių kvapiųjų medžiagų ir cheminių medžiagų migracijos apribojimai.",
+      "unknownAllergens": "Šis DPP gali būti nepilnas, nes informacija apie alergenines kvapiąsias medžiagas yra privaloma, kai taikoma. Prieš skelbdami, pakeiskite „Nežinoma“ į „Taip“ arba „Ne“.",
+      "suggestLegislation": "Atsižvelgiant į pasirinktą žaislo kategoriją, taip pat apsvarstykite galimybę pažymėti: {{list}}."
+    },
+    "disclaimer": {
+      "title": "Žaislų DPP – atitikties atsakomybės apribojimas",
+      "body": "Tikslus ES skaitmeninio gaminio paso duomenų modelis ir API specifikacijos žaislams dar nėra nustatytos ir tikimasi, kad jos bus apibrėžtos įgyvendinimo akte, kuris turi būti priimtas iki 2026 m. pabaigos. Šis įrankis yra pirmoji versija, pagrįsta Reglamentu (ES) 2025/2509, ir neturėtų būti laikomas galutine teisine konsultacija."
+    },
+    "internalBadge": "Vidinis – nerodoma viešai",
+    "safetyGate": {
+      "title": "ES saugos vartai",
+      "body": "Praneškite apie nesaugius gaminius per ES saugos vartų portalą:",
+      "alwaysShown": "Ši nuoroda visada rodoma viešame pase."
+    },
+    "certificate": {
+      "viewFile": "Peržiūrėti įkeltą failą",
+      "remove": "Pašalinti failą",
+      "uploading": "Įkeliama...",
+      "uploadButton": "Įkelti sertifikatą",
+      "errors": {
+        "loginRequired": "Norėdami įkelti failus, turite būti prisijungę.",
+        "tooLarge": "Failas per didelis. Maksimalus dydis yra 5 MB.",
+        "uploadFailed": "Įkelti nepavyko."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Kol kas nepridėta jokių alergeninių kvapiųjų medžiagų.",
+      "summary": "Deklaruota kvapiųjų medžiagų: {{count}}.",
+      "addButton": "Pridėti kvapiąją medžiagą",
+      "cas": "CAS",
+      "removeAria": "Pašalinti {{name}}",
+      "concentrationLabel": "Koncentracija (mg/kg)",
+      "componentLabel": "Komponentas / medžiaga",
+      "componentPlaceholder": "pvz., minkšto žaislo užpildas",
+      "aboveThreshold": "Koncentracija ≥10 mg/kg",
+      "supplierDeclaration": "Tiekėjo deklaracija faile",
+      "testReport": "Bandymų ataskaita faile",
+      "dialogTitle": "Pasirinkite alergenines kvapiąsias medžiagas",
+      "searchPlaceholder": "Ieškoti pagal pavadinimą, CAS arba ID...",
+      "clearSearch": "Išvalyti paiešką",
+      "noResults": "Nerasta kvapiųjų medžiagų, atitinkančių „{{q}}“.",
+      "done": "Atlikta"
+    },
+    "validation": {
+      "imageRequired": "Būtina pateikti spalvotą žaislo nuotrauką.",
+      "descriptionRequired": "Žaislams būtinas gaminio aprašymas."
+    },
+    "public": {
+      "badge": "🧸 Žaislas – skaitmeninis gaminio pasas",
+      "otherFallback": "Kita",
+      "notDeclared": "Nenurodyta",
+      "ceMarked": "✓ Pažymėta CE ženklu",
+      "statusPublished": "Paskelbta",
+      "noAllergens": "Nedeklaruota jokių alergeninių kvapiųjų medžiagų, kurioms taikomi ženklinimo reikalavimai, esančių 10 mg/kg ar didesne koncentracija.",
+      "certificateDownload": "Atsisiųsti atitikties sertifikatą",
+      "reportUnsafe": "Pranešti apie nesaugų gaminį",
+      "mirroredAt": "Atspindėta adresu {{url}}",
+      "mirroredDefault": "Atspindėta Open-Label.eu infrastruktūroje",
+      "nbNumber": "Numeris {{n}}",
+      "nbCertificate": "Sertifikatas: {{ref}}",
+      "nbIssued": "(išduota {{date}})",
+      "instructionsTitle": "Instrukcijos ir įspėjimai",
+      "ceDeclarationStatement": "Gamintojas pareiškia, kad šis žaislas atitinka taikomus ES saugos reikalavimus ir yra arba bus paženklintas CE ženklu, kai to reikalaujama, prieš pateikiant jį į ES rinką.",
+      "docLabel": "ES atitikties deklaracija",
+      "docReference": "Nuoroda",
+      "safetyAssessmentLabel": "Saugos vertinimas",
+      "technicalDocsLabel": "Techninė dokumentacija",
+      "yesNoUnknown": {
+        "yes": "Taip",
+        "no": "Ne",
+        "unknown": "Nežinoma"
+      },
+      "sections": {
+        "identity": "Gaminio tapatybė",
+        "manufacturer": "Gamintojo atsakomybė",
+        "manufacturerNote": "Šis skaitmeninis gaminio pasas išduodamas išskirtine gamintojo atsakomybe.",
+        "euOperator": "ES veiklos vykdytojo informacija",
+        "authRep": "Įgaliotasis atstovas",
+        "euResponsible": "ES atsakingas ekonominės veiklos vykdytojas",
+        "compliance": "Atitiktis",
+        "safety": "Saugos ir cheminė informacija",
+        "safetyReporting": "Pranešimai apie saugos incidentus",
+        "infrastructure": "DPP infrastruktūra"
+      },
+      "rows": {
+        "brand": "Prekės ženklas",
+        "model": "Modelis",
+        "sku": "SKU / variantas",
+        "toyCategory": "Žaislo kategorija",
+        "age": "Numatyta amžiaus grupė",
+        "uid": "Unikalus identifikatorius",
+        "manufacturer": "Gamintojas",
+        "address": "Adresas",
+        "email": "El. paštas",
+        "website": "Svetainė",
+        "operatorId": "Veiklos vykdytojo identifikatorius",
+        "legalName": "Juridinis pavadinimas",
+        "role": "Vaidmuo",
+        "ce": "CE ženklas",
+        "applicableLeg": "Taikomi teisės aktai",
+        "standards": "Darnieji standartai",
+        "commonSpecs": "Bendrosios specifikacijos",
+        "otherStandards": "Kiti standartai",
+        "notifiedBody": "Notifikuotoji įstaiga",
+        "customs": "Muitinės kodas",
+        "dppProvider": "DPP paslaugų teikėjas",
+        "backup": "Atsarginės kopijos nuoroda",
+        "dppVersion": "DPP versija",
+        "lastUpdated": "Paskutinį kartą atnaujinta",
+        "status": "Būsena"
+      },
+      "table": {
+        "substance": "Medžiaga",
+        "cas": "CAS",
+        "concentration": "Koncentracija",
+        "component": "Komponentas"
+      },
+      "safety": {
+        "telephone": "Telefonas",
+        "emailLabel": "El. paštas",
+        "web": "Svetainė",
+        "gatePortal": "ES saugos vartų portalas"
       }
     }
   }

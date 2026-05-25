@@ -21,7 +21,10 @@
     "language": "Limbă",
     "custom": "Personalizat",
     "selectOption": "Selectați o opțiune",
-    "confirmed": "Confirmat"
+    "confirmed": "Confirmat",
+    "required": "Obligatoriu",
+    "whereApplicable": "După caz",
+    "tbdImplementingAct": "De stabilit — act de punere în aplicare"
   },
   "nav": {
     "signIn": "Autentificare",
@@ -666,15 +669,289 @@
     "poweredBy": "Susținut de"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Responsabilitatea producătorului",
+        "description": "Acest pașaport digital de produs este emis pe răspunderea exclusivă a producătorului."
+      },
+      "product_identity": {
+        "title": "Identitatea produsului",
+        "description": "Fiecare model sau variantă de jucărie necesită propriul DPP."
+      },
+      "manufacturer": {
+        "title": "Producător",
+        "description": "Entitatea juridică responsabilă pentru introducerea jucăriei pe piață."
+      },
+      "auth_rep": {
+        "title": "Reprezentant autorizat",
+        "description": "După caz."
+      },
+      "eu_operator": {
+        "title": "Operator economic responsabil din UE",
+        "description": "Necesar atunci când producătorul este stabilit în afara UE."
+      },
+      "compliance": {
+        "title": "Conformitate",
+        "description": "Marcajul CE, legislația și standardele UE aplicabile."
+      },
+      "notified_body": {
+        "title": "Evaluarea conformității și organismul notificat",
+        "description": "După caz."
+      },
+      "customs": {
+        "title": "Cod tarifar vamal",
+        "description": "Generat ca 9880 + capitolul NC + 00. Editabil."
+      },
+      "allergenic_fragrances": {
+        "title": "Parfumuri alergene",
+        "description": "Substanțe supuse cerințelor de etichetare la ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Raportarea incidentelor de siguranță",
+        "description": "Canale disponibile pentru consumatori și autorități."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Confirm că acest DPP este emis pe răspunderea exclusivă a producătorului."
+      },
+      "brand_name": {
+        "label": "Numele mărcii"
+      },
+      "model_name": {
+        "label": "Numele modelului sau numărul modelului"
+      },
+      "sku": {
+        "label": "SKU sau ID-ul variantei",
+        "help": "Utilizați un DPP separat pentru fiecare variantă (culoare, mărime, material, versiune electronică, versiune la pachet)."
+      },
+      "toy_category": {
+        "label": "Categoria jucăriei"
+      },
+      "toy_category_other": {
+        "label": "Categoria jucăriei (specificați)"
+      },
+      "age_group": {
+        "label": "Grup de vârstă vizat"
+      },
+      "age_group_other": {
+        "label": "Grup de vârstă (specificați)"
+      },
+      "mouth_contact": {
+        "label": "Este această jucărie destinată a fi introdusă în gură?",
+        "help": "Se aplică restricții mai stricte privind parfumurile alergene și substanțele chimice pentru jucăriile destinate contactului cu gura."
+      },
+      "unique_product_identifier": {
+        "label": "Identificator unic de produs",
+        "help": "Identificator persistent pentru acest model/SKU/variantă de jucărie. Ar trebui să fie compatibil cu identificarea de tip ESPR / ISO IEC 15459 atunci când specificațiile finale vor fi confirmate."
+      },
+      "identifier_type": {
+        "label": "Tipul identificatorului"
+      },
+      "identifier_type_other": {
+        "label": "Tipul identificatorului (specificați)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Denumirea juridică a producătorului"
+      },
+      "manufacturer_street": {
+        "label": "Adresa (strada)"
+      },
+      "manufacturer_city": {
+        "label": "Oraș"
+      },
+      "manufacturer_postal_code": {
+        "label": "Cod poștal"
+      },
+      "manufacturer_country": {
+        "label": "Țară"
+      },
+      "manufacturer_email": {
+        "label": "Adresă electronică (e-mail)",
+        "placeholder": "nume@companie.com"
+      },
+      "manufacturer_website": {
+        "label": "Site web",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Identificator unic de operator",
+        "help": "Utilizați cel mai bun identificator de operator disponibil acum; formatul final necesar poate fi definit prin actul de punere în aplicare."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Tipul identificatorului de operator"
+      },
+      "has_auth_rep": {
+        "label": "Are producătorul un reprezentant autorizat?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Denumirea juridică a reprezentantului autorizat"
+      },
+      "auth_rep_street": {
+        "label": "Adresa (strada)"
+      },
+      "auth_rep_city": {
+        "label": "Oraș"
+      },
+      "auth_rep_postal_code": {
+        "label": "Cod poștal"
+      },
+      "auth_rep_country": {
+        "label": "Țară"
+      },
+      "auth_rep_email": {
+        "label": "Adresă electronică (e-mail)",
+        "placeholder": "nume@companie.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Identificator unic de operator"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Tipul identificatorului de operator"
+      },
+      "manufacturer_non_eu": {
+        "label": "Este producătorul stabilit în afara UE?"
+      },
+      "eu_op_legal_name": {
+        "label": "Denumirea juridică a operatorului responsabil din UE"
+      },
+      "eu_op_role": {
+        "label": "Rol"
+      },
+      "eu_op_street": {
+        "label": "Adresa (strada)"
+      },
+      "eu_op_city": {
+        "label": "Oraș"
+      },
+      "eu_op_postal_code": {
+        "label": "Cod poștal"
+      },
+      "eu_op_country": {
+        "label": "Țară"
+      },
+      "eu_op_email": {
+        "label": "Adresă electronică (e-mail)",
+        "placeholder": "nume@companie.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Identificator unic de operator"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Tipul identificatorului de operator"
+      },
+      "has_instructions_warnings": {
+        "label": "Necesită această jucărie instrucțiuni, avertismente sau informații de siguranță?"
+      },
+      "public_instructions_warnings": {
+        "label": "Instrucțiuni și avertismente publice",
+        "help": "Adăugați avertismentele, instrucțiunile și informațiile de siguranță care însoțesc jucăria."
+      },
+      "ce_declaration_ack": {
+        "label": "Producătorul declară că această jucărie respectă cerințele de siguranță aplicabile ale UE și poartă sau va purta marcajul CE, acolo unde este necesar, înainte de a fi introdusă pe piața UE.",
+        "help": "Doar jucăriile care poartă marcajul CE pot fi introduse pe piața UE. Această declarație ar trebui să fie în concordanță cu evaluarea conformității efectuată de producător."
+      },
+      "eu_doc_available": {
+        "label": "Declarația de conformitate UE este disponibilă?",
+        "warn": "Declarația de conformitate UE este așteptată ca parte a cadrului de conformitate pentru jucării. Completați acest câmp înainte de a vă baza pe DPP pentru utilizarea orientată către piață."
+      },
+      "eu_doc_reference": {
+        "label": "Referința declarației de conformitate"
+      },
+      "eu_doc_upload": {
+        "label": "Încărcarea declarației de conformitate",
+        "help": "Înregistrare internă. Fișierul încărcat este păstrat pentru producător și nu este afișat pe DPP-ul public."
+      },
+      "safety_assessment_completed": {
+        "label": "Evaluarea siguranței a fost finalizată?",
+        "help": "Producătorii de jucării trebuie să evalueze riscurile chimice, fizice, mecanice, electrice, de inflamabilitate, de igienă, de radioactivitate și de expunere, după caz.",
+        "warn": "Informațiile privind evaluarea siguranței ar trebui completate înainte de a vă baza pe acest DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Documentația tehnică este disponibilă?",
+        "help": "Documentația tehnică sprijină demonstrarea faptului că jucăria respectă cerințele de siguranță aplicabile.",
+        "warn": "Documentația tehnică poate fi solicitată de autoritățile de supraveghere a pieței."
+      },
+      "technical_documentation_upload": {
+        "label": "Încărcarea documentației tehnice",
+        "help": "Înregistrare internă. Fișierul încărcat este păstrat pentru producător și nu este afișat pe DPP-ul public."
+      },
+      "applicable_legislation": {
+        "label": "Legislația UE aplicabilă"
+      },
+      "harmonised_standards": {
+        "label": "Standarde armonizate utilizate"
+      },
+      "common_specifications": {
+        "label": "Specificații comune utilizate",
+        "placeholder": "Descrieți specificațiile comune aplicate."
+      },
+      "other_standards": {
+        "label": "Alte standarde utilizate (unul pe rând)"
+      },
+      "notified_body_involved": {
+        "label": "A fost implicat un organism notificat?"
+      },
+      "notified_body_name": {
+        "label": "Numele organismului notificat"
+      },
+      "notified_body_number": {
+        "label": "Numărul organismului notificat",
+        "placeholder": "ex., 0123"
+      },
+      "certificate_reference": {
+        "label": "Referința certificatului"
+      },
+      "certificate_issue_date": {
+        "label": "Data emiterii certificatului (AAAA-LL-ZZ)",
+        "placeholder": "AAAA-LL-ZZ"
+      },
+      "notified_body_certificate_url": {
+        "label": "Certificat de conformitate (PDF sau imagine)",
+        "help": "Opțional. Fișierul încărcat este accesibil public de pe DPP."
+      },
+      "cn_chapter": {
+        "label": "Capitolul NC"
+      },
+      "customs_code": {
+        "label": "Cod tarifar vamal",
+        "placeholder": "98809500",
+        "help": "Completat automat din capitolul NC. Suprascrieți dacă clasificarea dvs. vamală diferă."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Conține jucăria sau oricare componentă a sa parfumuri alergene la o concentrație de ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Parfumuri alergene prezente"
+      },
+      "allergen_declaration_text": {
+        "label": "Declarație de alergeni (generată automat, editabilă)"
+      },
+      "safety_channels": {
+        "label": "Canale publice de raportare a siguranței"
+      },
+      "safety_phone": {
+        "label": "Telefon pentru raportarea siguranței",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "E-mail pentru raportarea siguranței",
+        "placeholder": "siguranta@companie.com"
+      },
+      "safety_website": {
+        "label": "Site web / URL formular de contact pentru raportarea siguranței",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
-        "VAT": "Număr de înregistrare în scopuri de TVA",
-        "NATIONAL": "Număr național de înregistrare a societății",
+        "VAT": "Număr TVA",
+        "NATIONAL": "Număr național de înregistrare a companiei",
         "DUNS": "DUNS",
-        "ESPR": "Identificator de operator ESPR / DPP",
+        "ESPR": "ESPR / Identificator de operator DPP",
         "other": "Altul"
       },
       "toyCategory": {
@@ -686,7 +963,7 @@
         "puzzle": "Puzzle",
         "board_game": "Joc de societate",
         "arts_crafts": "Jucărie pentru arte și meșteșuguri",
-        "slime": "Slime / chit / pastă de modelaj",
+        "slime": "Slime / chit / pastă de modelat",
         "chemical_set": "Set de jucării chimice",
         "cosmetic": "Jucărie cosmetică / machiaj de joacă",
         "olfactory": "Joc de societate olfactiv",
@@ -704,7 +981,7 @@
         "magnets": "Jucărie cu magneți",
         "drone": "Dronă de jucărie",
         "toy_in_food": "Jucărie în alimente",
-        "other": "Altele"
+        "other": "Altă categorie"
       },
       "ageGroup": {
         "14": "14 ani",
@@ -720,7 +997,7 @@
         "8plus": "8+ ani",
         "10plus": "10+ ani",
         "12plus": "12+ ani",
-        "other": "Altul"
+        "other": "Alt grup"
       },
       "identifierType": {
         "GTIN": "GTIN",
@@ -735,7 +1012,7 @@
       "cnChapter": {
         "32": "32 — Vopsele, pigmenți, cerneluri, coloranți",
         "33": "33 — Uleiuri esențiale, parfumuri, cosmetice",
-        "34": "34 — Săpunuri, ceruri, paste de modelaj",
+        "34": "34 — Săpunuri, ceruri, paste de modelat",
         "39": "39 — Materiale plastice și articole din acestea",
         "40": "40 — Cauciuc și articole din cauciuc",
         "42": "42 — Articole din piele",
@@ -753,7 +1030,7 @@
         "87": "87 — Vehicule și piese",
         "90": "90 — Instrumente optice, de măsurare, de verificare",
         "95": "95 — Jucării, jocuri și articole sportive",
-        "other": "Altele"
+        "other": "Altul"
       },
       "legislation": {
         "TSR": "Regulamentul (UE) 2025/2509 — Regulamentul privind siguranța jucăriilor",
@@ -770,7 +1047,7 @@
         "COSMETICS": "Regulamentul (CE) nr. 1223/2009 — Produse cosmetice",
         "REACH": "Regulamentul (CE) nr. 1907/2006 — REACH",
         "CLP": "Regulamentul (CE) nr. 1272/2008 — CLP",
-        "other": "Altele"
+        "other": "Altă legislație"
       },
       "standards": {
         "EN71_1": "EN 71-1 — Proprietăți mecanice și fizice",
@@ -808,6 +1085,138 @@
         "yes": "Da",
         "no": "Nu",
         "unknown": "Necunoscut"
+      }
+    },
+    "ai": {
+      "scannerTitle": "Scaner AI pentru etichete de jucării",
+      "scannerDescription": "Fotografiați sau încărcați o imagine a ambalajului jucăriei — AI-ul va citi marcajul CE, avertismentele de vârstă, blocul producătorului, codul de bare și parfumurile alergene listate.",
+      "dropHere": "↓ Plasați aici",
+      "dragOrClick": "Trageți și plasați sau faceți clic"
+    },
+    "warnings": {
+      "youngChild": "Această jucărie este destinată copiilor sub 36 de luni. Se aplică restricții mai stricte privind parfumurile alergene, iar orice piese mici trebuie evaluate pentru riscurile de sufocare.",
+      "mouthContact": "Această jucărie este destinată a fi introdusă în gură. Se aplică restricții mai stricte privind parfumurile alergene și migrarea substanțelor chimice.",
+      "unknownAllergens": "Acest DPP poate fi incomplet, deoarece informațiile despre parfumurile alergene sunt obligatorii, atunci când este cazul. Înlocuiți „Necunoscut” cu Da sau Nu înainte de publicare.",
+      "suggestLegislation": "Pe baza categoriei de jucării selectate, luați în considerare și bifarea: {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP pentru jucării — clauză de exonerare a răspunderii privind conformitatea",
+      "body": "Modelul exact de date și specificațiile API pentru Pașaportul Digital de Produs al UE pentru jucării sunt încă de stabilit (TBD) și se așteaptă să fie definite în actul de punere în aplicare până la sfârșitul anului 2026. Acest instrument este o primă versiune bazată pe Regulamentul (UE) 2025/2509 și nu trebuie tratat ca un aviz juridic final."
+    },
+    "internalBadge": "Intern — nu se afișează public",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Raportați produsele nesigure prin intermediul portalului EU Safety Gate:",
+      "alwaysShown": "Acest link este întotdeauna afișat pe pașaportul public."
+    },
+    "certificate": {
+      "viewFile": "Vizualizați fișierul încărcat",
+      "remove": "Eliminați fișierul",
+      "uploading": "Se încarcă...",
+      "uploadButton": "Încărcați certificatul",
+      "errors": {
+        "loginRequired": "Trebuie să fiți autentificat pentru a încărca fișiere.",
+        "tooLarge": "Fișierul este prea mare. Dimensiunea maximă este de 5 MB.",
+        "uploadFailed": "Încărcarea a eșuat."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Niciun parfum alergen adăugat încă.",
+      "summary": "{{count}} parfum(uri) declarate.",
+      "addButton": "Adăugați parfum",
+      "cas": "CAS",
+      "removeAria": "Eliminați {{name}}",
+      "concentrationLabel": "Concentrație (mg/kg)",
+      "componentLabel": "Componentă / material",
+      "componentPlaceholder": "ex., umplutură de pluș",
+      "aboveThreshold": "Concentrație ≥10 mg/kg",
+      "supplierDeclaration": "Declarație de la furnizor în dosar",
+      "testReport": "Raport de testare în dosar",
+      "dialogTitle": "Selectați parfumuri alergene",
+      "searchPlaceholder": "Căutați după nume, CAS sau id...",
+      "clearSearch": "Goliți căutarea",
+      "noResults": "Niciun parfum nu corespunde cu „{{q}}”.",
+      "done": "Gata"
+    },
+    "validation": {
+      "imageRequired": "Este necesară o imagine color a jucăriei.",
+      "descriptionRequired": "Este necesară o descriere a produsului pentru jucării."
+    },
+    "public": {
+      "badge": "🧸 Jucărie — Pașaport Digital de Produs",
+      "otherFallback": "Altul",
+      "notDeclared": "Nedeclarat",
+      "ceMarked": "✓ Marcat CE",
+      "statusPublished": "Publicat",
+      "noAllergens": "Nu sunt declarate parfumuri alergene supuse cerințelor de etichetare ca fiind prezente la sau peste 10 mg/kg.",
+      "certificateDownload": "Descărcați certificatul de conformitate",
+      "reportUnsafe": "Raportați un produs nesigur",
+      "mirroredAt": "Copie oglindă la {{url}}",
+      "mirroredDefault": "Copie oglindă pe infrastructura Open-Label.eu",
+      "nbNumber": "Numărul {{n}}",
+      "nbCertificate": "Certificat: {{ref}}",
+      "nbIssued": "(emis la {{date}})",
+      "instructionsTitle": "Instrucțiuni și avertismente",
+      "ceDeclarationStatement": "Producătorul declară că această jucărie respectă cerințele de siguranță aplicabile ale UE și poartă sau va purta marcajul CE, acolo unde este necesar, înainte de a fi introdusă pe piața UE.",
+      "docLabel": "Declarația de conformitate UE",
+      "docReference": "Referință",
+      "safetyAssessmentLabel": "Evaluarea siguranței",
+      "technicalDocsLabel": "Documentație tehnică",
+      "yesNoUnknown": {
+        "yes": "Da",
+        "no": "Nu",
+        "unknown": "Necunoscut"
+      },
+      "sections": {
+        "identity": "Identitatea produsului",
+        "manufacturer": "Responsabilitatea producătorului",
+        "manufacturerNote": "Acest pașaport digital de produs este emis pe răspunderea exclusivă a producătorului.",
+        "euOperator": "Informații despre operatorul din UE",
+        "authRep": "Reprezentant autorizat",
+        "euResponsible": "Operator economic responsabil din UE",
+        "compliance": "Conformitate",
+        "safety": "Informații privind siguranța și substanțele chimice",
+        "safetyReporting": "Raportarea incidentelor de siguranță",
+        "infrastructure": "Infrastructura DPP"
+      },
+      "rows": {
+        "brand": "Marcă",
+        "model": "Model",
+        "sku": "SKU / variantă",
+        "toyCategory": "Categoria jucăriei",
+        "age": "Grup de vârstă vizat",
+        "uid": "Identificator unic",
+        "manufacturer": "Producător",
+        "address": "Adresă",
+        "email": "E-mail",
+        "website": "Site web",
+        "operatorId": "Identificator de operator",
+        "legalName": "Denumire juridică",
+        "role": "Rol",
+        "ce": "Marcaj CE",
+        "applicableLeg": "Legislație aplicabilă",
+        "standards": "Standarde armonizate",
+        "commonSpecs": "Specificații comune",
+        "otherStandards": "Alte standarde",
+        "notifiedBody": "Organism notificat",
+        "customs": "Cod vamal",
+        "dppProvider": "Furnizor de servicii DPP",
+        "backup": "Referință copie de rezervă",
+        "dppVersion": "Versiune DPP",
+        "lastUpdated": "Ultima actualizare",
+        "status": "Stare"
+      },
+      "table": {
+        "substance": "Substanță",
+        "cas": "CAS",
+        "concentration": "Concentrație",
+        "component": "Componentă"
+      },
+      "safety": {
+        "telephone": "Telefon",
+        "emailLabel": "E-mail",
+        "web": "Web",
+        "gatePortal": "Portalul EU Safety Gate"
       }
     }
   }
