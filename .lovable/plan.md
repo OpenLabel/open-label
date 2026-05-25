@@ -1,33 +1,33 @@
-# Fix English leftover in Italian Toy DPP preview
+## Problem
 
-## Problem found
-Audited the live preview iframe of the sample Toy DPP in **Italian**. Almost everything is translated (sections, field labels, badges, compliance text, regulations, customs, footer). **One English string leaks through:**
+`generateAllergenDeclaration()` in `src/data/toyFragrances.ts` returns two hardcoded English sentences and `CategoryQuestions.tsx` writes them into `category_data.allergen_declaration_text` every time the toy form mounts/changes. Result: the source value persisted in the DB is always English.
 
-> "No allergenic fragrances subject to labelling requirements are declared as present at or above 10 mg/kg."
-
-Shown in the "Sicurezza e informazioni chimiche" section.
-
-## Root cause
-- `src/data/toyFragrances.ts::generateAllergenDeclaration()` writes this English sentence into `category_data.allergen_declaration_text` whenever the user selects "No" for allergenic fragrances (and into the sample seed).
-- `src/components/toys/ToyPublicPassport.tsx` line 505 renders `tr('allergen_declaration_text')` first, falling back to `t('toyPublic.values.noFragrancesDeclared')` only when empty. Since the stored string is non-empty English, the i18n key is never reached.
-- Localized keys `toyPublic.values.noFragrancesDeclared` already exist in all 24 locales — they just aren't used.
+In `ToyPublicPassport.tsx` line 506, `tr('allergen_declaration_text')` falls back to that stored English when no per-language override exists. So even after the previous i18n key fix, any DPP rendered in a non-English language still shows the English sentence (unless the user manually translated it). This is the same class of bug as before.
 
 ## Fix
-In `ToyPublicPassport.tsx`, when `has_allergenic_fragrances !== 'yes'` (or no fragrances are listed), render the localized `t('toyPublic.values.noFragrancesDeclared')` directly and ignore the stored English sentence. When `has_allergenic_fragrances === 'yes'` and fragrances exist, keep current behaviour: prefer `tr('allergen_declaration_text')` (which respects user edits + per-language translations), and only fall back to a localized template using `toyPublic.values.fragrancesDeclared` with `{{names}}` interpolation.
 
-### Code change (single file)
-`src/components/toys/ToyPublicPassport.tsx` lines 501–507 — replace with the conditional shown in the steps above.
+1. **Stop persisting English into `allergen_declaration_text`.** Remove the auto-write effect in `src/components/CategoryQuestions.tsx` (lines ~321–338). The field becomes a pure optional user override.
 
-### i18n additions
-- Add `toyPublic.values.fragrancesDeclared` key with `{{names}}` placeholder to all 24 locale files (`en, bg, cs, da, de, el, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sl, sv`). EN string: *"The following allergenic fragrances subject to labelling requirements are present at or above 10 mg/kg: {{names}}."* Translate to each EU language using existing terminology already used in `toys.allergens.*`.
-- `toyPublic.values.noFragrancesDeclared` already exists in all 24 locales — no change.
+2. **Simplify `generateAllergenDeclaration`** in `src/data/toyFragrances.ts`: keep the export (still imported in tests) but make it return `''` — or delete it and update imports/tests. Preferred: delete it and the import in `CategoryQuestions.tsx` to remove dead English strings from the codebase.
+
+3. **Render via i18n in `ToyPublicPassport.tsx`** (lines 504–511): only use `tr('allergen_declaration_text')` if the user has actually written something (i.e. the raw `d.allergen_declaration_text` is truthy AND not one of the legacy auto-generated English sentences). Otherwise render the localized `toyPublic.values.fragrancesDeclared` / `noFragrancesDeclared` keys (already added in 24 locales).
+
+   To stay safe for existing DPPs that already have the English sentence stored, add a legacy guard: treat stored values starting with `"No allergenic fragrances"` or `"The following allergenic fragrances"` as auto-generated and ignore them in favour of the i18n key.
+
+4. **Form UX** (`src/templates/toys.ts` line 529): change the field label from "Allergen declaration (auto-generated, editable)" to "Allergen declaration (optional override)" and add a helper/placeholder explaining that leaving it empty produces a localized declaration automatically. Add an i18n key for the new label/help and translate to all 24 EU languages.
+
+5. **Tests:** update `src/data/toyFragrances.test.ts` and `src/templates/toys.test.ts` to reflect the removed/empty function and new label. Add a test in `src/components/toys` (or extend existing) asserting the Italian public view renders the localized "No allergenic fragrances…" / "The following allergenic fragrances…" strings when `allergen_declaration_text` is empty or contains a legacy English value.
 
 ## Out of scope
-- `generateAllergenDeclaration()` in `src/data/toyFragrances.ts` stays as-is (still used by the form helper to populate the textarea the user can edit). The public/preview view no longer trusts it as authoritative.
-- Sample seed description "A soft plush bear demonstration passport…" is user-editable free text, not a UI string.
-- Form audit (FR + DE) — already done last turn.
 
-## Verify
-1. Reload `/passport/<id>/edit`, set preview language to Italian → confirm allergen sentence reads *"Nessuna fragranza allergenica soggetta a obblighi di etichettatura è dichiarata presente in concentrazione pari o superiore a 10 mg/kg."* (or equivalent existing IT translation of `noFragrancesDeclared`).
-2. Spot-check 2 other locales (DE, FR) in preview.
-3. Run `bunx vitest run src/i18n/locales/templateKeys.test.ts src/components/toys` to confirm no regression.
+- Field-level translation UI is unchanged; users can still add per-language overrides via `*_translations` maps.
+- No DB migration: legacy English values remain but are ignored at render time.
+
+## Files touched
+
+- `src/data/toyFragrances.ts`
+- `src/components/CategoryQuestions.tsx`
+- `src/components/toys/ToyPublicPassport.tsx`
+- `src/templates/toys.ts`
+- `src/data/toyFragrances.test.ts`, `src/templates/toys.test.ts`
+- `src/i18n/locales/*.json` (24 files) — new label/help key
