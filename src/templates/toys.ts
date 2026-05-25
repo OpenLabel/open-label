@@ -526,7 +526,8 @@ export class ToysTemplate extends BaseTemplate {
         }),
         f({
           id: 'allergen_declaration_text',
-          label: 'Allergen declaration (auto-generated, editable)',
+          label: 'Allergen declaration (optional override)',
+          help: 'Leave empty to display the standard localized declaration automatically. Fill only to provide a custom wording; use the translation editor for per-language versions.',
           type: 'textarea',
           translatable: true,
           showWhen: { field: 'has_allergenic_fragrances', equals: 'yes' },
