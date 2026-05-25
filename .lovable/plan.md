@@ -1,39 +1,32 @@
 ## Goal
 
-Run a real end-to-end test of the Toy AI Autofill using the uploaded PDF (which is a printout of the demo toy DPP), then measure coverage and recommend improvements.
+Run the Wine AI Autofill against the uploaded PDF (a printout of the demo Chateau Example 2022 DPP) and report coverage + improvement recommendations — same methodology as the toy test.
 
-## How I will run the test
+## How I will run it
 
-1. Copy `user-uploads://Open_Label_.eu_-_Free_Digital_Product_Passports.pdf` to `/tmp/sample-toy-dpp.pdf` so the browser can upload it.
-2. Open the dashboard, click **Create New → Toys**, open the AI autofill dialog, and upload the PDF (the file input already accepts `image/*,.pdf`).
-3. Wait for the `toy-label-ocr` edge function to return, then dump the form state to compare against the ground-truth content of the PDF.
+1. Copy the PDF to `/tmp/sample-wine-dpp.pdf`.
+2. Call `google/gemini-2.5-pro` via the Lovable AI Gateway with the **exact same prompt and `extract_wine_label_data` tool schema** the `wine-label-ocr` edge function uses (browser file upload isn't supported by the automation harness, so a direct gateway call is the cleanest way to reproduce the autofill output).
+3. Pretty-print the returned JSON and diff against the PDF's ground truth.
 
-## What I will measure
+## Ground truth in the PDF (19 expected fields)
 
-The PDF contains ~30 explicit fields the autofill should be able to recover. I will score:
+- product_name "Chateau Example 2022", product_type "wine"
+- vintage 2022, volume 750 ml
+- grape_variety "Merlot, Cabernet Sauvignon"
+- alcohol_percent 13.5
+- country France, region Bordeaux, denomination "Bordeaux AOC"
+- sugar_classification Dry
+- energy_kj 322, energy_kcal 77, carbohydrates 0.3, sugar 0.3 (fat/sat/protein/salt: "negligible")
+- detected_ingredients: grapes, sulfites, tartaric_acid
+- packaging_components: bottle GL 70 / colorless glass / glass collection, cork CORK / natural cork / general waste
+- producer_name "Domaine Example" (only on page 2 in the Legal Information block)
 
-- **Hit rate** — fields correctly extracted / fields visibly present in the PDF
-- **Wrong values** — fields filled with incorrect content (safety risk)
-- **Missed obvious fields** — anything explicitly printed but left blank
-- **Format issues** — enum mismatches, address splitting (street/city/postal/country), barcode → GTIN backfill, etc.
+## What I will report
 
-Ground-truth fields in the PDF (33 fields total):
-- Identity: brand, model, SKU, toy_category (plush), age_group (3+), GTIN, description, instructions/warnings, product image
-- Manufacturer: legal name, street, city, postal, country, email, website, VAT operator ID
-- Compliance: ce_marked, EU DoC available + reference, safety_assessment, technical_documentation, legislation (TSR + GPSR), 3× EN-71 standards, customs code (CN 95)
-- Safety reporting: channels (email + website), safety email, safety website
-- Allergenic fragrances: none declared (should set `has_allergenic_fragrances=no`)
+- Hit / miss / wrong table
+- Coverage %
+- Concrete improvement recommendations (e.g. prompt hints for the "Dry/Sec" sugar classification, handling of "negligible" → 0 for fat/sat/protein/salt, multi-page PDF reading for producer_name on page 2, ingredient ID matching for tartaric acid E334)
 
-## Deliverables
+## Out of scope this turn
 
-A written analysis containing:
-- Per-field hit / miss / wrong table
-- Coverage percentage
-- Concrete, prioritised list of improvements (prompt tweaks, schema additions, post-processing, PDF-specific handling, missing fields like `eu_doc_available` / `eu_doc_reference` / `safety_assessment_completed` / `technical_documentation_available` / `safety_channels` if I find gaps)
-
-No production data is modified — the test creates an unsaved draft passport.
-
-## Out of scope
-
-- Actually shipping improvements (only diagnosis + recommendations this turn)
-- Wine autofill
+- Shipping any fix — diagnosis only. I'll offer to implement the recommended changes after you read the report.
