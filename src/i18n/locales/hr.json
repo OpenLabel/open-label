@@ -625,7 +625,10 @@
       "backupCopyReference": "Referenca sigurnosne kopije",
       "dppVersion": "Verzija DPP-a",
       "lastUpdated": "Posljednje ažuriranje",
-      "status": "Stanje"
+      "status": "Stanje",
+      "euDoc": "EU izjava o sukladnosti",
+      "safetyAssessment": "Procjena sigurnosti",
+      "technicalDocumentation": "Tehnička dokumentacija"
     },
     "values": {
       "ceMarked": "Označeno oznakom CE",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Preslikano na infrastrukturu Open-Label.eu",
       "numberPrefix": "Broj: {{value}}",
       "certificatePrefix": "Potvrda: {{value}}",
-      "issuedSuffix": " (izdano {{date}})"
+      "issuedSuffix": " (izdano {{date}})",
+      "other": "Ostalo",
+      "reference": "Referenca",
+      "certificateDownload": "Preuzmite potvrdu o sukladnosti",
+      "ceDeclarationStatement": "Proizvođač izjavljuje da je ova igračka u skladu s primjenjivim sigurnosnim zahtjevima EU-a i da nosi ili će nositi oznaku CE, ako je to potrebno, prije stavljanja na tržište EU-a.",
+      "yesNoUnknown": {
+        "yes": "Da",
+        "no": "Ne",
+        "unknown": "Nepoznato"
+      }
     },
     "table": {
       "substance": "Tvar",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Prijavite nesiguran proizvod"
     },
     "poweredBy": "Omogućuje"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "PDV broj",
+        "NATIONAL": "Nacionalni registracijski broj tvrtke",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP identifikator gospodarskog subjekta",
+        "other": "Ostalo"
+      },
+      "toyCategory": {
+        "baby": "Igračka za bebe",
+        "plush": "Plišana igračka",
+        "doll": "Lutka",
+        "action_figure": "Akcijska figurica",
+        "construction": "Konstrukcijska igračka / kocke",
+        "puzzle": "Slagalica",
+        "board_game": "Društvena igra",
+        "arts_crafts": "Igračka za umjetnost i obrt",
+        "slime": "Sluz / kit / masa za modeliranje",
+        "chemical_set": "Kemijski set za igru",
+        "cosmetic": "Kozmetička igračka / šminka za igru",
+        "olfactory": "Mirisna društvena igra",
+        "gustative": "Okusna igra",
+        "outdoor": "Igračka za van",
+        "activity": "Aktivna igračka",
+        "ride_on": "Igračka za jahanje",
+        "wheeled": "Romobil / koturaljke / igračka na kotačima",
+        "aquatic": "Igračka za vodu",
+        "electronic": "Elektronička igračka",
+        "radio": "Igračka povezana radijskom vezom",
+        "internet": "Igračka povezana s internetom",
+        "ai": "Igračka s omogućenom umjetnom inteligencijom",
+        "battery": "Igračka s baterijom",
+        "magnets": "Igračka s magnetima",
+        "drone": "Dron igračka",
+        "toy_in_food": "Igračka u hrani",
+        "other": "Ostalo"
+      },
+      "ageGroup": {
+        "14": "14 godina",
+        "0_6m": "0–6 mjeseci",
+        "6_12m": "6–12 mjeseci",
+        "12_18m": "12–18 mjeseci",
+        "18_36m": "18–36 mjeseci",
+        "3plus": "3+ godina",
+        "4plus": "4+ godina",
+        "5plus": "5+ godina",
+        "6plus": "6+ godina",
+        "7plus": "7+ godina",
+        "8plus": "8+ godina",
+        "10plus": "10+ godina",
+        "12plus": "12+ godina",
+        "other": "Ostalo"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "Serijalizirani GTIN",
+        "SKU": "SKU",
+        "MODEL": "Broj modela",
+        "ISO_15459": "Identifikator kompatibilan s ISO/IEC 15459",
+        "other": "Ostalo"
+      },
+      "cnChapter": {
+        "32": "32 — Boje, pigmenti, tinte, bojila",
+        "33": "33 — Eterična ulja, parfemi, kozmetika",
+        "34": "34 — Sapuni, voskovi, paste za modeliranje",
+        "39": "39 — Plastika i proizvodi od plastike",
+        "40": "40 — Guma i proizvodi od gume",
+        "42": "42 — Kožni proizvodi",
+        "44": "44 — Drvo i proizvodi od drva",
+        "48": "48 — Papir i karton",
+        "49": "49 — Tiskane knjige, slike, kartice",
+        "61": "61 — Pletena odjeća / tekstilni dodaci",
+        "62": "62 — Nepletena odjeća / tekstilni dodaci",
+        "63": "63 — Ostali gotovi tekstilni proizvodi",
+        "69": "69 — Keramički proizvodi",
+        "70": "70 — Staklo i stakleni proizvodi",
+        "73": "73 — Proizvodi od željeza ili čelika",
+        "76": "76 — Proizvodi od aluminija",
+        "85": "85 — Električni strojevi i oprema",
+        "87": "87 — Vozila i dijelovi",
+        "90": "90 — Optički, mjerni, kontrolni instrumenti",
+        "95": "95 — Igračke, igre i sportski rekviziti",
+        "other": "Ostalo"
+      },
+      "legislation": {
+        "TSR": "Uredba (EU) 2025/2509 — Uredba o sigurnosti igračaka",
+        "GPSR": "Uredba (EU) 2023/988 — Uredba o općoj sigurnosti proizvoda",
+        "MSR": "Uredba (EU) 2019/1020 — Nadzor tržišta",
+        "AI_ACT": "Uredba (EU) 2024/1689 — Akt o umjetnoj inteligenciji",
+        "CRA": "Uredba (EU) 2024/2847 — Akt o kibersigurnosti",
+        "RED": "Direktiva 2014/53/EU — Direktiva o radijskoj opremi",
+        "LVD": "Direktiva 2014/35/EU — Direktiva o niskonaponskoj opremi",
+        "EMC": "Direktiva 2014/30/EU — Direktiva o elektromagnetskoj kompatibilnosti",
+        "RoHS": "Direktiva 2011/65/EU — RoHS",
+        "BATTERIES": "Uredba (EU) 2023/1542 — Uredba o baterijama",
+        "DRONES": "Delegirana uredba (EU) 2019/945 — UAS / dronovi",
+        "COSMETICS": "Uredba (EZ) br. 1223/2009 — Kozmetički proizvodi",
+        "REACH": "Uredba (EZ) br. 1907/2006 — REACH",
+        "CLP": "Uredba (EZ) br. 1272/2008 — CLP",
+        "other": "Ostalo"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Mehanička i fizikalna svojstva",
+        "EN71_2": "EN 71-2 — Zapaljivost",
+        "EN71_3": "EN 71-3 — Otpuštanje određenih elemenata",
+        "EN71_4": "EN 71-4 — Eksperimentalni setovi za kemiju",
+        "EN71_5": "EN 71-5 — Kemijske igračke osim eksperimentalnih setova",
+        "EN71_7": "EN 71-7 — Boje za slikanje prstima",
+        "EN71_8": "EN 71-8 — Aktivne igračke za kućnu uporabu",
+        "EN71_12": "EN 71-12 — N-nitrozamini i N-nitrozirajuće tvari",
+        "EN71_13": "EN 71-13 — Mirisne društvene igre, kozmetički setovi i okusne igre",
+        "EN71_14": "EN 71-14 — Trampolini za kućnu uporabu",
+        "EN_IEC_62115": "EN IEC 62115 — Električne igračke",
+        "other": "Druga usklađena norma",
+        "common_spec": "Zajednička specifikacija umjesto usklađene norme"
+      },
+      "safetyChannel": {
+        "phone": "Telefon",
+        "email": "E-pošta",
+        "website": "Namjenska web stranica",
+        "form": "Kontakt obrazac"
+      },
+      "euOperatorRole": {
+        "importer": "Uvoznik",
+        "auth_rep": "Ovlašteni zastupnik",
+        "fulfilment": "Pružatelj usluga distribucije",
+        "distributor": "Distributer koji djeluje kao odgovorni gospodarski subjekt",
+        "other": "Druga odgovorna osoba sa sjedištem u EU (Uredba 2019/1020, čl. 4.)"
+      },
+      "yesNo": {
+        "yes": "Da",
+        "no": "Ne"
+      },
+      "yesNoUnknown": {
+        "yes": "Da",
+        "no": "Ne",
+        "unknown": "Nepoznato"
+      }
+    }
   }
 }

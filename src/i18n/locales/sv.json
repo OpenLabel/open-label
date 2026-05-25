@@ -625,7 +625,10 @@
       "backupCopyReference": "Referens för säkerhetskopia",
       "dppVersion": "DPP-version",
       "lastUpdated": "Senast uppdaterad",
-      "status": "Status"
+      "status": "Status",
+      "euDoc": "EU-försäkran om överensstämmelse",
+      "safetyAssessment": "Säkerhetsbedömning",
+      "technicalDocumentation": "Teknisk dokumentation"
     },
     "values": {
       "ceMarked": "CE-märkt",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Speglad på Open-Label.eu-infrastruktur",
       "numberPrefix": "Nummer {{value}}",
       "certificatePrefix": "Certifikat: {{value}}",
-      "issuedSuffix": " (utfärdat {{date}})"
+      "issuedSuffix": " (utfärdat {{date}})",
+      "other": "Annat",
+      "reference": "Referens",
+      "certificateDownload": "Ladda ner försäkran om överensstämmelse",
+      "ceDeclarationStatement": "Tillverkaren försäkrar att denna leksak uppfyller gällande EU-säkerhetskrav och bär eller kommer att bära CE-märkningen där så krävs innan den släpps ut på EU-marknaden.",
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Okänd"
+      }
     },
     "table": {
       "substance": "Ämne",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Rapportera en osäker produkt"
     },
     "poweredBy": "Drivs av"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "Momsregistreringsnummer",
+        "NATIONAL": "Nationellt organisationsnummer",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP-operatörsidentifierare",
+        "other": "Annat"
+      },
+      "toyCategory": {
+        "baby": "Babyleksak",
+        "plush": "Mjukdjur",
+        "doll": "Docka",
+        "action_figure": "Actionfigur",
+        "construction": "Byggleksak / klossar",
+        "puzzle": "Pussel",
+        "board_game": "Brädspel",
+        "arts_crafts": "Pysselleksak",
+        "slime": "Slime / lera / modellmassa",
+        "chemical_set": "Kemisk leksakssats",
+        "cosmetic": "Kosmetisk leksak / leksakssmink",
+        "olfactory": "Luktbrädspel",
+        "gustative": "Smakspel",
+        "outdoor": "Utomhusleksak",
+        "activity": "Aktivitetsleksak",
+        "ride_on": "Åkleksak",
+        "wheeled": "Sparkcykel / skate / hjulleksak",
+        "aquatic": "Vattenleksak",
+        "electronic": "Elektronisk leksak",
+        "radio": "Radiouppkopplad leksak",
+        "internet": "Internetuppkopplad leksak",
+        "ai": "AI-aktiverad leksak",
+        "battery": "Leksak med batteri",
+        "magnets": "Leksak med magneter",
+        "drone": "Leksaksdrönare",
+        "toy_in_food": "Leksak i livsmedel",
+        "other": "Annat"
+      },
+      "ageGroup": {
+        "14": "14 år",
+        "0_6m": "0–6 månader",
+        "6_12m": "6–12 månader",
+        "12_18m": "12–18 månader",
+        "18_36m": "18–36 månader",
+        "3plus": "3+ år",
+        "4plus": "4+ år",
+        "5plus": "5+ år",
+        "6plus": "6+ år",
+        "7plus": "7+ år",
+        "8plus": "8+ år",
+        "10plus": "10+ år",
+        "12plus": "12+ år",
+        "other": "Annat"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "Serialiserad GTIN",
+        "SKU": "SKU",
+        "MODEL": "Modellnummer",
+        "ISO_15459": "ISO/IEC 15459-kompatibel identifierare",
+        "other": "Annat"
+      },
+      "cnChapter": {
+        "32": "32 — Färger, pigment, bläck, färgämnen",
+        "33": "33 — Eteriska oljor, parfymer, kosmetika",
+        "34": "34 — Tvålar, vaxer, modelleringspastor",
+        "39": "39 — Plast och plastartiklar",
+        "40": "40 — Gummi och gummiartiklar",
+        "42": "42 — Läderartiklar",
+        "44": "44 — Trä och träartiklar",
+        "48": "48 — Papper och papp",
+        "49": "49 — Tryckta böcker, bilder, kort",
+        "61": "61 — Stickade kläder / textiltillbehör",
+        "62": "62 — Icke-stickade kläder / textiltillbehör",
+        "63": "63 — Andra konfektionerade textilartiklar",
+        "69": "69 — Keramiska produkter",
+        "70": "70 — Glas och glasvaror",
+        "73": "73 — Artiklar av järn eller stål",
+        "76": "76 — Aluminiumartiklar",
+        "85": "85 — Elektriska maskiner och utrustning",
+        "87": "87 — Fordon och delar",
+        "90": "90 — Optiska instrument, mätinstrument, kontrollinstrument",
+        "95": "95 — Leksaker, spel och sportartiklar",
+        "other": "Annat"
+      },
+      "legislation": {
+        "TSR": "Förordning (EU) 2025/2509 — Leksakssäkerhetsförordningen",
+        "GPSR": "Förordning (EU) 2023/988 — Allmänna produktsäkerhetsförordningen",
+        "MSR": "Förordning (EU) 2019/1020 — Marknadskontroll",
+        "AI_ACT": "Förordning (EU) 2024/1689 — AI-akten",
+        "CRA": "Förordning (EU) 2024/2847 — Cybersäkerhetsakten",
+        "RED": "Direktiv 2014/53/EU — Radioutrustningsdirektivet",
+        "LVD": "Direktiv 2014/35/EU — Lågspänningsdirektivet",
+        "EMC": "Direktiv 2014/30/EU — EMC-direktivet",
+        "RoHS": "Direktiv 2011/65/EU — RoHS",
+        "BATTERIES": "Förordning (EU) 2023/1542 — Batteriförordningen",
+        "DRONES": "Delegerad förordning (EU) 2019/945 — UAS / drönare",
+        "COSMETICS": "Förordning (EG) nr 1223/2009 — Kosmetiska produkter",
+        "REACH": "Förordning (EG) nr 1907/2006 — REACH",
+        "CLP": "Förordning (EG) nr 1272/2008 — CLP",
+        "other": "Annan"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Mekaniska och fysikaliska egenskaper",
+        "EN71_2": "EN 71-2 — Brännbarhet",
+        "EN71_3": "EN 71-3 — Migration av vissa grundämnen",
+        "EN71_4": "EN 71-4 — Experimentlådor för kemi",
+        "EN71_5": "EN 71-5 — Kemiska leksaker (ej experimentlådor)",
+        "EN71_7": "EN 71-7 — Fingerfärger",
+        "EN71_8": "EN 71-8 — Aktivitetsleksaker för hemmabruk",
+        "EN71_12": "EN 71-12 — N-nitrosaminer och N-nitroserbara ämnen",
+        "EN71_13": "EN 71-13 — Luktbrädspel, kosmetiska set och smakspel",
+        "EN71_14": "EN 71-14 — Studsmattor för hemmabruk",
+        "EN_IEC_62115": "EN IEC 62115 — Elektriska leksaker",
+        "other": "Annan harmoniserad standard",
+        "common_spec": "Gemensam specifikation istället för harmoniserad standard"
+      },
+      "safetyChannel": {
+        "phone": "Telefon",
+        "email": "E-post",
+        "website": "Dedikerad webbplats",
+        "form": "Kontaktformulär"
+      },
+      "euOperatorRole": {
+        "importer": "Importör",
+        "auth_rep": "Auktoriserad representant",
+        "fulfilment": "Logistiktjänstleverantör",
+        "distributor": "Distributör som agerar som ansvarig ekonomisk aktör",
+        "other": "Annan EU-baserad ansvarig person (förordning 2019/1020 art. 4)"
+      },
+      "yesNo": {
+        "yes": "Ja",
+        "no": "Nej"
+      },
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Okänd"
+      }
+    }
   }
 }

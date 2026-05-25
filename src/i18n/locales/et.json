@@ -625,7 +625,10 @@
       "backupCopyReference": "Varukoopia viide",
       "dppVersion": "DPP versioon",
       "lastUpdated": "Viimati uuendatud",
-      "status": "Olek"
+      "status": "Olek",
+      "euDoc": "ELi vastavusdeklaratsioon",
+      "safetyAssessment": "Ohutushinnang",
+      "technicalDocumentation": "Tehniline dokumentatsioon"
     },
     "values": {
       "ceMarked": "CE-märgisega",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Peegeldatud Open-Label.eu infrastruktuuris",
       "numberPrefix": "Nr {{value}}",
       "certificatePrefix": "Sertifikaat: {{value}}",
-      "issuedSuffix": " (välja antud {{date}})"
+      "issuedSuffix": " (välja antud {{date}})",
+      "other": "Muu",
+      "reference": "Viide",
+      "certificateDownload": "Laadi alla vastavussertifikaat",
+      "ceDeclarationStatement": "Tootja kinnitab, et see mänguasi vastab kohaldatavatele ELi ohutusnõuetele ning kannab või hakkab kandma CE-märgistust, kui see on enne ELi turule laskmist nõutav.",
+      "yesNoUnknown": {
+        "yes": "Jah",
+        "no": "Ei",
+        "unknown": "Teadmata"
+      }
     },
     "table": {
       "substance": "Aine",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Teata ohtlikust tootest"
     },
     "poweredBy": "Toetab"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "KMKR-number",
+        "NATIONAL": "Riiklik äriregistri kood",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP ettevõtja identifikaator",
+        "other": "Muu"
+      },
+      "toyCategory": {
+        "baby": "Beebimänguasi",
+        "plush": "Pehme mänguasi",
+        "doll": "Nukk",
+        "action_figure": "Märulikangelane",
+        "construction": "Ehitusmänguasi / klotsid",
+        "puzzle": "Pusle",
+        "board_game": "Lauamäng",
+        "arts_crafts": "Kunsti- ja käsitöömänguasi",
+        "slime": "Lima / plastiliin / voolimismass",
+        "chemical_set": "Keemiamänguasjade komplekt",
+        "cosmetic": "Kosmeetiline mänguasi / mängumeik",
+        "olfactory": "Lõhnamäng",
+        "gustative": "Maitsmismäng",
+        "outdoor": "Õuemänguasi",
+        "activity": "Tegelusmänguasi",
+        "ride_on": "Pealeistutav mänguasi",
+        "wheeled": "Tõukeratas / rula / ratastega mänguasi",
+        "aquatic": "Veemänguasi",
+        "electronic": "Elektrooniline mänguasi",
+        "radio": "Raadioühendusega mänguasi",
+        "internet": "Internetiühendusega mänguasi",
+        "ai": "Tehisintellektiga mänguasi",
+        "battery": "Patareiga mänguasi",
+        "magnets": "Magnetitega mänguasi",
+        "drone": "Mängudroon",
+        "toy_in_food": "Toidu sees olev mänguasi",
+        "other": "Muu"
+      },
+      "ageGroup": {
+        "14": "14 aastat",
+        "0_6m": "0–6 kuud",
+        "6_12m": "6–12 kuud",
+        "12_18m": "12–18 kuud",
+        "18_36m": "18–36 kuud",
+        "3plus": "3+ aastat",
+        "4plus": "4+ aastat",
+        "5plus": "5+ aastat",
+        "6plus": "6+ aastat",
+        "7plus": "7+ aastat",
+        "8plus": "8+ aastat",
+        "10plus": "10+ aastat",
+        "12plus": "12+ aastat",
+        "other": "Muu"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 digilink",
+        "EPC": "EPC",
+        "SGTIN": "Seeriastatud GTIN",
+        "SKU": "SKU",
+        "MODEL": "Mudeli number",
+        "ISO_15459": "ISO/IEC 15459-ga ühilduv identifikaator",
+        "other": "Muu"
+      },
+      "cnChapter": {
+        "32": "32 — Värvid, pigmendid, tindid, värvained",
+        "33": "33 — Eeterlikud õlid, parfüümid, kosmeetika",
+        "34": "34 — Seebid, vahad, voolimispastad",
+        "39": "39 — Plastid ja plasttooted",
+        "40": "40 — Kautšuk, kummi ja kummitooted",
+        "42": "42 — Nahktooted",
+        "44": "44 — Puit ja puittooted",
+        "48": "48 — Paber ja papp",
+        "49": "49 — Trükitud raamatud, pildid, kaardid",
+        "61": "61 — Silmkoerõivad / tekstiilist aksessuaarid",
+        "62": "62 — Trikotaažist mitteolevad rõivad / tekstiilist aksessuaarid",
+        "63": "63 — Muud tekstiilist valmistooted",
+        "69": "69 — Keraamikatooted",
+        "70": "70 — Klaas ja klaastooted",
+        "73": "73 — Rauast või terasest tooted",
+        "76": "76 — Alumiiniumtooted",
+        "85": "85 — Elektrimasinad ja -seadmed",
+        "87": "87 — Sõidukid ja nende osad",
+        "90": "90 — Optika-, mõõte- ja kontrollimisinstrumendid",
+        "95": "95 — Mänguasjad, mängud ja sporditarbed",
+        "other": "Muu"
+      },
+      "legislation": {
+        "TSR": "Määrus (EL) 2025/2509 — Mänguasjade ohutuse määrus",
+        "GPSR": "Määrus (EL) 2023/988 — Üldise tooteohutuse määrus",
+        "MSR": "Määrus (EL) 2019/1020 — Turujärelevalve",
+        "AI_ACT": "Määrus (EL) 2024/1689 — Tehisintellekti määrus",
+        "CRA": "Määrus (EL) 2024/2847 — Küberturvalisuse määrus",
+        "RED": "Direktiiv 2014/53/EL — Raadioseadmete direktiiv",
+        "LVD": "Direktiiv 2014/35/EL — Madalpingedirektiiv",
+        "EMC": "Direktiiv 2014/30/EL — Elektromagnetilise ühilduvuse direktiiv",
+        "RoHS": "Direktiiv 2011/65/EL — RoHS",
+        "BATTERIES": "Määrus (EL) 2023/1542 — Patareide määrus",
+        "DRONES": "Delegeeritud määrus (EL) 2019/945 — UAS / droonid",
+        "COSMETICS": "Määrus (EÜ) nr 1223/2009 — Kosmeetikatooted",
+        "REACH": "Määrus (EÜ) nr 1907/2006 — REACH",
+        "CLP": "Määrus (EÜ) nr 1272/2008 — CLP",
+        "other": "Muu"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Mehaanilised ja füüsikalised omadused",
+        "EN71_2": "EN 71-2 — Süttivus",
+        "EN71_3": "EN 71-3 — Teatavate elementide migratsioon",
+        "EN71_4": "EN 71-4 — Keemiakatsete komplektid",
+        "EN71_5": "EN 71-5 — Keemilised mänguasjad, v.a katsekomplektid",
+        "EN71_7": "EN 71-7 — Näpuvärvid",
+        "EN71_8": "EN 71-8 — Koduseks kasutamiseks mõeldud tegelusmänguasjad",
+        "EN71_12": "EN 71-12 — N-nitrosoamiinid ja N-nitroseeruvad ained",
+        "EN71_13": "EN 71-13 — Lõhnamängud, kosmeetikakomplektid ja maitsmismängud",
+        "EN71_14": "EN 71-14 — Koduseks kasutamiseks mõeldud batuudid",
+        "EN_IEC_62115": "EN IEC 62115 — Elektrilised mänguasjad",
+        "other": "Muu harmoneeritud standard",
+        "common_spec": "Ühine spetsifikatsioon harmoneeritud standardi asemel"
+      },
+      "safetyChannel": {
+        "phone": "Telefon",
+        "email": "E-post",
+        "website": "Spetsiaalne veebisait",
+        "form": "Kontaktivorm"
+      },
+      "euOperatorRole": {
+        "importer": "Importija",
+        "auth_rep": "Volitatud esindaja",
+        "fulfilment": "Tellimuste täitmise teenuse osutaja",
+        "distributor": "Levitaja, kes tegutseb vastutava ettevõtjana",
+        "other": "Muu ELis asuv vastutav isik (määrus 2019/1020 art 4)"
+      },
+      "yesNo": {
+        "yes": "Jah",
+        "no": "Ei"
+      },
+      "yesNoUnknown": {
+        "yes": "Jah",
+        "no": "Ei",
+        "unknown": "Teadmata"
+      }
+    }
   }
 }

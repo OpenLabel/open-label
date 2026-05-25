@@ -335,6 +335,14 @@ const TOYS: Record<string, any> = {
     nbNumber: 'Number {{n}}',
     nbCertificate: 'Certificate: {{ref}}',
     nbIssued: '(issued {{date}})',
+    instructionsTitle: 'Instructions and warnings',
+    ceDeclarationStatement:
+      'The manufacturer declares that this toy complies with the applicable EU safety requirements and bears or will bear the CE marking where required before being placed on the EU market.',
+    docLabel: 'EU Declaration of Conformity',
+    docReference: 'Reference',
+    safetyAssessmentLabel: 'Safety assessment',
+    technicalDocsLabel: 'Technical documentation',
+    yesNoUnknown: { yes: 'Yes', no: 'No', unknown: 'Unknown' },
     sections: {
       identity: 'Product identity',
       manufacturer: 'Manufacturer responsibility',

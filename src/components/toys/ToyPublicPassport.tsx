@@ -51,23 +51,32 @@ interface ToyPublicPassportProps {
   onPreviewLanguageChange?: (lang: string) => void;
 }
 
+type LocalizedOption = { value: string; label: string; labelKey?: string };
+// i18next's TFunction has many overloads; accept any callable that returns something stringifiable.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type TFn = (...args: any[]) => any;
+
 function labelFor(
-  options: { value: string; label: string }[],
+  options: LocalizedOption[],
   value: unknown,
+  t: TFn,
 ): string {
   if (typeof value !== 'string') return '';
-  return options.find((o) => o.value === value)?.label ?? value;
+  const opt = options.find((o) => o.value === value);
+  if (!opt) return value;
+  return opt.labelKey ? String(t(opt.labelKey, opt.label)) : opt.label;
 }
 
 function labelsFor(
-  options: { value: string; label: string }[],
+  options: LocalizedOption[],
   values: unknown,
+  t: TFn,
 ): string[] {
   if (!Array.isArray(values)) return [];
-  return (values as string[]).map(
-    (v) => options.find((o) => o.value === v)?.label ?? v,
-  );
+  return (values as string[]).map((v) => labelFor(options, v, t));
 }
+
+
 
 function Row({ label, value }: { label: string; value: React.ReactNode }) {
   if (value === null || value === undefined || value === '' ) return null;
@@ -111,18 +120,18 @@ export function ToyPublicPassport({
 
   const toyCategoryLabel =
     d.toy_category === 'other'
-      ? (d.toy_category_other as string) || 'Other'
-      : labelFor(TOY_CATEGORIES, d.toy_category);
+      ? (d.toy_category_other as string) || t('toyPublic.values.other', 'Other')
+      : labelFor(TOY_CATEGORIES, d.toy_category, t);
 
   const ageLabel =
     d.age_group === 'other'
-      ? (d.age_group_other as string) || 'Other'
-      : labelFor(TOY_AGE_GROUPS, d.age_group);
+      ? (d.age_group_other as string) || t('toyPublic.values.other', 'Other')
+      : labelFor(TOY_AGE_GROUPS, d.age_group, t);
 
   const identifierTypeLabel =
     d.identifier_type === 'other'
-      ? (d.identifier_type_other as string) || 'Other'
-      : labelFor(TOY_IDENTIFIER_TYPES, d.identifier_type);
+      ? (d.identifier_type_other as string) || t('toyPublic.values.other', 'Other')
+      : labelFor(TOY_IDENTIFIER_TYPES, d.identifier_type, t);
 
   const fragrances = (d.allergenic_fragrances as SelectedFragrance[]) || [];
 
@@ -214,7 +223,7 @@ export function ToyPublicPassport({
           Boolean(d.public_instructions_warnings) && (
             <>
               <SectionTitle>
-                {t('toys.public.instructionsTitle', 'Instructions and warnings')}
+                {t('toyPublic.sections.instructionsAndWarnings')}
               </SectionTitle>
               <p className="text-sm whitespace-pre-wrap">
                 {tr('public_instructions_warnings')}
@@ -263,10 +272,7 @@ export function ToyPublicPassport({
             label={t('toyPublic.rows.operatorIdentifier')}
             value={
               d.manufacturer_operator_id && d.manufacturer_operator_id_type
-                ? `${d.manufacturer_operator_id as string} (${labelFor(
-                    TOY_OPERATOR_ID_TYPES,
-                    d.manufacturer_operator_id_type,
-                  )})`
+                ? `${d.manufacturer_operator_id as string} (${labelFor(TOY_OPERATOR_ID_TYPES, d.manufacturer_operator_id_type, t)})`
                 : (d.manufacturer_operator_id as string)
             }
           />
@@ -303,10 +309,7 @@ export function ToyPublicPassport({
                     value={
                       d.auth_rep_operator_id &&
                       d.auth_rep_operator_id_type
-                        ? `${d.auth_rep_operator_id as string} (${labelFor(
-                            TOY_OPERATOR_ID_TYPES,
-                            d.auth_rep_operator_id_type,
-                          )})`
+                        ? `${d.auth_rep_operator_id as string} (${labelFor(TOY_OPERATOR_ID_TYPES, d.auth_rep_operator_id_type, t)})`
                         : (d.auth_rep_operator_id as string)
                     }
                   />
@@ -325,7 +328,7 @@ export function ToyPublicPassport({
                   />
                   <Row
                     label={t('toyPublic.rows.role')}
-                    value={labelFor(TOY_EU_OPERATOR_ROLES, d.eu_op_role)}
+                    value={labelFor(TOY_EU_OPERATOR_ROLES, d.eu_op_role, t)}
                   />
                   <Row
                     label={t('toyPublic.rows.address')}
@@ -343,10 +346,7 @@ export function ToyPublicPassport({
                     label={t('toyPublic.rows.operatorIdentifier')}
                     value={
                       d.eu_op_operator_id && d.eu_op_operator_id_type
-                        ? `${d.eu_op_operator_id as string} (${labelFor(
-                            TOY_OPERATOR_ID_TYPES,
-                            d.eu_op_operator_id_type,
-                          )})`
+                        ? `${d.eu_op_operator_id as string} (${labelFor(TOY_OPERATOR_ID_TYPES, d.eu_op_operator_id_type, t)})`
                         : (d.eu_op_operator_id as string)
                     }
                   />
@@ -360,10 +360,7 @@ export function ToyPublicPassport({
         <SectionTitle>{t('toyPublic.sections.compliance')}</SectionTitle>
         {(d.ce_declaration_ack || d.ce_marked) && (
           <p className="text-sm italic text-muted-foreground mb-3">
-            {t(
-              'toys.public.ceDeclarationStatement',
-              'The manufacturer declares that this toy complies with the applicable EU safety requirements and bears or will bear the CE marking where required before being placed on the EU market.',
-            )}
+            {t('toyPublic.values.ceDeclarationStatement')}
           </p>
         )}
         <dl>
@@ -379,21 +376,15 @@ export function ToyPublicPassport({
           />
           {d.eu_doc_available && (
             <Row
-              label={t(
-                'toys.public.docLabel',
-                'EU Declaration of Conformity',
-              )}
+              label={t('toyPublic.rows.euDoc')}
               value={
                 <div className="space-y-0.5">
                   <div>
-                    {t(
-                      `toys.public.yesNoUnknown.${d.eu_doc_available as string}`,
-                      String(d.eu_doc_available),
-                    )}
+                    {t(`toyPublic.values.yesNoUnknown.${d.eu_doc_available as string}`, String(d.eu_doc_available))}
                   </div>
                   {Boolean(d.eu_doc_reference) && (
                     <div className="text-xs text-muted-foreground">
-                      {t('toys.public.docReference', 'Reference')}:{' '}
+                      {t('toyPublic.values.reference')}:{' '}
                       {d.eu_doc_reference as string}
                     </div>
                   )}
@@ -403,33 +394,21 @@ export function ToyPublicPassport({
           )}
           {d.safety_assessment_completed && (
             <Row
-              label={t(
-                'toys.public.safetyAssessmentLabel',
-                'Safety assessment',
-              )}
-              value={t(
-                `toys.public.yesNoUnknown.${d.safety_assessment_completed as string}`,
-                String(d.safety_assessment_completed),
-              )}
+              label={t('toyPublic.rows.safetyAssessment')}
+              value={t(`toyPublic.values.yesNoUnknown.${d.safety_assessment_completed as string}`, String(d.safety_assessment_completed))}
             />
           )}
           {d.technical_documentation_available && (
             <Row
-              label={t(
-                'toys.public.technicalDocsLabel',
-                'Technical documentation',
-              )}
-              value={t(
-                `toys.public.yesNoUnknown.${d.technical_documentation_available as string}`,
-                String(d.technical_documentation_available),
-              )}
+              label={t('toyPublic.rows.technicalDocumentation')}
+              value={t(`toyPublic.values.yesNoUnknown.${d.technical_documentation_available as string}`, String(d.technical_documentation_available))}
             />
           )}
           <Row
             label={t('toyPublic.rows.applicableLegislation')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
-                {labelsFor(TOY_LEGISLATION, d.applicable_legislation).map(
+                {labelsFor(TOY_LEGISLATION, d.applicable_legislation, t).map(
                   (l) => (
                     <li key={l}>{l}</li>
                   ),
@@ -441,7 +420,7 @@ export function ToyPublicPassport({
             label={t('toyPublic.rows.harmonisedStandards')}
             value={
               <ul className="list-disc ml-5 space-y-0.5">
-                {labelsFor(TOY_STANDARDS, d.harmonised_standards).map((l) => (
+                {labelsFor(TOY_STANDARDS, d.harmonised_standards, t).map((l) => (
                   <li key={l}>{l}</li>
                 ))}
               </ul>
@@ -496,7 +475,7 @@ export function ToyPublicPassport({
                         rel="noopener noreferrer"
                         className="text-primary underline inline-flex items-center gap-1"
                       >
-                        {t('toys.public.certificateDownload', 'Download conformity certificate')}
+                        {t('toyPublic.values.certificateDownload')}
                         <ExternalLink className="h-3 w-3" />
                       </a>
                     </div>
@@ -511,7 +490,7 @@ export function ToyPublicPassport({
               d.customs_code
                 ? `${d.customs_code as string}${
                     d.cn_chapter
-                      ? ` · ${labelFor(TOY_CN_CHAPTERS, d.cn_chapter)}`
+                      ? ` · ${labelFor(TOY_CN_CHAPTERS, d.cn_chapter, t)}`
                       : ''
                   }`
                 : ''
@@ -561,7 +540,7 @@ export function ToyPublicPassport({
               {t('toyPublic.subsections.safetyIncidentReporting')}
             </h3>
             <ul className="space-y-1 text-sm">
-              {labelsFor(TOY_SAFETY_CHANNELS, d.safety_channels).map((c) => (
+              {labelsFor(TOY_SAFETY_CHANNELS, d.safety_channels, t).map((c) => (
                 <li key={c}>· {c}</li>
               ))}
               {Boolean(d.safety_phone) && (

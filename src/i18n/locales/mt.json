@@ -625,7 +625,10 @@
       "backupCopyReference": "Referenza tal-kopja ta' riżerva",
       "dppVersion": "Verżjoni tad-DPP",
       "lastUpdated": "L-aħħar aġġornament",
-      "status": "Stat"
+      "status": "Stat",
+      "euDoc": "Dikjarazzjoni ta' Konformità tal-UE",
+      "safetyAssessment": "Valutazzjoni tas-sikurezza",
+      "technicalDocumentation": "Dokumentazzjoni teknika"
     },
     "values": {
       "ceMarked": "B'marka CE",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Rifless fuq l-infrastruttura ta' Open-Label.eu",
       "numberPrefix": "Numru {{value}}",
       "certificatePrefix": "Ċertifikat: {{value}}",
-      "issuedSuffix": " (maħruġ fil-{{date}})"
+      "issuedSuffix": " (maħruġ fil-{{date}})",
+      "other": "Oħrajn",
+      "reference": "Referenza",
+      "certificateDownload": "Niżżel iċ-ċertifikat ta' konformità",
+      "ceDeclarationStatement": "Il-manifattur jiddikjara li dan il-ġugarell jikkonforma mar-rekwiżiti applikabbli tas-sikurezza tal-UE u għandu jew se jkollu l-marka CE fejn meħtieġ qabel ma jitqiegħed fis-suq tal-UE.",
+      "yesNoUnknown": {
+        "yes": "Iva",
+        "no": "Le",
+        "unknown": "Mhux magħruf"
+      }
     },
     "table": {
       "substance": "Sustanzi",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Irrapporta prodott mhux sikur"
     },
     "poweredBy": "Mħaddem minn"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "Numru tal-VAT",
+        "NATIONAL": "Numru ta' reġistrazzjoni nazzjonali tal-kumpanija",
+        "DUNS": "DUNS",
+        "ESPR": "Identifikatur tal-operatur ESPR / DPP",
+        "other": "Oħrajn"
+      },
+      "toyCategory": {
+        "baby": "Ġugarell tat-trabi",
+        "plush": "Ġugarell tal-filpa",
+        "doll": "Pupa",
+        "action_figure": "Pupazz tal-azzjoni",
+        "construction": "Ġugarell tal-kostruzzjoni / blokki",
+        "puzzle": "Puzzle",
+        "board_game": "Logħba tal-bord",
+        "arts_crafts": "Ġugarell tal-arti u s-snajja'",
+        "slime": "Slime / stokk / kompost tal-immudellar",
+        "chemical_set": "Sett ta' ġugarell kimiku",
+        "cosmetic": "Ġugarell kosmetiku / make-up tal-logħob",
+        "olfactory": "Logħba tal-bord olfattiva",
+        "gustative": "Logħba gustattiva",
+        "outdoor": "Ġugarell ta' barra",
+        "activity": "Ġugarell tal-attività",
+        "ride_on": "Ġugarell li tirkeb fuqu",
+        "wheeled": "Scooter / skate / ġugarell bir-roti",
+        "aquatic": "Ġugarell akkwatiku",
+        "electronic": "Ġugarell elettroniku",
+        "radio": "Ġugarell imqabbad bir-radju",
+        "internet": "Ġugarell imqabbad mal-internet",
+        "ai": "Ġugarell bl-IA",
+        "battery": "Ġugarell bil-batterija",
+        "magnets": "Ġugarell bil-kalamiti",
+        "drone": "Drone tal-logħob",
+        "toy_in_food": "Ġugarell fl-ikel",
+        "other": "Oħrajn"
+      },
+      "ageGroup": {
+        "14": "14-il sena",
+        "0_6m": "0–6 xhur",
+        "6_12m": "6–12-il xahar",
+        "12_18m": "12–18-il xahar",
+        "18_36m": "18–36 xahar",
+        "3plus": "3+ snin",
+        "4plus": "4+ snin",
+        "5plus": "5+ snin",
+        "6plus": "6+ snin",
+        "7plus": "7+ snin",
+        "8plus": "8+ snin",
+        "10plus": "10+ snin",
+        "12plus": "12+ snin",
+        "other": "Oħrajn"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "GTIN Serializzat",
+        "SKU": "SKU",
+        "MODEL": "Numru tal-mudell",
+        "ISO_15459": "Identifikatur kompatibbli mal-ISO/IEC 15459",
+        "other": "Oħrajn"
+      },
+      "cnChapter": {
+        "32": "32 — Żebgħa, pigmenti, linka, żebgħat",
+        "33": "33 — Żjut essenzjali, fwejjaħ, kożmetiċi",
+        "34": "34 — Sapun, xemgħat, pasti tal-immudellar",
+        "39": "39 — Plastik u oġġetti magħmula minnu",
+        "40": "40 — Lastiku u oġġetti magħmula minnu",
+        "42": "42 — Oġġetti tal-ġilda",
+        "44": "44 — Injam u oġġetti tal-injam",
+        "48": "48 — Karta u kartunċin",
+        "49": "49 — Kotba stampati, stampi, kartolini",
+        "61": "61 — Ħwejjeġ maħdumin bil-labar / aċċessorji tat-tessuti",
+        "62": "62 — Ħwejjeġ mhux maħdumin bil-labar / aċċessorji tat-tessuti",
+        "63": "63 — Oġġetti oħra tat-tessuti magħmula lesti",
+        "69": "69 — Prodotti taċ-ċeramika",
+        "70": "70 — Ħġieġ u oġġetti tal-ħġieġ",
+        "73": "73 — Oġġetti tal-ħadid jew tal-azzar",
+        "76": "76 — Oġġetti tal-aluminju",
+        "85": "85 — Makkinarju u tagħmir elettriku",
+        "87": "87 — Vetturi u partijiet",
+        "90": "90 — Strumenti ottiċi, tal-kejl, tal-kontroll",
+        "95": "95 — Ġugarelli, logħob u oġġetti sportivi",
+        "other": "Oħrajn"
+      },
+      "legislation": {
+        "TSR": "Regolament (UE) 2025/2509 — Regolament dwar is-Sikurezza tal-Ġugarelli",
+        "GPSR": "Regolament (UE) 2023/988 — Regolament dwar is-Sikurezza Ġenerali tal-Prodotti",
+        "MSR": "Regolament (UE) 2019/1020 — Sorveljanza tas-suq",
+        "AI_ACT": "Regolament (UE) 2024/1689 — Att dwar l-Intelliġenza Artifiċjali",
+        "CRA": "Regolament (UE) 2024/2847 — Att dwar iċ-Ċiberreżiljenza",
+        "RED": "Direttiva 2014/53/UE — Direttiva dwar it-Tagħmir tar-Radju",
+        "LVD": "Direttiva 2014/35/UE — Direttiva dwar il-Vultaġġ Baxx",
+        "EMC": "Direttiva 2014/30/UE — Direttiva dwar l-EMC",
+        "RoHS": "Direttiva 2011/65/UE — RoHS",
+        "BATTERIES": "Regolament (UE) 2023/1542 — Regolament dwar il-Batteriji",
+        "DRONES": "Regolament Delegat (UE) 2019/945 — UAS / drones",
+        "COSMETICS": "Regolament (KE) Nru 1223/2009 — Prodotti Kożmetiċi",
+        "REACH": "Regolament (KE) Nru 1907/2006 — REACH",
+        "CLP": "Regolament (KE) Nru 1272/2008 — CLP",
+        "other": "Oħrajn"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Proprjetajiet mekkaniċi u fiżiċi",
+        "EN71_2": "EN 71-2 — Fjammabbiltà",
+        "EN71_3": "EN 71-3 — Migrazzjoni ta' ċerti elementi",
+        "EN71_4": "EN 71-4 — Settijiet sperimentali għall-kimika",
+        "EN71_5": "EN 71-5 — Ġugarelli kimiċi li mhumiex settijiet sperimentali",
+        "EN71_7": "EN 71-7 — Żebgħa tas-swaba'",
+        "EN71_8": "EN 71-8 — Ġugarelli tal-attività għall-użu domestiku",
+        "EN71_12": "EN 71-12 — N-nitrosamini u sustanzi N-nitrosatabbli",
+        "EN71_13": "EN 71-13 — Logħob tal-bord olfattiv, kitts kożmetiċi u logħob gustattiv",
+        "EN71_14": "EN 71-14 — Trampolini għall-użu domestiku",
+        "EN_IEC_62115": "EN IEC 62115 — Ġugarelli elettriċi",
+        "other": "Standard armonizzat ieħor",
+        "common_spec": "Speċifikazzjoni komuni minflok standard armonizzat"
+      },
+      "safetyChannel": {
+        "phone": "Telefown",
+        "email": "Email",
+        "website": "Sit web iddedikat",
+        "form": "Formola ta' kuntatt"
+      },
+      "euOperatorRole": {
+        "importer": "Importatur",
+        "auth_rep": "Rappreżentant awtorizzat",
+        "fulfilment": "Fornitur ta' servizz ta' fulfilment",
+        "distributor": "Distributur li jaġixxi bħala operatur ekonomiku responsabbli",
+        "other": "Persuna responsabbli oħra bbażata fl-UE (Reg. 2019/1020 Art. 4)"
+      },
+      "yesNo": {
+        "yes": "Iva",
+        "no": "Le"
+      },
+      "yesNoUnknown": {
+        "yes": "Iva",
+        "no": "Le",
+        "unknown": "Mhux magħruf"
+      }
+    }
   }
 }

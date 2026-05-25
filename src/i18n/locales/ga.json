@@ -625,7 +625,10 @@
       "backupCopyReference": "Tagairt cóipe cúltaca",
       "dppVersion": "Leagan DPP",
       "lastUpdated": "Nuashonraithe go deireanach",
-      "status": "Stádas"
+      "status": "Stádas",
+      "euDoc": "Dearbhú Comhréireachta an AE",
+      "safetyAssessment": "Measúnú sábháilteachta",
+      "technicalDocumentation": "Doiciméadacht theicniúil"
     },
     "values": {
       "ceMarked": "Marcáil CE",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Scáthánaithe ar bhonneagar Open-Label.eu",
       "numberPrefix": "Uimhir {{value}}",
       "certificatePrefix": "Deimhniú: {{value}}",
-      "issuedSuffix": " (eisithe {{date}})"
+      "issuedSuffix": " (eisithe {{date}})",
+      "other": "Eile",
+      "reference": "Tagairt",
+      "certificateDownload": "Íoslódáil an deimhniú comhréireachta",
+      "ceDeclarationStatement": "Dearbhaíonn an monaróir go gcomhlíonann an bréagán seo na ceanglais sábháilteachta is infheidhme de chuid an AE agus go bhfuil an mharcáil CE air nó go mbeidh sí air, i gcás inar gá, sula gcuirfear ar mhargadh an AE é.",
+      "yesNoUnknown": {
+        "yes": "Tá",
+        "no": "Níl",
+        "unknown": "Anaithnid"
+      }
     },
     "table": {
       "substance": "Substaint",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Tuairiscigh táirge neamhshábháilte"
     },
     "poweredBy": "Cumhachtaithe ag"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "Uimhir CBL",
+        "NATIONAL": "Uimhir chláraithe cuideachta náisiúnta",
+        "DUNS": "DUNS",
+        "ESPR": "Aitheantóir oibreora ESPR / DPP",
+        "other": "Eile"
+      },
+      "toyCategory": {
+        "baby": "Bréagán linbh",
+        "plush": "Bréagán pluise",
+        "doll": "Bábóg",
+        "action_figure": "Figiúr aicsin",
+        "construction": "Bréagán tógála / bloic",
+        "puzzle": "Puzal",
+        "board_game": "Cluiche boird",
+        "arts_crafts": "Bréagán ealaíon agus ceardaíochta",
+        "slime": "Slaod / putóg / cumasc samhaltúcháin",
+        "chemical_set": "Foireann bréagán ceimiceach",
+        "cosmetic": "Bréagán cosmaideach / smideadh súgartha",
+        "olfactory": "Cluiche boird boltanach",
+        "gustative": "Cluiche blaiseadh",
+        "outdoor": "Bréagán lasmuigh",
+        "activity": "Bréagán gníomhaíochta",
+        "ride_on": "Bréagán inrotha",
+        "wheeled": "Scútar / scátála / bréagán rothach",
+        "aquatic": "Bréagán uisceach",
+        "electronic": "Bréagán leictreonach",
+        "radio": "Bréagán raidió-nasctha",
+        "internet": "Bréagán idirlíon-nasctha",
+        "ai": "Bréagán IS-chumasaithe",
+        "battery": "Bréagán le ceallra",
+        "magnets": "Bréagán le maighnéid",
+        "drone": "Drón bréagáin",
+        "toy_in_food": "Bréagán i mbia",
+        "other": "Eile"
+      },
+      "ageGroup": {
+        "14": "14 bliana",
+        "0_6m": "0–6 mhí",
+        "6_12m": "6–12 mhí",
+        "12_18m": "12–18 mí",
+        "18_36m": "18–36 mí",
+        "3plus": "3+ bliana",
+        "4plus": "4+ bliana",
+        "5plus": "5+ bliana",
+        "6plus": "6+ bliana",
+        "7plus": "7+ bliana",
+        "8plus": "8+ bliana",
+        "10plus": "10+ bliana",
+        "12plus": "12+ bliana",
+        "other": "Eile"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "SGTIN",
+        "SKU": "SKU",
+        "MODEL": "Uimhir mhúnla",
+        "ISO_15459": "Aitheantóir atá comhoiriúnach le ISO/IEC 15459",
+        "other": "Eile"
+      },
+      "cnChapter": {
+        "32": "32 — Péinteanna, líocha, dúigh, ruaimeanna",
+        "33": "33 — Blátholaí, cumhráin, cosmaidí",
+        "34": "34 — Gallúnacha, céaracha, taosanna samhaltúcháin",
+        "39": "39 — Plaistigh agus earraí díobh",
+        "40": "40 — Rubar agus earraí díobh",
+        "42": "42 — Earraí leathair",
+        "44": "44 — Adhmad agus earraí adhmaid",
+        "48": "48 — Páipéar agus páipéarchlár",
+        "49": "49 — Leabhair chlóite, pictiúir, cártaí",
+        "61": "61 — Éadaí cniotáilte / gabhálais teicstíle",
+        "62": "62 — Éadaí neamhchniotáilte / gabhálais teicstíle",
+        "63": "63 — Earraí teicstíle déanta suas eile",
+        "69": "69 — Táirgí ceirmeacha",
+        "70": "70 — Gloine agus earraí gloine",
+        "73": "73 — Earraí iarainn nó cruach",
+        "76": "76 — Earraí alúmanaim",
+        "85": "85 — Innealra agus trealamh leictreach",
+        "87": "87 — Feithiclí agus páirteanna",
+        "90": "90 — Ionstraimí optúla, tomhais, seiceála",
+        "95": "95 — Bréagáin, cluichí agus riachtanais spóirt",
+        "other": "Eile"
+      },
+      "legislation": {
+        "TSR": "Rialachán (AE) 2025/2509 — An Rialachán maidir le Sábháilteacht Bréagán",
+        "GPSR": "Rialachán (AE) 2023/988 — An Rialachán Ginearálta maidir le Sábháilteacht Táirgí",
+        "MSR": "Rialachán (AE) 2019/1020 — Faireachas margaidh",
+        "AI_ACT": "Rialachán (AE) 2024/1689 — An Gníomh um an Intleacht Shaorga",
+        "CRA": "Rialachán (AE) 2024/2847 — An Gníomh um Chibear-athléimneacht",
+        "RED": "Treoir 2014/53/AE — An Treoir maidir le Trealamh Raidió",
+        "LVD": "Treoir 2014/35/AE — An Treoir maidir le Voltas Íseal",
+        "EMC": "Treoir 2014/30/AE — An Treoir EMC",
+        "RoHS": "Treoir 2011/65/AE — RoHS",
+        "BATTERIES": "Rialachán (AE) 2023/1542 — An Rialachán maidir le Cadhnraí",
+        "DRONES": "Rialachán Tarmligthe (AE) 2019/945 — UAS / dróin",
+        "COSMETICS": "Rialachán (CE) Uimh. 1223/2009 — Táirgí Cosmaideacha",
+        "REACH": "Rialachán (CE) Uimh. 1907/2006 — REACH",
+        "CLP": "Rialachán (CE) Uimh. 1272/2008 — CLP",
+        "other": "Eile"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Airíonna meicniúla agus fisiceacha",
+        "EN71_2": "EN 71-2 — Inadhainteacht",
+        "EN71_3": "EN 71-3 — Imirce dúl áirithe",
+        "EN71_4": "EN 71-4 — Foirneacha turgnamhacha don cheimic",
+        "EN71_5": "EN 71-5 — Bréagáin cheimiceacha seachas foirneacha turgnamhacha",
+        "EN71_7": "EN 71-7 — Méarphéinteanna",
+        "EN71_8": "EN 71-8 — Bréagáin ghníomhaíochta le haghaidh úsáid teaghlaigh",
+        "EN71_12": "EN 71-12 — N-níotróisaimíní agus substaintí N-níotróisáitithe",
+        "EN71_13": "EN 71-13 — Cluichí boird boltanacha, foirneacha cosmaideacha agus cluichí blaiseadh",
+        "EN71_14": "EN 71-14 — Trampailíní le haghaidh úsáid teaghlaigh",
+        "EN_IEC_62115": "EN IEC 62115 — Bréagáin leictreacha",
+        "other": "Caighdeán comhchuibhithe eile",
+        "common_spec": "Sonraíocht choiteann in ionad caighdeán comhchuibhithe"
+      },
+      "safetyChannel": {
+        "phone": "Teileafón",
+        "email": "Ríomhphost",
+        "website": "Suíomh gréasáin tiomnaithe",
+        "form": "Foirm teagmhála"
+      },
+      "euOperatorRole": {
+        "importer": "Allmhaireoir",
+        "auth_rep": "Ionadaí údaraithe",
+        "fulfilment": "Soláthraí seirbhíse comhlíonta",
+        "distributor": "Dáileoir ag gníomhú mar oibreoir eacnamaíoch freagrach",
+        "other": "Duine freagrach eile atá bunaithe san AE (Rial. 2019/1020 Art. 4)"
+      },
+      "yesNo": {
+        "yes": "Tá",
+        "no": "Níl"
+      },
+      "yesNoUnknown": {
+        "yes": "Tá",
+        "no": "Níl",
+        "unknown": "Anaithnid"
+      }
+    }
   }
 }

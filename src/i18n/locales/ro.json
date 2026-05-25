@@ -625,7 +625,10 @@
       "backupCopyReference": "Referință copie de rezervă",
       "dppVersion": "Versiune DPP",
       "lastUpdated": "Ultima actualizare",
-      "status": "Statut"
+      "status": "Statut",
+      "euDoc": "Declarația de conformitate UE",
+      "safetyAssessment": "Evaluarea siguranței",
+      "technicalDocumentation": "Documentație tehnică"
     },
     "values": {
       "ceMarked": "Marcat CE",
@@ -636,7 +639,16 @@
       "mirroredOnOpenLabel": "Oglindit pe infrastructura Open-Label.eu",
       "numberPrefix": "Numărul {{value}}",
       "certificatePrefix": "Certificat: {{value}}",
-      "issuedSuffix": " (emis la {{date}})"
+      "issuedSuffix": " (emis la {{date}})",
+      "other": "Altele",
+      "reference": "Referință",
+      "certificateDownload": "Descărcați certificatul de conformitate",
+      "ceDeclarationStatement": "Producătorul declară că această jucărie respectă cerințele de siguranță aplicabile ale UE și poartă sau va purta marcajul CE, acolo unde este necesar, înainte de a fi introdusă pe piața UE.",
+      "yesNoUnknown": {
+        "yes": "Da",
+        "no": "Nu",
+        "unknown": "Necunoscut"
+      }
     },
     "table": {
       "substance": "Substanță",
@@ -652,5 +664,151 @@
       "reportUnsafe": "Raportați un produs nesigur"
     },
     "poweredBy": "Susținut de"
+  },
+  "toys": {
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "Număr de înregistrare în scopuri de TVA",
+        "NATIONAL": "Număr național de înregistrare a societății",
+        "DUNS": "DUNS",
+        "ESPR": "Identificator de operator ESPR / DPP",
+        "other": "Altul"
+      },
+      "toyCategory": {
+        "baby": "Jucărie pentru bebeluși",
+        "plush": "Jucărie de pluș",
+        "doll": "Păpușă",
+        "action_figure": "Figurină de acțiune",
+        "construction": "Jucărie de construcție / cuburi",
+        "puzzle": "Puzzle",
+        "board_game": "Joc de societate",
+        "arts_crafts": "Jucărie pentru arte și meșteșuguri",
+        "slime": "Slime / chit / pastă de modelaj",
+        "chemical_set": "Set de jucării chimice",
+        "cosmetic": "Jucărie cosmetică / machiaj de joacă",
+        "olfactory": "Joc de societate olfactiv",
+        "gustative": "Joc gustativ",
+        "outdoor": "Jucărie de exterior",
+        "activity": "Jucărie de activitate",
+        "ride_on": "Jucărie de călărit",
+        "wheeled": "Trotinetă / patine / jucărie cu roți",
+        "aquatic": "Jucărie acvatică",
+        "electronic": "Jucărie electronică",
+        "radio": "Jucărie cu conexiune radio",
+        "internet": "Jucărie cu conexiune la internet",
+        "ai": "Jucărie cu inteligență artificială",
+        "battery": "Jucărie cu baterie",
+        "magnets": "Jucărie cu magneți",
+        "drone": "Dronă de jucărie",
+        "toy_in_food": "Jucărie în alimente",
+        "other": "Altele"
+      },
+      "ageGroup": {
+        "14": "14 ani",
+        "0_6m": "0–6 luni",
+        "6_12m": "6–12 luni",
+        "12_18m": "12–18 luni",
+        "18_36m": "18–36 luni",
+        "3plus": "3+ ani",
+        "4plus": "4+ ani",
+        "5plus": "5+ ani",
+        "6plus": "6+ ani",
+        "7plus": "7+ ani",
+        "8plus": "8+ ani",
+        "10plus": "10+ ani",
+        "12plus": "12+ ani",
+        "other": "Altul"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "GTIN serializat",
+        "SKU": "SKU",
+        "MODEL": "Număr de model",
+        "ISO_15459": "Identificator compatibil ISO/IEC 15459",
+        "other": "Altul"
+      },
+      "cnChapter": {
+        "32": "32 — Vopsele, pigmenți, cerneluri, coloranți",
+        "33": "33 — Uleiuri esențiale, parfumuri, cosmetice",
+        "34": "34 — Săpunuri, ceruri, paste de modelaj",
+        "39": "39 — Materiale plastice și articole din acestea",
+        "40": "40 — Cauciuc și articole din cauciuc",
+        "42": "42 — Articole din piele",
+        "44": "44 — Lemn și articole din lemn",
+        "48": "48 — Hârtie și carton",
+        "49": "49 — Cărți tipărite, imagini, carduri",
+        "61": "61 — Îmbrăcăminte tricotată / accesorii textile",
+        "62": "62 — Îmbrăcăminte netricotată / accesorii textile",
+        "63": "63 — Alte articole textile confecționate",
+        "69": "69 — Produse ceramice",
+        "70": "70 — Sticlă și articole din sticlă",
+        "73": "73 — Articole din fier sau oțel",
+        "76": "76 — Articole din aluminiu",
+        "85": "85 — Mașini și echipamente electrice",
+        "87": "87 — Vehicule și piese",
+        "90": "90 — Instrumente optice, de măsurare, de verificare",
+        "95": "95 — Jucării, jocuri și articole sportive",
+        "other": "Altele"
+      },
+      "legislation": {
+        "TSR": "Regulamentul (UE) 2025/2509 — Regulamentul privind siguranța jucăriilor",
+        "GPSR": "Regulamentul (UE) 2023/988 — Regulamentul privind siguranța generală a produselor",
+        "MSR": "Regulamentul (UE) 2019/1020 — Supravegherea pieței",
+        "AI_ACT": "Regulamentul (UE) 2024/1689 — Actul privind inteligența artificială",
+        "CRA": "Regulamentul (UE) 2024/2847 — Actul privind reziliența cibernetică",
+        "RED": "Directiva 2014/53/UE — Directiva privind echipamentele radio",
+        "LVD": "Directiva 2014/35/UE — Directiva privind joasa tensiune",
+        "EMC": "Directiva 2014/30/UE — Directiva EMC",
+        "RoHS": "Directiva 2011/65/UE — RoHS",
+        "BATTERIES": "Regulamentul (UE) 2023/1542 — Regulamentul privind bateriile",
+        "DRONES": "Regulamentul delegat (UE) 2019/945 — UAS / drone",
+        "COSMETICS": "Regulamentul (CE) nr. 1223/2009 — Produse cosmetice",
+        "REACH": "Regulamentul (CE) nr. 1907/2006 — REACH",
+        "CLP": "Regulamentul (CE) nr. 1272/2008 — CLP",
+        "other": "Altele"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — Proprietăți mecanice și fizice",
+        "EN71_2": "EN 71-2 — Inflamabilitate",
+        "EN71_3": "EN 71-3 — Migrarea anumitor elemente",
+        "EN71_4": "EN 71-4 — Seturi experimentale pentru chimie",
+        "EN71_5": "EN 71-5 — Jucării chimice, altele decât seturile experimentale",
+        "EN71_7": "EN 71-7 — Vopsele pentru degete",
+        "EN71_8": "EN 71-8 — Jucării de activitate pentru uz casnic",
+        "EN71_12": "EN 71-12 — N-nitrozamine și substanțe N-nitrozabile",
+        "EN71_13": "EN 71-13 — Jocuri de societate olfactive, truse cosmetice și jocuri gustative",
+        "EN71_14": "EN 71-14 — Trambuline pentru uz casnic",
+        "EN_IEC_62115": "EN IEC 62115 — Jucării electrice",
+        "other": "Alt standard armonizat",
+        "common_spec": "Specificație comună în loc de standard armonizat"
+      },
+      "safetyChannel": {
+        "phone": "Telefon",
+        "email": "E-mail",
+        "website": "Site web dedicat",
+        "form": "Formular de contact"
+      },
+      "euOperatorRole": {
+        "importer": "Importator",
+        "auth_rep": "Reprezentant autorizat",
+        "fulfilment": "Furnizor de servicii de logistică",
+        "distributor": "Distribuitor care acționează ca operator economic responsabil",
+        "other": "Altă persoană responsabilă cu sediul în UE (Reg. 2019/1020 Art. 4)"
+      },
+      "yesNo": {
+        "yes": "Da",
+        "no": "Nu"
+      },
+      "yesNoUnknown": {
+        "yes": "Da",
+        "no": "Nu",
+        "unknown": "Necunoscut"
+      }
+    }
   }
 }
