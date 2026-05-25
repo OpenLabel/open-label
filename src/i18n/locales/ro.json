@@ -926,7 +926,8 @@
         "label": "Parfumuri alergene prezente"
       },
       "allergen_declaration_text": {
-        "label": "Declarație de alergeni (generată automat, editabilă)"
+        "label": "Declarație privind alergenii (înlocuire opțională)",
+        "help": "Lăsați necompletat pentru a afișa automat declarația localizată standard. Completați doar dacă doriți o formulare personalizată; utilizați editorul de traduceri pentru versiunile pe limbi."
       },
       "safety_channels": {
         "label": "Canale publice de raportare a siguranței"
@@ -961,7 +962,7 @@
         "doll": "Păpușă",
         "action_figure": "Figurină de acțiune",
         "construction": "Jucărie de construcție / cuburi",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzle (joc de potrivire)",
         "board_game": "Joc de societate",
         "arts_crafts": "Jucărie pentru arte și meșteșuguri",
         "slime": "Slime / chit / pastă de modelat",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefon",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Site web",
         "gatePortal": "Portalul EU Safety Gate"
       }
     }

@@ -926,7 +926,8 @@
         "label": "Vorhandene allergene Duftstoffe"
       },
       "allergen_declaration_text": {
-        "label": "Allergendeklaration (automatisch generiert, bearbeitbar)"
+        "label": "Allergenerklärung (optionale Überschreibung)",
+        "help": "Leer lassen, damit die standardisierte lokalisierte Erklärung automatisch angezeigt wird. Nur ausfüllen, um eine individuelle Formulierung anzugeben; verwenden Sie den Übersetzungseditor für sprachspezifische Versionen."
       },
       "safety_channels": {
         "label": "Öffentliche Kanäle zur Meldung von Sicherheitsvorfällen"
@@ -961,7 +962,7 @@
         "doll": "Puppe",
         "action_figure": "Actionfigur",
         "construction": "Konstruktionsspielzeug / Bausteine",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzlespiel",
         "board_game": "Brettspiel",
         "arts_crafts": "Bastelspielzeug",
         "slime": "Schleim / Knete / Modelliermasse",
@@ -1004,7 +1005,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "Serialised GTIN",
+        "SGTIN": "Serialisierte GTIN",
         "SKU": "SKU",
         "MODEL": "Modellnummer",
         "ISO_15459": "ISO/IEC 15459-kompatibler Identifikator",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefon",
         "emailLabel": "E-Mail",
-        "web": "Web",
+        "web": "Webseite",
         "gatePortal": "EU Safety Gate Portal"
       }
     }

@@ -926,7 +926,8 @@
         "label": "Läsnä olevat allergisoivat hajusteet"
       },
       "allergen_declaration_text": {
-        "label": "Allergeeni-ilmoitus (automaattisesti luotu, muokattavissa)"
+        "label": "Allergeeniseloste (valinnainen ohitus)",
+        "help": "Jätä tyhjäksi, niin vakiomuotoinen paikallistettu seloste näytetään automaattisesti. Täytä vain, jos haluat mukautetun sanamuodon; käytä käännöseditoria kielikohtaisia versioita varten."
       },
       "safety_channels": {
         "label": "Julkiset turvallisuusilmoituskanavat"
@@ -952,7 +953,7 @@
         "VAT": "ALV-numero",
         "NATIONAL": "Kansallinen yritysrekisterinumero",
         "DUNS": "DUNS",
-        "ESPR": "ESPR / DPP operator identifier",
+        "ESPR": "ESPR / DPP toimijan tunniste",
         "other": "Muu"
       },
       "toyCategory": {

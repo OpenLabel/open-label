@@ -926,7 +926,8 @@
         "label": "Cumhráin ailléirgineacha i láthair"
       },
       "allergen_declaration_text": {
-        "label": "Dearbhú ailléirginí (ginte go huathoibríoch, ineagarthóireachta)"
+        "label": "Dearbhú ailléirgineach (sárú roghnach)",
+        "help": "Fág folamh chun an dearbhú caighdeánach logánaithe a thaispeáint go huathoibríoch. Líon isteach é amháin chun foclaíocht shaincheaptha a sholáthar; bain úsáid as eagarthóir na n-aistriúchán le haghaidh leaganacha de réir teanga."
       },
       "safety_channels": {
         "label": "Bealaí poiblí chun tuairisc a thabhairt ar shábháilteacht"

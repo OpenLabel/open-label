@@ -926,7 +926,8 @@
         "label": "Prisutni alergeni mirisi"
       },
       "allergen_declaration_text": {
-        "label": "Deklaracija o alergenima (automatski generirana, može se uređivati)"
+        "label": "Izjava o alergenima (neobavezno nadjačavanje)",
+        "help": "Ostavite prazno kako bi se automatski prikazala standardna lokalizirana izjava. Ispunite samo ako želite prilagođenu formulaciju; koristite uređivač prijevoda za inačice po jezicima."
       },
       "safety_channels": {
         "label": "Javni kanali za prijavu sigurnosnih problema"
@@ -1182,7 +1183,7 @@
       },
       "rows": {
         "brand": "Robna marka",
-        "model": "Model",
+        "model": "Model proizvoda",
         "sku": "SKU / varijanta",
         "toyCategory": "Kategorija igračke",
         "age": "Namijenjena dobna skupina",
@@ -1205,7 +1206,7 @@
         "backup": "Referenca sigurnosne kopije",
         "dppVersion": "Verzija DPP-a",
         "lastUpdated": "Zadnje ažurirano",
-        "status": "Status"
+        "status": "Status (stanje)"
       },
       "table": {
         "substance": "Tvar",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefon",
         "emailLabel": "E-pošta",
-        "web": "Web",
+        "web": "Mrežna stranica",
         "gatePortal": "Portal EU Safety Gate"
       }
     }

@@ -926,7 +926,8 @@
         "label": "Obecne alergenne substancje zapachowe"
       },
       "allergen_declaration_text": {
-        "label": "Deklaracja alergenów (generowana automatycznie, edytowalna)"
+        "label": "Deklaracja alergenów (opcjonalne nadpisanie)",
+        "help": "Pozostaw puste, aby automatycznie wyświetlać standardową zlokalizowaną deklarację. Wypełnij tylko, jeśli chcesz podać własne brzmienie; do wersji w poszczególnych językach użyj edytora tłumaczeń."
       },
       "safety_channels": {
         "label": "Publiczne kanały zgłaszania problemów z bezpieczeństwem"
@@ -961,7 +962,7 @@
         "doll": "Lalka",
         "action_figure": "Figurka akcji",
         "construction": "Zabawka konstrukcyjna / klocki",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzle (układanka)",
         "board_game": "Gra planszowa",
         "arts_crafts": "Zabawka artystyczna i kreatywna",
         "slime": "Slime / kit / masa plastyczna",
@@ -1004,7 +1005,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "Serialised GTIN",
+        "SGTIN": "Serializowany GTIN",
         "SKU": "SKU",
         "MODEL": "Numer modelu",
         "ISO_15459": "Identyfikator zgodny z ISO/IEC 15459",
@@ -1072,7 +1073,7 @@
         "form": "Formularz kontaktowy"
       },
       "euOperatorRole": {
-        "importer": "Importer",
+        "importer": "Importer (sprowadzający)",
         "auth_rep": "Upoważniony przedstawiciel",
         "fulfilment": "Dostawca usług realizacji zamówień",
         "distributor": "Dystrybutor działający jako odpowiedzialny podmiot gospodarczy",
@@ -1182,7 +1183,7 @@
       },
       "rows": {
         "brand": "Marka",
-        "model": "Model",
+        "model": "Model (typ)",
         "sku": "SKU / wariant",
         "toyCategory": "Kategoria zabawki",
         "age": "Docelowa grupa wiekowa",
@@ -1205,7 +1206,7 @@
         "backup": "Referencja kopii zapasowej",
         "dppVersion": "Wersja DPP",
         "lastUpdated": "Ostatnia aktualizacja",
-        "status": "Status"
+        "status": "Status (stan)"
       },
       "table": {
         "substance": "Substancja",

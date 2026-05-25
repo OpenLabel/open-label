@@ -926,7 +926,8 @@
         "label": "Allergenic fragrances present"
       },
       "allergen_declaration_text": {
-        "label": "Allergen declaration (auto-generated, editable)"
+        "label": "Allergen declaration (optional override)",
+        "help": "Leave empty to display the standard localized declaration automatically. Fill only to provide a custom wording; use the translation editor for per-language versions."
       },
       "safety_channels": {
         "label": "Public safety reporting channels"

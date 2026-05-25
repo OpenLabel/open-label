@@ -926,7 +926,8 @@
         "label": "Fragancias alergénicas presentes"
       },
       "allergen_declaration_text": {
-        "label": "Declaración de alérgenos (generada automáticamente, editable)"
+        "label": "Declaración de alérgenos (anulación opcional)",
+        "help": "Deje vacío para mostrar automáticamente la declaración localizada estándar. Rellene solo si desea una redacción personalizada; utilice el editor de traducciones para las versiones por idioma."
       },
       "safety_channels": {
         "label": "Canales públicos de notificación de seguridad"
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Teléfono",
         "emailLabel": "Correo electrónico",
-        "web": "Web",
+        "web": "Sitio web",
         "gatePortal": "Portal EU Safety Gate"
       }
     }

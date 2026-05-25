@@ -926,7 +926,8 @@
         "label": "Parfums allergènes présents"
       },
       "allergen_declaration_text": {
-        "label": "Déclaration d'allergènes (générée automatiquement, modifiable)"
+        "label": "Déclaration d'allergènes (remplacement facultatif)",
+        "help": "Laissez vide pour afficher automatiquement la déclaration localisée standard. Ne remplissez que pour fournir une formulation personnalisée ; utilisez l'éditeur de traductions pour les versions par langue."
       },
       "safety_channels": {
         "label": "Canaux publics de signalement de sécurité"
@@ -961,7 +962,7 @@
         "doll": "Poupée",
         "action_figure": "Figurine d'action",
         "construction": "Jouet de construction / blocs",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzle (casse-tête)",
         "board_game": "Jeu de société",
         "arts_crafts": "Jouet d'activités créatives",
         "slime": "Slime / pâte / pâte à modeler",
@@ -1130,7 +1131,7 @@
       "concentrationLabel": "Concentration (mg/kg)",
       "componentLabel": "Composant / matériau",
       "componentPlaceholder": "ex: rembourrage de peluche",
-      "aboveThreshold": "Concentration ≥10 mg/kg",
+      "aboveThreshold": "Concentration ≥ 10 mg/kg",
       "supplierDeclaration": "Déclaration du fournisseur archivée",
       "testReport": "Rapport de test archivé",
       "dialogTitle": "Sélectionner les parfums allergènes",
@@ -1208,15 +1209,15 @@
         "status": "Statut"
       },
       "table": {
-        "substance": "Substance",
+        "substance": "Substance chimique",
         "cas": "CAS",
-        "concentration": "Concentration",
+        "concentration": "Concentration mesurée",
         "component": "Composant"
       },
       "safety": {
         "telephone": "Téléphone",
         "emailLabel": "E-mail",
-        "web": "Web",
+        "web": "Site web",
         "gatePortal": "Portail EU Safety Gate"
       }
     }

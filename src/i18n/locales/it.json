@@ -926,7 +926,8 @@
         "label": "Fragranze allergeniche presenti"
       },
       "allergen_declaration_text": {
-        "label": "Dichiarazione degli allergeni (generata automaticamente, modificabile)"
+        "label": "Dichiarazione degli allergeni (sostituzione facoltativa)",
+        "help": "Lasciare vuoto per visualizzare automaticamente la dichiarazione localizzata standard. Compilare solo per fornire una formulazione personalizzata; utilizzare l'editor delle traduzioni per le versioni per lingua."
       },
       "safety_channels": {
         "label": "Canali pubblici di segnalazione per la sicurezza"
@@ -959,9 +960,9 @@
         "baby": "Giocattolo per la prima infanzia",
         "plush": "Peluche",
         "doll": "Bambola",
-        "action_figure": "Action figure",
+        "action_figure": "Action figure (statuetta)",
         "construction": "Giocattolo da costruzione / blocchi",
-        "puzzle": "Puzzle",
+        "puzzle": "Puzzle (rompicapo)",
         "board_game": "Gioco da tavolo",
         "arts_crafts": "Giocattolo per attività artistiche e manuali",
         "slime": "Slime / stucco / pasta da modellare",
@@ -1004,7 +1005,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "Serialised GTIN",
+        "SGTIN": "GTIN serializzato",
         "SKU": "SKU",
         "MODEL": "Numero di modello",
         "ISO_15459": "Identificatore compatibile ISO/IEC 15459",
@@ -1216,7 +1217,7 @@
       "safety": {
         "telephone": "Telefono",
         "emailLabel": "Email",
-        "web": "Web",
+        "web": "Sito web",
         "gatePortal": "Portale EU Safety Gate"
       }
     }
