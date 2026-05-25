@@ -21,7 +21,10 @@
     "language": "Kieli",
     "custom": "Mukautettu",
     "selectOption": "Valitse vaihtoehto",
-    "confirmed": "Vahvistettu"
+    "confirmed": "Vahvistettu",
+    "required": "Pakollinen",
+    "whereApplicable": "Sovellettaessa",
+    "tbdImplementingAct": "TBD — täytäntöönpanosäädös"
   },
   "nav": {
     "signIn": "Kirjaudu",
@@ -666,6 +669,280 @@
     "poweredBy": "Tarjoaa"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Valmistajan vastuu",
+        "description": "Tämä digitaalinen tuotepassi on annettu valmistajan yksinomaisella vastuulla."
+      },
+      "product_identity": {
+        "title": "Tuotteen identiteetti",
+        "description": "Jokainen lelumalli tai -variantti tarvitsee oman DPP:n."
+      },
+      "manufacturer": {
+        "title": "Valmistaja",
+        "description": "Oikeushenkilö, joka on vastuussa lelun saattamisesta markkinoille."
+      },
+      "auth_rep": {
+        "title": "Valtuutettu edustaja",
+        "description": "Sovellettavissa tapauksissa."
+      },
+      "eu_operator": {
+        "title": "EU:ssa toimiva vastuullinen talouden toimija",
+        "description": "Vaaditaan, kun valmistaja on sijoittautunut EU:n ulkopuolelle."
+      },
+      "compliance": {
+        "title": "Vaatimustenmukaisuus",
+        "description": "CE-merkintä, sovellettava EU-lainsäädäntö ja standardit."
+      },
+      "notified_body": {
+        "title": "Vaatimustenmukaisuuden arviointi ja ilmoitettu laitos",
+        "description": "Sovellettavissa tapauksissa."
+      },
+      "customs": {
+        "title": "Tullinimike",
+        "description": "Luotu muodossa 9880 + CN-koodin luku + 00. Muokattavissa."
+      },
+      "allergenic_fragrances": {
+        "title": "Allergisoivat hajusteet",
+        "description": "Aineet, joita koskevat merkintävaatimukset pitoisuudella ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Turvallisuuspoikkeamien ilmoittaminen",
+        "description": "Kuluttajien ja viranomaisten käytettävissä olevat kanavat."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Vahvistan, että tämä DPP on annettu valmistajan yksinomaisella vastuulla."
+      },
+      "brand_name": {
+        "label": "Tuotemerkki"
+      },
+      "model_name": {
+        "label": "Mallinimi tai mallinumero"
+      },
+      "sku": {
+        "label": "SKU tai variantin tunniste",
+        "help": "Käytä erillistä DPP:tä jokaiselle variantille (väri, koko, materiaali, elektroninen versio, pakettiversio)."
+      },
+      "toy_category": {
+        "label": "Lelukategoria"
+      },
+      "toy_category_other": {
+        "label": "Lelukategoria (täsmennä)"
+      },
+      "age_group": {
+        "label": "Tarkoitettu ikäryhmä"
+      },
+      "age_group_other": {
+        "label": "Ikäryhmä (täsmennä)"
+      },
+      "mouth_contact": {
+        "label": "Onko lelu tarkoitettu suuhun pantavaksi?",
+        "help": "Suuhun pantaviin leluihin sovelletaan tiukempia allergisoivien hajusteiden ja kemikaalien rajoituksia."
+      },
+      "unique_product_identifier": {
+        "label": "Yksilöllinen tuotetunniste",
+        "help": "Pysyvä tunniste tälle lelumallille/SKU:lle/variantille. Tulee olla yhteensopiva ESPR / ISO IEC 15459 -tyyppisen tunnistamisen kanssa, kun lopulliset eritelmät vahvistetaan."
+      },
+      "identifier_type": {
+        "label": "Tunnisteen tyyppi"
+      },
+      "identifier_type_other": {
+        "label": "Tunnisteen tyyppi (täsmennä)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Valmistajan virallinen nimi"
+      },
+      "manufacturer_street": {
+        "label": "Katuosoite"
+      },
+      "manufacturer_city": {
+        "label": "Kaupunki"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postinumero"
+      },
+      "manufacturer_country": {
+        "label": "Maa"
+      },
+      "manufacturer_email": {
+        "label": "Sähköinen osoite (sähköposti)",
+        "placeholder": "nimi@yritys.com"
+      },
+      "manufacturer_website": {
+        "label": "Verkkosivusto",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Yksilöllinen toimijan tunniste",
+        "help": "Käytä parasta saatavilla olevaa toimijan tunnistetta nyt; lopullinen vaadittu muoto voidaan määritellä täytäntöönpanosäädöksessä."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Toimijan tunnisteen tyyppi"
+      },
+      "has_auth_rep": {
+        "label": "Onko valmistajalla valtuutettua edustajaa?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Valtuutetun edustajan virallinen nimi"
+      },
+      "auth_rep_street": {
+        "label": "Katuosoite"
+      },
+      "auth_rep_city": {
+        "label": "Kaupunki"
+      },
+      "auth_rep_postal_code": {
+        "label": "Postinumero"
+      },
+      "auth_rep_country": {
+        "label": "Maa"
+      },
+      "auth_rep_email": {
+        "label": "Sähköinen osoite (sähköposti)",
+        "placeholder": "name@company.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Yksilöllinen toimijan tunniste"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Toimijan tunnisteen tyyppi"
+      },
+      "manufacturer_non_eu": {
+        "label": "Onko valmistaja sijoittautunut EU:n ulkopuolelle?"
+      },
+      "eu_op_legal_name": {
+        "label": "EU:ssa toimivan vastuullisen toimijan virallinen nimi"
+      },
+      "eu_op_role": {
+        "label": "Rooli"
+      },
+      "eu_op_street": {
+        "label": "Katuosoite"
+      },
+      "eu_op_city": {
+        "label": "Kaupunki"
+      },
+      "eu_op_postal_code": {
+        "label": "Postinumero"
+      },
+      "eu_op_country": {
+        "label": "Maa"
+      },
+      "eu_op_email": {
+        "label": "Sähköinen osoite (sähköposti)",
+        "placeholder": "name@company.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Yksilöllinen toimijan tunniste"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Toimijan tunnisteen tyyppi"
+      },
+      "has_instructions_warnings": {
+        "label": "Vaatiiko tämä lelu ohjeita, varoituksia tai turvallisuustietoja?"
+      },
+      "public_instructions_warnings": {
+        "label": "Julkiset ohjeet ja varoitukset",
+        "help": "Lisää lelun mukana tulevat varoitukset, ohjeet ja turvallisuustiedot."
+      },
+      "ce_declaration_ack": {
+        "label": "Valmistaja vakuuttaa, että tämä lelu on sovellettavien EU:n turvallisuusvaatimusten mukainen ja siinä on tai tulee olemaan CE-merkintä vaadittaessa ennen sen saattamista EU:n markkinoille.",
+        "help": "Vain CE-merkinnällä varustettuja leluja voidaan saattaa EU:n markkinoille. Tämän vakuutuksen tulee olla yhdenmukainen valmistajan vaatimustenmukaisuuden arvioinnin kanssa."
+      },
+      "eu_doc_available": {
+        "label": "Onko EU-vaatimustenmukaisuusvakuutus saatavilla?",
+        "warn": "EU-vaatimustenmukaisuusvakuutus on odotettu osa lelun vaatimustenmukaisuuskehystä. Täytä tämä ennen kuin luotat DPP:hen markkinoille suunnatussa käytössä."
+      },
+      "eu_doc_reference": {
+        "label": "Vaatimustenmukaisuusvakuutuksen viite"
+      },
+      "eu_doc_upload": {
+        "label": "Vaatimustenmukaisuusvakuutuksen lataus",
+        "help": "Vain sisäiseen käyttöön. Ladattu tiedosto säilytetään valmistajaa varten, eikä sitä näytetä julkisessa DPP:ssä."
+      },
+      "safety_assessment_completed": {
+        "label": "Onko turvallisuusarviointi tehty?",
+        "help": "Lelujen valmistajien on arvioitava kemialliset, fysikaaliset, mekaaniset, sähköiset, syttyvyys-, hygienia-, radioaktiivisuus- ja altistumisriskit tarvittaessa.",
+        "warn": "Turvallisuusarviointitiedot tulee täyttää ennen tähän DPP:hen luottamista."
+      },
+      "technical_documentation_available": {
+        "label": "Onko tekninen dokumentaatio saatavilla?",
+        "help": "Tekninen dokumentaatio tukee osoitusta siitä, että lelu täyttää sovellettavat turvallisuusvaatimukset.",
+        "warn": "Markkinavalvontaviranomaiset voivat vaatia teknistä dokumentaatiota."
+      },
+      "technical_documentation_upload": {
+        "label": "Teknisen dokumentaation lataus",
+        "help": "Vain sisäiseen käyttöön. Ladattu tiedosto säilytetään valmistajaa varten, eikä sitä näytetä julkisessa DPP:ssä."
+      },
+      "applicable_legislation": {
+        "label": "Sovellettava EU-lainsäädäntö"
+      },
+      "harmonised_standards": {
+        "label": "Käytetyt yhdenmukaistetut standardit"
+      },
+      "common_specifications": {
+        "label": "Käytetyt yhteiset eritelmät",
+        "placeholder": "Kuvaile sovelletut yhteiset eritelmät."
+      },
+      "other_standards": {
+        "label": "Muut käytetyt standardit (yksi per rivi)"
+      },
+      "notified_body_involved": {
+        "label": "Oliko ilmoitettu laitos osallisena?"
+      },
+      "notified_body_name": {
+        "label": "Ilmoitetun laitoksen nimi"
+      },
+      "notified_body_number": {
+        "label": "Ilmoitetun laitoksen numero",
+        "placeholder": "esim. 0123"
+      },
+      "certificate_reference": {
+        "label": "Todistuksen viite"
+      },
+      "certificate_issue_date": {
+        "label": "Todistuksen myöntämispäivä (VVVV-KK-PP)",
+        "placeholder": "VVVV-KK-PP"
+      },
+      "notified_body_certificate_url": {
+        "label": "Vaatimustenmukaisuustodistus (PDF tai kuva)",
+        "help": "Valinnainen. Ladattu tiedosto on julkisesti saatavilla DPP:stä."
+      },
+      "cn_chapter": {
+        "label": "CN-koodin luku"
+      },
+      "customs_code": {
+        "label": "Tullinimike",
+        "placeholder": "98809500",
+        "help": "Täytetään automaattisesti CN-koodin luvun perusteella. Korvaa, jos tulliluokituksesi on erilainen."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Sisältääkö lelu tai jokin sen osa allergisoivia hajusteita pitoisuudella ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Läsnä olevat allergisoivat hajusteet"
+      },
+      "allergen_declaration_text": {
+        "label": "Allergeeni-ilmoitus (automaattisesti luotu, muokattavissa)"
+      },
+      "safety_channels": {
+        "label": "Julkiset turvallisuusilmoituskanavat"
+      },
+      "safety_phone": {
+        "label": "Turvallisuusilmoitusten puhelinnumero",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "Turvallisuusilmoitusten sähköpostiosoite",
+        "placeholder": "safety@company.com"
+      },
+      "safety_website": {
+        "label": "Turvallisuusilmoitusten verkkosivusto / yhteydenottolomakkeen URL",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
@@ -674,7 +951,7 @@
         "VAT": "ALV-numero",
         "NATIONAL": "Kansallinen yritysrekisterinumero",
         "DUNS": "DUNS",
-        "ESPR": "ESPR / DPP-toimijatunniste",
+        "ESPR": "ESPR / DPP operator identifier",
         "other": "Muu"
       },
       "toyCategory": {
@@ -686,12 +963,12 @@
         "puzzle": "Palapeli",
         "board_game": "Lautapeli",
         "arts_crafts": "Askartelulelu",
-        "slime": "Lima / muovailuvaha / muovailumassa",
+        "slime": "Lima / muovailumassa",
         "chemical_set": "Kemiallinen lelusarja",
         "cosmetic": "Kosmeettinen lelu / leikkimeikki",
         "olfactory": "Hajuaistiin perustuva lautapeli",
         "gustative": "Makuaistiin perustuva peli",
-        "outdoor": "Ulkoilulelu",
+        "outdoor": "Ulkolelu",
         "activity": "Aktiviteettilelu",
         "ride_on": "Päällä ajettava lelu",
         "wheeled": "Potkulauta / rullalauta / pyörillä varustettu lelu",
@@ -726,7 +1003,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "Sarjoitettu GTIN",
+        "SGTIN": "SGTIN",
         "SKU": "SKU",
         "MODEL": "Mallinumero",
         "ISO_15459": "ISO/IEC 15459 -yhteensopiva tunniste",
@@ -738,17 +1015,17 @@
         "34": "34 — Saippuat, vahat, muovailutahnat",
         "39": "39 — Muovit ja muovituotteet",
         "40": "40 — Kumi ja kumituotteet",
-        "42": "42 — Nahkatuotteet",
+        "42": "42 — Nahkatavarat",
         "44": "44 — Puu ja puutavarat",
         "48": "48 — Paperi ja kartonki",
         "49": "49 — Painetut kirjat, kuvat, kortit",
         "61": "61 — Neulotut vaatteet / tekstiiliasusteet",
         "62": "62 — Muut kuin neulotut vaatteet / tekstiiliasusteet",
-        "63": "63 — Muut tekstiilituotteet",
+        "63": "63 — Muut valmiit tekstiilituotteet",
         "69": "69 — Keraamiset tuotteet",
         "70": "70 — Lasi ja lasitavarat",
-        "73": "73 — Rauta- ja terästuotteet",
-        "76": "76 — Alumiinituotteet",
+        "73": "73 — Rauta- ja terästavarat",
+        "76": "76 — Alumiinitavarat",
         "85": "85 — Sähkökoneet ja -laitteet",
         "87": "87 — Ajoneuvot ja niiden osat",
         "90": "90 — Optiset, mittaus- ja tarkastuslaitteet",
@@ -756,11 +1033,11 @@
         "other": "Muu"
       },
       "legislation": {
-        "TSR": "Asetus (EU) 2025/2509 — Lelujen turvallisuudesta annettu asetus",
+        "TSR": "Asetus (EU) 2025/2509 — Leluturvallisuusasetus",
         "GPSR": "Asetus (EU) 2023/988 — Yleinen tuoteturvallisuusasetus",
         "MSR": "Asetus (EU) 2019/1020 — Markkinavalvonta",
-        "AI_ACT": "Asetus (EU) 2024/1689 — Tekoälyasetus",
-        "CRA": "Asetus (EU) 2024/2847 — Kyberkestävyysasetus",
+        "AI_ACT": "Asetus (EU) 2024/1689 — Tekoälysäädös",
+        "CRA": "Asetus (EU) 2024/2847 — Kyberkestävyyssäädös",
         "RED": "Direktiivi 2014/53/EU — Radiolaitedirektiivi",
         "LVD": "Direktiivi 2014/35/EU — Pienjännitedirektiivi",
         "EMC": "Direktiivi 2014/30/EU — EMC-direktiivi",
@@ -776,14 +1053,14 @@
         "EN71_1": "EN 71-1 — Mekaaniset ja fysikaaliset ominaisuudet",
         "EN71_2": "EN 71-2 — Syttyvyys",
         "EN71_3": "EN 71-3 — Tiettyjen alkuaineiden siirtyminen",
-        "EN71_4": "EN 71-4 — Kemialliset kokeilupakkaukset",
-        "EN71_5": "EN 71-5 — Muut kemialliset lelut kuin kokeilupakkaukset",
+        "EN71_4": "EN 71-4 — Kemian kokeisiin tarkoitetut laitteistot",
+        "EN71_5": "EN 71-5 — Muut kemialliset lelut kuin kokeisiin tarkoitetut laitteistot",
         "EN71_7": "EN 71-7 — Sormivärit",
         "EN71_8": "EN 71-8 — Kotikäyttöön tarkoitetut aktiviteettilelut",
         "EN71_12": "EN 71-12 — N-nitrosamiinit ja N-nitrosoituvat aineet",
         "EN71_13": "EN 71-13 — Hajuaistiin perustuvat lautapelit, kosmetiikkapakkaukset ja makuaistiin perustuvat pelit",
         "EN71_14": "EN 71-14 — Kotikäyttöön tarkoitetut trampoliinit",
-        "EN_IEC_62115": "EN IEC 62115 — Sähkökäyttöiset lelut",
+        "EN_IEC_62115": "EN IEC 62115 — Sähkölelut",
         "other": "Muu yhdenmukaistettu standardi",
         "common_spec": "Yhteinen eritelmä yhdenmukaistetun standardin sijaan"
       },
@@ -798,7 +1075,7 @@
         "auth_rep": "Valtuutettu edustaja",
         "fulfilment": "Jakelupalvelun tarjoaja",
         "distributor": "Jakelija, joka toimii vastuullisena talouden toimijana",
-        "other": "Muu EU:hun sijoittautunut vastuullinen henkilö (asetuksen 2019/1020 4 artikla)"
+        "other": "Muu EU:hun sijoittautunut vastuuhenkilö (asetus 2019/1020, 4 artikla)"
       },
       "yesNo": {
         "yes": "Kyllä",
@@ -808,6 +1085,138 @@
         "yes": "Kyllä",
         "no": "Ei",
         "unknown": "Tuntematon"
+      }
+    },
+    "ai": {
+      "scannerTitle": "Tekoälypohjainen lelun etikettiskanneri",
+      "scannerDescription": "Ota tai lataa kuva lelun pakkauksesta – tekoäly lukee CE-merkinnän, ikävaroitukset, valmistajatiedot, viivakoodin ja luetellut allergisoivat hajusteet.",
+      "dropHere": "↓ Pudota tähän",
+      "dragOrClick": "Vedä ja pudota tai napsauta"
+    },
+    "warnings": {
+      "youngChild": "Tämä lelu on tarkoitettu alle 36 kuukauden ikäisille lapsille. Siihen sovelletaan tiukempia allergisoivien hajusteiden rajoituksia, ja mahdollisten pienten osien tukehtumisvaara on arvioitava.",
+      "mouthContact": "Tämä lelu on tarkoitettu suuhun pantavaksi. Siihen sovelletaan tiukempia allergisoivien hajusteiden ja kemikaalien siirtymisen rajoituksia.",
+      "unknownAllergens": "Tämä DPP saattaa olla puutteellinen, koska tiedot allergisoivista hajusteista ovat pakollisia soveltuvissa tapauksissa. Korvaa \"Tuntematon\" valinnalla Kyllä tai Ei ennen julkaisua.",
+      "suggestLegislation": "Valitun lelukategorian perusteella harkitse myös seuraavien valitsemista: {{list}}."
+    },
+    "disclaimer": {
+      "title": "Lelujen DPP — vaatimustenmukaisuutta koskeva vastuuvapauslauseke",
+      "body": "Lelujen tarkan EU:n digitaalisen tuotepassin tietomallin ja API-määritysten yksityiskohdat ovat vielä avoinna, ja niiden odotetaan tulevan määritellyiksi vuoden 2026 loppuun mennessä annettavassa täytäntöönpanosäädöksessä. Tämä työkalu on ensimmäinen versio, joka perustuu asetukseen (EU) 2025/2509, eikä sitä tule pitää lopullisena oikeudellisena neuvona."
+    },
+    "internalBadge": "Sisäinen — ei näytetä julkisesti",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Ilmoita vaarallisista tuotteista EU Safety Gate -portaalin kautta:",
+      "alwaysShown": "Tämä linkki näytetään aina julkisessa passissa."
+    },
+    "certificate": {
+      "viewFile": "Näytä ladattu tiedosto",
+      "remove": "Poista tiedosto",
+      "uploading": "Ladataan...",
+      "uploadButton": "Lataa todistus",
+      "errors": {
+        "loginRequired": "Sinun on oltava kirjautuneena sisään ladataksesi tiedostoja.",
+        "tooLarge": "Tiedosto on liian suuri. Enimmäiskoko on 5 Mt.",
+        "uploadFailed": "Lataus epäonnistui."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Allergisoivia hajusteita ei ole vielä lisätty.",
+      "summary": "{{count}} hajustetta ilmoitettu.",
+      "addButton": "Lisää hajuste",
+      "cas": "CAS",
+      "removeAria": "Poista {{name}}",
+      "concentrationLabel": "Pitoisuus (mg/kg)",
+      "componentLabel": "Komponentti / materiaali",
+      "componentPlaceholder": "esim. pehmolelun täyte",
+      "aboveThreshold": "Pitoisuus ≥10 mg/kg",
+      "supplierDeclaration": "Toimittajan vakuutus arkistoitu",
+      "testReport": "Testiraportti arkistoitu",
+      "dialogTitle": "Valitse allergisoivat hajusteet",
+      "searchPlaceholder": "Hae nimen, CAS-numeron tai tunnisteen perusteella...",
+      "clearSearch": "Tyhjennä haku",
+      "noResults": "Yksikään hajuste ei vastaa hakua \"{{q}}\".",
+      "done": "Valmis"
+    },
+    "validation": {
+      "imageRequired": "Lelusta vaaditaan värikuva.",
+      "descriptionRequired": "Leluille vaaditaan tuotekuvaus."
+    },
+    "public": {
+      "badge": "🧸 Lelu — Digitaalinen tuotepassi",
+      "otherFallback": "Muu",
+      "notDeclared": "Ei ilmoitettu",
+      "ceMarked": "✓ CE-merkitty",
+      "statusPublished": "Julkaistu",
+      "noAllergens": "Merkintävaatimusten alaisia allergisoivia hajusteita ei ole ilmoitettu olevan pitoisuutena 10 mg/kg tai enemmän.",
+      "certificateDownload": "Lataa vaatimustenmukaisuustodistus",
+      "reportUnsafe": "Ilmoita vaarallisesta tuotteesta",
+      "mirroredAt": "Peilattu osoitteessa {{url}}",
+      "mirroredDefault": "Peilattu Open-Label.eu-infrastruktuurissa",
+      "nbNumber": "Numero {{n}}",
+      "nbCertificate": "Todistus: {{ref}}",
+      "nbIssued": "(myönnetty {{date}})",
+      "instructionsTitle": "Ohjeet ja varoitukset",
+      "ceDeclarationStatement": "Valmistaja vakuuttaa, että tämä lelu on sovellettavien EU:n turvallisuusvaatimusten mukainen ja siinä on tai tulee olemaan CE-merkintä vaadittaessa ennen sen saattamista EU:n markkinoille.",
+      "docLabel": "EU-vaatimustenmukaisuusvakuutus",
+      "docReference": "Viite",
+      "safetyAssessmentLabel": "Turvallisuusarviointi",
+      "technicalDocsLabel": "Tekninen dokumentaatio",
+      "yesNoUnknown": {
+        "yes": "Kyllä",
+        "no": "Ei",
+        "unknown": "Tuntematon"
+      },
+      "sections": {
+        "identity": "Tuotteen identiteetti",
+        "manufacturer": "Valmistajan vastuu",
+        "manufacturerNote": "Tämä digitaalinen tuotepassi on annettu valmistajan yksinomaisella vastuulla.",
+        "euOperator": "EU-toimijan tiedot",
+        "authRep": "Valtuutettu edustaja",
+        "euResponsible": "EU:ssa toimiva vastuullinen talouden toimija",
+        "compliance": "Vaatimustenmukaisuus",
+        "safety": "Turvallisuus- ja kemikaalitiedot",
+        "safetyReporting": "Turvallisuuspoikkeamien ilmoittaminen",
+        "infrastructure": "DPP-infrastruktuuri"
+      },
+      "rows": {
+        "brand": "Tuotemerkki",
+        "model": "Malli",
+        "sku": "SKU / variantti",
+        "toyCategory": "Lelukategoria",
+        "age": "Tarkoitettu ikäryhmä",
+        "uid": "Yksilöllinen tunniste",
+        "manufacturer": "Valmistaja",
+        "address": "Osoite",
+        "email": "Sähköposti",
+        "website": "Verkkosivusto",
+        "operatorId": "Toimijan tunniste",
+        "legalName": "Virallinen nimi",
+        "role": "Rooli",
+        "ce": "CE-merkintä",
+        "applicableLeg": "Sovellettava lainsäädäntö",
+        "standards": "Yhdenmukaistetut standardit",
+        "commonSpecs": "Yhteiset eritelmät",
+        "otherStandards": "Muut standardit",
+        "notifiedBody": "Ilmoitettu laitos",
+        "customs": "Tullikoodi",
+        "dppProvider": "DPP-palveluntarjoaja",
+        "backup": "Varmuuskopion viite",
+        "dppVersion": "DPP-versio",
+        "lastUpdated": "Viimeksi päivitetty",
+        "status": "Tila"
+      },
+      "table": {
+        "substance": "Aine",
+        "cas": "CAS",
+        "concentration": "Pitoisuus",
+        "component": "Komponentti"
+      },
+      "safety": {
+        "telephone": "Puhelin",
+        "emailLabel": "Sähköposti",
+        "web": "Verkko",
+        "gatePortal": "EU Safety Gate -portaali"
       }
     }
   }

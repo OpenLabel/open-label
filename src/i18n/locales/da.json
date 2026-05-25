@@ -21,7 +21,10 @@
     "language": "Sprog",
     "custom": "Brugerdefineret",
     "selectOption": "Vælg en mulighed",
-    "confirmed": "Bekræftet"
+    "confirmed": "Bekræftet",
+    "required": "Påkrævet",
+    "whereApplicable": "Hvor det er relevant",
+    "tbdImplementingAct": "TBD — gennemførelsesretsakt"
   },
   "nav": {
     "signIn": "Log ind",
@@ -666,6 +669,280 @@
     "poweredBy": "Leveres af"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Producentansvar",
+        "description": "Dette digitale produktpas udstedes på producentens eget ansvar."
+      },
+      "product_identity": {
+        "title": "Produktidentitet",
+        "description": "Hver legetøjsmodel eller -variant skal have sit eget DPP."
+      },
+      "manufacturer": {
+        "title": "Producent",
+        "description": "Juridisk enhed, der er ansvarlig for at bringe legetøjet i omsætning."
+      },
+      "auth_rep": {
+        "title": "Bemyndiget repræsentant",
+        "description": "Hvor det er relevant."
+      },
+      "eu_operator": {
+        "title": "Ansvarlig økonomisk aktør i EU",
+        "description": "Påkrævet, når producenten er etableret uden for EU."
+      },
+      "compliance": {
+        "title": "Overensstemmelse",
+        "description": "CE-mærkning, gældende EU-lovgivning og -standarder."
+      },
+      "notified_body": {
+        "title": "Overensstemmelsesvurdering & bemyndiget organ",
+        "description": "Hvor det er relevant."
+      },
+      "customs": {
+        "title": "Toldvarekode",
+        "description": "Genereret som 9880 + KN-kapitel + 00. Kan redigeres."
+      },
+      "allergenic_fragrances": {
+        "title": "Allergifremkaldende duftstoffer",
+        "description": "Stoffer, der er omfattet af mærkningskrav ved ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Indberetning af sikkerhedshændelser",
+        "description": "Kanaler tilgængelige for forbrugere og myndigheder."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Jeg bekræfter, at dette DPP udstedes på producentens eget ansvar."
+      },
+      "brand_name": {
+        "label": "Mærkenavn"
+      },
+      "model_name": {
+        "label": "Modelnavn eller modelnummer"
+      },
+      "sku": {
+        "label": "SKU eller variant-ID",
+        "help": "Brug et separat DPP for hver variant (farve, størrelse, materiale, elektronisk version, samlet version)."
+      },
+      "toy_category": {
+        "label": "Legetøjskategori"
+      },
+      "toy_category_other": {
+        "label": "Legetøjskategori (angiv)"
+      },
+      "age_group": {
+        "label": "Tilsigtet aldersgruppe"
+      },
+      "age_group_other": {
+        "label": "Aldersgruppe (angiv)"
+      },
+      "mouth_contact": {
+        "label": "Er dette legetøj beregnet til at blive puttet i munden?",
+        "help": "For legetøj, der er beregnet til at blive puttet i munden, gælder strengere restriktioner for allergifremkaldende duftstoffer og kemikalier."
+      },
+      "unique_product_identifier": {
+        "label": "Unik produktidentifikator",
+        "help": "Vedvarende identifikator for denne legetøjsmodel/SKU/variant. Bør være kompatibel med ESPR / ISO IEC 15459-lignende identifikation, når de endelige specifikationer er bekræftet."
+      },
+      "identifier_type": {
+        "label": "Identifikatortype"
+      },
+      "identifier_type_other": {
+        "label": "Identifikatortype (angiv)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Producentens juridiske navn"
+      },
+      "manufacturer_street": {
+        "label": "Gadeadresse"
+      },
+      "manufacturer_city": {
+        "label": "By"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postnummer"
+      },
+      "manufacturer_country": {
+        "label": "Land"
+      },
+      "manufacturer_email": {
+        "label": "Elektronisk adresse (e-mail)",
+        "placeholder": "navn@virksomhed.dk"
+      },
+      "manufacturer_website": {
+        "label": "Hjemmeside",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Unik aktøridentifikator",
+        "help": "Brug den bedst tilgængelige aktøridentifikator nu; det endelige påkrævede format kan blive defineret i gennemførelsesretsakten."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Aktøridentifikatortype"
+      },
+      "has_auth_rep": {
+        "label": "Har producenten en bemyndiget repræsentant?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Bemyndiget repræsentants juridiske navn"
+      },
+      "auth_rep_street": {
+        "label": "Gadeadresse"
+      },
+      "auth_rep_city": {
+        "label": "By"
+      },
+      "auth_rep_postal_code": {
+        "label": "Postnummer"
+      },
+      "auth_rep_country": {
+        "label": "Land"
+      },
+      "auth_rep_email": {
+        "label": "Elektronisk adresse (e-mail)",
+        "placeholder": "navn@virksomhed.dk"
+      },
+      "auth_rep_operator_id": {
+        "label": "Unik aktøridentifikator"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Aktøridentifikatortype"
+      },
+      "manufacturer_non_eu": {
+        "label": "Er producenten etableret uden for EU?"
+      },
+      "eu_op_legal_name": {
+        "label": "Ansvarlig EU-aktørs juridiske navn"
+      },
+      "eu_op_role": {
+        "label": "Rolle"
+      },
+      "eu_op_street": {
+        "label": "Gadeadresse"
+      },
+      "eu_op_city": {
+        "label": "By"
+      },
+      "eu_op_postal_code": {
+        "label": "Postnummer"
+      },
+      "eu_op_country": {
+        "label": "Land"
+      },
+      "eu_op_email": {
+        "label": "Elektronisk adresse (e-mail)",
+        "placeholder": "navn@virksomhed.dk"
+      },
+      "eu_op_operator_id": {
+        "label": "Unik aktøridentifikator"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Aktøridentifikatortype"
+      },
+      "has_instructions_warnings": {
+        "label": "Kræver dette legetøj brugsanvisninger, advarsler eller sikkerhedsinformation?"
+      },
+      "public_instructions_warnings": {
+        "label": "Offentlige brugsanvisninger og advarsler",
+        "help": "Tilføj de advarsler, brugsanvisninger og sikkerhedsinformationer, der følger med legetøjet."
+      },
+      "ce_declaration_ack": {
+        "label": "Producenten erklærer, at dette legetøj overholder de gældende EU-sikkerhedskrav og bærer eller vil bære CE-mærkningen, hvor det er påkrævet, før det bringes i omsætning på EU-markedet.",
+        "help": "Kun legetøj, der bærer CE-mærkning, kan bringes i omsætning på EU-markedet. Denne erklæring skal være i overensstemmelse med producentens overensstemmelsesvurdering."
+      },
+      "eu_doc_available": {
+        "label": "Er EU-overensstemmelseserklæring tilgængelig?",
+        "warn": "EU-overensstemmelseserklæringen forventes at være en del af rammerne for legetøjs overensstemmelse. Udfyld dette, før du stoler på DPP'et til markedsorienteret brug."
+      },
+      "eu_doc_reference": {
+        "label": "Reference til overensstemmelseserklæring"
+      },
+      "eu_doc_upload": {
+        "label": "Upload af overensstemmelseserklæring",
+        "help": "Kun til internt brug. Den uploadede fil opbevares for producenten og vises ikke på det offentlige DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Sikkerhedsvurdering gennemført?",
+        "help": "Legetøjsproducenter skal vurdere kemiske, fysiske, mekaniske, elektriske, antændeligheds-, hygiejne-, radioaktivitets- og eksponeringsrisici, hvor det er relevant.",
+        "warn": "Information om sikkerhedsvurdering bør udfyldes, før du stoler på dette DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Teknisk dokumentation tilgængelig?",
+        "help": "Teknisk dokumentation understøtter demonstrationen af, at legetøjet overholder gældende sikkerhedskrav.",
+        "warn": "Teknisk dokumentation kan blive krævet af markedsovervågningsmyndighederne."
+      },
+      "technical_documentation_upload": {
+        "label": "Upload af teknisk dokumentation",
+        "help": "Kun til internt brug. Den uploadede fil opbevares for producenten og vises ikke på det offentlige DPP."
+      },
+      "applicable_legislation": {
+        "label": "Gældende EU-lovgivning"
+      },
+      "harmonised_standards": {
+        "label": "Anvendte harmoniserede standarder"
+      },
+      "common_specifications": {
+        "label": "Anvendte fælles specifikationer",
+        "placeholder": "Beskriv de anvendte fælles specifikationer."
+      },
+      "other_standards": {
+        "label": "Andre anvendte standarder (en pr. linje)"
+      },
+      "notified_body_involved": {
+        "label": "Var et bemyndiget organ involveret?"
+      },
+      "notified_body_name": {
+        "label": "Bemyndiget organs navn"
+      },
+      "notified_body_number": {
+        "label": "Bemyndiget organs nummer",
+        "placeholder": "f.eks. 0123"
+      },
+      "certificate_reference": {
+        "label": "Certifikatreference"
+      },
+      "certificate_issue_date": {
+        "label": "Certifikatudstedelsesdato (ÅÅÅÅ-MM-DD)",
+        "placeholder": "ÅÅÅÅ-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Overensstemmelsescertifikat (PDF eller billede)",
+        "help": "Valgfrit. Den uploadede fil er offentligt tilgængelig fra DPP'et."
+      },
+      "cn_chapter": {
+        "label": "KN-kapitel"
+      },
+      "customs_code": {
+        "label": "Toldvarekode",
+        "placeholder": "98809500",
+        "help": "Automatisk udfyldt fra KN-kapitel. Tilsidesæt, hvis din toldklassificering er anderledes."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Indeholder legetøjet eller nogen af dets komponenter allergifremkaldende duftstoffer ved ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Tilstedeværende allergifremkaldende duftstoffer"
+      },
+      "allergen_declaration_text": {
+        "label": "Allergendeklaration (automatisk genereret, kan redigeres)"
+      },
+      "safety_channels": {
+        "label": "Offentlige kanaler for sikkerhedsindberetning"
+      },
+      "safety_phone": {
+        "label": "Telefon til sikkerhedsindberetning",
+        "placeholder": "+45 ..."
+      },
+      "safety_email": {
+        "label": "E-mail til sikkerhedsindberetning",
+        "placeholder": "sikkerhed@virksomhed.dk"
+      },
+      "safety_website": {
+        "label": "Hjemmeside / kontaktformular-URL til sikkerhedsindberetning",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
@@ -674,7 +951,7 @@
         "VAT": "Momsnummer",
         "NATIONAL": "Nationalt virksomhedsregistreringsnummer",
         "DUNS": "DUNS",
-        "ESPR": "ESPR / DPP-operatøridentifikator",
+        "ESPR": "ESPR / DPP-aktøridentifikator",
         "other": "Andet"
       },
       "toyCategory": {
@@ -682,18 +959,18 @@
         "plush": "Tøjdyr",
         "doll": "Dukke",
         "action_figure": "Actionfigur",
-        "construction": "Konstruktionslegetøj / byggeklodser",
+        "construction": "Byggelegetøj / klodser",
         "puzzle": "Puslespil",
         "board_game": "Brætspil",
         "arts_crafts": "Kreativt legetøj",
         "slime": "Slim / modellervoks / formmasse",
-        "chemical_set": "Kemisk legetøjssæt",
+        "chemical_set": "Kemisæt",
         "cosmetic": "Kosmetisk legetøj / legesminke",
-        "olfactory": "Lugtebrætspil",
+        "olfactory": "Lugtespil",
         "gustative": "Smagsspil",
         "outdoor": "Udendørslegetøj",
         "activity": "Aktivitetslegetøj",
-        "ride_on": "Kørelegetøj",
+        "ride_on": "Køretøj til at sidde på",
         "wheeled": "Løbehjul / rulleskøjter / legetøj på hjul",
         "aquatic": "Vandlegetøj",
         "electronic": "Elektronisk legetøj",
@@ -708,10 +985,10 @@
       },
       "ageGroup": {
         "14": "14 år",
-        "0_6m": "0-6 måneder",
-        "6_12m": "6-12 måneder",
-        "12_18m": "12-18 måneder",
-        "18_36m": "18-36 måneder",
+        "0_6m": "0–6 måneder",
+        "6_12m": "6–12 måneder",
+        "12_18m": "12–18 måneder",
+        "18_36m": "18–36 måneder",
         "3plus": "3+ år",
         "4plus": "4+ år",
         "5plus": "5+ år",
@@ -748,11 +1025,11 @@
         "69": "69 — Keramiske produkter",
         "70": "70 — Glas og glasvarer",
         "73": "73 — Varer af jern eller stål",
-        "76": "76 — Varer af aluminium",
+        "76": "76 — Aluminiumvarer",
         "85": "85 — Elektriske maskiner og apparater",
         "87": "87 — Køretøjer og dele",
         "90": "90 — Optiske, måle-, kontrolinstrumenter",
-        "95": "95 — Legetøj, spil og sportsrekvisitter",
+        "95": "95 — Legetøj, spil og sportsartikler",
         "other": "Andet"
       },
       "legislation": {
@@ -767,7 +1044,7 @@
         "RoHS": "Direktiv 2011/65/EU — RoHS",
         "BATTERIES": "Forordning (EU) 2023/1542 — Batteriforordningen",
         "DRONES": "Delegeret forordning (EU) 2019/945 — UAS / droner",
-        "COSMETICS": "Forordning (EF) nr. 1223/2009 — Kosmetikforordningen",
+        "COSMETICS": "Forordning (EF) nr. 1223/2009 — Kosmetiske produkter",
         "REACH": "Forordning (EF) nr. 1907/2006 — REACH",
         "CLP": "Forordning (EF) nr. 1272/2008 — CLP",
         "other": "Andet"
@@ -776,13 +1053,13 @@
         "EN71_1": "EN 71-1 — Mekaniske og fysiske egenskaber",
         "EN71_2": "EN 71-2 — Antændelighed",
         "EN71_3": "EN 71-3 — Migration af visse grundstoffer",
-        "EN71_4": "EN 71-4 — Eksperimentalsæt til kemi",
-        "EN71_5": "EN 71-5 — Kemisk legetøj, undtagen eksperimentalsæt",
+        "EN71_4": "EN 71-4 — Eksperimentsæt til kemi",
+        "EN71_5": "EN 71-5 — Kemisk legetøj, undtagen eksperimentsæt",
         "EN71_7": "EN 71-7 — Fingermaling",
-        "EN71_8": "EN 71-8 — Aktivitetslegetøj til husholdningsbrug",
-        "EN71_12": "EN 71-12 — N-nitrosaminer og N-nitrosérbare stoffer",
-        "EN71_13": "EN 71-13 — Lugtebrætspil, kosmetiksæt og smagsspil",
-        "EN71_14": "EN 71-14 — Trampoliner til husholdningsbrug",
+        "EN71_8": "EN 71-8 — Aktivitetslegetøj til privat brug",
+        "EN71_12": "EN 71-12 — N-nitrosaminer og N-nitroserbare stoffer",
+        "EN71_13": "EN 71-13 — Lugtespil, kosmetiksæt og smagsspil",
+        "EN71_14": "EN 71-14 — Trampoliner til privat brug",
         "EN_IEC_62115": "EN IEC 62115 — Elektrisk legetøj",
         "other": "Anden harmoniseret standard",
         "common_spec": "Fælles specifikation i stedet for harmoniseret standard"
@@ -790,14 +1067,14 @@
       "safetyChannel": {
         "phone": "Telefon",
         "email": "E-mail",
-        "website": "Dedikeret websted",
+        "website": "Dedikeret hjemmeside",
         "form": "Kontaktformular"
       },
       "euOperatorRole": {
         "importer": "Importør",
         "auth_rep": "Bemyndiget repræsentant",
         "fulfilment": "Fulfilment-tjenesteudbyder",
-        "distributor": "Distributør, der fungerer som ansvarlig erhvervsdrivende",
+        "distributor": "Distributør, der fungerer som ansvarlig økonomisk aktør",
         "other": "Anden EU-baseret ansvarlig person (Forordning 2019/1020, art. 4)"
       },
       "yesNo": {
@@ -808,6 +1085,138 @@
         "yes": "Ja",
         "no": "Nej",
         "unknown": "Ukendt"
+      }
+    },
+    "ai": {
+      "scannerTitle": "AI-scanner til legetøjsmærkater",
+      "scannerDescription": "Tag eller upload et billede af legetøjets emballage — AI'en vil aflæse CE-mærket, aldersadvarsler, producentoplysninger, stregkode og anførte allergifremkaldende duftstoffer.",
+      "dropHere": "↓ Slip her",
+      "dragOrClick": "Træk og slip eller klik"
+    },
+    "warnings": {
+      "youngChild": "Dette legetøj er beregnet til børn under 36 måneder. Der gælder strengere restriktioner for allergifremkaldende duftstoffer, og eventuelle smådele skal vurderes for kvælningsfare.",
+      "mouthContact": "Dette legetøj er beregnet til at blive puttet i munden. Der gælder strengere restriktioner for allergifremkaldende duftstoffer og kemisk migration.",
+      "unknownAllergens": "Dette DPP kan være ufuldstændigt, da oplysninger om allergifremkaldende duftstoffer er obligatoriske, hvor det er relevant. Erstat \"Ukendt\" med Ja eller Nej før offentliggørelse.",
+      "suggestLegislation": "Baseret på den valgte legetøjskategori, overvej også at afkrydse: {{list}}."
+    },
+    "disclaimer": {
+      "title": "Legetøjs-DPP — ansvarsfraskrivelse vedrørende overensstemmelse",
+      "body": "De præcise datamodel- og API-specifikationer for EU's digitale produktpas for legetøj er endnu ikke fastlagt og forventes at blive defineret i gennemførelsesretsakten, der forventes inden udgangen af 2026. Dette værktøj er en første version baseret på forordning (EU) 2025/2509 og bør ikke betragtes som endelig juridisk rådgivning."
+    },
+    "internalBadge": "Internt — vises ikke offentligt",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Indberet farlige produkter via EU Safety Gate-portalen:",
+      "alwaysShown": "Dette link vises altid på det offentlige pas."
+    },
+    "certificate": {
+      "viewFile": "Se uploadet fil",
+      "remove": "Fjern fil",
+      "uploading": "Uploader...",
+      "uploadButton": "Upload certifikat",
+      "errors": {
+        "loginRequired": "Du skal være logget ind for at uploade filer.",
+        "tooLarge": "Filen er for stor. Maksimal størrelse er 5 MB.",
+        "uploadFailed": "Upload mislykkedes."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Ingen allergifremkaldende duftstoffer tilføjet endnu.",
+      "summary": "{{count}} duftstof(fer) deklareret.",
+      "addButton": "Tilføj duftstof",
+      "cas": "CAS",
+      "removeAria": "Fjern {{name}}",
+      "concentrationLabel": "Koncentration (mg/kg)",
+      "componentLabel": "Komponent / materiale",
+      "componentPlaceholder": "f.eks. tøjdyrsfyld",
+      "aboveThreshold": "Koncentration ≥10 mg/kg",
+      "supplierDeclaration": "Leverandørerklæring arkiveret",
+      "testReport": "Testrapport arkiveret",
+      "dialogTitle": "Vælg allergifremkaldende duftstoffer",
+      "searchPlaceholder": "Søg efter navn, CAS eller id...",
+      "clearSearch": "Ryd søgning",
+      "noResults": "Ingen duftstoffer matcher \"{{q}}\".",
+      "done": "Færdig"
+    },
+    "validation": {
+      "imageRequired": "Et farvebillede af legetøjet er påkrævet.",
+      "descriptionRequired": "En produktbeskrivelse er påkrævet for legetøj."
+    },
+    "public": {
+      "badge": "🧸 Legetøj — Digitalt Produktpas",
+      "otherFallback": "Andet",
+      "notDeclared": "Ikke angivet",
+      "ceMarked": "✓ CE-mærket",
+      "statusPublished": "Offentliggjort",
+      "noAllergens": "Ingen allergifremkaldende duftstoffer, der er omfattet af mærkningskrav, er deklareret som til stede i eller over 10 mg/kg.",
+      "certificateDownload": "Download overensstemmelsescertifikat",
+      "reportUnsafe": "Indberet et farligt produkt",
+      "mirroredAt": "Spejlet på {{url}}",
+      "mirroredDefault": "Spejlet på Open-Label.eu-infrastruktur",
+      "nbNumber": "Nummer {{n}}",
+      "nbCertificate": "Certifikat: {{ref}}",
+      "nbIssued": "(udstedt {{date}})",
+      "instructionsTitle": "Brugsanvisninger og advarsler",
+      "ceDeclarationStatement": "Producenten erklærer, at dette legetøj overholder de gældende EU-sikkerhedskrav og bærer eller vil bære CE-mærkningen, hvor det er påkrævet, før det bringes i omsætning på EU-markedet.",
+      "docLabel": "EU-overensstemmelseserklæring",
+      "docReference": "Reference",
+      "safetyAssessmentLabel": "Sikkerhedsvurdering",
+      "technicalDocsLabel": "Teknisk dokumentation",
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Ukendt"
+      },
+      "sections": {
+        "identity": "Produktidentitet",
+        "manufacturer": "Producentansvar",
+        "manufacturerNote": "Dette digitale produktpas udstedes på producentens eget ansvar.",
+        "euOperator": "Oplysninger om EU-aktør",
+        "authRep": "Bemyndiget repræsentant",
+        "euResponsible": "Ansvarlig økonomisk aktør i EU",
+        "compliance": "Overensstemmelse",
+        "safety": "Sikkerheds- og kemikalieinformation",
+        "safetyReporting": "Indberetning af sikkerhedshændelser",
+        "infrastructure": "DPP-infrastruktur"
+      },
+      "rows": {
+        "brand": "Mærke",
+        "model": "Model",
+        "sku": "SKU / variant",
+        "toyCategory": "Legetøjskategori",
+        "age": "Tilsigtet aldersgruppe",
+        "uid": "Unik identifikator",
+        "manufacturer": "Producent",
+        "address": "Adresse",
+        "email": "E-mail",
+        "website": "Hjemmeside",
+        "operatorId": "Aktøridentifikator",
+        "legalName": "Juridisk navn",
+        "role": "Rolle",
+        "ce": "CE-mærkning",
+        "applicableLeg": "Gældende lovgivning",
+        "standards": "Harmoniserede standarder",
+        "commonSpecs": "Fælles specifikationer",
+        "otherStandards": "Andre standarder",
+        "notifiedBody": "Bemyndiget organ",
+        "customs": "Toldkode",
+        "dppProvider": "DPP-tjenesteudbyder",
+        "backup": "Reference til sikkerhedskopi",
+        "dppVersion": "DPP-version",
+        "lastUpdated": "Sidst opdateret",
+        "status": "Status"
+      },
+      "table": {
+        "substance": "Stof",
+        "cas": "CAS",
+        "concentration": "Koncentration",
+        "component": "Komponent"
+      },
+      "safety": {
+        "telephone": "Telefon",
+        "emailLabel": "E-mail",
+        "web": "Web",
+        "gatePortal": "EU Safety Gate-portal"
       }
     }
   }

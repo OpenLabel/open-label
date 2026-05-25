@@ -1,58 +1,44 @@
-## Problem
+## Why the form is still English
 
-On the public Toy DPP, switching the language translates UI labels but leaves several **value strings** in English (visible in the Greek screenshot):
+The toy template (`src/templates/toys.ts`) already wires `labelKey`, `helpKey`, `placeholderKey`, `titleKey`, `descriptionKey` onto every field/section, and the renderer (`CategoryQuestions.tsx`) already resolves them via `t(key, englishFallback)`. The reason Greek users see English is simply that **none of those keys exist in any locale JSON** (including `en.json`) — so i18next falls back to the inline English string. Last turn we added `toys.options.*` and `toyPublic.*`; we never added `toys.fields.*`, `toys.sections.*`, `toys.disclaimer.*`, or the matching wine/other keys.
 
-- Status chips: `yes` / `no` (EU DoC, Safety assessment, Technical documentation, etc.)
-- Applicable legislation list: `Regulation (EU) 2025/2509 — Toy Safety Regulation`, GPSR, REACH, CLP, RED, LVD, EMC, RoHS, BATTERIES, AI Act, CRA, MSR, Drones, Cosmetics
-- Harmonised standards list: `EN 71-1 — Mechanical and physical properties`, EN 71-2…-14, EN IEC 62115, common spec
-- Customs code suffix: `95 — Toys, games and sports requisites` and the other CN chapters
-- Fragrance fallback sentence and `Other` fallbacks
-- A few rows that use `t('toys.public.*', 'English fallback')` whose keys don't exist in any locale yet (`docLabel`, `safetyAssessmentLabel`, `technicalDocsLabel`, `yesNoUnknown.*`, `certificateDownload`, `docReference`, `ceDeclarationStatement`)
-- Also: operator-id-type, toy category, age group, identifier type, safety channel, EU operator role labels (used in manufacturer / auth-rep / EU op blocks)
+## Scope (per user)
 
-Root cause: `src/templates/toys.ts` already wires each option with a `labelKey` (e.g. `toys.options.legislation.TSR`), but (a) `labelFor` / `labelsFor` in `ToyPublicPassport.tsx` ignore `labelKey` and just return `option.label`, and (b) **none** of those `toys.options.*` keys exist in any of the 24 locale JSON files.
+Translate **everything** visible in the edit form into all 24 EU languages, for **all templates** (toys + wine + other):
+- Section titles & descriptions
+- Field labels, helper text, placeholders, tooltips
+- Compliance disclaimer banner
+- Option dropdown values (toys already done last turn — verify only)
+- Any other hardcoded English in the editor chrome (TBD chip, "Required" badge, save bar, etc.)
 
-## Fix
+## Plan
 
-### 1. `src/components/toys/ToyPublicPassport.tsx`
-- Change `labelFor` / `labelsFor` to accept the `t` function and, for each option, return `t(option.labelKey, option.label)` so the English `label` is only the fallback.
-- Replace the `'Other'` literal fallbacks on lines 114 / 119 with `t('toyPublic.values.other')`.
-- Replace the bare `String(d.eu_doc_available)` fallback with the resolved `yesNoUnknown` key (already attempted with fallback — will now resolve once keys exist).
-- Keep unit suffixes like `mg/kg` untranslated (international unit).
+### 1. Audit hardcoded strings in the editor surface
+Grep `CategoryQuestions.tsx`, `PassportForm.tsx`, `WineFields.tsx`, and the toy/wine preview wrappers for any string literals not already routed through `t(...)`. Add new keys under a single `editor.*` namespace (e.g. `editor.required`, `editor.tbd`, `editor.save`, `editor.translate`, etc.). Replace literals with `t('editor.x', 'English fallback')`.
 
-### 2. `src/i18n/locales/en.json` — add the missing English keys (source of truth)
-- `toys.public.ceDeclarationStatement`, `docLabel`, `docReference`, `safetyAssessmentLabel`, `technicalDocsLabel`, `certificateDownload`, `yesNoUnknown.{yes,no,unknown}`
-- `toyPublic.values.other`
-- `toys.options.operatorIdType.{EORI,GLN,LEI,VAT,NATIONAL,DUNS,ESPR,other}`
-- `toys.options.toyCategory.*` (all 27 values)
-- `toys.options.ageGroup.*` (all 14)
-- `toys.options.identifierType.*` (8)
-- `toys.options.cnChapter.*` (20) — long descriptive form (e.g. "95 — Toys, games and sports requisites")
-- `toys.options.legislation.*` (15) — long regulation names
-- `toys.options.standards.*` (12) — long EN 71-x descriptive form
-- `toys.options.safetyChannel.{phone,email,website,form}`
-- `toys.options.euOperatorRole.{importer,auth_rep,fulfilment,distributor,other}`
+### 2. Toys template (the big one)
+Generate a complete `toys.fields.*`, `toys.sections.*`, `toys.disclaimer.*` tree in `en.json` by walking `src/templates/toys.ts` programmatically (one-off script under `scripts/extract-toys-i18n.ts`) so every `labelKey`, `helpKey`, `placeholderKey`, `titleKey`, `descriptionKey` referenced by the template has a matching English entry.
 
-Source labels are pulled directly from `src/templates/toys.ts` so the English copy stays consistent with the form.
+### 3. Wine & Other templates
+Wine and Other templates don't currently carry `labelKey`/`titleKey` on their fields. Add them (mirroring the toys helper pattern) and create `wine.fields.*` / `wine.sections.*` / `other.fields.*` / `other.sections.*` trees in `en.json`. Wine's custom `WineFields.tsx` editor will also be swept for hardcoded labels (same `t(key, fallback)` treatment).
 
-### 3. All 23 other locale files (`bg, cs, da, de, el, es, et, fi, fr, ga, hr, hu, it, lt, lv, mt, nl, pl, pt, ro, sk, sl, sv`)
-- Add the **same key tree** with professional regulatory translations.
-- Use the existing `scripts/translate-toys-i18n.ts` pattern (Gemini 2.5 Pro auto-translation, JSON parse with regex fallback, 16000-token budget per request) extended to cover the new namespaces — same approach used for the previous `toyPublic` rollout.
-- Manual review of regulatory-critical terms (TSR / GPSR / REACH / CLP / CE / harmonised standards / Safety Gate) in each language against existing professional acronyms already in the locale files (memory: `i18n/terminology-standards`).
+### 4. Propagate to 23 other locales
+Extend `scripts/translate-toys-i18n.ts` (the existing translation script) to cover the new `toys.fields/sections/disclaimer`, `wine.fields/sections`, `other.fields/sections`, and `editor.*` trees. Run it once to produce professional regulatory translations in BG, CS, DA, DE, EL, ES, ET, FI, FR, GA, HR, HU, IT, LT, LV, MT, NL, PL, PT, RO, SK, SL, SV. Terminology follows existing project standards (TSR, REACH, "Regulations", etc.).
 
-### 4. Audit & tests
-- Update `src/i18n/locales/audit.test.ts` only if the new English values trigger false positives (e.g. proper-noun cognates).
-- `src/i18n/locales/duplicateKeys.test.ts` and `locales.test.ts` must pass (no duplicate keys, all 24 locales have identical key set).
-- Full suite `bunx vitest run` must stay green (≥ 30 % coverage threshold; do not lower).
+### 5. Tests & verification
+- `duplicateKeys.test.ts` and `locales.test.ts` must stay green.
+- Extend `audit.test.ts` so any `labelKey`/`titleKey`/`helpKey`/`placeholderKey`/`descriptionKey` referenced by any template in `src/templates/*.ts` is required to exist in every locale file (prevents future regressions).
+- Add a render test that mounts `CategoryQuestions` for toys with `i18n.changeLanguage('el')` and asserts the Greek string appears for at least "Brand name", "Manufacturer responsibility", and the disclaimer title.
+- Manual: open a toy DPP in preview, switch to Greek / French / German / Polish, confirm every label, section, helper, placeholder, and the disclaimer renders in the target language.
 
-### 5. Out of scope
-- The **edit form** still uses English labels via `options[].label` — switching the form to `labelKey` is a separate change and the user hasn't asked for it. Public view only.
-- Wine view (unaffected).
-- Generic `PublicPassport` for the "Other" category.
+### 6. Out of scope
+- Public passport view (already done last turn).
+- Setup wizard and legal pages (intentionally static — memory `localization-scope`).
+- The 11 deferred category templates (no UI exposes them).
 
-## Verification
-
-1. `bunx vitest run` → all green, coverage ≥ 30 %.
-2. Manually open the sample toy DPP in the preview, switch language picker to Greek, French, German, Polish, and confirm: yes/no chips, every legislation bullet, every EN 71 bullet, CN chapter description, fragrance sentence, "Other" fallbacks, and the EU DoC / Safety assessment / Tech docs rows all render in the target language.
-3. Confirm the row **labels** are unchanged (already worked) and the Wine DPP is unchanged.
-4. Publish required for the change to reach `open-label.eu`.
+### Files touched
+- `src/templates/toys.ts` (verify), `src/templates/wine.ts`, `src/templates/other.ts` — add `labelKey`/`titleKey`/etc.
+- `src/components/CategoryQuestions.tsx`, `src/components/WineFields.tsx`, `src/pages/PassportForm.tsx` — replace any remaining literals with `t()`.
+- `scripts/extract-toys-i18n.ts` (new), `scripts/translate-toys-i18n.ts` (extend).
+- All 24 `src/i18n/locales/*.json`.
+- `src/i18n/locales/audit.test.ts` + new render test.

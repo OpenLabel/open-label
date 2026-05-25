@@ -21,7 +21,10 @@
     "language": "Keel",
     "custom": "Kohandatud",
     "selectOption": "Valige valik",
-    "confirmed": "Kinnitatud"
+    "confirmed": "Kinnitatud",
+    "required": "Nõutav",
+    "whereApplicable": "Vajaduse korral",
+    "tbdImplementingAct": "TBD — rakendusakt"
   },
   "nav": {
     "signIn": "Logi sisse",
@@ -666,12 +669,286 @@
     "poweredBy": "Toetab"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Tootja vastutus",
+        "description": "See digitaalne tootepass on välja antud tootja ainuvastutusel."
+      },
+      "product_identity": {
+        "title": "Toote identiteet",
+        "description": "Igal mänguasja mudelil või variandil peab olema oma DPP."
+      },
+      "manufacturer": {
+        "title": "Tootja",
+        "description": "Juriidiline isik, kes vastutab mänguasja turule laskmise eest."
+      },
+      "auth_rep": {
+        "title": "Volitatud esindaja",
+        "description": "Vajaduse korral."
+      },
+      "eu_operator": {
+        "title": "EL-i vastutav ettevõtja",
+        "description": "Nõutav, kui tootja asub väljaspool EL-i."
+      },
+      "compliance": {
+        "title": "Vastavus",
+        "description": "CE-märgis, kohaldatavad EL-i õigusaktid ja standardid."
+      },
+      "notified_body": {
+        "title": "Vastavushindamine ja teavitatud asutus",
+        "description": "Vajaduse korral."
+      },
+      "customs": {
+        "title": "Kaubakood",
+        "description": "Genereeritud kujul 9880 + CN-i peatükk + 00. Muudetav."
+      },
+      "allergenic_fragrances": {
+        "title": "Allergeensed lõhnaained",
+        "description": "Ained, millele kehtivad märgistamisnõuded kontsentratsioonil ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Ohutusjuhtumitest teavitamine",
+        "description": "Tarbijatele ja ametiasutustele kättesaadavad kanalid."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Kinnitan, et see DPP on välja antud tootja ainuvastutusel."
+      },
+      "brand_name": {
+        "label": "Kaubamärgi nimi"
+      },
+      "model_name": {
+        "label": "Mudeli nimi või mudeli number"
+      },
+      "sku": {
+        "label": "SKU või variandi ID",
+        "help": "Kasutage iga variandi (värv, suurus, materjal, elektrooniline versioon, komplektversioon) jaoks eraldi DPP-d."
+      },
+      "toy_category": {
+        "label": "Mänguasja kategooria"
+      },
+      "toy_category_other": {
+        "label": "Mänguasja kategooria (täpsustage)"
+      },
+      "age_group": {
+        "label": "Sihtvanuserühm"
+      },
+      "age_group_other": {
+        "label": "Vanuserühm (täpsustage)"
+      },
+      "mouth_contact": {
+        "label": "Kas see mänguasi on mõeldud suhu panemiseks?",
+        "help": "Suhu pandavatele mänguasjadele kehtivad rangemad allergeensete lõhnaainete ja kemikaalide piirangud."
+      },
+      "unique_product_identifier": {
+        "label": "Kordumatu tooteidentifikaator",
+        "help": "Selle mänguasja mudeli/SKU/variandi püsiv identifikaator. Peaks olema ühilduv ESPR / ISO IEC 15459-stiilis identifitseerimisega, kui lõplikud spetsifikatsioonid on kinnitatud."
+      },
+      "identifier_type": {
+        "label": "Identifikaatori tüüp"
+      },
+      "identifier_type_other": {
+        "label": "Identifikaatori tüüp (täpsustage)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Tootja juriidiline nimi"
+      },
+      "manufacturer_street": {
+        "label": "Tänava aadress"
+      },
+      "manufacturer_city": {
+        "label": "Linn"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postiindeks"
+      },
+      "manufacturer_country": {
+        "label": "Riik"
+      },
+      "manufacturer_email": {
+        "label": "Elektrooniline aadress (e-post)",
+        "placeholder": "nimi@ettevote.com"
+      },
+      "manufacturer_website": {
+        "label": "Veebisait",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Kordumatu ettevõtja identifikaator",
+        "help": "Kasutage praegu parimat saadaolevat ettevõtja identifikaatorit; lõplik nõutav vorming võidakse määratleda rakendusaktiga."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Ettevõtja identifikaatori tüüp"
+      },
+      "has_auth_rep": {
+        "label": "Kas tootjal on volitatud esindaja?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Volitatud esindaja juriidiline nimi"
+      },
+      "auth_rep_street": {
+        "label": "Tänava aadress"
+      },
+      "auth_rep_city": {
+        "label": "Linn"
+      },
+      "auth_rep_postal_code": {
+        "label": "Postiindeks"
+      },
+      "auth_rep_country": {
+        "label": "Riik"
+      },
+      "auth_rep_email": {
+        "label": "Elektrooniline aadress (e-post)",
+        "placeholder": "nimi@ettevote.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Kordumatu ettevõtja identifikaator"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Ettevõtja identifikaatori tüüp"
+      },
+      "manufacturer_non_eu": {
+        "label": "Kas tootja asub väljaspool EL-i?"
+      },
+      "eu_op_legal_name": {
+        "label": "EL-i vastutava ettevõtja juriidiline nimi"
+      },
+      "eu_op_role": {
+        "label": "Roll"
+      },
+      "eu_op_street": {
+        "label": "Tänava aadress"
+      },
+      "eu_op_city": {
+        "label": "Linn"
+      },
+      "eu_op_postal_code": {
+        "label": "Postiindeks"
+      },
+      "eu_op_country": {
+        "label": "Riik"
+      },
+      "eu_op_email": {
+        "label": "Elektrooniline aadress (e-post)",
+        "placeholder": "nimi@ettevote.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Kordumatu ettevõtja identifikaator"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Ettevõtja identifikaatori tüüp"
+      },
+      "has_instructions_warnings": {
+        "label": "Kas see mänguasi nõuab juhiseid, hoiatusi või ohutusteavet?"
+      },
+      "public_instructions_warnings": {
+        "label": "Avalikud juhised ja hoiatused",
+        "help": "Lisage mänguasjaga kaasas olevad hoiatused, juhised ja ohutusteave."
+      },
+      "ce_declaration_ack": {
+        "label": "Tootja deklareerib, et see mänguasi vastab kohaldatavatele EL-i ohutusnõuetele ning kannab või hakkab kandma CE-märgist, kui see on nõutav enne EL-i turule laskmist.",
+        "help": "EL-i turule tohib lasta ainult CE-märgisega mänguasju. See deklaratsioon peab olema kooskõlas tootja vastavushindamisega."
+      },
+      "eu_doc_available": {
+        "label": "Kas EL-i vastavusdeklaratsioon on saadaval?",
+        "warn": "EL-i vastavusdeklaratsioon on oodatud osana mänguasjade vastavusraamistikust. Täitke see enne, kui kasutate DPP-d turule suunatud otstarbel."
+      },
+      "eu_doc_reference": {
+        "label": "Vastavusdeklaratsiooni viide"
+      },
+      "eu_doc_upload": {
+        "label": "Vastavusdeklaratsiooni üleslaadimine",
+        "help": "Ainult sisekasutuseks. Üleslaaditud faili säilitatakse tootja jaoks ja seda ei kuvata avalikul DPP-l."
+      },
+      "safety_assessment_completed": {
+        "label": "Kas ohutushindamine on lõpule viidud?",
+        "help": "Mänguasjatootjad peavad asjakohasel juhul hindama keemilisi, füüsikalisi, mehaanilisi, elektrilisi, süttivus-, hügieeni-, radioaktiivsus- ja kokkupuuteriske.",
+        "warn": "Ohutushindamise teave tuleks täita enne sellele DPP-le tuginemist."
+      },
+      "technical_documentation_available": {
+        "label": "Kas tehniline dokumentatsioon on saadaval?",
+        "help": "Tehniline dokumentatsioon toetab tõendamist, et mänguasi vastab kohaldatavatele ohutusnõuetele.",
+        "warn": "Turujärelevalveasutused võivad nõuda tehnilist dokumentatsiooni."
+      },
+      "technical_documentation_upload": {
+        "label": "Tehnilise dokumentatsiooni üleslaadimine",
+        "help": "Ainult sisekasutuseks. Üleslaaditud faili säilitatakse tootja jaoks ja seda ei kuvata avalikul DPP-l."
+      },
+      "applicable_legislation": {
+        "label": "Kohaldatavad EL-i õigusaktid"
+      },
+      "harmonised_standards": {
+        "label": "Kasutatud harmoneeritud standardid"
+      },
+      "common_specifications": {
+        "label": "Kasutatud ühised spetsifikatsioonid",
+        "placeholder": "Kirjeldage kohaldatud ühiseid spetsifikatsioone."
+      },
+      "other_standards": {
+        "label": "Muud kasutatud standardid (üks rea kohta)"
+      },
+      "notified_body_involved": {
+        "label": "Kas teavitatud asutus oli kaasatud?"
+      },
+      "notified_body_name": {
+        "label": "Teavitatud asutuse nimi"
+      },
+      "notified_body_number": {
+        "label": "Teavitatud asutuse number",
+        "placeholder": "nt 0123"
+      },
+      "certificate_reference": {
+        "label": "Sertifikaadi viide"
+      },
+      "certificate_issue_date": {
+        "label": "Sertifikaadi väljaandmise kuupäev (AAAA-KK-PP)",
+        "placeholder": "AAAA-KK-PP"
+      },
+      "notified_body_certificate_url": {
+        "label": "Vastavussertifikaat (PDF või pilt)",
+        "help": "Valikuline. Üleslaaditud fail on DPP-st avalikult kättesaadav."
+      },
+      "cn_chapter": {
+        "label": "CN-i peatükk"
+      },
+      "customs_code": {
+        "label": "Kaubakood",
+        "placeholder": "98809500",
+        "help": "Täidetakse automaatselt CN-i peatüki alusel. Kirjutage üle, kui teie tolliklassifikatsioon erineb."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Kas mänguasi või mõni selle komponent sisaldab allergeenseid lõhnaaineid kontsentratsioonil ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Esinevad allergeensed lõhnaained"
+      },
+      "allergen_declaration_text": {
+        "label": "Allergeenide deklaratsioon (automaatselt genereeritud, muudetav)"
+      },
+      "safety_channels": {
+        "label": "Avalikud ohutusjuhtumitest teavitamise kanalid"
+      },
+      "safety_phone": {
+        "label": "Ohutusjuhtumitest teavitamise telefon",
+        "placeholder": "+372 ..."
+      },
+      "safety_email": {
+        "label": "Ohutusjuhtumitest teavitamise e-post",
+        "placeholder": "ohutus@ettevote.com"
+      },
+      "safety_website": {
+        "label": "Ohutusjuhtumitest teavitamise veebisaidi / kontaktivormi URL",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
-        "VAT": "KMKR-number",
+        "VAT": "Käibemaksukohustuslase number",
         "NATIONAL": "Riiklik äriregistri kood",
         "DUNS": "DUNS",
         "ESPR": "ESPR / DPP ettevõtja identifikaator",
@@ -682,17 +959,17 @@
         "plush": "Pehme mänguasi",
         "doll": "Nukk",
         "action_figure": "Märulikangelane",
-        "construction": "Ehitusmänguasi / klotsid",
+        "construction": "Konstruktor / klotsid",
         "puzzle": "Pusle",
         "board_game": "Lauamäng",
         "arts_crafts": "Kunsti- ja käsitöömänguasi",
         "slime": "Lima / plastiliin / voolimismass",
-        "chemical_set": "Keemiamänguasjade komplekt",
+        "chemical_set": "Keemiakomplekt",
         "cosmetic": "Kosmeetiline mänguasi / mängumeik",
-        "olfactory": "Lõhnamäng",
+        "olfactory": "Lõhnateemaline lauamäng",
         "gustative": "Maitsmismäng",
         "outdoor": "Õuemänguasi",
-        "activity": "Tegelusmänguasi",
+        "activity": "Aktiivsusmänguasi",
         "ride_on": "Pealeistutav mänguasi",
         "wheeled": "Tõukeratas / rula / ratastega mänguasi",
         "aquatic": "Veemänguasi",
@@ -703,7 +980,7 @@
         "battery": "Patareiga mänguasi",
         "magnets": "Magnetitega mänguasi",
         "drone": "Mängudroon",
-        "toy_in_food": "Toidu sees olev mänguasi",
+        "toy_in_food": "Mänguasi toidu sees",
         "other": "Muu"
       },
       "ageGroup": {
@@ -729,7 +1006,7 @@
         "SGTIN": "Seeriastatud GTIN",
         "SKU": "SKU",
         "MODEL": "Mudeli number",
-        "ISO_15459": "ISO/IEC 15459-ga ühilduv identifikaator",
+        "ISO_15459": "ISO/IEC 15459-ühilduv identifikaator",
         "other": "Muu"
       },
       "cnChapter": {
@@ -742,8 +1019,8 @@
         "44": "44 — Puit ja puittooted",
         "48": "48 — Paber ja papp",
         "49": "49 — Trükitud raamatud, pildid, kaardid",
-        "61": "61 — Silmkoerõivad / tekstiilist aksessuaarid",
-        "62": "62 — Trikotaažist mitteolevad rõivad / tekstiilist aksessuaarid",
+        "61": "61 — Silmkoelised rõivad / tekstiilitarvikud",
+        "62": "62 — Mitte-silmkoelised rõivad / tekstiilitarvikud",
         "63": "63 — Muud tekstiilist valmistooted",
         "69": "69 — Keraamikatooted",
         "70": "70 — Klaas ja klaastooted",
@@ -759,8 +1036,8 @@
         "TSR": "Määrus (EL) 2025/2509 — Mänguasjade ohutuse määrus",
         "GPSR": "Määrus (EL) 2023/988 — Üldise tooteohutuse määrus",
         "MSR": "Määrus (EL) 2019/1020 — Turujärelevalve",
-        "AI_ACT": "Määrus (EL) 2024/1689 — Tehisintellekti määrus",
-        "CRA": "Määrus (EL) 2024/2847 — Küberturvalisuse määrus",
+        "AI_ACT": "Määrus (EL) 2024/1689 — Tehisintellekti käsitlev õigusakt",
+        "CRA": "Määrus (EL) 2024/2847 — Kübervastupidavusakt",
         "RED": "Direktiiv 2014/53/EL — Raadioseadmete direktiiv",
         "LVD": "Direktiiv 2014/35/EL — Madalpingedirektiiv",
         "EMC": "Direktiiv 2014/30/EL — Elektromagnetilise ühilduvuse direktiiv",
@@ -777,11 +1054,11 @@
         "EN71_2": "EN 71-2 — Süttivus",
         "EN71_3": "EN 71-3 — Teatavate elementide migratsioon",
         "EN71_4": "EN 71-4 — Keemiakatsete komplektid",
-        "EN71_5": "EN 71-5 — Keemilised mänguasjad, v.a katsekomplektid",
+        "EN71_5": "EN 71-5 — Keemilised mänguasjad (v.a katsekomplektid)",
         "EN71_7": "EN 71-7 — Näpuvärvid",
-        "EN71_8": "EN 71-8 — Koduseks kasutamiseks mõeldud tegelusmänguasjad",
-        "EN71_12": "EN 71-12 — N-nitrosoamiinid ja N-nitroseeruvad ained",
-        "EN71_13": "EN 71-13 — Lõhnamängud, kosmeetikakomplektid ja maitsmismängud",
+        "EN71_8": "EN 71-8 — Koduseks kasutamiseks mõeldud aktiivsusmänguasjad",
+        "EN71_12": "EN 71-12 — N-nitrosoamiinid ja N-nitroseeritavad ained",
+        "EN71_13": "EN 71-13 — Lõhnateemalised lauamängud, kosmeetikakomplektid ja maitsmismängud",
         "EN71_14": "EN 71-14 — Koduseks kasutamiseks mõeldud batuudid",
         "EN_IEC_62115": "EN IEC 62115 — Elektrilised mänguasjad",
         "other": "Muu harmoneeritud standard",
@@ -794,11 +1071,11 @@
         "form": "Kontaktivorm"
       },
       "euOperatorRole": {
-        "importer": "Importija",
+        "importer": "Maaletooja",
         "auth_rep": "Volitatud esindaja",
-        "fulfilment": "Tellimuste täitmise teenuse osutaja",
+        "fulfilment": "Tellimuste täitmise teenuse pakkuja",
         "distributor": "Levitaja, kes tegutseb vastutava ettevõtjana",
-        "other": "Muu ELis asuv vastutav isik (määrus 2019/1020 art 4)"
+        "other": "Muu EL-is asuv vastutav isik (määrus 2019/1020 art 4)"
       },
       "yesNo": {
         "yes": "Jah",
@@ -808,6 +1085,138 @@
         "yes": "Jah",
         "no": "Ei",
         "unknown": "Teadmata"
+      }
+    },
+    "ai": {
+      "scannerTitle": "Tehisintellektiga mänguasja märgistuse skanner",
+      "scannerDescription": "Tehke või laadige üles pilt mänguasja pakendist — tehisintellekt loeb CE-märgise, vanusehoiatused, tootja andmeploki, vöötkoodi ja loetletud allergeensed lõhnaained.",
+      "dropHere": "↓ Lohista siia",
+      "dragOrClick": "Lohista ja vabasta või klõpsa"
+    },
+    "warnings": {
+      "youngChild": "See mänguasi on mõeldud alla 36 kuu vanustele lastele. Kehtivad rangemad allergeensete lõhnaainete piirangud ja kõik väikesed osad tuleb hinnata lämbumisohu suhtes.",
+      "mouthContact": "See mänguasi on mõeldud suhu panemiseks. Kehtivad rangemad allergeensete lõhnaainete ja kemikaalide migratsiooni piirangud.",
+      "unknownAllergens": "See DPP võib olla puudulik, sest teave allergeensete lõhnaainete kohta on kohaldatavatel juhtudel kohustuslik. Enne avaldamist asendage \"Teadmata\" valikuga \"Jah\" või \"Ei\".",
+      "suggestLegislation": "Valitud mänguasja kategooria põhjal kaaluge ka järgmiste märkimist: {{list}}."
+    },
+    "disclaimer": {
+      "title": "Mänguasjade DPP — vastavusest lahtiütlemine",
+      "body": "EL-i digitaalse tootepassi täpne andmemudel ja API spetsifikatsioonid mänguasjadele on veel kindlaks määramata ning need peaksid olema määratletud rakendusaktis, mis valmib 2026. aasta lõpuks. See tööriist on esimene versioon, mis põhineb määrusel (EL) 2025/2509, ja seda ei tohiks käsitleda lõpliku juriidilise nõuandena."
+    },
+    "internalBadge": "Sisekasutuseks — ei kuvata avalikult",
+    "safetyGate": {
+      "title": "EL-i Safety Gate",
+      "body": "Teatage ohtlikest toodetest EL-i Safety Gate'i portaali kaudu:",
+      "alwaysShown": "Seda linki kuvatakse alati avalikul passil."
+    },
+    "certificate": {
+      "viewFile": "Vaata üleslaaditud faili",
+      "remove": "Eemalda fail",
+      "uploading": "Laadin üles...",
+      "uploadButton": "Laadi sertifikaat üles",
+      "errors": {
+        "loginRequired": "Failide üleslaadimiseks peate olema sisse logitud.",
+        "tooLarge": "Fail on liiga suur. Maksimaalne suurus on 5 MB.",
+        "uploadFailed": "Üleslaadimine ebaõnnestus."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Allergeenseid lõhnaaineid pole veel lisatud.",
+      "summary": "{{count}} lõhnaaine(t) deklareeritud.",
+      "addButton": "Lisa lõhnaaine",
+      "cas": "CAS",
+      "removeAria": "Eemalda {{name}}",
+      "concentrationLabel": "Kontsentratsioon (mg/kg)",
+      "componentLabel": "Komponent / materjal",
+      "componentPlaceholder": "nt pehme täidis",
+      "aboveThreshold": "Kontsentratsioon ≥10 mg/kg",
+      "supplierDeclaration": "Tarnija deklaratsioon on failis",
+      "testReport": "Katsearuanne on failis",
+      "dialogTitle": "Valige allergeensed lõhnaained",
+      "searchPlaceholder": "Otsi nime, CAS-i või ID järgi...",
+      "clearSearch": "Tühjenda otsing",
+      "noResults": "Ükski lõhnaaine ei vasta otsingule \"{{q}}\".",
+      "done": "Valmis"
+    },
+    "validation": {
+      "imageRequired": "Nõutav on mänguasja värviline pilt.",
+      "descriptionRequired": "Mänguasjade puhul on nõutav tootekirjeldus."
+    },
+    "public": {
+      "badge": "🧸 Mänguasi — digitaalne tootepass",
+      "otherFallback": "Muu",
+      "notDeclared": "Deklareerimata",
+      "ceMarked": "✓ CE-märgistatud",
+      "statusPublished": "Avaldatud",
+      "noAllergens": "Märgistamisnõuetele vastavaid allergeenseid lõhnaaineid ei ole deklareeritud kontsentratsioonis 10 mg/kg või rohkem.",
+      "certificateDownload": "Laadi alla vastavussertifikaat",
+      "reportUnsafe": "Teata ohtlikust tootest",
+      "mirroredAt": "Peegeldatud aadressil {{url}}",
+      "mirroredDefault": "Peegeldatud Open-Label.eu taristus",
+      "nbNumber": "Number {{n}}",
+      "nbCertificate": "Sertifikaat: {{ref}}",
+      "nbIssued": "(välja antud {{date}})",
+      "instructionsTitle": "Juhised ja hoiatused",
+      "ceDeclarationStatement": "Tootja deklareerib, et see mänguasi vastab kohaldatavatele EL-i ohutusnõuetele ning kannab või hakkab kandma CE-märgist, kui see on nõutav enne EL-i turule laskmist.",
+      "docLabel": "EL-i vastavusdeklaratsioon",
+      "docReference": "Viide",
+      "safetyAssessmentLabel": "Ohutushindamine",
+      "technicalDocsLabel": "Tehniline dokumentatsioon",
+      "yesNoUnknown": {
+        "yes": "Jah",
+        "no": "Ei",
+        "unknown": "Teadmata"
+      },
+      "sections": {
+        "identity": "Toote identiteet",
+        "manufacturer": "Tootja vastutus",
+        "manufacturerNote": "See digitaalne tootepass on välja antud tootja ainuvastutusel.",
+        "euOperator": "EL-i ettevõtja teave",
+        "authRep": "Volitatud esindaja",
+        "euResponsible": "EL-i vastutav ettevõtja",
+        "compliance": "Vastavus",
+        "safety": "Ohutus- ja kemikaaliteave",
+        "safetyReporting": "Ohutusjuhtumitest teavitamine",
+        "infrastructure": "DPP taristu"
+      },
+      "rows": {
+        "brand": "Kaubamärk",
+        "model": "Mudel",
+        "sku": "SKU / variant",
+        "toyCategory": "Mänguasja kategooria",
+        "age": "Sihtvanuserühm",
+        "uid": "Kordumatu identifikaator",
+        "manufacturer": "Tootja",
+        "address": "Aadress",
+        "email": "E-post",
+        "website": "Veebisait",
+        "operatorId": "Ettevõtja identifikaator",
+        "legalName": "Juriidiline nimi",
+        "role": "Roll",
+        "ce": "CE-märgis",
+        "applicableLeg": "Kohaldatavad õigusaktid",
+        "standards": "Harmoneeritud standardid",
+        "commonSpecs": "Ühised spetsifikatsioonid",
+        "otherStandards": "Muud standardid",
+        "notifiedBody": "Teavitatud asutus",
+        "customs": "Kaubakood",
+        "dppProvider": "DPP teenusepakkuja",
+        "backup": "Varukoopia viide",
+        "dppVersion": "DPP versioon",
+        "lastUpdated": "Viimati uuendatud",
+        "status": "Olek"
+      },
+      "table": {
+        "substance": "Aine",
+        "cas": "CAS",
+        "concentration": "Kontsentratsioon",
+        "component": "Komponent"
+      },
+      "safety": {
+        "telephone": "Telefon",
+        "emailLabel": "E-post",
+        "web": "Veeb",
+        "gatePortal": "EL-i Safety Gate'i portaal"
       }
     }
   }
