@@ -21,7 +21,10 @@
     "language": "Jazyk",
     "custom": "Vlastné",
     "selectOption": "Vyberte možnosť",
-    "confirmed": "Potvrdené"
+    "confirmed": "Potvrdené",
+    "required": "Povinné",
+    "whereApplicable": "V relevantných prípadoch",
+    "tbdImplementingAct": "Bude stanovené — vykonávací akt"
   },
   "nav": {
     "signIn": "Prihlásiť sa",
@@ -666,40 +669,314 @@
     "poweredBy": "Používa technológiu"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Zodpovednosť výrobcu",
+        "description": "Tento digitálny pas výrobku sa vydáva na výhradnú zodpovednosť výrobcu."
+      },
+      "product_identity": {
+        "title": "Identita výrobku",
+        "description": "Každý model alebo variant hračky potrebuje vlastný DPP."
+      },
+      "manufacturer": {
+        "title": "Výrobca",
+        "description": "Právnická osoba zodpovedná za uvedenie hračky na trh."
+      },
+      "auth_rep": {
+        "title": "Splnomocnený zástupca",
+        "description": "V relevantných prípadoch."
+      },
+      "eu_operator": {
+        "title": "Zodpovedný hospodársky subjekt v EÚ",
+        "description": "Vyžaduje sa, ak je výrobca usadený mimo EÚ."
+      },
+      "compliance": {
+        "title": "Zhoda",
+        "description": "Označenie CE, platné právne predpisy a normy EÚ."
+      },
+      "notified_body": {
+        "title": "Posudzovanie zhody a notifikovaný orgán",
+        "description": "V relevantných prípadoch."
+      },
+      "customs": {
+        "title": "Colný kód tovaru",
+        "description": "Generované ako 9880 + kapitola CN + 00. Možnosť úpravy."
+      },
+      "allergenic_fragrances": {
+        "title": "Alergénne vonné látky",
+        "description": "Látky podliehajúce požiadavkám na označovanie pri koncentrácii ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Hlásenie bezpečnostných incidentov",
+        "description": "Kanály dostupné pre spotrebiteľov a orgány."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Potvrdzujem, že tento DPP sa vydáva na výhradnú zodpovednosť výrobcu."
+      },
+      "brand_name": {
+        "label": "Názov značky"
+      },
+      "model_name": {
+        "label": "Názov modelu alebo číslo modelu"
+      },
+      "sku": {
+        "label": "SKU alebo ID variantu",
+        "help": "Použite samostatný DPP pre každý variant (farba, veľkosť, materiál, elektronická verzia, verzia v balíku)."
+      },
+      "toy_category": {
+        "label": "Kategória hračky"
+      },
+      "toy_category_other": {
+        "label": "Kategória hračky (špecifikujte)"
+      },
+      "age_group": {
+        "label": "Určená veková skupina"
+      },
+      "age_group_other": {
+        "label": "Veková skupina (špecifikujte)"
+      },
+      "mouth_contact": {
+        "label": "Je táto hračka určená na vkladanie do úst?",
+        "help": "Pre hračky určené na vkladanie do úst platia prísnejšie obmedzenia týkajúce sa alergénnych vonných látok a chemikálií."
+      },
+      "unique_product_identifier": {
+        "label": "Jedinečný identifikátor výrobku",
+        "help": "Trvalý identifikátor pre tento model/SKU/variant hračky. Mal by byť kompatibilný s identifikáciou v štýle ESPR / ISO IEC 15459, keď budú potvrdené konečné špecifikácie."
+      },
+      "identifier_type": {
+        "label": "Typ identifikátora"
+      },
+      "identifier_type_other": {
+        "label": "Typ identifikátora (špecifikujte)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Obchodné meno výrobcu"
+      },
+      "manufacturer_street": {
+        "label": "Ulica a číslo"
+      },
+      "manufacturer_city": {
+        "label": "Mesto"
+      },
+      "manufacturer_postal_code": {
+        "label": "PSČ"
+      },
+      "manufacturer_country": {
+        "label": "Krajina"
+      },
+      "manufacturer_email": {
+        "label": "Elektronická adresa (e-mail)",
+        "placeholder": "meno@firma.com"
+      },
+      "manufacturer_website": {
+        "label": "Webová stránka",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Jedinečný identifikátor hospodárskeho subjektu",
+        "help": "Použite teraz najlepší dostupný identifikátor hospodárskeho subjektu; konečný požadovaný formát môže byť definovaný vykonávacím aktom."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Typ identifikátora hospodárskeho subjektu"
+      },
+      "has_auth_rep": {
+        "label": "Má výrobca splnomocneného zástupcu?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Obchodné meno splnomocneného zástupcu"
+      },
+      "auth_rep_street": {
+        "label": "Ulica a číslo"
+      },
+      "auth_rep_city": {
+        "label": "Mesto"
+      },
+      "auth_rep_postal_code": {
+        "label": "PSČ"
+      },
+      "auth_rep_country": {
+        "label": "Krajina"
+      },
+      "auth_rep_email": {
+        "label": "Elektronická adresa (e-mail)",
+        "placeholder": "meno@firma.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Jedinečný identifikátor hospodárskeho subjektu"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Typ identifikátora hospodárskeho subjektu"
+      },
+      "manufacturer_non_eu": {
+        "label": "Je výrobca usadený mimo EÚ?"
+      },
+      "eu_op_legal_name": {
+        "label": "Obchodné meno zodpovedného hospodárskeho subjektu v EÚ"
+      },
+      "eu_op_role": {
+        "label": "Rola"
+      },
+      "eu_op_street": {
+        "label": "Ulica a číslo"
+      },
+      "eu_op_city": {
+        "label": "Mesto"
+      },
+      "eu_op_postal_code": {
+        "label": "PSČ"
+      },
+      "eu_op_country": {
+        "label": "Krajina"
+      },
+      "eu_op_email": {
+        "label": "Elektronická adresa (e-mail)",
+        "placeholder": "meno@firma.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Jedinečný identifikátor hospodárskeho subjektu"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Typ identifikátora hospodárskeho subjektu"
+      },
+      "has_instructions_warnings": {
+        "label": "Vyžaduje táto hračka návod, varovania alebo bezpečnostné informácie?"
+      },
+      "public_instructions_warnings": {
+        "label": "Verejné pokyny a varovania",
+        "help": "Pridajte varovania, pokyny a bezpečnostné informácie, ktoré sú priložené k hračke."
+      },
+      "ce_declaration_ack": {
+        "label": "Výrobca vyhlasuje, že táto hračka spĺňa platné bezpečnostné požiadavky EÚ a nesie alebo bude niesť označenie CE, ak sa to vyžaduje, pred uvedením na trh EÚ.",
+        "help": "Na trh EÚ môžu byť uvedené iba hračky s označením CE. Toto vyhlásenie by malo byť v súlade s posúdením zhody výrobcu."
+      },
+      "eu_doc_available": {
+        "label": "Je k dispozícii EÚ vyhlásenie o zhode?",
+        "warn": "EÚ vyhlásenie o zhode sa očakáva ako súčasť rámca zhody hračiek. Doplňte ho predtým, ako sa budete spoliehať na DPP pri používaní na trhu."
+      },
+      "eu_doc_reference": {
+        "label": "Referencia vyhlásenia o zhode"
+      },
+      "eu_doc_upload": {
+        "label": "Nahratie vyhlásenia o zhode",
+        "help": "Len pre internú evidenciu. Nahraný súbor je uchovaný pre výrobcu a nezobrazuje sa vo verejnom DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Posúdenie bezpečnosti dokončené?",
+        "help": "Výrobcovia hračiek musia posúdiť chemické, fyzikálne, mechanické, elektrické riziká, riziká horľavosti, hygieny, rádioaktivity a expozície, ak je to relevantné.",
+        "warn": "Informácie o posúdení bezpečnosti by mali byť doplnené predtým, ako sa budete spoliehať na tento DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Je k dispozícii technická dokumentácia?",
+        "help": "Technická dokumentácia podporuje preukázanie, že hračka spĺňa platné bezpečnostné požiadavky.",
+        "warn": "Technickú dokumentáciu môžu vyžadovať orgány dohľadu nad trhom."
+      },
+      "technical_documentation_upload": {
+        "label": "Nahratie technickej dokumentácie",
+        "help": "Len pre internú evidenciu. Nahraný súbor je uchovaný pre výrobcu a nezobrazuje sa vo verejnom DPP."
+      },
+      "applicable_legislation": {
+        "label": "Platné právne predpisy EÚ"
+      },
+      "harmonised_standards": {
+        "label": "Použité harmonizované normy"
+      },
+      "common_specifications": {
+        "label": "Použité spoločné špecifikácie",
+        "placeholder": "Opíšte použité spoločné špecifikácie."
+      },
+      "other_standards": {
+        "label": "Iné použité normy (jedna na riadok)"
+      },
+      "notified_body_involved": {
+        "label": "Bol zapojený notifikovaný orgán?"
+      },
+      "notified_body_name": {
+        "label": "Názov notifikovaného orgánu"
+      },
+      "notified_body_number": {
+        "label": "Číslo notifikovaného orgánu",
+        "placeholder": "napr. 0123"
+      },
+      "certificate_reference": {
+        "label": "Referencia certifikátu"
+      },
+      "certificate_issue_date": {
+        "label": "Dátum vydania certifikátu (RRRR-MM-DD)",
+        "placeholder": "RRRR-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Certifikát o zhode (PDF alebo obrázok)",
+        "help": "Nepovinné. Nahraný súbor je verejne prístupný z DPP."
+      },
+      "cn_chapter": {
+        "label": "Kapitola CN"
+      },
+      "customs_code": {
+        "label": "Colný kód tovaru",
+        "placeholder": "98809500",
+        "help": "Automaticky vyplnené z kapitoly CN. Prepíšte, ak sa vaše colné zaradenie líši."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Obsahuje hračka alebo niektorá jej zložka alergénne vonné látky v koncentrácii ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Prítomné alergénne vonné látky"
+      },
+      "allergen_declaration_text": {
+        "label": "Vyhlásenie o alergénoch (automaticky generované, možnosť úpravy)"
+      },
+      "safety_channels": {
+        "label": "Verejné kanály na hlásenie bezpečnosti"
+      },
+      "safety_phone": {
+        "label": "Telefón na hlásenie bezpečnosti",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "E-mail na hlásenie bezpečnosti",
+        "placeholder": "bezpecnost@firma.com"
+      },
+      "safety_website": {
+        "label": "Webová stránka / URL kontaktného formulára na hlásenie bezpečnosti",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
-        "VAT": "Číslo DPH",
-        "NATIONAL": "Národné registračné číslo spoločnosti",
+        "VAT": "IČ DPH",
+        "NATIONAL": "IČO (Identifikačné číslo organizácie)",
         "DUNS": "DUNS",
-        "ESPR": "Identifikátor hospodárskeho subjektu ESPR / DPP",
+        "ESPR": "ESPR / DPP identifikátor hospodárskeho subjektu",
         "other": "Iné"
       },
       "toyCategory": {
-        "baby": "Hračka pre bábätká",
+        "baby": "Hračka pre dojčatá",
         "plush": "Plyšová hračka",
         "doll": "Bábika",
         "action_figure": "Akčná figúrka",
         "construction": "Stavebnica / kocky",
-        "puzzle": "Puzzle",
+        "puzzle": "Skladačka (puzzle)",
         "board_game": "Stolová hra",
-        "arts_crafts": "Umelecká a remeselná hračka",
+        "arts_crafts": "Hračka na umeleckú a remeselnú tvorbu",
         "slime": "Sliz / tmel / modelovacia hmota",
         "chemical_set": "Chemická súprava hračiek",
         "cosmetic": "Kozmetická hračka / detský make-up",
         "olfactory": "Čuchová stolová hra",
         "gustative": "Chuťová hra",
-        "outdoor": "Vonkajšia hračka",
-        "activity": "Aktívna hračka",
-        "ride_on": "Hračka na jazdenie",
+        "outdoor": "Hračka na vonkajšie použitie",
+        "activity": "Hračka na rozvoj aktivít",
+        "ride_on": "Hračka na jazdenie (odrážadlo)",
         "wheeled": "Kolobežka / korčule / kolesová hračka",
         "aquatic": "Hračka do vody",
         "electronic": "Elektronická hračka",
         "radio": "Hračka s rádiovým pripojením",
         "internet": "Hračka s pripojením na internet",
-        "ai": "Hračka s umelou inteligenciou (AI)",
+        "ai": "Hračka s umelou inteligenciou",
         "battery": "Hračka s batériou",
         "magnets": "Hračka s magnetmi",
         "drone": "Hračkársky dron",
@@ -726,7 +1003,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "Sériové číslo GTIN",
+        "SGTIN": "Serializované GTIN",
         "SKU": "SKU",
         "MODEL": "Číslo modelu",
         "ISO_15459": "Identifikátor kompatibilný s ISO/IEC 15459",
@@ -777,9 +1054,9 @@
         "EN71_2": "EN 71-2 — Horľavosť",
         "EN71_3": "EN 71-3 — Migrácia určitých prvkov",
         "EN71_4": "EN 71-4 — Súpravy na chemické pokusy",
-        "EN71_5": "EN 71-5 — Chemické hračky iné ako súpravy na pokusy",
+        "EN71_5": "EN 71-5 — Chemické hračky (iné ako súpravy na pokusy)",
         "EN71_7": "EN 71-7 — Farby na maľovanie prstami",
-        "EN71_8": "EN 71-8 — Hračky na aktívne využívanie voľného času na domáce použitie",
+        "EN71_8": "EN 71-8 — Hračky na rozvoj aktivít na domáce použitie",
         "EN71_12": "EN 71-12 — N-nitrózamíny a N-nitrózovateľné látky",
         "EN71_13": "EN 71-13 — Čuchové stolové hry, kozmetické súpravy a chuťové hry",
         "EN71_14": "EN 71-14 — Trampolíny na domáce použitie",
@@ -798,7 +1075,7 @@
         "auth_rep": "Splnomocnený zástupca",
         "fulfilment": "Poskytovateľ služieb plnenia",
         "distributor": "Distribútor konajúci ako zodpovedný hospodársky subjekt",
-        "other": "Iná zodpovedná osoba so sídlom v EÚ (Nariadenie (EÚ) 2019/1020, čl. 4)"
+        "other": "Iná zodpovedná osoba so sídlom v EÚ (Nariadenie 2019/1020, čl. 4)"
       },
       "yesNo": {
         "yes": "Áno",
@@ -808,6 +1085,138 @@
         "yes": "Áno",
         "no": "Nie",
         "unknown": "Neznáme"
+      }
+    },
+    "ai": {
+      "scannerTitle": "AI skener označení hračiek",
+      "scannerDescription": "Odfoťte alebo nahrajte obrázok obalu hračky — umelá inteligencia prečíta označenie CE, vekové varovania, údaje o výrobcovi, čiarový kód a uvedené alergénne vonné látky.",
+      "dropHere": "↓ Presuňte sem",
+      "dragOrClick": "Presuňte súbor alebo kliknite"
+    },
+    "warnings": {
+      "youngChild": "Táto hračka je určená pre deti do 36 mesiacov. Platia prísnejšie obmedzenia pre alergénne vonné látky a všetky malé časti musia byť posúdené z hľadiska nebezpečenstva udusenia.",
+      "mouthContact": "Táto hračka je určená na vkladanie do úst. Platia prísnejšie obmedzenia týkajúce sa alergénnych vonných látok a migrácie chemikálií.",
+      "unknownAllergens": "Tento DPP môže byť neúplný, pretože informácie o alergénnych vonných látkach sú v relevantných prípadoch povinné. Pred zverejnením nahraďte „Neznáme“ možnosťou Áno alebo Nie.",
+      "suggestLegislation": "Na základe zvolenej kategórie hračky zvážte aj zaškrtnutie: {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP pre hračky — vyhlásenie o odmietnutí zodpovednosti za zhodu",
+      "body": "Presný dátový model digitálneho pasu výrobku EÚ a špecifikácie API pre hračky ešte nie sú stanovené a očakáva sa, že budú definované vo vykonávacom akte do konca roka 2026. Tento nástroj je prvou verziou založenou na Nariadení (EÚ) 2025/2509 a nemal by sa považovať za konečné právne poradenstvo."
+    },
+    "internalBadge": "Interné — nezobrazuje sa verejne",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Nahláste nebezpečné výrobky prostredníctvom portálu EU Safety Gate:",
+      "alwaysShown": "Tento odkaz sa vždy zobrazuje vo verejnom pase."
+    },
+    "certificate": {
+      "viewFile": "Zobraziť nahraný súbor",
+      "remove": "Odstrániť súbor",
+      "uploading": "Nahráva sa...",
+      "uploadButton": "Nahrať certifikát",
+      "errors": {
+        "loginRequired": "Na nahrávanie súborov musíte byť prihlásený.",
+        "tooLarge": "Súbor je príliš veľký. Maximálna veľkosť je 5 MB.",
+        "uploadFailed": "Nahrávanie zlyhalo."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Zatiaľ neboli pridané žiadne alergénne vonné látky.",
+      "summary": "Deklarovaných {{count}} vonných látok.",
+      "addButton": "Pridať vonnú látku",
+      "cas": "CAS",
+      "removeAria": "Odstrániť {{name}}",
+      "concentrationLabel": "Koncentrácia (mg/kg)",
+      "componentLabel": "Zložka / materiál",
+      "componentPlaceholder": "napr. plyšová výplň",
+      "aboveThreshold": "Koncentrácia ≥10 mg/kg",
+      "supplierDeclaration": "Vyhlásenie dodávateľa v záznamoch",
+      "testReport": "Protokol o skúške v záznamoch",
+      "dialogTitle": "Vyberte alergénne vonné látky",
+      "searchPlaceholder": "Hľadať podľa názvu, CAS alebo ID...",
+      "clearSearch": "Vymazať vyhľadávanie",
+      "noResults": "Žiadne vonné látky nezodpovedajú „{{q}}“.",
+      "done": "Hotovo"
+    },
+    "validation": {
+      "imageRequired": "Vyžaduje sa farebný obrázok hračky.",
+      "descriptionRequired": "Pre hračky sa vyžaduje opis výrobku."
+    },
+    "public": {
+      "badge": "🧸 Hračka — Digitálny pas výrobku",
+      "otherFallback": "Iné",
+      "notDeclared": "Neuvedené",
+      "ceMarked": "✓ Označenie CE",
+      "statusPublished": "Zverejnené",
+      "noAllergens": "Nie sú deklarované žiadne alergénne vonné látky podliehajúce požiadavkám na označovanie, ktoré by boli prítomné v koncentrácii 10 mg/kg alebo vyššej.",
+      "certificateDownload": "Stiahnuť certifikát o zhode",
+      "reportUnsafe": "Nahlásiť nebezpečný výrobok",
+      "mirroredAt": "Zrkadlené na {{url}}",
+      "mirroredDefault": "Zrkadlené na infraštruktúre Open-Label.eu",
+      "nbNumber": "Číslo {{n}}",
+      "nbCertificate": "Certifikát: {{ref}}",
+      "nbIssued": "(vydané {{date}})",
+      "instructionsTitle": "Pokyny a varovania",
+      "ceDeclarationStatement": "Výrobca vyhlasuje, že táto hračka spĺňa platné bezpečnostné požiadavky EÚ a nesie alebo bude niesť označenie CE, ak sa to vyžaduje, pred uvedením na trh EÚ.",
+      "docLabel": "EÚ vyhlásenie o zhode",
+      "docReference": "Referencia",
+      "safetyAssessmentLabel": "Posúdenie bezpečnosti",
+      "technicalDocsLabel": "Technická dokumentácia",
+      "yesNoUnknown": {
+        "yes": "Áno",
+        "no": "Nie",
+        "unknown": "Neznáme"
+      },
+      "sections": {
+        "identity": "Identita výrobku",
+        "manufacturer": "Zodpovednosť výrobcu",
+        "manufacturerNote": "Tento digitálny pas výrobku sa vydáva na výhradnú zodpovednosť výrobcu.",
+        "euOperator": "Informácie o hospodárskom subjekte v EÚ",
+        "authRep": "Splnomocnený zástupca",
+        "euResponsible": "Zodpovedný hospodársky subjekt v EÚ",
+        "compliance": "Zhoda",
+        "safety": "Bezpečnostné a chemické informácie",
+        "safetyReporting": "Hlásenie bezpečnostných incidentov",
+        "infrastructure": "Infraštruktúra DPP"
+      },
+      "rows": {
+        "brand": "Značka",
+        "model": "Model",
+        "sku": "SKU / variant",
+        "toyCategory": "Kategória hračky",
+        "age": "Určená veková skupina",
+        "uid": "Jedinečný identifikátor",
+        "manufacturer": "Výrobca",
+        "address": "Adresa",
+        "email": "E-mail",
+        "website": "Webová stránka",
+        "operatorId": "Identifikátor hospodárskeho subjektu",
+        "legalName": "Obchodné meno",
+        "role": "Rola",
+        "ce": "Označenie CE",
+        "applicableLeg": "Platné právne predpisy",
+        "standards": "Harmonizované normy",
+        "commonSpecs": "Spoločné špecifikácie",
+        "otherStandards": "Iné normy",
+        "notifiedBody": "Notifikovaný orgán",
+        "customs": "Colný kód",
+        "dppProvider": "Poskytovateľ služieb DPP",
+        "backup": "Referencia záložnej kópie",
+        "dppVersion": "Verzia DPP",
+        "lastUpdated": "Posledná aktualizácia",
+        "status": "Stav"
+      },
+      "table": {
+        "substance": "Látka",
+        "cas": "CAS",
+        "concentration": "Koncentrácia",
+        "component": "Zložka"
+      },
+      "safety": {
+        "telephone": "Telefón",
+        "emailLabel": "E-mail",
+        "web": "Web",
+        "gatePortal": "Portál EU Safety Gate"
       }
     }
   }

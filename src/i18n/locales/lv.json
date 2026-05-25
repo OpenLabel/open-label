@@ -21,7 +21,10 @@
     "language": "Valoda",
     "custom": "Pielāgots",
     "selectOption": "Izvēlieties opciju",
-    "confirmed": "Apstiprināts"
+    "confirmed": "Apstiprināts",
+    "required": "Obligāti",
+    "whereApplicable": "Ja piemērojams",
+    "tbdImplementingAct": "Vēl nav noteikts — īstenošanas akts"
   },
   "nav": {
     "signIn": "Ieiet",
@@ -666,13 +669,287 @@
     "poweredBy": "Darbina"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Ražotāja atbildība",
+        "description": "Šī digitālā produkta pase ir izdota vienīgi uz ražotāja atbildību."
+      },
+      "product_identity": {
+        "title": "Produkta identitāte",
+        "description": "Katram rotaļlietas modelim vai variantam ir nepieciešama sava DPP."
+      },
+      "manufacturer": {
+        "title": "Ražotājs",
+        "description": "Juridiskā persona, kas atbild par rotaļlietas laišanu tirgū."
+      },
+      "auth_rep": {
+        "title": "Pilnvarotais pārstāvis",
+        "description": "Ja piemērojams."
+      },
+      "eu_operator": {
+        "title": "ES atbildīgais saimnieciskās darbības veicējs",
+        "description": "Nepieciešams, ja ražotājs ir reģistrēts ārpus ES."
+      },
+      "compliance": {
+        "title": "Atbilstība",
+        "description": "CE marķējums, piemērojamie ES tiesību akti un standarti."
+      },
+      "notified_body": {
+        "title": "Atbilstības novērtēšana un paziņotā struktūra",
+        "description": "Ja piemērojams."
+      },
+      "customs": {
+        "title": "Muitas preču kods",
+        "description": "Ģenerēts kā 9880 + KN nodaļa + 00. Rediģējams."
+      },
+      "allergenic_fragrances": {
+        "title": "Alergēnas smaržvielas",
+        "description": "Vielas, uz kurām attiecas marķēšanas prasības, ja to koncentrācija ir ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Ziņošana par drošības incidentiem",
+        "description": "Kanāli, kas pieejami patērētājiem un iestādēm."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Es apstiprinu, ka šī DPP ir izdota vienīgi uz ražotāja atbildību."
+      },
+      "brand_name": {
+        "label": "Zīmola nosaukums"
+      },
+      "model_name": {
+        "label": "Modeļa nosaukums vai modeļa numurs"
+      },
+      "sku": {
+        "label": "SKU vai varianta ID",
+        "help": "Izmantojiet atsevišķu DPP katram variantam (krāsa, izmērs, materiāls, elektroniskā versija, komplekta versija)."
+      },
+      "toy_category": {
+        "label": "Rotaļlietu kategorija"
+      },
+      "toy_category_other": {
+        "label": "Rotaļlietu kategorija (norādīt)"
+      },
+      "age_group": {
+        "label": "Paredzētā vecuma grupa"
+      },
+      "age_group_other": {
+        "label": "Vecuma grupa (norādīt)"
+      },
+      "mouth_contact": {
+        "label": "Vai šī rotaļlieta ir paredzēta likšanai mutē?",
+        "help": "Rotaļlietām, kas paredzētas saskarei ar muti, tiek piemēroti stingrāki ierobežojumi attiecībā uz alergēnām smaržvielām un ķīmiskām vielām."
+      },
+      "unique_product_identifier": {
+        "label": "Unikāls produkta identifikators",
+        "help": "Pastāvīgs identifikators šim rotaļlietas modelim/SKU/variantam. Tam jābūt saderīgam ar ESPR / ISO IEC 15459 stila identifikāciju, kad tiks apstiprinātas galīgās specifikācijas."
+      },
+      "identifier_type": {
+        "label": "Identifikatora veids"
+      },
+      "identifier_type_other": {
+        "label": "Identifikatora veids (norādīt)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Ražotāja juridiskais nosaukums"
+      },
+      "manufacturer_street": {
+        "label": "Ielas adrese"
+      },
+      "manufacturer_city": {
+        "label": "Pilsēta"
+      },
+      "manufacturer_postal_code": {
+        "label": "Pasta indekss"
+      },
+      "manufacturer_country": {
+        "label": "Valsts"
+      },
+      "manufacturer_email": {
+        "label": "Elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_website": {
+        "label": "Tīmekļa vietne",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Unikāls operatora identifikators",
+        "help": "Izmantojiet labāko pieejamo operatora identifikatoru tagad; galīgais nepieciešamais formāts var tikt definēts īstenošanas aktā."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Operatora identifikatora veids"
+      },
+      "has_auth_rep": {
+        "label": "Vai ražotājam ir pilnvarotais pārstāvis?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Pilnvarotā pārstāvja juridiskais nosaukums"
+      },
+      "auth_rep_street": {
+        "label": "Ielas adrese"
+      },
+      "auth_rep_city": {
+        "label": "Pilsēta"
+      },
+      "auth_rep_postal_code": {
+        "label": "Pasta indekss"
+      },
+      "auth_rep_country": {
+        "label": "Valsts"
+      },
+      "auth_rep_email": {
+        "label": "Elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Unikāls operatora identifikators"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Operatora identifikatora veids"
+      },
+      "manufacturer_non_eu": {
+        "label": "Vai ražotājs ir reģistrēts ārpus ES?"
+      },
+      "eu_op_legal_name": {
+        "label": "ES atbildīgā operatora juridiskais nosaukums"
+      },
+      "eu_op_role": {
+        "label": "Loma"
+      },
+      "eu_op_street": {
+        "label": "Ielas adrese"
+      },
+      "eu_op_city": {
+        "label": "Pilsēta"
+      },
+      "eu_op_postal_code": {
+        "label": "Pasta indekss"
+      },
+      "eu_op_country": {
+        "label": "Valsts"
+      },
+      "eu_op_email": {
+        "label": "Elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Unikāls operatora identifikators"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Operatora identifikatora veids"
+      },
+      "has_instructions_warnings": {
+        "label": "Vai šai rotaļlietai ir nepieciešamas instrukcijas, brīdinājumi vai drošības informācija?"
+      },
+      "public_instructions_warnings": {
+        "label": "Publiskas instrukcijas un brīdinājumi",
+        "help": "Pievienojiet brīdinājumus, instrukcijas un drošības informāciju, kas pievienota rotaļlietai."
+      },
+      "ce_declaration_ack": {
+        "label": "Ražotājs apliecina, ka šī rotaļlieta atbilst piemērojamajām ES drošuma prasībām un tai ir vai būs CE marķējums, ja nepieciešams, pirms laišanas ES tirgū.",
+        "help": "ES tirgū var laist tikai rotaļlietas ar CE marķējumu. Šai deklarācijai jābūt saskaņotai ar ražotāja atbilstības novērtējumu."
+      },
+      "eu_doc_available": {
+        "label": "Vai ir pieejama ES atbilstības deklarācija?",
+        "warn": "ES atbilstības deklarācija ir paredzēta kā daļa no rotaļlietu atbilstības sistēmas. Aizpildiet šo, pirms paļaujaties uz DPP izmantošanai tirgū."
+      },
+      "eu_doc_reference": {
+        "label": "Atbilstības deklarācijas atsauce"
+      },
+      "eu_doc_upload": {
+        "label": "Atbilstības deklarācijas augšupielāde",
+        "help": "Tikai iekšējai uzskaitei. Augšupielādētais fails tiek glabāts ražotājam un netiek rādīts publiskajā DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Vai drošuma novērtējums ir pabeigts?",
+        "help": "Rotaļlietu ražotājiem attiecīgā gadījumā jānovērtē ķīmiskie, fizikālie, mehāniskie, elektriskie, uzliesmojamības, higiēnas, radioaktivitātes un iedarbības riski.",
+        "warn": "Informācija par drošuma novērtējumu ir jāaizpilda, pirms paļaujaties uz šo DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Vai ir pieejama tehniskā dokumentācija?",
+        "help": "Tehniskā dokumentācija pamato pierādījumu, ka rotaļlieta atbilst piemērojamajām drošuma prasībām.",
+        "warn": "Tirgus uzraudzības iestādes var pieprasīt tehnisko dokumentāciju."
+      },
+      "technical_documentation_upload": {
+        "label": "Tehniskās dokumentācijas augšupielāde",
+        "help": "Tikai iekšējai uzskaitei. Augšupielādētais fails tiek glabāts ražotājam un netiek rādīts publiskajā DPP."
+      },
+      "applicable_legislation": {
+        "label": "Piemērojamie ES tiesību akti"
+      },
+      "harmonised_standards": {
+        "label": "Izmantotie saskaņotie standarti"
+      },
+      "common_specifications": {
+        "label": "Izmantotās kopējās specifikācijas",
+        "placeholder": "Aprakstiet piemērotās kopējās specifikācijas."
+      },
+      "other_standards": {
+        "label": "Citi izmantotie standarti (viens rindā)"
+      },
+      "notified_body_involved": {
+        "label": "Vai bija iesaistīta paziņotā struktūra?"
+      },
+      "notified_body_name": {
+        "label": "Paziņotās struktūras nosaukums"
+      },
+      "notified_body_number": {
+        "label": "Paziņotās struktūras numurs",
+        "placeholder": "piem., 0123"
+      },
+      "certificate_reference": {
+        "label": "Sertifikāta atsauce"
+      },
+      "certificate_issue_date": {
+        "label": "Sertifikāta izdošanas datums (GGGG-MM-DD)",
+        "placeholder": "GGGG-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Atbilstības sertifikāts (PDF vai attēls)",
+        "help": "Pēc izvēles. Augšupielādētais fails ir publiski pieejams no DPP."
+      },
+      "cn_chapter": {
+        "label": "KN nodaļa"
+      },
+      "customs_code": {
+        "label": "Muitas preču kods",
+        "placeholder": "98809500",
+        "help": "Automātiski aizpildīts no KN nodaļas. Pārrakstiet, ja jūsu muitas klasifikācija atšķiras."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Vai rotaļlieta vai kāda tās sastāvdaļa satur alergēnas smaržvielas ≥10 mg/kg koncentrācijā?"
+      },
+      "allergenic_fragrances": {
+        "label": "Esošās alergēnās smaržvielas"
+      },
+      "allergen_declaration_text": {
+        "label": "Alergēnu deklarācija (automātiski ģenerēta, rediģējama)"
+      },
+      "safety_channels": {
+        "label": "Publiskie ziņošanas kanāli par drošību"
+      },
+      "safety_phone": {
+        "label": "Tālrunis ziņošanai par drošību",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "E-pasts ziņošanai par drošību",
+        "placeholder": "safety@company.com"
+      },
+      "safety_website": {
+        "label": "Tīmekļa vietne / saziņas veidlapas URL ziņošanai par drošību",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
         "VAT": "PVN numurs",
-        "NATIONAL": "Valsts uzņēmuma reģistrācijas numurs",
+        "NATIONAL": "Nacionālais uzņēmuma reģistrācijas numurs",
         "DUNS": "DUNS",
         "ESPR": "ESPR / DPP operatora identifikators",
         "other": "Cits"
@@ -686,9 +963,9 @@
         "puzzle": "Puzle",
         "board_game": "Galda spēle",
         "arts_crafts": "Mākslas un rokdarbu rotaļlieta",
-        "slime": "Gļotas / plastilīns / veidošanas masa",
-        "chemical_set": "Ķīmisko eksperimentu komplekts",
-        "cosmetic": "Kosmētikas rotaļlieta / rotaļu kosmētika",
+        "slime": "Gļotas / plastilīns / modelēšanas masa",
+        "chemical_set": "Ķīmisko eksperimentu rotaļlietu komplekts",
+        "cosmetic": "Kosmētiskā rotaļlieta / rotaļu kosmētika",
         "olfactory": "Ožas galda spēle",
         "gustative": "Garšas spēle",
         "outdoor": "Āra rotaļlieta",
@@ -696,14 +973,14 @@
         "ride_on": "Uzsēžama rotaļlieta",
         "wheeled": "Skrejritenis / skrituļslidas / rotaļlieta ar riteņiem",
         "aquatic": "Ūdens rotaļlieta",
-        "electronic": "Elektroniska rotaļlieta",
-        "radio": "Ar radiosavienojumu aprīkota rotaļlieta",
-        "internet": "Ar interneta savienojumu aprīkota rotaļlieta",
+        "electronic": "Elektroniskā rotaļlieta",
+        "radio": "Ar radio savienota rotaļlieta",
+        "internet": "Ar internetu savienota rotaļlieta",
         "ai": "Rotaļlieta ar mākslīgo intelektu",
         "battery": "Rotaļlieta ar bateriju",
         "magnets": "Rotaļlieta ar magnētiem",
         "drone": "Rotaļu drons",
-        "toy_in_food": "Rotaļlieta pārtikas produktā",
+        "toy_in_food": "Rotaļlieta pārtikā",
         "other": "Cits"
       },
       "ageGroup": {
@@ -726,7 +1003,7 @@
         "GTIN": "GTIN",
         "GS1_DL": "GS1 Digital Link",
         "EPC": "EPC",
-        "SGTIN": "SGTIN",
+        "SGTIN": "Serializēts GTIN",
         "SKU": "SKU",
         "MODEL": "Modeļa numurs",
         "ISO_15459": "Ar ISO/IEC 15459 saderīgs identifikators",
@@ -735,11 +1012,11 @@
       "cnChapter": {
         "32": "32 — Krāsas, pigmenti, tintes, krāsvielas",
         "33": "33 — Ēteriskās eļļas, smaržas, kosmētika",
-        "34": "34 — Ziepes, vaski, veidošanas pastas",
+        "34": "34 — Ziepes, vaski, modelēšanas pastas",
         "39": "39 — Plastmasas un to izstrādājumi",
-        "40": "40 — Kaučuks un tā izstrādājumi",
+        "40": "40 — Kaučuks, gumija un to izstrādājumi",
         "42": "42 — Ādas izstrādājumi",
-        "44": "44 — Koks un koka izstrādājumi",
+        "44": "44 — Koksne un tās izstrādājumi",
         "48": "48 — Papīrs un kartons",
         "49": "49 — Iespiestas grāmatas, attēli, kartītes",
         "61": "61 — Trikotāžas apģērbi / tekstila piederumi",
@@ -775,7 +1052,7 @@
       "standards": {
         "EN71_1": "EN 71-1 — Mehāniskās un fizikālās īpašības",
         "EN71_2": "EN 71-2 — Uzliesmojamība",
-        "EN71_3": "EN 71-3 — Noteiktu elementu migrācija",
+        "EN71_3": "EN 71-3 — Atsevišķu elementu migrācija",
         "EN71_4": "EN 71-4 — Eksperimentu komplekti ķīmijā",
         "EN71_5": "EN 71-5 — Ķīmiskās rotaļlietas, kas nav eksperimentu komplekti",
         "EN71_7": "EN 71-7 — Pirkstiņkrāsas",
@@ -785,7 +1062,7 @@
         "EN71_14": "EN 71-14 — Batuti mājas lietošanai",
         "EN_IEC_62115": "EN IEC 62115 — Elektriskās rotaļlietas",
         "other": "Cits saskaņotais standarts",
-        "common_spec": "Kopīgā specifikācija saskaņotā standarta vietā"
+        "common_spec": "Kopējā specifikācija saskaņotā standarta vietā"
       },
       "safetyChannel": {
         "phone": "Tālrunis",
@@ -797,7 +1074,7 @@
         "importer": "Importētājs",
         "auth_rep": "Pilnvarotais pārstāvis",
         "fulfilment": "Pasūtījumu izpildes pakalpojumu sniedzējs",
-        "distributor": "Izplatītājs, kas darbojas kā atbildīgais saimnieciskās darbības subjekts",
+        "distributor": "Izplatītājs, kas darbojas kā atbildīgais saimnieciskās darbības veicējs",
         "other": "Cita ES bāzēta atbildīgā persona (Regulas 2019/1020 4. pants)"
       },
       "yesNo": {
@@ -808,6 +1085,138 @@
         "yes": "Jā",
         "no": "Nē",
         "unknown": "Nezināms"
+      }
+    },
+    "ai": {
+      "scannerTitle": "MI rotaļlietu marķējuma skeneris",
+      "scannerDescription": "Nofotografējiet vai augšupielādējiet rotaļlietas iepakojuma attēlu — MI nolasīs CE marķējumu, vecuma brīdinājumus, ražotāja informāciju, svītrkodu un norādītās alergēnās smaržvielas.",
+      "dropHere": "↓ Vilkt šeit",
+      "dragOrClick": "Ievelciet un nometiet vai noklikšķiniet"
+    },
+    "warnings": {
+      "youngChild": "Šī rotaļlieta ir paredzēta bērniem līdz 36 mēnešu vecumam. Tiek piemēroti stingrāki alergēno smaržvielu ierobežojumi, un visas sīkās detaļas ir jānovērtē attiecībā uz aizrīšanās risku.",
+      "mouthContact": "Šī rotaļlieta ir paredzēta likšanai mutē. Tiek piemēroti stingrāki ierobežojumi attiecībā uz alergēnām smaržvielām un ķīmisko vielu migrāciju.",
+      "unknownAllergens": "Šī DPP var būt nepilnīga, jo informācija par alergēnām smaržvielām ir obligāta, ja tā ir piemērojama. Pirms publicēšanas aizstājiet \"Nezināms\" ar \"Jā\" vai \"Nē\".",
+      "suggestLegislation": "Pamatojoties uz izvēlēto rotaļlietu kategoriju, apsveriet arī atzīmēt: {{list}}."
+    },
+    "disclaimer": {
+      "title": "Rotaļlietu DPP — atruna par atbilstību",
+      "body": "Precīzs ES digitālās produkta pases datu modelis un API specifikācijas rotaļlietām vēl nav noteiktas, un ir paredzēts, ka tās tiks definētas īstenošanas aktā līdz 2026. gada beigām. Šis rīks ir pirmā versija, kas balstīta uz Regulu (ES) 2025/2509, un to nevajadzētu uzskatīt par galīgu juridisku padomu."
+    },
+    "internalBadge": "Iekšējs — netiek rādīts publiski",
+    "safetyGate": {
+      "title": "ES Drošības vārti",
+      "body": "Ziņojiet par nedrošiem produktiem, izmantojot ES Drošības vārtu portālu:",
+      "alwaysShown": "Šī saite vienmēr tiek rādīta publiskajā pasē."
+    },
+    "certificate": {
+      "viewFile": "Skatīt augšupielādēto failu",
+      "remove": "Noņemt failu",
+      "uploading": "Augšupielādē...",
+      "uploadButton": "Augšupielādēt sertifikātu",
+      "errors": {
+        "loginRequired": "Lai augšupielādētu failus, jums jābūt pierakstījušamies.",
+        "tooLarge": "Fails ir pārāk liels. Maksimālais izmērs ir 5 MB.",
+        "uploadFailed": "Augšupielāde neizdevās."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Vēl nav pievienotas alergēnas smaržvielas.",
+      "summary": "Deklarēta(-as) {{count}} smaržviela(-as).",
+      "addButton": "Pievienot smaržvielu",
+      "cas": "CAS",
+      "removeAria": "Noņemt {{name}}",
+      "concentrationLabel": "Koncentrācija (mg/kg)",
+      "componentLabel": "Sastāvdaļa / materiāls",
+      "componentPlaceholder": "piem., mīkstās rotaļlietas pildījums",
+      "aboveThreshold": "Koncentrācija ≥10 mg/kg",
+      "supplierDeclaration": "Piegādātāja deklarācija failā",
+      "testReport": "Testēšanas pārskats failā",
+      "dialogTitle": "Izvēlieties alergēnās smaržvielas",
+      "searchPlaceholder": "Meklēt pēc nosaukuma, CAS vai ID...",
+      "clearSearch": "Notīrīt meklēšanu",
+      "noResults": "Neviena smaržviela neatbilst \"{{q}}\".",
+      "done": "Gatavs"
+    },
+    "validation": {
+      "imageRequired": "Ir nepieciešams krāsains rotaļlietas attēls.",
+      "descriptionRequired": "Rotaļlietām ir nepieciešams produkta apraksts."
+    },
+    "public": {
+      "badge": "🧸 Rotaļlieta — digitālā produkta pase",
+      "otherFallback": "Cits",
+      "notDeclared": "Nav deklarēts",
+      "ceMarked": "✓ CE marķējums",
+      "statusPublished": "Publicēts",
+      "noAllergens": "Nav deklarēts, ka produktā ir alergēnas smaržvielas, uz kurām attiecas marķēšanas prasības, koncentrācijā 10 mg/kg vai vairāk.",
+      "certificateDownload": "Lejupielādēt atbilstības sertifikātu",
+      "reportUnsafe": "Ziņot par nedrošu produktu",
+      "mirroredAt": "Spoguļots {{url}}",
+      "mirroredDefault": "Spoguļots Open-Label.eu infrastruktūrā",
+      "nbNumber": "Numurs {{n}}",
+      "nbCertificate": "Sertifikāts: {{ref}}",
+      "nbIssued": "(izdots {{date}})",
+      "instructionsTitle": "Instrukcijas un brīdinājumi",
+      "ceDeclarationStatement": "Ražotājs apliecina, ka šī rotaļlieta atbilst piemērojamajām ES drošuma prasībām un tai ir vai būs CE marķējums, ja nepieciešams, pirms laišanas ES tirgū.",
+      "docLabel": "ES atbilstības deklarācija",
+      "docReference": "Atsauce",
+      "safetyAssessmentLabel": "Drošuma novērtējums",
+      "technicalDocsLabel": "Tehniskā dokumentācija",
+      "yesNoUnknown": {
+        "yes": "Jā",
+        "no": "Nē",
+        "unknown": "Nezināms"
+      },
+      "sections": {
+        "identity": "Produkta identitāte",
+        "manufacturer": "Ražotāja atbildība",
+        "manufacturerNote": "Šī digitālā produkta pase ir izdota vienīgi uz ražotāja atbildību.",
+        "euOperator": "ES operatora informācija",
+        "authRep": "Pilnvarotais pārstāvis",
+        "euResponsible": "ES atbildīgais saimnieciskās darbības veicējs",
+        "compliance": "Atbilstība",
+        "safety": "Drošības un ķīmiskā informācija",
+        "safetyReporting": "Ziņošana par drošības incidentiem",
+        "infrastructure": "DPP infrastruktūra"
+      },
+      "rows": {
+        "brand": "Zīmols",
+        "model": "Modelis",
+        "sku": "SKU / variants",
+        "toyCategory": "Rotaļlietu kategorija",
+        "age": "Paredzētā vecuma grupa",
+        "uid": "Unikāls identifikators",
+        "manufacturer": "Ražotājs",
+        "address": "Adrese",
+        "email": "E-pasts",
+        "website": "Tīmekļa vietne",
+        "operatorId": "Operatora identifikators",
+        "legalName": "Juridiskais nosaukums",
+        "role": "Loma",
+        "ce": "CE marķējums",
+        "applicableLeg": "Piemērojamie tiesību akti",
+        "standards": "Saskaņotie standarti",
+        "commonSpecs": "Kopējās specifikācijas",
+        "otherStandards": "Citi standarti",
+        "notifiedBody": "Paziņotā struktūra",
+        "customs": "Muitas kods",
+        "dppProvider": "DPP pakalpojumu sniedzējs",
+        "backup": "Rezerves kopijas atsauce",
+        "dppVersion": "DPP versija",
+        "lastUpdated": "Pēdējo reizi atjaunināts",
+        "status": "Statuss"
+      },
+      "table": {
+        "substance": "Viela",
+        "cas": "CAS",
+        "concentration": "Koncentrācija",
+        "component": "Sastāvdaļa"
+      },
+      "safety": {
+        "telephone": "Tālrunis",
+        "emailLabel": "E-pasts",
+        "web": "Tīmeklis",
+        "gatePortal": "ES Drošības vārtu portāls"
       }
     }
   }

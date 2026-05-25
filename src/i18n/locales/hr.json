@@ -21,7 +21,10 @@
     "language": "Jezik",
     "custom": "Prilagođeno",
     "selectOption": "Odaberite opciju",
-    "confirmed": "Potvrđeno"
+    "confirmed": "Potvrđeno",
+    "required": "Obavezno",
+    "whereApplicable": "Gdje je primjenjivo",
+    "tbdImplementingAct": "Odredit će se — provedbeni akt"
   },
   "nav": {
     "signIn": "Prijava",
@@ -666,40 +669,314 @@
     "poweredBy": "Omogućuje"
   },
   "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "Odgovornost proizvođača",
+        "description": "Ova digitalna putovnica proizvoda izdana je pod isključivom odgovornošću proizvođača."
+      },
+      "product_identity": {
+        "title": "Identitet proizvoda",
+        "description": "Svaki model ili varijanta igračke treba vlastitu DPP."
+      },
+      "manufacturer": {
+        "title": "Proizvođač",
+        "description": "Pravna osoba odgovorna za stavljanje igračke na tržište."
+      },
+      "auth_rep": {
+        "title": "Ovlašteni zastupnik",
+        "description": "Gdje je primjenjivo."
+      },
+      "eu_operator": {
+        "title": "Odgovorni gospodarski subjekt u EU",
+        "description": "Obavezno kada proizvođač ima sjedište izvan EU."
+      },
+      "compliance": {
+        "title": "Sukladnost",
+        "description": "CE oznaka, primjenjivo zakonodavstvo i norme EU-a."
+      },
+      "notified_body": {
+        "title": "Ocjenjivanje sukladnosti i prijavljeno tijelo",
+        "description": "Gdje je primjenjivo."
+      },
+      "customs": {
+        "title": "Carinska tarifna oznaka",
+        "description": "Generirano kao 9880 + poglavlje KN + 00. Može se uređivati."
+      },
+      "allergenic_fragrances": {
+        "title": "Alergeni mirisi",
+        "description": "Tvari koje podliježu zahtjevima za označavanje pri koncentraciji ≥10 mg/kg."
+      },
+      "safety_reporting": {
+        "title": "Prijavljivanje sigurnosnih incidenata",
+        "description": "Kanali dostupni potrošačima i nadležnim tijelima."
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "Potvrđujem da je ova DPP izdana pod isključivom odgovornošću proizvođača."
+      },
+      "brand_name": {
+        "label": "Naziv robne marke"
+      },
+      "model_name": {
+        "label": "Naziv modela ili broj modela"
+      },
+      "sku": {
+        "label": "SKU ili ID varijante",
+        "help": "Koristite zasebnu DPP za svaku varijantu (boja, veličina, materijal, elektronička verzija, verzija u paketu)."
+      },
+      "toy_category": {
+        "label": "Kategorija igračke"
+      },
+      "toy_category_other": {
+        "label": "Kategorija igračke (navedite)"
+      },
+      "age_group": {
+        "label": "Namijenjena dobna skupina"
+      },
+      "age_group_other": {
+        "label": "Dobna skupina (navedite)"
+      },
+      "mouth_contact": {
+        "label": "Je li ova igračka namijenjena stavljanju u usta?",
+        "help": "Za igračke namijenjene stavljanju u usta primjenjuju se stroža ograničenja za alergene mirise i kemikalije."
+      },
+      "unique_product_identifier": {
+        "label": "Jedinstveni identifikator proizvoda",
+        "help": "Trajni identifikator za ovaj model/SKU/varijantu igračke. Trebao bi biti kompatibilan s identifikacijom u stilu ESPR / ISO IEC 15459 kada se potvrde konačne specifikacije."
+      },
+      "identifier_type": {
+        "label": "Vrsta identifikatora"
+      },
+      "identifier_type_other": {
+        "label": "Vrsta identifikatora (navedite)"
+      },
+      "manufacturer_legal_name": {
+        "label": "Puni pravni naziv proizvođača"
+      },
+      "manufacturer_street": {
+        "label": "Ulica i kućni broj"
+      },
+      "manufacturer_city": {
+        "label": "Grad"
+      },
+      "manufacturer_postal_code": {
+        "label": "Poštanski broj"
+      },
+      "manufacturer_country": {
+        "label": "Država"
+      },
+      "manufacturer_email": {
+        "label": "Elektronička adresa (e-pošta)",
+        "placeholder": "ime@tvrtka.com"
+      },
+      "manufacturer_website": {
+        "label": "Web-stranica",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "Jedinstveni identifikator subjekta",
+        "help": "Koristite najbolji trenutno dostupan identifikator subjekta; konačni traženi format može biti definiran provedbenim aktom."
+      },
+      "manufacturer_operator_id_type": {
+        "label": "Vrsta identifikatora subjekta"
+      },
+      "has_auth_rep": {
+        "label": "Ima li proizvođač ovlaštenog zastupnika?"
+      },
+      "auth_rep_legal_name": {
+        "label": "Puni pravni naziv ovlaštenog zastupnika"
+      },
+      "auth_rep_street": {
+        "label": "Ulica i kućni broj"
+      },
+      "auth_rep_city": {
+        "label": "Grad"
+      },
+      "auth_rep_postal_code": {
+        "label": "Poštanski broj"
+      },
+      "auth_rep_country": {
+        "label": "Država"
+      },
+      "auth_rep_email": {
+        "label": "Elektronička adresa (e-pošta)",
+        "placeholder": "ime@tvrtka.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "Jedinstveni identifikator subjekta"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "Vrsta identifikatora subjekta"
+      },
+      "manufacturer_non_eu": {
+        "label": "Ima li proizvođač sjedište izvan EU?"
+      },
+      "eu_op_legal_name": {
+        "label": "Puni pravni naziv odgovornog subjekta u EU"
+      },
+      "eu_op_role": {
+        "label": "Uloga"
+      },
+      "eu_op_street": {
+        "label": "Ulica i kućni broj"
+      },
+      "eu_op_city": {
+        "label": "Grad"
+      },
+      "eu_op_postal_code": {
+        "label": "Poštanski broj"
+      },
+      "eu_op_country": {
+        "label": "Država"
+      },
+      "eu_op_email": {
+        "label": "Elektronička adresa (e-pošta)",
+        "placeholder": "ime@tvrtka.com"
+      },
+      "eu_op_operator_id": {
+        "label": "Jedinstveni identifikator subjekta"
+      },
+      "eu_op_operator_id_type": {
+        "label": "Vrsta identifikatora subjekta"
+      },
+      "has_instructions_warnings": {
+        "label": "Zahtijeva li ova igračka upute, upozorenja ili sigurnosne informacije?"
+      },
+      "public_instructions_warnings": {
+        "label": "Javne upute i upozorenja",
+        "help": "Dodajte upozorenja, upute i sigurnosne informacije koje prate igračku."
+      },
+      "ce_declaration_ack": {
+        "label": "Proizvođač izjavljuje da je ova igračka u skladu s primjenjivim sigurnosnim zahtjevima EU-a i da nosi ili će nositi oznaku CE gdje je to potrebno prije stavljanja na tržište EU-a.",
+        "help": "Samo igračke s oznakom CE mogu se staviti na tržište EU-a. Ova izjava treba biti u skladu s ocjenom sukladnosti proizvođača."
+      },
+      "eu_doc_available": {
+        "label": "Je li dostupna EU izjava o sukladnosti?",
+        "warn": "EU izjava o sukladnosti očekuje se kao dio okvira za sukladnost igračaka. Ispunite ovo prije nego što se oslonite na DPP za upotrebu na tržištu."
+      },
+      "eu_doc_reference": {
+        "label": "Referenca Izjave o sukladnosti"
+      },
+      "eu_doc_upload": {
+        "label": "Prijenos Izjave o sukladnosti",
+        "help": "Samo za internu evidenciju. Prenesena datoteka čuva se za proizvođača i ne prikazuje se na javnoj DPP."
+      },
+      "safety_assessment_completed": {
+        "label": "Je li procjena sigurnosti dovršena?",
+        "help": "Proizvođači igračaka moraju procijeniti kemijske, fizikalne, mehaničke, električne rizike, rizike od zapaljivosti, higijene, radioaktivnosti i izloženosti, gdje je to relevantno.",
+        "warn": "Informacije o procjeni sigurnosti trebaju biti dovršene prije oslanjanja na ovu DPP."
+      },
+      "technical_documentation_available": {
+        "label": "Je li tehnička dokumentacija dostupna?",
+        "help": "Tehnička dokumentacija podupire dokazivanje da je igračka u skladu s primjenjivim sigurnosnim zahtjevima.",
+        "warn": "Tijela za nadzor tržišta mogu zahtijevati tehničku dokumentaciju."
+      },
+      "technical_documentation_upload": {
+        "label": "Prijenos tehničke dokumentacije",
+        "help": "Samo za internu evidenciju. Prenesena datoteka čuva se za proizvođača i ne prikazuje se na javnoj DPP."
+      },
+      "applicable_legislation": {
+        "label": "Primjenjivo zakonodavstvo EU-a"
+      },
+      "harmonised_standards": {
+        "label": "Korištene usklađene norme"
+      },
+      "common_specifications": {
+        "label": "Korištene zajedničke specifikacije",
+        "placeholder": "Opišite primijenjene zajedničke specifikacije."
+      },
+      "other_standards": {
+        "label": "Ostale korištene norme (jedna po retku)"
+      },
+      "notified_body_involved": {
+        "label": "Je li bilo uključeno prijavljeno tijelo?"
+      },
+      "notified_body_name": {
+        "label": "Naziv prijavljenog tijela"
+      },
+      "notified_body_number": {
+        "label": "Broj prijavljenog tijela",
+        "placeholder": "npr. 0123"
+      },
+      "certificate_reference": {
+        "label": "Referenca certifikata"
+      },
+      "certificate_issue_date": {
+        "label": "Datum izdavanja certifikata (GGGG-MM-DD)",
+        "placeholder": "GGGG-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "Certifikat o sukladnosti (PDF ili slika)",
+        "help": "Neobavezno. Prenesena datoteka javno je dostupna putem DPP-a."
+      },
+      "cn_chapter": {
+        "label": "Poglavlje KN"
+      },
+      "customs_code": {
+        "label": "Carinska tarifna oznaka",
+        "placeholder": "98809500",
+        "help": "Automatski popunjeno iz poglavlja KN. Izmijenite ako se vaša carinska klasifikacija razlikuje."
+      },
+      "has_allergenic_fragrances": {
+        "label": "Sadrži li igračka ili bilo koja njezina komponenta alergene mirise u koncentraciji ≥10 mg/kg?"
+      },
+      "allergenic_fragrances": {
+        "label": "Prisutni alergeni mirisi"
+      },
+      "allergen_declaration_text": {
+        "label": "Deklaracija o alergenima (automatski generirana, može se uređivati)"
+      },
+      "safety_channels": {
+        "label": "Javni kanali za prijavu sigurnosnih problema"
+      },
+      "safety_phone": {
+        "label": "Telefon za prijavu sigurnosnih problema",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "E-pošta za prijavu sigurnosnih problema",
+        "placeholder": "sigurnost@tvrtka.com"
+      },
+      "safety_website": {
+        "label": "Web-stranica / URL kontakt obrasca za prijavu sigurnosnih problema",
+        "placeholder": "https://..."
+      }
+    },
     "options": {
       "operatorIdType": {
         "EORI": "EORI",
         "GLN": "GLN",
         "LEI": "LEI",
         "VAT": "PDV broj",
-        "NATIONAL": "Nacionalni registracijski broj tvrtke",
+        "NATIONAL": "Matični broj tvrtke",
         "DUNS": "DUNS",
-        "ESPR": "ESPR / DPP identifikator gospodarskog subjekta",
+        "ESPR": "ESPR / DPP identifikator subjekta",
         "other": "Ostalo"
       },
       "toyCategory": {
         "baby": "Igračka za bebe",
         "plush": "Plišana igračka",
         "doll": "Lutka",
-        "action_figure": "Akcijska figurica",
+        "action_figure": "Akcijska figura",
         "construction": "Konstrukcijska igračka / kocke",
         "puzzle": "Slagalica",
         "board_game": "Društvena igra",
-        "arts_crafts": "Igračka za umjetnost i obrt",
+        "arts_crafts": "Igračka za likovno i kreativno stvaranje",
         "slime": "Sluz / kit / masa za modeliranje",
         "chemical_set": "Kemijski set za igru",
         "cosmetic": "Kozmetička igračka / šminka za igru",
         "olfactory": "Mirisna društvena igra",
         "gustative": "Okusna igra",
-        "outdoor": "Igračka za van",
+        "outdoor": "Igračka za vanjsku upotrebu",
         "activity": "Aktivna igračka",
         "ride_on": "Igračka za jahanje",
-        "wheeled": "Romobil / koturaljke / igračka na kotačima",
+        "wheeled": "Romobil / role / igračka na kotačima",
         "aquatic": "Igračka za vodu",
         "electronic": "Elektronička igračka",
         "radio": "Igračka povezana radijskom vezom",
         "internet": "Igračka povezana s internetom",
-        "ai": "Igračka s omogućenom umjetnom inteligencijom",
+        "ai": "Igračka s umjetnom inteligencijom",
         "battery": "Igračka s baterijom",
         "magnets": "Igračka s magnetima",
         "drone": "Dron igračka",
@@ -724,7 +1001,7 @@
       },
       "identifierType": {
         "GTIN": "GTIN",
-        "GS1_DL": "GS1 Digital Link",
+        "GS1_DL": "GS1 digitalna poveznica",
         "EPC": "EPC",
         "SGTIN": "Serijalizirani GTIN",
         "SKU": "SKU",
@@ -735,7 +1012,7 @@
       "cnChapter": {
         "32": "32 — Boje, pigmenti, tinte, bojila",
         "33": "33 — Eterična ulja, parfemi, kozmetika",
-        "34": "34 — Sapuni, voskovi, paste za modeliranje",
+        "34": "34 — Sapuni, voskovi, mase za modeliranje",
         "39": "39 — Plastika i proizvodi od plastike",
         "40": "40 — Guma i proizvodi od gume",
         "42": "42 — Kožni proizvodi",
@@ -743,7 +1020,7 @@
         "48": "48 — Papir i karton",
         "49": "49 — Tiskane knjige, slike, kartice",
         "61": "61 — Pletena odjeća / tekstilni dodaci",
-        "62": "62 — Nepletena odjeća / tekstilni dodaci",
+        "62": "62 — Ne-pletena odjeća / tekstilni dodaci",
         "63": "63 — Ostali gotovi tekstilni proizvodi",
         "69": "69 — Keramički proizvodi",
         "70": "70 — Staklo i stakleni proizvodi",
@@ -776,12 +1053,12 @@
         "EN71_1": "EN 71-1 — Mehanička i fizikalna svojstva",
         "EN71_2": "EN 71-2 — Zapaljivost",
         "EN71_3": "EN 71-3 — Otpuštanje određenih elemenata",
-        "EN71_4": "EN 71-4 — Eksperimentalni setovi za kemiju",
-        "EN71_5": "EN 71-5 — Kemijske igračke osim eksperimentalnih setova",
+        "EN71_4": "EN 71-4 — Kompleti za kemijske pokuse",
+        "EN71_5": "EN 71-5 — Kemijske igračke (kompleti), osim kompleta za pokuse",
         "EN71_7": "EN 71-7 — Boje za slikanje prstima",
         "EN71_8": "EN 71-8 — Aktivne igračke za kućnu uporabu",
-        "EN71_12": "EN 71-12 — N-nitrozamini i N-nitrozirajuće tvari",
-        "EN71_13": "EN 71-13 — Mirisne društvene igre, kozmetički setovi i okusne igre",
+        "EN71_12": "EN 71-12 — N-nitrozamini i N-nitrozabilne tvari",
+        "EN71_13": "EN 71-13 — Mirisne ploče za igru, kozmetički setovi i okusne igre",
         "EN71_14": "EN 71-14 — Trampolini za kućnu uporabu",
         "EN_IEC_62115": "EN IEC 62115 — Električne igračke",
         "other": "Druga usklađena norma",
@@ -790,7 +1067,7 @@
       "safetyChannel": {
         "phone": "Telefon",
         "email": "E-pošta",
-        "website": "Namjenska web stranica",
+        "website": "Namjenska web-stranica",
         "form": "Kontakt obrazac"
       },
       "euOperatorRole": {
@@ -798,7 +1075,7 @@
         "auth_rep": "Ovlašteni zastupnik",
         "fulfilment": "Pružatelj usluga distribucije",
         "distributor": "Distributer koji djeluje kao odgovorni gospodarski subjekt",
-        "other": "Druga odgovorna osoba sa sjedištem u EU (Uredba 2019/1020, čl. 4.)"
+        "other": "Druga odgovorna osoba sa sjedištem u EU (Uredba 2019/1020, čl. 4)"
       },
       "yesNo": {
         "yes": "Da",
@@ -808,6 +1085,138 @@
         "yes": "Da",
         "no": "Ne",
         "unknown": "Nepoznato"
+      }
+    },
+    "ai": {
+      "scannerTitle": "AI skener oznaka za igračke",
+      "scannerDescription": "Snimite ili prenesite sliku pakiranja igračke — umjetna inteligencija će pročitati CE oznaku, upozorenja o dobi, podatke o proizvođaču, crtični kod i navedene alergene mirise.",
+      "dropHere": "↓ Ispustite ovdje",
+      "dragOrClick": "Povucite i ispustite ili kliknite"
+    },
+    "warnings": {
+      "youngChild": "Ova je igračka namijenjena djeci mlađoj od 36 mjeseci. Primjenjuju se stroža ograničenja za alergene mirise, a svi mali dijelovi moraju biti procijenjeni na opasnost od gušenja.",
+      "mouthContact": "Ova je igračka namijenjena stavljanju u usta. Primjenjuju se stroža ograničenja za alergene mirise i migraciju kemikalija.",
+      "unknownAllergens": "Ova DPP može biti nepotpuna jer su informacije o alergenim mirisima obvezne kada je to primjenjivo. Zamijenite \"Nepoznato\" s Da ili Ne prije objavljivanja.",
+      "suggestLegislation": "Na temelju odabrane kategorije igračaka, razmislite o označavanju i: {{list}}."
+    },
+    "disclaimer": {
+      "title": "DPP za igračke — izjava o odricanju od odgovornosti za sukladnost",
+      "body": "Točan podatkovni model i API specifikacije za digitalnu putovnicu proizvoda EU-a za igračke još nisu definirani i očekuje se da će biti utvrđeni provedbenim aktom do kraja 2026. Ovaj je alat prva verzija temeljena na Uredbi (EU) 2025/2509 i ne treba ga smatrati konačnim pravnim savjetom."
+    },
+    "internalBadge": "Interno — ne prikazuje se javno",
+    "safetyGate": {
+      "title": "EU Safety Gate",
+      "body": "Prijavite nesigurne proizvode putem portala EU Safety Gate:",
+      "alwaysShown": "Ova se poveznica uvijek prikazuje na javnoj putovnici."
+    },
+    "certificate": {
+      "viewFile": "Prikaži prenesenu datoteku",
+      "remove": "Ukloni datoteku",
+      "uploading": "Prijenos...",
+      "uploadButton": "Prenesi certifikat",
+      "errors": {
+        "loginRequired": "Morate biti prijavljeni da biste prenosili datoteke.",
+        "tooLarge": "Datoteka je prevelika. Maksimalna veličina je 5 MB.",
+        "uploadFailed": "Prijenos nije uspio."
+      }
+    },
+    "fragrancePicker": {
+      "empty": "Još nisu dodani alergeni mirisi.",
+      "summary": "Prijavljeno {{count}} mirisa.",
+      "addButton": "Dodaj miris",
+      "cas": "CAS",
+      "removeAria": "Ukloni {{name}}",
+      "concentrationLabel": "Koncentracija (mg/kg)",
+      "componentLabel": "Komponenta / materijal",
+      "componentPlaceholder": "npr. plišano punjenje",
+      "aboveThreshold": "Koncentracija ≥10 mg/kg",
+      "supplierDeclaration": "Postoji izjava dobavljača",
+      "testReport": "Postoji izvješće o ispitivanju",
+      "dialogTitle": "Odaberite alergene mirise",
+      "searchPlaceholder": "Pretražite po nazivu, CAS-u ili ID-u...",
+      "clearSearch": "Očisti pretragu",
+      "noResults": "Nema mirisa koji odgovaraju \"{{q}}\".",
+      "done": "Gotovo"
+    },
+    "validation": {
+      "imageRequired": "Potrebna je slika igračke u boji.",
+      "descriptionRequired": "Za igračke je potreban opis proizvoda."
+    },
+    "public": {
+      "badge": "🧸 Igračka — digitalna putovnica proizvoda",
+      "otherFallback": "Ostalo",
+      "notDeclared": "Nije prijavljeno",
+      "ceMarked": "✓ CE oznaka",
+      "statusPublished": "Objavljeno",
+      "noAllergens": "Nisu prijavljeni alergeni mirisi koji podliježu zahtjevima za označavanje u koncentraciji od 10 mg/kg ili više.",
+      "certificateDownload": "Preuzmite certifikat o sukladnosti",
+      "reportUnsafe": "Prijavite nesiguran proizvod",
+      "mirroredAt": "Preslikano na {{url}}",
+      "mirroredDefault": "Preslikano na infrastrukturi Open-Label.eu",
+      "nbNumber": "Broj {{n}}",
+      "nbCertificate": "Certifikat: {{ref}}",
+      "nbIssued": "(izdano {{date}})",
+      "instructionsTitle": "Upute i upozorenja",
+      "ceDeclarationStatement": "Proizvođač izjavljuje da je ova igračka u skladu s primjenjivim sigurnosnim zahtjevima EU-a i da nosi ili će nositi oznaku CE gdje je to potrebno prije stavljanja na tržište EU-a.",
+      "docLabel": "EU izjava o sukladnosti",
+      "docReference": "Referenca",
+      "safetyAssessmentLabel": "Procjena sigurnosti",
+      "technicalDocsLabel": "Tehnička dokumentacija",
+      "yesNoUnknown": {
+        "yes": "Da",
+        "no": "Ne",
+        "unknown": "Nepoznato"
+      },
+      "sections": {
+        "identity": "Identitet proizvoda",
+        "manufacturer": "Odgovornost proizvođača",
+        "manufacturerNote": "Ova digitalna putovnica proizvoda izdana je pod isključivom odgovornošću proizvođača.",
+        "euOperator": "Informacije o subjektu u EU",
+        "authRep": "Ovlašteni zastupnik",
+        "euResponsible": "Odgovorni gospodarski subjekt u EU",
+        "compliance": "Sukladnost",
+        "safety": "Sigurnosne i kemijske informacije",
+        "safetyReporting": "Prijavljivanje sigurnosnih incidenata",
+        "infrastructure": "DPP infrastruktura"
+      },
+      "rows": {
+        "brand": "Robna marka",
+        "model": "Model",
+        "sku": "SKU / varijanta",
+        "toyCategory": "Kategorija igračke",
+        "age": "Namijenjena dobna skupina",
+        "uid": "Jedinstveni identifikator",
+        "manufacturer": "Proizvođač",
+        "address": "Adresa",
+        "email": "E-pošta",
+        "website": "Web-stranica",
+        "operatorId": "Identifikator subjekta",
+        "legalName": "Puni pravni naziv",
+        "role": "Uloga",
+        "ce": "CE oznaka",
+        "applicableLeg": "Primjenjivo zakonodavstvo",
+        "standards": "Usklađene norme",
+        "commonSpecs": "Zajedničke specifikacije",
+        "otherStandards": "Ostale norme",
+        "notifiedBody": "Prijavljeno tijelo",
+        "customs": "Carinska oznaka",
+        "dppProvider": "Pružatelj usluge DPP-a",
+        "backup": "Referenca sigurnosne kopije",
+        "dppVersion": "Verzija DPP-a",
+        "lastUpdated": "Zadnje ažurirano",
+        "status": "Status"
+      },
+      "table": {
+        "substance": "Tvar",
+        "cas": "CAS",
+        "concentration": "Koncentracija",
+        "component": "Komponenta"
+      },
+      "safety": {
+        "telephone": "Telefon",
+        "emailLabel": "E-pošta",
+        "web": "Web",
+        "gatePortal": "Portal EU Safety Gate"
       }
     }
   }
