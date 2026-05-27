@@ -26,6 +26,8 @@ export interface SiteConfig {
   sender_email: string;
   site_url: string;
   setup_complete: boolean;
+  admin_user_id: string;
+  admin_leaderboard_token: string;
 }
 
 interface SiteConfigContextType {
@@ -45,6 +47,8 @@ const defaultConfig: SiteConfig = {
   sender_email: '',
   site_url: '',
   setup_complete: false,
+  admin_user_id: '',
+  admin_leaderboard_token: '',
 };
 
 const SiteConfigContext = createContext<SiteConfigContextType | null>(null);
@@ -83,6 +87,8 @@ export function SiteConfigProvider({ children }: { children: ReactNode }) {
         sender_email: configObj.sender_email || '',
         site_url: configObj.site_url || '',
         setup_complete: configObj.setup_complete === 'true',
+        admin_user_id: configObj.admin_user_id || '',
+        admin_leaderboard_token: configObj.admin_leaderboard_token || '',
       });
     } catch (error) {
       console.error('Error fetching site config:', error);

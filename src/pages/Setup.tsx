@@ -15,7 +15,7 @@
  */
 
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Navigate } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -24,8 +24,10 @@ import { Checkbox } from '@/components/ui/checkbox';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/hooks/use-toast';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
+import { useAuth } from '@/hooks/useAuth';
 import { Badge } from '@/components/ui/badge';
 import { Building2, MapPin, CheckCircle2, Server, Link2, FileText, Sparkles, Mail, Globe } from 'lucide-react';
+import { generateAdminToken } from '@/lib/adminToken';
 
 export default function Setup() {
   const [companyName, setCompanyName] = useState('');
@@ -37,8 +39,13 @@ export default function Setup() {
   const [siteUrl, setSiteUrl] = useState('');
   const [saving, setSaving] = useState(false);
   const { saveConfig } = useSiteConfig();
+  const { user, loading: authLoading } = useAuth();
   const { toast } = useToast();
   const navigate = useNavigate();
+
+  if (!authLoading && !user) {
+    return <Navigate to="/auth" replace />;
+  }
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -63,6 +70,11 @@ export default function Setup() {
       return;
     }
 
+    if (!user) {
+      toast({ title: 'Error', description: 'You must be signed in to complete setup', variant: 'destructive' });
+      return;
+    }
+
     setSaving(true);
     try {
       await saveConfig({
@@ -73,6 +85,8 @@ export default function Setup() {
         ai_enabled: aiEnabled,
         sender_email: senderEmail.trim(),
         site_url: siteUrl.trim(),
+        admin_user_id: user.id,
+        admin_leaderboard_token: generateAdminToken(),
         setup_complete: true,
       });
       toast({ title: 'Setup complete!', description: 'Your instance is now configured.' });

@@ -70,10 +70,29 @@ serve(async (req) => {
     return jsonResponse({ error: "Too many requests" }, 429);
   }
 
-  const expected = Deno.env.get("ADMIN_LEADERBOARD_PASSWORD");
+  // Resolve expected token: prefer DB (site_config.admin_leaderboard_token),
+  // fall back to env for legacy deployments. Never hardcoded.
+  const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
+  const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
+  const supabase = createClient(supabaseUrl, supabaseServiceKey);
+
+  let expected = "";
+  try {
+    const { data: tokenRow } = await supabase
+      .from("site_config")
+      .select("value")
+      .eq("key", "admin_leaderboard_token")
+      .maybeSingle();
+    expected = (tokenRow?.value as string | undefined) ?? "";
+  } catch (e) {
+    console.error("site_config token lookup error:", e);
+  }
+  if (!expected) {
+    expected = Deno.env.get("ADMIN_LEADERBOARD_PASSWORD") ?? "";
+  }
   if (!expected) {
     return jsonResponse(
-      { error: "ADMIN_LEADERBOARD_PASSWORD secret is not configured" },
+      { error: "Admin token is not configured. Complete Setup to generate one." },
       503,
     );
   }
@@ -93,10 +112,6 @@ serve(async (req) => {
   }
 
   try {
-    const supabaseUrl = Deno.env.get("SUPABASE_URL")!;
-    const supabaseServiceKey = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY")!;
-    const supabase = createClient(supabaseUrl, supabaseServiceKey);
-
     const { data: referrals, error: refError } = await supabase
       .from("referrals")
       .select("referral_code, user_id, created_at");
