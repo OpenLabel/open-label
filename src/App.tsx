@@ -37,6 +37,7 @@ import ResetPassword from "./pages/ResetPassword";
 import NotFound from "./pages/NotFound";
 import ReferralStats from "./pages/ReferralStats";
 import ReferralLeaderboard from "./pages/ReferralLeaderboard";
+import AdminLeaderboard from "./pages/AdminLeaderboard";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
