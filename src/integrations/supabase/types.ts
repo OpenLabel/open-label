@@ -167,6 +167,7 @@ export type Database = {
         Args: { p_function_name: string; p_limit?: number; p_user_id: string }
         Returns: Json
       }
+      is_site_admin: { Args: never; Returns: boolean }
     }
     Enums: {
       product_category:
