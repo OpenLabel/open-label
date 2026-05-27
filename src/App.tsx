@@ -38,6 +38,7 @@ import NotFound from "./pages/NotFound";
 import ReferralStats from "./pages/ReferralStats";
 import ReferralLeaderboard from "./pages/ReferralLeaderboard";
 import AdminLeaderboard from "./pages/AdminLeaderboard";
+import Admin from "./pages/Admin";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
@@ -88,6 +89,7 @@ function AppRoutes() {
       <Route path="/referral/:code" element={<ReferralStats />} />
       <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
       <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />
+      <Route path="/admin" element={<Admin />} />
       <Route path="/legal" element={<LegalMentions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<Terms />} />

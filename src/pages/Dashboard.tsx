@@ -24,7 +24,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
-import { Plus, LogOut, Sparkles } from 'lucide-react';
+import { Plus, LogOut, Sparkles, Shield } from 'lucide-react';
 import { categoryList } from '@/templates';
 import { QRCodeDialog } from '@/components/QRCodeDialog';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
@@ -184,6 +184,11 @@ export default function Dashboard() {
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
             <LanguageSwitcher />
             <span className="hidden sm:inline text-sm text-muted-foreground truncate max-w-[150px]">{user?.email}</span>
+            {config?.admin_user_id && user?.id === config.admin_user_id && (
+              <Button variant="outline" size="sm" asChild title="Admin">
+                <Link to="/admin"><Shield className="h-4 w-4 sm:mr-2" /><span className="hidden sm:inline">Admin</span></Link>
+              </Button>
+            )}
             <Button variant="ghost" size="icon" onClick={() => signOut()}>
               <LogOut className="h-4 w-4" />
             </Button>
