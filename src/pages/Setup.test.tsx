@@ -12,6 +12,14 @@ vi.mock('@/hooks/useSiteConfig', () => ({
   SiteConfigProvider: ({ children }: any) => children,
 }));
 
+vi.mock('@/hooks/useAuth', () => ({
+  useAuth: () => ({
+    user: { id: 'test-user', email: 'admin@example.com' },
+    loading: false,
+  }),
+  AuthProvider: ({ children }: any) => children,
+}));
+
 import Setup from './Setup';
 
 describe('Setup page', () => {
