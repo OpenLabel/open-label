@@ -87,6 +87,7 @@ function AppRoutes() {
       <Route path="/p/:slug" element={<PublicPassport />} />
       <Route path="/referral/:code" element={<ReferralStats />} />
       <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
+      <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />
       <Route path="/legal" element={<LegalMentions />} />
       <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       <Route path="/terms" element={<Terms />} />
