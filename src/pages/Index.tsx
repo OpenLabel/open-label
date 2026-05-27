@@ -328,30 +328,36 @@ export default function Index() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
             {productCategories.map((category) => (
-              <Card 
-                key={category.key} 
-                className="relative overflow-hidden group cursor-pointer transition-all hover:shadow-lg hover:border-primary"
+              <Link
+                key={category.key}
+                to={user ? '/dashboard' : '/auth'}
+                className="block focus:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-lg"
+                aria-label={t(`categories.${category.key}`)}
               >
-                <CardContent className="p-5">
-                  <div className="flex items-start justify-between mb-2">
-                    <h3 className="font-semibold text-sm">{t(`categories.${category.key}`)}</h3>
-                    {category.status === 'active' ? (
-                      <Badge className="bg-green-500/10 text-green-600 text-xs border-green-500/20">
-                        {t('landing.categories.activeLaw')}
-                      </Badge>
-                    ) : (
-                      <Badge variant="outline" className="text-xs">
-                        {t('landing.categories.priorityGroup')}
-                      </Badge>
-                    )}
-                  </div>
-                  <p className="text-xs text-muted-foreground mb-3">{t(`categoryDescriptions.${category.key}`)}</p>
-                  <div className="flex items-center justify-between text-xs">
-                    <span className="text-muted-foreground">{category.regulation}</span>
-                    <span className="font-medium">{category.deadline === 'active' ? t('landing.timeline.active.badge') : category.deadline}</span>
-                  </div>
-                </CardContent>
-              </Card>
+                <Card
+                  className="relative overflow-hidden group cursor-pointer transition-all hover:shadow-lg hover:border-primary h-full"
+                >
+                  <CardContent className="p-5">
+                    <div className="flex items-start justify-between mb-2">
+                      <h3 className="font-semibold text-sm">{t(`categories.${category.key}`)}</h3>
+                      {category.status === 'active' ? (
+                        <Badge className="bg-green-500/10 text-green-600 text-xs border-green-500/20">
+                          {t('landing.categories.activeLaw')}
+                        </Badge>
+                      ) : (
+                        <Badge variant="outline" className="text-xs">
+                          {t('landing.categories.priorityGroup')}
+                        </Badge>
+                      )}
+                    </div>
+                    <p className="text-xs text-muted-foreground mb-3">{t(`categoryDescriptions.${category.key}`)}</p>
+                    <div className="flex items-center justify-between text-xs">
+                      <span className="text-muted-foreground">{category.regulation}</span>
+                      <span className="font-medium">{category.deadline === 'active' ? t('landing.timeline.active.badge') : category.deadline}</span>
+                    </div>
+                  </CardContent>
+                </Card>
+              </Link>
             ))}
           </div>
           <div className="text-center mt-8">
