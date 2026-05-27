@@ -34,6 +34,12 @@ const productCategories = [
     deadline: 'active'
   },
   { 
+    key: 'toys',
+    status: 'active' as const,
+    regulation: 'EU 2025/2509',
+    deadline: 'active'
+  },
+  { 
     key: 'other',
     status: 'active' as const,
     regulation: 'ESPR Framework',
