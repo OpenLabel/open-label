@@ -3,8 +3,8 @@ import { EU_LANGUAGES } from './TranslationButton';
 import { supportedLanguages } from '@/i18n/config';
 
 describe('EU_LANGUAGES', () => {
-  it('has 24 entries', () => {
-    expect(EU_LANGUAGES).toHaveLength(24);
+  it('has 25 entries (24 EU + zh-CN)', () => {
+    expect(EU_LANGUAGES).toHaveLength(25);
   });
 
   it('no duplicate codes', () => {
@@ -12,9 +12,9 @@ describe('EU_LANGUAGES', () => {
     expect(new Set(codes).size).toBe(codes.length);
   });
 
-  it('all codes are 2-letter ISO 639-1', () => {
+  it('all codes are BCP-47 (ISO 639-1, optional region)', () => {
     for (const lang of EU_LANGUAGES) {
-      expect(lang.code).toMatch(/^[a-z]{2}$/);
+      expect(lang.code).toMatch(/^[a-z]{2}(-[A-Z]{2})?$/);
     }
   });
 
