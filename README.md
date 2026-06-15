@@ -44,7 +44,7 @@ Create compliant Digital Product Passports in minutes. No installation, no credi
 | 🍷 **Wine E-Labels**     | Full EU Regulation 2021/2117 compliance with ingredients, nutrition, allergens |
 | 📦 **Generic DPP**       | Flexible template for any product type                                         |
 | 📱 **QR Codes**          | Generate scannable codes linking to each passport                              |
-| 🌍 **24 Languages**      | All EU official languages supported                                            |
+| 🌍 **25 Languages**      | All 24 EU official languages + Simplified Chinese (zh-CN)                      |
 | 🤖 **AI Autofill**       | Optional: scan wine labels to extract data automatically                       |
 | 🔒 **Self-Hosted**       | Full data sovereignty — your data, your servers                                |
 | 📜 **Long-Term Storage** | Designed for 50+ year data retention (wine, etc.)                              |
@@ -455,7 +455,7 @@ npm run preview
 │   ├── lib/            # Utility functions
 │   ├── data/           # Static data (ingredients, etc.)
 │   ├── templates/      # DPP category templates
-│   ├── i18n/           # Translations (24 languages)
+│   ├── i18n/           # Translations (25 languages: 24 EU + Simplified Chinese)
 │   └── integrations/   # Supabase client
 ├── supabase/
 │   ├── functions/      # Edge functions
