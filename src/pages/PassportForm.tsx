@@ -153,8 +153,13 @@ export default function PassportForm() {
     }
   }, [user, authLoading, navigate]);
 
+  // Hydrate the form from server data exactly once per passport id.
+  // Re-running on every refetch (e.g. window-focus) would clobber in-progress
+  // edits and freshly uploaded images that haven't been saved yet.
+  const hydratedForIdRef = useRef<string | null>(null);
   useEffect(() => {
-    if (existingPassport) {
+    if (existingPassport && hydratedForIdRef.current !== existingPassport.id) {
+      hydratedForIdRef.current = existingPassport.id;
       const newFormData = {
         name: existingPassport.name,
         category: existingPassport.category,
@@ -423,7 +428,7 @@ export default function PassportForm() {
                 <CardContent>
                   <ImageUpload
                     value={formData.image_url}
-                    onChange={(url) => setFormData({ ...formData, image_url: url })}
+                    onChange={(url) => setFormData((prev) => ({ ...prev, image_url: url }))}
                   />
                 </CardContent>
               </Card>
@@ -432,7 +437,7 @@ export default function PassportForm() {
               {formData.category === 'wine' && (
                 <WineFields
                   data={(formData.category_data as Record<string, unknown>) || {}}
-                  onChange={(data) => setFormData({ ...formData, category_data: data })}
+                  onChange={(data) => setFormData((prev) => ({ ...prev, category_data: data }))}
                 />
               )}
 
@@ -484,7 +489,7 @@ export default function PassportForm() {
                     <CardContent className="space-y-3">
                       <RichTextEditor
                         content={formData.description}
-                        onChange={(content) => setFormData({ ...formData, description: content })}
+                        onChange={(content) => setFormData((prev) => ({ ...prev, description: content }))}
                         placeholder={t('passport.descriptionPlaceholder')}
                       />
                       <div className="flex justify-end">
@@ -512,7 +517,7 @@ export default function PassportForm() {
                   <CategoryQuestions
                     category={formData.category}
                     data={(formData.category_data as Record<string, unknown>) || {}}
-                    onChange={(data) => setFormData({ ...formData, category_data: data })}
+                    onChange={(data) => setFormData((prev) => ({ ...prev, category_data: data }))}
                     extraMissingRequired={(() => {
                       const extras: { section: string; label: string }[] = [];
                       const productSection = t('passport.productInfo', 'Product information');
@@ -540,13 +545,13 @@ export default function PassportForm() {
                 passportSlug={existingPassport?.public_slug ?? null}
                 userEmail={user?.email}
                 enabled={formData.category_data.counterfeit_protection_enabled === true}
-                onChange={(enabled) => setFormData({
-                  ...formData,
+                onChange={(enabled) => setFormData((prev) => ({
+                  ...prev,
                   category_data: {
-                    ...formData.category_data,
+                    ...prev.category_data,
                     counterfeit_protection_enabled: enabled,
                   },
-                })}
+                }))}
               />
 
               {/* Actions - Mobile only */}
