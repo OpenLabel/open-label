@@ -1,0 +1,1225 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "save": "保存",
+    "cancel": "取消",
+    "delete": "删除",
+    "edit": "编辑",
+    "create": "创建",
+    "back": "返回",
+    "next": "下一步",
+    "search": "搜索",
+    "apply": "应用",
+    "close": "关闭",
+    "confirm": "确认",
+    "yes": "是",
+    "no": "否",
+    "error": "错误",
+    "success": "成功",
+    "warning": "警告",
+    "openSource": "开源",
+    "language": "语言",
+    "custom": "自定义",
+    "selectOption": "选择一个选项",
+    "confirmed": "已确认",
+    "required": "必填",
+    "whereApplicable": "如适用",
+    "tbdImplementingAct": "待定 — 实施法案"
+  },
+  "nav": {
+    "signIn": "登录",
+    "signUp": "注册",
+    "signOut": "退出",
+    "getStarted": "免费开始",
+    "dashboard": "前往仪表盘",
+    "createNew": "新建"
+  },
+  "landing": {
+    "hero": {
+      "badge": "符合欧盟ESPR标准",
+      "euFunded": "🇪🇺 荣获欧盟资助",
+      "title": "无限数字产品护照 — 100% 免费",
+      "subtitle": "免费、开源平台，用于符合欧盟生态设计可持续产品法规 (ESPR)。为电池、纺织品、建筑产品和12+个类别生成带二维码的机器可读护照。可在您自己的服务器上自托管或使用我们的托管版本。",
+      "cta": "创建您的第一本护照",
+      "demo": "查看演示护照",
+      "features": {
+        "free": "100% 免费和开源",
+        "selfHost": "可自托管",
+        "machineReadable": "机器可读 JSON/XML",
+        "categories": "12+ 产品类别"
+      }
+    },
+    "stats": {
+      "free": "免费和开源",
+      "categories": "产品类别",
+      "deadline": "首个欧盟截止日期",
+      "qr": "+ 唯一网址"
+    },
+    "features": {
+      "badge": "功能",
+      "title": "满足合规所需的一切",
+      "subtitle": "遵循欧盟技术标准构建：去中心化存储、ISO 15459 标识符、分级访问权限以及机器可读的 JSON/XML 输出。",
+      "espr": {
+        "title": "符合 ESPR 标准",
+        "description": "根据欧盟生态设计可持续产品法规要求，为每个类别预配置模板。"
+      },
+      "openSource": {
+        "title": "开源",
+        "description": "完全开源。可在您自己的服务器上自托管以完全控制数据，或免费使用我们的托管版本。"
+      },
+      "machineReadable": {
+        "title": "机器可读",
+        "description": "非静态 PDF。结构化 JSON/XML 数据，可与 BIM、回收系统和其他软件集成。"
+      },
+      "qr": {
+        "title": "二维码和数据载体",
+        "description": "每本护照都有唯一的 URL 和二维码。可根据 ISO 15459 集成 NFC/RFID。"
+      }
+    },
+    "ai": {
+      "badge": "AI 驱动",
+      "title": "AI 自动填充",
+      "subtitle": "无需手动输入。上传产品标签或任何文件的照片，我们的 AI 会在几秒钟内自动提取所有数据。",
+      "snap": {
+        "title": "拍照",
+        "description": "拍摄您的酒标、产品包装或任何带有产品信息的标签。"
+      },
+      "upload": {
+        "title": "上传文件",
+        "description": "PDF 数据表、Word 文档、Excel 规格表 — 上传任何文件，我们将提取相关数据。"
+      },
+      "extract": {
+        "title": "AI 提取数据",
+        "description": "我们的视觉 AI 读取并理解您的文档，自动填写所有护照字段。"
+      },
+      "multiUpload": {
+        "title": "支持多文件上传",
+        "description": "按顺序上传多张照片或文档 — AI 智能合并数据"
+      },
+      "cta": "免费试用 AI 自动填充",
+      "tags": {
+        "wineLabels": "酒标",
+        "productLabels": "产品标签",
+        "ingredientLists": "成分列表",
+        "nutritionFacts": "营养成分",
+        "technicalPdfs": "技术 PDF"
+      }
+    },
+    "categories": {
+      "badge": "欧盟法规范围",
+      "title": "支持的产品类别",
+      "subtitle": "模板根据欧盟官方法规和授权法案构建。随着授权法案的发布，将增加更多类别。",
+      "activeLaw": "现行法律",
+      "priorityGroup": "优先组",
+      "cta": "开始创建护照"
+    },
+    "timeline": {
+      "badge": "法规时间表",
+      "title": "欧盟 DPP 实施截止日期",
+      "subtitle": "欧盟正在分阶段推出数字产品护照要求。立即开始准备以确保合规。",
+      "feb2027": {
+        "title": "电池 — 即将推出",
+        "badge": "2027 年 2 月",
+        "description": "电动汽车、工业和轻型交通工具电池必须拥有数字产品护照，包含完整的生命周期数据、碳足迹声明（kg CO₂e/kWh，A-D 级评定）以及钴、锂和镍的回收含量百分比。"
+      },
+      "active": {
+        "title": "现已生效",
+        "badge": "已生效",
+        "description": "葡萄酒和烈酒 (EU 2021/2117) 已要求提供数字声明，包括成分列表和营养信息。"
+      },
+      "rollout": {
+        "title": "2027-2030 年：全面推广",
+        "description": "纺织品、电子产品、家具、钢铁、铝、建筑产品、玩具、化妆品、轮胎和洗涤剂将随着授权法案的发布而要求提供 DPP。"
+      }
+    },
+    "selfHost": {
+      "badge": "开源",
+      "title": "在您自己的服务器上运行",
+      "subtitle": "本项目完全开源。您可以在自己的基础设施上自托管，以实现完全的数据主权，修改代码以满足您的需求，或为项目做出贡献。",
+      "deploy": {
+        "title": "自托管",
+        "description": "部署在您自己的服务器上。完全控制您的数据和合规文档。"
+      },
+      "customize": {
+        "title": "自定义",
+        "description": "添加自定义字段，与您的 ERP/PLM 系统集成，或构建白标解决方案。"
+      },
+      "contribute": {
+        "title": "贡献",
+        "description": "随着法规的发展，帮助改进模板。社区驱动的合规更新。"
+      }
+    },
+    "cta": {
+      "title": "准备好合规了吗？",
+      "subtitle": "立即开始创建符合欧盟标准的数字产品护照。免费、无限制且开源。",
+      "button": "立即免费开始"
+    },
+    "footer": {
+      "legal": "法律声明",
+      "github": "在 GitHub 上查看"
+    }
+  },
+  "auth": {
+    "title": "数字产品护照",
+    "subtitle": "登录或创建账户",
+    "resetSubtitle": "重置您的密码",
+    "signIn": "登录",
+    "signUp": "注册",
+    "email": "电子邮件",
+    "password": "密码",
+    "companyName": "公司名称",
+    "sendResetLink": "发送重置链接",
+    "sending": "正在发送...",
+    "backToSignIn": "返回登录",
+    "forgotPassword": "忘记密码？",
+    "welcomeBack": "欢迎回来！",
+    "accountCreated": "账户已创建！",
+    "accountCreatedDesc": "您现在可以登录了。",
+    "checkEmail": "检查您的电子邮件",
+    "resetLinkSent": "密码重置链接已发送。",
+    "validation": {
+      "invalidEmail": "请输入有效的电子邮件地址",
+      "shortPassword": "密码至少需要6个字符"
+    },
+    "setNewPassword": "设置新密码",
+    "setNewPasswordDesc": "请在下方输入您的新密码",
+    "newPassword": "新密码",
+    "confirmPassword": "确认密码",
+    "updatePassword": "更新密码",
+    "passwordMismatch": "密码不匹配",
+    "passwordUpdated": "密码更新成功！"
+  },
+  "dashboard": {
+    "title": "您的产品护照",
+    "noPassports": "暂无产品护照。创建您的第一个！",
+    "updated": "已更新",
+    "duplicate": "复制",
+    "showQr": "显示二维码",
+    "duplicated": "产品护照已复制",
+    "deleted": "产品护照已删除",
+    "confirmDelete": "您确定要删除此产品护照吗？",
+    "dragToReorder": "拖动以重新排序",
+    "createSampleToy": "创建示例玩具",
+    "sampleToyCreated": "示例玩具产品护照已创建"
+  },
+  "passport": {
+    "createTitle": "创建新产品护照",
+    "editTitle": "编辑产品护照",
+    "basicInfo": "基本信息",
+    "dppName": "DPP名称（仅限内部使用）",
+    "dppNamePlaceholder": "为此产品护照输入一个内部名称",
+    "dppNameHelp": "此名称仅在您的仪表板上可见",
+    "productName": "产品名称",
+    "productNamePlaceholder": "输入产品名称",
+    "productNameHelp": "这是消费者在公共数字产品护照上看到的名称",
+    "category": "产品类别",
+    "productImage": "产品图片",
+    "productDescription": "产品描述",
+    "descriptionPlaceholder": "描述您的产品...",
+    "details": "详情",
+    "saving": "正在保存...",
+    "saveChanges": "保存更改",
+    "createPassport": "创建产品护照",
+    "updated": "产品护照更新成功",
+    "created": "产品护照创建成功",
+    "unsavedChanges": "未保存的更改",
+    "unsavedChangesDesc": "您有未保存的更改。您确定要离开吗？您的更改将丢失。",
+    "leaveWithoutSaving": "不保存并离开",
+    "enterProductName": "请输入产品名称",
+    "notFound": "未找到产品护照",
+    "notFoundDesc": "此数字产品护照不存在或已被移除。",
+    "productPassport": "产品护照",
+    "checkAuthenticity": "检查真实性",
+    "poweredBy": "由",
+    "noAdditionalInfo": "此类别无需额外信息。",
+    "earlyAlpha": "早期Alpha版本",
+    "earlyAlphaDesc": "此模板处于早期Alpha版本，可能不完全符合当前法规。使用前请根据官方要求核实所有信息。",
+    "missingRequiredTitle": "部分必填字段未填写",
+    "missingRequiredBody": "您仍然可以保存并发布此DPP，但以下字段是完全符合法规所必需的："
+  },
+  "imageUpload": {
+    "loginRequired": "您必须登录才能上传图片",
+    "invalidType": "请上传图片文件",
+    "tooLarge": "图片大小必须小于5MB",
+    "uploading": "正在上传...",
+    "uploadButton": "上传产品图片",
+    "uploadFailed": "图片上传失败"
+  },
+  "categories": {
+    "battery": "电池",
+    "construction": "建筑产品",
+    "textiles": "纺织品和鞋类",
+    "wine": "葡萄酒和烈酒",
+    "toys": "玩具",
+    "electronics": "电子产品和ICT",
+    "iron_steel": "钢铁",
+    "aluminum": "铝",
+    "cosmetics": "化妆品",
+    "furniture": "家具和床垫",
+    "tires": "轮胎",
+    "detergents": "洗涤剂和化学品",
+    "other": "所有其他产品"
+  },
+  "categoryDescriptions": {
+    "battery": "碳足迹、回收、供应链尽职调查",
+    "construction": "DoPC、GWP A1-A3、耐火性",
+    "textiles": "纤维成分、耐用性、PFAS声明",
+    "wine": "成分、营养、地理标志",
+    "toys": "安全评估、EN 71标准、化学合规性",
+    "electronics": "可修复性指数、备件、软件更新",
+    "iron_steel": "碳强度、废钢含量、合金化学成分",
+    "aluminum": "冶炼能源、线圈可追溯性",
+    "cosmetics": "INCI列表、纳米材料、包装可回收性",
+    "furniture": "EUDR木材来源、备件、PFAS",
+    "tires": "磨损率、翻新历史、微塑料",
+    "detergents": "数字SDS、生物降解性、剂量优化",
+    "other": "适用于任何产品类型的通用DPP模板"
+  },
+  "wine": {
+    "productIdentity": "产品标识",
+    "productIdentityDesc": "基本葡萄酒产品信息",
+    "productName": "产品名称",
+    "volume": "容量",
+    "grapeVariety": "葡萄品种",
+    "vintage": "年份",
+    "country": "原产国",
+    "region": "产区",
+    "denomination": "产地/命名",
+    "sugarClassification": "糖分分类",
+    "producerInfo": "生产商信息",
+    "producerInfoDesc": "关于葡萄酒生产商的信息",
+    "producerName": "生产商/酒庄名称",
+    "bottlerInfo": "装瓶商信息",
+    "bottlerInfoPlaceholder": "装瓶商名称和地址",
+    "nutritionalValues": "营养价值",
+    "nutritionalValuesDesc": "根据欧盟法规2021/2117要求",
+    "alcohol": "酒精",
+    "alcoholPercent": "酒精含量 (% Vol)",
+    "residualSugar": "残糖",
+    "residualSugarGL": "残糖 (g/L)",
+    "acidity": "酸度",
+    "totalAcidity": "总酸度",
+    "totalAcidityGL": "总酸度 - C₄H₆O₆ (g/L)",
+    "glycerine": "甘油/多元醇",
+    "glycerineGL": "甘油 (g/L)",
+    "energy": "能量",
+    "energyKcal": "能量 (kcal)",
+    "energyKj": "能量 (kJ)",
+    "fat": "脂肪",
+    "fatG": "脂肪 (g)",
+    "saturatedFat": "其中饱和脂肪",
+    "saturatedFatG": "饱和脂肪酸 (g)",
+    "carbohydrate": "碳水化合物",
+    "carbohydratesG": "碳水化合物 (g)",
+    "sugars": "其中糖",
+    "sugarG": "糖 (g)",
+    "protein": "蛋白质",
+    "proteinsG": "蛋白质 (g)",
+    "salt": "盐",
+    "saltG": "盐 (g)",
+    "manual": "手动",
+    "calculatedValues": "计算值 (每100毫升)",
+    "smallQuantities": "含有少量",
+    "additionalNutritional": "其他营养价值",
+    "smallQuantitiesDesc": "值为0的将显示为“含有少量...”",
+    "additionalNutritionalDesc": "这些值将包含在营养声明中",
+    "displayOptions": "显示选项",
+    "electronicLabelOptions": "电子标签显示选项",
+    "electronicLabelOptionsDesc": "选择要在电子标签上显示哪些分析数据（可选）",
+    "showAlcohol": "酒精",
+    "showResidualSugar": "残糖",
+    "showTotalAcidity": "总酸度 (C₄H₆O₆)",
+    "displaySettings": "显示设置",
+    "displaySettingsDesc": "配置您的公共数字产品护照上显示的内容",
+    "hidePromo": "隐藏“由 Open Label .eu 提供支持”宣传信息",
+    "ingredients": "成分",
+    "addIngredients": "添加成分",
+    "addCustomIngredient": "添加自定义",
+    "noIngredients": "未添加成分",
+    "ingredientCategories": {
+      "general": "通用",
+      "gases": "气体和包装气体",
+      "acidity_regulators": "酸度调节剂",
+      "stabilizers": "稳定剂",
+      "preservatives": "防腐剂和抗氧化剂",
+      "processing_aids": "加工助剂"
+    },
+    "bottledProtectiveAtmosphere": "在保护性气氛中装瓶",
+    "ingredientsDescription": "从葡萄酒成分列表中选择成分或添加自定义成分。按数量（从大到小）排序。",
+    "chooseIngredients": "选择葡萄酒成分",
+    "chooseIngredientsDescription": "选择构成您葡萄酒成分的所有成分。如有必要，您可以添加自定义成分。",
+    "selectFromList": "从列表中选择成分",
+    "defineCustom": "定义自定义成分",
+    "sortIngredients": "成分排序",
+    "sortIngredientsDescription": "成分列表应按数量从大到小排序。低于0.1 g/100 ml 的数量无需排序。",
+    "allergen": "过敏原",
+    "allergenNotice": "过敏原通知",
+    "allergenWarning": "此葡萄酒含有必须声明的过敏原：",
+    "selectIngredientsTitle": "从列表中选择葡萄酒成分",
+    "noIngredientsFound": "未找到与“{{search}}”匹配的成分",
+    "recycling": "回收信息",
+    "recyclingDescription": "选择用于葡萄酒包装的材料。",
+    "recyclingNote": "请查阅您当地的回收指南。分离组件并正确处置。",
+    "legalInfo": "法律信息",
+    "negligibleAmounts": "含有微量的脂肪、饱和脂肪、蛋白质和盐。",
+    "per100ml": "每100毫升",
+    "selectCountry": "选择国家",
+    "selectClassification": "选择分类",
+    "manualOverride": "手动覆盖",
+    "placeholders": {
+      "productName": "例如，Château Margaux 2018",
+      "grapeVariety": "例如，赤霞珠、梅洛",
+      "vintage": "例如，2020，NV，多年份",
+      "volume": "例如，750",
+      "region": "例如，波尔多、勃艮第、香槟",
+      "denomination": "例如，AOC, AOP, IGP",
+      "sugarClassification": "例如：Brut、Sec、Demi-Sec、Doux",
+      "producerName": "例如：Château Margaux",
+      "alcohol": "例如：13.5",
+      "residualSugar": "例如：2.5",
+      "totalAcidity": "例如：5.5",
+      "glycerine": "例如：8.5"
+    },
+    "hints": {
+      "productName": "酒标上显示的葡萄酒商品名称。",
+      "productNameTooltip": "这是消费者看到的官方产品名称。它应与酒标上印刷的内容完全一致，包括年份或特殊名称。",
+      "grapeVariety": "用于酿造此葡萄酒的葡萄品种。",
+      "grapeVarietyTooltip": "列出葡萄品种（例如：赤霞珠、梅洛、霞多丽）。如果是混酿，可以列出多个品种。这有助于消费者了解葡萄酒的特性，并且根据欧盟标签规定，如果酒标上提及品种，则必须列出。",
+      "vintage": "葡萄采摘的年份。",
+      "vintageTooltip": "年份表示葡萄采摘的年份。对于由多个年份混合而成的葡萄酒，请使用“NV”（无年份），这在香槟中很常见。多年份葡萄酒混合了不同采摘年份的葡萄。",
+      "volume": "瓶中葡萄酒的量。",
+      "volumeTooltip": "标准葡萄酒瓶为750毫升。其他常见尺寸：375毫升（半瓶）、1.5升（大瓶）、3升（双倍大瓶）。此容量必须与酒标上印刷的容量一致。",
+      "country": "葡萄酒的生产地。",
+      "countryTooltip": "葡萄种植和葡萄酒酿造的国家。这是在欧盟销售葡萄酒的法律要求，并影响适用于您产品的法规。",
+      "region": "特定的葡萄酒产区。",
+      "regionTooltip": "葡萄酒生产国境内的地理区域（例如：波尔多、托斯卡纳、纳帕谷）。这可以表明受地理标志法律保护的质量和风格特征。",
+      "denomination": "官方质量分类或受保护的原产地。",
+      "denominationTooltip": "受保护的名称，如AOC（原产地控制命名）、AOP（原产地保护命名）、DOC、DOCG或IGP（地理保护标志）。这些受欧盟保护的术语保证葡萄酒符合特定的质量和原产地要求。",
+      "sugarClassification": "葡萄酒的甜度等级。",
+      "sugarClassificationTooltip": "对于起泡酒：天然干型（0-3克/升）、特干型（0-6克/升）、干型（0-12克/升）、半干型（12-17克/升）、干型/Sec（17-32克/升）、半甜型（32-50克/升）、甜型（50克/升以上）。对于静止葡萄酒，使用“干型”、“中等”、“甜型”等术语。",
+      "producerName": "酿造葡萄酒的酒庄或公司。",
+      "producerNameTooltip": "生产商、酒庄或酿酒厂的法定名称。这是葡萄酒标签上的强制性信息，有助于消费者识别产品的负责人。",
+      "bottlerInfo": "葡萄酒的装瓶者及地点。",
+      "bottlerInfoTooltip": "欧盟法律要求说明葡萄酒的装瓶者及其地址。使用“由[名称]在[地址]装瓶”或“Mis en bouteille au château”（酒庄装瓶）等短语。如果由酒商装瓶，这可能与生产商不同。",
+      "alcoholPercent": "按体积计的酒精含量。",
+      "alcoholPercentTooltip": "葡萄酒中按体积计的酒精百分比。欧盟法律要求在标签上注明，允许±0.5%的误差。典型葡萄酒的酒精含量范围为5.5%（轻型起泡酒）至15%以上（强化葡萄酒）。此值用于计算能量含量。",
+      "residualSugar": "发酵后残留的糖分。",
+      "residualSugarTooltip": "发酵过程中未转化为酒精的天然葡萄糖量（以克/升计）。这会影响甜度感知，并用于计算碳水化合物含量。干型葡萄酒通常低于4克/升。",
+      "totalAcidity": "以酒石酸表示的总酸含量。",
+      "totalAcidityTooltip": "总酸度以酒石酸当量（C₄H₆O₆）克/升计。这会影响葡萄酒的口感、新鲜度和稳定性。典型值为4-9克/升。这用于营养计算。",
+      "glycerine": "发酵产生的天然甘油。",
+      "glycerineTooltip": "甘油是酒精发酵的天然副产品，有助于葡萄酒的酒体和口感。典型值为4-15克/升。酒精含量较高的葡萄酒往往含有更多的甘油。用于能量计算。",
+      "calculatedValuesTooltip": "这些营养值是根据酒精、糖、酸度和甘油，使用欧盟标准公式自动计算的。勾选“手动”以输入您自己的实验室测试值。",
+      "energyTooltip": "能量含量根据酒精（7千卡/克）、糖（4千卡/克）和甘油（2.4千卡/克）计算。这是营养标签上显示的内容。",
+      "carbohydratesTooltip": "总碳水化合物按每100毫升残留糖和酒石酸含量之和计算。这包括所有有助于碳水化合物含量的糖和酸。",
+      "sugarNutritionTooltip": "营养标签上显示的糖值，根据每100毫升残留糖含量计算。与残留糖（克/升）不同——这是欧盟食品标签要求的每100毫升。",
+      "smallQuantitiesHint": "葡萄酒天然含有极少量这些营养物质。除非实验室分析另有显示，否则请保持为0。",
+      "smallQuantitiesTooltip": "欧盟法规1169/2011允许对含量极少的营养物质声明“含量可忽略不计”。对于葡萄酒，脂肪、饱和脂肪、蛋白质和盐通常可忽略不计。仅当实验室分析显示可测量量时才在此处输入值。",
+      "electronicLabelHint": "与所需营养信息一起显示的可选数据。",
+      "electronicLabelTooltip": "除了强制性的营养声明外，您还可以选择显示额外的分析数据，如实际酒精含量、残留糖或酸度。这为希望获得详细葡萄酒信息的消费者和侍酒师提供了透明度。",
+      "displaySettingsHint": "控制在您的公共护照页面上显示的其他元素。"
+    }
+  },
+  "ingredients": {
+    "grapes": "葡萄",
+    "saccharose": "蔗糖（甘蔗/甜菜糖）",
+    "aleppo_pine_resin": "阿勒颇松脂",
+    "caramel": "焦糖（着色剂 E150）",
+    "concentrated_grape_must": "浓缩葡萄汁",
+    "grape_must": "葡萄汁",
+    "rectified_concentrated_grape_must": "精炼浓缩葡萄汁 (RCGM)",
+    "filling_dosage": "发酵液（用于二次发酵）",
+    "expedition_dosage": "添糖液（最终添糖）",
+    "argon": "氩气 (E938)",
+    "nitrogen": "氮气 (E941)",
+    "carbon_dioxide": "二氧化碳 (E290)",
+    "protective_atmosphere": "在保护性气氛下装瓶",
+    "tartaric_acid": "酒石酸 (E334)",
+    "malic_acid": "苹果酸 (E296)",
+    "lactic_acid": "乳酸 (E270)",
+    "calcium_sulfate": "硫酸钙 (E516)",
+    "citric_acid": "柠檬酸 (E330) – 酸度调节剂",
+    "citric_acid_stabilizer": "柠檬酸 (E330) – 稳定剂",
+    "metatartaric_acid": "偏酒石酸 (E353)",
+    "gum_arabic": "阿拉伯胶 (E414)",
+    "yeast_mannoproteins": "酵母甘露糖蛋白",
+    "carboxymethylcellulose": "羧甲基纤维素 (E466)",
+    "potassium_polyaspartate": "聚天冬氨酸钾 (E456)",
+    "fumaric_acid": "富马酸 (E297)",
+    "potassium_sorbate": "山梨酸钾 (E202)",
+    "lysozyme": "溶菌酶 (E1105) – 含蛋清蛋白",
+    "ascorbic_acid": "L-抗坏血酸 (E300)",
+    "dmdc": "二甲基二碳酸酯 – DMDC (E242)",
+    "sulfites": "亚硫酸盐 (>10 mg/L)",
+    "sulfur_dioxide": "二氧化硫 (E220)",
+    "potassium_bisulfite": "亚硫酸氢钾 (E228)",
+    "potassium_metabisulfite": "焦亚硫酸钾 (E224)",
+    "egg": "鸡蛋和蛋制品",
+    "milk": "牛奶和奶制品",
+    "casein": "酪蛋白 (牛奶蛋白)",
+    "albumin": "白蛋白 (蛋清蛋白)",
+    "isinglass": "鱼胶 (鱼鳔)",
+    "bentonite": "膨润土 (澄清粘土)",
+    "gelatin": "明胶 (动物源)",
+    "pea_protein": "豌豆蛋白",
+    "potato_protein": "马铃薯蛋白",
+    "pvpp": "PVPP – 聚乙烯聚吡咯烷酮 (E1202)"
+  },
+  "recycling": {
+    "code": "代码",
+    "material": "材料",
+    "disposal": "处置",
+    "componentTypes": {
+      "bottle": "瓶子",
+      "closure": "瓶盖",
+      "capsule": "胶囊",
+      "label": "标签",
+      "box": "盒子"
+    },
+    "selectMaterial": "选择材料",
+    "individualComponents": "单个组件",
+    "compositeComponents": "复合组件",
+    "customMaterial": "自定义材料",
+    "addCustomMaterial": "添加自定义材料",
+    "disposalAdvice": "处置建议",
+    "addMaterial": "添加材料",
+    "addPackagingMaterial": "添加包装材料",
+    "customType": "自定义类型",
+    "addCustomType": "添加自定义材料类型",
+    "editCustomType": "编辑自定义材料类型",
+    "materialName": "材料名称",
+    "materialNamePlaceholder": "例如，木箱"
+  },
+  "legal": {
+    "title": "法律声明",
+    "legalMentions": "法律声明"
+  },
+  "notFound": {
+    "title": "404",
+    "message": "抱歉！页面未找到",
+    "returnHome": "返回主页"
+  },
+  "counterfeit": {
+    "title": "防伪保护",
+    "enable": "启用",
+    "disable": "禁用",
+    "description": "使用我们合作伙伴提供的安全封条保护您的产品免受伪造。",
+    "addProtection": "添加防伪保护（可选）",
+    "enabled": "防伪保护已启用",
+    "enabledDescription": "已向我们的防伪保护合作伙伴发送电子邮件。他们将与您联系以提供安全封条。",
+    "requestSent": "请求已发送！",
+    "requestSentDescription": "已向我们的防伪合作伙伴发送电子邮件。他们将与您联系以提供安全封条。",
+    "sending": "正在发送...",
+    "errorNoEmail": "无法发送请求 - 未找到用户电子邮件",
+    "errorSaveFirst": "请先保存护照，然后再启用防伪保护",
+    "errorFailed": "发送防伪保护请求失败"
+  },
+  "customIngredient": {
+    "title": "定义自定义成分",
+    "editTitle": "编辑自定义成分",
+    "ingredientName": "成分名称",
+    "eNumber": "E-编号（可选）",
+    "eNumberPlaceholder": "例如，E 123",
+    "ingredientPlaceholder": "例如，橡木片",
+    "isAllergen": "这是一种过敏原",
+    "addButton": "添加成分"
+  },
+  "certifications": {
+    "title": "认证与标签"
+  },
+  "qrDialog": {
+    "title": "二维码",
+    "download": "下载二维码",
+    "copyLink": "复制链接",
+    "printSizeInstructionWine": "打印宽度为 1.8 厘米。高度随内容变化。六边形对应安全封条的 1 厘米。"
+  },
+  "translation": {
+    "title": "翻译",
+    "description": "提供所有欧盟语言的翻译。使用 AI 生成初始翻译，然后根据需要进行审阅和编辑。",
+    "manageTranslations": "管理翻译",
+    "translate": "翻译",
+    "sourceText": "源文本",
+    "empty": "（空）",
+    "generateWithAI": "使用 AI 生成",
+    "enterTranslation": "输入翻译...",
+    "saveTranslations": "保存翻译",
+    "noSourceText": "无源文本",
+    "enterTextFirst": "请先在字段中输入文本，然后再生成翻译。",
+    "generated": "翻译已生成",
+    "reviewAndEdit": "根据需要审阅和编辑翻译。",
+    "error": "翻译错误",
+    "errorDesc": "生成翻译失败。请重试。",
+    "saved": "翻译已保存",
+    "autoTranslating": "正在翻译..."
+  },
+  "preview": {
+    "livePreview": "实时预览",
+    "productPassport": "产品护照",
+    "productName": "产品名称",
+    "checkAuthenticity": "检查真伪",
+    "productDescription": "产品描述",
+    "certificationsLabels": "认证与标签",
+    "poweredBy": "由 ... 提供支持"
+  },
+  "ai": {
+    "analyzing": "正在分析文档...",
+    "takePhoto": "拍照",
+    "uploadFile": "上传文件",
+    "supportedFormats": "支持照片、PDF 和 Word 文档",
+    "multiUploadTip": "有多个文件？每次上传后再次运行此操作，以合并来自不同来源的数据。",
+    "autofillButton": "使用 AI 自动填充",
+    "experimental": "实验性",
+    "scannerTitle": "AI 标签扫描器",
+    "scannerDescription": "上传葡萄酒标签照片、PDF 或文档，AI 将自动提取信息。您还可以扫描现有数字产品护照的二维码照片。",
+    "experimentalWarning": "实验性功能：请在保存前仔细检查所有提取的数据。AI 可能会出错。",
+    "autofillComplete": "✨ AI 自动填充完成",
+    "autofillCompleteDesc": "字段已填充。请在保存前审阅并验证数据。",
+    "qrCodeUsed": "检测到二维码，并分析了其链接页面以获取额外数据。",
+    "noDataExtracted": "未从标签中提取任何数据",
+    "processingFailed": "处理失败",
+    "processingFailedDesc": "无法从标签中提取数据",
+    "quotaExceeded": "超出合理使用配额",
+    "quotaExceededDesc": "您已达到每月 100 次 AI 标签扫描的限制。",
+    "quotaExceededBody": "为确保所有用户都能公平使用，我们限制AI驱动的标签扫描每月100次。您的配额将在下月初重置。",
+    "quotaContactBody": "如果您的企业需要更高的限额，请联系我们，我们很乐意讨论解决方案。",
+    "contactUs": "联系我们"
+  },
+  "richText": {
+    "enterUrl": "输入网址："
+  },
+  "toyPublic": {
+    "headerBadge": "玩具 — 数字产品护照",
+    "sections": {
+      "productIdentity": "产品标识",
+      "instructionsAndWarnings": "说明和警告",
+      "manufacturer": "制造商",
+      "euOperator": "欧盟经营者信息",
+      "compliance": "合规性",
+      "safetyChemical": "安全与化学信息",
+      "dppInfrastructure": "DPP基础设施"
+    },
+    "subsections": {
+      "authorisedRepresentative": "授权代表",
+      "euResponsibleEconomicOperator": "欧盟负责任经济经营者",
+      "safetyIncidentReporting": "安全事件报告"
+    },
+    "rows": {
+      "brand": "品牌",
+      "model": "型号",
+      "skuVariant": "SKU / 变体",
+      "toyCategory": "玩具类别",
+      "intendedAgeGroup": "适用年龄组",
+      "uniqueIdentifier": "唯一标识符",
+      "manufacturer": "制造商",
+      "address": "地址",
+      "email": "电子邮件",
+      "website": "网站",
+      "operatorIdentifier": "经营者标识符",
+      "legalName": "法定名称",
+      "role": "角色",
+      "ceMarking": "CE标志",
+      "applicableLegislation": "适用法规",
+      "harmonisedStandards": "协调标准",
+      "commonSpecifications": "通用规范",
+      "otherStandards": "其他标准",
+      "notifiedBody": "公告机构",
+      "customsCode": "海关编码",
+      "dppServiceProvider": "DPP服务提供商",
+      "backupCopyReference": "备份副本参考",
+      "dppVersion": "DPP版本",
+      "lastUpdated": "最后更新",
+      "status": "状态",
+      "euDoc": "欧盟符合性声明",
+      "safetyAssessment": "安全评估",
+      "technicalDocumentation": "技术文件"
+    },
+    "values": {
+      "ceMarked": "已加贴CE标志",
+      "notDeclared": "未声明",
+      "published": "已发布",
+      "noFragrancesDeclared": "未声明存在任何需加贴标签的过敏性香料，含量均低于或等于10毫克/千克。",
+      "fragrancesDeclared": "存在以下需加贴标签的过敏性香料，含量均高于或等于10毫克/千克：{{names}}。",
+      "mirroredAt": "镜像于 {{url}}",
+      "mirroredOnOpenLabel": "镜像于 Open-Label.eu 基础设施",
+      "numberPrefix": "编号 {{value}}",
+      "certificatePrefix": "证书：{{value}}",
+      "issuedSuffix": "（签发日期 {{date}}）",
+      "other": "其他",
+      "reference": "参考",
+      "certificateDownload": "下载符合性证书",
+      "ceDeclarationStatement": "制造商声明，本玩具符合适用的欧盟安全要求，并在投放欧盟市场前已加贴或将加贴CE标志（如适用）。",
+      "yesNoUnknown": {
+        "yes": "是",
+        "no": "否",
+        "unknown": "未知"
+      }
+    },
+    "table": {
+      "substance": "物质",
+      "cas": "CAS",
+      "concentration": "浓度",
+      "component": "成分"
+    },
+    "safety": {
+      "telephone": "电话",
+      "email": "电子邮件",
+      "web": "网址",
+      "safetyGatePortal": "欧盟安全之门门户网站",
+      "reportUnsafe": "报告不安全产品"
+    },
+    "poweredBy": "由 ... 提供支持"
+  },
+  "toys": {
+    "sections": {
+      "manufacturer_responsibility": {
+        "title": "制造商责任",
+        "description": "本数字产品护照由制造商全权负责签发。"
+      },
+      "product_identity": {
+        "title": "产品标识",
+        "description": "每个玩具型号或变体都需要自己的DPP。"
+      },
+      "manufacturer": {
+        "title": "制造商",
+        "description": "负责将玩具投放市场的法律实体。"
+      },
+      "auth_rep": {
+        "title": "授权代表",
+        "description": "如适用。"
+      },
+      "eu_operator": {
+        "title": "欧盟负责经济运营商",
+        "description": "当制造商在欧盟境外设立时需要。"
+      },
+      "compliance": {
+        "title": "合规性",
+        "description": "CE标志、适用的欧盟法规和标准。"
+      },
+      "notified_body": {
+        "title": "合格评定与公告机构",
+        "description": "如适用。"
+      },
+      "customs": {
+        "title": "海关商品编码",
+        "description": "生成格式为 9880 + CN 章 + 00。可编辑。"
+      },
+      "allergenic_fragrances": {
+        "title": "致敏性香料",
+        "description": "浓度≥10 mg/kg时需进行标签标注的物质。"
+      },
+      "safety_reporting": {
+        "title": "安全事故报告",
+        "description": "消费者和主管部门可用的渠道。"
+      }
+    },
+    "fields": {
+      "manufacturer_responsibility_confirmed": {
+        "label": "我确认本DPP由制造商全权负责签发。"
+      },
+      "brand_name": {
+        "label": "品牌名称"
+      },
+      "model_name": {
+        "label": "型号名称或型号"
+      },
+      "sku": {
+        "label": "SKU或变体ID",
+        "help": "每个变体（颜色、尺寸、材料、电子版本、捆绑版本）使用单独的DPP。"
+      },
+      "toy_category": {
+        "label": "玩具类别"
+      },
+      "toy_category_other": {
+        "label": "玩具类别（请注明）"
+      },
+      "age_group": {
+        "label": "适用年龄组"
+      },
+      "age_group_other": {
+        "label": "年龄组（请注明）"
+      },
+      "mouth_contact": {
+        "label": "此玩具是否打算放入口中？",
+        "help": "对于口腔接触玩具，适用更严格的致敏性香料和化学品限制。"
+      },
+      "unique_product_identifier": {
+        "label": "唯一产品标识符",
+        "help": "此玩具型号/SKU/变体的持久标识符。最终规范确认后，应与ESPR / ISO IEC 15459式标识兼容。"
+      },
+      "identifier_type": {
+        "label": "标识符类型"
+      },
+      "identifier_type_other": {
+        "label": "标识符类型（请注明）"
+      },
+      "manufacturer_legal_name": {
+        "label": "制造商法定名称"
+      },
+      "manufacturer_street": {
+        "label": "街道地址"
+      },
+      "manufacturer_city": {
+        "label": "城市"
+      },
+      "manufacturer_postal_code": {
+        "label": "邮政编码"
+      },
+      "manufacturer_country": {
+        "label": "国家/地区"
+      },
+      "manufacturer_email": {
+        "label": "电子邮箱 (电子邮件)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_website": {
+        "label": "网站",
+        "placeholder": "https://..."
+      },
+      "manufacturer_operator_id": {
+        "label": "唯一运营商标识符",
+        "help": "请使用目前可用的最佳运营商标识符；最终所需格式可能由实施法案定义。"
+      },
+      "manufacturer_operator_id_type": {
+        "label": "运营商标识符类型"
+      },
+      "has_auth_rep": {
+        "label": "制造商是否有授权代表？"
+      },
+      "auth_rep_legal_name": {
+        "label": "授权代表法定名称"
+      },
+      "auth_rep_street": {
+        "label": "街道地址"
+      },
+      "auth_rep_city": {
+        "label": "城市"
+      },
+      "auth_rep_postal_code": {
+        "label": "邮政编码"
+      },
+      "auth_rep_country": {
+        "label": "国家"
+      },
+      "auth_rep_email": {
+        "label": "电子邮箱",
+        "placeholder": "name@company.com"
+      },
+      "auth_rep_operator_id": {
+        "label": "唯一经营者标识符"
+      },
+      "auth_rep_operator_id_type": {
+        "label": "经营者标识符类型"
+      },
+      "manufacturer_non_eu": {
+        "label": "制造商是否在欧盟境外设立？"
+      },
+      "eu_op_legal_name": {
+        "label": "欧盟负责经营者的法定名称"
+      },
+      "eu_op_role": {
+        "label": "角色"
+      },
+      "eu_op_street": {
+        "label": "街道地址"
+      },
+      "eu_op_city": {
+        "label": "城市"
+      },
+      "eu_op_postal_code": {
+        "label": "邮政编码"
+      },
+      "eu_op_country": {
+        "label": "国家"
+      },
+      "eu_op_email": {
+        "label": "电子邮箱",
+        "placeholder": "name@company.com"
+      },
+      "eu_op_operator_id": {
+        "label": "唯一经营者标识符"
+      },
+      "eu_op_operator_id_type": {
+        "label": "经营者标识符类型"
+      },
+      "has_instructions_warnings": {
+        "label": "此玩具是否需要说明、警告或安全信息？"
+      },
+      "public_instructions_warnings": {
+        "label": "公开说明和警告",
+        "help": "添加随玩具附带的警告、说明和安全信息。"
+      },
+      "ce_declaration_ack": {
+        "label": "制造商声明此玩具符合适用的欧盟安全要求，并在投放欧盟市场前已加贴或将加贴CE标志。",
+        "help": "只有带有CE标志的玩具才能投放欧盟市场。此声明应与制造商的合格评定保持一致。"
+      },
+      "eu_doc_available": {
+        "label": "是否有欧盟符合性声明？",
+        "warn": "欧盟符合性声明是玩具符合性框架的一部分。在依赖DPP进行市场推广之前，请先完成此项。"
+      },
+      "eu_doc_reference": {
+        "label": "符合性声明参考"
+      },
+      "eu_doc_upload": {
+        "label": "上传符合性声明",
+        "help": "仅供内部记录。上传的文件由制造商保存，不会在公共DPP上显示。"
+      },
+      "safety_assessment_completed": {
+        "label": "已完成安全评估？",
+        "help": "玩具制造商必须评估相关的化学、物理、机械、电气、易燃性、卫生、放射性和暴露风险。",
+        "warn": "在依赖此DPP之前，应完成安全评估信息。"
+      },
+      "technical_documentation_available": {
+        "label": "是否有技术文件？",
+        "help": "技术文件支持证明玩具符合适用的安全要求。",
+        "warn": "市场监督机构可能要求提供技术文件。"
+      },
+      "technical_documentation_upload": {
+        "label": "上传技术文件",
+        "help": "仅供内部记录。上传的文件由制造商保存，不会在公共DPP上显示。"
+      },
+      "applicable_legislation": {
+        "label": "适用的欧盟法规"
+      },
+      "harmonised_standards": {
+        "label": "使用的协调标准"
+      },
+      "common_specifications": {
+        "label": "使用的通用规范",
+        "placeholder": "描述所应用的通用规范。"
+      },
+      "other_standards": {
+        "label": "使用的其他标准（每行一个）"
+      },
+      "notified_body_involved": {
+        "label": "是否有公告机构参与？"
+      },
+      "notified_body_name": {
+        "label": "公告机构名称"
+      },
+      "notified_body_number": {
+        "label": "公告机构编号",
+        "placeholder": "例如，0123"
+      },
+      "certificate_reference": {
+        "label": "证书参考"
+      },
+      "certificate_issue_date": {
+        "label": "证书签发日期 (YYYY-MM-DD)",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "notified_body_certificate_url": {
+        "label": "符合性证书（PDF或图片）",
+        "help": "可选。上传的文件可从DPP公开访问。"
+      },
+      "cn_chapter": {
+        "label": "CN章节"
+      },
+      "customs_code": {
+        "label": "海关商品编码",
+        "placeholder": "98809500",
+        "help": "从CN章节自动填充。如果您的海关分类不同，请覆盖。"
+      },
+      "has_allergenic_fragrances": {
+        "label": "玩具或任何组件是否含有≥10 mg/kg的致敏香料？"
+      },
+      "allergenic_fragrances": {
+        "label": "存在的致敏香料"
+      },
+      "allergen_declaration_text": {
+        "label": "过敏原声明（可选覆盖）",
+        "help": "留空将自动显示标准本地化声明。仅在提供自定义措辞时填写；使用翻译编辑器获取每种语言的版本。"
+      },
+      "safety_channels": {
+        "label": "公共安全报告渠道"
+      },
+      "safety_phone": {
+        "label": "安全报告电话",
+        "placeholder": "+33 ..."
+      },
+      "safety_email": {
+        "label": "安全报告邮箱",
+        "placeholder": "safety@company.com"
+      },
+      "safety_website": {
+        "label": "安全报告网站/联系表单 URL",
+        "placeholder": "https://..."
+      }
+    },
+    "options": {
+      "operatorIdType": {
+        "EORI": "EORI",
+        "GLN": "GLN",
+        "LEI": "LEI",
+        "VAT": "增值税号",
+        "NATIONAL": "国家公司注册号",
+        "DUNS": "DUNS",
+        "ESPR": "ESPR / DPP 运营商标识符",
+        "other": "其他"
+      },
+      "toyCategory": {
+        "baby": "婴儿玩具",
+        "plush": "毛绒玩具",
+        "doll": "玩偶",
+        "action_figure": "可动人偶",
+        "construction": "建筑玩具/积木",
+        "puzzle": "拼图",
+        "board_game": "棋盘游戏",
+        "arts_crafts": "艺术与手工玩具",
+        "slime": "史莱姆/橡皮泥/造型泥",
+        "chemical_set": "化学玩具套装",
+        "cosmetic": "化妆玩具/儿童彩妆",
+        "olfactory": "嗅觉棋盘游戏",
+        "gustative": "味觉游戏",
+        "outdoor": "户外玩具",
+        "activity": "活动玩具",
+        "ride_on": "骑乘玩具",
+        "wheeled": "滑板车/溜冰鞋/轮式玩具",
+        "aquatic": "水上玩具",
+        "electronic": "电子玩具",
+        "radio": "无线电连接玩具",
+        "internet": "互联网连接玩具",
+        "ai": "人工智能玩具",
+        "battery": "带电池玩具",
+        "magnets": "带磁铁玩具",
+        "drone": "玩具无人机",
+        "toy_in_food": "食品内玩具",
+        "other": "其他"
+      },
+      "ageGroup": {
+        "14": "14 岁",
+        "0_6m": "0-6 个月",
+        "6_12m": "6-12 个月",
+        "12_18m": "12-18 个月",
+        "18_36m": "18-36 个月",
+        "3plus": "3 岁以上",
+        "4plus": "4 岁以上",
+        "5plus": "5 岁以上",
+        "6plus": "6 岁以上",
+        "7plus": "7 岁以上",
+        "8plus": "8 岁以上",
+        "10plus": "10 岁以上",
+        "12plus": "12 岁以上",
+        "other": "其他"
+      },
+      "identifierType": {
+        "GTIN": "GTIN",
+        "GS1_DL": "GS1 Digital Link",
+        "EPC": "EPC",
+        "SGTIN": "序列化 GTIN",
+        "SKU": "SKU",
+        "MODEL": "型号",
+        "ISO_15459": "ISO/IEC 15459 兼容标识符",
+        "other": "其他"
+      },
+      "cnChapter": {
+        "32": "32 — 油漆、颜料、墨水、染料",
+        "33": "33 — 精油、香水、化妆品",
+        "34": "34 — 肥皂、蜡、造型膏",
+        "39": "39 — 塑料及其制品",
+        "40": "40 — 橡胶及其制品",
+        "42": "42 — 皮革制品",
+        "44": "44 — 木材及木制品",
+        "48": "48 — 纸和纸板",
+        "49": "49 — 印刷书籍、图片、卡片",
+        "61": "61 — 针织服装/纺织附件",
+        "62": "62 — 非针织服装/纺织附件",
+        "63": "63 — 其他纺织制成品",
+        "69": "69 — 陶瓷产品",
+        "70": "70 — 玻璃和玻璃器皿",
+        "73": "73 — 钢铁制品",
+        "76": "76 — 铝制品",
+        "85": "85 — 电气机械和设备",
+        "87": "87 — 车辆及零件",
+        "90": "90 — 光学、测量、检查仪器",
+        "95": "95 — 玩具、游戏和运动用品",
+        "other": "其他"
+      },
+      "legislation": {
+        "TSR": "法规 (EU) 2025/2509 — 玩具安全法规",
+        "GPSR": "法规 (EU) 2023/988 — 一般产品安全法规",
+        "MSR": "法规 (EU) 2019/1020 — 市场监督",
+        "AI_ACT": "法规 (EU) 2024/1689 — 人工智能法案",
+        "CRA": "法规 (EU) 2024/2847 — 网络弹性法案",
+        "RED": "指令 2014/53/EU — 无线电设备指令",
+        "LVD": "指令 2014/35/EU — 低电压指令",
+        "EMC": "指令 2014/30/EU — EMC 指令",
+        "RoHS": "指令 2011/65/EU — RoHS",
+        "BATTERIES": "法规 (EU) 2023/1542 — 电池法规",
+        "DRONES": "授权法规 (EU) 2019/945 — 无人机系统/无人机",
+        "COSMETICS": "法规 (EC) No 1223/2009 — 化妆品",
+        "REACH": "法规 (EC) No 1907/2006 — REACH",
+        "CLP": "法规 (EC) No 1272/2008 — CLP",
+        "other": "其他"
+      },
+      "standards": {
+        "EN71_1": "EN 71-1 — 机械和物理性能",
+        "EN71_2": "EN 71-2 — 易燃性",
+        "EN71_3": "EN 71-3 — 某些元素的迁移",
+        "EN71_4": "EN 71-4 — 化学实验套装",
+        "EN71_5": "EN 71-5 — 除实验套装外的化学玩具",
+        "EN71_7": "EN 71-7 — 手指画颜料",
+        "EN71_8": "EN 71-8 — 家用活动玩具",
+        "EN71_12": "EN 71-12 — N-亚硝胺和N-亚硝胺可生成物质",
+        "EN71_13": "EN 71-13 — 嗅觉棋盘游戏、化妆品套装和味觉游戏",
+        "EN71_14": "EN 71-14 — 家用蹦床",
+        "EN_IEC_62115": "EN IEC 62115 — 电动玩具",
+        "other": "其他协调标准",
+        "common_spec": "通用规范而非协调标准"
+      },
+      "safetyChannel": {
+        "phone": "电话",
+        "email": "电子邮件",
+        "website": "专用网站",
+        "form": "联系表单"
+      },
+      "euOperatorRole": {
+        "importer": "进口商",
+        "auth_rep": "授权代表",
+        "fulfilment": "履约服务提供商",
+        "distributor": "作为负责任经济运营商的分销商",
+        "other": "其他欧盟负责方 (法规 2019/1020 第 4 条)"
+      },
+      "yesNo": {
+        "yes": "是",
+        "no": "否"
+      },
+      "yesNoUnknown": {
+        "yes": "是",
+        "no": "否",
+        "unknown": "未知"
+      }
+    },
+    "ai": {
+      "scannerTitle": "AI 玩具标签扫描仪",
+      "scannerDescription": "拍摄或上传玩具包装图片 — AI 将读取 CE 标志、年龄警告、制造商信息、条形码和列出的致敏香料。",
+      "dropHere": "↓ 拖放到此处",
+      "dragOrClick": "拖放或点击"
+    },
+    "warnings": {
+      "youngChild": "此玩具适用于 36 个月以下的儿童。适用更严格的致敏香料限制，并且必须评估任何小部件是否存在窒息危险。",
+      "mouthContact": "此玩具旨在放入口中。适用更严格的致敏香料和化学迁移限制。",
+      "unknownAllergens": "此 DPP 可能不完整，因为在适用情况下，致敏香料信息是强制性的。在发布前将“未知”替换为“是”或“否”。",
+      "suggestLegislation": "根据所选玩具类别，还请考虑勾选：{{list}}。"
+    },
+    "disclaimer": {
+      "title": "玩具 DPP — 合规免责声明",
+      "body": "玩具的欧盟数字产品护照数据模型和 API 规范仍在制定中，预计将于 2026 年底前通过实施法案确定。本工具是基于法规 (EU) 2025/2509 的第一个版本，不应被视为最终法律建议。"
+    },
+    "internalBadge": "内部 — 不对外显示",
+    "safetyGate": {
+      "title": "欧盟安全门户",
+      "body": "通过欧盟安全门户报告不安全产品：",
+      "alwaysShown": "此链接始终显示在公共护照上。"
+    },
+    "certificate": {
+      "viewFile": "查看上传文件",
+      "remove": "移除文件",
+      "uploading": "正在上传...",
+      "uploadButton": "上传证书",
+      "errors": {
+        "loginRequired": "您必须登录才能上传文件。",
+        "tooLarge": "文件过大。最大尺寸为 5 MB。",
+        "uploadFailed": "上传失败。"
+      }
+    },
+    "fragrancePicker": {
+      "empty": "尚未添加致敏香料。",
+      "summary": "已声明 {{count}} 种香料。",
+      "addButton": "添加香料",
+      "cas": "CAS",
+      "removeAria": "移除 {{name}}",
+      "concentrationLabel": "浓度 (mg/kg)",
+      "componentLabel": "成分/材料",
+      "componentPlaceholder": "例如，毛绒填充物",
+      "aboveThreshold": "浓度 ≥10 mg/kg",
+      "supplierDeclaration": "供应商声明已存档",
+      "testReport": "测试报告已存档",
+      "dialogTitle": "选择致敏香料",
+      "searchPlaceholder": "按名称、CAS 或 ID 搜索...",
+      "clearSearch": "清除搜索",
+      "noResults": "没有香料与“{{q}}”匹配。",
+      "done": "完成"
+    },
+    "validation": {
+      "imageRequired": "需要玩具的彩色图片。",
+      "descriptionRequired": "玩具需要产品描述。"
+    },
+    "public": {
+      "badge": "🧸 玩具 — 数字产品护照",
+      "otherFallback": "其他",
+      "notDeclared": "未声明",
+      "ceMarked": "✓ CE 标志",
+      "statusPublished": "已发布",
+      "noAllergens": "未声明存在浓度等于或高于 10 mg/kg 的致敏香料，这些香料需遵守标签要求。",
+      "certificateDownload": "下载合格证书",
+      "reportUnsafe": "报告不安全产品",
+      "mirroredAt": "镜像于 {{url}}",
+      "mirroredDefault": "镜像于 Open-Label.eu 基础设施",
+      "nbNumber": "编号 {{n}}",
+      "nbCertificate": "证书：{{ref}}",
+      "nbIssued": "（签发日期 {{date}}）",
+      "instructionsTitle": "说明和警告",
+      "ceDeclarationStatement": "制造商声明此玩具符合适用的欧盟安全要求，并在投放欧盟市场前已或将加贴 CE 标志（如要求）。",
+      "docLabel": "欧盟符合性声明",
+      "docReference": "参考",
+      "safetyAssessmentLabel": "安全评估",
+      "technicalDocsLabel": "技术文件",
+      "yesNoUnknown": {
+        "yes": "是",
+        "no": "否",
+        "unknown": "未知"
+      },
+      "sections": {
+        "identity": "产品标识",
+        "manufacturer": "制造商责任",
+        "manufacturerNote": "本数字产品护照由制造商全权负责签发。",
+        "euOperator": "欧盟经营者信息",
+        "authRep": "授权代表",
+        "euResponsible": "欧盟负责经济经营者",
+        "compliance": "合规性",
+        "safety": "安全与化学信息",
+        "safetyReporting": "安全事件报告",
+        "infrastructure": "DPP 基础设施"
+      },
+      "rows": {
+        "brand": "品牌",
+        "model": "型号",
+        "sku": "SKU / 变体",
+        "toyCategory": "玩具类别",
+        "age": "适用年龄组",
+        "uid": "唯一标识符",
+        "manufacturer": "制造商",
+        "address": "地址",
+        "email": "电子邮件",
+        "website": "网站",
+        "operatorId": "经营者标识符",
+        "legalName": "法定名称",
+        "role": "角色",
+        "ce": "CE 标志",
+        "applicableLeg": "适用法规",
+        "standards": "协调标准",
+        "commonSpecs": "通用规范",
+        "otherStandards": "其他标准",
+        "notifiedBody": "公告机构",
+        "customs": "海关编码",
+        "dppProvider": "DPP 服务提供商",
+        "backup": "备份副本参考",
+        "dppVersion": "DPP 版本",
+        "lastUpdated": "最后更新",
+        "status": "状态"
+      },
+      "table": {
+        "substance": "物质",
+        "cas": "CAS",
+        "concentration": "浓度",
+        "component": "组件"
+      },
+      "safety": {
+        "telephone": "电话",
+        "emailLabel": "电子邮件",
+        "web": "网址",
+        "gatePortal": "欧盟安全门户"
+      }
+    }
+  }
+}
