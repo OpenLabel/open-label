@@ -1,10 +1,25 @@
-# Bootstrap hugo@cypheme.com as admin
+## Remove internal DPP Name from public views
 
-One-off data insert into `public.site_config` so your existing account becomes admin without re-running Setup.
+The internal "DPP Name" field must never leak to end users. Currently both public views fall back to `passport.name` when Product Name is empty.
 
-## What I'll insert
+### Changes
 
-- `admin_user_id` = `8b204d52-ab25-449b-bfcd-c9ef19ea8eef` (hugo@cypheme.com)
-- `admin_leaderboard_token` = freshly generated 32-byte base64url random string (server-side via `gen_random_bytes`, never hardcoded)
+1. **`src/components/wine/WinePublicPassport.tsx`** (line ~80)
+   - Change `const productName = (categoryData.product_name as string) || passport.name;`
+   - To: use translated product name → product_name → empty string (no fallback to `passport.name`).
 
-After this, the Admin button shows up in your dashboard header and the leaderboard links work.
+2. **`src/pages/PublicPassport.tsx`** (line ~115)
+   - Remove `|| passport.name` from the title resolution chain.
+   - Result: if no Product Name is set, the title area renders blank (or we hide the element entirely).
+
+3. **Document title (`<title>` / SEO)** — apply the same rule so the browser tab and meta tags don't leak the internal name either.
+
+### Out of scope (per your choice)
+
+- No publish-time validation requiring Product Name.
+- No "Untitled Product" placeholder.
+- Dashboard, admin, and editor continue to show DPP Name as today.
+
+### Tests
+
+Update / add tests asserting that when `category_data.product_name` is empty, the public passport does NOT render `passport.name`.

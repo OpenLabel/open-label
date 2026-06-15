@@ -76,8 +76,9 @@ export function WinePublicPassport({
   // This ensures ALL labels in the preview use the selected language, not the app language
   const t = (key: string) => tBase(key, { lng: displayLanguage });
 
-  // Product info
-  const productName = (categoryData.product_name as string) || passport.name;
+  // Product info — never fall back to passport.name (internal "DPP Name", not for end users)
+  const productNameTranslations = categoryData.product_name_translations as Record<string, string> | undefined;
+  const productName = productNameTranslations?.[displayLanguage] || (categoryData.product_name as string) || '';
   const volume = categoryData.volume as number | undefined;
   const volumeUnit = (categoryData.volume_unit as string) || 'ml';
   const grapeVarietyRaw = categoryData.grape_variety as string | undefined;

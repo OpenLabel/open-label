@@ -66,4 +66,10 @@ describe('PublicPassport page', () => {
     renderPage();
     expect(screen.getByText('Widget')).toBeInTheDocument();
   });
+
+  it('never displays the internal DPP name (passport.name) publicly', () => {
+    renderPage();
+    // 'Test Product' is the internal DPP Name — must not appear in the public view
+    expect(screen.queryByText('Test Product')).not.toBeInTheDocument();
+  });
 });
