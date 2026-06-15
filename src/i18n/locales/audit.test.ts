@@ -25,6 +25,7 @@ import roLocale from "./ro.json";
 import skLocale from "./sk.json";
 import slLocale from "./sl.json";
 import svLocale from "./sv.json";
+import zhCNLocale from "./zh-CN.json";
 
 type TranslationObject = Record<string, unknown>;
 
@@ -34,6 +35,7 @@ const locales: Record<string, TranslationObject> = {
   ga: gaLocale, hr: hrLocale, hu: huLocale, it: itLocale, lt: ltLocale,
   lv: lvLocale, mt: mtLocale, nl: nlLocale, pl: plLocale, pt: ptLocale,
   ro: roLocale, sk: skLocale, sl: slLocale, sv: svLocale,
+  "zh-CN": zhCNLocale,
 };
 
 // Flatten nested object to dot-notation keys with their values
@@ -76,6 +78,7 @@ const perLanguageAllowedValues: Record<string, string[]> = {
   sk: ["Open Source"],
   sl: ["Open Source", "Material"],
   sv: ["Open Source", "Region", "Protein", "Salt", "Allergen", "Material", "Status"],
+  "zh-CN": ["Open Source"],
 };
 
 // Check if a value is legitimately the same across languages (not untranslated)
@@ -225,7 +228,7 @@ describe("Translation Audit", () => {
   });
 
   // Strict test: fully updated locales must have zero missing keys
-  const fullyUpdatedLocales = ["bg", "cs", "da", "de", "el", "es", "et", "fi", "fr", "ga", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "sk", "sl", "sv"];
+  const fullyUpdatedLocales = ["bg", "cs", "da", "de", "el", "es", "et", "fi", "fr", "ga", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "sk", "sl", "sv", "zh-CN"];
 
   it.each(fullyUpdatedLocales)(
     "locale '%s' should have zero missing keys",

@@ -23,7 +23,7 @@ const corsHeaders = {
   "Access-Control-Allow-Headers": "authorization, x-client-info, apikey, content-type",
 };
 
-// EU language names for context
+// EU language names + Simplified Chinese for context
 const languageNames: Record<string, string> = {
   bg: "Bulgarian",
   cs: "Czech",
@@ -49,13 +49,14 @@ const languageNames: Record<string, string> = {
   sk: "Slovak",
   sl: "Slovenian",
   sv: "Swedish",
+  "zh-CN": "Chinese (Simplified)",
 };
 
 const EU_LANG_CODES = Object.keys(languageNames) as [string, ...string[]];
 const TranslateSchema = z.object({
   text: z.string().trim().min(1).max(50_000),
   sourceLanguage: z.enum(EU_LANG_CODES),
-  targetLanguages: z.array(z.enum(EU_LANG_CODES)).min(1).max(23),
+  targetLanguages: z.array(z.enum(EU_LANG_CODES)).min(1).max(24),
 });
 
 serve(async (req) => {
@@ -145,10 +146,11 @@ Important guidelines:
 - For sugar classifications (Brut, Sec, Demi-Sec), use the standard term in each language if one exists
 - Preserve any technical terms, E-numbers, or regulatory codes exactly
 - If a term is a proper noun or brand, keep it unchanged
+- For Simplified Chinese (zh-CN), use 简体中文 — concise, professional product-label wording
 - Be concise - these are product label terms, not sentences
 
 Respond ONLY with a valid JSON object where keys are language codes and values are translations.
-Example format: {"de": "German translation", "fr": "French translation"}
+Example format: {"de": "German translation", "fr": "French translation", "zh-CN": "中文翻译"}
 
 Do not include the source language in the response.`;
 
@@ -168,7 +170,7 @@ Do not include the source language in the response.`;
           },
         ],
         temperature: 0.3,
-        max_tokens: 16000,
+        max_tokens: 20000,
       }),
     });
 

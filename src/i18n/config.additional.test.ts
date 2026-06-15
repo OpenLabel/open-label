@@ -2,8 +2,8 @@ import { describe, it, expect } from 'vitest';
 import { supportedLanguages } from './config';
 
 describe('supportedLanguages', () => {
-  it('has 24 entries (all official EU languages)', () => {
-    expect(supportedLanguages).toHaveLength(24);
+  it('has 25 entries (24 EU languages + Simplified Chinese)', () => {
+    expect(supportedLanguages).toHaveLength(25);
   });
 
   it('each entry has code, name, nativeName', () => {
@@ -19,9 +19,9 @@ describe('supportedLanguages', () => {
     expect(new Set(codes).size).toBe(codes.length);
   });
 
-  it('all codes are 2-letter ISO 639-1', () => {
+  it('all codes are valid BCP-47 codes (2-letter ISO 639-1, optionally with -XX region)', () => {
     for (const lang of supportedLanguages) {
-      expect(lang.code).toMatch(/^[a-z]{2}$/);
+      expect(lang.code).toMatch(/^[a-z]{2}(-[A-Z]{2})?$/);
     }
   });
 
@@ -31,9 +31,9 @@ describe('supportedLanguages', () => {
     expect(en!.name).toBe('English');
   });
 
-  it('includes all major EU languages', () => {
+  it('includes all major EU languages plus Simplified Chinese', () => {
     const codes = supportedLanguages.map(l => l.code);
-    for (const c of ['en', 'fr', 'de', 'es', 'it', 'pl', 'nl', 'pt']) {
+    for (const c of ['en', 'fr', 'de', 'es', 'it', 'pl', 'nl', 'pt', 'zh-CN']) {
       expect(codes).toContain(c);
     }
   });

@@ -33,6 +33,7 @@ import roLocale from "./ro.json";
 import skLocale from "./sk.json";
 import slLocale from "./sl.json";
 import svLocale from "./sv.json";
+import zhCNLocale from "./zh-CN.json";
 
 type Bag = Record<string, unknown>;
 
@@ -42,6 +43,7 @@ const locales: Record<string, Bag> = {
   ga: gaLocale, hr: hrLocale, hu: huLocale, it: itLocale, lt: ltLocale,
   lv: lvLocale, mt: mtLocale, nl: nlLocale, pl: plLocale, pt: ptLocale,
   ro: roLocale, sk: skLocale, sl: slLocale, sv: svLocale,
+  "zh-CN": zhCNLocale,
 };
 
 function resolve(obj: Bag, path: string): unknown {
