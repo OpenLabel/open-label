@@ -32,7 +32,7 @@ import { Label } from '@/components/ui/label';
 import { useToast } from '@/hooks/use-toast';
 import { supabase } from '@/integrations/supabase/client';
 
-// Official EU languages only (24 languages)
+// 24 official EU languages + Simplified Chinese (zh-CN), all first-class
 export const EU_LANGUAGES = [
   { code: 'bg', name: 'Bulgarian', nativeName: 'Български' },
   { code: 'cs', name: 'Czech', nativeName: 'Čeština' },
@@ -58,6 +58,7 @@ export const EU_LANGUAGES = [
   { code: 'sk', name: 'Slovak', nativeName: 'Slovenčina' },
   { code: 'sl', name: 'Slovenian', nativeName: 'Slovenščina' },
   { code: 'sv', name: 'Swedish', nativeName: 'Svenska' },
+  { code: 'zh-CN', name: 'Chinese (Simplified)', nativeName: '简体中文' },
 ] as const;
 
 export type EULanguageCode = (typeof EU_LANGUAGES)[number]['code'];

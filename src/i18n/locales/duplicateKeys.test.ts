@@ -6,7 +6,7 @@ const localeDir = path.resolve(__dirname);
 const localeCodes = [
   "bg","cs","da","de","el","en","es","et","fi","fr",
   "ga","hr","hu","it","lt","lv","mt","nl","pl","pt",
-  "ro","sk","sl","sv",
+  "ro","sk","sl","sv","zh-CN",
 ];
 
 function findDuplicateTopLevelKeys(jsonString: string): string[] {

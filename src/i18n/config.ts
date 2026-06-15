@@ -18,7 +18,7 @@ import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
-// Import all translations (24 official EU languages)
+// Import all translations (24 official EU languages + Simplified Chinese)
 import bg from './locales/bg.json';
 import cs from './locales/cs.json';
 import da from './locales/da.json';
@@ -43,6 +43,7 @@ import ro from './locales/ro.json';
 import sk from './locales/sk.json';
 import sl from './locales/sl.json';
 import sv from './locales/sv.json';
+import zhCN from './locales/zh-CN.json';
 
 export const supportedLanguages = [
   { code: 'bg', name: 'Bulgarian', nativeName: 'Български' },
@@ -69,6 +70,7 @@ export const supportedLanguages = [
   { code: 'sk', name: 'Slovak', nativeName: 'Slovenčina' },
   { code: 'sl', name: 'Slovenian', nativeName: 'Slovenščina' },
   { code: 'sv', name: 'Swedish', nativeName: 'Svenska' },
+  { code: 'zh-CN', name: 'Chinese (Simplified)', nativeName: '简体中文' },
 ] as const;
 
 export type SupportedLanguage = typeof supportedLanguages[number]['code'];
@@ -98,6 +100,7 @@ const resources = {
   sk: { translation: sk },
   sl: { translation: sl },
   sv: { translation: sv },
+  'zh-CN': { translation: zhCN },
 };
 
 i18n

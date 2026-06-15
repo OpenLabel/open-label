@@ -25,6 +25,7 @@ import roLocale from "./ro.json";
 import skLocale from "./sk.json";
 import slLocale from "./sl.json";
 import svLocale from "./sv.json";
+import zhCNLocale from "./zh-CN.json";
 
 type TranslationObject = Record<string, unknown>;
 
@@ -34,6 +35,7 @@ const locales: Record<string, TranslationObject> = {
   ga: gaLocale, hr: hrLocale, hu: huLocale, it: itLocale, lt: ltLocale,
   lv: lvLocale, mt: mtLocale, nl: nlLocale, pl: plLocale, pt: ptLocale,
   ro: roLocale, sk: skLocale, sl: slLocale, sv: svLocale,
+  "zh-CN": zhCNLocale,
 };
 
 // Recursively count all keys in a nested object
@@ -71,7 +73,7 @@ describe("Translation files consistency", () => {
   const referenceKeyCount = referenceKeys.length;
 
   // Locales that have been fully updated to match English
-  const fullyUpdatedLocales = ["bg", "cs", "da", "de", "el", "es", "et", "fi", "fr", "ga", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "sk", "sl", "sv"];
+  const fullyUpdatedLocales = ["bg", "cs", "da", "de", "el", "es", "et", "fi", "fr", "ga", "hr", "hu", "it", "lt", "lv", "mt", "nl", "pl", "pt", "ro", "sk", "sl", "sv", "zh-CN"];
 
   it("should have English as the reference with all keys", () => {
     expect(referenceKeyCount).toBeGreaterThan(0);
