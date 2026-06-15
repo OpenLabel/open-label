@@ -112,7 +112,7 @@ export default function PublicPassport() {
               </Badge>
             )}
             <h1 className="text-3xl font-bold mb-2">
-              {(categoryData.product_name_translations as Record<string, string>)?.[displayLanguage] || (categoryData.product_name as string) || passport.name}
+              {(categoryData.product_name_translations as Record<string, string>)?.[displayLanguage] || (categoryData.product_name as string) || ''}
             </h1>
             
             {/* Check Authenticity Button */}
@@ -134,7 +134,7 @@ export default function PublicPassport() {
             <Card className="overflow-hidden">
               <img
                 src={passport.image_url}
-                alt={passport.name}
+                alt={(categoryData.product_name as string) || ''}
                 className="w-full max-h-96 object-contain bg-background"
               />
             </Card>
