@@ -50,6 +50,7 @@ const ALLOWED_IDENTICAL = new Set<string>([
   "name@company.com",
   "safety@company.com",
   "404",
+  "YYYY-MM-DD",
 ]);
 
 function isAllowedIdentical(value: string): boolean {

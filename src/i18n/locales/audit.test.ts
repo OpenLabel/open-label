@@ -78,7 +78,7 @@ const perLanguageAllowedValues: Record<string, string[]> = {
   sk: ["Open Source"],
   sl: ["Open Source", "Material"],
   sv: ["Open Source", "Region", "Protein", "Salt", "Allergen", "Material", "Status"],
-  "zh-CN": ["Open Source"],
+  "zh-CN": ["Open Source", "YYYY-MM-DD"],
 };
 
 // Check if a value is legitimately the same across languages (not untranslated)
