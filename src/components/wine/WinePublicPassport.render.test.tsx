@@ -219,11 +219,13 @@ describe('WinePublicPassport render', () => {
     expect(screen.getByText('PDO Translated')).toBeInTheDocument();
   });
 
-  it('falls back to passport name if no product_name', () => {
+  it('never leaks internal DPP name when no product_name is set', () => {
     renderComp({
       ...basePassport,
       category_data: {},
     });
-    expect(screen.getByTestId('passport-name')).toHaveTextContent('Test Wine');
+    // Public passport must NOT fall back to internal "DPP Name" (passport.name)
+    expect(screen.getByTestId('passport-name')).toHaveTextContent('');
+    expect(screen.queryByText('Test Wine')).not.toBeInTheDocument();
   });
 });
