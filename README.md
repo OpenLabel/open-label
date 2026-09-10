@@ -42,12 +42,19 @@ Create compliant Digital Product Passports in minutes. No installation, no credi
 | Feature                  | Description                                                                    |
 | ------------------------ | ------------------------------------------------------------------------------ |
 | 🍷 **Wine E-Labels**     | Full EU Regulation 2021/2117 compliance with ingredients, nutrition, allergens |
+| 🚗 **Car cleaning products** | Conditional chemical safety information, 25 languages, public JSON and 2029 detergent DPP preparation |
 | 📦 **Generic DPP**       | Flexible template for any product type                                         |
 | 📱 **QR Codes**          | Generate scannable codes linking to each passport                              |
 | 🌍 **25 Languages**      | All 24 EU official languages + Simplified Chinese (zh-CN)                      |
 | 🤖 **AI Autofill**       | Optional: scan wine labels to extract data automatically                       |
 | 🔒 **Self-Hosted**       | Full data sovereignty — your data, your servers                                |
 | 📜 **Long-Term Storage** | Designed for 50+ year data retention (wine, etc.)                              |
+
+### Car cleaning products
+
+The car cleaning category covers shampoos, surface and glass cleaners, wheel cleaners, waxes, polishes and lubricants with separate scope assessments. It provides conditional detergent ingredient, CLP hazard, poison centre, SDS, biocidal and EU operator fields. All 25 supported locales are included. Public output and JSON exports exclude unknown and inactive fields; confidential formulations must not be entered.
+
+Regulation (EU) 2026/405 mainly applies from 23 September 2029. This feature supports current product information and future DPP preparation. Saving a record does not certify a product or prove legal compliance. Required physical labels and chemical safety duties remain applicable. See [implementation and deployment limits](docs/CAR_CLEANING.md) and the [sourced EU legal mapping](docs/CAR_CLEANING_LEGAL_MAPPING.md).
 
 ### 🚧 Early Alpha Categories (Available on Request)
 

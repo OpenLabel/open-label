@@ -18,6 +18,9 @@ import { useEffect, useRef, useState } from 'react';
 import type { TFunction } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { getTemplate } from '@/templates';
+import { carCleaningFallback } from '@/components/car-cleaning/copy';
+import { CarCleaningDatasetEditor } from '@/components/car-cleaning/CarCleaningDataset';
+import { validateCarCleaning } from '@/lib/carCleaning';
 import type { ProductCategory } from '@/types/passport';
 import {
   evaluateShowWhen,
@@ -255,6 +258,13 @@ export function CategoryQuestions({
   const { t } = useTranslation();
   const template = getTemplate(category);
   const isToys = category === 'toys';
+  const isCarCleaning = category === 'car_cleaning';
+  const carIssues = isCarCleaning ? validateCarCleaning(data) : [];
+  const carCopy = (key: string) => t(key, carCleaningFallback(key));
+  const carFieldLabel = (id: string) => {
+    const question = template.sections.flatMap(section => section.questions).find(item => item.id === id);
+    return question ? tLabel(t, question) : id === 'product_name' ? t('passport.productName') : carCopy(`carCleaning.fields.${id}`);
+  };
 
   // Build the list of unfilled required fields (template-required + extras).
   // Hidden conditional fields (showWhen evaluating false) are excluded.
@@ -265,7 +275,7 @@ export function CategoryQuestions({
       ? t(section.titleKey, section.title)
       : section.title;
     for (const q of section.questions) {
-      if (!q.required) continue;
+      if (!q.required && !(q.requiredWhen && evaluateShowWhen(q.requiredWhen, data))) continue;
       if (!evaluateShowWhen(q.showWhen, data)) continue;
       const value = data[q.id];
       const empty =
@@ -421,6 +431,9 @@ export function CategoryQuestions({
     }
 
     switch (question.type) {
+      case 'substances':
+      case 'microorganisms':
+        return <CarCleaningDatasetEditor id={question.id} kind={question.type} value={value} onChange={next => handleChange(question.id, next)} />;
       case 'text':
         if (question.translatable) {
           return (
@@ -515,10 +528,10 @@ export function CategoryQuestions({
       case 'select':
         return (
           <Select
-            value={(value as string) || ''}
+            value={(value as string) || (isCarCleaning && question.id === 'dpp_profile' ? 'current' : '')}
             onValueChange={(val) => handleChange(question.id, val)}
           >
-            <SelectTrigger>
+            <SelectTrigger id={question.id} aria-invalid={isCarCleaning && carIssues.some(issue => issue.field === question.id) || undefined}>
               <SelectValue placeholder={t('common.selectOption')} />
             </SelectTrigger>
             <SelectContent>
@@ -622,6 +635,34 @@ export function CategoryQuestions({
 
   return (
     <div className="space-y-6">
+      {isCarCleaning && (
+        <Alert>
+          <Info className="h-4 w-4" />
+          <AlertTitle>{carCopy('carCleaning.noticeTitle')}</AlertTitle>
+          <AlertDescription className="text-sm whitespace-pre-line space-y-3">
+            <p>{carCopy('carCleaning.noticeBody')}</p>
+            <p className="font-medium">{carCopy('carCleaning.publicDataNotice')}</p>
+            <p>{carCopy('carCleaning.translationHelp')}</p>
+          </AlertDescription>
+        </Alert>
+      )}
+      {isCarCleaning && carIssues.length > 0 && (
+        <Alert id="car-cleaning-validation" tabIndex={-1} variant="destructive">
+          <AlertTriangle className="h-4 w-4" />
+          <AlertTitle>{carCopy('carCleaning.validationTitle')}</AlertTitle>
+          <AlertDescription className="text-sm">
+            <p className="mb-2">{carCopy('carCleaning.validationBody')}</p>
+            <ul className="list-disc ml-5 space-y-1">
+              {carIssues.map((issue, index) => (
+                <li key={`${issue.field}-${issue.code}-${index}`}>
+                  <button type="button" className="text-left underline" onClick={() => document.getElementById(issue.field)?.focus()}>{carFieldLabel(issue.field)}</button>
+                  {': '}{carCopy(`carCleaning.validation.${issue.code}`)}
+                </li>
+              ))}
+            </ul>
+          </AlertDescription>
+        </Alert>
+      )}
       {/* Toys disclaimer */}
       {isToys && (
         <Alert>
@@ -639,7 +680,7 @@ export function CategoryQuestions({
       )}
 
       {/* Missing mandatory fields summary — non-blocking */}
-      {missingRequired.length > 0 && (
+      {!isCarCleaning && missingRequired.length > 0 && (
         <Alert
           variant="destructive"
           className="bg-amber-50 border-amber-300 text-amber-900 dark:bg-amber-950/40 dark:border-amber-700 dark:text-amber-100"
@@ -670,7 +711,7 @@ export function CategoryQuestions({
       )}
 
       {/* Alpha warning for non-wine, non-toys categories */}
-      {category !== 'wine' && category !== 'toys' && (
+      {category !== 'wine' && category !== 'toys' && !isCarCleaning && (
         <Alert
           variant="destructive"
           className="bg-destructive/10 border-destructive/30"
@@ -703,9 +744,14 @@ export function CategoryQuestions({
         const title = section.titleKey
           ? t(section.titleKey, section.title)
           : section.title;
-        const description = section.descriptionKey
-          ? t(section.descriptionKey, section.description ?? '')
-          : section.description;
+        const carSectionHelp: Record<string, string> = {
+          annex_substances: 'annexHelp', annex_microorganisms: 'annexHelp', annex_identity: 'identityHelp', scope: 'scopeHelp', operator: 'operatorHelp', ingredients: 'ingredientsHelp', pcn: 'pcnHelp', sds: 'sdsHelp',
+        };
+        const description = isCarCleaning && section.id && carSectionHelp[section.id]
+          ? carCopy(`carCleaning.${carSectionHelp[section.id]}`)
+          : section.descriptionKey
+            ? t(section.descriptionKey, section.description ?? '')
+            : section.description;
 
         return (
           <Card key={sectionIndex}>
@@ -731,7 +777,7 @@ export function CategoryQuestions({
                     {question.type !== 'checkbox' && (
                       <Label htmlFor={question.id}>
                         {tLabel(t, question)}
-                        {question.required && (
+                        {(question.required || (question.requiredWhen && evaluateShowWhen(question.requiredWhen, data))) && (
                           <span className="text-destructive ml-1">*</span>
                         )}
                         {renderBadge(question.badge)}

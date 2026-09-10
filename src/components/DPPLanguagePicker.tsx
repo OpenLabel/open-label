@@ -47,7 +47,7 @@ export function DPPLanguagePicker({
   onLanguageChange,
   currentLanguage,
 }: DPPLanguagePickerProps) {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
   
   // Use provided language or fall back to i18n language, constrained to EU languages
   const getEffectiveLanguage = () => {
@@ -104,7 +104,7 @@ export function DPPLanguagePicker({
     <div className="flex items-center gap-2">
       <Globe className="h-4 w-4 text-muted-foreground" />
       <Select value={selectedLang} onValueChange={handleChange}>
-        <SelectTrigger className="w-[140px] h-8 text-xs">
+        <SelectTrigger aria-label={t('common.language')} className="w-[140px] h-8 text-xs">
           <SelectValue />
         </SelectTrigger>
         <SelectContent className="max-h-[300px]">

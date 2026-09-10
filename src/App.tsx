@@ -20,8 +20,9 @@ import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import { initGoogleAdsTag, trackPageView } from "@/lib/googleAdsTracking";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { hasGoogleAdsTagLoaded, initGoogleAdsTag, isPublicPassportPath, trackPageView } from "@/lib/googleAdsTracking";
+import { mustReloadPublicDocument, reloadPublicPassportDocument } from "@/lib/publicPassportPrivacy";
 import { useReferral } from "@/hooks/useReferral";
 import { AuthProvider } from "@/hooks/useAuth";
 import { SiteConfigProvider, useSiteConfig } from "@/hooks/useSiteConfig";
@@ -61,6 +62,18 @@ function GoogleAdsTracker() {
     trackPageView(location.pathname + location.search);
   }, [location.pathname, location.search]);
   return null;
+}
+
+function MarketingTools() {
+  const { pathname } = useLocation();
+  if (isPublicPassportPath(pathname)) return null;
+  return (
+    <>
+      <ReferralCapture />
+      <GoogleAdsTracker />
+      <ConsentBanner />
+    </>
+  );
 }
 
 function AppRoutes() {
@@ -120,22 +133,40 @@ function AppRoutes() {
   );
 }
 
+function DocumentSurface() {
+  const { pathname } = useLocation();
+  const [publicDocument] = useState(() => isPublicPassportPath(pathname));
+  // Removing gtag's script cannot remove its listeners. Cross this boundary
+  // with a real navigation and never mount public content in an account document.
+  const needsReload = publicDocument !== isPublicPassportPath(pathname)
+    || mustReloadPublicDocument(pathname, hasGoogleAdsTagLoaded());
+  useLayoutEffect(() => {
+    if (needsReload) reloadPublicPassportDocument();
+  }, [needsReload]);
+  if (needsReload) return null;
+
+  if (publicDocument) {
+    return <Routes><Route path="/p/:slug" element={<PublicPassport />} /></Routes>;
+  }
+  return (
+    <AuthProvider>
+      <BuildStatusBanner />
+      <MarketingTools />
+      <AppRoutes />
+    </AuthProvider>
+  );
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <SiteConfigProvider>
-      <AuthProvider>
-        <TooltipProvider>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
-            <BuildStatusBanner />
-            <ReferralCapture />
-            <GoogleAdsTracker />
-            <AppRoutes />
-            <ConsentBanner />
-          </BrowserRouter>
-        </TooltipProvider>
-      </AuthProvider>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <DocumentSurface />
+        </BrowserRouter>
+      </TooltipProvider>
     </SiteConfigProvider>
   </QueryClientProvider>
 );

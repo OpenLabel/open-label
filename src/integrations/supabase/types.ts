@@ -44,6 +44,69 @@ export type Database = {
         }
         Relationships: []
       }
+      car_cleaning_passport_archives: {
+        Row: {
+          passport_id: string
+          archive_id: string
+          user_id: string
+          public_slug: string
+          product_identifier: string
+          latest_version: number
+          retained_until: string
+          withdrawn_at: string | null
+          guarded_model_definition: Json | null
+          created_at: string
+        }
+        Insert: {
+          passport_id: string
+          archive_id?: string
+          user_id: string
+          public_slug: string
+          product_identifier?: never
+          latest_version?: number
+          retained_until: string
+          withdrawn_at?: string | null
+          guarded_model_definition?: Json | null
+          created_at?: string
+        }
+        Update: {
+          passport_id?: string
+          archive_id?: string
+          user_id?: string
+          public_slug?: string
+          product_identifier?: never
+          latest_version?: number
+          retained_until?: string
+          withdrawn_at?: string | null
+          guarded_model_definition?: Json | null
+          created_at?: string
+        }
+        Relationships: []
+      }
+      car_cleaning_passport_versions: {
+        Row: {
+          passport_id: string
+          user_id: string
+          version: number
+          recorded_at: string
+          snapshot: Json
+        }
+        Insert: {
+          passport_id: string
+          user_id: string
+          version: number
+          recorded_at: string
+          snapshot: Json
+        }
+        Update: {
+          passport_id?: string
+          user_id?: string
+          version?: number
+          recorded_at?: string
+          snapshot?: Json
+        }
+        Relationships: []
+      }
       passports: {
         Row: {
           category: Database["public"]["Enums"]["product_category"]
@@ -185,6 +248,7 @@ export type Database = {
         | "furniture"
         | "tires"
         | "detergents"
+        | "car_cleaning"
     }
     CompositeTypes: {
       [_ in never]: never
@@ -326,6 +390,7 @@ export const Constants = {
         "furniture",
         "tires",
         "detergents",
+        "car_cleaning",
       ],
     },
   },

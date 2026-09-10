@@ -1,1 +1,4 @@
 project_id = "fkzhbkkbazjrbxcxlzcb"
+
+[functions.get-public-passport]
+verify_jwt = false

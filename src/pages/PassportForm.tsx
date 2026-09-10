@@ -1,3 +1,5 @@
+import { CarCleaningWriteError } from '@/lib/carCleaningWrite';
+import { CarCleaningCarrier } from '@/components/car-cleaning/CarCleaningCarrier';
 /*
  * Open-Label Digital Product Passport Engine
  * Copyright (C) 2026 Open-Label.eu
@@ -53,6 +55,8 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
 import { toDppLanguage } from '@/lib/dppLanguage';
+import { validateCarCleaning } from '@/lib/carCleaning';
+import { CAR_CLEANING_COPY } from '@/templates/carCleaning';
 
 interface FormData {
   name: string;
@@ -225,6 +229,13 @@ export default function PassportForm() {
       return;
     }
 
+    if (formData.category === 'car_cleaning' && validateCarCleaning(formData.category_data).length > 0) {
+      const key = 'carCleaning.validationSaveError';
+      toast({ title: t('common.error'), description: t(key, CAR_CLEANING_COPY.validationSaveError), variant: 'destructive' });
+      document.getElementById('car-cleaning-validation')?.focus();
+      return;
+    }
+
     // Template-`required` fields and toys image/description are NOT hard-blocks:
     // the form surfaces them via the "Missing mandatory fields" warning so the
     // user can still save and publish an incomplete DPP and iterate later.
@@ -257,7 +268,7 @@ export default function PassportForm() {
       // current user owns AND only when no other passport row of the same
       // user still references that URL (duplicated passports share image
       // objects — deleting one would break the other). Best-effort cleanup.
-      if (user && pendingImageDeletionsRef.current.length > 0) {
+      if (formData.category !== 'car_cleaning' && user && pendingImageDeletionsRef.current.length > 0) {
         const marker = '/storage/v1/object/public/passport-images/';
         const pending = pendingImageDeletionsRef.current.slice();
         pendingImageDeletionsRef.current = [];
@@ -347,7 +358,7 @@ export default function PassportForm() {
         navigate(`/passport/${savedPassport.id}/edit`, { replace: true });
       }
     } catch (error: unknown) {
-      toast({ title: t('common.error'), description: error instanceof Error ? error.message : String(error), variant: 'destructive' });
+      toast({ title: t('common.error'), description: error instanceof CarCleaningWriteError ? t(error.code === 'identity' ? 'carCleaning.identityHelp' : 'carCleaning.validationSaveError') : error instanceof Error ? error.message : String(error), variant: 'destructive' });
     } finally {
       setSaving(false);
     }
@@ -450,6 +461,11 @@ export default function PassportForm() {
           {/* Form Section */}
           <div className={showPreview ? 'flex-1 min-w-0' : 'max-w-3xl mx-auto w-full'}>
             <form id="passport-form" onSubmit={handleSubmit} className="space-y-6">
+              {formData.category === 'car_cleaning' && existingPassport?.public_slug && <CarCleaningCarrier
+                url={`${window.location.origin}/p/${existingPassport.public_slug}`}
+                productName={typeof existingPassport.category_data === 'object' && existingPassport.category_data && !Array.isArray(existingPassport.category_data) && typeof existingPassport.category_data.product_name === 'string' ? existingPassport.category_data.product_name : ''}
+                machineReadableUrl={`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/get-public-passport?slug=${existingPassport.public_slug}`}
+              />}
               {/* Basic Information */}
               <Card>
                 <CardHeader>
@@ -475,7 +491,7 @@ export default function PassportForm() {
                         setFormData({ ...formData, category: value, category_data: {} })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger id="category">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>

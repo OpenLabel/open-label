@@ -29,9 +29,17 @@ export type ProductCategory =
   | 'furniture'
   | 'tires'
   | 'detergents'
+  | 'car_cleaning'
   | 'other';
 
+export interface CarCleaningHistoryData {
+  product_identifier: string; identifier_status: 'internal_unverified'; public_path: string;
+  latest_version: number; selected_version?: number; retained_until: string; withdrawn: boolean;
+  versions: { version: number; recorded_at: string }[]; next_before_version: number | null;
+}
+
 export interface Passport {
+  dpp_history?: CarCleaningHistoryData;
   id: string;
   user_id: string;
   name: string;
