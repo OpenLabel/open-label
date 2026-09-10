@@ -22,6 +22,8 @@
  */
 
 import { applyStoredConsent, setConsentDefaults } from './adsConsent';
+import { isPublicPassportPath } from './publicPassportPrivacy';
+export { isPublicPassportPath } from './publicPassportPrivacy';
 
 export const GOOGLE_ADS_TAG_ID = 'AW-672872996';
 
@@ -36,7 +38,7 @@ let loaded = false;
 
 /** Inject the gtag.js script and configure the tag. Idempotent. */
 export function initGoogleAdsTag(tagId: string = GOOGLE_ADS_TAG_ID): void {
-  if (typeof window === 'undefined' || typeof document === 'undefined') return;
+  if (typeof window === 'undefined' || typeof document === 'undefined' || isPublicPassportPath(window.location.pathname)) return;
   if (loaded) return;
   loaded = true;
 
@@ -71,19 +73,18 @@ export function __resetGoogleAdsTagForTests(): void {
   loaded = false;
 }
 
-/** Public product information is outside marketing tracking, including case-insensitive routes. */
-export function isPublicPassportPath(path: string): boolean {
-  // React Router decodes path segments before matching, so encoded p/P is public too.
-  try {
-    return /^\/p(?:\/|[?#]|$)/i.test(decodeURIComponent(path.split(/[?#]/, 1)[0]));
-  } catch {
-    return /^\/p(?:\/|[?#]|$)/i.test(path);
-  }
+/** A public passport entered from this document needs a fresh document. */
+export function hasGoogleAdsTagLoaded(): boolean {
+  return loaded || (typeof window !== 'undefined' && !!window.gtag);
+}
+
+function isViewingPublicPassport(): boolean {
+  return typeof window !== 'undefined' && isPublicPassportPath(window.location.pathname);
 }
 
 /** Report a SPA route change as a page_view. */
 export function trackPageView(path: string, tagId: string = GOOGLE_ADS_TAG_ID): void {
-  if (isPublicPassportPath(path) || typeof window === 'undefined' || !window.gtag) return;
+  if (isViewingPublicPassport() || isPublicPassportPath(path) || typeof window === 'undefined' || !window.gtag) return;
   window.gtag('event', 'page_view', {
     send_to: tagId,
     page_path: path,
@@ -92,7 +93,7 @@ export function trackPageView(path: string, tagId: string = GOOGLE_ADS_TAG_ID): 
 
 /** Fire a conversion event once per browser session. */
 export function trackConversionOnce(sendTo: string): void {
-  if (typeof window === 'undefined' || !window.gtag) return;
+  if (typeof window === 'undefined' || isViewingPublicPassport() || !window.gtag) return;
   const key = `ga_conv_${sendTo}`;
   try {
     if (window.sessionStorage.getItem(key)) return;
@@ -132,7 +133,7 @@ export const NAV_FALLBACK_MS = 500;
 export function trackButtonConversion(action: ConversionAction, onSent?: () => void): void {
   const sendTo = CONVERSION_LABELS[action];
   const done = () => onSent?.();
-  if (!sendTo || typeof window === 'undefined' || !window.gtag) {
+  if (!sendTo || typeof window === 'undefined' || isViewingPublicPassport() || !window.gtag) {
     done();
     return;
   }
@@ -164,6 +165,12 @@ const AD_PARAMS = ['gclid', 'gclsrc', 'dclid', 'wbraid', 'gbraid', 'utm_source',
  * cross-page attribution survives the jump (e.g. landing page -> /auth).
  */
 export function withAdParams(url: string, currentSearch?: string): string {
+  if (isViewingPublicPassport()) return url;
+  try {
+    if (isPublicPassportPath(new URL(url, 'https://passport.invalid').pathname)) return url;
+  } catch {
+    return url;
+  }
   const search =
     currentSearch ?? (typeof window !== 'undefined' ? window.location.search : '');
   if (!search || search.length < 2) return url;

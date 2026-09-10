@@ -1,7 +1,7 @@
 import { describe, it, expect } from "vitest";
 import { templates } from "./index";
 
-const validTypes = ["text", "textarea", "select", "checkbox", "number", "multi_select", "file"];
+const validTypes = ["text", "textarea", "select", "checkbox", "number", "multi_select", "file", "substances", "microorganisms"];
 
 describe("template structural integrity", () => {
   for (const [category, template] of Object.entries(templates)) {

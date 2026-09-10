@@ -19,6 +19,7 @@ import type { TFunction } from 'i18next';
 import { useTranslation } from 'react-i18next';
 import { getTemplate } from '@/templates';
 import { carCleaningFallback } from '@/components/car-cleaning/copy';
+import { CarCleaningDatasetEditor } from '@/components/car-cleaning/CarCleaningDataset';
 import { validateCarCleaning } from '@/lib/carCleaning';
 import type { ProductCategory } from '@/types/passport';
 import {
@@ -274,7 +275,7 @@ export function CategoryQuestions({
       ? t(section.titleKey, section.title)
       : section.title;
     for (const q of section.questions) {
-      if (!q.required) continue;
+      if (!q.required && !(q.requiredWhen && evaluateShowWhen(q.requiredWhen, data))) continue;
       if (!evaluateShowWhen(q.showWhen, data)) continue;
       const value = data[q.id];
       const empty =
@@ -430,6 +431,9 @@ export function CategoryQuestions({
     }
 
     switch (question.type) {
+      case 'substances':
+      case 'microorganisms':
+        return <CarCleaningDatasetEditor id={question.id} kind={question.type} value={value} onChange={next => handleChange(question.id, next)} />;
       case 'text':
         if (question.translatable) {
           return (
@@ -524,7 +528,7 @@ export function CategoryQuestions({
       case 'select':
         return (
           <Select
-            value={(value as string) || ''}
+            value={(value as string) || (isCarCleaning && question.id === 'dpp_profile' ? 'current' : '')}
             onValueChange={(val) => handleChange(question.id, val)}
           >
             <SelectTrigger id={question.id} aria-invalid={isCarCleaning && carIssues.some(issue => issue.field === question.id) || undefined}>
@@ -741,7 +745,7 @@ export function CategoryQuestions({
           ? t(section.titleKey, section.title)
           : section.title;
         const carSectionHelp: Record<string, string> = {
-          scope: 'scopeHelp', operator: 'operatorHelp', ingredients: 'ingredientsHelp', pcn: 'pcnHelp', sds: 'sdsHelp',
+          annex_substances: 'annexHelp', annex_microorganisms: 'annexHelp', annex_identity: 'identityHelp', scope: 'scopeHelp', operator: 'operatorHelp', ingredients: 'ingredientsHelp', pcn: 'pcnHelp', sds: 'sdsHelp',
         };
         const description = isCarCleaning && section.id && carSectionHelp[section.id]
           ? carCopy(`carCleaning.${carSectionHelp[section.id]}`)
@@ -773,7 +777,7 @@ export function CategoryQuestions({
                     {question.type !== 'checkbox' && (
                       <Label htmlFor={question.id}>
                         {tLabel(t, question)}
-                        {question.required && (
+                        {(question.required || (question.requiredWhen && evaluateShowWhen(question.requiredWhen, data))) && (
                           <span className="text-destructive ml-1">*</span>
                         )}
                         {renderBadge(question.badge)}

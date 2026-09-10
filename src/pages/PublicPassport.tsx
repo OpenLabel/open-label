@@ -14,7 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
-import { useParams, Link } from 'react-router-dom';
+import { useSearchParams, useParams, Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { usePassportBySlug } from '@/hooks/usePassports';
 import { getTemplate, categoryList } from '@/templates';
@@ -32,7 +32,8 @@ export default function PublicPassport() {
   const { t, i18n } = useTranslation();
   const displayLanguage = toDppLanguage(i18n.language);
   const { slug } = useParams<{ slug: string }>();
-  const { data: passport, isLoading, error } = usePassportBySlug(slug);
+  const [query] = useSearchParams();
+  const { data: passport, isLoading, error } = usePassportBySlug(slug, { version: query.get('version') ?? undefined, history_before: query.get('history_before') ?? undefined });
 
   if (isLoading) {
     return (

@@ -1,9 +1,13 @@
+import { carCleaningHistoryExport } from './carCleaningHistoryExport.ts';
+import { CAR_CLEANING_CARRIER_COPY, CAR_CLEANING_HISTORY_COPY } from './carCleaningPlatformCopy.ts';
+import { annexVICondition, annexVIRequiredExisting, annexVISections, annexVICopy, isAnnexVI, projectDataset } from './carCleaningAnnexVI.ts';
+
 /** Shared, dependency-free car cleaning data contract for the UI and public API. */
-export type CarCleaningCondition = { field: string; equals: string | string[] };
+export type CarCleaningCondition = { field: string; equals: string | string[]; and?: CarCleaningCondition[]; or?: CarCleaningCondition[] };
 export type CarCleaningQuestion = {
   id: string; label: string; labelKey: string;
-  type: 'text' | 'textarea' | 'select' | 'checkbox' | 'number';
-  required?: boolean; options?: { value: string; label: string; labelKey: string }[];
+  type: 'text' | 'textarea' | 'select' | 'checkbox' | 'number' | 'substances' | 'microorganisms';
+  required?: boolean; requiredWhen?: CarCleaningCondition; options?: { value: string; label: string; labelKey: string }[];
   showWhen?: CarCleaningCondition; helpText?: string; helpKey?: string;
   translatable?: boolean; autoTranslate?: boolean;
 };
@@ -25,6 +29,7 @@ const prose = { translatable: true, autoTranslate: false };
 export const carCleaningSections: CarCleaningSection[] = [
   section('scope', 'Product and regulatory scope', [
     q('product_kind', 'Product function', 'select', { ...req, options: options([['shampoo', 'Car shampoo'], ['surface_cleaner', 'Surface or interior cleaner'], ['glass_cleaner', 'Glass cleaner'], ['wheel_cleaner', 'Wheel cleaner or degreaser'], ['wax_polish', 'Wax or polish'], ['lubricant', 'Lubricant'], ['other', 'Other car care product']]) }),
+    q('dpp_profile', 'Information profile', 'select', { options: options([['current', 'Current product information'], ['annex_vi', 'Full Annex VI detergent dataset for the 2029 rules']]), showWhen: when('detergent_scope', 'yes') }),
     q('detergent_scope', 'Intended to wash or clean surfaces?', 'select', { ...req, options: yesNo }),
     q('scope_reason', 'Reason the product is outside detergent scope', 'textarea', { ...req, showWhen: when('detergent_scope', 'no') }),
     q('use_sector', 'Intended users', 'select', { ...req, options: options([['consumer', 'Consumers, including mixed consumer and professional use'], ['professional', 'Professional use only'], ['industrial', 'Industrial use only']]) }),
@@ -35,7 +40,7 @@ export const carCleaningSections: CarCleaningSection[] = [
   ]),
   section('identity', 'Identification and traceability', [
     q('model_identifier', 'Product model identifier', 'text', req),
-    q('batch_identifier', 'Batch or lot reference', 'text', req),
+    q('batch_identifier', 'Batch or lot reference'),
     q('net_content', 'Nominal quantity with unit', 'text', req),
     q('target_markets', 'EU markets and required label languages', 'textarea', req),
     q('brand_name', 'Brand'),
@@ -91,25 +96,30 @@ export const carCleaningSections: CarCleaningSection[] = [
   section('review', 'Supplier review and future passport preparation', [
     q('reach_review', 'Applicable REACH restrictions and duties assessed', 'select', { ...req, options: options([['reviewed', 'Reviewed by the supplier'], ['review', 'Assessment needed']]) }),
     q('physical_label_reviewed', 'I have checked the required physical label and supplied safety information', 'checkbox', req),
+    q('previous_passport_url', 'Link to the preceding passport, when this record replaces one'),
     q('label_image_url', 'Public colour image of packaging and label URL'),
     q('persistent_product_id', 'Persistent product identifier for future DPP'),
     q('manufacturer_operator_id', 'Manufacturer economic operator identifier'),
-    q('commodity_code', 'Applicable customs commodity code'),
+    q('commodity_code', 'Applicable customs commodity code', 'text', { requiredWhen: { ...annexVICondition, and: [...annexVICondition.and!, when('commodity_code_status', 'applicable')] } }),
     q('backup_provider_url', 'Independent passport backup provider reference URL'),
     q('conformity_reference', 'Manufacturer conformity evidence reference'),
     q('data_review_date', 'Product information review date (YYYY-MM-DD)'),
   ]),
-];
+  ...annexVISections,
+].map(s => ({ ...s, questions: s.questions.map(f => annexVIRequiredExisting.has(f.id) ? { ...f, requiredWhen: annexVICondition } : f) }));
 
 export const CAR_CLEANING_COPY = {
+  ...annexVICopy,
+  carrier: CAR_CLEANING_CARRIER_COPY,
+  history: CAR_CLEANING_HISTORY_COPY,
   publicTitle: 'Car cleaning product information',
   noticeTitle: 'Chemical safety and DPP preparation',
   noticeBody: 'Regulation (EU) 2026/405 mainly applies from 23 September 2029. Until then, Regulation (EC) No 648/2004 remains relevant for detergents, with transitional rules for existing stock. This record supports product information and future DPP preparation. It is not certification, a legal approval or a complete regulatory DPP. Physical labels, REACH, CLP, applicable SDS supply and biocidal requirements still apply. Ordinary chemical cleaners do not acquire a CE marking through this passport.',
   publicDataNotice: 'Everything saved in this category is public. Use public document links only. Do not enter confidential formulations, private technical files or personal data unrelated to the product.',
   scopeHelp: 'Assess intended function and composition. A wax, polish or lubricant may fall outside detergent rules if it does not clean. Cleaning and disinfecting claims can trigger overlapping detergent and biocidal duties.',
-  limits: 'Future DPP limits: this service does not provide the EU registry connection, verified persistent identifiers, independent backup, guaranteed regulatory retention, authority access controls or full Annex VI substance and microorganism data. Technical specifications and access rights depend on implementing measures. Supplier entries are not independently verified. ESPR requirements apply only where an applicable product measure requires them.',
+  limits: 'Future DPP limits: this service does not provide the EU registry connection, verified persistent identifiers, independent backup, guaranteed regulatory retention, verified authority credentials or independent business-continuity guarantees. Technical specifications and access rights depend on implementing measures. Supplier entries are not independently verified. ESPR requirements apply only where an applicable product measure requires them.',
   operatorHelp: 'Record the applicable EU operator. Roles depend on the supply chain and applicable law; two representatives are not universally required. A non-EU manufacturer will also need to assess the authorised representative duty under Article 9 of Regulation (EU) 2026/405 when it applies.',
-  ingredientsHelp: 'Current detergent labels and public ingredient lists follow Article 11 and Annex VII of Regulation (EC) No 648/2004. Declarable fragrance allergens above 0.01% must be assessed. Professional-only products may use equivalent technical information. A public summary does not replace the medical ingredient data sheet or future Annex VI data.',
+  ingredientsHelp: 'Current detergent labels and public ingredient lists follow Article 11 and Annex VII of Regulation (EC) No 648/2004. Declarable fragrance allergens above 0.01% must be assessed. Professional-only products may use equivalent technical information. A public summary does not replace the medical ingredient data sheet or the full Annex VI dataset available in the future profile.',
   pcnHelp: 'Under current CLP rules, UFI and poison centre notification depend on Annex VIII scope, including health or physical hazards and applicable exemptions. Environmental hazards alone do not automatically trigger notification. Industrial-only use and exemptions need assessment. The 2029 detergent rules include further UFI labelling provisions.',
   sdsHelp: 'A website link does not by itself fulfil the duty to supply an SDS. Assess REACH Article 31, including supply on request and consumer exceptions, and provide required language versions to recipients.',
   translationHelp: 'Check safety wording against the authorised label and SDS in every target market language. Translations are supplier content, not validated legal translations.',
@@ -120,7 +130,7 @@ export const CAR_CLEANING_COPY = {
   validationSaveError: 'Resolve the applicable car cleaning fields before saving.',
   sources: 'EU legal sources',
   validation: {
-    required: 'Complete this field.', type: 'Use the expected value type.', option: 'Choose a listed option.',
+    required: 'Complete this field.', rows: 'Complete each entry, use valid identifiers, remove duplicate identities and keep the list within 500 entries.', condition: 'This route is incompatible with the selected product use.', type: 'Use the expected value type.', option: 'Choose a listed option.',
     review: 'Resolve the assessment before saving.', url: 'Use a complete public HTTP or HTTPS URL without credentials.',
     email: 'Enter a valid email address.', ufi: 'Enter a UFI with four groups of four valid characters. Format checking does not verify a poison centre submission.',
     range: 'Enter a percentage from 0 to 100.', date: 'Use a valid date in YYYY-MM-DD format.',
@@ -141,7 +151,7 @@ export const CAR_CLEANING_SOURCES = [
 ];
 export type CarCleaningIssue = { field: string; code: keyof typeof CAR_CLEANING_COPY.validation };
 export function matchesCarCleaning(condition: CarCleaningCondition | undefined, data: Record<string, unknown>): boolean {
-  return !condition || (Array.isArray(condition.equals) ? condition.equals.includes(data[condition.field] as string) : data[condition.field] === condition.equals);
+  return !condition || (((Array.isArray(condition.equals) ? condition.equals.includes(data[condition.field] as string) : data[condition.field] === condition.equals) || (condition.or ?? []).some(c => matchesCarCleaning(c, data))) && (condition.and ?? []).every(c => matchesCarCleaning(c, data)));
 }
 export function visibleCarCleaningQuestions(data: Record<string, unknown>): CarCleaningQuestion[] {
   return carCleaningSections.filter(s => matchesCarCleaning(s.showWhen, data)).flatMap(s => s.questions.filter(f => matchesCarCleaning(f.showWhen, data)));
@@ -156,6 +166,10 @@ export function publicHttpUrl(value: unknown): string | null {
 function fieldIssue(field: CarCleaningQuestion, value: unknown): CarCleaningIssue['code'] | null {
   const empty = value === undefined || value === null || (typeof value === 'string' && !value.trim());
   if (empty) return field.required ? 'required' : null;
+  if (field.type === 'substances' || field.type === 'microorganisms') {
+    if (Array.isArray(value) && value.length === 0) return field.required ? 'required' : null;
+    return projectDataset(field.type, value) ? null : 'rows';
+  }
   if (field.type === 'checkbox') return value === true ? null : value === false ? 'confirmation' : 'type';
   if (field.type === 'number') return typeof value !== 'number' || !Number.isFinite(value) ? 'type' : value < 0 || value > 100 ? 'range' : null;
   if (typeof value !== 'string') return 'type';
@@ -164,7 +178,7 @@ function fieldIssue(field: CarCleaningQuestion, value: unknown): CarCleaningIssu
   if (field.options && value === 'review') return 'review';
   if (field.id.endsWith('_url') && !publicHttpUrl(value)) return 'url';
   if (field.id.endsWith('_email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'email';
-  if (field.id === 'ufi_code' && !/^[0-9A-HJKMNP-TV-Y]{4}(?:-[0-9A-HJKMNP-TV-Y]{4}){3}$/.test(value)) return 'ufi';
+  if ((field.id === 'ufi_code' || field.id === 'future_ufi_code') && !/^[0-9A-HJKMNP-TV-Y]{4}(?:-[0-9A-HJKMNP-TV-Y]{4}){3}$/.test(value)) return 'ufi';
   if (field.id.endsWith('_date')) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return 'date';
     const parsed = new Date(value + 'T00:00:00Z');
@@ -177,9 +191,11 @@ export function validateCarCleaning(data: Record<string, unknown>): CarCleaningI
   const nameIssue = fieldIssue(q('product_name', 'Product name', 'text', req), data.product_name);
   if (nameIssue) issues.push({ field: 'product_name', code: nameIssue });
   for (const field of visibleCarCleaningQuestions(data)) {
-    const code = fieldIssue(field, data[field.id]);
+    const effective = field.requiredWhen && matchesCarCleaning(field.requiredWhen, data) ? { ...field, required: true } : field;
+    const code = fieldIssue(effective, data[field.id]);
     if (code) issues.push({ field: field.id, code });
   }
+  if (isAnnexVI(data) && data.substance_list_route === 'equivalent_sds' && !['professional', 'industrial'].includes(data.use_sector as string)) issues.push({ field: 'substance_list_route', code: 'condition' });
   return issues;
 }
 const languages = new Set(['bg','cs','da','de','el','en','es','et','fi','fr','ga','hr','hu','it','lt','lv','mt','nl','pl','pt','ro','sk','sl','sv','zh-CN']);
@@ -194,7 +210,8 @@ export function publicCarCleaningData(input: unknown): Record<string, unknown> {
   for (const field of visibleCarCleaningQuestions(data)) {
     const value = data[field.id];
     if (value === undefined || value === null || value === '' || fieldIssue(field, value)) continue;
-    result[field.id] = value;
+    if (isAnnexVI(data) && data.substance_list_route === 'equivalent_sds' && !['professional', 'industrial'].includes(data.use_sector as string) && ['substance_list_route', 'industrial_institutional_use', 'equivalent_sds_supplied', 'annex_sds_url', 'annex_sds_languages', 'annex_sds_revision_date'].includes(field.id)) continue;
+    result[field.id] = field.type === 'substances' || field.type === 'microorganisms' ? projectDataset(field.type, value) : value;
     if (field.translatable) {
       const tr = translations(data[`${field.id}_translations`]);
       if (Object.keys(tr).length) result[`${field.id}_translations`] = tr;
@@ -210,11 +227,12 @@ export function publicCarCleaningData(input: unknown): Record<string, unknown> {
 export function exportCarCleaningPassport(passport: { name: string; category_data: unknown; public_slug?: string | null; image_url?: string | null; description?: string | null; updated_at?: string; [key: string]: unknown }) {
   const publicData = publicCarCleaningData(passport.category_data);
   return {
-    schema_version: 'open-label.car-cleaning.v1', category: 'car_cleaning',
-    name: typeof publicData.product_name === 'string' ? publicData.product_name : null, public_slug: passport.public_slug ?? null,
-    image_url: publicHttpUrl(passport.image_url), description: typeof passport.description === 'string' ? passport.description : null,
-    updated_at: passport.updated_at ?? null,
+    schema_version: isAnnexVI(publicData) ? 'open-label.car-cleaning.v2' : 'open-label.car-cleaning.v1', category: 'car_cleaning',
+    name: typeof publicData.product_name === 'string' ? publicData.product_name : null, public_slug: typeof passport.public_slug === 'string' && /^(?:[a-f0-9]{8}|[a-f0-9]{16}|[a-f0-9]{32})$/.test(passport.public_slug) ? passport.public_slug : null,
+    image_url: publicHttpUrl(passport.image_url), description: typeof passport.description === 'string' && passport.description.length <= 10000 ? passport.description : null,
+    updated_at: typeof passport.updated_at === 'string' && /^\d{4}-\d{2}-\d{2}T/.test(passport.updated_at) && Number.isFinite(Date.parse(passport.updated_at)) ? passport.updated_at : null,
     category_data: publicData,
-    regulatory_context: { main_application_date: '2029-09-23', certification: false, regulatory_dpp_complete: false, limitations: CAR_CLEANING_COPY.limits, sources: CAR_CLEANING_SOURCES },
+    dpp_history: carCleaningHistoryExport(passport.dpp_history, passport.public_slug),
+    regulatory_context: { annex_vi_dataset_selected: isAnnexVI(publicData), annex_vi_field_validation_passed: isAnnexVI(publicData) && validateCarCleaning(publicData).length === 0, main_application_date: '2029-09-23', certification: false, regulatory_dpp_complete: false, limitations: CAR_CLEANING_COPY.limits, sources: CAR_CLEANING_SOURCES },
   };
 }

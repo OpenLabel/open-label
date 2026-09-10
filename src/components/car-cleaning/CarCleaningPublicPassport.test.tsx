@@ -40,6 +40,7 @@ describe('Car cleaning consumer information', () => {
     expect(screen.getByText('Safe description')).toBeInTheDocument();
     expect(document.querySelector('[onerror]')).toBeNull();
     expect(document.querySelector('script')).toBeNull();
+    expect(document.querySelector('img')).toBeNull();
     expect(document.querySelector('a[href^="javascript:"]')).toBeNull();
   });
 

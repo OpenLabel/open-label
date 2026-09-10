@@ -3,15 +3,16 @@ import { act, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { Link } from 'react-router-dom';
 
-const { detectCountry, referralCapture, setConsentDefaults } = vi.hoisted(() => ({
-  detectCountry: vi.fn().mockResolvedValue('US'), referralCapture: vi.fn(), setConsentDefaults: vi.fn(),
+const { detectCountry, referralCapture, setConsentDefaults, authMount, reloadPublicDocument } = vi.hoisted(() => ({
+  detectCountry: vi.fn().mockResolvedValue('US'), referralCapture: vi.fn(), setConsentDefaults: vi.fn(), authMount: vi.fn(), reloadPublicDocument: vi.fn(),
 }));
 vi.mock('@/lib/adsConsent', () => ({
   applyStoredConsent: vi.fn(), setConsentDefaults, detectCountry, getStoredConsent: () => null,
   isRegulatedCountry: () => false, setConsent: vi.fn(),
 }));
 vi.mock('@/hooks/useReferral', () => ({ useReferral: referralCapture }));
-vi.mock('@/hooks/useAuth', () => ({ AuthProvider: ({ children }: { children: ReactNode }) => children }));
+vi.mock('@/hooks/useAuth', () => ({ AuthProvider: ({ children }: { children: ReactNode }) => { authMount(); return children; } }));
+vi.mock('@/lib/publicPassportPrivacy', async importOriginal => ({ ...(await importOriginal<typeof import('@/lib/publicPassportPrivacy')>()), reloadPublicPassportDocument: reloadPublicDocument }));
 vi.mock('@/hooks/useSiteConfig', () => ({
   SiteConfigProvider: ({ children }: { children: ReactNode }) => children,
   useSiteConfig: () => ({ loading: false, isSetupRequired: false }),
@@ -54,21 +55,29 @@ describe('Public passport marketing privacy', () => {
     expect(detectCountry).not.toHaveBeenCalled();
     expect(referralCapture).not.toHaveBeenCalled();
     expect(setConsentDefaults).not.toHaveBeenCalled();
+    expect(authMount).not.toHaveBeenCalled();
+    expect(reloadPublicDocument).not.toHaveBeenCalled();
   });
 
-  it('stops route events when moving from marketing to a public passport and resumes on returning home', async () => {
+  it('requires a fresh document before showing public content after marketing navigation', async () => {
     const gtag = vi.fn(); window.gtag = gtag;
     await act(async () => { render(<App />); });
     expect(gtag).toHaveBeenCalledWith('event', 'page_view', expect.objectContaining({ page_path: '/' }));
-    expect(detectCountry).toHaveBeenCalledOnce();
     gtag.mockClear(); referralCapture.mockClear();
     await act(async () => { fireEvent.click(screen.getByRole('link', { name: 'View public passport' })); });
-    expect(screen.getByText('Public product information')).toBeInTheDocument();
+    expect(reloadPublicDocument).toHaveBeenCalledOnce();
+    expect(screen.queryByText('Public product information')).not.toBeInTheDocument();
     expect(gtag).not.toHaveBeenCalled();
     expect(referralCapture).not.toHaveBeenCalled();
-    expect(detectCountry).toHaveBeenCalledOnce();
+  });
+
+  it('requires a new account document when leaving a cold public passport', async () => {
+    window.history.replaceState({}, '', '/p/aabbccdd');
+    await act(async () => { render(<App />); });
     await act(async () => { fireEvent.click(screen.getByRole('link', { name: 'Return home' })); });
-    expect(gtag).toHaveBeenCalledWith('event', 'page_view', expect.objectContaining({ page_path: '/' }));
+    expect(reloadPublicDocument).toHaveBeenCalledOnce();
+    expect(authMount).not.toHaveBeenCalled();
+    expect(window.gtag).toBeUndefined();
   });
 
   it('guards the tracking helper even when another caller supplies a public passport URL', () => {

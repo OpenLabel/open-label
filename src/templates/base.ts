@@ -21,7 +21,9 @@ export type QuestionType =
   | 'checkbox'
   | 'number'
   | 'multi_select'
-  | 'file';
+  | 'file'
+  | 'substances'
+  | 'microorganisms';
 
 export type QuestionBadge = 'required' | 'where_applicable' | 'tbd';
 
@@ -30,6 +32,8 @@ export interface ShowWhenCondition {
   equals: unknown | unknown[];
   /** When true, condition matches if the field's array value INCLUDES `equals` */
   includes?: boolean;
+  and?: ShowWhenCondition[];
+  or?: ShowWhenCondition[];
 }
 
 export interface TemplateOption {
@@ -52,6 +56,7 @@ export interface TemplateQuestion {
   /** i18n key for translated placeholder */
   placeholderKey?: string;
   required?: boolean;
+  requiredWhen?: ShowWhenCondition;
   helpText?: string;
   /** i18n key for translated help text */
   helpKey?: string;
@@ -135,6 +140,8 @@ export function evaluateShowWhen(
   data: Record<string, unknown>,
 ): boolean {
   if (!condition) return true;
+  if (condition.and && !condition.and.every(child => evaluateShowWhen(child, data))) return false;
+  if (condition.or?.some(child => evaluateShowWhen(child, data))) return true;
   const value = data[condition.field];
   if (condition.includes) {
     if (!Array.isArray(value)) return false;

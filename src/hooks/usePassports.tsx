@@ -1,3 +1,4 @@
+import { prepareCarCleaningDuplicate, writeCarCleaningPassport } from '@/lib/carCleaningWrite';
 /*
  * Open-Label Digital Product Passport Engine
  * Copyright (C) 2026 Open-Label.eu
@@ -18,6 +19,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { toast } from 'sonner';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from './useAuth';
+import { fetchPublicPassport } from '@/lib/publicPassportFetch';
 import type { Passport, PassportFormData, ProductCategory } from '@/types/passport';
 
 // Stable empty-array reference so consumers that sync via useEffect don't
@@ -48,6 +50,7 @@ export function usePassports() {
   const createPassport = useMutation({
     mutationFn: async (formData: PassportFormData) => {
       if (!user) throw new Error('User not authenticated');
+      if (formData.category === 'car_cleaning') return writeCarCleaningPassport(formData, (name, options) => supabase.functions.invoke(name, options));
       
       const { data, error } = await supabase
         .from('passports')
@@ -74,6 +77,7 @@ export function usePassports() {
   const updatePassport = useMutation({
     mutationFn: async ({ id, ...formData }: PassportFormData & { id: string }) => {
       if (!user) throw new Error('User not authenticated');
+      if (formData.category === 'car_cleaning') return writeCarCleaningPassport({ ...formData, id }, (name, options) => supabase.functions.invoke(name, options));
       const { data, error } = await supabase
         .from('passports')
         .update({
@@ -104,6 +108,7 @@ export function usePassports() {
   const duplicatePassport = useMutation({
     mutationFn: async (passport: Passport) => {
       if (!user) throw new Error('User not authenticated');
+      if (passport.category === 'car_cleaning') return writeCarCleaningPassport({ name: `${passport.name} (Copy)`, category: 'car_cleaning', image_url: passport.image_url, description: passport.description || '', language: passport.language, category_data: prepareCarCleaningDuplicate(passport.category_data, passport.public_slug ? `${window.location.origin}/p/${passport.public_slug}` : undefined) as PassportFormData['category_data'] }, (name, options) => supabase.functions.invoke(name, options));
       
       const { data, error } = await supabase
         .from('passports')
@@ -140,6 +145,7 @@ export function usePassports() {
     },
     onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['passports', user?.id] });
+      queryClient.invalidateQueries({ queryKey: ['car-cleaning-retained', user?.id] });
     },
   });
 
@@ -175,27 +181,10 @@ export function usePassports() {
   };
 }
 
-export function usePassportBySlug(slug: string | undefined) {
+export function usePassportBySlug(slug: string | undefined, selection?: { version?: string; history_before?: string }) {
   return useQuery({
-    queryKey: ['passport', 'public', slug],
-    queryFn: async () => {
-      if (!slug) return null;
-      
-      // Use the edge function to fetch public passports (prevents scraping)
-      const response = await supabase.functions.invoke('get-public-passport', {
-        body: { slug },
-      });
-      
-      if (response.error) {
-        throw new Error(response.error.message || 'Failed to fetch passport');
-      }
-      
-      if (!response.data?.passport) {
-        throw new Error('Passport not found');
-      }
-      
-      return response.data.passport as Omit<Passport, 'user_id'>;
-    },
+    queryKey: ['passport', 'public', slug, selection?.version, selection?.history_before],
+    queryFn: ({ signal }) => slug ? fetchPublicPassport(slug, signal, undefined, undefined, selection) : null,
     enabled: !!slug,
   });
 }

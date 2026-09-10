@@ -84,7 +84,7 @@ Registry implementing arrangements already exist: Regulation 2026/1778 was publi
 
 The detergent acts do not create a CE marking requirement. Annex IV manufacturer assessment and an Article 21 passport do not amount to EU certification. The Commission limits CE marking to products whose relevant legislation requires it. Exclude CE mark, notified-body number and generic EU Declaration of Conformity generation from this ordinary cleaning-product category. Any separately regulated equipment or other product is outside this category decision. [Commission CE guidance](https://single-market-economy.ec.europa.eu/single-market/goods/ce-marking_en)
 
-## Recommended compact implementation
+## Original current-information implementation
 
 Seven field groups can cover the intended preparation workflow without implying certification:
 
@@ -99,3 +99,46 @@ Seven field groups can cover the intended preparation workflow without implying 
 Use unknown/not assessed states rather than defaulting false. Distinguish form completeness from evidence review and legal compliance. Scope requiring special review should remain visibly unresolved; completing unrelated fields must not convert it into a pass. Store no confidential composition, poison-centre dossier, medical ingredient sheet or internal risk report in publicly exposed category data. Enforce the same public projection in API, exports and display. A public free-text field or URL can itself leak sensitive data, so label requested information as public and constrain document types at the point of entry.
 
 This mapping checks EU-level source rules and their conditions. It does not check a particular formulation, Member State labelling languages, actual registrations, poison-centre submissions, biocidal authorisation, transport classification, packaging waste duties or product-specific claims. Those should not be represented as verified by saving or exporting this form.
+
+
+## Annex VI and platform amendment, 10 September 2026
+
+The current profile remains available because the main application date is 23 September 2029. The explicit `annex_vi` profile now collects the full Annex VI Part A dataset for detergent-scope products. A complete field set is not an assessment, verified identifier, registry submission or operating-service guarantee.
+
+| Primary provision | Implemented data and behavior |
+| --- | --- |
+| VI A(a) | Public product trade name, supplier persistent product identifier, model reference, public colour label/packaging image URL. Server-issued internal UUID and immutable public slug identify the platform record separately. |
+| VI A(b), Article 9 | Manufacturer name/address/email/phone/operator ID. Future non-EU representative contacts and mandate are required. EU manufacturers can declare an appointed representative. Importer applicability and name/address/email/phone are separate. |
+| VI A(c) | Actual independent backup provider URL and agreement reference, entered by the supplier. No agreement or backup service is created by these fields. |
+| VI A(d) | Model and traceability references. Product-content and manufacturing-process revision references help record the Article 2(39) model definition. |
+| VI A(e), A(g) | Explicit manufacturer sole-responsibility indication, manufacturer compliance-demonstrated statement, other applicable Union laws and assessment reference. The platform never produces certification. |
+| VI A(f) | Applicable commodity code or an explicit non-applicability assessment. No automatic customs classification. |
+| VI A(h) | Full structured substance identities, optional CAS/EC/other identifier, intentional-addition or qualifying carry-over preservative basis. No concentrations or confidential medical/technical formula. The supplier confirms completeness and CLP Article 18(3) naming assessment. |
+| VI A(h) exception | Separate equivalent-SDS route requires non-consumer use, statutory industrial/institutional confirmation, actual equivalent SDS supply confirmation, URL, language and revision. Ordinary professional use alone does not qualify. |
+| VI A(i) | Explicit microorganism presence or absence; every intentionally added genus, species and strain name/code. The substance-SDS exception never removes this dataset. |
+| Annex V | Future UFI separate from current CLP notification scope; distinct future ingredient class/constituent, preservative and Part D allergen information; microorganism shelf-life and conditional food-contact instructions. Current 648/2004 information remains separate. |
+| Articles 21, 22 | Structured JSON and anonymous public GET/POST, permanent platform URI reservation, append-only retained versions, version index and old-version access, retained withdrawal route, owner-only raw archive access, authenticated validated write gateway and restrictive direct-write policy. |
+| Article 22(f) | Supplier-entered preceding-passport URL; duplicating a record records the source URI and starts a current-information profile with a new model reference. This is not an external identifier verification service. |
+| Articles 21(4), 21(12) | Real downloadable SVG QR carrier, four-module quiet zone, scan instruction, readable stable URI and JSON endpoint metadata. Local image decoding verifies encoded bytes only. Physical label placement, print material, size, visibility, durability and live resolution still require testing. |
+
+The source contract is shared between frontend validation, public projection, export and the authenticated save gateway. Invalid structured lists are rejected as a whole rather than silently truncated. Unknown keys and hidden branches are removed before new saves and public historical rendering. The platform bounds each dataset at 500 rows, row identity text at 500 characters, optional identifiers at 200 characters, ordinary text at 2,000 characters and prose at 10,000 characters. Those are implementation limits, not legal limits.
+
+The archive fixes the platform UUID and public slug. Once future model information is retained, the model reference, trade name, manufacturer operator ID, content revision, process revision and CLP classification cannot be silently replaced, including by changing the selected profile. A new model needs a new passport. This does not detect a real formulation or process change concealed behind an unchanged supplier revision reference.
+
+Retention is a software floor of at least ten years after the later of the save timestamp and the supplier's latest declared placing-on-market date. The floor never decreases and there is no automatic expiry purge. The actual market-placement date may be omitted for a product not yet placed. Supplier updates for later placements remain necessary. Deleting the dashboard record or auth account does not cascade into retained snapshots. Historical data starts with the migration seed or first subsequent save; earlier versions cannot be reconstructed.
+
+These records retain JSON and document URLs. They do not guarantee retention of external files or object-storage bytes. Replaced car images are excluded from the app's ordinary post-save cleanup, but provider lifecycle policies, direct object deletion and external links need an immutable asset system and tested backup/restore process. Account erasure does not erase legally retained business records automatically; exceptional correction, confidential-data removal and rights requests need an authorised, audited operational process before regulatory operation.
+
+Public routes omit authoring authentication storage/refresh and advertising/referral tools. Crossing between authoring and public content reloads the document. Public API calls omit viewer credentials and referrer. Rich-description media/style content is removed; arbitrary external primary image hosts remain behind a user-initiated link. Managed app image delivery still necessarily receives network requests. The rate limiter uses bounded ephemeral salted IP hashes, not a persistent usage log. Hosting, CDN, provider logging and contractual data-processing controls still require independent review.
+
+## Required external and deployment prerequisites
+
+1. Restore the mandated real Chrome WebBridge connection and complete all five browser QA rounds, at least 50 distinct genuine screenshots, console/network checks, real account persistence and public resolution. None of the local rendering or unit tests substitutes for this gate.
+2. Obtain authorised backend deployment access through the supported credential workflow. Deploy the enum migration first in its own committed migration transaction, then the additive history migration. Deploy both edge functions and the client that uses the save gateway before enabling the restrictive direct-write policy. Coordinate hosting visibility so users never reach a partially deployed category.
+3. Configure and verify the actual production domain, HTTPS resolver and carrier URLs. Keep the same canonical public origin stable. The current environment has not verified the hosting/domain binding or deployed these amendments.
+4. Establish actual persistent product/operator identifier issuance, applicable standards conformance, digital credentials, registry access and submission under the applicable EU arrangements. The platform UUID is explicitly unverified; no registry ID is generated locally.
+5. Contract an independent DPP service provider for backup, establish business-continuity and insolvency availability, immutable assets, monitored retention and tested restore procedures. Supplier text fields do not establish these services.
+6. Implement authority and other restricted actor access according to the applicable implementing measures and verified credentials. Present access is anonymous public content plus authenticated owner archives, with no claimed regulator login, confidential technical-file portal or federated authority system.
+7. Require product-specific supplier evidence: composition and intended use, conformity assessment and technical file, physical label and market languages, REACH/CLP/SDS/PCN/BPR duties as applicable, dates, operator mandates and actual provider arrangements. Do not place private dossiers in the public category or public upload bucket.
+
+Primary legal detail and exact-source extracts are preserved outside git in `research/ANNEX_VI_AUDIT.md` and `research/ANNEX_VI_PRIMARY_EXTRACTS.txt`. This amendment does not change the verified legal dates or turn ESPR into a universal present mandate. [2026/405](https://eur-lex.europa.eu/eli/reg/2026/405/oj/eng), [648/2004](https://eur-lex.europa.eu/eli/reg/2004/648/2015-06-01/eng), [ESPR](https://eur-lex.europa.eu/eli/reg/2024/1781/oj/eng), [registry arrangements 2026/1778](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32026R1778).

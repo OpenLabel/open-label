@@ -1,3 +1,6 @@
+import { carCleaningAutomaticImageUrl } from '@/lib/carCleaningImages';
+import { CarCleaningHistory, type CarCleaningHistoryData } from './CarCleaningHistory';
+import { CarCleaningDatasetView } from './CarCleaningDataset';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import DOMPurify from 'dompurify';
@@ -14,6 +17,7 @@ import { toDppLanguage } from '@/lib/dppLanguage';
 interface CarCleaningPublicPassportProps {
   passport: {
     name: string;
+    dpp_history?: CarCleaningHistoryData;
     image_url?: string | null;
     description?: string | null;
     category_data: Record<string, unknown>;
@@ -41,7 +45,8 @@ export function CarCleaningPublicPassport({ passport, isPreview = false, preview
     return data[id];
   };
   const productName = translatedValue('product_name');
-  const imageUrl = publicHttpUrl(passport.image_url);
+  const sourceImageUrl = publicHttpUrl(passport.image_url);
+  const imageUrl = carCleaningAutomaticImageUrl(passport.image_url, import.meta.env.VITE_SUPABASE_URL, window.location.origin);
   const description = translatedValue('description') || passport.description;
 
   function displayValue(question: TemplateQuestion): string {
@@ -50,6 +55,7 @@ export function CarCleaningPublicPassport({ passport, isPreview = false, preview
       const option = question.options?.find(item => item.value === candidate);
       return option ? option.labelKey ? t(option.labelKey, option.label) : option.label : '';
     };
+    if (question.type === 'substances' || question.type === 'microorganisms') return Array.isArray(value) && value.length > 0 ? String(value.length) : '';
     if (question.type === 'select') return optionLabel(value);
     if (question.type === 'multi_select') return Array.isArray(value) ? value.map(optionLabel).filter(Boolean).join(', ') : '';
     if (typeof value === 'boolean') return t(value ? 'common.yes' : 'common.no');
@@ -81,18 +87,19 @@ export function CarCleaningPublicPassport({ passport, isPreview = false, preview
           <DPPLanguagePicker localOnly={isPreview} currentLanguage={previewLanguage} onLanguageChange={onPreviewLanguageChange} />
         </div>
         <header className="flex flex-col sm:flex-row gap-5 items-start">
-          {imageUrl && <img src={imageUrl} alt={typeof productName === 'string' ? productName : ''} className="w-32 h-32 object-contain rounded-lg border" />}
+          {imageUrl && <img referrerPolicy="no-referrer" src={imageUrl} alt={typeof productName === 'string' ? productName : ''} className="w-32 h-32 object-contain rounded-lg border" />}
           <div className="min-w-0 space-y-3">
             <Badge variant="secondary">{copy('carCleaning.publicTitle')}</Badge>
             <h1 className="text-2xl sm:text-3xl font-bold break-words">{typeof productName === 'string' && productName.trim() ? productName : copy('carCleaning.publicTitle')}</h1>
           </div>
+          {!imageUrl && sourceImageUrl && <a href={sourceImageUrl} target="_blank" rel="noopener noreferrer" className="text-sm underline break-all">{copy('carCleaning.fields.label_image_url')}</a>}
         </header>
         <aside className="rounded-lg border border-blue-200 bg-blue-50/70 p-4 text-sm text-blue-950">
           <h2 className="font-semibold mb-2">{copy('carCleaning.noticeTitle')}</h2>
           <p className="whitespace-pre-line">{copy('carCleaning.noticeBody')}</p>
           <p className="mt-3">{copy('carCleaning.limits')}</p>
         </aside>
-        {typeof description === 'string' && description.trim() && <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description) }} />}
+        {typeof description === 'string' && description.trim() && <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description, { FORBID_TAGS: ['img', 'video', 'audio', 'source', 'iframe', 'object', 'embed', 'svg'], FORBID_ATTR: ['style'] }) }} />}
         {sections.map((section, index) => (
           <Card key={section.id || index} className="print:shadow-none break-inside-avoid">
             <CardHeader className="pb-3"><h2 className="text-lg font-semibold">{section.titleKey ? t(section.titleKey, section.title) : section.title}</h2></CardHeader>
@@ -103,7 +110,7 @@ export function CarCleaningPublicPassport({ passport, isPreview = false, preview
                 return (
                   <div key={question.id} className="grid gap-1 sm:grid-cols-[minmax(0,2fr)_minmax(0,3fr)] sm:gap-4 border-b pb-3 last:border-0 last:pb-0">
                     <dt className="text-sm text-muted-foreground">{question.labelKey ? t(question.labelKey, question.label) : question.label}</dt>
-                    <dd className="text-sm whitespace-pre-wrap break-words min-w-0">{url ? <a href={url} target="_blank" rel="noopener noreferrer" className="underline text-primary break-all">{value}</a> : value}</dd>
+                    <dd className="text-sm whitespace-pre-wrap break-words min-w-0">{question.type === 'substances' || question.type === 'microorganisms' ? <CarCleaningDatasetView kind={question.type} value={data[question.id]} translate={t} /> : url ? <a href={url} target="_blank" rel="noopener noreferrer" className="underline text-primary break-all">{value}</a> : value}</dd>
                   </div>
                 );
               })}
@@ -111,6 +118,7 @@ export function CarCleaningPublicPassport({ passport, isPreview = false, preview
           </Card>
         ))}
         {sections.length === 0 && <p className="text-sm text-muted-foreground">{copy('carCleaning.emptyPublic')}</p>}
+        {!isPreview && <CarCleaningHistory slug={passport.public_slug} history={passport.dpp_history} />}
         {!isPreview && <div className="flex flex-wrap gap-3 print:hidden">
           <Button variant="outline" onClick={downloadJson}><Download className="mr-2 h-4 w-4" />{copy('carCleaning.downloadJson')}</Button>
           <Button variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" />{copy('carCleaning.print')}</Button>

@@ -1,3 +1,5 @@
+import { CarCleaningRetained } from '@/components/car-cleaning/CarCleaningRetained';
+import { CAR_CLEANING_HISTORY_COPY } from '../../supabase/functions/_shared/carCleaningPlatformCopy';
 /*
  * Open-Label Digital Product Passport Engine
  * Copyright (C) 2026 Open-Label.eu
@@ -112,7 +114,9 @@ export default function Dashboard() {
   };
 
   const handleDelete = async (id: string) => {
-    if (!confirm(t('dashboard.confirmDelete'))) return;
+    const record = passports.find(passport => passport.id === id);
+    const notice = record?.category === 'car_cleaning' ? t('carCleaning.history.withdrawalNotice', CAR_CLEANING_HISTORY_COPY.withdrawalNotice) : t('dashboard.confirmDelete');
+    if (!confirm(notice)) return;
     try {
       await deletePassport.mutateAsync(id);
       toast({ title: t('dashboard.deleted') });
@@ -249,6 +253,7 @@ export default function Dashboard() {
           </DndContext>
         )}
 
+        <CarCleaningRetained refreshKey={passports.map(passport => passport.id).sort().join(',')} />
         <QRCodeDialog
           open={qrDialogOpen}
           onOpenChange={setQrDialogOpen}
