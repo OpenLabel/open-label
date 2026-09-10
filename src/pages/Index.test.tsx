@@ -1,5 +1,5 @@
 import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen, within } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 vi.mock('@/hooks/useAuth', () => ({
@@ -75,6 +75,15 @@ describe('Index page', () => {
   it('renders category cards', () => {
     renderIndex();
     expect(screen.getByText('categories.wine')).toBeInTheDocument();
+  });
+
+
+  it('presents car cleaning with its preparation date without an active-law badge', () => {
+    renderIndex();
+    const card = screen.getByRole('link', { name: 'categories.car_cleaning' });
+    expect(within(card).getByText('2029-09-23')).toBeInTheDocument();
+    expect(within(card).getByText('categoryDescriptions.car_cleaning')).toBeInTheDocument();
+    expect(within(card).queryByText('landing.categories.activeLaw')).not.toBeInTheDocument();
   });
 
   it('renders footer', () => {

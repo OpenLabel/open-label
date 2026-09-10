@@ -29,6 +29,7 @@ export type ProductCategory =
   | 'furniture'
   | 'tires'
   | 'detergents'
+  | 'car_cleaning'
   | 'other';
 
 export interface Passport {

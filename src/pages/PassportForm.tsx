@@ -53,6 +53,8 @@ import {
   AlertDialogTitle,
 } from '@/components/ui/alert-dialog';
 import { toDppLanguage } from '@/lib/dppLanguage';
+import { validateCarCleaning } from '@/lib/carCleaning';
+import { CAR_CLEANING_COPY } from '@/templates/carCleaning';
 
 interface FormData {
   name: string;
@@ -222,6 +224,13 @@ export default function PassportForm() {
     
     if (!formData.name.trim()) {
       toast({ title: t('common.error'), description: t('passport.enterProductName'), variant: 'destructive' });
+      return;
+    }
+
+    if (formData.category === 'car_cleaning' && validateCarCleaning(formData.category_data).length > 0) {
+      const key = 'carCleaning.validationSaveError';
+      toast({ title: t('common.error'), description: t(key, CAR_CLEANING_COPY.validationSaveError), variant: 'destructive' });
+      document.getElementById('car-cleaning-validation')?.focus();
       return;
     }
 
@@ -475,7 +484,7 @@ export default function PassportForm() {
                         setFormData({ ...formData, category: value, category_data: {} })
                       }
                     >
-                      <SelectTrigger>
+                      <SelectTrigger id="category">
                         <SelectValue />
                       </SelectTrigger>
                       <SelectContent>

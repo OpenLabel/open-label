@@ -18,6 +18,8 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 import { z } from "https://deno.land/x/zod@v3.22.4/mod.ts";
 
+import { publicCarCleaningData } from "../_shared/carCleaning.ts";
+
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
   "Access-Control-Allow-Headers":
@@ -117,6 +119,13 @@ serve(async (req) => {
         JSON.stringify({ error: "Passport not found" }),
         { status: 404, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
+    }
+
+    if (passport.category === 'car_cleaning') {
+      passport.category_data = publicCarCleaningData(passport.category_data);
+      // The dashboard record name is not the public product trade name.
+      passport.name = typeof passport.category_data.product_name === 'string'
+        ? passport.category_data.product_name : '';
     }
 
     return new Response(

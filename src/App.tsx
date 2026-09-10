@@ -21,7 +21,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { initGoogleAdsTag, trackPageView } from "@/lib/googleAdsTracking";
+import { initGoogleAdsTag, isPublicPassportPath, trackPageView } from "@/lib/googleAdsTracking";
 import { useReferral } from "@/hooks/useReferral";
 import { AuthProvider } from "@/hooks/useAuth";
 import { SiteConfigProvider, useSiteConfig } from "@/hooks/useSiteConfig";
@@ -61,6 +61,18 @@ function GoogleAdsTracker() {
     trackPageView(location.pathname + location.search);
   }, [location.pathname, location.search]);
   return null;
+}
+
+function MarketingTools() {
+  const { pathname } = useLocation();
+  if (isPublicPassportPath(pathname)) return null;
+  return (
+    <>
+      <ReferralCapture />
+      <GoogleAdsTracker />
+      <ConsentBanner />
+    </>
+  );
 }
 
 function AppRoutes() {
@@ -129,10 +141,8 @@ const App = () => (
           <Sonner />
           <BrowserRouter>
             <BuildStatusBanner />
-            <ReferralCapture />
-            <GoogleAdsTracker />
+            <MarketingTools />
             <AppRoutes />
-            <ConsentBanner />
           </BrowserRouter>
         </TooltipProvider>
       </AuthProvider>

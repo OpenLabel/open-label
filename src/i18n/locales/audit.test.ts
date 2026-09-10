@@ -83,6 +83,10 @@ const perLanguageAllowedValues: Record<string, string[]> = {
 
 // Check if a value is legitimately the same across languages (not untranslated)
 function isLegitimateMatch(key: string, value: string, langCode: string): boolean {
+  // These native legal terms are spelled identically in English. Keep the
+  // exceptions scoped to the exact locale, key and value.
+  if (langCode === 'fr' && key === 'carCleaning.options.danger' && value === 'Danger') return true;
+  if (langCode === 'pl' && key === 'carCleaning.options.importer' && value === 'Importer') return true;
   // Very short values (1-2 chars) — often symbols, numbers
   if (value.length <= 2) return true;
 

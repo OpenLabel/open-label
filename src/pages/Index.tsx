@@ -40,6 +40,12 @@ const productCategories = [
     deadline: 'active'
   },
   { 
+    key: 'car_cleaning',
+    status: 'active' as const,
+    regulation: 'EC 648/2004 · EU 2026/405',
+    deadline: '2029-09-23'
+  },
+  {
     key: 'other',
     status: 'active' as const,
     regulation: 'ESPR Framework',
@@ -340,7 +346,7 @@ export default function Index() {
                   <CardContent className="p-5">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="font-semibold text-sm">{t(`categories.${category.key}`)}</h3>
-                      {category.status === 'active' ? (
+                      {category.key !== 'car_cleaning' && (category.status === 'active' ? (
                         <Badge className="bg-green-500/10 text-green-600 text-xs border-green-500/20">
                           {t('landing.categories.activeLaw')}
                         </Badge>
@@ -348,7 +354,7 @@ export default function Index() {
                         <Badge variant="outline" className="text-xs">
                           {t('landing.categories.priorityGroup')}
                         </Badge>
-                      )}
+                      ))}
                     </div>
                     <p className="text-xs text-muted-foreground mb-3">{t(`categoryDescriptions.${category.key}`)}</p>
                     <div className="flex items-center justify-between text-xs">

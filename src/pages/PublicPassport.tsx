@@ -23,6 +23,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { Badge } from '@/components/ui/badge';
 import { WinePublicPassport } from '@/components/wine/WinePublicPassport';
 import { ToyPublicPassport } from '@/components/toys/ToyPublicPassport';
+import { CarCleaningPublicPassport } from '@/components/car-cleaning/CarCleaningPublicPassport';
 import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import { toDppLanguage } from '@/lib/dppLanguage';
@@ -88,6 +89,10 @@ export default function PublicPassport() {
         }}
       />
     );
+  }
+
+  if (passport.category === 'car_cleaning') {
+    return <CarCleaningPublicPassport passport={{ ...passport, category_data: (passport.category_data as Record<string, unknown>) || {} }} />;
   }
 
   const template = getTemplate(passport.category);

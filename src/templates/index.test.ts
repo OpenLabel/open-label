@@ -18,6 +18,7 @@ describe("templates", () => {
         "furniture",
         "tires",
         "detergents",
+        "car_cleaning",
         "other",
       ];
 
@@ -75,6 +76,7 @@ describe("templates", () => {
         "furniture",
         "tires",
         "detergents",
+        "car_cleaning",
         "other",
       ];
 
@@ -86,8 +88,8 @@ describe("templates", () => {
   });
 
   describe("categoryList", () => {
-    it("has visible product categories (wine, toys, and other)", () => {
-      expect(categoryList.length).toBe(3);
+    it("has visible product categories (wine, toys, car cleaning, and other)", () => {
+      expect(categoryList.map(c => c.value)).toEqual(["wine", "toys", "car_cleaning", "other"]);
     });
 
     it("each category has required properties", () => {
@@ -130,6 +132,7 @@ describe("templates", () => {
       const validCategories: ProductCategory[] = [
         "wine",
         "toys",
+        "car_cleaning",
         "other",
       ];
 

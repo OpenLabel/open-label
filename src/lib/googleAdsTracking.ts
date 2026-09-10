@@ -71,9 +71,19 @@ export function __resetGoogleAdsTagForTests(): void {
   loaded = false;
 }
 
+/** Public product information is outside marketing tracking, including case-insensitive routes. */
+export function isPublicPassportPath(path: string): boolean {
+  // React Router decodes path segments before matching, so encoded p/P is public too.
+  try {
+    return /^\/p(?:\/|[?#]|$)/i.test(decodeURIComponent(path.split(/[?#]/, 1)[0]));
+  } catch {
+    return /^\/p(?:\/|[?#]|$)/i.test(path);
+  }
+}
+
 /** Report a SPA route change as a page_view. */
 export function trackPageView(path: string, tagId: string = GOOGLE_ADS_TAG_ID): void {
-  if (typeof window === 'undefined' || !window.gtag) return;
+  if (isPublicPassportPath(path) || typeof window === 'undefined' || !window.gtag) return;
   window.gtag('event', 'page_view', {
     send_to: tagId,
     page_path: path,
