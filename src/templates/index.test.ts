@@ -86,8 +86,8 @@ describe("templates", () => {
   });
 
   describe("categoryList", () => {
-    it("has visible product categories (wine, toys, and other)", () => {
-      expect(categoryList.length).toBe(3);
+    it("has visible product categories (wine, toys, textiles, and other)", () => {
+      expect(categoryList.length).toBe(4);
     });
 
     it("each category has required properties", () => {
@@ -130,6 +130,7 @@ describe("templates", () => {
       const validCategories: ProductCategory[] = [
         "wine",
         "toys",
+        "textiles",
         "other",
       ];
 
