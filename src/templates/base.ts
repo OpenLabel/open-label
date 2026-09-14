@@ -117,6 +117,9 @@ export interface CategoryTemplate {
   icon: string;
   sections: TemplateSection[];
   getRequiredLogos?: (data: Record<string, unknown>) => string[];
+  getCompositionWarning?: (
+    data: Record<string, unknown>,
+  ) => { fieldId: string; message: string } | null;
 }
 
 export abstract class BaseTemplate implements CategoryTemplate {

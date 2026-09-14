@@ -255,6 +255,7 @@ export function CategoryQuestions({
   const { t } = useTranslation();
   const template = getTemplate(category);
   const isToys = category === 'toys';
+  const isTextiles = category === 'textiles';
 
   // Build the list of unfilled required fields (template-required + extras).
   // Hidden conditional fields (showWhen evaluating false) are excluded.
@@ -332,7 +333,7 @@ export function CategoryQuestions({
 
   // ---- Toys AI autofill: merge sanitized fields from edge function ----
   useEffect(() => {
-    if (!isToys) return;
+    if (!isToys && !isTextiles) return;
     const payload = data.__ai_autofill as Record<string, unknown> | undefined;
     if (!payload) return;
 
@@ -389,7 +390,7 @@ export function CategoryQuestions({
     delete (next as Record<string, unknown>).__ai_autofill;
     onChange(next);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data.__ai_autofill, isToys]);
+  }, [data.__ai_autofill, isToys, isTextiles]);
 
   const handleChange = (id: string, value: unknown) => {
     onChange({ ...data, [id]: value });
