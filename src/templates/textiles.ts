@@ -14,6 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
+import { SYNTHETIC_FIBER_IDS } from '@/data/knownFiberIds';
 import { BaseTemplate, TemplateSection } from './base';
 
 export class TextilesTemplate extends BaseTemplate {
@@ -811,7 +812,7 @@ export class TextilesTemplate extends BaseTemplate {
           warnWhen: {
             equals: [undefined, ''],
             message:
-              'Destruction of unsold apparel, footwear and accessories by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure.',
+              'Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure.',
           },
         },
         {
