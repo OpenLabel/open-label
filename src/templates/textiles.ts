@@ -27,12 +27,12 @@ export class TextilesTemplate extends BaseTemplate {
     {
       id: 'identity',
       title: 'Identity',
-      description: 'Product and item level identification plus the EU economic operator',
+      description: 'Product and item level identification',
       questions: [
         {
           id: 'show_advanced_fields',
           label:
-            'Show all fields (certifications detail, full supply chain, environmental footprint, durability testing, extended circularity)',
+            'Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)',
           type: 'checkbox',
           helpText:
             'Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record.',
@@ -109,7 +109,7 @@ export class TextilesTemplate extends BaseTemplate {
           type: 'text',
           required: true,
           badge: 'required',
-          placeholder: 'e.g., T-shirt, Sneaker, Belt',
+          placeholder: 'e.g., T-shirt, Jacket, Trousers',
         },
       ],
     },
@@ -376,7 +376,6 @@ export class TextilesTemplate extends BaseTemplate {
         },
         {
           id: 'svhc_declared',
-          showWhen: { field: 'show_advanced_fields', equals: true },
           label: 'REACH / SVHC substances present above 0.1% w/w?',
           type: 'checkbox',
           badge: 'where_applicable',
@@ -388,6 +387,31 @@ export class TextilesTemplate extends BaseTemplate {
           type: 'textarea',
           placeholder: 'Substance name, CAS number, concentration and component',
           showWhen: { field: 'svhc_declared', equals: true },
+        },
+        {
+          id: 'pfas_present',
+          label: 'Does this product contain intentionally added PFAS?',
+          type: 'select',
+          badge: 'where_applicable',
+          options: [
+            { value: 'yes', label: 'Yes' },
+            { value: 'no', label: 'No' },
+            { value: 'unknown', label: 'Unknown' },
+          ],
+          helpText:
+            'France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.',
+          warnWhen: {
+            equals: ['yes', 'unknown'],
+            message:
+              'Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An "Unknown" answer must be resolved with the supplier before selling in France.',
+          },
+        },
+        {
+          id: 'pfas_details',
+          label: 'Which components and which substances',
+          type: 'textarea',
+          showWhen: { field: 'pfas_present', equals: 'yes' },
+          placeholder: 'e.g., DWR finish on outer shell — PFHxA',
         },
         {
           id: 'rsl_compliance_status',
