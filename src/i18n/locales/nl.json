@@ -1818,5 +1818,9 @@
         "other": "Other"
       }
     }
+  },
+  "demo": {
+    "banner": "Demopaspoort. Alle gegevens zijn fictief.",
+    "cta": "Maak uw eigen paspoort"
   }
 }

@@ -1818,5 +1818,9 @@
         "other": "Egyéb"
       }
     }
+  },
+  "demo": {
+    "banner": "Bemutató útlevél. Minden adat fiktív.",
+    "cta": "Készítse el saját útlevelét"
   }
 }

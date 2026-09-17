@@ -1818,5 +1818,9 @@
         "other": "Andere"
       }
     }
+  },
+  "demo": {
+    "banner": "Demo-Pass. Alle Daten sind fiktiv.",
+    "cta": "Erstellen Sie Ihren eigenen Pass"
   }
 }

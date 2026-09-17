@@ -24,6 +24,12 @@ describe('isTrackingExemptPath', () => {
     expect(isTrackingExemptPath('/p')).toBe(true);
   });
 
+  it('exempts the demo passport view', () => {
+    expect(isTrackingExemptPath('/demo')).toBe(true);
+    expect(isTrackingExemptPath('/demo/wine')).toBe(true);
+    expect(isTrackingExemptPath('/demo/textiles')).toBe(true);
+  });
+
   it('does not exempt other routes', () => {
     for (const path of ['/', '/auth', '/dashboard', '/cypheme/passport', '/privacy-policy', '/passport/new']) {
       expect(isTrackingExemptPath(path)).toBe(false);

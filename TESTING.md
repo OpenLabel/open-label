@@ -25,18 +25,31 @@ Legend:
 - `/legal-mentions` — must render the 404 / NotFound page (route removed).
 
 ### 1.3 Public passport — `/p/:slug` [public]
-1. Open the demo passport: `/p/de00000000000001` (Chateau Example 2022, wine).
+1. Open a published wine passport of your own: `/p/<slug>`.
 2. Verify: product name, wine fields, ingredients (allergens in bold), nutrition table, recycling materials, and the mandatory **"Powered by Open-Label.eu"** attribution.
-3. Language override: `/p/de00000000000001?lang=it` — entire page (including safety/chemical sections and allergen declarations) must be Italian, no English leaks. Repeat with `?lang=zh-CN` and one other EU language.
+3. Language override: `/p/<slug>?lang=it` — entire page (including safety/chemical sections and allergen declarations) must be Italian, no English leaks. Repeat with `?lang=zh-CN` and one other EU language.
 4. Invalid slug (e.g. `/p/0000000000000000`): friendly not-found state, no stack trace.
 5. Rate limiting: refresh rapidly ~30+ times; the public-data endpoint should eventually return a rate-limit error rather than data.
-6. **No tracking, no cookie banner (hard regulatory requirement)** — with a fresh browser profile, from an EEA/UK/CH location (or with the country trace forced to `FR`), load `/p/de00000000000001` and verify ALL of the following:
+6. **No tracking, no cookie banner (hard regulatory requirement)** — with a fresh browser profile, from an EEA/UK/CH location (or with the country trace forced to `FR`), load `/p/<slug>` and verify ALL of the following:
    - No cookie/consent banner and no "Cookie settings" button appear, at any moment.
    - Network tab: no request to `googletagmanager.com`, no `gtag/js`, no `google-analytics`, no `/cdn-cgi/trace` country lookup.
    - Console: `window.gtag` and `window.dataLayer` are `undefined` on a direct load of the passport page.
    - Application tab: no advertising/analytics cookie or storage entry is created (`openlabel_ads_consent` must not be written).
    - Client-side navigation: from `/p/:slug`, no `page_view` or conversion is sent; navigating to `/` afterwards may load tracking normally, and returning to `/p/:slug` must send nothing further for that route.
    - This applies to every published passport URL, in every language and on mobile.
+
+### 1.3b Demo passports — `/demo` [public]
+1. `/demo` redirects to `/demo/wine`. An unknown or unsampled category (e.g. `/demo/batteries`) also redirects to `/demo/wine`.
+2. One tab per active, sampled category (wine, toys, apparel), in `categoryList` order, each with its icon and translated label. Clicking a tab changes the URL and the rendered passport.
+3. The slim banner reads "Demo passport. All data is fictitious." in the selected language, with a "Create your own passport" button linking to `/auth`.
+4. The passport below the banner renders through the same public components as `/p/:slug`.
+5. Nothing is fetched from the backend: no request to the database or to `get-public-passport`.
+6. Same hard tracking requirement as section 1.3 item 6 — no tag, no `page_view`, no cookie banner on `/demo/*`.
+
+**Demo passports (maintenance).** The demo data lives in `src/data/samples/`, one file per category, registered in `src/data/samples/index.ts`.
+- To add a sample for a new category: create `src/data/samples/<category>.ts` exporting `buildSample<Category>Passport(): PassportFormData` with fictitious data, `.example` domains for every URL and email, and a description stating the data is fictitious; then register it in `SAMPLE_PASSPORTS`.
+- Switching a `categoryList` entry to `status: 'active'` without adding a sample fails `src/data/samples/samples.test.ts` with "Category X is active but has no demo sample in src/data/samples".
+- **Any template change must be accompanied by a sample update, or the suite goes red**: the sample tests assert that every visible required question is filled, that every select / multi_select value exists in the template, and that no unknown key is present in `category_data`.
 
 ### 1.4 Cypheme landing page — `/cypheme/passport` [public]
 1. Verify the isolated Cypheme design system (Roboto/Inter, brand orange/blue, 16px radius buttons) and that global app styles don't bleed in.

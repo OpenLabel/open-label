@@ -1818,5 +1818,9 @@
         "other": "Other"
       }
     }
+  },
+  "demo": {
+    "banner": "Ukážkový pas. Všetky údaje sú fiktívne.",
+    "cta": "Vytvorte si vlastný pas"
   }
 }

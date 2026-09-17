@@ -1818,5 +1818,9 @@
         "other": "Andet"
       }
     }
+  },
+  "demo": {
+    "banner": "Demopas. Alle data er fiktive.",
+    "cta": "Opret dit eget pas"
   }
 }

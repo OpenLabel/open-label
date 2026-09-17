@@ -1818,5 +1818,9 @@
         "other": "Muu"
       }
     }
+  },
+  "demo": {
+    "banner": "Näidispass. Kõik andmed on väljamõeldud.",
+    "cta": "Loo oma pass"
   }
 }

@@ -117,7 +117,7 @@ export default function Index() {
               </Link>
             </Button>
             <Button size="lg" variant="outline" className="text-lg px-8 py-6" asChild>
-              <Link to="/p/de00000000000001">{t('landing.hero.demo')}</Link>
+              <Link to="/demo">{t('landing.hero.demo')}</Link>
             </Button>
           </div>
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground">

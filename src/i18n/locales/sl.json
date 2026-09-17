@@ -1818,5 +1818,9 @@
         "other": "Other"
       }
     }
+  },
+  "demo": {
+    "banner": "Predstavitveni potni list. Vsi podatki so izmišljeni.",
+    "cta": "Ustvarite svoj potni list"
   }
 }

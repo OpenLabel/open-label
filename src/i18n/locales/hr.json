@@ -1818,5 +1818,9 @@
         "other": "Ostalo"
       }
     }
+  },
+  "demo": {
+    "banner": "Demo putovnica. Svi su podaci izmišljeni.",
+    "cta": "Izradite vlastitu putovnicu"
   }
 }

@@ -1818,5 +1818,9 @@
         "other": "Muu"
       }
     }
+  },
+  "demo": {
+    "banner": "Esittelypassi. Kaikki tiedot ovat kuvitteellisia.",
+    "cta": "Luo oma passi"
   }
 }

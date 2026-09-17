@@ -44,6 +44,7 @@ import ReferralLeaderboard from "./pages/ReferralLeaderboard";
 import AdminLeaderboard from "./pages/AdminLeaderboard";
 import Admin from "./pages/Admin";
 import CyphemePassport from "./pages/CyphemePassport";
+import Demo from "./pages/Demo";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
@@ -89,6 +90,8 @@ function AppRoutes() {
         <Route path="/auth" element={<Auth />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/p/:slug" element={<PublicPassport />} />
+        <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
+        <Route path="/demo/:category" element={<Demo />} />
         <Route path="/referral/:code" element={<ReferralStats />} />
         <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
         <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />
@@ -110,6 +113,8 @@ function AppRoutes() {
       <Route path="/passport/new" element={<PassportForm />} />
       <Route path="/passport/:id/edit" element={<PassportForm />} />
       <Route path="/p/:slug" element={<PublicPassport />} />
+      <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
+      <Route path="/demo/:category" element={<Demo />} />
       <Route path="/referral/:code" element={<ReferralStats />} />
       <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
       <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />

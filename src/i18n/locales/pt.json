@@ -1818,5 +1818,9 @@
         "other": "Other"
       }
     }
+  },
+  "demo": {
+    "banner": "Passaporte de demonstração. Todos os dados são fictícios.",
+    "cta": "Crie o seu próprio passaporte"
   }
 }
