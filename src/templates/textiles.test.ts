@@ -8,6 +8,45 @@ describe('TextilesTemplate', () => {
     expect(textilesTemplate.icon).toBe('👕');
   });
 
+  describe('primary_fiber options', () => {
+    const options =
+      textilesTemplate.sections
+        .flatMap((s) => s.questions)
+        .find((q) => q.id === 'primary_fiber')?.options ?? [];
+
+    it('uses official EU fibre names without brand or US trade names', () => {
+      expect(options.length).toBeGreaterThan(0);
+      for (const o of options) {
+        for (const brand of ['Rayon', 'Tencel', 'Spandex', 'Nylon']) {
+          expect(o.label).not.toContain(brand);
+        }
+      }
+    });
+
+    it('does not offer leather (not a textile fibre)', () => {
+      expect(options.map((o) => o.value)).not.toContain('leather');
+    });
+
+    it('lists modal and cashmere as distinct fibres', () => {
+      const values = options.map((o) => o.value);
+      expect(values).toContain('modal');
+      expect(values).toContain('cashmere');
+    });
+
+    it('keeps legacy values stable while relabelling to EU names', () => {
+      expect(options.find((o) => o.value === 'nylon')?.label).toBe('Polyamide');
+      expect(options.find((o) => o.value === 'viscose')?.label).toBe('Viscose');
+      expect(options.find((o) => o.value === 'lyocell')?.label).toBe('Lyocell');
+      expect(options.find((o) => o.value === 'elastane')?.label).toBe('Elastane');
+      expect(options.find((o) => o.value === 'linen')?.label).toBe('Linen (Flax)');
+    });
+
+    it('has unique option values', () => {
+      const values = options.map((o) => o.value);
+      expect(new Set(values).size).toBe(values.length);
+    });
+  });
+
   it('is an instance of TextilesTemplate', () => {
     expect(textilesTemplate).toBeInstanceOf(TextilesTemplate);
   });
