@@ -43,7 +43,7 @@ const PROTECTED = [
 ] as const;
 
 const FORBIDDEN_FIBRE_TERMS = /\b(?:rayon|tencel|spandex|nylon)\b/i;
-const CHUNK_SIZE = 36;
+const CHUNK_SIZE = 288;
 
 type Tree = Record<string, any>;
 
@@ -148,7 +148,7 @@ ${JSON.stringify(masked)}`;
       model: 'google/gemini-2.5-pro',
       messages: [{ role: 'user', content: prompt }],
       temperature: 0.1,
-      max_tokens: 12000,
+      max_tokens: 30000,
     }),
   });
   if (!response.ok) throw new Error(`AI gateway ${response.status}: ${(await response.text()).slice(0, 300)}`);
@@ -205,7 +205,10 @@ async function main(): Promise<void> {
   }
   const english = flatten(load('en').textiles);
   if (Object.keys(english).length !== 288) throw new Error(`Expected 288 English Apparel values, found ${Object.keys(english).length}`);
-  for (const code of targets) await translateLocale(code, english);
+  const batchSize = 4;
+  for (let i = 0; i < targets.length; i += batchSize) {
+    await Promise.all(targets.slice(i, i + batchSize).map((code) => translateLocale(code, english)));
+  }
 }
 
 main().catch((error) => {
