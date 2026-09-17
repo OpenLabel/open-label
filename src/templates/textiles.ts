@@ -976,6 +976,8 @@ export class TextilesTemplate extends BaseTemplate {
     return logos;
   }
 
+  // TODO(i18n): these messages are built at runtime with interpolated numbers
+  // and are NOT yet translated. They are keyed in a later step.
   getInlineWarnings(
     data: Record<string, unknown>,
   ): { fieldId: string; message: string }[] {
