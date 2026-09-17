@@ -626,6 +626,9 @@ export function CategoryQuestions({
     return <div className="space-y-6" />;
   }
 
+  // Cross-field warnings supplied by the template (optional per template).
+  const inlineWarnings = template.getInlineWarnings?.(data) ?? [];
+
   // ---- Toys-specific warnings ----
   const toyWarnings: string[] = [];
   if (isToys) {
