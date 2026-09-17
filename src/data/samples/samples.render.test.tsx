@@ -23,6 +23,17 @@ vi.mock('react-i18next', () => ({
   initReactI18next: { type: '3rdParty', init: vi.fn() },
 }));
 
+vi.mock('@/hooks/useSiteConfig', () => ({
+  useSiteConfig: () => ({
+    config: { company_name: 'Test', setup_complete: true, site_url: '' },
+    loading: false,
+    isSetupRequired: false,
+    refetch: vi.fn(),
+    saveConfig: vi.fn(),
+  }),
+  SiteConfigProvider: ({ children }: any) => children,
+}));
+
 vi.mock('@/integrations/supabase/client', () => ({
   supabase: {
     auth: {
