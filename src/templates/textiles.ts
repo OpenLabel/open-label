@@ -14,6 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
+import { SYNTHETIC_FIBER_IDS } from '@/data/knownFiberIds';
 import { BaseTemplate, TemplateSection } from './base';
 
 export class TextilesTemplate extends BaseTemplate {
@@ -27,12 +28,12 @@ export class TextilesTemplate extends BaseTemplate {
     {
       id: 'identity',
       title: 'Identity',
-      description: 'Product and item level identification plus the EU economic operator',
+      description: 'Product and item level identification',
       questions: [
         {
           id: 'show_advanced_fields',
           label:
-            'Show all fields (certifications detail, full supply chain, environmental footprint, durability testing, extended circularity)',
+            'Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)',
           type: 'checkbox',
           helpText:
             'Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record.',
@@ -109,7 +110,7 @@ export class TextilesTemplate extends BaseTemplate {
           type: 'text',
           required: true,
           badge: 'required',
-          placeholder: 'e.g., T-shirt, Sneaker, Belt',
+          placeholder: 'e.g., T-shirt, Jacket, Trousers',
         },
       ],
     },
@@ -376,7 +377,6 @@ export class TextilesTemplate extends BaseTemplate {
         },
         {
           id: 'svhc_declared',
-          showWhen: { field: 'show_advanced_fields', equals: true },
           label: 'REACH / SVHC substances present above 0.1% w/w?',
           type: 'checkbox',
           badge: 'where_applicable',
@@ -388,6 +388,31 @@ export class TextilesTemplate extends BaseTemplate {
           type: 'textarea',
           placeholder: 'Substance name, CAS number, concentration and component',
           showWhen: { field: 'svhc_declared', equals: true },
+        },
+        {
+          id: 'pfas_present',
+          label: 'Does this product contain intentionally added PFAS?',
+          type: 'select',
+          badge: 'where_applicable',
+          options: [
+            { value: 'yes', label: 'Yes' },
+            { value: 'no', label: 'No' },
+            { value: 'unknown', label: 'Unknown' },
+          ],
+          helpText:
+            'France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.',
+          warnWhen: {
+            equals: ['yes', 'unknown'],
+            message:
+              'Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An "Unknown" answer must be resolved with the supplier before selling in France.',
+          },
+        },
+        {
+          id: 'pfas_details',
+          label: 'Which components and which substances',
+          type: 'textarea',
+          showWhen: { field: 'pfas_present', equals: 'yes' },
+          placeholder: 'e.g., DWR finish on outer shell — PFHxA',
         },
         {
           id: 'rsl_compliance_status',
@@ -448,13 +473,11 @@ export class TextilesTemplate extends BaseTemplate {
         },
         {
           id: 'country_spinning_weaving',
-          showWhen: { field: 'show_advanced_fields', equals: true },
           label: 'Country of Spinning / Weaving',
           type: 'text',
         },
         {
           id: 'country_dyeing_finishing',
-          showWhen: { field: 'show_advanced_fields', equals: true },
           label: 'Country of Dyeing / Finishing',
           type: 'text',
         },
@@ -789,7 +812,7 @@ export class TextilesTemplate extends BaseTemplate {
           warnWhen: {
             equals: [undefined, ''],
             message:
-              'Destruction of unsold apparel, footwear and accessories by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure.',
+              'Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure.',
           },
         },
         {
@@ -905,9 +928,11 @@ export class TextilesTemplate extends BaseTemplate {
     return logos;
   }
 
-  getCompositionWarning(
+  getInlineWarnings(
     data: Record<string, unknown>,
-  ): { fieldId: string; message: string } | null {
+  ): { fieldId: string; message: string }[] {
+    const warnings: { fieldId: string; message: string }[] = [];
+
     const toNumber = (value: unknown): number | undefined => {
       if (value === undefined || value === null || value === '')
         return undefined;
@@ -916,25 +941,60 @@ export class TextilesTemplate extends BaseTemplate {
     };
 
     const primary = toNumber(data.primary_fiber_percentage);
-    if (primary === undefined) return null;
+    if (primary === undefined) return warnings;
     const secondary = toNumber(data.secondary_fiber_percentage);
     const sum = primary + (secondary ?? 0);
 
     if (sum > 100.5) {
-      return {
+      warnings.push({
         fieldId: 'secondary_fiber_percentage',
         message: `Primary (${primary}%) and secondary (${secondary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
-      };
+      });
     }
 
     if (secondary === undefined && primary < 95) {
-      return {
+      warnings.push({
         fieldId: 'primary_fiber_percentage',
         message: `Primary fiber is declared at ${primary}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.`,
-      };
+      });
     }
 
-    return null;
+    // --- Synthetic fibre share (microplastic shedding) ---
+    const SYNTHETIC_WORDS = [
+      'polyester',
+      'polyamide',
+      'nylon',
+      'elastane',
+      'acrylic',
+      'polypropylene',
+    ];
+    const isSyntheticText = (value: unknown): boolean => {
+      if (typeof value !== 'string') return false;
+      const v = value.trim().toLowerCase();
+      if (!v) return false;
+      if ((SYNTHETIC_FIBER_IDS as readonly string[]).includes(v)) return true;
+      return SYNTHETIC_WORDS.some((w) => v.includes(w));
+    };
+
+    let syntheticPercentage = 0;
+    if (
+      typeof data.primary_fiber === 'string' &&
+      (SYNTHETIC_FIBER_IDS as readonly string[]).includes(data.primary_fiber)
+    ) {
+      syntheticPercentage += primary;
+    }
+    if (isSyntheticText(data.secondary_fiber)) {
+      syntheticPercentage += secondary ?? 0;
+    }
+
+    if (syntheticPercentage > 50) {
+      warnings.push({
+        fieldId: 'microplastic_shedding',
+        message: `This garment is ${syntheticPercentage}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this.`,
+      });
+    }
+
+    return warnings;
   }
 }
 
