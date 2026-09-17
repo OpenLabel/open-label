@@ -56,6 +56,8 @@ export function ConsentBanner() {
     setDecided(true);
   }, []);
 
+  if (exempt) return null;
+
   if (!regulated) return null;
 
   if (decided) {
