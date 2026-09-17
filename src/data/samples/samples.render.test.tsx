@@ -92,6 +92,7 @@ describe('Demo page', () => {
       expect(screen.getByText(getSamplePassport('toys')!().name)).toBeInTheDocument(),
     );
     expect(screen.queryByText(/Chateau Example 2022/)).not.toBeInTheDocument();
+    expect(screen.getByTestId('location')).toHaveTextContent('/demo/toys');
   });
 
   it('redirects an unknown category to wine', async () => {
