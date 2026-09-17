@@ -44,6 +44,7 @@ import ReferralLeaderboard from "./pages/ReferralLeaderboard";
 import AdminLeaderboard from "./pages/AdminLeaderboard";
 import Admin from "./pages/Admin";
 import CyphemePassport from "./pages/CyphemePassport";
+import Demo from "./pages/Demo";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();

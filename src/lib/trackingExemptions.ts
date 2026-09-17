@@ -23,7 +23,7 @@
  *
  * This is a hard requirement — do not add exceptions.
  */
-export const TRACKING_EXEMPT_PATH_PREFIXES = ['/p/', '/demo'] as const;
+export const TRACKING_EXEMPT_PATH_PREFIXES = ['/p/', '/demo/'] as const;
 
 /** True when the given pathname must load no tracking and show no consent UI. */
 export function isTrackingExemptPath(pathname: string | null | undefined): boolean {
