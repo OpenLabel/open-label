@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Identità",
+        "description": "Identifikazzjoni fil-livell tal-prodott u tal-oġġett"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Min hu responsabbli",
+        "description": "Manifattur, importatur u persuna responsabbli fl-UE, miżmuma bħala tliet partijiet separati"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Materjali u Kompożizzjoni",
+        "description": "Tikkettar obbligatorju tal-kontenut tal-fibra skont ir-Regolament tal-UE 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Ċertifikazzjonijiet",
+        "description": "Liema ċertifikazzjonijiet għandu dan l-oġġett, u kif tivverifika kull dikjarazzjoni."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Vjaġġ fil-Katina tal-Provvista",
+        "description": "Pajjiż ta’ kull stadju tal-produzzjoni flimkien mal-fabbrika tal-Livell 1 u l-istatus tal-awditjar"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Impronta Ambjentali",
+        "description": "Ċifri ambjentali b’metodu ta’ kalkolu ddikjarat"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Durabbiltà u Ttestjar",
+        "description": "Riżultati mkejla tad-durabbiltà. L-att delegat mistenni dwar it-tessuti taħt ESPR huwa antiċipat li jiffoka fuq il-metriċi tad-durabbiltà, għalhekk irreġistra riżultati reali tat-testijiet minflok punteġġi soġġettivi."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Ċirkolarità u Tmiem tal-Ħajja",
+        "description": "Informazzjoni dwar il-kura, it-tiswija, it-teħid lura u r-riċiklabbiltà"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Reġistru tad-Disponiment",
+        "description": "Jappoġġja l-projbizzjoni ta’ ESPR fuq il-qerda ta’ oġġetti tal-konsumatur mhux mibjugħa, li tapplika għal kumpaniji kbar mid-19 ta’ Lulju 2026 u teħtieġ iż-żamma tar-rekords u d-divulgazzjoni"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Sostanzjazzjoni ta’ Dikjarazzjonijiet Ekoloġiċi",
+        "description": "Jappoġġja d-Direttiva dwar l-Għoti tas-Setgħa lill-Konsumaturi (EU) 2024/825, li tapplika mis-27 ta’ Settembru 2026"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Awtentikazzjoni",
+        "description": "Karatteristiċi kontra l-falsifikazzjoni marbuta ma’ dan l-oġġett"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Uri l-oqsma kollha (dettall taċ-ċertifikazzjonijiet, fabbrika tal-Livell 1 u status tal-awditjar, impronta ambjentali, ittestjar tad-durabbiltà, ċirkolarità estiża)",
+        "help": "Il-biċċa l-kbira tal-marki jeħtieġu biss l-oqsma ta’ hawn taħt. Ixgħel din l-għażla jekk għandek riżultati tat-testijiet tal-laboratorju, data LCA, jew traċċabbiltà dettaljata tal-katina tal-provvista biex tirreġistra."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Numru tal-oġġett kummerċjali li jidentifika l-SKU.",
+        "placeholder": "eż., 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Identifikatur Uniku għal kull Oġġett",
+        "help": "Jidentifika dan l-oġġett fiżiku individwali, mhux l-SKU. L-identifikaturi għal kull oġġett huma dawk li jippermettu l-bejgħ mill-ġdid, it-trasferiment tas-sjieda u l-awtentikazzjoni matul il-ħajja tal-prodott.",
+        "placeholder": "eż., DPP-2026-000184213",
+        "warn": "Open Label ma jassenjax dan l-identifikatur għalik. Il-marki għandhom jibnu s-sistema ta’ identifikazzjoni tagħhom stess għal kull oġġett — eż. tikketti serjalizzati RFID/NFC, skema ta’ numerazzjoni tal-linja tal-produzzjoni, jew serjali eżistenti tal-ERP — u jdaħħlu dak il-valur hawn."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Referenza tal-Istil / Mudell",
+        "help": "Ir-Regolament (EU) 2023/988 (GPSR) jeħtieġ identifikatur tal-prodott tat-tip, tal-lott jew tan-numru tas-serje flimkien mal-isem u l-indirizz tal-manifattur. Dan huwa l-identifikatur għat-tip/lott tal-prodott — mhuwiex sostitut għall-identifikatur għal kull oġġett ta’ hawn fuq.",
+        "placeholder": "eż., Qmis Oxford ST-4412"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Kulur",
+        "placeholder": "eż., Indigo / Ekru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Daqs",
+        "placeholder": "eż., M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Piż tal-Prodott (grammi)",
+        "help": "Piż nett tal-oġġett, użat għat-tbaħħir u r-rappurtar tal-intensità tal-materjal.",
+        "placeholder": "eż., 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Lott jew Lott tal-Produzzjoni",
+        "placeholder": "eż., LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Isem tal-Marka"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Tip ta’ Prodott",
+        "placeholder": "eż., T-shirt, Ġakketta, Qliezet"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Isem legali tal-manifattur",
+        "help": "Ir-Regolament (EU) 2023/988 (GPSR) jeħtieġ li l-isem tal-manifattur, l-indirizz postali u l-indirizz elettroniku jingħataw fuq il-prodott jew l-imballaġġ tiegħu."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Indirizz tat-triq"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Kodiċi postali"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Belt"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Pajjiż"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Indirizz elettroniku (email)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Il-manifattur huwa stabbilit barra l-UE?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Isem legali tal-importatur",
+        "help": "Meta l-manifattur ikun stabbilit barra l-UE, l-isem tal-importatur, l-indirizz postali u l-indirizz elettroniku għandhom jingħataw ukoll."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Indirizz tat-triq"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Kodiċi postali"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Belt"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Pajjiż"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Indirizz elettroniku (email)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Persuna responsabbli fl-UE — isem legali",
+        "help": "Il-persuna responsabbli fl-UE skont l-Artikolu 4 tar-Regolament (EU) 2019/1020 hija rwol separat mill-manifattur u l-importatur, anke meta l-istess kumpanija twettaq aktar minn wieħed minnhom."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Persuna responsabbli fl-UE — indirizz",
+        "placeholder": "Indirizz reġistrat ġewwa l-Unjoni Ewropea"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Persuna responsabbli fl-UE — indirizz elettroniku (email)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Tip ta’ Fibra Primarja"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Perċentwal tal-Fibra Primarja (%)",
+        "placeholder": "eż., 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Tip ta’ Fibra Sekondarja (jekk applikabbli)",
+        "placeholder": "eż., Elastan"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Perċentwal tal-Fibra Sekondarja (%)",
+        "placeholder": "eż., 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Dikjarazzjoni Sħiħa tal-Kompożizzjoni",
+        "placeholder": "eż., 80% Qoton, 15% Poliester, 5% Elastan"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Fih partijiet mhux tat-tessut li joriġinaw mill-annimali",
+        "help": "Ir-Regolament tal-UE 1007/2011 jeħtieġ li dan jiġi ddikjarat fuq it-tikketta meta prodott ikun fih partijiet mhux tat-tessut li joriġinaw mill-annimali, bħal irqajja’ tal-ġilda, trimm tal-fer, buttuni tal-qarn jew tal-għadam."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Liema partijiet, u minn liema annimal",
+        "placeholder": "eż., Irqajja’ tal-ġilda fuq il-minkeb (bovini); buttuni tal-qarn (buflu)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Kompożizzjoni fil-Livell tal-Komponenti",
+        "help": "Iddikjara l-qoxra ta’ barra, il-kisja u t-trimm separatament sabiex kull komponent ikun jista’ jiġi vvalutat għar-riċiklaġġ.",
+        "placeholder": "Qoxra ta’ barra: 100% Qoton\nKisja: 100% Visk\nTrimm: Żipp tal-poliester, buttuni tar-ram isfar"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Perċentwal Totali tal-Kontenut Riċiklat (%)",
+        "placeholder": "eż., 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Kontenut Riċiklat ta’ Qabel il-Konsum (%)",
+        "help": "Skart tal-produzzjoni rkuprat qabel ma jasal għand konsumatur.",
+        "placeholder": "eż., 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Kontenut Riċiklat ta’ Wara l-Konsum (%)",
+        "help": "Materjal irkuprat minn prodotti li waslu għand l-utenti finali.",
+        "placeholder": "eż., 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Fih fibri sintetiċi li jarmu mikroplastiċi?",
+        "help": "Il-liġi Franċiża AGEC teħtieġ li l-konsumaturi jiġu infurmati meta libsa tirrilaxxa fibri mikroplastiċi waqt il-ħasil."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Sustanzi REACH / SVHC preżenti ’l fuq minn 0.1% w/w?",
+        "help": "Sustanzi ta’ Tħassib Għoli Ħafna skont ir-Regolament (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Dettalji tas-Sustanza SVHC",
+        "placeholder": "Isem tas-sustanza, numru CAS, konċentrazzjoni u komponent"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Dan il-prodott fih PFAS miżjuda intenzjonalment?",
+        "help": "Franza tipprojbixxi l-PFAS fil-ħwejjeġ, ix-xedd tas-saqajn u l-aġenti tal-impermeabilizzazzjoni mill-1 ta’ Jannar 2026 taħt il-Liġi 2025-188. L-PFAS jinsabu komunement f’finituri reżistenti għall-ilma (DWR).",
+        "warn": "It-tqegħid ta’ lbies li fih PFAS miżjuda intenzjonalment fis-suq Franċiż huwa pprojbit mill-1 ta’ Jannar 2026 taħt il-Liġi 2025-188. Risposta “Mhux magħruf” trid tiġi solvuta mal-fornitur qabel il-bejgħ fi Franza."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Liema komponenti u liema sustanzi",
+        "placeholder": "eż., finitura DWR fuq il-qoxra ta’ barra — PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Status ta’ Konformità mal-Lista ta’ Sustanzi Ristretti (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Ċertifikazzjonijiet Miżmuma"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Referenzi taċ-Ċertifikati",
+        "help": "Mis-27 ta’ Settembru 2026, id-Direttiva (EU) 2024/825 teħtieġ li tikketta ta’ sostenibbiltà tkun ibbażata fuq skema ta’ ċertifikazzjoni jew stabbilita minn awtorità pubblika. Ħalli vojt jekk ma jkunx hemm ċertifikazzjonijiet miżmuma hawn fuq.",
+        "placeholder": "Waħda għal kull linja, eż.\nGOTS — CU 123456 GOTS — jiskadi fit-2027-06-30\nOEKO-TEX — 21.HTR.12345 — jiskadi fit-2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Pajjiż tal-Produzzjoni tal-Fibra",
+        "placeholder": "Fejn il-fibra tkabbret jew ġiet prodotta"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Pajjiż tal-Għażil / Insiġ"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Pajjiż taż-Żebgħa / Finitura"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Pajjiż tal-Manifattura / Assemblaġġ",
+        "help": "L-istadju ddikjarat bħala l-pajjiż tal-oriġini fuq it-tikketta."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Magħmul fl-UE?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Isem tal-Fabbrika tal-Livell 1"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Indirizz tal-Fabbrika tal-Livell 1"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Status tal-Awditjar Soċjali / Ambjentali"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Ċertifikat tal-Awditjar (tella’)",
+        "help": "Miżmum għar-rekords interni tiegħek — qatt ma jiġi ppubblikat fuq il-passaport pubbliku."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Trasparenza sħiħa tal-katina tal-provvista disponibbli?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Impronta tal-Karbonju (kg CO2e)",
+        "placeholder": "Għal kull unità ta’ prodott"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Użu tal-Ilma (litri għal kull unità)",
+        "placeholder": "eż., 2700 għal t-shirt tal-qoton"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Metodu ta’ Kalkolu",
+        "help": "Ċifra mingħajr metodu ta’ kalkolu ddikjarat mhijiex dikjarazzjoni sostantiva taħt id-Direttiva dwar l-Għoti tas-Setgħa lill-Konsumaturi."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Rapport ta’ Appoġġ LCA (tella’)",
+        "help": "Miżmum għar-rekords interni tiegħek — qatt ma jiġi ppubblikat fuq il-passaport pubbliku."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Riżultat tar-Reżistenza għall-Formazzjoni ta’ Boċċi",
+        "help": "Standard tat-test: ISO 12945-2 (formazzjoni ta’ boċċi Martindale).",
+        "placeholder": "eż., Grad 4 wara 2000 togħrika"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Riżultat tas-Sodizza tal-Kulur għall-Ħasil",
+        "help": "Standard tat-test: ISO 105-C06.",
+        "placeholder": "eż., Grad 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Riżultat tas-Sodizza tal-Kulur għad-Dawl",
+        "help": "Standard tat-test: ISO 105-B02.",
+        "placeholder": "eż., Grad 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Riżultat tal-Istabbiltà Dimensjonali Wara l-Ħasil",
+        "help": "Standard tat-test: ISO 6330 b’kejl ISO 5077.",
+        "placeholder": "eż., -2% tul, -1% wisa’"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Riżultat tas-Saħħa tal-Ħjata",
+        "help": "Standard tat-test: ISO 13935-2 (metodu tal-qabda).",
+        "placeholder": "eż., 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Referenza tar-Rapport tat-Test",
+        "placeholder": "Isem tal-laboratorju u numru tar-rapport"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Rapport tat-Test (tella’)",
+        "help": "Miżmum għar-rekords interni tiegħek — qatt ma jiġi ppubblikat fuq il-passaport pubbliku."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Temperatura Massima tal-Ħasil"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Jista’ jitnixxef f’tumble dryer?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Jista’ jiġi mgħoddi?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Temperatura Massima tal-Mogħdija"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Simboli tal-Kura"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Istruzzjonijiet Addizzjonali tal-Kura",
+        "placeholder": "Kwalunkwe struzzjoni speċjali tal-kura"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Trimm żejda disponibbli għat-tiswija?",
+        "help": "Buttuni, żippijiet, kurduni u komponenti oħra li jistgħu jinbidlu."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL għall-Ibbukkjar tat-Tiswija",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Riċiklabbli fi tmiem il-ħajja?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Programm ta’ teħid lura disponibbli?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "Isem tal-Iskema tat-Teħid Lura u Numri ta’ Reġistrazzjoni EPR għal kull Suq",
+        "help": "In-numri ta’ reġistrazzjoni tar-Responsabbiltà Estiża tal-Produttur ivarjaw skont l-istat membru, għalhekk elenka linja waħda għal kull suq.",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Klassi tar-Riċiklabbiltà"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Noti dwar iż-Żarmar",
+        "placeholder": "Kif tissepara l-qoxra ta’ barra, il-kisja, it-trimm u l-ħardwer għar-riċiklaġġ"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Disponiment Attwali"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Kodiċi tar-Raġuni tal-Qerda",
+        "warn": "Il-qerda ta’ lbies mhux mibjugħ minn kumpaniji kbar hija ristretta mid-19 ta’ Lulju 2026 taħt l-ESPR u teħtieġ iż-żamma tar-rekords u d-divulgazzjoni pubblika."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Data tad-Disponiment",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Noti dwar id-Disponiment",
+        "placeholder": "Kwantità, rotta tal-immaniġġjar u kwalunkwe referenza ta’ awtorità kompetenti"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Dikjarazzjonijiet Ambjentali Magħmula fuq il-Prodott jew l-Imballaġġ",
+        "placeholder": "eż., \"Magħmul b’50% poliester riċiklat wara l-konsum (ċertifikat GRS)\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referenza tal-Evidenza tas-Sostanzjazzjoni",
+        "placeholder": "Studju, ċertifikat jew referenza tal-korp ta’ verifika għal kull dikjarazzjoni"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Evidenza tas-Sostanzjazzjoni (tella’)",
+        "help": "Miżmum għar-rekords interni tiegħek — qatt ma jiġi ppubblikat fuq il-passaport pubbliku."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Id-dikjarazzjonijiet jevitaw termini ambjentali ġeneriċi?",
+        "help": "Dikjarazzjonijiet ġeneriċi bħal \"favur l-ambjent\", \"konxju\" u \"newtrali f’termini ta’ karbonju permezz ta’ kumpens\" huma pprojbiti mis-27 ta’ Settembru 2026."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Karatteristika ta’ awtentikazzjoni preżenti?",
+        "help": "L-ilbies huwa fost l-aktar kategoriji ta’ prodotti ffalsifikati fl-UE, għalhekk l-awtentikazzjoni fil-livell tal-oġġett tipproteġi materjalment il-marka u x-xerrej."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Metodu ta’ Awtentikazzjoni"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "URL tal-Verifika",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Iva",
+        "no": "Le"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
+        "cotton": "Qoton",
+        "organic_cotton": "Qoton organiku",
+        "linen": "Kittien",
+        "hemp": "Qanneb",
+        "wool": "Suf",
+        "cashmere": "Kaxmir",
         "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "alpaca": "Alpaka",
         "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
+        "silk": "Ħarir",
+        "viscose": "Visk",
         "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "lyocell": "Lajoċell",
+        "acetate": "Aċetat",
+        "cupro": "Kupro",
+        "polyester": "Poliester",
+        "recycled_polyester": "Poliester riċiklat",
+        "nylon": "Poliammid",
+        "acrylic": "Akrilik",
+        "elastane": "Elastan",
+        "polypropylene": "Polipropilen",
+        "other": "Oħrajn"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Iva",
+        "no": "Le",
+        "unknown": "Mhux magħruf"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Konformi — verifikat permezz ta’ ttestjar",
+        "compliant_declared": "Konformi — dikjarazzjoni tal-fornitur biss",
+        "in_progress": "Valutazzjoni għaddejja",
+        "not_assessed": "Mhux ivvalutat"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Oħrajn"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI awditjat",
+        "sedex_smeta": "Sedex SMETA awditjat",
+        "sa8000": "SA8000 ċertifikat",
+        "wrap": "WRAP ċertifikat",
+        "brand_audit": "Awditjar immexxi mill-marka",
+        "not_audited": "Mhux awditjat"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Ilbies u Xedd tas-Saqajn",
         "iso_14067": "ISO 14067",
         "ghg_protocol": "GHG Protocol Product Standard",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Mudell intern"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Aħsel bl-idejn biss",
+        "dry_clean": "Dry clean biss"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Baxx (110°C)",
+        "medium": "Medju (150°C)",
+        "high": "Għoli (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Aħsel 30°C",
+        "wash_40": "Aħsel 40°C",
+        "wash_60": "Aħsel 60°C",
+        "hand_wash": "Aħsel bl-idejn",
+        "do_not_wash": "Taħsilx",
+        "bleach_allowed": "Ibbliċjar permess",
+        "non_chlorine_bleach": "Bliċ mingħajr kloru biss",
+        "do_not_bleach": "Tibbajdjax",
+        "tumble_dry_low": "Tumble dry b’sħana baxxa",
+        "tumble_dry_normal": "Tumble dry normali",
+        "do_not_tumble_dry": "Tużax tumble dryer",
+        "iron_low": "Għaddi b’temperatura baxxa",
+        "iron_medium": "Għaddi b’temperatura medja",
+        "iron_high": "Għaddi b’temperatura għolja",
+        "do_not_iron": "Tgħaddix",
+        "dry_clean_any": "Dry clean professjonali",
+        "dry_clean_petroleum": "Dry clean professjonali, solvent tal-petroleum biss",
+        "wet_clean": "Wet clean professjonali",
+        "do_not_dry_clean": "Tagħmilx dry clean"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Materjal wieħed — riċiklabbli minn fibra għal fibra",
+        "separable_blend": "Taħlita, komponenti separabbli",
+        "mechanical_only": "Riċiklaġġ mekkaniku biss",
+        "downcycle_only": "Downcycling biss",
+        "not_recyclable": "Mhux riċiklabbli bħalissa"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Għadu fl-istokk",
+        "sold": "Mibjugħ",
+        "donated": "Mogħti b’donazzjoni",
+        "recycled": "Riċiklat",
+        "remanufactured": "Rimanifatturat",
+        "destroyed": "Meqrud"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Saħħa u sigurtà",
+        "counterfeit_ip": "Falsifikazzjoni / ksur tal-IP",
+        "damaged_beyond_repair": "Ħsara li ma tissewwiex",
+        "donation_refused": "Donazzjoni rrifjutata wara li staqsejna tliet organizzazzjonijiet tal-ekonomija soċjali",
+        "protected_logo": "Logo protett ma jistax jitneħħa",
+        "unlawful_product": "Prodott irriżulta li kien illegali"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "Tikketta NFC",
+        "secure_qr": "Kodiċi QR sigur / serjalizzat",
+        "security_seal": "Siġill tas-sigurtà li juri t-tbagħbis",
+        "ai_fingerprint": "Impronta diġitali tal-immaġni bl-IA",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Oħrajn"
       }
     }
   }

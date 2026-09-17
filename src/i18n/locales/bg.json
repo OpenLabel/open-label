@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Идентичност",
+        "description": "Идентификация на ниво продукт и артикул"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Кой носи отговорност",
+        "description": "Производител, вносител и отговорно лице в ЕС, запазени като три отделни страни"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Материали и състав",
+        "description": "Задължително етикетиране на съдържанието на влакна съгласно Регламент (ЕС) 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Сертификати",
+        "description": "Какви сертификати притежава този артикул и как да се провери всяко твърдение."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Път по веригата на доставки",
+        "description": "Държава на всеки етап от производството плюс фабрика от ниво 1 и статус на одита"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Екологичен отпечатък",
+        "description": "Данни за околната среда с посочен метод на изчисление"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Дълготрайност и изпитване",
+        "description": "Измерени резултати за дълготрайност. Очаква се делегираният акт за текстила съгласно ESPR да се съсредоточи върху показателите за дълготрайност, така че записвайте реални резултати от изпитвания, а не субективни оценки."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Кръгова икономика и край на жизнения цикъл",
+        "description": "Информация за грижа, ремонт, обратно приемане и рециклируемост"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Запис за разпореждане",
+        "description": "Подкрепя забраната на ESPR за унищожаване на непродадени потребителски стоки, която се прилага за големи компании от 19 юли 2026 г. и изисква водене на документация и оповестяване"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Обосновка на екологични твърдения",
+        "description": "Подкрепя Директивата за предоставяне на повече права на потребителите (EU) 2024/825, която се прилага от 27 септември 2026 г."
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Удостоверяване на автентичност",
+        "description": "Функции против фалшифициране, свързани с този артикул"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Показване на всички полета (подробности за сертификати, фабрика от ниво 1 и статус на одита, екологичен отпечатък, изпитване за дълготрайност, разширена кръгова икономика)",
+        "help": "Повечето марки се нуждаят само от полетата по-долу. Включете тази опция, ако имате резултати от лабораторни изпитвания, данни по LCA или подробна проследимост на веригата на доставки за записване."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Номер на търговска единица, идентифициращ SKU.",
+        "placeholder": "напр. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Уникален идентификатор на артикул",
+        "help": "Идентифицира този отделен физически артикул, а не SKU. Идентификаторите на артикул са това, което позволява препродажба, прехвърляне на собственост и удостоверяване на автентичност през целия жизнен цикъл на продукта.",
+        "placeholder": "напр. DPP-2026-000184213",
+        "warn": "Open Label не присвоява този идентификатор вместо вас. Марките трябва да изградят своя собствена система за идентификация на артикули — напр. серийни етикети RFID/NFC, схема за номериране на производствената линия или съществуващ сериен номер от ERP — и да въведат тази стойност тук."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Референтен номер на стил / модел",
+        "help": "Регламент (EU) 2023/988 (GPSR) изисква идентификатор на продукта от тип, партида или сериен номер заедно с името и адреса на производителя. Това е идентификаторът за типа/партидата на продукта — той не замества уникалния идентификатор на артикул по-горе.",
+        "placeholder": "напр. риза Оксфорд ST-4412"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Цветова комбинация",
+        "placeholder": "напр. индиго / екрю"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Размер",
+        "placeholder": "напр. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Тегло на продукта (грамове)",
+        "help": "Нетно тегло на артикула, използвано за доставка и отчитане на интензивността на материалите.",
+        "placeholder": "напр. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Партида или производствен лот",
+        "placeholder": "напр. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Име на марката"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Вид на продукта",
+        "placeholder": "напр. тениска, яке, панталон"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Юридическо наименование на производителя",
+        "help": "Регламент (EU) 2023/988 (GPSR) изисква името, пощенският адрес и електронният адрес на производителя да бъдат посочени върху продукта или неговата опаковка."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Адрес (улица)"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Пощенски код"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Град"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Държава"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Електронен адрес (имейл)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Производителят установен ли е извън ЕС?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Юридическо наименование на вносителя",
+        "help": "Когато производителят е установен извън ЕС, трябва да бъдат посочени и името, пощенският адрес и електронният адрес на вносителя."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Адрес (улица)"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Пощенски код"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Град"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Държава"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Електронен адрес (имейл)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Отговорно лице в ЕС — юридическо наименование",
+        "help": "Отговорното лице в ЕС съгласно член 4 от Регламент (EU) 2019/1020 е отделна роля от тази на производителя и вносителя, дори когато едно и също дружество изпълнява повече от една от тях."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Отговорно лице в ЕС — адрес",
+        "placeholder": "Адрес на регистрация в рамките на Европейския съюз"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Отговорно лице в ЕС — електронен адрес (имейл)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Вид на основното влакно"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Процентно съдържание на основното влакно (%)",
+        "placeholder": "напр. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Вторичен вид влакно (ако е приложимо)",
+        "placeholder": "напр. еластан"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Процент на вторичното влакно (%)",
+        "placeholder": "напр. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Пълен състав",
+        "placeholder": "напр. 80% памук, 15% полиестер, 5% еластан"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Съдържа нетекстилни части от животински произход",
+        "help": "Регламент 1007/2011 на ЕС изисква това да бъде посочено на етикета, когато продуктът съдържа нетекстилни части от животински произход, като например кожени кръпки, гарнитура от кожа с косъм, копчета от рог или кост."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Кои части и от кое животно",
+        "placeholder": "напр. кожени кръпки на лактите (едър рогат добитък); копчета от рог (бивол)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Състав на ниво компонент",
+        "help": "Декларирайте външната част, подплатата и гарнитурите поотделно, така че всеки компонент да може да бъде оценен за рециклиране.",
+        "placeholder": "Външна част: 100% памук\nПодплата: 100% вискоза\nГарнитури: полиестерен цип, месингови копчета"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Общ процент на рециклирано съдържание (%)",
+        "placeholder": "напр. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Рециклирано съдържание преди употреба (%)",
+        "help": "Производствени отпадъци, оползотворени преди да достигнат до потребителя.",
+        "placeholder": "напр. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Рециклирано съдържание след употреба (%)",
+        "help": "Материал, възстановен от продукти, които са достигнали до крайните потребители.",
+        "placeholder": "напр. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Съдържа ли синтетични влакна, които отделят микропластмаса?",
+        "help": "Френският закон AGEC изисква потребителите да бъдат информирани, когато дадена дреха отделя микропластмасови влакна по време на пране."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Наличие на вещества REACH / SVHC над 0,1% тегловни?",
+        "help": "Вещества, пораждащи сериозно безпокойство, съгласно Регламент (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Подробности за веществото SVHC",
+        "placeholder": "Име на веществото, CAS номер, концентрация и компонент"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Съдържа ли този продукт умишлено добавени PFAS?",
+        "help": "Франция забранява PFAS в облеклото, обувките и хидроизолационните агенти от 1 януари 2026 г. съгласно Закон 2025-188. PFAS обикновено се срещат в трайни водоотблъскващи (DWR) покрития.",
+        "warn": "Пускането на френския пазар на облекло, съдържащо умишлено добавени PFAS, е забранено от 1 януари 2026 г. съгласно Закон 2025-188. Отговор „Неизвестно“ трябва да бъде изяснен с доставчика преди продажба във Франция."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Кои компоненти и кои вещества",
+        "placeholder": "напр. DWR покритие на външната част — PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Списък с ограничени за употреба вещества (RSL) — статус на съответствие"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Притежавани сертификати"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Референтни номера на сертификати",
+        "help": "От 27 септември 2026 г. Директива (EU) 2024/825 изисква етикетът за устойчивост да се основава на схема за сертифициране или да е установен от публичен орган. Оставете празно, ако не притежавате сертификати, посочени по-горе.",
+        "placeholder": "По един на ред, напр.\nGOTS — CU 123456 GOTS — изтича на 2027-06-30\nOEKO-TEX — 21.HTR.12345 — изтича на 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Държава на производство на влакната",
+        "placeholder": "Където влакното е отгледано или произведено"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Държава на предене / тъкане"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Държава на багрене / апретиране"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Държава на конфекциониране / сглобяване",
+        "help": "Етапът, деклариран като държава на произход върху етикета."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Произведено в ЕС?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Име на фабриката от първо ниво"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Адрес на фабриката от първо ниво"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Статус на социалния / екологичния одит"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Сертификат от одит (качване)",
+        "help": "Съхранява се за Ваша вътрешна документация — никога не се публикува в публичния паспорт."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Налична ли е пълна прозрачност на веригата на доставки?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Въглероден отпечатък (kg CO2e)",
+        "placeholder": "За единица продукт"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Разход на вода (литри за единица)",
+        "placeholder": "напр. 2700 за памучна тениска"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Метод на изчисление",
+        "help": "Данни без посочен метод на изчисление не представляват обосновано твърдение съгласно Директивата за овластяване на потребителите."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Подкрепящ доклад LCA (качване)",
+        "help": "Съхранява се за Ваша вътрешна документация — никога не се публикува в публичния паспорт."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Резултат от устойчивост на пилинг",
+        "help": "Стандарт на изпитване: ISO 12945-2 (пилинг по Martindale).",
+        "placeholder": "напр. степен 4 след 2000 цикъла на триене"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Резултат от устойчивост на цвета при пране",
+        "help": "Стандарт на изпитване: ISO 105-C06.",
+        "placeholder": "напр. степен 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Резултат от устойчивост на цвета на светлина",
+        "help": "Стандарт на изпитване: ISO 105-B02.",
+        "placeholder": "напр. степен 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Резултат от стабилност на размерите след пране",
+        "help": "Стандарт на изпитване: ISO 6330 с измерване по ISO 5077.",
+        "placeholder": "напр. -2% дължина, -1% ширина"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Резултат от здравина на шева",
+        "help": "Стандарт на изпитване: ISO 13935-2 (метод на захващане).",
+        "placeholder": "напр. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Референтен номер на протокола от изпитване",
+        "placeholder": "Име на лабораторията и номер на протокола"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Протокол от изпитване (качване)",
+        "help": "Съхранява се за Вашата вътрешна документация — никога не се публикува в публичния паспорт."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Максимална температура на пране"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Може ли да се суши в сушилня?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Може ли да се глади?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Максимална температура на гладене"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Символи за поддръжка"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Допълнителни инструкции за поддръжка",
+        "placeholder": "Всякакви специални инструкции за поддръжка"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Налични ли са резервни спомагателни материали за ремонт?",
+        "help": "Копчета, ципове, шнурове и други сменяеми компоненти."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL адрес за заявка на ремонт",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Подлежи ли на рециклиране в края на жизнения си цикъл?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Налична ли е програма за обратно приемане?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "Име на схемата за обратно приемане и регистрационни номера по EPR за всеки пазар",
+        "help": "Регистрационните номера по Разширена отговорност на производителя се различават за всяка държава членка, така че посочете по един ред за всеки пазар.",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Клас на рециклируемост"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Бележки относно разглобяването",
+        "placeholder": "Как да отделите външната част, подплатата, спомагателните материали и металните елементи за рециклиране"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Текущо разпореждане"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Код на причината за унищожаване",
+        "warn": "Унищожаването на непродадени облекла от големи компании е ограничено от 19 юли 2026 г. съгласно ESPR и изисква водене на документация и публично оповестяване."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Дата на разпореждане",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Бележки относно разпореждането",
+        "placeholder": "Количество, път на обработка и всяка референция от компетентен орган"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Екологични претенции, направени върху продукта или опаковката",
+        "placeholder": "напр. „Произведено с 50% рециклиран полиестер след употреба (сертифициран по GRS)“"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Референтен номер на доказателствата за обосноваване",
+        "placeholder": "Справка за проучване, сертификат или орган за проверка за всяка претенция"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Доказателства за обосноваване (качване)",
+        "help": "Съхранява се за Ваша вътрешна документация — никога не се публикува в публичния паспорт."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Твърденията избягват ли общи термини, свързани с околната среда?",
+        "help": "Общи твърдения като „екологосъобразен“, „съзнателен“ и „въглеродно неутрален чрез компенсиране“ са забранени от 27 септември 2026 г."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Наличен ли е елемент за удостоверяване на автентичността?",
+        "help": "Облеклото е сред най-фалшифицираните продуктови категории в ЕС, така че удостоверяването на автентичността на ниво артикул съществено защитава марката и купувача."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Метод за удостоверяване на автентичността"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "URL адрес за проверка",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Да",
+        "no": "Не"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "cotton": "памук",
+        "organic_cotton": "органичен памук",
+        "linen": "лен",
+        "hemp": "коноп",
+        "wool": "вълна",
+        "cashmere": "кашмир",
+        "mohair": "мохер",
+        "alpaca": "алпака",
+        "angora": "ангора",
+        "silk": "коприна",
+        "viscose": "вискоза",
+        "modal": "модал",
+        "lyocell": "лиосел",
+        "acetate": "ацетат",
+        "cupro": "купро",
+        "polyester": "полиестер",
+        "recycled_polyester": "рециклиран полиестер",
+        "nylon": "полиамид",
+        "acrylic": "акрил",
+        "elastane": "еластан",
+        "polypropylene": "полипропилен",
+        "other": "Други"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Да",
+        "no": "Не",
+        "unknown": "Неизвестно"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Съответства — проверено чрез изпитване",
+        "compliant_declared": "Съответстващо — само декларация от доставчика",
+        "in_progress": "Оценката е в ход",
+        "not_assessed": "Не е оценявано"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Други"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI одитиран",
+        "sedex_smeta": "Sedex SMETA одитиран",
+        "sa8000": "SA8000 сертифициран",
+        "wrap": "WRAP сертифициран",
+        "brand_audit": "Одит, воден от марката",
+        "not_audited": "Не е одитиран"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Облекло и обувки",
         "iso_14067": "ISO 14067",
-        "ghg_protocol": "GHG Protocol Product Standard",
+        "ghg_protocol": "Продуктов стандарт по Протокола за парниковите газове",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Вътрешен модел"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Само ръчно пране",
+        "dry_clean": "Само химическо чистене"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Ниска (110°C)",
+        "medium": "Средна (150°C)",
+        "high": "Висока (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Пране 30°C",
+        "wash_40": "Пране 40°C",
+        "wash_60": "Пране 60°C",
+        "hand_wash": "Ръчно пране",
+        "do_not_wash": "Да не се пере",
+        "bleach_allowed": "Позволено е избелване",
+        "non_chlorine_bleach": "Избелване само с препарати без хлор",
+        "do_not_bleach": "Да не се избелва",
+        "tumble_dry_low": "Сушене в сушилня при ниска температура",
+        "tumble_dry_normal": "Сушене в сушилня при нормална температура",
+        "do_not_tumble_dry": "Да не се суши в сушилня",
+        "iron_low": "Гладене при ниска температура",
+        "iron_medium": "Гладене при средна температура",
+        "iron_high": "Гладене при висока температура",
+        "do_not_iron": "Да не се глади",
+        "dry_clean_any": "Професионално химическо чистене",
+        "dry_clean_petroleum": "Професионално химическо чистене, само с петролни разтворители",
+        "wet_clean": "Професионално мокро почистване",
+        "do_not_dry_clean": "Да не се подлага на химическо чистене"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Еднороден материал — рециклируем от влакно до влакно",
+        "separable_blend": "Смес, отделими компоненти",
+        "mechanical_only": "Само механично рециклиране",
+        "downcycle_only": "Само рециклиране с понижаване на качеството",
+        "not_recyclable": "Понастоящем не подлежи на рециклиране"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Все още в наличност",
+        "sold": "Продадено",
+        "donated": "Дарено",
+        "recycled": "Рециклирано",
+        "remanufactured": "Преработено",
+        "destroyed": "Унищожено"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Здраве и безопасност",
+        "counterfeit_ip": "Фалшификат / Нарушение на интелектуалната собственост",
+        "damaged_beyond_repair": "Повредено без възможност за ремонт",
+        "donation_refused": "Дарението е отказано след запитване до три организации от социалната икономика",
+        "protected_logo": "Защитеното лого не може да бъде премахнато",
+        "unlawful_product": "Продуктът се оказа незаконен"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC таг",
+        "secure_qr": "Защитен / сериен QR код",
+        "security_seal": "Печат с индикация за нарушена цялост",
+        "ai_fingerprint": "Изобразителен отпечатък с изкуствен интелект",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Друго"
       }
     }
   }

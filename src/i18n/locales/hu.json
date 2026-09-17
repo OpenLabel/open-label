@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Azonosítás",
+        "description": "Termék- és cikkszintű azonosítás"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Ki a felelős",
+        "description": "Gyártó, importőr és uniós felelős személy, három különálló félként kezelve"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Anyagok és összetétel",
+        "description": "Kötelező szálösszetétel-címkézés a(z) 1007/2011 EU-rendelet szerint"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Tanúsítványok",
+        "description": "Milyen tanúsítványokkal rendelkezik ez a cikk, és hogyan ellenőrizhető az egyes állítások valódisága."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Ellátási lánc útja",
+        "description": "Az egyes gyártási szakaszok országa, valamint a Tier 1 besorolású gyár és az auditálás státusza"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Környezeti lábnyom",
+        "description": "Környezetvédelmi adatok a számítási módszer megjelölésével"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Tartósság és tesztelés",
+        "description": "Mért tartóssági eredmények. A(z) ESPR szerinti, várhatóan a textíliákra vonatkozó felhatalmazáson alapuló jogi aktus a tartóssági mutatókra fog összpontosítani, ezért szubjektív pontszámok helyett a tényleges vizsgálati eredményeket kell rögzíteni."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Körforgásosság és életciklus vége",
+        "description": "Kezelési, javítási, visszavételi és újrahasznosíthatósági információk"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Rendelkezési nyilvántartás",
+        "description": "Támogatja az eladatlan fogyasztási cikkek megsemmisítésének a(z) ESPR szerinti tilalmát, amely 2026. július 19-től a nagyvállalatokra vonatkozik, és nyilvántartási és közzétételi kötelezettséget ír elő"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Zöld állítások alátámasztása",
+        "description": "Támogatja a fogyasztók szerepének megerősítéséről szóló (EU) 2024/825 irányelvet, amely 2026. szeptember 27-től alkalmazandó"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Eredetiségigazolás",
+        "description": "Ehhez a cikkhez kapcsolódó hamisítás elleni jellemzők"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Összes mező megjelenítése (tanúsítványok részletei, Tier 1 besorolású gyár és auditálás státusza, környezeti lábnyom, tartóssági vizsgálat, kiterjesztett körforgásosság)",
+        "help": "A legtöbb márkának csak az alábbi mezőkre van szüksége. Kapcsolja be ezt a funkciót, ha laboratóriumi vizsgálati eredményekkel, LCA adatokkal vagy részletes ellátásilánc-nyomonkövethetőséggel rendelkezik, amelyeket rögzíteni szeretne."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "A készletezési egységet (SKU) azonosító kereskedelmi áruazonosító szám.",
+        "placeholder": "pl. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Egyedi cikkazonosító",
+        "help": "Ezt az egyedi fizikai cikket azonosítja, nem a készletezési egységet (SKU). Az egyedi cikkazonosítók teszik lehetővé az újraértékesítést, a tulajdonjog átruházását és az eredetiségigazolást a termék teljes élettartama alatt.",
+        "placeholder": "pl. DPP-2026-000184213",
+        "warn": "Az Open Label nem rendel Önnek ilyen azonosítót. A márkáknak ki kell építeniük a saját egyedi cikkazonosító rendszerüket – pl. sorozatszámmal ellátott RFID/NFC címkék, gyártósori számozási séma vagy egy meglévő vállalatirányítási (ERP) sorozatszám – és ezt az értéket kell itt megadniuk."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Stílus- / modellhivatkozás",
+        "help": "A(z) (EU) 2023/988 (GPSR) rendelet előírja a típus-, tétel- vagy sorozatszámot tartalmazó termékazonosító feltüntetését a gyártó neve és címe mellett. Ez a terméktípus/tétel azonosítója – nem helyettesíti a fenti egyedi cikkazonosítót.",
+        "placeholder": "pl. ST-4412 Oxford ing"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Színváltozat",
+        "placeholder": "pl. Indigó / Ekrü"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Méret",
+        "placeholder": "pl. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Termék súlya (gramm)",
+        "help": "A cikk nettó súlya, amelyet a szállításhoz és az anyagintenzitási jelentésekhez használnak.",
+        "placeholder": "pl. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Tétel vagy gyártási sorozat",
+        "placeholder": "pl. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Márkanév"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Terméktípus",
+        "placeholder": "pl. Póló, Dzseki, Nadrág"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Gyártó hivatalos neve",
+        "help": "A(z) (EU) 2023/988 (GPSR) rendelet előírja a gyártó nevének, postacímének és elektronikus címének feltüntetését a terméken vagy annak csomagolásán."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Utca, házszám"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Irányítószám"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Város"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Ország"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronikus cím (e-mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "A gyártó az EU-n kívül letelepedett?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Importőr hivatalos neve",
+        "help": "Ha a gyártó az EU-n kívül letelepedett, az importőr nevét, postacímét és elektronikus címét is meg kell adni."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Utca, házszám"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Irányítószám"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Város"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Ország"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronikus cím (e-mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "EU-s felelős személy – hivatalos név",
+        "help": "A(z) (EU) 2019/1020 rendelet 4. cikke szerinti uniós felelős személy a gyártótól és az importőrtől elkülönülő szerepkör, még akkor is, ha ugyanaz a vállalat látja el több szerepkört is."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "EU-s felelős személy – cím",
+        "placeholder": "Bejegyzett székhely az Európai Unión belül"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "EU-s felelős személy – elektronikus cím (e-mail)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Elsődleges száltípus"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Elsődleges szál aránya (%)",
+        "placeholder": "pl. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Másodlagos száltípus (ha van)",
+        "placeholder": "pl. Elasztán"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Másodlagos szál aránya (%)",
+        "placeholder": "pl. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Teljes összetétel",
+        "placeholder": "pl. 80% pamut, 15% poliészter, 5% elasztán"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Tartalmaz nem textil állati eredetű részeket",
+        "help": "A(z) 1007/2011 EU-rendelet előírja ennek feltüntetését a címkén, ha a termék nem textil állati eredetű részeket, például bőrfoltokat, szőrmedíszítést, szaru- vagy csontgombokat tartalmaz."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Mely részek, és melyik állattól",
+        "placeholder": "pl. Bőr könyökfoltok (szarvasmarha); szarugombok (bivaly)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Összetevő szintű összetétel",
+        "help": "Külön tüntesse fel a külső réteget, a bélést és a díszítőelemeket, hogy minden összetevő újrahasznosíthatóságát értékelni lehessen.",
+        "placeholder": "Külső réteg: 100% pamut\nBélés: 100% viszkóz\nDíszítőelemek: Poliészter cipzár, sárgaréz gombok"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Teljes újrahasznosított tartalom aránya (%)",
+        "placeholder": "pl. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Fogyasztás előtti újrahasznosított tartalom (%)",
+        "help": "A fogyasztóhoz való eljutás előtt visszanyert gyártási hulladék.",
+        "placeholder": "pl. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Fogyasztás utáni újrahasznosított tartalom (%)",
+        "help": "A végfelhasználókhoz eljutott termékekből visszanyert anyag.",
+        "placeholder": "pl. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Tartalmaz mikroműanyagokat kibocsátó szintetikus szálakat?",
+        "help": "A francia AGEC-törvény előírja a fogyasztók tájékoztatását, ha egy ruhadarab mosás közben mikroműanyag szálakat bocsát ki."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Tartalmaz REACH / SVHC anyagokat 0,1 tömegszázalékot meghaladó koncentrációban?",
+        "help": "Különös aggodalomra okot adó anyagok a(z) (EC) 1907/2006 (REACH) rendelet szerint."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "SVHC anyag részletei",
+        "placeholder": "Anyag neve, CAS-szám, koncentráció és összetevő"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Tartalmaz ez a termék szándékosan hozzáadott PFAS anyagokat?",
+        "help": "Franciaország a(z) 2025-188 törvény értelmében 2026. január 1-jétől betiltja a(z) PFAS anyagok használatát a ruházati cikkekben, lábbelikben és vízszigetelő szerekben. A(z) PFAS anyagok gyakran megtalálhatók a tartós vízlepergető (DWR) bevonatokban.",
+        "warn": "A szándékosan hozzáadott PFAS anyagokat tartalmazó ruházati cikkek franciaországi forgalomba hozatala 2026. január 1-jétől tilos a(z) 2025-188 törvény értelmében. A „Nem ismert” választ a franciaországi értékesítés előtt tisztázni kell a beszállítóval."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Mely összetevők és mely anyagok",
+        "placeholder": "pl. DWR bevonat a külső rétegen – PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Korlátozott Anyagok Listájának (RSL) való megfelelés státusza"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Meglévő tanúsítványok"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Tanúsítványhivatkozások",
+        "help": "2026. szeptember 27-től a(z) (EU) 2024/825 irányelv előírja, hogy a fenntarthatósági címkének tanúsítási rendszeren kell alapulnia, vagy hatóságnak kell létrehoznia. Hagyja üresen, ha a fentiek közül nem rendelkezik tanúsítvánnyal.",
+        "placeholder": "Soronként egy, pl.\nGOTS – CU 123456 GOTS – lejár: 2027-06-30\nOEKO-TEX – 21.HTR.12345 – lejár: 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Szálgyártás országa",
+        "placeholder": "Ahol a szálat termesztették vagy előállították"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Fonalgyártás / szövés országa"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Festés / kikészítés országa"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Konfekcionálás / összeszerelés országa",
+        "help": "A címkén származási országként feltüntetett szakasz."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Az EU-ban készült?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Tier 1 besorolású gyár neve"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Tier 1 besorolású gyár címe"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Társadalmi / környezetvédelmi audit státusza"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Audit tanúsítvány (feltöltés)",
+        "help": "Belső nyilvántartás céljából tárolva – soha nem kerül közzétételre a nyilvános útlevélben."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Teljes ellátásilánc-átláthatóság elérhető?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Szénlábnyom (kg CO2e)",
+        "placeholder": "Termékegységenként"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Vízfelhasználás (liter/egység)",
+        "placeholder": "pl. 2700 egy pamutpóló esetében"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Számítási módszer",
+        "help": "A számítási módszer megjelölése nélküli adat nem minősül alátámasztott állításnak a fogyasztók szerepének megerősítéséről szóló irányelv értelmében."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Támogató LCA jelentés (feltöltés)",
+        "help": "Belső nyilvántartás céljából tárolva – soha nem kerül közzétételre a nyilvános útlevélben."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Bolygósodással szembeni ellenállás eredménye",
+        "help": "Vizsgálati szabvány: ISO 12945-2 (Martindale bolygósodás).",
+        "placeholder": "pl. 4-es fokozat 2000 dörzsölés után"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Mosással szembeni színtartósság eredménye",
+        "help": "Vizsgálati szabvány: ISO 105-C06.",
+        "placeholder": "pl. 4-5-ös fokozat"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Fénnyel szembeni színtartósság eredménye",
+        "help": "Vizsgálati szabvány: ISO 105-B02.",
+        "placeholder": "pl. 5-ös fokozat"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Mosás utáni méretstabilitás eredménye",
+        "help": "Vizsgálati szabvány: ISO 6330, ISO 5077 méréssel.",
+        "placeholder": "pl. -2% hossz, -1% szélesség"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Varratszilárdság eredménye",
+        "help": "Vizsgálati szabvány: ISO 13935-2 (grab módszer).",
+        "placeholder": "pl. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Vizsgálati jegyzőkönyv hivatkozása",
+        "placeholder": "Laboratórium neve és a jegyzőkönyv száma"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Vizsgálati jegyzőkönyv (feltöltés)",
+        "help": "Belső nyilvántartás céljából tárolva – soha nem kerül közzétételre a nyilvános útlevélben."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Maximális mosási hőmérséklet"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Szárítógépben szárítható?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Vasalható?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Maximális vasalási hőmérséklet"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Kezelési szimbólumok"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "További kezelési útmutató",
+        "placeholder": "Bármilyen speciális kezelési útmutató"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Rendelkezésre állnak pótalkatrészek a javításhoz?",
+        "help": "Gombok, cipzárak, zsinórok és egyéb cserélhető alkatrészek."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "Javítási időpontfoglalás URL-je",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Újrahasznosítható az életciklusa végén?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Elérhető visszavételi program?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
-        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+        "label": "Visszavételi rendszer neve és EPR regisztrációs számok piaconként",
+        "help": "A kiterjesztett gyártói felelősség (EPR) regisztrációs számai tagállamonként eltérőek, ezért piaconként egy sort adjon meg.",
+        "placeholder": "FR: Refashion – FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Újrahasznosíthatósági osztály"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Szétszerelési megjegyzések",
+        "placeholder": "Hogyan válassza szét a külső réteget, a bélést, a díszítőelemeket és a fémkellékeket az újrahasznosításhoz"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Jelenlegi rendelkezés"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Megsemmisítés okkódja",
+        "warn": "Az eladatlan ruházati cikkek nagyvállalatok általi megsemmisítését 2026. július 19-től korlátozza a(z) ESPR, és nyilvántartási és nyilvános közzétételi kötelezettséget ír elő."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Rendelkezés dátuma",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Rendelkezési megjegyzések",
+        "placeholder": "Mennyiség, kezelési útvonal és bármely illetékes hatósági hivatkozás"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "A terméken vagy a csomagoláson tett környezetvédelmi állítások",
+        "placeholder": "pl. „50%-ban fogyasztás utáni újrahasznosított poliészterből készült (GRS tanúsítvánnyal)”"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Alátámasztó bizonyíték hivatkozása",
+        "placeholder": "Tanulmány, tanúsítvány vagy ellenőrző szerv hivatkozása minden egyes állításhoz"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Alátámasztó bizonyíték (feltöltés)",
+        "help": "Belső nyilvántartás céljából tárolva – soha nem kerül közzétételre a nyilvános útlevélben."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Az állítások kerülik az általános környezetvédelmi kifejezéseket?",
+        "help": "Az olyan általános állítások, mint a „környezetbarát”, „tudatos” és „karbonsemleges ellentételezéssel”, 2026. szeptember 27-től tilosak."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Van eredetiségigazoló funkció?",
+        "help": "A ruházat az EU-ban a leggyakrabban hamisított termékkategóriák közé tartozik, ezért a cikkszintű eredetiségigazolás lényegesen védi a márkát és a vevőt."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Eredetiségigazolás módja"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "Ellenőrzési URL",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Igen",
+        "no": "Nem"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "cotton": "Pamut",
+        "organic_cotton": "Bio pamut",
+        "linen": "Len",
+        "hemp": "Kender",
+        "wool": "Gyapjú",
+        "cashmere": "Kasmír",
+        "mohair": "Moher",
+        "alpaca": "Alpaka",
+        "angora": "Angóra",
+        "silk": "Selyem",
+        "viscose": "Viszkóz",
+        "modal": "Modál",
+        "lyocell": "Liocell",
+        "acetate": "Acetát",
+        "cupro": "Kupro",
+        "polyester": "Poliészter",
+        "recycled_polyester": "Újrahasznosított poliészter",
+        "nylon": "Poliamid",
+        "acrylic": "Akril",
+        "elastane": "Elasztán",
+        "polypropylene": "Polipropilén",
+        "other": "Egyéb"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Igen",
+        "no": "Nem",
+        "unknown": "Nem ismert"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Megfelelő – vizsgálattal igazolva",
+        "compliant_declared": "Megfelelő – csak beszállítói nyilatkozat alapján",
+        "in_progress": "Értékelés folyamatban",
+        "not_assessed": "Nincs értékelve"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Egyéb"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI által auditált",
+        "sedex_smeta": "Sedex SMETA által auditált",
+        "sa8000": "SA8000 tanúsítvánnyal rendelkezik",
+        "wrap": "WRAP tanúsítvánnyal rendelkezik",
+        "brand_audit": "Márka által vezetett audit",
+        "not_audited": "Nincs auditálva"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Ruházat és lábbeli",
         "iso_14067": "ISO 14067",
-        "ghg_protocol": "GHG Protocol Product Standard",
+        "ghg_protocol": "GHG Protocol Termékszabvány",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Belső modell"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Csak kézi mosás",
+        "dry_clean": "Csak vegytisztítás"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Alacsony (110°C)",
+        "medium": "Közepes (150°C)",
+        "high": "Magas (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Mosás 30°C",
+        "wash_40": "Mosás 40°C",
+        "wash_60": "Mosás 60°C",
+        "hand_wash": "Kézi mosás",
+        "do_not_wash": "Nem mosható",
+        "bleach_allowed": "Fehérítés engedélyezett",
+        "non_chlorine_bleach": "Csak klórmentes fehérítő",
+        "do_not_bleach": "Tilos fehéríteni",
+        "tumble_dry_low": "Szárítógépben alacsony hőfokon szárítható",
+        "tumble_dry_normal": "Szárítógépben normál hőfokon szárítható",
+        "do_not_tumble_dry": "Szárítógépben nem szárítható",
+        "iron_low": "Vasalás alacsony hőfokon",
+        "iron_medium": "Vasalás közepes hőfokon",
+        "iron_high": "Vasalás magas hőfokon",
+        "do_not_iron": "Tilos vasalni",
+        "dry_clean_any": "Professzionális vegytisztítás",
+        "dry_clean_petroleum": "Professzionális vegytisztítás, csak kőolaj-oldószerrel",
+        "wet_clean": "Professzionális nedves tisztítás",
+        "do_not_dry_clean": "Tilos vegytisztítani"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Egyanyagú – szálból szálba újrahasznosítható",
+        "separable_blend": "Keverék, szétválasztható összetevők",
+        "mechanical_only": "Csak mechanikai újrahasznosítás",
+        "downcycle_only": "Csak alacsonyabb értékű termékké való újrahasznosítás (downcycling)",
+        "not_recyclable": "Jelenleg nem újrahasznosítható"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Még raktáron",
+        "sold": "Eladva",
+        "donated": "Adományozva",
+        "recycled": "Újrahasznosítva",
+        "remanufactured": "Újragyártva",
+        "destroyed": "Megsemmisítve"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Egészség és biztonság",
+        "counterfeit_ip": "Hamisítvány / szellemi tulajdon megsértése",
+        "damaged_beyond_repair": "Javíthatatlanul sérült",
+        "donation_refused": "Adományozás visszautasítva három szociális gazdasági szervezet megkeresése után",
+        "protected_logo": "A védett logó nem távolítható el",
+        "unlawful_product": "A termék jogellenesnek bizonyult"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC címke",
+        "secure_qr": "Biztonságos / sorozatszámmal ellátott QR kód",
+        "security_seal": "Hamisításbiztos biztonsági plomba",
+        "ai_fingerprint": "MI kép-ujjlenyomat",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Egyéb"
       }
     }
   }

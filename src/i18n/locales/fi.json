@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Tunniste",
+        "description": "Tuotteen ja yksittäisen kappaleen tunnistetiedot"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Kuka on vastuussa",
+        "description": "Valmistaja, maahantuoja ja EU:n vastuullinen henkilö, pidetään kolmena erillisenä osapuolena"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Materiaalit ja koostumus",
+        "description": "Pakolliset kuitukoostumusmerkinnät EU-asetuksen 1007/2011 mukaisesti"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Sertifioinnit",
+        "description": "Mitä sertifiointeja tällä tuotteella on ja miten kukin väite todennetaan."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Toimitusketjun vaiheet",
+        "description": "Kunkin tuotantovaiheen maa sekä Tier 1 -tason tehtaan ja auditoinnin tila"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Ympäristöjalanjälki",
+        "description": "Ympäristöluvut ja ilmoitettu laskentamenetelmä"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Kestävyys ja testaus",
+        "description": "Mitatut kestävyystulokset. Odotettavissa olevan tekstiilejä koskevan delegoidun säädöksen ESPR ennakoidaan keskittyvän kestävyysmittareihin, joten kirjaa todelliset testitulokset subjektiivisten arvioiden sijaan."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Kiertotalous ja elinkaaren loppuvaihe",
+        "description": "Hoito-, korjaus-, takaisinotto- ja kierrätettävyystiedot"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Hävittämistiedot",
+        "description": "Tukee asetuksen ESPR mukaista myymättömien kulutustavaroiden hävittämiskieltoa, jota sovelletaan suuriin yrityksiin 19. heinäkuuta 2026 alkaen ja joka edellyttää kirjanpitoa ja tietojen julkistamista"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Ympäristöväitteiden perusteleminen",
+        "description": "Tukee kuluttajien voimaannuttamista koskevaa direktiiviä (EU) 2024/825, jota sovelletaan 27. syyskuuta 2026 alkaen"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Aitouden todentaminen",
+        "description": "Tähän tuotteeseen liittyvät väärennösten vastaiset ominaisuudet"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Näytä kaikki kentät (sertifiointien tiedot, Tier 1 -tason tehdas ja auditoinnin tila, ympäristöjalanjälki, kestävyystestaus, laajennettu kiertotalous)",
+        "help": "Useimmat brändit tarvitsevat vain alla olevat kentät. Ota tämä käyttöön, jos sinulla on laboratoriotestituloksia, LCA-tietoja tai yksityiskohtaista toimitusketjun jäljitettävyyttä kirjattavaksi."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Kauppanimikenumero, joka yksilöi varastointiyksikön (SKU).",
+        "placeholder": "esim. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Yksittäisen kappaleen yksilöllinen tunniste",
+        "help": "Tunnistaa tämän yksittäisen fyysisen kappaleen, ei varastointiyksikköä (SKU). Yksittäisen kappaleen tunnisteet mahdollistavat jälleenmyynnin, omistajuuden siirron ja aitouden todentamisen tuotteen elinkaaren aikana.",
+        "placeholder": "esim. DPP-2026-000184213",
+        "warn": "Open Label ei anna tätä tunnistetta puolestasi. Brändien tulisi rakentaa oma yksittäisten kappaleiden tunnistusjärjestelmä – esim. sarjanumeroidut RFID/NFC-tunnisteet, tuotantolinjan numerointijärjestelmä tai olemassa oleva ERP-sarjanumero – ja syöttää kyseinen arvo tähän."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Tyyli-/malliviite",
+        "help": "Asetus (EU) 2023/988 (GPSR) edellyttää, että valmistajan nimen ja osoitteen ohella ilmoitetaan tuotteen tyyppi-, erä- tai sarjanumero. Tämä on tuotetyypin/erän tunniste – se ei korvaa yllä olevaa yksittäisen kappaleen tunnistetta.",
+        "placeholder": "esim. ST-4412 Oxford-paita"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Väritys",
+        "placeholder": "esim. Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Koko",
+        "placeholder": "esim. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Tuotteen paino (grammoina)",
+        "help": "Tuotteen nettopaino, käytetään toimituksissa ja materiaali-intensiteetin raportoinnissa.",
+        "placeholder": "esim. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Erä tai tuotantoerä",
+        "placeholder": "esim. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Brändin nimi"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Tuotetyyppi",
+        "placeholder": "esim. T-paita, takki, housut"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Valmistajan virallinen nimi",
+        "help": "Asetus (EU) 2023/988 (GPSR) edellyttää, että valmistajan nimi, postiosoite ja sähköinen osoite ilmoitetaan tuotteessa tai sen pakkauksessa."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Katuosoite"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postinumero"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Kaupunki"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Maa"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Sähköinen osoite (sähköposti)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Onko valmistaja sijoittautunut EU:n ulkopuolelle?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Maahantuojan virallinen nimi",
+        "help": "Kun valmistaja on sijoittautunut EU:n ulkopuolelle, on ilmoitettava myös maahantuojan nimi, postiosoite ja sähköinen osoite."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Katuosoite"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postinumero"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Kaupunki"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Maa"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Sähköinen osoite (sähköposti)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "EU:n vastuullinen henkilö – virallinen nimi",
+        "help": "Asetuksen (EU) 2019/1020 4 artiklan mukainen EU:n vastuullinen henkilö on eri rooli kuin valmistaja ja maahantuoja, vaikka sama yritys hoitaisi useampaa näistä tehtävistä."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "EU:n vastuullinen henkilö – osoite",
+        "placeholder": "Rekisteröity osoite Euroopan unionin sisällä"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "EU:n vastuullinen henkilö – sähköinen osoite (sähköposti)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Ensisijainen kuitutyyppi"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Ensisijaisen kuidun prosenttiosuus (%)",
+        "placeholder": "esim. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Toissijainen kuitutyyppi (tarvittaessa)",
+        "placeholder": "esim. elastaani"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Toissijaisen kuidun prosenttiosuus (%)",
+        "placeholder": "esim. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Täydellinen koostumusilmoitus",
+        "placeholder": "esim. 80 % puuvillaa, 15 % polyesteriä, 5 % elastaania"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Sisältää eläinperäisiä muita kuin tekstiiliosia",
+        "help": "EU-asetus 1007/2011 edellyttää, että tämä mainitaan merkinnässä, kun tuote sisältää eläinperäisiä muita kuin tekstiiliosia, kuten nahkapaikkoja, turkissomisteita tai sarvi- tai luunappeja."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Mitä osia ja mistä eläimestä",
+        "placeholder": "esim. nahkaiset kyynärpaikat (nauta); sarvinapit (puhveli)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Osien koostumus",
+        "help": "Ilmoita päällikangas, vuori ja somisteet erikseen, jotta kunkin osan kierrätettävyys voidaan arvioida.",
+        "placeholder": "Päällikangas: 100 % puuvillaa\nVuori: 100 % viskoosia\nSomisteet: polyesterivetoketju, messinkinapit"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Kierrätetyn materiaalin kokonaisprosenttiosuus (%)",
+        "placeholder": "esim. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Tuotannon ylijäämämateriaalin osuus (%)",
+        "help": "Tuotantojäte, joka on otettu talteen ennen kuluttajalle päätymistä.",
+        "placeholder": "esim. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Kuluttajakäytöstä poistetun materiaalin osuus (%)",
+        "help": "Materiaali, joka on otettu talteen loppukäyttäjille päätyneistä tuotteista.",
+        "placeholder": "esim. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Sisältääkö synteettisiä kuituja, joista irtoaa mikromuoveja?",
+        "help": "Ranskan AGEC-laki edellyttää kuluttajille ilmoittamista, kun vaatteesta irtoaa mikromuovikuituja pesun aikana."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Onko tuotteessa REACH- / SVHC-aineita yli 0,1 painoprosenttia?",
+        "help": "Erityistä huolta aiheuttavat aineet asetuksen (EC) 1907/2006 (REACH) mukaisesti."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "SVHC-aineen tiedot",
+        "placeholder": "Aineen nimi, CAS-numero, pitoisuus ja osa"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Sisältääkö tämä tuote tarkoituksellisesti lisättyjä PFAS-aineita?",
+        "help": "Ranska kieltää PFAS-aineiden käytön vaatteissa, jalkineissa ja vedenpitävyyskäsittelyaineissa 1. tammikuuta 2026 alkaen lain 2025-188 nojalla. PFAS-aineita esiintyy yleisesti kestävissä vettähylkivissä (DWR) viimeistelyissä.",
+        "warn": "Tarkoituksellisesti lisättyjä PFAS-aineita sisältävien vaatteiden saattaminen Ranskan markkinoille on kielletty 1. tammikuuta 2026 alkaen lain 2025-188 nojalla. \"Ei tiedossa\" -vastaus on selvitettävä toimittajan kanssa ennen myyntiä Ranskassa."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Mitä osia ja mitä aineita",
+        "placeholder": "esim. DWR-viimeistely päällikankaassa – PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Rajoitettujen aineiden luettelon (RSL) vaatimustenmukaisuuden tila"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Hallussa olevat sertifioinnit"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Sertifikaattiviitteet",
+        "help": "Direktiivi (EU) 2024/825 edellyttää 27. syyskuuta 2026 alkaen, että kestävyysmerkinnän on perustuttava sertifiointijärjestelmään tai sen on oltava viranomaisen vahvistama. Jätä tyhjäksi, jos yllä mainittuja sertifiointeja ei ole.",
+        "placeholder": "Yksi riviä kohti, esim.\nGOTS – CU 123456 GOTS – voimassa 30.6.2027 asti\nOEKO-TEX – 21.HTR.12345 – voimassa 15.1.2027 asti"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Kuidun tuotantomaa",
+        "placeholder": "Missä kuitu on kasvatettu tai tuotettu"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Kehruu- / kudontamaa"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Värjäys- / viimeistelymaa"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Valmistus- / kokoopanomaa",
+        "help": "Vaihe, joka ilmoitetaan alkuperämaana etiketissä."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Valmistettu EU:ssa?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Tier 1 -tason tehtaan nimi"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Tier 1 -tason tehtaan osoite"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Sosiaaliset / ympäristöauditoinnit"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Auditointitodistus (lataa)",
+        "help": "Säilytetään sisäisissä tiedostoissasi – ei koskaan julkaista julkisessa passissa."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Onko täysi toimitusketjun läpinäkyvyys saatavilla?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Hiilijalanjälki (kg CO2e)",
+        "placeholder": "Tuoteyksikköä kohti"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Vedenkulutus (litraa/yksikkö)",
+        "placeholder": "esim. 2700 puuvillaiselle t-paidalle"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Laskentamenetelmä",
+        "help": "Luku ilman ilmoitettua laskentamenetelmää ei ole perusteltu väite kuluttajien voimaannuttamista koskevan direktiivin mukaan."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Tukeva LCA-raportti (lataa)",
+        "help": "Säilytetään sisäisissä tiedostoissasi – ei koskaan julkaista julkisessa passissa."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Nyppyyntymiskestävyyden tulos",
+        "help": "Testistandardi: ISO 12945-2 (Martindale-nyppyyntyminen).",
+        "placeholder": "esim. arvosana 4 (2000 hankausta)"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Värinkeston tulos pesussa",
+        "help": "Testistandardi: ISO 105-C06.",
+        "placeholder": "esim. arvosana 4–5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Valonkeston tulos",
+        "help": "Testistandardi: ISO 105-B02.",
+        "placeholder": "esim. arvosana 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Mittapysyvyyden tulos pesun jälkeen",
+        "help": "Testistandardi: ISO 6330 ja ISO 5077-mittaus.",
+        "placeholder": "esim. -2 % pituus, -1 % leveys"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Saumanlujuuden tulos",
+        "help": "Testistandardi: ISO 13935-2 (Grab-menetelmä).",
+        "placeholder": "esim. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Testiraportin viite",
+        "placeholder": "Laboratorion nimi ja raportin numero"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Testiraportti (lataa)",
+        "help": "Säilytetään sisäisissä tiedostoissasi – ei koskaan julkaista julkisessa passissa."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Maksimipesulämpötila"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Voidaanko rumpukuivata?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Voidaanko silittää?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Maksimisilityslämpötila"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Hoito-ohjemerkinnät"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Lisähoito-ohjeet",
+        "placeholder": "Mahdolliset erityiset hoito-ohjeet"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Onko korjausta varten saatavilla varasomisteita?",
+        "help": "Napit, vetoketjut, nyörit ja muut vaihdettavat osat."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "Korjausvarauksen URL-osoite",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Kierrätettävissä elinkaaren lopussa?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Onko takaisinotto-ohjelma saatavilla?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
-        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+        "label": "Takaisinottojärjestelmän nimi ja EPR-rekisteröintinumerot markkinoittain",
+        "help": "Laajennetun tuottajavastuun rekisteröintinumerot vaihtelevat jäsenvaltioittain, joten luettele yksi rivi per markkina.",
+        "placeholder": "FR: Refashion – FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Kierrätettävyysluokka"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Purkamisohjeet",
+        "placeholder": "Miten päällikangas, vuori, somisteet ja metalliosat erotellaan kierrätystä varten"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Nykyinen hävitystila"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Hävityksen syykoodi",
+        "warn": "Suurten yritysten myymättömien vaatteiden hävittäminen on rajoitettua 19. heinäkuuta 2026 alkaen asetuksen ESPR nojalla ja edellyttää kirjanpitoa ja julkista ilmoittamista."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Hävityspäivämäärä",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Hävitystiedot",
+        "placeholder": "Määrä, käsittelyreitti ja mahdollinen toimivaltaisen viranomaisen viite"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Tuotteessa tai pakkauksessa esitetyt ympäristöväitteet",
+        "placeholder": "esim. \"Valmistettu 50 % kuluttajakäytöstä poistetusta kierrätetystä polyesteristä (GRS-sertifioitu)\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Perustelutodisteiden viite",
+        "placeholder": "Tutkimus-, sertifikaatti- tai todentamiselimen viite kullekin väitteelle"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Perustelutodisteet (lataa)",
+        "help": "Säilytetään sisäisissä tiedostoissasi – ei koskaan julkaista julkisessa passissa."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Vältetäänkö väitteissä yleisluontoisia ympäristötermejä?",
+        "help": "Yleisluontoiset väitteet, kuten \"ympäristöystävällinen\", \"vastuullinen\" ja \"hiilineutraali päästökompensaation kautta\", ovat kiellettyjä 27. syyskuuta 2026 alkaen."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Onko aitouden todentamisominaisuus olemassa?",
+        "help": "Vaatteet ovat yksi EU:n eniten väärennetyistä tuotekategorioista, joten yksittäisen kappaleen tason aitouden todentaminen suojaa olennaisesti brändiä ja ostajaa."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Aitouden todentamismenetelmä"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "Todentamisen URL-osoite",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Kyllä",
+        "no": "Ei"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
+        "cotton": "Puuvilla",
+        "organic_cotton": "Luonnonmukainen puuvilla",
+        "linen": "Pellava",
+        "hemp": "Hamppu",
+        "wool": "Villa",
+        "cashmere": "Kašmir",
         "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "alpaca": "Alpakka",
         "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
-        "modal": "Modal",
+        "silk": "Silkki",
+        "viscose": "Viskoosi",
+        "modal": "Modaali",
         "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "acetate": "Asetaatti",
+        "cupro": "Kupro",
+        "polyester": "Polyesteri",
+        "recycled_polyester": "Kierrätetty polyesteri",
+        "nylon": "Polyamidi",
+        "acrylic": "Akryyli",
+        "elastane": "Elastaani",
+        "polypropylene": "Polypropeeni",
+        "other": "Muu"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Kyllä",
+        "no": "Ei",
+        "unknown": "Ei tiedossa"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Vaatimustenmukainen – testauksella varmennettu",
+        "compliant_declared": "Vaatimustenmukainen – vain toimittajan ilmoitus",
+        "in_progress": "Arviointi kesken",
+        "not_assessed": "Ei arvioitu"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Muu"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI-auditoitu",
+        "sedex_smeta": "Sedex SMETA-auditoitu",
+        "sa8000": "SA8000-sertifioitu",
+        "wrap": "WRAP-sertifioitu",
+        "brand_audit": "Brändin oma auditointi",
+        "not_audited": "Ei auditoitu"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Vaatteet ja jalkineet",
         "iso_14067": "ISO 14067",
         "ghg_protocol": "GHG Protocol Product Standard",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Sisäinen malli"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Vain käsinpesu",
+        "dry_clean": "Vain kemiallinen pesu"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Matala (110°C)",
+        "medium": "Keskilämpö (150°C)",
+        "high": "Korkea (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Pesu 30°C",
+        "wash_40": "Pesu 40°C",
+        "wash_60": "Pesu 60°C",
+        "hand_wash": "Käsinpesu",
+        "do_not_wash": "Ei vesipesua",
+        "bleach_allowed": "Valkaisu sallittu",
+        "non_chlorine_bleach": "Vain happivalkaisu",
+        "do_not_bleach": "Ei valkaisua",
+        "tumble_dry_low": "Rumpukuivaus matalassa lämpötilassa",
+        "tumble_dry_normal": "Rumpukuivaus, normaali",
+        "do_not_tumble_dry": "Ei rumpukuivausta",
+        "iron_low": "Silitys matalalla lämpötilalla",
+        "iron_medium": "Silitys keskilämmöllä",
+        "iron_high": "Silitys korkealla lämpötilalla",
+        "do_not_iron": "Ei silitystä",
+        "dry_clean_any": "Kemiallinen pesu",
+        "dry_clean_petroleum": "Kemiallinen pesu, vain petrolipohjainen liuotin",
+        "wet_clean": "Ammattimainen vesipesu",
+        "do_not_dry_clean": "Ei kemiallista pesua"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Yksimateriaali – kuitu kuiduksi -kierrätettävä",
+        "separable_blend": "Seos, eroteltavat osat",
+        "mechanical_only": "Vain mekaaninen kierrätys",
+        "downcycle_only": "Vain alaskierrätys",
+        "not_recyclable": "Ei tällä hetkellä kierrätettävissä"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Varastossa",
+        "sold": "Myyty",
+        "donated": "Lahjoitettu",
+        "recycled": "Kierrätetty",
+        "remanufactured": "Uudelleenvalmistettu",
+        "destroyed": "Hävitetty"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Terveys ja turvallisuus",
+        "counterfeit_ip": "Väärennös / teollis- ja tekijänoikeuksien loukkaus",
+        "damaged_beyond_repair": "Vahingoittunut korjauskelvottomaksi",
+        "donation_refused": "Lahjoituksesta kieltäydytty kolmelle yhteisötalouden organisaatiolle tehdyn tarjouksen jälkeen",
+        "protected_logo": "Suojattua logoa ei voi poistaa",
+        "unlawful_product": "Tuote osoittautui laittomaksi"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC-tunniste",
+        "secure_qr": "Suojattu / sarjanumeroitu QR-koodi",
+        "security_seal": "Peukaloinnin paljastava turvasinetti",
+        "ai_fingerprint": "Tekoälyn kuvantunnistus",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Muu"
       }
     }
   }

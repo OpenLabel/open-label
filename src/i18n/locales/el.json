@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Ταυτότητα",
+        "description": "Ταυτοποίηση σε επίπεδο προϊόντος και τεμαχίου"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Ποιος είναι υπεύθυνος",
+        "description": "Κατασκευαστής, εισαγωγέας και υπεύθυνο πρόσωπο στην ΕΕ, διατηρούμενοι ως τρία χωριστά μέρη"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Υλικά και Σύνθεση",
+        "description": "Υποχρεωτική επισήμανση της περιεκτικότητας σε ίνες σύμφωνα με τον κανονισμό (ΕΕ) 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Πιστοποιήσεις",
+        "description": "Ποιες πιστοποιήσεις κατέχει αυτό το προϊόν και πώς να επαληθεύσετε κάθε ισχυρισμό."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Διαδρομή της Εφοδιαστικής Αλυσίδας",
+        "description": "Χώρα κάθε σταδίου παραγωγής συν το εργοστάσιο Tier 1 και η κατάσταση ελέγχου"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Περιβαλλοντικό Αποτύπωμα",
+        "description": "Περιβαλλοντικά στοιχεία με δηλωμένη μέθοδο υπολογισμού"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Ανθεκτικότητα και Δοκιμές",
+        "description": "Μετρημένα αποτελέσματα ανθεκτικότητας. Η αναμενόμενη κατ' εξουσιοδότηση πράξη για τα κλωστοϋφαντουργικά προϊόντα στο πλαίσιο του ESPR προβλέπεται να επικεντρωθεί σε μετρήσεις ανθεκτικότητας, επομένως καταγράψτε πραγματικά αποτελέσματα δοκιμών αντί για υποκειμενικές βαθμολογίες."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Κυκλικότητα και Τέλος Κύκλου Ζωής",
+        "description": "Πληροφορίες για τη φροντίδα, την επισκευή, την επιστροφή και την ανακυκλωσιμότητα"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Αρχείο Διάθεσης",
+        "description": "Υποστηρίζει την απαγόρευση του ESPR για την καταστροφή απούλητων καταναλωτικών αγαθών, η οποία ισχύει για τις μεγάλες εταιρείες από τις 19 Ιουλίου 2026 και απαιτεί τήρηση αρχείων και γνωστοποίηση"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Τεκμηρίωση Οικολογικών Ισχυρισμών",
+        "description": "Υποστηρίζει την οδηγία για την ενδυνάμωση των καταναλωτών (EU) 2024/825, η οποία ισχύει από τις 27 Σεπτεμβρίου 2026"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Αυθεντικοποίηση",
+        "description": "Χαρακτηριστικά κατά της παραποίησης/απομίμησης που συνδέονται με αυτό το προϊόν"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Εμφάνιση όλων των πεδίων (λεπτομέρειες πιστοποιήσεων, εργοστάσιο Tier 1 και κατάσταση ελέγχου, περιβαλλοντικό αποτύπωμα, δοκιμές ανθεκτικότητας, εκτεταμένη κυκλικότητα)",
+        "help": "Οι περισσότερες μάρκες χρειάζονται μόνο τα παρακάτω πεδία. Ενεργοποιήστε το αν έχετε αποτελέσματα εργαστηριακών δοκιμών, δεδομένα LCA ή λεπτομερή ιχνηλασιμότητα της εφοδιαστικής αλυσίδας για καταγραφή."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Αριθμός εμπορικού είδους που προσδιορίζει το SKU.",
+        "placeholder": "π.χ., 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Μοναδικό Αναγνωριστικό ανά Τεμάχιο",
+        "help": "Προσδιορίζει αυτό το μεμονωμένο φυσικό αντικείμενο, όχι το SKU. Τα αναγνωριστικά ανά τεμάχιο είναι αυτά που επιτρέπουν τη μεταπώληση, τη μεταβίβαση ιδιοκτησίας και την αυθεντικοποίηση κατά τη διάρκεια ζωής του προϊόντος.",
+        "placeholder": "π.χ., DPP-2026-000184213",
+        "warn": "Το Open Label δεν εκχωρεί αυτό το αναγνωριστικό για εσάς. Οι μάρκες θα πρέπει να δημιουργήσουν το δικό τους σύστημα αναγνώρισης ανά τεμάχιο — π.χ. σειριακές ετικέτες RFID/NFC, ένα σύστημα αρίθμησης γραμμής παραγωγής ή έναν υπάρχοντα σειριακό αριθμό ERP — και να εισαγάγουν αυτήν την τιμή εδώ."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Αναφορά Στυλ / Μοντέλου",
+        "help": "Ο κανονισμός (EU) 2023/988 (GPSR) απαιτεί ένα αναγνωριστικό προϊόντος τύπου, παρτίδας ή σειριακού αριθμού μαζί με το όνομα και τη διεύθυνση του κατασκευαστή. Αυτό είναι το αναγνωριστικό για τον τύπο/παρτίδα του προϊόντος — δεν υποκαθιστά το παραπάνω αναγνωριστικό ανά τεμάχιο.",
+        "placeholder": "π.χ., Πουκάμισο Oxford ST-4412"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Χρωματικός συνδυασμός",
+        "placeholder": "π.χ., Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Μέγεθος",
+        "placeholder": "π.χ., M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Βάρος Προϊόντος (γραμμάρια)",
+        "help": "Καθαρό βάρος του τεμαχίου, που χρησιμοποιείται για την αποστολή και την αναφορά έντασης υλικών.",
+        "placeholder": "π.χ., 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Παρτίδα ή Παρτίδα Παραγωγής",
+        "placeholder": "π.χ., LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Επωνυμία Μάρκας"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Τύπος Προϊόντος",
+        "placeholder": "π.χ., T-shirt, Μπουφάν, Παντελόνι"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Νόμιμη επωνυμία κατασκευαστή",
+        "help": "Ο κανονισμός (EU) 2023/988 (GPSR) απαιτεί το όνομα, την ταχυδρομική διεύθυνση και την ηλεκτρονική διεύθυνση του κατασκευαστή να αναγράφονται στο προϊόν ή στη συσκευασία του."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Διεύθυνση οδού"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Ταχυδρομικός κώδικας"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Πόλη"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Χώρα"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Ηλεκτρονική διεύθυνση (email)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Είναι ο κατασκευαστής εγκατεστημένος εκτός της ΕΕ;"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Νόμιμη επωνυμία εισαγωγέα",
+        "help": "Όταν ο κατασκευαστής είναι εγκατεστημένος εκτός της ΕΕ, πρέπει επίσης να αναγράφονται το όνομα, η ταχυδρομική διεύθυνση και η ηλεκτρονική διεύθυνση του εισαγωγέα."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Διεύθυνση οδού"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Ταχυδρομικός κώδικας"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Πόλη"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Χώρα"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Ηλεκτρονική διεύθυνση (email)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Υπεύθυνο πρόσωπο στην ΕΕ — νόμιμη επωνυμία",
+        "help": "Το υπεύθυνο πρόσωπο στην ΕΕ σύμφωνα με τον κανονισμό (EU) 2019/1020 άρθρο 4 είναι ένας ξεχωριστός ρόλος από τον κατασκευαστή και τον εισαγωγέα, ακόμη και όταν η ίδια εταιρεία εκτελεί περισσότερους από έναν από αυτούς."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Υπεύθυνο πρόσωπο στην ΕΕ — διεύθυνση",
+        "placeholder": "Καταχωρισμένη διεύθυνση εντός της Ευρωπαϊκής Ένωσης"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Υπεύθυνο πρόσωπο στην ΕΕ — ηλεκτρονική διεύθυνση (email)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Τύπος Κύριας Ίνας"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Ποσοστό Κύριας Ίνας (%)",
+        "placeholder": "π.χ., 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Τύπος Δευτερεύουσας Ίνας (εάν υπάρχει)",
+        "placeholder": "π.χ., Ελαστομερής πολυουρεθάνη"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Ποσοστό Δευτερεύουσας Ίνας (%)",
+        "placeholder": "π.χ., 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Πλήρης Δήλωση Σύνθεσης",
+        "placeholder": "π.χ., 80% Βαμβάκι, 15% Πολυεστέρας, 5% Ελαστομερής πολυουρεθάνη"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Περιέχει μη κλωστοϋφαντουργικά μέρη ζωικής προέλευσης",
+        "help": "Ο κανονισμός (ΕΕ) 1007/2011 απαιτεί αυτό να αναγράφεται στην ετικέτα όταν ένα προϊόν περιέχει μη κλωστοϋφαντουργικά μέρη ζωικής προέλευσης, όπως δερμάτινα επιρράμματα, γούνινες επενδύσεις, κουμπιά από κέρατο ή κόκκαλο."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Ποια μέρη και από ποιο ζώο",
+        "placeholder": "π.χ., Δερμάτινα επιρράμματα αγκώνα (βοοειδή)· κουμπιά από κέρατο (βούβαλος)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Σύνθεση σε επίπεδο συστατικού",
+        "help": "Δηλώστε το εξωτερικό περίβλημα, τη φόδρα και τα διακοσμητικά στοιχεία ξεχωριστά, ώστε κάθε συστατικό να μπορεί να αξιολογηθεί για ανακύκλωση.",
+        "placeholder": "Εξωτερικό περίβλημα: 100% Βαμβάκι\nΦόδρα: 100% Βισκόζη\nΔιακοσμητικά: Φερμουάρ από πολυεστέρα, ορειχάλκινα κουμπιά"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Συνολικό Ποσοστό Ανακυκλωμένου Περιεχομένου (%)",
+        "placeholder": "π.χ., 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Ποσοστό Προ-καταναλωτικού Ανακυκλωμένου Περιεχομένου (%)",
+        "help": "Απόβλητα παραγωγής που ανακτώνται πριν φτάσουν στον καταναλωτή.",
+        "placeholder": "π.χ., 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Ποσοστό Μετα-καταναλωτικού Ανακυκλωμένου Περιεχομένου (%)",
+        "help": "Υλικό που ανακτήθηκε από προϊόντα που έφτασαν στους τελικούς χρήστες.",
+        "placeholder": "π.χ., 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Περιέχει συνθετικές ίνες που αποβάλλουν μικροπλαστικά;",
+        "help": "Ο γαλλικός νόμος AGEC απαιτεί την ενημέρωση των καταναλωτών όταν ένα ένδυμα απελευθερώνει μικροπλαστικές ίνες κατά το πλύσιμο."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Παρουσία ουσιών REACH / SVHC σε ποσοστό άνω του 0,1% κ.β.;",
+        "help": "Ουσίες που προκαλούν πολύ μεγάλη ανησυχία σύμφωνα με τον κανονισμό (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Λεπτομέρειες Ουσίας SVHC",
+        "placeholder": "Όνομα ουσίας, αριθμός CAS, συγκέντρωση και συστατικό"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Περιέχει αυτό το προϊόν σκοπίμως προστιθέμενες ουσίες PFAS;",
+        "help": "Η Γαλλία απαγορεύει τις PFAS σε είδη ένδυσης, υπόδησης και αδιαβροχοποιητικούς παράγοντες από την 1η Ιανουαρίου 2026 βάσει του νόμου 2025-188. Οι PFAS απαντώνται συχνά σε ανθεκτικά υδατοαπωθητικά (DWR) φινιρίσματα.",
+        "warn": "Η διάθεση στην γαλλική αγορά ενδυμάτων που περιέχουν σκοπίμως προστιθέμενες PFAS απαγορεύεται από την 1η Ιανουαρίου 2026 βάσει του νόμου 2025-188. Μια απάντηση «Άγνωστο» πρέπει να διευθετηθεί με τον προμηθευτή πριν από την πώληση στη Γαλλία."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Ποια συστατικά και ποιες ουσίες",
+        "placeholder": "π.χ., φινίρισμα DWR στο εξωτερικό περίβλημα — PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Κατάσταση Συμμόρφωσης με τον Κατάλογο Περιορισμένων Ουσιών (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Κατεχόμενες Πιστοποιήσεις"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Αναφορές Πιστοποιητικών",
+        "help": "Από τις 27 Σεπτεμβρίου 2026, η οδηγία (EU) 2024/825 απαιτεί ένα σήμα βιωσιμότητας να βασίζεται σε σύστημα πιστοποίησης ή να έχει θεσπιστεί από δημόσια αρχή. Αφήστε κενό εάν δεν κατέχετε καμία από τις παραπάνω πιστοποιήσεις.",
+        "placeholder": "Ένα ανά γραμμή, π.χ.\nGOTS — CU 123456 GOTS — λήγει 2027-06-30\nOEKO-TEX — 21.HTR.12345 — λήγει 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Χώρα Παραγωγής Ίνας",
+        "placeholder": "Όπου η ίνα καλλιεργήθηκε ή παρήχθη"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Χώρα Νηματοποίησης / Ύφανσης"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Χώρα Βαφής / Φινιρίσματος"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Χώρα Κατασκευής / Συναρμολόγησης",
+        "help": "Το στάδιο που δηλώνεται ως χώρα προέλευσης στην ετικέτα."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Κατασκευάζεται στην ΕΕ;"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Όνομα Εργοστασίου Tier 1"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Διεύθυνση Εργοστασίου Tier 1"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Κατάσταση Κοινωνικού / Περιβαλλοντικού Ελέγχου"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Πιστοποιητικό Ελέγχου (μεταφόρτωση)",
+        "help": "Διατηρείται για τα εσωτερικά σας αρχεία — δεν δημοσιεύεται ποτέ στο δημόσιο διαβατήριο."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Διαθέσιμη πλήρης διαφάνεια της εφοδιαστικής αλυσίδας;"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Αποτύπωμα Άνθρακα (kg CO2e)",
+        "placeholder": "Ανά μονάδα προϊόντος"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Χρήση Νερού (λίτρα ανά μονάδα)",
+        "placeholder": "π.χ., 2700 για βαμβακερό t-shirt"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Μέθοδος Υπολογισμού",
+        "help": "Ένα στοιχείο χωρίς δηλωμένη μέθοδο υπολογισμού δεν αποτελεί τεκμηριωμένο ισχυρισμό βάσει της οδηγίας για την ενδυνάμωση των καταναλωτών."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Υποστηρικτική Έκθεση LCA (μεταφόρτωση)",
+        "help": "Διατηρείται για τα εσωτερικά σας αρχεία — δεν δημοσιεύεται ποτέ στο δημόσιο διαβατήριο."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Αποτέλεσμα Αντοχής στο Χνούδιασμα (Pilling)",
+        "help": "Πρότυπο δοκιμής: ISO 12945-2 (Martindale pilling).",
+        "placeholder": "π.χ., Βαθμός 4 μετά από 2000 τριβές"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Αποτέλεσμα Αντοχής Χρώματος στο Πλύσιμο",
+        "help": "Πρότυπο δοκιμής: ISO 105-C06.",
+        "placeholder": "π.χ., Βαθμός 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Αποτέλεσμα Αντοχής Χρώματος στο Φως",
+        "help": "Πρότυπο δοκιμής: ISO 105-B02.",
+        "placeholder": "π.χ., Βαθμός 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Αποτέλεσμα Διαστασιακής Σταθερότητας μετά το Πλύσιμο",
+        "help": "Πρότυπο δοκιμής: ISO 6330 με μέτρηση ISO 5077.",
+        "placeholder": "π.χ., -2% μήκος, -1% πλάτος"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Αποτέλεσμα Αντοχής Ραφής",
+        "help": "Πρότυπο δοκιμής: ISO 13935-2 (μέθοδος αρπαγής).",
+        "placeholder": "π.χ., 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Αναφορά Έκθεσης Δοκιμής",
+        "placeholder": "Όνομα εργαστηρίου και αριθμός έκθεσης"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Έκθεση Δοκιμής (μεταφόρτωση)",
+        "help": "Διατηρείται για τα εσωτερικά σας αρχεία — δεν δημοσιεύεται ποτέ στο δημόσιο διαβατήριο."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Μέγιστη Θερμοκρασία Πλύσης"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Μπορεί να στεγνώσει σε στεγνωτήριο;"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Μπορεί να σιδερωθεί;"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Μέγιστη Θερμοκρασία Σιδερώματος"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Σύμβολα Φροντίδας"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Πρόσθετες Οδηγίες Φροντίδας",
+        "placeholder": "Οποιεσδήποτε ειδικές οδηγίες φροντίδας"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Διαθέσιμα ανταλλακτικά διακοσμητικά για επισκευή;",
+        "help": "Κουμπιά, φερμουάρ, κορδόνια και άλλα αντικαταστάσιμα εξαρτήματα."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL Κράτησης Επισκευής",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Ανακυκλώσιμο στο τέλος του κύκλου ζωής του;"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Διαθέσιμο πρόγραμμα επιστροφής;"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "Όνομα Συστήματος Επιστροφής και Αριθμοί Μητρώου EPR ανά Αγορά",
+        "help": "Οι αριθμοί μητρώου Διευρυμένης Ευθύνης Παραγωγού διαφέρουν ανά κράτος μέλος, επομένως αναφέρετε μία γραμμή ανά αγορά.",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Κατηγορία Ανακυκλωσιμότητας"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Σημειώσεις Αποσυναρμολόγησης",
+        "placeholder": "Πώς να διαχωρίσετε το εξωτερικό περίβλημα, τη φόδρα, τα διακοσμητικά και τα μεταλλικά στοιχεία για ανακύκλωση"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Τρέχουσα Διάθεση"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Κωδικός Αιτίας Καταστροφής",
+        "warn": "Η καταστροφή απούλητων ενδυμάτων από μεγάλες εταιρείες περιορίζεται από τις 19 Ιουλίου 2026 βάσει του ESPR και απαιτεί τήρηση αρχείων και δημόσια γνωστοποίηση."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Ημερομηνία Διάθεσης",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Σημειώσεις Διάθεσης",
+        "placeholder": "Ποσότητα, οδός διαχείρισης και οποιαδήποτε αναφορά αρμόδιας αρχής"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Περιβαλλοντικοί Ισχυρισμοί στο Προϊόν ή στη Συσκευασία",
+        "placeholder": "π.χ., «Κατασκευασμένο με 50% μετα-καταναλωτικό ανακυκλωμένο πολυεστέρα (πιστοποιημένο κατά GRS)»"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Αναφορά Τεκμηρίωσης Ισχυρισμών",
+        "placeholder": "Αναφορά μελέτης, πιστοποιητικού ή φορέα επαλήθευσης για κάθε ισχυρισμό"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Τεκμηρίωση Ισχυρισμών (μεταφόρτωση)",
+        "help": "Διατηρείται για τα εσωτερικά σας αρχεία — δεν δημοσιεύεται ποτέ στο δημόσιο διαβατήριο."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Οι ισχυρισμοί αποφεύγουν γενικούς περιβαλλοντικούς όρους;",
+        "help": "Γενικοί ισχυρισμοί όπως «φιλικό προς το περιβάλλον», «συνειδητό» και «ουδέτερο ισοζύγιο άνθρακα μέσω αντιστάθμισης» απαγορεύονται από τις 27 Σεπτεμβρίου 2026."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Υπάρχει χαρακτηριστικό αυθεντικοποίησης;",
+        "help": "Τα είδη ένδυσης συγκαταλέγονται στις κατηγορίες προϊόντων με τα περισσότερα κρούσματα παραποίησης/απομίμησης στην ΕΕ, επομένως η αυθεντικοποίηση σε επίπεδο τεμαχίου προστατεύει ουσιαστικά τη μάρκα και τον αγοραστή."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Μέθοδος Αυθεντικοποίησης"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "URL Επαλήθευσης",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ναι",
+        "no": "Όχι"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "cotton": "Βαμβάκι",
+        "organic_cotton": "Βιολογικό βαμβάκι",
+        "linen": "Λινάρι",
+        "hemp": "Κάνναβη",
+        "wool": "Μαλλί",
+        "cashmere": "Κασμίρι",
+        "mohair": "Μοχέρ",
+        "alpaca": "Αλπακά",
+        "angora": "Ανκορά",
+        "silk": "Μετάξι",
+        "viscose": "Βισκόζη",
+        "modal": "Μοντάλ",
+        "lyocell": "Λυοσέλ",
+        "acetate": "Οξική κυτταρίνη",
+        "cupro": "Κουπρό",
+        "polyester": "Πολυεστέρας",
+        "recycled_polyester": "Ανακυκλωμένος πολυεστέρας",
+        "nylon": "Πολυαμίδιο",
+        "acrylic": "Ακρυλικό",
+        "elastane": "Ελαστομερής πολυουρεθάνη",
+        "polypropylene": "Πολυπροπυλένιο",
+        "other": "Άλλο"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ναι",
+        "no": "Όχι",
+        "unknown": "Άγνωστο"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Συμμορφώνεται — επαληθευμένο με δοκιμή",
+        "compliant_declared": "Συμμορφώνεται — μόνο δήλωση προμηθευτή",
+        "in_progress": "Αξιολόγηση σε εξέλιξη",
+        "not_assessed": "Δεν έχει αξιολογηθεί"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Άλλο"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "Ελεγμένο κατά amfori BSCI",
+        "sedex_smeta": "Ελεγμένο κατά Sedex SMETA",
+        "sa8000": "Πιστοποιημένο κατά SA8000",
+        "wrap": "Πιστοποιημένο κατά WRAP",
+        "brand_audit": "Έλεγχος υπό την καθοδήγηση της μάρκας",
+        "not_audited": "Δεν έχει ελεγχθεί"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Ένδυση & Υπόδηση",
         "iso_14067": "ISO 14067",
-        "ghg_protocol": "GHG Protocol Product Standard",
+        "ghg_protocol": "Πρότυπο Προϊόντος GHG Protocol",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Εσωτερικό μοντέλο"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Πλύσιμο μόνο στο χέρι",
+        "dry_clean": "Μόνο στεγνό καθάρισμα"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Χαμηλή (110°C)",
+        "medium": "Μέτρια (150°C)",
+        "high": "Υψηλή (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Πλύσιμο 30°C",
+        "wash_40": "Πλύσιμο 40°C",
+        "wash_60": "Πλύσιμο 60°C",
+        "hand_wash": "Πλύσιμο στο χέρι",
+        "do_not_wash": "Να μην πλένεται",
+        "bleach_allowed": "Επιτρέπεται η λεύκανση",
+        "non_chlorine_bleach": "Μόνο λευκαντικό χωρίς χλώριο",
+        "do_not_bleach": "Να μη χρησιμοποιείται λευκαντικό",
+        "tumble_dry_low": "Στέγνωμα σε στεγνωτήριο σε χαμηλή θερμοκρασία",
+        "tumble_dry_normal": "Κανονικό στέγνωμα σε στεγνωτήριο",
+        "do_not_tumble_dry": "Να μην στεγνώνεται σε στεγνωτήριο",
+        "iron_low": "Σιδέρωμα σε χαμηλή θερμοκρασία",
+        "iron_medium": "Σιδέρωμα σε μέτρια θερμοκρασία",
+        "iron_high": "Σιδέρωμα σε υψηλή θερμοκρασία",
+        "do_not_iron": "Να μη σιδερώνεται",
+        "dry_clean_any": "Επαγγελματικό στεγνό καθάρισμα",
+        "dry_clean_petroleum": "Επαγγελματικό στεγνό καθάρισμα, μόνο με διαλύτη πετρελαίου",
+        "wet_clean": "Επαγγελματικό υγρό καθάρισμα",
+        "do_not_dry_clean": "Να μην γίνεται στεγνό καθάρισμα"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Μονοϋλικό — ανακυκλώσιμο από ίνα σε ίνα",
+        "separable_blend": "Μείγμα, διαχωρίσιμα συστατικά",
+        "mechanical_only": "Μόνο μηχανική ανακύκλωση",
+        "downcycle_only": "Μόνο υποκύκλωση",
+        "not_recyclable": "Προς το παρόν μη ανακυκλώσιμο"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Ακόμα σε απόθεμα",
+        "sold": "Πουλήθηκε",
+        "donated": "Δωρήθηκε",
+        "recycled": "Ανακυκλώθηκε",
+        "remanufactured": "Ανακατασκευάστηκε",
+        "destroyed": "Καταστράφηκε"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Υγεία και ασφάλεια",
+        "counterfeit_ip": "Παραποίηση/απομίμηση / Παραβίαση ΔΠ",
+        "damaged_beyond_repair": "Κατεστραμμένο χωρίς δυνατότητα επισκευής",
+        "donation_refused": "Άρνηση δωρεάς μετά από ερώτηση σε τρεις οργανισμούς κοινωνικής οικονομίας",
+        "protected_logo": "Το προστατευμένο λογότυπο δεν μπορεί να αφαιρεθεί",
+        "unlawful_product": "Το προϊόν αποδείχθηκε παράνομο"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "Ετικέτα NFC",
+        "secure_qr": "Ασφαλής / σειριακός κωδικός QR",
+        "security_seal": "Σφραγίδα ασφαλείας με ένδειξη παραβίασης",
+        "ai_fingerprint": "Αποτύπωμα εικόνας με ΤΝ",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Άλλο"
       }
     }
   }

@@ -1296,526 +1296,526 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Identifikavimas",
+        "description": "Gaminio ir prekės lygmens identifikavimas"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Kas yra atsakingas",
+        "description": "Gamintojas, importuotojas ir ES atsakingas asmuo, nurodomi kaip trys atskiros šalys"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Medžiagos ir sudėtis",
+        "description": "Privalomas pluošto sudėties ženklinimas pagal ES reglamentą 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Sertifikatai",
+        "description": "Kuriuos sertifikatus turi ši prekė ir kaip patikrinti kiekvieną teiginį."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Tiekimo grandinės kelias",
+        "description": "Kiekvieno gamybos etapo šalis, taip pat 1 lygio gamykla ir audito statusas"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Poveikis aplinkai",
+        "description": "Aplinkosauginiai rodikliai su nurodytu skaičiavimo metodu"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Patvarumas ir bandymai",
+        "description": "Išmatuoti patvarumo rezultatai. Tikimasi, kad būsimame tekstilės deleguotajame akte pagal ESPR pagrindinis dėmesys bus skiriamas patvarumo rodikliams, todėl registruokite realius bandymų rezultatus, o ne subjektyvius vertinimus."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Žiediškumas ir eksploatavimo pabaiga",
+        "description": "Priežiūros, remonto, priėmimo atgal ir perdirbamumo informacija"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Disponavimo įrašas",
+        "description": "Palaiko ESPR draudimą naikinti neparduotas vartojimo prekes, kuris taikomas didelėms įmonėms nuo 2026 m. liepos 19 d. ir reikalauja vesti apskaitą bei atskleisti informaciją"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Ekologiškumo teiginių pagrindimas",
+        "description": "Palaiko Direktyvą dėl vartotojų įgalinimo (EU) 2024/825, kuri taikoma nuo 2026 m. rugsėjo 27 d."
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Autentiškumo patvirtinimas",
+        "description": "Su šia preke susietos apsaugos nuo klastojimo priemonės"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Rodyti visus laukus (išsami informacija apie sertifikatus, 1 lygio gamykla ir audito statusas, poveikis aplinkai, patvarumo bandymai, išplėstinis žiediškumas)",
+        "help": "Daugumai prekių ženklų reikia tik toliau nurodytų laukų. Įjunkite šią parinktį, jei turite laboratorinių tyrimų rezultatus, LCA duomenis arba išsamią tiekimo grandinės atsekamumo informaciją, kurią reikia įrašyti."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Prekybos prekės numeris, identifikuojantis SKU.",
+        "placeholder": "pvz., 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Unikalus prekės identifikatorius",
+        "help": "Identifikuoja šį konkretų fizinį daiktą, o ne SKU. Unikalūs prekių identifikatoriai leidžia perparduoti, perduoti nuosavybės teises ir patvirtinti autentiškumą per visą gaminio gyvavimo ciklą.",
+        "placeholder": "pvz., DPP-2026-000184213",
+        "warn": "„Open Label“ jums nepriskiria šio identifikatoriaus. Prekių ženklai turėtų sukurti savo pačių prekių identifikavimo sistemą, pvz., serijines RFID/NFC žymes, gamybos linijos numeravimo schemą arba esamą ERP serijos numerį, ir įvesti tą vertę čia."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Stiliaus / modelio nuoroda",
+        "help": "Reglamentas (EU) 2023/988 (GPSR) reikalauja, kad kartu su gamintojo pavadinimu ir adresu būtų nurodytas gaminio tipo, partijos arba serijos numerio identifikatorius. Tai yra gaminio tipo / partijos identifikatorius – jis nepakeičia aukščiau nurodyto unikalus prekės identifikatoriaus.",
+        "placeholder": "pvz., ST-4412 Oksfordo marškiniai"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Spalvų derinys",
+        "placeholder": "pvz., Indigo / Ekru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Dydis",
+        "placeholder": "pvz., M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Gaminio svoris (gramais)",
+        "help": "Grynasis prekės svoris, naudojamas siuntimui ir ataskaitoms apie medžiagų intensyvumą.",
+        "placeholder": "pvz., 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Partija arba gamybos serija",
+        "placeholder": "pvz., LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Prekės ženklo pavadinimas"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Gaminio tipas",
+        "placeholder": "pvz., marškinėliai, švarkas, kelnės"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Gamintojo juridinis pavadinimas",
+        "help": "Reglamentas (EU) 2023/988 (GPSR) reikalauja, kad ant gaminio arba jo pakuotės būtų nurodytas gamintojo pavadinimas, pašto adresas ir elektroninis adresas."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Gatvės adresas"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Pašto kodas"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Miestas"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Šalis"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektroninis adresas (el. paštas)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Ar gamintojas įsisteigęs ne ES?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Importuotojo juridinis pavadinimas",
+        "help": "Kai gamintojas yra įsisteigęs ne ES, taip pat turi būti nurodytas importuotojo pavadinimas, pašto adresas ir elektroninis adresas."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Gatvės adresas"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Pašto kodas"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Miestas"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Šalis"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektroninis adresas (el. paštas)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "ES atsakingas asmuo – juridinis pavadinimas",
+        "help": "ES atsakingas asmuo pagal Reglamento (EU) 2019/1020 4 straipsnį yra atskiras vaidmuo nuo gamintojo ir importuotojo, net jei ta pati įmonė atlieka daugiau nei vieną iš jų."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "ES atsakingas asmuo – adresas",
+        "placeholder": "Registruotas adresas Europos Sąjungoje"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "ES atsakingas asmuo – elektroninis adresas (el. paštas)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Pagrindinio pluošto tipas"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Pagrindinio pluošto procentinė dalis (%)",
+        "placeholder": "pvz., 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Antrinio pluošto tipas (jei taikoma)",
+        "placeholder": "pvz., elastanas"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Antrinio pluošto procentinė dalis (%)",
+        "placeholder": "pvz., 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Visa sudėtis",
+        "placeholder": "pvz., 80 % medvilnė, 15 % poliesteris, 5 % elastanas"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Sudėtyje yra ne tekstilės gyvūninės kilmės dalių",
+        "help": "ES reglamentas 1007/2011 reikalauja, kad tai būtų nurodyta etiketėje, kai gaminyje yra ne tekstilės gyvūninės kilmės dalių, pavyzdžiui, odinių antsiuvų, kailio apdailos, rago ar kaulo sagų."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Kurios dalys ir iš kurio gyvūno",
+        "placeholder": "pvz., odiniai alkūnių antsiuvai (galvijų); rago sagos (buivolų)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Sudėtis pagal komponentus",
+        "help": "Atskirai nurodykite išorinio audinio, pamušalo ir apdailos detalių sudėtį, kad kiekvieną komponentą būtų galima įvertinti dėl perdirbimo.",
+        "placeholder": "Išorinis audinys: 100 % medvilnė\nPamušalas: 100 % viskozė\nApdailos detalės: poliesterio užtrauktukas, žalvarinės sagos"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Bendra perdirbto turinio procentinė dalis (%)",
+        "placeholder": "pvz., 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Iki vartojimo perdirbtas turinys (%)",
+        "help": "Gamybos atliekos, surinktos prieš pasiekiant vartotoją.",
+        "placeholder": "pvz., 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Po vartojimo perdirbtas turinys (%)",
+        "help": "Medžiaga, gauta iš gaminių, kurie pasiekė galutinius vartotojus.",
+        "placeholder": "pvz., 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Ar sudėtyje yra sintetinių pluoštų, kurie skalbiant išskiria mikroplastiką?",
+        "help": "Prancūzijos AGEC įstatymas reikalauja informuoti vartotojus, kai drabužis skalbimo metu išskiria mikroplastiko pluoštus."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Ar yra REACH / SVHC medžiagų, kurių koncentracija viršija 0,1 % masės?",
+        "help": "Labai didelį susirūpinimą keliančios medžiagos pagal Reglamentą (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "SVHC medžiagos informacija",
+        "placeholder": "Medžiagos pavadinimas, CAS numeris, koncentracija ir komponentas"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Ar šiame gaminyje yra sąmoningai pridėtų PFAS?",
+        "help": "Prancūzija nuo 2026 m. sausio 1 d. pagal Įstatymą 2025-188 draudžia naudoti PFAS drabužiuose, avalynėje ir hidroizoliacinėse priemonėse. PFAS dažnai randamos patvariose vandenį atstumiančiose (DWR) apdailos medžiagose.",
+        "warn": "Pagal Įstatymą 2025-188 nuo 2026 m. sausio 1 d. draudžiama tiekti Prancūzijos rinkai drabužius, kuriuose yra sąmoningai pridėtų PFAS. Atsakymas „Nežinoma“ turi būti išsiaiškintas su tiekėju prieš pradedant pardavinėti Prancūzijoje."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Kurie komponentai ir kurios medžiagos",
+        "placeholder": "pvz., DWR apdaila ant išorinio audinio – PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Ribojamų medžiagų sąrašo (RSL) atitikties statusas"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Turimi sertifikatai"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Sertifikatų nuorodos",
+        "help": "Nuo 2026 m. rugsėjo 27 d. Direktyva (EU) 2024/825 reikalauja, kad tvarumo ženklas būtų pagrįstas sertifikavimo sistema arba nustatytas valdžios institucijos. Palikite tuščią, jei aukščiau nurodytų sertifikatų neturite.",
+        "placeholder": "Po vieną eilutėje, pvz.:\nGOTS – CU 123456 GOTS – galioja iki 2027-06-30\nOEKO-TEX – 21.HTR.12345 – galioja iki 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Pluošto gamybos šalis",
+        "placeholder": "Kur pluoštas buvo užaugintas ar pagamintas"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Verpimo / audimo šalis"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Dažymo / apdailos šalis"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Siuvimo / surinkimo šalis",
+        "help": "Etiketėje nurodomas etapas kaip kilmės šalis."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Pagaminta ES?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "1 lygio gamyklos pavadinimas"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "1 lygio gamyklos adresas"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Socialinio / aplinkosauginio audito statusas"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Audito sertifikatas (įkelti)",
+        "help": "Saugoma jūsų vidiniams įrašams – niekada neskelbiama viešame pase."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Ar prieinamas visiškas tiekimo grandinės skaidrumas?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Anglies pėdsakas (kg CO2e)",
+        "placeholder": "Vienam gaminio vienetui"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Vandens suvartojimas (litrai vienetui)",
+        "placeholder": "pvz., 2700 medvilniniams marškinėliams"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Skaičiavimo metodas",
+        "help": "Skaičius be nurodyto skaičiavimo metodo nėra pagrįstas teiginys pagal Direktyvą dėl vartotojų įgalinimo."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Patvirtinanti LCA ataskaita (įkelti)",
+        "help": "Saugoma jūsų vidiniams įrašams – niekada neskelbiama viešame pase."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Atsparumo pilingavimuisi (burbuliavimuisi) rezultatas",
+        "help": "Bandymo standartas: ISO 12945-2 (Martindeilo pilingavimosi (burbuliavimosi) bandymas).",
+        "placeholder": "pvz., 4 klasė po 2000 trynimų"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Spalvos atsparumo skalbimui rezultatas",
+        "help": "Bandymo standartas: ISO 105-C06.",
+        "placeholder": "pvz., 4–5 klasė"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Spalvos atsparumo šviesai rezultatas",
+        "help": "Bandymo standartas: ISO 105-B02.",
+        "placeholder": "pvz., 5 klasė"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Matmenų stabilumo po skalbimo rezultatas",
+        "help": "Bandymo standartas: ISO 6330 su ISO 5077 matavimu.",
+        "placeholder": "pvz., -2 % ilgio, -1 % pločio"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Siūlės stiprumo rezultatas",
+        "help": "Bandymo standartas: ISO 13935-2 (griebimo metodas).",
+        "placeholder": "pvz., 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Bandymų ataskaitos nuoroda",
+        "placeholder": "Laboratorijos pavadinimas ir ataskaitos numeris"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Bandymų ataskaita (įkelti)",
+        "help": "Saugoma jūsų vidiniams įrašams – niekada neskelbiama viešame pase."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Maksimali skalbimo temperatūra"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Galima džiovinti būgninėje džiovyklėje?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Galima lyginti?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Maksimali lyginimo temperatūra"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Priežiūros simboliai"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Papildomos priežiūros instrukcijos",
+        "placeholder": "Bet kokios specialios priežiūros instrukcijos"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Ar yra atsarginių apdailos detalių remontui?",
+        "help": "Sagos, užtrauktukai, virvelės ir kiti keičiami komponentai."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "Remonto užsakymo URL",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Perdirbamas pasibaigus eksploatavimo laikui?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Ar yra priėmimo atgal programa?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
-        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+        "label": "Priėmimo atgal schemos pavadinimas ir EPR registracijos numeriai pagal rinką",
+        "help": "Gamintojo išplėstinės atsakomybės registracijos numeriai skiriasi kiekvienoje valstybėje narėje, todėl nurodykite po vieną eilutę kiekvienai rinkai.",
+        "placeholder": "FR: Refashion – FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Perdirbamumo klasė"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Išardymo pastabos",
+        "placeholder": "Kaip atskirti išorinį audinį, pamušalą, apdailos detales ir furnitūrą perdirbimui"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Dabartinis disponavimas"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Sunaikinimo priežasties kodas",
+        "warn": "Pagal ESPR nuo 2026 m. liepos 19 d. didelėms įmonėms draudžiama naikinti neparduotus drabužius, reikalaujama vesti apskaitą ir viešai atskleisti informaciją."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Disponavimo data",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Disponavimo pastabos",
+        "placeholder": "Kiekis, tvarkymo būdas ir bet kokia kompetentingos institucijos nuoroda"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Ekologiškumo teiginiai ant gaminio ar pakuotės",
+        "placeholder": "pvz., „Pagaminta iš 50 % po vartojimo perdirbto poliesterio (GRS sertifikuota)“"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Pagrindžiančių įrodymų nuoroda",
+        "placeholder": "Kiekvieno teiginio tyrimo, sertifikato ar patikros įstaigos nuoroda"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Pagrindžiantys įrodymai (įkelti)",
+        "help": "Saugoma jūsų vidiniams įrašams – niekada neskelbiama viešame pase."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Ar teiginiuose vengiama bendrinių aplinkosaugos terminų?",
+        "help": "Bendriniai teiginiai, tokie kaip „ekologiškas“, „sąmoningas“ ir „neutralus anglies dioksido atžvilgiu kompensuojant“, yra draudžiami nuo 2026 m. rugsėjo 27 d."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Ar yra autentiškumo patvirtinimo priemonė?",
+        "help": "Drabužiai yra viena iš dažniausiai klastojamų prekių kategorijų ES, todėl prekės lygmens autentiškumo patvirtinimas iš esmės apsaugo prekės ženklą ir pirkėją."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Autentiškumo patvirtinimo metodas"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "Patikros URL",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Taip",
+        "no": "Ne"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "cotton": "Medvilnė",
+        "organic_cotton": "Organinė medvilnė",
+        "linen": "Linai",
+        "hemp": "Kanapės",
+        "wool": "Vilna",
+        "cashmere": "Kašmyras",
+        "mohair": "Mohera",
+        "alpaca": "Alpaka",
         "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "silk": "Šilkas",
+        "viscose": "Viskozė",
+        "modal": "Modalas",
+        "lyocell": "Liocelis",
+        "acetate": "Acetatas",
+        "cupro": "Vario",
+        "polyester": "Poliesteris",
+        "recycled_polyester": "Perdirbtas poliesteris",
+        "nylon": "Poliamidas",
+        "acrylic": "Akrilas",
+        "elastane": "Elastanas",
+        "polypropylene": "Polipropilenas",
+        "other": "Kita"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Taip",
+        "no": "Ne",
+        "unknown": "Nežinoma"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Atitinka – patikrinta bandymais",
+        "compliant_declared": "Atitinka – tik tiekėjo deklaracija",
+        "in_progress": "Vertinimas vykdomas",
+        "not_assessed": "Neįvertinta"
       },
       "certificationsHeld": {
-        "gots": "GOTS (Global Organic Textile Standard)",
+        "gots": "GOTS (Pasaulinis ekologiškos tekstilės standartas)",
         "oeko_tex": "OEKO-TEX Standard 100",
-        "grs": "GRS (Global Recycled Standard)",
+        "grs": "GRS (Pasaulinis perdirbimo standartas)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Kita"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI audituota",
+        "sedex_smeta": "Sedex SMETA audituota",
+        "sa8000": "SA8000 sertifikuota",
+        "wrap": "WRAP sertifikuota",
+        "brand_audit": "Prekės ženklo atliktas auditas",
+        "not_audited": "Neaudituota"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR drabužiams ir avalynei",
         "iso_14067": "ISO 14067",
-        "ghg_protocol": "GHG Protocol Product Standard",
+        "ghg_protocol": "ŠESD protokolo gaminio standartas",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Vidinis modelis"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Skalbti tik rankomis",
+        "dry_clean": "Tik sausas valymas"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Žema (110°C)",
+        "medium": "Vidutinė (150°C)",
+        "high": "Aukšta (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Skalbti 30°C",
+        "wash_40": "Skalbti 40°C",
+        "wash_60": "Skalbti 60°C",
+        "hand_wash": "Skalbti rankomis",
+        "do_not_wash": "Neskabti",
+        "bleach_allowed": "Balinti leidžiama",
+        "non_chlorine_bleach": "Tik baliklis be chloro",
+        "do_not_bleach": "Nebalinti",
+        "tumble_dry_low": "Džiovinti žemoje temperatūroje",
+        "tumble_dry_normal": "Džiovinti įprastai",
+        "do_not_tumble_dry": "Nedžiovinti būgninėje džiovyklėje",
+        "iron_low": "Lyginti žemoje temperatūroje",
+        "iron_medium": "Lyginti vidutinėje temperatūroje",
+        "iron_high": "Lyginti aukštoje temperatūroje",
+        "do_not_iron": "Nelyginti",
+        "dry_clean_any": "Profesionalus sausas valymas",
+        "dry_clean_petroleum": "Profesionalus sausas valymas, tik naftos tirpikliu",
+        "wet_clean": "Profesionalus šlapias valymas",
+        "do_not_dry_clean": "Nevalyti sausuoju būdu"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Vienos medžiagos – perdirbama iš pluošto į pluoštą",
+        "separable_blend": "Mišinys, atskiriami komponentai",
+        "mechanical_only": "Tik mechaninis perdirbimas",
+        "downcycle_only": "Tik perdirbimas į menkesnės vertės produktus",
+        "not_recyclable": "Šiuo metu neperdirbama"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Vis dar sandėlyje",
+        "sold": "Parduota",
+        "donated": "Paaukota",
+        "recycled": "Perdirbta",
+        "remanufactured": "Pergaminta",
+        "destroyed": "Sunaikinta"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Sveikata ir sauga",
+        "counterfeit_ip": "Klastotė / intelektinės nuosavybės pažeidimas",
+        "damaged_beyond_repair": "Sugadinta nepataisomai",
+        "donation_refused": "Auka atmesta, paklausus trijų socialinės ekonomikos organizacijų",
+        "protected_logo": "Negalima pašalinti apsaugoto logotipo",
+        "unlawful_product": "Paaiškėjo, kad produktas yra neteisėtas"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC žymė",
+        "secure_qr": "Saugus / serijinis QR kodas",
+        "security_seal": "Apsauginis plombas su pažeidimo įrodymu",
+        "ai_fingerprint": "DI vaizdo atspaudas",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Kita"
       }
     }
   }

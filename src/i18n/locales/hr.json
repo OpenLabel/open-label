@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Identitet",
+        "description": "Identifikacija na razini proizvoda i artikla"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Tko je odgovoran",
+        "description": "Proizvođač, uvoznik i odgovorna osoba u EU-u, navedeni kao tri odvojene strane"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Materijali i sastav",
+        "description": "Obvezno označivanje sastava sirovina u skladu s Uredbom EU-a 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Certifikati",
+        "description": "Koje certifikate ovaj artikl posjeduje i kako provjeriti svaku tvrdnju."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Put lanca opskrbe",
+        "description": "Zemlja svake faze proizvodnje te tvornica prve razine i status revizije"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Ekološki otisak",
+        "description": "Podaci o utjecaju na okoliš s navedenom metodom izračuna"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Trajnost i ispitivanje",
+        "description": "Izmjereni rezultati trajnosti. Očekuje se da će se delegirani akt o tekstilu u okviru ESPR usredotočiti na mjerne podatke o trajnosti, stoga zabilježite stvarne rezultate ispitivanja, a ne subjektivne ocjene."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Kružnost i kraj životnog vijeka",
+        "description": "Informacije o održavanju, popravku, povratu i mogućnosti recikliranja"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Evidencija o zbrinjavanju",
+        "description": "Podržava zabranu uništavanja neprodane robe široke potrošnje iz ESPR, koja se primjenjuje na velika poduzeća od 19. srpnja 2026. i zahtijeva vođenje evidencije i objavu podataka"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Potkrepljivanje zelenih tvrdnji",
+        "description": "Podržava Direktivu o osnaživanju potrošača (EU) 2024/825, koja se primjenjuje od 27. rujna 2026."
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Autentifikacija",
+        "description": "Značajke za zaštitu od krivotvorenja povezane s ovim artiklom"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Prikaži sva polja (detalji o certifikatima, tvornica prve razine i status revizije, ekološki otisak, ispitivanje trajnosti, proširena kružnost)",
+        "help": "Većini robnih marki potrebna su samo polja u nastavku. Uključite ovu opciju ako imate rezultate laboratorijskih ispitivanja, podatke iz LCA ili detaljnu sljedivost lanca opskrbe za bilježenje."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Broj trgovačke jedinice koji identificira SKU.",
+        "placeholder": "npr. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Jedinstveni identifikator po artiklu",
+        "help": "Identificira ovaj pojedinačni fizički artikl, a ne SKU. Identifikatori po artiklu omogućuju preprodaju, prijenos vlasništva i autentifikaciju tijekom životnog vijeka proizvoda.",
+        "placeholder": "npr. DPP-2026-000184213",
+        "warn": "Open Label vam ne dodjeljuje ovaj identifikator. Robne marke trebale bi izgraditi vlastiti sustav identifikacije po artiklu — npr. serijalizirane RFID/NFC oznake, shemu numeriranja na proizvodnoj liniji ili postojeći serijski broj iz ERP-a — i unijeti tu vrijednost ovdje."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Referenca stila / modela",
+        "help": "Uredba (EU) 2023/988 (GPSR) zahtijeva identifikator proizvoda prema vrsti, seriji ili serijskom broju uz ime i adresu proizvođača. Ovo je identifikator za vrstu/seriju proizvoda — nije zamjena za gore navedeni identifikator po artiklu.",
+        "placeholder": "npr. ST-4412 Oxford košulja"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Boja",
+        "placeholder": "npr. Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Veličina",
+        "placeholder": "npr. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Težina proizvoda (grami)",
+        "help": "Neto težina artikla, koristi se za otpremu i izvješćivanje o intenzitetu materijala.",
+        "placeholder": "npr. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Serija ili proizvodna partija",
+        "placeholder": "npr. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Naziv robne marke"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Vrsta proizvoda",
+        "placeholder": "npr. majica kratkih rukava, jakna, hlače"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Pravni naziv proizvođača",
+        "help": "Uredba (EU) 2023/988 (GPSR) zahtijeva da se ime, poštanska adresa i elektronička adresa proizvođača navedu na proizvodu ili njegovoj ambalaži."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Ulica i kućni broj"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Poštanski broj"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Grad"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Država"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronička adresa (e-pošta)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Ima li proizvođač poslovni nastan izvan EU-a?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Pravni naziv uvoznika",
+        "help": "Kada proizvođač ima poslovni nastan izvan EU-a, moraju se navesti i ime, poštanska adresa i elektronička adresa uvoznika."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Ulica i kućni broj"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Poštanski broj"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Grad"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Država"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronička adresa (e-pošta)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Odgovorna osoba u EU-u — pravni naziv",
+        "help": "Odgovorna osoba u EU-u prema članku 4. Uredbe (EU) 2019/1020 zasebna je uloga od proizvođača i uvoznika, čak i kada ista tvrtka obavlja više od jedne od tih uloga."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Odgovorna osoba u EU-u — adresa",
+        "placeholder": "Registrirana adresa unutar Europske unije"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Odgovorna osoba u EU-u — elektronička adresa (e-pošta)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Vrsta primarnog vlakna"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Postotak primarnog vlakna (%)",
+        "placeholder": "npr. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Vrsta sekundarnog vlakna (ako je primjenjivo)",
+        "placeholder": "npr. elastansko vlakno"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Postotak sekundarnog vlakna (%)",
+        "placeholder": "npr. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Potpuna izjava o sastavu",
+        "placeholder": "npr. 80 % pamuk, 15 % poliestersko vlakno, 5 % elastansko vlakno"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Sadrži netekstilne dijelove životinjskog podrijetla",
+        "help": "Uredba EU-a 1007/2011 zahtijeva da se to navede na oznaci kada proizvod sadrži netekstilne dijelove životinjskog podrijetla, kao što su kožne zakrpe, krzneni ukrasi, gumbi od roga ili kosti."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Koji dijelovi i od koje životinje",
+        "placeholder": "npr. kožne zakrpe na laktovima (govedo); gumbi od roga (bivol)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Sastav na razini komponenti",
+        "help": "Deklarirajte vanjski sloj, podstavu i ukrase odvojeno kako bi se svaka komponenta mogla procijeniti za recikliranje.",
+        "placeholder": "Vanjski sloj: 100 % pamuk\nPodstava: 100 % viskoza\nUkrasi: patentni zatvarač od poliesterskog vlakna, mjedeni gumbi"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Ukupni postotak recikliranog sadržaja (%)",
+        "placeholder": "npr. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Postotak recikliranog sadržaja prije uporabe (%)",
+        "help": "Proizvodni otpad prikupljen prije nego što je dospio do potrošača.",
+        "placeholder": "npr. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Postotak recikliranog sadržaja nakon uporabe (%)",
+        "help": "Materijal dobiven iz proizvoda koji su dospjeli do krajnjih korisnika.",
+        "placeholder": "npr. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Sadrži li sintetička vlakna koja otpuštaju mikroplastiku?",
+        "help": "Francuski zakon AGEC zahtijeva informiranje potrošača kada odjevni predmet otpušta mikroplastična vlakna tijekom pranja."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Prisutne tvari s popisa REACH / SVHC u koncentraciji iznad 0,1 % m/m?",
+        "help": "Posebno zabrinjavajuće tvari prema Uredbi (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Detalji o tvari s popisa SVHC",
+        "placeholder": "Naziv tvari, CAS broj, koncentracija i komponenta"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Sadrži li ovaj proizvod namjerno dodane tvari PFAS?",
+        "help": "Francuska zabranjuje PFAS u odjeći, obući i sredstvima za vodonepropusnost od 1. siječnja 2026. prema Zakonu 2025-188. PFAS se često nalaze u završnim obradama za trajnu vodoodbojnost (DWR).",
+        "warn": "Stavljanje odjeće koja sadrži namjerno dodane tvari PFAS na francusko tržište zabranjeno je od 1. siječnja 2026. prema Zakonu 2025-188. Odgovor „Nepoznato” mora se riješiti s dobavljačem prije prodaje u Francuskoj."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Koje komponente i koje tvari",
+        "placeholder": "npr. DWR završna obrada na vanjskom sloju — PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Status sukladnosti s Popisom ograničenih tvari (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Posjedovani certifikati"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Reference certifikata",
+        "help": "Od 27. rujna 2026., Direktiva (EU) 2024/825 zahtijeva da se oznaka održivosti temelji na programu certificiranja ili da je uspostavi javno tijelo. Ostavite prazno ako gore nisu navedeni certifikati.",
+        "placeholder": "Jedan po retku, npr.\nGOTS — CU 123456 GOTS — istječe 30. 6. 2027.\nOEKO-TEX — 21.HTR.12345 — istječe 15. 1. 2027."
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Zemlja proizvodnje vlakana",
+        "placeholder": "Gdje je vlakno uzgojeno ili proizvedeno"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Zemlja predenja / tkanja"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Zemlja bojenja / dorade"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Zemlja izrade / sastavljanja",
+        "help": "Faza koja se na oznaci deklarira kao zemlja podrijetla."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Proizvedeno u EU?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Naziv tvornice prve razine"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Adresa tvornice prve razine"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Status socijalne / ekološke revizije"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Certifikat o reviziji (prijenos)",
+        "help": "Čuva se za vašu internu evidenciju — nikada se ne objavljuje na javnoj putovnici."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Dostupna potpuna transparentnost lanca opskrbe?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Ugljični otisak (kg CO2e)",
+        "placeholder": "Po jedinici proizvoda"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Potrošnja vode (litre po jedinici)",
+        "placeholder": "npr. 2700 za pamučnu majicu"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Metoda izračuna",
+        "help": "Brojka bez navedene metode izračuna nije potkrijepljena tvrdnja prema Direktivi o osnaživanju potrošača."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Popratno izvješće LCA (prijenos)",
+        "help": "Čuva se za vašu internu evidenciju — nikada se ne objavljuje na javnoj putovnici."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Rezultat otpornosti na piling",
+        "help": "Norma za ispitivanje: ISO 12945-2 (Martindale piling).",
+        "placeholder": "npr. ocjena 4 nakon 2000 trljanja"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Rezultat postojanosti boje na pranje",
+        "help": "Norma za ispitivanje: ISO 105-C06.",
+        "placeholder": "npr. ocjena 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Rezultat postojanosti boje na svjetlost",
+        "help": "Norma za ispitivanje: ISO 105-B02.",
+        "placeholder": "npr. ocjena 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Rezultat dimenzijske stabilnosti nakon pranja",
+        "help": "Norma za ispitivanje: ISO 6330 s mjerenjem prema ISO 5077.",
+        "placeholder": "npr. -2 % duljina, -1 % širina"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Rezultat čvrstoće šava",
+        "help": "Norma za ispitivanje: ISO 13935-2 (grab metoda).",
+        "placeholder": "npr. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Referenca izvješća o ispitivanju",
+        "placeholder": "Naziv laboratorija i broj izvješća"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Izvješće o ispitivanju (prijenos)",
+        "help": "Čuva se za vašu internu evidenciju — nikada se ne objavljuje na javnoj putovnici."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Maksimalna temperatura pranja"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Može li se sušiti u sušilici?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Može li se glačati?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Maksimalna temperatura glačanja"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Simboli za održavanje"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Dodatne upute za održavanje",
+        "placeholder": "Bilo kakve posebne upute za održavanje"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Dostupni rezervni ukrasi za popravak?",
+        "help": "Gumbi, patentni zatvarači, vezice i druge zamjenjive komponente."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL za rezervaciju popravka",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Može li se reciklirati na kraju životnog vijeka?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Dostupan program povrata?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "Naziv sheme povrata i registracijski brojevi EPR po tržištu",
+        "help": "Registracijski brojevi proširene odgovornosti proizvođača razlikuju se po državi članici, stoga navedite jedan redak po tržištu.",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Klasa reciklabilnosti"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Napomene o rastavljanju",
+        "placeholder": "Kako odvojiti vanjski sloj, podstavu, ukrase i metalne dijelove za recikliranje"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Trenutno zbrinjavanje"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Šifra razloga uništenja",
+        "warn": "Uništavanje neprodane odjeće od strane velikih tvrtki ograničeno je od 19. srpnja 2026. prema ESPR i zahtijeva vođenje evidencije i javnu objavu."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Datum zbrinjavanja",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Napomene o zbrinjavanju",
+        "placeholder": "Količina, put rukovanja i bilo koja referenca nadležnog tijela"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Ekološke tvrdnje navedene na proizvodu ili ambalaži",
+        "placeholder": "npr. „Proizvedeno s 50 % recikliranog poliesterskog vlakna nakon uporabe (GRS certificirano)”"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referenca dokaza za potkrepljivanje tvrdnji",
+        "placeholder": "Referenca studije, certifikata ili verifikacijskog tijela za svaku tvrdnju"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Dokazi za potkrepljivanje tvrdnji (prijenos)",
+        "help": "Čuva se za vašu internu evidenciju — nikada se ne objavljuje na javnoj putovnici."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Izbjegavaju li se u tvrdnjama generički ekološki pojmovi?",
+        "help": "Generičke tvrdnje kao što su „ekološki prihvatljivo”, „svjesno” i „ugljično neutralno putem kompenzacije” zabranjene su od 27. rujna 2026."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Postoji li značajka za autentifikaciju?",
+        "help": "Odjeća je među kategorijama proizvoda koje se najviše krivotvore u EU-u, stoga autentifikacija na razini artikla materijalno štiti robnu marku i kupca."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Metoda autentifikacije"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "URL za provjeru",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Da",
+        "no": "Ne"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "cotton": "Pamuk",
+        "organic_cotton": "Organski pamuk",
+        "linen": "Lan",
+        "hemp": "Konoplja",
+        "wool": "Vuna",
+        "cashmere": "Kašmir",
+        "mohair": "Moher",
+        "alpaca": "Alpaka",
         "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
+        "silk": "Svila",
+        "viscose": "Viskoza",
         "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "lyocell": "Liocel",
+        "acetate": "Acetat",
+        "cupro": "Kupro",
+        "polyester": "Poliestersko vlakno",
+        "recycled_polyester": "Reciklirano poliestersko vlakno",
+        "nylon": "Poliamidno vlakno",
+        "acrylic": "Akrilno vlakno",
+        "elastane": "Elastansko vlakno",
+        "polypropylene": "Polipropilensko vlakno",
+        "other": "Ostalo"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Da",
+        "no": "Ne",
+        "unknown": "Nepoznato"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Sukladno — provjereno ispitivanjem",
+        "compliant_declared": "Sukladno — samo izjava dobavljača",
+        "in_progress": "Procjena u tijeku",
+        "not_assessed": "Nije procijenjeno"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Ostalo"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "revidirano prema amfori BSCI",
+        "sedex_smeta": "revidirano prema Sedex SMETA",
+        "sa8000": "certificirano prema SA8000",
+        "wrap": "certificirano prema WRAP",
+        "brand_audit": "Revizija koju vodi robna marka",
+        "not_audited": "Nije revidirano"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR za odjeću i obuću",
         "iso_14067": "ISO 14067",
         "ghg_protocol": "GHG Protocol Product Standard",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Interni model"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Samo ručno pranje",
+        "dry_clean": "Samo kemijsko čišćenje"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Niska (110°C)",
+        "medium": "Srednja (150°C)",
+        "high": "Visoka (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Pranje na 30°C",
+        "wash_40": "Pranje na 40°C",
+        "wash_60": "Pranje na 60°C",
+        "hand_wash": "Ručno pranje",
+        "do_not_wash": "Ne prati",
+        "bleach_allowed": "Dopušteno izbjeljivanje",
+        "non_chlorine_bleach": "Samo izbjeljivač bez klora",
+        "do_not_bleach": "Ne izbjeljivati",
+        "tumble_dry_low": "Sušiti u sušilici na niskoj temperaturi",
+        "tumble_dry_normal": "Sušiti u sušilici normalno",
+        "do_not_tumble_dry": "Ne sušiti u sušilici",
+        "iron_low": "Glačati na niskoj temperaturi",
+        "iron_medium": "Glačati na srednjoj temperaturi",
+        "iron_high": "Glačati na visokoj temperaturi",
+        "do_not_iron": "Ne glačati",
+        "dry_clean_any": "Profesionalno kemijsko čišćenje",
+        "dry_clean_petroleum": "Profesionalno kemijsko čišćenje, samo s petrolejskim otapalom",
+        "wet_clean": "Profesionalno mokro čišćenje",
+        "do_not_dry_clean": "Ne čistiti kemijski"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Jedan materijal — može se reciklirati od vlakna do vlakna",
+        "separable_blend": "Mješavina, odvojive komponente",
+        "mechanical_only": "Samo mehaničko recikliranje",
+        "downcycle_only": "Samo recikliranje u proizvode niže vrijednosti",
+        "not_recyclable": "Trenutno se ne može reciklirati"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Još na zalihi",
+        "sold": "Prodano",
+        "donated": "Donirano",
+        "recycled": "Reciklirano",
+        "remanufactured": "Obnovljeno",
+        "destroyed": "Uništeno"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Zdravlje i sigurnost",
+        "counterfeit_ip": "Krivotvorina / kršenje intelektualnog vlasništva",
+        "damaged_beyond_repair": "Oštećeno izvan mogućnosti popravka",
+        "donation_refused": "Donacija odbijena nakon upita trima organizacijama socijalne ekonomije",
+        "protected_logo": "Zaštićeni logotip ne može se ukloniti",
+        "unlawful_product": "Ispostavilo se da je proizvod nezakonit"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC oznaka",
+        "secure_qr": "Sigurnosni / serijalizirani QR kod",
+        "security_seal": "Sigurnosni pečat s dokazom o neovlaštenom otvaranju",
+        "ai_fingerprint": "AI slikovni otisak",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Ostalo"
       }
     }
   }
