@@ -132,7 +132,7 @@ describe('CategoryQuestions', () => {
     );
   });
 
-  // Positive wiring tests: the Appareil (textiles) template's inline warnings
+  // Positive wiring tests: the Apparel (textiles) template's inline warnings
   // must actually reach the screen — the original bug was that
   // getCompositionWarning existed but no component ever rendered it.
   it('renders the synthetic-fibre microplastic warning for textiles', () => {
