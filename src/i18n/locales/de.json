@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Identität",
+        "description": "Identifizierung auf Produkt- und Artikelebene"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Wer ist verantwortlich",
+        "description": "Hersteller, Importeur und verantwortliche Person in der EU, als drei getrennte Parteien geführt"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Materialien und Zusammensetzung",
+        "description": "Verpflichtende Fasergehaltskennzeichnung gemäß EU-Verordnung 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Zertifizierungen",
+        "description": "Welche Zertifizierungen dieser Artikel besitzt und wie die jeweilige Angabe überprüft werden kann."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Lieferkettenweg",
+        "description": "Land jeder Produktionsstufe sowie Tier-1-Fabrik und Audit-Status"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Ökologischer Fußabdruck",
+        "description": "Umweltkennzahlen mit einer angegebenen Berechnungsmethode"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Haltbarkeit und Prüfung",
+        "description": "Gemessene Haltbarkeitsergebnisse. Es wird erwartet, dass sich der delegierte Rechtsakt für Textilien im Rahmen von ESPR auf Haltbarkeitskennzahlen konzentrieren wird. Erfassen Sie daher echte Testergebnisse anstelle von subjektiven Bewertungen."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Zirkularität und Lebensende",
+        "description": "Informationen zu Pflege, Reparatur, Rücknahme und Recyclingfähigkeit"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Verbleibsnachweis",
+        "description": "Unterstützt das Verbot der Vernichtung unverkaufter Konsumgüter gemäß ESPR, das für große Unternehmen ab dem 19. Juli 2026 gilt und Aufzeichnungs- und Offenlegungspflichten erfordert"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Belegung von Umweltaussagen",
+        "description": "Unterstützt die Richtlinie zur Stärkung der Verbraucher (EU) 2024/825, die ab dem 27. September 2026 gilt"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Authentifizierung",
+        "description": "Mit diesem Artikel verknüpfte Fälschungsschutzmerkmale"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Alle Felder anzeigen (Zertifizierungsdetails, Tier-1-Fabrik und Audit-Status, ökologischer Fußabdruck, Haltbarkeitsprüfung, erweiterte Zirkularität)",
+        "help": "Die meisten Marken benötigen nur die folgenden Felder. Aktivieren Sie diese Option, wenn Sie Labortestergebnisse, LCA-Daten oder eine detaillierte Rückverfolgbarkeit der Lieferkette erfassen möchten."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Nummer der Handelseinheit zur Identifizierung der SKU.",
+        "placeholder": "z. B. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Eindeutige Kennung pro Artikel",
+        "help": "Identifiziert diesen einzelnen physischen Artikel, nicht die SKU. Kennungen pro Artikel ermöglichen den Wiederverkauf, die Eigentumsübertragung und die Authentifizierung über die gesamte Produktlebensdauer.",
+        "placeholder": "z. B. DPP-2026-000184213",
+        "warn": "Open Label vergibt diese Kennung nicht für Sie. Marken sollten ihr eigenes System zur Identifizierung pro Artikel aufbauen – z. B. serialisierte RFID/NFC-Tags, ein Nummerierungsschema der Produktionslinie oder eine bestehende ERP-Seriennummer – und diesen Wert hier eingeben."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Stil-/Modellreferenz",
+        "help": "Die Verordnung (EU) 2023/988 (GPSR) verlangt neben dem Namen und der Anschrift des Herstellers eine Produktkennung des Typs, der Charge oder der Seriennummer. Dies ist die Kennung für den Produkttyp/die Charge – sie ist kein Ersatz für die obige Kennung pro Artikel.",
+        "placeholder": "z. B. ST-4412 Oxford-Hemd"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Farbgebung",
+        "placeholder": "z. B. Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Größe",
+        "placeholder": "z. B. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Produktgewicht (Gramm)",
+        "help": "Nettogewicht des Artikels, verwendet für den Versand und die Berichterstattung über die Materialintensität.",
+        "placeholder": "z. B. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Charge oder Produktionslos",
+        "placeholder": "z. B. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Markenname"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Produkttyp",
+        "placeholder": "z. B. T-Shirt, Jacke, Hose"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Gesetzlicher Name des Herstellers",
+        "help": "Die Verordnung (EU) 2023/988 (GPSR) schreibt vor, dass der Name, die Postanschrift und die elektronische Adresse des Herstellers auf dem Produkt oder seiner Verpackung anzugeben sind."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Straße und Hausnummer"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postleitzahl"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Stadt"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronische Adresse (E-Mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Ist der Hersteller außerhalb der EU ansässig?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Gesetzlicher Name des Importeurs",
+        "help": "Wenn der Hersteller außerhalb der EU ansässig ist, müssen auch der Name, die Postanschrift und die elektronische Adresse des Importeurs angegeben werden."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Straße und Hausnummer"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postleitzahl"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Stadt"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronische Adresse (E-Mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Verantwortliche Person in der EU – gesetzlicher Name",
+        "help": "Die verantwortliche Person in der EU gemäß Artikel 4 der Verordnung (EU) 2019/1020 ist eine vom Hersteller und Importeur getrennte Rolle, auch wenn dasselbe Unternehmen mehr als eine dieser Rollen ausübt."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Verantwortliche Person in der EU – Anschrift",
+        "placeholder": "Eingetragene Anschrift innerhalb der Europäischen Union"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Verantwortliche Person in der EU – elektronische Adresse (E-Mail)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Primärfasertyp"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Primärfaseranteil (%)",
+        "placeholder": "z. B. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Sekundärfasertyp (falls zutreffend)",
+        "placeholder": "z. B. Elasthan"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Sekundärfaseranteil (%)",
+        "placeholder": "z. B. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Vollständige Zusammensetzung",
+        "placeholder": "z. B. 80 % Baumwolle, 15 % Polyester, 5 % Elasthan"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Enthält nichttextile Teile tierischen Ursprungs",
+        "help": "Die EU-Verordnung 1007/2011 schreibt vor, dass dies auf dem Etikett angegeben werden muss, wenn ein Produkt nichttextile Teile tierischen Ursprungs enthält, wie z. B. Lederaufnäher, Pelzbesatz, Horn- oder Knochenknöpfe."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Welche Teile und von welchem Tier",
+        "placeholder": "z. B. Ellbogenaufnäher aus Leder (Rind); Hornknöpfe (Büffel)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Zusammensetzung auf Komponentenebene",
+        "help": "Deklarieren Sie Oberstoff, Futter und Besätze getrennt, damit jede Komponente für das Recycling bewertet werden kann.",
+        "placeholder": "Oberstoff: 100 % Baumwolle\nFutter: 100 % Viskose\nBesätze: Reißverschluss aus Polyester, Messingknöpfe"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Gesamter Recyclinganteil (%)",
+        "placeholder": "z. B. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Pre-Consumer-Recyclinganteil (%)",
+        "help": "Produktionsabfälle, die zurückgewonnen wurden, bevor sie einen Verbraucher erreichten.",
+        "placeholder": "z. B. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Post-Consumer-Recyclinganteil (%)",
+        "help": "Material, das aus Produkten zurückgewonnen wurde, die Endverbraucher erreicht haben.",
+        "placeholder": "z. B. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Enthält synthetische Fasern, die Mikroplastik freisetzen?",
+        "help": "Das französische AGEC-Gesetz schreibt vor, dass Verbraucher darüber informiert werden müssen, wenn ein Kleidungsstück beim Waschen Mikroplastikfasern freisetzt."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "REACH / SVHC-Stoffe über 0,1 % w/w vorhanden?",
+        "help": "Besonders besorgniserregende Stoffe gemäß Verordnung (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Details zum SVHC-Stoff",
+        "placeholder": "Stoffname, CAS-Nummer, Konzentration und Komponente"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Enthält dieses Produkt absichtlich zugesetzte PFAS?",
+        "help": "Frankreich verbietet PFAS in Kleidung, Schuhen und Imprägniermitteln ab dem 1. Januar 2026 gemäß Gesetz 2025-188. PFAS sind häufig in dauerhaft wasserabweisenden (DWR) Ausrüstungen zu finden.",
+        "warn": "Das Inverkehrbringen von Kleidung mit absichtlich zugesetzten PFAS auf dem französischen Markt ist ab dem 1. Januar 2026 gemäß Gesetz 2025-188 verboten. Eine „Unbekannt“-Antwort muss mit dem Lieferanten geklärt werden, bevor in Frankreich verkauft wird."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Welche Komponenten und welche Stoffe",
+        "placeholder": "z. B. DWR-Ausrüstung auf dem Oberstoff – PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Konformitätsstatus der Liste der eingeschränkten Stoffe (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Besessene Zertifizierungen"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Zertifikatsreferenzen",
+        "help": "Ab dem 27. September 2026 schreibt die Richtlinie (EU) 2024/825 vor, dass ein Nachhaltigkeitslabel auf einem Zertifizierungssystem beruhen oder von einer öffentlichen Behörde eingeführt werden muss. Leer lassen, wenn oben keine Zertifizierungen vorhanden sind.",
+        "placeholder": "Eins pro Zeile, z. B.\nGOTS – CU 123456 GOTS – läuft ab 2027-06-30\nOEKO-TEX – 21.HTR.12345 – läuft ab 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Land der Faserproduktion",
+        "placeholder": "Wo die Faser angebaut oder hergestellt wurde"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Land des Spinnens / Webens"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Land des Färbens / der Veredelung"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Land der Konfektionierung / Montage",
+        "help": "Die auf dem Etikett als Ursprungsland deklarierte Stufe."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Hergestellt in der EU?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Name der Tier-1-Fabrik"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Adresse der Tier-1-Fabrik"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Status des Sozial-/Umweltaudits"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Auditzertifikat (Upload)",
+        "help": "Wird für Ihre internen Unterlagen aufbewahrt – wird niemals im öffentlichen Pass veröffentlicht."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Vollständige Lieferkettentransparenz verfügbar?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "CO2-Fußabdruck (kg CO2e)",
+        "placeholder": "Pro Produkteinheit"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Wasserverbrauch (Liter pro Einheit)",
+        "placeholder": "z. B. 2700 für ein Baumwoll-T-Shirt"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Berechnungsmethode",
+        "help": "Eine Kennzahl ohne angegebene Berechnungsmethode ist keine belegte Angabe im Sinne der Richtlinie zur Stärkung der Verbraucher."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Unterstützender LCA-Bericht (Upload)",
+        "help": "Wird für Ihre internen Unterlagen aufbewahrt – wird niemals im öffentlichen Pass veröffentlicht."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Ergebnis der Pillingresistenz",
+        "help": "Prüfnorm: ISO 12945-2 (Martindale-Pilling).",
+        "placeholder": "z. B. Note 4 nach 2000 Scheuertouren"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Ergebnis der Waschechtheit",
+        "help": "Prüfnorm: ISO 105-C06.",
+        "placeholder": "z. B. Note 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Ergebnis der Lichtechtheit",
+        "help": "Prüfnorm: ISO 105-B02.",
+        "placeholder": "z. B. Note 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Ergebnis der Maßänderung nach dem Waschen",
+        "help": "Prüfnorm: ISO 6330 mit ISO 5077-Messung.",
+        "placeholder": "z. B. -2 % Länge, -1 % Breite"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Ergebnis der Nahtfestigkeit",
+        "help": "Prüfnorm: ISO 13935-2 (Grab-Test-Verfahren).",
+        "placeholder": "z. B. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Prüfberichtsreferenz",
+        "placeholder": "Name des Labors und Berichtsnummer"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Prüfbericht (Upload)",
+        "help": "Wird für Ihre internen Unterlagen aufbewahrt – wird niemals im öffentlichen Pass veröffentlicht."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Maximale Waschtemperatur"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Kann im Wäschetrockner getrocknet werden?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Kann gebügelt werden?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Maximale Bügeltemperatur"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Pflegesymbole"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Zusätzliche Pflegehinweise",
+        "placeholder": "Besondere Pflegehinweise"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Ersatzbesätze für die Reparatur verfügbar?",
+        "help": "Knöpfe, Reißverschlüsse, Kordeln und andere austauschbare Komponenten."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL für die Reparaturbuchung",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Am Ende der Lebensdauer recycelbar?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Rücknahmeprogramm verfügbar?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
-        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+        "label": "Name des Rücknahmesystems und EPR-Registrierungsnummern pro Markt",
+        "help": "Die Registrierungsnummern der erweiterten Herstellerverantwortung unterscheiden sich je nach Mitgliedstaat, daher eine Zeile pro Markt auflisten.",
+        "placeholder": "FR: Refashion – FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Recyclingfähigkeitsklasse"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Demontagehinweise",
+        "placeholder": "Wie man Oberstoff, Futter, Besätze und Zubehörteile für das Recycling trennt"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Aktueller Verbleib"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Grund für die Vernichtung",
+        "warn": "Die Vernichtung unverkaufter Kleidung durch große Unternehmen ist ab dem 19. Juli 2026 gemäß ESPR eingeschränkt und erfordert eine Aufzeichnung und öffentliche Offenlegung."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Datum des Verbleibs",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Anmerkungen zum Verbleib",
+        "placeholder": "Menge, Verwertungsweg und Referenz der zuständigen Behörde"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Umweltaussagen auf dem Produkt oder der Verpackung",
+        "placeholder": "z. B. „Hergestellt mit 50 % recyceltem Post-Consumer-Polyester (GRS-zertifiziert)“"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referenz für den Nachweis der Belegung",
+        "placeholder": "Studie, Zertifikat oder Referenz der Verifizierungsstelle für jede Angabe"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Nachweis der Belegung (Upload)",
+        "help": "Wird für Ihre internen Unterlagen aufbewahrt – wird niemals im öffentlichen Pass veröffentlicht."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Vermeiden die Angaben allgemeine Umweltbegriffe?",
+        "help": "Allgemeine Angaben wie „umweltfreundlich“, „bewusst“ und „klimaneutral durch Kompensation“ sind ab dem 27. September 2026 verboten."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Authentifizierungsmerkmal vorhanden?",
+        "help": "Bekleidung gehört zu den am häufigsten gefälschten Produktkategorien in der EU, daher schützt eine Authentifizierung auf Artikelebene die Marke und den Käufer wesentlich."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Authentifizierungsmethode"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "Verifizierungs-URL",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ja",
+        "no": "Nein"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
+        "cotton": "Baumwolle",
+        "organic_cotton": "Bio-Baumwolle",
+        "linen": "Flachs/Leinen",
+        "hemp": "Hanf",
+        "wool": "Wolle",
+        "cashmere": "Kaschmir",
         "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "alpaca": "Alpaka",
         "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
+        "silk": "Seide",
+        "viscose": "Viskose",
         "modal": "Modal",
         "lyocell": "Lyocell",
-        "acetate": "Acetate",
+        "acetate": "Acetat",
         "cupro": "Cupro",
         "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "recycled_polyester": "Recycelter Polyester",
+        "nylon": "Polyamid",
+        "acrylic": "Acryl",
+        "elastane": "Elasthan",
+        "polypropylene": "Polypropylen",
+        "other": "Andere"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ja",
+        "no": "Nein",
+        "unknown": "Unbekannt"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Konform – durch Prüfung verifiziert",
+        "compliant_declared": "Konform – nur Lieferantenerklärung",
+        "in_progress": "Bewertung läuft",
+        "not_assessed": "Nicht bewertet"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Andere"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI auditiert",
+        "sedex_smeta": "Sedex SMETA auditiert",
+        "sa8000": "SA8000 zertifiziert",
+        "wrap": "WRAP zertifiziert",
+        "brand_audit": "Markeneigenes Audit",
+        "not_audited": "Nicht auditiert"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Bekleidung & Schuhe",
         "iso_14067": "ISO 14067",
         "ghg_protocol": "GHG Protocol Product Standard",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Internes Modell"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Nur Handwäsche",
+        "dry_clean": "Nur chemische Reinigung"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Niedrig (110°C)",
+        "medium": "Mittel (150°C)",
+        "high": "Hoch (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Waschen 30°C",
+        "wash_40": "Waschen 40°C",
+        "wash_60": "Waschen 60°C",
+        "hand_wash": "Handwäsche",
+        "do_not_wash": "Nicht waschen",
+        "bleach_allowed": "Bleichen erlaubt",
+        "non_chlorine_bleach": "Nur chlorfreies Bleichen",
+        "do_not_bleach": "Nicht bleichen",
+        "tumble_dry_low": "Trocknen bei niedriger Temperatur",
+        "tumble_dry_normal": "Normal trocknen",
+        "do_not_tumble_dry": "Nicht im Wäschetrockner trocknen",
+        "iron_low": "Bügeln bei niedriger Temperatur",
+        "iron_medium": "Bügeln bei mittlerer Temperatur",
+        "iron_high": "Bügeln bei hoher Temperatur",
+        "do_not_iron": "Nicht bügeln",
+        "dry_clean_any": "Professionelle chemische Reinigung",
+        "dry_clean_petroleum": "Professionelle chemische Reinigung, nur Petroleumbasierte Lösungsmittel",
+        "wet_clean": "Professionelle Nassreinigung",
+        "do_not_dry_clean": "Nicht chemisch reinigen"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Monomaterial – Faser-zu-Faser recycelbar",
+        "separable_blend": "Mischung, trennbare Komponenten",
+        "mechanical_only": "Nur mechanisches Recycling",
+        "downcycle_only": "Nur Downcycling",
+        "not_recyclable": "Derzeit nicht recycelbar"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Noch auf Lager",
+        "sold": "Verkauft",
+        "donated": "Gespendet",
+        "recycled": "Recycelt",
+        "remanufactured": "Wiederaufbereitet",
+        "destroyed": "Vernichtet"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Gesundheit und Sicherheit",
+        "counterfeit_ip": "Fälschung / Verletzung geistigen Eigentums",
+        "damaged_beyond_repair": "Irreparabel beschädigt",
+        "donation_refused": "Spende nach Anfrage bei drei sozialwirtschaftlichen Organisationen abgelehnt",
+        "protected_logo": "Geschütztes Logo kann nicht entfernt werden",
+        "unlawful_product": "Produkt erwies sich als rechtswidrig"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC-Tag",
+        "secure_qr": "Sicherer / serialisierter QR-Code",
+        "security_seal": "Manipulationssicheres Sicherheitssiegel",
+        "ai_fingerprint": "KI-Bild-Fingerabdruck",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Andere"
       }
     }
   }

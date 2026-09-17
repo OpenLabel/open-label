@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Aitheantas",
+        "description": "Aitheantas ar leibhéal an táirge agus na míre"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Cé atá freagrach",
+        "description": "Monaróir, allmhaireoir agus duine freagrach an AE, coinnithe mar thrí pháirtí ar leith"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Ábhair agus Comhdhéanamh",
+        "description": "Lipéadú éigeantach ar ábhar snáithíní de réir Rialachán AE 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Deimhnithe",
+        "description": "Na deimhnithe atá ag an mír seo, agus conas gach maíomh a fhíorú."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Aistear an tSlabhra Soláthair",
+        "description": "Tír gach céime táirgthe móide stádas na monarchan Leibhéal 1 agus an iniúchta"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Lorg Comhshaoil",
+        "description": "Figiúirí comhshaoil le modh ríofa sonraithe"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Marthanacht agus Tástáil",
+        "description": "Torthaí marthanachta tomhaiste. Meastar go ndíreoidh an gníomh tarmligthe teicstíle a bhfuiltear ag súil leis faoi ESPR ar mhéadracht marthanachta, mar sin taifead torthaí tástála iarbhír seachas scóir shuibíochtúla."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Ciorclaíocht agus Deireadh Ré",
+        "description": "Faisnéis faoi chúram, deisiú, tabhairt ar ais agus in-athchúrsáilteacht"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Taifead Diúscartha",
+        "description": "Tacaíonn sé leis an gcosc ESPR ar earraí tomhaltais neamhdhíolta a scriosadh, a bhfuil feidhm aige maidir le cuideachtaí móra ón 19 Iúil 2026 agus a éilíonn coimeád taifead agus nochtadh"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Fianú na Maíomh Glas",
+        "description": "Tacaíonn sé leis an Treoir maidir le Tomhaltóirí a Chumasú (EU) 2024/825, a bhfuil feidhm aici ón 27 Meán Fómhair 2026"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Fíordheimhniú",
+        "description": "Gnéithe frithghóchumtha atá nasctha leis an mír seo"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Taispeáin gach réimse (sonraí deimhnithe, stádas na monarchan Leibhéal 1 agus an iniúchta, lorg comhshaoil, tástáil marthanachta, ciorclaíocht leathnaithe)",
+        "help": "Níl de dhíth ar fhormhór na mbrandaí ach na réimsí thíos. Cuir seo ar siúl má tá torthaí tástála saotharlainne, sonraí LCA, nó inrianaitheacht mhionsonraithe slabhra soláthair le taifeadadh agat."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
+        "help": "Uimhir thrádála na míre a shainaithníonn an SKU.",
         "placeholder": "e.g., 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
+        "label": "Aitheantóir Uathúil in aghaidh na Míre",
+        "help": "Sainaithníonn sé an mhír fhisiciúil aonair seo, ní an SKU. Is iad na haitheantóirí in aghaidh na míre a chumasaíonn athdhíol, aistriú úinéireachta agus fíordheimhniú thar shaolré an táirge.",
         "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "warn": "Ní shannann Open Label an t-aitheantóir seo duit. Ba cheart do bhrandaí a gcóras aitheantais in aghaidh na míre féin a thógáil — e.g. clibeanna sraitheacha RFID/NFC, scéim uimhrithe líne táirgthe, nó sraithuimhir ERP atá ann cheana — agus an luach sin a chur isteach anseo."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Tagairt Stíle / Mhúnla",
+        "help": "Éilíonn Rialachán (EU) 2023/988 (GPSR) go mbeadh aitheantóir táirge de chineál, baisc nó sraithuimhir ann in éineacht le hainm agus seoladh an mhonaróra. Is é seo an t-aitheantóir don chineál/bhaisc táirge — ní hionadach é don aitheantóir in aghaidh na míre thuas.",
+        "placeholder": "e.g., Léine Oxford ST-4412"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Dathbhealach",
+        "placeholder": "e.g., Ionadagó / Éacrú"
       },
       "size": {
-        "label": "Size",
+        "label": "Méid",
         "placeholder": "e.g., M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
+        "label": "Meáchan an Táirge (gram)",
+        "help": "Glanmheáchan na míre, a úsáidtear le haghaidh loingseoireachta agus tuairiscithe ar dhéine ábhair.",
         "placeholder": "e.g., 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
+        "label": "Baisc nó Lot Táirgthe",
         "placeholder": "e.g., LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Ainm an Bhranda"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Cineál Táirge",
+        "placeholder": "e.g., T-léine, Seaicéad, Bríste"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Ainm dlíthiúil an mhonaróra",
+        "help": "Éilíonn Rialachán (EU) 2023/988 (GPSR) go dtabharfaí ainm, seoladh poist agus seoladh leictreonach an mhonaróra ar an táirge nó ar a phacáistíocht."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Seoladh sráide"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Cód poist"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Cathair"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Tír"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Seoladh leictreonach (ríomhphost)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "An bhfuil an monaróir bunaithe lasmuigh den AE?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Ainm dlíthiúil an allmhaireora",
+        "help": "Nuair a bhíonn an monaróir bunaithe lasmuigh den AE, ní mór ainm, seoladh poist agus seoladh leictreonach an allmhaireora a thabhairt freisin."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Seoladh sráide"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Cód poist"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Cathair"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Tír"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Seoladh leictreonach (ríomhphost)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Duine freagrach an AE — ainm dlíthiúil",
+        "help": "Is ról ar leith é an duine freagrach san AE faoi Airteagal 4 de Rialachán (EU) 2019/1020 ó ról an mhonaróra agus an allmhaireora, fiú nuair a dhéanann an chuideachta chéanna níos mó ná ceann amháin acu."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Duine freagrach an AE — seoladh",
+        "placeholder": "Seoladh cláraithe laistigh den Aontas Eorpach"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Duine freagrach an AE — seoladh leictreonach (ríomhphost)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Cineál an Phríomhshnáithín"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
+        "label": "Céatadán an Phríomhshnáithín (%)",
         "placeholder": "e.g., 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Cineál an tSnaithín Thánaistigh (más infheidhme)",
+        "placeholder": "e.g., Leaisteán"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
+        "label": "Céatadán an tSnaithín Thánaistigh (%)",
         "placeholder": "e.g., 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Ráiteas Comhdhéanaimh Iomlán",
+        "placeholder": "e.g., 80% Cadás, 15% Poileistear, 5% Leaisteán"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Tá páirteanna neamhtheicstíle de bhunadh ainmhíoch ann",
+        "help": "Éilíonn Rialachán AE 1007/2011 go luafaí é seo ar an lipéad nuair a bhíonn páirteanna neamhtheicstíle de bhunadh ainmhíoch i dtáirge, amhail paistí leathair, fionnadh, cnaipí adhairce nó cnámh."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Cé na páirteanna, agus ó cén t-ainmhí",
+        "placeholder": "e.g., Paistí leathair uillinne (bó-ainmhí); cnaipí adhairce (buabhall)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Comhdhéanamh ar Leibhéal na Comhpháirte",
+        "help": "Dearbhaigh an bhlaosc sheachtrach, an líneáil agus na maisiúcháin ar leithligh ionas gur féidir gach comhpháirt a mheas le haghaidh athchúrsála.",
+        "placeholder": "Blaosc sheachtrach: 100% Cadás\nLíneáil: 100% Vioscós\nMaisiúcháin: Zipeáil poileistir, cnaipí práis"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
+        "label": "Céatadán Iomlán an Ábhair Athchúrsáilte (%)",
         "placeholder": "e.g., 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
+        "label": "Ábhar Athchúrsáilte Réamh-thomhaltais (%)",
+        "help": "Dramhaíl táirgthe a aisghabhadh sular shroich sí tomhaltóir.",
         "placeholder": "e.g., 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
+        "label": "Ábhar Athchúrsáilte Iar-thomhaltais (%)",
+        "help": "Ábhar a aisghabhadh ó tháirgí a shroich úsáideoirí deiridh.",
         "placeholder": "e.g., 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "An bhfuil snáithíní sintéiseacha ann a sceitheann micreaphlaistigh?",
+        "help": "Éilíonn dlí AGEC na Fraince go gcuirfí tomhaltóirí ar an eolas nuair a scaoileann ball éadaigh snáithíní micreaphlaisteacha le linn níocháin."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "An bhfuil substaintí REACH / SVHC i láthair os cionn 0.1% w/w?",
+        "help": "Substaintí is Ábhar Mór Imní de réir Rialachán (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Sonraí na Substainte SVHC",
+        "placeholder": "Ainm na substainte, uimhir CAS, tiúchan agus comhpháirt"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "An bhfuil PFAS curtha leis an táirge seo d'aon ghnó?",
+        "help": "Cuireann an Fhrainc cosc ar PFAS in éadaí, coisbheart agus oibreáin uiscedhíonta ón 1 Eanáir 2026 faoi Dhlí 2025-188. Is minic a fhaightear PFAS i gcríochnuithe marthanacha uisce-éartha (DWR).",
+        "warn": "Tá sé toirmiscthe éadaí ina bhfuil PFAS curtha leo d'aon ghnó a chur ar mhargadh na Fraince ón 1 Eanáir 2026 faoi Dhlí 2025-188. Ní mór freagra \"Anaithnid\" a réiteach leis an soláthraí sula ndíoltar sa Fhrainc é."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Cé na comhpháirteanna agus cé na substaintí",
+        "placeholder": "e.g., críoch DWR ar an mblaosc sheachtrach — PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Stádas Comhlíonta an Liosta Substaintí Srianta (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Deimhnithe i Seilbh"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Tagairtí Deimhnithe",
+        "help": "Ón 27 Meán Fómhair 2026, éilíonn Treoir (EU) 2024/825 go mbeidh lipéad inbhuanaitheachta bunaithe ar scéim deimhniúcháin nó bunaithe ag údarás poiblí. Fág bán mura bhfuil aon deimhnithe i seilbh thuas.",
+        "placeholder": "Ceann in aghaidh na líne, e.g.\nGOTS — CU 123456 GOTS — in éag 2027-06-30\nOEKO-TEX — 21.HTR.12345 — in éag 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Tír Táirgthe an tSnáithín",
+        "placeholder": "An áit ar fásadh nó ar táirgeadh an snáithín"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Tír an tSnīomhacháin / na Fíodóireachta"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Tír an Ruaimnithe / na Críochnaithe"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Tír na Déantúsaíochta / an Tionóil",
+        "help": "An chéim a dhearbhaítear mar thír thionscnaimh ar an lipéad."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Déanta san AE?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Ainm na Monarchan Leibhéal 1"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Seoladh na Monarchan Leibhéal 1"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Stádas an Iniúchta Shóisialta / Chomhshaoil"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Teastas Iniúchta (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "An bhfuil trédhearcacht iomlán an tslabhra soláthair ar fáil?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Lorg Carbóin (kg CO2e)",
+        "placeholder": "In aghaidh an aonaid táirge"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Úsáid Uisce (lítear in aghaidh an aonaid)",
+        "placeholder": "e.g., 2700 do t-léine cadáis"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Modh Ríofa",
+        "help": "Ní maíomh fianaithe é figiúr gan modh ríofa sonraithe faoin Treoir maidir le Tomhaltóirí a Chumasú."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Tuarascáil Tacaíochta LCA (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Toradh na Frithsheasmhachta in aghaidh Píleála",
+        "help": "Caighdeán tástála: ISO 12945-2 (píleáil Martindale).",
+        "placeholder": "e.g., Grád 4 tar éis 2000 cuimilt"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Toradh Dathdhílseachta don Níochán",
+        "help": "Caighdeán tástála: ISO 105-C06.",
+        "placeholder": "e.g., Grád 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Toradh Dathdhílseachta don Solas",
+        "help": "Caighdeán tástála: ISO 105-B02.",
+        "placeholder": "e.g., Grád 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Toradh na Cobhsaíochta Toisí Tar éis Níocháin",
+        "help": "Caighdeán tástála: ISO 6330 le tomhas ISO 5077.",
+        "placeholder": "e.g., -2% fad, -1% leithead"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
+        "label": "Toradh Neart an Fhuaighil",
+        "help": "Caighdeán tástála: ISO 13935-2 (modh an ghreama).",
         "placeholder": "e.g., 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Tagairt na Tuarascála Tástála",
+        "placeholder": "Ainm na saotharlainne agus uimhir na tuarascála"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Tuarascáil Tástála (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Uasteocht Níocháin"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "An féidir é a thriomú sa triomadóir?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "An féidir é a iarnáil?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Uasteocht Iarnála"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Siombailí Cúraim"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Treoracha Cúraim Breise",
+        "placeholder": "Aon treoracha cúraim speisialta"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "An bhfuil maisiúcháin spártha ar fáil le haghaidh deisiúcháin?",
+        "help": "Cnaipí, zipeálacha, cordaí agus comhpháirteanna in-athsholáthair eile."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL Áirithinte Deisiúcháin",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "In-athchúrsáilte ag deireadh ré?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "An bhfuil clár tabhairt ar ais ar fáil?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "Ainm na Scéime Tabhairt ar Ais agus Uimhreacha Clárúcháin EPR in aghaidh an Mhargaidh",
+        "help": "Bíonn difríocht idir uimhreacha clárúcháin na Freagrachta Leathnaithe Táirgeora in aghaidh an bhallstáit, mar sin liostaigh líne amháin in aghaidh an mhargaidh.",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Aicme In-athchúrsáilteachta"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Nótaí Díchóimeála",
+        "placeholder": "Conas an bhlaosc sheachtrach, an líneáil, na maisiúcháin agus na crua-earraí a scaradh le haghaidh athchúrsála"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Diúscairt Reatha"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Cód Cúise an Scriosadh",
+        "warn": "Tá srian ar chuideachtaí móra éadaí neamhdhíolta a scriosadh ón 19 Iúil 2026 faoin ESPR agus éilíonn sé coimeád taifead agus nochtadh poiblí."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Dáta Diúscartha",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Nótaí Diúscartha",
+        "placeholder": "Cainníocht, bealach láimhseála agus aon tagairt d'údarás inniúil"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Maímh Chomhshaoil a Rinneadh ar an Táirge nó ar an bPacáistíocht",
+        "placeholder": "e.g., \"Déanta le 50% poileistear athchúrsáilte iar-thomhaltais (deimhnithe ag GRS)\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Tagairt Fianaise an Fhianaithe",
+        "placeholder": "Tagairt staidéir, teastais nó comhlachta fíorúcháin do gach maíomh"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Fianaise Fianaithe (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "An seachnaíonn maímh téarmaí cineálacha comhshaoil?",
+        "help": "Tá cosc ar mhaímh chineálacha amhail \"éiceabhách\", \"coinsiasach\" agus \"carbón-neodrach trí fhritháireamh\" ón 27 Meán Fómhair 2026."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "An bhfuil gné fíordheimhnithe i láthair?",
+        "help": "Tá éadaí i measc na gcatagóirí táirgí is mó a ghóchumtar san AE, mar sin cosnaíonn fíordheimhniú ar leibhéal na míre an branda agus an ceannaitheoir go hábhartha."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Modh Fíordheimhnithe"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "URL Fíorúcháin",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Tá",
+        "no": "Níl"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "cotton": "Cadás",
+        "organic_cotton": "Cadás orgánach",
+        "linen": "Líon",
+        "hemp": "Cnáib",
+        "wool": "Olann",
+        "cashmere": "Caismír",
+        "mohair": "Móihéar",
+        "alpaca": "Alpacá",
+        "angora": "Angóra",
+        "silk": "Síoda",
+        "viscose": "Vioscós",
+        "modal": "Módal",
+        "lyocell": "Lióicell",
+        "acetate": "Aicéatáit",
+        "cupro": "Copró",
+        "polyester": "Poileistear",
+        "recycled_polyester": "Poileistear athchúrsáilte",
+        "nylon": "Polaimíd",
+        "acrylic": "Aicrileach",
+        "elastane": "Leaisteán",
+        "polypropylene": "Polapróipiléin",
+        "other": "Eile"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Tá",
+        "no": "Níl",
+        "unknown": "Anaithnid"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Comhlíontach — fíoraithe trí thástáil",
+        "compliant_declared": "Comhlíontach — dearbhú an tsoláthraí amháin",
+        "in_progress": "Measúnú ar siúl",
+        "not_assessed": "Gan mheasúnú"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Eile"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "Iniúchta ag amfori BSCI",
+        "sedex_smeta": "Iniúchta ag Sedex SMETA",
+        "sa8000": "Deimhnithe ag SA8000",
+        "wrap": "Deimhnithe ag WRAP",
+        "brand_audit": "Iniúchadh faoi stiúir an bhranda",
+        "not_audited": "Gan iniúchadh"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Éadaí & Coisbheart",
         "iso_14067": "ISO 14067",
-        "ghg_protocol": "GHG Protocol Product Standard",
+        "ghg_protocol": "Caighdeán Táirge Phrótacal GHG",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Múnla inmheánach"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Nigh de láimh amháin",
+        "dry_clean": "Tirimghlanadh amháin"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Íseal (110°C)",
+        "medium": "Meánach (150°C)",
+        "high": "Ard (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Nigh 30°C",
+        "wash_40": "Nigh 40°C",
+        "wash_60": "Nigh 60°C",
+        "hand_wash": "Nigh de láimh",
+        "do_not_wash": "Ná nigh",
+        "bleach_allowed": "Ceadaítear tuaradh",
+        "non_chlorine_bleach": "Tuar neamh-chlóirín amháin",
+        "do_not_bleach": "Ná tuar",
+        "tumble_dry_low": "Triomaigh sa triomadóir ar theas íseal",
+        "tumble_dry_normal": "Triomaigh sa triomadóir de ghnáth",
+        "do_not_tumble_dry": "Ná triomaigh sa triomadóir",
+        "iron_low": "Iarnáil ar theocht íseal",
+        "iron_medium": "Iarnáil ar theocht mheánach",
+        "iron_high": "Iarnáil ar theocht ard",
+        "do_not_iron": "Ná hiarnáil",
+        "dry_clean_any": "Tirimghlanadh gairmiúil",
+        "dry_clean_petroleum": "Tirimghlanadh gairmiúil, tuaslagóir peitriliam amháin",
+        "wet_clean": "Fliuchghlanadh gairmiúil",
+        "do_not_dry_clean": "Ná tirimghlan"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Aonábhar — in-athchúrsáilte ó shnáithín go snáithín",
+        "separable_blend": "Cumasc, comhpháirteanna inscartha",
+        "mechanical_only": "Athchúrsáil mheicniúil amháin",
+        "downcycle_only": "Íos-chúrsáil amháin",
+        "not_recyclable": "Neamh-in-athchúrsáilte faoi láthair"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Fós i stoc",
+        "sold": "Díolta",
+        "donated": "Bronnta",
+        "recycled": "Athchúrsáilte",
+        "remanufactured": "Athmhonaraithe",
+        "destroyed": "Scriosta"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Sláinte agus sábháilteacht",
+        "counterfeit_ip": "Góchumadh / sárú Maoine Intleachtúla",
+        "damaged_beyond_repair": "Damáiste déanta dó nach féidir a dheisiú",
+        "donation_refused": "Diúltaíodh don bhronnadh tar éis fiafraí de thrí eagraíocht geilleagair shóisialta",
+        "protected_logo": "Ní féidir lógó cosanta a bhaint",
+        "unlawful_product": "Tharla sé go raibh an táirge neamhdhleathach"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "Clib NFC",
+        "secure_qr": "Cód QR slán / sraitheach",
+        "security_seal": "Séala slándála sofheicthe cur isteach",
+        "ai_fingerprint": "Méarlorg íomhá Intleachta Saorga",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Eile"
       }
     }
   }
