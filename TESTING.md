@@ -30,6 +30,13 @@ Legend:
 3. Language override: `/p/de00000000000001?lang=it` — entire page (including safety/chemical sections and allergen declarations) must be Italian, no English leaks. Repeat with `?lang=zh-CN` and one other EU language.
 4. Invalid slug (e.g. `/p/0000000000000000`): friendly not-found state, no stack trace.
 5. Rate limiting: refresh rapidly ~30+ times; the public-data endpoint should eventually return a rate-limit error rather than data.
+6. **No tracking, no cookie banner (hard regulatory requirement)** — with a fresh browser profile, from an EEA/UK/CH location (or with the country trace forced to `FR`), load `/p/de00000000000001` and verify ALL of the following:
+   - No cookie/consent banner and no "Cookie settings" button appear, at any moment.
+   - Network tab: no request to `googletagmanager.com`, no `gtag/js`, no `google-analytics`, no `/cdn-cgi/trace` country lookup.
+   - Console: `window.gtag` and `window.dataLayer` are `undefined` on a direct load of the passport page.
+   - Application tab: no advertising/analytics cookie or storage entry is created (`openlabel_ads_consent` must not be written).
+   - Client-side navigation: from `/p/:slug`, no `page_view` or conversion is sent; navigating to `/` afterwards may load tracking normally, and returning to `/p/:slug` must send nothing further for that route.
+   - This applies to every published passport URL, in every language and on mobile.
 
 ### 1.4 Cypheme landing page — `/cypheme/passport` [public]
 1. Verify the isolated Cypheme design system (Roboto/Inter, brand orange/blue, 16px radius buttons) and that global app styles don't bleed in.
@@ -134,6 +141,7 @@ Only testable on a fresh instance where `setup_complete` is false:
 - **Mobile pass** (375px): landing, auth, dashboard, form, public passport, Cypheme page.
 - **Rate limiting**: public-data edge functions reject bursts (see 1.3.5).
 - **Security spot checks**: public view never exposes owner email/user id; SVG file uploads are rejected; external URLs in passport fields are validated.
+- **Tracking-free public passport (regulatory)**: re-run check 1.3.6 after any change to tracking, consent or routing code. Automated guards: `src/lib/trackingExemptions.test.ts`, `src/__tests__/publicPassportNoTracking.test.tsx`, and the ConsentBanner exemption test. A failure here is a compliance defect, not a cosmetic one.
 
 ---
 

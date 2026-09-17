@@ -22,6 +22,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { initGoogleAdsTag, trackPageView } from "@/lib/googleAdsTracking";
+import { isTrackingExemptPath } from "@/lib/trackingExemptions";
 import { useReferral } from "@/hooks/useReferral";
 import { AuthProvider } from "@/hooks/useAuth";
 import { SiteConfigProvider, useSiteConfig } from "@/hooks/useSiteConfig";
@@ -54,12 +55,16 @@ function ReferralCapture() {
 
 function GoogleAdsTracker() {
   const location = useLocation();
+  // Regulatory: the public passport view must stay strictly tracking-free.
+  const exempt = isTrackingExemptPath(location.pathname);
   useEffect(() => {
+    if (exempt) return;
     initGoogleAdsTag();
-  }, []);
+  }, [exempt]);
   useEffect(() => {
+    if (exempt) return;
     trackPageView(location.pathname + location.search);
-  }, [location.pathname, location.search]);
+  }, [exempt, location.pathname, location.search]);
   return null;
 }
 

@@ -27,9 +27,9 @@ function mockCountry(loc: string) {
   );
 }
 
-function renderBanner() {
+function renderBanner(path = '/') {
   return render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={[path]}>
       <ConsentBanner />
     </MemoryRouter>,
   );
@@ -74,6 +74,13 @@ describe('ConsentBanner', () => {
     const user = userEvent.setup();
     await user.click(await screen.findByRole('button', { name: 'Reject' }));
     expect(window.localStorage.getItem(CONSENT_STORAGE_KEY)).toBe('denied');
+  });
+
+  it('never appears on the public passport view (regulatory requirement)', async () => {
+    mockCountry('FR');
+    renderBanner('/p/de00000000000001');
+    await waitFor(() => expect(screen.queryByRole('dialog')).not.toBeInTheDocument());
+    expect(global.fetch).not.toHaveBeenCalled();
   });
 
   it('lets the visitor change their choice later', async () => {
