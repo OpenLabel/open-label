@@ -95,13 +95,20 @@ export function buildTextilesTree(): Record<string, any> {
   return tree;
 }
 
-function deepMerge(target: Record<string, any>, source: Record<string, any>) {
+function deepMerge(
+  target: Record<string, any>,
+  source: Record<string, any>,
+  overwrite: boolean,
+) {
   for (const key of Object.keys(source)) {
     const value = source[key];
     if (value && typeof value === 'object' && !Array.isArray(value)) {
       if (!target[key] || typeof target[key] !== 'object') target[key] = {};
-      deepMerge(target[key], value);
-    } else {
+      deepMerge(target[key], value, overwrite);
+    } else if (overwrite || target[key] === undefined) {
+      // English is the source of truth. Other locales are only SEEDED with the
+      // English text where a value is missing, so real translations added in
+      // step 2 are never clobbered by re-running this script.
       target[key] = value;
     }
   }
