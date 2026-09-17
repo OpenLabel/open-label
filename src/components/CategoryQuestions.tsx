@@ -138,10 +138,17 @@ function FileUploadField({
   question,
   value,
   onChange,
+  usePrivateStorage,
 }: {
   question: TemplateQuestion;
   value: string | undefined;
   onChange: (url: string | null) => void;
+  /**
+   * When true, uploads go to the private bucket and a storage PATH is stored
+   * (signed on demand when viewing). Currently only enabled for Apparel
+   * (textiles) internal documents; other categories keep the public bucket.
+   */
+  usePrivateStorage: boolean;
 }) {
   const { t } = useTranslation();
   const { user } = useAuth();
@@ -152,7 +159,7 @@ function FileUploadField({
   const accept = question.accept ?? 'application/pdf,image/*';
   const maxBytes = question.maxBytes ?? 5 * 1024 * 1024;
 
-  const isInternal = question.internal === true;
+  const isInternal = usePrivateStorage;
   // Legacy records stored full public URLs even for internal fields.
   const isLegacyUrl = typeof value === 'string' && value.startsWith('http');
 
@@ -607,6 +614,7 @@ export function CategoryQuestions({
             question={question}
             value={value as string | undefined}
             onChange={(url) => handleChange(question.id, url ?? '')}
+            usePrivateStorage={isTextiles && question.internal === true}
           />
         );
       default:

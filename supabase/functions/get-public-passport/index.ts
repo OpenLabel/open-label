@@ -30,14 +30,20 @@ const SlugSchema = z.object({
     .regex(/^[a-f0-9]{8}$|^[a-f0-9]{16}$|^[a-f0-9]{32}$/, "Invalid passport identifier"),
 });
 
-// Question ids marked `internal: true` in the templates. These are collected for
-// the manufacturer's records only and MUST NOT be exposed on the public passport.
+// Apparel (textiles) internal documents — in scope, stripped from the public response.
 // Kept in sync with src/templates/* by src/lib/internalFieldIds.test.ts.
 const INTERNAL_FIELD_IDS = [
   "audit_certificate_file",
   "lca_report_file",
   "test_report_file",
   "claims_evidence_file",
+];
+
+// Known internal fields in OTHER categories that are currently still returned in
+// the public response. These are a pre-existing issue outside the scope of the
+// Apparel work and are deliberately NOT stripped here pending a decision from the
+// project owner. Do not add fields here without that decision.
+const OUT_OF_SCOPE_INTERNAL_FIELD_IDS = [
   "eu_doc_upload",
   "technical_documentation_upload",
 ];
