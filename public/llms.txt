@@ -7,6 +7,7 @@ Open Label .eu lets companies create unlimited Digital Product Passports for fre
 ## Pages
 
 - [Home](/): Overview of the DPP generator and supported categories.
+- [Demo Passports](/demo): Live demo Digital Product Passports for wine, toys and apparel, using fictitious data.
 - [Referral Leaderboard](/referral-leaderboard): Public ranking of referral codes by valid signups.
 - [Legal Mentions](/legal): Publisher and legal information.
 - [Privacy Policy](/privacy-policy): How user data is handled.
