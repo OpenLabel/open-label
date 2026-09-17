@@ -472,13 +472,11 @@ export class TextilesTemplate extends BaseTemplate {
         },
         {
           id: 'country_spinning_weaving',
-          showWhen: { field: 'show_advanced_fields', equals: true },
           label: 'Country of Spinning / Weaving',
           type: 'text',
         },
         {
           id: 'country_dyeing_finishing',
-          showWhen: { field: 'show_advanced_fields', equals: true },
           label: 'Country of Dyeing / Finishing',
           type: 'text',
         },
