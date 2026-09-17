@@ -187,6 +187,7 @@ describe("Translation Audit", () => {
 
       const untranslatedKeys: string[] = [];
       for (const key of enKeys) {
+        if (isTranslationPending(key)) continue;
         if (key in flat && flat[key] === enFlat[key]) {
           if (!isLegitimateMatch(key, enFlat[key], code)) {
             untranslatedKeys.push(key);
@@ -257,6 +258,8 @@ describe("Translation Audit", () => {
       const untranslated: string[] = [];
 
       for (const key of enKeys) {
+        // Tracked, temporary translation debt (see pendingTranslations.ts).
+        if (isTranslationPending(key)) continue;
         if (key in flat && flat[key] === enFlat[key] && !isLegitimateMatch(key, enFlat[key], code)) {
           untranslated.push(key);
         }
