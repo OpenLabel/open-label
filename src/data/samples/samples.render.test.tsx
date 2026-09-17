@@ -53,9 +53,15 @@ vi.mock('@/integrations/supabase/client', () => ({
 import Demo, { getDemoCategories } from '@/pages/Demo';
 import { getSamplePassport } from './index';
 
+function LocationProbe() {
+  const location = useLocation();
+  return <div data-testid="location">{location.pathname}</div>;
+}
+
 function renderDemo(path: string) {
   return render(
     <MemoryRouter initialEntries={[path]}>
+      <LocationProbe />
       <Routes>
         <Route path="/demo/:category" element={<Demo />} />
       </Routes>
