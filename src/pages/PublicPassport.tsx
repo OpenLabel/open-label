@@ -26,6 +26,7 @@ import { ToyPublicPassport } from '@/components/toys/ToyPublicPassport';
 import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import { toDppLanguage } from '@/lib/dppLanguage';
+import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue } from '@/lib/publicPassportFields';
 
 export default function PublicPassport() {
   const { t, i18n } = useTranslation();
@@ -95,11 +96,7 @@ export default function PublicPassport() {
   const categoryInfo = categoryList.find(c => c.value === passport.category);
   const requiredLogos = template.getRequiredLogos?.(categoryData) || [];
 
-  const getDisplayValue = (value: unknown, questionType: string): string => {
-    if (value === null || value === undefined || value === '') return '';
-    if (typeof value === 'boolean') return value ? t('common.yes') : t('common.no');
-    return String(value);
-  };
+  const tr = t as unknown as (key: string, fallback?: string) => string;
 
   return (
     <div className="min-h-screen bg-muted/30">
@@ -180,12 +177,7 @@ export default function PublicPassport() {
           {template.sections.length > 0 && (
             <div className="space-y-4">
               {template.sections.map((section, sectionIndex) => {
-                const hasData = section.questions.some(q => {
-                  const val = categoryData[q.id];
-                  return val !== null && val !== undefined && val !== '' && val !== false;
-                });
-
-                if (!hasData) return null;
+                if (!sectionHasPublicData(section, categoryData)) return null;
 
                 return (
                   <Card key={sectionIndex}>
@@ -196,9 +188,9 @@ export default function PublicPassport() {
                     </CardHeader>
                     <CardContent>
                       <dl className="grid gap-3">
-                        {section.questions.map((question) => {
+                        {section.questions.filter(isPubliclyVisible).map((question) => {
                           const value = categoryData[question.id];
-                          const displayValue = getDisplayValue(value, question.type);
+                          const displayValue = resolveDisplayValue(question, value, tr);
 
                           // BUG-07: filter checkboxes by raw boolean, not translated 'No'
                           if (question.type === 'checkbox' || typeof value === 'boolean') {
@@ -207,13 +199,8 @@ export default function PublicPassport() {
                             return null;
                           }
 
-                          let displayLabel = displayValue;
-                          if (question.type === 'select' && question.options) {
-                            const option = question.options.find(o => o.value === value);
-                            if (option) {
-                              displayLabel = option.labelKey ? t(option.labelKey, option.label) : option.label;
-                            }
-                          }
+                          const displayLabel = displayValue;
+
 
                           const questionLabel = question.labelKey ? t(question.labelKey, question.label) : question.label;
 

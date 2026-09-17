@@ -152,6 +152,10 @@ function FileUploadField({
   const accept = question.accept ?? 'application/pdf,image/*';
   const maxBytes = question.maxBytes ?? 5 * 1024 * 1024;
 
+  const isInternal = question.internal === true;
+  // Legacy records stored full public URLs even for internal fields.
+  const isLegacyUrl = typeof value === 'string' && value.startsWith('http');
+
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
@@ -168,13 +172,23 @@ function FileUploadField({
     try {
       const ext = file.name.split('.').pop() ?? 'bin';
       const fileName = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
-      const path = `${user.id}/certificates/${fileName}`;
-      const { error: uploadError } = await supabase.storage
-        .from('passport-images')
-        .upload(path, file);
-      if (uploadError) throw uploadError;
-      const { data } = supabase.storage.from('passport-images').getPublicUrl(path);
-      onChange(data.publicUrl);
+      if (isInternal) {
+        // Internal documents go to the private bucket; we store the PATH, never a URL.
+        const path = `${user.id}/internal/${fileName}`;
+        const { error: uploadError } = await supabase.storage
+          .from('passport-private')
+          .upload(path, file);
+        if (uploadError) throw uploadError;
+        onChange(path);
+      } else {
+        const path = `${user.id}/certificates/${fileName}`;
+        const { error: uploadError } = await supabase.storage
+          .from('passport-images')
+          .upload(path, file);
+        if (uploadError) throw uploadError;
+        const { data } = supabase.storage.from('passport-images').getPublicUrl(path);
+        onChange(data.publicUrl);
+      }
     } catch (err) {
       setError(
         err instanceof Error
@@ -183,6 +197,24 @@ function FileUploadField({
       );
     } finally {
       setUploading(false);
+    }
+  };
+
+  // Private files are signed on demand — signed URLs expire and must not be persisted.
+  const openPrivateFile = async () => {
+    setError(null);
+    try {
+      const { data, error: signError } = await supabase.storage
+        .from('passport-private')
+        .createSignedUrl(value as string, 60);
+      if (signError) throw signError;
+      if (data?.signedUrl) window.open(data.signedUrl, '_blank', 'noopener,noreferrer');
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : t('toys.certificate.errors.uploadFailed', 'Upload failed.'),
+      );
     }
   };
 
@@ -198,15 +230,26 @@ function FileUploadField({
       />
       {value ? (
         <div className="flex items-center gap-2 border rounded-md p-2 bg-muted/30">
-          <a
-            href={sanitizeUrl(value as string)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-primary underline inline-flex items-center gap-1 flex-1 truncate"
-          >
-            {t('toys.certificate.viewFile', 'View uploaded file')}
-            <ExternalLink className="h-3 w-3 shrink-0" />
-          </a>
+          {isInternal && !isLegacyUrl ? (
+            <button
+              type="button"
+              onClick={openPrivateFile}
+              className="text-sm text-primary underline inline-flex items-center gap-1 flex-1 truncate text-left"
+            >
+              {t('toys.certificate.viewFile', 'View uploaded file')}
+              <ExternalLink className="h-3 w-3 shrink-0" />
+            </button>
+          ) : (
+            <a
+              href={sanitizeUrl(value as string)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary underline inline-flex items-center gap-1 flex-1 truncate"
+            >
+              {t('toys.certificate.viewFile', 'View uploaded file')}
+              <ExternalLink className="h-3 w-3 shrink-0" />
+            </a>
+          )}
           <Button
             type="button"
             variant="ghost"

@@ -30,6 +30,18 @@ const SlugSchema = z.object({
     .regex(/^[a-f0-9]{8}$|^[a-f0-9]{16}$|^[a-f0-9]{32}$/, "Invalid passport identifier"),
 });
 
+// Question ids marked `internal: true` in the templates. These are collected for
+// the manufacturer's records only and MUST NOT be exposed on the public passport.
+// Kept in sync with src/templates/* by src/lib/internalFieldIds.test.ts.
+const INTERNAL_FIELD_IDS = [
+  "audit_certificate_file",
+  "lca_report_file",
+  "test_report_file",
+  "claims_evidence_file",
+  "eu_doc_upload",
+  "technical_documentation_upload",
+];
+
 // Simple in-memory rate limiting (per IP, resets on function cold start)
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
 const RATE_LIMIT = 30; // requests per window
@@ -117,6 +129,16 @@ serve(async (req) => {
         JSON.stringify({ error: "Passport not found" }),
         { status: 404, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
+    }
+
+    // Never expose internal-only fields (audit/test/LCA reports, DoC uploads, ...)
+    const rawCategoryData = passport.category_data;
+    if (rawCategoryData && typeof rawCategoryData === "object" && !Array.isArray(rawCategoryData)) {
+      const filtered = { ...(rawCategoryData as Record<string, unknown>) };
+      for (const key of INTERNAL_FIELD_IDS) {
+        delete filtered[key];
+      }
+      passport.category_data = filtered;
     }
 
     return new Response(
