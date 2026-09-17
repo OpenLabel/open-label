@@ -1296,156 +1296,156 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Identitet",
+        "description": "Identifikation på produkt- og varenummerniveau"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Hvem er ansvarlig",
+        "description": "Producent, importør og ansvarlig person i EU, angivet som tre separate parter"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Materialer og sammensætning",
+        "description": "Obligatorisk mærkning af fiberindhold i henhold til EU-forordning 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Certificeringer",
+        "description": "Hvilke certificeringer denne vare har, og hvordan hver påstand kan verificeres."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Forsyningskædens rejse",
+        "description": "Land for hvert produktionstrin plus Tier 1-fabrik og revisionsstatus"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Miljømæssigt fodaftryk",
+        "description": "Miljøtal med en angivet beregningsmetode"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Holdbarhed og test",
+        "description": "Målte holdbarhedsresultater. Den forventede delegerede retsakt for tekstiler under ESPR forventes at fokusere på holdbarhedsmålinger, så registrer reelle testresultater i stedet for subjektive bedømmelser."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Cirkularitet og udtjening",
+        "description": "Oplysninger om pleje, reparation, tilbagetagning og genanvendelighed"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Bortskaffelsesjournal",
+        "description": "Understøtter ESPR-forbuddet mod at destruere usolgte forbrugsvarer, som gælder for store virksomheder fra 19. juli 2026 og kræver journalføring og offentliggørelse"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Dokumentation for grønne anprisninger",
+        "description": "Understøtter direktivet om styrkelse af forbrugerne (EU) 2024/825, som gælder fra 27. september 2026"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Autentificering",
+        "description": "Funktioner til bekæmpelse af forfalskning knyttet til denne vare"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Vis alle felter (certificeringsdetaljer, Tier 1-fabrik og revisionsstatus, miljømæssigt fodaftryk, holdbarhedstest, udvidet cirkularitet)",
+        "help": "De fleste mærker har kun brug for felterne nedenfor. Slå dette til, hvis du har laboratorietestresultater, LCA-data eller detaljeret sporbarhed i forsyningskæden, der skal registreres."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Handelsvarenummer, der identificerer SKU'en.",
+        "placeholder": "f.eks. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Unik identifikator pr. vare",
+        "help": "Identificerer denne individuelle fysiske vare, ikke SKU'en. Identifikatorer pr. vare er det, der muliggør videresalg, ejerskabsoverdragelse og autentificering i løbet af produktets levetid.",
+        "placeholder": "f.eks. DPP-2026-000184213",
+        "warn": "Open Label tildeler ikke denne identifikator for dig. Mærker bør opbygge deres eget system til identifikation pr. vare — f.eks. serielle RFID/NFC-mærker, et nummereringssystem fra produktionslinjen eller et eksisterende ERP-serienummer — og indtaste denne værdi her."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Style-/modelreference",
+        "help": "Forordning (EU) 2023/988 (GPSR) kræver en produktidentifikator af typen, batch- eller serienummer sammen med producentens navn og adresse. Dette er identifikatoren for produkttypen/batchen — det er ikke en erstatning for den unikke identifikator pr. vare ovenfor.",
+        "placeholder": "f.eks. ST-4412 Oxford Shirt"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Farvekombination",
+        "placeholder": "f.eks. Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Størrelse",
+        "placeholder": "f.eks. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Produktvægt (gram)",
+        "help": "Varens nettovægt, som bruges til forsendelse og rapportering af materialeintensitet.",
+        "placeholder": "f.eks. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Batch- eller produktionsparti",
+        "placeholder": "f.eks. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Mærkenavn"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Produkttype",
+        "placeholder": "f.eks. T-shirt, jakke, bukser"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Producentens juridiske navn",
+        "help": "Forordning (EU) 2023/988 (GPSR) kræver, at producentens navn, postadresse og elektroniske adresse er angivet på produktet eller dets emballage."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Gadeadresse"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postnummer"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "By"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisk adresse (e-mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Er producenten etableret uden for EU?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Importørens juridiske navn",
+        "help": "Når producenten er etableret uden for EU, skal importørens navn, postadresse og elektroniske adresse også angives."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Gadeadresse"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postnummer"
       },
       "importer_city": {
-        "label": "City"
+        "label": "By"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisk adresse (e-mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Ansvarlig person i EU — juridisk navn",
+        "help": "Den ansvarlige person i EU i henhold til forordning (EU) 2019/1020 artikel 4 er en særskilt rolle fra producenten og importøren, selv når det samme selskab udfører mere end én af dem."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Ansvarlig person i EU — adresse",
+        "placeholder": "Registreret adresse i Den Europæiske Union"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Ansvarlig person i EU — elektronisk adresse (e-mail)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Primær fibertype"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Primær fiberprocent (%)",
+        "placeholder": "f.eks. 80"
       },
       "secondary_fiber": {
         "label": "Secondary Fiber Type (if applicable)",

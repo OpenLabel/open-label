@@ -1296,437 +1296,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Identity",
-        "description": "Product and item level identification"
+        "title": "Identita",
+        "description": "Identifikace na úrovni produktu a položky"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Kdo je odpovědný",
+        "description": "Výrobce, dovozce a odpovědná osoba v EU, vedené jako tři samostatné strany"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Materiály a složení",
+        "description": "Povinné označování složení vláken podle nařízení EU 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Certifikace",
+        "description": "Jaké certifikace má tato položka a jak ověřit každé tvrzení."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Cesta dodavatelského řetězce",
+        "description": "Země každé fáze výroby plus továrna Tier 1 a stav auditu"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Environmentální stopa",
+        "description": "Environmentální údaje s uvedenou metodou výpočtu"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Životnost a testování",
+        "description": "Naměřené výsledky životnosti. Očekává se, že akt v přenesené pravomoci pro textilní výrobky podle ESPR se zaměří na metriky životnosti, proto zaznamenávejte skutečné výsledky testů, nikoli subjektivní hodnocení."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Oběhovost a konec životnosti",
+        "description": "Informace o péči, opravách, zpětném odběru a recyklovatelnosti"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Záznam o naložení s výrobkem",
+        "description": "Podporuje zákaz ničení neprodaného spotřebního zboží podle ESPR, který se vztahuje na velké společnosti od 19. července 2026 a vyžaduje vedení záznamů a zveřejňování informací"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Odůvodnění ekologických tvrzení",
+        "description": "Podporuje směrnici o posílení postavení spotřebitelů (EU) 2024/825, která se použije od 27. září 2026"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Ověření pravosti",
+        "description": "Prvky proti padělání spojené s touto položkou"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Zobrazit všechna pole (podrobnosti o certifikacích, továrna Tier 1 a stav auditu, environmentální stopa, testování životnosti, rozšířená oběhovost)",
+        "help": "Většina značek potřebuje pouze níže uvedená pole. Tuto možnost zapněte, pokud máte k dispozici výsledky laboratorních testů, data LCA nebo podrobné záznamy o sledovatelnosti dodavatelského řetězce."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Číslo obchodní položky identifikující SKU.",
+        "placeholder": "např. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Jedinečný identifikátor položky",
+        "help": "Identifikuje tuto jednotlivou fyzickou položku, nikoli SKU. Identifikátory jednotlivých položek umožňují další prodej, převod vlastnictví a ověření pravosti po celou dobu životnosti produktu.",
+        "placeholder": "např. DPP-2026-000184213",
+        "warn": "Open Label vám tento identifikátor nepřiřazuje. Značky by si měly vytvořit vlastní systém identifikace jednotlivých položek – např. sériové štítky RFID/NFC, systém číslování na výrobní lince nebo stávající sériové číslo z ERP – a tuto hodnotu zadat zde."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Reference stylu / modelu",
+        "help": "Nařízení (EU) 2023/988 (GPSR) vyžaduje kromě jména a adresy výrobce také identifikátor produktu typu, šarže nebo sériového čísla. Toto je identifikátor pro typ/šarži produktu – nenahrazuje výše uvedený identifikátor jednotlivé položky.",
+        "placeholder": "např. ST-4412 Oxford Shirt"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Barevné provedení",
+        "placeholder": "např. Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Velikost",
+        "placeholder": "např. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Hmotnost výrobku (v gramech)",
+        "help": "Čistá hmotnost položky, která se používá pro účely přepravy a vykazování materiálové náročnosti.",
+        "placeholder": "např. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Šarže nebo výrobní dávka",
+        "placeholder": "např. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Název značky"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Typ výrobku",
+        "placeholder": "např. tričko, bunda, kalhoty"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Právní název výrobce",
+        "help": "Nařízení (EU) 2023/988 (GPSR) vyžaduje, aby na výrobku nebo jeho obalu byl uveden název výrobce, jeho poštovní adresa a elektronická adresa."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Ulice a číslo popisné"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Poštovní směrovací číslo"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Město"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Země"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronická adresa (e-mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Je výrobce usazen mimo EU?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Právní název dovozce",
+        "help": "Je-li výrobce usazen mimo EU, musí být rovněž uveden název dovozce, jeho poštovní adresa a elektronická adresa."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Ulice a číslo popisné"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Poštovní směrovací číslo"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Město"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Země"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronická adresa (e-mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Odpovědná osoba v EU – právní název",
+        "help": "Odpovědná osoba v EU podle článku 4 nařízení (EU) 2019/1020 je samostatnou rolí odlišnou od výrobce a dovozce, a to i v případě, že stejná společnost vykonává více než jednu z těchto rolí."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Odpovědná osoba v EU – adresa",
+        "placeholder": "Registrovaná adresa v Evropské unii"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Odpovědná osoba v EU – elektronická adresa (e-mail)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Typ primárního vlákna"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Procentuální podíl primárního vlákna (%)",
+        "placeholder": "např. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Druh sekundárního vlákna (pokud je relevantní)",
+        "placeholder": "např. elastan"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Procentuální podíl sekundárního vlákna (%)",
+        "placeholder": "např. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Úplné složení",
+        "placeholder": "např. 80 % bavlna, 15 % polyester, 5 % elastan"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Obsahuje netextilní části živočišného původu",
+        "help": "Nařízení EU 1007/2011 vyžaduje, aby tato informace byla uvedena na etiketě, pokud výrobek obsahuje netextilní části živočišného původu, jako jsou kožené nášivky, kožešinové lemy, knoflíky z rohoviny nebo kosti."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Které části a z jakého zvířete",
+        "placeholder": "např. kožené loketní nášivky (skot); knoflíky z rohoviny (buvol)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Složení podle jednotlivých součástí",
+        "help": "Uveďte samostatně vnější materiál, podšívku a doplňky, aby bylo možné posoudit recyklovatelnost každé součásti.",
+        "placeholder": "Vnější materiál: 100 % bavlna\nPodšívka: 100 % viskóza\nDoplňky: polyesterový zip, mosazné knoflíky"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Celkový procentuální podíl recyklovaného obsahu (%)",
+        "placeholder": "např. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Procentuální podíl pre-spotřebitelského recyklovaného obsahu (%)",
+        "help": "Výrobní odpad získaný zpět předtím, než se dostal ke spotřebiteli.",
+        "placeholder": "např. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Procentuální podíl post-spotřebitelského recyklovaného obsahu (%)",
+        "help": "Materiál získaný z výrobků, které se dostaly ke konečným uživatelům.",
+        "placeholder": "např. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Obsahuje syntetická vlákna, která uvolňují mikroplasty?",
+        "help": "Francouzský zákon AGEC vyžaduje informovat spotřebitele, pokud oděv při praní uvolňuje mikroplastová vlákna."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Jsou přítomny látky REACH / SVHC v koncentraci vyšší než 0,1 % w/w?",
+        "help": "Látky vzbuzující mimořádné obavy podle nařízení (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Podrobnosti o látce SVHC",
+        "placeholder": "Název látky, číslo CAS, koncentrace a součást"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Obsahuje tento výrobek záměrně přidané látky PFAS?",
+        "help": "Francie zakazuje látky PFAS v oděvech, obuvi a impregnačních prostředcích od 1. ledna 2026 podle zákona 2025-188. Látky PFAS se běžně vyskytují v trvanlivých vodoodpudivých (DWR) úpravách.",
+        "warn": "Uvádění oděvů obsahujících záměrně přidané látky PFAS na francouzský trh je od 1. ledna 2026 zakázáno podle zákona 2025-188. Odpověď „Neznámé“ musí být před prodejem ve Francii vyřešena s dodavatelem."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Které součásti a které látky",
+        "placeholder": "např. úprava DWR na vnějším materiálu – PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Stav shody se seznamem omezených látek (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Držené certifikace"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Referenční čísla certifikátů",
+        "help": "Od 27. září 2026 směrnice (EU) 2024/825 vyžaduje, aby označení udržitelnosti bylo založeno na certifikačním systému nebo stanoveno veřejným orgánem. Pokud výše uvedené certifikace nedržíte, ponechte pole prázdné.",
+        "placeholder": "Jeden na řádek, např.\nGOTS — CU 123456 GOTS — platnost do 2027-06-30\nOEKO-TEX — 21.HTR.12345 — platnost do 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Země produkce vlákna",
+        "placeholder": "Kde bylo vlákno vypěstováno nebo vyrobeno"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Země předení / tkaní"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Země barvení / konečné úpravy"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Země zhotovení / kompletace",
+        "help": "Fáze výroby uvedená na etiketě jako země původu."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Vyrobeno v EU?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Název továrny Tier 1"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Adresa továrny Tier 1"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Stav sociálního / environmentálního auditu"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Certifikát o auditu (nahrát)",
+        "help": "Uchovává se pro vaši interní evidenci — nikdy se nezveřejňuje ve veřejném pasu produktu."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Je k dispozici plná transparentnost dodavatelského řetězce?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Uhlíková stopa (kg CO2e)",
+        "placeholder": "Na jednotku produktu"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Spotřeba vody (litry na jednotku)",
+        "placeholder": "např. 2700 pro bavlněné tričko"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Metoda výpočtu",
+        "help": "Údaj bez uvedené metody výpočtu není podloženým tvrzením podle směrnice o posílení postavení spotřebitelů."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Podpůrná zpráva LCA (nahrát)",
+        "help": "Uchovává se pro vaši interní evidenci — nikdy se nezveřejňuje ve veřejném pasu produktu."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Výsledek zkoušky odolnosti proti žmolkování",
+        "help": "Zkušební norma: ISO 12945-2 (žmolkování dle Martindale).",
+        "placeholder": "např. stupeň 4 po 2000 cyklech"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Výsledek stálobarevnosti při praní",
+        "help": "Zkušební norma: ISO 105-C06.",
+        "placeholder": "např. stupeň 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Výsledek stálobarevnosti na světle",
+        "help": "Zkušební norma: ISO 105-B02.",
+        "placeholder": "např. stupeň 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Výsledek rozměrové stálosti po praní",
+        "help": "Zkušební norma: ISO 6330 s měřením ISO 5077.",
+        "placeholder": "např. -2 % délka, -1 % šířka"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Výsledek pevnosti švu",
+        "help": "Zkušební norma: ISO 13935-2 (grab metoda).",
+        "placeholder": "např. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Referenční číslo zkušebního protokolu",
+        "placeholder": "Název laboratoře a číslo protokolu"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Zkušební protokol (nahrát)",
+        "help": "Uchováváno pro vaši interní evidenci — nikdy se nezveřejňuje ve veřejném pasu."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Maximální teplota praní"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Lze sušit v bubnové sušičce?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Lze žehlit?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Maximální teplota žehlení"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Symboly ošetřování"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Další pokyny k ošetřování",
+        "placeholder": "Jakékoli zvláštní pokyny k ošetřování"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Jsou k dispozici náhradní doplňky pro opravu?",
+        "help": "Knoflíky, zipy, šňůrky a další vyměnitelné součásti."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL pro objednání opravy",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Recyklovatelný na konci životnosti?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Je k dispozici program zpětného odběru?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "Název systému zpětného odběru a registrační čísla EPR pro jednotlivé trhy",
+        "help": "Registrační čísla rozšířené odpovědnosti výrobce se v jednotlivých členských státech liší, proto uveďte jeden řádek pro každý trh.",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Třída recyklovatelnosti"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Poznámky k demontáži",
+        "placeholder": "Jak oddělit vnější vrstvu, podšívku, doplňky a kovové části pro recyklaci"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Aktuální stav naložení"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Kód důvodu zničení",
+        "warn": "Zničení neprodaných oděvů velkými společnostmi je od 19. července 2026 omezeno v rámci ESPR a vyžaduje vedení záznamů a zveřejňování informací."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Datum naložení",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Poznámky k naložení",
+        "placeholder": "Množství, způsob nakládání a případná reference příslušného orgánu"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Environmentální tvrzení uvedená na výrobku nebo obalu",
+        "placeholder": "např. „Vyrobeno z 50 % recyklovaného polyesteru po spotřebiteli (certifikováno GRS)\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referenční číslo pro doložení tvrzení",
+        "placeholder": "Reference studie, certifikátu nebo ověřovacího orgánu pro každé tvrzení"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Doložení tvrzení (nahrát)",
+        "help": "Uchovává se pro vaši interní evidenci – nikdy se nezveřejňuje na veřejném pasu."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Tvrzení se vyhýbají obecným environmentálním pojmům?",
+        "help": "Obecná tvrzení jako „ekologicky šetrný“, „vědomý“ a „uhlíkově neutrální prostřednictvím kompenzace“ jsou od 27. září 2026 zakázána."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Je přítomen prvek pro ověření pravosti?",
+        "help": "Oděvy patří v EU mezi nejčastěji padělané kategorie výrobků, takže ověření pravosti na úrovni jednotlivých kusů významně chrání značku i kupujícího."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Metoda ověření pravosti"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "Ověřovací URL",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ano",
+        "no": "Ne"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "cotton": "Bavlna",
+        "organic_cotton": "Organická bavlna",
+        "linen": "Len",
+        "hemp": "Konopí",
+        "wool": "Vlna",
+        "cashmere": "Kašmír",
+        "mohair": "Mohér",
+        "alpaca": "Alpaka",
         "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
+        "silk": "Hedvábí",
+        "viscose": "Viskóza",
         "modal": "Modal",
         "lyocell": "Lyocell",
-        "acetate": "Acetate",
+        "acetate": "Acetát",
         "cupro": "Cupro",
         "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "recycled_polyester": "Recyklovaný polyester",
+        "nylon": "Polyamid",
+        "acrylic": "Akryl",
+        "elastane": "Elastan",
+        "polypropylene": "Polypropylen",
+        "other": "Jiné"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ano",
+        "no": "Ne",
+        "unknown": "Neznámé"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "V souladu – ověřeno testováním",
+        "compliant_declared": "V souladu – pouze na základě prohlášení dodavatele",
+        "in_progress": "Hodnocení probíhá",
+        "not_assessed": "Nehodnoceno"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1734,88 +1734,88 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Jiné"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI auditováno",
+        "sedex_smeta": "Sedex SMETA auditováno",
+        "sa8000": "SA8000 certifikováno",
+        "wrap": "WRAP certifikováno",
+        "brand_audit": "Audit vedený značkou",
+        "not_audited": "Bez auditu"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Oděvy a obuv",
         "iso_14067": "ISO 14067",
         "ghg_protocol": "GHG Protocol Product Standard",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Interní model"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Pouze ruční praní",
+        "dry_clean": "Pouze chemické čištění"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Nízká (110°C)",
+        "medium": "Střední (150°C)",
+        "high": "Vysoká (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Praní 30°C",
+        "wash_40": "Praní 40°C",
+        "wash_60": "Praní 60°C",
+        "hand_wash": "Ruční praní",
+        "do_not_wash": "Neprat",
+        "bleach_allowed": "Bělení povoleno",
+        "non_chlorine_bleach": "Pouze bělení bez chlóru",
+        "do_not_bleach": "Nebělit",
+        "tumble_dry_low": "Sušit v sušičce při nízké teplotě",
+        "tumble_dry_normal": "Sušit v sušičce při normální teplotě",
+        "do_not_tumble_dry": "Nesušit v sušičce",
+        "iron_low": "Žehlit na nízkou teplotu",
+        "iron_medium": "Žehlit na střední teplotu",
+        "iron_high": "Žehlit na vysokou teplotu",
+        "do_not_iron": "Nežehlit",
+        "dry_clean_any": "Profesionální chemické čištění",
+        "dry_clean_petroleum": "Profesionální chemické čištění, pouze ropnými rozpouštědly",
+        "wet_clean": "Profesionální mokré čištění",
+        "do_not_dry_clean": "Nečistit chemicky"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Jeden materiál – recyklovatelný z vlákna na vlákno",
+        "separable_blend": "Směs, oddělitelné složky",
+        "mechanical_only": "Pouze mechanická recyklace",
+        "downcycle_only": "Pouze downcyklace",
+        "not_recyclable": "V současnosti nerecyklovatelné"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Stále na skladě",
+        "sold": "Prodáno",
+        "donated": "Darováno",
+        "recycled": "Recyklováno",
+        "remanufactured": "Repasováno",
+        "destroyed": "Zničeno"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Zdraví a bezpečnost",
+        "counterfeit_ip": "Padělek / porušení duševního vlastnictví",
+        "damaged_beyond_repair": "Poškozeno bez možnosti opravy",
+        "donation_refused": "Darování odmítnuto po oslovení tří organizací sociální ekonomiky",
+        "protected_logo": "Chráněné logo nelze odstranit",
+        "unlawful_product": "Ukázalo se, že výrobek je protiprávní"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "secure_qr": "Zabezpečený / sériový kód QR",
+        "security_seal": "Bezpečnostní plomba prokazující neoprávněnou manipulaci",
+        "ai_fingerprint": "Obrazový otisk AI",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Jiné"
       }
     }
   }
