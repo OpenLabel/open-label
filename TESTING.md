@@ -38,6 +38,19 @@ Legend:
    - Client-side navigation: from `/p/:slug`, no `page_view` or conversion is sent; navigating to `/` afterwards may load tracking normally, and returning to `/p/:slug` must send nothing further for that route.
    - This applies to every published passport URL, in every language and on mobile.
 
+### 1.3b Demo passports — `/demo` [public]
+1. `/demo` redirects to `/demo/wine`. An unknown or unsampled category (e.g. `/demo/batteries`) also redirects to `/demo/wine`.
+2. One tab per active, sampled category (wine, toys, apparel), in `categoryList` order, each with its icon and translated label. Clicking a tab changes the URL and the rendered passport.
+3. The slim banner reads "Demo passport. All data is fictitious." in the selected language, with a "Create your own passport" button linking to `/auth`.
+4. The passport below the banner renders through the same public components as `/p/:slug`.
+5. Nothing is fetched from the backend: no request to the database or to `get-public-passport`.
+6. Same hard tracking requirement as section 1.3 item 6 — no tag, no `page_view`, no cookie banner on `/demo/*`.
+
+**Demo passports (maintenance).** The demo data lives in `src/data/samples/`, one file per category, registered in `src/data/samples/index.ts`.
+- To add a sample for a new category: create `src/data/samples/<category>.ts` exporting `buildSample<Category>Passport(): PassportFormData` with fictitious data, `.example` domains for every URL and email, and a description stating the data is fictitious; then register it in `SAMPLE_PASSPORTS`.
+- Switching a `categoryList` entry to `status: 'active'` without adding a sample fails `src/data/samples/samples.test.ts` with "Category X is active but has no demo sample in src/data/samples".
+- **Any template change must be accompanied by a sample update, or the suite goes red**: the sample tests assert that every visible required question is filled, that every select / multi_select value exists in the template, and that no unknown key is present in `category_data`.
+
 ### 1.4 Cypheme landing page — `/cypheme/passport` [public]
 1. Verify the isolated Cypheme design system (Roboto/Inter, brand orange/blue, 16px radius buttons) and that global app styles don't bleed in.
 2. View page source / devtools `<head>`: a `<meta name="robots" content="noindex,nofollow">` tag must be present.
