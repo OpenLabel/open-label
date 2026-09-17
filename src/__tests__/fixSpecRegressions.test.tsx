@@ -111,7 +111,12 @@ describe('§B.2 mandatory regressions', () => {
   // raw boolean value, not by comparing the translated label to the English
   // word "No" (which never matches under fr/it/etc and leaks empty rows).
   it('BUG-07: checkbox filter uses raw boolean in preview and public views', () => {
-    for (const rel of ['components/PassportPreview.tsx', 'pages/PublicPassport.tsx']) {
+    // The public generic rendering now lives in GenericPublicPassport.tsx,
+    // which PublicPassport.tsx renders through PublicPassportView.
+    for (const rel of [
+      'components/PassportPreview.tsx',
+      'components/GenericPublicPassport.tsx',
+    ]) {
       const src = readSrc(rel);
       expect(src, rel).toMatch(/typeof value === 'boolean'/);
     }
