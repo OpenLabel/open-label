@@ -129,7 +129,7 @@ function main() {
   for (const code of LOCALES) {
     const path = resolve(LOCALES_DIR, `${code}.json`);
     const data = JSON.parse(readFileSync(path, 'utf-8'));
-    deepMerge(data, tree);
+    deepMerge(data, tree, code === 'en');
     writeFileSync(path, JSON.stringify(data, null, 2) + '\n', 'utf-8');
   }
 
