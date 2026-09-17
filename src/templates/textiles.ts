@@ -322,6 +322,20 @@ export class TextilesTemplate extends BaseTemplate {
           badge: 'required',
         },
         {
+          id: 'contains_animal_parts',
+          label: 'Contains non-textile parts of animal origin',
+          type: 'checkbox',
+          helpText:
+            'EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons.',
+        },
+        {
+          id: 'animal_parts_details',
+          label: 'Which parts, and from which animal',
+          type: 'textarea',
+          showWhen: { field: 'contains_animal_parts', equals: true },
+          placeholder: 'e.g., Leather elbow patches (bovine); horn buttons (buffalo)',
+        },
+        {
           id: 'component_composition',
           showWhen: { field: 'show_advanced_fields', equals: true },
           label: 'Component-level Composition',
