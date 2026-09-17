@@ -928,9 +928,11 @@ export class TextilesTemplate extends BaseTemplate {
     return logos;
   }
 
-  getCompositionWarning(
+  getInlineWarnings(
     data: Record<string, unknown>,
-  ): { fieldId: string; message: string } | null {
+  ): { fieldId: string; message: string }[] {
+    const warnings: { fieldId: string; message: string }[] = [];
+
     const toNumber = (value: unknown): number | undefined => {
       if (value === undefined || value === null || value === '')
         return undefined;
@@ -939,25 +941,60 @@ export class TextilesTemplate extends BaseTemplate {
     };
 
     const primary = toNumber(data.primary_fiber_percentage);
-    if (primary === undefined) return null;
+    if (primary === undefined) return warnings;
     const secondary = toNumber(data.secondary_fiber_percentage);
     const sum = primary + (secondary ?? 0);
 
     if (sum > 100.5) {
-      return {
+      warnings.push({
         fieldId: 'secondary_fiber_percentage',
         message: `Primary (${primary}%) and secondary (${secondary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
-      };
+      });
     }
 
     if (secondary === undefined && primary < 95) {
-      return {
+      warnings.push({
         fieldId: 'primary_fiber_percentage',
         message: `Primary fiber is declared at ${primary}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.`,
-      };
+      });
     }
 
-    return null;
+    // --- Synthetic fibre share (microplastic shedding) ---
+    const SYNTHETIC_WORDS = [
+      'polyester',
+      'polyamide',
+      'nylon',
+      'elastane',
+      'acrylic',
+      'polypropylene',
+    ];
+    const isSyntheticText = (value: unknown): boolean => {
+      if (typeof value !== 'string') return false;
+      const v = value.trim().toLowerCase();
+      if (!v) return false;
+      if ((SYNTHETIC_FIBER_IDS as readonly string[]).includes(v)) return true;
+      return SYNTHETIC_WORDS.some((w) => v.includes(w));
+    };
+
+    let syntheticPercentage = 0;
+    if (
+      typeof data.primary_fiber === 'string' &&
+      (SYNTHETIC_FIBER_IDS as readonly string[]).includes(data.primary_fiber)
+    ) {
+      syntheticPercentage += primary;
+    }
+    if (isSyntheticText(data.secondary_fiber)) {
+      syntheticPercentage += secondary ?? 0;
+    }
+
+    if (syntheticPercentage > 50) {
+      warnings.push({
+        fieldId: 'microplastic_shedding',
+        message: `This garment is ${syntheticPercentage}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this.`,
+      });
+    }
+
+    return warnings;
   }
 }
 
