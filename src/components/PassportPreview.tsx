@@ -25,6 +25,7 @@ import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import type { ProductCategory } from '@/types/passport';
 import { toDppLanguage } from '@/lib/dppLanguage';
+import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue } from '@/lib/publicPassportFields';
 
 interface PassportPreviewProps {
   formData: {
