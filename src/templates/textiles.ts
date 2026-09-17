@@ -15,7 +15,57 @@
  */
 
 import { SYNTHETIC_FIBER_IDS } from '@/data/knownFiberIds';
-import { BaseTemplate, TemplateSection } from './base';
+import {
+  BaseTemplate,
+  TemplateOption,
+  TemplateQuestion,
+  TemplateSection,
+} from './base';
+
+// Helper: build option lists with labelKey wired up to a namespace.
+function opts(
+  ns: string,
+  entries: { value: string; label: string }[],
+): TemplateOption[] {
+  return entries.map((e) => ({
+    value: e.value,
+    label: e.label,
+    labelKey: `textiles.options.${ns}.${e.value}`,
+  }));
+}
+
+// Helper to attach standard labelKey/helpKey/placeholderKey to a question.
+type FieldDef = Omit<
+  TemplateQuestion,
+  'labelKey' | 'helpKey' | 'placeholderKey'
+>;
+function f(q: FieldDef): TemplateQuestion {
+  const out: TemplateQuestion = {
+    ...q,
+    labelKey: `textiles.fields.${q.id}.label`,
+  };
+  if (q.helpText) out.helpKey = `textiles.fields.${q.id}.help`;
+  if (q.placeholder) out.placeholderKey = `textiles.fields.${q.id}.placeholder`;
+  return out;
+}
+
+function section(
+  id: string,
+  title: string,
+  description: string | undefined,
+  questions: TemplateQuestion[],
+): TemplateSection {
+  return {
+    id,
+    title,
+    titleKey: `textiles.sections.${id}.title`,
+    description,
+    descriptionKey: description
+      ? `textiles.sections.${id}.description`
+      : undefined,
+    questions,
+  };
+}
 
 export class TextilesTemplate extends BaseTemplate {
   id = 'textiles';
