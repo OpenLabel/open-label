@@ -222,32 +222,116 @@ describe('TextilesTemplate', () => {
     ]);
   });
 
-  it('getCompositionWarning flags percentages above 100', () => {
-    const warning = textilesTemplate.getCompositionWarning({
-      primary_fiber_percentage: 80,
-      secondary_fiber_percentage: 30,
-    });
-    expect(warning?.fieldId).toBe('secondary_fiber_percentage');
-    expect(warning?.message).toContain('110%');
-  });
+  describe('getInlineWarnings', () => {
+    const fieldIds = (data: Record<string, unknown>) =>
+      textilesTemplate.getInlineWarnings(data).map((w) => w.fieldId);
 
-  it('getCompositionWarning flags an incomplete single-fibre declaration', () => {
-    const warning = textilesTemplate.getCompositionWarning({
-      primary_fiber_percentage: 60,
+    it('returns nothing for empty or clean data', () => {
+      expect(textilesTemplate.getInlineWarnings({})).toEqual([]);
+      expect(
+        textilesTemplate.getInlineWarnings({
+          primary_fiber: 'cotton',
+          primary_fiber_percentage: 100,
+        }),
+      ).toEqual([]);
+      expect(
+        textilesTemplate.getInlineWarnings({
+          primary_fiber: 'cotton',
+          primary_fiber_percentage: 80,
+          secondary_fiber_percentage: 20,
+        }),
+      ).toEqual([]);
     });
-    expect(warning?.fieldId).toBe('primary_fiber_percentage');
-  });
 
-  it('getCompositionWarning stays silent for valid or empty data', () => {
-    expect(textilesTemplate.getCompositionWarning({})).toBeNull();
-    expect(
-      textilesTemplate.getCompositionWarning({ primary_fiber_percentage: 100 }),
-    ).toBeNull();
-    expect(
-      textilesTemplate.getCompositionWarning({
+    it('flags percentages above 100', () => {
+      const warnings = textilesTemplate.getInlineWarnings({
         primary_fiber_percentage: 80,
-        secondary_fiber_percentage: 20,
-      }),
-    ).toBeNull();
+        secondary_fiber_percentage: 30,
+      });
+      const warning = warnings.find(
+        (w) => w.fieldId === 'secondary_fiber_percentage',
+      );
+      expect(warning?.message).toContain('110%');
+    });
+
+    it('flags an incomplete single-fibre declaration', () => {
+      expect(fieldIds({ primary_fiber_percentage: 60 })).toContain(
+        'primary_fiber_percentage',
+      );
+    });
+
+    it('flags a garment that is more than 50% synthetic', () => {
+      const warnings = textilesTemplate.getInlineWarnings({
+        primary_fiber: 'polyester',
+        primary_fiber_percentage: 60,
+      });
+      const warning = warnings.find((w) => w.fieldId === 'microplastic_shedding');
+      expect(warning).toBeDefined();
+      expect(warning!.message).toContain('60%');
+    });
+
+    it('does not flag exactly 50% synthetic', () => {
+      expect(
+        fieldIds({
+          primary_fiber: 'polyester',
+          primary_fiber_percentage: 50,
+          secondary_fiber: 'Cotton',
+          secondary_fiber_percentage: 50,
+        }),
+      ).not.toContain('microplastic_shedding');
+    });
+
+    it('does not treat viscose as a synthetic', () => {
+      expect(
+        fieldIds({
+          primary_fiber: 'viscose',
+          primary_fiber_percentage: 60,
+          secondary_fiber: 'Cotton',
+          secondary_fiber_percentage: 40,
+        }),
+      ).not.toContain('microplastic_shedding');
+    });
+
+    it('counts a synthetic secondary fibre given as free text', () => {
+      expect(
+        fieldIds({
+          primary_fiber: 'cotton',
+          primary_fiber_percentage: 45,
+          secondary_fiber: 'Polyester',
+          secondary_fiber_percentage: 55,
+        }),
+      ).toContain('microplastic_shedding');
+    });
+  });
+
+  describe('France-mandatory fields and PFAS', () => {
+    const allQuestions = textilesTemplate.sections.flatMap((s) => s.questions);
+    const find = (id: string) => allQuestions.find((q) => q.id === id);
+
+    it('always shows the stage countries and the SVHC declaration', () => {
+      for (const id of [
+        'country_spinning_weaving',
+        'country_dyeing_finishing',
+        'svhc_declared',
+      ]) {
+        expect(find(id)).toBeDefined();
+        expect(find(id)!.showWhen).toBeUndefined();
+      }
+    });
+
+    it('declares PFAS with conditional details', () => {
+      const pfas = find('pfas_present');
+      expect(pfas?.type).toBe('select');
+      expect((pfas?.options ?? []).map((o) => o.value)).toEqual([
+        'yes',
+        'no',
+        'unknown',
+      ]);
+      expect(pfas?.warnWhen?.equals).toEqual(['yes', 'unknown']);
+      expect(find('pfas_details')?.showWhen).toEqual({
+        field: 'pfas_present',
+        equals: 'yes',
+      });
+    });
   });
 });
