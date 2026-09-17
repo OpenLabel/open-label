@@ -429,7 +429,7 @@ export class TextilesTemplate extends BaseTemplate {
           placeholder:
             'One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15',
           helpText:
-            'From 27 September 2026 the Empowering Consumers Directive (EU) 2024/825 prohibits displaying a certification claim without a verifiable reference behind it. Leave blank if no certifications are held above.',
+            'From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.',
         },
       ],
     },
@@ -781,12 +781,13 @@ export class TextilesTemplate extends BaseTemplate {
           options: [
             { value: 'health_safety', label: 'Health and safety' },
             { value: 'counterfeit_ip', label: 'Counterfeit / IP infringement' },
-            { value: 'returned_unsellable', label: 'Returned and unsellable' },
             { value: 'damaged_beyond_repair', label: 'Damaged beyond repair' },
-            { value: 'other', label: 'Other' }
+            { value: 'donation_refused', label: 'Donation refused after asking three social economy organisations' },
+            { value: 'protected_logo', label: "Protected logo can't be removed" },
+            { value: 'unlawful_product', label: 'Product turned out to be unlawful' }
           ],
           warnWhen: {
-            equals: [undefined, '', 'other', 'returned_unsellable'],
+            equals: [undefined, ''],
             message:
               'Destruction of unsold apparel, footwear and accessories by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure.',
           },
