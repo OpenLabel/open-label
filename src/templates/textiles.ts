@@ -18,9 +18,9 @@ import { BaseTemplate, TemplateSection } from './base';
 
 export class TextilesTemplate extends BaseTemplate {
   id = 'textiles';
-  name = 'Apparel, Footwear & Accessories';
+  name = 'Apparel';
   description =
-    'Garment Passport for apparel, footwear and accessories per EU Regulation 1007/2011 fibre labelling, the ESPR rules on destruction of unsold consumer goods, and the Empowering Consumers Directive (EU) 2024/825';
+    'Garment Passport for apparel per EU Regulation 1007/2011 fibre labelling, the ESPR rules on destruction of unsold consumer goods, and the Empowering Consumers Directive (EU) 2024/825';
   icon = '👕';
 
   sections: TemplateSection[] = [
@@ -148,20 +148,35 @@ export class TextilesTemplate extends BaseTemplate {
           type: 'select',
           required: true,
           badge: 'required',
+          // Labels are the official EU fibre names (Regulation 1007/2011 Annex I).
+          // Option VALUES are frozen for data compatibility with existing passports.
           options: [
+            // Natural plant fibres
             { value: 'cotton', label: 'Cotton' },
             { value: 'organic_cotton', label: 'Organic Cotton' },
+            { value: 'linen', label: 'Linen (Flax)' },
+            { value: 'hemp', label: 'Hemp' },
+            // Animal fibres
+            { value: 'wool', label: 'Wool' },
+            { value: 'cashmere', label: 'Cashmere' },
+            { value: 'mohair', label: 'Mohair' },
+            { value: 'alpaca', label: 'Alpaca' },
+            { value: 'angora', label: 'Angora' },
+            { value: 'silk', label: 'Silk' },
+            // Man-made cellulosics
+            { value: 'viscose', label: 'Viscose' },
+            { value: 'modal', label: 'Modal' },
+            { value: 'lyocell', label: 'Lyocell' },
+            { value: 'acetate', label: 'Acetate' },
+            { value: 'cupro', label: 'Cupro' },
+            // Synthetics
             { value: 'polyester', label: 'Polyester' },
             { value: 'recycled_polyester', label: 'Recycled Polyester' },
-            { value: 'wool', label: 'Wool' },
-            { value: 'linen', label: 'Linen' },
-            { value: 'silk', label: 'Silk' },
-            { value: 'viscose', label: 'Viscose/Rayon' },
-            { value: 'lyocell', label: 'Lyocell/Tencel' },
-            { value: 'nylon', label: 'Nylon/Polyamide' },
-            { value: 'elastane', label: 'Elastane/Spandex' },
-            { value: 'hemp', label: 'Hemp' },
-            { value: 'leather', label: 'Leather' },
+            // Value stays `nylon` for data compatibility; EU fibre name is Polyamide.
+            { value: 'nylon', label: 'Polyamide' },
+            { value: 'acrylic', label: 'Acrylic' },
+            { value: 'elastane', label: 'Elastane' },
+            { value: 'polypropylene', label: 'Polypropylene' },
             { value: 'other', label: 'Other' }
           ]
         },

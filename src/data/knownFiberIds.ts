@@ -20,26 +20,44 @@
  * src/templates/textiles.ts — sync enforced by src/data/knownFiberIds.test.ts.
  */
 export const KNOWN_FIBER_IDS: string[] = [
+  // Natural plant fibres
   'cotton',
   'organic_cotton',
+  'linen',
+  'hemp',
+  // Animal fibres
+  'wool',
+  'cashmere',
+  'mohair',
+  'alpaca',
+  'angora',
+  'silk',
+  // Man-made cellulosics
+  'viscose',
+  'modal',
+  'lyocell',
+  'acetate',
+  'cupro',
+  // Synthetics
   'polyester',
   'recycled_polyester',
-  'wool',
-  'linen',
-  'silk',
-  'viscose',
-  'lyocell',
   'nylon',
+  'acrylic',
   'elastane',
-  'hemp',
-  'leather',
+  'polypropylene',
   'other',
 ];
 
-/** Fibres that shed microplastics when washed (synthetic / petro-based). */
+/**
+ * Fibres that shed microplastics when washed (petro-based synthetics only).
+ * Regenerated cellulosics (viscose, modal, lyocell, acetate, cupro) are NOT
+ * synthetics and must never be listed here.
+ */
 export const SYNTHETIC_FIBER_IDS: string[] = [
   'polyester',
   'recycled_polyester',
   'nylon',
   'elastane',
+  'acrylic',
+  'polypropylene',
 ];

@@ -41,12 +41,16 @@ const MONTHLY_LIMIT = 100;
  * src/templates/textiles.ts — sync enforced by src/data/knownFiberIds.test.ts.
  */
 const KNOWN_FIBERS: string[] = [
-  "cotton", "organic_cotton", "polyester", "recycled_polyester", "wool",
-  "linen", "silk", "viscose", "lyocell", "nylon", "elastane", "hemp",
-  "leather", "other",
+  "cotton", "organic_cotton", "linen", "hemp",
+  "wool", "cashmere", "mohair", "alpaca", "angora", "silk",
+  "viscose", "modal", "lyocell", "acetate", "cupro",
+  "polyester", "recycled_polyester", "nylon", "acrylic", "elastane",
+  "polypropylene", "other",
 ];
 
-const SYNTHETIC_FIBERS = new Set(["polyester", "recycled_polyester", "nylon", "elastane"]);
+const SYNTHETIC_FIBERS = new Set([
+  "polyester", "recycled_polyester", "nylon", "elastane", "acrylic", "polypropylene",
+]);
 
 const WASHING_TEMP_VALUES = ["hand", "30", "40", "60", "95", "dry_clean"];
 
@@ -74,20 +78,29 @@ function buildFiberPromptSection(): string {
   return `KNOWN FIBRE IDS (return these exact ids, never free text):
 ${KNOWN_FIBERS.join(", ")}
 
+Every fibre is a DISTINCT id. Never merge one fibre into another.
 Map every language and trade name to the right id:
 - coton / algodón / Baumwolle / cotone / katoen / bomull → cotton
 - coton biologique / organic cotton / Bio-Baumwolle / GOTS cotton → organic_cotton
+- lin / lino / Leinen / flax / linen → linen
+- chanvre / cáñamo / Hanf / hemp → hemp
+- laine / lana / Wolle / wool / virgin wool / merino → wool
+- cashmere / cachemire / Kaschmir → cashmere (NOT wool)
+- mohair → mohair (NOT wool)
+- alpaca / alpaga → alpaca (NOT wool)
+- angora → angora (NOT wool)
+- soie / seda / Seide / silk → silk
+- viscose / rayon / viscose rayon / viscosa / Viskose / bamboo viscose → viscose
+- modal / Modal → modal (NOT viscose)
+- lyocell / tencel / TENCEL™ → lyocell
+- acetate / acétate / Acetat → acetate
+- cupro / cuprammonium / Bemberg → cupro
 - polyester / poliéster / PES / PET → polyester
 - recycled polyester / rPET / polyester recyclé → recycled_polyester
-- laine / lana / Wolle / merino / cashmere / mohair / alpaca → wool
-- lin / lino / Leinen / flax → linen
-- soie / seda / Seide / silk → silk
-- viscose / rayon / viscosa / Viskose / modal / bamboo viscose → viscose
-- lyocell / Tencel / TENCEL™ → lyocell
 - polyamide / nylon / poliammide / Polyamid → nylon
-- elasthanne / elastane / spandex / Lycra / Elasthan → elastane
-- chanvre / cáñamo / Hanf / hemp → hemp
-- cuir / cuero / Leder / leather / suede / nubuck → leather
+- acrylic / acrylique / acrílico / Acryl / polyacrylic → acrylic
+- polypropylene / polypro / polypropylène / PP → polypropylene
+- elastane / elasthanne / spandex / Lycra / Elasthan → elastane
 Anything genuinely unmatched must be returned prefixed with "custom:" (e.g. "custom:ramie").`;
 }
 
