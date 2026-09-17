@@ -114,7 +114,6 @@ export class TextilesTemplate extends BaseTemplate {
           placeholder: 'e.g., T-shirt, Jacket, Trousers',
         }),
       ],
-      ],
     ),
     section(
       'responsible_operators',
@@ -250,7 +249,6 @@ export class TextilesTemplate extends BaseTemplate {
           badge: 'required',
           placeholder: 'name@company.com',
         }),
-      ],
       ],
     ),
     section(
@@ -430,7 +428,6 @@ export class TextilesTemplate extends BaseTemplate {
           ]),
         }),
       ],
-      ],
     ),
     section(
       'certifications',
@@ -459,7 +456,6 @@ export class TextilesTemplate extends BaseTemplate {
           helpText:
             'From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.',
         }),
-      ],
       ],
     ),
 
@@ -541,7 +537,6 @@ export class TextilesTemplate extends BaseTemplate {
           type: 'checkbox'
         }),
       ],
-      ],
     ),
     section(
       'environment',
@@ -588,7 +583,6 @@ export class TextilesTemplate extends BaseTemplate {
           internal: true,
           helpText: 'Held for your internal records — never published on the public passport.',
         }),
-      ],
       ],
     ),
     section(
@@ -653,7 +647,6 @@ export class TextilesTemplate extends BaseTemplate {
           internal: true,
           helpText: 'Held for your internal records — never published on the public passport.',
         }),
-      ],
       ],
     ),
     section(
@@ -782,7 +775,6 @@ export class TextilesTemplate extends BaseTemplate {
             'How to separate the outer shell, lining, trims and hardware for recycling',
         }),
       ],
-      ],
     ),
     section(
       'disposition',
@@ -835,7 +827,6 @@ export class TextilesTemplate extends BaseTemplate {
           placeholder: 'Quantity, handling route and any competent authority reference',
         }),
       ],
-      ],
     ),
     section(
       'green_claims',
@@ -875,7 +866,6 @@ export class TextilesTemplate extends BaseTemplate {
             'Generic claims such as "eco-friendly", "conscious" and "carbon neutral via offsetting" are prohibited from 27 September 2026.',
         }),
       ],
-      ],
     ),
     section(
       'authentication',
@@ -910,7 +900,6 @@ export class TextilesTemplate extends BaseTemplate {
           placeholder: 'https://…',
           showWhen: { field: 'authentication_feature_present', equals: true },
         }),
-      ],
       ],
     ),
   ];
