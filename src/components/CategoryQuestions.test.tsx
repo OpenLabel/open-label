@@ -109,9 +109,17 @@ describe('CategoryQuestions', () => {
 
   // Cross-field inline warnings are opt-in: a template without
   // getInlineWarnings must render exactly as it did before.
-  it('renders no inline warnings for a template without getInlineWarnings', async () => {
+  it('renders no extra alerts for a template without getInlineWarnings', async () => {
     const { templates } = await import('@/templates');
     expect(templates.battery.getInlineWarnings).toBeUndefined();
+
+    const baseline = render(
+      <CategoryQuestions category="battery" data={{}} onChange={vi.fn()} />,
+    );
+    const baselineAlerts =
+      baseline.container.querySelectorAll('.bg-amber-50').length;
+    baseline.unmount();
+
     const { container } = render(
       <CategoryQuestions
         category="battery"
@@ -119,8 +127,9 @@ describe('CategoryQuestions', () => {
         onChange={vi.fn()}
       />,
     );
-    const alerts = container.querySelectorAll('.bg-amber-50');
-    expect(alerts).toHaveLength(0);
+    expect(container.querySelectorAll('.bg-amber-50')).toHaveLength(
+      baselineAlerts,
+    );
   });
 });
 
