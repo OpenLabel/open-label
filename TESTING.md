@@ -25,12 +25,12 @@ Legend:
 - `/legal-mentions` — must render the 404 / NotFound page (route removed).
 
 ### 1.3 Public passport — `/p/:slug` [public]
-1. Open the demo passport: `/p/de00000000000001` (Chateau Example 2022, wine).
+1. Open a published wine passport of your own: `/p/<slug>`.
 2. Verify: product name, wine fields, ingredients (allergens in bold), nutrition table, recycling materials, and the mandatory **"Powered by Open-Label.eu"** attribution.
-3. Language override: `/p/de00000000000001?lang=it` — entire page (including safety/chemical sections and allergen declarations) must be Italian, no English leaks. Repeat with `?lang=zh-CN` and one other EU language.
+3. Language override: `/p/<slug>?lang=it` — entire page (including safety/chemical sections and allergen declarations) must be Italian, no English leaks. Repeat with `?lang=zh-CN` and one other EU language.
 4. Invalid slug (e.g. `/p/0000000000000000`): friendly not-found state, no stack trace.
 5. Rate limiting: refresh rapidly ~30+ times; the public-data endpoint should eventually return a rate-limit error rather than data.
-6. **No tracking, no cookie banner (hard regulatory requirement)** — with a fresh browser profile, from an EEA/UK/CH location (or with the country trace forced to `FR`), load `/p/de00000000000001` and verify ALL of the following:
+6. **No tracking, no cookie banner (hard regulatory requirement)** — with a fresh browser profile, from an EEA/UK/CH location (or with the country trace forced to `FR`), load `/p/<slug>` and verify ALL of the following:
    - No cookie/consent banner and no "Cookie settings" button appear, at any moment.
    - Network tab: no request to `googletagmanager.com`, no `gtag/js`, no `google-analytics`, no `/cdn-cgi/trace` country lookup.
    - Console: `window.gtag` and `window.dataLayer` are `undefined` on a direct load of the passport page.
