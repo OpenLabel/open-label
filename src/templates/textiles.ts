@@ -111,29 +111,142 @@ export class TextilesTemplate extends BaseTemplate {
           badge: 'required',
           placeholder: 'e.g., T-shirt, Sneaker, Belt',
         },
+      ],
+    },
+    {
+      id: 'responsible_operators',
+      title: 'Who is responsible',
+      description:
+        'Manufacturer, importer and EU responsible person, kept as three separate parties',
+      questions: [
+        // --- Group A: Manufacturer ---
         {
-          id: 'eu_operator_name',
-          label: 'EU Responsible Person / Economic Operator Name',
+          id: 'manufacturer_legal_name',
+          label: 'Manufacturer legal name',
+          type: 'text',
+          required: true,
+          badge: 'required',
+          helpText:
+            "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging.",
+        },
+        {
+          id: 'manufacturer_street',
+          label: 'Street address',
           type: 'text',
           required: true,
           badge: 'required',
         },
         {
+          id: 'manufacturer_postal_code',
+          label: 'Postal code',
+          type: 'text',
+          required: true,
+          badge: 'required',
+        },
+        {
+          id: 'manufacturer_city',
+          label: 'City',
+          type: 'text',
+          required: true,
+          badge: 'required',
+        },
+        {
+          id: 'manufacturer_country',
+          label: 'Country',
+          type: 'text',
+          required: true,
+          badge: 'required',
+        },
+        {
+          id: 'manufacturer_email',
+          label: 'Electronic address (email)',
+          type: 'text',
+          required: true,
+          badge: 'required',
+          placeholder: 'name@company.com',
+        },
+        // --- Group B: Importer (only when the manufacturer is outside the EU) ---
+        {
+          id: 'manufacturer_non_eu',
+          label: 'Is the manufacturer established outside the EU?',
+          type: 'select',
+          required: true,
+          badge: 'required',
+          options: [
+            { value: 'yes', label: 'Yes' },
+            { value: 'no', label: 'No' },
+          ],
+        },
+        {
+          id: 'importer_legal_name',
+          label: 'Importer legal name',
+          type: 'text',
+          badge: 'where_applicable',
+          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
+          helpText:
+            "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given.",
+        },
+        {
+          id: 'importer_street',
+          label: 'Street address',
+          type: 'text',
+          badge: 'where_applicable',
+          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
+        },
+        {
+          id: 'importer_postal_code',
+          label: 'Postal code',
+          type: 'text',
+          badge: 'where_applicable',
+          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
+        },
+        {
+          id: 'importer_city',
+          label: 'City',
+          type: 'text',
+          badge: 'where_applicable',
+          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
+        },
+        {
+          id: 'importer_country',
+          label: 'Country',
+          type: 'text',
+          badge: 'where_applicable',
+          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
+        },
+        {
+          id: 'importer_email',
+          label: 'Electronic address (email)',
+          type: 'text',
+          badge: 'where_applicable',
+          placeholder: 'name@company.com',
+          showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
+        },
+        // --- Group C: EU responsible person (existing ids preserved) ---
+        {
+          id: 'eu_operator_name',
+          label: 'EU responsible person — legal name',
+          type: 'text',
+          required: true,
+          badge: 'required',
+          helpText:
+            'The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them.',
+        },
+        {
           id: 'eu_operator_address',
-          label: 'EU Responsible Person / Economic Operator Address',
+          label: 'EU responsible person — address',
           type: 'textarea',
           required: true,
           badge: 'required',
           placeholder: 'Registered address inside the European Union',
         },
         {
-          id: 'passport_valid_until',
-          label: 'Passport Valid Until',
+          id: 'eu_operator_email',
+          label: 'EU responsible person — electronic address (email)',
           type: 'text',
-          placeholder: 'YYYY-MM-DD',
-          helpText:
-            'Optional expiry date for this passport record, e.g. for a limited-run or seasonal product. Leave blank if the passport should remain valid indefinitely.',
-          showWhen: { field: 'show_advanced_fields', equals: true },
+          required: true,
+          badge: 'required',
+          placeholder: 'name@company.com',
         },
       ],
     },
@@ -207,6 +320,20 @@ export class TextilesTemplate extends BaseTemplate {
           placeholder: 'e.g., 80% Cotton, 15% Polyester, 5% Elastane',
           required: true,
           badge: 'required',
+        },
+        {
+          id: 'contains_animal_parts',
+          label: 'Contains non-textile parts of animal origin',
+          type: 'checkbox',
+          helpText:
+            'EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons.',
+        },
+        {
+          id: 'animal_parts_details',
+          label: 'Which parts, and from which animal',
+          type: 'textarea',
+          showWhen: { field: 'contains_animal_parts', equals: true },
+          placeholder: 'e.g., Leather elbow patches (bovine); horn buttons (buffalo)',
         },
         {
           id: 'component_composition',
@@ -302,7 +429,7 @@ export class TextilesTemplate extends BaseTemplate {
           placeholder:
             'One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15',
           helpText:
-            'From 27 September 2026 the Empowering Consumers Directive (EU) 2024/825 prohibits displaying a certification claim without a verifiable reference behind it. Leave blank if no certifications are held above.',
+            'From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.',
         },
       ],
     },
@@ -654,12 +781,13 @@ export class TextilesTemplate extends BaseTemplate {
           options: [
             { value: 'health_safety', label: 'Health and safety' },
             { value: 'counterfeit_ip', label: 'Counterfeit / IP infringement' },
-            { value: 'returned_unsellable', label: 'Returned and unsellable' },
             { value: 'damaged_beyond_repair', label: 'Damaged beyond repair' },
-            { value: 'other', label: 'Other' }
+            { value: 'donation_refused', label: 'Donation refused after asking three social economy organisations' },
+            { value: 'protected_logo', label: "Protected logo can't be removed" },
+            { value: 'unlawful_product', label: 'Product turned out to be unlawful' }
           ],
           warnWhen: {
-            equals: [undefined, '', 'other', 'returned_unsellable'],
+            equals: [undefined, ''],
             message:
               'Destruction of unsold apparel, footwear and accessories by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure.',
           },

@@ -108,7 +108,7 @@ const EXTRACTION_TOOL = {
   type: "function" as const,
   function: {
     name: "extract_garment_label_data",
-    description: "Extract structured Digital Product Passport data from an apparel, footwear or accessory care label, hangtag, swing ticket, tech pack or certificate.",
+    description: "Extract structured Digital Product Passport data from an apparel care label, hangtag, swing ticket, tech pack or certificate.",
     parameters: {
       type: "object",
       properties: {
@@ -132,7 +132,7 @@ const EXTRACTION_TOOL = {
         full_composition: { type: "string", description: "Verbatim full fibre composition as printed, e.g. '80% Cotton, 20% Polyester'. Percentages must sum to 100." },
         component_composition: { type: "string", description: "Component-level composition when the label separates outer shell / lining / trims." },
         recycled_content_percentage: { type: "number", description: "Total recycled content percentage if stated." },
-        microplastic_shedding: { type: "boolean", description: "True when the detected fibres are synthetic (polyester, recycled polyester, nylon/polyamide, elastane) and therefore shed microplastics on washing." },
+        microplastic_shedding: { type: "boolean", description: "True when the detected fibres are petro-based synthetics (polyester, recycled polyester, polyamide, elastane, acrylic, polypropylene) and therefore shed microplastics on washing. Regenerated cellulosics (viscose, modal, lyocell, acetate, cupro) do NOT count." },
 
         // Supply chain
         country_of_origin: { type: "string", description: "Country in the 'Made in' statement — the making-up / assembly country." },
@@ -168,7 +168,7 @@ const EXTRACTION_TOOL = {
   },
 };
 
-const SYSTEM_PROMPT = `You are a garment data extractor for a Digital Product Passport covering apparel, footwear and accessories under Regulation (EU) 1007/2011 (textile fibre names and labelling), the ESPR framework, and Directive (EU) 2024/825 (Empowering Consumers).
+const SYSTEM_PROMPT = `You are a garment data extractor for a Digital Product Passport covering apparel under Regulation (EU) 1007/2011 (textile fibre names and labelling), the ESPR framework, and Directive (EU) 2024/825 (Empowering Consumers).
 
 SOURCES you will be given: sewn-in care labels, hangtags and swing tickets, product tech packs and spec sheets supplied as PDF, and certification certificates.
 
@@ -522,7 +522,7 @@ async function tryQrCodeScrape(
     let markdown = scrapeData.data?.markdown || scrapeData.markdown || "";
 
     // Content relevance filter: discard scraped content with no garment-related keywords
-    const GARMENT_KEYWORDS = /\b(cotton|polyester|wool|linen|viscose|elastane|nylon|composition|fibre|fiber|care|wash|made in|garment|apparel|footwear|coton|laine|algod[oó]n|baumwolle)\b/i;
+    const GARMENT_KEYWORDS = /\b(cotton|polyester|wool|linen|hemp|viscose|modal|lyocell|acetate|cupro|elastane|nylon|acrylic|polypropylene|cashmere|mohair|alpaca|angora|composition|fibre|fiber|care|wash|made in|garment|apparel|coton|laine|algod[oó]n|baumwolle)\b/i;
     if (markdown && !GARMENT_KEYWORDS.test(markdown)) {
       console.warn("Scraped content appears irrelevant (no garment keywords found). Discarding", markdown.length, "chars");
       markdown = "";
