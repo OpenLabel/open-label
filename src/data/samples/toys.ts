@@ -64,7 +64,12 @@ export function buildSampleToyPassport(): PassportFormData {
       // Notified body
       notified_body_involved: 'no',
 
-      // Customs — CN 9503 00 41 covers stuffed toys representing animals
+      // Customs — CN 9503 00 41 covers stuffed toys representing animals.
+      // `cn_chapter` is a required question in the toy template, so it stays,
+      // set to the chapter the code above actually belongs to. The form's
+      // auto-fill only overwrites empty or 9880-prefixed codes, so 95030041
+      // is preserved.
+      cn_chapter: '95',
       customs_code: '95030041',
 
       // Allergenic fragrances
