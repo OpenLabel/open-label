@@ -4,7 +4,7 @@ import { TextilesTemplate, textilesTemplate } from './textiles';
 describe('TextilesTemplate', () => {
   it('has correct properties', () => {
     expect(textilesTemplate.id).toBe('textiles');
-    expect(textilesTemplate.name).toBe('Apparel, Footwear & Accessories');
+    expect(textilesTemplate.name).toBe('Apparel');
     expect(textilesTemplate.icon).toBe('👕');
   });
 
