@@ -78,6 +78,32 @@ function requiredProtectedTokens(source: string): string[] {
   return PROTECTED.filter((token) => source.includes(token));
 }
 
+function maskProtectedTokens(values: Record<string, string>): {
+  masked: Record<string, string>;
+  replacements: Record<string, string>;
+} {
+  const replacements: Record<string, string> = {};
+  let index = 0;
+  const masked = Object.fromEntries(Object.entries(values).map(([key, source]) => {
+    let value = source;
+    for (const token of requiredProtectedTokens(source).sort((a, b) => b.length - a.length)) {
+      const marker = `__KEEP_${index++}__`;
+      replacements[marker] = token;
+      value = value.split(token).join(marker);
+    }
+    return [key, value];
+  }));
+  return { masked, replacements };
+}
+
+function restoreProtectedTokens(value: string, replacements: Record<string, string>): string {
+  let restored = value;
+  for (const [marker, token] of Object.entries(replacements)) {
+    restored = restored.split(marker).join(token);
+  }
+  return restored;
+}
+
 function validateValue(key: string, source: string, translated: unknown): asserts translated is string {
   if (typeof translated !== 'string' || !translated.trim()) throw new Error(`${key}: empty translation`);
   for (const token of requiredProtectedTokens(source)) {
@@ -92,6 +118,7 @@ async function translateChunk(code: string, values: Record<string, string>): Pro
   const apiKey = process.env.LOVABLE_API_KEY;
   if (!apiKey) throw new Error('LOVABLE_API_KEY is not set');
   const language = LANGUAGE_NAMES[code] ?? code;
+  const { masked, replacements } = maskProtectedTokens(values);
   const prompt = `You are a professional legal translator specialising in EU apparel and textile labelling.
 
 Translate every JSON VALUE from English to ${language} (${code}). Return ONLY one valid JSON object with the exact same keys. Never translate keys.
@@ -105,14 +132,14 @@ LEGAL FIBRE RULE:
 - For Simplified Chinese, use standard professional textile-labelling terminology because Annex I has no official Chinese version.
 
 VERBATIM RULE:
-- Preserve these identifiers exactly wherever present: ${PROTECTED.join(', ')}.
+- Preserve every token matching __KEEP_NUMBER__ exactly. These placeholders are restored after translation.
 - Preserve standalone units N and %, all URLs, dates, numbers, punctuation, line breaks, and example codes.
 - Translate surrounding prose naturally and professionally. Do not leave ordinary English prose untranslated.
 - Certification and scheme names remain exact, but words surrounding them (such as audited/certified) must be translated.
 - Do not add explanations, markdown, comments, or alternate translations.
 
 INPUT:
-${JSON.stringify(values)}`;
+${JSON.stringify(masked)}`;
 
   const response = await fetch('https://ai.gateway.lovable.dev/v1/chat/completions', {
     method: 'POST',
@@ -131,10 +158,13 @@ ${JSON.stringify(values)}`;
   const first = clean.indexOf('{');
   const last = clean.lastIndexOf('}');
   if (first < 0 || last < first) throw new Error('AI response contained no JSON object');
-  const result = JSON.parse(clean.slice(first, last + 1)) as Record<string, string>;
+  const parsed = JSON.parse(clean.slice(first, last + 1)) as Record<string, string>;
   const expected = Object.keys(values).sort();
-  const actual = Object.keys(result).sort();
+  const actual = Object.keys(parsed).sort();
   if (JSON.stringify(expected) !== JSON.stringify(actual)) throw new Error('AI response changed the key set');
+  const result = Object.fromEntries(
+    Object.entries(parsed).map(([key, value]) => [key, restoreProtectedTokens(value, replacements)]),
+  );
   for (const key of expected) validateValue(key, values[key], result[key]);
   return result;
 }
