@@ -106,5 +106,21 @@ describe('CategoryQuestions', () => {
     fireEvent.change(input, { target: { value: '' } });
     expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ capacity_kwh: null }));
   });
+
+  // Cross-field inline warnings are opt-in: a template without
+  // getInlineWarnings must render exactly as it did before.
+  it('renders no inline warnings for a template without getInlineWarnings', async () => {
+    const { templates } = await import('@/templates');
+    expect(templates.battery.getInlineWarnings).toBeUndefined();
+    const { container } = render(
+      <CategoryQuestions
+        category="battery"
+        data={{ primary_fiber: 'polyester', primary_fiber_percentage: 90 }}
+        onChange={vi.fn()}
+      />,
+    );
+    const alerts = container.querySelectorAll('.bg-amber-50');
+    expect(alerts).toHaveLength(0);
+  });
 });
 
