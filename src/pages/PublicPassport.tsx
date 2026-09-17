@@ -95,11 +95,7 @@ export default function PublicPassport() {
   const categoryInfo = categoryList.find(c => c.value === passport.category);
   const requiredLogos = template.getRequiredLogos?.(categoryData) || [];
 
-  const getDisplayValue = (value: unknown, questionType: string): string => {
-    if (value === null || value === undefined || value === '') return '';
-    if (typeof value === 'boolean') return value ? t('common.yes') : t('common.no');
-    return String(value);
-  };
+  const tr = t as unknown as (key: string, fallback?: string) => string;
 
   return (
     <div className="min-h-screen bg-muted/30">
