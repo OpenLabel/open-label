@@ -144,12 +144,14 @@ describe('CategoryQuestions', () => {
       />,
     );
     // Anchored to microplastic_shedding; other amber alerts (missing-fields
-    // summary, alpha notice) exist, so match on the message itself.
+    // summary, alpha notice) exist, so match on the message itself. "more
+    // than 50%" is unique to the warning — the question label also contains
+    // "shed microplastics".
     expect(
       screen.getByText(/60% synthetic fibre/),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/shed microplastics/),
+      screen.getByText(/more than 50%/),
     ).toBeInTheDocument();
   });
 
