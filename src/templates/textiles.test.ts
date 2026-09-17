@@ -51,10 +51,11 @@ describe('TextilesTemplate', () => {
     expect(textilesTemplate).toBeInstanceOf(TextilesTemplate);
   });
 
-  it('has 10 sections covering the full garment passport', () => {
-    expect(textilesTemplate.sections).toHaveLength(10);
+  it('has 11 sections covering the full garment passport', () => {
+    expect(textilesTemplate.sections).toHaveLength(11);
     expect(textilesTemplate.sections.map((s) => s.id)).toEqual([
       'identity',
+      'responsible_operators',
       'materials',
       'certifications',
       'supply_chain',
@@ -65,6 +66,83 @@ describe('TextilesTemplate', () => {
       'green_claims',
       'authentication',
     ]);
+  });
+
+  describe('responsible operators', () => {
+    const allQuestions = textilesTemplate.sections.flatMap((s) => s.questions);
+    const find = (id: string) => allQuestions.filter((q) => q.id === id);
+
+    it('no longer has a passport expiry date', () => {
+      expect(allQuestions.map((q) => q.id)).not.toContain('passport_valid_until');
+    });
+
+    it('keeps the EU responsible person ids exactly once', () => {
+      expect(find('eu_operator_name')).toHaveLength(1);
+      expect(find('eu_operator_address')).toHaveLength(1);
+    });
+
+    it('requires a manufacturer email and an EU responsible person email', () => {
+      expect(find('manufacturer_email')[0]?.required).toBe(true);
+      expect(find('eu_operator_email')[0]?.required).toBe(true);
+    });
+
+    it('shows importer fields only for a non-EU manufacturer and does not require them', () => {
+      const importerIds = [
+        'importer_legal_name',
+        'importer_street',
+        'importer_postal_code',
+        'importer_city',
+        'importer_country',
+        'importer_email',
+      ];
+      for (const id of importerIds) {
+        const q = find(id)[0];
+        expect(q).toBeDefined();
+        expect(q!.showWhen).toEqual({ field: 'manufacturer_non_eu', equals: 'yes' });
+        expect(q!.required).toBeFalsy();
+      }
+      expect(find('manufacturer_non_eu')[0]?.required).toBe(true);
+    });
+  });
+
+  describe('non-textile parts of animal origin', () => {
+    const allQuestions = textilesTemplate.sections.flatMap((s) => s.questions);
+
+    it('declares animal parts with conditional details', () => {
+      expect(allQuestions.find((q) => q.id === 'contains_animal_parts')?.type).toBe('checkbox');
+      expect(
+        allQuestions.find((q) => q.id === 'animal_parts_details')?.showWhen,
+      ).toEqual({ field: 'contains_animal_parts', equals: true });
+    });
+  });
+
+  describe('destruction reason codes', () => {
+    const question = textilesTemplate.sections
+      .flatMap((s) => s.questions)
+      .find((q) => q.id === 'disposition_reason_code')!;
+    const values = (question.options ?? []).map((o) => o.value);
+
+    it('drops the codes the Commission did not publish', () => {
+      expect(values).not.toContain('other');
+      expect(values).not.toContain('returned_unsellable');
+    });
+
+    it('offers the published codes', () => {
+      expect(values).toEqual(
+        expect.arrayContaining([
+          'health_safety',
+          'counterfeit_ip',
+          'damaged_beyond_repair',
+          'donation_refused',
+          'protected_logo',
+          'unlawful_product',
+        ]),
+      );
+    });
+
+    it('warns only when no reason has been chosen', () => {
+      expect(question.warnWhen?.equals).toEqual([undefined, '']);
+    });
   });
 
   it('has no duplicate question IDs', () => {
