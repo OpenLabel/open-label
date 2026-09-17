@@ -33,7 +33,9 @@ function edgeFunctionList(name: string): string[] {
     join(process.cwd(), 'supabase/functions/garment-label-ocr/index.ts'),
     'utf-8',
   );
-  const match = src.match(new RegExp(`${name}[^[]*\\[([\\s\\S]*?)\\]`));
+  const match = src.match(
+    new RegExp(`const ${name}[^=]*=\\s*(?:new Set\\()?\\s*\\[([\\s\\S]*?)\\]`),
+  );
   if (!match) throw new Error(`${name} not found in the garment-label-ocr edge function`);
   return [...match[1].matchAll(/"([a-z_]+)"/g)].map((m) => m[1]);
 }
