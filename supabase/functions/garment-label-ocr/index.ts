@@ -78,20 +78,29 @@ function buildFiberPromptSection(): string {
   return `KNOWN FIBRE IDS (return these exact ids, never free text):
 ${KNOWN_FIBERS.join(", ")}
 
+Every fibre is a DISTINCT id. Never merge one fibre into another.
 Map every language and trade name to the right id:
 - coton / algodón / Baumwolle / cotone / katoen / bomull → cotton
 - coton biologique / organic cotton / Bio-Baumwolle / GOTS cotton → organic_cotton
+- lin / lino / Leinen / flax / linen → linen
+- chanvre / cáñamo / Hanf / hemp → hemp
+- laine / lana / Wolle / wool / virgin wool / merino → wool
+- cashmere / cachemire / Kaschmir → cashmere (NOT wool)
+- mohair → mohair (NOT wool)
+- alpaca / alpaga → alpaca (NOT wool)
+- angora → angora (NOT wool)
+- soie / seda / Seide / silk → silk
+- viscose / rayon / viscose rayon / viscosa / Viskose / bamboo viscose → viscose
+- modal / Modal → modal (NOT viscose)
+- lyocell / tencel / TENCEL™ → lyocell
+- acetate / acétate / Acetat → acetate
+- cupro / cuprammonium / Bemberg → cupro
 - polyester / poliéster / PES / PET → polyester
 - recycled polyester / rPET / polyester recyclé → recycled_polyester
-- laine / lana / Wolle / merino / cashmere / mohair / alpaca → wool
-- lin / lino / Leinen / flax → linen
-- soie / seda / Seide / silk → silk
-- viscose / rayon / viscosa / Viskose / modal / bamboo viscose → viscose
-- lyocell / Tencel / TENCEL™ → lyocell
 - polyamide / nylon / poliammide / Polyamid → nylon
-- elasthanne / elastane / spandex / Lycra / Elasthan → elastane
-- chanvre / cáñamo / Hanf / hemp → hemp
-- cuir / cuero / Leder / leather / suede / nubuck → leather
+- acrylic / acrylique / acrílico / Acryl / polyacrylic → acrylic
+- polypropylene / polypro / polypropylène / PP → polypropylene
+- elastane / elasthanne / spandex / Lycra / Elasthan → elastane
 Anything genuinely unmatched must be returned prefixed with "custom:" (e.g. "custom:ramie").`;
 }
 
