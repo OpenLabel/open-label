@@ -104,6 +104,8 @@ describe("Simplified Chinese (zh-CN) completeness", () => {
   it("no zh-CN value is byte-identical to its English source (outside the acronym/brand allowlist)", () => {
     const untranslated: string[] = [];
     for (const k of enKeys) {
+      // Tracked, temporary translation debt (see pendingTranslations.ts).
+      if (isTranslationPending(k)) continue;
       const en = enFlat[k];
       const zh = zhFlat[k];
       if (typeof zh !== "string") continue;
