@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { PENDING_TRANSLATION_PREFIXES, isTranslationPending } from "./pendingTranslations";
 
 // Import all locale files (24 official EU languages)
 import enLocale from "./en.json";

@@ -14,6 +14,7 @@
 import { describe, it, expect } from "vitest";
 import enLocale from "./en.json";
 import zhCNLocale from "./zh-CN.json";
+import { isTranslationPending } from "./pendingTranslations";
 
 type Bag = Record<string, unknown>;
 
