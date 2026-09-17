@@ -41,12 +41,16 @@ const MONTHLY_LIMIT = 100;
  * src/templates/textiles.ts — sync enforced by src/data/knownFiberIds.test.ts.
  */
 const KNOWN_FIBERS: string[] = [
-  "cotton", "organic_cotton", "polyester", "recycled_polyester", "wool",
-  "linen", "silk", "viscose", "lyocell", "nylon", "elastane", "hemp",
-  "leather", "other",
+  "cotton", "organic_cotton", "linen", "hemp",
+  "wool", "cashmere", "mohair", "alpaca", "angora", "silk",
+  "viscose", "modal", "lyocell", "acetate", "cupro",
+  "polyester", "recycled_polyester", "nylon", "acrylic", "elastane",
+  "polypropylene", "other",
 ];
 
-const SYNTHETIC_FIBERS = new Set(["polyester", "recycled_polyester", "nylon", "elastane"]);
+const SYNTHETIC_FIBERS = new Set([
+  "polyester", "recycled_polyester", "nylon", "elastane", "acrylic", "polypropylene",
+]);
 
 const WASHING_TEMP_VALUES = ["hand", "30", "40", "60", "95", "dry_clean"];
 
