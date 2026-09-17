@@ -1818,5 +1818,9 @@
         "other": "Jiné"
       }
     }
+  },
+  "demo": {
+    "banner": "Ukázkový pas. Všechny údaje jsou smyšlené.",
+    "cta": "Vytvořte si vlastní pas"
   }
 }

@@ -1818,5 +1818,9 @@
         "other": "Cits"
       }
     }
+  },
+  "demo": {
+    "banner": "Demonstrācijas pase. Visi dati ir izdomāti.",
+    "cta": "Izveidojiet savu pasi"
   }
 }

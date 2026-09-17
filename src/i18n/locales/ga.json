@@ -1818,5 +1818,9 @@
         "other": "Eile"
       }
     }
+  },
+  "demo": {
+    "banner": "Pas taispeántais. Tá na sonraí uile ficseanúil.",
+    "cta": "Cruthaigh do phas féin"
   }
 }

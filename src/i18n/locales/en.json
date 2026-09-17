@@ -1818,5 +1818,9 @@
         "other": "Other"
       }
     }
+  },
+  "demo": {
+    "banner": "Demo passport. All data is fictitious.",
+    "cta": "Create your own passport"
   }
 }

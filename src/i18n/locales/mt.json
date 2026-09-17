@@ -1818,5 +1818,9 @@
         "other": "Oħrajn"
       }
     }
+  },
+  "demo": {
+    "banner": "Passaport ta’ dimostrazzjoni. Id-data kollha hija fittizja.",
+    "cta": "Oħloq il-passaport tiegħek"
   }
 }

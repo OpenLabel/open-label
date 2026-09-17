@@ -1818,5 +1818,9 @@
         "other": "Kita"
       }
     }
+  },
+  "demo": {
+    "banner": "Demonstracinis pasas. Visi duomenys yra išgalvoti.",
+    "cta": "Sukurkite savo pasą"
   }
 }

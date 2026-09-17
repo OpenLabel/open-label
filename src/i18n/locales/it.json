@@ -1818,5 +1818,9 @@
         "other": "Altro"
       }
     }
+  },
+  "demo": {
+    "banner": "Passaporto dimostrativo. Tutti i dati sono fittizi.",
+    "cta": "Crea il tuo passaporto"
   }
 }
