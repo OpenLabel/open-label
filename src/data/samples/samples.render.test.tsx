@@ -17,7 +17,12 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (k: string, fallback?: string) => (typeof fallback === 'string' ? fallback : k),
-    i18n: { language: 'en', changeLanguage: vi.fn() },
+    i18n: {
+      language: 'en',
+      changeLanguage: vi.fn(),
+      getFixedT: () => (k: string, fallback?: string) =>
+        typeof fallback === 'string' ? fallback : k,
+    },
   }),
   Trans: ({ children }: any) => children,
   initReactI18next: { type: '3rdParty', init: vi.fn() },
