@@ -124,11 +124,6 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
   const categoryInfo = categoryList.find(c => c.value === formData.category);
   const requiredLogos = template.getRequiredLogos?.(categoryData) || [];
 
-  const getDisplayValue = (value: unknown): string => {
-    if (value === null || value === undefined || value === '') return '';
-    if (typeof value === 'boolean') return value ? t('common.yes') : t('common.no');
-    return String(value);
-  };
 
   return (
     <div className="sticky top-8">
