@@ -83,6 +83,8 @@ describe('Demo page', () => {
     renderDemo('/demo/wine');
     expect(await screen.findByText(/Chateau Example 2022/)).toBeInTheDocument();
 
+    expect(screen.getByTestId('location')).toHaveTextContent('/demo/wine');
+
     const toyTab = screen.getAllByRole('tab').find((t) => /toys/i.test(t.textContent || ''))!;
     await user.click(toyTab);
 
