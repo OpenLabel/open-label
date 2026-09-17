@@ -215,12 +215,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                   {template.sections.length > 0 && (
                     <div className="space-y-3">
                       {template.sections.map((section, sectionIndex) => {
-                        const hasData = section.questions.some(q => {
-                          const val = categoryData[q.id];
-                          return val !== null && val !== undefined && val !== '' && val !== false;
-                        });
-
-                        if (!hasData) return null;
+                        if (!sectionHasPublicData(section, categoryData)) return null;
 
                         return (
                           <Card key={sectionIndex}>
@@ -229,9 +224,9 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                             </CardHeader>
                             <CardContent>
                               <dl className="grid gap-2">
-                                {section.questions.map((question) => {
+                                {section.questions.filter(isPubliclyVisible).map((question) => {
                                   const value = categoryData[question.id];
-                                  const displayValue = getDisplayValue(value);
+                                  const displayValue = resolveDisplayValue(question, value, t);
 
                                   // BUG-07: filter checkboxes by raw boolean, not by translated text ('No' vs 'Non')
                                   if (question.type === 'checkbox' || typeof value === 'boolean') {
@@ -240,13 +235,8 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                                     return null;
                                   }
 
-                                  let displayLabel = displayValue;
-                                  if (question.type === 'select' && question.options) {
-                                    const option = question.options.find(o => o.value === value);
-                                    if (option) {
-                                      displayLabel = option.labelKey ? t(option.labelKey, option.label) : option.label;
-                                    }
-                                  }
+                                  const displayLabel = displayValue;
+
 
                                   const questionLabel = question.labelKey ? t(question.labelKey, question.label) : question.label;
 
