@@ -39,6 +39,7 @@ interface PassportPreviewProps {
 
 export function PassportPreview({ formData }: PassportPreviewProps) {
   const { t, i18n } = useTranslation();
+  const tr = t as unknown as (key: string, fallback?: string) => string;
   
   // Manage preview language separately from app language
   const [previewLanguage, setPreviewLanguage] = useState(() => {
@@ -227,7 +228,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                               <dl className="grid gap-2">
                                 {section.questions.filter(isPubliclyVisible).map((question) => {
                                   const value = categoryData[question.id];
-                                  const displayValue = resolveDisplayValue(question, value, t);
+                                  const displayValue = resolveDisplayValue(question, value, tr);
 
                                   // BUG-07: filter checkboxes by raw boolean, not by translated text ('No' vs 'Non')
                                   if (question.type === 'checkbox' || typeof value === 'boolean') {
