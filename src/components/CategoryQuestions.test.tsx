@@ -131,5 +131,42 @@ describe('CategoryQuestions', () => {
       baselineAlerts,
     );
   });
+
+  // Positive wiring tests: the Appareil (textiles) template's inline warnings
+  // must actually reach the screen — the original bug was that
+  // getCompositionWarning existed but no component ever rendered it.
+  it('renders the synthetic-fibre microplastic warning for textiles', () => {
+    render(
+      <CategoryQuestions
+        category="textiles"
+        data={{ primary_fiber: 'polyester', primary_fiber_percentage: 60 }}
+        onChange={vi.fn()}
+      />,
+    );
+    // Anchored to microplastic_shedding; other amber alerts (missing-fields
+    // summary, alpha notice) exist, so match on the message itself.
+    expect(
+      screen.getByText(/60% synthetic fibre/),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/shed microplastics/),
+    ).toBeInTheDocument();
+  });
+
+  it('renders the over-100% composition warning for textiles', () => {
+    render(
+      <CategoryQuestions
+        category="textiles"
+        data={{
+          primary_fiber_percentage: 80,
+          secondary_fiber_percentage: 30,
+        }}
+        onChange={vi.fn()}
+      />,
+    );
+    // Anchored to secondary_fiber_percentage.
+    expect(screen.getByText(/110%/)).toBeInTheDocument();
+    expect(screen.getByText(/exceeds 100%/)).toBeInTheDocument();
+  });
 });
 
