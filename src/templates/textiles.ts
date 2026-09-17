@@ -18,9 +18,9 @@ import { BaseTemplate, TemplateSection } from './base';
 
 export class TextilesTemplate extends BaseTemplate {
   id = 'textiles';
-  name = 'Apparel, Footwear & Accessories';
+  name = 'Apparel';
   description =
-    'Garment Passport for apparel, footwear and accessories per EU Regulation 1007/2011 fibre labelling, the ESPR rules on destruction of unsold consumer goods, and the Empowering Consumers Directive (EU) 2024/825';
+    'Garment Passport for apparel per EU Regulation 1007/2011 fibre labelling, the ESPR rules on destruction of unsold consumer goods, and the Empowering Consumers Directive (EU) 2024/825';
   icon = '👕';
 
   sections: TemplateSection[] = [
