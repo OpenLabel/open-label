@@ -27,9 +27,9 @@ function mockCountry(loc: string) {
   );
 }
 
-function renderBanner() {
+function renderBanner(path = '/') {
   return render(
-    <MemoryRouter>
+    <MemoryRouter initialEntries={[path]}>
       <ConsentBanner />
     </MemoryRouter>,
   );
