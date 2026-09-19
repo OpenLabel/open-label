@@ -44,6 +44,69 @@ export type Database = {
         }
         Relationships: []
       }
+      car_cleaning_passport_archives: {
+        Row: {
+          archive_id: string
+          created_at: string
+          guarded_model_definition: Json | null
+          latest_version: number
+          passport_id: string
+          product_identifier: string
+          public_slug: string
+          retained_until: string
+          user_id: string
+          withdrawn_at: string | null
+        }
+        Insert: {
+          archive_id?: string
+          created_at?: string
+          guarded_model_definition?: Json | null
+          latest_version?: number
+          passport_id: string
+          product_identifier?: string
+          public_slug: string
+          retained_until: string
+          user_id: string
+          withdrawn_at?: string | null
+        }
+        Update: {
+          archive_id?: string
+          created_at?: string
+          guarded_model_definition?: Json | null
+          latest_version?: number
+          passport_id?: string
+          product_identifier?: string
+          public_slug?: string
+          retained_until?: string
+          user_id?: string
+          withdrawn_at?: string | null
+        }
+        Relationships: []
+      }
+      car_cleaning_passport_versions: {
+        Row: {
+          passport_id: string
+          recorded_at: string
+          snapshot: Json
+          user_id: string
+          version: number
+        }
+        Insert: {
+          passport_id: string
+          recorded_at: string
+          snapshot: Json
+          user_id: string
+          version: number
+        }
+        Update: {
+          passport_id?: string
+          recorded_at?: string
+          snapshot?: Json
+          user_id?: string
+          version?: number
+        }
+        Relationships: []
+      }
       passports: {
         Row: {
           category: Database["public"]["Enums"]["product_category"]
@@ -163,6 +226,11 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      car_cleaning_model_definition: { Args: { data: Json }; Returns: Json }
+      car_cleaning_retention_floor: {
+        Args: { data: Json; saved_at: string }
+        Returns: string
+      }
       increment_api_usage: {
         Args: { p_function_name: string; p_limit?: number; p_user_id: string }
         Returns: Json
