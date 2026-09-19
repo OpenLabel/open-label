@@ -26,13 +26,13 @@ import {
 import { Globe } from 'lucide-react';
 
 export function LanguageSwitcher() {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="flex items-center gap-2">
       <Globe className="h-4 w-4 text-muted-foreground" />
       <Select value={i18n.language} onValueChange={(lang) => i18n.changeLanguage(lang)}>
-        <SelectTrigger className="w-[140px] h-8 text-xs">
+        <SelectTrigger aria-label={t('common.language')} className="w-[140px] h-8 text-xs">
           <SelectValue />
         </SelectTrigger>
         <SelectContent className="max-h-[300px]">

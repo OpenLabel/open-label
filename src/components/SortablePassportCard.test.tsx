@@ -63,6 +63,13 @@ describe('SortablePassportCard', () => {
     expect(screen.getAllByText('🍷').length).toBeGreaterThan(0);
   });
 
+  it('names QR, edit, duplicate and delete controls in both responsive layouts', () => {
+    renderCard();
+    for (const name of ['dashboard.showQr', 'common.edit', 'dashboard.duplicate', 'common.delete']) {
+      expect(screen.getAllByRole('button', { name })).toHaveLength(2);
+    }
+  });
+
   it('shows drag handle', () => {
     renderCard();
     expect(screen.getAllByLabelText('dashboard.dragToReorder').length).toBeGreaterThan(0);

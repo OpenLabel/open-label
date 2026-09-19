@@ -1,3 +1,4 @@
+import type { AriaAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
@@ -8,7 +9,7 @@ type Translate = (key: string, fallback: string) => string;
 const label = (key: keyof typeof annexVICopy.dataset, t: Translate) => t(`carCleaning.dataset.${key}`, annexVICopy.dataset[key]);
 const rowFields = (kind: DatasetKind) => kind === 'microorganisms' ? ['genus', 'species', 'strain'] as const : ['chemical_name'] as const;
 
-export function CarCleaningDatasetEditor({ id, kind, value, onChange }: { id: string; kind: DatasetKind; value: unknown; onChange: (value: Record<string, unknown>[]) => void }) {
+export function CarCleaningDatasetEditor({ id, kind, value, onChange, ...validationAttributes }: { id: string; kind: DatasetKind; value: unknown; onChange: (value: Record<string, unknown>[]) => void } & Pick<AriaAttributes, 'aria-label' | 'aria-invalid' | 'aria-describedby'>) {
   const { t } = useTranslation();
   const rows: Record<string, unknown>[] = Array.isArray(value) ? value.filter(v => v && typeof v === 'object' && !Array.isArray(v)) : [];
   const update = (index: number, key: string, entry: string) => onChange(rows.map((row, i) => {
@@ -24,7 +25,7 @@ export function CarCleaningDatasetEditor({ id, kind, value, onChange }: { id: st
       {choices.map(choice => <option key={choice} value={choice}>{label(choice, t)}</option>)}
     </select>
   </div>;
-  return <div id={id} tabIndex={-1} className="space-y-3">
+  return <div id={id} role="group" tabIndex={-1} className="space-y-3" {...validationAttributes}>
     {rows.map((row, index) => <fieldset key={index} className="rounded-md border p-3 space-y-3 min-w-0">
       <legend className="px-1 text-sm font-medium">{label('entry', t)} {index + 1}</legend>
       {rowFields(kind).map(key => <div key={key} className="space-y-1">

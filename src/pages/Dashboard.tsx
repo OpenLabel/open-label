@@ -28,6 +28,7 @@ import { Skeleton } from '@/components/ui/skeleton';
 import { useToast } from '@/hooks/use-toast';
 import { Plus, LogOut, Sparkles, Shield } from 'lucide-react';
 import { categoryList } from '@/templates';
+import { publicCarCleaningData } from '@/lib/carCleaning';
 import { QRCodeDialog } from '@/components/QRCodeDialog';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { SortablePassportCard } from '@/components/SortablePassportCard';
@@ -164,7 +165,13 @@ export default function Dashboard() {
       }
     }
 
-    setSelectedPassport({ name: passport.name, slug: passport.public_slug, counterfeitProtection, wineIngredientsText, wineEnergyText });
+    const publicCarData = passport.category === 'car_cleaning' ? publicCarCleaningData(categoryData) : null;
+    const shareName = publicCarData
+      ? typeof publicCarData.product_name === 'string' && publicCarData.product_name.trim()
+        ? publicCarData.product_name
+        : t('categories.car_cleaning')
+      : passport.name;
+    setSelectedPassport({ name: shareName, slug: passport.public_slug, counterfeitProtection, wineIngredientsText, wineEnergyText });
     setQrDialogOpen(true);
   };
 

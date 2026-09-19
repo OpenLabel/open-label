@@ -62,7 +62,7 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
-        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center">
+        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center gap-2">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
               <span className="text-primary-foreground font-bold text-sm">OL</span>
@@ -70,7 +70,7 @@ export default function Index() {
             <h1 className="hidden sm:block text-lg font-semibold">Open Label <span className="text-primary font-bold">.eu</span></h1>
             <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
-          <div className="flex gap-1.5 sm:gap-2 items-center min-w-0">
+          <div className="flex flex-wrap sm:flex-nowrap justify-end gap-1.5 sm:gap-2 items-center min-w-0">
             <LanguageSwitcher />
             {loading ? null : user ? (
               <Button size="sm" className="sm:size-default" asChild>
@@ -81,7 +81,7 @@ export default function Index() {
                 <Button variant="ghost" size="sm" className="sm:size-default hidden xs:inline-flex" asChild>
                   <Link to="/auth">{t('nav.signIn')}</Link>
                 </Button>
-                <Button size="sm" className="sm:size-default text-xs sm:text-sm whitespace-nowrap shrink-0" asChild>
+                <Button size="sm" className="sm:size-default text-xs sm:text-sm whitespace-normal sm:whitespace-nowrap h-auto min-h-9 py-2 max-w-full shrink-0" asChild>
                   <Link to="/auth">{t('nav.getStarted')}</Link>
                 </Button>
               </>

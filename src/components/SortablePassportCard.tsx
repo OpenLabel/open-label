@@ -103,6 +103,7 @@ export function SortablePassportCard({
                     size="sm"
                     className="h-8 px-2"
                     onClick={() => onShowQR(passport)}
+                    aria-label={t('dashboard.showQr')}
                   >
                     <QrCode className="h-4 w-4" />
                   </Button>
@@ -117,6 +118,7 @@ export function SortablePassportCard({
                   size="sm"
                   className="h-8 px-2"
                   onClick={() => navigate(`/passport/${passport.id}/edit`)}
+                  aria-label={t('common.edit')}
                 >
                   <Edit className="h-4 w-4" />
                 </Button>
@@ -130,6 +132,7 @@ export function SortablePassportCard({
                   size="sm"
                   className="h-8 px-2"
                   onClick={() => onDuplicate(passport)}
+                  aria-label={t('dashboard.duplicate')}
                 >
                   <Copy className="h-4 w-4" />
                 </Button>
@@ -143,6 +146,7 @@ export function SortablePassportCard({
                   size="sm"
                   className="h-8 px-2 text-destructive hover:text-destructive"
                   onClick={() => onDelete(passport.id)}
+                  aria-label={t('common.delete')}
                 >
                   <Trash2 className="h-4 w-4" />
                 </Button>
@@ -191,6 +195,7 @@ export function SortablePassportCard({
                     size="icon"
                     className="h-8 w-8"
                     onClick={() => onShowQR(passport)}
+                    aria-label={t('dashboard.showQr')}
                   >
                     <QrCode className="h-4 w-4" />
                   </Button>
@@ -205,6 +210,7 @@ export function SortablePassportCard({
                   size="icon"
                   className="h-8 w-8"
                   onClick={() => navigate(`/passport/${passport.id}/edit`)}
+                  aria-label={t('common.edit')}
                 >
                   <Edit className="h-4 w-4" />
                 </Button>
@@ -218,6 +224,7 @@ export function SortablePassportCard({
                   size="icon"
                   className="h-8 w-8"
                   onClick={() => onDuplicate(passport)}
+                  aria-label={t('dashboard.duplicate')}
                 >
                   <Copy className="h-4 w-4" />
                 </Button>
@@ -231,6 +238,7 @@ export function SortablePassportCard({
                   size="icon"
                   className="h-8 w-8 text-destructive hover:text-destructive"
                   onClick={() => onDelete(passport.id)}
+                  aria-label={t('common.delete')}
                 >
                   <Trash2 className="h-4 w-4" />
                 </Button>

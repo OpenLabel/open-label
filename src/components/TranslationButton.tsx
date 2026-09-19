@@ -14,7 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Languages, Loader2, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -30,6 +30,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 
 import { useToast } from '@/hooks/use-toast';
+import { useSiteConfig } from '@/hooks/useSiteConfig';
 import { supabase } from '@/integrations/supabase/client';
 
 // 24 official EU languages + Simplified Chinese (zh-CN), all first-class
@@ -95,11 +96,38 @@ export function TranslationButton({
 }: TranslationButtonProps) {
   const { t } = useTranslation();
   const { toast } = useToast();
+  const { config, loading: configLoading, error: configError } = useSiteConfig();
+  const aiEnabled = config?.ai_enabled === true && !configLoading && !configError;
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [localTranslations, setLocalTranslations] = useState<Translations>({});
+  const mountedRef = useRef(true);
+  const requestIdRef = useRef(0);
+  const currentRef = useRef({ value, sourceLanguage, aiEnabled, open });
+  currentRef.current = { value, sourceLanguage, aiEnabled, open };
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+      requestIdRef.current += 1;
+    };
+  }, []);
+
+  useEffect(() => {
+    // A response belongs to the source and policy under which it was requested.
+    requestIdRef.current += 1;
+    setLoading(false);
+  }, [value, sourceLanguage, aiEnabled]);
 
   const hasTranslations = Object.keys(translations).length > 0;
+
+  const handleOpenChange = (nextOpen: boolean) => {
+    // Closing or reopening starts a separate editing session, even for the same text.
+    requestIdRef.current += 1;
+    setLoading(false);
+    setOpen(nextOpen);
+  };
 
   const handleOpen = () => {
     // Initialize with existing translations, using source value for source language
@@ -108,10 +136,11 @@ export function TranslationButton({
       initial[sourceLanguage] = value;
     }
     setLocalTranslations(initial);
-    setOpen(true);
+    handleOpenChange(true);
   };
 
   const handleGenerateTranslations = async () => {
+    if (!open || !aiEnabled || loading) return;
     if (!value.trim()) {
       toast({
         variant: 'destructive',
@@ -121,6 +150,10 @@ export function TranslationButton({
       return;
     }
 
+    const requestId = ++requestIdRef.current;
+    const isCurrentRequest = () => mountedRef.current && requestIdRef.current === requestId &&
+      currentRef.current.open && currentRef.current.aiEnabled &&
+      currentRef.current.value === value && currentRef.current.sourceLanguage === sourceLanguage;
     setLoading(true);
     try {
       const { data, error } = await supabase.functions.invoke('translate-text', {
@@ -131,22 +164,33 @@ export function TranslationButton({
         },
       });
 
+      if (!isCurrentRequest()) return;
       if (error) throw error;
-
-      // Merge AI translations with existing (user edits take precedence)
-      const newTranslations: Translations = { [sourceLanguage]: value };
-      for (const lang of EU_LANGUAGES) {
-        if (lang.code === sourceLanguage) continue;
-        // Keep existing user edits, otherwise use AI translation
-        newTranslations[lang.code] = localTranslations[lang.code] || data.translations[lang.code] || '';
+      const generated = data?.translations;
+      if (!generated || typeof generated !== 'object' || Array.isArray(generated) ||
+        Object.values(generated).some(text => typeof text !== 'string')) {
+        throw new Error('Invalid translation response');
       }
 
-      setLocalTranslations(newTranslations);
+      // Merge into the latest form state so edits made during the request survive.
+      setLocalTranslations(latest => {
+        if (!isCurrentRequest()) return latest;
+        const newTranslations: Translations = { [sourceLanguage]: value };
+        for (const lang of EU_LANGUAGES) {
+          if (lang.code === sourceLanguage) continue;
+          const editedWhilePending = latest[lang.code] !== localTranslations[lang.code];
+          newTranslations[lang.code] = editedWhilePending
+            ? latest[lang.code] || ''
+            : latest[lang.code] || generated[lang.code] || '';
+        }
+        return newTranslations;
+      });
       toast({
         title: t('translation.generated', 'Translations generated'),
         description: t('translation.reviewAndEdit', 'Review and edit translations as needed.'),
       });
     } catch (error) {
+      if (!isCurrentRequest()) return;
       console.error('Translation error:', error);
       toast({
         variant: 'destructive',
@@ -154,7 +198,7 @@ export function TranslationButton({
         description: t('translation.errorDesc', 'Failed to generate translations. Please try again.'),
       });
     } finally {
-      setLoading(false);
+      if (isCurrentRequest()) setLoading(false);
     }
   };
 
@@ -167,7 +211,7 @@ export function TranslationButton({
       }
     }
     onSave(translationsToSave);
-    setOpen(false);
+    handleOpenChange(false);
     toast({
       title: t('translation.saved', 'Translations saved'),
     });
@@ -202,7 +246,7 @@ export function TranslationButton({
         )}
       </Button>
 
-      <Dialog open={open} onOpenChange={setOpen}>
+      <Dialog open={open} onOpenChange={handleOpenChange}>
         <DialogContent className="max-w-2xl max-h-[85vh] flex flex-col">
           <DialogHeader>
             <DialogTitle>
@@ -221,7 +265,7 @@ export function TranslationButton({
             <button
               type="button"
               onClick={handleGenerateTranslations}
-              disabled={loading || !value.trim()}
+              disabled={!aiEnabled || loading || !value.trim()}
               className="group relative overflow-hidden rounded-lg p-[2px] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none"
               style={{
                 background: 'linear-gradient(135deg, #FF6B6B 0%, #FF8E53 15%, #FEC89A 30%, #98D8AA 50%, #7EB6FF 70%, #A78BFA 85%, #F472B6 100%)',
@@ -268,7 +312,7 @@ export function TranslationButton({
           </div>
 
           <DialogFooter className="pt-4 border-t">
-            <Button type="button" variant="outline" onClick={() => setOpen(false)}>
+            <Button type="button" variant="outline" onClick={() => handleOpenChange(false)}>
               {t('common.cancel')}
             </Button>
             <Button type="button" onClick={handleSave}>

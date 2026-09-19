@@ -21,6 +21,7 @@ import { getTemplate } from '@/templates';
 import { carCleaningFallback } from '@/components/car-cleaning/copy';
 import { CarCleaningDatasetEditor } from '@/components/car-cleaning/CarCleaningDataset';
 import { validateCarCleaning } from '@/lib/carCleaning';
+import { carCleaningErrorId, carCleaningValidationAttributes } from '@/lib/carCleaningAccessibility';
 import type { ProductCategory } from '@/types/passport';
 import {
   evaluateShowWhen,
@@ -419,6 +420,7 @@ export function CategoryQuestions({
 
   const renderQuestion = (question: TemplateQuestion) => {
     const value = data[question.id];
+    const validationAttributes = carCleaningValidationAttributes(carIssues, question.id);
 
     // Special-cased: toy fragrance picker
     if (isToys && question.id === 'allergenic_fragrances') {
@@ -433,12 +435,13 @@ export function CategoryQuestions({
     switch (question.type) {
       case 'substances':
       case 'microorganisms':
-        return <CarCleaningDatasetEditor id={question.id} kind={question.type} value={value} onChange={next => handleChange(question.id, next)} />;
+        return <CarCleaningDatasetEditor id={question.id} kind={question.type} value={value} onChange={next => handleChange(question.id, next)} aria-label={tLabel(t, question)} {...validationAttributes} />;
       case 'text':
         if (question.translatable) {
           return (
             <TranslatableField
               id={question.id}
+              {...validationAttributes}
               value={(value as string) || ''}
               onChange={(v) => handleChange(question.id, v)}
               translations={
@@ -456,6 +459,7 @@ export function CategoryQuestions({
         return (
           <Input
             id={question.id}
+            {...validationAttributes}
             value={(value as string) || ''}
             onChange={(e) => handleChange(question.id, e.target.value)}
             placeholder={tPlaceholder(t, question)}
@@ -466,6 +470,7 @@ export function CategoryQuestions({
           return (
             <TranslatableField
               id={question.id}
+              {...validationAttributes}
               value={(value as string) || ''}
               onChange={(v) => handleChange(question.id, v)}
               translations={
@@ -484,6 +489,7 @@ export function CategoryQuestions({
         return (
           <Textarea
             id={question.id}
+            {...validationAttributes}
             value={(value as string) || ''}
             onChange={(e) => handleChange(question.id, e.target.value)}
             placeholder={tPlaceholder(t, question)}
@@ -494,6 +500,7 @@ export function CategoryQuestions({
         return (
           <Input
             id={question.id}
+            {...validationAttributes}
             type="number"
             // BUG-19: preserve legitimate 0; use '' only when null/undefined
             value={value === 0 || value ? String(value) : ''}
@@ -511,6 +518,7 @@ export function CategoryQuestions({
           <div className="flex items-center space-x-2">
             <Checkbox
               id={question.id}
+              {...validationAttributes}
               checked={(value as boolean) || false}
               onCheckedChange={(checked) =>
                 handleChange(question.id, checked)
@@ -531,7 +539,7 @@ export function CategoryQuestions({
             value={(value as string) || (isCarCleaning && question.id === 'dpp_profile' ? 'current' : '')}
             onValueChange={(val) => handleChange(question.id, val)}
           >
-            <SelectTrigger id={question.id} aria-invalid={isCarCleaning && carIssues.some(issue => issue.field === question.id) || undefined}>
+            <SelectTrigger id={question.id} {...validationAttributes}>
               <SelectValue placeholder={t('common.selectOption')} />
             </SelectTrigger>
             <SelectContent>
@@ -654,7 +662,7 @@ export function CategoryQuestions({
             <p className="mb-2">{carCopy('carCleaning.validationBody')}</p>
             <ul className="list-disc ml-5 space-y-1">
               {carIssues.map((issue, index) => (
-                <li key={`${issue.field}-${issue.code}-${index}`}>
+                <li id={carCleaningErrorId(issue, index)} key={`${issue.field}-${issue.code}-${index}`}>
                   <button type="button" className="text-left underline" onClick={() => document.getElementById(issue.field)?.focus()}>{carFieldLabel(issue.field)}</button>
                   {': '}{carCopy(`carCleaning.validation.${issue.code}`)}
                 </li>

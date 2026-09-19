@@ -7,6 +7,7 @@ import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { CarCleaningPublicPassport } from './CarCleaningPublicPassport';
 import { annexCleaner } from './annexFixtures';
 
+vi.mock('@/hooks/useSiteConfig', () => ({ useSiteConfig: () => ({ config: { ai_enabled: false }, loading: false, error: false }) }));
 vi.mock('@/hooks/useAutoTranslate', () => ({ useAutoTranslate: () => ({ isTranslating: false, markAsUserEdited: vi.fn(), isUserEdited: vi.fn() }) }));
 type Dictionary = { carCleaning: { fields: Record<string, string>; sections: Record<string, string>; dataset: Record<string, string> } };
 const bundles = import.meta.glob('../../i18n/locales/*.json', { eager: true, import: 'default' }) as Record<string, Dictionary>;

@@ -114,6 +114,12 @@ for (const [code, bundle] of Object.entries(cyphemeResources)) {
   }
 }
 
+i18n.on('languageChanged', (language: string) => {
+  if (typeof document !== 'undefined') {
+    document.documentElement.lang = i18n.resolvedLanguage || language;
+  }
+});
+
 i18n
   .use(LanguageDetector)
   .use(initReactI18next)

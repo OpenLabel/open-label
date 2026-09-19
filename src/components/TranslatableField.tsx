@@ -14,7 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
-import { useCallback } from 'react';
+import { useCallback, type AriaAttributes } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -25,7 +25,7 @@ import {
 import { useAutoTranslate } from '@/hooks/useAutoTranslate';
 import { toDppLanguage } from '@/lib/dppLanguage';
 
-interface TranslatableFieldProps {
+interface TranslatableFieldProps extends Pick<AriaAttributes, 'aria-invalid' | 'aria-describedby'> {
   id: string;
   value: string;
   onChange: (value: string) => void;
@@ -54,6 +54,8 @@ export function TranslatableField({
   multiline = false,
   rows = 3,
   autoTranslate = true,
+  'aria-invalid': ariaInvalid,
+  'aria-describedby': ariaDescribedBy,
 }: TranslatableFieldProps) {
   const { t, i18n } = useTranslation();
   const sourceLanguage = toDppLanguage(i18n.language);
@@ -77,6 +79,8 @@ export function TranslatableField({
         {multiline ? (
           <Textarea
             id={id}
+            aria-invalid={ariaInvalid}
+            aria-describedby={ariaDescribedBy}
             value={value}
             onChange={(e) => onChange(e.target.value)}
             placeholder={placeholder}
@@ -86,6 +90,8 @@ export function TranslatableField({
         ) : (
           <Input
             id={id}
+            aria-invalid={ariaInvalid}
+            aria-describedby={ariaDescribedBy}
             value={value}
             onChange={(e) => onChange(e.target.value)}
             placeholder={placeholder}

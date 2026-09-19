@@ -46,10 +46,6 @@ vi.mock('@/components/ImageUpload', () => ({
   ImageUpload: () => <div data-testid="image-upload" />,
 }));
 
-vi.mock('@/components/CategoryQuestions', () => ({
-  CategoryQuestions: () => <div data-testid="category-questions" />,
-}));
-
 vi.mock('@/components/WineFields', () => ({
   WineFields: () => <div data-testid="wine-fields" />,
 }));
@@ -83,14 +79,63 @@ import PassportForm from './PassportForm';
 
 describe('Car cleaning save validation', () => {
   beforeEach(() => { vi.clearAllMocks(); existing.category = 'car_cleaning'; existing.category_data = {}; });
-  const renderForm = () => render(<MemoryRouter initialEntries={['/passport/car-1/edit']}><Routes>
+  const renderForm = (path = '/passport/car-1/edit') => render(<MemoryRouter initialEntries={[path]}><Routes>
+    <Route path="/passport/new" element={<PassportForm />} />
     <Route path="/passport/:id/edit" element={<PassportForm />} />
   </Routes></MemoryRouter>);
+
+  it('gives the icon-only header back action its translated accessible name', () => {
+    renderForm();
+    expect(screen.getByRole('button', { name: (name) => name === 'common.back' })).toBeEnabled();
+  });
+
+  it.each([
+    ['/passport/new', 'common.create'],
+    ['/passport/car-1/edit', 'passport.saveChanges'],
+  ])('keeps the %s submit action named when narrow-screen labels are hidden', (path, name) => {
+    renderForm(path);
+    const submit = document.querySelector<HTMLButtonElement>('header button[type="submit"][form="passport-form"]')!;
+    // Below the sm breakpoint the real stylesheet hides these responsive labels.
+    // JSDOM has no media layout, so reproduce their resulting visibility state.
+    submit.querySelectorAll('span').forEach(span => { span.hidden = true; });
+    expect(submit).toHaveAccessibleName(name);
+    expect(submit).toBeEnabled();
+  });
 
   it('blocks saving an incomplete car cleaning record even when its internal name exists', () => {
     renderForm();
     fireEvent.submit(document.getElementById('passport-form')!);
     expect(updatePassport).not.toHaveBeenCalled();
+  });
+
+  it('links the required public product name to its real summary error and clears it after correction', () => {
+    existing.category_data = { ...validCleaner, product_name: '' };
+    renderForm();
+    const input = screen.getByLabelText('passport.productName');
+    expect(input).toHaveAttribute('aria-invalid', 'true');
+    const errorIds = input.getAttribute('aria-describedby');
+    expect(errorIds).toBeTruthy();
+    for (const id of errorIds!.split(/\s+/)) {
+      const error = document.getElementById(id)!;
+      expect(document.getElementById('car-cleaning-validation')).toContainElement(error);
+      expect(error).toHaveTextContent('carCleaning.validation.required');
+      fireEvent.click(error.querySelector('button')!);
+      expect(input).toHaveFocus();
+    }
+    expect(input).toHaveAccessibleDescription();
+    fireEvent.change(input, { target: { value: 'QA corrected public name' } });
+    expect(input).not.toHaveAttribute('aria-invalid');
+    expect(input).not.toHaveAttribute('aria-describedby');
+    expect(document.getElementById('car-cleaning-validation')).not.toBeInTheDocument();
+  });
+
+  it.each(['car_cleaning', 'other'])('leaves an assessed %s product name without car error attributes', (category) => {
+    existing.category = category;
+    existing.category_data = { ...validCleaner };
+    renderForm();
+    const input = screen.getByLabelText('passport.productName');
+    expect(input).not.toHaveAttribute('aria-invalid');
+    expect(input).not.toHaveAttribute('aria-describedby');
   });
 
   it('preserves the existing nonblocking save behavior for other categories', async () => {

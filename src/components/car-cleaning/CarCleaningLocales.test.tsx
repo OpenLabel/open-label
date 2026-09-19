@@ -7,6 +7,7 @@ import { CarCleaningPublicPassport } from './CarCleaningPublicPassport';
 import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { validCleaner } from './testFixtures';
 
+vi.mock('@/hooks/useSiteConfig', () => ({ useSiteConfig: () => ({ config: { ai_enabled: false }, loading: false, error: false }) }));
 vi.mock('@/hooks/useAutoTranslate', () => ({ useAutoTranslate: () => ({ isTranslating: false, markAsUserEdited: vi.fn(), isUserEdited: vi.fn() }) }));
 
 type Dictionary = { carCleaning: { publicTitle: string; downloadJson: string; noticeTitle: string; validationTitle: string; fields: Record<string, string>; sections: Record<string, string> }; common: { language: string } };

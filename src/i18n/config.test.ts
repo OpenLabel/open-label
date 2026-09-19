@@ -1,4 +1,4 @@
-import { describe, it, expect } from "vitest";
+import { afterEach, beforeEach, describe, it, expect, vi } from "vitest";
 import { supportedLanguages } from "./config";
 
 // All 24 official EU language codes + Simplified Chinese (zh-CN)
@@ -30,5 +30,36 @@ describe("i18n config integrity", () => {
 
   it("has exactly 25 languages (24 EU + Simplified Chinese)", () => {
     expect(supportedLanguages.length).toBe(25);
+  });
+});
+
+describe('document language', () => {
+  beforeEach(() => {
+    vi.resetModules();
+    localStorage.clear();
+    document.documentElement.lang = 'en';
+  });
+
+  afterEach(() => {
+    localStorage.clear();
+    document.documentElement.lang = 'en';
+  });
+
+  it.each(['fr', 'zh-CN'])('declares the initially detected %s locale', async (language) => {
+    localStorage.setItem('i18nextLng', language);
+
+    const { default: i18n } = await import('./config');
+
+    expect(i18n.resolvedLanguage).toBe(language);
+    expect(document.documentElement.lang).toBe(language);
+  });
+
+  it('follows language changes and uses the rendered language for a regional locale', async () => {
+    const { default: i18n } = await import('./config');
+
+    for (const [requested, rendered] of [['fr', 'fr'], ['zh-CN', 'zh-CN'], ['fr-FR', 'fr'], ['en', 'en']]) {
+      await i18n.changeLanguage(requested);
+      expect(document.documentElement.lang).toBe(rendered);
+    }
   });
 });

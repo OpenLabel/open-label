@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import type { Passport } from '@/types/passport';
@@ -52,7 +52,7 @@ vi.mock('@/components/LanguageSwitcher', () => ({
 }));
 
 vi.mock('@/components/QRCodeDialog', () => ({
-  QRCodeDialog: () => null,
+  QRCodeDialog: ({ open, productName }: { open: boolean; productName: string }) => open ? <output data-testid="qr-product-name">{productName}</output> : null,
 }));
 
 vi.mock('@/components/SortablePassportCard', () => ({
@@ -127,3 +127,24 @@ describe('Dashboard page', () => {
 });
 
 
+
+
+describe('Car cleaning QR export privacy', () => {
+  afterEach(() => { mockPassports.splice(0); });
+
+  it.each([
+    [{ product_name: 'Public shampoo' }, 'Public shampoo'],
+    [{}, 'categories.car_cleaning'],
+    [{ product_name: { confidential: 'Private supplier object' } }, 'categories.car_cleaning'],
+  ])('uses public car product identity in the share dialog and download filename', (category_data, expected) => {
+    mockPassports.push({
+      id: 'car-qa', user_id: 'u1', name: 'INTERNAL DO NOT PUBLISH', category: 'car_cleaning',
+      image_url: null, description: '', language: 'en', category_data,
+      public_slug: 'aabbccdd', created_at: '2026-09-10', updated_at: '2026-09-10',
+    });
+    render(<MemoryRouter><Dashboard /></MemoryRouter>);
+    fireEvent.click(screen.getByTestId('qr-btn'));
+    expect(screen.getByTestId('qr-product-name')).toHaveTextContent(expected);
+    expect(screen.getByTestId('qr-product-name')).not.toHaveTextContent('INTERNAL DO NOT PUBLISH');
+  });
+});

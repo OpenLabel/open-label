@@ -56,6 +56,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { toDppLanguage } from '@/lib/dppLanguage';
 import { validateCarCleaning } from '@/lib/carCleaning';
+import { carCleaningValidationAttributes } from '@/lib/carCleaningAccessibility';
 import { CAR_CLEANING_COPY } from '@/templates/carCleaning';
 
 interface FormData {
@@ -429,7 +430,7 @@ export default function PassportForm() {
         <header className="border-b bg-background sticky top-0 z-10">
           <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex items-center justify-between gap-2">
             <div className="flex items-center gap-2 sm:gap-4 min-w-0">
-              <Button variant="ghost" size="icon" onClick={handleBack} className="shrink-0">
+              <Button variant="ghost" size="icon" onClick={handleBack} aria-label={t('common.back')} className="shrink-0">
                 <ArrowLeft className="h-4 w-4" />
               </Button>
               <h1 className="text-lg sm:text-xl font-semibold truncate">
@@ -438,7 +439,7 @@ export default function PassportForm() {
             </div>
             <div className="flex items-center gap-2 sm:gap-4 shrink-0">
               <LanguageSwitcher />
-              <Button type="submit" form="passport-form" disabled={saving} size="sm" className="gap-1 sm:gap-2 sm:size-default">
+              <Button type="submit" form="passport-form" aria-label={isEditing ? t('passport.saveChanges') : t('common.create')} disabled={saving} size="sm" className="gap-1 sm:gap-2 sm:size-default">
                 {saving ? (
                   <>
                     <Loader2 className="h-4 w-4 animate-spin" />
@@ -594,6 +595,7 @@ export default function PassportForm() {
                       <div className="flex gap-2">
                         <Input
                           id="product_name"
+                          {...carCleaningValidationAttributes(formData.category === 'car_cleaning' ? validateCarCleaning(formData.category_data) : [], 'product_name')}
                           value={productNameValue}
                           onChange={(e) => handleCategoryDataChange('product_name', e.target.value)}
                           placeholder={t('passport.productNamePlaceholder')}
