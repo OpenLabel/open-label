@@ -9,21 +9,42 @@ const originalPath = 'supabase/migrations/20260910110000_car_cleaning_passport_h
 const historyTag = '0000_car_cleaning_passport_history';
 const mirrorPath = `drizzle/migrations/${historyTag}.sql`;
 const journalPath = 'drizzle/migrations/meta/_journal.json';
+const policyTag = '0001_require_car_cleaning_save_gateway';
+const policyPath = 'supabase/migrations/20260910120000_require_car_cleaning_save_gateway.sql';
+const policyMirrorPath = `drizzle/migrations/${policyTag}.sql`;
+const reviewedMigrations = [
+  { tag: historyTag, originalPath, mirrorPath, sha256: deployedHistorySha256, idx: 0, when: 1789836088900, label: 'history' },
+  {
+    tag: policyTag, originalPath: policyPath, mirrorPath: policyMirrorPath,
+    sha256: '3bf875bca2a70a80ba88f34248e68bb40c6b33bb47adcada3579e126e93b5f75',
+    idx: 1, when: 1789837534644, label: 'gateway policy',
+  },
+];
+type JournalEntry = { idx: number; version: string; when: number; tag: string; breakpoints: boolean };
+type Journal = { version: string; dialect: string; entries: JournalEntry[] };
 type ArtifactReader = (path: string) => Buffer;
 const readRepository: ArtifactReader = path => readFileSync(resolve(process.cwd(), path));
 
 // These are immutable deployment artifacts. Future changes belong in a new migration.
-function verifyHistoryProvenance(read: ArtifactReader) {
-  const journal = JSON.parse(read(journalPath).toString('utf8'));
-  if (journal.dialect !== 'postgresql' || !Array.isArray(journal.entries)
-    || journal.entries.filter((entry: { tag?: string }) => entry.tag === historyTag).length !== 1) {
-    throw new Error(`Drizzle journal must reference ${historyTag} exactly once`);
+function verifyMigrationProvenance(read: ArtifactReader) {
+  const journal: Journal = JSON.parse(read(journalPath).toString('utf8'));
+  if (journal.version !== '7' || journal.dialect !== 'postgresql' || !Array.isArray(journal.entries)) {
+    throw new Error('Drizzle journal must retain its PostgreSQL version 7 format');
   }
-  const entry = journal.entries.find((candidate: { tag?: string }) => candidate.tag === historyTag);
-  const referencedPath = `drizzle/migrations/${entry.tag}.sql`;
-  for (const path of [originalPath, referencedPath]) {
-    const digest = createHash('sha256').update(read(path)).digest('hex');
-    if (digest !== deployedHistorySha256) throw new Error(`${path}: deployed history SHA256 mismatch`);
+  for (const migration of reviewedMigrations) {
+    if (journal.entries.filter(entry => entry.tag === migration.tag).length !== 1) {
+      throw new Error(`Drizzle journal must reference ${migration.tag} exactly once`);
+    }
+    const entry = journal.entries[migration.idx];
+    if (entry?.tag !== migration.tag || entry.idx !== migration.idx || entry.when !== migration.when
+      || entry.version !== '7' || entry.breakpoints !== true) {
+      throw new Error(`Drizzle journal provenance mismatch for ${migration.tag}`);
+    }
+    const referencedPath = `drizzle/migrations/${entry.tag}.sql`;
+    for (const path of [migration.originalPath, referencedPath]) {
+      const digest = createHash('sha256').update(read(path)).digest('hex');
+      if (digest !== migration.sha256) throw new Error(`${path}: deployed ${migration.label} SHA256 mismatch`);
+    }
   }
 }
 
@@ -44,28 +65,63 @@ afterEach(() => {
   for (const directory of fixtureDirectories.splice(0)) rmSync(directory, { recursive: true, force: true });
 });
 
-describe('deployed car cleaning history migration provenance', () => {
-  it('retains the reviewed bytes in both migration tracks and the journal reference', () => {
-    expect(() => verifyHistoryProvenance(readRepository)).not.toThrow();
+function changedJournal(change: (journal: Journal) => void): ArtifactReader {
+  const journal: Journal = JSON.parse(readRepository(journalPath).toString('utf8'));
+  change(journal);
+  return fixtureReader({ [journalPath]: Buffer.from(JSON.stringify(journal)) });
+}
+
+describe('deployed car cleaning migration provenance', () => {
+  it('retains the reviewed bytes in both migration tracks and the ordered journal provenance', () => {
+    expect(() => verifyMigrationProvenance(readRepository)).not.toThrow();
   });
 
-  it.each([originalPath, mirrorPath])('detects an altered deployed artifact at %s', path => {
+  it.each(reviewedMigrations.flatMap(migration => [migration.originalPath, migration.mirrorPath]
+    .map(path => ({ path, label: migration.label }))))('detects an altered deployed artifact at $path', ({ path, label }) => {
     const changed = Buffer.concat([readRepository(path), Buffer.from('\n-- Altered migration fixture.\n')]);
     const read = fixtureReader({ [path]: changed });
-    expect(() => verifyHistoryProvenance(read)).toThrow(`${path}: deployed history SHA256 mismatch`);
+    expect(() => verifyMigrationProvenance(read)).toThrow(`${path}: deployed ${label} SHA256 mismatch`);
   });
 
-  it('rejects a synchronized rewrite even when both copies still match each other', () => {
+  it.each(reviewedMigrations)('rejects a synchronized $label rewrite even when both copies match', ({ originalPath, mirrorPath, label }) => {
     const changed = Buffer.concat([readRepository(originalPath), Buffer.from('\n-- Synchronized rewrite fixture.\n')]);
     const read = fixtureReader({ [originalPath]: changed, [mirrorPath]: changed });
-    expect(() => verifyHistoryProvenance(read)).toThrow(`${originalPath}: deployed history SHA256 mismatch`);
+    expect(() => verifyMigrationProvenance(read)).toThrow(`${originalPath}: deployed ${label} SHA256 mismatch`);
   });
 
-  it('detects a journal that no longer references the reviewed migration file', () => {
-    const journal = JSON.parse(readRepository(journalPath).toString('utf8'));
-    journal.entries = journal.entries.map((entry: { tag: string }) => entry.tag === historyTag
-      ? { ...entry, tag: '0000_unreviewed_history' } : entry);
-    const read = fixtureReader({ [journalPath]: Buffer.from(JSON.stringify(journal)) });
-    expect(() => verifyHistoryProvenance(read)).toThrow(`Drizzle journal must reference ${historyTag} exactly once`);
+  it.each(reviewedMigrations)('detects a journal that no longer references $tag', ({ tag }) => {
+    const read = changedJournal(journal => {
+      journal.entries = journal.entries.map(entry => entry.tag === tag ? { ...entry, tag: 'unreviewed_migration' } : entry);
+    });
+    expect(() => verifyMigrationProvenance(read)).toThrow(`Drizzle journal must reference ${tag} exactly once`);
+  });
+
+  it.each(reviewedMigrations)('rejects duplicate journal references to $tag', ({ tag }) => {
+    const read = changedJournal(journal => {
+      journal.entries.push({ ...journal.entries.find(entry => entry.tag === tag)!, idx: 2, when: 1789837534645 });
+    });
+    expect(() => verifyMigrationProvenance(read)).toThrow(`Drizzle journal must reference ${tag} exactly once`);
+  });
+
+  it.each(reviewedMigrations)('rejects a changed deployment timestamp for $tag', ({ tag }) => {
+    const read = changedJournal(journal => { journal.entries.find(entry => entry.tag === tag)!.when += 1; });
+    expect(() => verifyMigrationProvenance(read)).toThrow(`Drizzle journal provenance mismatch for ${tag}`);
+  });
+
+  it('rejects a policy migration moved before its deployed history predecessor', () => {
+    const read = changedJournal(journal => { journal.entries.reverse(); });
+    expect(() => verifyMigrationProvenance(read)).toThrow(`Drizzle journal provenance mismatch for ${historyTag}`);
+  });
+
+  it('rejects a rewritten policy journal identity', () => {
+    const read = changedJournal(journal => { journal.entries.find(entry => entry.tag === policyTag)!.idx = 0; });
+    expect(() => verifyMigrationProvenance(read)).toThrow(`Drizzle journal provenance mismatch for ${policyTag}`);
+  });
+
+  it('allows later forward migrations without rewriting either deployed entry', () => {
+    const read = changedJournal(journal => {
+      journal.entries.push({ idx: 2, version: '7', when: 1789837534645, tag: '0002_future_forward_migration', breakpoints: true });
+    });
+    expect(() => verifyMigrationProvenance(read)).not.toThrow();
   });
 });
