@@ -63,7 +63,7 @@ export type Database = {
           guarded_model_definition?: Json | null
           latest_version?: number
           passport_id: string
-          product_identifier?: string
+          product_identifier?: never
           public_slug: string
           retained_until: string
           user_id: string
@@ -75,7 +75,7 @@ export type Database = {
           guarded_model_definition?: Json | null
           latest_version?: number
           passport_id?: string
-          product_identifier?: string
+          product_identifier?: never
           public_slug?: string
           retained_until?: string
           user_id?: string
