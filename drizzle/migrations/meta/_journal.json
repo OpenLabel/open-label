@@ -8,6 +8,13 @@
       "when": 1789836088900,
       "tag": "0000_car_cleaning_passport_history",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1789837534644,
+      "tag": "0001_require_car_cleaning_save_gateway",
+      "breakpoints": true
     }
   ]
 }
