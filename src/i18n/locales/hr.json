@@ -589,7 +589,19 @@
     "uploadFailed": "Učitavanje slike nije uspjelo"
   },
   "richText": {
-    "enterUrl": "Unesite URL:"
+    "enterUrl": "Unesite URL:",
+    "bold": "Podebljano",
+    "italic": "Kurziv",
+    "underline": "Podcrtano",
+    "bulletList": "Popis s grafičkim oznakama",
+    "orderedList": "Numerirani popis",
+    "alignLeft": "Poravnaj lijevo",
+    "alignCenter": "Poravnaj po sredini",
+    "alignRight": "Poravnaj desno",
+    "insertLink": "Umetni poveznicu",
+    "undo": "Poništi",
+    "redo": "Ponovi",
+    "editorLabel": "Uređivač oblikovanog teksta"
   },
   "toyPublic": {
     "headerBadge": "Igračka – Digitalna putovnica proizvoda",

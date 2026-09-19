@@ -589,7 +589,19 @@
     "uploadFailed": "Nahranie obrázku sa nepodarilo"
   },
   "richText": {
-    "enterUrl": "Zadajte URL:"
+    "enterUrl": "Zadajte URL:",
+    "bold": "Tučné",
+    "italic": "Kurzíva",
+    "underline": "Podčiarknutie",
+    "bulletList": "Zoznam s odrážkami",
+    "orderedList": "Číslovaný zoznam",
+    "alignLeft": "Zarovnať vľavo",
+    "alignCenter": "Zarovnať na stred",
+    "alignRight": "Zarovnať vpravo",
+    "insertLink": "Vložiť odkaz",
+    "undo": "Späť",
+    "redo": "Znova",
+    "editorLabel": "Editor formátovaného textu"
   },
   "toyPublic": {
     "headerBadge": "Hračka – Digitálny pas výrobku",

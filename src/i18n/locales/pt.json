@@ -589,7 +589,19 @@
     "contactUs": "Contacte-nos"
   },
   "richText": {
-    "enterUrl": "Introduza URL:"
+    "enterUrl": "Introduza URL:",
+    "bold": "Negrito",
+    "italic": "Itálico",
+    "underline": "Sublinhado",
+    "bulletList": "Lista com marcas",
+    "orderedList": "Lista numerada",
+    "alignLeft": "Alinhar à esquerda",
+    "alignCenter": "Centrar",
+    "alignRight": "Alinhar à direita",
+    "insertLink": "Inserir ligação",
+    "undo": "Anular",
+    "redo": "Refazer",
+    "editorLabel": "Editor de texto formatado"
   },
   "toyPublic": {
     "headerBadge": "Brinquedo — Passaporte Digital do Produto",

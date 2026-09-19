@@ -589,7 +589,19 @@
     "uploadFailed": "Nalaganje slike ni uspelo"
   },
   "richText": {
-    "enterUrl": "Vnesite URL:"
+    "enterUrl": "Vnesite URL:",
+    "bold": "Krepko",
+    "italic": "Ležeče",
+    "underline": "Podčrtano",
+    "bulletList": "Označen seznam",
+    "orderedList": "Oštevilčen seznam",
+    "alignLeft": "Poravnaj levo",
+    "alignCenter": "Poravnaj na sredino",
+    "alignRight": "Poravnaj desno",
+    "insertLink": "Vstavi povezavo",
+    "undo": "Razveljavi",
+    "redo": "Uveljavi",
+    "editorLabel": "Urejevalnik oblikovanega besedila"
   },
   "toyPublic": {
     "headerBadge": "Igrača – Digitalni potni list izdelka",

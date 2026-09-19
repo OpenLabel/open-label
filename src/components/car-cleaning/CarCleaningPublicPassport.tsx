@@ -120,22 +120,33 @@ export function CarCleaningPublicPassport({ passport, isPreview = false, preview
         {sections.length === 0 && <p className="text-sm text-muted-foreground">{copy('carCleaning.emptyPublic')}</p>}
         {!isPreview && <CarCleaningHistory slug={passport.public_slug} history={passport.dpp_history} />}
         {!isPreview && <div className="flex flex-wrap gap-3 print:hidden">
-          <Button variant="outline" onClick={downloadJson}><Download className="mr-2 h-4 w-4" />{copy('carCleaning.downloadJson')}</Button>
-          <Button variant="outline" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" />{copy('carCleaning.print')}</Button>
+          <Button variant="outline" className="h-auto min-h-10 max-w-full whitespace-normal" onClick={downloadJson}><Download className="mr-2 h-4 w-4" />{copy('carCleaning.downloadJson')}</Button>
+          <Button variant="outline" className="h-auto min-h-10 max-w-full whitespace-normal" onClick={() => window.print()}><Printer className="mr-2 h-4 w-4" />{copy('carCleaning.print')}</Button>
         </div>}
-        <details className="text-sm">
-          <summary className="cursor-pointer font-medium">{copy('carCleaning.sources')}</summary>
-          <ul className="mt-3 space-y-2">
-            {CAR_CLEANING_SOURCES.map(source => {
-              const identifier = source.title.match(/\((EU|EC)\).*?(\d+\/\d+)/);
-              return <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" className="underline text-primary">{identifier ? `${identifier[1]} ${identifier[2]}` : source.url}</a></li>;
-            })}
-          </ul>
-        </details>
-        <footer className="border-t pt-5 text-center text-sm text-muted-foreground space-y-3">
-          <p>{t('passport.poweredBy')}{' '}<a href="https://www.open-label.eu" target="_blank" rel="noopener noreferrer" className="text-primary underline">Open-Label.eu</a></p>
-          <Link to="/legal" className="inline-block underline print:hidden">{t('legal.legalMentions')}</Link>
-        </footer>
+        <div className="space-y-6 print:space-y-3 print:break-inside-avoid">
+          <details className="text-sm print:hidden">
+            <summary className="cursor-pointer font-medium">{copy('carCleaning.sources')}</summary>
+            <ul className="mt-3 space-y-2">
+              {CAR_CLEANING_SOURCES.map(source => {
+                const identifier = source.title.match(/\((EU|EC)\).*?(\d+\/\d+)/);
+                return <li key={source.url}><a href={source.url} target="_blank" rel="noopener noreferrer" className="underline text-primary">{identifier ? `${identifier[1]} ${identifier[2]}` : source.url}</a></li>;
+              })}
+            </ul>
+          </details>
+          <section className="hidden print:block text-xs">
+            <h2 className="font-medium">{copy('carCleaning.sources')}</h2>
+            <ul className="mt-2 space-y-2">
+              {CAR_CLEANING_SOURCES.map(source => <li key={source.url}>
+                <p>{source.title}</p>
+                <a href={source.url} className="underline break-all">{source.url}</a>
+              </li>)}
+            </ul>
+          </section>
+          <footer className="border-t pt-5 text-center text-sm text-muted-foreground space-y-3 print:pt-2">
+            <p>{t('passport.poweredBy')}{' '}<a href="https://www.open-label.eu" target="_blank" rel="noopener noreferrer" className="text-primary underline">Open-Label.eu</a></p>
+            <Link to="/legal" className="inline-block underline print:hidden">{t('legal.legalMentions')}</Link>
+          </footer>
+        </div>
       </main>
     </div>
   );

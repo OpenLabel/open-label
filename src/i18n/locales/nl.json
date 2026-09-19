@@ -589,7 +589,19 @@
     "contactUs": "Neem contact op"
   },
   "richText": {
-    "enterUrl": "Voer URL in:"
+    "enterUrl": "Voer URL in:",
+    "bold": "Vet",
+    "italic": "Cursief",
+    "underline": "Onderstrepen",
+    "bulletList": "Lijst met opsommingstekens",
+    "orderedList": "Genummerde lijst",
+    "alignLeft": "Links uitlijnen",
+    "alignCenter": "Centreren",
+    "alignRight": "Rechts uitlijnen",
+    "insertLink": "Link invoegen",
+    "undo": "Ongedaan maken",
+    "redo": "Opnieuw uitvoeren",
+    "editorLabel": "Editor voor opgemaakte tekst"
   },
   "toyPublic": {
     "headerBadge": "Speelgoed — Digitaal Productpaspoort",

@@ -589,7 +589,19 @@
     "contactUs": "Kontakta oss"
   },
   "richText": {
-    "enterUrl": "Ange URL:"
+    "enterUrl": "Ange URL:",
+    "bold": "Fetstil",
+    "italic": "Kursiv",
+    "underline": "Understrykning",
+    "bulletList": "Punktlista",
+    "orderedList": "Numrerad lista",
+    "alignLeft": "Vänsterjustera",
+    "alignCenter": "Centrera",
+    "alignRight": "Högerjustera",
+    "insertLink": "Infoga länk",
+    "undo": "Ångra",
+    "redo": "Gör om",
+    "editorLabel": "Redigerare för formaterad text"
   },
   "toyPublic": {
     "headerBadge": "Leksak — Digitalt produktpass",

@@ -589,7 +589,19 @@
     "contactUs": "Skontaktuj się z nami"
   },
   "richText": {
-    "enterUrl": "Wprowadź URL:"
+    "enterUrl": "Wprowadź URL:",
+    "bold": "Pogrubienie",
+    "italic": "Kursywa",
+    "underline": "Podkreślenie",
+    "bulletList": "Lista punktowana",
+    "orderedList": "Lista numerowana",
+    "alignLeft": "Wyrównaj do lewej",
+    "alignCenter": "Wyśrodkuj",
+    "alignRight": "Wyrównaj do prawej",
+    "insertLink": "Wstaw odnośnik",
+    "undo": "Cofnij",
+    "redo": "Ponów",
+    "editorLabel": "Edytor tekstu sformatowanego"
   },
   "toyPublic": {
     "headerBadge": "Zabawka — Cyfrowy Paszport Produktu",

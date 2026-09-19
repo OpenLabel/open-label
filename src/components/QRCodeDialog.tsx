@@ -109,6 +109,7 @@ function RoundedHexagonWithText({ size = 104 }: { size?: number }) {
       height={size}
       viewBox={`0 0 ${size} ${size}`}
       className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+      style={{ width: `${(size / 250) * 100}%`, height: 'auto' }}
     >
       <path
         d={path}
@@ -410,31 +411,33 @@ export function QRCodeDialog({
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-md">
-        <DialogHeader>
-          <DialogTitle className="text-center">{t('qrDialog.title')} - {productName}</DialogTitle>
+      <DialogContent className="w-[calc(100%-2rem)] max-h-[calc(100dvh-2rem)] grid-cols-1 overflow-y-auto sm:max-w-md" aria-describedby={undefined}>
+        <DialogHeader className="min-w-0 px-6">
+          <DialogTitle className="min-w-0 break-words text-center leading-snug">{t('qrDialog.title')} - {productName}</DialogTitle>
         </DialogHeader>
-        <div className="flex flex-col items-center gap-4 py-4">
+        <div className="flex min-w-0 w-full flex-col items-center gap-4 py-4">
           {url && (
-            <div ref={qrContainerRef} className="rounded-lg border p-4 bg-white relative">
+            <div ref={qrContainerRef} className="max-w-full rounded-lg border p-4 bg-white">
               {/* Wine ingredients label above QR code */}
               {wineIngredientsText && (
-                <p className="text-sm font-bold leading-tight text-gray-700 mb-2 text-center w-[250px]">
+                <p className="text-sm font-bold leading-tight text-gray-700 mb-2 text-center w-[250px] max-w-full break-words">
                   {wineIngredientsText}
                 </p>
               )}
-              <QRCodeSVG
-                value={url}
-                size={250}
-                level="H"
-                includeMargin={false}
-                className="qr-code-svg"
-              />
-              {/* Only show security seal placeholder when counterfeit protection is enabled */}
-              {showSecuritySealOverlay && <RoundedHexagonWithText size={139} />}
+              <div className="relative w-[250px] max-w-full">
+                <QRCodeSVG
+                  value={url}
+                  size={250}
+                  level="H"
+                  includeMargin={false}
+                  className="qr-code-svg block h-auto max-w-full"
+                />
+                {/* Only show security seal placeholder when counterfeit protection is enabled */}
+                {showSecuritySealOverlay && <RoundedHexagonWithText size={139} />}
+              </div>
               {/* Wine energy text below QR code */}
               {wineEnergyText && (
-                <p className="text-sm font-bold leading-tight text-gray-700 mt-2 text-center w-[250px]">
+                <p className="text-sm font-bold leading-tight text-gray-700 mt-2 text-center w-[250px] max-w-full break-words">
                   {wineEnergyText}
                 </p>
               )}
@@ -442,14 +445,14 @@ export function QRCodeDialog({
           )}
           {/* Print size instruction */}
           {showSecuritySealOverlay && (
-            <p className="text-xs text-muted-foreground text-center max-w-[250px]">
+            <p className="text-xs text-muted-foreground text-center w-full max-w-[250px] break-words">
               {(wineIngredientsText || wineEnergyText)
                 ? t('qrDialog.printSizeInstructionWine', 'Print at 1.8 cm wide. Height varies with content. The hexagon corresponds to 1 cm for the security seal.')
                 : t('qrDialog.printSizeInstruction', 'Print at 1.8 × 1.8 cm. The hexagon corresponds to 1 cm for the security seal.')}
             </p>
           )}
-          <div className="flex items-center gap-2 w-full max-w-sm">
-            <div className="flex-1 text-sm text-muted-foreground bg-muted rounded-md px-3 py-2 truncate">
+          <div className="flex min-w-0 items-center gap-2 w-full max-w-sm">
+            <div className="min-w-0 flex-1 text-sm text-muted-foreground bg-muted rounded-md px-3 py-2 truncate">
               {url}
             </div>
             <Button

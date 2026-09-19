@@ -589,7 +589,19 @@
     "uploadFailed": "It-tlugħ tal-istampa falla"
   },
   "richText": {
-    "enterUrl": "Daħħal URL:"
+    "enterUrl": "Daħħal URL:",
+    "bold": "Tipa grassa",
+    "italic": "Korsiv",
+    "underline": "Issottolinja",
+    "bulletList": "Lista bil-balal",
+    "orderedList": "Lista nnumerata",
+    "alignLeft": "Allinja max-xellug",
+    "alignCenter": "Allinja fin-nofs",
+    "alignRight": "Allinja mal-lemin",
+    "insertLink": "Daħħal ħolqa",
+    "undo": "Annulla l-aħħar azzjoni",
+    "redo": "Erġa' wettaq l-azzjoni",
+    "editorLabel": "Editur tat-test ifformattjat"
   },
   "toyPublic": {
     "headerBadge": "Ġugarell — Passaport Diġitali tal-Prodott",

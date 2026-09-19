@@ -589,7 +589,19 @@
     "uploadFailed": "Pildi üleslaadimine ebaõnnestus"
   },
   "richText": {
-    "enterUrl": "Sisestage URL:"
+    "enterUrl": "Sisestage URL:",
+    "bold": "Paks kiri",
+    "italic": "Kaldkiri",
+    "underline": "Allakriipsutus",
+    "bulletList": "Täpploend",
+    "orderedList": "Nummerdatud loend",
+    "alignLeft": "Joonda vasakule",
+    "alignCenter": "Joonda keskele",
+    "alignRight": "Joonda paremale",
+    "insertLink": "Lisa link",
+    "undo": "Võta tagasi",
+    "redo": "Tee uuesti",
+    "editorLabel": "Vormindatud teksti redaktor"
   },
   "toyPublic": {
     "headerBadge": "Mänguasi — digitaalne tootepass",

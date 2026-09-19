@@ -589,7 +589,19 @@
     "contactUs": "Kontaktieren Sie uns"
   },
   "richText": {
-    "enterUrl": "URL eingeben:"
+    "enterUrl": "URL eingeben:",
+    "bold": "Fett",
+    "italic": "Kursiv",
+    "underline": "Unterstreichen",
+    "bulletList": "Aufzählung",
+    "orderedList": "Nummerierte Liste",
+    "alignLeft": "Linksbündig",
+    "alignCenter": "Zentrieren",
+    "alignRight": "Rechtsbündig",
+    "insertLink": "Link einfügen",
+    "undo": "Rückgängig",
+    "redo": "Wiederholen",
+    "editorLabel": "Editor für formatierten Text"
   },
   "toyPublic": {
     "headerBadge": "Spielzeug – Digitaler Produktpass",

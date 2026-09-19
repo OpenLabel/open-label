@@ -589,7 +589,19 @@
     "uploadFailed": "Attēla augšupielāde neizdevās"
   },
   "richText": {
-    "enterUrl": "Ievadiet URL:"
+    "enterUrl": "Ievadiet URL:",
+    "bold": "Treknraksts",
+    "italic": "Slīpraksts",
+    "underline": "Pasvītrojums",
+    "bulletList": "Aizzīmju saraksts",
+    "orderedList": "Numurēts saraksts",
+    "alignLeft": "Līdzināt pa kreisi",
+    "alignCenter": "Centrēt",
+    "alignRight": "Līdzināt pa labi",
+    "insertLink": "Ievietot saiti",
+    "undo": "Atsaukt",
+    "redo": "Atcelt atsaukšanu",
+    "editorLabel": "Formatēta teksta redaktors"
   },
   "toyPublic": {
     "headerBadge": "Rotaļlieta — Digitālā produkta pase",

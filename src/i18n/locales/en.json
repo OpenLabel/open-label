@@ -589,7 +589,19 @@
     "contactUs": "Contact Us"
   },
   "richText": {
-    "enterUrl": "Enter URL:"
+    "enterUrl": "Enter URL:",
+    "bold": "Bold",
+    "italic": "Italic",
+    "underline": "Underline",
+    "bulletList": "Bullet list",
+    "orderedList": "Numbered list",
+    "alignLeft": "Align left",
+    "alignCenter": "Align center",
+    "alignRight": "Align right",
+    "insertLink": "Insert link",
+    "undo": "Undo",
+    "redo": "Redo",
+    "editorLabel": "Rich text editor"
   },
   "toyPublic": {
     "headerBadge": "Toy — Digital Product Passport",

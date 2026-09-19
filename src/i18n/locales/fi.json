@@ -589,7 +589,19 @@
     "uploadFailed": "Kuvan lataus epäonnistui"
   },
   "richText": {
-    "enterUrl": "Syötä URL:"
+    "enterUrl": "Syötä URL:",
+    "bold": "Lihavointi",
+    "italic": "Kursivointi",
+    "underline": "Alleviivaus",
+    "bulletList": "Luettelomerkkiluettelo",
+    "orderedList": "Numeroitu luettelo",
+    "alignLeft": "Tasaa vasemmalle",
+    "alignCenter": "Keskitä",
+    "alignRight": "Tasaa oikealle",
+    "insertLink": "Lisää linkki",
+    "undo": "Kumoa",
+    "redo": "Tee uudelleen",
+    "editorLabel": "Muotoillun tekstin editori"
   },
   "toyPublic": {
     "headerBadge": "Lelu – Digitaalinen tuotepassi",

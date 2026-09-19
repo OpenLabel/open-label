@@ -589,7 +589,19 @@
     "uploadFailed": "Încărcarea imaginii a eșuat"
   },
   "richText": {
-    "enterUrl": "Introduceți URL:"
+    "enterUrl": "Introduceți URL:",
+    "bold": "Aldin",
+    "italic": "Cursiv",
+    "underline": "Subliniere",
+    "bulletList": "Listă cu marcatori",
+    "orderedList": "Listă numerotată",
+    "alignLeft": "Aliniere la stânga",
+    "alignCenter": "Aliniere la centru",
+    "alignRight": "Aliniere la dreapta",
+    "insertLink": "Inserează un link",
+    "undo": "Anulează",
+    "redo": "Refă",
+    "editorLabel": "Editor de text formatat"
   },
   "toyPublic": {
     "headerBadge": "Jucărie — Pașaport digital al produsului",

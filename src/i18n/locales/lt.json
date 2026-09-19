@@ -589,7 +589,19 @@
     "uploadFailed": "Nepavyko įkelti vaizdo"
   },
   "richText": {
-    "enterUrl": "Įveskite URL:"
+    "enterUrl": "Įveskite URL:",
+    "bold": "Pusjuodis",
+    "italic": "Kursyvas",
+    "underline": "Pabraukimas",
+    "bulletList": "Ženklelių sąrašas",
+    "orderedList": "Numeruotas sąrašas",
+    "alignLeft": "Lygiuoti kairėje",
+    "alignCenter": "Lygiuoti centre",
+    "alignRight": "Lygiuoti dešinėje",
+    "insertLink": "Įterpti nuorodą",
+    "undo": "Atšaukti",
+    "redo": "Grąžinti",
+    "editorLabel": "Raiškiojo teksto rengyklė"
   },
   "toyPublic": {
     "headerBadge": "Žaislas — skaitmeninis gaminio pasas",

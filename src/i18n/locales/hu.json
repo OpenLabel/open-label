@@ -589,7 +589,19 @@
     "uploadFailed": "Kép feltöltése sikertelen"
   },
   "richText": {
-    "enterUrl": "Adja meg az URL-t:"
+    "enterUrl": "Adja meg az URL-t:",
+    "bold": "Félkövér",
+    "italic": "Dőlt",
+    "underline": "Aláhúzott",
+    "bulletList": "Felsorolás",
+    "orderedList": "Számozott lista",
+    "alignLeft": "Balra igazítás",
+    "alignCenter": "Középre igazítás",
+    "alignRight": "Jobbra igazítás",
+    "insertLink": "Hivatkozás beszúrása",
+    "undo": "Visszavonás",
+    "redo": "Újra",
+    "editorLabel": "Formázott szöveg szerkesztője"
   },
   "toyPublic": {
     "headerBadge": "Játék – digitális termékútlevél",

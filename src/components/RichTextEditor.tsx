@@ -48,7 +48,7 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
   const { t } = useTranslation();
   const editor = useEditor({
     extensions: [
-      StarterKit,
+      StarterKit.configure({ link: false, underline: false }),
       Underline,
       TextAlign.configure({
         types: ['heading', 'paragraph'],
@@ -64,6 +64,9 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
     editorProps: {
       attributes: {
         class: 'prose prose-sm max-w-none focus:outline-none min-h-[150px] p-3',
+        role: 'textbox',
+        'aria-multiline': 'true',
+        'aria-label': t('richText.editorLabel'),
       },
     },
   });
@@ -95,6 +98,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
       <div className="border-b bg-muted/50 p-1 flex flex-wrap gap-1">
         <Toggle
           size="sm"
+          aria-label={t('richText.bold')}
+          title={t('richText.bold')}
           pressed={editor.isActive('bold')}
           onPressedChange={() => editor.chain().focus().toggleBold().run()}
         >
@@ -102,6 +107,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         </Toggle>
         <Toggle
           size="sm"
+          aria-label={t('richText.italic')}
+          title={t('richText.italic')}
           pressed={editor.isActive('italic')}
           onPressedChange={() => editor.chain().focus().toggleItalic().run()}
         >
@@ -109,6 +116,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         </Toggle>
         <Toggle
           size="sm"
+          aria-label={t('richText.underline')}
+          title={t('richText.underline')}
           pressed={editor.isActive('underline')}
           onPressedChange={() => editor.chain().focus().toggleUnderline().run()}
         >
@@ -117,6 +126,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         <div className="w-px bg-border mx-1" />
         <Toggle
           size="sm"
+          aria-label={t('richText.bulletList')}
+          title={t('richText.bulletList')}
           pressed={editor.isActive('bulletList')}
           onPressedChange={() => editor.chain().focus().toggleBulletList().run()}
         >
@@ -124,6 +135,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         </Toggle>
         <Toggle
           size="sm"
+          aria-label={t('richText.orderedList')}
+          title={t('richText.orderedList')}
           pressed={editor.isActive('orderedList')}
           onPressedChange={() => editor.chain().focus().toggleOrderedList().run()}
         >
@@ -132,6 +145,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         <div className="w-px bg-border mx-1" />
         <Toggle
           size="sm"
+          aria-label={t('richText.alignLeft')}
+          title={t('richText.alignLeft')}
           pressed={editor.isActive({ textAlign: 'left' })}
           onPressedChange={() => editor.chain().focus().setTextAlign('left').run()}
         >
@@ -139,6 +154,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         </Toggle>
         <Toggle
           size="sm"
+          aria-label={t('richText.alignCenter')}
+          title={t('richText.alignCenter')}
           pressed={editor.isActive({ textAlign: 'center' })}
           onPressedChange={() => editor.chain().focus().setTextAlign('center').run()}
         >
@@ -146,6 +163,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         </Toggle>
         <Toggle
           size="sm"
+          aria-label={t('richText.alignRight')}
+          title={t('richText.alignRight')}
           pressed={editor.isActive({ textAlign: 'right' })}
           onPressedChange={() => editor.chain().focus().setTextAlign('right').run()}
         >
@@ -154,6 +173,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
         <div className="w-px bg-border mx-1" />
         <Toggle
           size="sm"
+          aria-label={t('richText.insertLink')}
+          title={t('richText.insertLink')}
           pressed={editor.isActive('link')}
           onPressedChange={addLink}
         >
@@ -164,6 +185,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
           type="button"
           variant="ghost"
           size="sm"
+          aria-label={t('richText.undo')}
+          title={t('richText.undo')}
           onClick={() => editor.chain().focus().undo().run()}
           disabled={!editor.can().undo()}
         >
@@ -173,6 +196,8 @@ export function RichTextEditor({ content, onChange, placeholder }: RichTextEdito
           type="button"
           variant="ghost"
           size="sm"
+          aria-label={t('richText.redo')}
+          title={t('richText.redo')}
           onClick={() => editor.chain().focus().redo().run()}
           disabled={!editor.can().redo()}
         >

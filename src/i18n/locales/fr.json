@@ -589,7 +589,19 @@
     "contactUs": "Contactez-nous"
   },
   "richText": {
-    "enterUrl": "Entrez l'URL :"
+    "enterUrl": "Entrez l'URL :",
+    "bold": "Gras",
+    "italic": "Italique",
+    "underline": "Souligné",
+    "bulletList": "Liste à puces",
+    "orderedList": "Liste numérotée",
+    "alignLeft": "Aligner à gauche",
+    "alignCenter": "Centrer",
+    "alignRight": "Aligner à droite",
+    "insertLink": "Insérer un lien",
+    "undo": "Annuler",
+    "redo": "Rétablir",
+    "editorLabel": "Éditeur de texte enrichi"
   },
   "toyPublic": {
     "headerBadge": "Jouet — Passeport numérique des produits",

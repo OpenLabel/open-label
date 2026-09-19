@@ -589,7 +589,19 @@
     "contactUs": "Contattaci"
   },
   "richText": {
-    "enterUrl": "Inserisci URL:"
+    "enterUrl": "Inserisci URL:",
+    "bold": "Grassetto",
+    "italic": "Corsivo",
+    "underline": "Sottolineato",
+    "bulletList": "Elenco puntato",
+    "orderedList": "Elenco numerato",
+    "alignLeft": "Allinea a sinistra",
+    "alignCenter": "Allinea al centro",
+    "alignRight": "Allinea a destra",
+    "insertLink": "Inserisci collegamento",
+    "undo": "Annulla",
+    "redo": "Ripeti",
+    "editorLabel": "Editor di testo formattato"
   },
   "toyPublic": {
     "headerBadge": "Giocattolo — Passaporto Digitale del Prodotto",

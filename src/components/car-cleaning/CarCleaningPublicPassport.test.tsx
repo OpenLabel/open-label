@@ -2,6 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { validCleaner } from './testFixtures';
+import { CAR_CLEANING_SOURCES } from '@/lib/carCleaning';
 
 vi.mock('react-i18next', () => ({ useTranslation: () => ({
   t: (key: string, fallback?: string) => fallback || key,
@@ -42,6 +43,16 @@ describe('Car cleaning consumer information', () => {
     expect(document.querySelector('script')).toBeNull();
     expect(document.querySelector('img')).toBeNull();
     expect(document.querySelector('a[href^="javascript:"]')).toBeNull();
+  });
+
+  it('provides readable legal source URLs outside the collapsed disclosure for printing', () => {
+    renderPassport();
+    for (const source of CAR_CLEANING_SOURCES) {
+      const link = screen.getByRole('link', { name: source.url });
+      expect(link).toHaveAttribute('href', source.url);
+      expect(link.closest('details')).toBeNull();
+      expect(link.closest('li')).toHaveTextContent(source.title);
+    }
   });
 
   it('downloads public JSON with the same safe data and offers printing', async () => {

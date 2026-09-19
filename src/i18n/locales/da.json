@@ -589,7 +589,19 @@
     "uploadFailed": "Upload af billede mislykkedes"
   },
   "richText": {
-    "enterUrl": "Indtast URL:"
+    "enterUrl": "Indtast URL:",
+    "bold": "Fed",
+    "italic": "Kursiv",
+    "underline": "Understregning",
+    "bulletList": "Punktopstilling",
+    "orderedList": "Nummereret liste",
+    "alignLeft": "Venstrejuster",
+    "alignCenter": "Centrer",
+    "alignRight": "Højrejuster",
+    "insertLink": "Indsæt link",
+    "undo": "Fortryd",
+    "redo": "Annuller fortryd",
+    "editorLabel": "Editor til formateret tekst"
   },
   "toyPublic": {
     "headerBadge": "Legetøj – Digitalt produktpas",

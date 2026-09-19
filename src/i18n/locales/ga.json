@@ -589,7 +589,19 @@
     "contactUs": "Déan teagmháil linn"
   },
   "richText": {
-    "enterUrl": "Iontráil URL:"
+    "enterUrl": "Iontráil URL:",
+    "bold": "Trom",
+    "italic": "Iodálach",
+    "underline": "Folínigh",
+    "bulletList": "Liosta le hurchair",
+    "orderedList": "Liosta uimhrithe",
+    "alignLeft": "Ailínigh ar chlé",
+    "alignCenter": "Ailínigh sa lár",
+    "alignRight": "Ailínigh ar dheis",
+    "insertLink": "Cuir nasc isteach",
+    "undo": "Cealaigh",
+    "redo": "Athdhéan",
+    "editorLabel": "Eagarthóir téacs shaibhir"
   },
   "toyPublic": {
     "headerBadge": "Bréagán — Pas Digiteach Táirgí",

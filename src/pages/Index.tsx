@@ -62,7 +62,7 @@ export default function Index() {
     <div className="min-h-screen bg-background">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
-        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center gap-2">
+        <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 grid grid-cols-[auto_minmax(0,1fr)] sm:flex justify-between items-center gap-2">
           <div className="flex items-center gap-2">
             <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
               <span className="text-primary-foreground font-bold text-sm">OL</span>
@@ -70,10 +70,10 @@ export default function Index() {
             <h1 className="hidden sm:block text-lg font-semibold">Open Label <span className="text-primary font-bold">.eu</span></h1>
             <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
-          <div className="flex flex-wrap sm:flex-nowrap justify-end gap-1.5 sm:gap-2 items-center min-w-0">
+          <div className="flex w-full sm:w-auto flex-wrap sm:flex-nowrap justify-end gap-1.5 sm:gap-2 items-center min-w-0">
             <LanguageSwitcher />
             {loading ? null : user ? (
-              <Button size="sm" className="sm:size-default" asChild>
+              <Button size="sm" className="sm:size-default h-auto min-h-9 py-2 max-w-full whitespace-normal sm:whitespace-nowrap" asChild>
                 <Link to="/dashboard">{t('nav.dashboard')}</Link>
               </Button>
             ) : (
@@ -110,7 +110,7 @@ export default function Index() {
               {t('landing.hero.euFunded')}
             </Badge>
           </div>
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 max-w-5xl mx-auto leading-tight tracking-tight">
+          <h1 className="min-w-0 break-words text-4xl md:text-6xl lg:text-7xl font-bold mb-6 max-w-5xl mx-auto leading-tight tracking-tight">
             {t('landing.hero.title')}
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed">
@@ -176,7 +176,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">{t('landing.features.badge')}</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('landing.features.title')}</h2>
+            <h2 className="min-w-0 break-words text-3xl md:text-4xl font-bold mb-4">{t('landing.features.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {t('landing.features.subtitle')}
             </p>
@@ -187,7 +187,7 @@ export default function Index() {
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <Shield className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{t('landing.features.espr.title')}</h3>
+                <h3 className="min-w-0 break-words font-semibold text-lg mb-2">{t('landing.features.espr.title')}</h3>
                 <p className="text-sm text-muted-foreground">
                   {t('landing.features.espr.description')}
                 </p>
@@ -198,7 +198,7 @@ export default function Index() {
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <InfinityIcon className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{t('landing.features.openSource.title')}</h3>
+                <h3 className="min-w-0 break-words font-semibold text-lg mb-2">{t('landing.features.openSource.title')}</h3>
                 <p className="text-sm text-muted-foreground">
                   {t('landing.features.openSource.description')}
                 </p>
@@ -209,7 +209,7 @@ export default function Index() {
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <Globe className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{t('landing.features.machineReadable.title')}</h3>
+                <h3 className="min-w-0 break-words font-semibold text-lg mb-2">{t('landing.features.machineReadable.title')}</h3>
                 <p className="text-sm text-muted-foreground">
                   {t('landing.features.machineReadable.description')}
                 </p>
@@ -220,7 +220,7 @@ export default function Index() {
                 <div className="h-12 w-12 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
                   <Zap className="h-6 w-6 text-primary" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">{t('landing.features.qr.title')}</h3>
+                <h3 className="min-w-0 break-words font-semibold text-lg mb-2">{t('landing.features.qr.title')}</h3>
                 <p className="text-sm text-muted-foreground">
                   {t('landing.features.qr.description')}
                 </p>
@@ -244,7 +244,7 @@ export default function Index() {
                 <Sparkles className="h-3 w-3 mr-1" />
                 {t('landing.ai.badge')}
               </Badge>
-              <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-amber-600 bg-clip-text text-transparent">
+              <h2 className="min-w-0 break-words text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-violet-600 via-fuchsia-600 to-amber-600 bg-clip-text text-transparent">
                 {t('landing.ai.title')}
               </h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -258,7 +258,7 @@ export default function Index() {
                   <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-violet-500 to-fuchsia-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-violet-500/30">
                     <Camera className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{t('landing.ai.snap.title')}</h3>
+                  <h3 className="min-w-0 break-words font-semibold text-lg mb-2">{t('landing.ai.snap.title')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.ai.snap.description')}
                   </p>
@@ -270,7 +270,7 @@ export default function Index() {
                   <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-fuchsia-500 to-amber-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-fuchsia-500/30">
                     <FileText className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{t('landing.ai.upload.title')}</h3>
+                  <h3 className="min-w-0 break-words font-semibold text-lg mb-2">{t('landing.ai.upload.title')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.ai.upload.description')}
                   </p>
@@ -282,7 +282,7 @@ export default function Index() {
                   <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center mx-auto mb-4 shadow-lg shadow-amber-500/30">
                     <Sparkles className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="font-semibold text-lg mb-2">{t('landing.ai.extract.title')}</h3>
+                  <h3 className="min-w-0 break-words font-semibold text-lg mb-2">{t('landing.ai.extract.title')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.ai.extract.description')}
                   </p>
@@ -296,7 +296,7 @@ export default function Index() {
                     <Upload className="h-6 w-6 text-white" />
                   </div>
                   <div className="text-left">
-                    <h4 className="font-semibold">{t('landing.ai.multiUpload.title')}</h4>
+                    <h4 className="min-w-0 break-words font-semibold">{t('landing.ai.multiUpload.title')}</h4>
                     <p className="text-sm text-muted-foreground">
                       {t('landing.ai.multiUpload.description')}
                     </p>
@@ -327,7 +327,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">{t('landing.categories.badge')}</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('landing.categories.title')}</h2>
+            <h2 className="min-w-0 break-words text-3xl md:text-4xl font-bold mb-4">{t('landing.categories.title')}</h2>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               {t('landing.categories.subtitle')}
             </p>
@@ -345,7 +345,7 @@ export default function Index() {
                 >
                   <CardContent className="p-5">
                     <div className="flex items-start justify-between mb-2">
-                      <h3 className="font-semibold text-sm">{t(`categories.${category.key}`)}</h3>
+                      <h3 className="min-w-0 break-words font-semibold text-sm">{t(`categories.${category.key}`)}</h3>
                       {category.key !== 'car_cleaning' && (category.status === 'active' ? (
                         <Badge className="bg-green-500/10 text-green-600 text-xs border-green-500/20">
                           {t('landing.categories.activeLaw')}
@@ -381,7 +381,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <Badge variant="outline" className="mb-4">{t('landing.timeline.badge')}</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('landing.timeline.title')}</h2>
+            <h2 className="min-w-0 break-words text-3xl md:text-4xl font-bold mb-4">{t('landing.timeline.title')}</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               {t('landing.timeline.subtitle')}
             </p>
@@ -394,7 +394,7 @@ export default function Index() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-semibold">{t('landing.timeline.active.title')}</h3>
+                    <h3 className="min-w-0 break-words font-semibold">{t('landing.timeline.active.title')}</h3>
                     <Badge variant="outline">{t('landing.timeline.active.badge')}</Badge>
                   </div>
                   <p className="text-sm text-muted-foreground">
@@ -410,7 +410,7 @@ export default function Index() {
                 </div>
                 <div>
                   <div className="flex items-center gap-2 mb-1">
-                    <h3 className="font-semibold">{t('landing.timeline.feb2027.title')}</h3>
+                    <h3 className="min-w-0 break-words font-semibold">{t('landing.timeline.feb2027.title')}</h3>
                     <Badge variant="secondary">{t('landing.timeline.feb2027.badge')}</Badge>
                   </div>
                   <p className="text-sm text-muted-foreground">
@@ -425,7 +425,7 @@ export default function Index() {
                   <Users className="h-5 w-5 text-muted-foreground" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">{t('landing.timeline.rollout.title')}</h3>
+                  <h3 className="min-w-0 break-words font-semibold mb-1">{t('landing.timeline.rollout.title')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.timeline.rollout.description')}
                   </p>
@@ -441,14 +441,14 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="outline" className="mb-4">{t('landing.selfHost.badge')}</Badge>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('landing.selfHost.title')}</h2>
+            <h2 className="min-w-0 break-words text-3xl md:text-4xl font-bold mb-4">{t('landing.selfHost.title')}</h2>
             <p className="text-muted-foreground mb-8 max-w-2xl mx-auto">
               {t('landing.selfHost.subtitle')}
             </p>
             <div className="grid md:grid-cols-3 gap-6">
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <h3 className="font-semibold mb-2">{t('landing.selfHost.deploy.title')}</h3>
+                  <h3 className="min-w-0 break-words font-semibold mb-2">{t('landing.selfHost.deploy.title')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.selfHost.deploy.description')}
                   </p>
@@ -456,7 +456,7 @@ export default function Index() {
               </Card>
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <h3 className="font-semibold mb-2">{t('landing.selfHost.customize.title')}</h3>
+                  <h3 className="min-w-0 break-words font-semibold mb-2">{t('landing.selfHost.customize.title')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.selfHost.customize.description')}
                   </p>
@@ -464,7 +464,7 @@ export default function Index() {
               </Card>
               <Card>
                 <CardContent className="pt-6 text-center">
-                  <h3 className="font-semibold mb-2">{t('landing.selfHost.contribute.title')}</h3>
+                  <h3 className="min-w-0 break-words font-semibold mb-2">{t('landing.selfHost.contribute.title')}</h3>
                   <p className="text-sm text-muted-foreground">
                     {t('landing.selfHost.contribute.description')}
                   </p>
@@ -478,7 +478,7 @@ export default function Index() {
       {/* CTA */}
       <section className="py-20 md:py-28 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">{t('landing.cta.title')}</h2>
+          <h2 className="min-w-0 break-words text-3xl md:text-4xl font-bold mb-4">{t('landing.cta.title')}</h2>
           <p className="text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             {t('landing.cta.subtitle')}
           </p>
