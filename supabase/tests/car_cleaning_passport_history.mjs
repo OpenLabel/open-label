@@ -11,6 +11,9 @@ const stranger = '22222222-2222-4222-8222-222222222222';
 const passport = '33333333-3333-4333-8333-333333333333';
 await db.exec(`
   CREATE ROLE anon; CREATE ROLE authenticated; CREATE ROLE service_role BYPASSRLS;
+  CREATE ROLE fixture_history_default_grantee BYPASSRLS;
+  ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT SELECT, INSERT ON TABLES TO fixture_history_default_grantee;
+  ALTER DEFAULT PRIVILEGES IN SCHEMA public GRANT EXECUTE ON FUNCTIONS TO fixture_history_default_grantee;
   CREATE SCHEMA auth;
   CREATE TABLE auth.users (id uuid PRIMARY KEY);
   CREATE FUNCTION auth.uid() RETURNS uuid LANGUAGE sql AS $$ SELECT nullif(current_setting('request.jwt.claim.sub', true), '')::uuid $$;
@@ -58,6 +61,26 @@ await test('anonymous SQL cannot read private snapshots or archive metadata', as
     await fails('SELECT * FROM public.car_cleaning_passport_versions', /permission denied/);
     await fails('SELECT * FROM public.car_cleaning_passport_archives', /permission denied/);
   } finally { await db.exec('RESET ROLE'); }
+});
+await test('pre-existing default table grants cannot expose or forge private history through a bypass-RLS role', async () => {
+  await db.exec('SET ROLE fixture_history_default_grantee');
+  try {
+    for (const table of ['car_cleaning_passport_archives', 'car_cleaning_passport_versions']) {
+      await fails(`SELECT * FROM public.${table}`, /permission denied/);
+      await fails(`INSERT INTO public.${table} DEFAULT VALUES`, /permission denied/);
+    }
+  } finally { await db.exec('RESET ROLE'); }
+});
+await test('pre-existing default function grants do not expose internal history functions', async () => {
+  for (const signature of [
+    'public.car_cleaning_history_immutable()',
+    'public.car_cleaning_retention_floor(jsonb,timestamptz)',
+    'public.car_cleaning_model_definition(jsonb)',
+    'public.guard_car_cleaning_passport_identity()',
+    'public.capture_car_cleaning_passport_version()',
+  ]) {
+    assert.equal((await rows(`SELECT has_function_privilege('fixture_history_default_grantee','${signature}','EXECUTE') AS allowed`))[0].allowed, false);
+  }
 });
 await test('owner cannot forge versions, delete history, or shorten retention', async () => {
   await assert.rejects(asOwner(`UPDATE public.car_cleaning_passport_archives SET retained_until=now()`), /permission denied/);

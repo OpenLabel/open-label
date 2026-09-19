@@ -243,7 +243,7 @@
   "categories": {
     "battery": "Baterijas",
     "construction": "Būvizstrādājumi",
-    "textiles": "Tekstilizstrādājumi un apavi",
+    "textiles": "Apģērbi",
     "wine": "Vīns un stiprie dzērieni",
     "toys": "Rotaļlietas",
     "electronics": "Elektronika un IKT",
@@ -1294,6 +1294,536 @@
     "decline": "Noraidīt",
     "manage": "Sīkdatņu iestatījumi",
     "privacyLink": "Privātuma politika"
+  },
+  "textiles": {
+    "sections": {
+      "identity": {
+        "title": "Identitāte",
+        "description": "Produkta un vienības līmeņa identifikācija"
+      },
+      "responsible_operators": {
+        "title": "Atbildīgās personas",
+        "description": "Ražotājs, importētājs un ES atbildīgā persona, norādīti kā trīs atsevišķas puses"
+      },
+      "materials": {
+        "title": "Materiāli un sastāvs",
+        "description": "Obligātais šķiedru sastāva marķējums saskaņā ar ES Regulu 1007/2011"
+      },
+      "certifications": {
+        "title": "Sertifikāti",
+        "description": "Šīs preces sertifikāti un kā pārbaudīt katru apgalvojumu."
+      },
+      "supply_chain": {
+        "title": "Piegādes ķēdes ceļš",
+        "description": "Katra ražošanas posma valsts, kā arī 1. līmeņa rūpnīca un audita statuss"
+      },
+      "environment": {
+        "title": "Ietekme uz vidi",
+        "description": "Vides rādītāji ar norādītu aprēķina metodi"
+      },
+      "durability": {
+        "title": "Izturība un testēšana",
+        "description": "Izmērīti izturības rezultāti. Paredzams, ka gaidāmajā tekstilizstrādājumu deleģētajā aktā saskaņā ar ESPR galvenā uzmanība tiks pievērsta izturības rādītājiem, tāpēc reģistrējiet reālus testu rezultātus, nevis subjektīvus vērtējumus."
+      },
+      "circularity": {
+        "title": "Aprites ekonomika un aprites cikla beigas",
+        "description": "Informācija par kopšanu, remontu, atpakaļpieņemšanu un pārstrādājamību"
+      },
+      "disposition": {
+        "title": "Likvidēšanas ieraksts",
+        "description": "Atbalsta ESPR aizliegumu iznīcināt nepārdotas patēriņa preces, kas attiecas uz lieliem uzņēmumiem no 2026. gada 19. jūlija un paredz uzskaites veikšanu un informācijas atklāšanu"
+      },
+      "green_claims": {
+        "title": "“Zaļo” apgalvojumu pamatojums",
+        "description": "Atbalsta Patērētāju iespēju direktīvu (EU) 2024/825, kas piemērojama no 2026. gada 27. septembra"
+      },
+      "authentication": {
+        "title": "Autentiskuma noteikšana",
+        "description": "Ar šo preci saistītās pretviltošanas funkcijas"
+      }
+    },
+    "fields": {
+      "show_advanced_fields": {
+        "label": "Rādīt visus laukus (sertifikātu informācija, 1. līmeņa rūpnīca un audita statuss, ietekme uz vidi, izturības testēšana, paplašināta aprites ekonomika)",
+        "help": "Vairumam zīmolu ir nepieciešami tikai tālāk norādītie lauki. Ieslēdziet šo opciju, ja jums ir laboratorijas testu rezultāti, LCA dati vai detalizēta piegādes ķēdes izsekojamība, ko reģistrēt."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "help": "Tirdzniecības vienības numurs, kas identificē SKU.",
+        "placeholder": "piem., 3401234567890"
+      },
+      "item_unique_identifier": {
+        "label": "Unikālais vienības identifikators",
+        "help": "Identificē šo konkrēto fizisko preci, nevis SKU. Vienību identifikatori ir tie, kas nodrošina tālākpārdošanu, īpašumtiesību nodošanu un autentiskuma noteikšanu visā produkta aprites ciklā.",
+        "placeholder": "piem., DPP-2026-000184213",
+        "warn": "Open Label nepiešķir jums šo identifikatoru. Zīmoliem ir jāizveido sava vienību identifikācijas sistēma, piemēram, sērijveida RFID/NFC birkas, ražošanas līnijas numerācijas shēma vai esošs ERP sērijas numurs, un šī vērtība jāievada šeit."
+      },
+      "style_reference": {
+        "label": "Stila / modeļa atsauce",
+        "help": "Regula (EU) 2023/988 (GPSR) nosaka, ka līdz ar ražotāja nosaukumu un adresi ir jānorāda produkta identifikators – tips, partija vai sērijas numurs. Šis ir produkta tipa/partijas identifikators, un tas neaizstāj iepriekš minēto vienības identifikatoru.",
+        "placeholder": "piem., ST-4412 Oksfordas krekls"
+      },
+      "colourway": {
+        "label": "Krāsu salikums",
+        "placeholder": "piem., Indigo / Ekrū"
+      },
+      "size": {
+        "label": "Izmērs",
+        "placeholder": "piem., M, 42, 10"
+      },
+      "product_weight_grams": {
+        "label": "Produkta svars (gramos)",
+        "help": "Preces neto svars, ko izmanto nosūtīšanai un ziņošanai par materiālu intensitāti.",
+        "placeholder": "piem., 220"
+      },
+      "batch_lot": {
+        "label": "Partija vai ražošanas sērija",
+        "placeholder": "piem., LOT-2026-03-A"
+      },
+      "brand_name": {
+        "label": "Zīmola nosaukums"
+      },
+      "product_type": {
+        "label": "Produkta veids",
+        "placeholder": "piem., T-krekls, Jaka, Bikses"
+      },
+      "manufacturer_legal_name": {
+        "label": "Ražotāja juridiskais nosaukums",
+        "help": "Regula (EU) 2023/988 (GPSR) nosaka, ka uz produkta vai tā iepakojuma ir jānorāda ražotāja nosaukums, pasta adrese un elektroniskā adrese."
+      },
+      "manufacturer_street": {
+        "label": "Ielas adrese"
+      },
+      "manufacturer_postal_code": {
+        "label": "Pasta indekss"
+      },
+      "manufacturer_city": {
+        "label": "Pilsēta"
+      },
+      "manufacturer_country": {
+        "label": "Valsts"
+      },
+      "manufacturer_email": {
+        "label": "Elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_non_eu": {
+        "label": "Vai ražotājs ir reģistrēts ārpus ES?"
+      },
+      "importer_legal_name": {
+        "label": "Importētāja juridiskais nosaukums",
+        "help": "Ja ražotājs ir reģistrēts ārpus ES, jānorāda arī importētāja nosaukums, pasta adrese un elektroniskā adrese."
+      },
+      "importer_street": {
+        "label": "Ielas adrese"
+      },
+      "importer_postal_code": {
+        "label": "Pasta indekss"
+      },
+      "importer_city": {
+        "label": "Pilsēta"
+      },
+      "importer_country": {
+        "label": "Valsts"
+      },
+      "importer_email": {
+        "label": "Elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "ES atbildīgā persona — juridiskais nosaukums",
+        "help": "ES atbildīgā persona saskaņā ar Regulas (EU) 2019/1020 4. pantu ir atsevišķa loma no ražotāja un importētāja, pat ja viens un tas pats uzņēmums pilda vairākas no šīm lomām."
+      },
+      "eu_operator_address": {
+        "label": "ES atbildīgā persona — adrese",
+        "placeholder": "Reģistrētā adrese Eiropas Savienībā"
+      },
+      "eu_operator_email": {
+        "label": "ES atbildīgā persona — elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "primary_fiber": {
+        "label": "Primārās šķiedras veids"
+      },
+      "primary_fiber_percentage": {
+        "label": "Primārās šķiedras procentuālais daudzums (%)",
+        "placeholder": "piem., 80"
+      },
+      "secondary_fiber": {
+        "label": "Sekundārās šķiedras veids (ja piemērojams)",
+        "placeholder": "piem., Elastāns"
+      },
+      "secondary_fiber_percentage": {
+        "label": "Sekundārās šķiedras procentuālais daudzums (%)",
+        "placeholder": "piem., 20"
+      },
+      "full_composition": {
+        "label": "Pilns sastāva apraksts",
+        "placeholder": "piem., 80% kokvilna, 15% poliesteris, 5% elastāns"
+      },
+      "contains_animal_parts": {
+        "label": "Satur dzīvnieku izcelsmes netekstila daļas",
+        "help": "ES Regula 1007/2011 nosaka, ka tas ir jānorāda marķējumā, ja produkts satur dzīvnieku izcelsmes netekstila daļas, piemēram, ādas ielāpus, kažokādas apdari, raga vai kaula pogas."
+      },
+      "animal_parts_details": {
+        "label": "Kādas daļas un no kāda dzīvnieka",
+        "placeholder": "piem., Ādas elkoņu ielāpi (liellopu); raga pogas (bifeļu)"
+      },
+      "component_composition": {
+        "label": "Sastāvs pa komponentiem",
+        "help": "Deklarējiet ārējo apvalku, oderi un apdari atsevišķi, lai katru komponentu varētu novērtēt pārstrādei.",
+        "placeholder": "Ārējais apvalks: 100% kokvilna\nOdere: 100% viskoze\nApdare: Poliestera rāvējslēdzējs, misiņa pogas"
+      },
+      "recycled_content_percentage": {
+        "label": "Kopējais pārstrādātā satura procentuālais daudzums (%)",
+        "placeholder": "piem., 50"
+      },
+      "recycled_pre_consumer_percentage": {
+        "label": "Pirmspatēriņa pārstrādātā satura procentuālais daudzums (%)",
+        "help": "Ražošanas atkritumi, kas atgūti pirms nonākšanas pie patērētāja.",
+        "placeholder": "piem., 20"
+      },
+      "recycled_post_consumer_percentage": {
+        "label": "Pēcpatēriņa pārstrādātā satura procentuālais daudzums (%)",
+        "help": "Materiāls, kas atgūts no produktiem, kuri nonākuši pie galalietotājiem.",
+        "placeholder": "piem., 30"
+      },
+      "microplastic_shedding": {
+        "label": "Vai satur sintētiskās šķiedras, kas izdala mikroplastmasu?",
+        "help": "Francijas AGEC likums nosaka, ka patērētāji ir jāinformē, ja apģērbs mazgāšanas laikā izdala mikroplastmasas šķiedras."
+      },
+      "svhc_declared": {
+        "label": "Vai satur REACH / SVHC vielas virs 0,1 % no svara?",
+        "help": "Īpašas bažas izraisošas vielas saskaņā ar Regulu (EC) 1907/2006 (REACH)."
+      },
+      "svhc_details": {
+        "label": "Informācija par SVHC vielu",
+        "placeholder": "Vielas nosaukums, CAS numurs, koncentrācija un komponents"
+      },
+      "pfas_present": {
+        "label": "Vai šis produkts satur apzināti pievienotas PFAS?",
+        "help": "Francija ar Likumu 2025-188 no 2026. gada 1. janvāra aizliedz PFAS izmantošanu apģērbā, apavos un hidroizolācijas līdzekļos. PFAS parasti ir atrodamas noturīgas ūdens atgrūšanas (DWR) apdarēs.",
+        "warn": "Saskaņā ar Likumu 2025-188 no 2026. gada 1. janvāra ir aizliegts laist Francijas tirgū apģērbu, kas satur apzināti pievienotas PFAS. Atbilde “Nezināms” ir jānoskaidro ar piegādātāju pirms pārdošanas uzsākšanas Francijā."
+      },
+      "pfas_details": {
+        "label": "Kādi komponenti un kādas vielas",
+        "placeholder": "piem., DWR apdare uz ārējā apvalka — PFHxA"
+      },
+      "rsl_compliance_status": {
+        "label": "Ierobežoto vielu saraksta (RSL) atbilstības statuss"
+      },
+      "certifications_held": {
+        "label": "Esošie sertifikāti"
+      },
+      "certificate_references": {
+        "label": "Sertifikātu atsauces",
+        "help": "No 2026. gada 27. septembra Direktīva (EU) 2024/825 nosaka, ka ilgtspējas marķējumam ir jābūt balstītam uz sertifikācijas shēmu vai jābūt izveidotam valsts iestādē. Atstājiet tukšu, ja iepriekš nav norādīti sertifikāti.",
+        "placeholder": "Vienu rindā, piem.\nGOTS — CU 123456 GOTS — derīgs līdz 2027-06-30\nOEKO-TEX — 21.HTR.12345 — derīgs līdz 2027-01-15"
+      },
+      "country_fibre_production": {
+        "label": "Šķiedras ražošanas valsts",
+        "placeholder": "Kur šķiedra tika audzēta vai ražota"
+      },
+      "country_spinning_weaving": {
+        "label": "Vērpšanas / aušanas valsts"
+      },
+      "country_dyeing_finishing": {
+        "label": "Krāsošanas / apdares valsts"
+      },
+      "country_of_origin": {
+        "label": "Izgatavošanas / montāžas valsts",
+        "help": "Posms, kas marķējumā norādīts kā izcelsmes valsts."
+      },
+      "made_in_eu": {
+        "label": "Ražots ES?"
+      },
+      "manufacturing_facility": {
+        "label": "1. līmeņa rūpnīcas nosaukums"
+      },
+      "factory_address": {
+        "label": "1. līmeņa rūpnīcas adrese"
+      },
+      "audit_status": {
+        "label": "Sociālā / vides audita statuss"
+      },
+      "audit_certificate_file": {
+        "label": "Audita sertifikāts (augšupielādēt)",
+        "help": "Tiek glabāts jūsu iekšējai uzskaitei — nekad netiek publicēts publiskajā pasē."
+      },
+      "supply_chain_transparent": {
+        "label": "Vai ir pieejama pilnīga piegādes ķēdes pārredzamība?"
+      },
+      "carbon_footprint": {
+        "label": "Oglekļa pēda (kg CO2e)",
+        "placeholder": "Uz produkta vienību"
+      },
+      "water_usage": {
+        "label": "Ūdens patēriņš (litri uz vienību)",
+        "placeholder": "piem., 2700 kokvilnas T-kreklam"
+      },
+      "footprint_method": {
+        "label": "Aprēķina metode",
+        "help": "Skaitlis bez norādītas aprēķina metodes nav pamatots apgalvojums saskaņā ar Patērētāju iespēju direktīvu."
+      },
+      "lca_report_file": {
+        "label": "Pamatojošs LCA ziņojums (augšupielādēt)",
+        "help": "Tiek glabāts jūsu iekšējai uzskaitei — nekad netiek publicēts publiskajā pasē."
+      },
+      "pilling_resistance": {
+        "label": "Savēlumu veidošanās noturības rezultāts",
+        "help": "Testēšanas standarts: ISO 12945-2 (Mārtindeila savēlumu tests).",
+        "placeholder": "piem., 4. pakāpe pēc 2000 berzēm"
+      },
+      "colour_fastness_washing": {
+        "label": "Krāsas noturības pret mazgāšanu rezultāts",
+        "help": "Testēšanas standarts: ISO 105-C06.",
+        "placeholder": "piem., 4.–5. pakāpe"
+      },
+      "colour_fastness_light": {
+        "label": "Krāsas noturības pret gaismu rezultāts",
+        "help": "Testēšanas standarts: ISO 105-B02.",
+        "placeholder": "piem., 5. pakāpe"
+      },
+      "dimensional_stability": {
+        "label": "Izmēru stabilitātes pēc mazgāšanas rezultāts",
+        "help": "Testēšanas standarts: ISO 6330 ar ISO 5077 mērījumu.",
+        "placeholder": "piem., -2% garumā, -1% platumā"
+      },
+      "seam_strength": {
+        "label": "Vīles stiprības rezultāts",
+        "help": "Testēšanas standarts: ISO 13935-2 (satveršanas metode).",
+        "placeholder": "piem., 220 N"
+      },
+      "test_report_reference": {
+        "label": "Testa ziņojuma atsauce",
+        "placeholder": "Laboratorijas nosaukums un ziņojuma numurs"
+      },
+      "test_report_file": {
+        "label": "Testa ziņojums (augšupielādēt)",
+        "help": "Tiek glabāts jūsu iekšējai uzskaitei — nekad netiek publicēts publiskajā pasē."
+      },
+      "washing_temp": {
+        "label": "Maksimālā mazgāšanas temperatūra"
+      },
+      "can_tumble_dry": {
+        "label": "Var žāvēt veļas žāvētājā?"
+      },
+      "can_iron": {
+        "label": "Var gludināt?"
+      },
+      "iron_temp": {
+        "label": "Maksimālā gludināšanas temperatūra"
+      },
+      "care_symbols": {
+        "label": "Kopšanas simboli"
+      },
+      "care_instructions_text": {
+        "label": "Papildu kopšanas norādījumi",
+        "placeholder": "Jebkādi īpaši kopšanas norādījumi"
+      },
+      "spare_trims_available": {
+        "label": "Vai ir pieejama rezerves apdare remontam?",
+        "help": "Pogas, rāvējslēdzēji, auklas un citi nomaināmi komponenti."
+      },
+      "repair_booking_url": {
+        "label": "Remonta pieteikšanas URL",
+        "placeholder": "https://…"
+      },
+      "recyclable": {
+        "label": "Pārstrādājams pēc aprites cikla beigām?"
+      },
+      "take_back_program": {
+        "label": "Vai ir pieejama atpakaļpieņemšanas programma?"
+      },
+      "take_back_scheme_epr": {
+        "label": "Atpakaļpieņemšanas shēmas nosaukums un EPR reģistrācijas numuri katram tirgum",
+        "help": "Paplašinātās ražotāja atbildības reģistrācijas numuri katrā dalībvalstī atšķiras, tāpēc norādiet vienu rindu katram tirgum.",
+        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+      },
+      "recyclability_class": {
+        "label": "Pārstrādājamības klase"
+      },
+      "disassembly_notes": {
+        "label": "Demontāžas piezīmes",
+        "placeholder": "Kā atdalīt ārējo apvalku, oderi, apdari un furnitūru pārstrādei"
+      },
+      "disposition_status": {
+        "label": "Pašreizējā likvidēšana"
+      },
+      "disposition_reason_code": {
+        "label": "Iznīcināšanas iemesla kods",
+        "warn": "Saskaņā ar ESPR no 2026. gada 19. jūlija ir ierobežota nepārdota apģērba iznīcināšana, ko veic lieli uzņēmumi, un ir nepieciešama uzskaite un publiska informācijas atklāšana."
+      },
+      "disposition_date": {
+        "label": "Likvidēšanas datums",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "disposition_notes": {
+        "label": "Likvidēšanas piezīmes",
+        "placeholder": "Daudzums, apstrādes ceļš un jebkura kompetentās iestādes atsauce"
+      },
+      "environmental_claims": {
+        "label": "Uz produkta vai iepakojuma norādītie apgalvojumi par ietekmi uz vidi",
+        "placeholder": "piem., “Izgatavots no 50% pēcpatēriņa pārstrādāta poliestera (GRS sertificēts)”"
+      },
+      "claims_evidence_reference": {
+        "label": "Pamatojuma pierādījumu atsauce",
+        "placeholder": "Pētījuma, sertifikāta vai verifikācijas iestādes atsauce katram apgalvojumam"
+      },
+      "claims_evidence_file": {
+        "label": "Pamatojuma pierādījumi (augšupielādēt)",
+        "help": "Tiek glabāts jūsu iekšējai uzskaitei — nekad netiek publicēts publiskajā pasē."
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Vai apgalvojumos tiek izvairīties no vispārīgiem vides terminiem?",
+        "help": "Vispārīgi apgalvojumi, piemēram, “videi draudzīgs”, “apzināts” un “oglekļa neitrāls, izmantojot kompensāciju”, ir aizliegti no 2026. gada 27. septembra."
+      },
+      "authentication_feature_present": {
+        "label": "Vai ir autentiskuma noteikšanas funkcija?",
+        "help": "Apģērbs ir viena no visvairāk viltotajām produktu kategorijām ES, tāpēc vienības līmeņa autentiskuma noteikšana būtiski aizsargā zīmolu un pircēju."
+      },
+      "authentication_method": {
+        "label": "Autentiskuma noteikšanas metode"
+      },
+      "authentication_verification_url": {
+        "label": "Verifikācijas URL",
+        "placeholder": "https://…"
+      }
+    },
+    "options": {
+      "manufacturerNonEu": {
+        "yes": "Jā",
+        "no": "Nē"
+      },
+      "primaryFiber": {
+        "cotton": "Kokvilna",
+        "organic_cotton": "Bioloģiskā kokvilna",
+        "linen": "Lini",
+        "hemp": "Kaņepes",
+        "wool": "Vilna",
+        "cashmere": "Kašmirs",
+        "mohair": "Mohēra",
+        "alpaca": "Alpaka",
+        "angora": "Angora",
+        "silk": "Zīds",
+        "viscose": "Viskoze",
+        "modal": "Modāls",
+        "lyocell": "Liocels",
+        "acetate": "Acetāts",
+        "cupro": "Kupro",
+        "polyester": "Poliesteris",
+        "recycled_polyester": "Pārstrādāts poliesteris",
+        "nylon": "Poliamīds",
+        "acrylic": "Akrils",
+        "elastane": "Elastāns",
+        "polypropylene": "Polipropilēns",
+        "other": "Cits"
+      },
+      "pfasPresent": {
+        "yes": "Jā",
+        "no": "Nē",
+        "unknown": "Nezināms"
+      },
+      "rslCompliance": {
+        "compliant_tested": "Atbilstīgs — pārbaudīts testēšanā",
+        "compliant_declared": "Atbilstīgs — tikai piegādātāja deklarācija",
+        "in_progress": "Novērtēšana procesā",
+        "not_assessed": "Nav novērtēts"
+      },
+      "certificationsHeld": {
+        "gots": "GOTS (Globālais organiskā tekstila standarts)",
+        "oeko_tex": "OEKO-TEX Standard 100",
+        "grs": "GRS (Globālais pārstrādes standarts)",
+        "bluesign": "bluesign®",
+        "fair_trade": "Fair Trade",
+        "other": "Cits"
+      },
+      "auditStatus": {
+        "amfori_bsci": "amfori BSCI auditēts",
+        "sedex_smeta": "Sedex SMETA auditēts",
+        "sa8000": "SA8000 sertificēts",
+        "wrap": "WRAP sertificēts",
+        "brand_audit": "Zīmola veikts audits",
+        "not_audited": "Nav auditēts"
+      },
+      "footprintMethod": {
+        "pefcr_apparel_footwear": "PEFCR Apģērbs un apavi",
+        "iso_14067": "ISO 14067",
+        "ghg_protocol": "GHG protokola produkta standarts",
+        "iso_14040_44": "ISO 14040/14044 LCA",
+        "higg_msi": "Higg MSI",
+        "internal_model": "Iekšējais modelis"
+      },
+      "washingTemp": {
+        "30": "30°C",
+        "40": "40°C",
+        "60": "60°C",
+        "95": "95°C",
+        "hand": "Mazgāt tikai ar rokām",
+        "dry_clean": "Tikai ķīmiskā tīrīšana"
+      },
+      "ironTemp": {
+        "low": "Zema (110°C)",
+        "medium": "Vidēja (150°C)",
+        "high": "Augsta (200°C)"
+      },
+      "careSymbols": {
+        "wash_30": "Mazgāt 30°C",
+        "wash_40": "Mazgāt 40°C",
+        "wash_60": "Mazgāt 60°C",
+        "hand_wash": "Mazgāt ar rokām",
+        "do_not_wash": "Nemazgāt",
+        "bleach_allowed": "Balināšana atļauta",
+        "non_chlorine_bleach": "Tikai balinātājs, kas nesatur hloru",
+        "do_not_bleach": "Nebalināt",
+        "tumble_dry_low": "Žāvēt veļas žāvētājā zemā temperatūrā",
+        "tumble_dry_normal": "Žāvēt veļas žāvētājā normālā režīmā",
+        "do_not_tumble_dry": "Nežāvēt veļas žāvētājā",
+        "iron_low": "Gludināt zemā temperatūrā",
+        "iron_medium": "Gludināt vidējā temperatūrā",
+        "iron_high": "Gludināt augstā temperatūrā",
+        "do_not_iron": "Negludināt",
+        "dry_clean_any": "Profesionāla ķīmiskā tīrīšana",
+        "dry_clean_petroleum": "Profesionāla ķīmiskā tīrīšana, tikai ar naftas šķīdinātāju",
+        "wet_clean": "Profesionāla mitrā tīrīšana",
+        "do_not_dry_clean": "Netīrīt ķīmiski"
+      },
+      "recyclabilityClass": {
+        "mono_material": "Viena materiāla — pārstrādājams no šķiedras uz šķiedru",
+        "separable_blend": "Maisījums, atdalāmi komponenti",
+        "mechanical_only": "Tikai mehāniska pārstrāde",
+        "downcycle_only": "Tikai zemākas kvalitātes pārstrāde",
+        "not_recyclable": "Pašlaik nav pārstrādājams"
+      },
+      "dispositionStatus": {
+        "in_stock": "Joprojām noliktavā",
+        "sold": "Pārdots",
+        "donated": "Ziedots",
+        "recycled": "Pārstrādāts",
+        "remanufactured": "Atjaunots",
+        "destroyed": "Iznīcināts"
+      },
+      "dispositionReason": {
+        "health_safety": "Veselība un drošība",
+        "counterfeit_ip": "Viltojums / IP pārkāpums",
+        "damaged_beyond_repair": "Bojāts, nav labojams",
+        "donation_refused": "Ziedojums noraidīts pēc pieprasījuma trīs sociālās ekonomikas organizācijām",
+        "protected_logo": "Aizsargātu logotipu nevar noņemt",
+        "unlawful_product": "Produkts izrādījās nelikumīgs"
+      },
+      "authenticationMethod": {
+        "nfc_tag": "NFC birka",
+        "secure_qr": "Drošs / sērijveida QR kods",
+        "security_seal": "Pret viltojumiem drošs plombējums",
+        "ai_fingerprint": "AI attēla pirkstu nospiedums",
+        "rfid": "RFID",
+        "other": "Cits"
+      }
+    }
+  },
+  "demo": {
+    "banner": "Demonstrācijas pase. Visi dati ir izdomāti.",
+    "cta": "Izveidojiet savu pasi"
   },
   "carCleaning": {
     "publicTitle": "Informācija par automašīnu tīrīšanas līdzekli",

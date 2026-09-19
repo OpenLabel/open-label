@@ -1,9 +1,9 @@
 /** Public product access must not initialize an account or advertising session. */
 export function isPublicPassportPath(path: string): boolean {
   try {
-    return /^\/p(?:\/|$)/i.test(decodeURIComponent(path.split(/[?#]/, 1)[0]));
+    return /^\/(?:p|demo)(?:\/|$)/i.test(decodeURIComponent(path.split(/[?#]/, 1)[0]));
   } catch {
-    return /^\/p(?:\/|[?#]|$)/i.test(path);
+    return /^\/(?:p|demo)(?:\/|[?#]|$)/i.test(path);
   }
 }
 

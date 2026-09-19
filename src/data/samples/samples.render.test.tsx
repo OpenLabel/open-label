@@ -1,0 +1,128 @@
+/*
+ * Open-Label Digital Product Passport Engine
+ * Copyright (C) 2026 Open-Label.eu
+ *
+ * Licensed under the Open-Label Public License (OLPL) v1.0.
+ */
+
+/**
+ * (d) Rendering half of the demo sample suite. Lives in its own .tsx file
+ * because samples.test.ts is JSX-free.
+ */
+import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { render, screen, waitFor } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
+
+vi.mock('react-i18next', () => ({
+  useTranslation: () => ({
+    t: (k: string, fallback?: string) => (typeof fallback === 'string' ? fallback : k),
+    i18n: {
+      language: 'en',
+      changeLanguage: vi.fn(),
+      getFixedT: () => (k: string, fallback?: string) =>
+        typeof fallback === 'string' ? fallback : k,
+    },
+  }),
+  Trans: ({ children }: any) => children,
+  initReactI18next: { type: '3rdParty', init: vi.fn() },
+}));
+
+vi.mock('@/hooks/useSiteConfig', () => ({
+  useSiteConfig: () => ({
+    config: { company_name: 'Test', setup_complete: true, site_url: '' },
+    loading: false,
+    isSetupRequired: false,
+    refetch: vi.fn(),
+    saveConfig: vi.fn(),
+  }),
+  SiteConfigProvider: ({ children }: any) => children,
+}));
+
+vi.mock('@/integrations/supabase/client', () => ({
+  supabase: {
+    auth: {
+      onAuthStateChange: () => ({ data: { subscription: { unsubscribe: vi.fn() } } }),
+      getSession: () => Promise.resolve({ data: { session: null } }),
+    },
+    from: () => ({ select: vi.fn(), insert: vi.fn() }),
+    functions: { invoke: vi.fn() },
+  },
+}));
+
+import Demo, { getDemoCategories } from '@/pages/Demo';
+import { getSamplePassport } from './index';
+
+function LocationProbe() {
+  const location = useLocation();
+  return <div data-testid="location">{location.pathname}</div>;
+}
+
+function renderDemo(path: string) {
+  return render(
+    <MemoryRouter initialEntries={[path]}>
+      <LocationProbe />
+      <Routes>
+        <Route path="/demo/:category" element={<Demo />} />
+      </Routes>
+    </MemoryRouter>,
+  );
+}
+
+describe('Demo page', () => {
+  beforeEach(() => vi.clearAllMocks());
+
+  it('renders one tab per sampled active category', () => {
+    renderDemo('/demo/wine');
+    const tabs = screen.getAllByRole('tab');
+    expect(tabs).toHaveLength(getDemoCategories().length);
+  });
+
+  it('switching tabs changes the rendered product name', async () => {
+    const user = userEvent.setup();
+    renderDemo('/demo/wine');
+    expect(await screen.findByText(/Chateau Example 2022/)).toBeInTheDocument();
+
+    expect(screen.getByTestId('location')).toHaveTextContent('/demo/wine');
+
+    const toyTab = screen.getAllByRole('tab').find((t) => /toys/i.test(t.textContent || ''))!;
+    await user.click(toyTab);
+
+    await waitFor(() =>
+      expect(screen.getByText(getSamplePassport('toys')!().name)).toBeInTheDocument(),
+    );
+    expect(screen.queryByText(/Chateau Example 2022/)).not.toBeInTheDocument();
+    expect(screen.getByTestId('location')).toHaveTextContent('/demo/toys');
+  });
+
+  it('redirects an unknown category to wine', async () => {
+    render(
+      <MemoryRouter initialEntries={['/demo/nonexistent']}>
+        <Routes>
+          <Route path="/demo/:category" element={<Demo />} />
+        </Routes>
+      </MemoryRouter>,
+    );
+    await waitFor(() => expect(screen.getByText(/Chateau Example 2022/)).toBeInTheDocument());
+  });
+
+  it('fetches nothing from the backend', async () => {
+    const { supabase } = await import('@/integrations/supabase/client');
+    renderDemo('/demo/textiles');
+    expect(supabase.functions.invoke).not.toHaveBeenCalled();
+  });
+
+  it('renders the fictitious car sample through the dedicated public renderer without a backend request', async () => {
+    const { supabase } = await import('@/integrations/supabase/client');
+    renderDemo('/demo/car_cleaning');
+
+    expect(screen.getByRole('heading', { name: 'Sample Car Shampoo', level: 1 })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Chemical safety and DPP preparation' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Detergent ingredient information' })).toBeInTheDocument();
+    expect(screen.getByText(/All product and supplier details are fictitious/)).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'https://example-cleaner.example/ingredients' })).toHaveAttribute('href', 'https://example-cleaner.example/ingredients');
+    expect(screen.getByRole('button', { name: 'Download public JSON' })).toBeInTheDocument();
+    expect(screen.getByTestId('location')).toHaveTextContent('/demo/car_cleaning');
+    expect(supabase.functions.invoke).not.toHaveBeenCalled();
+  });
+});

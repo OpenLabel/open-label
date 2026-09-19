@@ -21,6 +21,7 @@ vi.mock('react-i18next', () => ({ useTranslation: () => ({ t: (key: string) => k
 vi.mock('@/components/BuildStatusBanner', () => ({ BuildStatusBanner: () => null }));
 vi.mock('./pages/Index', () => ({ default: () => <Link to="/p/aabbccdd?ref=marketing">View public passport</Link> }));
 vi.mock('./pages/PublicPassport', () => ({ default: () => <div>Public product information<Link to="/">Return home</Link></div> }));
+vi.mock('./pages/Demo', () => ({ default: () => <div>Public product information<Link to="/">Return home</Link></div> }));
 vi.mock('./pages/Auth', () => ({ default: () => null }));
 vi.mock('./pages/Dashboard', () => ({ default: () => null }));
 vi.mock('./pages/PassportForm', () => ({ default: () => null }));
@@ -46,7 +47,7 @@ beforeEach(() => {
 afterEach(() => { window.history.replaceState({}, '', '/'); vi.restoreAllMocks(); });
 
 describe('Public passport marketing privacy', () => {
-  it.each(['/p/aabbccdd?ref=PRIVATE', '/P/aabbccdd'])('does not load advertising, geo-consent or referral capture on cold public route %s', async path => {
+  it.each(['/p/aabbccdd?ref=PRIVATE', '/P/aabbccdd', '/demo/car_cleaning'])('does not load advertising, geo-consent or referral capture on cold public route %s', async path => {
     window.history.replaceState({}, '', path);
     await act(async () => { render(<App />); });
     expect(screen.getByText('Public product information')).toBeInTheDocument();
@@ -83,7 +84,7 @@ describe('Public passport marketing privacy', () => {
   it('guards the tracking helper even when another caller supplies a public passport URL', () => {
     const gtag = vi.fn(); window.gtag = gtag;
     trackPageView('/p/aabbccdd?email=private@example.test');
-    trackPageView('/P/aabbccdd');
+    trackPageView('/P/aabbccdd', '/demo/car_cleaning');
     expect(gtag).not.toHaveBeenCalled();
     trackPageView('/passport/new');
     expect(gtag).toHaveBeenCalledOnce();

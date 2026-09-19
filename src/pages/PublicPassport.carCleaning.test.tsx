@@ -5,6 +5,8 @@ import { describe, expect, it, vi } from 'vitest';
 const { passport } = vi.hoisted(() => ({ passport: {
   id: 'car-1', name: 'Internal formula trial', category: 'car_cleaning', image_url: null,
   description: '<p>Car shampoo</p>', updated_at: '2026-09-10T12:00:00Z',
+  public_slug: 'aabbccdd',
+  dpp_history: { product_identifier: 'urn:uuid:qa', identifier_status: 'internal_unverified' as const, public_path: '/p/aabbccdd', latest_version: 2, selected_version: 1, retained_until: '2039-09-23T00:00:00Z', withdrawn: true, versions: [{ version: 1, recorded_at: '2029-09-23T00:00:00Z' }], next_before_version: null },
   category_data: { product_name: 'Clean car', product_type: 'shampoo', internal_notes: 'Confidential formulation' },
 } }));
 vi.mock('@/hooks/usePassports', () => ({ usePassportBySlug: () => ({ data: passport, isLoading: false, error: null }) }));
@@ -35,5 +37,13 @@ describe('Car cleaning public routing', () => {
     expect(screen.getByTestId('passport-language-picker')).toBeInTheDocument();
     expect(screen.getByText('Clean car')).toBeInTheDocument();
     expect(screen.queryByRole('button', { name: /json/i })).not.toBeInTheDocument();
+  });
+
+  it('preserves retained history and stable version links through the shared public renderer', () => {
+    page();
+    expect(screen.getByRole('link', { name: 'Version 1' })).toHaveAttribute('href', '/p/aabbccdd?version=1');
+    expect(screen.getByRole('link', { name: 'Version 1' })).toHaveAttribute('aria-current', 'page');
+    expect(screen.getByText(/owner has withdrawn/)).toBeInTheDocument();
+    expect(screen.getByText(/urn:uuid:qa/)).toBeInTheDocument();
   });
 });

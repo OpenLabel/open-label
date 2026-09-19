@@ -5,6 +5,9 @@ import userEvent from '@testing-library/user-event';
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({ t: (k: string) => k, i18n: { language: 'en', changeLanguage: vi.fn() } }),
 }));
+vi.mock('@/hooks/useSiteConfig', () => ({
+  useSiteConfig: () => ({ config: { ai_enabled: false }, loading: false, error: false }),
+}));
 
 import { CategoryQuestions } from './CategoryQuestions';
 
@@ -106,5 +109,68 @@ describe('CategoryQuestions', () => {
     fireEvent.change(input, { target: { value: '' } });
     expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ capacity_kwh: null }));
   });
-});
 
+  // Cross-field inline warnings are opt-in: a template without
+  // getInlineWarnings must render exactly as it did before.
+  it('renders no extra alerts for a template without getInlineWarnings', async () => {
+    const { templates } = await import('@/templates');
+    expect(templates.battery.getInlineWarnings).toBeUndefined();
+
+    const baseline = render(
+      <CategoryQuestions category="battery" data={{}} onChange={vi.fn()} />,
+    );
+    const baselineAlerts =
+      baseline.container.querySelectorAll('.bg-amber-50').length;
+    baseline.unmount();
+
+    const { container } = render(
+      <CategoryQuestions
+        category="battery"
+        data={{ primary_fiber: 'polyester', primary_fiber_percentage: 90 }}
+        onChange={vi.fn()}
+      />,
+    );
+    expect(container.querySelectorAll('.bg-amber-50')).toHaveLength(
+      baselineAlerts,
+    );
+  });
+
+  // Positive wiring tests: the Apparel (textiles) template's inline warnings
+  // must actually reach the screen — the original bug was that
+  // getCompositionWarning existed but no component ever rendered it.
+  it('renders the synthetic-fibre microplastic warning for textiles', () => {
+    render(
+      <CategoryQuestions
+        category="textiles"
+        data={{ primary_fiber: 'polyester', primary_fiber_percentage: 60 }}
+        onChange={vi.fn()}
+      />,
+    );
+    // Anchored to microplastic_shedding; other amber alerts (missing-fields
+    // summary, alpha notice) exist, so match on the message itself. "more
+    // than 50%" is unique to the warning — the question label also contains
+    // "shed microplastics".
+    expect(
+      screen.getByText(/60% synthetic fibre/),
+    ).toBeInTheDocument();
+    expect(
+      screen.getByText(/more than 50%/),
+    ).toBeInTheDocument();
+  });
+
+  it('renders the over-100% composition warning for textiles', () => {
+    render(
+      <CategoryQuestions
+        category="textiles"
+        data={{
+          primary_fiber_percentage: 80,
+          secondary_fiber_percentage: 30,
+        }}
+        onChange={vi.fn()}
+      />,
+    );
+    // Anchored to secondary_fiber_percentage.
+    expect(screen.getByText(/110%/)).toBeInTheDocument();
+    expect(screen.getByText(/exceeds 100%/)).toBeInTheDocument();
+  });
+});

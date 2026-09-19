@@ -23,6 +23,7 @@ import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-route
 import { useEffect, useLayoutEffect, useState } from "react";
 import { hasGoogleAdsTagLoaded, initGoogleAdsTag, isPublicPassportPath, trackPageView } from "@/lib/googleAdsTracking";
 import { mustReloadPublicDocument, reloadPublicPassportDocument } from "@/lib/publicPassportPrivacy";
+import { isTrackingExemptPath } from "@/lib/trackingExemptions";
 import { useReferral } from "@/hooks/useReferral";
 import { AuthProvider } from "@/hooks/useAuth";
 import { SiteConfigProvider, useSiteConfig } from "@/hooks/useSiteConfig";
@@ -44,6 +45,7 @@ import ReferralLeaderboard from "./pages/ReferralLeaderboard";
 import AdminLeaderboard from "./pages/AdminLeaderboard";
 import Admin from "./pages/Admin";
 import CyphemePassport from "./pages/CyphemePassport";
+import Demo from "./pages/Demo";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const queryClient = new QueryClient();
@@ -55,12 +57,16 @@ function ReferralCapture() {
 
 function GoogleAdsTracker() {
   const location = useLocation();
+  // Regulatory: the public passport view must stay strictly tracking-free.
+  const exempt = isTrackingExemptPath(location.pathname);
   useEffect(() => {
+    if (exempt) return;
     initGoogleAdsTag();
-  }, []);
+  }, [exempt]);
   useEffect(() => {
+    if (exempt) return;
     trackPageView(location.pathname + location.search);
-  }, [location.pathname, location.search]);
+  }, [exempt, location.pathname, location.search]);
   return null;
 }
 
@@ -97,6 +103,8 @@ function AppRoutes() {
         <Route path="/auth" element={<Auth />} />
         <Route path="/reset-password" element={<ResetPassword />} />
         <Route path="/p/:slug" element={<PublicPassport />} />
+        <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
+        <Route path="/demo/:category" element={<Demo />} />
         <Route path="/referral/:code" element={<ReferralStats />} />
         <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
         <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />
@@ -118,6 +126,8 @@ function AppRoutes() {
       <Route path="/passport/new" element={<PassportForm />} />
       <Route path="/passport/:id/edit" element={<PassportForm />} />
       <Route path="/p/:slug" element={<PublicPassport />} />
+      <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
+      <Route path="/demo/:category" element={<Demo />} />
       <Route path="/referral/:code" element={<ReferralStats />} />
       <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
       <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />
@@ -146,7 +156,13 @@ function DocumentSurface() {
   if (needsReload) return null;
 
   if (publicDocument) {
-    return <Routes><Route path="/p/:slug" element={<PublicPassport />} /></Routes>;
+    return (
+      <Routes>
+        <Route path="/p/:slug" element={<PublicPassport />} />
+        <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
+        <Route path="/demo/:category" element={<Demo />} />
+      </Routes>
+    );
   }
   return (
     <AuthProvider>

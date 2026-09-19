@@ -22,6 +22,7 @@ For a non-EU manufacturer, the current information workflow asks for the applica
 - Category authoring fields are public. The gateway discards unknown and inactive category data before new writes. It does not collect a private formulation, poison centre dossier, internal medical ingredient sheet or confidential file upload. A user can still disclose sensitive information in a public text field or link, so the editor states the public boundary explicitly. Retained raw snapshots, including any older private data, remain owner-only; anonymous responses and exports apply the public projection.
 - Public JSON uses `open-label.car-cleaning.v1`, stable field and enum identifiers, and a regulatory-context block that explicitly states that it is neither certification nor a complete statutory DPP. Print uses the same public rendering.
 - The editor and public interface support all 24 official EU languages plus Simplified Chinese. Free-text translations can be supplied and reviewed per language. Safety fields do not automatically call the AI translation service. Existing wine and toy label extraction is not applied to chemical classification or compliance assertions.
+- The public demo includes a clearly fictitious current-information car cleaner alongside the existing category samples. It uses the same dedicated public renderer and privacy boundary as saved car passports. Demo data does not create a saved passport, retained history or a supplier compliance assessment.
 
 ## Technical limits
 
@@ -38,6 +39,8 @@ Public `/p/` documents omit authoring authentication storage and refresh, the ap
 ## Deployment
 
 Apply and commit the additive enum migration `20260910095000_add_car_cleaning_category.sql` before `20260910110000_car_cleaning_passport_history.sql`. Deploy `get-public-passport` and `save-car-cleaning-passport` with their shared dependencies and the updated frontend. Enable `20260910120000_require_car_cleaning_save_gateway.sql` only after the gateway and client are available, so the direct-write restriction does not block older callers during a partial release. Coordinate category visibility and follow the existing hosting workflow. Review the sequence against a disposable compatible database before production.
+
+The history migration removes inherited non-owner grants on its two new tables and five internal functions before granting intended reads. This prevents deployment-specific default grants, including grants to automation roles that bypass RLS, from exposing raw history or allowing forged versions. Existing table grants and role defaults remain unchanged. Database owners and privileged platform administrators remain part of the operational trust boundary.
 
 Do not equate a local build, a GitHub commit, or a frontend publish with a complete release. Verify the migrations, authenticated gateway, public function response, served frontend assets, actual save/reload and history behavior, and unauthenticated public rendering on the target host. Use only named disposable test records. Deleting a car dashboard row withdraws it while retaining its public archive, so cleanup must respect the documented retention semantics and affect only task-owned records.
 

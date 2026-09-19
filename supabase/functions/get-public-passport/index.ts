@@ -39,6 +39,26 @@ const SlugSchema = z.object({
 // Security-only rate state expires automatically and contains no raw IP addresses.
 const rateLimiter = createEphemeralRateLimiter();
 
+// Apparel (textiles) internal documents, in scope, stripped from the public response.
+// Kept in sync with src/templates/* by src/lib/internalFieldIds.test.ts.
+const INTERNAL_FIELD_IDS = [
+  "audit_certificate_file",
+  "lca_report_file",
+  "test_report_file",
+  "claims_evidence_file",
+];
+
+// Known internal fields in OTHER categories that are currently still returned in
+// the public response. These are a pre-existing issue outside the scope of the
+// Apparel work and are deliberately NOT stripped here pending a decision from the
+// project owner. Do not add fields here without that decision.
+const OUT_OF_SCOPE_INTERNAL_FIELD_IDS = [
+  "eu_doc_upload",
+  "technical_documentation_upload",
+];
+
+
+
 serve(async (req) => {
   if (req.method === "OPTIONS") {
     return new Response(null, { headers: corsHeaders });
@@ -143,6 +163,16 @@ serve(async (req) => {
         JSON.stringify({ error: "Passport or requested version not found" }),
         { status: 404, headers: { "Content-Type": "application/json", ...corsHeaders } }
       );
+    }
+
+    // Never expose internal-only fields (audit/test/LCA reports, DoC uploads, ...)
+    const rawCategoryData = passport.category_data;
+    if (rawCategoryData && typeof rawCategoryData === "object" && !Array.isArray(rawCategoryData)) {
+      const filtered = { ...(rawCategoryData as Record<string, unknown>) };
+      for (const key of INTERNAL_FIELD_IDS) {
+        delete filtered[key];
+      }
+      passport.category_data = filtered;
     }
 
     return new Response(

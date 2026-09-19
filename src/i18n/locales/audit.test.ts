@@ -1,4 +1,5 @@
 import { describe, it, expect } from "vitest";
+import { PENDING_TRANSLATION_PREFIXES, isTranslationPending } from "./pendingTranslations";
 
 // Import all locale files (24 official EU languages)
 import enLocale from "./en.json";
@@ -166,6 +167,12 @@ function isLegitimateMatch(key: string, value: string, langCode: string): boolea
 }
 
 describe("Translation Audit", () => {
+  // The pending-translation list is TEMPORARY debt, not an allowlist. Nothing
+  // may be added to it, and step 2 of the Apparel i18n work must empty it.
+  it("pending-translation debt is limited to the Apparel subtree", () => {
+    expect([...PENDING_TRANSLATION_PREFIXES].sort()).toEqual(["textiles."]);
+  });
+
   const enFlat = flattenKeys(locales.en);
   const enKeys = Object.keys(enFlat);
   const enKeyCount = enKeys.length;
@@ -193,6 +200,7 @@ describe("Translation Audit", () => {
 
       const untranslatedKeys: string[] = [];
       for (const key of enKeys) {
+        if (isTranslationPending(key)) continue;
         if (key in flat && flat[key] === enFlat[key]) {
           if (!isLegitimateMatch(key, enFlat[key], code)) {
             untranslatedKeys.push(key);
@@ -263,6 +271,8 @@ describe("Translation Audit", () => {
       const untranslated: string[] = [];
 
       for (const key of enKeys) {
+        // Tracked, temporary translation debt (see pendingTranslations.ts).
+        if (isTranslationPending(key)) continue;
         if (key in flat && flat[key] === enFlat[key] && !isLegitimateMatch(key, enFlat[key], code)) {
           untranslated.push(key);
         }

@@ -122,6 +122,14 @@ export interface CategoryTemplate {
   icon: string;
   sections: TemplateSection[];
   getRequiredLogos?: (data: Record<string, unknown>) => string[];
+  /**
+   * Cross-field inline warnings that cannot be expressed as a single-question
+   * `warnWhen`. Returns one entry per warning, anchored to the field it belongs
+   * under. Optional — templates that omit it render no cross-field warnings.
+   */
+  getInlineWarnings?: (
+    data: Record<string, unknown>,
+  ) => { fieldId: string; message: string }[];
 }
 
 export abstract class BaseTemplate implements CategoryTemplate {

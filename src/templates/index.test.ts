@@ -88,8 +88,8 @@ describe("templates", () => {
   });
 
   describe("categoryList", () => {
-    it("has visible product categories (wine, toys, car cleaning, and other)", () => {
-      expect(categoryList.map(c => c.value)).toEqual(["wine", "toys", "car_cleaning", "other"]);
+    it("has visible product categories (wine, toys, textiles, car cleaning, and other)", () => {
+      expect(categoryList.map(c => c.value)).toEqual(["wine", "toys", "textiles", "car_cleaning", "other"]);
     });
 
     it("each category has required properties", () => {
@@ -132,6 +132,7 @@ describe("templates", () => {
       const validCategories: ProductCategory[] = [
         "wine",
         "toys",
+        "textiles",
         "car_cleaning",
         "other",
       ];

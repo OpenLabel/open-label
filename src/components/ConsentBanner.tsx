@@ -16,7 +16,8 @@
 
 import { useCallback, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
+import { isTrackingExemptPath } from '@/lib/trackingExemptions';
 import { Button } from '@/components/ui/button';
 import {
   applyStoredConsent,
@@ -35,8 +36,11 @@ export function ConsentBanner() {
   const { t } = useTranslation();
   const [regulated, setRegulated] = useState(false);
   const [decided, setDecided] = useState<boolean>(() => getStoredConsent() !== null);
+  // Regulatory: no consent UI and no consent signalling on the public passport view.
+  const exempt = isTrackingExemptPath(useLocation().pathname);
 
   useEffect(() => {
+    if (exempt) return;
     let active = true;
     applyStoredConsent();
     detectCountry().then((country) => {
@@ -45,12 +49,14 @@ export function ConsentBanner() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [exempt]);
 
   const decide = useCallback((decision: 'granted' | 'denied') => {
     setConsent(decision);
     setDecided(true);
   }, []);
+
+  if (exempt) return null;
 
   if (!regulated) return null;
 

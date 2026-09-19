@@ -38,6 +38,7 @@ import { CategoryQuestions } from '@/components/CategoryQuestions';
 import { WineFields } from '@/components/WineFields';
 import { WineAIAutofill } from '@/components/wine/WineAIAutofill';
 import { ToyAIAutofill } from '@/components/toys/ToyAIAutofill';
+import { GarmentAIAutofill } from '@/components/apparel/GarmentAIAutofill';
 import { PassportPreview } from '@/components/PassportPreview';
 import { CounterfeitProtection } from '@/components/CounterfeitProtection';
 import { TranslationButton, type Translations } from '@/components/TranslationButton';
@@ -511,7 +512,7 @@ export default function PassportForm() {
               </Card>
 
               {/* AI Autofill Button - between Basic Info and Product Image */}
-              {(formData.category === 'wine' || formData.category === 'toys') && (() => {
+              {(formData.category === 'wine' || formData.category === 'toys' || formData.category === 'textiles') && (() => {
                 const handleAutofill = (extractedData: Record<string, unknown>) => {
                   setFormData(prev => ({
                     ...prev,
@@ -547,11 +548,13 @@ export default function PassportForm() {
                     setFormData(prev => ({ ...prev, ...updates }));
                   }
                 };
-                return formData.category === 'wine' ? (
-                  <WineAIAutofill onAutofill={handleAutofill} onAutofillMeta={handleAutofillMeta} />
-                ) : (
-                  <ToyAIAutofill onAutofill={handleAutofill} onAutofillMeta={handleAutofillMeta} />
-                );
+                if (formData.category === 'wine') {
+                  return <WineAIAutofill onAutofill={handleAutofill} onAutofillMeta={handleAutofillMeta} />;
+                }
+                if (formData.category === 'textiles') {
+                  return <GarmentAIAutofill onAutofill={handleAutofill} onAutofillMeta={handleAutofillMeta} />;
+                }
+                return <ToyAIAutofill onAutofill={handleAutofill} onAutofillMeta={handleAutofillMeta} />;
               })()}
 
               {/* Product Image - right after basic information */}

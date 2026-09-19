@@ -55,6 +55,7 @@ export const getTemplate = (category: ProductCategory): CategoryTemplate => {
 export const categoryList = [
   { value: 'wine' as const, label: 'Wine & Spirits', icon: '🍷', status: 'active' as const, regulation: 'EU 2021/2117' },
   { value: 'toys' as const, label: 'Toys', icon: '🧸', status: 'active' as const, regulation: 'EU 2025/2509' },
+  { value: 'textiles' as const, label: 'Apparel', icon: '👕', status: 'active' as const, regulation: 'EU 1007/2011 + ESPR' },
   { value: 'car_cleaning' as const, label: 'Car cleaning products', icon: '🚗', status: 'active' as const, regulation: 'EC 648/2004 · EU 2026/405' },
   { value: 'other' as const, label: 'Other', icon: '📦', status: 'active' as const, regulation: 'Generic DPP' },
 ];

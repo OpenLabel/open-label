@@ -142,10 +142,17 @@ function FileUploadField({
   question,
   value,
   onChange,
+  usePrivateStorage,
 }: {
   question: TemplateQuestion;
   value: string | undefined;
   onChange: (url: string | null) => void;
+  /**
+   * When true, uploads go to the private bucket and a storage PATH is stored
+   * (signed on demand when viewing). Currently only enabled for Apparel
+   * (textiles) internal documents; other categories keep the public bucket.
+   */
+  usePrivateStorage: boolean;
 }) {
   const { t } = useTranslation();
   const { user } = useAuth();
@@ -155,6 +162,10 @@ function FileUploadField({
 
   const accept = question.accept ?? 'application/pdf,image/*';
   const maxBytes = question.maxBytes ?? 5 * 1024 * 1024;
+
+  const isInternal = usePrivateStorage;
+  // Legacy records stored full public URLs even for internal fields.
+  const isLegacyUrl = typeof value === 'string' && value.startsWith('http');
 
   const handleUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -172,13 +183,23 @@ function FileUploadField({
     try {
       const ext = file.name.split('.').pop() ?? 'bin';
       const fileName = `${Date.now()}-${Math.random().toString(36).slice(2, 8)}.${ext}`;
-      const path = `${user.id}/certificates/${fileName}`;
-      const { error: uploadError } = await supabase.storage
-        .from('passport-images')
-        .upload(path, file);
-      if (uploadError) throw uploadError;
-      const { data } = supabase.storage.from('passport-images').getPublicUrl(path);
-      onChange(data.publicUrl);
+      if (isInternal) {
+        // Internal documents go to the private bucket; we store the PATH, never a URL.
+        const path = `${user.id}/internal/${fileName}`;
+        const { error: uploadError } = await supabase.storage
+          .from('passport-private')
+          .upload(path, file);
+        if (uploadError) throw uploadError;
+        onChange(path);
+      } else {
+        const path = `${user.id}/certificates/${fileName}`;
+        const { error: uploadError } = await supabase.storage
+          .from('passport-images')
+          .upload(path, file);
+        if (uploadError) throw uploadError;
+        const { data } = supabase.storage.from('passport-images').getPublicUrl(path);
+        onChange(data.publicUrl);
+      }
     } catch (err) {
       setError(
         err instanceof Error
@@ -187,6 +208,24 @@ function FileUploadField({
       );
     } finally {
       setUploading(false);
+    }
+  };
+
+  // Private files are signed on demand — signed URLs expire and must not be persisted.
+  const openPrivateFile = async () => {
+    setError(null);
+    try {
+      const { data, error: signError } = await supabase.storage
+        .from('passport-private')
+        .createSignedUrl(value as string, 60);
+      if (signError) throw signError;
+      if (data?.signedUrl) window.open(data.signedUrl, '_blank', 'noopener,noreferrer');
+    } catch (err) {
+      setError(
+        err instanceof Error
+          ? err.message
+          : t('toys.certificate.errors.uploadFailed', 'Upload failed.'),
+      );
     }
   };
 
@@ -202,15 +241,26 @@ function FileUploadField({
       />
       {value ? (
         <div className="flex items-center gap-2 border rounded-md p-2 bg-muted/30">
-          <a
-            href={sanitizeUrl(value as string)}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-sm text-primary underline inline-flex items-center gap-1 flex-1 truncate"
-          >
-            {t('toys.certificate.viewFile', 'View uploaded file')}
-            <ExternalLink className="h-3 w-3 shrink-0" />
-          </a>
+          {isInternal && !isLegacyUrl ? (
+            <button
+              type="button"
+              onClick={openPrivateFile}
+              className="text-sm text-primary underline inline-flex items-center gap-1 flex-1 truncate text-left"
+            >
+              {t('toys.certificate.viewFile', 'View uploaded file')}
+              <ExternalLink className="h-3 w-3 shrink-0" />
+            </button>
+          ) : (
+            <a
+              href={sanitizeUrl(value as string)}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-primary underline inline-flex items-center gap-1 flex-1 truncate"
+            >
+              {t('toys.certificate.viewFile', 'View uploaded file')}
+              <ExternalLink className="h-3 w-3 shrink-0" />
+            </a>
+          )}
           <Button
             type="button"
             variant="ghost"
@@ -259,6 +309,7 @@ export function CategoryQuestions({
   const { t } = useTranslation();
   const template = getTemplate(category);
   const isToys = category === 'toys';
+  const isTextiles = category === 'textiles';
   const isCarCleaning = category === 'car_cleaning';
   const carIssues = isCarCleaning ? validateCarCleaning(data) : [];
   const carCopy = (key: string) => t(key, carCleaningFallback(key));
@@ -343,7 +394,7 @@ export function CategoryQuestions({
 
   // ---- Toys AI autofill: merge sanitized fields from edge function ----
   useEffect(() => {
-    if (!isToys) return;
+    if (!isToys && !isTextiles) return;
     const payload = data.__ai_autofill as Record<string, unknown> | undefined;
     if (!payload) return;
 
@@ -400,7 +451,7 @@ export function CategoryQuestions({
     delete (next as Record<string, unknown>).__ai_autofill;
     onChange(next);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data.__ai_autofill, isToys]);
+  }, [data.__ai_autofill, isToys, isTextiles]);
 
   const handleChange = (id: string, value: unknown) => {
     onChange({ ...data, [id]: value });
@@ -584,6 +635,7 @@ export function CategoryQuestions({
             question={question}
             value={value as string | undefined}
             onChange={(url) => handleChange(question.id, url ?? '')}
+            usePrivateStorage={isTextiles && question.internal === true}
           />
         );
       default:
@@ -594,6 +646,9 @@ export function CategoryQuestions({
   if (template.sections.length === 0) {
     return <div className="space-y-6" />;
   }
+
+  // Cross-field warnings supplied by the template (optional per template).
+  const inlineWarnings = template.getInlineWarnings?.(data) ?? [];
 
   // ---- Toys-specific warnings ----
   const toyWarnings: string[] = [];
@@ -815,6 +870,18 @@ export function CategoryQuestions({
                         <AlertDescription>{warnMessage}</AlertDescription>
                       </Alert>
                     )}
+                    {inlineWarnings
+                      .filter((w) => w.fieldId === question.id)
+                      .map((w, i) => (
+                        <Alert
+                          key={`${question.id}-inline-${i}`}
+                          variant="destructive"
+                          className="bg-amber-50 border-amber-300 text-amber-900 dark:bg-amber-950/40 dark:border-amber-700 dark:text-amber-100"
+                        >
+                          <AlertTriangle className="h-4 w-4" />
+                          <AlertDescription>{w.message}</AlertDescription>
+                        </Alert>
+                      ))}
                   </div>
                 );
               })}

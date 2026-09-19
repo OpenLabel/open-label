@@ -2,7 +2,7 @@ import { describe, expect, it, vi } from 'vitest';
 import { getPassportAuthOptions, mustReloadPublicDocument } from './publicPassportPrivacy';
 
 describe('public passport document isolation', () => {
-  it.each(['/p/abcdef01', '/P/abcdef01', '/%70/abcdef01'])('never accesses account storage on %s', path => {
+  it.each(['/p/abcdef01', '/P/abcdef01', '/%70/abcdef01', '/demo', '/demo/car_cleaning', '/%64emo/car_cleaning'])('never accesses account storage on %s', path => {
     const getStorage = vi.fn(() => localStorage);
     expect(getPassportAuthOptions(path, getStorage)).toEqual({
       persistSession: false, autoRefreshToken: false, detectSessionInUrl: false,

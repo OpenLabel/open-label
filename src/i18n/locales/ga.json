@@ -243,7 +243,7 @@
   "categories": {
     "battery": "Cadhnraí",
     "construction": "Táirgí Tógála",
-    "textiles": "Teicstílí & Coisbheart",
+    "textiles": "Éadaí",
     "wine": "Fíon & Biotáillí",
     "toys": "Bréagáin",
     "electronics": "Leictreonaic & TFC",
@@ -1294,6 +1294,536 @@
     "decline": "Diúltaigh",
     "manage": "Socruithe fianán",
     "privacyLink": "Beartas príobháideachais"
+  },
+  "textiles": {
+    "sections": {
+      "identity": {
+        "title": "Aitheantas",
+        "description": "Aitheantas ar leibhéal an táirge agus na míre"
+      },
+      "responsible_operators": {
+        "title": "Cé atá freagrach",
+        "description": "Monaróir, allmhaireoir agus duine freagrach an AE, coinnithe mar thrí pháirtí ar leith"
+      },
+      "materials": {
+        "title": "Ábhair agus Comhdhéanamh",
+        "description": "Lipéadú éigeantach ar ábhar snáithíní de réir Rialachán AE 1007/2011"
+      },
+      "certifications": {
+        "title": "Deimhnithe",
+        "description": "Na deimhnithe atá ag an mír seo, agus conas gach maíomh a fhíorú."
+      },
+      "supply_chain": {
+        "title": "Aistear an tSlabhra Soláthair",
+        "description": "Tír gach céime táirgthe móide stádas na monarchan Leibhéal 1 agus an iniúchta"
+      },
+      "environment": {
+        "title": "Lorg Comhshaoil",
+        "description": "Figiúirí comhshaoil le modh ríofa sonraithe"
+      },
+      "durability": {
+        "title": "Marthanacht agus Tástáil",
+        "description": "Torthaí marthanachta tomhaiste. Meastar go ndíreoidh an gníomh tarmligthe teicstíle a bhfuiltear ag súil leis faoi ESPR ar mhéadracht marthanachta, mar sin taifead torthaí tástála iarbhír seachas scóir shuibíochtúla."
+      },
+      "circularity": {
+        "title": "Ciorclaíocht agus Deireadh Ré",
+        "description": "Faisnéis faoi chúram, deisiú, tabhairt ar ais agus in-athchúrsáilteacht"
+      },
+      "disposition": {
+        "title": "Taifead Diúscartha",
+        "description": "Tacaíonn sé leis an gcosc ESPR ar earraí tomhaltais neamhdhíolta a scriosadh, a bhfuil feidhm aige maidir le cuideachtaí móra ón 19 Iúil 2026 agus a éilíonn coimeád taifead agus nochtadh"
+      },
+      "green_claims": {
+        "title": "Fianú na Maíomh Glas",
+        "description": "Tacaíonn sé leis an Treoir maidir le Tomhaltóirí a Chumasú (EU) 2024/825, a bhfuil feidhm aici ón 27 Meán Fómhair 2026"
+      },
+      "authentication": {
+        "title": "Fíordheimhniú",
+        "description": "Gnéithe frithghóchumtha atá nasctha leis an mír seo"
+      }
+    },
+    "fields": {
+      "show_advanced_fields": {
+        "label": "Taispeáin gach réimse (sonraí deimhnithe, stádas na monarchan Leibhéal 1 agus an iniúchta, lorg comhshaoil, tástáil marthanachta, ciorclaíocht leathnaithe)",
+        "help": "Níl de dhíth ar fhormhór na mbrandaí ach na réimsí thíos. Cuir seo ar siúl má tá torthaí tástála saotharlainne, sonraí LCA, nó inrianaitheacht mhionsonraithe slabhra soláthair le taifeadadh agat."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "help": "Uimhir thrádála na míre a shainaithníonn an SKU.",
+        "placeholder": "e.g., 3401234567890"
+      },
+      "item_unique_identifier": {
+        "label": "Aitheantóir Uathúil in aghaidh na Míre",
+        "help": "Sainaithníonn sé an mhír fhisiciúil aonair seo, ní an SKU. Is iad na haitheantóirí in aghaidh na míre a chumasaíonn athdhíol, aistriú úinéireachta agus fíordheimhniú thar shaolré an táirge.",
+        "placeholder": "e.g., DPP-2026-000184213",
+        "warn": "Ní shannann Open Label an t-aitheantóir seo duit. Ba cheart do bhrandaí a gcóras aitheantais in aghaidh na míre féin a thógáil — e.g. clibeanna sraitheacha RFID/NFC, scéim uimhrithe líne táirgthe, nó sraithuimhir ERP atá ann cheana — agus an luach sin a chur isteach anseo."
+      },
+      "style_reference": {
+        "label": "Tagairt Stíle / Mhúnla",
+        "help": "Éilíonn Rialachán (EU) 2023/988 (GPSR) go mbeadh aitheantóir táirge de chineál, baisc nó sraithuimhir ann in éineacht le hainm agus seoladh an mhonaróra. Is é seo an t-aitheantóir don chineál/bhaisc táirge — ní hionadach é don aitheantóir in aghaidh na míre thuas.",
+        "placeholder": "e.g., Léine Oxford ST-4412"
+      },
+      "colourway": {
+        "label": "Dathbhealach",
+        "placeholder": "e.g., Ionadagó / Éacrú"
+      },
+      "size": {
+        "label": "Méid",
+        "placeholder": "e.g., M, 42, 10"
+      },
+      "product_weight_grams": {
+        "label": "Meáchan an Táirge (gram)",
+        "help": "Glanmheáchan na míre, a úsáidtear le haghaidh loingseoireachta agus tuairiscithe ar dhéine ábhair.",
+        "placeholder": "e.g., 220"
+      },
+      "batch_lot": {
+        "label": "Baisc nó Lot Táirgthe",
+        "placeholder": "e.g., LOT-2026-03-A"
+      },
+      "brand_name": {
+        "label": "Ainm an Bhranda"
+      },
+      "product_type": {
+        "label": "Cineál Táirge",
+        "placeholder": "e.g., T-léine, Seaicéad, Bríste"
+      },
+      "manufacturer_legal_name": {
+        "label": "Ainm dlíthiúil an mhonaróra",
+        "help": "Éilíonn Rialachán (EU) 2023/988 (GPSR) go dtabharfaí ainm, seoladh poist agus seoladh leictreonach an mhonaróra ar an táirge nó ar a phacáistíocht."
+      },
+      "manufacturer_street": {
+        "label": "Seoladh sráide"
+      },
+      "manufacturer_postal_code": {
+        "label": "Cód poist"
+      },
+      "manufacturer_city": {
+        "label": "Cathair"
+      },
+      "manufacturer_country": {
+        "label": "Tír"
+      },
+      "manufacturer_email": {
+        "label": "Seoladh leictreonach (ríomhphost)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_non_eu": {
+        "label": "An bhfuil an monaróir bunaithe lasmuigh den AE?"
+      },
+      "importer_legal_name": {
+        "label": "Ainm dlíthiúil an allmhaireora",
+        "help": "Nuair a bhíonn an monaróir bunaithe lasmuigh den AE, ní mór ainm, seoladh poist agus seoladh leictreonach an allmhaireora a thabhairt freisin."
+      },
+      "importer_street": {
+        "label": "Seoladh sráide"
+      },
+      "importer_postal_code": {
+        "label": "Cód poist"
+      },
+      "importer_city": {
+        "label": "Cathair"
+      },
+      "importer_country": {
+        "label": "Tír"
+      },
+      "importer_email": {
+        "label": "Seoladh leictreonach (ríomhphost)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "Duine freagrach an AE — ainm dlíthiúil",
+        "help": "Is ról ar leith é an duine freagrach san AE faoi Airteagal 4 de Rialachán (EU) 2019/1020 ó ról an mhonaróra agus an allmhaireora, fiú nuair a dhéanann an chuideachta chéanna níos mó ná ceann amháin acu."
+      },
+      "eu_operator_address": {
+        "label": "Duine freagrach an AE — seoladh",
+        "placeholder": "Seoladh cláraithe laistigh den Aontas Eorpach"
+      },
+      "eu_operator_email": {
+        "label": "Duine freagrach an AE — seoladh leictreonach (ríomhphost)",
+        "placeholder": "name@company.com"
+      },
+      "primary_fiber": {
+        "label": "Cineál an Phríomhshnáithín"
+      },
+      "primary_fiber_percentage": {
+        "label": "Céatadán an Phríomhshnáithín (%)",
+        "placeholder": "e.g., 80"
+      },
+      "secondary_fiber": {
+        "label": "Cineál an tSnaithín Thánaistigh (más infheidhme)",
+        "placeholder": "e.g., Leaisteán"
+      },
+      "secondary_fiber_percentage": {
+        "label": "Céatadán an tSnaithín Thánaistigh (%)",
+        "placeholder": "e.g., 20"
+      },
+      "full_composition": {
+        "label": "Ráiteas Comhdhéanaimh Iomlán",
+        "placeholder": "e.g., 80% Cadás, 15% Poileistear, 5% Leaisteán"
+      },
+      "contains_animal_parts": {
+        "label": "Tá páirteanna neamhtheicstíle de bhunadh ainmhíoch ann",
+        "help": "Éilíonn Rialachán AE 1007/2011 go luafaí é seo ar an lipéad nuair a bhíonn páirteanna neamhtheicstíle de bhunadh ainmhíoch i dtáirge, amhail paistí leathair, fionnadh, cnaipí adhairce nó cnámh."
+      },
+      "animal_parts_details": {
+        "label": "Cé na páirteanna, agus ó cén t-ainmhí",
+        "placeholder": "e.g., Paistí leathair uillinne (bó-ainmhí); cnaipí adhairce (buabhall)"
+      },
+      "component_composition": {
+        "label": "Comhdhéanamh ar Leibhéal na Comhpháirte",
+        "help": "Dearbhaigh an bhlaosc sheachtrach, an líneáil agus na maisiúcháin ar leithligh ionas gur féidir gach comhpháirt a mheas le haghaidh athchúrsála.",
+        "placeholder": "Blaosc sheachtrach: 100% Cadás\nLíneáil: 100% Vioscós\nMaisiúcháin: Zipeáil poileistir, cnaipí práis"
+      },
+      "recycled_content_percentage": {
+        "label": "Céatadán Iomlán an Ábhair Athchúrsáilte (%)",
+        "placeholder": "e.g., 50"
+      },
+      "recycled_pre_consumer_percentage": {
+        "label": "Ábhar Athchúrsáilte Réamh-thomhaltais (%)",
+        "help": "Dramhaíl táirgthe a aisghabhadh sular shroich sí tomhaltóir.",
+        "placeholder": "e.g., 20"
+      },
+      "recycled_post_consumer_percentage": {
+        "label": "Ábhar Athchúrsáilte Iar-thomhaltais (%)",
+        "help": "Ábhar a aisghabhadh ó tháirgí a shroich úsáideoirí deiridh.",
+        "placeholder": "e.g., 30"
+      },
+      "microplastic_shedding": {
+        "label": "An bhfuil snáithíní sintéiseacha ann a sceitheann micreaphlaistigh?",
+        "help": "Éilíonn dlí AGEC na Fraince go gcuirfí tomhaltóirí ar an eolas nuair a scaoileann ball éadaigh snáithíní micreaphlaisteacha le linn níocháin."
+      },
+      "svhc_declared": {
+        "label": "An bhfuil substaintí REACH / SVHC i láthair os cionn 0.1% w/w?",
+        "help": "Substaintí is Ábhar Mór Imní de réir Rialachán (EC) 1907/2006 (REACH)."
+      },
+      "svhc_details": {
+        "label": "Sonraí na Substainte SVHC",
+        "placeholder": "Ainm na substainte, uimhir CAS, tiúchan agus comhpháirt"
+      },
+      "pfas_present": {
+        "label": "An bhfuil PFAS curtha leis an táirge seo d'aon ghnó?",
+        "help": "Cuireann an Fhrainc cosc ar PFAS in éadaí, coisbheart agus oibreáin uiscedhíonta ón 1 Eanáir 2026 faoi Dhlí 2025-188. Is minic a fhaightear PFAS i gcríochnuithe marthanacha uisce-éartha (DWR).",
+        "warn": "Tá sé toirmiscthe éadaí ina bhfuil PFAS curtha leo d'aon ghnó a chur ar mhargadh na Fraince ón 1 Eanáir 2026 faoi Dhlí 2025-188. Ní mór freagra \"Anaithnid\" a réiteach leis an soláthraí sula ndíoltar sa Fhrainc é."
+      },
+      "pfas_details": {
+        "label": "Cé na comhpháirteanna agus cé na substaintí",
+        "placeholder": "e.g., críoch DWR ar an mblaosc sheachtrach — PFHxA"
+      },
+      "rsl_compliance_status": {
+        "label": "Stádas Comhlíonta an Liosta Substaintí Srianta (RSL)"
+      },
+      "certifications_held": {
+        "label": "Deimhnithe i Seilbh"
+      },
+      "certificate_references": {
+        "label": "Tagairtí Deimhnithe",
+        "help": "Ón 27 Meán Fómhair 2026, éilíonn Treoir (EU) 2024/825 go mbeidh lipéad inbhuanaitheachta bunaithe ar scéim deimhniúcháin nó bunaithe ag údarás poiblí. Fág bán mura bhfuil aon deimhnithe i seilbh thuas.",
+        "placeholder": "Ceann in aghaidh na líne, e.g.\nGOTS — CU 123456 GOTS — in éag 2027-06-30\nOEKO-TEX — 21.HTR.12345 — in éag 2027-01-15"
+      },
+      "country_fibre_production": {
+        "label": "Tír Táirgthe an tSnáithín",
+        "placeholder": "An áit ar fásadh nó ar táirgeadh an snáithín"
+      },
+      "country_spinning_weaving": {
+        "label": "Tír an tSnīomhacháin / na Fíodóireachta"
+      },
+      "country_dyeing_finishing": {
+        "label": "Tír an Ruaimnithe / na Críochnaithe"
+      },
+      "country_of_origin": {
+        "label": "Tír na Déantúsaíochta / an Tionóil",
+        "help": "An chéim a dhearbhaítear mar thír thionscnaimh ar an lipéad."
+      },
+      "made_in_eu": {
+        "label": "Déanta san AE?"
+      },
+      "manufacturing_facility": {
+        "label": "Ainm na Monarchan Leibhéal 1"
+      },
+      "factory_address": {
+        "label": "Seoladh na Monarchan Leibhéal 1"
+      },
+      "audit_status": {
+        "label": "Stádas an Iniúchta Shóisialta / Chomhshaoil"
+      },
+      "audit_certificate_file": {
+        "label": "Teastas Iniúchta (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
+      },
+      "supply_chain_transparent": {
+        "label": "An bhfuil trédhearcacht iomlán an tslabhra soláthair ar fáil?"
+      },
+      "carbon_footprint": {
+        "label": "Lorg Carbóin (kg CO2e)",
+        "placeholder": "In aghaidh an aonaid táirge"
+      },
+      "water_usage": {
+        "label": "Úsáid Uisce (lítear in aghaidh an aonaid)",
+        "placeholder": "e.g., 2700 do t-léine cadáis"
+      },
+      "footprint_method": {
+        "label": "Modh Ríofa",
+        "help": "Ní maíomh fianaithe é figiúr gan modh ríofa sonraithe faoin Treoir maidir le Tomhaltóirí a Chumasú."
+      },
+      "lca_report_file": {
+        "label": "Tuarascáil Tacaíochta LCA (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
+      },
+      "pilling_resistance": {
+        "label": "Toradh na Frithsheasmhachta in aghaidh Píleála",
+        "help": "Caighdeán tástála: ISO 12945-2 (píleáil Martindale).",
+        "placeholder": "e.g., Grád 4 tar éis 2000 cuimilt"
+      },
+      "colour_fastness_washing": {
+        "label": "Toradh Dathdhílseachta don Níochán",
+        "help": "Caighdeán tástála: ISO 105-C06.",
+        "placeholder": "e.g., Grád 4-5"
+      },
+      "colour_fastness_light": {
+        "label": "Toradh Dathdhílseachta don Solas",
+        "help": "Caighdeán tástála: ISO 105-B02.",
+        "placeholder": "e.g., Grád 5"
+      },
+      "dimensional_stability": {
+        "label": "Toradh na Cobhsaíochta Toisí Tar éis Níocháin",
+        "help": "Caighdeán tástála: ISO 6330 le tomhas ISO 5077.",
+        "placeholder": "e.g., -2% fad, -1% leithead"
+      },
+      "seam_strength": {
+        "label": "Toradh Neart an Fhuaighil",
+        "help": "Caighdeán tástála: ISO 13935-2 (modh an ghreama).",
+        "placeholder": "e.g., 220 N"
+      },
+      "test_report_reference": {
+        "label": "Tagairt na Tuarascála Tástála",
+        "placeholder": "Ainm na saotharlainne agus uimhir na tuarascála"
+      },
+      "test_report_file": {
+        "label": "Tuarascáil Tástála (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
+      },
+      "washing_temp": {
+        "label": "Uasteocht Níocháin"
+      },
+      "can_tumble_dry": {
+        "label": "An féidir é a thriomú sa triomadóir?"
+      },
+      "can_iron": {
+        "label": "An féidir é a iarnáil?"
+      },
+      "iron_temp": {
+        "label": "Uasteocht Iarnála"
+      },
+      "care_symbols": {
+        "label": "Siombailí Cúraim"
+      },
+      "care_instructions_text": {
+        "label": "Treoracha Cúraim Breise",
+        "placeholder": "Aon treoracha cúraim speisialta"
+      },
+      "spare_trims_available": {
+        "label": "An bhfuil maisiúcháin spártha ar fáil le haghaidh deisiúcháin?",
+        "help": "Cnaipí, zipeálacha, cordaí agus comhpháirteanna in-athsholáthair eile."
+      },
+      "repair_booking_url": {
+        "label": "URL Áirithinte Deisiúcháin",
+        "placeholder": "https://…"
+      },
+      "recyclable": {
+        "label": "In-athchúrsáilte ag deireadh ré?"
+      },
+      "take_back_program": {
+        "label": "An bhfuil clár tabhairt ar ais ar fáil?"
+      },
+      "take_back_scheme_epr": {
+        "label": "Ainm na Scéime Tabhairt ar Ais agus Uimhreacha Clárúcháin EPR in aghaidh an Mhargaidh",
+        "help": "Bíonn difríocht idir uimhreacha clárúcháin na Freagrachta Leathnaithe Táirgeora in aghaidh an bhallstáit, mar sin liostaigh líne amháin in aghaidh an mhargaidh.",
+        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+      },
+      "recyclability_class": {
+        "label": "Aicme In-athchúrsáilteachta"
+      },
+      "disassembly_notes": {
+        "label": "Nótaí Díchóimeála",
+        "placeholder": "Conas an bhlaosc sheachtrach, an líneáil, na maisiúcháin agus na crua-earraí a scaradh le haghaidh athchúrsála"
+      },
+      "disposition_status": {
+        "label": "Diúscairt Reatha"
+      },
+      "disposition_reason_code": {
+        "label": "Cód Cúise an Scriosadh",
+        "warn": "Tá srian ar chuideachtaí móra éadaí neamhdhíolta a scriosadh ón 19 Iúil 2026 faoin ESPR agus éilíonn sé coimeád taifead agus nochtadh poiblí."
+      },
+      "disposition_date": {
+        "label": "Dáta Diúscartha",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "disposition_notes": {
+        "label": "Nótaí Diúscartha",
+        "placeholder": "Cainníocht, bealach láimhseála agus aon tagairt d'údarás inniúil"
+      },
+      "environmental_claims": {
+        "label": "Maímh Chomhshaoil a Rinneadh ar an Táirge nó ar an bPacáistíocht",
+        "placeholder": "e.g., \"Déanta le 50% poileistear athchúrsáilte iar-thomhaltais (deimhnithe ag GRS)\""
+      },
+      "claims_evidence_reference": {
+        "label": "Tagairt Fianaise an Fhianaithe",
+        "placeholder": "Tagairt staidéir, teastais nó comhlachta fíorúcháin do gach maíomh"
+      },
+      "claims_evidence_file": {
+        "label": "Fianaise Fianaithe (uaslódáil)",
+        "help": "Coinnithe do do thaifid inmheánacha — ní fhoilsítear riamh ar an bpas poiblí é."
+      },
+      "claims_avoid_generic_terms": {
+        "label": "An seachnaíonn maímh téarmaí cineálacha comhshaoil?",
+        "help": "Tá cosc ar mhaímh chineálacha amhail \"éiceabhách\", \"coinsiasach\" agus \"carbón-neodrach trí fhritháireamh\" ón 27 Meán Fómhair 2026."
+      },
+      "authentication_feature_present": {
+        "label": "An bhfuil gné fíordheimhnithe i láthair?",
+        "help": "Tá éadaí i measc na gcatagóirí táirgí is mó a ghóchumtar san AE, mar sin cosnaíonn fíordheimhniú ar leibhéal na míre an branda agus an ceannaitheoir go hábhartha."
+      },
+      "authentication_method": {
+        "label": "Modh Fíordheimhnithe"
+      },
+      "authentication_verification_url": {
+        "label": "URL Fíorúcháin",
+        "placeholder": "https://…"
+      }
+    },
+    "options": {
+      "manufacturerNonEu": {
+        "yes": "Tá",
+        "no": "Níl"
+      },
+      "primaryFiber": {
+        "cotton": "Cadás",
+        "organic_cotton": "Cadás orgánach",
+        "linen": "Líon",
+        "hemp": "Cnáib",
+        "wool": "Olann",
+        "cashmere": "Caismír",
+        "mohair": "Móihéar",
+        "alpaca": "Alpacá",
+        "angora": "Angóra",
+        "silk": "Síoda",
+        "viscose": "Vioscós",
+        "modal": "Módal",
+        "lyocell": "Lióicell",
+        "acetate": "Aicéatáit",
+        "cupro": "Copró",
+        "polyester": "Poileistear",
+        "recycled_polyester": "Poileistear athchúrsáilte",
+        "nylon": "Polaimíd",
+        "acrylic": "Aicrileach",
+        "elastane": "Leaisteán",
+        "polypropylene": "Polapróipiléin",
+        "other": "Eile"
+      },
+      "pfasPresent": {
+        "yes": "Tá",
+        "no": "Níl",
+        "unknown": "Anaithnid"
+      },
+      "rslCompliance": {
+        "compliant_tested": "Comhlíontach — fíoraithe trí thástáil",
+        "compliant_declared": "Comhlíontach — dearbhú an tsoláthraí amháin",
+        "in_progress": "Measúnú ar siúl",
+        "not_assessed": "Gan mheasúnú"
+      },
+      "certificationsHeld": {
+        "gots": "GOTS (Global Organic Textile Standard)",
+        "oeko_tex": "OEKO-TEX Standard 100",
+        "grs": "GRS (Global Recycled Standard)",
+        "bluesign": "bluesign®",
+        "fair_trade": "Fair Trade",
+        "other": "Eile"
+      },
+      "auditStatus": {
+        "amfori_bsci": "Iniúchta ag amfori BSCI",
+        "sedex_smeta": "Iniúchta ag Sedex SMETA",
+        "sa8000": "Deimhnithe ag SA8000",
+        "wrap": "Deimhnithe ag WRAP",
+        "brand_audit": "Iniúchadh faoi stiúir an bhranda",
+        "not_audited": "Gan iniúchadh"
+      },
+      "footprintMethod": {
+        "pefcr_apparel_footwear": "PEFCR Éadaí & Coisbheart",
+        "iso_14067": "ISO 14067",
+        "ghg_protocol": "Caighdeán Táirge Phrótacal GHG",
+        "iso_14040_44": "ISO 14040/14044 LCA",
+        "higg_msi": "Higg MSI",
+        "internal_model": "Múnla inmheánach"
+      },
+      "washingTemp": {
+        "30": "30°C",
+        "40": "40°C",
+        "60": "60°C",
+        "95": "95°C",
+        "hand": "Nigh de láimh amháin",
+        "dry_clean": "Tirimghlanadh amháin"
+      },
+      "ironTemp": {
+        "low": "Íseal (110°C)",
+        "medium": "Meánach (150°C)",
+        "high": "Ard (200°C)"
+      },
+      "careSymbols": {
+        "wash_30": "Nigh 30°C",
+        "wash_40": "Nigh 40°C",
+        "wash_60": "Nigh 60°C",
+        "hand_wash": "Nigh de láimh",
+        "do_not_wash": "Ná nigh",
+        "bleach_allowed": "Ceadaítear tuaradh",
+        "non_chlorine_bleach": "Tuar neamh-chlóirín amháin",
+        "do_not_bleach": "Ná tuar",
+        "tumble_dry_low": "Triomaigh sa triomadóir ar theas íseal",
+        "tumble_dry_normal": "Triomaigh sa triomadóir de ghnáth",
+        "do_not_tumble_dry": "Ná triomaigh sa triomadóir",
+        "iron_low": "Iarnáil ar theocht íseal",
+        "iron_medium": "Iarnáil ar theocht mheánach",
+        "iron_high": "Iarnáil ar theocht ard",
+        "do_not_iron": "Ná hiarnáil",
+        "dry_clean_any": "Tirimghlanadh gairmiúil",
+        "dry_clean_petroleum": "Tirimghlanadh gairmiúil, tuaslagóir peitriliam amháin",
+        "wet_clean": "Fliuchghlanadh gairmiúil",
+        "do_not_dry_clean": "Ná tirimghlan"
+      },
+      "recyclabilityClass": {
+        "mono_material": "Aonábhar — in-athchúrsáilte ó shnáithín go snáithín",
+        "separable_blend": "Cumasc, comhpháirteanna inscartha",
+        "mechanical_only": "Athchúrsáil mheicniúil amháin",
+        "downcycle_only": "Íos-chúrsáil amháin",
+        "not_recyclable": "Neamh-in-athchúrsáilte faoi láthair"
+      },
+      "dispositionStatus": {
+        "in_stock": "Fós i stoc",
+        "sold": "Díolta",
+        "donated": "Bronnta",
+        "recycled": "Athchúrsáilte",
+        "remanufactured": "Athmhonaraithe",
+        "destroyed": "Scriosta"
+      },
+      "dispositionReason": {
+        "health_safety": "Sláinte agus sábháilteacht",
+        "counterfeit_ip": "Góchumadh / sárú Maoine Intleachtúla",
+        "damaged_beyond_repair": "Damáiste déanta dó nach féidir a dheisiú",
+        "donation_refused": "Diúltaíodh don bhronnadh tar éis fiafraí de thrí eagraíocht geilleagair shóisialta",
+        "protected_logo": "Ní féidir lógó cosanta a bhaint",
+        "unlawful_product": "Tharla sé go raibh an táirge neamhdhleathach"
+      },
+      "authenticationMethod": {
+        "nfc_tag": "Clib NFC",
+        "secure_qr": "Cód QR slán / sraitheach",
+        "security_seal": "Séala slándála sofheicthe cur isteach",
+        "ai_fingerprint": "Méarlorg íomhá Intleachta Saorga",
+        "rfid": "RFID",
+        "other": "Eile"
+      }
+    }
+  },
+  "demo": {
+    "banner": "Pas taispeántais. Tá na sonraí uile ficseanúil.",
+    "cta": "Cruthaigh do phas féin"
   },
   "carCleaning": {
     "publicTitle": "Faisnéis faoi tháirge glantacháin carranna",

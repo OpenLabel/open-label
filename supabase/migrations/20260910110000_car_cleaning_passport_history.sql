@@ -28,7 +28,31 @@ CREATE INDEX car_cleaning_version_owner ON public.car_cleaning_passport_versions
 
 ALTER TABLE public.car_cleaning_passport_archives ENABLE ROW LEVEL SECURITY;
 ALTER TABLE public.car_cleaning_passport_versions ENABLE ROW LEVEL SECURITY;
-REVOKE ALL ON public.car_cleaning_passport_archives, public.car_cleaning_passport_versions FROM PUBLIC, anon, authenticated, service_role;
+-- Deployment-specific default privileges can include roles that bypass RLS.
+-- Remove every explicit non-owner grant on these new tables before granting
+-- the intended read access. Existing tables and role defaults are untouched.
+DO $$
+DECLARE
+  permission record;
+BEGIN
+  FOR permission IN
+    SELECT DISTINCT n.nspname, c.relname, acl.grantee
+    FROM pg_catalog.pg_class AS c
+    JOIN pg_catalog.pg_namespace AS n ON n.oid = c.relnamespace
+    CROSS JOIN LATERAL pg_catalog.aclexplode(
+      coalesce(c.relacl, pg_catalog.acldefault('r', c.relowner))
+    ) AS acl
+    WHERE n.nspname = 'public'
+      AND c.relname IN ('car_cleaning_passport_archives', 'car_cleaning_passport_versions')
+      AND acl.grantee <> c.relowner
+  LOOP
+    EXECUTE pg_catalog.format('REVOKE ALL ON TABLE %I.%I FROM %s',
+      permission.nspname, permission.relname,
+      CASE WHEN permission.grantee = 0 THEN 'PUBLIC'
+        ELSE pg_catalog.quote_ident(pg_catalog.pg_get_userbyid(permission.grantee)) END);
+  END LOOP;
+END;
+$$;
 GRANT SELECT ON public.car_cleaning_passport_archives, public.car_cleaning_passport_versions TO authenticated, service_role;
 CREATE POLICY "Owners can read retained car cleaning metadata"
   ON public.car_cleaning_passport_archives FOR SELECT TO authenticated USING (auth.uid() = user_id);
@@ -166,9 +190,33 @@ SELECT id, user_id, 1, now(), to_jsonb(p) - 'user_id'
 FROM public.passports p WHERE category::text = 'car_cleaning';
 
 -- Functions are trigger-internal, not callable mutation RPCs.
-REVOKE ALL ON FUNCTION public.car_cleaning_history_immutable() FROM PUBLIC, anon, authenticated, service_role;
-REVOKE ALL ON FUNCTION public.car_cleaning_retention_floor(jsonb, timestamptz) FROM PUBLIC, anon, authenticated, service_role;
-REVOKE ALL ON FUNCTION public.guard_car_cleaning_passport_identity() FROM PUBLIC, anon, authenticated, service_role;
-REVOKE ALL ON FUNCTION public.capture_car_cleaning_passport_version() FROM PUBLIC, anon, authenticated, service_role;
-
-REVOKE ALL ON FUNCTION public.car_cleaning_model_definition(jsonb) FROM PUBLIC, anon, authenticated, service_role;
+-- Include deployment-specific default EXECUTE grants, especially on SECURITY
+-- DEFINER trigger functions. Only these exact new function signatures are touched.
+DO $$
+DECLARE
+  permission record;
+BEGIN
+  FOR permission IN
+    SELECT DISTINCT n.nspname, p.proname,
+      pg_catalog.pg_get_function_identity_arguments(p.oid) AS arguments, acl.grantee
+    FROM pg_catalog.pg_proc AS p
+    JOIN pg_catalog.pg_namespace AS n ON n.oid = p.pronamespace
+    CROSS JOIN LATERAL pg_catalog.aclexplode(
+      coalesce(p.proacl, pg_catalog.acldefault('f', p.proowner))
+    ) AS acl
+    WHERE p.oid IN (
+      'public.car_cleaning_history_immutable()'::regprocedure,
+      'public.car_cleaning_retention_floor(jsonb,timestamptz)'::regprocedure,
+      'public.car_cleaning_model_definition(jsonb)'::regprocedure,
+      'public.guard_car_cleaning_passport_identity()'::regprocedure,
+      'public.capture_car_cleaning_passport_version()'::regprocedure
+    )
+      AND acl.grantee <> p.proowner
+  LOOP
+    EXECUTE pg_catalog.format('REVOKE ALL ON FUNCTION %I.%I(%s) FROM %s',
+      permission.nspname, permission.proname, permission.arguments,
+      CASE WHEN permission.grantee = 0 THEN 'PUBLIC'
+        ELSE pg_catalog.quote_ident(pg_catalog.pg_get_userbyid(permission.grantee)) END);
+  END LOOP;
+END;
+$$;

@@ -243,7 +243,7 @@
   "categories": {
     "battery": "Akud",
     "construction": "Ehitustooted",
-    "textiles": "Tekstiilid ja jalatsid",
+    "textiles": "Rõivad",
     "wine": "Vein ja kanged joogid",
     "toys": "Mänguasjad",
     "electronics": "Elektroonika ja IKT",
@@ -1294,6 +1294,536 @@
     "decline": "Keeldun",
     "manage": "Küpsiste seaded",
     "privacyLink": "Privaatsuspoliitika"
+  },
+  "textiles": {
+    "sections": {
+      "identity": {
+        "title": "Identiteet",
+        "description": "Toote ja kaubaartikli tasandi identifitseerimine"
+      },
+      "responsible_operators": {
+        "title": "Kes on vastutav",
+        "description": "Tootja, importija ja ELi vastutav isik, hoitakse kolme eraldi osapoolena"
+      },
+      "materials": {
+        "title": "Materjalid ja koostis",
+        "description": "Kohustuslik kiukoostise märgistus vastavalt ELi määrusele 1007/2011"
+      },
+      "certifications": {
+        "title": "Sertifikaadid",
+        "description": "Millised sertifikaadid sellel kaubaartiklil on ja kuidas iga väidet kontrollida."
+      },
+      "supply_chain": {
+        "title": "Tarneahela teekond",
+        "description": "Iga tootmisetapi riik ning esimese tasandi tehase ja auditi staatus"
+      },
+      "environment": {
+        "title": "Keskkonnajalajälg",
+        "description": "Keskkonnanäitajad koos märgitud arvutusmeetodiga"
+      },
+      "durability": {
+        "title": "Vastupidavus ja katsetamine",
+        "description": "Mõõdetud vastupidavuse tulemused. Eeldatakse, et ESPR alusel oodatav tekstiilivaldkonna delegeeritud õigusakt keskendub vastupidavusnäitajatele, seega registreerige tegelikud katsetulemused, mitte subjektiivsed hinded."
+      },
+      "circularity": {
+        "title": "Ringlus ja kasutuselt kõrvaldamine",
+        "description": "Hooldus-, parandus-, tagasivõtmis- ja ringlussevõetavuse teave"
+      },
+      "disposition": {
+        "title": "Kõrvaldamise register",
+        "description": "Toetab ESPR müümata tarbekaupade hävitamise keeldu, mis kehtib suurtele ettevõtetele alates 19. juulist 2026 ning nõuab arvestuse pidamist ja teabe avalikustamist"
+      },
+      "green_claims": {
+        "title": "Roheväidete põhjendamine",
+        "description": "Toetab tarbijate mõjuvõimu suurendamise direktiivi (EU) 2024/825, mis kehtib alates 27. septembrist 2026"
+      },
+      "authentication": {
+        "title": "Autentimine",
+        "description": "Selle kaubaartikliga seotud võltsimisvastased funktsioonid"
+      }
+    },
+    "fields": {
+      "show_advanced_fields": {
+        "label": "Kuva kõik väljad (sertifikaatide üksikasjad, esimese tasandi tehase ja auditi staatus, keskkonnajalajälg, vastupidavuse katsetamine, laiendatud ringlus)",
+        "help": "Enamik brände vajab ainult allolevaid välju. Lülitage see sisse, kui teil on registreerimiseks laborikatsete tulemusi, LCA andmeid või üksikasjalikku tarneahela jälgitavust."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "help": "Kaubakood, mis identifitseerib SKU.",
+        "placeholder": "nt 3401234567890"
+      },
+      "item_unique_identifier": {
+        "label": "Kaubaartikli unikaalne identifikaator",
+        "help": "Identifitseerib selle konkreetse füüsilise kaubaartikli, mitte SKU. Kaubaartikli identifikaatorid võimaldavad edasimüüki, omandiõiguse üleminekut ja autentimist toote eluea jooksul.",
+        "placeholder": "nt DPP-2026-000184213",
+        "warn": "Open Label ei määra seda identifikaatorit teie eest. Brändid peaksid looma oma kaubaartikli identifitseerimissüsteemi – nt seerianumbriga RFID/NFC sildid, tootmisliini numeratsioonisüsteemi või olemasoleva ERP seerianumbri – ja sisestama selle väärtuse siia."
+      },
+      "style_reference": {
+        "label": "Stiili / mudeli viide",
+        "help": "Määrus (EU) 2023/988 (GPSR) nõuab lisaks tootja nimele ja aadressile toote identifikaatorit tüübi, partii või seerianumbri kujul. See on toote tüübi/partii identifikaator – see ei asenda ülaltoodud kaubaartikli identifikaatorit.",
+        "placeholder": "nt ST-4412 Oxfordi särk"
+      },
+      "colourway": {
+        "label": "Värvikombinatsioon",
+        "placeholder": "nt indigo / ekrüü"
+      },
+      "size": {
+        "label": "Suurus",
+        "placeholder": "nt M, 42, 10"
+      },
+      "product_weight_grams": {
+        "label": "Toote kaal (grammides)",
+        "help": "Kaubaartikli netokaal, mida kasutatakse saatmiseks ja materjalimahukuse aruandluseks.",
+        "placeholder": "nt 220"
+      },
+      "batch_lot": {
+        "label": "Partii või tootmispartii",
+        "placeholder": "nt LOT-2026-03-A"
+      },
+      "brand_name": {
+        "label": "Brändi nimi"
+      },
+      "product_type": {
+        "label": "Toote tüüp",
+        "placeholder": "nt T-särk, jakk, püksid"
+      },
+      "manufacturer_legal_name": {
+        "label": "Tootja juriidiline nimi",
+        "help": "Määrus (EU) 2023/988 (GPSR) nõuab, et tootja nimi, postiaadress ja elektrooniline aadress oleksid märgitud tootele või selle pakendile."
+      },
+      "manufacturer_street": {
+        "label": "Tänava aadress"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postiindeks"
+      },
+      "manufacturer_city": {
+        "label": "Linn"
+      },
+      "manufacturer_country": {
+        "label": "Riik"
+      },
+      "manufacturer_email": {
+        "label": "Elektrooniline aadress (e-post)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_non_eu": {
+        "label": "Kas tootja on asutatud väljaspool ELi?"
+      },
+      "importer_legal_name": {
+        "label": "Importija juriidiline nimi",
+        "help": "Kui tootja on asutatud väljaspool ELi, tuleb märkida ka importija nimi, postiaadress ja elektrooniline aadress."
+      },
+      "importer_street": {
+        "label": "Tänava aadress"
+      },
+      "importer_postal_code": {
+        "label": "Postiindeks"
+      },
+      "importer_city": {
+        "label": "Linn"
+      },
+      "importer_country": {
+        "label": "Riik"
+      },
+      "importer_email": {
+        "label": "Elektrooniline aadress (e-post)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "ELi vastutav isik – juriidiline nimi",
+        "help": "Määruse (EU) 2019/1020 artikli 4 kohane ELi vastutav isik on tootjast ja importijast eraldi roll, isegi kui sama ettevõte täidab neist mitut."
+      },
+      "eu_operator_address": {
+        "label": "ELi vastutav isik – aadress",
+        "placeholder": "Registreeritud aadress Euroopa Liidus"
+      },
+      "eu_operator_email": {
+        "label": "ELi vastutav isik – elektrooniline aadress (e-post)",
+        "placeholder": "name@company.com"
+      },
+      "primary_fiber": {
+        "label": "Põhikiu tüüp"
+      },
+      "primary_fiber_percentage": {
+        "label": "Põhikiu protsent (%)",
+        "placeholder": "nt 80"
+      },
+      "secondary_fiber": {
+        "label": "Teise kiu tüüp (kui on kohaldatav)",
+        "placeholder": "nt elastaan"
+      },
+      "secondary_fiber_percentage": {
+        "label": "Teise kiu protsent (%)",
+        "placeholder": "nt 20"
+      },
+      "full_composition": {
+        "label": "Täielik koostise deklaratsioon",
+        "placeholder": "nt 80% puuvill, 15% polüester, 5% elastaan"
+      },
+      "contains_animal_parts": {
+        "label": "Sisaldab loomset päritolu mittetekstiilseid osi",
+        "help": "ELi määrus 1007/2011 nõuab selle märkimist etiketil, kui toode sisaldab loomset päritolu mittetekstiilseid osi, näiteks nahast paiku, karusnahast äärist, sarvest või luust nööpe."
+      },
+      "animal_parts_details": {
+        "label": "Millised osad ja milliselt loomalt",
+        "placeholder": "nt nahast küünarnukilapid (veise); sarvest nööbid (pühvli)"
+      },
+      "component_composition": {
+        "label": "Komponentide tasandi koostis",
+        "help": "Deklareerige pealiskangas, vooder ja kaunistused eraldi, et iga komponenti saaks ringlussevõtu seisukohast hinnata.",
+        "placeholder": "Pealiskangas: 100% puuvill\nVooder: 100% viskoos\nKaunistused: polüestrist lukk, messingist nööbid"
+      },
+      "recycled_content_percentage": {
+        "label": "Ringlussevõetud materjali kogusisaldus (%)",
+        "placeholder": "nt 50"
+      },
+      "recycled_pre_consumer_percentage": {
+        "label": "Tarbimiseelne ringlussevõetud materjali sisaldus (%)",
+        "help": "Tootmisjäätmed, mis on taaskasutatud enne tarbijani jõudmist.",
+        "placeholder": "nt 20"
+      },
+      "recycled_post_consumer_percentage": {
+        "label": "Tarbimisjärgne ringlussevõetud materjali sisaldus (%)",
+        "help": "Materjal, mis on taaskasutatud lõppkasutajateni jõudnud toodetest.",
+        "placeholder": "nt 30"
+      },
+      "microplastic_shedding": {
+        "label": "Kas sisaldab sünteetilisi kiude, mis eraldavad mikroplasti?",
+        "help": "Prantsusmaa AGECi seadus nõuab tarbijate teavitamist, kui rõivas eraldab pesemise ajal mikroplastkiude."
+      },
+      "svhc_declared": {
+        "label": "Kas REACH / SVHC aineid on üle 0,1% massiprotsendi?",
+        "help": "Väga ohtlikud ained vastavalt määrusele (EC) 1907/2006 (REACH)."
+      },
+      "svhc_details": {
+        "label": "SVHC aine üksikasjad",
+        "placeholder": "Aine nimi, CAS-number, kontsentratsioon ja komponent"
+      },
+      "pfas_present": {
+        "label": "Kas see toode sisaldab tahtlikult lisatud PFAS?",
+        "help": "Prantsusmaa keelab seaduse 2025-188 alusel alates 1. jaanuarist 2026 PFAS kasutamise rõivastes, jalatsites ja veekindlust andvates ainetes. PFAS leidub tavaliselt vastupidavates vetthülgavates (DWR) viimistlustes.",
+        "warn": "Tahtlikult lisatud PFAS sisaldavate rõivaste turule laskmine Prantsusmaal on seaduse 2025-188 alusel keelatud alates 1. jaanuarist 2026. Vastus „Teadmata“ tuleb enne Prantsusmaal müümist tarnijaga selgeks teha."
+      },
+      "pfas_details": {
+        "label": "Millised komponendid ja millised ained",
+        "placeholder": "nt DWR viimistlus pealiskangal — PFHxA"
+      },
+      "rsl_compliance_status": {
+        "label": "Piirangutega ainete nimekirja (RSL) vastavuse staatus"
+      },
+      "certifications_held": {
+        "label": "Olemasolevad sertifikaadid"
+      },
+      "certificate_references": {
+        "label": "Sertifikaatide viited",
+        "help": "Alates 27. septembrist 2026 nõuab direktiiv (EU) 2024/825, et kestlikkusmärgis põhineks sertifitseerimiskaval või oleks kehtestatud riigiasutuse poolt. Jätke tühjaks, kui ülaltoodud sertifikaate ei ole.",
+        "placeholder": "Üks rea kohta, nt\nGOTS — CU 123456 GOTS — aegub 30.06.2027\nOEKO-TEX — 21.HTR.12345 — aegub 15.01.2027"
+      },
+      "country_fibre_production": {
+        "label": "Kiu tootmise riik",
+        "placeholder": "Kus kiud kasvatati või toodeti"
+      },
+      "country_spinning_weaving": {
+        "label": "Ketramise / kudumise riik"
+      },
+      "country_dyeing_finishing": {
+        "label": "Värvimise / viimistlemise riik"
+      },
+      "country_of_origin": {
+        "label": "Valmistamise / kokkupaneku riik",
+        "help": "Etiketil päritoluriigina deklareeritud etapp."
+      },
+      "made_in_eu": {
+        "label": "Valmistatud ELis?"
+      },
+      "manufacturing_facility": {
+        "label": "Esimese tasandi tehase nimi"
+      },
+      "factory_address": {
+        "label": "Esimese tasandi tehase aadress"
+      },
+      "audit_status": {
+        "label": "Sotsiaalse / keskkonnaauditi staatus"
+      },
+      "audit_certificate_file": {
+        "label": "Auditi sertifikaat (laadi üles)",
+        "help": "Hoitakse teie sisekasutuseks – ei avaldata kunagi avalikus passis."
+      },
+      "supply_chain_transparent": {
+        "label": "Kas täielik tarneahela läbipaistvus on saadaval?"
+      },
+      "carbon_footprint": {
+        "label": "Süsinikujalajälg (kg CO2e)",
+        "placeholder": "Tooteühiku kohta"
+      },
+      "water_usage": {
+        "label": "Veekasutus (liitrit ühiku kohta)",
+        "placeholder": "nt 2700 puuvillase T-särgi puhul"
+      },
+      "footprint_method": {
+        "label": "Arvutusmeetod",
+        "help": "Ilma märgitud arvutusmeetodita näitaja ei ole tarbijate mõjuvõimu suurendamise direktiivi kohaselt põhjendatud väide."
+      },
+      "lca_report_file": {
+        "label": "Toetav LCA aruanne (laadi üles)",
+        "help": "Hoitakse teie sisekasutuseks – ei avaldata kunagi avalikus passis."
+      },
+      "pilling_resistance": {
+        "label": "Topilisuskindluse tulemus",
+        "help": "Katse standard: ISO 12945-2 (Martindale'i topilisus).",
+        "placeholder": "nt hinne 4 pärast 2000 hõõrdumist"
+      },
+      "colour_fastness_washing": {
+        "label": "Värvipüsivuse tulemus pesemisel",
+        "help": "Katse standard: ISO 105-C06.",
+        "placeholder": "nt hinne 4-5"
+      },
+      "colour_fastness_light": {
+        "label": "Värvipüsivuse tulemus valguses",
+        "help": "Katse standard: ISO 105-B02.",
+        "placeholder": "nt hinne 5"
+      },
+      "dimensional_stability": {
+        "label": "Mõõtmete stabiilsuse tulemus pärast pesemist",
+        "help": "Katse standard: ISO 6330 koos ISO 5077 mõõtmisega.",
+        "placeholder": "nt -2% pikkus, -1% laius"
+      },
+      "seam_strength": {
+        "label": "Õmbluse tugevuse tulemus",
+        "help": "Katse standard: ISO 13935-2 (haardemeetod).",
+        "placeholder": "nt 220 N"
+      },
+      "test_report_reference": {
+        "label": "Katsearuande viide",
+        "placeholder": "Labori nimi ja aruande number"
+      },
+      "test_report_file": {
+        "label": "Katsearuanne (laadi üles)",
+        "help": "Hoitakse teie sisekasutuseks – ei avaldata kunagi avalikus passis."
+      },
+      "washing_temp": {
+        "label": "Maksimaalne pesemistemperatuur"
+      },
+      "can_tumble_dry": {
+        "label": "Kas võib trummelkuivatada?"
+      },
+      "can_iron": {
+        "label": "Kas võib triikida?"
+      },
+      "iron_temp": {
+        "label": "Maksimaalne triikimistemperatuur"
+      },
+      "care_symbols": {
+        "label": "Hooldussümbolid"
+      },
+      "care_instructions_text": {
+        "label": "Täiendavad hooldusjuhised",
+        "placeholder": "Mis tahes erilised hooldusjuhised"
+      },
+      "spare_trims_available": {
+        "label": "Kas parandamiseks on saadaval varukaunistusi?",
+        "help": "Nööbid, lukud, nöörid ja muud vahetatavad komponendid."
+      },
+      "repair_booking_url": {
+        "label": "Paranduse broneerimise URL",
+        "placeholder": "https://…"
+      },
+      "recyclable": {
+        "label": "Kasutusaja lõpus ringlussevõetav?"
+      },
+      "take_back_program": {
+        "label": "Kas tagasivõtuprogramm on saadaval?"
+      },
+      "take_back_scheme_epr": {
+        "label": "Tagasivõtukava nimi ja EPR registreerimisnumbrid turu kohta",
+        "help": "Laiendatud tootjavastutuse registreerimisnumbrid on liikmesriigiti erinevad, seega loetlege üks rida turu kohta.",
+        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+      },
+      "recyclability_class": {
+        "label": "Ringlussevõetavuse klass"
+      },
+      "disassembly_notes": {
+        "label": "Lahtivõtmise märkused",
+        "placeholder": "Kuidas eraldada pealiskangas, vooder, kaunistused ja furnituur ringlussevõtuks"
+      },
+      "disposition_status": {
+        "label": "Praegune kõrvaldamine"
+      },
+      "disposition_reason_code": {
+        "label": "Hävitamise põhjuse kood",
+        "warn": "Suurte ettevõtete poolt müümata rõivaste hävitamine on alates 19. juulist 2026 piiratud vastavalt ESPR ning nõuab arvestuse pidamist ja avalikku teavitamist."
+      },
+      "disposition_date": {
+        "label": "Kõrvaldamise kuupäev",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "disposition_notes": {
+        "label": "Kõrvaldamise märkused",
+        "placeholder": "Kogus, käitlemismarsruut ja mis tahes pädeva asutuse viide"
+      },
+      "environmental_claims": {
+        "label": "Tootel või pakendil esitatud keskkonnaalased väited",
+        "placeholder": "nt „Valmistatud 50% tarbimisjärgsest ringlussevõetud polüestrist (GRS sertifitseeritud)“"
+      },
+      "claims_evidence_reference": {
+        "label": "Põhjendavate tõendite viide",
+        "placeholder": "Iga väite kohta uuringu, sertifikaadi või kontrolliasutuse viide"
+      },
+      "claims_evidence_file": {
+        "label": "Põhjendavad tõendid (laadi üles)",
+        "help": "Hoitakse teie sisekasutuseks – ei avaldata kunagi avalikus passis."
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Kas väidetes välditakse üldisi keskkonnatermineid?",
+        "help": "Üldised väited nagu „keskkonnasõbralik“, „teadlik“ ja „süsinikuneutraalne tasaarvestuse kaudu“ on keelatud alates 27. septembrist 2026."
+      },
+      "authentication_feature_present": {
+        "label": "Kas autentimisfunktsioon on olemas?",
+        "help": "Rõivad on ELis üks enim võltsitud tootekategooriaid, seega kaitseb kaubaartikli tasandi autentimine oluliselt brändi ja ostjat."
+      },
+      "authentication_method": {
+        "label": "Autentimismeetod"
+      },
+      "authentication_verification_url": {
+        "label": "Verifitseerimise URL",
+        "placeholder": "https://…"
+      }
+    },
+    "options": {
+      "manufacturerNonEu": {
+        "yes": "Jah",
+        "no": "Ei"
+      },
+      "primaryFiber": {
+        "cotton": "Puuvill",
+        "organic_cotton": "Orgaaniline puuvill",
+        "linen": "Lina",
+        "hemp": "Kanep",
+        "wool": "Vill",
+        "cashmere": "Kašmiir",
+        "mohair": "Mohäär",
+        "alpaca": "Alpaka",
+        "angora": "Angoora",
+        "silk": "Siid",
+        "viscose": "Viskoos",
+        "modal": "Modaal",
+        "lyocell": "Lüotsell",
+        "acetate": "Atsetaat",
+        "cupro": "Kupro",
+        "polyester": "Polüester",
+        "recycled_polyester": "Ringlussevõetud polüester",
+        "nylon": "Polüamiid",
+        "acrylic": "Akrüül",
+        "elastane": "Elastaan",
+        "polypropylene": "Polüpropüleen",
+        "other": "Muu"
+      },
+      "pfasPresent": {
+        "yes": "Jah",
+        "no": "Ei",
+        "unknown": "Teadmata"
+      },
+      "rslCompliance": {
+        "compliant_tested": "Vastav – katsetamisega kontrollitud",
+        "compliant_declared": "Vastav – ainult tarnija deklaratsioon",
+        "in_progress": "Hindamine on pooleli",
+        "not_assessed": "Hindamata"
+      },
+      "certificationsHeld": {
+        "gots": "GOTS (ülemaailmne orgaanilise tekstiili standard)",
+        "oeko_tex": "OEKO-TEX Standard 100",
+        "grs": "GRS (ülemaailmne ringlussevõtu standard)",
+        "bluesign": "bluesign®",
+        "fair_trade": "Fair Trade",
+        "other": "Muu"
+      },
+      "auditStatus": {
+        "amfori_bsci": "amfori BSCI auditeeritud",
+        "sedex_smeta": "Sedex SMETA auditeeritud",
+        "sa8000": "SA8000 sertifitseeritud",
+        "wrap": "WRAP sertifitseeritud",
+        "brand_audit": "Brändi juhitud audit",
+        "not_audited": "Auditeerimata"
+      },
+      "footprintMethod": {
+        "pefcr_apparel_footwear": "PEFCR rõivad ja jalatsid",
+        "iso_14067": "ISO 14067",
+        "ghg_protocol": "GHG protokolli tootestandard",
+        "iso_14040_44": "ISO 14040/14044 LCA",
+        "higg_msi": "Higg MSI",
+        "internal_model": "Sisemine mudel"
+      },
+      "washingTemp": {
+        "30": "30°C",
+        "40": "40°C",
+        "60": "60°C",
+        "95": "95°C",
+        "hand": "Ainult käsipesu",
+        "dry_clean": "Ainult keemiline puhastus"
+      },
+      "ironTemp": {
+        "low": "Madal (110°C)",
+        "medium": "Keskmine (150°C)",
+        "high": "Kõrge (200°C)"
+      },
+      "careSymbols": {
+        "wash_30": "Pesu 30°C",
+        "wash_40": "Pesu 40°C",
+        "wash_60": "Pesu 60°C",
+        "hand_wash": "Käsipesu",
+        "do_not_wash": "Mitte pesta",
+        "bleach_allowed": "Pleegitamine lubatud",
+        "non_chlorine_bleach": "Ainult kloorivaba pleegitus",
+        "do_not_bleach": "Mitte pleegitada",
+        "tumble_dry_low": "Trummelkuivatus madalal kuumusel",
+        "tumble_dry_normal": "Tavaline trummelkuivatus",
+        "do_not_tumble_dry": "Mitte trummelkuivatada",
+        "iron_low": "Triikida madalal temperatuuril",
+        "iron_medium": "Triikida keskmisel temperatuuril",
+        "iron_high": "Triikida kõrgel temperatuuril",
+        "do_not_iron": "Mitte triikida",
+        "dry_clean_any": "Professionaalne keemiline puhastus",
+        "dry_clean_petroleum": "Professionaalne keemiline puhastus, ainult petrooleumlahusti",
+        "wet_clean": "Professionaalne märgpuhastus",
+        "do_not_dry_clean": "Mitte puhastada keemiliselt"
+      },
+      "recyclabilityClass": {
+        "mono_material": "Ühest materjalist – kiust-kiusse ringlussevõetav",
+        "separable_blend": "Segu, eraldatavad komponendid",
+        "mechanical_only": "Ainult mehaaniline ringlussevõtt",
+        "downcycle_only": "Ainult allringlus",
+        "not_recyclable": "Praegu ei ole ringlussevõetav"
+      },
+      "dispositionStatus": {
+        "in_stock": "Endiselt laos",
+        "sold": "Müüdud",
+        "donated": "Annetatud",
+        "recycled": "Ringlusse võetud",
+        "remanufactured": "Taastoodetud",
+        "destroyed": "Hävitatud"
+      },
+      "dispositionReason": {
+        "health_safety": "Tervis ja ohutus",
+        "counterfeit_ip": "Võltsing / intellektuaalomandi rikkumine",
+        "damaged_beyond_repair": "Parandamatult kahjustatud",
+        "donation_refused": "Annetusest keelduti pärast kolmelt sotsiaalmajanduslikult organisatsioonilt küsimist",
+        "protected_logo": "Kaitstud logo ei saa eemaldada",
+        "unlawful_product": "Toode osutus ebaseaduslikuks"
+      },
+      "authenticationMethod": {
+        "nfc_tag": "NFC silt",
+        "secure_qr": "Turvaline / seerianumbriga QR kood",
+        "security_seal": "Rikkumist tuvastav turvaplomm",
+        "ai_fingerprint": "Tehisintellekti kujutise sõrmejälg",
+        "rfid": "RFID",
+        "other": "Muu"
+      }
+    }
+  },
+  "demo": {
+    "banner": "Näidispass. Kõik andmed on väljamõeldud.",
+    "cta": "Loo oma pass"
   },
   "carCleaning": {
     "publicTitle": "Autopuhastustoote teave",
