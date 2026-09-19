@@ -77,6 +77,19 @@ Successful writes return `{passport}`. Invalid category fields return `{error, i
 5. Assess model changes, linked predecessor passports and manufacturer responsibility. A version of the same record is not automatically a newly issued regulatory passport.
 6. Establish a controlled, legally assessed admin process for exceptional redaction, account succession and archive disposal. The normal app exposes none of those privileges.
 
+## Deployment addendum: migration provenance, 19 September 2026
+
+The local-preparation statements above describe the original implementation phase. The Lovable rollout introduced a second migration track. Choose the track for the target database before applying SQL:
+
+- **Fresh or local Supabase track:** after the application's baseline schema, apply the enum migration in its own committed transaction, then the history migration. Deploy and verify both edge functions and the compatible client before applying the restrictive gateway-policy migration.
+- **Current Lovable track:** the enum was committed separately. The supported provider runner applied `drizzle/migrations/0000_car_cleaning_passport_history.sql`, then `drizzle/migrations/0001_require_car_cleaning_save_gateway.sql` after the gateway and client verification gate. These are exact mirrors of the reviewed Supabase history and restrictive policy migrations. The Drizzle journal records them in that order; neither includes the enum. Their recorded journal timestamps are `1789836088900` and `1789837534644`, respectively.
+
+The original Supabase history file and its Drizzle mirror contain the same 11,504 bytes, with SHA256 `b25c496ccc91b92f7804e87bf9a979a77cf5e928539c488c4b10500799dc12c9`. The 13-line restrictive policy files share SHA256 `3bf875bca2a70a80ba88f34248e68bb40c6b33bb47adcada3579e126e93b5f75`. Preserve all four files as immutable deployment provenance; corrections require a new migration. `src/lib/carCleaningMigrationProvenance.test.ts` checks both pinned hashes in both tracks, unique journal references, and the recorded order and metadata. Temporary altered copies verify that the check detects drift, including matching rewrites of either pair, changed timestamps and reordered entries. Later forward migrations can be appended without changing these deployed entries. Source checks do not establish that a database applied the SQL successfully.
+
+Never apply the Supabase and Drizzle copies of either migration to the same database. Before an existing database changes migration tracks, document its applied history, exact SQL hashes, live schema checks, and the supported ledger-reconciliation procedure. Do not hand-create ledger entries, substitute no-op migrations, or suppress conflicts with broad `IF NOT EXISTS` changes. Keep the provider journal, migration artifacts, and required dependency configuration intact. Record actual deployment and postflight evidence separately from source provenance.
+
+The provider's empty `drizzle/schema.ts` and empty `0000_snapshot.json` and `0001_snapshot.json` are bootstrap artifacts, not an authoritative description of the live schema. The second snapshot links to the first but does not describe the installed history tables or policies. Do not run Drizzle `push` or `generate` against them to reconcile the database. Use reviewed forward migrations and the supported deployment route.
+
 ## Validation evidence
 
 The SQL tests run against isolated in-memory PostgreSQL via PGlite, using a minimal schema matching relevant deployed columns and auth/RLS semantics. The package was installed only under the parent `logs/passport-history-db-check` directory, with no repository dependency changes. Run:
