@@ -1,5 +1,5 @@
 import { CarCleaningWriteError } from '@/lib/carCleaningWrite';
-import { CarCleaningCarrier } from '@/components/car-cleaning/CarCleaningCarrier';
+import { SavedCarCleaningCarrier } from '@/components/car-cleaning/SavedCarCleaningCarrier';
 /*
  * Open-Label Digital Product Passport Engine
  * Copyright (C) 2026 Open-Label.eu
@@ -463,10 +463,9 @@ export default function PassportForm() {
           {/* Form Section */}
           <div className={showPreview ? 'flex-1 min-w-0' : 'max-w-3xl mx-auto w-full'}>
             <form id="passport-form" onSubmit={handleSubmit} className="space-y-6">
-              {formData.category === 'car_cleaning' && existingPassport?.public_slug && <CarCleaningCarrier
-                url={`${window.location.origin}/p/${existingPassport.public_slug}`}
+              {formData.category === 'car_cleaning' && existingPassport?.public_slug && <SavedCarCleaningCarrier
+                slug={existingPassport.public_slug}
                 productName={typeof existingPassport.category_data === 'object' && existingPassport.category_data && !Array.isArray(existingPassport.category_data) && typeof existingPassport.category_data.product_name === 'string' ? existingPassport.category_data.product_name : ''}
-                machineReadableUrl={`${import.meta.env.VITE_SUPABASE_URL}/functions/v1/get-public-passport?slug=${existingPassport.public_slug}`}
               />}
               {/* Basic Information */}
               <Card>

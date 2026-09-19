@@ -22,6 +22,14 @@ export function buildCarCleaningCarrier(url: string, machineReadableUrl?: string
   return { passportUri: uri.href, ...(machineReadableUrl ? { machineReadableUri: machineReadableUrl } : {}) };
 }
 
+/** A configured public origin must not silently fall back to a different authoring origin. */
+export function carCleaningPassportUri(siteUrl: string, currentOrigin: string, slug: string): string | null {
+  const base = siteUrl.trim() || currentOrigin;
+  const parsed = publicHttpsUrl(base);
+  if (!parsed || (base !== parsed.origin && base !== `${parsed.origin}/`)) return null;
+  return buildCarCleaningCarrier(`${parsed.origin}/p/${slug}`)?.passportUri ?? null;
+}
+
 /** Fixed-width URI wrapping keeps every encoded character in the printable fallback URI. */
 export function carrierTextLines(text: string, columns = 42): string[] {
   const chars = Array.from(text);

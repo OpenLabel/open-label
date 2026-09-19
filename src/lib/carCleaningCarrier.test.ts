@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { buildCarCleaningCarrier, carrierTextLines } from './carCleaningCarrier';
+import { buildCarCleaningCarrier, carCleaningPassportUri, carrierTextLines } from './carCleaningCarrier';
 
 describe('car-cleaning data carrier', () => {
   it('uses a stable HTTPS passport URI and preserves an optional actual structured-data endpoint', () => {
@@ -23,5 +23,22 @@ describe('car-cleaning data carrier', () => {
     const lines = carrierTextLines(uri, 32);
     expect(lines.every(line => line.length <= 32)).toBe(true);
     expect(lines.join('')).toBe(uri);
+  });
+
+  it.each(['https://public.example', ' https://public.example/ '])('uses the configured canonical origin %s instead of an authoring host', siteUrl => {
+    expect(carCleaningPassportUri(siteUrl, 'https://authoring.example', 'abcdef01')).toBe('https://public.example/p/abcdef01');
+  });
+
+  it('uses the current origin only when the confirmed site URL is empty', () => {
+    expect(carCleaningPassportUri('', 'https://public.example', 'abcdef01')).toBe('https://public.example/p/abcdef01');
+    expect(carCleaningPassportUri(' ', 'http://localhost:5173', 'abcdef01')).toBeNull();
+  });
+
+  it.each(['http://public.example', 'https://user:password@public.example', 'https://public.example/path', 'https://public.example/?tracking=1', 'https://public.example/#anchor', 'https://public.example:8443', 'https://localhost', 'not-a-url'])('does not substitute the authoring host for invalid configured origin %s', siteUrl => {
+    expect(carCleaningPassportUri(siteUrl, 'https://authoring.example', 'abcdef01')).toBeNull();
+  });
+
+  it('does not mint a carrier URI for an unsaved or noncanonical slug', () => {
+    expect(carCleaningPassportUri('https://public.example', 'https://authoring.example', '../private')).toBeNull();
   });
 });

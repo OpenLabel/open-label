@@ -35,7 +35,7 @@ export function CarCleaningCarrier({ url, productName, machineReadableUrl }: Car
     URL.revokeObjectURL(objectUrl);
   }
 
-  return <section className="space-y-3 rounded-lg border p-4" aria-label={copy('title')}>
+  return <section className="min-w-0 space-y-3 break-words rounded-lg border p-4" aria-label={copy('title')}>
     <h3 className="font-semibold">{copy('title')}</h3>
     <svg ref={svgRef} xmlns="http://www.w3.org/2000/svg" width="384" height={height} viewBox={`0 0 384 ${height}`} className="h-auto max-w-full bg-white" role="img" aria-label={`${copy('title')}: ${productName}`}>
       <title>{productName}</title>
@@ -46,8 +46,8 @@ export function CarCleaningCarrier({ url, productName, machineReadableUrl }: Car
       {uriLines.map((line, index) => <text key={index} x="192" y={uriY + index * 16} textAnchor="middle" fontSize="12" fontFamily="monospace" fill="black">{line}</text>)}
     </svg>
     <div className="flex flex-wrap gap-3 items-center">
-      <Button type="button" variant="outline" onClick={downloadSvg}>{copy('download')}</Button>
-      {carrier.machineReadableUri && <a className="text-sm underline" href={carrier.machineReadableUri} target="_blank" rel="noopener noreferrer">{copy('structuredData')}</a>}
+      <Button type="button" variant="outline" className="h-auto min-h-10 max-w-full whitespace-normal" onClick={downloadSvg}>{copy('download')}</Button>
+      {carrier.machineReadableUri && <a className="min-w-0 text-sm underline" href={carrier.machineReadableUri} target="_blank" rel="noopener noreferrer">{copy('structuredData')}</a>}
     </div>
     <p className="text-sm text-muted-foreground">{copy('physicalLabel')}</p>
     <p className="text-sm text-muted-foreground">{copy('verification')}</p>

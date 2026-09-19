@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react';
-import { describe, it, expect, vi, beforeEach } from 'vitest';
+import { describe, it, expect, vi, beforeEach, afterEach } from 'vitest';
 import { render, screen, fireEvent, act } from '@testing-library/react';
 import { validCleaner } from '@/components/car-cleaning/testFixtures';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
@@ -15,8 +15,10 @@ vi.mock('@/hooks/useAuth', () => ({
 const { updatePassport, existing } = vi.hoisted(() => ({
   updatePassport: vi.fn().mockResolvedValue({ id: 'car-1', public_slug: 'aabbccdd' }),
   existing: { id: 'car-1', user_id: 'u1', name: 'Car record', category: 'car_cleaning',
-    image_url: null, description: '', language: 'en', category_data: {}, updated_at: '2026-09-10' },
+    image_url: null, description: '', language: 'en', category_data: {}, updated_at: '2026-09-10', public_slug: undefined as string | undefined },
 }));
+const mockSiteConfig = { config: { site_url: 'https://public.example/' }, loading: false, error: false };
+vi.mock('@/hooks/useSiteConfig', () => ({ useSiteConfig: () => mockSiteConfig }));
 vi.mock('@/hooks/usePassports', () => ({
   usePassports: () => ({ createPassport: { mutateAsync: vi.fn() }, updatePassport: { mutateAsync: updatePassport } }),
   usePassportById: () => ({ data: existing, isLoading: false }),
@@ -78,11 +80,33 @@ vi.mock('@/hooks/useAutoTranslate', () => ({
 import PassportForm from './PassportForm';
 
 describe('Car cleaning save validation', () => {
-  beforeEach(() => { vi.clearAllMocks(); existing.category = 'car_cleaning'; existing.category_data = {}; });
+  beforeEach(() => { vi.clearAllMocks(); existing.category = 'car_cleaning'; existing.category_data = {}; existing.public_slug = undefined; mockSiteConfig.loading = false; mockSiteConfig.error = false; });
+  afterEach(() => { vi.unstubAllEnvs(); });
   const renderForm = (path = '/passport/car-1/edit') => render(<MemoryRouter initialEntries={[path]}><Routes>
     <Route path="/passport/new" element={<PassportForm />} />
     <Route path="/passport/:id/edit" element={<PassportForm />} />
   </Routes></MemoryRouter>);
+
+  it('uses the same configured public carrier origin and JSON endpoint as the Dashboard', () => {
+    vi.stubEnv('VITE_SUPABASE_URL', 'https://api.example');
+    existing.public_slug = 'aabbccdd';
+    existing.category_data = { ...validCleaner, product_name: 'QA public cleaner' };
+    renderForm();
+    const carrier = screen.getByRole('img', { name: 'carCleaning.carrier.title: QA public cleaner' });
+    expect(carrier).toHaveTextContent('https://public.example/p/aabbccdd');
+    expect(carrier.querySelector('metadata')?.textContent).toContain('https://api.example/functions/v1/get-public-passport?slug=aabbccdd');
+    expect(carrier).not.toHaveTextContent('Car record');
+  });
+
+  it.each(['loading', 'error'] as const)('withholds the editor carrier while site configuration has %s', state => {
+    vi.stubEnv('VITE_SUPABASE_URL', 'https://api.example');
+    existing.public_slug = 'aabbccdd';
+    existing.category_data = { ...validCleaner };
+    mockSiteConfig[state] = true;
+    renderForm();
+    expect(screen.getByText('carCleaning.carrier.invalidUrl')).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'carCleaning.carrier.download' })).not.toBeInTheDocument();
+  });
 
   it('gives the icon-only header back action its translated accessible name', () => {
     renderForm();

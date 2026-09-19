@@ -30,6 +30,8 @@ import { Plus, LogOut, Sparkles, Shield } from 'lucide-react';
 import { categoryList } from '@/templates';
 import { publicCarCleaningData } from '@/lib/carCleaning';
 import { QRCodeDialog } from '@/components/QRCodeDialog';
+import { SavedCarCleaningCarrier } from '@/components/car-cleaning/SavedCarCleaningCarrier';
+import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { SortablePassportCard } from '@/components/SortablePassportCard';
 import { buildSampleToyPassport } from '@/data/sampleToyPassport';
@@ -54,7 +56,7 @@ import type { Passport } from '@/types/passport';
 export default function Dashboard() {
   const { t, i18n } = useTranslation();
   const [qrDialogOpen, setQrDialogOpen] = useState(false);
-  const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; counterfeitProtection: boolean; wineIngredientsText?: string; wineEnergyText?: string } | null>(null);
+  const [selectedPassport, setSelectedPassport] = useState<{ name: string; slug: string; category: Passport['category']; counterfeitProtection: boolean; wineIngredientsText?: string; wineEnergyText?: string } | null>(null);
   const [localPassports, setLocalPassports] = useState<Passport[]>([]);
   const { user, loading: authLoading, signOut } = useAuth();
   const { passports, isLoading, createPassport, duplicatePassport, deletePassport, reorderPassports } = usePassports();
@@ -171,7 +173,7 @@ export default function Dashboard() {
         ? publicCarData.product_name
         : t('categories.car_cleaning')
       : passport.name;
-    setSelectedPassport({ name: shareName, slug: passport.public_slug, counterfeitProtection, wineIngredientsText, wineEnergyText });
+    setSelectedPassport({ name: shareName, slug: passport.public_slug, category: passport.category, counterfeitProtection, wineIngredientsText, wineEnergyText });
     setQrDialogOpen(true);
   };
 
@@ -261,7 +263,18 @@ export default function Dashboard() {
         )}
 
         <CarCleaningRetained refreshKey={passports.map(passport => passport.id).sort().join(',')} />
-        <QRCodeDialog
+        {selectedPassport?.category === 'car_cleaning' ? (
+          <Dialog open={qrDialogOpen} onOpenChange={setQrDialogOpen}>
+            <DialogContent className="w-[calc(100%-2rem)] max-h-[calc(100dvh-2rem)] grid-cols-1 overflow-y-auto sm:max-w-md" aria-describedby={undefined}>
+              <DialogHeader className="min-w-0 px-6">
+                <DialogTitle className="min-w-0 break-words text-center leading-snug">{t('qrDialog.title')} - {selectedPassport.name}</DialogTitle>
+              </DialogHeader>
+              <div className="min-w-0">
+                <SavedCarCleaningCarrier slug={selectedPassport.slug} productName={selectedPassport.name} />
+              </div>
+            </DialogContent>
+          </Dialog>
+        ) : <QRCodeDialog
           open={qrDialogOpen}
           onOpenChange={setQrDialogOpen}
           url={selectedPassport ? getPublicUrl(selectedPassport.slug) : ''}
@@ -269,7 +282,7 @@ export default function Dashboard() {
           showSecuritySealOverlay={selectedPassport?.counterfeitProtection || false}
           wineIngredientsText={selectedPassport?.wineIngredientsText}
           wineEnergyText={selectedPassport?.wineEnergyText}
-        />
+        />}
       </main>
     </div>
   );
