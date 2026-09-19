@@ -46,64 +46,64 @@ export type Database = {
       }
       car_cleaning_passport_archives: {
         Row: {
-          passport_id: string
           archive_id: string
-          user_id: string
-          public_slug: string
-          product_identifier: string
-          latest_version: number
-          retained_until: string
-          withdrawn_at: string | null
-          guarded_model_definition: Json | null
           created_at: string
+          guarded_model_definition: Json | null
+          latest_version: number
+          passport_id: string
+          product_identifier: string
+          public_slug: string
+          retained_until: string
+          user_id: string
+          withdrawn_at: string | null
         }
         Insert: {
-          passport_id: string
           archive_id?: string
-          user_id: string
-          public_slug: string
-          product_identifier?: never
-          latest_version?: number
-          retained_until: string
-          withdrawn_at?: string | null
-          guarded_model_definition?: Json | null
           created_at?: string
+          guarded_model_definition?: Json | null
+          latest_version?: number
+          passport_id: string
+          product_identifier?: string
+          public_slug: string
+          retained_until: string
+          user_id: string
+          withdrawn_at?: string | null
         }
         Update: {
-          passport_id?: string
           archive_id?: string
-          user_id?: string
-          public_slug?: string
-          product_identifier?: never
-          latest_version?: number
-          retained_until?: string
-          withdrawn_at?: string | null
-          guarded_model_definition?: Json | null
           created_at?: string
+          guarded_model_definition?: Json | null
+          latest_version?: number
+          passport_id?: string
+          product_identifier?: string
+          public_slug?: string
+          retained_until?: string
+          user_id?: string
+          withdrawn_at?: string | null
         }
         Relationships: []
       }
       car_cleaning_passport_versions: {
         Row: {
           passport_id: string
-          user_id: string
-          version: number
           recorded_at: string
           snapshot: Json
+          user_id: string
+          version: number
         }
         Insert: {
           passport_id: string
-          user_id: string
-          version: number
           recorded_at: string
           snapshot: Json
+          user_id: string
+          version: number
         }
         Update: {
           passport_id?: string
-          user_id?: string
-          version?: number
           recorded_at?: string
           snapshot?: Json
+          user_id?: string
+          version?: number
         }
         Relationships: []
       }
@@ -226,6 +226,11 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      car_cleaning_model_definition: { Args: { data: Json }; Returns: Json }
+      car_cleaning_retention_floor: {
+        Args: { data: Json; saved_at: string }
+        Returns: string
+      }
       increment_api_usage: {
         Args: { p_function_name: string; p_limit?: number; p_user_id: string }
         Returns: Json
