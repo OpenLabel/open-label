@@ -1004,15 +1004,28 @@ export class TextilesTemplate extends BaseTemplate {
     const sum = primary + (secondary ?? 0);
 
     if (sum > 100.5) {
-      warnings.push({
-        fieldId: 'secondary_fiber_percentage',
-        message: `Primary (${primary}%) and secondary (${secondary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
-      });
+      if (secondary === undefined) {
+        warnings.push({
+          fieldId: 'primary_fiber_percentage',
+          messageKey: 'textiles.warnings.primaryExceeds100',
+          params: { primary },
+          message: `The primary fiber percentage alone (${primary}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.`,
+        });
+      } else {
+        warnings.push({
+          fieldId: 'secondary_fiber_percentage',
+          messageKey: 'textiles.warnings.compositionExceeds100',
+          params: { primary, secondary, sum },
+          message: `Primary (${primary}%) and secondary (${secondary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
+        });
+      }
     }
 
     if (secondary === undefined && primary < 95) {
       warnings.push({
         fieldId: 'primary_fiber_percentage',
+        messageKey: 'textiles.warnings.incompleteSingleFibre',
+        params: { primary },
         message: `Primary fiber is declared at ${primary}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.`,
       });
     }
