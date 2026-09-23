@@ -2082,5 +2082,29 @@
       "more": "Eerdere versies",
       "restore": "Bewaarde paspoorten voor autoreinigingsproducten"
     }
+  },
+  "garmentPublic": {
+    "headerBadge": "Apparel — Digital Product Passport",
+    "madeInEu": "Made in EU",
+    "sections": {
+      "substances": "Substances",
+      "care": "Care",
+      "metadata": "DPP infrastructure"
+    },
+    "subsections": {
+      "manufacturer": "Manufacturer",
+      "importer": "Importer",
+      "euResponsiblePerson": "EU responsible person"
+    },
+    "rows": {
+      "address": "Address",
+      "dppServiceProvider": "DPP service provider",
+      "dppVersion": "DPP version",
+      "lastUpdated": "Last updated",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Published"
+    }
   }
 }

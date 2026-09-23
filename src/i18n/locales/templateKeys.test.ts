@@ -89,6 +89,21 @@ const toysKeys = [
 ].sort();
 
 const textilesKeys = [
+  // Bespoke Apparel public renderer strings (GarmentPublicPassport).
+  "garmentPublic.headerBadge",
+  "garmentPublic.madeInEu",
+  "garmentPublic.sections.substances",
+  "garmentPublic.sections.care",
+  "garmentPublic.sections.metadata",
+  "garmentPublic.subsections.manufacturer",
+  "garmentPublic.subsections.importer",
+  "garmentPublic.subsections.euResponsiblePerson",
+  "garmentPublic.rows.address",
+  "garmentPublic.rows.dppServiceProvider",
+  "garmentPublic.rows.dppVersion",
+  "garmentPublic.rows.lastUpdated",
+  "garmentPublic.rows.status",
+  "garmentPublic.values.published",
   "textiles.warnings.compositionExceeds100",
   "textiles.warnings.primaryExceeds100",
   "textiles.warnings.incompleteSingleFibre",
