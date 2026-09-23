@@ -1061,6 +1061,8 @@ export class TextilesTemplate extends BaseTemplate {
     if (syntheticPercentage > 50) {
       warnings.push({
         fieldId: 'microplastic_shedding',
+        messageKey: 'textiles.warnings.syntheticOver50',
+        params: { percentage: syntheticPercentage },
         message: `This garment is ${syntheticPercentage}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this.`,
       });
     }
