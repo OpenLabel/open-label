@@ -22,7 +22,7 @@ import { Badge } from '@/components/ui/badge';
 import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import { toDppLanguage } from '@/lib/dppLanguage';
-import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue } from '@/lib/publicPassportFields';
+import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue, resolveFieldValue } from '@/lib/publicPassportFields';
 import { DPPLanguagePicker } from '@/components/DPPLanguagePicker';
 import type { ProductCategory } from '@/types/passport';
 
@@ -158,7 +158,7 @@ export function GenericPublicPassport({ category, passport, isPreview, previewLa
                     <CardContent>
                       <dl className="grid gap-3">
                         {section.questions.filter(isPubliclyVisible).map((question) => {
-                          const value = categoryData[question.id];
+                          const value = resolveFieldValue(question, categoryData, displayLanguage);
                           const displayValue = resolveDisplayValue(question, value, tr);
 
                           // BUG-07: filter checkboxes by raw boolean, not translated 'No'
