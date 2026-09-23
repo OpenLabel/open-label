@@ -978,10 +978,18 @@ export class TextilesTemplate extends BaseTemplate {
 
   // TODO(i18n): these messages are built at runtime with interpolated numbers
   // and are NOT yet translated. They are keyed in a later step.
-  getInlineWarnings(
-    data: Record<string, unknown>,
-  ): { fieldId: string; message: string }[] {
-    const warnings: { fieldId: string; message: string }[] = [];
+  getInlineWarnings(data: Record<string, unknown>): {
+    fieldId: string;
+    messageKey: string;
+    params?: Record<string, string | number>;
+    message: string;
+  }[] {
+    const warnings: {
+      fieldId: string;
+      messageKey: string;
+      params?: Record<string, string | number>;
+      message: string;
+    }[] = [];
 
     const toNumber = (value: unknown): number | undefined => {
       if (value === undefined || value === null || value === '')
@@ -996,15 +1004,28 @@ export class TextilesTemplate extends BaseTemplate {
     const sum = primary + (secondary ?? 0);
 
     if (sum > 100.5) {
-      warnings.push({
-        fieldId: 'secondary_fiber_percentage',
-        message: `Primary (${primary}%) and secondary (${secondary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
-      });
+      if (secondary === undefined) {
+        warnings.push({
+          fieldId: 'primary_fiber_percentage',
+          messageKey: 'textiles.warnings.primaryExceeds100',
+          params: { primary },
+          message: `The primary fiber percentage alone (${primary}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.`,
+        });
+      } else {
+        warnings.push({
+          fieldId: 'secondary_fiber_percentage',
+          messageKey: 'textiles.warnings.compositionExceeds100',
+          params: { primary, secondary, sum },
+          message: `Primary (${primary}%) and secondary (${secondary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
+        });
+      }
     }
 
     if (secondary === undefined && primary < 95) {
       warnings.push({
         fieldId: 'primary_fiber_percentage',
+        messageKey: 'textiles.warnings.incompleteSingleFibre',
+        params: { primary },
         message: `Primary fiber is declared at ${primary}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.`,
       });
     }
@@ -1040,6 +1061,8 @@ export class TextilesTemplate extends BaseTemplate {
     if (syntheticPercentage > 50) {
       warnings.push({
         fieldId: 'microplastic_shedding',
+        messageKey: 'textiles.warnings.syntheticOver50',
+        params: { percentage: syntheticPercentage },
         message: `This garment is ${syntheticPercentage}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this.`,
       });
     }

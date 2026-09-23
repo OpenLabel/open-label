@@ -129,7 +129,15 @@ export interface CategoryTemplate {
    */
   getInlineWarnings?: (
     data: Record<string, unknown>,
-  ) => { fieldId: string; message: string }[];
+  ) => {
+    fieldId: string;
+    /** i18n key for the translated message */
+    messageKey: string;
+    /** Interpolation values for the message */
+    params?: Record<string, string | number>;
+    /** English fallback, used when the key is missing */
+    message: string;
+  }[];
 }
 
 export abstract class BaseTemplate implements CategoryTemplate {

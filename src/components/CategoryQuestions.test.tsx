@@ -2,8 +2,25 @@ import { describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
+// Mimics i18next: an unknown key falls back to `defaultValue` and the
+// remaining options are interpolated into it, like the real runtime does.
+const translate = (
+  k: string,
+  opts?: Record<string, unknown> | string,
+): string => {
+  if (typeof opts === 'string') return opts;
+  const def = opts?.defaultValue;
+  if (typeof def !== 'string') return k;
+  return def.replace(/\{\{(\w+)\}\}/g, (m, name) =>
+    opts?.[name] === undefined ? m : String(opts[name]),
+  );
+};
+
 vi.mock('react-i18next', () => ({
-  useTranslation: () => ({ t: (k: string) => k, i18n: { language: 'en', changeLanguage: vi.fn() } }),
+  useTranslation: () => ({
+    t: translate,
+    i18n: { language: 'en', changeLanguage: vi.fn() },
+  }),
 }));
 vi.mock('@/hooks/useSiteConfig', () => ({
   useSiteConfig: () => ({ config: { ai_enabled: false }, loading: false, error: false }),

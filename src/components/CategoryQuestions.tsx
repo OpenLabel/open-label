@@ -879,7 +879,12 @@ export function CategoryQuestions({
                           className="bg-amber-50 border-amber-300 text-amber-900 dark:bg-amber-950/40 dark:border-amber-700 dark:text-amber-100"
                         >
                           <AlertTriangle className="h-4 w-4" />
-                          <AlertDescription>{w.message}</AlertDescription>
+                          <AlertDescription>
+                            {t(w.messageKey, {
+                              defaultValue: w.message,
+                              ...(w.params ?? {}),
+                            })}
+                          </AlertDescription>
                         </Alert>
                       ))}
                   </div>

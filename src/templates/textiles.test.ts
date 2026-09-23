@@ -251,13 +251,43 @@ describe('TextilesTemplate', () => {
       const warning = warnings.find(
         (w) => w.fieldId === 'secondary_fiber_percentage',
       );
+      expect(warning?.messageKey).toBe('textiles.warnings.compositionExceeds100');
+      expect(warning?.params).toEqual({ primary: 80, secondary: 30, sum: 110 });
       expect(warning?.message).toContain('110%');
     });
 
+    it('flags a primary percentage above 100 on its own without "undefined"', () => {
+      const warnings = textilesTemplate.getInlineWarnings({
+        primary_fiber_percentage: 120,
+      });
+      const warning = warnings.find(
+        (w) => w.messageKey === 'textiles.warnings.primaryExceeds100',
+      );
+      expect(warning).toBeDefined();
+      expect(warning!.fieldId).toBe('primary_fiber_percentage');
+      expect(warning!.params).toEqual({ primary: 120 });
+      for (const w of warnings) {
+        expect(w.message).not.toContain('undefined');
+        expect(JSON.stringify(w.params ?? {})).not.toContain('undefined');
+      }
+      expect(
+        warnings.some(
+          (w) => w.messageKey === 'textiles.warnings.compositionExceeds100',
+        ),
+      ).toBe(false);
+    });
+
     it('flags an incomplete single-fibre declaration', () => {
+      const warnings = textilesTemplate.getInlineWarnings({
+        primary_fiber_percentage: 60,
+      });
       expect(fieldIds({ primary_fiber_percentage: 60 })).toContain(
         'primary_fiber_percentage',
       );
+      const warning = warnings.find(
+        (w) => w.messageKey === 'textiles.warnings.incompleteSingleFibre',
+      );
+      expect(warning?.params).toEqual({ primary: 60 });
     });
 
     it('flags a garment that is more than 50% synthetic', () => {
@@ -267,6 +297,8 @@ describe('TextilesTemplate', () => {
       });
       const warning = warnings.find((w) => w.fieldId === 'microplastic_shedding');
       expect(warning).toBeDefined();
+      expect(warning!.messageKey).toBe('textiles.warnings.syntheticOver50');
+      expect(warning!.params).toEqual({ percentage: 60 });
       expect(warning!.message).toContain('60%');
     });
 
