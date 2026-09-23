@@ -22,7 +22,14 @@
  * EMPTY this array. The guard test below makes it impossible to quietly add
  * further prefixes to this list.
  */
-export const PENDING_TRANSLATION_PREFIXES: readonly string[] = ['textiles.'];
+ * `garmentPublic.` is the same Apparel debt: the strings used only by the
+ * bespoke Apparel public renderer, seeded in English by
+ * scripts/seed-garment-public-i18n.ts and translated by the same step 2 run.
+ */
+export const PENDING_TRANSLATION_PREFIXES: readonly string[] = [
+  'textiles.',
+  'garmentPublic.',
+];
 
 /** True when a key belongs to a subtree whose translation is still pending. */
 export function isTranslationPending(key: string): boolean {
