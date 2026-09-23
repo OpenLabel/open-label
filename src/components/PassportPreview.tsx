@@ -170,22 +170,31 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
             <div className="min-h-screen bg-muted/30">
               <main className="px-4 py-6">
                 <div className="max-w-3xl mx-auto space-y-4">
+                  {/* Language picker (preview mode, local only) */}
+                  <div className="flex justify-end mb-4">
+                    <DPPLanguagePicker
+                      localOnly
+                      currentLanguage={previewLanguage}
+                      onLanguageChange={setPreviewLanguage}
+                    />
+                  </div>
+
                   {/* Header */}
                   <div className="text-center">
                     {formData.category !== 'other' && (
                       <Badge variant="secondary" className="mb-3">
-                        {categoryInfo?.icon} {t(`categories.${formData.category}`)} {t('preview.productPassport')}
+                        {categoryInfo?.icon} {tg(`categories.${formData.category}`)} {tg('preview.productPassport')}
                       </Badge>
                     )}
                     <h1 className="text-xl font-bold mb-2">
-                      {(categoryData?.product_name as string) || formData.name || t('preview.productName')}
+                      {(categoryData?.product_name as string) || formData.name || tg('preview.productName')}
                     </h1>
-                    
+
                     {/* Check Authenticity Button (preview mode - non-clickable) */}
                     {categoryData?.counterfeit_protection_enabled && (
                       <div className="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-green-600 text-white rounded-lg font-medium text-sm cursor-default">
                         <ShieldCheck className="h-3 w-3" />
-                        {t('preview.checkAuthenticity')}
+                        {tg('preview.checkAuthenticity')}
                       </div>
                     )}
                   </div>
