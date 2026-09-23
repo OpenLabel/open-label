@@ -49,7 +49,15 @@ export function PublicPassportView({ category, passport, isPreview, previewLangu
   if (category === 'car_cleaning') {
     return <CarCleaningPublicPassport passport={passport} />;
   }
-  return <GenericPublicPassport category={category} passport={passport} />;
+  return (
+    <GenericPublicPassport
+      category={category}
+      passport={passport}
+      isPreview={isPreview}
+      previewLanguage={previewLanguage}
+      onPreviewLanguageChange={onPreviewLanguageChange}
+    />
+  );
 }
 
 export default PublicPassportView;
