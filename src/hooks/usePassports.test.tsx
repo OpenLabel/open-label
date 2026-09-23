@@ -46,7 +46,7 @@ vi.mock('@/integrations/supabase/client', () => ({
   },
 }));
 
-import { usePassports, usePassportBySlug, usePassportById } from './usePassports';
+import { usePassports, usePassportBySlug, usePassportById, PREFILL_IDENTITY_KEYS } from './usePassports';
 
 const createWrapper = () => {
   const queryClient = new QueryClient({
