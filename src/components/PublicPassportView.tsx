@@ -17,6 +17,7 @@
 import { WinePublicPassport } from '@/components/wine/WinePublicPassport';
 import { ToyPublicPassport } from '@/components/toys/ToyPublicPassport';
 import { GenericPublicPassport } from '@/components/GenericPublicPassport';
+import { GarmentPublicPassport } from '@/components/apparel/GarmentPublicPassport';
 import { CarCleaningPublicPassport } from '@/components/car-cleaning/CarCleaningPublicPassport';
 import type { CarCleaningHistoryData, ProductCategory } from '@/types/passport';
 
@@ -48,6 +49,16 @@ export function PublicPassportView({ category, passport, isPreview, previewLangu
   }
   if (category === 'car_cleaning') {
     return <CarCleaningPublicPassport passport={passport} />;
+  }
+  if (category === 'textiles') {
+    return (
+      <GarmentPublicPassport
+        passport={passport}
+        isPreview={isPreview}
+        previewLanguage={previewLanguage}
+        onPreviewLanguageChange={onPreviewLanguageChange}
+      />
+    );
   }
   return (
     <GenericPublicPassport
