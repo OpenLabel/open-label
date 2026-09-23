@@ -188,4 +188,31 @@ describe("Apparel template is fully key-driven", () => {
       .map((q) => q.id);
     expect(missing, `Apparel warnWhen missing messageKey: ${missing.join(", ")}`).toEqual([]);
   });
+
+  it("every cross-field inline warning has a non-empty messageKey", () => {
+    const samples: Record<string, unknown>[] = [
+      { primary_fiber_percentage: 80, secondary_fiber_percentage: 30 },
+      { primary_fiber_percentage: 120 },
+      { primary_fiber_percentage: 60 },
+      { primary_fiber: "polyester", primary_fiber_percentage: 60 },
+    ];
+    const seen = new Set<string>();
+    for (const data of samples) {
+      const warnings = textilesTemplate.getInlineWarnings?.(data) ?? [];
+      expect(warnings.length).toBeGreaterThan(0);
+      for (const w of warnings) {
+        expect(typeof w.messageKey).toBe("string");
+        expect(w.messageKey.trim()).not.toBe("");
+        seen.add(w.messageKey);
+      }
+    }
+    expect([...seen].sort()).toEqual(
+      [
+        "textiles.warnings.compositionExceeds100",
+        "textiles.warnings.incompleteSingleFibre",
+        "textiles.warnings.primaryExceeds100",
+        "textiles.warnings.syntheticOver50",
+      ].sort(),
+    );
+  });
 });
