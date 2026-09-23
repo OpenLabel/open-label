@@ -143,6 +143,10 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
   const categoryInfo = categoryList.find(c => c.value === formData.category);
   const requiredLogos = template.getRequiredLogos?.(categoryData) || [];
 
+  // Passport-language strings: mirror GenericPublicPassport (fixed t in the preview language)
+  const tg = i18n.getFixedT(previewLanguage);
+  const trg = tg as unknown as (key: string, fallback?: string) => string;
+
 
   return (
     <div className="sticky top-8">
