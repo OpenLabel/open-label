@@ -3,6 +3,7 @@ import {
   isPubliclyVisible,
   sectionHasPublicData,
   resolveDisplayValue,
+  resolveFieldValue,
 } from './publicPassportFields';
 import type { TemplateQuestion, TemplateSection } from '@/templates/base';
 
