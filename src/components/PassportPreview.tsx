@@ -27,6 +27,7 @@ import DOMPurify from 'dompurify';
 import type { ProductCategory } from '@/types/passport';
 import { toDppLanguage } from '@/lib/dppLanguage';
 import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue } from '@/lib/publicPassportFields';
+import { DPPLanguagePicker } from '@/components/DPPLanguagePicker';
 
 interface PassportPreviewProps {
   formData: {
@@ -143,6 +144,10 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
   const categoryInfo = categoryList.find(c => c.value === formData.category);
   const requiredLogos = template.getRequiredLogos?.(categoryData) || [];
 
+  // Passport-language strings: mirror GenericPublicPassport (fixed t in the preview language)
+  const tg = i18n.getFixedT(previewLanguage);
+  const trg = tg as unknown as (key: string, fallback?: string) => string;
+
 
   return (
     <div className="sticky top-8">
@@ -166,22 +171,31 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
             <div className="min-h-screen bg-muted/30">
               <main className="px-4 py-6">
                 <div className="max-w-3xl mx-auto space-y-4">
+                  {/* Language picker (preview mode, local only) */}
+                  <div className="flex justify-end mb-4">
+                    <DPPLanguagePicker
+                      localOnly
+                      currentLanguage={previewLanguage}
+                      onLanguageChange={setPreviewLanguage}
+                    />
+                  </div>
+
                   {/* Header */}
                   <div className="text-center">
                     {formData.category !== 'other' && (
                       <Badge variant="secondary" className="mb-3">
-                        {categoryInfo?.icon} {t(`categories.${formData.category}`)} {t('preview.productPassport')}
+                        {categoryInfo?.icon} {tg(`categories.${formData.category}`)} {tg('preview.productPassport')}
                       </Badge>
                     )}
                     <h1 className="text-xl font-bold mb-2">
-                      {(categoryData?.product_name as string) || formData.name || t('preview.productName')}
+                      {(categoryData?.product_name as string) || formData.name || tg('preview.productName')}
                     </h1>
-                    
+
                     {/* Check Authenticity Button (preview mode - non-clickable) */}
                     {categoryData?.counterfeit_protection_enabled && (
                       <div className="inline-flex items-center gap-2 mt-3 px-3 py-1.5 bg-green-600 text-white rounded-lg font-medium text-sm cursor-default">
                         <ShieldCheck className="h-3 w-3" />
-                        {t('preview.checkAuthenticity')}
+                        {tg('preview.checkAuthenticity')}
                       </div>
                     )}
                   </div>
@@ -201,7 +215,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                   {formData.description && (
                     <Card>
                       <CardHeader className="pb-2">
-                        <CardTitle className="text-sm">{t('preview.productDescription')}</CardTitle>
+                        <CardTitle className="text-sm">{tg('preview.productDescription')}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div 
@@ -216,7 +230,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                   {requiredLogos.length > 0 && (
                     <Card>
                       <CardHeader className="pb-2">
-                        <CardTitle className="text-sm">{t('preview.certificationsLabels')}</CardTitle>
+                        <CardTitle className="text-sm">{tg('preview.certificationsLabels')}</CardTitle>
                       </CardHeader>
                       <CardContent>
                         <div className="flex flex-wrap gap-1">
@@ -239,13 +253,13 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                         return (
                           <Card key={sectionIndex}>
                             <CardHeader className="pb-2">
-                              <CardTitle className="text-sm">{section.titleKey ? t(section.titleKey, section.title) : section.title}</CardTitle>
+                              <CardTitle className="text-sm">{section.titleKey ? tg(section.titleKey, section.title) : section.title}</CardTitle>
                             </CardHeader>
                             <CardContent>
                               <dl className="grid gap-2">
                                 {section.questions.filter(isPubliclyVisible).map((question) => {
                                   const value = categoryData[question.id];
-                                  const displayValue = resolveDisplayValue(question, value, tr);
+                                  const displayValue = resolveDisplayValue(question, value, trg);
 
                                   // BUG-07: filter checkboxes by raw boolean, not by translated text ('No' vs 'Non')
                                   if (question.type === 'checkbox' || typeof value === 'boolean') {
@@ -257,7 +271,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                                   const displayLabel = displayValue;
 
 
-                                  const questionLabel = question.labelKey ? t(question.labelKey, question.label) : question.label;
+                                  const questionLabel = question.labelKey ? tg(question.labelKey, question.label) : question.label;
 
                                   return (
                                     <div key={question.id} className="grid grid-cols-2 gap-1">
@@ -284,7 +298,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                   
                     <div className="bg-primary/5 border border-primary/20 rounded-lg p-3 text-center">
                       <p className="text-xs text-foreground">
-                        {t('preview.poweredBy')}{' '}
+                        {tg('preview.poweredBy')}{' '}
                         <span className="text-primary font-medium">Open Label <span className="text-primary font-bold">.eu</span></span>
                       </p>
                     </div>
@@ -293,7 +307,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
 
                   {/* Footer */}
                   <footer className="text-center text-[10px] text-muted-foreground py-3 border-t">
-                    <span className="underline">{t('legal.legalMentions')}</span>
+                    <span className="underline">{tg('legal.legalMentions')}</span>
                   </footer>
                 </div>
               </main>

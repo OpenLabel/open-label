@@ -23,6 +23,7 @@ import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import { toDppLanguage } from '@/lib/dppLanguage';
 import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue } from '@/lib/publicPassportFields';
+import { DPPLanguagePicker } from '@/components/DPPLanguagePicker';
 import type { ProductCategory } from '@/types/passport';
 
 export interface GenericPublicPassportProps {
@@ -34,15 +35,21 @@ export interface GenericPublicPassportProps {
     category_data: Record<string, unknown>;
     updated_at: string;
   };
+  isPreview?: boolean;
+  /** For preview mode: current preview language */
+  previewLanguage?: string;
+  /** For preview mode: callback when language changes */
+  onPreviewLanguageChange?: (lang: string) => void;
 }
 
 /**
  * Public rendering for categories without a bespoke viewer. Extracted verbatim
  * from PublicPassport.tsx so the demo page and the live page share one renderer.
  */
-export function GenericPublicPassport({ category, passport }: GenericPublicPassportProps) {
-  const { t, i18n } = useTranslation();
-  const displayLanguage = toDppLanguage(i18n.language);
+export function GenericPublicPassport({ category, passport, isPreview, previewLanguage, onPreviewLanguageChange }: GenericPublicPassportProps) {
+  const { i18n } = useTranslation();
+  const displayLanguage = previewLanguage || toDppLanguage(i18n.language);
+  const t = i18n.getFixedT(displayLanguage);
 
   const template = getTemplate(category);
   const categoryData = passport.category_data || {};
@@ -55,6 +62,15 @@ export function GenericPublicPassport({ category, passport }: GenericPublicPassp
     <div className="min-h-screen bg-muted/30">
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto space-y-6">
+          {/* Language picker */}
+          <div className="flex justify-end mb-4">
+            <DPPLanguagePicker
+              localOnly={isPreview}
+              currentLanguage={previewLanguage}
+              onLanguageChange={onPreviewLanguageChange}
+            />
+          </div>
+
           {/* Header */}
           <div className="text-center">
             {category !== 'other' && (
