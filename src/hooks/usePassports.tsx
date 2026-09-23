@@ -240,6 +240,15 @@ export const PREFILL_IDENTITY_KEYS = [
   'eu_op_email',
   'eu_op_operator_id',
   'eu_op_operator_id_type',
+  'eu_operator_name',
+  'eu_operator_address',
+  'eu_operator_email',
+  'importer_legal_name',
+  'importer_street',
+  'importer_postal_code',
+  'importer_city',
+  'importer_country',
+  'importer_email',
 ] as const;
 
 export function useLatestPassportDefaults(category: ProductCategory | undefined) {
