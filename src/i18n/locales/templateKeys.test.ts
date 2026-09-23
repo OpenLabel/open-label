@@ -88,7 +88,13 @@ const toysKeys = [
   ...collectTemplateKeys(toysTemplate),
 ].sort();
 
-const textilesKeys = collectTemplateKeys(textilesTemplate);
+const textilesKeys = [
+  "textiles.warnings.compositionExceeds100",
+  "textiles.warnings.primaryExceeds100",
+  "textiles.warnings.incompleteSingleFibre",
+  "textiles.warnings.syntheticOver50",
+  ...collectTemplateKeys(textilesTemplate),
+].sort();
 
 const templates: { name: string; keys: string[] }[] = [
   { name: "Toys", keys: toysKeys },
