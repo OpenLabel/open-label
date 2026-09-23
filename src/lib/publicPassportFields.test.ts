@@ -104,3 +104,47 @@ describe('resolveDisplayValue', () => {
     expect(resolveDisplayValue(publicQ, 42, t)).toBe('42');
   });
 });
+
+describe('resolveFieldValue', () => {
+  const translatableQ: TemplateQuestion = {
+    id: 'environmental_claims',
+    label: 'Environmental claims',
+    type: 'textarea',
+    translatable: true,
+  };
+
+  it('returns the translation when one exists for the display language', () => {
+    const categoryData = {
+      environmental_claims: 'Source text',
+      environmental_claims_translations: { fr: 'Texte traduit' },
+    };
+    expect(resolveFieldValue(translatableQ, categoryData, 'fr')).toBe('Texte traduit');
+  });
+
+  it('falls back to the source value when the translation is missing', () => {
+    const categoryData = {
+      environmental_claims: 'Source text',
+      environmental_claims_translations: { de: 'Deutscher Text' },
+    };
+    expect(resolveFieldValue(translatableQ, categoryData, 'fr')).toBe('Source text');
+  });
+
+  it('falls back to the source value when the translation is empty or whitespace', () => {
+    const emptyMap = { environmental_claims: 'Source text', environmental_claims_translations: { fr: '' } };
+    const blankMap = { environmental_claims: 'Source text', environmental_claims_translations: { fr: '   ' } };
+    expect(resolveFieldValue(translatableQ, emptyMap, 'fr')).toBe('Source text');
+    expect(resolveFieldValue(translatableQ, blankMap, 'fr')).toBe('Source text');
+  });
+
+  it('ignores _translations entirely when the question is not translatable', () => {
+    const categoryData = {
+      brand: 'Source brand',
+      brand_translations: { fr: 'Marque traduite' },
+    };
+    expect(resolveFieldValue(publicQ, categoryData, 'fr')).toBe('Source brand');
+  });
+
+  it('handles a missing translations map', () => {
+    expect(resolveFieldValue(translatableQ, { environmental_claims: 'Source text' }, 'fr')).toBe('Source text');
+  });
+});
