@@ -978,10 +978,18 @@ export class TextilesTemplate extends BaseTemplate {
 
   // TODO(i18n): these messages are built at runtime with interpolated numbers
   // and are NOT yet translated. They are keyed in a later step.
-  getInlineWarnings(
-    data: Record<string, unknown>,
-  ): { fieldId: string; message: string }[] {
-    const warnings: { fieldId: string; message: string }[] = [];
+  getInlineWarnings(data: Record<string, unknown>): {
+    fieldId: string;
+    messageKey: string;
+    params?: Record<string, string | number>;
+    message: string;
+  }[] {
+    const warnings: {
+      fieldId: string;
+      messageKey: string;
+      params?: Record<string, string | number>;
+      message: string;
+    }[] = [];
 
     const toNumber = (value: unknown): number | undefined => {
       if (value === undefined || value === null || value === '')
