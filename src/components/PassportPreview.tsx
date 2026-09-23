@@ -26,7 +26,7 @@ import { ShieldCheck } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import type { ProductCategory } from '@/types/passport';
 import { toDppLanguage } from '@/lib/dppLanguage';
-import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue } from '@/lib/publicPassportFields';
+import { isPubliclyVisible, sectionHasPublicData, resolveDisplayValue, resolveFieldValue } from '@/lib/publicPassportFields';
 import { DPPLanguagePicker } from '@/components/DPPLanguagePicker';
 
 interface PassportPreviewProps {
@@ -258,7 +258,7 @@ export function PassportPreview({ formData }: PassportPreviewProps) {
                             <CardContent>
                               <dl className="grid gap-2">
                                 {section.questions.filter(isPubliclyVisible).map((question) => {
-                                  const value = categoryData[question.id];
+                                  const value = resolveFieldValue(question, categoryData, previewLanguage);
                                   const displayValue = resolveDisplayValue(question, value, trg);
 
                                   // BUG-07: filter checkboxes by raw boolean, not by translated text ('No' vs 'Non')

@@ -46,7 +46,7 @@ vi.mock('@/integrations/supabase/client', () => ({
   },
 }));
 
-import { usePassports, usePassportBySlug, usePassportById } from './usePassports';
+import { usePassports, usePassportBySlug, usePassportById, PREFILL_IDENTITY_KEYS } from './usePassports';
 
 const createWrapper = () => {
   const queryClient = new QueryClient({
@@ -85,5 +85,24 @@ describe('usePassportById', () => {
   it('returns null when no id', () => {
     const { result } = renderHook(() => usePassportById(undefined), { wrapper: createWrapper() });
     expect(result.current.data).toBeUndefined();
+  });
+});
+
+describe('PREFILL_IDENTITY_KEYS', () => {
+  it('contains the Apparel EU responsible person and importer field ids', () => {
+    const apparelIds = [
+      'eu_operator_name',
+      'eu_operator_address',
+      'eu_operator_email',
+      'importer_legal_name',
+      'importer_street',
+      'importer_postal_code',
+      'importer_city',
+      'importer_country',
+      'importer_email',
+    ];
+    for (const id of apparelIds) {
+      expect(PREFILL_IDENTITY_KEYS).toContain(id);
+    }
   });
 });

@@ -23,6 +23,26 @@ export function isPubliclyVisible(question: TemplateQuestion): boolean {
   return question.internal !== true;
 }
 
+/**
+ * Value to display for a question, preferring a saved per-language translation
+ * when the question is translatable. Mirrors the `tr()` helper in
+ * ToyPublicPassport.
+ */
+export function resolveFieldValue(
+  question: TemplateQuestion,
+  categoryData: Record<string, unknown>,
+  displayLanguage: string,
+): unknown {
+  if (question.translatable) {
+    const map = categoryData[`${question.id}_translations`] as
+      | Record<string, string>
+      | undefined;
+    const translated = map?.[displayLanguage];
+    if (typeof translated === 'string' && translated.trim()) return translated;
+  }
+  return categoryData[question.id];
+}
+
 /** True when at least one publicly visible question in the section has a value. */
 export function sectionHasPublicData(
   section: TemplateSection,
