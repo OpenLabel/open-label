@@ -21,7 +21,7 @@
  * ⚠️ Step 2 MUST translate `textiles.*` in all 24 non-English locales and then
  * EMPTY this array. The guard test below makes it impossible to quietly add
  * further prefixes to this list.
- */
+ *
  * `garmentPublic.` is the same Apparel debt: the strings used only by the
  * bespoke Apparel public renderer, seeded in English by
  * scripts/seed-garment-public-i18n.ts and translated by the same step 2 run.
