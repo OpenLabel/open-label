@@ -62,6 +62,15 @@ export function GenericPublicPassport({ category, passport, isPreview, previewLa
     <div className="min-h-screen bg-muted/30">
       <main className="container mx-auto px-4 py-8">
         <div className="max-w-3xl mx-auto space-y-6">
+          {/* Language picker */}
+          <div className="flex justify-end mb-4">
+            <DPPLanguagePicker
+              localOnly={isPreview}
+              currentLanguage={previewLanguage}
+              onLanguageChange={onPreviewLanguageChange}
+            />
+          </div>
+
           {/* Header */}
           <div className="text-center">
             {category !== 'other' && (

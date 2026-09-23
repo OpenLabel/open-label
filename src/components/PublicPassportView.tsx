@@ -31,10 +31,15 @@ export interface PublicPassportViewProps {
     public_slug?: string | null;
     dpp_history?: CarCleaningHistoryData;
   };
+  isPreview?: boolean;
+  /** For preview mode: current preview language */
+  previewLanguage?: string;
+  /** For preview mode: callback when language changes */
+  onPreviewLanguageChange?: (lang: string) => void;
 }
 
 /** Picks the public renderer for a category. Used by /p/:slug and /demo alike. */
-export function PublicPassportView({ category, passport }: PublicPassportViewProps) {
+export function PublicPassportView({ category, passport, isPreview, previewLanguage, onPreviewLanguageChange }: PublicPassportViewProps) {
   if (category === 'wine') {
     return <WinePublicPassport passport={passport} />;
   }
