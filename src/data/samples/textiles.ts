@@ -22,6 +22,7 @@ export function buildSampleTextilesPassport(): PassportFormData {
     language: 'en',
     category_data: {
       // Identity
+      product_name: 'Sample Cotton T-Shirt',
       gtin: '01234567890128',
       item_unique_identifier: 'DPP-2026-000184213',
       style_reference: 'ST-4412',
