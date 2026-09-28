@@ -295,7 +295,9 @@ export function GarmentPublicPassport({
             <Badge variant="secondary" className="mb-2">
               👕 {t('garmentPublic.headerBadge', 'Apparel — Digital Product Passport')}
             </Badge>
-            <h1 className="text-2xl sm:text-3xl font-bold leading-tight">{passport.name}</h1>
+            <h1 className="text-2xl sm:text-3xl font-bold leading-tight">
+              {tr('product_name') || passport.name || ''}
+            </h1>
             {Boolean(d.brand_name) && (
               <p className="text-sm text-muted-foreground mt-1">
                 {tr('brand_name')}

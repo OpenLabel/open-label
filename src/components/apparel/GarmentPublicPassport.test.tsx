@@ -137,6 +137,61 @@ describe('GarmentPublicPassport', () => {
     });
   });
 
+  describe('product name heading', () => {
+    it('renders the translated product name when previewLanguage is set', () => {
+      renderPassport({
+        isPreview: true,
+        previewLanguage: 'fr',
+        onPreviewLanguageChange: () => {},
+        passport: {
+          ...basePassport,
+          name: 'Demo T-Shirt',
+          category_data: {
+            ...basePassport.category_data,
+            product_name: 'Demo T-Shirt',
+            product_name_translations: { fr: 'T-shirt de démonstration' },
+          },
+        },
+      });
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'T-shirt de démonstration' }),
+      ).toBeInTheDocument();
+      expect(
+        screen.queryByRole('heading', { level: 1, name: 'Demo T-Shirt' }),
+      ).not.toBeInTheDocument();
+    });
+
+    it('falls back to category_data.product_name when no translation exists', () => {
+      renderPassport({
+        isPreview: true,
+        previewLanguage: 'fr',
+        onPreviewLanguageChange: () => {},
+        passport: {
+          ...basePassport,
+          name: 'Demo T-Shirt',
+          category_data: {
+            ...basePassport.category_data,
+            product_name: 'Product Name Fallback',
+          },
+        },
+      });
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Product Name Fallback' }),
+      ).toBeInTheDocument();
+    });
+
+    it('falls back to passport.name when neither translation nor product_name exists', () => {
+      renderPassport({
+        isPreview: true,
+        previewLanguage: 'fr',
+        onPreviewLanguageChange: () => {},
+      });
+      expect(
+        screen.getByRole('heading', { level: 1, name: 'Demo T-Shirt' }),
+      ).toBeInTheDocument();
+    });
+  });
+
   describe('certifications', () => {
     it('renders full certification names, never title-cased slugs', () => {
       renderPassport({
