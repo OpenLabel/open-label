@@ -156,7 +156,7 @@ describe('GarmentPublicPassport', () => {
       expect(
         screen.getByRole('heading', { level: 1, name: 'T-shirt de démonstration' }),
       ).toBeInTheDocument();
-ecorrect      expect(
+      expect(
         screen.queryByRole('heading', { level: 1, name: 'Demo T-Shirt' }),
       ).not.toBeInTheDocument();
     });
