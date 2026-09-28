@@ -77,7 +77,7 @@ export class TextilesTemplate extends BaseTemplate {
   sections: TemplateSection[] = [
     section(
       'identity',
-      'Identity',
+      'Product identity',
       'Product and item level identification',
       [
         f({
