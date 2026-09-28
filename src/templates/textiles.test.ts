@@ -68,6 +68,25 @@ describe('TextilesTemplate', () => {
     ]);
   });
 
+  it('starts Product identity with the required translatable Product Name using shared keys', () => {
+    const identity = textilesTemplate.sections.find((section) => section.id === 'identity');
+    const productName = identity?.questions[0];
+
+    expect(productName).toMatchObject({
+      id: 'product_name',
+      type: 'text',
+      translatable: true,
+      required: true,
+      badge: 'required',
+      labelKey: 'passport.productName',
+      placeholderKey: 'passport.productNamePlaceholder',
+      helpKey: 'passport.productNameHelp',
+    });
+    expect(productName?.labelKey).not.toMatch(/^textiles\.fields\.product_name\./);
+    expect(productName?.placeholderKey).not.toMatch(/^textiles\.fields\.product_name\./);
+    expect(productName?.helpKey).not.toMatch(/^textiles\.fields\.product_name\./);
+  });
+
   describe('responsible operators', () => {
     const allQuestions = textilesTemplate.sections.flatMap((s) => s.questions);
     const find = (id: string) => allQuestions.filter((q) => q.id === id);
@@ -171,7 +190,7 @@ describe('TextilesTemplate', () => {
 
   it('has an advanced-mode toggle gating detailed fields', () => {
     const identity = textilesTemplate.sections[0];
-    expect(identity.questions[0].id).toBe('show_advanced_fields');
+    expect(identity.questions[1].id).toBe('show_advanced_fields');
     const gated = textilesTemplate.sections.flatMap((s) =>
       s.questions.filter((q) => q.showWhen?.field === 'show_advanced_fields'),
     );

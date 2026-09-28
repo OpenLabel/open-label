@@ -80,6 +80,22 @@ export class TextilesTemplate extends BaseTemplate {
       'Product identity',
       'Product and item level identification',
       [
+        {
+          ...f({
+            id: 'product_name',
+            label: 'Product Name',
+            type: 'text',
+            translatable: true,
+            required: true,
+            badge: 'required',
+            placeholder: 'Enter a name for this product',
+            helpText:
+              'This is the name consumers will see on the public Digital Product Passport',
+          }),
+          labelKey: 'passport.productName',
+          placeholderKey: 'passport.productNamePlaceholder',
+          helpKey: 'passport.productNameHelp',
+        },
         f({
           id: 'show_advanced_fields',
           label:

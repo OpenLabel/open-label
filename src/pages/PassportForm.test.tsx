@@ -1,4 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
+import { beforeEach, describe, it, expect, vi } from 'vitest';
 import { render, screen, fireEvent } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes } from 'react-router-dom';
@@ -11,12 +11,29 @@ vi.mock('@/hooks/useAuth', () => ({
   AuthProvider: ({ children }: any) => children,
 }));
 
+const { existingPassport, useAutoTranslateMock } = vi.hoisted(() => ({
+  existingPassport: { current: null as null | {
+    id: string;
+    name: string;
+    category: 'textiles' | 'toys' | 'car_cleaning';
+    image_url: null;
+    description: string;
+    language: string;
+    category_data: Record<string, unknown>;
+  } },
+  useAutoTranslateMock: vi.fn(() => ({
+    isTranslating: false,
+    markAsUserEdited: vi.fn(),
+    isUserEdited: vi.fn(),
+  })),
+}));
+
 vi.mock('@/hooks/usePassports', () => ({
   usePassports: () => ({
     createPassport: { mutateAsync: vi.fn().mockResolvedValue({ id: 'new-id' }) },
     updatePassport: { mutateAsync: vi.fn() },
   }),
-  usePassportById: () => ({ data: null, isLoading: false }),
+  usePassportById: () => ({ data: existingPassport.current, isLoading: false }),
   useLatestPassportDefaults: () => ({ data: null, isLoading: false }),
 }));
 
@@ -59,6 +76,10 @@ vi.mock('@/components/toys/ToyAIAutofill', () => ({
   ToyAIAutofill: () => <div data-testid="toy-ai" />,
 }));
 
+vi.mock('@/components/apparel/GarmentAIAutofill', () => ({
+  GarmentAIAutofill: () => <div data-testid="garment-ai" />,
+}));
+
 vi.mock('@/components/PassportPreview', () => ({
   PassportPreview: () => <div data-testid="preview" />,
 }));
@@ -73,20 +94,39 @@ vi.mock('@/components/TranslationButton', () => ({
 }));
 
 vi.mock('@/hooks/useAutoTranslate', () => ({
-  useAutoTranslate: () => ({ isTranslating: false, markAsUserEdited: vi.fn(), isUserEdited: vi.fn() }),
+  useAutoTranslate: useAutoTranslateMock,
 }));
 
 import PassportForm from './PassportForm';
 
 describe('PassportForm page', () => {
-  const renderForm = () =>
+  beforeEach(() => {
+    existingPassport.current = null;
+    useAutoTranslateMock.mockClear();
+  });
+
+  const renderForm = (path = '/passport/new') =>
     render(
-      <MemoryRouter initialEntries={['/passport/new']}>
+      <MemoryRouter initialEntries={[path]}>
         <Routes>
           <Route path="/passport/:id" element={<PassportForm />} />
+          <Route path="/passport/:id/edit" element={<PassportForm />} />
         </Routes>
       </MemoryRouter>
     );
+
+  const renderExistingCategory = (category: 'textiles' | 'toys' | 'car_cleaning') => {
+    existingPassport.current = {
+      id: `${category}-1`,
+      name: `${category} DPP`,
+      category,
+      image_url: null,
+      description: '',
+      language: 'en',
+      category_data: { product_name: `${category} product` },
+    };
+    return renderForm(`/passport/${category}-1/edit`);
+  };
 
   it('renders without crashing', () => {
     renderForm();
@@ -139,5 +179,30 @@ describe('PassportForm page', () => {
   it('shows wine fields for wine category (default)', () => {
     renderForm();
     expect(screen.getByTestId('wine-fields')).toBeInTheDocument();
+  });
+
+  it('does not render the standalone Product Name card for Apparel', () => {
+    renderExistingCategory('textiles');
+    expect(screen.queryByLabelText('passport.productName')).not.toBeInTheDocument();
+    expect(screen.getByTestId('category-questions')).toBeInTheDocument();
+  });
+
+  it.each(['toys', 'car_cleaning'] as const)(
+    'keeps the standalone Product Name card for %s',
+    (category) => {
+      renderExistingCategory(category);
+      expect(screen.getByLabelText('passport.productName')).toHaveValue(`${category} product`);
+    },
+  );
+
+  it.each([
+    ['textiles', false],
+    ['toys', true],
+    ['car_cleaning', true],
+  ] as const)('sets page-level Product Name auto-translation for %s to %s', (category, enabled) => {
+    renderExistingCategory(category);
+    expect(useAutoTranslateMock).toHaveBeenCalledWith(
+      expect.objectContaining({ value: `${category} product`, enabled }),
+    );
   });
 });
