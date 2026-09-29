@@ -167,12 +167,10 @@ function isLegitimateMatch(key: string, value: string, langCode: string): boolea
 }
 
 describe("Translation Audit", () => {
-  // The pending-translation list is TEMPORARY debt, not an allowlist. Nothing
-  // may be added to it, and step 2 of the Apparel i18n work must empty it.
-  it("pending-translation debt is limited to the Apparel subtrees", () => {
-    expect([...PENDING_TRANSLATION_PREFIXES].sort()).toEqual(
-      ["garmentPublic.", "textiles."].sort(),
-    );
+  // The Apparel translation debt has been cleared. Nothing may be added back:
+  // untranslated strings must be translated, never hidden behind a prefix.
+  it("no translation debt is outstanding", () => {
+    expect([...PENDING_TRANSLATION_PREFIXES]).toEqual([]);
   });
 
   const enFlat = flattenKeys(locales.en);
