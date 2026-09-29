@@ -1310,437 +1310,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product and item level identification"
+        "title": "Produktidentitet",
+        "description": "Identifiering på produkt- och artikelnivå"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Vem är ansvarig",
+        "description": "Tillverkare, importör och ansvarig person inom EU, hålls som tre separata parter"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Material och sammansättning",
+        "description": "Obligatorisk märkning av fiberinnehåll enligt EU-förordning 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Certifieringar",
+        "description": "Vilka certifieringar denna artikel innehar och hur varje påstående kan verifieras."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Resan genom leveranskedjan",
+        "description": "Land för varje produktionssteg plus Tier 1-fabrik och revisionsstatus"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Miljöavtryck",
+        "description": "Miljösiffror med en angiven beräkningsmetod"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Hållbarhet och testning",
+        "description": "Uppmätta hållbarhetsresultat. Den förväntade delegerade akten för textilier under ESPR förväntas fokusera på hållbarhetsmått, så registrera verkliga testresultat snarare än subjektiva poäng."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Cirkularitet och livslängdsslut",
+        "description": "Information om skötsel, reparation, återtagande och återvinningsbarhet"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Dispositionsregister",
+        "description": "Stöder ESPR-förbudet mot att förstöra osålda konsumentvaror, vilket gäller för stora företag från och med den 19 juli 2026 och kräver registerföring och offentliggörande"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Underlag för gröna påståenden",
+        "description": "Stöder direktivet om stärkt konsumentmakt (EU) 2024/825, som gäller från och med den 27 september 2026"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Autentisering",
+        "description": "Funktioner mot förfalskning kopplade till denna artikel"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Visa alla fält (certifieringsdetaljer, Tier 1-fabrik och revisionsstatus, miljöavtryck, hållbarhetstestning, utökad cirkularitet)",
+        "help": "De flesta varumärken behöver bara fälten nedan. Aktivera detta om du har laboratorietestresultat, LCA-data eller detaljerad spårbarhet i leveranskedjan att registrera."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Artikelnummer som identifierar SKU:n.",
+        "placeholder": "t.ex. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Unik identifierare per artikel",
+        "help": "Identifierar denna enskilda fysiska artikel, inte SKU:n. Identifierare per artikel är det som möjliggör andrahandsförsäljning, ägaröverföring och autentisering under produktens livstid.",
+        "placeholder": "t.ex. DPP-2026-000184213",
+        "warn": "Open Label tilldelar inte denna identifierare åt dig. Varumärken bör bygga sitt eget system för identifiering per artikel – t.ex. serialiserade RFID/NFC-taggar, ett numreringsschema från produktionslinjen eller ett befintligt ERP-serienummer – och ange det värdet här."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Stil-/modellreferens",
+        "help": "Förordning (EU) 2023/988 (GPSR) kräver en produktidentifierare av typ-, parti- eller serienummer tillsammans med tillverkarens namn och adress. Detta är identifieraren för produkttypen/partiet – det är inte en ersättning för den unika identifieraren per artikel ovan.",
+        "placeholder": "t.ex. ST-4412 Oxfordskjorta"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Färgsättning",
+        "placeholder": "t.ex. Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Storlek",
+        "placeholder": "t.ex. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Produktvikt (gram)",
+        "help": "Nettovikt för artikeln, används för frakt och rapportering av materialintensitet.",
+        "placeholder": "t.ex. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Parti eller produktionssats",
+        "placeholder": "t.ex. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Varumärke"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Produkttyp",
+        "placeholder": "t.ex. T-shirt, Jacka, Byxor"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Tillverkarens juridiska namn",
+        "help": "Förordning (EU) 2023/988 (GPSR) kräver att tillverkarens namn, postadress och elektroniska adress anges på produkten eller dess förpackning."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Gatuadress"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postnummer"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Stad"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisk adress (e-post)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Är tillverkaren etablerad utanför EU?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Importörens juridiska namn",
+        "help": "När tillverkaren är etablerad utanför EU måste även importörens namn, postadress och elektroniska adress anges."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Gatuadress"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postnummer"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Stad"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisk adress (e-post)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "Ansvarig person inom EU – juridiskt namn",
+        "help": "Den ansvariga personen inom EU enligt artikel 4 i förordning (EU) 2019/1020 är en separat roll från tillverkaren och importören, även när samma företag utför mer än en av dem."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Ansvarig person inom EU – adress",
+        "placeholder": "Registrerad adress inom Europeiska unionen"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "Ansvarig person inom EU – elektronisk adress (e-post)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Primär fibertyp"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Andel primärfiber (%)",
+        "placeholder": "t.ex. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Sekundär fibertyp (om tillämpligt)",
+        "placeholder": "t.ex. Elastan"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Andel sekundärfiber (%)",
+        "placeholder": "t.ex. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Fullständig innehållsdeklaration",
+        "placeholder": "t.ex. 80 % bomull, 15 % polyester, 5 % elastan"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Innehåller icke-textila delar av animaliskt ursprung",
+        "help": "EU-förordning 1007/2011 kräver att detta anges på etiketten när en produkt innehåller icke-textila delar av animaliskt ursprung, såsom läderlappar, pälsdetaljer, knappar av horn eller ben."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Vilka delar och från vilket djur",
+        "placeholder": "t.ex. Armbågslappar i läder (nötkreatur); hornknappar (buffel)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Sammansättning på komponentnivå",
+        "help": "Deklarera yttertyg, foder och detaljer separat så att varje komponent kan bedömas för återvinning.",
+        "placeholder": "Yttertyg: 100 % bomull\nFoder: 100 % viskos\nDetaljer: Blixtlås i polyester, mässingsknappar"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Total andel återvunnet material (%)",
+        "placeholder": "t.ex. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Andel återvunnet material före konsumentledet (%)",
+        "help": "Produktionsavfall som återvunnits innan det når en konsument.",
+        "placeholder": "t.ex. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Andel återvunnet material efter konsumentledet (%)",
+        "help": "Material som återvunnits från produkter som har nått slutanvändare.",
+        "placeholder": "t.ex. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Innehåller syntetfibrer som fäller mikroplaster?",
+        "help": "Den franska AGEC-lagen kräver att konsumenter informeras när ett plagg släpper ifrån sig mikroplastfibrer vid tvätt."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "Finns REACH- / SVHC-ämnen i halter över 0,1 % vikt/vikt?",
+        "help": "Särskilt farliga ämnen (SVHC) enligt förordning (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Detaljer om SVHC-ämne",
+        "placeholder": "Ämnesnamn, CAS-nummer, koncentration och komponent"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Innehåller denna produkt avsiktligt tillsatta PFAS?",
+        "help": "Frankrike förbjuder PFAS i kläder, skor och impregneringsmedel från och med den 1 januari 2026 enligt lag 2025-188. PFAS förekommer vanligtvis i hållbara vattenavvisande (DWR) ytbehandlingar.",
+        "warn": "Att släppa ut kläder som innehåller avsiktligt tillsatta PFAS på den franska marknaden är förbjudet från och med den 1 januari 2026 enligt lag 2025-188. Ett ”Okänt” svar måste redas ut med leverantören innan försäljning i Frankrike."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Vilka komponenter och vilka ämnen",
+        "placeholder": "t.ex. DWR-ytbehandling på yttertyg – PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Status för efterlevnad av listan över begränsade ämnen (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Innehavda certifieringar"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Certifikatreferenser",
+        "help": "Från och med den 27 september 2026 kräver direktiv (EU) 2024/825 att en hållbarhetsmärkning baseras på ett certifieringssystem eller är fastställd av en offentlig myndighet. Lämna tomt om inga certifieringar innehas ovan.",
+        "placeholder": "En per rad, t.ex.\nGOTS – CU 123456 GOTS – upphör att gälla 2027-06-30\nOEKO-TEX – 21.HTR.12345 – upphör att gälla 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Land för fiberproduktion",
+        "placeholder": "Där fibern odlades eller producerades"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Land för spinning/vävning"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Land för färgning/beredning"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Land för konfektionering/montering",
+        "help": "Det steg som deklareras som ursprungsland på etiketten."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Tillverkad i EU?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Namn på Tier 1-fabrik"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Adress till Tier 1-fabrik"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Status för social/miljörevision"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Revisionscertifikat (ladda upp)",
+        "help": "Sparas för era interna register – publiceras aldrig i det offentliga passet."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Fullständig transparens i leveranskedjan tillgänglig?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "Koldioxidavtryck (kg CO2e)",
+        "placeholder": "Per produktenhet"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Vattenanvändning (liter per enhet)",
+        "placeholder": "t.ex. 2700 för en t-shirt i bomull"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Beräkningsmetod",
+        "help": "En siffra utan angiven beräkningsmetod är inte ett underbyggt påstående enligt direktivet om stärkt konsumentmakt."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Stödjande LCA-rapport (ladda upp)",
+        "help": "Sparas för era interna register – publiceras aldrig i det offentliga passet."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Resultat för noppningsresistens",
+        "help": "Teststandard: ISO 12945-2 (Martindale-noppning).",
+        "placeholder": "t.ex. Grad 4 efter 2000 gnidningar"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Resultat för färgäkthet vid tvätt",
+        "help": "Teststandard: ISO 105-C06.",
+        "placeholder": "t.ex. Grad 4–5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Resultat för ljusäkthet",
+        "help": "Teststandard: ISO 105-B02.",
+        "placeholder": "t.ex. Grad 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Resultat för dimensionsstabilitet efter tvätt",
+        "help": "Teststandard: ISO 6330 med ISO 5077-mätning.",
+        "placeholder": "t.ex. -2 % längd, -1 % bredd"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Resultat för sömstyrka",
+        "help": "Teststandard: ISO 13935-2 (grab-metoden).",
+        "placeholder": "t.ex. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Testrapportreferens",
+        "placeholder": "Laboratorienamn och rapportnummer"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Testrapport (ladda upp)",
+        "help": "Sparas för era interna register – publiceras aldrig i det offentliga passet."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Högsta tvättemperatur"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Kan torktumlas?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Kan strykas?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Högsta stryktemperatur"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Skötselsymboler"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Ytterligare skötselråd",
+        "placeholder": "Eventuella särskilda skötselråd"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Finns reservdelar tillgängliga för reparation?",
+        "help": "Knappar, blixtlås, snören och andra utbytbara komponenter."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL för reparationsbokning",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Återvinningsbar vid livslängdsslut?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Återtagandeprogram tillgängligt?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
-        "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
+        "label": "Namn på återtagandesystem och EPR-registreringsnummer per marknad",
+        "help": "Registreringsnummer för utökat producentansvar skiljer sig åt mellan medlemsstaterna, så ange en rad per marknad.",
+        "placeholder": "FR: Refashion – FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Återvinningsbarhetsklass"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Demonteringsanvisningar",
+        "placeholder": "Hur man separerar yttertyg, foder, detaljer och beslag för återvinning"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Nuvarande disposition"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Orsakskod för destruktion",
+        "warn": "Destruktion av osålda kläder av stora företag är begränsad från och med den 19 juli 2026 enligt ESPR och kräver registerföring och offentliggörande."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Dispositionsdatum",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Dispositionsanteckningar",
+        "placeholder": "Kvantitet, hanteringsväg och eventuell referens till behörig myndighet"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Miljöpåståenden på produkt eller förpackning",
+        "placeholder": "t.ex. ”Tillverkad med 50 % återvunnen polyester från konsumentledet (GRS-certifierad)”"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referens till bevis för underlag",
+        "placeholder": "Studie, certifikat eller verifieringsorganreferens för varje påstående"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Bevis för underlag (ladda upp)",
+        "help": "Sparas för era interna register – publiceras aldrig i det offentliga passet."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Undviker påståenden generiska miljötermer?",
+        "help": "Generiska påståenden som ”miljövänlig”, ”medveten” och ”koldioxidneutral via klimatkompensation” är förbjudna från och med den 27 september 2026."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Finns autentiseringsfunktion?",
+        "help": "Kläder är en av de mest förfalskade produktkategorierna i EU, så autentisering på artikelnivå skyddar varumärket och köparen väsentligt."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Autentiseringsmetod"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "Verifierings-URL",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ja",
+        "no": "Nej"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
+        "cotton": "Bomull",
+        "organic_cotton": "Ekologisk bomull",
+        "linen": "Lin",
+        "hemp": "Hampa",
+        "wool": "Ull",
+        "cashmere": "Kashmir",
         "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "alpaca": "Alpacka",
         "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
+        "silk": "Silke",
+        "viscose": "Viskos",
         "modal": "Modal",
         "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
+        "acetate": "Acetat",
+        "cupro": "Kupro",
         "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "recycled_polyester": "Återvunnen polyester",
+        "nylon": "Polyamid",
+        "acrylic": "Akryl",
+        "elastane": "Elastan",
+        "polypropylene": "Polypropen",
+        "other": "Annan"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Okänt"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Uppfyller kraven – verifierat genom testning",
+        "compliant_declared": "Uppfyller kraven – endast leverantörsdeklaration",
+        "in_progress": "Bedömning pågår",
+        "not_assessed": "Ej bedömd"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1748,95 +1748,95 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Annan"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI-granskad",
+        "sedex_smeta": "Sedex SMETA-granskad",
+        "sa8000": "SA8000-certifierad",
+        "wrap": "WRAP-certifierad",
+        "brand_audit": "Varumärkesledd revision",
+        "not_audited": "Ej granskad"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Kläder och skor",
         "iso_14067": "ISO 14067",
         "ghg_protocol": "GHG Protocol Product Standard",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Intern modell"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Endast handtvätt",
+        "dry_clean": "Endast kemtvätt"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "Låg (110°C)",
+        "medium": "Medel (150°C)",
+        "high": "Hög (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Tvätta 30°C",
+        "wash_40": "Tvätta 40°C",
+        "wash_60": "Tvätta 60°C",
+        "hand_wash": "Handtvätt",
+        "do_not_wash": "Tvätta inte",
+        "bleach_allowed": "Blekning tillåten",
+        "non_chlorine_bleach": "Endast klorfritt blekmedel",
+        "do_not_bleach": "Blek inte",
+        "tumble_dry_low": "Torktumla låg värme",
+        "tumble_dry_normal": "Torktumla normalt",
+        "do_not_tumble_dry": "Torktumla inte",
+        "iron_low": "Stryk låg värme",
+        "iron_medium": "Stryk medelhög värme",
+        "iron_high": "Stryk hög värme",
+        "do_not_iron": "Stryk inte",
+        "dry_clean_any": "Professionell kemtvätt",
+        "dry_clean_petroleum": "Professionell kemtvätt, endast petroleumlösningsmedel",
+        "wet_clean": "Professionell våtrengöring",
+        "do_not_dry_clean": "Kemtvätta inte"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Monomaterial – återvinningsbart från fiber till fiber",
+        "separable_blend": "Blandning, separerbara komponenter",
+        "mechanical_only": "Endast mekanisk återvinning",
+        "downcycle_only": "Endast nedvinning",
+        "not_recyclable": "För närvarande ej återvinningsbar"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Fortfarande i lager",
+        "sold": "Såld",
+        "donated": "Donerad",
+        "recycled": "Återvunnen",
+        "remanufactured": "Återtillverkad",
+        "destroyed": "Förstörd"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Hälsa och säkerhet",
+        "counterfeit_ip": "Förfalskning/IP-intrång",
+        "damaged_beyond_repair": "Skadad bortom reparation",
+        "donation_refused": "Donation nekad efter förfrågan hos tre sociala ekonomiorganisationer",
+        "protected_logo": "Skyddad logotyp kan inte tas bort",
+        "unlawful_product": "Produkten visade sig vara olaglig"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC-tagg",
+        "secure_qr": "Säker/serialiserad QR-kod",
+        "security_seal": "Säkerhetsförsegling som visar manipulation",
+        "ai_fingerprint": "AI-bildfingeravtryck",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Annan"
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Procentandelarna för primärfiber ({{primary}} %) och sekundärfiber ({{secondary}} %) blir tillsammans {{sum}} %, vilket överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen återspegla produktens faktiska innehåll – kontrollera dessa siffror.",
+      "primaryExceeds100": "Enbart procentandelen för primärfibern ({{primary}} %) överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen återspegla produktens faktiska innehåll – kontrollera denna siffra.",
+      "incompleteSingleFibre": "Primärfibern anges som {{primary}} % utan att någon sekundärfiber har registrerats. Om denna produkt är en blandning, lägg till återstående fiber/fibrer via Sekundärfibertyp/procentandel eller den fullständiga fibersammansättningen så att den angivna sammansättningen blir 100 %.",
+      "syntheticOver50": "Detta plagg består av {{percentage}} % syntetfiber, vilket är mer än 50 %. Det kommer att släppa ifrån sig mikroplaster vid tvätt, och konsumenten måste informeras om detta."
     }
   },
   "demo": {
