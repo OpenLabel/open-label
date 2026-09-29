@@ -1310,437 +1310,437 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product and item level identification"
+        "title": "Productidentiteit",
+        "description": "Identificatie op product- en artikelniveau"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "Wie is verantwoordelijk",
+        "description": "Fabrikant, importeur en in de EU verantwoordelijke persoon, als drie afzonderlijke partijen aangehouden"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "Materialen en samenstelling",
+        "description": "Verplichte etikettering van de vezelsamenstelling volgens EU-verordening 1007/2011"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "Certificeringen",
+        "description": "Welke certificeringen dit artikel heeft en hoe elke claim kan worden geverifieerd."
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "Traject in de toeleveringsketen",
+        "description": "Land van elke productiefase plus Tier 1-fabriek en auditstatus"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "Ecologische voetafdruk",
+        "description": "Milieugegevens met een vermelde berekeningsmethode"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "Duurzaamheid en testen",
+        "description": "Gemeten duurzaamheidsresultaten. De verwachte gedelegeerde handeling voor textiel onder ESPR zal zich naar verwachting richten op duurzaamheidsstatistieken, dus leg echte testresultaten vast in plaats van subjectieve scores."
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "Circulariteit en einde levensduur",
+        "description": "Informatie over onderhoud, reparatie, terugname en recycleerbaarheid"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "Afvoeradministratie",
+        "description": "Ondersteunt het ESPR verbod op het vernietigen van onverkochte consumentengoederen, dat vanaf 19 juli 2026 van toepassing is op grote bedrijven en administratie en openbaarmaking vereist"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "Onderbouwing van groene claims",
+        "description": "Ondersteunt de richtlijn consumentenrechten (EU) 2024/825, die van toepassing is vanaf 27 september 2026"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "Authenticatie",
+        "description": "Kenmerken ter bestrijding van namaak gekoppeld aan dit artikel"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "Alle velden tonen (certificeringsdetails, Tier 1-fabriek en auditstatus, ecologische voetafdruk, duurzaamheidstests, uitgebreide circulariteit)",
+        "help": "De meeste merken hebben alleen de onderstaande velden nodig. Schakel dit in als u laboratoriumtestresultaten, LCA-gegevens of gedetailleerde traceerbaarheid van de toeleveringsketen wilt vastleggen."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "Handelsartikelnummer ter identificatie van de SKU.",
+        "placeholder": "bijv. 3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "Unieke identificatiecode per artikel",
+        "help": "Identificeert dit individuele fysieke artikel, niet de SKU. Identificatiecodes per artikel maken doorverkoop, eigendomsoverdracht en authenticatie gedurende de levensduur van het product mogelijk.",
+        "placeholder": "bijv. DPP-2026-000184213",
+        "warn": "Open Label wijst deze identificatiecode niet voor u toe. Merken moeten hun eigen identificatiesysteem per artikel opzetten — bijv. geserialiseerde RFID/NFC-tags, een nummeringsschema voor de productielijn of een bestaand ERP-serienummer — en die waarde hier invoeren."
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "Stijl-/modelreferentie",
+        "help": "Verordening (EU) 2023/988 (GPSR) vereist een productidentificatie van het type, batch- of serienummer naast de naam en het adres van de fabrikant. Dit is de identificatiecode voor het producttype/de batch — het is geen vervanging voor de bovenstaande identificatiecode per artikel.",
+        "placeholder": "bijv. ST-4412 Oxford Shirt"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "Kleurencombinatie",
+        "placeholder": "bijv. Indigo / Ecru"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "Maat",
+        "placeholder": "bijv. M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "Productgewicht (gram)",
+        "help": "Nettogewicht van het artikel, gebruikt voor verzending en rapportage over materiaalintensiteit.",
+        "placeholder": "bijv. 220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "Batch of productiepartij",
+        "placeholder": "bijv. LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Merknaam"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "Producttype",
+        "placeholder": "bijv. T-shirt, Jas, Broek"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "Wettelijke naam van de fabrikant",
+        "help": "Verordening (EU) 2023/988 (GPSR) vereist dat de naam, het postadres en het elektronische adres van de fabrikant op het product of de verpakking worden vermeld."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Straatadres"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postcode"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Stad"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisch adres (e-mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Is de fabrikant buiten de EU gevestigd?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "Wettelijke naam van de importeur",
+        "help": "Wanneer de fabrikant buiten de EU is gevestigd, moeten ook de naam, het postadres en het elektronische adres van de importeur worden vermeld."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Straatadres"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postcode"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Stad"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisch adres (e-mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "In de EU verantwoordelijke persoon — wettelijke naam",
+        "help": "De in de EU verantwoordelijke persoon krachtens artikel 4 van Verordening (EU) 2019/1020 is een afzonderlijke rol van de fabrikant en de importeur, zelfs wanneer hetzelfde bedrijf meer dan één van deze rollen vervult."
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "In de EU verantwoordelijke persoon — adres",
+        "placeholder": "Geregistreerd adres binnen de Europese Unie"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "In de EU verantwoordelijke persoon — elektronisch adres (e-mail)",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "Primaire vezelsoort"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "Percentage primaire vezel (%)",
+        "placeholder": "bijv. 80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "Secundaire vezelsoort (indien van toepassing)",
+        "placeholder": "bijv. Elastaan"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "Percentage secundaire vezel (%)",
+        "placeholder": "bijv. 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "Volledige samenstellingsverklaring",
+        "placeholder": "bijv. 80% Katoen, 15% Polyester, 5% Elastaan"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "Bevat niet-textiele delen van dierlijke oorsprong",
+        "help": "EU-verordening 1007/2011 vereist dat dit op het etiket wordt vermeld wanneer een product niet-textiele delen van dierlijke oorsprong bevat, zoals leren patches, bontafwerking, hoornen of benen knopen."
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "Welke delen en van welk dier",
+        "placeholder": "bijv. Leren elleboogstukken (rund); hoornen knopen (buffel)"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "Samenstelling op componentniveau",
+        "help": "Geef de buitenstof, voering en afwerkingen afzonderlijk aan, zodat elk component kan worden beoordeeld op recycling.",
+        "placeholder": "Buitenstof: 100% Katoen\nVoering: 100% Viscose\nAfwerkingen: Polyester rits, messing knopen"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "Totaal percentage gerecycled materiaal (%)",
+        "placeholder": "bijv. 50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "Pre-consumer gerecycled materiaal (%)",
+        "help": "Productieafval dat wordt teruggewonnen voordat het de consument bereikt.",
+        "placeholder": "bijv. 20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "Post-consumer gerecycled materiaal (%)",
+        "help": "Materiaal teruggewonnen uit producten die eindgebruikers hebben bereikt.",
+        "placeholder": "bijv. 30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "Bevat synthetische vezels die microplastics afgeven?",
+        "help": "De Franse AGEC-wet vereist dat consumenten worden geïnformeerd wanneer een kledingstuk microplasticvezels afgeeft tijdens het wassen."
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "REACH / SVHC-stoffen aanwezig boven 0,1% g/g?",
+        "help": "Zeer zorgwekkende stoffen (ZZS) volgens Verordening (EC) 1907/2006 (REACH)."
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "Details van SVHC-stof",
+        "placeholder": "Naam van de stof, CAS-nummer, concentratie en component"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "Bevat dit product opzettelijk toegevoegde PFAS?",
+        "help": "Frankrijk verbiedt PFAS in kleding, schoeisel en impregneermiddelen vanaf 1 januari 2026 onder Wet 2025-188. PFAS worden vaak aangetroffen in duurzame waterafstotende (DWR) afwerkingen.",
+        "warn": "Het op de Franse markt brengen van kleding die opzettelijk toegevoegde PFAS bevat, is verboden vanaf 1 januari 2026 onder Wet 2025-188. Een \"Onbekend\" antwoord moet met de leverancier worden opgelost voordat er in Frankrijk wordt verkocht."
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "Welke componenten en welke stoffen",
+        "placeholder": "bijv. DWR-afwerking op buitenstof — PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "Nalevingsstatus van de lijst met aan beperkingen onderworpen stoffen (RSL)"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "Behaalde certificeringen"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "Certificaatreferenties",
+        "help": "Vanaf 27 september 2026 vereist Richtlijn (EU) 2024/825 dat een duurzaamheidslabel gebaseerd is op een certificeringsregeling of is vastgesteld door een overheidsinstantie. Laat leeg als er hierboven geen certificeringen zijn behaald.",
+        "placeholder": "Eén per regel, bijv.\nGOTS — CU 123456 GOTS — vervalt op 2027-06-30\nOEKO-TEX — 21.HTR.12345 — vervalt op 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "Land van vezelproductie",
+        "placeholder": "Waar de vezel is geteeld of geproduceerd"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "Land van spinnen / weven"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "Land van verven / afwerken"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "Land van confectie / assemblage",
+        "help": "De fase die op het etiket als land van oorsprong wordt vermeld."
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "Gemaakt in de EU?"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "Naam van Tier 1-fabriek"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "Adres van Tier 1-fabriek"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "Status van sociale / milieu-audit"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Auditcertificaat (uploaden)",
+        "help": "Bewaard voor uw interne administratie — nooit gepubliceerd op het openbare paspoort."
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "Volledige transparantie van de toeleveringsketen beschikbaar?"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "CO2-voetafdruk (kg CO2e)",
+        "placeholder": "Per producteenheid"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "Waterverbruik (liter per eenheid)",
+        "placeholder": "bijv. 2700 voor een katoenen T-shirt"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "Berekeningsmethode",
+        "help": "Een cijfer zonder een vermelde berekeningsmethode is geen onderbouwde claim onder de richtlijn consumentenrechten."
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Ondersteunend LCA-rapport (uploaden)",
+        "help": "Bewaard voor uw interne administratie — nooit gepubliceerd op het openbare paspoort."
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "Resultaat pillingweerstand",
+        "help": "Testnorm: ISO 12945-2 (Martindale pilling).",
+        "placeholder": "bijv. Graad 4 na 2000 wrijvingen"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "Resultaat kleurechtheid bij wassen",
+        "help": "Testnorm: ISO 105-C06.",
+        "placeholder": "bijv. Graad 4-5"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "Resultaat kleurechtheid bij licht",
+        "help": "Testnorm: ISO 105-B02.",
+        "placeholder": "bijv. Graad 5"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "Resultaat dimensionale stabiliteit na wassen",
+        "help": "Testnorm: ISO 6330 met ISO 5077-meting.",
+        "placeholder": "bijv. -2% lengte, -1% breedte"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "Resultaat naadsterkte",
+        "help": "Testnorm: ISO 13935-2 (grab-methode).",
+        "placeholder": "bijv. 220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "Referentie testrapport",
+        "placeholder": "Naam laboratorium en rapportnummer"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Testrapport (uploaden)",
+        "help": "Bewaard voor uw interne administratie — nooit gepubliceerd op het openbare paspoort."
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "Maximale wastemperatuur"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "Mag in de droogtrommel?"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "Mag gestreken worden?"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "Maximale strijktemperatuur"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "Wasvoorschriften"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "Aanvullende wasvoorschriften",
+        "placeholder": "Eventuele speciale wasvoorschriften"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "Reserveonderdelen beschikbaar voor reparatie?",
+        "help": "Knopen, ritsen, koorden en andere vervangbare onderdelen."
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "URL voor het boeken van reparaties",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "Recyclebaar aan het einde van de levensduur?"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "Terugnameprogramma beschikbaar?"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "Naam van het terugnamesysteem en EPR-registratienummers per markt",
+        "help": "Registratienummers voor uitgebreide producentenverantwoordelijkheid verschillen per lidstaat, dus vermeld één regel per markt.",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "Recycleerbaarheidsklasse"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "Demontage-instructies",
+        "placeholder": "Hoe de buitenstof, voering, afwerkingen en fournituren te scheiden voor recycling"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "Huidige bestemming"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "Redencode voor vernietiging",
+        "warn": "Vernietiging van onverkochte kleding door grote bedrijven is vanaf 19 juli 2026 beperkt onder de ESPR en vereist administratie en openbaarmaking."
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "Datum van afvoer",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "Opmerkingen bij afvoer",
+        "placeholder": "Hoeveelheid, verwerkingsroute en eventuele referentie van de bevoegde autoriteit"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "Milieuclaims op product of verpakking",
+        "placeholder": "bijv. \"Gemaakt met 50% post-consumer gerecycled polyester (GRS gecertificeerd)\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referentie bewijs van onderbouwing",
+        "placeholder": "Referentie van studie, certificaat of verificatie-instelling voor elke claim"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "Bewijs van onderbouwing (uploaden)",
+        "help": "Bewaard voor uw interne administratie — nooit gepubliceerd op het openbare paspoort."
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "Vermijden claims generieke milieutermen?",
+        "help": "Generieke claims zoals \"milieuvriendelijk\", \"bewust\" en \"CO2-neutraal via compensatie\" zijn verboden vanaf 27 september 2026."
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "Authenticatiekenmerk aanwezig?",
+        "help": "Kleding behoort tot de meest nagemaakte productcategorieën in de EU, dus authenticatie op artikelniveau beschermt het merk en de koper wezenlijk."
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "Authenticatiemethode"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "Verificatie-URL",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ja",
+        "no": "Nee"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
+        "cotton": "Katoen",
+        "organic_cotton": "Biologisch katoen",
+        "linen": "Vlas",
+        "hemp": "Hennep",
+        "wool": "Wol",
+        "cashmere": "Kasjmier",
         "mohair": "Mohair",
         "alpaca": "Alpaca",
         "angora": "Angora",
-        "silk": "Silk",
+        "silk": "Zijde",
         "viscose": "Viscose",
         "modal": "Modal",
         "lyocell": "Lyocell",
-        "acetate": "Acetate",
+        "acetate": "Acetaat",
         "cupro": "Cupro",
         "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
+        "recycled_polyester": "Gerecycled polyester",
         "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "acrylic": "Acryl",
+        "elastane": "Elastaan",
+        "polypropylene": "Polypropyleen",
+        "other": "Overig"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ja",
+        "no": "Nee",
+        "unknown": "Onbekend"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "Conform — geverifieerd door testen",
+        "compliant_declared": "Conform — alleen verklaring van leverancier",
+        "in_progress": "Beoordeling in uitvoering",
+        "not_assessed": "Niet beoordeeld"
       },
       "certificationsHeld": {
         "gots": "GOTS (Global Organic Textile Standard)",
@@ -1748,95 +1748,95 @@
         "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "Overig"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI geauditeerd",
+        "sedex_smeta": "Sedex SMETA geauditeerd",
+        "sa8000": "SA8000 gecertificeerd",
+        "wrap": "WRAP gecertificeerd",
+        "brand_audit": "Door het merk geleide audit",
+        "not_audited": "Niet geauditeerd"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR Kleding & Schoeisel",
         "iso_14067": "ISO 14067",
         "ghg_protocol": "GHG Protocol Product Standard",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "Intern model"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "Alleen handwas",
+        "dry_clean": "Alleen chemisch reinigen"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
+        "low": "Laag (110°C)",
         "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "high": "Hoog (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "Wassen 30°C",
+        "wash_40": "Wassen 40°C",
+        "wash_60": "Wassen 60°C",
+        "hand_wash": "Handwas",
+        "do_not_wash": "Niet wassen",
+        "bleach_allowed": "Bleken toegestaan",
+        "non_chlorine_bleach": "Alleen bleekmiddel zonder chloor",
+        "do_not_bleach": "Niet bleken",
+        "tumble_dry_low": "Drogen in trommel op lage temperatuur",
+        "tumble_dry_normal": "Drogen in trommel normaal",
+        "do_not_tumble_dry": "Niet in de droogtrommel drogen",
+        "iron_low": "Strijken op lage temperatuur",
+        "iron_medium": "Strijken op medium temperatuur",
+        "iron_high": "Strijken op hoge temperatuur",
+        "do_not_iron": "Niet strijken",
+        "dry_clean_any": "Professioneel chemisch reinigen",
+        "dry_clean_petroleum": "Professioneel chemisch reinigen, alleen petroleumoplosmiddel",
+        "wet_clean": "Professioneel nat reinigen",
+        "do_not_dry_clean": "Niet chemisch reinigen"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "Monomateriaal — vezel-tot-vezel recyclebaar",
+        "separable_blend": "Mengsel, scheidbare componenten",
+        "mechanical_only": "Alleen mechanische recycling",
+        "downcycle_only": "Alleen downcycling",
+        "not_recyclable": "Momenteel niet recyclebaar"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "Nog in voorraad",
+        "sold": "Verkocht",
+        "donated": "Gedoneerd",
+        "recycled": "Gerecycled",
+        "remanufactured": "Hergefabriceerd",
+        "destroyed": "Vernietigd"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "Gezondheid en veiligheid",
+        "counterfeit_ip": "Namaak / IE-inbreuk",
+        "damaged_beyond_repair": "Onherstelbaar beschadigd",
+        "donation_refused": "Donatie geweigerd na vraag aan drie sociale-economieorganisaties",
+        "protected_logo": "Beschermd logo kan niet worden verwijderd",
+        "unlawful_product": "Product bleek onwettig te zijn"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC-tag",
+        "secure_qr": "Beveiligde / geserialiseerde QR-code",
+        "security_seal": "Verzegeling met fraudebestendigheid",
+        "ai_fingerprint": "AI-beeldvingerafdruk",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "Overig"
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "De som van de percentages van de primaire vezel ({{primary}}%) en de secundaire vezel ({{secondary}}%) is {{sum}}%, wat meer is dan 100%. EU-verordening 1007/2011 vereist dat de aangegeven vezelsamenstelling de werkelijke samenstelling van het artikel weerspiegelt — controleer deze cijfers.",
+      "primaryExceeds100": "Het percentage van de primaire vezel ({{primary}}%) is al meer dan 100%. EU-verordening 1007/2011 vereist dat de aangegeven vezelsamenstelling de werkelijke samenstelling van het artikel weerspiegelt — controleer dit cijfer.",
+      "incompleteSingleFibre": "De primaire vezel is aangegeven als {{primary}}% en er is geen secundaire vezel vermeld. Als dit artikel een mengsel is, voeg dan de resterende vezel(s) toe via Secundair Vezeltype/Percentage of de Volledige Samenstellingsverklaring, zodat de aangegeven samenstelling de volledige 100% dekt.",
+      "syntheticOver50": "Dit kledingstuk bestaat voor {{percentage}}% uit synthetische vezels, wat meer is dan 50%. Het zal microplastics loslaten tijdens het wassen en de consument moet hierover worden geïnformeerd."
     }
   },
   "demo": {
