@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Éadaí — Pas Digiteach Táirge",
+    "madeInEu": "Déanta san AE",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Substaintí",
+      "care": "Cúram",
+      "metadata": "DPP bonneagar"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Monaróir",
+      "importer": "Iompórtálaí",
+      "euResponsiblePerson": "Duine freagrach an AE"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Seoladh",
+      "dppServiceProvider": "DPP soláthraí seirbhíse",
+      "dppVersion": "DPP leagan",
+      "lastUpdated": "Nuashonraithe go deireanach",
+      "status": "Stádas"
     },
     "values": {
-      "published": "Published"
+      "published": "Foilsithe"
     }
   }
 }

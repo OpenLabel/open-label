@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Ilbies — Passaport Diġitali tal-Prodott",
+    "madeInEu": "Magħmul fl-UE",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Sustanzi",
+      "care": "Kura",
+      "metadata": "DPP infrastruttura"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Manifattur",
+      "importer": "Importatur",
+      "euResponsiblePerson": "Persuna responsabbli fl-UE"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
+      "address": "Indirizz",
+      "dppServiceProvider": "DPP fornitur tas-servizz",
+      "dppVersion": "DPP verżjoni",
+      "lastUpdated": "Aġġornat l-aħħar",
       "status": "Status"
     },
     "values": {
-      "published": "Published"
+      "published": "Ippubblikat"
     }
   }
 }

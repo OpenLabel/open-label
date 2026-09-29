@@ -122,6 +122,9 @@ function validateValue(key: string, source: string, translated: unknown): assert
   for (const token of requiredProtectedTokens(source)) {
     if (!translated.includes(token)) throw new Error(`${key}: protected token changed: ${token}`);
   }
+  for (const ph of source.match(/\{\{[^}]+\}\}/g) ?? []) {
+    if (!translated.includes(ph)) throw new Error(`${key}: interpolation placeholder changed: ${ph}`);
+  }
   if (key.startsWith('options.primaryFiber.') && FORBIDDEN_FIBRE_TERMS.test(translated)) {
     throw new Error(`${key}: forbidden brand/US fibre term: ${translated}`);
   }
@@ -140,6 +143,7 @@ Translate every JSON VALUE from English to ${language} (${code}). Return ONLY on
 ${fibreRules}
 VERBATIM RULE:
 - Preserve every token matching __KEEP_NUMBER__ exactly. These placeholders are restored after translation.
+- Preserve i18next placeholders like {{name}} exactly, untranslated.
 - Preserve standalone units N and %, all URLs, dates, numbers, punctuation, line breaks, and example codes.
 - Translate surrounding prose naturally and professionally. Do not leave ordinary English prose untranslated.
 - Certification and scheme names remain exact, but words surrounding them (such as audited/certified) must be translated.

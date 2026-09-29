@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "服装 — 数字产品护照",
+    "madeInEu": "欧盟制造",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "物质",
+      "care": "保养",
+      "metadata": "DPP 基础设施"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "制造商",
+      "importer": "进口商",
+      "euResponsiblePerson": "欧盟负责人"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "地址",
+      "dppServiceProvider": "DPP 服务提供商",
+      "dppVersion": "DPP 版本",
+      "lastUpdated": "最后更新",
+      "status": "状态"
     },
     "values": {
-      "published": "Published"
+      "published": "已发布"
     }
   }
 }

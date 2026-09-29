@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Habillement — Passeport de produit numérique",
+    "madeInEu": "Fabriqué dans l'UE",
     "sections": {
       "substances": "Substances",
-      "care": "Care",
+      "care": "Entretien",
       "metadata": "DPP infrastructure"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Fabricant",
+      "importer": "Importateur",
+      "euResponsiblePerson": "Personne responsable dans l'UE"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
+      "address": "Adresse",
+      "dppServiceProvider": "DPP fournisseur de services",
       "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "lastUpdated": "Dernière mise à jour",
+      "status": "Statut"
     },
     "values": {
-      "published": "Published"
+      "published": "Publié"
     }
   }
 }

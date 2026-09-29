@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Vaatetus — Digitaalinen tuotepassi",
+    "madeInEu": "Valmistettu EU:ssa",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Aineet",
+      "care": "Hoito",
+      "metadata": "DPP-infrastruktuuri"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Valmistaja",
+      "importer": "Maahantuoja",
+      "euResponsiblePerson": "EU-vastuuhenkilö"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Osoite",
+      "dppServiceProvider": "DPP-palveluntarjoaja",
+      "dppVersion": "DPP-versio",
+      "lastUpdated": "Viimeksi päivitetty",
+      "status": "Tila"
     },
     "values": {
-      "published": "Published"
+      "published": "Julkaistu"
     }
   }
 }

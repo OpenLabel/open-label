@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Oblačila — Digitalni potni list za izdelek",
+    "madeInEu": "Proizvedeno v EU",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Snovi",
+      "care": "Nega",
+      "metadata": "DPP infrastruktura"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Proizvajalec",
+      "importer": "Uvoznik",
+      "euResponsiblePerson": "Odgovorna oseba v EU"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Naslov",
+      "dppServiceProvider": "DPP ponudnik storitev",
+      "dppVersion": "DPP različica",
+      "lastUpdated": "Zadnja posodobitev",
+      "status": "Stanje"
     },
     "values": {
-      "published": "Published"
+      "published": "Objavljeno"
     }
   }
 }

@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Apģērbs — Digitālā produkta pase",
+    "madeInEu": "Ražots ES",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Vielas",
+      "care": "Kopšana",
+      "metadata": "DPP infrastruktūra"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Ražotājs",
+      "importer": "Importētājs",
+      "euResponsiblePerson": "ES atbildīgā persona"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Adrese",
+      "dppServiceProvider": "DPP pakalpojumu sniedzējs",
+      "dppVersion": "DPP versija",
+      "lastUpdated": "Pēdējo reizi atjaunināts",
+      "status": "Statuss"
     },
     "values": {
-      "published": "Published"
+      "published": "Publicēts"
     }
   }
 }

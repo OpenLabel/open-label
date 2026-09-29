@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Apranga – skaitmeninis gaminio pasas",
+    "madeInEu": "Pagaminta ES",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Medžiagos",
+      "care": "Priežiūra",
+      "metadata": "DPP infrastruktūra"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Gamintojas",
+      "importer": "Importuotojas",
+      "euResponsiblePerson": "Atsakingasis asmuo ES"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Adresas",
+      "dppServiceProvider": "DPP paslaugų teikėjas",
+      "dppVersion": "DPP versija",
+      "lastUpdated": "Paskutinį kartą atnaujinta",
+      "status": "Būsena"
     },
     "values": {
-      "published": "Published"
+      "published": "Paskelbta"
     }
   }
 }

@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Ένδυση — Ψηφιακό Διαβατήριο Προϊόντος",
+    "madeInEu": "Κατασκευάζεται στην ΕΕ",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Ουσίες",
+      "care": "Φροντίδα",
+      "metadata": "DPP υποδομή"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Κατασκευαστής",
+      "importer": "Εισαγωγέας",
+      "euResponsiblePerson": "Υπεύθυνο πρόσωπο στην ΕΕ"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Διεύθυνση",
+      "dppServiceProvider": "DPP πάροχος υπηρεσιών",
+      "dppVersion": "DPP έκδοση",
+      "lastUpdated": "Τελευταία ενημέρωση",
+      "status": "Κατάσταση"
     },
     "values": {
-      "published": "Published"
+      "published": "Δημοσιευμένο"
     }
   }
 }

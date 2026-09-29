@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Articole de îmbrăcăminte — Pașaport digital de produs",
+    "madeInEu": "Fabricat în UE",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Substanțe",
+      "care": "Întreținere",
+      "metadata": "DPP infrastructură"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Producător",
+      "importer": "Importator",
+      "euResponsiblePerson": "Persoană responsabilă din UE"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Adresă",
+      "dppServiceProvider": "DPP furnizor de servicii",
+      "dppVersion": "DPP versiune",
+      "lastUpdated": "Ultima actualizare",
+      "status": "Stare"
     },
     "values": {
-      "published": "Published"
+      "published": "Publicat"
     }
   }
 }
