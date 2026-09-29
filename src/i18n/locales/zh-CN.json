@@ -1310,533 +1310,533 @@
   "textiles": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product and item level identification"
+        "title": "产品身份",
+        "description": "产品和单品级别识别"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU responsible person, kept as three separate parties"
+        "title": "责任方",
+        "description": "制造商、进口商和欧盟责任人，作为三个独立方"
       },
       "materials": {
-        "title": "Materials and Composition",
-        "description": "Mandatory fibre content labelling per EU Regulation 1007/2011"
+        "title": "材料与成分",
+        "description": "根据欧盟法规 1007/2011 的强制性纤维成分标签"
       },
       "certifications": {
-        "title": "Certifications",
-        "description": "Which certifications this item holds, and how to verify each claim."
+        "title": "认证",
+        "description": "此单品持有的认证以及如何验证每项声明。"
       },
       "supply_chain": {
-        "title": "Supply Chain Journey",
-        "description": "Country of each production stage plus Tier 1 factory and audit status"
+        "title": "供应链历程",
+        "description": "各生产阶段的国家，以及一级工厂和审核状态"
       },
       "environment": {
-        "title": "Environmental Footprint",
-        "description": "Environmental figures with a stated calculation method"
+        "title": "环境足迹",
+        "description": "附有明确计算方法的环境数据"
       },
       "durability": {
-        "title": "Durability and Testing",
-        "description": "Measured durability results. The expected textile delegated act under ESPR is anticipated to focus on durability metrics, so record real test results rather than subjective scores."
+        "title": "耐用性与测试",
+        "description": "实测的耐用性结果。预计在 ESPR 下的纺织品授权法案将侧重于耐用性指标，因此请记录真实的测试结果而非主观评分。"
       },
       "circularity": {
-        "title": "Circularity and End of Life",
-        "description": "Care, repair, take-back and recyclability information"
+        "title": "循环性与产品寿命终结",
+        "description": "保养、维修、回收和可回收性信息"
       },
       "disposition": {
-        "title": "Disposition Record",
-        "description": "Supports the ESPR ban on destroying unsold consumer goods, which applies to large companies from 19 July 2026 and requires record-keeping and disclosure"
+        "title": "处置记录",
+        "description": "支持 ESPR 关于禁止销毁未售出消费品的禁令，该禁令自2026年7月19日起适用于大型公司，并要求记录和披露"
       },
       "green_claims": {
-        "title": "Green Claims Substantiation",
-        "description": "Supports the Empowering Consumers Directive (EU) 2024/825, which applies from 27 September 2026"
+        "title": "绿色声明证实",
+        "description": "支持《赋能消费者指令》(EU) 2024/825，该指令自2026年9月27日起适用"
       },
       "authentication": {
-        "title": "Authentication",
-        "description": "Anti-counterfeit features linked to this item"
+        "title": "真伪验证",
+        "description": "与此单品关联的防伪特征"
       }
     },
     "fields": {
       "show_advanced_fields": {
-        "label": "Show all fields (certifications detail, Tier 1 factory and audit status, environmental footprint, durability testing, extended circularity)",
-        "help": "Most brands only need the fields below. Turn this on if you have lab test results, LCA data, or detailed supply-chain traceability to record."
+        "label": "显示所有字段（认证详情、一级工厂和审核状态、环境足迹、耐用性测试、扩展循环性）",
+        "help": "大多数品牌仅需以下字段。如果您有实验室测试结果、LCA 数据或详细的供应链可追溯性需要记录，请开启此项。"
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "help": "Trade item number identifying the SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "help": "识别SKU的贸易项目编号。",
+        "placeholder": "例如：3401234567890"
       },
       "item_unique_identifier": {
-        "label": "Per-item Unique Identifier",
-        "help": "Identifies this individual physical item, not the SKU. Per-item identifiers are what enable resale, ownership transfer and authentication over the product lifetime.",
-        "placeholder": "e.g., DPP-2026-000184213",
-        "warn": "Open Label does not assign this identifier for you. Brands should build their own per-item identification system — e.g. serialized RFID/NFC tags, a production-line numbering scheme, or an existing ERP serial — and enter that value here."
+        "label": "单品唯一标识符",
+        "help": "识别此单个实体物品，而非SKU。单品标识符可在产品生命周期内实现转售、所有权转移和真伪验证。",
+        "placeholder": "例如：DPP-2026-000184213",
+        "warn": "Open Label 不会为您分配此标识符。品牌应建立自己的单品识别系统——例如，序列化的 RFID/NFC 标签、生产线编号方案或现有的ERP序列号——并在此处输入该值。"
       },
       "style_reference": {
-        "label": "Style / Model Reference",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires a product identifier of type, batch or serial number alongside the manufacturer name and address. This is the identifier for the product type/batch — it is not a substitute for the per-item identifier above.",
-        "placeholder": "e.g., ST-4412 Oxford Shirt"
+        "label": "款式/型号参考",
+        "help": "法规 (EU) 2023/988 (GPSR) 要求在制造商名称和地址旁提供类型、批次或序列号的产品标识符。这是产品类型/批次的标识符——它不能替代上述的单品标识符。",
+        "placeholder": "例如：ST-4412 牛津衬衫"
       },
       "colourway": {
-        "label": "Colourway",
-        "placeholder": "e.g., Indigo / Ecru"
+        "label": "配色",
+        "placeholder": "例如：靛蓝/米白"
       },
       "size": {
-        "label": "Size",
-        "placeholder": "e.g., M, 42, 10"
+        "label": "尺码",
+        "placeholder": "例如：M, 42, 10"
       },
       "product_weight_grams": {
-        "label": "Product Weight (grams)",
-        "help": "Net weight of the item, used for shipping and material-intensity reporting.",
-        "placeholder": "e.g., 220"
+        "label": "产品重量（克）",
+        "help": "单品净重，用于运输和材料强度报告。",
+        "placeholder": "例如：220"
       },
       "batch_lot": {
-        "label": "Batch or Production Lot",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "label": "批次或生产批号",
+        "placeholder": "例如：LOT-2026-03-A"
       },
       "brand_name": {
-        "label": "Brand Name"
+        "label": "品牌名称"
       },
       "product_type": {
-        "label": "Product Type",
-        "placeholder": "e.g., T-shirt, Jacket, Trousers"
+        "label": "产品类型",
+        "placeholder": "例如：T恤、夹克、裤子"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "Regulation (EU) 2023/988 (GPSR) requires the manufacturer's name, postal address and electronic address to be given on the product or its packaging."
+        "label": "制造商法定名称",
+        "help": "法规 (EU) 2023/988 (GPSR) 要求在产品或其包装上提供制造商的名称、邮政地址和电子地址。"
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "街道地址"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "邮政编码"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "城市"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "国家"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "电子地址（电子邮件）",
         "placeholder": "name@company.com"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "制造商是否在欧盟以外设立？"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given."
+        "label": "进口商法定名称",
+        "help": "当制造商在欧盟以外设立时，也必须提供进口商的名称、邮政地址和电子地址。"
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "街道地址"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "邮政编码"
       },
       "importer_city": {
-        "label": "City"
+        "label": "城市"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "国家"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "电子地址（电子邮件）",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU responsible person — legal name",
-        "help": "The EU responsible person under Regulation (EU) 2019/1020 Article 4 is a separate role from the manufacturer and the importer, even when the same company performs more than one of them."
+        "label": "欧盟责任人 — 法定名称",
+        "help": "根据法规 (EU) 2019/1020 第4条，欧盟责任人是一个独立于制造商和进口商的角色，即使同一家公司可能同时扮演多个角色。"
       },
       "eu_operator_address": {
-        "label": "EU responsible person — address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "欧盟责任人 — 地址",
+        "placeholder": "欧盟境内的注册地址"
       },
       "eu_operator_email": {
-        "label": "EU responsible person — electronic address (email)",
+        "label": "欧盟责任人 — 电子地址（电子邮件）",
         "placeholder": "name@company.com"
       },
       "primary_fiber": {
-        "label": "Primary Fiber Type"
+        "label": "主要纤维类型"
       },
       "primary_fiber_percentage": {
-        "label": "Primary Fiber Percentage (%)",
-        "placeholder": "e.g., 80"
+        "label": "主要纤维百分比 (%)",
+        "placeholder": "例如：80"
       },
       "secondary_fiber": {
-        "label": "Secondary Fiber Type (if applicable)",
-        "placeholder": "e.g., Elastane"
+        "label": "次要纤维类型（如适用）",
+        "placeholder": "例如：弹性纤维"
       },
       "secondary_fiber_percentage": {
-        "label": "Secondary Fiber Percentage (%)",
-        "placeholder": "e.g., 20"
+        "label": "次要纤维百分比 (%)",
+        "placeholder": "例如：20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
-        "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
+        "label": "完整成分说明",
+        "placeholder": "例如：80% 棉, 15% 聚酯纤维, 5% 弹性纤维"
       },
       "contains_animal_parts": {
-        "label": "Contains non-textile parts of animal origin",
-        "help": "EU Regulation 1007/2011 requires this to be stated on the label when a product contains non-textile parts of animal origin, such as leather patches, fur trim, horn or bone buttons."
+        "label": "含有源自动物的非纺织品部件",
+        "help": "欧盟法规 1007/2011 要求，当产品含有源自动物的非纺织品部件时，如皮革补丁、毛皮饰边、牛角或骨质纽扣，必须在标签上注明。"
       },
       "animal_parts_details": {
-        "label": "Which parts, and from which animal",
-        "placeholder": "e.g., Leather elbow patches (bovine); horn buttons (buffalo)"
+        "label": "具体部件及来源动物",
+        "placeholder": "例如：皮革肘部补丁（牛）；牛角纽扣（水牛）"
       },
       "component_composition": {
-        "label": "Component-level Composition",
-        "help": "Declare outer shell, lining and trims separately so each component can be assessed for recycling.",
-        "placeholder": "Outer shell: 100% Cotton\nLining: 100% Viscose\nTrims: Polyester zip, brass buttons"
+        "label": "部件级别成分",
+        "help": "分别申报外壳、衬里和辅料，以便评估每个部件的可回收性。",
+        "placeholder": "外壳：100% 棉\n衬里：100% 粘胶纤维\n辅料：聚酯纤维拉链，黄铜纽扣"
       },
       "recycled_content_percentage": {
-        "label": "Total Recycled Content Percentage (%)",
-        "placeholder": "e.g., 50"
+        "label": "总再生材料含量百分比 (%)",
+        "placeholder": "例如：50"
       },
       "recycled_pre_consumer_percentage": {
-        "label": "Pre-consumer Recycled Content (%)",
-        "help": "Production waste reclaimed before reaching a consumer.",
-        "placeholder": "e.g., 20"
+        "label": "消费前再生材料含量 (%)",
+        "help": "在到达消费者之前回收的生产废料。",
+        "placeholder": "例如：20"
       },
       "recycled_post_consumer_percentage": {
-        "label": "Post-consumer Recycled Content (%)",
-        "help": "Material recovered from products that reached end users.",
-        "placeholder": "e.g., 30"
+        "label": "消费后再生材料含量 (%)",
+        "help": "从已到达最终用户的产品中回收的材料。",
+        "placeholder": "例如：30"
       },
       "microplastic_shedding": {
-        "label": "Contains synthetic fibres that shed microplastics?",
-        "help": "The French AGEC law requires informing consumers when a garment releases microplastic fibres during washing."
+        "label": "是否含有会脱落微塑料的合成纤维？",
+        "help": "法国AGEC法要求，当服装在洗涤过程中会释放微塑料纤维时，需告知消费者。"
       },
       "svhc_declared": {
-        "label": "REACH / SVHC substances present above 0.1% w/w?",
-        "help": "Substances of Very High Concern per Regulation (EC) 1907/2006 (REACH)."
+        "label": "是否含有浓度超过 0.1% (w/w) 的 REACH / SVHC 物质？",
+        "help": "根据法规 (EC) 1907/2006 (REACH) 定义的高度关注物质。"
       },
       "svhc_details": {
-        "label": "SVHC Substance Details",
-        "placeholder": "Substance name, CAS number, concentration and component"
+        "label": "SVHC 物质详情",
+        "placeholder": "物质名称、CAS号、浓度和所在部件"
       },
       "pfas_present": {
-        "label": "Does this product contain intentionally added PFAS?",
-        "help": "France prohibits PFAS in clothing, footwear and waterproofing agents from 1 January 2026 under Law 2025-188. PFAS are commonly found in durable water repellent (DWR) finishes.",
-        "warn": "Placing apparel containing intentionally added PFAS on the French market is prohibited from 1 January 2026 under Law 2025-188. An \"Unknown\" answer must be resolved with the supplier before selling in France."
+        "label": "本产品是否含有故意添加的 PFAS？",
+        "help": "根据 2025-188 号法律，法国自2026年1月1日起禁止在服装、鞋类和防水剂中使用 PFAS。PFAS 常见于耐久防水（DWR）整理剂中。",
+        "warn": "根据 2025-188 号法律，自2026年1月1日起，禁止在法国市场投放含有故意添加的 PFAS 的服装。在法国销售前，必须与供应商解决“未知”的答案。"
       },
       "pfas_details": {
-        "label": "Which components and which substances",
-        "placeholder": "e.g., DWR finish on outer shell — PFHxA"
+        "label": "具体部件和物质",
+        "placeholder": "例如：外壳上的 DWR 整理剂 — PFHxA"
       },
       "rsl_compliance_status": {
-        "label": "Restricted Substance List (RSL) Compliance Status"
+        "label": "限制物质清单（RSL）合规状态"
       },
       "certifications_held": {
-        "label": "Certifications Held"
+        "label": "持有的认证"
       },
       "certificate_references": {
-        "label": "Certificate References",
-        "help": "From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.",
-        "placeholder": "One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15"
+        "label": "证书参考信息",
+        "help": "自2026年9月27日起，(EU) 2024/825 指令要求可持续性标签必须基于认证计划或由公共机构设立。如未持有上述认证，请留空。",
+        "placeholder": "每行一个，例如：\nGOTS — CU 123456 GOTS — 有效期至 2027-06-30\nOEKO-TEX — 21.HTR.12345 — 有效期至 2027-01-15"
       },
       "country_fibre_production": {
-        "label": "Country of Fibre Production",
-        "placeholder": "Where the fibre was grown or produced"
+        "label": "纤维生产国",
+        "placeholder": "纤维生长或生产地"
       },
       "country_spinning_weaving": {
-        "label": "Country of Spinning / Weaving"
+        "label": "纺纱/织造国"
       },
       "country_dyeing_finishing": {
-        "label": "Country of Dyeing / Finishing"
+        "label": "染色/后整理国"
       },
       "country_of_origin": {
-        "label": "Country of Making-up / Assembly",
-        "help": "The stage declared as country of origin on the label."
+        "label": "缝制/组装国",
+        "help": "标签上声明为原产国的阶段。"
       },
       "made_in_eu": {
-        "label": "Made in EU?"
+        "label": "欧盟制造？"
       },
       "manufacturing_facility": {
-        "label": "Tier 1 Factory Name"
+        "label": "一级工厂名称"
       },
       "factory_address": {
-        "label": "Tier 1 Factory Address"
+        "label": "一级工厂地址"
       },
       "audit_status": {
-        "label": "Social / Environmental Audit Status"
+        "label": "社会/环境审核状态"
       },
       "audit_certificate_file": {
-        "label": "Audit Certificate (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "审核证书（上传）",
+        "help": "供您内部记录使用 — 绝不会在公开护照上发布。"
       },
       "supply_chain_transparent": {
-        "label": "Full supply chain transparency available?"
+        "label": "是否提供完整的供应链透明度？"
       },
       "carbon_footprint": {
-        "label": "Carbon Footprint (kg CO2e)",
-        "placeholder": "Per unit of product"
+        "label": "碳足迹 (kg CO2e)",
+        "placeholder": "每单位产品"
       },
       "water_usage": {
-        "label": "Water Usage (liters per unit)",
-        "placeholder": "e.g., 2700 for cotton t-shirt"
+        "label": "用水量（升/单位）",
+        "placeholder": "例如：一件棉T恤为2700"
       },
       "footprint_method": {
-        "label": "Calculation Method",
-        "help": "A figure without a stated calculation method is not a substantiated claim under the Empowering Consumers Directive."
+        "label": "计算方法",
+        "help": "根据《赋能消费者指令》，没有明确计算方法的数据不构成已证实的声明。"
       },
       "lca_report_file": {
-        "label": "Supporting LCA Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "支持性 LCA 报告（上传）",
+        "help": "供您内部记录使用 — 绝不会在公开护照上发布。"
       },
       "pilling_resistance": {
-        "label": "Pilling Resistance Result",
-        "help": "Test standard: ISO 12945-2 (Martindale pilling).",
-        "placeholder": "e.g., Grade 4 after 2000 rubs"
+        "label": "抗起毛起球性结果",
+        "help": "测试标准：ISO 12945-2（马丁代尔法起球）。",
+        "placeholder": "例如：摩擦2000次后为4级"
       },
       "colour_fastness_washing": {
-        "label": "Colour Fastness to Washing Result",
-        "help": "Test standard: ISO 105-C06.",
-        "placeholder": "e.g., Grade 4-5"
+        "label": "耐洗色牢度结果",
+        "help": "测试标准：ISO 105-C06。",
+        "placeholder": "例如：4-5级"
       },
       "colour_fastness_light": {
-        "label": "Colour Fastness to Light Result",
-        "help": "Test standard: ISO 105-B02.",
-        "placeholder": "e.g., Grade 5"
+        "label": "耐光色牢度结果",
+        "help": "测试标准：ISO 105-B02。",
+        "placeholder": "例如：5级"
       },
       "dimensional_stability": {
-        "label": "Dimensional Stability After Washing Result",
-        "help": "Test standard: ISO 6330 with ISO 5077 measurement.",
-        "placeholder": "e.g., -2% length, -1% width"
+        "label": "洗后尺寸稳定性结果",
+        "help": "测试标准：ISO 6330，采用 ISO 5077 测量法。",
+        "placeholder": "例如：长度-2%，宽度-1%"
       },
       "seam_strength": {
-        "label": "Seam Strength Result",
-        "help": "Test standard: ISO 13935-2 (grab method).",
-        "placeholder": "e.g., 220 N"
+        "label": "接缝强力结果",
+        "help": "测试标准：ISO 13935-2（抓样法）。",
+        "placeholder": "例如：220 N"
       },
       "test_report_reference": {
-        "label": "Test Report Reference",
-        "placeholder": "Laboratory name and report number"
+        "label": "测试报告参考信息",
+        "placeholder": "实验室名称和报告编号"
       },
       "test_report_file": {
-        "label": "Test Report (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "测试报告（上传）",
+        "help": "供您内部记录使用 — 绝不会在公开护照上发布。"
       },
       "washing_temp": {
-        "label": "Maximum Washing Temperature"
+        "label": "最高洗涤温度"
       },
       "can_tumble_dry": {
-        "label": "Can be tumble dried?"
+        "label": "可否滚筒烘干？"
       },
       "can_iron": {
-        "label": "Can be ironed?"
+        "label": "可否熨烫？"
       },
       "iron_temp": {
-        "label": "Maximum Iron Temperature"
+        "label": "最高熨烫温度"
       },
       "care_symbols": {
-        "label": "Care Symbols"
+        "label": "护理符号"
       },
       "care_instructions_text": {
-        "label": "Additional Care Instructions",
-        "placeholder": "Any special care instructions"
+        "label": "附加护理说明",
+        "placeholder": "任何特殊护理说明"
       },
       "spare_trims_available": {
-        "label": "Spare trims available for repair?",
-        "help": "Buttons, zips, cords and other replaceable components."
+        "label": "是否有备用辅料可供维修？",
+        "help": "纽扣、拉链、绳带和其他可更换部件。"
       },
       "repair_booking_url": {
-        "label": "Repair Booking URL",
+        "label": "维修预约网址",
         "placeholder": "https://…"
       },
       "recyclable": {
-        "label": "Recyclable at end of life?"
+        "label": "产品寿命终结时可回收？"
       },
       "take_back_program": {
-        "label": "Take-back program available?"
+        "label": "是否有回收计划？"
       },
       "take_back_scheme_epr": {
-        "label": "Take-back Scheme Name and EPR Registration Numbers per Market",
-        "help": "Extended Producer Responsibility registration numbers differ per member state, so list one line per market.",
+        "label": "回收计划名称及各市场的 EPR 注册号",
+        "help": "各成员国的生产者责任延伸注册号不同，因此请按市场每行列出一个。",
         "placeholder": "FR: Refashion — FR123456_01ABCD\nDE: …"
       },
       "recyclability_class": {
-        "label": "Recyclability Class"
+        "label": "可回收性等级"
       },
       "disassembly_notes": {
-        "label": "Disassembly Notes",
-        "placeholder": "How to separate the outer shell, lining, trims and hardware for recycling"
+        "label": "拆卸说明",
+        "placeholder": "如何分离外壳、衬里、辅料和五金件以便回收"
       },
       "disposition_status": {
-        "label": "Current Disposition"
+        "label": "当前处置状态"
       },
       "disposition_reason_code": {
-        "label": "Destruction Reason Code",
-        "warn": "Destruction of unsold apparel by large companies is restricted from 19 July 2026 under the ESPR and requires record-keeping and public disclosure."
+        "label": "销毁原因代码",
+        "warn": "根据 ESPR，自2026年7月19日起，大型公司销毁未售出服装的行为将受到限制，并需要进行记录和公开披露。"
       },
       "disposition_date": {
-        "label": "Disposition Date",
+        "label": "处置日期",
         "placeholder": "YYYY-MM-DD"
       },
       "disposition_notes": {
-        "label": "Disposition Notes",
-        "placeholder": "Quantity, handling route and any competent authority reference"
+        "label": "处置备注",
+        "placeholder": "数量、处理途径及任何主管当局的参考信息"
       },
       "environmental_claims": {
-        "label": "Environmental Claims Made on Product or Packaging",
-        "placeholder": "e.g., \"Made with 50% post-consumer recycled polyester (GRS certified)\""
+        "label": "在产品或包装上作出的环境声明",
+        "placeholder": "例如：“采用50%消费后再生聚酯纤维（经 GRS 认证）制成”"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation Evidence Reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "证实证据参考信息",
+        "placeholder": "每项声明的研究、证书或验证机构参考信息"
       },
       "claims_evidence_file": {
-        "label": "Substantiation Evidence (upload)",
-        "help": "Held for your internal records — never published on the public passport."
+        "label": "证实证据（上传）",
+        "help": "供您内部记录使用 — 绝不会在公开护照上发布。"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "label": "声明是否避免使用通用环境术语？",
+        "help": "自2026年9月27日起，禁止使用“环保”、“自觉”和“通过抵消实现碳中和”等通用声明。"
       },
       "authentication_feature_present": {
-        "label": "Authentication feature present?",
-        "help": "Apparel is among the most counterfeited product categories in the EU, so item-level authentication materially protects the brand and the buyer."
+        "label": "是否存在真伪验证特征？",
+        "help": "服装是欧盟最常被仿冒的产品类别之一，因此单品级别的真伪验证能有效保护品牌和买家。"
       },
       "authentication_method": {
-        "label": "Authentication Method"
+        "label": "真伪验证方法"
       },
       "authentication_verification_url": {
-        "label": "Verification URL",
+        "label": "验证网址",
         "placeholder": "https://…"
       }
     },
     "options": {
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "是",
+        "no": "否"
       },
       "primaryFiber": {
-        "cotton": "Cotton",
-        "organic_cotton": "Organic Cotton",
-        "linen": "Linen (Flax)",
-        "hemp": "Hemp",
-        "wool": "Wool",
-        "cashmere": "Cashmere",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
-        "silk": "Silk",
-        "viscose": "Viscose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
-        "acetate": "Acetate",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
-        "recycled_polyester": "Recycled Polyester",
-        "nylon": "Polyamide",
-        "acrylic": "Acrylic",
-        "elastane": "Elastane",
-        "polypropylene": "Polypropylene",
-        "other": "Other"
+        "cotton": "棉",
+        "organic_cotton": "有机棉",
+        "linen": "亚麻",
+        "hemp": "大麻",
+        "wool": "羊毛",
+        "cashmere": "羊绒",
+        "mohair": "马海毛",
+        "alpaca": "羊驼毛",
+        "angora": "安哥拉兔毛",
+        "silk": "蚕丝",
+        "viscose": "粘胶纤维",
+        "modal": "莫代尔",
+        "lyocell": "莱赛尔",
+        "acetate": "醋酸纤维",
+        "cupro": "铜氨纤维",
+        "polyester": "聚酯纤维",
+        "recycled_polyester": "再生聚酯纤维",
+        "nylon": "聚酰胺纤维",
+        "acrylic": "聚丙烯腈纤维",
+        "elastane": "弹性纤维",
+        "polypropylene": "聚丙烯纤维",
+        "other": "其他"
       },
       "pfasPresent": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "是",
+        "no": "否",
+        "unknown": "未知"
       },
       "rslCompliance": {
-        "compliant_tested": "Compliant — verified by testing",
-        "compliant_declared": "Compliant — supplier declaration only",
-        "in_progress": "Assessment in progress",
-        "not_assessed": "Not assessed"
+        "compliant_tested": "合规 — 经测试验证",
+        "compliant_declared": "合规 — 仅供应商声明",
+        "in_progress": "评估中",
+        "not_assessed": "未评估"
       },
       "certificationsHeld": {
-        "gots": "GOTS (Global Organic Textile Standard)",
+        "gots": "GOTS (全球有机纺织品标准)",
         "oeko_tex": "OEKO-TEX Standard 100",
-        "grs": "GRS (Global Recycled Standard)",
+        "grs": "GRS (全球回收标准)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
-        "other": "Other"
+        "other": "其他"
       },
       "auditStatus": {
-        "amfori_bsci": "amfori BSCI audited",
-        "sedex_smeta": "Sedex SMETA audited",
-        "sa8000": "SA8000 certified",
-        "wrap": "WRAP certified",
-        "brand_audit": "Brand-led audit",
-        "not_audited": "Not audited"
+        "amfori_bsci": "amfori BSCI 审核通过",
+        "sedex_smeta": "Sedex SMETA 审核通过",
+        "sa8000": "SA8000 认证",
+        "wrap": "WRAP 认证",
+        "brand_audit": "品牌主导审核",
+        "not_audited": "未审核"
       },
       "footprintMethod": {
-        "pefcr_apparel_footwear": "PEFCR Apparel & Footwear",
+        "pefcr_apparel_footwear": "PEFCR 服装与鞋类",
         "iso_14067": "ISO 14067",
-        "ghg_protocol": "GHG Protocol Product Standard",
+        "ghg_protocol": "温室气体核算体系产品标准",
         "iso_14040_44": "ISO 14040/14044 LCA",
         "higg_msi": "Higg MSI",
-        "internal_model": "Internal model"
+        "internal_model": "内部模型"
       },
       "washingTemp": {
         "30": "30°C",
         "40": "40°C",
         "60": "60°C",
         "95": "95°C",
-        "hand": "Hand wash only",
-        "dry_clean": "Dry clean only"
+        "hand": "仅手洗",
+        "dry_clean": "仅干洗"
       },
       "ironTemp": {
-        "low": "Low (110°C)",
-        "medium": "Medium (150°C)",
-        "high": "High (200°C)"
+        "low": "低温 (110°C)",
+        "medium": "中温 (150°C)",
+        "high": "高温 (200°C)"
       },
       "careSymbols": {
-        "wash_30": "Wash 30°C",
-        "wash_40": "Wash 40°C",
-        "wash_60": "Wash 60°C",
-        "hand_wash": "Hand wash",
-        "do_not_wash": "Do not wash",
-        "bleach_allowed": "Bleaching allowed",
-        "non_chlorine_bleach": "Non-chlorine bleach only",
-        "do_not_bleach": "Do not bleach",
-        "tumble_dry_low": "Tumble dry low heat",
-        "tumble_dry_normal": "Tumble dry normal",
-        "do_not_tumble_dry": "Do not tumble dry",
-        "iron_low": "Iron low",
-        "iron_medium": "Iron medium",
-        "iron_high": "Iron high",
-        "do_not_iron": "Do not iron",
-        "dry_clean_any": "Professional dry clean",
-        "dry_clean_petroleum": "Professional dry clean, petroleum solvent only",
-        "wet_clean": "Professional wet clean",
-        "do_not_dry_clean": "Do not dry clean"
+        "wash_30": "洗涤 30°C",
+        "wash_40": "洗涤 40°C",
+        "wash_60": "洗涤 60°C",
+        "hand_wash": "手洗",
+        "do_not_wash": "不可洗涤",
+        "bleach_allowed": "可漂白",
+        "non_chlorine_bleach": "仅限非氯漂白",
+        "do_not_bleach": "不可漂白",
+        "tumble_dry_low": "低温滚筒烘干",
+        "tumble_dry_normal": "常规滚筒烘干",
+        "do_not_tumble_dry": "不可滚筒烘干",
+        "iron_low": "低温熨烫",
+        "iron_medium": "中温熨烫",
+        "iron_high": "高温熨烫",
+        "do_not_iron": "不可熨烫",
+        "dry_clean_any": "专业干洗",
+        "dry_clean_petroleum": "专业干洗，仅限石油溶剂",
+        "wet_clean": "专业湿洗",
+        "do_not_dry_clean": "不可干洗"
       },
       "recyclabilityClass": {
-        "mono_material": "Mono-material — fibre-to-fibre recyclable",
-        "separable_blend": "Blend, separable components",
-        "mechanical_only": "Mechanical recycling only",
-        "downcycle_only": "Downcycling only",
-        "not_recyclable": "Not currently recyclable"
+        "mono_material": "单一材料 — 可进行纤维到纤维回收",
+        "separable_blend": "混合材料，可分离组分",
+        "mechanical_only": "仅限机械回收",
+        "downcycle_only": "仅限降级回收",
+        "not_recyclable": "目前不可回收"
       },
       "dispositionStatus": {
-        "in_stock": "Still in stock",
-        "sold": "Sold",
-        "donated": "Donated",
-        "recycled": "Recycled",
-        "remanufactured": "Remanufactured",
-        "destroyed": "Destroyed"
+        "in_stock": "仍在库存中",
+        "sold": "已售出",
+        "donated": "已捐赠",
+        "recycled": "已回收",
+        "remanufactured": "已再制造",
+        "destroyed": "已销毁"
       },
       "dispositionReason": {
-        "health_safety": "Health and safety",
-        "counterfeit_ip": "Counterfeit / IP infringement",
-        "damaged_beyond_repair": "Damaged beyond repair",
-        "donation_refused": "Donation refused after asking three social economy organisations",
-        "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "health_safety": "健康与安全",
+        "counterfeit_ip": "假冒/知识产权侵权",
+        "damaged_beyond_repair": "损坏无法修复",
+        "donation_refused": "询问三家社会经济组织后捐赠被拒",
+        "protected_logo": "受保护的标志无法移除",
+        "unlawful_product": "产品被证实为非法"
       },
       "authenticationMethod": {
-        "nfc_tag": "NFC tag",
-        "secure_qr": "Secure / serialised QR code",
-        "security_seal": "Tamper-evident security seal",
-        "ai_fingerprint": "AI image fingerprint",
+        "nfc_tag": "NFC 标签",
+        "secure_qr": "安全/序列化 QR 码",
+        "security_seal": "防篡改安全封条",
+        "ai_fingerprint": "AI图像指纹",
         "rfid": "RFID",
-        "other": "Other"
+        "other": "其他"
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "主要纤维 ({{primary}}%) 和次要纤维 ({{secondary}}%) 的百分比总和为 {{sum}}%，超过了 100%。欧盟法规 1007/2011 要求申报的纤维成分必须反映产品的实际构成 — 请检查这些数据。",
+      "primaryExceeds100": "仅主要纤维的百分比 ({{primary}}%) 就已超过 100%。欧盟法规 1007/2011 要求申报的纤维成分必须反映产品的实际构成 — 请检查此数据。",
+      "incompleteSingleFibre": "主要纤维申报为 {{primary}}%，但未记录次要纤维。如果该产品是混纺产品，请通过“次要纤维类型/百分比”或“完整成分声明”添加剩余的纤维，以确保申报的成分总和达到 100%。",
+      "syntheticOver50": "该服装含有 {{percentage}}% 的合成纤维，超过了 50%。在洗涤过程中会脱落微塑料，必须将此情况告知消费者。"
     }
   },
   "demo": {
@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "服装 — 数字产品护照",
+    "madeInEu": "欧盟制造",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "物质",
+      "care": "保养",
+      "metadata": "DPP 基础设施"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "制造商",
+      "importer": "进口商",
+      "euResponsiblePerson": "欧盟负责人"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "地址",
+      "dppServiceProvider": "DPP 服务提供商",
+      "dppVersion": "DPP 版本",
+      "lastUpdated": "最后更新",
+      "status": "状态"
     },
     "values": {
-      "published": "Published"
+      "published": "已发布"
     }
   }
 }

@@ -26,10 +26,9 @@
  * bespoke Apparel public renderer, seeded in English by
  * scripts/seed-garment-public-i18n.ts and translated by the same step 2 run.
  */
-export const PENDING_TRANSLATION_PREFIXES: readonly string[] = [
-  'textiles.',
-  'garmentPublic.',
-];
+// Step 2 completed: textiles.* and garmentPublic.* are translated in all 24
+// non-English locales. Keep this array empty.
+export const PENDING_TRANSLATION_PREFIXES: readonly string[] = [];
 
 /** True when a key belongs to a subtree whose translation is still pending. */
 export function isTranslationPending(key: string): boolean {

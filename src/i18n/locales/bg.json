@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Процентното съдържание на основните ({{primary}}%) и вторичните ({{secondary}}%) влакна е общо {{sum}}%, което надвишава 100%. Регламент (ЕС) 1007/2011 изисква декларираният състав на влакната да отразява действителния състав на артикула — проверете тези данни.",
+      "primaryExceeds100": "Само процентното съдържание на основните влакна ({{primary}}%) надвишава 100%. Регламент (ЕС) 1007/2011 изисква декларираният състав на влакната да отразява действителния състав на артикула — проверете тази стойност.",
+      "incompleteSingleFibre": "Декларирани са основни влакна {{primary}}% без посочени вторични влакна. Ако този артикул е смес, добавете останалите влакна чрез „Вид/процентно съдържание на вторични влакна“ или „Пълен декларативен състав“, така че декларираният състав да обхваща пълните 100%.",
+      "syntheticOver50": "Тази дреха е {{percentage}}% синтетични влакна, което е повече от 50%. Тя ще отделя микропластмаса по време на пране и потребителят трябва да бъде информиран за това."
     }
   },
   "demo": {
@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Облекло — Цифров паспорт на продукта",
+    "madeInEu": "Произведено в ЕС",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Вещества",
+      "care": "Грижа",
+      "metadata": "DPP инфраструктура"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Производител",
+      "importer": "Вносител",
+      "euResponsiblePerson": "Отговорно лице в ЕС"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Адрес",
+      "dppServiceProvider": "DPP доставчик на услуги",
+      "dppVersion": "DPP версия",
+      "lastUpdated": "Последна актуализация",
+      "status": "Статус"
     },
     "values": {
-      "published": "Published"
+      "published": "Публикувано"
     }
   }
 }

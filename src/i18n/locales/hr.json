@@ -1716,10 +1716,10 @@
         "cashmere": "Kašmir",
         "mohair": "Moher",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Svila",
         "viscose": "Viskoza",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetat",
         "cupro": "Kupro",
@@ -1743,9 +1743,9 @@
         "not_assessed": "Nije procijenjeno"
       },
       "certificationsHeld": {
-        "gots": "GOTS (Global Organic Textile Standard)",
+        "gots": "GOTS (Globalni organski tekstilni standard)",
         "oeko_tex": "OEKO-TEX Standard 100",
-        "grs": "GRS (Global Recycled Standard)",
+        "grs": "GRS (Globalni reciklirani standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
         "other": "Ostalo"
@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Postoci primarnih ({{primary}}%) i sekundarnih ({{secondary}}%) vlakana zbrajaju se u {{sum}}%, što premašuje 100%. Uredba EU-a 1007/2011 zahtijeva da deklarirani sirovinski sastav odražava stvarni sastav proizvoda – provjerite ove brojke.",
+      "primaryExceeds100": "Samo postotak primarnih vlakana ({{primary}}%) premašuje 100%. Uredba EU-a 1007/2011 zahtijeva da deklarirani sirovinski sastav odražava stvarni sastav proizvoda – provjerite ovu brojku.",
+      "incompleteSingleFibre": "Primarno vlakno deklarirano je s {{primary}}%, bez zabilježenih sekundarnih vlakana. Ako je ovaj proizvod mješavina, dodajte preostala vlakna putem vrste/postotka sekundarnih vlakana ili potpune izjave o sastavu kako bi deklarirani sastav činio punih 100%.",
+      "syntheticOver50": "Ovaj odjevni predmet sadrži {{percentage}}% sintetičkih vlakana, što je više od 50%. Tijekom pranja ispuštat će mikroplastiku i potrošač o tome mora biti obaviješten."
     }
   },
   "demo": {
@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Odjeća — Digitalna putovnica proizvoda",
+    "madeInEu": "Proizvedeno u EU",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Tvari",
+      "care": "Održavanje",
+      "metadata": "DPP infrastruktura"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Proizvođač",
+      "importer": "Uvoznik",
+      "euResponsiblePerson": "Odgovorna osoba u EU"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
+      "address": "Adresa",
+      "dppServiceProvider": "DPP pružatelj usluge",
+      "dppVersion": "DPP verzija",
+      "lastUpdated": "Zadnje ažurirano",
       "status": "Status"
     },
     "values": {
-      "published": "Published"
+      "published": "Objavljeno"
     }
   }
 }

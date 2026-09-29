@@ -1716,7 +1716,7 @@
         "cashmere": "Kašmirs",
         "mohair": "Mohēra",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Zīds",
         "viscose": "Viskoze",
         "modal": "Modāls",
@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Primārās ({{primary}}%) un sekundārās ({{secondary}}%) šķiedras procentuālais daudzums kopā veido {{sum}}%, kas pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šos skaitļus.",
+      "primaryExceeds100": "Tikai primārās šķiedras procentuālais daudzums ({{primary}}%) pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šo skaitli.",
+      "incompleteSingleFibre": "Ir norādīta primārā šķiedra {{primary}}% apmērā, bet nav reģistrēta sekundārā šķiedra. Ja šis izstrādājums ir maisījums, pievienojiet atlikušo(-ās) šķiedru(-as), izmantojot laukus “Sekundārās šķiedras veids/procentuālais daudzums” vai “Pilns sastāva apraksts”, lai norādītais sastāvs veidotu visus 100%.",
+      "syntheticOver50": "Šis apģērbs satur {{percentage}}% sintētiskās šķiedras, kas ir vairāk nekā 50%. Mazgāšanas laikā tas izdalīs mikroplastmasu, un patērētājs par to ir jāinformē."
     }
   },
   "demo": {
@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Apģērbs — Digitālā produkta pase",
+    "madeInEu": "Ražots ES",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Vielas",
+      "care": "Kopšana",
+      "metadata": "DPP infrastruktūra"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Ražotājs",
+      "importer": "Importētājs",
+      "euResponsiblePerson": "ES atbildīgā persona"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Adrese",
+      "dppServiceProvider": "DPP pakalpojumu sniedzējs",
+      "dppVersion": "DPP versija",
+      "lastUpdated": "Pēdējo reizi atjaunināts",
+      "status": "Statuss"
     },
     "values": {
-      "published": "Published"
+      "published": "Publicēts"
     }
   }
 }

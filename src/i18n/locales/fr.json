@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Les pourcentages des fibres primaire ({{primary}} %) et secondaire ({{secondary}} %) totalisent {{sum}} %, dépassant ainsi 100 %. Le règlement (UE) 1007/2011 exige que la composition en fibres déclarée corresponde à la composition réelle de l'article — veuillez vérifier ces chiffres.",
+      "primaryExceeds100": "Le pourcentage de la fibre primaire à lui seul ({{primary}} %) dépasse 100 %. Le règlement (UE) 1007/2011 exige que la composition en fibres déclarée corresponde à la composition réelle de l'article — veuillez vérifier ce chiffre.",
+      "incompleteSingleFibre": "La fibre primaire est déclarée à {{primary}} % sans qu'aucune fibre secondaire ne soit indiquée. Si cet article est un mélange, ajoutez la ou les fibres restantes via les champs « Type/Pourcentage de la fibre secondaire » ou « Déclaration de composition complète » pour que la composition déclarée atteigne 100 %.",
+      "syntheticOver50": "Ce vêtement est composé à {{percentage}} % de fibres synthétiques, soit plus de 50 %. Il rejettera des microplastiques lors du lavage, et le consommateur doit en être informé."
     }
   },
   "demo": {
@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Habillement — Passeport de produit numérique",
+    "madeInEu": "Fabriqué dans l'UE",
     "sections": {
       "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "care": "Entretien",
+      "metadata": "Infrastructure du DPP"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Fabricant",
+      "importer": "Importateur",
+      "euResponsiblePerson": "Personne responsable dans l'UE"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Adresse",
+      "dppServiceProvider": "DPP fournisseur de services",
+      "dppVersion": "Version du DPP",
+      "lastUpdated": "Dernière mise à jour",
+      "status": "Statut"
     },
     "values": {
-      "published": "Published"
+      "published": "Publié"
     }
   }
 }

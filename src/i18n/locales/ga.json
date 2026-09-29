@@ -1362,12 +1362,12 @@
       "gtin": {
         "label": "GTIN / EAN",
         "help": "Uimhir thrádála na míre a shainaithníonn an SKU.",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "m.sh., 3401234567890"
       },
       "item_unique_identifier": {
         "label": "Aitheantóir Uathúil in aghaidh na Míre",
         "help": "Sainaithníonn sé an mhír fhisiciúil aonair seo, ní an SKU. Is iad na haitheantóirí in aghaidh na míre a chumasaíonn athdhíol, aistriú úinéireachta agus fíordheimhniú thar shaolré an táirge.",
-        "placeholder": "e.g., DPP-2026-000184213",
+        "placeholder": "m.sh., DPP-2026-000184213",
         "warn": "Ní shannann Open Label an t-aitheantóir seo duit. Ba cheart do bhrandaí a gcóras aitheantais in aghaidh na míre féin a thógáil — e.g. clibeanna sraitheacha RFID/NFC, scéim uimhrithe líne táirgthe, nó sraithuimhir ERP atá ann cheana — agus an luach sin a chur isteach anseo."
       },
       "style_reference": {
@@ -1381,16 +1381,16 @@
       },
       "size": {
         "label": "Méid",
-        "placeholder": "e.g., M, 42, 10"
+        "placeholder": "m.sh., M, 42, 10"
       },
       "product_weight_grams": {
         "label": "Meáchan an Táirge (gram)",
         "help": "Glanmheáchan na míre, a úsáidtear le haghaidh loingseoireachta agus tuairiscithe ar dhéine ábhair.",
-        "placeholder": "e.g., 220"
+        "placeholder": "m.sh., 220"
       },
       "batch_lot": {
         "label": "Baisc nó Lot Táirgthe",
-        "placeholder": "e.g., LOT-2026-03-A"
+        "placeholder": "m.sh., LOT-2026-03-A"
       },
       "brand_name": {
         "label": "Ainm an Bhranda"
@@ -1459,7 +1459,7 @@
       },
       "primary_fiber_percentage": {
         "label": "Céatadán an Phríomhshnáithín (%)",
-        "placeholder": "e.g., 80"
+        "placeholder": "m.sh., 80"
       },
       "secondary_fiber": {
         "label": "Cineál an tSnaithín Thánaistigh (más infheidhme)",
@@ -1467,7 +1467,7 @@
       },
       "secondary_fiber_percentage": {
         "label": "Céatadán an tSnaithín Thánaistigh (%)",
-        "placeholder": "e.g., 20"
+        "placeholder": "m.sh., 20"
       },
       "full_composition": {
         "label": "Ráiteas Comhdhéanaimh Iomlán",
@@ -1488,17 +1488,17 @@
       },
       "recycled_content_percentage": {
         "label": "Céatadán Iomlán an Ábhair Athchúrsáilte (%)",
-        "placeholder": "e.g., 50"
+        "placeholder": "m.sh., 50"
       },
       "recycled_pre_consumer_percentage": {
         "label": "Ábhar Athchúrsáilte Réamh-thomhaltais (%)",
         "help": "Dramhaíl táirgthe a aisghabhadh sular shroich sí tomhaltóir.",
-        "placeholder": "e.g., 20"
+        "placeholder": "m.sh., 20"
       },
       "recycled_post_consumer_percentage": {
         "label": "Ábhar Athchúrsáilte Iar-thomhaltais (%)",
         "help": "Ábhar a aisghabhadh ó tháirgí a shroich úsáideoirí deiridh.",
-        "placeholder": "e.g., 30"
+        "placeholder": "m.sh., 30"
       },
       "microplastic_shedding": {
         "label": "An bhfuil snáithíní sintéiseacha ann a sceitheann micreaphlaistigh?",
@@ -1604,7 +1604,7 @@
       "seam_strength": {
         "label": "Toradh Neart an Fhuaighil",
         "help": "Caighdeán tástála: ISO 13935-2 (modh an ghreama).",
-        "placeholder": "e.g., 220 N"
+        "placeholder": "m.sh., 220 N"
       },
       "test_report_reference": {
         "label": "Tagairt na Tuarascála Tástála",
@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Is ionann suim chéatadáin an phríomhshnáithín ({{primary}}%) agus an tsnáithín thánaistigh ({{secondary}}%) agus {{sum}}%, a sháraíonn 100%. Ceanglaítear le Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíní dearbhaithe comhdhéanamh iarbhír an earra — seiceáil na figiúirí seo.",
+      "primaryExceeds100": "Sáraíonn céatadán an phríomhshnáithín amháin ({{primary}}%) 100%. Ceanglaítear le Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíní dearbhaithe comhdhéanamh iarbhír an earra — seiceáil an figiúr seo.",
+      "incompleteSingleFibre": "Dearbhaítear an príomhshnáithín ag {{primary}}% gan aon snáithín tánaisteach a bheith taifeadta. Más cumasc é an t-earra seo, cuir an snáithín/na snáithíní eile leis trí Chineál/Chéatadán an tSnaithín Thánaistigh nó tríd an Ráiteas Comhdhéanaimh Iomlán ionas go gclúdóidh an comhdhéanamh dearbhaithe an 100% iomlán.",
+      "syntheticOver50": "Is snáithín sintéiseach é {{percentage}}% den bhall éadaigh seo, atá níos mó ná 50%. Scaoilfidh sé micreaphlaistigh le linn níocháin, agus ní mór an tomhaltóir a chur ar an eolas faoi seo."
     }
   },
   "demo": {
@@ -2084,27 +2084,27 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apparel — Digital Product Passport",
-    "madeInEu": "Made in EU",
+    "headerBadge": "Éadaí — Pas Digiteach Táirge",
+    "madeInEu": "Déanta san AE",
     "sections": {
-      "substances": "Substances",
-      "care": "Care",
-      "metadata": "DPP infrastructure"
+      "substances": "Substaintí",
+      "care": "Cúram",
+      "metadata": "DPP bonneagar"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "euResponsiblePerson": "EU responsible person"
+      "manufacturer": "Monaróir",
+      "importer": "Iompórtálaí",
+      "euResponsiblePerson": "Duine freagrach an AE"
     },
     "rows": {
-      "address": "Address",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "address": "Seoladh",
+      "dppServiceProvider": "DPP soláthraí seirbhíse",
+      "dppVersion": "DPP leagan",
+      "lastUpdated": "Nuashonraithe go deireanach",
+      "status": "Stádas"
     },
     "values": {
-      "published": "Published"
+      "published": "Foilsithe"
     }
   }
 }
