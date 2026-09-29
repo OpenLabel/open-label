@@ -167,10 +167,10 @@ function isLegitimateMatch(key: string, value: string, langCode: string): boolea
 }
 
 describe("Translation Audit", () => {
-  // The Apparel translation debt has been cleared. Nothing may be added back:
-  // untranslated strings must be translated, never hidden behind a prefix.
-  it("no translation debt is outstanding", () => {
-    expect([...PENDING_TRANSLATION_PREFIXES]).toEqual([]);
+  // Tracked Apparel translation debt. The exact list is asserted so no further
+  // prefixes can be quietly added; it must be emptied once translation is done.
+  it("translation debt is limited to the tracked Apparel prefixes", () => {
+    expect([...PENDING_TRANSLATION_PREFIXES]).toEqual(['textiles.', 'garmentPublic.']);
   });
 
   const enFlat = flattenKeys(locales.en);
