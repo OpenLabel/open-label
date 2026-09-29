@@ -8,7 +8,8 @@
  */
 
 // One-off, resumable translator for the Apparel `textiles.*` locale subtree.
-// Usage: bun run scripts/translate-textiles-i18n.ts [fr de ...]
+// Usage: bun run scripts/translate-textiles-i18n.ts [--section=textiles|garmentPublic] [fr de ...]
+// Default section is textiles. Only values byte-identical to English are sent.
 
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
@@ -44,6 +45,18 @@ const PROTECTED = [
 
 const FORBIDDEN_FIBRE_TERMS = /\b(?:rayon|tencel|spandex|nylon)\b/i;
 const CHUNK_SIZE = 288;
+const SECTIONS = ['textiles', 'garmentPublic'] as const;
+let SECTION: string = 'textiles';
+
+const FIBRE_RULES = `LEGAL FIBRE RULE:
+- Keys beginning options.primaryFiber are legally prescribed textile fibre names.
+- For EU official languages use the exact official name in Regulation (EU) No 1007/2011 Annex I for: cotton, flax/linen, hemp, wool, cashmere, mohair, alpaca, angora, silk, viscose, modal, lyocell, acetate, cupro, polyester, polyamide, acrylic, elastane, polypropylene.
+- Never use Rayon, Tencel, Spandex, or Nylon in any language. Use the official equivalents of viscose, lyocell, elastane, and polyamide.
+- organic_cotton is the translated qualifier “organic” plus the official cotton name. recycled_polyester is the translated qualifier “recycled” plus the official polyester name.
+- Keep cashmere, mohair, alpaca and angora distinct; keep modal distinct from viscose.
+- For Simplified Chinese, use standard professional textile-labelling terminology because Annex I has no official Chinese version.
+
+`;
 
 type Tree = Record<string, any>;
 
@@ -115,6 +128,7 @@ function validateValue(key: string, source: string, translated: unknown): assert
 }
 
 async function translateChunk(code: string, values: Record<string, string>): Promise<Record<string, string>> {
+  const fibreRules = SECTION === 'textiles' ? FIBRE_RULES : '';
   const apiKey = process.env.LOVABLE_API_KEY;
   if (!apiKey) throw new Error('LOVABLE_API_KEY is not set');
   const language = LANGUAGE_NAMES[code] ?? code;
@@ -123,14 +137,7 @@ async function translateChunk(code: string, values: Record<string, string>): Pro
 
 Translate every JSON VALUE from English to ${language} (${code}). Return ONLY one valid JSON object with the exact same keys. Never translate keys.
 
-LEGAL FIBRE RULE:
-- Keys beginning options.primaryFiber are legally prescribed textile fibre names.
-- For EU official languages use the exact official name in Regulation (EU) No 1007/2011 Annex I for: cotton, flax/linen, hemp, wool, cashmere, mohair, alpaca, angora, silk, viscose, modal, lyocell, acetate, cupro, polyester, polyamide, acrylic, elastane, polypropylene.
-- Never use Rayon, Tencel, Spandex, or Nylon in any language. Use the official equivalents of viscose, lyocell, elastane, and polyamide.
-- organic_cotton is the translated qualifier “organic” plus the official cotton name. recycled_polyester is the translated qualifier “recycled” plus the official polyester name.
-- Keep cashmere, mohair, alpaca and angora distinct; keep modal distinct from viscose.
-- For Simplified Chinese, use standard professional textile-labelling terminology because Annex I has no official Chinese version.
-
+${fibreRules}
 VERBATIM RULE:
 - Preserve every token matching __KEEP_NUMBER__ exactly. These placeholders are restored after translation.
 - Preserve standalone units N and %, all URLs, dates, numbers, punctuation, line breaks, and example codes.
@@ -171,10 +178,10 @@ ${JSON.stringify(masked)}`;
 
 async function translateLocale(code: string, english: Record<string, string>): Promise<void> {
   const locale = load(code);
-  const current = flatten(locale.textiles ?? {});
+  const current = flatten(locale[SECTION] ?? {});
   const pending = Object.keys(english).filter((key) => current[key] === english[key]);
   if (pending.length === 0) {
-    console.log(`${code}: 0 translated, ${Object.keys(english).length} skipped`);
+    console.log(`${code}/${SECTION}: 0 translated, ${Object.keys(english).length} skipped`);
     return;
   }
 
@@ -184,27 +191,30 @@ async function translateLocale(code: string, english: Record<string, string>): P
     const input = Object.fromEntries(keys.map((key) => [key, english[key]]));
     const translated = await translateChunk(code, input);
     for (const key of keys) {
-      setPath(locale.textiles, key, translated[key]);
+      setPath((locale[SECTION] ??= {}), key, translated[key]);
       translatedCount += 1;
     }
     save(code, locale);
-    console.log(`${code}: ${translatedCount}/${pending.length} translated`);
+    console.log(`${code}/${SECTION}: ${translatedCount}/${pending.length} translated`);
   }
 
-  const finalKeys = Object.keys(flatten(locale.textiles)).sort();
+  const finalKeys = Object.keys(flatten(locale[SECTION])).sort();
   const englishKeys = Object.keys(english).sort();
   if (JSON.stringify(finalKeys) !== JSON.stringify(englishKeys)) throw new Error(`${code}: final key set differs`);
-  console.log(`${code}: ${translatedCount} translated, ${englishKeys.length - translatedCount} skipped`);
+  console.log(`${code}/${SECTION}: ${translatedCount} translated, ${englishKeys.length - translatedCount} skipped`);
 }
 
 async function main(): Promise<void> {
+  const sectionArg = process.argv.find((arg) => arg.startsWith('--section='));
+  if (sectionArg) SECTION = sectionArg.slice('--section='.length);
+  if (!SECTIONS.includes(SECTION as (typeof SECTIONS)[number])) throw new Error(`Unsupported section: ${SECTION}`);
   const requested = process.argv.slice(2).filter((arg) => !arg.startsWith('-'));
   const targets = requested.length ? requested : [...TARGETS];
   for (const code of targets) {
     if (!TARGETS.includes(code as (typeof TARGETS)[number])) throw new Error(`Unsupported locale: ${code}`);
   }
-  const english = flatten(load('en').textiles);
-  if (Object.keys(english).length !== 288) throw new Error(`Expected 288 English Apparel values, found ${Object.keys(english).length}`);
+  const english = flatten(load('en')[SECTION] ?? {});
+  if (Object.keys(english).length === 0) throw new Error(`No English values found for section ${SECTION}`);
   const batchSize = 4;
   for (let i = 0; i < targets.length; i += batchSize) {
     await Promise.all(targets.slice(i, i + batchSize).map((code) => translateLocale(code, english)));
