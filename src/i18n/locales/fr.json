@@ -2089,7 +2089,7 @@
     "sections": {
       "substances": "Substances",
       "care": "Entretien",
-      "metadata": "DPP infrastructure"
+      "metadata": "Infrastructure du DPP"
     },
     "subsections": {
       "manufacturer": "Fabricant",
@@ -2099,7 +2099,7 @@
     "rows": {
       "address": "Adresse",
       "dppServiceProvider": "DPP fournisseur de services",
-      "dppVersion": "DPP version",
+      "dppVersion": "Version du DPP",
       "lastUpdated": "Dernière mise à jour",
       "status": "Statut"
     },

@@ -2099,7 +2099,7 @@
     "rows": {
       "address": "Adresse",
       "dppServiceProvider": "DPP tjenesteudbyder",
-      "dppVersion": "DPP version",
+      "dppVersion": "DPP-version",
       "lastUpdated": "Senest opdateret",
       "status": "Status"
     },
