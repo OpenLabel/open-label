@@ -1776,7 +1776,7 @@
       },
       "ironTemp": {
         "low": "Laag (110°C)",
-        "medium": "Medium (150°C)",
+        "medium": "Gemiddeld (150°C)",
         "high": "Hoog (200°C)"
       },
       "careSymbols": {
