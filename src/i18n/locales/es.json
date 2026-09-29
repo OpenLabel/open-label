@@ -1714,15 +1714,15 @@
         "hemp": "Cáñamo",
         "wool": "Lana",
         "cashmere": "Cachemira",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
+        "mohair": "mohair",
+        "alpaca": "alpaca",
+        "angora": "angora",
         "silk": "Seda",
         "viscose": "Viscosa",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetato",
-        "cupro": "Cupro",
+        "cupro": "cupro",
         "polyester": "Poliéster",
         "recycled_polyester": "Poliéster reciclado",
         "nylon": "Poliamida",
@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Los porcentajes de fibra primaria ({{primary}} %) y secundaria ({{secondary}} %) suman un {{sum}} %, lo que supera el 100 %. El Reglamento (UE) 1007/2011 exige que la composición de fibras declarada refleje la composición real del artículo. Verifique estas cifras.",
+      "primaryExceeds100": "Solo el porcentaje de fibra primaria ({{primary}} %) ya supera el 100 %. El Reglamento (UE) 1007/2011 exige que la composición de fibras declarada refleje la composición real del artículo. Verifique esta cifra.",
+      "incompleteSingleFibre": "Se ha declarado un {{primary}} % de fibra primaria sin registrar ninguna fibra secundaria. Si este artículo es una mezcla, añada la(s) fibra(s) restante(s) a través del Tipo/Porcentaje de Fibra Secundaria o de la Declaración de Composición Completa para que la composición declarada represente el 100 %.",
+      "syntheticOver50": "Esta prenda contiene un {{percentage}} % de fibra sintética, lo que supone más del 50 %. Desprenderá microplásticos durante el lavado, y se debe informar de ello al consumidor."
     }
   },
   "demo": {

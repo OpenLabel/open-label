@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Il-perċentwali tal-fibra primarja ({{primary}}%) u sekondarja ({{secondary}}%) jammontaw għal {{sum}}%, li jaqbeż il-100%. Ir-Regolament tal-UE 1007/2011 jirrikjedi li l-kompożizzjoni tal-fibra ddikjarata tirrifletti l-kompożizzjoni reali tal-oġġett — iċċekkja dawn iċ-ċifri.",
+      "primaryExceeds100": "Il-perċentwal tal-fibra primarja waħdu ({{primary}}%) jaqbeż il-100%. Ir-Regolament tal-UE 1007/2011 jirrikjedi li l-kompożizzjoni tal-fibra ddikjarata tirrifletti l-kompożizzjoni reali tal-oġġett — iċċekkja din iċ-ċifra.",
+      "incompleteSingleFibre": "Il-fibra primarja hija ddikjarata bħala {{primary}}% mingħajr ma hija rreġistrata l-ebda fibra sekondarja. Jekk dan l-oġġett huwa taħlita, żid il-fibra/fibri li jifdal permezz tat-Tip/Perċentwal tal-Fibra Sekondarja jew id-Dikjarazzjoni tal-Kompożizzjoni Sħiħa sabiex il-kompożizzjoni ddikjarata tammonta għall-100% sħaħ.",
+      "syntheticOver50": "Dan l-ilbies huwa magħmul minn {{percentage}}% fibra sintetika, li huwa aktar minn 50%. Dan se jerħi mikroplastiċi waqt il-ħasil, u l-konsumatur għandu jiġi infurmat b’dan."
     }
   },
   "demo": {

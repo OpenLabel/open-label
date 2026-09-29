@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Die prozentualen Anteile der primären ({{primary}}%) und sekundären ({{secondary}}%) Fasern ergeben in der Summe {{sum}}%, was 100% übersteigt. Gemäß der EU-Verordnung 1007/2011 muss die angegebene Faserzusammensetzung der tatsächlichen Beschaffenheit des Artikels entsprechen — überprüfen Sie diese Angaben.",
+      "primaryExceeds100": "Der prozentuale Anteil der primären Faser allein ({{primary}}%) übersteigt 100%. Gemäß der EU-Verordnung 1007/2011 muss die angegebene Faserzusammensetzung der tatsächlichen Beschaffenheit des Artikels entsprechen — überprüfen Sie diese Angabe.",
+      "incompleteSingleFibre": "Die Primärfaser ist mit {{primary}}% deklariert, eine Sekundärfaser wurde nicht angegeben. Handelt es sich um ein Gemisch, fügen Sie die restliche(n) Faser(n) über Sekundärer Fasertyp/Prozentsatz oder Vollständige Zusammensetzung hinzu, damit die deklarierte Zusammensetzung 100% ergibt.",
+      "syntheticOver50": "Dieses Kleidungsstück besteht zu {{percentage}}% aus Kunstfasern; das sind mehr als 50%. Es wird beim Waschen Mikroplastik freisetzen, worüber der Verbraucher informiert werden muss."
     }
   },
   "demo": {

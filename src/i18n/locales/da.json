@@ -1714,16 +1714,16 @@
         "hemp": "Hamp",
         "wool": "Uld",
         "cashmere": "Kashmir",
-        "mohair": "Mohair",
+        "mohair": "mohair",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Silke",
         "viscose": "Viskose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
+        "modal": "modal",
+        "lyocell": "lyocell",
         "acetate": "Acetat",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
+        "cupro": "cupro",
+        "polyester": "polyester",
         "recycled_polyester": "Genanvendt polyester",
         "nylon": "Polyamid",
         "acrylic": "Acryl",
@@ -1776,7 +1776,7 @@
       },
       "ironTemp": {
         "low": "Lav (110°C)",
-        "medium": "Medium (150°C)",
+        "medium": "Mellem (150°C)",
         "high": "Høj (200°C)"
       },
       "careSymbols": {
@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Procentdelen af primære ({{primary}}%) og sekundære ({{secondary}}%) fibre er tilsammen {{sum}}%, hvilket overstiger 100%. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller disse tal.",
+      "primaryExceeds100": "Procentdelen af primære fibre alene ({{primary}}%) overstiger 100%. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller dette tal.",
+      "incompleteSingleFibre": "Primære fibre er angivet til {{primary}}%, uden at der er registreret nogen sekundære fibre. Hvis denne vare er en blanding, skal de resterende fibre tilføjes via 'Sekundær fibertype/procentdel' eller 'Fuld sammensætningserklæring', så den angivne sammensætning udgør de fulde 100%.",
+      "syntheticOver50": "Denne beklædningsgenstand består af {{percentage}}% syntetiske fibre, hvilket er mere end 50%. Den vil afgive mikroplast under vask, og forbrugeren skal informeres om dette."
     }
   },
   "demo": {

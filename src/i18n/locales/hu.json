@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Az elsődleges ({{primary}}%) és a másodlagos ({{secondary}}%) szálak százalékos arányának összege {{sum}}%, ami meghaladja a 100%-ot. A(z) 1007/2011 EU-rendelet előírja, hogy a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezeket az adatokat.",
+      "primaryExceeds100": "Már az elsődleges szál százalékos aránya ({{primary}}%) is meghaladja a 100%-ot. A(z) 1007/2011 EU-rendelet előírja, hogy a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezt az adatot.",
+      "incompleteSingleFibre": "Az elsődleges szál {{primary}}%-os arányban van feltüntetve, másodlagos szál nincs megadva. Ha a termék keverék, adja hozzá a fennmaradó szál(ak)at a Másodlagos száltípus/Százalék vagy a Teljes összetétel mezőben, hogy a feltüntetett összetétel a teljes 100%-ot tegye ki.",
+      "syntheticOver50": "Ez a ruhadarab {{percentage}}%-ban szintetikus szálból készült, ami több mint 50%. Mosás közben mikroműanyagokat fog kibocsátani, és erről a fogyasztót tájékoztatni kell."
     }
   },
   "demo": {

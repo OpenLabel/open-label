@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Põhikiu ({{primary}}%) ja teise kiu ({{secondary}}%) protsentuaalne sisaldus on kokku {{sum}}%, mis ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele – kontrollige neid andmeid.",
+      "primaryExceeds100": "Ainuüksi põhikiu protsentuaalne sisaldus ({{primary}}%) ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele – kontrollige seda arvu.",
+      "incompleteSingleFibre": "Põhikiu sisalduseks on deklareeritud {{primary}}% ja teise kiu andmed puuduvad. Kui toode on kiusegu, lisage ülejäänud kiud jaotises „Teise kiu tüüp/protsent“ või „Täielik kiukoostis“, nii et deklareeritud koostis moodustaks kokku 100%.",
+      "syntheticOver50": "See rõivaese sisaldab {{percentage}}% sünteetilist kiudu, mis on rohkem kui 50%. Pesemisel eraldub sellest mikroplasti ja tarbijat tuleb sellest teavitada."
     }
   },
   "demo": {

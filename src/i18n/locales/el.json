@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Τα ποσοστά της κύριας ({{primary}}%) και της δευτερεύουσας ({{secondary}}%) ίνας αθροίζουν σε {{sum}}%, το οποίο υπερβαίνει το 100%. Ο κανονισμός (ΕΕ) 1007/2011 απαιτεί η δηλωμένη σύνθεση σε ίνες να αντικατοπτρίζει την πραγματική σύνθεση του προϊόντος — ελέγξτε αυτά τα στοιχεία.",
+      "primaryExceeds100": "Το ποσοστό μόνο της κύριας ίνας ({{primary}}%) υπερβαίνει το 100%. Ο κανονισμός (ΕΕ) 1007/2011 απαιτεί η δηλωμένη σύνθεση σε ίνες να αντικατοπτρίζει την πραγματική σύνθεση του προϊόντος — ελέγξτε αυτό το στοιχείο.",
+      "incompleteSingleFibre": "Η κύρια ίνα δηλώνεται σε ποσοστό {{primary}}% χωρίς να έχει καταγραφεί δευτερεύουσα ίνα. Εάν αυτό το προϊόν είναι μείγμα, προσθέστε την/τις υπόλοιπη/ες ίνα/ες μέσω του πεδίου «Τύπος/Ποσοστό Δευτερεύουσας Ίνας» ή της «Πλήρους Δήλωσης Σύνθεσης», ώστε η δηλωμένη σύνθεση να αντιστοιχεί στο σύνολο του 100%.",
+      "syntheticOver50": "Αυτό το ένδυμα αποτελείται από {{percentage}}% συνθετικές ίνες, ποσοστό που υπερβαίνει το 50%. Θα αποβάλλει μικροπλαστικά κατά την πλύση και ο καταναλωτής πρέπει να ενημερωθεί σχετικά."
     }
   },
   "demo": {

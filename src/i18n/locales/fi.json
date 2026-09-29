@@ -1714,13 +1714,13 @@
         "hemp": "Hamppu",
         "wool": "Villa",
         "cashmere": "Kašmir",
-        "mohair": "Mohair",
+        "mohair": "mohair",
         "alpaca": "Alpakka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Silkki",
         "viscose": "Viskoosi",
         "modal": "Modaali",
-        "lyocell": "Lyocell",
+        "lyocell": "lyocell",
         "acetate": "Asetaatti",
         "cupro": "Kupro",
         "polyester": "Polyesteri",
@@ -1833,10 +1833,10 @@
       }
     },
     "warnings": {
-      "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
-      "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
-      "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "compositionExceeds100": "Ensisijaisen kuidun ({{primary}} %) ja toissijaisen kuidun ({{secondary}} %) prosenttiosuuksien summa on {{sum}} %, mikä ylittää 100 %. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta – tarkista nämä luvut.",
+      "primaryExceeds100": "Jo yksin ensisijaisen kuidun prosenttiosuus ({{primary}} %) ylittää 100 %. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta – tarkista tämä luku.",
+      "incompleteSingleFibre": "Ensisijaisen kuidun osuudeksi on ilmoitettu {{primary}} %, eikä toissijaista kuitua ole merkitty. Jos tuote on sekoite, lisää loput kuidut Toissijainen kuitutyyppi/prosenttiosuus -kenttään tai Täydellinen koostumusseloste -kenttään, jotta ilmoitettu koostumus kattaa koko 100 %.",
+      "syntheticOver50": "Tämä vaate on {{percentage}} % synteettistä kuitua, mikä on yli 50 %. Siitä irtoaa mikromuovia pesun aikana, ja kuluttajalle on ilmoitettava tästä."
     }
   },
   "demo": {
