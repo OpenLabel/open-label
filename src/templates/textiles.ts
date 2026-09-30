@@ -248,7 +248,8 @@ export class TextilesTemplate extends BaseTemplate {
           id: 'importer_legal_name',
           label: 'Importer legal name',
           type: 'text',
-          badge: 'where_applicable',
+          required: true,
+          badge: 'required',
           showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
           helpText:
             "When the manufacturer is established outside the EU, the importer's name, postal address and electronic address must also be given.",
@@ -257,35 +258,40 @@ export class TextilesTemplate extends BaseTemplate {
           id: 'importer_street',
           label: 'Street address',
           type: 'text',
-          badge: 'where_applicable',
+          required: true,
+          badge: 'required',
           showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
         }),
         f({
           id: 'importer_postal_code',
           label: 'Postal code',
           type: 'text',
-          badge: 'where_applicable',
+          required: true,
+          badge: 'required',
           showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
         }),
         f({
           id: 'importer_city',
           label: 'City',
           type: 'text',
-          badge: 'where_applicable',
+          required: true,
+          badge: 'required',
           showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
         }),
         f({
           id: 'importer_country',
           label: 'Country',
           type: 'text',
-          badge: 'where_applicable',
+          required: true,
+          badge: 'required',
           showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
         }),
         f({
           id: 'importer_email',
           label: 'Electronic address (email)',
           type: 'text',
-          badge: 'where_applicable',
+          required: true,
+          badge: 'required',
           placeholder: 'name@company.com',
           showWhen: { field: 'manufacturer_non_eu', equals: 'yes' },
         }),
@@ -871,7 +877,10 @@ export class TextilesTemplate extends BaseTemplate {
             { value: 'damaged_beyond_repair', label: 'Damaged beyond repair' },
             { value: 'donation_refused', label: 'Donation refused after asking three social economy organisations' },
             { value: 'protected_logo', label: "Protected logo can't be removed" },
-            { value: 'unlawful_product', label: 'Product turned out to be unlawful' }
+            { value: 'unlawful_product', label: 'Product turned out to be unlawful' },
+            { value: 'forced_labour', label: 'Product made with forced labour' },
+            { value: 'expired_licence', label: 'Licence expired' },
+            { value: 'contamination', label: 'Contamination' }
           ]),
           warnWhen: {
             messageKey: 'textiles.fields.disposition_reason_code.warn',
@@ -929,7 +938,7 @@ export class TextilesTemplate extends BaseTemplate {
           label: 'Claims avoid generic environmental terms?',
           type: 'checkbox',
           helpText:
-            'Generic claims such as "eco-friendly", "conscious" and "carbon neutral via offsetting" are prohibited from 27 September 2026.',
+            'Generic claims such as "eco-friendly" and "carbon neutral via offsetting" are prohibited from 27 September 2026.',
         }),
       ],
     ),
@@ -1074,7 +1083,7 @@ export class TextilesTemplate extends BaseTemplate {
       syntheticPercentage += secondary ?? 0;
     }
 
-    if (syntheticPercentage > 50) {
+    if (syntheticPercentage >= 50) {
       warnings.push({
         fieldId: 'microplastic_shedding',
         messageKey: 'textiles.warnings.syntheticOver50',

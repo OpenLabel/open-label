@@ -535,7 +535,11 @@
     "printSizeInstruction": "以 1.8 厘米宽度打印。高度因内容而异。",
     "openPassport": "打开护照",
     "downloadSvg": "下载 SVG",
-    "downloadPng": "下载 PNG"
+    "downloadPng": "下载 PNG",
+    "securitySeal": {
+      "line1": "请在此处粘贴",
+      "line2": "防伪封签"
+    }
   },
   "translation": {
     "title": "翻译",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "声明是否避免使用通用环境术语？",
-        "help": "自2026年9月27日起，禁止使用“环保”、“自觉”和“通过抵消实现碳中和”等通用声明。"
+        "help": "自2026年9月27日起，禁止使用“环保”和“通过抵消实现碳中和”等通用声明。"
       },
       "authentication_feature_present": {
         "label": "是否存在真伪验证特征？",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "损坏无法修复",
         "donation_refused": "询问三家社会经济组织后捐赠被拒",
         "protected_logo": "受保护的标志无法移除",
-        "unlawful_product": "产品被证实为非法"
+        "unlawful_product": "产品被证实为非法",
+        "forced_labour": "使用强迫劳动制造的产品",
+        "expired_licence": "许可证已过期",
+        "contamination": "污染"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC 标签",

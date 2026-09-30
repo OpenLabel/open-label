@@ -100,7 +100,15 @@ function getRoundedHexagonPath(size: number) {
 }
 
 // Rounded hexagon SVG with text - creates a hexagon with curved corners and instruction text
-function RoundedHexagonWithText({ size = 104 }: { size?: number }) {
+function RoundedHexagonWithText({
+  size = 104,
+  line1,
+  line2,
+}: {
+  size?: number;
+  line1: string;
+  line2: string;
+}) {
   const { path, centerX, centerY } = getRoundedHexagonPath(size);
 
   return (
@@ -125,7 +133,7 @@ function RoundedHexagonWithText({ size = 104 }: { size?: number }) {
         fontWeight="500"
         fill="#666"
       >
-        Place security
+        {line1}
       </text>
       <text
         x={centerX}
@@ -135,7 +143,7 @@ function RoundedHexagonWithText({ size = 104 }: { size?: number }) {
         fontWeight="500"
         fill="#666"
       >
-        seals here
+        {line2}
       </text>
       <text
         x={centerX}
@@ -232,8 +240,8 @@ export function QRCodeDialog({
         ctx.fillStyle = '#666';
         ctx.font = '500 8px sans-serif';
         ctx.textAlign = 'center';
-        ctx.fillText('Place security', centerX, centerY - 12);
-        ctx.fillText('seals here', centerX, centerY);
+        ctx.fillText(t('qrDialog.securitySeal.line1', 'Place security'), centerX, centerY - 12);
+        ctx.fillText(t('qrDialog.securitySeal.line2', 'seals here'), centerX, centerY);
         ctx.fillStyle = '#999';
         ctx.font = '6.5px sans-serif';
         ctx.fillText('cypheme.com', centerX, centerY + 18);
@@ -378,8 +386,8 @@ export function QRCodeDialog({
         sealGroup.appendChild(text);
       };
 
-      addText('Place security', centerX, centerY - 12, '8', '500', '#666');
-      addText('seals here', centerX, centerY, '8', '500', '#666');
+      addText(t('qrDialog.securitySeal.line1', 'Place security'), centerX, centerY - 12, '8', '500', '#666');
+      addText(t('qrDialog.securitySeal.line2', 'seals here'), centerX, centerY, '8', '500', '#666');
       addText('cypheme.com', centerX, centerY + 18, '6.5', '400', '#999');
 
       wrapper.appendChild(sealGroup);
@@ -407,7 +415,7 @@ export function QRCodeDialog({
     link.href = blobUrl;
     link.click();
     URL.revokeObjectURL(blobUrl);
-  }, [productName, showSecuritySealOverlay, wineIngredientsText, wineEnergyText]);
+  }, [productName, showSecuritySealOverlay, t, wineIngredientsText, wineEnergyText]);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -433,7 +441,11 @@ export function QRCodeDialog({
                   className="qr-code-svg block h-auto max-w-full"
                 />
                 {/* Only show security seal placeholder when counterfeit protection is enabled */}
-                {showSecuritySealOverlay && <RoundedHexagonWithText size={139} />}
+                {showSecuritySealOverlay && <RoundedHexagonWithText
+                    size={139}
+                    line1={t('qrDialog.securitySeal.line1', 'Place security')}
+                    line2={t('qrDialog.securitySeal.line2', 'seals here')}
+                  />}
               </div>
               {/* Wine energy text below QR code */}
               {wineEnergyText && (

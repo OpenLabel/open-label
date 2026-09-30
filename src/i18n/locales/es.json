@@ -509,7 +509,11 @@
     "printSizeInstruction": "Imprima con 1,8 cm de ancho. La altura varía según el contenido.",
     "openPassport": "Abrir pasaporte",
     "downloadSvg": "Descargar SVG",
-    "downloadPng": "Descargar PNG"
+    "downloadPng": "Descargar PNG",
+    "securitySeal": {
+      "line1": "Coloque aquí los",
+      "line2": "sellos de seguridad"
+    }
   },
   "translation": {
     "title": "Traducciones",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "¿Evitan las declaraciones términos medioambientales genéricos?",
-        "help": "Las declaraciones genéricas como \"ecológico\", \"consciente\" y \"neutro en carbono mediante compensación\" están prohibidas a partir del 27 de septiembre de 2026."
+        "help": "Las declaraciones genéricas como \"ecológico\" y \"neutro en carbono mediante compensación\" están prohibidas a partir del 27 de septiembre de 2026."
       },
       "authentication_feature_present": {
         "label": "¿Dispone de una función de autenticación?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Dañado sin posibilidad de reparación",
         "donation_refused": "Donación rechazada tras consultar a tres organizaciones de economía social",
         "protected_logo": "No se puede eliminar el logotipo protegido",
-        "unlawful_product": "El producto resultó ser ilegal"
+        "unlawful_product": "El producto resultó ser ilegal",
+        "forced_labour": "Producto fabricado con trabajo forzoso",
+        "expired_licence": "Licencia caducada",
+        "contamination": "Contaminación"
       },
       "authenticationMethod": {
         "nfc_tag": "Etiqueta NFC",
@@ -2084,7 +2091,7 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Prendas de vestir — Pasaporte Digital de Producto",
+    "headerBadge": "Prendas — Pasaporte Digital de Producto",
     "madeInEu": "Fabricado en la UE",
     "sections": {
       "substances": "Sustancias",

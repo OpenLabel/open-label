@@ -527,7 +527,11 @@
     "printSizeInstruction": "Ipprintja bi wisa' ta' 1.8 ċm. L-għoli jvarja skont il-kontenut.",
     "openPassport": "Iftaħ il-passaport",
     "downloadSvg": "Niżżel SVG",
-    "downloadPng": "Niżżel PNG"
+    "downloadPng": "Niżżel PNG",
+    "securitySeal": {
+      "line1": "Poġġi s-siġilli",
+      "line2": "tas-sigurtà hawn"
+    }
   },
   "translation": {
     "title": "Traduzzjonijiet",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Id-dikjarazzjonijiet jevitaw termini ambjentali ġeneriċi?",
-        "help": "Dikjarazzjonijiet ġeneriċi bħal \"favur l-ambjent\", \"konxju\" u \"newtrali f’termini ta’ karbonju permezz ta’ kumpens\" huma pprojbiti mis-27 ta’ Settembru 2026."
+        "help": "Dikjarazzjonijiet ġeneriċi bħal \"favur l-ambjent\" u \"newtrali f’termini ta’ karbonju permezz ta’ kumpens\" huma pprojbiti mis-27 ta’ Settembru 2026."
       },
       "authentication_feature_present": {
         "label": "Karatteristika ta’ awtentikazzjoni preżenti?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Ħsara li ma tissewwiex",
         "donation_refused": "Donazzjoni rrifjutata wara li staqsejna tliet organizzazzjonijiet tal-ekonomija soċjali",
         "protected_logo": "Logo protett ma jistax jitneħħa",
-        "unlawful_product": "Prodott irriżulta li kien illegali"
+        "unlawful_product": "Prodott irriżulta li kien illegali",
+        "forced_labour": "Prodott magħmul bix-xogħol furzat",
+        "expired_licence": "Liċenzja skaduta",
+        "contamination": "Kontaminazzjoni"
       },
       "authenticationMethod": {
         "nfc_tag": "Tikketta NFC",
@@ -2084,7 +2091,7 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Ilbies — Passaport Diġitali tal-Prodott",
+    "headerBadge": "Ħwejjeġ — Passaport Diġitali tal-Prodott",
     "madeInEu": "Magħmul fl-UE",
     "sections": {
       "substances": "Sustanzi",

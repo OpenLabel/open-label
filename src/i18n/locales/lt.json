@@ -527,7 +527,11 @@
     "printSizeInstruction": "Spausdinkite 1,8 cm pločio. Aukštis priklauso nuo turinio.",
     "openPassport": "Atidaryti pasą",
     "downloadSvg": "Atsisiųsti SVG",
-    "downloadPng": "Atsisiųsti PNG"
+    "downloadPng": "Atsisiųsti PNG",
+    "securitySeal": {
+      "line1": "Čia uždėkite",
+      "line2": "apsaugos plombas"
+    }
   },
   "translation": {
     "title": "Vertimai",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Ar teiginiuose vengiama bendrinių aplinkosaugos terminų?",
-        "help": "Bendriniai teiginiai, tokie kaip „ekologiškas“, „sąmoningas“ ir „neutralus anglies dioksido atžvilgiu kompensuojant“, yra draudžiami nuo 2026 m. rugsėjo 27 d."
+        "help": "Bendriniai teiginiai, tokie kaip „ekologiškas“ ir „neutralus anglies dioksido atžvilgiu kompensuojant“, yra draudžiami nuo 2026 m. rugsėjo 27 d."
       },
       "authentication_feature_present": {
         "label": "Ar yra autentiškumo patvirtinimo priemonė?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Sugadinta nepataisomai",
         "donation_refused": "Auka atmesta, paklausus trijų socialinės ekonomikos organizacijų",
         "protected_logo": "Negalima pašalinti apsaugoto logotipo",
-        "unlawful_product": "Paaiškėjo, kad produktas yra neteisėtas"
+        "unlawful_product": "Paaiškėjo, kad produktas yra neteisėtas",
+        "forced_labour": "Gaminys, pagamintas naudojant priverstinį darbą",
+        "expired_licence": "Licencija nebegalioja",
+        "contamination": "Užteršimas"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC žymė",

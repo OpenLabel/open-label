@@ -527,7 +527,11 @@
     "printSizeInstruction": "Tulosta 1,8 cm leveänä. Korkeus vaihtelee sisällön mukaan.",
     "openPassport": "Avaa passi",
     "downloadSvg": "Lataa SVG",
-    "downloadPng": "Lataa PNG"
+    "downloadPng": "Lataa PNG",
+    "securitySeal": {
+      "line1": "Kiinnitä turvasinetit",
+      "line2": "tähän"
+    }
   },
   "translation": {
     "title": "Käännökset",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vältetäänkö väitteissä yleisluontoisia ympäristötermejä?",
-        "help": "Yleisluontoiset väitteet, kuten \"ympäristöystävällinen\", \"vastuullinen\" ja \"hiilineutraali päästökompensaation kautta\", ovat kiellettyjä 27. syyskuuta 2026 alkaen."
+        "help": "Yleisluontoiset väitteet, kuten \"ympäristöystävällinen\" ja \"hiilineutraali päästökompensaation kautta\", ovat kiellettyjä 27. syyskuuta 2026 alkaen."
       },
       "authentication_feature_present": {
         "label": "Onko aitouden todentamisominaisuus olemassa?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Vahingoittunut korjauskelvottomaksi",
         "donation_refused": "Lahjoituksesta kieltäydytty kolmelle yhteisötalouden organisaatiolle tehdyn tarjouksen jälkeen",
         "protected_logo": "Suojattua logoa ei voi poistaa",
-        "unlawful_product": "Tuote osoittautui laittomaksi"
+        "unlawful_product": "Tuote osoittautui laittomaksi",
+        "forced_labour": "Pakkotyöllä valmistettu tuote",
+        "expired_licence": "Lisenssi vanhentunut",
+        "contamination": "Kontaminaatio"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC-tunniste",
@@ -2084,7 +2091,7 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Vaatetus — Digitaalinen tuotepassi",
+    "headerBadge": "Vaatteet — Digitaalinen tuotepassi",
     "madeInEu": "Valmistettu EU:ssa",
     "sections": {
       "substances": "Aineet",

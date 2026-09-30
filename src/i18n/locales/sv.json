@@ -535,7 +535,11 @@
     "printSizeInstruction": "Skriv ut med 1,8 cm bredd. Höjden varierar med innehållet.",
     "openPassport": "Öppna pass",
     "downloadSvg": "Ladda ner SVG",
-    "downloadPng": "Ladda ner PNG"
+    "downloadPng": "Ladda ner PNG",
+    "securitySeal": {
+      "line1": "Placera säkerhets-",
+      "line2": "förseglingar här"
+    }
   },
   "translation": {
     "title": "Översättningar",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Undviker påståenden generiska miljötermer?",
-        "help": "Generiska påståenden som ”miljövänlig”, ”medveten” och ”koldioxidneutral via klimatkompensation” är förbjudna från och med den 27 september 2026."
+        "help": "Generiska påståenden som ”miljövänlig” och ”koldioxidneutral via klimatkompensation” är förbjudna från och med den 27 september 2026."
       },
       "authentication_feature_present": {
         "label": "Finns autentiseringsfunktion?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Skadad bortom reparation",
         "donation_refused": "Donation nekad efter förfrågan hos tre sociala ekonomiorganisationer",
         "protected_logo": "Skyddad logotyp kan inte tas bort",
-        "unlawful_product": "Produkten visade sig vara olaglig"
+        "unlawful_product": "Produkten visade sig vara olaglig",
+        "forced_labour": "Produkt tillverkad med tvångsarbete",
+        "expired_licence": "Licensen har löpt ut",
+        "contamination": "Kontaminering"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC-tagg",

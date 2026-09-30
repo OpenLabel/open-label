@@ -527,7 +527,11 @@
     "printSizeInstruction": "Nyomtassa 1,8 cm szélességben. A magasság a tartalomtól függ.",
     "openPassport": "Útlevél megnyitása",
     "downloadSvg": "SVG letöltése",
-    "downloadPng": "PNG letöltése"
+    "downloadPng": "PNG letöltése",
+    "securitySeal": {
+      "line1": "Ide helyezze a",
+      "line2": "biztonsági zárjegyeket"
+    }
   },
   "translation": {
     "title": "Fordítások",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Az állítások kerülik az általános környezetvédelmi kifejezéseket?",
-        "help": "Az olyan általános állítások, mint a „környezetbarát”, „tudatos” és „karbonsemleges ellentételezéssel”, 2026. szeptember 27-től tilosak."
+        "help": "Az olyan általános állítások, mint a „környezetbarát” és „karbonsemleges ellentételezéssel”, 2026. szeptember 27-től tilosak."
       },
       "authentication_feature_present": {
         "label": "Van eredetiségigazoló funkció?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Javíthatatlanul sérült",
         "donation_refused": "Adományozás visszautasítva három szociális gazdasági szervezet megkeresése után",
         "protected_logo": "A védett logó nem távolítható el",
-        "unlawful_product": "A termék jogellenesnek bizonyult"
+        "unlawful_product": "A termék jogellenesnek bizonyult",
+        "forced_labour": "Kényszermunkával előállított termék",
+        "expired_licence": "Lejárt licenc",
+        "contamination": "Szennyeződés"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC címke",

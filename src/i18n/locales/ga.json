@@ -527,7 +527,11 @@
     "printSizeInstruction": "Priontáil ag leithead 1.8 cm. Athraíonn an airde de réir an ábhair.",
     "openPassport": "Oscail an pas",
     "downloadSvg": "Íoslódáil SVG",
-    "downloadPng": "Íoslódáil PNG"
+    "downloadPng": "Íoslódáil PNG",
+    "securitySeal": {
+      "line1": "Cuir na séalaí slándála",
+      "line2": "anseo"
+    }
   },
   "translation": {
     "title": "Aistriúcháin",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "An seachnaíonn maímh téarmaí cineálacha comhshaoil?",
-        "help": "Tá cosc ar mhaímh chineálacha amhail \"éiceabhách\", \"coinsiasach\" agus \"carbón-neodrach trí fhritháireamh\" ón 27 Meán Fómhair 2026."
+        "help": "Tá cosc ar mhaímh chineálacha amhail \"éiceabhách\" agus \"carbón-neodrach trí fhritháireamh\" ón 27 Meán Fómhair 2026."
       },
       "authentication_feature_present": {
         "label": "An bhfuil gné fíordheimhnithe i láthair?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Damáiste déanta dó nach féidir a dheisiú",
         "donation_refused": "Diúltaíodh don bhronnadh tar éis fiafraí de thrí eagraíocht geilleagair shóisialta",
         "protected_logo": "Ní féidir lógó cosanta a bhaint",
-        "unlawful_product": "Tharla sé go raibh an táirge neamhdhleathach"
+        "unlawful_product": "Tharla sé go raibh an táirge neamhdhleathach",
+        "forced_labour": "Táirge a rinneadh le saothar éigeantais",
+        "expired_licence": "Ceadúnas imithe in éag",
+        "contamination": "Éilliú"
       },
       "authenticationMethod": {
         "nfc_tag": "Clib NFC",

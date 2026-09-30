@@ -162,11 +162,13 @@ export function GarmentPublicPassport({
       .join(', ');
 
   const careSymbols = labelsFor(QUESTIONS.care_symbols?.options, d.care_symbols, t);
-  const certifications = labelsFor(
-    QUESTIONS.certifications_held?.options,
-    d.certifications_held,
-    t,
-  );
+  // Mirrors textiles.getRequiredLogos(): a certification badge is only shown
+  // when a certificate reference backs it up.
+  const hasCertificateReferences =
+    typeof d.certificate_references === 'string' && d.certificate_references.trim() !== '';
+  const certifications = hasCertificateReferences
+    ? labelsFor(QUESTIONS.certifications_held?.options, d.certifications_held, t)
+    : [];
   const madeInEu = Boolean(d.made_in_eu);
 
   const percent = (id: string): string => {
@@ -458,7 +460,7 @@ export function GarmentPublicPassport({
               <Row
                 label={fl('pfas_details')}
                 value={
-                  d.pfas_details ? <p className="whitespace-pre-wrap">{tr('pfas_details')}</p> : ''
+                  d.pfas_present === 'yes' && d.pfas_details ? <p className="whitespace-pre-wrap">{tr('pfas_details')}</p> : ''
                 }
               />
               <Row

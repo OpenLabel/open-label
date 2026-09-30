@@ -527,7 +527,11 @@
     "printSizeInstruction": "Printige 1,8 cm laiuselt. Kõrgus sõltub sisust.",
     "openPassport": "Ava pass",
     "downloadSvg": "Laadi alla SVG",
-    "downloadPng": "Laadi alla PNG"
+    "downloadPng": "Laadi alla PNG",
+    "securitySeal": {
+      "line1": "Kinnitage turvaplommid",
+      "line2": "siia"
+    }
   },
   "translation": {
     "title": "Tõlked",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Kas väidetes välditakse üldisi keskkonnatermineid?",
-        "help": "Üldised väited nagu „keskkonnasõbralik“, „teadlik“ ja „süsinikuneutraalne tasaarvestuse kaudu“ on keelatud alates 27. septembrist 2026."
+        "help": "Üldised väited nagu „keskkonnasõbralik“ ja „süsinikuneutraalne tasaarvestuse kaudu“ on keelatud alates 27. septembrist 2026."
       },
       "authentication_feature_present": {
         "label": "Kas autentimisfunktsioon on olemas?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Parandamatult kahjustatud",
         "donation_refused": "Annetusest keelduti pärast kolmelt sotsiaalmajanduslikult organisatsioonilt küsimist",
         "protected_logo": "Kaitstud logo ei saa eemaldada",
-        "unlawful_product": "Toode osutus ebaseaduslikuks"
+        "unlawful_product": "Toode osutus ebaseaduslikuks",
+        "forced_labour": "Sunniviisilise tööga valmistatud toode",
+        "expired_licence": "Litsents on aegunud",
+        "contamination": "Saastumine"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC silt",
