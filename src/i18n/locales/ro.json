@@ -527,7 +527,11 @@
     "printSizeInstruction": "Imprimați la 1,8 cm lățime. Înălțimea variază în funcție de conținut.",
     "openPassport": "Deschide pașaportul",
     "downloadSvg": "Descarcă SVG",
-    "downloadPng": "Descarcă PNG"
+    "downloadPng": "Descarcă PNG",
+    "securitySeal": {
+      "line1": "Aplicați aici",
+      "line2": "sigiliile de securitate"
+    }
   },
   "translation": {
     "title": "Traduceri",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Mențiunile evită termeni ecologici generici?",
-        "help": "Mențiunile generice precum „ecologic”, „conștient” și „neutru din punct de vedere al emisiilor de carbon prin compensare” sunt interzise începând cu 27 septembrie 2026."
+        "help": "Mențiunile generice precum „ecologic” și „neutru din punct de vedere al emisiilor de carbon prin compensare” sunt interzise începând cu 27 septembrie 2026."
       },
       "authentication_feature_present": {
         "label": "Există o funcție de autentificare?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Deteriorat fără posibilitate de reparare",
         "donation_refused": "Donație refuzată după solicitarea a trei organizații de economie socială",
         "protected_logo": "Logo-ul protejat nu poate fi eliminat",
-        "unlawful_product": "Produsul s-a dovedit a fi ilegal"
+        "unlawful_product": "Produsul s-a dovedit a fi ilegal",
+        "forced_labour": "Produs fabricat prin muncă forțată",
+        "expired_licence": "Licență expirată",
+        "contamination": "Contaminare"
       },
       "authenticationMethod": {
         "nfc_tag": "Etichetă NFC",
@@ -2084,7 +2091,7 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Articole de îmbrăcăminte — Pașaport digital de produs",
+    "headerBadge": "Îmbrăcăminte — Pașaport digital de produs",
     "madeInEu": "Fabricat în UE",
     "sections": {
       "substances": "Substanțe",

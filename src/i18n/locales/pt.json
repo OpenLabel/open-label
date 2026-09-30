@@ -509,7 +509,11 @@
     "printSizeInstruction": "Imprima com 1,8 cm de largura. A altura varia com o conteúdo.",
     "openPassport": "Abrir passaporte",
     "downloadSvg": "Descarregar SVG",
-    "downloadPng": "Descarregar PNG"
+    "downloadPng": "Descarregar PNG",
+    "securitySeal": {
+      "line1": "Coloque aqui os",
+      "line2": "selos de segurança"
+    }
   },
   "translation": {
     "title": "Traduções",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "As alegações evitam termos ambientais genéricos?",
-        "help": "Alegações genéricas como \"ecológico\", \"consciente\" e \"neutro em carbono através de compensação\" são proibidas a partir de 27 de setembro de 2026."
+        "help": "Alegações genéricas como \"ecológico\" e \"neutro em carbono através de compensação\" são proibidas a partir de 27 de setembro de 2026."
       },
       "authentication_feature_present": {
         "label": "Funcionalidade de autenticação presente?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Danificado sem possibilidade de reparação",
         "donation_refused": "Doação recusada após consulta a três organizações da economia social",
         "protected_logo": "O logótipo protegido não pode ser removido",
-        "unlawful_product": "O produto revelou-se ilegal"
+        "unlawful_product": "O produto revelou-se ilegal",
+        "forced_labour": "Produto fabricado com trabalho forçado",
+        "expired_licence": "Licença expirada",
+        "contamination": "Contaminação"
       },
       "authenticationMethod": {
         "nfc_tag": "Etiqueta NFC",

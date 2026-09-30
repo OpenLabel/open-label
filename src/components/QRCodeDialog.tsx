@@ -415,7 +415,7 @@ export function QRCodeDialog({
     link.href = blobUrl;
     link.click();
     URL.revokeObjectURL(blobUrl);
-  }, [productName, showSecuritySealOverlay, wineIngredientsText, wineEnergyText]);
+  }, [productName, showSecuritySealOverlay, t, wineIngredientsText, wineEnergyText]);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>

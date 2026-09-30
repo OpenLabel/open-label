@@ -496,7 +496,11 @@
     "printSizeInstruction": "Wydrukuj z szerokością 1,8 cm. Wysokość zależy od zawartości.",
     "openPassport": "Otwórz paszport",
     "downloadSvg": "Pobierz SVG",
-    "downloadPng": "Pobierz PNG"
+    "downloadPng": "Pobierz PNG",
+    "securitySeal": {
+      "line1": "Umieść tutaj",
+      "line2": "plomby zabezpieczające"
+    }
   },
   "customIngredient": {
     "title": "Zdefiniuj własny składnik",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Czy w oświadczeniach unika się ogólnych terminów środowiskowych?",
-        "help": "Ogólne oświadczenia, takie jak „przyjazny dla środowiska”, „świadomy” i „neutralny pod względem emisji dwutlenku węgla dzięki kompensacji”, są zakazane od 27 września 2026 r."
+        "help": "Ogólne oświadczenia, takie jak „przyjazny dla środowiska” i „neutralny pod względem emisji dwutlenku węgla dzięki kompensacji”, są zakazane od 27 września 2026 r."
       },
       "authentication_feature_present": {
         "label": "Czy produkt posiada funkcję uwierzytelniania?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Uszkodzony nie do naprawienia",
         "donation_refused": "Odmowa przyjęcia darowizny po zapytaniu trzech organizacji ekonomii społecznej",
         "protected_logo": "Chronione logo nie może zostać usunięte",
-        "unlawful_product": "Produkt okazał się niezgodny z prawem"
+        "unlawful_product": "Produkt okazał się niezgodny z prawem",
+        "forced_labour": "Produkt wytworzony z użyciem pracy przymusowej",
+        "expired_licence": "Licencja wygasła",
+        "contamination": "Skażenie"
       },
       "authenticationMethod": {
         "nfc_tag": "Tag NFC",

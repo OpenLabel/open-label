@@ -517,7 +517,11 @@
     "printSizeInstruction": "Imprimez à 1,8 cm de large. La hauteur varie selon le contenu.",
     "openPassport": "Ouvrir le passeport",
     "downloadSvg": "Télécharger SVG",
-    "downloadPng": "Télécharger PNG"
+    "downloadPng": "Télécharger PNG",
+    "securitySeal": {
+      "line1": "Apposez les scellés",
+      "line2": "de sécurité ici"
+    }
   },
   "translation": {
     "title": "Traductions",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Les allégations évitent-elles les termes environnementaux génériques ?",
-        "help": "Les allégations génériques telles que « écologique », « conscient » et « neutre en carbone par compensation » sont interdites à partir du 27 septembre 2026."
+        "help": "Les allégations génériques telles que « écologique » et « neutre en carbone par compensation » sont interdites à partir du 27 septembre 2026."
       },
       "authentication_feature_present": {
         "label": "Fonctionnalité d'authentification présente ?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Endommagé au-delà de toute réparation",
         "donation_refused": "Don refusé après demande auprès de trois organisations de l'économie sociale",
         "protected_logo": "Le logo protégé ne peut être retiré",
-        "unlawful_product": "Produit s'est avéré illégal"
+        "unlawful_product": "Produit s'est avéré illégal",
+        "forced_labour": "Produit fabriqué par le travail forcé",
+        "expired_licence": "Licence expirée",
+        "contamination": "Contamination"
       },
       "authenticationMethod": {
         "nfc_tag": "Étiquette NFC",
@@ -2084,7 +2091,7 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Habillement — Passeport de produit numérique",
+    "headerBadge": "Vêtements — Passeport de produit numérique",
     "madeInEu": "Fabriqué dans l'UE",
     "sections": {
       "substances": "Substances",

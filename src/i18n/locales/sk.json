@@ -527,7 +527,11 @@
     "printSizeInstruction": "Tlačte v šírke 1,8 cm. Výška sa líši podľa obsahu.",
     "openPassport": "Otvoriť pas",
     "downloadSvg": "Stiahnuť SVG",
-    "downloadPng": "Stiahnuť PNG"
+    "downloadPng": "Stiahnuť PNG",
+    "securitySeal": {
+      "line1": "Sem umiestnite",
+      "line2": "bezpečnostné pečate"
+    }
   },
   "translation": {
     "title": "Preklady",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vyhýbajú sa tvrdenia všeobecným environmentálnym pojmom?",
-        "help": "Všeobecné tvrdenia ako „ekologický“, „uvedomelý“ a „uhlíkovo neutrálny prostredníctvom kompenzácie“ sú od 27. septembra 2026 zakázané."
+        "help": "Všeobecné tvrdenia ako „ekologický“ a „uhlíkovo neutrálny prostredníctvom kompenzácie“ sú od 27. septembra 2026 zakázané."
       },
       "authentication_feature_present": {
         "label": "Je prítomný prvok autentifikácie?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Poškodené nad rámec opravy",
         "donation_refused": "Darovanie odmietnuté po oslovení troch organizácií sociálnej ekonomiky",
         "protected_logo": "Chránené logo sa nedá odstrániť",
-        "unlawful_product": "Ukázalo sa, že výrobok je nezákonný"
+        "unlawful_product": "Ukázalo sa, že výrobok je nezákonný",
+        "forced_labour": "Výrobok vyrobený nútenou prácou",
+        "expired_licence": "Platnosť licencie uplynula",
+        "contamination": "Kontaminácia"
       },
       "authenticationMethod": {
         "nfc_tag": "Štítok NFC",

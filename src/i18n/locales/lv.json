@@ -527,7 +527,11 @@
     "printSizeInstruction": "Drukājiet 1,8 cm platumā. Augstums mainās atkarībā no satura.",
     "openPassport": "Atvērt pasi",
     "downloadSvg": "Lejupielādēt SVG",
-    "downloadPng": "Lejupielādēt PNG"
+    "downloadPng": "Lejupielādēt PNG",
+    "securitySeal": {
+      "line1": "Novietojiet šeit",
+      "line2": "drošības plombas"
+    }
   },
   "translation": {
     "title": "Tulkojumi",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vai apgalvojumos tiek izvairīties no vispārīgiem vides terminiem?",
-        "help": "Vispārīgi apgalvojumi, piemēram, “videi draudzīgs”, “apzināts” un “oglekļa neitrāls, izmantojot kompensāciju”, ir aizliegti no 2026. gada 27. septembra."
+        "help": "Vispārīgi apgalvojumi, piemēram, “videi draudzīgs” un “oglekļa neitrāls, izmantojot kompensāciju”, ir aizliegti no 2026. gada 27. septembra."
       },
       "authentication_feature_present": {
         "label": "Vai ir autentiskuma noteikšanas funkcija?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Bojāts, nav labojams",
         "donation_refused": "Ziedojums noraidīts pēc pieprasījuma trīs sociālās ekonomikas organizācijām",
         "protected_logo": "Aizsargātu logotipu nevar noņemt",
-        "unlawful_product": "Produkts izrādījās nelikumīgs"
+        "unlawful_product": "Produkts izrādījās nelikumīgs",
+        "forced_labour": "Produkts, kas izgatavots ar piespiedu darbu",
+        "expired_licence": "Licences derīguma termiņš beidzies",
+        "contamination": "Piesārņojums"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC birka",
@@ -2084,7 +2091,7 @@
     }
   },
   "garmentPublic": {
-    "headerBadge": "Apģērbs — Digitālā produkta pase",
+    "headerBadge": "Apģērbi — Digitālā produkta pase",
     "madeInEu": "Ražots ES",
     "sections": {
       "substances": "Vielas",

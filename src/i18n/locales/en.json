@@ -535,7 +535,11 @@
     "printSizeInstruction": "Print at 1.8 cm wide. Height varies with content.",
     "openPassport": "Open Passport",
     "downloadSvg": "Download SVG",
-    "downloadPng": "Download PNG"
+    "downloadPng": "Download PNG",
+    "securitySeal": {
+      "line1": "Place security",
+      "line2": "seals here"
+    }
   },
   "translation": {
     "title": "Translations",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as \"eco-friendly\", \"conscious\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
+        "help": "Generic claims such as \"eco-friendly\" and \"carbon neutral via offsetting\" are prohibited from 27 September 2026."
       },
       "authentication_feature_present": {
         "label": "Authentication feature present?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Damaged beyond repair",
         "donation_refused": "Donation refused after asking three social economy organisations",
         "protected_logo": "Protected logo can't be removed",
-        "unlawful_product": "Product turned out to be unlawful"
+        "unlawful_product": "Product turned out to be unlawful",
+        "forced_labour": "Product made with forced labour",
+        "expired_licence": "Licence expired",
+        "contamination": "Contamination"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC tag",

@@ -527,7 +527,11 @@
     "printSizeInstruction": "Natisnite v širini 1,8 cm. Višina se razlikuje glede na vsebino.",
     "openPassport": "Odpri potni list",
     "downloadSvg": "Prenesi SVG",
-    "downloadPng": "Prenesi PNG"
+    "downloadPng": "Prenesi PNG",
+    "securitySeal": {
+      "line1": "Sem namestite",
+      "line2": "varnostne pečate"
+    }
   },
   "translation": {
     "title": "Prevodi",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Ali se trditve izogibajo splošnim okoljskim izrazom?",
-        "help": "Splošne trditve, kot so »okolju prijazno«, »zavestno« in »ogljično nevtralno z izravnavo«, so od 27. septembra 2026 prepovedane."
+        "help": "Splošne trditve, kot so »okolju prijazno« in »ogljično nevtralno z izravnavo«, so od 27. septembra 2026 prepovedane."
       },
       "authentication_feature_present": {
         "label": "Ali je prisotna funkcija za preverjanje pristnosti?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Poškodovano do nepopravljivosti",
         "donation_refused": "Donacija zavrnjena po povpraševanju pri treh socialnih podjetjih",
         "protected_logo": "Zaščitenega logotipa ni mogoče odstraniti",
-        "unlawful_product": "Izdelek se je izkazal za nezakonitega"
+        "unlawful_product": "Izdelek se je izkazal za nezakonitega",
+        "forced_labour": "Izdelek, izdelan s prisilnim delom",
+        "expired_licence": "Licenca je potekla",
+        "contamination": "Kontaminacija"
       },
       "authenticationMethod": {
         "nfc_tag": "Oznaka NFC",

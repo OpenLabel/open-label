@@ -527,7 +527,11 @@
     "printSizeInstruction": "Ispišite u širini 1,8 cm. Visina ovisi o sadržaju.",
     "openPassport": "Otvori putovnicu",
     "downloadSvg": "Preuzmi SVG",
-    "downloadPng": "Preuzmi PNG"
+    "downloadPng": "Preuzmi PNG",
+    "securitySeal": {
+      "line1": "Ovdje postavite",
+      "line2": "sigurnosne pečate"
+    }
   },
   "translation": {
     "title": "Prijevodi",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Izbjegavaju li se u tvrdnjama generički ekološki pojmovi?",
-        "help": "Generičke tvrdnje kao što su „ekološki prihvatljivo”, „svjesno” i „ugljično neutralno putem kompenzacije” zabranjene su od 27. rujna 2026."
+        "help": "Generičke tvrdnje kao što su „ekološki prihvatljivo” i „ugljično neutralno putem kompenzacije” zabranjene su od 27. rujna 2026."
       },
       "authentication_feature_present": {
         "label": "Postoji li značajka za autentifikaciju?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Oštećeno izvan mogućnosti popravka",
         "donation_refused": "Donacija odbijena nakon upita trima organizacijama socijalne ekonomije",
         "protected_logo": "Zaštićeni logotip ne može se ukloniti",
-        "unlawful_product": "Ispostavilo se da je proizvod nezakonit"
+        "unlawful_product": "Ispostavilo se da je proizvod nezakonit",
+        "forced_labour": "Proizvod izrađen prisilnim radom",
+        "expired_licence": "Licencija je istekla",
+        "contamination": "Kontaminacija"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC oznaka",

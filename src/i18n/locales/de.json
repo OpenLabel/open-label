@@ -517,7 +517,11 @@
     "printSizeInstruction": "Drucken Sie 1,8 cm breit. Die Höhe variiert je nach Inhalt.",
     "openPassport": "Pass öffnen",
     "downloadSvg": "SVG herunterladen",
-    "downloadPng": "PNG herunterladen"
+    "downloadPng": "PNG herunterladen",
+    "securitySeal": {
+      "line1": "Sicherheitssiegel",
+      "line2": "hier anbringen"
+    }
   },
   "translation": {
     "title": "Übersetzungen",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vermeiden die Angaben allgemeine Umweltbegriffe?",
-        "help": "Allgemeine Angaben wie „umweltfreundlich“, „bewusst“ und „klimaneutral durch Kompensation“ sind ab dem 27. September 2026 verboten."
+        "help": "Allgemeine Angaben wie „umweltfreundlich“ und „klimaneutral durch Kompensation“ sind ab dem 27. September 2026 verboten."
       },
       "authentication_feature_present": {
         "label": "Authentifizierungsmerkmal vorhanden?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Irreparabel beschädigt",
         "donation_refused": "Spende nach Anfrage bei drei sozialwirtschaftlichen Organisationen abgelehnt",
         "protected_logo": "Geschütztes Logo kann nicht entfernt werden",
-        "unlawful_product": "Produkt erwies sich als rechtswidrig"
+        "unlawful_product": "Produkt erwies sich als rechtswidrig",
+        "forced_labour": "Mit Zwangsarbeit hergestelltes Produkt",
+        "expired_licence": "Lizenz abgelaufen",
+        "contamination": "Kontamination"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC-Tag",

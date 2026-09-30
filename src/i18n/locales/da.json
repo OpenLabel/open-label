@@ -527,7 +527,11 @@
     "printSizeInstruction": "Udskriv i 1,8 cm bredde. Højden varierer afhængigt af indholdet.",
     "openPassport": "Åbn pas",
     "downloadSvg": "Hent SVG",
-    "downloadPng": "Hent PNG"
+    "downloadPng": "Hent PNG",
+    "securitySeal": {
+      "line1": "Placer sikkerheds-",
+      "line2": "forseglinger her"
+    }
   },
   "translation": {
     "title": "Oversættelser",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Undgår påstande generiske miljømæssige termer?",
-        "help": "Generiske påstande som \"miljøvenlig\", \"bevidst\" og \"CO2-neutral via modregning\" er forbudt fra 27. september 2026."
+        "help": "Generiske påstande som \"miljøvenlig\" og \"CO2-neutral via modregning\" er forbudt fra 27. september 2026."
       },
       "authentication_feature_present": {
         "label": "Autentificeringsfunktion til stede?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Beskadiget ud over reparation",
         "donation_refused": "Donation afvist efter forespørgsel hos tre socialøkonomiske organisationer",
         "protected_logo": "Beskyttet logo kan ikke fjernes",
-        "unlawful_product": "Produktet viste sig at være ulovligt"
+        "unlawful_product": "Produktet viste sig at være ulovligt",
+        "forced_labour": "Produkt fremstillet ved tvangsarbejde",
+        "expired_licence": "Licensen er udløbet",
+        "contamination": "Kontaminering"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC-tag",

@@ -504,7 +504,11 @@
     "printSizeInstruction": "Print in 1,8 cm breed. De hoogte varieert per inhoud.",
     "openPassport": "Paspoort openen",
     "downloadSvg": "SVG downloaden",
-    "downloadPng": "PNG downloaden"
+    "downloadPng": "PNG downloaden",
+    "securitySeal": {
+      "line1": "Plaats hier de",
+      "line2": "veiligheidszegels"
+    }
   },
   "customIngredient": {
     "title": "Definieer een aangepast ingrediënt",
@@ -1688,7 +1692,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vermijden claims generieke milieutermen?",
-        "help": "Generieke claims zoals \"milieuvriendelijk\", \"bewust\" en \"CO2-neutraal via compensatie\" zijn verboden vanaf 27 september 2026."
+        "help": "Generieke claims zoals \"milieuvriendelijk\" en \"CO2-neutraal via compensatie\" zijn verboden vanaf 27 september 2026."
       },
       "authentication_feature_present": {
         "label": "Authenticatiekenmerk aanwezig?",
@@ -1821,7 +1825,10 @@
         "damaged_beyond_repair": "Onherstelbaar beschadigd",
         "donation_refused": "Donatie geweigerd na vraag aan drie sociale-economieorganisaties",
         "protected_logo": "Beschermd logo kan niet worden verwijderd",
-        "unlawful_product": "Product bleek onwettig te zijn"
+        "unlawful_product": "Product bleek onwettig te zijn",
+        "forced_labour": "Product vervaardigd met dwangarbeid",
+        "expired_licence": "Licentie verlopen",
+        "contamination": "Verontreiniging"
       },
       "authenticationMethod": {
         "nfc_tag": "NFC-tag",
