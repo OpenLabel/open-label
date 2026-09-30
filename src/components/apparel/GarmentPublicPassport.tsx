@@ -87,7 +87,7 @@ function Row({ label, value }: { label: string; value: React.ReactNode }) {
   if (value === null || value === undefined || value === '') return null;
   return (
     <div className="grid grid-cols-[180px_1fr] gap-3 py-2 border-b border-muted/50 last:border-b-0">
-      <dt className="text-xs uppercase tracking-wide text-muted-foreground">{label}</dt>
+      <dt className="text-xs text-muted-foreground">{label}</dt>
       <dd className="text-sm">{value}</dd>
     </div>
   );
