@@ -12,3 +12,7 @@
 - [ ] Translate textiles.* into nl, pl, pt, ro, sk, sl, sv, zh-CN
       Blocked: AI translation credits exhausted. Debt marker
       PENDING_TRANSLATION_PREFIXES = ['textiles.'] stays until then.
+
+## Apparel Live Preview label styling
+- [ ] Remove the forced uppercase styling from Apparel preview row labels only.
+- [ ] Run the full test suite and confirm no other files changed.
