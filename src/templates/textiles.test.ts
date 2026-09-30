@@ -105,7 +105,7 @@ describe('TextilesTemplate', () => {
       expect(find('eu_operator_email')[0]?.required).toBe(true);
     });
 
-    it('shows importer fields only for a non-EU manufacturer and does not require them', () => {
+    it('shows importer fields only for a non-EU manufacturer and requires them when shown', () => {
       const importerIds = [
         'importer_legal_name',
         'importer_street',
@@ -118,7 +118,8 @@ describe('TextilesTemplate', () => {
         const q = find(id)[0];
         expect(q).toBeDefined();
         expect(q!.showWhen).toEqual({ field: 'manufacturer_non_eu', equals: 'yes' });
-        expect(q!.required).toBeFalsy();
+        expect(q!.required).toBe(true);
+        expect(q!.badge).toBe('required');
       }
       expect(find('manufacturer_non_eu')[0]?.required).toBe(true);
     });
@@ -321,7 +322,7 @@ describe('TextilesTemplate', () => {
       expect(warning!.message).toContain('60%');
     });
 
-    it('does not flag exactly 50% synthetic', () => {
+    it('flags exactly 50% synthetic (>= 50%)', () => {
       expect(
         fieldIds({
           primary_fiber: 'polyester',
@@ -329,7 +330,7 @@ describe('TextilesTemplate', () => {
           secondary_fiber: 'Cotton',
           secondary_fiber_percentage: 50,
         }),
-      ).not.toContain('microplastic_shedding');
+      ).toContain('microplastic_shedding');
     });
 
     it('does not treat viscose as a synthetic', () => {
