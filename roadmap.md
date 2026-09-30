@@ -12,3 +12,4 @@
 - [ ] Translate textiles.* into nl, pl, pt, ro, sk, sl, sv, zh-CN
       Blocked: AI translation credits exhausted. Debt marker
       PENDING_TRANSLATION_PREFIXES = ['textiles.'] stays until then.
+
