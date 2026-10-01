@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Verifizierungs-URL",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS-Logo",
+        "help": "Laden Sie das Logo hoch, das Ihnen die Zertifizierungsstelle lizenziert hat. Es wird im öffentlichen Pass nur angezeigt, wenn Zertifikatsreferenzen ausgefüllt sind."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX-Logo",
+        "help": "Laden Sie das Logo hoch, das Ihnen die Zertifizierungsstelle lizenziert hat. Es wird im öffentlichen Pass nur angezeigt, wenn Zertifikatsreferenzen ausgefüllt sind."
+      },
+      "cert_logo_grs": {
+        "label": "GRS-Logo",
+        "help": "Laden Sie das Logo hoch, das Ihnen die Zertifizierungsstelle lizenziert hat. Es wird im öffentlichen Pass nur angezeigt, wenn Zertifikatsreferenzen ausgefüllt sind."
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign®-Logo",
+        "help": "Laden Sie das Logo hoch, das Ihnen die Zertifizierungsstelle lizenziert hat. Es wird im öffentlichen Pass nur angezeigt, wenn Zertifikatsreferenzen ausgefüllt sind."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade-Logo",
+        "help": "Laden Sie das Logo hoch, das Ihnen die Zertifizierungsstelle lizenziert hat. Es wird im öffentlichen Pass nur angezeigt, wenn Zertifikatsreferenzen ausgefüllt sind."
       }
     },
     "options": {

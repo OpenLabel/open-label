@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Verification URL",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS logo",
+        "help": "Upload the logo licensed to you by the certification body. It is shown on the public passport only when certificate references are filled in."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX logo",
+        "help": "Upload the logo licensed to you by the certification body. It is shown on the public passport only when certificate references are filled in."
+      },
+      "cert_logo_grs": {
+        "label": "GRS logo",
+        "help": "Upload the logo licensed to you by the certification body. It is shown on the public passport only when certificate references are filled in."
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign® logo",
+        "help": "Upload the logo licensed to you by the certification body. It is shown on the public passport only when certificate references are filled in."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade logo",
+        "help": "Upload the logo licensed to you by the certification body. It is shown on the public passport only when certificate references are filled in."
       }
     },
     "options": {

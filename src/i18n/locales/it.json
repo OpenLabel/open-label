@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL di verifica",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logo GOTS",
+        "help": "Carichi il logo concesso in licenza dall’organismo di certificazione. Viene mostrato sul passaporto pubblico solo quando i riferimenti dei certificati sono compilati."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logo OEKO-TEX",
+        "help": "Carichi il logo concesso in licenza dall’organismo di certificazione. Viene mostrato sul passaporto pubblico solo quando i riferimenti dei certificati sono compilati."
+      },
+      "cert_logo_grs": {
+        "label": "Logo GRS",
+        "help": "Carichi il logo concesso in licenza dall’organismo di certificazione. Viene mostrato sul passaporto pubblico solo quando i riferimenti dei certificati sono compilati."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logo bluesign®",
+        "help": "Carichi il logo concesso in licenza dall’organismo di certificazione. Viene mostrato sul passaporto pubblico solo quando i riferimenti dei certificati sono compilati."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logo Fair Trade",
+        "help": "Carichi il logo concesso in licenza dall’organismo di certificazione. Viene mostrato sul passaporto pubblico solo quando i riferimenti dei certificati sono compilati."
       }
     },
     "options": {

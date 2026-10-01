@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "验证网址",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS 标志",
+        "help": "上传认证机构授权您使用的标志。仅当填写了证书编号时，才会在公开护照中显示。"
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX 标志",
+        "help": "上传认证机构授权您使用的标志。仅当填写了证书编号时，才会在公开护照中显示。"
+      },
+      "cert_logo_grs": {
+        "label": "GRS 标志",
+        "help": "上传认证机构授权您使用的标志。仅当填写了证书编号时，才会在公开护照中显示。"
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign® 标志",
+        "help": "上传认证机构授权您使用的标志。仅当填写了证书编号时，才会在公开护照中显示。"
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade 标志",
+        "help": "上传认证机构授权您使用的标志。仅当填写了证书编号时，才会在公开护照中显示。"
       }
     },
     "options": {

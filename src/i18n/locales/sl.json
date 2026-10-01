@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL za preverjanje",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logotip GOTS",
+        "help": "Naložite logotip, za katerega vam je licenco podelil certifikacijski organ. V javnem potnem listu je prikazan le, če so izpolnjeni sklici na certifikate."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logotip OEKO-TEX",
+        "help": "Naložite logotip, za katerega vam je licenco podelil certifikacijski organ. V javnem potnem listu je prikazan le, če so izpolnjeni sklici na certifikate."
+      },
+      "cert_logo_grs": {
+        "label": "Logotip GRS",
+        "help": "Naložite logotip, za katerega vam je licenco podelil certifikacijski organ. V javnem potnem listu je prikazan le, če so izpolnjeni sklici na certifikate."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logotip bluesign®",
+        "help": "Naložite logotip, za katerega vam je licenco podelil certifikacijski organ. V javnem potnem listu je prikazan le, če so izpolnjeni sklici na certifikate."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logotip Fair Trade",
+        "help": "Naložite logotip, za katerega vam je licenco podelil certifikacijski organ. V javnem potnem listu je prikazan le, če so izpolnjeni sklici na certifikate."
       }
     },
     "options": {

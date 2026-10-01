@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Verifierings-URL",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS-logotyp",
+        "help": "Ladda upp den logotyp som certifieringsorganet har licensierat till er. Den visas i det offentliga passet endast när certifikatreferenser har fyllts i."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX-logotyp",
+        "help": "Ladda upp den logotyp som certifieringsorganet har licensierat till er. Den visas i det offentliga passet endast när certifikatreferenser har fyllts i."
+      },
+      "cert_logo_grs": {
+        "label": "GRS-logotyp",
+        "help": "Ladda upp den logotyp som certifieringsorganet har licensierat till er. Den visas i det offentliga passet endast när certifikatreferenser har fyllts i."
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign®-logotyp",
+        "help": "Ladda upp den logotyp som certifieringsorganet har licensierat till er. Den visas i det offentliga passet endast när certifikatreferenser har fyllts i."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade-logotyp",
+        "help": "Ladda upp den logotyp som certifieringsorganet har licensierat till er. Den visas i det offentliga passet endast när certifikatreferenser har fyllts i."
       }
     },
     "options": {

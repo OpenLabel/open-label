@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL tal-Verifika",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logo ta’ GOTS",
+        "help": "Tella’ l-logo li ngħatajtlek liċenzja għalih mill-korp taċ-ċertifikazzjoni. Jintwera fuq il-passaport pubbliku biss meta r-referenzi taċ-ċertifikati jkunu mimlija."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logo ta’ OEKO-TEX",
+        "help": "Tella’ l-logo li ngħatajtlek liċenzja għalih mill-korp taċ-ċertifikazzjoni. Jintwera fuq il-passaport pubbliku biss meta r-referenzi taċ-ċertifikati jkunu mimlija."
+      },
+      "cert_logo_grs": {
+        "label": "Logo ta’ GRS",
+        "help": "Tella’ l-logo li ngħatajtlek liċenzja għalih mill-korp taċ-ċertifikazzjoni. Jintwera fuq il-passaport pubbliku biss meta r-referenzi taċ-ċertifikati jkunu mimlija."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logo ta’ bluesign®",
+        "help": "Tella’ l-logo li ngħatajtlek liċenzja għalih mill-korp taċ-ċertifikazzjoni. Jintwera fuq il-passaport pubbliku biss meta r-referenzi taċ-ċertifikati jkunu mimlija."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logo ta’ Fair Trade",
+        "help": "Tella’ l-logo li ngħatajtlek liċenzja għalih mill-korp taċ-ċertifikazzjoni. Jintwera fuq il-passaport pubbliku biss meta r-referenzi taċ-ċertifikati jkunu mimlija."
       }
     },
     "options": {

@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Todentamisen URL-osoite",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS-logo",
+        "help": "Lataa sertifiointielimen sinulle lisensoima logo. Se näytetään julkisessa passissa vain, kun sertifikaattiviitteet on täytetty."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX-logo",
+        "help": "Lataa sertifiointielimen sinulle lisensoima logo. Se näytetään julkisessa passissa vain, kun sertifikaattiviitteet on täytetty."
+      },
+      "cert_logo_grs": {
+        "label": "GRS-logo",
+        "help": "Lataa sertifiointielimen sinulle lisensoima logo. Se näytetään julkisessa passissa vain, kun sertifikaattiviitteet on täytetty."
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign®-logo",
+        "help": "Lataa sertifiointielimen sinulle lisensoima logo. Se näytetään julkisessa passissa vain, kun sertifikaattiviitteet on täytetty."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade-logo",
+        "help": "Lataa sertifiointielimen sinulle lisensoima logo. Se näytetään julkisessa passissa vain, kun sertifikaattiviitteet on täytetty."
       }
     },
     "options": {

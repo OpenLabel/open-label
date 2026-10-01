@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Verifitseerimise URL",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS logo kujutis",
+        "help": "Laadige üles sertifitseerimisasutuse poolt teile litsentsitud logo. Seda kuvatakse avalikus passis ainult siis, kui sertifikaatide viited on täidetud."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX logo kujutis",
+        "help": "Laadige üles sertifitseerimisasutuse poolt teile litsentsitud logo. Seda kuvatakse avalikus passis ainult siis, kui sertifikaatide viited on täidetud."
+      },
+      "cert_logo_grs": {
+        "label": "GRS logo kujutis",
+        "help": "Laadige üles sertifitseerimisasutuse poolt teile litsentsitud logo. Seda kuvatakse avalikus passis ainult siis, kui sertifikaatide viited on täidetud."
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign® logo kujutis",
+        "help": "Laadige üles sertifitseerimisasutuse poolt teile litsentsitud logo. Seda kuvatakse avalikus passis ainult siis, kui sertifikaatide viited on täidetud."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade logo kujutis",
+        "help": "Laadige üles sertifitseerimisasutuse poolt teile litsentsitud logo. Seda kuvatakse avalikus passis ainult siis, kui sertifikaatide viited on täidetud."
       }
     },
     "options": {

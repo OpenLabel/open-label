@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Patikros URL",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS logotipas",
+        "help": "Įkelkite sertifikavimo įstaigos jums licencijuotą logotipą. Jis rodomas viešajame pase tik tada, kai užpildytos sertifikatų nuorodos."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX logotipas",
+        "help": "Įkelkite sertifikavimo įstaigos jums licencijuotą logotipą. Jis rodomas viešajame pase tik tada, kai užpildytos sertifikatų nuorodos."
+      },
+      "cert_logo_grs": {
+        "label": "GRS logotipas",
+        "help": "Įkelkite sertifikavimo įstaigos jums licencijuotą logotipą. Jis rodomas viešajame pase tik tada, kai užpildytos sertifikatų nuorodos."
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign® logotipas",
+        "help": "Įkelkite sertifikavimo įstaigos jums licencijuotą logotipą. Jis rodomas viešajame pase tik tada, kai užpildytos sertifikatų nuorodos."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade logotipas",
+        "help": "Įkelkite sertifikavimo įstaigos jums licencijuotą logotipą. Jis rodomas viešajame pase tik tada, kai užpildytos sertifikatų nuorodos."
       }
     },
     "options": {

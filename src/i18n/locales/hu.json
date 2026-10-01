@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Ellenőrzési URL",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "GOTS logó",
+        "help": "Töltse fel a tanúsító szervezet által Önnek licencelt logót. A nyilvános útlevélen csak akkor jelenik meg, ha a tanúsítványhivatkozások ki vannak töltve."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "OEKO-TEX logó",
+        "help": "Töltse fel a tanúsító szervezet által Önnek licencelt logót. A nyilvános útlevélen csak akkor jelenik meg, ha a tanúsítványhivatkozások ki vannak töltve."
+      },
+      "cert_logo_grs": {
+        "label": "GRS logó",
+        "help": "Töltse fel a tanúsító szervezet által Önnek licencelt logót. A nyilvános útlevélen csak akkor jelenik meg, ha a tanúsítványhivatkozások ki vannak töltve."
+      },
+      "cert_logo_bluesign": {
+        "label": "bluesign® logó",
+        "help": "Töltse fel a tanúsító szervezet által Önnek licencelt logót. A nyilvános útlevélen csak akkor jelenik meg, ha a tanúsítványhivatkozások ki vannak töltve."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Fair Trade logó",
+        "help": "Töltse fel a tanúsító szervezet által Önnek licencelt logót. A nyilvános útlevélen csak akkor jelenik meg, ha a tanúsítványhivatkozások ki vannak töltve."
       }
     },
     "options": {
