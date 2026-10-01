@@ -28,71 +28,59 @@
 const PROTECTED_TERMS: Record<string, readonly string[]> = {
   'bg': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'cs': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'da': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
     'textiles.options.footprintMethod.pefcr_apparel_footwear', // "PEFCR Apparel & Footwear"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'de': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'el': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'es': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
@@ -102,41 +90,34 @@ const PROTECTED_TERMS: Record<string, readonly string[]> = {
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'fi': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'fr': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'ga': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
@@ -145,30 +126,25 @@ const PROTECTED_TERMS: Record<string, readonly string[]> = {
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'hu': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'it': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
@@ -178,7 +154,6 @@ const PROTECTED_TERMS: Record<string, readonly string[]> = {
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
@@ -187,100 +162,83 @@ const PROTECTED_TERMS: Record<string, readonly string[]> = {
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'mt': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'nl': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'pl': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'pt': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'ro': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'sk': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'sl': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
   ],
   'sv': [
     'textiles.fields.gtin.label', // "GTIN / EAN"
-    'textiles.options.certificationsHeld.gots', // "GOTS (Global Organic Textile Standard)"
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.grs', // "GRS (Global Recycled Standard)"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.ghg_protocol', // "GHG Protocol Product Standard"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
@@ -290,9 +248,9 @@ const PROTECTED_TERMS: Record<string, readonly string[]> = {
     'textiles.options.certificationsHeld.oeko_tex', // "OEKO-TEX Standard 100"
     'textiles.options.certificationsHeld.bluesign', // "bluesign\u00ae"
     'textiles.options.certificationsHeld.fair_trade', // "Fair Trade"
-    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
     'textiles.options.footprintMethod.iso_14040_44', // "ISO 14040/14044 LCA"
     'textiles.options.footprintMethod.higg_msi', // "Higg MSI"
+    'textiles.options.footprintMethod.iso_14067', // "ISO 14067"
   ],
 };
 
@@ -552,7 +510,6 @@ const COGNATES: Record<string, readonly string[]> = {
     'textiles.options.primaryFiber.lyocell', // "Lyocell"
     'textiles.options.primaryFiber.cupro', // "Cupro"
     'textiles.options.primaryFiber.polyester', // "Polyester"
-    'garmentPublic.rows.status', // "Status"
   ],
   'fr': [
     'textiles.sections.certifications.title', // "Certifications"
@@ -626,7 +583,6 @@ const COGNATES: Record<string, readonly string[]> = {
     'textiles.options.primaryFiber.modal', // "Modal"
     'textiles.options.primaryFiber.lyocell', // "Lyocell"
     'textiles.options.primaryFiber.polyester', // "Polyester"
-    'garmentPublic.rows.status', // "Status"
   ],
 };
 
