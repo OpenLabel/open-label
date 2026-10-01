@@ -34,6 +34,12 @@ function opts(
   }));
 }
 
+// Brand-uploaded certification logos: certification marks are licensed to the
+// certified brand, not to the platform, so the brand supplies its own file.
+// These are PUBLIC uploads (no `internal` flag).
+const CERT_LOGO_HELP =
+  'Upload the logo licensed to you by the certification body. It is shown on the public passport only when certificate references are filled in.';
+
 // Helper to attach standard labelKey/helpKey/placeholderKey to a question.
 type FieldDef = Omit<
   TemplateQuestion,
@@ -527,6 +533,51 @@ export class TextilesTemplate extends BaseTemplate {
             'One per line, e.g.\nGOTS — CU 123456 GOTS — expires 2027-06-30\nOEKO-TEX — 21.HTR.12345 — expires 2027-01-15',
           helpText:
             'From 27 September 2026, Directive (EU) 2024/825 requires a sustainability label to be based on a certification scheme or established by a public authority. Leave blank if no certifications are held above.',
+        }),
+        f({
+          id: 'cert_logo_gots',
+          label: 'GOTS logo',
+          type: 'file',
+          accept: 'image/*',
+          maxBytes: 2 * 1024 * 1024,
+          showWhen: { field: 'certifications_held', equals: 'gots', includes: true },
+          helpText: CERT_LOGO_HELP,
+        }),
+        f({
+          id: 'cert_logo_oeko_tex',
+          label: 'OEKO-TEX logo',
+          type: 'file',
+          accept: 'image/*',
+          maxBytes: 2 * 1024 * 1024,
+          showWhen: { field: 'certifications_held', equals: 'oeko_tex', includes: true },
+          helpText: CERT_LOGO_HELP,
+        }),
+        f({
+          id: 'cert_logo_grs',
+          label: 'GRS logo',
+          type: 'file',
+          accept: 'image/*',
+          maxBytes: 2 * 1024 * 1024,
+          showWhen: { field: 'certifications_held', equals: 'grs', includes: true },
+          helpText: CERT_LOGO_HELP,
+        }),
+        f({
+          id: 'cert_logo_bluesign',
+          label: 'bluesign® logo',
+          type: 'file',
+          accept: 'image/*',
+          maxBytes: 2 * 1024 * 1024,
+          showWhen: { field: 'certifications_held', equals: 'bluesign', includes: true },
+          helpText: CERT_LOGO_HELP,
+        }),
+        f({
+          id: 'cert_logo_fair_trade',
+          label: 'Fair Trade logo',
+          type: 'file',
+          accept: 'image/*',
+          maxBytes: 2 * 1024 * 1024,
+          showWhen: { field: 'certifications_held', equals: 'fair_trade', includes: true },
+          helpText: CERT_LOGO_HELP,
         }),
       ],
     ),

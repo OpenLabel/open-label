@@ -169,6 +169,19 @@ export function GarmentPublicPassport({
   const certifications = hasCertificateReferences
     ? labelsFor(QUESTIONS.certifications_held?.options, d.certifications_held, t)
     : [];
+  // Brand-uploaded logo per certification (cert_logo_<value>); falls back to
+  // the text badge when no logo was uploaded. Only http(s) URLs are rendered.
+  const certificationEntries = hasCertificateReferences && Array.isArray(d.certifications_held)
+    ? (d.certifications_held as string[]).map((value) => {
+        const raw = d[`cert_logo_${value}`];
+        const safe = typeof raw === 'string' && raw.trim() !== '' ? sanitizeUrl(raw) : '';
+        return {
+          value,
+          label: labelFor(QUESTIONS.certifications_held?.options, value, t),
+          logoUrl: value !== 'other' && /^https?:\/\//i.test(safe) ? safe : '',
+        };
+      })
+    : [];
   const madeInEu = Boolean(d.made_in_eu);
 
   const percent = (id: string): string => {
@@ -556,12 +569,22 @@ export function GarmentPublicPassport({
           <>
             <SectionTitle>{st('certifications')}</SectionTitle>
             <div className="flex flex-wrap gap-2">
-              {certifications.map((c) => (
-                <Badge key={c} variant="outline" className="text-sm py-1 px-3">
-                  {/* Logo images intentionally omitted: no certification mark is licensed yet. */}
-                  {c}
-                </Badge>
-              ))}
+              {certificationEntries.map(({ value, label, logoUrl }) =>
+                logoUrl ? (
+                  <img
+                    key={value}
+                    src={logoUrl}
+                    alt={label}
+                    title={label}
+                    className="h-12 w-auto object-contain"
+                    loading="lazy"
+                  />
+                ) : (
+                  <Badge key={value} variant="outline" className="text-sm py-1 px-3">
+                    {label}
+                  </Badge>
+                ),
+              )}
               {madeInEu && (
                 <Badge variant="outline" className="text-sm py-1 px-3">
                   {t('garmentPublic.madeInEu', 'Made in EU')}
