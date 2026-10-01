@@ -7,7 +7,10 @@
  */
 
 /**
- * TEMPORARY translation debt — step 1 of 2 for the Apparel (textiles) category.
+ * Translation debt marker (currently EMPTY: Apparel debt cleared 2026-10-01,
+ * legitimate identical values live in translationAllowlist.ts).
+ *
+ * History: TEMPORARY translation debt — step 1 of 2 for the Apparel (textiles) category.
  *
  * Step 1 made `src/templates/textiles.ts` key-driven and seeded every locale
  * with the ENGLISH source text so that the key sets stay identical and the app
@@ -26,7 +29,7 @@
  * bespoke Apparel public renderer, seeded in English by
  * scripts/seed-garment-public-i18n.ts and translated by the same step 2 run.
  */
-export const PENDING_TRANSLATION_PREFIXES: readonly string[] = ['textiles.', 'garmentPublic.'];
+export const PENDING_TRANSLATION_PREFIXES: readonly string[] = [];
 
 /** True when a key belongs to a subtree whose translation is still pending. */
 export function isTranslationPending(key: string): boolean {

@@ -15,6 +15,7 @@ import { describe, it, expect } from "vitest";
 import enLocale from "./en.json";
 import zhCNLocale from "./zh-CN.json";
 import { isTranslationPending } from "./pendingTranslations";
+import { isAllowlistedIdentical } from "./translationAllowlist";
 
 type Bag = Record<string, unknown>;
 
@@ -109,7 +110,7 @@ describe("Simplified Chinese (zh-CN) completeness", () => {
       const en = enFlat[k];
       const zh = zhFlat[k];
       if (typeof zh !== "string") continue;
-      if (zh === en && !isAllowedIdentical(en)) {
+      if (zh === en && !isAllowedIdentical(en) && !isAllowlistedIdentical("zh-CN", k)) {
         untranslated.push(k);
       }
     }

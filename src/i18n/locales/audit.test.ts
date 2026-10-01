@@ -1,5 +1,6 @@
 import { describe, it, expect } from "vitest";
 import { PENDING_TRANSLATION_PREFIXES, isTranslationPending } from "./pendingTranslations";
+import { isAllowlistedIdentical, TRANSLATION_ALLOWLIST_SIZE } from "./translationAllowlist";
 
 // Import all locale files (24 official EU languages)
 import enLocale from "./en.json";
@@ -84,6 +85,8 @@ const perLanguageAllowedValues: Record<string, string[]> = {
 
 // Check if a value is legitimately the same across languages (not untranslated)
 function isLegitimateMatch(key: string, value: string, langCode: string): boolean {
+  // Reviewed exact (locale, key) pairs, see translationAllowlist.ts.
+  if (isAllowlistedIdentical(langCode, key)) return true;
   // These native legal terms are spelled identically in English. Keep the
   // exceptions scoped to the exact locale, key and value.
   if (['da', 'de', 'fr'].includes(langCode) && key === 'carCleaning.history.version' && value === 'Version') return true;
@@ -167,10 +170,15 @@ function isLegitimateMatch(key: string, value: string, langCode: string): boolea
 }
 
 describe("Translation Audit", () => {
-  // Tracked Apparel translation debt. The exact list is asserted so no further
-  // prefixes can be quietly added; it must be emptied once translation is done.
-  it("translation debt is limited to the tracked Apparel prefixes", () => {
-    expect([...PENDING_TRANSLATION_PREFIXES]).toEqual(['textiles.', 'garmentPublic.']);
+  // Translation debt marker. Apparel debt was cleared on 2026-10-01; the empty
+  // list is asserted so no prefix can be quietly re-added.
+  it("has no pending translation prefixes", () => {
+    expect([...PENDING_TRANSLATION_PREFIXES]).toEqual([]);
+  });
+
+  // The reviewed allowlist is pinned to its exact size so it cannot grow silently.
+  it("translation allowlist has the exact reviewed size", () => {
+    expect(TRANSLATION_ALLOWLIST_SIZE).toBe(420);
   });
 
   const enFlat = flattenKeys(locales.en);
