@@ -1474,7 +1474,7 @@
         "placeholder": "např. 20"
       },
       "full_composition": {
-        "label": "Úplné složení",
+        "label": "Další podrobnosti o složení",
         "placeholder": "např. 80 % bavlna, 15 % polyester, 5 % elastan"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akryl",
         "elastane": "Elastan",
         "polypropylene": "Polypropylen",
-        "other": "Jiné"
+        "other": "Jiné",
+        "none": "Žádné (jednosložkový výrobek)"
       },
       "pfasPresent": {
         "yes": "Ano",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Samotný podíl primárních vláken ({{primary}} %) přesahuje 100 %. Nařízení EU 1007/2011 vyžaduje, aby deklarované složení vláken odpovídalo skutečnému složení výrobku – zkontrolujte prosím tento údaj.",
       "incompleteSingleFibre": "Je deklarován podíl primárních vláken {{primary}} % bez uvedení sekundárních vláken. Pokud je tento výrobek směs, doplňte zbývající vlákno (vlákna) prostřednictvím pole Typ/procentuální podíl sekundárního vlákna nebo Úplné složení, aby deklarované složení tvořilo celých 100 %.",
       "syntheticOver50": "Tento oděv obsahuje {{percentage}} % syntetických vláken, což je více než 50 %. Během praní se z něj budou uvolňovat mikroplasty a spotřebitel o tom musí být informován."
+    },
+    "disclaimer": {
+      "title": "Oděvy DPP — Vyloučení odpovědnosti za soulad s předpisy",
+      "text": "Přesný datový model digitálního pasu výrobku EU a akt v přenesené pravomoci pro oděvy podle nařízení o ekodesignu udržitelných výrobků (ESPR) ještě nebyly stanoveny. Tento nástroj je první verzí založenou na nařízení (EU) č. 1007/2011 (označování textilních vláken), pravidlech ESPR o ničení neprodaného zboží a směrnici o posílení postavení spotřebitelů (EU) 2024/825 a neměl by být považován za konečné právní poradenství."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Zveřejněno"
-    }
+    },
+    "composition": "Složení"
   }
 }

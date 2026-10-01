@@ -1474,7 +1474,7 @@
         "placeholder": "npr. 20"
       },
       "full_composition": {
-        "label": "Potpuna izjava o sastavu",
+        "label": "Dodatni podaci o sastavu",
         "placeholder": "npr. 80 % pamuk, 15 % poliestersko vlakno, 5 % elastansko vlakno"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akrilno vlakno",
         "elastane": "Elastansko vlakno",
         "polypropylene": "Polipropilensko vlakno",
-        "other": "Ostalo"
+        "other": "Ostalo",
+        "none": "Nijedno (proizvod od jednog vlakna)"
       },
       "pfasPresent": {
         "yes": "Da",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Samo postotak primarnih vlakana ({{primary}}%) premašuje 100%. Uredba EU-a 1007/2011 zahtijeva da deklarirani sirovinski sastav odražava stvarni sastav proizvoda – provjerite ovu brojku.",
       "incompleteSingleFibre": "Primarno vlakno deklarirano je s {{primary}}%, bez zabilježenih sekundarnih vlakana. Ako je ovaj proizvod mješavina, dodajte preostala vlakna putem vrste/postotka sekundarnih vlakana ili potpune izjave o sastavu kako bi deklarirani sastav činio punih 100%.",
       "syntheticOver50": "Ovaj odjevni predmet sadrži {{percentage}}% sintetičkih vlakana, što je više od 50%. Tijekom pranja ispuštat će mikroplastiku i potrošač o tome mora biti obaviješten."
+    },
+    "disclaimer": {
+      "title": "Odjeća DPP — izjava o odricanju od odgovornosti u vezi sukladnosti",
+      "text": "Točan podatkovni model digitalne putovnice proizvoda EU-a i delegirani akt za odjeću u skladu s Uredbom o ekološkom dizajnu za održive proizvode (ESPR) još nisu utvrđeni. Ovaj je alat prva verzija koja se temelji na Uredbi (EU) br. 1007/2011 (označivanje tekstilnih vlakana), pravilima iz ESPR o uništavanju neprodane robe i Direktivi o osnaživanju potrošača (EU) 2024/825 te se ne treba smatrati konačnim pravnim savjetom."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Objavljeno"
-    }
+    },
+    "composition": "Sastav"
   }
 }

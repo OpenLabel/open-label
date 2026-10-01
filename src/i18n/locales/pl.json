@@ -1474,7 +1474,7 @@
         "placeholder": "np. 20"
       },
       "full_composition": {
-        "label": "Pełny skład surowcowy",
+        "label": "Dodatkowe szczegóły dotyczące składu",
         "placeholder": "np. 80% Bawełna, 15% Poliester, 5% Elastan"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akryl",
         "elastane": "Elastan",
         "polypropylene": "Polipropylen",
-        "other": "Inne"
+        "other": "Inne",
+        "none": "Brak (produkt jednowłóknowy)"
       },
       "pfasPresent": {
         "yes": "Tak",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Już sama procentowa zawartość włókna podstawowego ({{primary}}%) przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład włókienniczy odzwierciedlał rzeczywisty skład produktu — należy sprawdzić tę wartość.",
       "incompleteSingleFibre": "Zadeklarowano włókno podstawowe na poziomie {{primary}}% bez podania włókna dodatkowego. Jeśli produkt jest mieszanką, należy dodać pozostałe włókna, podając ich rodzaj i procentową zawartość lub uzupełniając pełny skład surowcowy, tak aby zadeklarowany skład sumował się do 100%.",
       "syntheticOver50": "Ta odzież zawiera {{percentage}}% włókien syntetycznych, co stanowi ponad 50%. Podczas prania będzie uwalniać mikroplastik, o czym konsument musi zostać poinformowany."
+    },
+    "disclaimer": {
+      "title": "Odzież DPP — oświadczenie o zgodności",
+      "text": "Dokładny model danych cyfrowego paszportu produktu UE i akt delegowany dla odzieży w ramach rozporządzenia w sprawie ekoprojektu dla zrównoważonych produktów (ESPR) nie zostały jeszcze określone. To narzędzie jest pierwszą wersją opartą na rozporządzeniu (UE) nr 1007/2011 (etykietowanie włókien), zasadach ESPR dotyczących niszczenia niesprzedanych towarów oraz dyrektywie w sprawie wzmocnienia pozycji konsumentów (EU) 2024/825 i nie powinno być traktowane jako ostateczna porada prawna."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Opublikowano"
-    }
+    },
+    "composition": "Skład"
   }
 }

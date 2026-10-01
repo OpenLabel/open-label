@@ -1474,7 +1474,7 @@
         "placeholder": "m.sh., 20"
       },
       "full_composition": {
-        "label": "Ráiteas Comhdhéanaimh Iomlán",
+        "label": "Sonraí breise comhdhéanaimh",
         "placeholder": "e.g., 80% Cadás, 15% Poileistear, 5% Leaisteán"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Aicrileach",
         "elastane": "Leaisteán",
         "polypropylene": "Polapróipiléin",
-        "other": "Eile"
+        "other": "Eile",
+        "none": "Ceann ar bith (táirge snáithín aonair)"
       },
       "pfasPresent": {
         "yes": "Tá",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Sáraíonn céatadán an phríomhshnáithín amháin ({{primary}}%) 100%. Ceanglaítear le Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíní dearbhaithe comhdhéanamh iarbhír an earra — seiceáil an figiúr seo.",
       "incompleteSingleFibre": "Dearbhaítear an príomhshnáithín ag {{primary}}% gan aon snáithín tánaisteach a bheith taifeadta. Más cumasc é an t-earra seo, cuir an snáithín/na snáithíní eile leis trí Chineál/Chéatadán an tSnaithín Thánaistigh nó tríd an Ráiteas Comhdhéanaimh Iomlán ionas go gclúdóidh an comhdhéanamh dearbhaithe an 100% iomlán.",
       "syntheticOver50": "Is snáithín sintéiseach é {{percentage}}% den bhall éadaigh seo, atá níos mó ná 50%. Scaoilfidh sé micreaphlaistigh le linn níocháin, agus ní mór an tomhaltóir a chur ar an eolas faoi seo."
+    },
+    "disclaimer": {
+      "title": "Éadaí DPP — séanadh comhlíontachta",
+      "text": "Níl an tsamhail sonraí agus an gníomh tarmligthe beacht do Phas Digiteach Táirgí an AE le haghaidh éadaí faoi Rialachán (ESPR) maidir le hÉicidhearthóireacht do Tháirgí Inbhuanaithe le cinneadh go fóill. Is céad leagan é an uirlis seo atá bunaithe ar Rialachán (AE) Uimh. 1007/2011 (lipéadú snáithíní), ar rialacha ESPR maidir le scriosadh earraí nár díoladh, agus ar an Treoir maidir le Tomhaltóirí a Chumasú (EU) 2024/825, agus níor cheart déileáil leis mar chomhairle dlí chríochnaitheach."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Foilsithe"
-    }
+    },
+    "composition": "Comhdhéanamh"
   }
 }

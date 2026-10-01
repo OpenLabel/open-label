@@ -1474,7 +1474,7 @@
         "placeholder": "t.ex. 20"
       },
       "full_composition": {
-        "label": "Fullständig innehållsdeklaration",
+        "label": "Ytterligare sammansättningsuppgifter",
         "placeholder": "t.ex. 80 % bomull, 15 % polyester, 5 % elastan"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akryl",
         "elastane": "Elastan",
         "polypropylene": "Polypropen",
-        "other": "Annan"
+        "other": "Annan",
+        "none": "Ingen (enfiberprodukt)"
       },
       "pfasPresent": {
         "yes": "Ja",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Enbart procentandelen för primärfibern ({{primary}} %) överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen återspegla produktens faktiska innehåll – kontrollera denna siffra.",
       "incompleteSingleFibre": "Primärfibern anges som {{primary}} % utan att någon sekundärfiber har registrerats. Om denna produkt är en blandning, lägg till återstående fiber/fibrer via Sekundärfibertyp/procentandel eller den fullständiga fibersammansättningen så att den angivna sammansättningen blir 100 %.",
       "syntheticOver50": "Detta plagg består av {{percentage}} % syntetfiber, vilket är mer än 50 %. Det kommer att släppa ifrån sig mikroplaster vid tvätt, och konsumenten måste informeras om detta."
+    },
+    "disclaimer": {
+      "title": "Kläder DPP – friskrivningsklausul om regelefterlevnad",
+      "text": "Den exakta datamodellen för EU:s digitala produktpass och den delegerade akten för kläder enligt förordningen om ekodesign för hållbara produkter (ESPR) har ännu inte fastställts. Detta verktyg är en första version baserad på förordning (EU) nr 1007/2011 (fibermärkning), reglerna i ESPR om destruktion av osålda varor, och direktivet om stärkt konsumentinflytande (EU) 2024/825, och ska inte betraktas som slutgiltig juridisk rådgivning."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Publicerad"
-    }
+    },
+    "composition": "Sammansättning"
   }
 }

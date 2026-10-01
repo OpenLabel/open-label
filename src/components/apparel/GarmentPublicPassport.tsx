@@ -190,6 +190,17 @@ export function GarmentPublicPassport({
     return `${v as string | number}%`;
   };
 
+  const compositionParts = [
+    d.primary_fiber && d.primary_fiber_percentage !== undefined && d.primary_fiber_percentage !== ''
+      ? `${percent('primary_fiber_percentage')} ${optionLabel('primary_fiber', d.primary_fiber)}`
+      : '',
+    d.secondary_fiber && d.secondary_fiber !== 'none' &&
+    d.secondary_fiber_percentage !== undefined && d.secondary_fiber_percentage !== ''
+      ? `${percent('secondary_fiber_percentage')} ${optionLabel('secondary_fiber', d.secondary_fiber)}`
+      : '',
+  ].filter(Boolean);
+  const composition = compositionParts.join(', ');
+
   const showIdentity = hasAny(d, [
     'brand_name',
     'product_type',
@@ -385,20 +396,8 @@ export function GarmentPublicPassport({
             <SectionTitle>{st('materials')}</SectionTitle>
             <dl>
               <Row
-                label={fl('primary_fiber')}
-                value={
-                  [optionLabel('primary_fiber', d.primary_fiber), percent('primary_fiber_percentage')]
-                    .filter(Boolean)
-                    .join(' — ')
-                }
-              />
-              <Row
-                label={fl('secondary_fiber')}
-                value={
-                  [d.secondary_fiber as string, percent('secondary_fiber_percentage')]
-                    .filter(Boolean)
-                    .join(' — ')
-                }
+                label={String(t('garmentPublic.composition', 'Composition'))}
+                value={composition}
               />
               <Row
                 label={fl('full_composition')}

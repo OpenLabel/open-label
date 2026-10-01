@@ -1474,7 +1474,7 @@
         "placeholder": "p. ej., 20"
       },
       "full_composition": {
-        "label": "Declaración de composición completa",
+        "label": "Detalles adicionales de la composición",
         "placeholder": "p. ej., 80 % algodón, 15 % poliéster, 5 % elastano"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Acrílico",
         "elastane": "Elastano",
         "polypropylene": "Polipropileno",
-        "other": "Otro"
+        "other": "Otro",
+        "none": "Ninguna (producto monofibra)"
       },
       "pfasPresent": {
         "yes": "Sí",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Solo el porcentaje de fibra primaria ({{primary}} %) ya supera el 100 %. El Reglamento (UE) 1007/2011 exige que la composición de fibras declarada refleje la composición real del artículo. Verifique esta cifra.",
       "incompleteSingleFibre": "Se ha declarado un {{primary}} % de fibra primaria sin registrar ninguna fibra secundaria. Si este artículo es una mezcla, añada la(s) fibra(s) restante(s) a través del Tipo/Porcentaje de Fibra Secundaria o de la Declaración de Composición Completa para que la composición declarada represente el 100 %.",
       "syntheticOver50": "Esta prenda contiene un {{percentage}} % de fibra sintética, lo que supone más del 50 %. Desprenderá microplásticos durante el lavado, y se debe informar de ello al consumidor."
+    },
+    "disclaimer": {
+      "title": "Prendas de vestir DPP — Descargo de responsabilidad de conformidad",
+      "text": "El modelo de datos exacto del Pasaporte Digital de Producto de la UE y el acto delegado para prendas de vestir en virtud del Reglamento sobre diseño ecológico para productos sostenibles (ESPR) están aún por determinar. Esta herramienta es una primera versión basada en el Reglamento (UE) n.º 1007/2011 (etiquetado de fibras), las normas de ESPR sobre la destrucción de productos no vendidos, y la Directiva para empoderar a los consumidores (EU) 2024/825, y no debe considerarse como asesoramiento jurídico definitivo."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Publicado"
-    }
+    },
+    "composition": "Composición"
   }
 }

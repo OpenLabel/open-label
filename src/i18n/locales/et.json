@@ -1474,7 +1474,7 @@
         "placeholder": "nt 20"
       },
       "full_composition": {
-        "label": "Täielik koostise deklaratsioon",
+        "label": "Koostise lisateave",
         "placeholder": "nt 80% puuvill, 15% polüester, 5% elastaan"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akrüül",
         "elastane": "Elastaan",
         "polypropylene": "Polüpropüleen",
-        "other": "Muu"
+        "other": "Muu",
+        "none": "Puudub (ühekiuline toode)"
       },
       "pfasPresent": {
         "yes": "Jah",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Ainuüksi põhikiu protsentuaalne sisaldus ({{primary}}%) ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele – kontrollige seda arvu.",
       "incompleteSingleFibre": "Põhikiu sisalduseks on deklareeritud {{primary}}% ja teise kiu andmed puuduvad. Kui toode on kiusegu, lisage ülejäänud kiud jaotises „Teise kiu tüüp/protsent“ või „Täielik kiukoostis“, nii et deklareeritud koostis moodustaks kokku 100%.",
       "syntheticOver50": "See rõivaese sisaldab {{percentage}}% sünteetilist kiudu, mis on rohkem kui 50%. Pesemisel eraldub sellest mikroplasti ja tarbijat tuleb sellest teavitada."
+    },
+    "disclaimer": {
+      "title": "Rõivad DPP — vastavusnõuete lahtiütlus",
+      "text": "Täpne ELi digitaalse tootepassi andmemudel ja delegeeritud õigusakt rõivaste kohta vastavalt säästvate toodete ökodisaini määrusele (ESPR) ei ole veel kindlaks määratud. See tööriist on esimene versioon, mis põhineb määrusel (EL) nr 1007/2011 (tekstiilkiudude märgistus), ESPR eeskirjadel müümata kaupade hävitamise kohta ja tarbijate mõjuvõimu suurendamise direktiivil (EU) 2024/825, ning seda ei tohiks käsitleda lõpliku juriidilise nõuandena."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Avaldatud"
-    }
+    },
+    "composition": "Koostis"
   }
 }

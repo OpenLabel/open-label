@@ -1474,7 +1474,7 @@
         "placeholder": "piem., 20"
       },
       "full_composition": {
-        "label": "Pilns sastāva apraksts",
+        "label": "Papildu informācija par sastāvu",
         "placeholder": "piem., 80% kokvilna, 15% poliesteris, 5% elastāns"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akrils",
         "elastane": "Elastāns",
         "polypropylene": "Polipropilēns",
-        "other": "Cits"
+        "other": "Cits",
+        "none": "Nav (vienas šķiedras izstrādājums)"
       },
       "pfasPresent": {
         "yes": "Jā",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Tikai primārās šķiedras procentuālais daudzums ({{primary}}%) pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šo skaitli.",
       "incompleteSingleFibre": "Ir norādīta primārā šķiedra {{primary}}% apmērā, bet nav reģistrēta sekundārā šķiedra. Ja šis izstrādājums ir maisījums, pievienojiet atlikušo(-ās) šķiedru(-as), izmantojot laukus “Sekundārās šķiedras veids/procentuālais daudzums” vai “Pilns sastāva apraksts”, lai norādītais sastāvs veidotu visus 100%.",
       "syntheticOver50": "Šis apģērbs satur {{percentage}}% sintētiskās šķiedras, kas ir vairāk nekā 50%. Mazgāšanas laikā tas izdalīs mikroplastmasu, un patērētājs par to ir jāinformē."
+    },
+    "disclaimer": {
+      "title": "Apģērbs DPP — atruna par atbilstību",
+      "text": "Precīzs ES digitālās produkta pases datu modelis un deleģētais akts attiecībā uz apģērbu saskaņā ar Ekodizaina regulu ilgtspējīgiem produktiem (ESPR) vēl nav noteikts. Šis rīks ir pirmā versija, kas balstīta uz Regulu (ES) Nr. 1007/2011 (par šķiedru marķēšanu), ESPR noteikumiem par nepārdotu preču iznīcināšanu un Patērētāju tiesību stiprināšanas direktīvu (EU) 2024/825, un to nevajadzētu uzskatīt par galīgu juridisku padomu."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Publicēts"
-    }
+    },
+    "composition": "Sastāvs"
   }
 }

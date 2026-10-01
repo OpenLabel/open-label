@@ -89,7 +89,10 @@ const toysKeys = [
 ].sort();
 
 const textilesKeys = [
+  "textiles.disclaimer.title",
+  "textiles.disclaimer.text",
   // Bespoke Apparel public renderer strings (GarmentPublicPassport).
+  "garmentPublic.composition",
   "garmentPublic.headerBadge",
   "garmentPublic.madeInEu",
   "garmentPublic.sections.substances",

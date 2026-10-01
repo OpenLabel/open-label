@@ -178,7 +178,7 @@ describe("Translation Audit", () => {
 
   // The reviewed allowlist is pinned to its exact size so it cannot grow silently.
   it("translation allowlist has the exact reviewed size", () => {
-    expect(TRANSLATION_ALLOWLIST_SIZE).toBe(420);
+    expect(TRANSLATION_ALLOWLIST_SIZE).toBe(421);
   });
 
   const enFlat = flattenKeys(locales.en);

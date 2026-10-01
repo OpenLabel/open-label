@@ -45,7 +45,7 @@ export function buildSampleTextilesPassport(): PassportFormData {
       // Materials and composition
       primary_fiber: 'cotton',
       primary_fiber_percentage: 80,
-      secondary_fiber: 'Recycled polyester',
+      secondary_fiber: 'recycled_polyester',
       secondary_fiber_percentage: 20,
       full_composition: '80% cotton, 20% recycled polyester',
       contains_animal_parts: false,
