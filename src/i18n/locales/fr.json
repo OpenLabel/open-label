@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL de vérification",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logo GOTS",
+        "help": "Téléversez le logo qui vous a été concédé sous licence par l’organisme de certification. Il n’apparaît sur le passeport public que si les références de certificat sont renseignées."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logo OEKO-TEX",
+        "help": "Téléversez le logo qui vous a été concédé sous licence par l’organisme de certification. Il n’apparaît sur le passeport public que si les références de certificat sont renseignées."
+      },
+      "cert_logo_grs": {
+        "label": "Logo GRS",
+        "help": "Téléversez le logo qui vous a été concédé sous licence par l’organisme de certification. Il n’apparaît sur le passeport public que si les références de certificat sont renseignées."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logo bluesign®",
+        "help": "Téléversez le logo qui vous a été concédé sous licence par l’organisme de certification. Il n’apparaît sur le passeport public que si les références de certificat sont renseignées."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logo Fair Trade",
+        "help": "Téléversez le logo qui vous a été concédé sous licence par l’organisme de certification. Il n’apparaît sur le passeport public que si les références de certificat sont renseignées."
       }
     },
     "options": {

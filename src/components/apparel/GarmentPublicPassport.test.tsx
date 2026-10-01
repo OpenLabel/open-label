@@ -216,5 +216,45 @@ describe('GarmentPublicPassport', () => {
       expect(html).not.toContain('Oeko Tex');
       expect(html).not.toContain('Made In Eu');
     });
+
+    const withCerts = (extra: Record<string, unknown>) => ({
+      ...basePassport,
+      category_data: {
+        ...basePassport.category_data,
+        certifications_held: ['gots', 'oeko_tex'],
+        ...extra,
+      },
+    });
+
+    it('shows an uploaded logo image instead of the text badge, falling back to text otherwise', () => {
+      renderPassport({
+        passport: withCerts({
+          certificate_references: 'GOTS — CU 123456',
+          cert_logo_gots: 'https://example.com/gots.png',
+        }),
+      });
+      const img = screen.getByRole('img', { name: 'GOTS (Global Organic Textile Standard)' });
+      expect(img).toHaveAttribute('src', 'https://example.com/gots.png');
+      expect(screen.getByText('OEKO-TEX Standard 100')).toBeInTheDocument();
+    });
+
+    it('shows no logo or badge when certificate references are empty', () => {
+      renderPassport({
+        passport: withCerts({ cert_logo_gots: 'https://example.com/gots.png' }),
+      });
+      expect(screen.queryByRole('img', { name: /GOTS/ })).not.toBeInTheDocument();
+      expect(screen.queryByText('OEKO-TEX Standard 100')).not.toBeInTheDocument();
+    });
+
+    it('never renders a non-http(s) logo URL', () => {
+      renderPassport({
+        passport: withCerts({
+          certificate_references: 'GOTS — CU 123456',
+          cert_logo_gots: 'javascript:alert(1)',
+        }),
+      });
+      expect(screen.queryByRole('img', { name: /GOTS/ })).not.toBeInTheDocument();
+      expect(screen.getByText('GOTS (Global Organic Textile Standard)')).toBeInTheDocument();
+    });
   });
 });

@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL de verificación",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logotipo de GOTS",
+        "help": "Suba el logotipo que le ha licenciado el organismo de certificación. Solo se muestra en el pasaporte público cuando se han rellenado las referencias de los certificados."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logotipo de OEKO-TEX",
+        "help": "Suba el logotipo que le ha licenciado el organismo de certificación. Solo se muestra en el pasaporte público cuando se han rellenado las referencias de los certificados."
+      },
+      "cert_logo_grs": {
+        "label": "Logotipo de GRS",
+        "help": "Suba el logotipo que le ha licenciado el organismo de certificación. Solo se muestra en el pasaporte público cuando se han rellenado las referencias de los certificados."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logotipo de bluesign®",
+        "help": "Suba el logotipo que le ha licenciado el organismo de certificación. Solo se muestra en el pasaporte público cuando se han rellenado las referencias de los certificados."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logotipo de Fair Trade",
+        "help": "Suba el logotipo que le ha licenciado el organismo de certificación. Solo se muestra en el pasaporte público cuando se han rellenado las referencias de los certificados."
       }
     },
     "options": {

@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL za provjeru",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logotip GOTS",
+        "help": "Učitajte logotip koji vam je licencirao certifikacijsko tijelo. Prikazuje se u javnoj putovnici samo kada su ispunjene reference certifikata."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logotip OEKO-TEX",
+        "help": "Učitajte logotip koji vam je licencirao certifikacijsko tijelo. Prikazuje se u javnoj putovnici samo kada su ispunjene reference certifikata."
+      },
+      "cert_logo_grs": {
+        "label": "Logotip GRS",
+        "help": "Učitajte logotip koji vam je licencirao certifikacijsko tijelo. Prikazuje se u javnoj putovnici samo kada su ispunjene reference certifikata."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logotip bluesign®",
+        "help": "Učitajte logotip koji vam je licencirao certifikacijsko tijelo. Prikazuje se u javnoj putovnici samo kada su ispunjene reference certifikata."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logotip Fair Trade",
+        "help": "Učitajte logotip koji vam je licencirao certifikacijsko tijelo. Prikazuje se u javnoj putovnici samo kada su ispunjene reference certifikata."
       }
     },
     "options": {

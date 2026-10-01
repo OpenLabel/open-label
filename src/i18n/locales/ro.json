@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL de verificare",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Sigla GOTS",
+        "help": "Încărcați sigla licențiată de organismul de certificare. Aceasta este afișată în pașaportul public numai atunci când referințele certificatelor sunt completate."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Sigla OEKO-TEX",
+        "help": "Încărcați sigla licențiată de organismul de certificare. Aceasta este afișată în pașaportul public numai atunci când referințele certificatelor sunt completate."
+      },
+      "cert_logo_grs": {
+        "label": "Sigla GRS",
+        "help": "Încărcați sigla licențiată de organismul de certificare. Aceasta este afișată în pașaportul public numai atunci când referințele certificatelor sunt completate."
+      },
+      "cert_logo_bluesign": {
+        "label": "Sigla bluesign®",
+        "help": "Încărcați sigla licențiată de organismul de certificare. Aceasta este afișată în pașaportul public numai atunci când referințele certificatelor sunt completate."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Sigla Fair Trade",
+        "help": "Încărcați sigla licențiată de organismul de certificare. Aceasta este afișată în pașaportul public numai atunci când referințele certificatelor sunt completate."
       }
     },
     "options": {

@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Adres URL weryfikacji",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logo GOTS",
+        "help": "Prześlij logo licencjonowane Ci przez jednostkę certyfikującą. Jest ono wyświetlane w publicznym paszporcie tylko wtedy, gdy wypełniono odniesienia do certyfikatów."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logo OEKO-TEX",
+        "help": "Prześlij logo licencjonowane Ci przez jednostkę certyfikującą. Jest ono wyświetlane w publicznym paszporcie tylko wtedy, gdy wypełniono odniesienia do certyfikatów."
+      },
+      "cert_logo_grs": {
+        "label": "Logo GRS",
+        "help": "Prześlij logo licencjonowane Ci przez jednostkę certyfikującą. Jest ono wyświetlane w publicznym paszporcie tylko wtedy, gdy wypełniono odniesienia do certyfikatów."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logo bluesign®",
+        "help": "Prześlij logo licencjonowane Ci przez jednostkę certyfikującą. Jest ono wyświetlane w publicznym paszporcie tylko wtedy, gdy wypełniono odniesienia do certyfikatów."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logo Fair Trade",
+        "help": "Prześlij logo licencjonowane Ci przez jednostkę certyfikującą. Jest ono wyświetlane w publicznym paszporcie tylko wtedy, gdy wypełniono odniesienia do certyfikatów."
       }
     },
     "options": {

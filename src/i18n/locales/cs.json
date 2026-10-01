@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "Ověřovací URL",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Logo GOTS",
+        "help": "Nahrajte logo, které vám licencoval certifikační orgán. Ve veřejném pasu se zobrazí pouze tehdy, jsou-li vyplněny odkazy na certifikáty."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Logo OEKO-TEX",
+        "help": "Nahrajte logo, které vám licencoval certifikační orgán. Ve veřejném pasu se zobrazí pouze tehdy, jsou-li vyplněny odkazy na certifikáty."
+      },
+      "cert_logo_grs": {
+        "label": "Logo GRS",
+        "help": "Nahrajte logo, které vám licencoval certifikační orgán. Ve veřejném pasu se zobrazí pouze tehdy, jsou-li vyplněny odkazy na certifikáty."
+      },
+      "cert_logo_bluesign": {
+        "label": "Logo bluesign®",
+        "help": "Nahrajte logo, které vám licencoval certifikační orgán. Ve veřejném pasu se zobrazí pouze tehdy, jsou-li vyplněny odkazy na certifikáty."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Logo Fair Trade",
+        "help": "Nahrajte logo, které vám licencoval certifikační orgán. Ve veřejném pasu se zobrazí pouze tehdy, jsou-li vyplněny odkazy na certifikáty."
       }
     },
     "options": {

@@ -1704,6 +1704,26 @@
       "authentication_verification_url": {
         "label": "URL Fíorúcháin",
         "placeholder": "https://…"
+      },
+      "cert_logo_gots": {
+        "label": "Lógó GOTS",
+        "help": "Uaslódáil an lógó atá ceadúnaithe duit ag an gcomhlacht deimhniúcháin. Ní thaispeántar é ar an bpas poiblí ach amháin nuair a líontar tagairtí na ndeimhnithe."
+      },
+      "cert_logo_oeko_tex": {
+        "label": "Lógó OEKO-TEX",
+        "help": "Uaslódáil an lógó atá ceadúnaithe duit ag an gcomhlacht deimhniúcháin. Ní thaispeántar é ar an bpas poiblí ach amháin nuair a líontar tagairtí na ndeimhnithe."
+      },
+      "cert_logo_grs": {
+        "label": "Lógó GRS",
+        "help": "Uaslódáil an lógó atá ceadúnaithe duit ag an gcomhlacht deimhniúcháin. Ní thaispeántar é ar an bpas poiblí ach amháin nuair a líontar tagairtí na ndeimhnithe."
+      },
+      "cert_logo_bluesign": {
+        "label": "Lógó bluesign®",
+        "help": "Uaslódáil an lógó atá ceadúnaithe duit ag an gcomhlacht deimhniúcháin. Ní thaispeántar é ar an bpas poiblí ach amháin nuair a líontar tagairtí na ndeimhnithe."
+      },
+      "cert_logo_fair_trade": {
+        "label": "Lógó Fair Trade",
+        "help": "Uaslódáil an lógó atá ceadúnaithe duit ag an gcomhlacht deimhniúcháin. Ní thaispeántar é ar an bpas poiblí ach amháin nuair a líontar tagairtí na ndeimhnithe."
       }
     },
     "options": {
