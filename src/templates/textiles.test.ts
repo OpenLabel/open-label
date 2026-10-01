@@ -205,11 +205,27 @@ describe('TextilesTemplate', () => {
 
   it('marks uploaded evidence files as internal only', () => {
     const files = textilesTemplate.sections.flatMap((s) =>
-      s.questions.filter((q) => q.type === 'file'),
+      s.questions.filter((q) => q.type === 'file' && !q.id.startsWith('cert_logo_')),
     );
     expect(files.length).toBeGreaterThan(0);
     for (const f of files) {
       expect(f.internal).toBe(true);
+    }
+  });
+
+  it('adds one public, image-only logo upload per certification (no "other")', () => {
+    const cert = textilesTemplate.sections.find((s) => s.id === 'certifications')!;
+    const logos = cert.questions.filter((q) => q.id.startsWith('cert_logo_'));
+    expect(logos.map((q) => q.id)).toEqual([
+      'cert_logo_gots', 'cert_logo_oeko_tex', 'cert_logo_grs', 'cert_logo_bluesign', 'cert_logo_fair_trade',
+    ]);
+    for (const q of logos) {
+      const value = q.id.replace('cert_logo_', '');
+      expect(q.type).toBe('file');
+      expect(q.accept).toBe('image/*');
+      expect(q.maxBytes).toBe(2 * 1024 * 1024);
+      expect(q.internal).toBeFalsy();
+      expect(q.showWhen).toEqual({ field: 'certifications_held', equals: value, includes: true });
     }
   });
 
