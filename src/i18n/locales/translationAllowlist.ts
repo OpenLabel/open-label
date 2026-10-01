@@ -523,6 +523,7 @@ const COGNATES: Record<string, readonly string[]> = {
     'textiles.options.primaryFiber.nylon', // "Polyamide"
     'textiles.options.dispositionReason.contamination', // "Contamination"
     'garmentPublic.sections.substances', // "Substances"
+    'garmentPublic.composition', // "Composition"
   ],
   'hr': [
     'garmentPublic.rows.status', // "Status"
