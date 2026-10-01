@@ -1738,12 +1738,12 @@
         "hemp": "Qanneb",
         "wool": "Suf",
         "cashmere": "Kaxmir",
-        "mohair": "moher",
+        "mohair": "Mohair",
         "alpaca": "Alpaka",
-        "angora": "angora",
+        "angora": "Angora",
         "silk": "Ħarir",
         "viscose": "Visk",
-        "modal": "modal",
+        "modal": "Modal",
         "lyocell": "Lajoċell",
         "acetate": "Aċetat",
         "cupro": "Kupro",
@@ -2133,7 +2133,7 @@
       "dppServiceProvider": "DPP fornitur tas-servizz",
       "dppVersion": "DPP verżjoni",
       "lastUpdated": "Aġġornat l-aħħar",
-      "status": "Stat"
+      "status": "Status"
     },
     "values": {
       "published": "Ippubblikat"

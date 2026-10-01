@@ -1768,9 +1768,9 @@
         "not_assessed": "Nincs értékelve"
       },
       "certificationsHeld": {
-        "gots": "GOTS (Globális Organikus Textil Standard)",
+        "gots": "GOTS (Global Organic Textile Standard)",
         "oeko_tex": "OEKO-TEX Standard 100",
-        "grs": "GRS (Globális Újrahasznosított Standard)",
+        "grs": "GRS (Global Recycled Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
         "other": "Egyéb"
