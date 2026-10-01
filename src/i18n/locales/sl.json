@@ -1474,7 +1474,7 @@
         "placeholder": "npr. 20"
       },
       "full_composition": {
-        "label": "Celotna izjava o sestavi",
+        "label": "Dodatne podrobnosti o sestavi",
         "placeholder": "npr. 80 % bombaž, 15 % poliester, 5 % elastan"
       },
       "contains_animal_parts": {
@@ -1740,10 +1740,10 @@
         "cashmere": "Kašmir",
         "mohair": "Moher",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Svila",
         "viscose": "Viskoza",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetat",
         "cupro": "Kupro",
@@ -1753,7 +1753,8 @@
         "acrylic": "Akril",
         "elastane": "Elastan",
         "polypropylene": "Polipropilen",
-        "other": "Drugo"
+        "other": "Drugo",
+        "none": "Brez (izdelek iz enega vlakna)"
       },
       "pfasPresent": {
         "yes": "Da",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Že samo odstotek primarnih vlaken ({{primary}} %) presega 100 %. Uredba EU 1007/2011 zahteva, da navedena sestava vlaken odraža dejansko sestavo izdelka — preverite ta podatek.",
       "incompleteSingleFibre": "Naveden je {{primary}} % primarnih vlaken, sekundarna vlakna pa niso zabeležena. Če je ta izdelek mešanica, dodajte preostala vlakna prek vnosa vrste/odstotka sekundarnih vlaken ali celotne izjave o sestavi, da bo navedena sestava znašala polnih 100 %.",
       "syntheticOver50": "To oblačilo vsebuje {{percentage}} % sintetičnih vlaken, kar je več kot 50 %. Med pranjem bo sproščalo mikroplastiko, o čemer mora biti potrošnik obveščen."
+    },
+    "disclaimer": {
+      "title": "Oblačila DPP — izjava o omejitvi odgovornosti glede skladnosti",
+      "text": "Natančen podatkovni model digitalnega potnega lista za izdelke EU in delegirani akt za oblačila v skladu z Uredbo o okoljsko primerni zasnovi za trajnostne izdelke (ESPR) še nista določena. To orodje je prva različica, ki temelji na Uredbi (EU) št. 1007/2011 (označevanje vlaken), pravilih ESPR o uničenju neprodanega blaga in Direktivi o krepitvi vloge potrošnikov (EU) 2024/825, in se ne sme obravnavati kot končni pravni nasvet."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Objavljeno"
-    }
+    },
+    "composition": "Sestava"
   }
 }

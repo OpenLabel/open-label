@@ -34,6 +34,44 @@ function opts(
   }));
 }
 
+// Official EU fibre vocabulary shared by both structured composition fields.
+// Values are frozen for compatibility with existing passports.
+const FIBER_OPTIONS = [
+  // Natural plant fibres
+  { value: 'cotton', label: 'Cotton' },
+  { value: 'organic_cotton', label: 'Organic Cotton' },
+  { value: 'linen', label: 'Linen (Flax)' },
+  { value: 'hemp', label: 'Hemp' },
+  // Animal fibres
+  { value: 'wool', label: 'Wool' },
+  { value: 'cashmere', label: 'Cashmere' },
+  { value: 'mohair', label: 'Mohair' },
+  { value: 'alpaca', label: 'Alpaca' },
+  { value: 'angora', label: 'Angora' },
+  { value: 'silk', label: 'Silk' },
+  // Man-made cellulosics
+  { value: 'viscose', label: 'Viscose' },
+  { value: 'modal', label: 'Modal' },
+  { value: 'lyocell', label: 'Lyocell' },
+  { value: 'acetate', label: 'Acetate' },
+  { value: 'cupro', label: 'Cupro' },
+  // Synthetics
+  { value: 'polyester', label: 'Polyester' },
+  { value: 'recycled_polyester', label: 'Recycled Polyester' },
+  // Value stays `nylon` for data compatibility; EU fibre name is Polyamide.
+  { value: 'nylon', label: 'Polyamide' },
+  { value: 'acrylic', label: 'Acrylic' },
+  { value: 'elastane', label: 'Elastane' },
+  { value: 'polypropylene', label: 'Polypropylene' },
+  { value: 'other', label: 'Other' },
+];
+
+const PRIMARY_FIBER_OPTIONS = opts('primaryFiber', FIBER_OPTIONS);
+const SECONDARY_FIBER_OPTIONS = opts('primaryFiber', [
+  { value: 'none', label: 'None (single-fibre product)' },
+  ...FIBER_OPTIONS,
+]);
+
 // Brand-uploaded certification logos: certification marks are licensed to the
 // certified brand, not to the platform, so the brand supplies its own file.
 // These are PUBLIC uploads (no `internal` flag).
@@ -340,37 +378,7 @@ export class TextilesTemplate extends BaseTemplate {
           type: 'select',
           required: true,
           badge: 'required',
-          // Labels are the official EU fibre names (Regulation 1007/2011 Annex I).
-          // Option VALUES are frozen for data compatibility with existing passports.
-          options: opts('primaryFiber', [
-            // Natural plant fibres
-            { value: 'cotton', label: 'Cotton' },
-            { value: 'organic_cotton', label: 'Organic Cotton' },
-            { value: 'linen', label: 'Linen (Flax)' },
-            { value: 'hemp', label: 'Hemp' },
-            // Animal fibres
-            { value: 'wool', label: 'Wool' },
-            { value: 'cashmere', label: 'Cashmere' },
-            { value: 'mohair', label: 'Mohair' },
-            { value: 'alpaca', label: 'Alpaca' },
-            { value: 'angora', label: 'Angora' },
-            { value: 'silk', label: 'Silk' },
-            // Man-made cellulosics
-            { value: 'viscose', label: 'Viscose' },
-            { value: 'modal', label: 'Modal' },
-            { value: 'lyocell', label: 'Lyocell' },
-            { value: 'acetate', label: 'Acetate' },
-            { value: 'cupro', label: 'Cupro' },
-            // Synthetics
-            { value: 'polyester', label: 'Polyester' },
-            { value: 'recycled_polyester', label: 'Recycled Polyester' },
-            // Value stays `nylon` for data compatibility; EU fibre name is Polyamide.
-            { value: 'nylon', label: 'Polyamide' },
-            { value: 'acrylic', label: 'Acrylic' },
-            { value: 'elastane', label: 'Elastane' },
-            { value: 'polypropylene', label: 'Polypropylene' },
-            { value: 'other', label: 'Other' }
-          ]),
+          options: PRIMARY_FIBER_OPTIONS,
         }),
         f({
           id: 'primary_fiber_percentage',
@@ -383,8 +391,8 @@ export class TextilesTemplate extends BaseTemplate {
         f({
           id: 'secondary_fiber',
           label: 'Secondary Fiber Type (if applicable)',
-          type: 'text',
-          placeholder: 'e.g., Elastane'
+          type: 'select',
+          options: SECONDARY_FIBER_OPTIONS,
         }),
         f({
           id: 'secondary_fiber_percentage',
@@ -394,11 +402,9 @@ export class TextilesTemplate extends BaseTemplate {
         }),
         f({
           id: 'full_composition',
-          label: 'Full Composition Statement',
+          label: 'Additional composition details',
           type: 'textarea',
           placeholder: 'e.g., 80% Cotton, 15% Polyester, 5% Elastane',
-          required: true,
-          badge: 'required',
         }),
         f({
           id: 'contains_animal_parts',
@@ -1107,22 +1113,6 @@ export class TextilesTemplate extends BaseTemplate {
     }
 
     // --- Synthetic fibre share (microplastic shedding) ---
-    const SYNTHETIC_WORDS = [
-      'polyester',
-      'polyamide',
-      'nylon',
-      'elastane',
-      'acrylic',
-      'polypropylene',
-    ];
-    const isSyntheticText = (value: unknown): boolean => {
-      if (typeof value !== 'string') return false;
-      const v = value.trim().toLowerCase();
-      if (!v) return false;
-      if ((SYNTHETIC_FIBER_IDS as readonly string[]).includes(v)) return true;
-      return SYNTHETIC_WORDS.some((w) => v.includes(w));
-    };
-
     let syntheticPercentage = 0;
     if (
       typeof data.primary_fiber === 'string' &&
@@ -1130,7 +1120,10 @@ export class TextilesTemplate extends BaseTemplate {
     ) {
       syntheticPercentage += primary;
     }
-    if (isSyntheticText(data.secondary_fiber)) {
+    if (
+      typeof data.secondary_fiber === 'string' &&
+      (SYNTHETIC_FIBER_IDS as readonly string[]).includes(data.secondary_fiber)
+    ) {
       syntheticPercentage += secondary ?? 0;
     }
 

@@ -103,6 +103,13 @@ describe('CategoryQuestions', () => {
     expect(screen.getByText('passport.earlyAlpha')).toBeInTheDocument();
   });
 
+  it('shows the Apparel disclaimer instead of the generic alpha warning', () => {
+    render(<CategoryQuestions category="textiles" data={{}} onChange={vi.fn()} />);
+    expect(screen.getByText('Apparel DPP — compliance disclaimer')).toBeInTheDocument();
+    expect(screen.getByText(/delegated act for apparel/)).toBeInTheDocument();
+    expect(screen.queryByText('passport.earlyAlpha')).not.toBeInTheDocument();
+  });
+
   it('renders empty div for wine category (no sections)', () => {
     // wine category has sections handled by WineFields, so CategoryQuestions returns empty
     const { container } = render(

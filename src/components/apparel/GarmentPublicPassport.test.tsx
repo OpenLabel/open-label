@@ -137,6 +137,46 @@ describe('GarmentPublicPassport', () => {
     });
   });
 
+  describe('structured composition', () => {
+    it('renders the generated composition from translated fibre labels', () => {
+      renderPassport({
+        isPreview: true,
+        previewLanguage: 'fr',
+        onPreviewLanguageChange: () => {},
+        passport: {
+          ...basePassport,
+          category_data: {
+            ...basePassport.category_data,
+            primary_fiber: 'cotton',
+            primary_fiber_percentage: 80,
+            secondary_fiber: 'recycled_polyester',
+            secondary_fiber_percentage: 20,
+          },
+        },
+      });
+      expect(screen.getByText('80% Coton, 20% Polyester recyclé')).toBeInTheDocument();
+    });
+
+    it('omits None and shows full composition as a supplementary note', () => {
+      renderPassport({
+        passport: {
+          ...basePassport,
+          category_data: {
+            ...basePassport.category_data,
+            primary_fiber: 'cotton',
+            primary_fiber_percentage: 100,
+            secondary_fiber: 'none',
+            full_composition: 'Trim: 100% recycled polyester',
+          },
+        },
+      });
+      expect(screen.getByText('100% Cotton')).toBeInTheDocument();
+      expect(screen.queryByText(/None \(single-fibre product\)/)).not.toBeInTheDocument();
+      expect(screen.getByText('Additional composition details')).toBeInTheDocument();
+      expect(screen.getByText('Trim: 100% recycled polyester')).toBeInTheDocument();
+    });
+  });
+
   describe('product name heading', () => {
     it('renders the translated product name when previewLanguage is set', () => {
       renderPassport({

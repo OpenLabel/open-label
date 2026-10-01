@@ -1474,7 +1474,7 @@
         "placeholder": "pl. 20"
       },
       "full_composition": {
-        "label": "Teljes összetétel",
+        "label": "További összetételi adatok",
         "placeholder": "pl. 80% pamut, 15% poliészter, 5% elasztán"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akril",
         "elastane": "Elasztán",
         "polypropylene": "Polipropilén",
-        "other": "Egyéb"
+        "other": "Egyéb",
+        "none": "Nincs (egyszálas termék)"
       },
       "pfasPresent": {
         "yes": "Igen",
@@ -1767,9 +1768,9 @@
         "not_assessed": "Nincs értékelve"
       },
       "certificationsHeld": {
-        "gots": "GOTS (Global Organic Textile Standard)",
+        "gots": "GOTS (Globális Organikus Textil Standard)",
         "oeko_tex": "OEKO-TEX Standard 100",
-        "grs": "GRS (Global Recycled Standard)",
+        "grs": "GRS (Globális Újrahasznosított Standard)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
         "other": "Egyéb"
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Már az elsődleges szál százalékos aránya ({{primary}}%) is meghaladja a 100%-ot. A(z) 1007/2011 EU-rendelet előírja, hogy a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezt az adatot.",
       "incompleteSingleFibre": "Az elsődleges szál {{primary}}%-os arányban van feltüntetve, másodlagos szál nincs megadva. Ha a termék keverék, adja hozzá a fennmaradó szál(ak)at a Másodlagos száltípus/Százalék vagy a Teljes összetétel mezőben, hogy a feltüntetett összetétel a teljes 100%-ot tegye ki.",
       "syntheticOver50": "Ez a ruhadarab {{percentage}}%-ban szintetikus szálból készült, ami több mint 50%. Mosás közben mikroműanyagokat fog kibocsátani, és erről a fogyasztót tájékoztatni kell."
+    },
+    "disclaimer": {
+      "title": "Ruhanemű DPP — megfelelőségi nyilatkozat",
+      "text": "A ruházati termékekre vonatkozó uniós digitális termékútlevél pontos adatmodellje és felhatalmazáson alapuló jogi aktusa a fenntartható termékek környezettudatos tervezéséről szóló rendelet (ESPR) értelmében még kidolgozás alatt áll. Ez az eszköz egy első verzió, amely az (EU) 1007/2011 számú rendeleten (textilszál-jelölés), az eladatlan áruk megsemmisítésére vonatkozó ESPR szabályokon és a fogyasztók szerepének megerősítéséről szóló (EU) 2024/825 irányelven alapul, és nem tekinthető végleges jogi tanácsadásnak."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Közzétéve"
-    }
+    },
+    "composition": "Összetétel"
   }
 }

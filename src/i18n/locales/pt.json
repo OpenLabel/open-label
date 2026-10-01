@@ -1474,7 +1474,7 @@
         "placeholder": "p. ex., 20"
       },
       "full_composition": {
-        "label": "Declaração de Composição Completa",
+        "label": "Detalhes adicionais da composição",
         "placeholder": "p. ex., 80% Algodão, 15% Poliéster, 5% Elastano"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Acrílico",
         "elastane": "Elastano",
         "polypropylene": "Polipropileno",
-        "other": "Outro"
+        "other": "Outro",
+        "none": "Nenhuma (produto monofibra)"
       },
       "pfasPresent": {
         "yes": "Sim",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "A percentagem da fibra primária, por si só ({{primary}}%), excede 100%. O Regulamento (UE) 1007/2011 exige que a composição de fibras declarada reflita a composição real do artigo — verifique este valor.",
       "incompleteSingleFibre": "A fibra primária está declarada como {{primary}}% sem que nenhuma fibra secundária tenha sido registada. Se este artigo for uma mistura, adicione a(s) fibra(s) restante(s) através do Tipo/Percentagem de Fibra Secundária ou da Declaração de Composição Completa para que a composição declarada corresponda a 100%.",
       "syntheticOver50": "Esta peça de vestuário é composta por {{percentage}}% de fibra sintética, o que é mais de 50%. Libertará microplásticos durante a lavagem, e o consumidor deve ser informado sobre este facto."
+    },
+    "disclaimer": {
+      "title": "Vestuário DPP — aviso de conformidade",
+      "text": "O modelo de dados exato do Passaporte Digital de Produto da UE e o ato delegado para vestuário ao abrigo do Regulamento relativo à conceção ecológica de produtos sustentáveis (ESPR) ainda estão por determinar. Esta ferramenta é uma primeira versão baseada no Regulamento (UE) n.º 1007/2011 (etiquetagem de fibras), nas regras do ESPR sobre a destruição de bens não vendidos e na Diretiva relativa à capacitação dos consumidores (EU) 2024/825, e não deve ser considerada como aconselhamento jurídico final."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Publicado"
-    }
+    },
+    "composition": "Composição"
   }
 }

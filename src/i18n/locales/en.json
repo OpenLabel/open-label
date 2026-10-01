@@ -1474,7 +1474,7 @@
         "placeholder": "e.g., 20"
       },
       "full_composition": {
-        "label": "Full Composition Statement",
+        "label": "Additional composition details",
         "placeholder": "e.g., 80% Cotton, 15% Polyester, 5% Elastane"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Acrylic",
         "elastane": "Elastane",
         "polypropylene": "Polypropylene",
-        "other": "Other"
+        "other": "Other",
+        "none": "None (single-fibre product)"
       },
       "pfasPresent": {
         "yes": "Yes",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
       "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
       "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+    },
+    "disclaimer": {
+      "title": "Apparel DPP — compliance disclaimer",
+      "text": "The exact EU Digital Product Passport data model and delegated act for apparel under the Ecodesign for Sustainable Products Regulation (ESPR) are still TBD. This tool is a first version based on Regulation (EU) No 1007/2011 (fibre labelling), the ESPR rules on destruction of unsold goods, and the Empowering Consumers Directive (EU) 2024/825, and should not be treated as final legal advice."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Published"
-    }
+    },
+    "composition": "Composition"
   }
 }

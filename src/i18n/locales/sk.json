@@ -1474,7 +1474,7 @@
         "placeholder": "napr. 20"
       },
       "full_composition": {
-        "label": "Úplné zloženie",
+        "label": "Ďalšie podrobnosti o zložení",
         "placeholder": "napr. 80 % bavlna, 15 % polyester, 5 % elastan"
       },
       "contains_animal_parts": {
@@ -1740,20 +1740,21 @@
         "cashmere": "Kašmír",
         "mohair": "Mohér",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Hodváb",
         "viscose": "Viskóza",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Lyocel",
         "acetate": "Acetát",
         "cupro": "Kupro",
-        "polyester": "Polyester",
+        "polyester": "polyester",
         "recycled_polyester": "Recyklovaný polyester",
         "nylon": "Polyamid",
         "acrylic": "Akryl",
         "elastane": "Elastan",
         "polypropylene": "Polypropylén",
-        "other": "Iné"
+        "other": "Iné",
+        "none": "Žiadne (výrobok z jedného druhu vlákna)"
       },
       "pfasPresent": {
         "yes": "Áno",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Už samotný percentuálny podiel primárneho vlákna ({{primary}} %) presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby uvedené zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tento údaj.",
       "incompleteSingleFibre": "Primárne vlákno je uvedené s podielom {{primary}} % a nie je zaznamenané žiadne sekundárne vlákno. Ak je tento výrobok zmesou, pridajte zostávajúce vlákno (vlákna) v časti Typ/percentuálny podiel sekundárneho vlákna alebo Úplné zloženie, aby uvedené zloženie tvorilo celých 100 %.",
       "syntheticOver50": "Tento odev obsahuje {{percentage}} % syntetických vlákien, čo je viac ako 50 %. Počas prania bude uvoľňovať mikroplasty a spotrebiteľ o tom musí byť informovaný."
+    },
+    "disclaimer": {
+      "title": "Odevy DPP – vyhlásenie o zhode",
+      "text": "Presný dátový model digitálneho pasu výrobku EÚ a delegovaný akt pre odevy podľa nariadenia o ekodizajne udržateľných výrobkov (ESPR) ešte nie sú stanovené. Tento nástroj je prvou verziou založenou na nariadení (EÚ) č. 1007/2011 (označovanie vlákien), pravidlách ESPR o ničení nepredaného tovaru a smernici o posilnení postavenia spotrebiteľov (EU) 2024/825 a nemal by sa považovať za konečné právne poradenstvo."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Zverejnené"
-    }
+    },
+    "composition": "Zloženie"
   }
 }

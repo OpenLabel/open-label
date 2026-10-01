@@ -1474,7 +1474,7 @@
         "placeholder": "de ex., 20"
       },
       "full_composition": {
-        "label": "Declarația completă a compoziției",
+        "label": "Detalii suplimentare despre compoziție",
         "placeholder": "de ex., 80% Bumbac, 15% Poliester, 5% Elastan"
       },
       "contains_animal_parts": {
@@ -1738,22 +1738,23 @@
         "hemp": "Cânepă",
         "wool": "Lână",
         "cashmere": "Cașmir",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
+        "mohair": "mohair",
+        "alpaca": "alpaca",
+        "angora": "angora",
         "silk": "Mătase",
         "viscose": "Viscoză",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetat",
-        "cupro": "Cupro",
+        "cupro": "cupro",
         "polyester": "Poliester",
         "recycled_polyester": "Poliester reciclat",
         "nylon": "Poliamidă",
         "acrylic": "Acrilic",
         "elastane": "Elastan",
         "polypropylene": "Polipropilenă",
-        "other": "Altele"
+        "other": "Altele",
+        "none": "Niciuna (produs monofibră)"
       },
       "pfasPresent": {
         "yes": "Da",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Numai procentajul fibrei primare ({{primary}}%) depășește 100%. Regulamentul (UE) 1007/2011 prevede că compoziția fibroasă declarată trebuie să reflecte alcătuirea reală a articolului — verificați această valoare.",
       "incompleteSingleFibre": "Fibra primară este declarată la {{primary}}%, fără a fi înregistrată nicio fibră secundară. Dacă acest articol este un amestec, adăugați fibra (fibrele) rămasă (rămase) prin intermediul câmpurilor Tip/Procentaj fibră secundară sau Declarație completă de compoziție, astfel încât compoziția declarată să totalizeze 100%.",
       "syntheticOver50": "Acest articol de îmbrăcăminte este în proporție de {{percentage}}% din fibre sintetice, ceea ce reprezintă mai mult de 50%. Acesta va elibera microplastice în timpul spălării, iar consumatorul trebuie să fie informat cu privire la acest aspect."
+    },
+    "disclaimer": {
+      "title": "Articole de îmbrăcăminte DPP — clauză de exonerare privind conformitatea",
+      "text": "Modelul exact de date al Pașaportului digital de produs al UE și actul delegat pentru articolele de îmbrăcăminte în temeiul Regulamentului privind proiectarea ecologică pentru produse durabile (ESPR) urmează a fi stabilite. Acest instrument este o primă versiune bazată pe Regulamentul (UE) nr. 1007/2011 (etichetarea fibrelor), normele ESPR privind distrugerea bunurilor nevândute și Directiva (EU) 2024/825 privind consolidarea rolului consumatorilor și nu trebuie tratat ca o consiliere juridică finală."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Publicat"
-    }
+    },
+    "composition": "Compoziție"
   }
 }

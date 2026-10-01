@@ -742,6 +742,22 @@ export function CategoryQuestions({
         </Alert>
       )}
 
+      {/* Apparel disclaimer */}
+      {category === 'textiles' && (
+        <Alert>
+          <Info className="h-4 w-4" />
+          <AlertTitle>
+            {t('textiles.disclaimer.title', 'Apparel DPP — compliance disclaimer')}
+          </AlertTitle>
+          <AlertDescription className="text-sm">
+            {t(
+              'textiles.disclaimer.text',
+              'The exact EU Digital Product Passport data model and delegated act for apparel under the Ecodesign for Sustainable Products Regulation (ESPR) are still TBD. This tool is a first version based on Regulation (EU) No 1007/2011 (fibre labelling), the ESPR rules on destruction of unsold goods, and the Empowering Consumers Directive (EU) 2024/825, and should not be treated as final legal advice.',
+            )}
+          </AlertDescription>
+        </Alert>
+      )}
+
       {/* Missing mandatory fields summary — non-blocking */}
       {!isCarCleaning && missingRequired.length > 0 && (
         <Alert
@@ -774,7 +790,7 @@ export function CategoryQuestions({
       )}
 
       {/* Alpha warning for non-wine, non-toys categories */}
-      {category !== 'wine' && category !== 'toys' && !isCarCleaning && (
+      {category !== 'wine' && category !== 'toys' && category !== 'textiles' && !isCarCleaning && (
         <Alert
           variant="destructive"
           className="bg-destructive/10 border-destructive/30"

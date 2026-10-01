@@ -1474,7 +1474,7 @@
         "placeholder": "f.eks. 20"
       },
       "full_composition": {
-        "label": "Fuld materialesammensætning",
+        "label": "Yderligere oplysninger om sammensætning",
         "placeholder": "f.eks. 80 % bomuld, 15 % polyester, 5 % elastan"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Acryl",
         "elastane": "Elastan",
         "polypropylene": "Polypropylen",
-        "other": "Andet"
+        "other": "Andet",
+        "none": "Ingen (enkeltfiberprodukt)"
       },
       "pfasPresent": {
         "yes": "Ja",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Procentdelen af primære fibre alene ({{primary}}%) overstiger 100%. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller dette tal.",
       "incompleteSingleFibre": "Primære fibre er angivet til {{primary}}%, uden at der er registreret nogen sekundære fibre. Hvis denne vare er en blanding, skal de resterende fibre tilføjes via 'Sekundær fibertype/procentdel' eller 'Fuld sammensætningserklæring', så den angivne sammensætning udgør de fulde 100%.",
       "syntheticOver50": "Denne beklædningsgenstand består af {{percentage}}% syntetiske fibre, hvilket er mere end 50%. Den vil afgive mikroplast under vask, og forbrugeren skal informeres om dette."
+    },
+    "disclaimer": {
+      "title": "Beklædning DPP — ansvarsfraskrivelse vedrørende overholdelse af regler",
+      "text": "Den præcise datamodel for det digitale produktpas i EU og den delegerede retsakt for beklædning i henhold til forordningen om ecodesign for bæredygtige produkter (ESPR) er endnu ikke fastlagt. Dette værktøj er en første version baseret på forordning (EU) nr. 1007/2011 (fibermærkning), ESPR-reglerne om destruktion af usolgte varer og direktivet om styrkelse af forbrugerne (EU) 2024/825 og bør ikke betragtes som endelig juridisk rådgivning."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Udgivet"
-    }
+    },
+    "composition": "Sammensætning"
   }
 }

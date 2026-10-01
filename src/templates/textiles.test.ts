@@ -47,6 +47,28 @@ describe('TextilesTemplate', () => {
     });
   });
 
+  describe('structured fibre composition', () => {
+    const questions = textilesTemplate.sections.flatMap((s) => s.questions);
+    const primary = questions.find((q) => q.id === 'primary_fiber');
+    const secondary = questions.find((q) => q.id === 'secondary_fiber');
+    const full = questions.find((q) => q.id === 'full_composition');
+
+    it('uses the translated primary-fibre vocabulary for the secondary dropdown plus None', () => {
+      expect(secondary?.type).toBe('select');
+      expect(secondary?.options?.[0]).toMatchObject({
+        value: 'none',
+        labelKey: 'textiles.options.primaryFiber.none',
+      });
+      expect(secondary?.options?.slice(1)).toEqual(primary?.options);
+    });
+
+    it('keeps extended composition optional', () => {
+      expect(full?.required).not.toBe(true);
+      expect(full?.badge).not.toBe('required');
+      expect(full?.label).toBe('Additional composition details');
+    });
+  });
+
   it('is an instance of TextilesTemplate', () => {
     expect(textilesTemplate).toBeInstanceOf(TextilesTemplate);
   });
@@ -360,15 +382,26 @@ describe('TextilesTemplate', () => {
       ).not.toContain('microplastic_shedding');
     });
 
-    it('counts a synthetic secondary fibre given as free text', () => {
+    it('counts a synthetic secondary fibre by its structured ID', () => {
       expect(
         fieldIds({
           primary_fiber: 'cotton',
           primary_fiber_percentage: 45,
-          secondary_fiber: 'Polyester',
+          secondary_fiber: 'polyester',
           secondary_fiber_percentage: 55,
         }),
       ).toContain('microplastic_shedding');
+    });
+
+    it('does not use fuzzy matching for a legacy secondary-fibre value', () => {
+      expect(
+        fieldIds({
+          primary_fiber: 'cotton',
+          primary_fiber_percentage: 45,
+          secondary_fiber: 'polyester blend',
+          secondary_fiber_percentage: 55,
+        }),
+      ).not.toContain('microplastic_shedding');
     });
   });
 

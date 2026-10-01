@@ -1474,7 +1474,7 @@
         "placeholder": "ex. 20"
       },
       "full_composition": {
-        "label": "Déclaration de composition complète",
+        "label": "Détails de composition supplémentaires",
         "placeholder": "ex. 80 % Coton, 15 % Polyester, 5 % Élasthanne"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Acrylique",
         "elastane": "Élasthanne",
         "polypropylene": "Polypropylène",
-        "other": "Autre"
+        "other": "Autre",
+        "none": "Aucune (produit monofibre)"
       },
       "pfasPresent": {
         "yes": "Oui",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Le pourcentage de la fibre primaire à lui seul ({{primary}} %) dépasse 100 %. Le règlement (UE) 1007/2011 exige que la composition en fibres déclarée corresponde à la composition réelle de l'article — veuillez vérifier ce chiffre.",
       "incompleteSingleFibre": "La fibre primaire est déclarée à {{primary}} % sans qu'aucune fibre secondaire ne soit indiquée. Si cet article est un mélange, ajoutez la ou les fibres restantes via les champs « Type/Pourcentage de la fibre secondaire » ou « Déclaration de composition complète » pour que la composition déclarée atteigne 100 %.",
       "syntheticOver50": "Ce vêtement est composé à {{percentage}} % de fibres synthétiques, soit plus de 50 %. Il rejettera des microplastiques lors du lavage, et le consommateur doit en être informé."
+    },
+    "disclaimer": {
+      "title": "Vêtements DPP — clause de non-responsabilité en matière de conformité",
+      "text": "Le modèle de données exact du passeport numérique de produit de l'UE et l'acte délégué pour les vêtements dans le cadre du règlement sur l'écoconception pour des produits durables (ESPR) ne sont pas encore définis. Cet outil est une première version basée sur le règlement (UE) n° 1007/2011 (étiquetage des fibres), les règles de l'ESPR sur la destruction des invendus et la directive visant à donner aux consommateurs les moyens d'agir ((EU) 2024/825), et ne doit pas être considéré comme un avis juridique définitif."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Publié"
-    }
+    },
+    "composition": "Composition"
   }
 }

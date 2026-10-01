@@ -1474,7 +1474,7 @@
         "placeholder": "esim. 20"
       },
       "full_composition": {
-        "label": "Täydellinen koostumusilmoitus",
+        "label": "Koostumuksen lisätiedot",
         "placeholder": "esim. 80 % puuvillaa, 15 % polyesteriä, 5 % elastaania"
       },
       "contains_animal_parts": {
@@ -1753,7 +1753,8 @@
         "acrylic": "Akryyli",
         "elastane": "Elastaani",
         "polypropylene": "Polypropeeni",
-        "other": "Muu"
+        "other": "Muu",
+        "none": "Ei ole (yksikuituinen tuote)"
       },
       "pfasPresent": {
         "yes": "Kyllä",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Jo yksin ensisijaisen kuidun prosenttiosuus ({{primary}} %) ylittää 100 %. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta – tarkista tämä luku.",
       "incompleteSingleFibre": "Ensisijaisen kuidun osuudeksi on ilmoitettu {{primary}} %, eikä toissijaista kuitua ole merkitty. Jos tuote on sekoite, lisää loput kuidut Toissijainen kuitutyyppi/prosenttiosuus -kenttään tai Täydellinen koostumusseloste -kenttään, jotta ilmoitettu koostumus kattaa koko 100 %.",
       "syntheticOver50": "Tämä vaate on {{percentage}} % synteettistä kuitua, mikä on yli 50 %. Siitä irtoaa mikromuovia pesun aikana, ja kuluttajalle on ilmoitettava tästä."
+    },
+    "disclaimer": {
+      "title": "Vaatteet DPP — vaatimustenmukaisuutta koskeva vastuuvapauslauseke",
+      "text": "Vaatteita koskeva tarkka EU:n digitaalisen tuotepassin tietomalli ja delegoitu säädös kestävien tuotteiden ekologista suunnittelua koskevan asetuksen (ESPR) nojalla ovat vielä vahvistamatta. Tämä työkalu on ensimmäinen versio, joka perustuu asetukseen (EU) N:o 1007/2011 (kuitumerkinnät), ESPR-sääntöihin myymättömien tuotteiden hävittämisestä ja kuluttajien voimaannuttamista koskevaan direktiiviin (EU) 2024/825, eikä sitä tule pitää lopullisena oikeudellisena neuvontana."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Julkaistu"
-    }
+    },
+    "composition": "Koostumus"
   }
 }

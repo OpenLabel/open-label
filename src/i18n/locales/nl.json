@@ -1474,7 +1474,7 @@
         "placeholder": "bijv. 20"
       },
       "full_composition": {
-        "label": "Volledige samenstellingsverklaring",
+        "label": "Aanvullende samenstellingsdetails",
         "placeholder": "bijv. 80% Katoen, 15% Polyester, 5% Elastaan"
       },
       "contains_animal_parts": {
@@ -1738,22 +1738,23 @@
         "hemp": "Hennep",
         "wool": "Wol",
         "cashmere": "Kasjmier",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
+        "mohair": "mohair",
+        "alpaca": "alpaca",
+        "angora": "angora",
         "silk": "Zijde",
-        "viscose": "Viscose",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
+        "viscose": "viscose",
+        "modal": "modal",
+        "lyocell": "lyocell",
         "acetate": "Acetaat",
-        "cupro": "Cupro",
-        "polyester": "Polyester",
+        "cupro": "cupro",
+        "polyester": "polyester",
         "recycled_polyester": "Gerecycled polyester",
-        "nylon": "Polyamide",
+        "nylon": "polyamide",
         "acrylic": "Acryl",
         "elastane": "Elastaan",
         "polypropylene": "Polypropyleen",
-        "other": "Overig"
+        "other": "Overig",
+        "none": "Geen (product van één enkele vezel)"
       },
       "pfasPresent": {
         "yes": "Ja",
@@ -1864,6 +1865,10 @@
       "primaryExceeds100": "Het percentage van de primaire vezel ({{primary}}%) is al meer dan 100%. EU-verordening 1007/2011 vereist dat de aangegeven vezelsamenstelling de werkelijke samenstelling van het artikel weerspiegelt — controleer dit cijfer.",
       "incompleteSingleFibre": "De primaire vezel is aangegeven als {{primary}}% en er is geen secundaire vezel vermeld. Als dit artikel een mengsel is, voeg dan de resterende vezel(s) toe via Secundair Vezeltype/Percentage of de Volledige Samenstellingsverklaring, zodat de aangegeven samenstelling de volledige 100% dekt.",
       "syntheticOver50": "Dit kledingstuk bestaat voor {{percentage}}% uit synthetische vezels, wat meer is dan 50%. Het zal microplastics loslaten tijdens het wassen en de consument moet hierover worden geïnformeerd."
+    },
+    "disclaimer": {
+      "title": "Kleding DPP — conformiteitsdisclaimer",
+      "text": "Het exacte datamodel voor het digitale productpaspoort van de EU en de gedelegeerde handeling voor kleding onder de verordening inzake ecologisch ontwerp voor duurzame producten (ESPR) moeten nog worden vastgesteld. Deze tool is een eerste versie gebaseerd op Verordening (EU) nr. 1007/2011 (vezel-etikettering), de ESPR-regels over de vernietiging van onverkochte goederen en de richtlijn ter versterking van de positie van de consument (EU) 2024/825, en mag niet worden beschouwd als definitief juridisch advies."
     }
   },
   "demo": {
@@ -2132,6 +2137,7 @@
     },
     "values": {
       "published": "Gepubliceerd"
-    }
+    },
+    "composition": "Samenstelling"
   }
 }
