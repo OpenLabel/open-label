@@ -198,6 +198,10 @@ export function GarmentPublicPassport({
     d.secondary_fiber_percentage !== undefined && d.secondary_fiber_percentage !== ''
       ? `${percent('secondary_fiber_percentage')} ${optionLabel('secondary_fiber', d.secondary_fiber)}`
       : '',
+    d.tertiary_fiber && d.tertiary_fiber !== 'none' &&
+    d.tertiary_fiber_percentage !== undefined && d.tertiary_fiber_percentage !== ''
+      ? `${percent('tertiary_fiber_percentage')} ${optionLabel('tertiary_fiber', d.tertiary_fiber)}`
+      : '',
   ].filter(Boolean);
   const composition = compositionParts.join(', ');
 
@@ -217,6 +221,8 @@ export function GarmentPublicPassport({
     'primary_fiber_percentage',
     'secondary_fiber',
     'secondary_fiber_percentage',
+    'tertiary_fiber',
+    'tertiary_fiber_percentage',
     'full_composition',
     'component_composition',
     'recycled_content_percentage',

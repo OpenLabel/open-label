@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Fair Trade-i logo",
         "help": "Laadige üles sertifitseerimisasutuse poolt teile litsentsitud logo. Seda kuvatakse avalikus passis ainult siis, kui sertifikaatide viited on täidetud."
+      },
+      "tertiary_fiber": {
+        "label": "Kolmanda kiu tüüp (vajaduse korral)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Kolmanda kiu osakaal (%)",
+        "placeholder": "nt 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Põhikiu ({{primary}}%) ja teise kiu ({{secondary}}%) protsentuaalne sisaldus on kokku {{sum}}%, mis ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele – kontrollige neid andmeid.",
       "primaryExceeds100": "Ainuüksi põhikiu protsentuaalne sisaldus ({{primary}}%) ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele – kontrollige seda arvu.",
       "incompleteSingleFibre": "Põhikiu sisalduseks on deklareeritud {{primary}}% ja teise kiu andmed puuduvad. Kui toode on kiusegu, lisage ülejäänud kiud jaotises „Teise kiu tüüp/protsent“ või „Täielik kiukoostis“, nii et deklareeritud koostis moodustaks kokku 100%.",
-      "syntheticOver50": "See rõivaese sisaldab {{percentage}}% sünteetilist kiudu, mis on rohkem kui 50%. Pesemisel eraldub sellest mikroplasti ja tarbijat tuleb sellest teavitada."
+      "syntheticOver50": "See rõivaese sisaldab {{percentage}}% sünteetilist kiudu, mis on rohkem kui 50%. Pesemisel eraldub sellest mikroplasti ja tarbijat tuleb sellest teavitada.",
+      "compositionExceeds100Three": "Põhikiu ({{primary}}%), teise kiu ({{secondary}}%) ja kolmanda kiu ({{tertiary}}%) osakaalude summa on {{sum}}%, mis ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele — kontrollige neid andmeid."
     },
     "disclaimer": {
       "title": "Rõivad DPP — vastavusnõuete lahtiütlus",

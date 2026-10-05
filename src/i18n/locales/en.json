@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Fair Trade logo",
         "help": "Upload the logo licensed to you by the certification body. It is shown on the public passport only when certificate references are filled in."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
       "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
       "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this."
+      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Apparel DPP — compliance disclaimer",

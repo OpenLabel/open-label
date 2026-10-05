@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Fair Trade logotips",
         "help": "Augšupielādējiet sertifikācijas iestādes jums licencēto logotipu. Tas publiskajā pasē tiek rādīts tikai tad, ja ir aizpildītas sertifikātu atsauces."
+      },
+      "tertiary_fiber": {
+        "label": "Trešās šķiedras veids (ja attiecināms)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Trešās šķiedras procentuālais daudzums (%)",
+        "placeholder": "piem., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Primārās ({{primary}}%) un sekundārās ({{secondary}}%) šķiedras procentuālais daudzums kopā veido {{sum}}%, kas pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šos skaitļus.",
       "primaryExceeds100": "Tikai primārās šķiedras procentuālais daudzums ({{primary}}%) pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šo skaitli.",
       "incompleteSingleFibre": "Ir norādīta primārā šķiedra {{primary}}% apmērā, bet nav reģistrēta sekundārā šķiedra. Ja šis izstrādājums ir maisījums, pievienojiet atlikušo(-ās) šķiedru(-as), izmantojot laukus “Sekundārās šķiedras veids/procentuālais daudzums” vai “Pilns sastāva apraksts”, lai norādītais sastāvs veidotu visus 100%.",
-      "syntheticOver50": "Šis apģērbs satur {{percentage}}% sintētiskās šķiedras, kas ir vairāk nekā 50%. Mazgāšanas laikā tas izdalīs mikroplastmasu, un patērētājs par to ir jāinformē."
+      "syntheticOver50": "Šis apģērbs satur {{percentage}}% sintētiskās šķiedras, kas ir vairāk nekā 50%. Mazgāšanas laikā tas izdalīs mikroplastmasu, un patērētājs par to ir jāinformē.",
+      "compositionExceeds100Three": "Pirmās ({{primary}}%), otrās ({{secondary}}%) un trešās ({{tertiary}}%) šķiedras procentuālais daudzums kopā ir {{sum}}%, kas pārsniedz 100%. ES Regula 1007/2011 nosaka, ka deklarētajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šos skaitļus."
     },
     "disclaimer": {
       "title": "Apģērbs DPP — atruna par atbilstību",

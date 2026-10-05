@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Logotip Fair Trade",
         "help": "Učitajte logotip koji vam je licencirao certifikacijsko tijelo. Prikazuje se u javnoj putovnici samo kada su ispunjene reference certifikata."
+      },
+      "tertiary_fiber": {
+        "label": "Vrsta tercijarnog vlakna (ako je primjenjivo)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Postotak tercijarnog vlakna (%)",
+        "placeholder": "npr. 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Postoci primarnih ({{primary}}%) i sekundarnih ({{secondary}}%) vlakana zbrajaju se u {{sum}}%, što premašuje 100%. Uredba EU-a 1007/2011 zahtijeva da deklarirani sirovinski sastav odražava stvarni sastav proizvoda – provjerite ove brojke.",
       "primaryExceeds100": "Samo postotak primarnih vlakana ({{primary}}%) premašuje 100%. Uredba EU-a 1007/2011 zahtijeva da deklarirani sirovinski sastav odražava stvarni sastav proizvoda – provjerite ovu brojku.",
       "incompleteSingleFibre": "Primarno vlakno deklarirano je s {{primary}}%, bez zabilježenih sekundarnih vlakana. Ako je ovaj proizvod mješavina, dodajte preostala vlakna putem vrste/postotka sekundarnih vlakana ili potpune izjave o sastavu kako bi deklarirani sastav činio punih 100%.",
-      "syntheticOver50": "Ovaj odjevni predmet sadrži {{percentage}}% sintetičkih vlakana, što je više od 50%. Tijekom pranja ispuštat će mikroplastiku i potrošač o tome mora biti obaviješten."
+      "syntheticOver50": "Ovaj odjevni predmet sadrži {{percentage}}% sintetičkih vlakana, što je više od 50%. Tijekom pranja ispuštat će mikroplastiku i potrošač o tome mora biti obaviješten.",
+      "compositionExceeds100Three": "Zbroj postotaka primarnog ({{primary}}%), sekundarnog ({{secondary}}%) i tercijarnog ({{tertiary}}%) vlakna iznosi {{sum}}%, što premašuje 100 %. Uredba EU-a 1007/2011 zahtijeva da deklarirani sastav vlakana odražava stvarni sastav proizvoda — provjerite te brojke."
     },
     "disclaimer": {
       "title": "Odjeća DPP — izjava o odricanju od odgovornosti u vezi sukladnosti",
