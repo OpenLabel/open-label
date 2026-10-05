@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Logo Fair Trade",
         "help": "Nahrajte logo, které vám licencoval certifikační orgán. Ve veřejném pasu se zobrazí pouze tehdy, jsou-li vyplněny odkazy na certifikáty."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Podíly primárních ({{primary}} %) a sekundárních ({{secondary}} %) vláken dávají v součtu {{sum}} %, což přesahuje 100 %. Nařízení EU 1007/2011 vyžaduje, aby deklarované složení vláken odpovídalo skutečnému složení výrobku – zkontrolujte prosím tyto údaje.",
       "primaryExceeds100": "Samotný podíl primárních vláken ({{primary}} %) přesahuje 100 %. Nařízení EU 1007/2011 vyžaduje, aby deklarované složení vláken odpovídalo skutečnému složení výrobku – zkontrolujte prosím tento údaj.",
       "incompleteSingleFibre": "Je deklarován podíl primárních vláken {{primary}} % bez uvedení sekundárních vláken. Pokud je tento výrobek směs, doplňte zbývající vlákno (vlákna) prostřednictvím pole Typ/procentuální podíl sekundárního vlákna nebo Úplné složení, aby deklarované složení tvořilo celých 100 %.",
-      "syntheticOver50": "Tento oděv obsahuje {{percentage}} % syntetických vláken, což je více než 50 %. Během praní se z něj budou uvolňovat mikroplasty a spotřebitel o tom musí být informován."
+      "syntheticOver50": "Tento oděv obsahuje {{percentage}} % syntetických vláken, což je více než 50 %. Během praní se z něj budou uvolňovat mikroplasty a spotřebitel o tom musí být informován.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Oděvy DPP — Vyloučení odpovědnosti za soulad s předpisy",

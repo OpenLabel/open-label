@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Logo Fair Trade",
         "help": "Prześlij logo licencjonowane Ci przez jednostkę certyfikującą. Jest ono wyświetlane w publicznym paszporcie tylko wtedy, gdy wypełniono odniesienia do certyfikatów."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Suma procentowa włókna podstawowego ({{primary}}%) i włókna dodatkowego ({{secondary}}%) wynosi {{sum}}%, co przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład włókienniczy odzwierciedlał rzeczywisty skład produktu — należy sprawdzić te wartości.",
       "primaryExceeds100": "Już sama procentowa zawartość włókna podstawowego ({{primary}}%) przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład włókienniczy odzwierciedlał rzeczywisty skład produktu — należy sprawdzić tę wartość.",
       "incompleteSingleFibre": "Zadeklarowano włókno podstawowe na poziomie {{primary}}% bez podania włókna dodatkowego. Jeśli produkt jest mieszanką, należy dodać pozostałe włókna, podając ich rodzaj i procentową zawartość lub uzupełniając pełny skład surowcowy, tak aby zadeklarowany skład sumował się do 100%.",
-      "syntheticOver50": "Ta odzież zawiera {{percentage}}% włókien syntetycznych, co stanowi ponad 50%. Podczas prania będzie uwalniać mikroplastik, o czym konsument musi zostać poinformowany."
+      "syntheticOver50": "Ta odzież zawiera {{percentage}}% włókien syntetycznych, co stanowi ponad 50%. Podczas prania będzie uwalniać mikroplastik, o czym konsument musi zostać poinformowany.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Odzież DPP — oświadczenie o zgodności",

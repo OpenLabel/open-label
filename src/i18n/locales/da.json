@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Fair Trade-logo",
         "help": "Upload det logo, som certificeringsorganet har givet dig licens til. Det vises kun i det offentlige pas, når certifikatreferencerne er udfyldt."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Procentdelen af primære ({{primary}}%) og sekundære ({{secondary}}%) fibre er tilsammen {{sum}}%, hvilket overstiger 100%. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller disse tal.",
       "primaryExceeds100": "Procentdelen af primære fibre alene ({{primary}}%) overstiger 100%. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller dette tal.",
       "incompleteSingleFibre": "Primære fibre er angivet til {{primary}}%, uden at der er registreret nogen sekundære fibre. Hvis denne vare er en blanding, skal de resterende fibre tilføjes via 'Sekundær fibertype/procentdel' eller 'Fuld sammensætningserklæring', så den angivne sammensætning udgør de fulde 100%.",
-      "syntheticOver50": "Denne beklædningsgenstand består af {{percentage}}% syntetiske fibre, hvilket er mere end 50%. Den vil afgive mikroplast under vask, og forbrugeren skal informeres om dette."
+      "syntheticOver50": "Denne beklædningsgenstand består af {{percentage}}% syntetiske fibre, hvilket er mere end 50%. Den vil afgive mikroplast under vask, og forbrugeren skal informeres om dette.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Beklædning DPP — ansvarsfraskrivelse vedrørende overholdelse af regler",

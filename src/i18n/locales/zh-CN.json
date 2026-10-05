@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Fair Trade 标志",
         "help": "上传认证机构授权您使用的标志。仅当填写了证书编号时，才会在公开护照中显示。"
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "主要纤维 ({{primary}}%) 和次要纤维 ({{secondary}}%) 的百分比总和为 {{sum}}%，超过了 100%。欧盟法规 1007/2011 要求申报的纤维成分必须反映产品的实际构成 — 请检查这些数据。",
       "primaryExceeds100": "仅主要纤维的百分比 ({{primary}}%) 就已超过 100%。欧盟法规 1007/2011 要求申报的纤维成分必须反映产品的实际构成 — 请检查此数据。",
       "incompleteSingleFibre": "主要纤维申报为 {{primary}}%，但未记录次要纤维。如果该产品是混纺产品，请通过“次要纤维类型/百分比”或“完整成分声明”添加剩余的纤维，以确保申报的成分总和达到 100%。",
-      "syntheticOver50": "该服装含有 {{percentage}}% 的合成纤维，超过了 50%。在洗涤过程中会脱落微塑料，必须将此情况告知消费者。"
+      "syntheticOver50": "该服装含有 {{percentage}}% 的合成纤维，超过了 50%。在洗涤过程中会脱落微塑料，必须将此情况告知消费者。",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "服装 DPP — 合规免责声明",

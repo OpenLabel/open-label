@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Logo Fair Trade",
         "help": "Nahrajte logo, ktoré vám licencoval certifikačný orgán. Vo verejnom pase sa zobrazí iba vtedy, ak sú vyplnené odkazy na certifikáty."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Súčet percentuálnych podielov primárneho ({{primary}} %) a sekundárneho ({{secondary}} %) vlákna je {{sum}} %, čo presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby uvedené zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tieto údaje.",
       "primaryExceeds100": "Už samotný percentuálny podiel primárneho vlákna ({{primary}} %) presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby uvedené zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tento údaj.",
       "incompleteSingleFibre": "Primárne vlákno je uvedené s podielom {{primary}} % a nie je zaznamenané žiadne sekundárne vlákno. Ak je tento výrobok zmesou, pridajte zostávajúce vlákno (vlákna) v časti Typ/percentuálny podiel sekundárneho vlákna alebo Úplné zloženie, aby uvedené zloženie tvorilo celých 100 %.",
-      "syntheticOver50": "Tento odev obsahuje {{percentage}} % syntetických vlákien, čo je viac ako 50 %. Počas prania bude uvoľňovať mikroplasty a spotrebiteľ o tom musí byť informovaný."
+      "syntheticOver50": "Tento odev obsahuje {{percentage}} % syntetických vlákien, čo je viac ako 50 %. Počas prania bude uvoľňovať mikroplasty a spotrebiteľ o tom musí byť informovaný.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Odevy DPP – vyhlásenie o zhode",

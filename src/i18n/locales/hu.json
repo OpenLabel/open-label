@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Fair Trade logó",
         "help": "Töltse fel a tanúsító szervezet által Önnek licencelt logót. A nyilvános útlevélen csak akkor jelenik meg, ha a tanúsítványhivatkozások ki vannak töltve."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Az elsődleges ({{primary}}%) és a másodlagos ({{secondary}}%) szálak százalékos arányának összege {{sum}}%, ami meghaladja a 100%-ot. A(z) 1007/2011 EU-rendelet előírja, hogy a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezeket az adatokat.",
       "primaryExceeds100": "Már az elsődleges szál százalékos aránya ({{primary}}%) is meghaladja a 100%-ot. A(z) 1007/2011 EU-rendelet előírja, hogy a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezt az adatot.",
       "incompleteSingleFibre": "Az elsődleges szál {{primary}}%-os arányban van feltüntetve, másodlagos szál nincs megadva. Ha a termék keverék, adja hozzá a fennmaradó szál(ak)at a Másodlagos száltípus/Százalék vagy a Teljes összetétel mezőben, hogy a feltüntetett összetétel a teljes 100%-ot tegye ki.",
-      "syntheticOver50": "Ez a ruhadarab {{percentage}}%-ban szintetikus szálból készült, ami több mint 50%. Mosás közben mikroműanyagokat fog kibocsátani, és erről a fogyasztót tájékoztatni kell."
+      "syntheticOver50": "Ez a ruhadarab {{percentage}}%-ban szintetikus szálból készült, ami több mint 50%. Mosás közben mikroműanyagokat fog kibocsátani, és erről a fogyasztót tájékoztatni kell.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Ruhanemű DPP — megfelelőségi nyilatkozat",

@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Lógó Fair Trade",
         "help": "Uaslódáil an lógó atá ceadúnaithe duit ag an gcomhlacht deimhniúcháin. Ní thaispeántar é ar an bpas poiblí ach amháin nuair a líontar tagairtí na ndeimhnithe."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Is ionann suim chéatadáin an phríomhshnáithín ({{primary}}%) agus an tsnáithín thánaistigh ({{secondary}}%) agus {{sum}}%, a sháraíonn 100%. Ceanglaítear le Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíní dearbhaithe comhdhéanamh iarbhír an earra — seiceáil na figiúirí seo.",
       "primaryExceeds100": "Sáraíonn céatadán an phríomhshnáithín amháin ({{primary}}%) 100%. Ceanglaítear le Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíní dearbhaithe comhdhéanamh iarbhír an earra — seiceáil an figiúr seo.",
       "incompleteSingleFibre": "Dearbhaítear an príomhshnáithín ag {{primary}}% gan aon snáithín tánaisteach a bheith taifeadta. Más cumasc é an t-earra seo, cuir an snáithín/na snáithíní eile leis trí Chineál/Chéatadán an tSnaithín Thánaistigh nó tríd an Ráiteas Comhdhéanaimh Iomlán ionas go gclúdóidh an comhdhéanamh dearbhaithe an 100% iomlán.",
-      "syntheticOver50": "Is snáithín sintéiseach é {{percentage}}% den bhall éadaigh seo, atá níos mó ná 50%. Scaoilfidh sé micreaphlaistigh le linn níocháin, agus ní mór an tomhaltóir a chur ar an eolas faoi seo."
+      "syntheticOver50": "Is snáithín sintéiseach é {{percentage}}% den bhall éadaigh seo, atá níos mó ná 50%. Scaoilfidh sé micreaphlaistigh le linn níocháin, agus ní mór an tomhaltóir a chur ar an eolas faoi seo.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Éadaí DPP — séanadh comhlíontachta",

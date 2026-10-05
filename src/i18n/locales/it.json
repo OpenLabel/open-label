@@ -1724,6 +1724,13 @@
       "cert_logo_fair_trade": {
         "label": "Logo Fair Trade",
         "help": "Carichi il logo concesso in licenza dall’organismo di certificazione. Viene mostrato sul passaporto pubblico solo quando i riferimenti dei certificati sono compilati."
+      },
+      "tertiary_fiber": {
+        "label": "Tertiary Fiber Type (if applicable)"
+      },
+      "tertiary_fiber_percentage": {
+        "label": "Tertiary Fiber Percentage (%)",
+        "placeholder": "e.g., 5"
       }
     },
     "options": {
@@ -1864,7 +1871,8 @@
       "compositionExceeds100": "Le percentuali della fibra primaria ({{primary}}%) e secondaria ({{secondary}}%) danno una somma del {{sum}}%, che supera il 100%. Il regolamento (UE) 1007/2011 richiede che la composizione fibrosa dichiarata rispecchi l'effettiva composizione del prodotto — verificare questi dati.",
       "primaryExceeds100": "La sola percentuale della fibra primaria ({{primary}}%) supera il 100%. Il regolamento (UE) 1007/2011 richiede che la composizione fibrosa dichiarata rispecchi l'effettiva composizione del prodotto — verificare questo dato.",
       "incompleteSingleFibre": "La fibra primaria è dichiarata al {{primary}}% senza che sia registrata alcuna fibra secondaria. Se questo articolo è una mista, aggiungere la/le fibra/e rimanente/i tramite Tipo/Percentuale di fibra secondaria o la Dichiarazione di composizione completa, in modo che la composizione dichiarata raggiunga il 100%.",
-      "syntheticOver50": "Questo indumento è composto per il {{percentage}}% da fibra sintetica, una percentuale superiore al 50%. Rilascerà microplastiche durante il lavaggio e il consumatore deve esserne informato."
+      "syntheticOver50": "Questo indumento è composto per il {{percentage}}% da fibra sintetica, una percentuale superiore al 50%. Rilascerà microplastiche durante il lavaggio e il consumatore deve esserne informato.",
+      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
       "title": "Abbigliamento DPP — Dichiarazione di non responsabilità sulla conformità",
