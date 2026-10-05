@@ -1726,11 +1726,11 @@
         "help": "Prześlij logo licencjonowane Ci przez jednostkę certyfikującą. Jest ono wyświetlane w publicznym paszporcie tylko wtedy, gdy wypełniono odniesienia do certyfikatów."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Rodzaj włókna trzeciorzędowego (jeśli dotyczy)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Procentowa zawartość włókna trzeciorzędowego (%)",
+        "placeholder": "np. 5"
       }
     },
     "options": {
@@ -1747,10 +1747,10 @@
         "cashmere": "Kaszmir",
         "mohair": "Moher",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Jedwab",
         "viscose": "Wiskoza",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetat",
         "cupro": "Miedziowe",
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Już sama procentowa zawartość włókna podstawowego ({{primary}}%) przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład włókienniczy odzwierciedlał rzeczywisty skład produktu — należy sprawdzić tę wartość.",
       "incompleteSingleFibre": "Zadeklarowano włókno podstawowe na poziomie {{primary}}% bez podania włókna dodatkowego. Jeśli produkt jest mieszanką, należy dodać pozostałe włókna, podając ich rodzaj i procentową zawartość lub uzupełniając pełny skład surowcowy, tak aby zadeklarowany skład sumował się do 100%.",
       "syntheticOver50": "Ta odzież zawiera {{percentage}}% włókien syntetycznych, co stanowi ponad 50%. Podczas prania będzie uwalniać mikroplastik, o czym konsument musi zostać poinformowany.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Udziały procentowe włókna pierwszorzędowego ({{primary}}%), drugorzędowego ({{secondary}}%) i trzeciorzędowego ({{tertiary}}%) sumują się do {{sum}}%, co przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład surowcowy odzwierciedlał rzeczywisty skład produktu — sprawdź te wartości."
     },
     "disclaimer": {
       "title": "Odzież DPP — oświadczenie o zgodności",

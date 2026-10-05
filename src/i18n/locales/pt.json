@@ -1726,11 +1726,11 @@
         "help": "Carregue o logótipo licenciado pelo organismo de certificação. Só é apresentado no passaporte público quando as referências dos certificados estiverem preenchidas."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Tipo de Fibra Terciária (se aplicável)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Percentagem de Fibra Terciária (%)",
+        "placeholder": "p. ex., 5"
       }
     },
     "options": {
@@ -1745,15 +1745,15 @@
         "hemp": "Cânhamo",
         "wool": "Lã",
         "cashmere": "Caxemira",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
+        "mohair": "mohair",
+        "alpaca": "alpaca",
         "angora": "Angorá",
         "silk": "Seda",
-        "viscose": "Viscose",
-        "modal": "Modal",
+        "viscose": "viscose",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetato",
-        "cupro": "Cupro",
+        "cupro": "cupro",
         "polyester": "Poliéster",
         "recycled_polyester": "Poliéster reciclado",
         "nylon": "Poliamida",
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "A percentagem da fibra primária, por si só ({{primary}}%), excede 100%. O Regulamento (UE) 1007/2011 exige que a composição de fibras declarada reflita a composição real do artigo — verifique este valor.",
       "incompleteSingleFibre": "A fibra primária está declarada como {{primary}}% sem que nenhuma fibra secundária tenha sido registada. Se este artigo for uma mistura, adicione a(s) fibra(s) restante(s) através do Tipo/Percentagem de Fibra Secundária ou da Declaração de Composição Completa para que a composição declarada corresponda a 100%.",
       "syntheticOver50": "Esta peça de vestuário é composta por {{percentage}}% de fibra sintética, o que é mais de 50%. Libertará microplásticos durante a lavagem, e o consumidor deve ser informado sobre este facto.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "As percentagens de fibra primária ({{primary}}%), secundária ({{secondary}}%) e terciária ({{tertiary}}%) somam {{sum}}%, o que excede 100%. O Regulamento (UE) 1007/2011 exige que a composição de fibras declarada reflita a composição real do artigo — verifique estes valores."
     },
     "disclaimer": {
       "title": "Vestuário DPP — aviso de conformidade",

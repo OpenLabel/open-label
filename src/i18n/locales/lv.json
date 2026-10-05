@@ -1726,11 +1726,11 @@
         "help": "Augšupielādējiet sertifikācijas iestādes jums licencēto logotipu. Tas publiskajā pasē tiek rādīts tikai tad, ja ir aizpildītas sertifikātu atsauces."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Trešās šķiedras veids (ja attiecināms)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Trešās šķiedras procentuālais daudzums (%)",
+        "placeholder": "piem., 5"
       }
     },
     "options": {
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Tikai primārās šķiedras procentuālais daudzums ({{primary}}%) pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šo skaitli.",
       "incompleteSingleFibre": "Ir norādīta primārā šķiedra {{primary}}% apmērā, bet nav reģistrēta sekundārā šķiedra. Ja šis izstrādājums ir maisījums, pievienojiet atlikušo(-ās) šķiedru(-as), izmantojot laukus “Sekundārās šķiedras veids/procentuālais daudzums” vai “Pilns sastāva apraksts”, lai norādītais sastāvs veidotu visus 100%.",
       "syntheticOver50": "Šis apģērbs satur {{percentage}}% sintētiskās šķiedras, kas ir vairāk nekā 50%. Mazgāšanas laikā tas izdalīs mikroplastmasu, un patērētājs par to ir jāinformē.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Pirmās ({{primary}}%), otrās ({{secondary}}%) un trešās ({{tertiary}}%) šķiedras procentuālais daudzums kopā ir {{sum}}%, kas pārsniedz 100%. ES Regula 1007/2011 nosaka, ka deklarētajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šos skaitļus."
     },
     "disclaimer": {
       "title": "Apģērbs DPP — atruna par atbilstību",

@@ -1726,11 +1726,11 @@
         "help": "Upload het logo dat de certificeringsinstelling u in licentie heeft gegeven. Het wordt alleen in het openbare paspoort getoond als de certificaatreferenties zijn ingevuld."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Type tertiaire vezel (indien van toepassing)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Percentage tertiaire vezel (%)",
+        "placeholder": "bijv. 5"
       }
     },
     "options": {
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Het percentage van de primaire vezel ({{primary}}%) is al meer dan 100%. EU-verordening 1007/2011 vereist dat de aangegeven vezelsamenstelling de werkelijke samenstelling van het artikel weerspiegelt — controleer dit cijfer.",
       "incompleteSingleFibre": "De primaire vezel is aangegeven als {{primary}}% en er is geen secundaire vezel vermeld. Als dit artikel een mengsel is, voeg dan de resterende vezel(s) toe via Secundair Vezeltype/Percentage of de Volledige Samenstellingsverklaring, zodat de aangegeven samenstelling de volledige 100% dekt.",
       "syntheticOver50": "Dit kledingstuk bestaat voor {{percentage}}% uit synthetische vezels, wat meer is dan 50%. Het zal microplastics loslaten tijdens het wassen en de consument moet hierover worden geïnformeerd.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "De percentages van de primaire ({{primary}}%), secundaire ({{secondary}}%) en tertiaire ({{tertiary}}%) vezels zijn samen {{sum}}%, wat meer is dan 100%. EU-verordening 1007/2011 vereist dat de vermelde vezelsamenstelling de werkelijke samenstelling van het artikel weerspiegelt — controleer deze cijfers."
     },
     "disclaimer": {
       "title": "Kleding DPP — conformiteitsdisclaimer",

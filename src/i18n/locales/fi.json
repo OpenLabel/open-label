@@ -1726,11 +1726,11 @@
         "help": "Lataa sertifiointielimen sinulle lisensoima logo. Se näytetään julkisessa passissa vain, kun sertifikaattiviitteet on täytetty."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Kolmas kuitu (tarvittaessa)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Kolmannen kuidun prosenttiosuus (%)",
+        "placeholder": "esim. 5"
       }
     },
     "options": {
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Jo yksin ensisijaisen kuidun prosenttiosuus ({{primary}} %) ylittää 100 %. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta – tarkista tämä luku.",
       "incompleteSingleFibre": "Ensisijaisen kuidun osuudeksi on ilmoitettu {{primary}} %, eikä toissijaista kuitua ole merkitty. Jos tuote on sekoite, lisää loput kuidut Toissijainen kuitutyyppi/prosenttiosuus -kenttään tai Täydellinen koostumusseloste -kenttään, jotta ilmoitettu koostumus kattaa koko 100 %.",
       "syntheticOver50": "Tämä vaate on {{percentage}} % synteettistä kuitua, mikä on yli 50 %. Siitä irtoaa mikromuovia pesun aikana, ja kuluttajalle on ilmoitettava tästä.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Ensisijaisen ({{primary}}%), toissijaisen ({{secondary}}%) ja kolmannen ({{tertiary}}%) kuidun prosenttiosuuksien summa on {{sum}}%, mikä ylittää 100%. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta — tarkista nämä luvut."
     },
     "disclaimer": {
       "title": "Vaatteet DPP — vaatimustenmukaisuutta koskeva vastuuvapauslauseke",

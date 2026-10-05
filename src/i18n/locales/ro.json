@@ -1726,11 +1726,11 @@
         "help": "Încărcați sigla licențiată de organismul de certificare. Aceasta este afișată în pașaportul public numai atunci când referințele certificatelor sunt completate."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Tip de fibră terțiară (dacă este cazul)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Procent de fibră terțiară (%)",
+        "placeholder": "de ex., 5"
       }
     },
     "options": {
@@ -1745,15 +1745,15 @@
         "hemp": "Cânepă",
         "wool": "Lână",
         "cashmere": "Cașmir",
-        "mohair": "Mohair",
-        "alpaca": "Alpaca",
-        "angora": "Angora",
+        "mohair": "mohair",
+        "alpaca": "alpaca",
+        "angora": "angora",
         "silk": "Mătase",
         "viscose": "Viscoză",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetat",
-        "cupro": "Cupro",
+        "cupro": "cupro",
         "polyester": "Poliester",
         "recycled_polyester": "Poliester reciclat",
         "nylon": "Poliamidă",
@@ -1775,9 +1775,9 @@
         "not_assessed": "Neevaluat"
       },
       "certificationsHeld": {
-        "gots": "GOTS (Global Organic Textile Standard)",
+        "gots": "GOTS (Standardul Global pentru Textile Organice)",
         "oeko_tex": "OEKO-TEX Standard 100",
-        "grs": "GRS (Global Recycled Standard)",
+        "grs": "GRS (Standardul Global pentru Reciclare)",
         "bluesign": "bluesign®",
         "fair_trade": "Fair Trade",
         "other": "Altele"
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Numai procentajul fibrei primare ({{primary}}%) depășește 100%. Regulamentul (UE) 1007/2011 prevede că compoziția fibroasă declarată trebuie să reflecte alcătuirea reală a articolului — verificați această valoare.",
       "incompleteSingleFibre": "Fibra primară este declarată la {{primary}}%, fără a fi înregistrată nicio fibră secundară. Dacă acest articol este un amestec, adăugați fibra (fibrele) rămasă (rămase) prin intermediul câmpurilor Tip/Procentaj fibră secundară sau Declarație completă de compoziție, astfel încât compoziția declarată să totalizeze 100%.",
       "syntheticOver50": "Acest articol de îmbrăcăminte este în proporție de {{percentage}}% din fibre sintetice, ceea ce reprezintă mai mult de 50%. Acesta va elibera microplastice în timpul spălării, iar consumatorul trebuie să fie informat cu privire la acest aspect.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Procentele fibrelor primare ({{primary}}%), secundare ({{secondary}}%) și terțiare ({{tertiary}}%) însumează {{sum}}%, ceea ce depășește 100%. Regulamentul UE 1007/2011 impune ca compoziția fibroasă declarată să reflecte structura reală a articolului — verificați aceste valori."
     },
     "disclaimer": {
       "title": "Articole de îmbrăcăminte DPP — clauză de exonerare privind conformitatea",

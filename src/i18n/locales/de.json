@@ -1726,11 +1726,11 @@
         "help": "Laden Sie das Logo hoch, das Ihnen die Zertifizierungsstelle lizenziert hat. Es wird im öffentlichen Pass nur angezeigt, wenn Zertifikatsreferenzen ausgefüllt sind."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Tertiärfasertyp (falls zutreffend)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Tertiärfaseranteil (%)",
+        "placeholder": "z. B. 5"
       }
     },
     "options": {
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Der prozentuale Anteil der primären Faser allein ({{primary}}%) übersteigt 100%. Gemäß der EU-Verordnung 1007/2011 muss die angegebene Faserzusammensetzung der tatsächlichen Beschaffenheit des Artikels entsprechen — überprüfen Sie diese Angabe.",
       "incompleteSingleFibre": "Die Primärfaser ist mit {{primary}}% deklariert, eine Sekundärfaser wurde nicht angegeben. Handelt es sich um ein Gemisch, fügen Sie die restliche(n) Faser(n) über Sekundärer Fasertyp/Prozentsatz oder Vollständige Zusammensetzung hinzu, damit die deklarierte Zusammensetzung 100% ergibt.",
       "syntheticOver50": "Dieses Kleidungsstück besteht zu {{percentage}}% aus Kunstfasern; das sind mehr als 50%. Es wird beim Waschen Mikroplastik freisetzen, worüber der Verbraucher informiert werden muss.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Die Faseranteile von Primärfaser ({{primary}}%), Sekundärfaser ({{secondary}}%) und Tertiärfaser ({{tertiary}}%) ergeben in der Summe {{sum}}%, was 100 % übersteigt. Die EU-Verordnung 1007/2011 schreibt vor, dass die angegebene Faserzusammensetzung die tatsächliche Beschaffenheit des Artikels widerspiegeln muss — bitte überprüfen Sie diese Angaben."
     },
     "disclaimer": {
       "title": "Bekleidung DPP – Rechtlicher Hinweis zur Konformität",

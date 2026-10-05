@@ -1726,11 +1726,11 @@
         "help": "Įkelkite sertifikavimo įstaigos jums licencijuotą logotipą. Jis rodomas viešajame pase tik tada, kai užpildytos sertifikatų nuorodos."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Trečias pluošto tipas (jei taikoma)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Trečio pluošto procentinė dalis (%)",
+        "placeholder": "pvz., 5"
       }
     },
     "options": {
@@ -1747,7 +1747,7 @@
         "cashmere": "Kašmyras",
         "mohair": "Mohera",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Šilkas",
         "viscose": "Viskozė",
         "modal": "Modalas",
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Vien pirminio pluošto procentinė dalis ({{primary}} %) viršija 100 %. Pagal ES reglamentą 1007/2011 reikalaujama, kad deklaruota pluošto sudėtis atitiktų faktinę gaminio sudėtį – patikrinkite šį skaičių.",
       "incompleteSingleFibre": "Deklaruota {{primary}} % pirminio pluošto, tačiau nenurodytas joks antrinis pluoštas. Jei tai yra mišinys, pridėkite likusį (-ius) pluoštą (-us) laukeliuose „Antrinio pluošto tipas / procentinė dalis“ arba „Visa sudėtis“, kad deklaruota sudėtis sudarytų visus 100 %.",
       "syntheticOver50": "Šio drabužio sudėtyje yra {{percentage}} % sintetinio pluošto, o tai yra daugiau nei 50 %. Skalbiant jis išskirs mikroplastiko, todėl vartotojas turi būti apie tai informuotas.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Pirminio ({{primary}} %), antrinio ({{secondary}} %) ir trečiojo ({{tertiary}} %) pluoštų procentinių dalių bendra suma yra {{sum}} %, kuri viršija 100 %. Pagal ES reglamentą 1007/2011 reikalaujama, kad deklaruota pluošto sudėtis atitiktų faktinę gaminio sudėtį – patikrinkite šiuos skaičius."
     },
     "disclaimer": {
       "title": "Apranga DPP – atitikties atsakomybės apribojimas",

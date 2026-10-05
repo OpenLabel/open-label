@@ -1726,11 +1726,11 @@
         "help": "Suba el logotipo que le ha licenciado el organismo de certificación. Solo se muestra en el pasaporte público cuando se han rellenado las referencias de los certificados."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Tipo de fibra terciaria (si procede)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Porcentaje de fibra terciaria (%)",
+        "placeholder": "p. ej., 5"
       }
     },
     "options": {
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Solo el porcentaje de fibra primaria ({{primary}} %) ya supera el 100 %. El Reglamento (UE) 1007/2011 exige que la composición de fibras declarada refleje la composición real del artículo. Verifique esta cifra.",
       "incompleteSingleFibre": "Se ha declarado un {{primary}} % de fibra primaria sin registrar ninguna fibra secundaria. Si este artículo es una mezcla, añada la(s) fibra(s) restante(s) a través del Tipo/Porcentaje de Fibra Secundaria o de la Declaración de Composición Completa para que la composición declarada represente el 100 %.",
       "syntheticOver50": "Esta prenda contiene un {{percentage}} % de fibra sintética, lo que supone más del 50 %. Desprenderá microplásticos durante el lavado, y se debe informar de ello al consumidor.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Los porcentajes de las fibras primaria ({{primary}}%), secundaria ({{secondary}}%) y terciaria ({{tertiary}}%) suman un {{sum}}%, lo que supera el 100%. El Reglamento (UE) 1007/2011 exige que la composición de fibras declarada refleje la composición real del artículo — verifique estas cifras."
     },
     "disclaimer": {
       "title": "Prendas de vestir DPP — Descargo de responsabilidad de conformidad",
