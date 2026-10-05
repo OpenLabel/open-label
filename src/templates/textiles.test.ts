@@ -403,6 +403,61 @@ describe('TextilesTemplate', () => {
         }),
       ).not.toContain('microplastic_shedding');
     });
+
+    it('flags a 3-fibre blend that reaches 50% synthetic via the tertiary fibre', () => {
+      const data = {
+        primary_fiber: 'cotton',
+        primary_fiber_percentage: 50,
+        secondary_fiber: 'polyester',
+        secondary_fiber_percentage: 30,
+        tertiary_fiber: 'elastane',
+        tertiary_fiber_percentage: 20,
+      };
+      const w = textilesTemplate
+        .getInlineWarnings(data)
+        .find((x) => x.fieldId === 'microplastic_shedding');
+      expect(w?.params).toMatchObject({ percentage: 50 });
+      // Without the tertiary slot this blend would be 30% and missed.
+      const { tertiary_fiber: _t, tertiary_fiber_percentage: _p, ...two } = data;
+      expect(fieldIds(two)).not.toContain('microplastic_shedding');
+    });
+
+    it('ignores a non-synthetic or none tertiary fibre', () => {
+      expect(
+        fieldIds({
+          primary_fiber: 'cotton', primary_fiber_percentage: 60,
+          secondary_fiber: 'polyester', secondary_fiber_percentage: 30,
+          tertiary_fiber: 'none', tertiary_fiber_percentage: 10,
+        }),
+      ).not.toContain('microplastic_shedding');
+    });
+
+    it('includes the tertiary percentage in the over-100% sum', () => {
+      const w = textilesTemplate.getInlineWarnings({
+        primary_fiber_percentage: 60,
+        secondary_fiber_percentage: 30,
+        tertiary_fiber_percentage: 20,
+      }).find((x) => x.fieldId === 'tertiary_fiber_percentage');
+      expect(w?.messageKey).toBe('textiles.warnings.compositionExceeds100Three');
+      expect(w?.params).toMatchObject({ sum: 110 });
+    });
+
+    it('does not report an incomplete single-fibre declaration when only a tertiary fibre is given', () => {
+      const keys = textilesTemplate.getInlineWarnings({
+        primary_fiber_percentage: 80,
+        tertiary_fiber_percentage: 20,
+      }).map((x) => x.messageKey);
+      expect(keys).not.toContain('textiles.warnings.incompleteSingleFibre');
+    });
+
+    it('reuses the secondary dropdown options for the tertiary fibre', () => {
+      const qs = textilesTemplate.sections.flatMap((s) => s.questions);
+      const sec = qs.find((q) => q.id === 'secondary_fiber');
+      const ter = qs.find((q) => q.id === 'tertiary_fiber');
+      expect(ter?.type).toBe('select');
+      expect(ter?.options).toBe(sec?.options);
+      expect(ter?.labelKey).toBe('textiles.fields.tertiary_fiber.label');
+    });
   });
 
   describe('France-mandatory fields and PFAS', () => {
