@@ -35,6 +35,8 @@ const LOCALES = [
 /** Option namespaces, keyed by the question id that owns the option list. */
 const OPTION_NAMESPACES: Record<string, string> = {
   primary_fiber: 'primaryFiber',
+  secondary_fiber: 'primaryFiber',
+  tertiary_fiber: 'primaryFiber',
   rsl_compliance_status: 'rslCompliance',
   certifications_held: 'certificationsHeld',
   audit_status: 'auditStatus',

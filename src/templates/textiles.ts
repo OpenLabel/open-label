@@ -401,6 +401,18 @@ export class TextilesTemplate extends BaseTemplate {
           placeholder: 'e.g., 20'
         }),
         f({
+          id: 'tertiary_fiber',
+          label: 'Tertiary Fiber Type (if applicable)',
+          type: 'select',
+          options: SECONDARY_FIBER_OPTIONS,
+        }),
+        f({
+          id: 'tertiary_fiber_percentage',
+          label: 'Tertiary Fiber Percentage (%)',
+          type: 'number',
+          placeholder: 'e.g., 5'
+        }),
+        f({
           id: 'full_composition',
           label: 'Additional composition details',
           type: 'textarea',
@@ -1083,27 +1095,36 @@ export class TextilesTemplate extends BaseTemplate {
     const primary = toNumber(data.primary_fiber_percentage);
     if (primary === undefined) return warnings;
     const secondary = toNumber(data.secondary_fiber_percentage);
-    const sum = primary + (secondary ?? 0);
+    const tertiary = toNumber(data.tertiary_fiber_percentage);
+    const sum = primary + (secondary ?? 0) + (tertiary ?? 0);
 
     if (sum > 100.5) {
-      if (secondary === undefined) {
+      if (secondary === undefined && tertiary === undefined) {
         warnings.push({
           fieldId: 'primary_fiber_percentage',
           messageKey: 'textiles.warnings.primaryExceeds100',
           params: { primary },
           message: `The primary fiber percentage alone (${primary}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.`,
         });
-      } else {
+      } else if (tertiary === undefined) {
         warnings.push({
           fieldId: 'secondary_fiber_percentage',
           messageKey: 'textiles.warnings.compositionExceeds100',
           params: { primary, secondary, sum },
           message: `Primary (${primary}%) and secondary (${secondary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
         });
+      } else {
+        const sec = secondary ?? 0;
+        warnings.push({
+          fieldId: 'tertiary_fiber_percentage',
+          messageKey: 'textiles.warnings.compositionExceeds100Three',
+          params: { primary, secondary: sec, tertiary, sum },
+          message: `Primary (${primary}%), secondary (${sec}%) and tertiary (${tertiary}%) fiber percentages sum to ${sum}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.`,
+        });
       }
     }
 
-    if (secondary === undefined && primary < 95) {
+    if (secondary === undefined && tertiary === undefined && primary < 95) {
       warnings.push({
         fieldId: 'primary_fiber_percentage',
         messageKey: 'textiles.warnings.incompleteSingleFibre',
@@ -1113,19 +1134,12 @@ export class TextilesTemplate extends BaseTemplate {
     }
 
     // --- Synthetic fibre share (microplastic shedding) ---
+    const isSynthetic = (v: unknown) =>
+      typeof v === 'string' && (SYNTHETIC_FIBER_IDS as readonly string[]).includes(v);
     let syntheticPercentage = 0;
-    if (
-      typeof data.primary_fiber === 'string' &&
-      (SYNTHETIC_FIBER_IDS as readonly string[]).includes(data.primary_fiber)
-    ) {
-      syntheticPercentage += primary;
-    }
-    if (
-      typeof data.secondary_fiber === 'string' &&
-      (SYNTHETIC_FIBER_IDS as readonly string[]).includes(data.secondary_fiber)
-    ) {
-      syntheticPercentage += secondary ?? 0;
-    }
+    if (isSynthetic(data.primary_fiber)) syntheticPercentage += primary;
+    if (isSynthetic(data.secondary_fiber)) syntheticPercentage += secondary ?? 0;
+    if (isSynthetic(data.tertiary_fiber)) syntheticPercentage += tertiary ?? 0;
 
     if (syntheticPercentage >= 50) {
       warnings.push({
