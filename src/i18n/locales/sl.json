@@ -1726,11 +1726,11 @@
         "help": "Naložite logotip, za katerega vam je licenco podelil certifikacijski organ. V javnem potnem listu je prikazan le, če so izpolnjeni sklici na certifikate."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Vrsta terciarnih vlaken (če je primerno)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Odstotek terciarnih vlaken (%)",
+        "placeholder": "npr. 5"
       }
     },
     "options": {
@@ -1747,10 +1747,10 @@
         "cashmere": "Kašmir",
         "mohair": "Moher",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Svila",
         "viscose": "Viskoza",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Liocel",
         "acetate": "Acetat",
         "cupro": "Kupro",
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Že samo odstotek primarnih vlaken ({{primary}} %) presega 100 %. Uredba EU 1007/2011 zahteva, da navedena sestava vlaken odraža dejansko sestavo izdelka — preverite ta podatek.",
       "incompleteSingleFibre": "Naveden je {{primary}} % primarnih vlaken, sekundarna vlakna pa niso zabeležena. Če je ta izdelek mešanica, dodajte preostala vlakna prek vnosa vrste/odstotka sekundarnih vlaken ali celotne izjave o sestavi, da bo navedena sestava znašala polnih 100 %.",
       "syntheticOver50": "To oblačilo vsebuje {{percentage}} % sintetičnih vlaken, kar je več kot 50 %. Med pranjem bo sproščalo mikroplastiko, o čemer mora biti potrošnik obveščen.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Seštevek odstotkov primarnih ({{primary}}%), sekundarnih ({{secondary}}%) in terciarnih ({{tertiary}}%) vlaken znaša {{sum}}%, kar presega 100%. Uredba EU 1007/2011 zahteva, da navedena sestava vlaken odraža dejansko sestavo izdelka – preverite te podatke."
     },
     "disclaimer": {
       "title": "Oblačila DPP — izjava o omejitvi odgovornosti glede skladnosti",

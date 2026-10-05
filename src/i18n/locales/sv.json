@@ -1726,11 +1726,11 @@
         "help": "Ladda upp den logotyp som certifieringsorganet har licensierat till er. Den visas i det offentliga passet endast när certifikatreferenser har fyllts i."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Tertiär fibertyp (om tillämpligt)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Tertiär fiberprocent (%)",
+        "placeholder": "t.ex. 5"
       }
     },
     "options": {
@@ -1745,16 +1745,16 @@
         "hemp": "Hampa",
         "wool": "Ull",
         "cashmere": "Kashmir",
-        "mohair": "Mohair",
+        "mohair": "mohair",
         "alpaca": "Alpacka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Silke",
         "viscose": "Viskos",
-        "modal": "Modal",
-        "lyocell": "Lyocell",
+        "modal": "modal",
+        "lyocell": "lyocell",
         "acetate": "Acetat",
         "cupro": "Kupro",
-        "polyester": "Polyester",
+        "polyester": "polyester",
         "recycled_polyester": "Återvunnen polyester",
         "nylon": "Polyamid",
         "acrylic": "Akryl",
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Enbart procentandelen för primärfibern ({{primary}} %) överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen återspegla produktens faktiska innehåll – kontrollera denna siffra.",
       "incompleteSingleFibre": "Primärfibern anges som {{primary}} % utan att någon sekundärfiber har registrerats. Om denna produkt är en blandning, lägg till återstående fiber/fibrer via Sekundärfibertyp/procentandel eller den fullständiga fibersammansättningen så att den angivna sammansättningen blir 100 %.",
       "syntheticOver50": "Detta plagg består av {{percentage}} % syntetfiber, vilket är mer än 50 %. Det kommer att släppa ifrån sig mikroplaster vid tvätt, och konsumenten måste informeras om detta.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Summan av procentandelarna för primärfiber ({{primary}} %), sekundärfiber ({{secondary}} %) och tertiärfiber ({{tertiary}} %) är {{sum}} %, vilket överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen motsvara varans faktiska sammansättning – kontrollera dessa siffror."
     },
     "disclaimer": {
       "title": "Kläder DPP – friskrivningsklausul om regelefterlevnad",

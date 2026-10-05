@@ -1726,11 +1726,11 @@
         "help": "Nahrajte logo, ktoré vám licencoval certifikačný orgán. Vo verejnom pase sa zobrazí iba vtedy, ak sú vyplnené odkazy na certifikáty."
       },
       "tertiary_fiber": {
-        "label": "Tertiary Fiber Type (if applicable)"
+        "label": "Typ terciárneho vlákna (ak je relevantné)"
       },
       "tertiary_fiber_percentage": {
-        "label": "Tertiary Fiber Percentage (%)",
-        "placeholder": "e.g., 5"
+        "label": "Percentuálny podiel terciárneho vlákna (%)",
+        "placeholder": "napr. 5"
       }
     },
     "options": {
@@ -1747,14 +1747,14 @@
         "cashmere": "Kašmír",
         "mohair": "Mohér",
         "alpaca": "Alpaka",
-        "angora": "Angora",
+        "angora": "angora",
         "silk": "Hodváb",
         "viscose": "Viskóza",
-        "modal": "Modal",
+        "modal": "modal",
         "lyocell": "Lyocel",
         "acetate": "Acetát",
         "cupro": "Kupro",
-        "polyester": "Polyester",
+        "polyester": "polyester",
         "recycled_polyester": "Recyklovaný polyester",
         "nylon": "Polyamid",
         "acrylic": "Akryl",
@@ -1872,7 +1872,7 @@
       "primaryExceeds100": "Už samotný percentuálny podiel primárneho vlákna ({{primary}} %) presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby uvedené zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tento údaj.",
       "incompleteSingleFibre": "Primárne vlákno je uvedené s podielom {{primary}} % a nie je zaznamenané žiadne sekundárne vlákno. Ak je tento výrobok zmesou, pridajte zostávajúce vlákno (vlákna) v časti Typ/percentuálny podiel sekundárneho vlákna alebo Úplné zloženie, aby uvedené zloženie tvorilo celých 100 %.",
       "syntheticOver50": "Tento odev obsahuje {{percentage}} % syntetických vlákien, čo je viac ako 50 %. Počas prania bude uvoľňovať mikroplasty a spotrebiteľ o tom musí byť informovaný.",
-      "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
+      "compositionExceeds100Three": "Súčet percentuálnych podielov primárneho ({{primary}}%), sekundárneho ({{secondary}}%) a terciárneho ({{tertiary}}%) vlákna je {{sum}}%, čo presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby deklarované zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tieto údaje."
     },
     "disclaimer": {
       "title": "Odevy DPP – vyhlásenie o zhode",
