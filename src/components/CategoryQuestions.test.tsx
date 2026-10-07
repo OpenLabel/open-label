@@ -47,7 +47,9 @@ describe('CategoryQuestions', () => {
     const { container } = render(<CategoryQuestions category="textiles" data={{ show_advanced_fields: true }} onChange={vi.fn()} />);
     expect(screen.getAllByRole('button', { name: 'Upload certificate' }).length).toBeGreaterThan(0);
     expect(screen.queryByRole('button', { name: 'Upload logo' })).not.toBeInTheDocument();
-    expect(screen.getAllByText('Maximum size: 5 MB').length).toBeGreaterThan(0);
+    // The size hint is only shown for image-only (logo) fields, so non-image
+    // uploads render exactly as they did before it existed.
+    expect(screen.queryByText(/Maximum size: 5 MB/)).not.toBeInTheDocument();
     const input = container.querySelector('#file-audit_certificate_file');
     if (!input) throw new Error('Certificate upload input missing');
     const file = new File([new Uint8Array(5 * 1024 * 1024 + 1)], 'certificate.pdf', { type: 'application/pdf' });

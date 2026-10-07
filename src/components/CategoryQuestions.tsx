@@ -297,9 +297,11 @@ function FileUploadField({
           )}
         </Button>
       )}
-      <p className="text-xs text-muted-foreground">
-        {t('common.fileMaxSize', { defaultValue: 'Maximum size: {{max}}', max: maxSize })}
-      </p>
+      {isImageOnly && (
+        <p className="text-xs text-muted-foreground">
+          {t('common.fileMaxSize', { defaultValue: 'Maximum size: {{max}}', max: maxSize })}
+        </p>
+      )}
       {error && <p className="text-sm text-destructive">{error}</p>}
     </div>
   );
