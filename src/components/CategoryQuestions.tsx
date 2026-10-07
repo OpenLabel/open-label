@@ -162,6 +162,8 @@ function FileUploadField({
 
   const accept = question.accept ?? 'application/pdf,image/*';
   const maxBytes = question.maxBytes ?? 5 * 1024 * 1024;
+  const maxSize = `${Number((maxBytes / (1024 * 1024)).toFixed(2))} MB`;
+  const isImageOnly = accept.split(',').every((type) => type.trim().startsWith('image/'));
 
   const isInternal = usePrivateStorage;
   // Legacy records stored full public URLs even for internal fields.
@@ -175,7 +177,7 @@ function FileUploadField({
       return;
     }
     if (file.size > maxBytes) {
-      setError(t('toys.certificate.errors.tooLarge', 'File is too large. Maximum size is 5 MB.'));
+      setError(t('common.fileTooLarge', { defaultValue: 'File is too large. Maximum size is {{max}}.', max: maxSize }));
       return;
     }
     setUploading(true);
@@ -290,11 +292,14 @@ function FileUploadField({
           ) : (
             <>
               <Upload className="h-4 w-4 mr-2" />
-              {t('toys.certificate.uploadButton', 'Upload certificate')}
+              {isImageOnly ? t('common.uploadLogo', 'Upload logo') : t('toys.certificate.uploadButton', 'Upload certificate')}
             </>
           )}
         </Button>
       )}
+      <p className="text-xs text-muted-foreground">
+        {t('common.fileMaxSize', { defaultValue: 'Maximum size: {{max}}', max: maxSize })}
+      </p>
       {error && <p className="text-sm text-destructive">{error}</p>}
     </div>
   );

@@ -89,6 +89,13 @@ const toysKeys = [
 ].sort();
 
 const textilesKeys = [
+  "apparel.ai.scannerTitle",
+  "apparel.ai.scannerDescription",
+  "ai.dropHere",
+  "ai.dragDropHint",
+  "common.fileTooLarge",
+  "common.uploadLogo",
+  "common.fileMaxSize",
   "textiles.disclaimer.title",
   "textiles.disclaimer.text",
   // Bespoke Apparel public renderer strings (GarmentPublicPassport).

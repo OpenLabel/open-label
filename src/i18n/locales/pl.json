@@ -24,7 +24,10 @@
     "confirmed": "Potwierdzone",
     "required": "Wymagane",
     "whereApplicable": "W stosownych przypadkach",
-    "tbdImplementingAct": "Do ustalenia — akt wykonawczy"
+    "tbdImplementingAct": "Do ustalenia — akt wykonawczy",
+    "fileTooLarge": "Plik jest za duży. Maksymalny rozmiar to {{max}}.",
+    "uploadLogo": "Prześlij logo",
+    "fileMaxSize": "Maksymalny rozmiar: {{max}}"
   },
   "nav": {
     "signIn": "Zaloguj się",
@@ -590,7 +593,9 @@
     "quotaExceededBody": "Aby zapewnić sprawiedliwy dostęp, ograniczamy skanowanie do 100 na miesiąc. Limit odnowi się na początku następnego miesiąca.",
     "quotaContactBody": "Jeśli potrzebujesz wyższego limitu dla swojej firmy, skontaktuj się z nami.",
     "qrCodeUsed": "Wykryto kod QR, a powiązana strona została również przeanalizowana w celu uzyskania dodatkowych danych.",
-    "contactUs": "Skontaktuj się z nami"
+    "contactUs": "Skontaktuj się z nami",
+    "dropHere": "↓ Upuść tutaj",
+    "dragDropHint": "Przeciągnij i upuść lub kliknij"
   },
   "richText": {
     "enterUrl": "Wprowadź URL:",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Suma procentowa włókna podstawowego ({{primary}}%) i włókna dodatkowego ({{secondary}}%) wynosi {{sum}}%, co przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład włókienniczy odzwierciedlał rzeczywisty skład produktu — należy sprawdzić te wartości.",
       "primaryExceeds100": "Już sama procentowa zawartość włókna podstawowego ({{primary}}%) przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład włókienniczy odzwierciedlał rzeczywisty skład produktu — należy sprawdzić tę wartość.",
       "incompleteSingleFibre": "Zadeklarowano włókno podstawowe na poziomie {{primary}}% bez podania włókna dodatkowego. Jeśli produkt jest mieszanką, należy dodać pozostałe włókna, podając ich rodzaj i procentową zawartość lub uzupełniając pełny skład surowcowy, tak aby zadeklarowany skład sumował się do 100%.",
-      "syntheticOver50": "Ta odzież zawiera {{percentage}}% włókien syntetycznych, co stanowi ponad 50%. Podczas prania będzie uwalniać mikroplastik, o czym konsument musi zostać poinformowany.",
+      "syntheticOver50": "Ta odzież składa się w {{percentage}}% z włókien syntetycznych, co stanowi 50% lub więcej. Podczas prania będzie uwalniać mikroplastik, o czym konsument musi zostać poinformowany.",
       "compositionExceeds100Three": "Udziały procentowe włókna pierwszorzędowego ({{primary}}%), drugorzędowego ({{secondary}}%) i trzeciorzędowego ({{tertiary}}%) sumują się do {{sum}}%, co przekracza 100%. Rozporządzenie UE 1007/2011 wymaga, aby deklarowany skład surowcowy odzwierciedlał rzeczywisty skład produktu — sprawdź te wartości."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Opublikowano"
     },
     "composition": "Skład"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Skaner metek odzieżowych",
+      "scannerDescription": "Zrób zdjęcie lub prześlij wszywki pielęgnacyjnej, etykiety kartonowej lub pliku PDF ze specyfikacją techniczną — AI odczyta skład włókien, symbole pielęgnacji, kraj produkcji, certyfikaty oraz oznaczenia stylu."
+    }
   }
 }

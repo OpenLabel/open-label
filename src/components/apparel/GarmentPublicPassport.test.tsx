@@ -59,6 +59,57 @@ describe('GarmentPublicPassport', () => {
     expect(screen.getByText(expected)).toBeInTheDocument();
   });
 
+  describe('parent-dependent fields', () => {
+    it.each([false, true])('hides stale details on public/preview (preview=%s)', (isPreview) => {
+      const data = {
+        svhc_declared: false, svhc_details: 'STALE SVHC DETAILS',
+        contains_animal_parts: false, animal_parts_details: 'STALE ANIMAL DETAILS',
+        pfas_present: 'no', pfas_details: 'STALE PFAS DETAILS',
+        can_iron: false, iron_temp: 'medium',
+        disposition_status: 'donated', disposition_reason_code: 'contamination',
+        authentication_feature_present: false, authentication_method: 'qr',
+        authentication_verification_url: 'https://example.com/stale-auth',
+      };
+      renderPassport({ isPreview, passport: { ...basePassport, category_data: data } });
+      for (const value of ['STALE SVHC DETAILS', 'STALE ANIMAL DETAILS', 'STALE PFAS DETAILS', 'https://example.com/stale-auth']) {
+        expect(screen.queryByText(value)).not.toBeInTheDocument();
+      }
+      for (const id of ['iron_temp', 'disposition_reason_code', 'authentication_method']) {
+        expect(screen.queryByText(i18n.getFixedT('en')(`textiles.fields.${id}.label`))).not.toBeInTheDocument();
+      }
+      expect(data.svhc_details).toBe('STALE SVHC DETAILS');
+      expect(screen.queryByRole('heading', { name: i18n.getFixedT('en')('textiles.sections.authentication.title') })).not.toBeInTheDocument();
+    });
+
+    it('shows dependent details when their parent is enabled', () => {
+      renderPassport({ passport: { ...basePassport, category_data: {
+        svhc_declared: true, svhc_details: 'ACTIVE SVHC DETAILS',
+        contains_animal_parts: true, animal_parts_details: 'ACTIVE ANIMAL DETAILS',
+        can_iron: true, iron_temp: 'medium',
+      } } });
+      expect(screen.getByText('ACTIVE SVHC DETAILS')).toBeInTheDocument();
+      expect(screen.getByText('ACTIVE ANIMAL DETAILS')).toBeInTheDocument();
+      expect(screen.getByText(i18n.getFixedT('en')('textiles.fields.iron_temp.label'))).toBeInTheDocument();
+    });
+
+    it('keeps advanced-only data visible when the editor toggle is off', () => {
+      renderPassport({ passport: { ...basePassport, category_data: {
+        show_advanced_fields: false, manufacturing_facility: 'Recorded factory',
+      } } });
+      expect(screen.getByText('Recorded factory')).toBeInTheDocument();
+    });
+
+    it('omits sections containing only inactive stale data', () => {
+      renderPassport({ passport: { ...basePassport, category_data: {
+        svhc_declared: false, svhc_details: 'STALE', contains_animal_parts: false,
+        animal_parts_details: 'STALE', can_iron: false, iron_temp: 'medium',
+      } } });
+      for (const key of ['garmentPublic.sections.substances', 'garmentPublic.sections.care', 'textiles.sections.materials.title']) {
+        expect(screen.queryByRole('heading', { name: i18n.getFixedT('en')(key) })).not.toBeInTheDocument();
+      }
+    });
+  });
+
   describe('internal evidence documents', () => {
     it('never renders the four internal document fields or their values', () => {
       renderPassport({

@@ -24,7 +24,10 @@
     "confirmed": "Confirmed",
     "required": "Required",
     "whereApplicable": "Where applicable",
-    "tbdImplementingAct": "TBD — implementing act"
+    "tbdImplementingAct": "TBD — implementing act",
+    "fileTooLarge": "File is too large. Maximum size is {{max}}.",
+    "uploadLogo": "Upload logo",
+    "fileMaxSize": "Maximum size: {{max}}"
   },
   "nav": {
     "signIn": "Sign In",
@@ -590,7 +593,9 @@
     "quotaExceededDesc": "You've reached the monthly limit of 100 AI label scans.",
     "quotaExceededBody": "To ensure fair access for all users, we limit AI-powered label scanning to 100 scans per month. Your quota will reset at the beginning of next month.",
     "quotaContactBody": "If you need a higher limit for your business, please contact us and we'll be happy to discuss options.",
-    "contactUs": "Contact Us"
+    "contactUs": "Contact Us",
+    "dropHere": "↓ Drop here",
+    "dragDropHint": "Drag & drop or click"
   },
   "richText": {
     "enterUrl": "Enter URL:",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Primary ({{primary}}%) and secondary ({{secondary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures.",
       "primaryExceeds100": "The primary fiber percentage alone ({{primary}}%) exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check this figure.",
       "incompleteSingleFibre": "Primary fiber is declared at {{primary}}% with no secondary fiber recorded. If this item is a blend, add the remaining fiber(s) via Secondary Fiber Type/Percentage or the Full Composition Statement so the declared composition accounts for the full 100%.",
-      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is more than 50%. It will shed microplastics during washing, and the consumer must be informed of this.",
+      "syntheticOver50": "This garment is {{percentage}}% synthetic fibre, which is 50% or more. It will shed microplastics during washing, and the consumer must be informed of this.",
       "compositionExceeds100Three": "Primary ({{primary}}%), secondary ({{secondary}}%) and tertiary ({{tertiary}}%) fiber percentages sum to {{sum}}%, which exceeds 100%. EU Regulation 1007/2011 requires the declared fibre composition to reflect the item's actual make-up — check these figures."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Published"
     },
     "composition": "Composition"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Apparel label scanner",
+      "scannerDescription": "Photograph or upload the sewn-in care label, the hangtag, or a tech pack PDF — the AI will read the fibre composition, care symbols, made-in country, certifications, and style references."
+    }
   }
 }

@@ -24,7 +24,10 @@
     "confirmed": "已确认",
     "required": "必填",
     "whereApplicable": "如适用",
-    "tbdImplementingAct": "待定 — 实施法案"
+    "tbdImplementingAct": "待定 — 实施法案",
+    "fileTooLarge": "文件过大。最大为 {{max}}。",
+    "uploadLogo": "上传徽标",
+    "fileMaxSize": "最大：{{max}}"
   },
   "nav": {
     "signIn": "登录",
@@ -590,7 +593,9 @@
     "quotaExceededDesc": "您已达到每月 100 次 AI 标签扫描的限制。",
     "quotaExceededBody": "为确保所有用户都能公平使用，我们限制AI驱动的标签扫描每月100次。您的配额将在下月初重置。",
     "quotaContactBody": "如果您的企业需要更高的限额，请联系我们，我们很乐意讨论解决方案。",
-    "contactUs": "联系我们"
+    "contactUs": "联系我们",
+    "dropHere": "↓ 拖放至此",
+    "dragDropHint": "拖放或点击"
   },
   "richText": {
     "enterUrl": "输入网址：",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "主要纤维 ({{primary}}%) 和次要纤维 ({{secondary}}%) 的百分比总和为 {{sum}}%，超过了 100%。欧盟法规 1007/2011 要求申报的纤维成分必须反映产品的实际构成 — 请检查这些数据。",
       "primaryExceeds100": "仅主要纤维的百分比 ({{primary}}%) 就已超过 100%。欧盟法规 1007/2011 要求申报的纤维成分必须反映产品的实际构成 — 请检查此数据。",
       "incompleteSingleFibre": "主要纤维申报为 {{primary}}%，但未记录次要纤维。如果该产品是混纺产品，请通过“次要纤维类型/百分比”或“完整成分声明”添加剩余的纤维，以确保申报的成分总和达到 100%。",
-      "syntheticOver50": "该服装含有 {{percentage}}% 的合成纤维，超过了 50%。在洗涤过程中会脱落微塑料，必须将此情况告知消费者。",
+      "syntheticOver50": "该服装含有 {{percentage}}% 的合成纤维，含量为 50% 或以上。在洗涤过程中会脱落微塑料，必须将此情况告知消费者。",
       "compositionExceeds100Three": "主要 ({{primary}}%)、次要 ({{secondary}}%) 和第三 ({{tertiary}}%) 纤维百分比的总和为 {{sum}}%，超过了 100%。欧盟法规 1007/2011 要求申报的纤维成分必须反映产品的实际构成 — 请检查这些数据。"
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "已发布"
     },
     "composition": "成分"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "服装标签扫描器",
+      "scannerDescription": "拍摄或上传缝入的护理标签、吊牌或技术包 PDF——AI 将读取纤维成分、洗护符号、原产国、认证和款式参考信息。"
+    }
   }
 }

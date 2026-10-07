@@ -24,7 +24,10 @@
     "confirmed": "Bekræftet",
     "required": "Påkrævet",
     "whereApplicable": "Hvor det er relevant",
-    "tbdImplementingAct": "TBD — gennemførelsesretsakt"
+    "tbdImplementingAct": "TBD — gennemførelsesretsakt",
+    "fileTooLarge": "Filen er for stor. Maksimal størrelse er {{max}}.",
+    "uploadLogo": "Overfør logo",
+    "fileMaxSize": "Maksimal størrelse: {{max}}"
   },
   "nav": {
     "signIn": "Log ind",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "For at sikre fair adgang begrænser vi AI-etiketsscanninger til 100 pr. måned. Din kvote nulstilles i begyndelsen af næste måned.",
     "quotaContactBody": "Hvis du har brug for en højere grænse til din virksomhed, kontakt os venligst.",
     "qrCodeUsed": "En QR-kode blev fundet, og den tilknyttede side blev også analyseret for yderligere data.",
-    "contactUs": "Kontakt os"
+    "contactUs": "Kontakt os",
+    "dropHere": "↓ Slip her",
+    "dragDropHint": "Træk og slip eller klik"
   },
   "imageUpload": {
     "loginRequired": "Du skal være logget ind for at uploade billeder",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Procentdelen af primære ({{primary}}%) og sekundære ({{secondary}}%) fibre er tilsammen {{sum}}%, hvilket overstiger 100%. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller disse tal.",
       "primaryExceeds100": "Procentdelen af primære fibre alene ({{primary}}%) overstiger 100%. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller dette tal.",
       "incompleteSingleFibre": "Primære fibre er angivet til {{primary}}%, uden at der er registreret nogen sekundære fibre. Hvis denne vare er en blanding, skal de resterende fibre tilføjes via 'Sekundær fibertype/procentdel' eller 'Fuld sammensætningserklæring', så den angivne sammensætning udgør de fulde 100%.",
-      "syntheticOver50": "Denne beklædningsgenstand består af {{percentage}}% syntetiske fibre, hvilket er mere end 50%. Den vil afgive mikroplast under vask, og forbrugeren skal informeres om dette.",
+      "syntheticOver50": "Denne beklædningsgenstand består af {{percentage}}% syntetiske fibre, hvilket er 50% eller mere. Den vil afgive mikroplast under vask, og forbrugeren skal informeres om dette.",
       "compositionExceeds100Three": "Primær ({{primary}} %), sekundær ({{secondary}} %) og tertiær ({{tertiary}} %) fiberprocenter udgør tilsammen {{sum}} %, hvilket overstiger 100 %. EU-forordning 1007/2011 kræver, at den angivne fibersammensætning afspejler varens faktiske sammensætning — kontroller disse tal."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Udgivet"
     },
     "composition": "Sammensætning"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Mærkescanner til tøj",
+      "scannerDescription": "Fotografér eller overfør det isyede vaskemærke, hængemærket eller en tech pack PDF — AI'en læser fibersammensætningen, vaskesymbolerne, oprindelsesland, certificeringer og stilreferencer."
+    }
   }
 }

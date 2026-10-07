@@ -1,0 +1,1 @@
+- Apparel public and owner-preview field visibility must use the template's shared condition evaluator, ignoring editor-only advanced-field toggles, so both views hide stale dependent data consistently without deleting stored values.

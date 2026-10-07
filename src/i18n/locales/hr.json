@@ -24,7 +24,10 @@
     "confirmed": "Potvrđeno",
     "required": "Obavezno",
     "whereApplicable": "Gdje je primjenjivo",
-    "tbdImplementingAct": "Odredit će se — provedbeni akt"
+    "tbdImplementingAct": "Odredit će se — provedbeni akt",
+    "fileTooLarge": "Datoteka je prevelika. Maksimalna veličina je {{max}}.",
+    "uploadLogo": "Učitaj logotip",
+    "fileMaxSize": "Maksimalna veličina: {{max}}"
   },
   "nav": {
     "signIn": "Prijava",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "Kako bismo osigurali pravedan pristup, ograničavamo AI skeniranja na 100 mjesečno. Vaša kvota će se resetirati početkom sljedećeg mjeseca.",
     "quotaContactBody": "Ako trebate veće ograničenje za vaše poslovanje, kontaktirajte nas.",
     "qrCodeUsed": "Otkriven je QR kod i povezana stranica je također analizirana za dodatne podatke.",
-    "contactUs": "Kontaktirajte nas"
+    "contactUs": "Kontaktirajte nas",
+    "dropHere": "↓ Ispustite ovdje",
+    "dragDropHint": "Povucite i ispustite ili kliknite"
   },
   "imageUpload": {
     "loginRequired": "Morate biti prijavljeni za učitavanje slika",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Postoci primarnih ({{primary}}%) i sekundarnih ({{secondary}}%) vlakana zbrajaju se u {{sum}}%, što premašuje 100%. Uredba EU-a 1007/2011 zahtijeva da deklarirani sirovinski sastav odražava stvarni sastav proizvoda – provjerite ove brojke.",
       "primaryExceeds100": "Samo postotak primarnih vlakana ({{primary}}%) premašuje 100%. Uredba EU-a 1007/2011 zahtijeva da deklarirani sirovinski sastav odražava stvarni sastav proizvoda – provjerite ovu brojku.",
       "incompleteSingleFibre": "Primarno vlakno deklarirano je s {{primary}}%, bez zabilježenih sekundarnih vlakana. Ako je ovaj proizvod mješavina, dodajte preostala vlakna putem vrste/postotka sekundarnih vlakana ili potpune izjave o sastavu kako bi deklarirani sastav činio punih 100%.",
-      "syntheticOver50": "Ovaj odjevni predmet sadrži {{percentage}}% sintetičkih vlakana, što je više od 50%. Tijekom pranja ispuštat će mikroplastiku i potrošač o tome mora biti obaviješten.",
+      "syntheticOver50": "Ovaj odjevni predmet sadrži {{percentage}}% sintetičkih vlakana, što je 50% ili više. Otpuštat će mikroplastiku tijekom pranja i potrošač o tome mora biti obaviješten.",
       "compositionExceeds100Three": "Zbroj postotaka primarnog ({{primary}}%), sekundarnog ({{secondary}}%) i tercijarnog ({{tertiary}}%) vlakna iznosi {{sum}}%, što premašuje 100 %. Uredba EU-a 1007/2011 zahtijeva da deklarirani sastav vlakana odražava stvarni sastav proizvoda — provjerite te brojke."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Objavljeno"
     },
     "composition": "Sastav"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Skener etiketa na odjeći",
+      "scannerDescription": "Fotografirajte ili učitajte ušivenu etiketu s uputama za održavanje, viseću etiketu ili tehničku specifikaciju u PDF formatu — AI će pročitati sastav vlakana, simbole za održavanje, zemlju podrijetla, certifikate i stilske reference."
+    }
   }
 }

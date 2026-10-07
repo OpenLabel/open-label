@@ -24,7 +24,10 @@
     "confirmed": "Vahvistettu",
     "required": "Pakollinen",
     "whereApplicable": "Sovellettaessa",
-    "tbdImplementingAct": "TBD — täytäntöönpanosäädös"
+    "tbdImplementingAct": "TBD — täytäntöönpanosäädös",
+    "fileTooLarge": "Tiedosto on liian suuri. Enimmäiskoko on {{max}}.",
+    "uploadLogo": "Lataa logo",
+    "fileMaxSize": "Enimmäiskoko: {{max}}"
   },
   "nav": {
     "signIn": "Kirjaudu",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "Reilun käytön takaamiseksi rajoitamme tekoälyskannaukset 100:aan kuukaudessa. Kiintiösi nollautuu seuraavan kuukauden alussa.",
     "quotaContactBody": "Jos tarvitset korkeamman rajan yrityksellesi, ota yhteyttä.",
     "qrCodeUsed": "QR-koodi havaittiin ja linkitetty sivu analysoitiin myös lisätietojen saamiseksi.",
-    "contactUs": "Ota yhteyttä"
+    "contactUs": "Ota yhteyttä",
+    "dropHere": "↓ Pudota tähän",
+    "dragDropHint": "Vedä ja pudota tai napsauta"
   },
   "imageUpload": {
     "loginRequired": "Sinun on kirjauduttava sisään ladataksesi kuvia",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Ensisijaisen kuidun ({{primary}} %) ja toissijaisen kuidun ({{secondary}} %) prosenttiosuuksien summa on {{sum}} %, mikä ylittää 100 %. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta – tarkista nämä luvut.",
       "primaryExceeds100": "Jo yksin ensisijaisen kuidun prosenttiosuus ({{primary}} %) ylittää 100 %. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta – tarkista tämä luku.",
       "incompleteSingleFibre": "Ensisijaisen kuidun osuudeksi on ilmoitettu {{primary}} %, eikä toissijaista kuitua ole merkitty. Jos tuote on sekoite, lisää loput kuidut Toissijainen kuitutyyppi/prosenttiosuus -kenttään tai Täydellinen koostumusseloste -kenttään, jotta ilmoitettu koostumus kattaa koko 100 %.",
-      "syntheticOver50": "Tämä vaate on {{percentage}} % synteettistä kuitua, mikä on yli 50 %. Siitä irtoaa mikromuovia pesun aikana, ja kuluttajalle on ilmoitettava tästä.",
+      "syntheticOver50": "Tämä vaate on {{percentage}}% tekokuitua, mikä on 50% tai enemmän. Siitä irtoaa mikromuovia pesun aikana, ja kuluttajalle on ilmoitettava tästä.",
       "compositionExceeds100Three": "Ensisijaisen ({{primary}}%), toissijaisen ({{secondary}}%) ja kolmannen ({{tertiary}}%) kuidun prosenttiosuuksien summa on {{sum}}%, mikä ylittää 100%. EU-asetus 1007/2011 edellyttää, että ilmoitettu kuitukoostumus vastaa tuotteen todellista koostumusta — tarkista nämä luvut."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Julkaistu"
     },
     "composition": "Koostumus"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Vaate-etiketin skanneri",
+      "scannerDescription": "Valokuvaa tai lataa ommeltu hoito-ohjelappu, tuotelappu tai teknisen tuoteselosteen PDF — tekoäly lukee kuitukoostumuksen, hoito-ohjesymbolit, valmistusmaan, sertifikaatit ja tyyliviitteet."
+    }
   }
 }

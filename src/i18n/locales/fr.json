@@ -24,7 +24,10 @@
     "confirmed": "Confirmé",
     "required": "Requis",
     "whereApplicable": "Le cas échéant",
-    "tbdImplementingAct": "À déterminer — acte d'exécution"
+    "tbdImplementingAct": "À déterminer — acte d'exécution",
+    "fileTooLarge": "Le fichier est trop volumineux. La taille maximale est de {{max}}.",
+    "uploadLogo": "Téléverser le logo",
+    "fileMaxSize": "Taille maximale : {{max}}"
   },
   "nav": {
     "signIn": "Connexion",
@@ -590,7 +593,9 @@
     "quotaExceededBody": "Pour garantir un accès équitable à tous les utilisateurs, nous limitons les scans d'étiquettes IA à 100 par mois. Votre quota sera réinitialisé au début du mois prochain.",
     "quotaContactBody": "Si vous avez besoin d'une limite plus élevée pour votre entreprise, veuillez nous contacter.",
     "qrCodeUsed": "Un QR code a été détecté et la page liée a également été analysée pour des données supplémentaires.",
-    "contactUs": "Contactez-nous"
+    "contactUs": "Contactez-nous",
+    "dropHere": "↓ Déposez ici",
+    "dragDropHint": "Glissez-déposez ou cliquez"
   },
   "richText": {
     "enterUrl": "Entrez l'URL :",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Les pourcentages des fibres primaire ({{primary}} %) et secondaire ({{secondary}} %) totalisent {{sum}} %, dépassant ainsi 100 %. Le règlement (UE) 1007/2011 exige que la composition en fibres déclarée corresponde à la composition réelle de l'article — veuillez vérifier ces chiffres.",
       "primaryExceeds100": "Le pourcentage de la fibre primaire à lui seul ({{primary}} %) dépasse 100 %. Le règlement (UE) 1007/2011 exige que la composition en fibres déclarée corresponde à la composition réelle de l'article — veuillez vérifier ce chiffre.",
       "incompleteSingleFibre": "La fibre primaire est déclarée à {{primary}} % sans qu'aucune fibre secondaire ne soit indiquée. Si cet article est un mélange, ajoutez la ou les fibres restantes via les champs « Type/Pourcentage de la fibre secondaire » ou « Déclaration de composition complète » pour que la composition déclarée atteigne 100 %.",
-      "syntheticOver50": "Ce vêtement est composé à {{percentage}} % de fibres synthétiques, soit plus de 50 %. Il rejettera des microplastiques lors du lavage, et le consommateur doit en être informé.",
+      "syntheticOver50": "Ce vêtement contient {{percentage}}% de fibres synthétiques, soit 50% ou plus. Il rejettera des microplastiques lors du lavage, et le consommateur doit en être informé.",
       "compositionExceeds100Three": "Les pourcentages des fibres primaire ({{primary}} %), secondaire ({{secondary}} %) et tertiaire ({{tertiary}} %) totalisent {{sum}} %, ce qui dépasse 100 %. Le règlement (UE) 1007/2011 exige que la composition en fibres déclarée corresponde à la composition réelle de l'article — veuillez vérifier ces chiffres."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Publié"
     },
     "composition": "Composition"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Scanner d'étiquettes de vêtements",
+      "scannerDescription": "Photographiez ou téléversez l'étiquette d'entretien cousue, l'étiquette volante ou un dossier technique PDF — l'IA lira la composition des fibres, les symboles d'entretien, le pays de fabrication, les certifications et les références de style."
+    }
   }
 }

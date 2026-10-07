@@ -24,7 +24,10 @@
     "confirmed": "Deimhnithe",
     "required": "Riachtanach",
     "whereApplicable": "I gcás inarb infheidhme",
-    "tbdImplementingAct": "Le cinneadh — gníomh cur chun feidhme"
+    "tbdImplementingAct": "Le cinneadh — gníomh cur chun feidhme",
+    "fileTooLarge": "Tá an comhad ró-mhór. Is é {{max}} an t-uasmhéid.",
+    "uploadLogo": "Uaslódáil lógó",
+    "fileMaxSize": "Uasmhéid: {{max}}"
   },
   "nav": {
     "signIn": "Sínigh isteach",
@@ -590,7 +593,9 @@
     "quotaExceededBody": "Chun rochtain chothrom a chinntiú, cuirimid teorainn le scanadh go 100 in aghaidh na míosa.",
     "quotaContactBody": "Má theastaíonn teorainn níos airde uait do do ghnó, déan teagmháil linn.",
     "qrCodeUsed": "Braitheadh cód QR agus rinneadh anailís ar an leathanach nasctha freisin le haghaidh sonraí breise.",
-    "contactUs": "Déan teagmháil linn"
+    "contactUs": "Déan teagmháil linn",
+    "dropHere": "↓ Scaoil anseo",
+    "dragDropHint": "Tarraing agus scaoil nó cliceáil"
   },
   "richText": {
     "enterUrl": "Iontráil URL:",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Is ionann suim chéatadáin an phríomhshnáithín ({{primary}}%) agus an tsnáithín thánaistigh ({{secondary}}%) agus {{sum}}%, a sháraíonn 100%. Ceanglaítear le Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíní dearbhaithe comhdhéanamh iarbhír an earra — seiceáil na figiúirí seo.",
       "primaryExceeds100": "Sáraíonn céatadán an phríomhshnáithín amháin ({{primary}}%) 100%. Ceanglaítear le Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíní dearbhaithe comhdhéanamh iarbhír an earra — seiceáil an figiúr seo.",
       "incompleteSingleFibre": "Dearbhaítear an príomhshnáithín ag {{primary}}% gan aon snáithín tánaisteach a bheith taifeadta. Más cumasc é an t-earra seo, cuir an snáithín/na snáithíní eile leis trí Chineál/Chéatadán an tSnaithín Thánaistigh nó tríd an Ráiteas Comhdhéanaimh Iomlán ionas go gclúdóidh an comhdhéanamh dearbhaithe an 100% iomlán.",
-      "syntheticOver50": "Is snáithín sintéiseach é {{percentage}}% den bhall éadaigh seo, atá níos mó ná 50%. Scaoilfidh sé micreaphlaistigh le linn níocháin, agus ní mór an tomhaltóir a chur ar an eolas faoi seo.",
+      "syntheticOver50": "Is snáithín sintéiseach é {{percentage}}% den bhall éadaigh seo, is é sin 50% nó níos mó. Scaoilfidh sé micreaphlaistigh le linn níocháin, agus ní mór an tomhaltóir a chur ar an eolas faoi seo.",
       "compositionExceeds100Three": "Is é {{sum}}% suim chéatadáin an phríomhshnáithín ({{primary}}%), an tsnáithín thánaistigh ({{secondary}}%), agus an tríú snáithín ({{tertiary}}%), rud a sháraíonn 100%. Ceanglaíonn Rialachán (AE) 1007/2011 go léireodh an comhdhéanamh snáithíneach dearbhaithe fíorchomhdhéanamh an earra — seiceáil na figiúirí seo."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Foilsithe"
     },
     "composition": "Comhdhéanamh"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Scanóir lipéad éadaigh",
+      "scannerDescription": "Tóg grianghraf den lipéad cúraim fuaite isteach, den chlib crochta, nó de PDF de phaca teicniúil, nó uaslódáil ceann acu — léifidh an IS comhdhéanamh na snáithíní, na siombailí cúraim, an tír thionscnaimh, na deimhnithe, agus tagairtí stíle."
+    }
   }
 }

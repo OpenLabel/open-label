@@ -24,7 +24,10 @@
     "confirmed": "Kinnitatud",
     "required": "Nõutav",
     "whereApplicable": "Vajaduse korral",
-    "tbdImplementingAct": "TBD — rakendusakt"
+    "tbdImplementingAct": "TBD — rakendusakt",
+    "fileTooLarge": "Fail on liiga suur. Maksimaalne suurus on {{max}}.",
+    "uploadLogo": "Laadi logo üles",
+    "fileMaxSize": "Maksimaalne suurus: {{max}}"
   },
   "nav": {
     "signIn": "Logi sisse",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "Õiglase juurdepääsu tagamiseks piirame AI skaneerimised 100-ni kuus. Kvoot uueneb järgmise kuu alguses.",
     "quotaContactBody": "Kui vajate kõrgemat limiiti, võtke meiega ühendust.",
     "qrCodeUsed": "Tuvastati QR-kood ja seotud leht analüüsiti samuti lisaandmete saamiseks.",
-    "contactUs": "Võtke ühendust"
+    "contactUs": "Võtke ühendust",
+    "dropHere": "↓ Lohista siia",
+    "dragDropHint": "Lohista või klõpsa"
   },
   "imageUpload": {
     "loginRequired": "Piltide üleslaadimiseks peate olema sisse logitud",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Põhikiu ({{primary}}%) ja teise kiu ({{secondary}}%) protsentuaalne sisaldus on kokku {{sum}}%, mis ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele – kontrollige neid andmeid.",
       "primaryExceeds100": "Ainuüksi põhikiu protsentuaalne sisaldus ({{primary}}%) ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele – kontrollige seda arvu.",
       "incompleteSingleFibre": "Põhikiu sisalduseks on deklareeritud {{primary}}% ja teise kiu andmed puuduvad. Kui toode on kiusegu, lisage ülejäänud kiud jaotises „Teise kiu tüüp/protsent“ või „Täielik kiukoostis“, nii et deklareeritud koostis moodustaks kokku 100%.",
-      "syntheticOver50": "See rõivaese sisaldab {{percentage}}% sünteetilist kiudu, mis on rohkem kui 50%. Pesemisel eraldub sellest mikroplasti ja tarbijat tuleb sellest teavitada.",
+      "syntheticOver50": "See rõivaese sisaldab {{percentage}}% sünteetilist kiudu, mis on 50% või rohkem. Pesemisel eraldub sellest mikroplasti ja tarbijat tuleb sellest teavitada.",
       "compositionExceeds100Three": "Põhikiu ({{primary}}%), teise kiu ({{secondary}}%) ja kolmanda kiu ({{tertiary}}%) osakaalude summa on {{sum}}%, mis ületab 100%. ELi määrus 1007/2011 nõuab, et deklareeritud kiukoostis vastaks toote tegelikule koostisele — kontrollige neid andmeid."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Avaldatud"
     },
     "composition": "Koostis"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Rõivasildi skanner",
+      "scannerDescription": "Pildista või laadi üles sisseõmmeldud hooldussilt, tooteetikett või tehnilise kirjelduse PDF — tehisintellekt loeb kiukoostise, hooldussümbolid, päritoluriigi, sertifikaadid ja stiiliviited."
+    }
   }
 }

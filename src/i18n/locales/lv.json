@@ -24,7 +24,10 @@
     "confirmed": "Apstiprināts",
     "required": "Obligāti",
     "whereApplicable": "Ja piemērojams",
-    "tbdImplementingAct": "Vēl nav noteikts — īstenošanas akts"
+    "tbdImplementingAct": "Vēl nav noteikts — īstenošanas akts",
+    "fileTooLarge": "Fails ir pārāk liels. Maksimālais izmērs ir {{max}}.",
+    "uploadLogo": "Augšupielādēt logotipu",
+    "fileMaxSize": "Maksimālais izmērs: {{max}}"
   },
   "nav": {
     "signIn": "Ieiet",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "Lai nodrošinātu godīgu piekļuvi, mēs ierobežojam AI skenēšanu līdz 100 mēnesī. Jūsu kvota tiks atjaunota nākamā mēneša sākumā.",
     "quotaContactBody": "Ja nepieciešams augstāks limits, lūdzu, sazinieties ar mums.",
     "qrCodeUsed": "Tika atklāts QR kods un saistītā lapa arī tika analizēta papildu datiem.",
-    "contactUs": "Sazinieties ar mums"
+    "contactUs": "Sazinieties ar mums",
+    "dropHere": "↓ Nometiet šeit",
+    "dragDropHint": "Velciet un nometiet vai noklikšķiniet"
   },
   "imageUpload": {
     "loginRequired": "Lai augšupielādētu attēlus, jums jābūt pieteicies",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Primārās ({{primary}}%) un sekundārās ({{secondary}}%) šķiedras procentuālais daudzums kopā veido {{sum}}%, kas pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šos skaitļus.",
       "primaryExceeds100": "Tikai primārās šķiedras procentuālais daudzums ({{primary}}%) pārsniedz 100%. ES Regula 1007/2011 nosaka, ka norādītajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šo skaitli.",
       "incompleteSingleFibre": "Ir norādīta primārā šķiedra {{primary}}% apmērā, bet nav reģistrēta sekundārā šķiedra. Ja šis izstrādājums ir maisījums, pievienojiet atlikušo(-ās) šķiedru(-as), izmantojot laukus “Sekundārās šķiedras veids/procentuālais daudzums” vai “Pilns sastāva apraksts”, lai norādītais sastāvs veidotu visus 100%.",
-      "syntheticOver50": "Šis apģērbs satur {{percentage}}% sintētiskās šķiedras, kas ir vairāk nekā 50%. Mazgāšanas laikā tas izdalīs mikroplastmasu, un patērētājs par to ir jāinformē.",
+      "syntheticOver50": "Šis apģērbs satur {{percentage}}% sintētiskās šķiedras, kas ir 50% vai vairāk. Mazgāšanas laikā tas izdalīs mikroplastmasu, un patērētājs par to ir jāinformē.",
       "compositionExceeds100Three": "Pirmās ({{primary}}%), otrās ({{secondary}}%) un trešās ({{tertiary}}%) šķiedras procentuālais daudzums kopā ir {{sum}}%, kas pārsniedz 100%. ES Regula 1007/2011 nosaka, ka deklarētajam šķiedru sastāvam ir jāatspoguļo izstrādājuma faktiskais sastāvs — pārbaudiet šos skaitļus."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Publicēts"
     },
     "composition": "Sastāvs"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Apģērba etiķešu skeneris",
+      "scannerDescription": "Nofotografējiet vai augšupielādējiet iešūto kopšanas etiķeti, piekaramo birku vai tehniskās specifikācijas PDF — mākslīgais intelekts nolasīs šķiedru sastāvu, kopšanas simbolus, izcelsmes valsti, sertifikātus un stila atsauces."
+    }
   }
 }

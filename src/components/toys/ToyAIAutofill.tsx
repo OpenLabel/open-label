@@ -250,7 +250,7 @@ export function ToyAIAutofill({ onAutofill, onAutofillMeta }: ToyAIAutofillProps
                   {t('ai.takePhoto')} / {t('ai.uploadFile')}
                 </span>
                 <span className="text-xs text-muted-foreground/70">
-                  {isDragging ? '↓ Drop here' : 'Drag & drop or click'}
+                  {isDragging ? t('ai.dropHere') : t('ai.dragDropHint')}
                 </span>
               </div>
             )}

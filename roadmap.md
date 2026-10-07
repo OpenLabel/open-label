@@ -13,3 +13,8 @@
       Blocked: AI translation credits exhausted. Debt marker
       PENDING_TRANSLATION_PREFIXES = ['textiles.'] stays until then.
 
+
+## Client QA follow-up
+- [x] Translate scanner text and shared upload labels, correct warning wording
+- [x] Gate Apparel public and preview fields with template conditions
+- [ ] Add regression coverage and run full suite
