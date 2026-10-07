@@ -8,8 +8,11 @@
 - [x] Toy sample: customs_code -> 95030041 (cn_chapter kept at '95', it is a
       required template question; removing it fails sample test (b))
 
-## Apparel translations (blocked)
-- [ ] Translate textiles.* into nl, pl, pt, ro, sk, sl, sv, zh-CN
-      Blocked: AI translation credits exhausted. Debt marker
-      PENDING_TRANSLATION_PREFIXES = ['textiles.'] stays until then.
+## Apparel translations (done)
+- [x] Translate textiles.* into all supported locales; debt marker empty and audit passing.
 
+
+## Client QA follow-up
+- [x] Translate scanner text and shared upload labels, correct warning wording
+- [x] Gate Apparel public and preview fields with template conditions
+- [x] Add regression coverage and run full suite: 1,889 passed, 0 failed, 0 skipped

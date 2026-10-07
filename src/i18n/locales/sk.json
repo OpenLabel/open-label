@@ -24,7 +24,10 @@
     "confirmed": "Potvrdené",
     "required": "Povinné",
     "whereApplicable": "V relevantných prípadoch",
-    "tbdImplementingAct": "Bude stanovené — vykonávací akt"
+    "tbdImplementingAct": "Bude stanovené — vykonávací akt",
+    "fileTooLarge": "Súbor je príliš veľký. Maximálna veľkosť je {{max}}.",
+    "uploadLogo": "Nahrať logo",
+    "fileMaxSize": "Maximálna veľkosť: {{max}}"
   },
   "nav": {
     "signIn": "Prihlásiť sa",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "Pre zabezpečenie spravodlivého prístupu obmedzujeme AI skenovanie na 100 mesačne. Vaša kvóta sa obnoví na začiatku budúceho mesiaca.",
     "quotaContactBody": "Ak potrebujete vyšší limit, kontaktujte nás.",
     "qrCodeUsed": "Bol zistený QR kód a prepojená stránka bola tiež analyzovaná pre ďalšie údaje.",
-    "contactUs": "Kontaktujte nás"
+    "contactUs": "Kontaktujte nás",
+    "dropHere": "↓ Pustite sem",
+    "dragDropHint": "Pretiahnite a pustite alebo kliknite"
   },
   "imageUpload": {
     "loginRequired": "Pre nahrávanie obrázkov musíte byť prihlásení",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Súčet percentuálnych podielov primárneho ({{primary}} %) a sekundárneho ({{secondary}} %) vlákna je {{sum}} %, čo presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby uvedené zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tieto údaje.",
       "primaryExceeds100": "Už samotný percentuálny podiel primárneho vlákna ({{primary}} %) presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby uvedené zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tento údaj.",
       "incompleteSingleFibre": "Primárne vlákno je uvedené s podielom {{primary}} % a nie je zaznamenané žiadne sekundárne vlákno. Ak je tento výrobok zmesou, pridajte zostávajúce vlákno (vlákna) v časti Typ/percentuálny podiel sekundárneho vlákna alebo Úplné zloženie, aby uvedené zloženie tvorilo celých 100 %.",
-      "syntheticOver50": "Tento odev obsahuje {{percentage}} % syntetických vlákien, čo je viac ako 50 %. Počas prania bude uvoľňovať mikroplasty a spotrebiteľ o tom musí byť informovaný.",
+      "syntheticOver50": "Tento odev obsahuje {{percentage}}% syntetických vlákien, čo je 50% alebo viac. Počas prania bude uvoľňovať mikroplasty a spotrebiteľ o tom musí byť informovaný.",
       "compositionExceeds100Three": "Súčet percentuálnych podielov primárneho ({{primary}}%), sekundárneho ({{secondary}}%) a terciárneho ({{tertiary}}%) vlákna je {{sum}}%, čo presahuje 100 %. Nariadenie EÚ 1007/2011 vyžaduje, aby deklarované zloženie vlákien zodpovedalo skutočnému zloženiu výrobku — skontrolujte tieto údaje."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Zverejnené"
     },
     "composition": "Zloženie"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Skener odevných etikiet",
+      "scannerDescription": "Odfotografujte alebo nahrajte všitú etiketu s pokynmi na ošetrovanie, visačku alebo technickú dokumentáciu vo formáte PDF — umelá inteligencia načíta zloženie vlákien, symboly ošetrovania, krajinu pôvodu, certifikácie a referencie štýlu."
+    }
   }
 }

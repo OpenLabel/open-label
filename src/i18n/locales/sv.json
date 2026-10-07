@@ -24,7 +24,10 @@
     "confirmed": "Bekräftad",
     "required": "Obligatorisk",
     "whereApplicable": "I tillämpliga fall",
-    "tbdImplementingAct": "Ej fastställd — genomförandeakt"
+    "tbdImplementingAct": "Ej fastställd — genomförandeakt",
+    "fileTooLarge": "Filen är för stor. Maximal storlek är {{max}}.",
+    "uploadLogo": "Ladda upp logotyp",
+    "fileMaxSize": "Maximal storlek: {{max}}"
   },
   "nav": {
     "signIn": "Logga in",
@@ -590,7 +593,9 @@
     "quotaExceededBody": "För att säkerställa rättvis åtkomst för alla användare begränsar vi AI-etikettsskanningar till 100 per månad. Din kvot återställs i början av nästa månad.",
     "quotaContactBody": "Om du behöver en högre gräns för ditt företag, vänligen kontakta oss.",
     "qrCodeUsed": "En QR-kod upptäcktes och den länkade sidan analyserades också för ytterligare data.",
-    "contactUs": "Kontakta oss"
+    "contactUs": "Kontakta oss",
+    "dropHere": "↓ Släpp här",
+    "dragDropHint": "Dra och släpp eller klicka"
   },
   "richText": {
     "enterUrl": "Ange URL:",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Procentandelarna för primärfiber ({{primary}} %) och sekundärfiber ({{secondary}} %) blir tillsammans {{sum}} %, vilket överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen återspegla produktens faktiska innehåll – kontrollera dessa siffror.",
       "primaryExceeds100": "Enbart procentandelen för primärfibern ({{primary}} %) överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen återspegla produktens faktiska innehåll – kontrollera denna siffra.",
       "incompleteSingleFibre": "Primärfibern anges som {{primary}} % utan att någon sekundärfiber har registrerats. Om denna produkt är en blandning, lägg till återstående fiber/fibrer via Sekundärfibertyp/procentandel eller den fullständiga fibersammansättningen så att den angivna sammansättningen blir 100 %.",
-      "syntheticOver50": "Detta plagg består av {{percentage}} % syntetfiber, vilket är mer än 50 %. Det kommer att släppa ifrån sig mikroplaster vid tvätt, och konsumenten måste informeras om detta.",
+      "syntheticOver50": "Detta plagg består av {{percentage}}% syntetfiber, vilket är 50% eller mer. Det kommer att fälla mikroplaster vid tvätt, och konsumenten måste informeras om detta.",
       "compositionExceeds100Three": "Summan av procentandelarna för primärfiber ({{primary}} %), sekundärfiber ({{secondary}} %) och tertiärfiber ({{tertiary}} %) är {{sum}} %, vilket överstiger 100 %. Enligt EU-förordning 1007/2011 måste den angivna fibersammansättningen motsvara varans faktiska sammansättning – kontrollera dessa siffror."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Publicerad"
     },
     "composition": "Sammansättning"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Klädetikettskanner",
+      "scannerDescription": "Fotografera eller ladda upp den insydda tvättrådsetiketten, häng-etiketten eller en teknisk specifikation som PDF – AI:n läser av fibersammansättningen, tvättsymbolerna, tillverkningsland, certifieringar och stilreferenser."
+    }
   }
 }

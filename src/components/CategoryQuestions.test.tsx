@@ -26,9 +26,35 @@ vi.mock('@/hooks/useSiteConfig', () => ({
   useSiteConfig: () => ({ config: { ai_enabled: false }, loading: false, error: false }),
 }));
 
+vi.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ user: { id: 'test-owner' } }) }));
+
 import { CategoryQuestions } from './CategoryQuestions';
 
 describe('CategoryQuestions', () => {
+  it('uses logo uploads and their actual 2 MB size limit', () => {
+    const { container } = render(<CategoryQuestions category="textiles" data={{ certifications_held: ['gots'] }} onChange={vi.fn()} />);
+    expect(screen.getByRole('button', { name: 'Upload logo' })).toBeInTheDocument();
+    expect(screen.getByText('Maximum size: 2 MB')).toBeInTheDocument();
+    const input = container.querySelector('#file-cert_logo_gots');
+    expect(input).toBeInTheDocument();
+    if (!input) throw new Error('Logo upload input missing');
+    const file = new File([new Uint8Array(2 * 1024 * 1024 + 1)], 'logo.png', { type: 'image/png' });
+    fireEvent.change(input, { target: { files: [file] } });
+    expect(screen.getByText('File is too large. Maximum size is 2 MB.')).toBeInTheDocument();
+  });
+
+  it('keeps certificate upload wording and 5 MB limit for other file fields', () => {
+    const { container } = render(<CategoryQuestions category="textiles" data={{ show_advanced_fields: true }} onChange={vi.fn()} />);
+    expect(screen.getAllByRole('button', { name: 'Upload certificate' }).length).toBeGreaterThan(0);
+    expect(screen.queryByRole('button', { name: 'Upload logo' })).not.toBeInTheDocument();
+    expect(screen.getAllByText('Maximum size: 5 MB').length).toBeGreaterThan(0);
+    const input = container.querySelector('#file-audit_certificate_file');
+    if (!input) throw new Error('Certificate upload input missing');
+    const file = new File([new Uint8Array(5 * 1024 * 1024 + 1)], 'certificate.pdf', { type: 'application/pdf' });
+    fireEvent.change(input, { target: { files: [file] } });
+    expect(screen.getByText('File is too large. Maximum size is 5 MB.')).toBeInTheDocument();
+  });
+
   it('renders without crashing for battery category', () => {
     const { container } = render(
       <CategoryQuestions category="battery" data={{}} onChange={vi.fn()} />
@@ -171,14 +197,14 @@ describe('CategoryQuestions', () => {
       />,
     );
     // Anchored to microplastic_shedding; other amber alerts (missing-fields
-    // summary, alpha notice) exist, so match on the message itself. "more
-    // than 50%" is unique to the warning — the question label also contains
+    // summary, alpha notice) exist, so match on the message itself.
+    // The threshold wording is unique; the question label also contains
     // "shed microplastics".
     expect(
       screen.getByText(/60% synthetic fibre/),
     ).toBeInTheDocument();
     expect(
-      screen.getByText(/more than 50%/),
+      screen.getByText(/50% or more/),
     ).toBeInTheDocument();
   });
 

@@ -24,7 +24,10 @@
     "confirmed": "Confirmado",
     "required": "Obrigatório",
     "whereApplicable": "Se aplicável",
-    "tbdImplementingAct": "A definir — ato de execução"
+    "tbdImplementingAct": "A definir — ato de execução",
+    "fileTooLarge": "O ficheiro é demasiado grande. O tamanho máximo é {{max}}.",
+    "uploadLogo": "Carregar logótipo",
+    "fileMaxSize": "Tamanho máximo: {{max}}"
   },
   "nav": {
     "signIn": "Entrar",
@@ -590,7 +593,9 @@
     "quotaExceededBody": "Para garantir acesso justo, limitamos as digitalizações a 100 por mês. A quota será reposta no início do próximo mês.",
     "quotaContactBody": "Se precisa de um limite mais elevado para a sua empresa, contacte-nos.",
     "qrCodeUsed": "Foi detetado um código QR e a página associada também foi analisada para dados adicionais.",
-    "contactUs": "Contacte-nos"
+    "contactUs": "Contacte-nos",
+    "dropHere": "↓ Solte aqui",
+    "dragDropHint": "Arraste e solte ou clique"
   },
   "richText": {
     "enterUrl": "Introduza URL:",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "As percentagens da fibra primária ({{primary}}%) e secundária ({{secondary}}%) somam {{sum}}%, o que excede 100%. O Regulamento (UE) 1007/2011 exige que a composição de fibras declarada reflita a composição real do artigo — verifique estes valores.",
       "primaryExceeds100": "A percentagem da fibra primária, por si só ({{primary}}%), excede 100%. O Regulamento (UE) 1007/2011 exige que a composição de fibras declarada reflita a composição real do artigo — verifique este valor.",
       "incompleteSingleFibre": "A fibra primária está declarada como {{primary}}% sem que nenhuma fibra secundária tenha sido registada. Se este artigo for uma mistura, adicione a(s) fibra(s) restante(s) através do Tipo/Percentagem de Fibra Secundária ou da Declaração de Composição Completa para que a composição declarada corresponda a 100%.",
-      "syntheticOver50": "Esta peça de vestuário é composta por {{percentage}}% de fibra sintética, o que é mais de 50%. Libertará microplásticos durante a lavagem, e o consumidor deve ser informado sobre este facto.",
+      "syntheticOver50": "Esta peça de vestuário é composta por {{percentage}}% de fibra sintética, o que corresponde a 50% ou mais. Irá libertar microplásticos durante a lavagem, e o consumidor deve ser informado disto.",
       "compositionExceeds100Three": "As percentagens de fibra primária ({{primary}}%), secundária ({{secondary}}%) e terciária ({{tertiary}}%) somam {{sum}}%, o que excede 100%. O Regulamento (UE) 1007/2011 exige que a composição de fibras declarada reflita a composição real do artigo — verifique estes valores."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Publicado"
     },
     "composition": "Composição"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Analisador de etiquetas de vestuário",
+      "scannerDescription": "Fotografe ou carregue a etiqueta de cuidados cosida, a etiqueta pendente ou um PDF da ficha técnica — a IA lerá a composição das fibras, os símbolos de cuidados, o país de fabrico, as certificações e as referências de estilo."
+    }
   }
 }

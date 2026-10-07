@@ -21,7 +21,7 @@ import { Separator } from '@/components/ui/separator';
 import { ShieldCheck, ExternalLink } from 'lucide-react';
 import DOMPurify from 'dompurify';
 import { textilesTemplate } from '@/templates/textiles';
-import type { TemplateOption, TemplateQuestion } from '@/templates/base';
+import { evaluateShowWhen, type TemplateOption, type TemplateQuestion } from '@/templates/base';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import { DPPLanguagePicker } from '@/components/DPPLanguagePicker';
 import { toDppLanguage } from '@/lib/dppLanguage';
@@ -83,7 +83,8 @@ function labelsFor(options: TemplateOption[] | undefined, values: unknown, t: TF
   return (values as string[]).map((v) => labelFor(options, v, t));
 }
 
-function Row({ label, value }: { label: string; value: React.ReactNode }) {
+function Row({ label, value, active = true }: { label: string; value: React.ReactNode; active?: boolean }) {
+  if (!active) return null;
   if (value === null || value === undefined || value === '') return null;
   return (
     <div className="grid grid-cols-[180px_1fr] gap-3 py-2 border-b border-muted/50 last:border-b-0">
@@ -102,8 +103,9 @@ function SectionTitle({ children }: { children: React.ReactNode }) {
 }
 
 /** True when at least one of the given ids carries a usable value. */
-function hasAny(d: Record<string, unknown>, ids: string[]): boolean {
+function hasAnyActive(d: Record<string, unknown>, ids: string[], isActive: (id: string) => boolean): boolean {
   return ids.some((id) => {
+    if (!isActive(id)) return false;
     const v = d[id];
     if (v === undefined || v === null || v === '' || v === false) return false;
     if (Array.isArray(v)) return v.length > 0;
@@ -120,6 +122,13 @@ export function GarmentPublicPassport({
   const { i18n } = useTranslation();
   const { config } = useSiteConfig();
   const d = passport.category_data || {};
+  // Advanced-field visibility is an editor preference, not a public-data condition.
+  const isActive = (id: string): boolean => {
+    const condition = QUESTIONS[id]?.showWhen;
+    return condition?.field === 'show_advanced_fields' || evaluateShowWhen(condition, d);
+  };
+  const hasAny = (data: Record<string, unknown>, ids: string[]) =>
+    hasAnyActive(data, ids, isActive);
   const displayLanguage = previewLanguage || toDppLanguage(i18n.language);
   const t = i18n.getFixedT(displayLanguage);
 
@@ -377,19 +386,19 @@ export function GarmentPublicPassport({
           <>
             <SectionTitle>{st('identity')}</SectionTitle>
             <dl>
-              <Row label={fl('brand_name')} value={tr('brand_name')} />
-              <Row label={fl('product_type')} value={d.product_type as string} />
-              <Row label={fl('style_reference')} value={d.style_reference as string} />
+              <Row active={isActive('brand_name')} label={fl('brand_name')} value={tr('brand_name')} />
+              <Row active={isActive('product_type')} label={fl('product_type')} value={d.product_type as string} />
+              <Row active={isActive('style_reference')} label={fl('style_reference')} value={d.style_reference as string} />
               <Row
-                label={fl('item_unique_identifier')}
+                active={isActive('item_unique_identifier')} label={fl('item_unique_identifier')}
                 value={d.item_unique_identifier as string}
               />
-              <Row label={fl('gtin')} value={d.gtin as string} />
-              <Row label={fl('colourway')} value={d.colourway as string} />
-              <Row label={fl('size')} value={d.size as string} />
-              <Row label={fl('batch_lot')} value={d.batch_lot as string} />
+              <Row active={isActive('gtin')} label={fl('gtin')} value={d.gtin as string} />
+              <Row active={isActive('colourway')} label={fl('colourway')} value={d.colourway as string} />
+              <Row active={isActive('size')} label={fl('size')} value={d.size as string} />
+              <Row active={isActive('batch_lot')} label={fl('batch_lot')} value={d.batch_lot as string} />
               <Row
-                label={fl('product_weight_grams')}
+                active={isActive('product_weight_grams')} label={fl('product_weight_grams')}
                 value={d.product_weight_grams as string | number}
               />
             </dl>
@@ -406,7 +415,7 @@ export function GarmentPublicPassport({
                 value={composition}
               />
               <Row
-                label={fl('full_composition')}
+                active={isActive('full_composition')} label={fl('full_composition')}
                 value={
                   d.full_composition ? (
                     <p className="whitespace-pre-wrap">{tr('full_composition')}</p>
@@ -416,7 +425,7 @@ export function GarmentPublicPassport({
                 }
               />
               <Row
-                label={fl('component_composition')}
+                active={isActive('component_composition')} label={fl('component_composition')}
                 value={
                   d.component_composition ? (
                     <p className="whitespace-pre-wrap">{tr('component_composition')}</p>
@@ -426,25 +435,25 @@ export function GarmentPublicPassport({
                 }
               />
               <Row
-                label={fl('recycled_content_percentage')}
+                active={isActive('recycled_content_percentage')} label={fl('recycled_content_percentage')}
                 value={percent('recycled_content_percentage')}
               />
               <Row
-                label={fl('recycled_pre_consumer_percentage')}
+                active={isActive('recycled_pre_consumer_percentage')} label={fl('recycled_pre_consumer_percentage')}
                 value={percent('recycled_pre_consumer_percentage')}
               />
               <Row
-                label={fl('recycled_post_consumer_percentage')}
+                active={isActive('recycled_post_consumer_percentage')} label={fl('recycled_post_consumer_percentage')}
                 value={percent('recycled_post_consumer_percentage')}
               />
               {Boolean(d.microplastic_shedding) && (
-                <Row label={fl('microplastic_shedding')} value={yesNo(true)} />
+                <Row active={isActive('microplastic_shedding')} label={fl('microplastic_shedding')} value={yesNo(true)} />
               )}
               {Boolean(d.contains_animal_parts) && (
-                <Row label={fl('contains_animal_parts')} value={yesNo(true)} />
+                <Row active={isActive('contains_animal_parts')} label={fl('contains_animal_parts')} value={yesNo(true)} />
               )}
               <Row
-                label={fl('animal_parts_details')}
+                active={isActive('animal_parts_details')} label={fl('animal_parts_details')}
                 value={
                   d.animal_parts_details ? (
                     <p className="whitespace-pre-wrap">{tr('animal_parts_details')}</p>
@@ -463,26 +472,26 @@ export function GarmentPublicPassport({
             <SectionTitle>{t('garmentPublic.sections.substances', 'Substances')}</SectionTitle>
             <dl>
               {Boolean(d.svhc_declared) && (
-                <Row label={fl('svhc_declared')} value={yesNo(true)} />
+                <Row active={isActive('svhc_declared')} label={fl('svhc_declared')} value={yesNo(true)} />
               )}
               <Row
-                label={fl('svhc_details')}
+                active={isActive('svhc_details')} label={fl('svhc_details')}
                 value={
                   d.svhc_details ? <p className="whitespace-pre-wrap">{tr('svhc_details')}</p> : ''
                 }
               />
               <Row
-                label={fl('pfas_present')}
+                active={isActive('pfas_present')} label={fl('pfas_present')}
                 value={optionLabel('pfas_present', d.pfas_present)}
               />
               <Row
-                label={fl('pfas_details')}
+                active={isActive('pfas_details')} label={fl('pfas_details')}
                 value={
-                  d.pfas_present === 'yes' && d.pfas_details ? <p className="whitespace-pre-wrap">{tr('pfas_details')}</p> : ''
+                  d.pfas_details ? <p className="whitespace-pre-wrap">{tr('pfas_details')}</p> : ''
                 }
               />
               <Row
-                label={fl('rsl_compliance_status')}
+                active={isActive('rsl_compliance_status')} label={fl('rsl_compliance_status')}
                 value={optionLabel('rsl_compliance_status', d.rsl_compliance_status)}
               />
             </dl>
@@ -494,14 +503,14 @@ export function GarmentPublicPassport({
           <>
             <SectionTitle>{t('garmentPublic.sections.care', 'Care')}</SectionTitle>
             <dl>
-              <Row label={fl('washing_temp')} value={optionLabel('washing_temp', d.washing_temp)} />
+              <Row active={isActive('washing_temp')} label={fl('washing_temp')} value={optionLabel('washing_temp', d.washing_temp)} />
               {Boolean(d.can_tumble_dry) && (
-                <Row label={fl('can_tumble_dry')} value={yesNo(true)} />
+                <Row active={isActive('can_tumble_dry')} label={fl('can_tumble_dry')} value={yesNo(true)} />
               )}
-              {Boolean(d.can_iron) && <Row label={fl('can_iron')} value={yesNo(true)} />}
-              <Row label={fl('iron_temp')} value={optionLabel('iron_temp', d.iron_temp)} />
+              {Boolean(d.can_iron) && <Row active={isActive('can_iron')} label={fl('can_iron')} value={yesNo(true)} />}
+              <Row active={isActive('iron_temp')} label={fl('iron_temp')} value={optionLabel('iron_temp', d.iron_temp)} />
               <Row
-                label={fl('care_symbols')}
+                active={isActive('care_symbols')} label={fl('care_symbols')}
                 value={
                   careSymbols.length > 0 ? (
                     <ul className="list-disc ml-5 space-y-0.5">
@@ -515,7 +524,7 @@ export function GarmentPublicPassport({
                 }
               />
               <Row
-                label={fl('care_instructions_text')}
+                active={isActive('care_instructions_text')} label={fl('care_instructions_text')}
                 value={
                   d.care_instructions_text ? (
                     <p className="whitespace-pre-wrap">{tr('care_instructions_text')}</p>
@@ -534,25 +543,25 @@ export function GarmentPublicPassport({
             <SectionTitle>{st('supply_chain')}</SectionTitle>
             <dl>
               <Row
-                label={fl('country_fibre_production')}
+                active={isActive('country_fibre_production')} label={fl('country_fibre_production')}
                 value={d.country_fibre_production as string}
               />
               <Row
-                label={fl('country_spinning_weaving')}
+                active={isActive('country_spinning_weaving')} label={fl('country_spinning_weaving')}
                 value={d.country_spinning_weaving as string}
               />
               <Row
-                label={fl('country_dyeing_finishing')}
+                active={isActive('country_dyeing_finishing')} label={fl('country_dyeing_finishing')}
                 value={d.country_dyeing_finishing as string}
               />
-              <Row label={fl('country_of_origin')} value={d.country_of_origin as string} />
-              {madeInEu && <Row label={fl('made_in_eu')} value={yesNo(true)} />}
+              <Row active={isActive('country_of_origin')} label={fl('country_of_origin')} value={d.country_of_origin as string} />
+              {madeInEu && <Row active={isActive('made_in_eu')} label={fl('made_in_eu')} value={yesNo(true)} />}
               <Row
-                label={fl('manufacturing_facility')}
+                active={isActive('manufacturing_facility')} label={fl('manufacturing_facility')}
                 value={d.manufacturing_facility as string}
               />
               <Row
-                label={fl('factory_address')}
+                active={isActive('factory_address')} label={fl('factory_address')}
                 value={
                   d.factory_address ? (
                     <p className="whitespace-pre-wrap">{d.factory_address as string}</p>
@@ -561,9 +570,9 @@ export function GarmentPublicPassport({
                   )
                 }
               />
-              <Row label={fl('audit_status')} value={optionLabel('audit_status', d.audit_status)} />
+              <Row active={isActive('audit_status')} label={fl('audit_status')} value={optionLabel('audit_status', d.audit_status)} />
               {Boolean(d.supply_chain_transparent) && (
-                <Row label={fl('supply_chain_transparent')} value={yesNo(true)} />
+                <Row active={isActive('supply_chain_transparent')} label={fl('supply_chain_transparent')} value={yesNo(true)} />
               )}
             </dl>
           </>
@@ -609,19 +618,19 @@ export function GarmentPublicPassport({
           <>
             <SectionTitle>{st('durability')}</SectionTitle>
             <dl>
-              <Row label={fl('pilling_resistance')} value={d.pilling_resistance as string} />
+              <Row active={isActive('pilling_resistance')} label={fl('pilling_resistance')} value={d.pilling_resistance as string} />
               <Row
-                label={fl('colour_fastness_washing')}
+                active={isActive('colour_fastness_washing')} label={fl('colour_fastness_washing')}
                 value={d.colour_fastness_washing as string}
               />
-              <Row label={fl('colour_fastness_light')} value={d.colour_fastness_light as string} />
+              <Row active={isActive('colour_fastness_light')} label={fl('colour_fastness_light')} value={d.colour_fastness_light as string} />
               <Row
-                label={fl('dimensional_stability')}
+                active={isActive('dimensional_stability')} label={fl('dimensional_stability')}
                 value={d.dimensional_stability as string}
               />
-              <Row label={fl('seam_strength')} value={d.seam_strength as string} />
+              <Row active={isActive('seam_strength')} label={fl('seam_strength')} value={d.seam_strength as string} />
               <Row
-                label={fl('test_report_reference')}
+                active={isActive('test_report_reference')} label={fl('test_report_reference')}
                 value={d.test_report_reference as string}
               />
             </dl>
@@ -634,12 +643,12 @@ export function GarmentPublicPassport({
             <SectionTitle>{st('environment')}</SectionTitle>
             <dl>
               <Row
-                label={fl('carbon_footprint')}
+                active={isActive('carbon_footprint')} label={fl('carbon_footprint')}
                 value={d.carbon_footprint as string | number}
               />
-              <Row label={fl('water_usage')} value={d.water_usage as string | number} />
+              <Row active={isActive('water_usage')} label={fl('water_usage')} value={d.water_usage as string | number} />
               <Row
-                label={fl('footprint_method')}
+                active={isActive('footprint_method')} label={fl('footprint_method')}
                 value={optionLabel('footprint_method', d.footprint_method)}
               />
             </dl>
@@ -651,12 +660,12 @@ export function GarmentPublicPassport({
           <>
             <SectionTitle>{st('circularity')}</SectionTitle>
             <dl>
-              {Boolean(d.recyclable) && <Row label={fl('recyclable')} value={yesNo(true)} />}
+              {Boolean(d.recyclable) && <Row active={isActive('recyclable')} label={fl('recyclable')} value={yesNo(true)} />}
               {Boolean(d.take_back_program) && (
-                <Row label={fl('take_back_program')} value={yesNo(true)} />
+                <Row active={isActive('take_back_program')} label={fl('take_back_program')} value={yesNo(true)} />
               )}
               <Row
-                label={fl('take_back_scheme_epr')}
+                active={isActive('take_back_scheme_epr')} label={fl('take_back_scheme_epr')}
                 value={
                   d.take_back_scheme_epr ? (
                     <p className="whitespace-pre-wrap">{d.take_back_scheme_epr as string}</p>
@@ -666,14 +675,14 @@ export function GarmentPublicPassport({
                 }
               />
               <Row
-                label={fl('recyclability_class')}
+                active={isActive('recyclability_class')} label={fl('recyclability_class')}
                 value={optionLabel('recyclability_class', d.recyclability_class)}
               />
               {Boolean(d.spare_trims_available) && (
-                <Row label={fl('spare_trims_available')} value={yesNo(true)} />
+                <Row active={isActive('spare_trims_available')} label={fl('spare_trims_available')} value={yesNo(true)} />
               )}
               <Row
-                label={fl('repair_booking_url')}
+                active={isActive('repair_booking_url')} label={fl('repair_booking_url')}
                 value={
                   d.repair_booking_url ? (
                     <a
@@ -691,7 +700,7 @@ export function GarmentPublicPassport({
                 }
               />
               <Row
-                label={fl('disassembly_notes')}
+                active={isActive('disassembly_notes')} label={fl('disassembly_notes')}
                 value={
                   d.disassembly_notes ? (
                     <p className="whitespace-pre-wrap">{tr('disassembly_notes')}</p>
@@ -710,7 +719,7 @@ export function GarmentPublicPassport({
             <SectionTitle>{st('green_claims')}</SectionTitle>
             <dl>
               <Row
-                label={fl('environmental_claims')}
+                active={isActive('environmental_claims')} label={fl('environmental_claims')}
                 value={
                   tr('environmental_claims') ? (
                     <p className="whitespace-pre-wrap">{tr('environmental_claims')}</p>
@@ -720,7 +729,7 @@ export function GarmentPublicPassport({
                 }
               />
               <Row
-                label={fl('claims_evidence_reference')}
+                active={isActive('claims_evidence_reference')} label={fl('claims_evidence_reference')}
                 value={
                   d.claims_evidence_reference ? (
                     <p className="whitespace-pre-wrap">{d.claims_evidence_reference as string}</p>
@@ -730,7 +739,7 @@ export function GarmentPublicPassport({
                 }
               />
               {Boolean(d.claims_avoid_generic_terms) && (
-                <Row label={fl('claims_avoid_generic_terms')} value={yesNo(true)} />
+                <Row active={isActive('claims_avoid_generic_terms')} label={fl('claims_avoid_generic_terms')} value={yesNo(true)} />
               )}
             </dl>
           </>
@@ -747,14 +756,14 @@ export function GarmentPublicPassport({
               </h3>
               <dl>
                 <Row
-                  label={fl('manufacturer_legal_name')}
+                  active={isActive('manufacturer_legal_name')} label={fl('manufacturer_legal_name')}
                   value={d.manufacturer_legal_name as string}
                 />
                 <Row
                   label={t('garmentPublic.rows.address', 'Address')}
                   value={address('manufacturer')}
                 />
-                <Row label={fl('manufacturer_email')} value={d.manufacturer_email as string} />
+                <Row active={isActive('manufacturer_email')} label={fl('manufacturer_email')} value={d.manufacturer_email as string} />
               </dl>
             </div>
 
@@ -765,14 +774,14 @@ export function GarmentPublicPassport({
                 </h3>
                 <dl>
                   <Row
-                    label={fl('importer_legal_name')}
+                    active={isActive('importer_legal_name')} label={fl('importer_legal_name')}
                     value={d.importer_legal_name as string}
                   />
                   <Row
                     label={t('garmentPublic.rows.address', 'Address')}
                     value={address('importer')}
                   />
-                  <Row label={fl('importer_email')} value={d.importer_email as string} />
+                  <Row active={isActive('importer_email')} label={fl('importer_email')} value={d.importer_email as string} />
                 </dl>
               </div>
             )}
@@ -782,9 +791,9 @@ export function GarmentPublicPassport({
                 {t('garmentPublic.subsections.euResponsiblePerson', 'EU responsible person')}
               </h3>
               <dl>
-                <Row label={fl('eu_operator_name')} value={d.eu_operator_name as string} />
+                <Row active={isActive('eu_operator_name')} label={fl('eu_operator_name')} value={d.eu_operator_name as string} />
                 <Row
-                  label={fl('eu_operator_address')}
+                  active={isActive('eu_operator_address')} label={fl('eu_operator_address')}
                   value={
                     d.eu_operator_address ? (
                       <p className="whitespace-pre-wrap">{d.eu_operator_address as string}</p>
@@ -793,7 +802,7 @@ export function GarmentPublicPassport({
                     )
                   }
                 />
-                <Row label={fl('eu_operator_email')} value={d.eu_operator_email as string} />
+                <Row active={isActive('eu_operator_email')} label={fl('eu_operator_email')} value={d.eu_operator_email as string} />
               </dl>
             </div>
           </>
@@ -805,16 +814,16 @@ export function GarmentPublicPassport({
             <SectionTitle>{st('disposition')}</SectionTitle>
             <dl>
               <Row
-                label={fl('disposition_status')}
+                active={isActive('disposition_status')} label={fl('disposition_status')}
                 value={optionLabel('disposition_status', d.disposition_status)}
               />
               <Row
-                label={fl('disposition_reason_code')}
+                active={isActive('disposition_reason_code')} label={fl('disposition_reason_code')}
                 value={optionLabel('disposition_reason_code', d.disposition_reason_code)}
               />
-              <Row label={fl('disposition_date')} value={d.disposition_date as string} />
+              <Row active={isActive('disposition_date')} label={fl('disposition_date')} value={d.disposition_date as string} />
               <Row
-                label={fl('disposition_notes')}
+                active={isActive('disposition_notes')} label={fl('disposition_notes')}
                 value={
                   d.disposition_notes ? (
                     <p className="whitespace-pre-wrap">{d.disposition_notes as string}</p>
@@ -833,14 +842,14 @@ export function GarmentPublicPassport({
             <SectionTitle>{st('authentication')}</SectionTitle>
             <dl>
               {Boolean(d.authentication_feature_present) && (
-                <Row label={fl('authentication_feature_present')} value={yesNo(true)} />
+                <Row active={isActive('authentication_feature_present')} label={fl('authentication_feature_present')} value={yesNo(true)} />
               )}
               <Row
-                label={fl('authentication_method')}
+                active={isActive('authentication_method')} label={fl('authentication_method')}
                 value={optionLabel('authentication_method', d.authentication_method)}
               />
               <Row
-                label={fl('authentication_verification_url')}
+                active={isActive('authentication_verification_url')} label={fl('authentication_verification_url')}
                 value={
                   d.authentication_verification_url ? (
                     <a

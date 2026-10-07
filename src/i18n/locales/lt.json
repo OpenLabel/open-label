@@ -24,7 +24,10 @@
     "confirmed": "Patvirtinta",
     "required": "Privaloma",
     "whereApplicable": "Kai taikoma",
-    "tbdImplementingAct": "Bus nustatyta – įgyvendinimo aktas"
+    "tbdImplementingAct": "Bus nustatyta – įgyvendinimo aktas",
+    "fileTooLarge": "Failas per didelis. Didžiausias dydis yra {{max}}.",
+    "uploadLogo": "Įkelti logotipą",
+    "fileMaxSize": "Didžiausias dydis: {{max}}"
   },
   "nav": {
     "signIn": "Prisijungti",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "Siekdami užtikrinti sąžiningą prieigą, ribojame AI nuskaitymus iki 100 per mėnesį. Jūsų kvota atsistatys kito mėnesio pradžioje.",
     "quotaContactBody": "Jei jums reikia didesnės ribos, susisiekite su mumis.",
     "qrCodeUsed": "Aptiktas QR kodas ir susijusi svetainė taip pat buvo išanalizuota papildomų duomenų.",
-    "contactUs": "Susisiekite"
+    "contactUs": "Susisiekite",
+    "dropHere": "↓ Įmeskite čia",
+    "dragDropHint": "Vilkite ir paleiskite arba spustelėkite"
   },
   "imageUpload": {
     "loginRequired": "Norėdami įkelti vaizdus, turite būti prisijungę",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Pirminio ({{primary}} %) ir antrinio ({{secondary}} %) pluoštų procentinė dalis iš viso sudaro {{sum}} %, o tai viršija 100 %. Pagal ES reglamentą 1007/2011 reikalaujama, kad deklaruota pluošto sudėtis atitiktų faktinę gaminio sudėtį – patikrinkite šiuos skaičius.",
       "primaryExceeds100": "Vien pirminio pluošto procentinė dalis ({{primary}} %) viršija 100 %. Pagal ES reglamentą 1007/2011 reikalaujama, kad deklaruota pluošto sudėtis atitiktų faktinę gaminio sudėtį – patikrinkite šį skaičių.",
       "incompleteSingleFibre": "Deklaruota {{primary}} % pirminio pluošto, tačiau nenurodytas joks antrinis pluoštas. Jei tai yra mišinys, pridėkite likusį (-ius) pluoštą (-us) laukeliuose „Antrinio pluošto tipas / procentinė dalis“ arba „Visa sudėtis“, kad deklaruota sudėtis sudarytų visus 100 %.",
-      "syntheticOver50": "Šio drabužio sudėtyje yra {{percentage}} % sintetinio pluošto, o tai yra daugiau nei 50 %. Skalbiant jis išskirs mikroplastiko, todėl vartotojas turi būti apie tai informuotas.",
+      "syntheticOver50": "Šis drabužis sudarytas iš {{percentage}}% sintetinio pluošto, o tai yra 50% ar daugiau. Skalbiant jis išskirs mikroplastiką, ir vartotojas apie tai turi būti informuotas.",
       "compositionExceeds100Three": "Pirminio ({{primary}} %), antrinio ({{secondary}} %) ir trečiojo ({{tertiary}} %) pluoštų procentinių dalių bendra suma yra {{sum}} %, kuri viršija 100 %. Pagal ES reglamentą 1007/2011 reikalaujama, kad deklaruota pluošto sudėtis atitiktų faktinę gaminio sudėtį – patikrinkite šiuos skaičius."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Paskelbta"
     },
     "composition": "Sudėtis"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Drabužių etikečių skaitytuvas",
+      "scannerDescription": "Nufotografuokite arba įkelkite įsiūtą priežiūros etiketę, pakabinamą etiketę arba techninės specifikacijos PDF — dirbtinis intelektas nuskaitys pluošto sudėtį, priežiūros simbolius, pagaminimo šalį, sertifikatus ir stiliaus nuorodas."
+    }
   }
 }

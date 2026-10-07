@@ -24,7 +24,10 @@
     "confirmed": "Megerősítve",
     "required": "Kötelező",
     "whereApplicable": "Adott esetben",
-    "tbdImplementingAct": "Később meghatározandó – végrehajtási jogi aktus"
+    "tbdImplementingAct": "Később meghatározandó – végrehajtási jogi aktus",
+    "fileTooLarge": "A fájl túl nagy. A maximális méret {{max}}.",
+    "uploadLogo": "Logó feltöltése",
+    "fileMaxSize": "Maximális méret: {{max}}"
   },
   "nav": {
     "signIn": "Bejelentkezés",
@@ -582,7 +585,9 @@
     "quotaExceededBody": "A méltányos hozzáférés biztosítása érdekében az AI szkennelést havi 100-ra korlátozzuk. Kvótája a következő hónap elején visszaáll.",
     "quotaContactBody": "Ha magasabb limetre van szüksége, kérjük, lépjen kapcsolatba velünk.",
     "qrCodeUsed": "QR-kód észlelve, és a kapcsolódó oldal is elemezve lett további adatokért.",
-    "contactUs": "Kapcsolat"
+    "contactUs": "Kapcsolat",
+    "dropHere": "↓ Húzza ide",
+    "dragDropHint": "Húzza ide vagy kattintson"
   },
   "imageUpload": {
     "loginRequired": "A képek feltöltéséhez be kell jelentkeznie",
@@ -1871,7 +1876,7 @@
       "compositionExceeds100": "Az elsődleges ({{primary}}%) és a másodlagos ({{secondary}}%) szálak százalékos arányának összege {{sum}}%, ami meghaladja a 100%-ot. A(z) 1007/2011 EU-rendelet előírja, hogy a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezeket az adatokat.",
       "primaryExceeds100": "Már az elsődleges szál százalékos aránya ({{primary}}%) is meghaladja a 100%-ot. A(z) 1007/2011 EU-rendelet előírja, hogy a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezt az adatot.",
       "incompleteSingleFibre": "Az elsődleges szál {{primary}}%-os arányban van feltüntetve, másodlagos szál nincs megadva. Ha a termék keverék, adja hozzá a fennmaradó szál(ak)at a Másodlagos száltípus/Százalék vagy a Teljes összetétel mezőben, hogy a feltüntetett összetétel a teljes 100%-ot tegye ki.",
-      "syntheticOver50": "Ez a ruhadarab {{percentage}}%-ban szintetikus szálból készült, ami több mint 50%. Mosás közben mikroműanyagokat fog kibocsátani, és erről a fogyasztót tájékoztatni kell.",
+      "syntheticOver50": "Ez a ruhadarab {{percentage}}%-ban szintetikus szálakból készült, ami 50% vagy annál több. Mosás közben mikroműanyagokat bocsát ki, és erről a fogyasztót tájékoztatni kell.",
       "compositionExceeds100Three": "Az elsődleges ({{primary}}%), a másodlagos ({{secondary}}%) és a harmadlagos ({{tertiary}}%) szálak arányának összege {{sum}}%, ami meghaladja a 100%-ot. A 1007/2011 számú EU-rendelet értelmében a feltüntetett szálösszetételnek meg kell felelnie a termék tényleges összetételének – ellenőrizze ezeket az adatokat."
     },
     "disclaimer": {
@@ -2147,5 +2152,11 @@
       "published": "Közzétéve"
     },
     "composition": "Összetétel"
+  },
+  "apparel": {
+    "ai": {
+      "scannerTitle": "Ruházati címke szkenner",
+      "scannerDescription": "Fényképezze le vagy töltse fel a bevarrt kezelési útmutató címkét, a függőcímkét vagy egy tech pack PDF-et – a mesterséges intelligencia beolvassa a szálösszetételt, a kezelési szimbólumokat, a származási országot, a tanúsítványokat és a stílusreferenciákat."
+    }
   }
 }
