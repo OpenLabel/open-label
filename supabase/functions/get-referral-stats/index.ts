@@ -109,11 +109,11 @@ serve(async (req) => {
       );
     }
 
-    // Get passport counts per user
+    // Get passport counts per user (with category for breakdown)
     const userIds = referrals.map((r) => r.user_id);
     const { data: passports, error: passError } = await supabase
       .from("passports")
-      .select("user_id")
+      .select("user_id, category")
       .in("user_id", userIds);
 
     if (passError) {
@@ -124,10 +124,14 @@ serve(async (req) => {
       );
     }
 
-    // Count passports per user
+    // Count passports per user, total and car cleaning only
     const passportCounts = new Map<string, number>();
+    const carCleaningCounts = new Map<string, number>();
     for (const p of passports || []) {
       passportCounts.set(p.user_id, (passportCounts.get(p.user_id) || 0) + 1);
+      if (p.category === "car_cleaning") {
+        carCleaningCounts.set(p.user_id, (carCleaningCounts.get(p.user_id) || 0) + 1);
+      }
     }
 
     // Build anonymized response
@@ -135,10 +139,12 @@ serve(async (req) => {
       label: `Signup #${i + 1}`,
       signupDate: r.created_at,
       dppCount: passportCounts.get(r.user_id) || 0,
+      carCleaningCount: carCleaningCounts.get(r.user_id) || 0,
     }));
+    const carCleaningTotal = signups.reduce((n, s) => n + s.carCleaningCount, 0);
 
     return new Response(
-      JSON.stringify({ signups, total: signups.length }),
+      JSON.stringify({ signups, total: signups.length, carCleaningTotal }),
       { status: 200, headers: { "Content-Type": "application/json", ...corsHeaders } }
     );
   } catch (error: unknown) {
