@@ -34,7 +34,7 @@ describe("car cleaning translations, locale group B", () => {
         expect((value as string).trim().length, key).toBeGreaterThan(0);
         expect(value, key).not.toMatch(/[\u2013\u2014]/);
       }
-      for (const key of ["noticeBody", "publicDataNotice", "scopeHelp", "limits", "operatorHelp", "ingredientsHelp", "pcnHelp", "sdsHelp", "translationHelp", "validationBody"]) {
+      for (const key of ["noticeBody", "publicNotice", "publicDataNotice", "scopeHelp", "operatorHelp", "ingredientsHelp", "pcnHelp", "sdsHelp", "translationHelp", "validationBody"]) {
         expect(translated[key], key).not.toBe(english[key]);
       }
       expect(translated.operatorHelp).toMatch(/9/);

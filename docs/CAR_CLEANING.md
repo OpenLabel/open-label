@@ -24,6 +24,10 @@ For a non-EU manufacturer, the current information workflow asks for the applica
 - The editor and public interface support all 24 official EU languages plus Simplified Chinese. Free-text translations can be supplied and reviewed per language. Safety fields do not automatically call the AI translation service. Existing wine and toy label extraction is not applied to chemical classification or compliance assertions.
 - The public demo includes a clearly fictitious current-information car cleaner alongside the existing category samples. It uses the same dedicated public renderer and privacy boundary as saved car passports. Demo data does not create a saved passport, retained history or a supplier compliance assessment.
 
+## Service limits shown to suppliers
+
+Future DPP limits: this service does not provide the EU registry connection, verified persistent identifiers, independent backup, guaranteed regulatory retention, verified authority credentials or independent business-continuity guarantees. Technical specifications and access rights depend on implementing measures. Supplier entries are not independently verified. ESPR requirements apply only where an applicable product measure requires them.
+
 ## Technical limits
 
 The implementation includes a stable public URI, an internal archive identifier, immutable version snapshots, retained public access after withdrawal, and a downloadable SVG QR carrier. The stored retention floor can extend but does not decrease, and the public API can return a selected version with a paginated history index. These implemented controls do not establish verified persistent product or operator identifiers, registry submission, a contracted passport backup provider, guaranteed ten-year service operation or verified authority access to technical documentation. Supplier references, declarations and dataset completeness are not independently verified.

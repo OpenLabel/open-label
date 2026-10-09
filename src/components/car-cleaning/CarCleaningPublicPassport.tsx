@@ -94,10 +94,8 @@ export function CarCleaningPublicPassport({ passport, isPreview = false, preview
           </div>
           {!imageUrl && sourceImageUrl && <a href={sourceImageUrl} target="_blank" rel="noopener noreferrer" className="text-sm underline break-all">{copy('carCleaning.fields.label_image_url')}</a>}
         </header>
-        <aside className="rounded-lg border border-blue-200 bg-blue-50/70 p-4 text-sm text-blue-950">
-          <h2 className="font-semibold mb-2">{copy('carCleaning.noticeTitle')}</h2>
-          <p className="whitespace-pre-line">{copy('carCleaning.noticeBody')}</p>
-          <p className="mt-3">{copy('carCleaning.limits')}</p>
+        <aside className="rounded-lg border border-blue-200 bg-blue-50/70 p-3 text-sm text-blue-950">
+          <p>{copy('carCleaning.publicNotice')}</p>
         </aside>
         {typeof description === 'string' && description.trim() && <div className="prose prose-sm max-w-none" dangerouslySetInnerHTML={{ __html: DOMPurify.sanitize(description, { FORBID_TAGS: ['img', 'video', 'audio', 'source', 'iframe', 'object', 'embed', 'svg'], FORBID_ATTR: ['style'] }) }} />}
         {sections.map((section, index) => (

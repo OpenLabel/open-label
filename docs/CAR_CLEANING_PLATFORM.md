@@ -10,6 +10,10 @@ Article 21 requires a model-specific passport, a persistent unique product ident
 
 The code implements local storage and access building blocks. It cannot guarantee the continued operation or solvency of the hosting provider, payment of infrastructure bills, DNS continuity, regulatory qualification of a backup provider, EU registry availability or future credential interoperability. Those remain explicit prerequisites below.
 
+## Service limits shown to suppliers
+
+Future DPP limits: this service does not provide the EU registry connection, verified persistent identifiers, independent backup, guaranteed regulatory retention, verified authority credentials or independent business-continuity guarantees. Technical specifications and access rights depend on implementing measures. Supplier entries are not independently verified. ESPR requirements apply only where an applicable product measure requires them.
+
 ## Data model
 
 `20260910110000_car_cleaning_passport_history.sql` must follow the committed enum migration `20260910095000_add_car_cleaning_category.sql`.

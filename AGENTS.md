@@ -1,1 +1,2 @@
 - Apparel public and owner-preview field visibility must use the template's shared condition evaluator, ignoring editor-only advanced-field toggles, so both views hide stale dependent data consistently without deleting stored values.
+- Keep car cleaning audience notices in the shared platform copy and existing structured-export limitations separate from UI keys, so notice edits preserve the export contract.
