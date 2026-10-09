@@ -15,7 +15,7 @@
  */
 
 import { useEffect } from 'react';
-import { Link, Navigate, useNavigate, useParams } from 'react-router-dom';
+import { Link, Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { categoryList } from '@/templates';
 import { SAMPLE_PASSPORTS, getSamplePassport } from '@/data/samples';
@@ -35,9 +35,20 @@ export function getDemoCategories() {
   );
 }
 
+/**
+ * Keep a valid `?ref=` code in a query string. The demo itself never stores
+ * it (public pages stay tracking-free); /auth captures it on arrival.
+ */
+export function refQuery(search: string): string {
+  const ref = new URLSearchParams(search).get('ref');
+  return ref && /^[a-zA-Z0-9]{1,64}$/.test(ref) ? `?ref=${ref}` : '';
+}
+
 export default function Demo() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const { search } = useLocation();
+  const ref = refQuery(search);
   const { category } = useParams<{ category: string }>();
   const tabs = getDemoCategories();
 
@@ -49,7 +60,7 @@ export default function Demo() {
   }, [sample]);
 
   if (!active || !sample) {
-    return <Navigate to={`/demo/${DEFAULT_CATEGORY}`} replace />;
+    return <Navigate to={`/demo/${DEFAULT_CATEGORY}${ref}`} replace />;
   }
 
   return (
@@ -59,7 +70,7 @@ export default function Demo() {
         <div className="container mx-auto px-4 py-3 flex flex-col sm:flex-row items-center justify-center gap-3 text-center">
           <p className="text-sm font-medium text-foreground">{t('demo.banner')}</p>
           <Button size="sm" asChild>
-            <Link to="/auth">{t('demo.cta')}</Link>
+            <Link to={`/auth${ref}`}>{t('demo.cta')}</Link>
           </Button>
         </div>
       </div>
@@ -77,7 +88,7 @@ export default function Demo() {
               type="button"
               role="tab"
               aria-selected={c.value === active.value}
-              onClick={() => navigate(`/demo/${c.value}`)}
+              onClick={() => navigate(`/demo/${c.value}${ref}`)}
               className={`rounded-full px-4 py-1.5 text-sm font-medium transition-colors ${
                 c.value === active.value
                   ? 'bg-primary text-primary-foreground'

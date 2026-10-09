@@ -33,11 +33,13 @@ interface Signup {
   label: string;
   signupDate: string;
   dppCount: number;
+  carCleaningCount?: number;
 }
 
 interface ReferralStatsData {
   signups: Signup[];
   total: number;
+  carCleaningTotal?: number;
 }
 
 export default function ReferralStats() {
@@ -92,17 +94,24 @@ export default function ReferralStats() {
               </p>
             ) : data && data.total > 0 ? (
               <>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-muted-foreground mb-1">
                   <span className="font-semibold text-foreground">
                     {data.total}
                   </span>{" "}
                   signup{data.total !== 1 ? "s" : ""} total
+                </p>
+                <p className="text-muted-foreground mb-4" data-testid="car-cleaning-total">
+                  <span className="font-semibold text-foreground">
+                    {data.carCleaningTotal ?? 0}
+                  </span>{" "}
+                  Car Cleaning DPP{(data.carCleaningTotal ?? 0) !== 1 ? "s" : ""} created
                 </p>
                 <Table>
                   <TableHeader>
                     <TableRow>
                       <TableHead>#</TableHead>
                       <TableHead>Signup Date</TableHead>
+                      <TableHead className="text-right">Car Cleaning DPPs</TableHead>
                       <TableHead className="text-right">DPPs Created</TableHead>
                     </TableRow>
                   </TableHeader>
@@ -114,6 +123,9 @@ export default function ReferralStats() {
                         </TableCell>
                         <TableCell>
                           {new Date(signup.signupDate).toLocaleDateString()}
+                        </TableCell>
+                        <TableCell className="text-right">
+                          {signup.carCleaningCount ?? 0}
                         </TableCell>
                         <TableCell className="text-right">
                           {signup.dppCount}
