@@ -16,3 +16,7 @@
 - [x] Translate scanner text and shared upload labels, correct warning wording
 - [x] Gate Apparel public and preview fields with template conditions
 - [x] Add regression coverage and run full suite: 1,889 passed, 0 failed, 0 skipped
+
+## Car cleaning audience notices
+- [x] Shorten public and supplier notices, translate all 25 locales, document service limits
+- [ ] Verify all locale audits, full suite and car cleaning demo

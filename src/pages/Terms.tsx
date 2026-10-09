@@ -106,6 +106,7 @@ export default function Terms() {
               You are solely responsible for reviewing, verifying, and ensuring that all information in your 
               product passports is accurate, complete, and meets all applicable legal and regulatory requirements 
               in your jurisdiction before publication and use.
+              {' '}For car cleaning records, supplier entries are not independently verified, and no EU registry connection, independent backup or regulatory retention guarantee is provided.
             </p>
           </section>
 

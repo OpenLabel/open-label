@@ -1,5 +1,5 @@
 import { carCleaningHistoryExport } from './carCleaningHistoryExport.ts';
-import { CAR_CLEANING_CARRIER_COPY, CAR_CLEANING_HISTORY_COPY } from './carCleaningPlatformCopy.ts';
+import { CAR_CLEANING_CARRIER_COPY, CAR_CLEANING_HISTORY_COPY, CAR_CLEANING_NOTICE_COPY, CAR_CLEANING_REGULATORY_LIMITATIONS } from './carCleaningPlatformCopy.ts';
 import { annexVICondition, annexVIRequiredExisting, annexVISections, annexVICopy, isAnnexVI, projectDataset } from './carCleaningAnnexVI.ts';
 
 /** Shared, dependency-free car cleaning data contract for the UI and public API. */
@@ -110,14 +110,12 @@ export const carCleaningSections: CarCleaningSection[] = [
 
 export const CAR_CLEANING_COPY = {
   ...annexVICopy,
+  ...CAR_CLEANING_NOTICE_COPY,
   carrier: CAR_CLEANING_CARRIER_COPY,
   history: CAR_CLEANING_HISTORY_COPY,
   publicTitle: 'Car cleaning product information',
-  noticeTitle: 'Chemical safety and DPP preparation',
-  noticeBody: 'Regulation (EU) 2026/405 mainly applies from 23 September 2029. Until then, Regulation (EC) No 648/2004 remains relevant for detergents, with transitional rules for existing stock. This record supports product information and future DPP preparation. It is not certification, a legal approval or a complete regulatory DPP. Physical labels, REACH, CLP, applicable SDS supply and biocidal requirements still apply. Ordinary chemical cleaners do not acquire a CE marking through this passport.',
   publicDataNotice: 'Everything saved in this category is public. Use public document links only. Do not enter confidential formulations, private technical files or personal data unrelated to the product.',
   scopeHelp: 'Assess intended function and composition. A wax, polish or lubricant may fall outside detergent rules if it does not clean. Cleaning and disinfecting claims can trigger overlapping detergent and biocidal duties.',
-  limits: 'Future DPP limits: this service does not provide the EU registry connection, verified persistent identifiers, independent backup, guaranteed regulatory retention, verified authority credentials or independent business-continuity guarantees. Technical specifications and access rights depend on implementing measures. Supplier entries are not independently verified. ESPR requirements apply only where an applicable product measure requires them.',
   operatorHelp: 'Record the applicable EU operator. Roles depend on the supply chain and applicable law; two representatives are not universally required. A non-EU manufacturer will also need to assess the authorised representative duty under Article 9 of Regulation (EU) 2026/405 when it applies.',
   ingredientsHelp: 'Current detergent labels and public ingredient lists follow Article 11 and Annex VII of Regulation (EC) No 648/2004. Declarable fragrance allergens above 0.01% must be assessed. Professional-only products may use equivalent technical information. A public summary does not replace the medical ingredient data sheet or the full Annex VI dataset available in the future profile.',
   pcnHelp: 'Under current CLP rules, UFI and poison centre notification depend on Annex VIII scope, including health or physical hazards and applicable exemptions. Environmental hazards alone do not automatically trigger notification. Industrial-only use and exemptions need assessment. The 2029 detergent rules include further UFI labelling provisions.',
@@ -233,6 +231,6 @@ export function exportCarCleaningPassport(passport: { name: string; category_dat
     updated_at: typeof passport.updated_at === 'string' && /^\d{4}-\d{2}-\d{2}T/.test(passport.updated_at) && Number.isFinite(Date.parse(passport.updated_at)) ? passport.updated_at : null,
     category_data: publicData,
     dpp_history: carCleaningHistoryExport(passport.dpp_history, passport.public_slug),
-    regulatory_context: { annex_vi_dataset_selected: isAnnexVI(publicData), annex_vi_field_validation_passed: isAnnexVI(publicData) && validateCarCleaning(publicData).length === 0, main_application_date: '2029-09-23', certification: false, regulatory_dpp_complete: false, limitations: CAR_CLEANING_COPY.limits, sources: CAR_CLEANING_SOURCES },
+    regulatory_context: { annex_vi_dataset_selected: isAnnexVI(publicData), annex_vi_field_validation_passed: isAnnexVI(publicData) && validateCarCleaning(publicData).length === 0, main_application_date: '2029-09-23', certification: false, regulatory_dpp_complete: false, limitations: CAR_CLEANING_REGULATORY_LIMITATIONS, sources: CAR_CLEANING_SOURCES },
   };
 }

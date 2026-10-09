@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { validCleaner } from './testFixtures';
-import { CAR_CLEANING_SOURCES } from '@/lib/carCleaning';
+import { CAR_CLEANING_COPY, CAR_CLEANING_SOURCES } from '@/lib/carCleaning';
 
 vi.mock('react-i18next', () => ({ useTranslation: () => ({
   t: (key: string, fallback?: string) => fallback || key,
@@ -25,8 +25,10 @@ describe('Car cleaning consumer information', () => {
     expect(screen.queryByText('SECRET FORMULA')).not.toBeInTheDocument();
     expect(screen.queryByText('STALE UFI')).not.toBeInTheDocument();
     expect(screen.queryByText('STALE OPERATOR')).not.toBeInTheDocument();
-    expect(screen.getByText(/23 September 2029/)).toBeInTheDocument();
-    expect(screen.getByText(/does not provide the EU registry connection/)).toBeInTheDocument();
+    expect(screen.getByText(CAR_CLEANING_COPY.publicNotice)).toBeInTheDocument();
+    expect(screen.queryByText(CAR_CLEANING_COPY.noticeTitle)).not.toBeInTheDocument();
+    expect(screen.queryByText(CAR_CLEANING_COPY.noticeBody)).not.toBeInTheDocument();
+    expect(document.body.textContent).not.toMatch(/Future DPP limits|business-continuity/);
   });
 
   it('uses field translations and localized option labels in preview language', () => {

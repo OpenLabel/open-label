@@ -117,7 +117,8 @@ describe('Demo page', () => {
     renderDemo('/demo/car_cleaning');
 
     expect(screen.getByRole('heading', { name: 'Sample Car Shampoo', level: 1 })).toBeInTheDocument();
-    expect(screen.getByRole('heading', { name: 'Chemical safety and DPP preparation' })).toBeInTheDocument();
+    expect(screen.getByText('This page gives product information published by the supplier. It is not the EU digital product passport required from 2029 under Regulation (EU) 2026/405 and does not replace the label on the packaging.')).toBeInTheDocument();
+    expect(screen.queryByRole('heading', { name: 'Chemical safety and DPP preparation' })).not.toBeInTheDocument();
     expect(screen.getByRole('heading', { name: 'Detergent ingredient information' })).toBeInTheDocument();
     expect(screen.getByText(/All product and supplier details are fictitious/)).toBeInTheDocument();
     expect(screen.getByRole('link', { name: 'https://example-cleaner.example/ingredients' })).toHaveAttribute('href', 'https://example-cleaner.example/ingredients');

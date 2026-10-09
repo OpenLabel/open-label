@@ -23,6 +23,7 @@ describe('Terms page', () => {
     expect(screen.getByText('1. Acceptance of Terms')).toBeInTheDocument();
     expect(screen.getByText('2. Open Source License')).toBeInTheDocument();
     expect(screen.getByText('15. Contact')).toBeInTheDocument();
+    expect(screen.getByText(/For car cleaning records, supplier entries are not independently verified, and no EU registry connection, independent backup or regulatory retention guarantee is provided\./)).toBeInTheDocument();
   });
 
   it('displays company info', () => {
