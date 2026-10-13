@@ -2892,54 +2892,54 @@
       "text": "Die Verordnung (EU) 2026/405 über Wasch- und Reinigungsmittel und Tenside gilt ab dem 23. September 2029. Ihre Vorschriften zum digitalen Produktpass, die Zugriffsrechte und die Einzelheiten zum Datenträger müssen noch durch einen Durchführungsrechtsakt festgelegt werden, und bis dahin gilt die Verordnung (EC) No 648/2004. Dieses Tool sammelt Produktinformationen und bereitet Passdaten vor. Es handelt sich nicht um eine Zertifizierung oder eine Genehmigung und sollte nicht als endgültige Rechtsberatung betrachtet werden. Alles, was in dieser Kategorie gespeichert wird, ist öffentlich."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Noch keine Allergene hinzugefügt.",
+      "summary": "{{count}} Allergen(e) deklariert.",
+      "addButton": "Allergen hinzufügen",
+      "dialogTitle": "Duftstoffallergene auswählen",
+      "searchPlaceholder": "Suche nach Name, CAS-, EC- oder Nummer...",
+      "clearSearch": "Suche löschen",
+      "noResults": "Keine Allergene entsprechen \"{{q}}\".",
+      "done": "Fertig",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "{{name}} entfernen"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Wasch- und Reinigungsmittel: Digitaler Produktpass",
+    "notice": "Diese Seite enthält vom Lieferanten veröffentlichte Produktinformationen. Sie stellt keine Zertifizierung oder Genehmigung dar und ersetzt nicht die Kennzeichnung auf der Verpackung.",
+    "units": "Einheiten",
+    "ecolabelBadge": "EU-Umweltzeichen",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Produkt",
+      "hazard": "Gefahr und Sicherheit",
+      "use": "Anwendung und Dosierung",
+      "ingredients": "Inhaltsstoffe",
+      "environment": "Umwelt und Verpackung",
+      "biocide": "Biozidprodukt",
+      "responsible": "Verantwortlicher",
+      "annexVi": "Datensatz gemäß Anhang VI",
+      "metadata": "DPP-Infrastruktur"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Hersteller",
+      "importer": "Importeur",
+      "authorisedRepresentative": "Bevollmächtigter in der EU"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
+      "constituentClasses": "Inhaltsstoffklassen über 0,2 Gewichtsprozent",
+      "ecolabel": "EU-Umweltzeichen",
+      "licenceNumber": "Lizenznummer",
       "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
+      "address": "Anschrift",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "dppServiceProvider": "DPP-Dienstanbieter",
+      "dppVersion": "DPP-Version",
+      "lastUpdated": "Zuletzt aktualisiert",
       "status": "Status"
     },
     "values": {
-      "published": "Published"
+      "published": "Veröffentlicht"
     }
   }
 }

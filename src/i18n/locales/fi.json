@@ -2892,54 +2892,54 @@
       "text": "Pesuaineista ja pinta-aktiivisista aineista annettua asetusta (EU) 2026/405 sovelletaan 23. syyskuuta 2029 alkaen. Sen digitaalista tuotepassia, käyttöoikeuksia ja datansiirtovälineen tietoja koskevat säännöt vahvistetaan myöhemmin täytäntöönpanosäädöksellä, ja siihen asti sovelletaan asetusta (EC) No 648/2004. Tämä työkalu kerää tuotetietoja ja valmistelee passin tietoja. Se ei ole sertifiointi tai hyväksyntä, eikä sitä tule pitää lopullisena oikeudellisena neuvona. Kaikki tähän luokkaan tallennetut tiedot ovat julkisia."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Allergeeneja ei ole vielä lisätty.",
+      "summary": "{{count}} allergeeni(a) ilmoitettu.",
+      "addButton": "Lisää allergeeni",
+      "dialogTitle": "Valitse hajusteallergeenit",
+      "searchPlaceholder": "Hae nimen, CAS-, EC- tai numeron perusteella...",
+      "clearSearch": "Tyhjennä haku",
+      "noResults": "Hakusanalla \"{{q}}\" ei löytynyt allergeeneja.",
+      "done": "Valmis",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Poista {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Pesuaineet: Digitaalinen tuotepassi",
+    "notice": "Tämä sivu sisältää toimittajan julkaisemia tuotetietoja. Se ei ole sertifiointi tai hyväksyntä, eikä se korvaa pakkauksessa olevaa merkintää.",
+    "units": "yksikköä",
+    "ecolabelBadge": "EU-ympäristömerkki",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Tuote",
+      "hazard": "Vaara ja turvallisuus",
+      "use": "Käyttö ja annostelu",
+      "ingredients": "Ainesosat",
+      "environment": "Ympäristö ja pakkaus",
+      "biocide": "Biosidivalmiste",
+      "responsible": "Vastuussa oleva taho",
+      "annexVi": "Liitteen VI aineisto",
+      "metadata": "DPP-infrastruktuuri"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Valmistaja",
+      "importer": "Maahantuoja",
+      "authorisedRepresentative": "EU:n valtuutettu edustaja"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "Ainesosien ryhmät, joiden pitoisuus on yli 0,2 painoprosenttia",
+      "ecolabel": "EU-ympäristömerkki",
+      "licenceNumber": "Lisenssinumero",
+      "name": "Nimi",
+      "address": "Osoite",
+      "email": "Sähköposti",
+      "phone": "Puhelin",
+      "dppServiceProvider": "DPP-palveluntarjoaja",
+      "dppVersion": "DPP-versio",
+      "lastUpdated": "Päivitetty viimeksi",
+      "status": "Tila"
     },
     "values": {
-      "published": "Published"
+      "published": "Julkaistu"
     }
   }
 }

@@ -2892,54 +2892,54 @@
       "text": "Ο κανονισμός (EU) 2026/405 για τα απορρυπαντικά και τις επιφανειοδραστικές ουσίες εφαρμόζεται από τις 23 Σεπτεμβρίου 2029. Οι κανόνες για το ψηφιακό διαβατήριο προϊόντος, τα δικαιώματα πρόσβασης και τα στοιχεία του φορέα δεδομένων δεν έχουν ακόμη καθοριστεί με εκτελεστική πράξη και, μέχρι τότε, εφαρμόζεται ο κανονισμός (EC) No 648/2004. Αυτό το εργαλείο συλλέγει πληροφορίες για το προϊόν και προετοιμάζει δεδομένα για το διαβατήριο. Δεν αποτελεί πιστοποίηση ή έγκριση και δεν πρέπει να εκλαμβάνεται ως τελική νομική συμβουλή. Όλα όσα αποθηκεύονται σε αυτήν την κατηγορία είναι δημόσια."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Δεν έχουν προστεθεί ακόμη αλλεργιογόνα.",
+      "summary": "{{count}} δηλωμένα αλλεργιογόνα.",
+      "addButton": "Προσθήκη αλλεργιογόνου",
+      "dialogTitle": "Επιλογή αλλεργιογόνων αρωματικών ουσιών",
+      "searchPlaceholder": "Αναζήτηση με βάση την ονομασία, τον αριθμό CAS, EC ή άλλον αριθμό...",
+      "clearSearch": "Εκκαθάριση αναζήτησης",
+      "noResults": "Κανένα αλλεργιογόνο δεν αντιστοιχεί στο \"{{q}}\".",
+      "done": "Τέλος",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Αφαίρεση {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Απορρυπαντικά: Ψηφιακό διαβατήριο προϊόντος",
+    "notice": "Αυτή η σελίδα παρέχει πληροφορίες για το προϊόν που δημοσιεύονται από τον προμηθευτή. Δεν αποτελεί πιστοποίηση ή έγκριση και δεν αντικαθιστά την ετικέτα της συσκευασίας.",
+    "units": "μονάδες",
+    "ecolabelBadge": "Οικολογικό σήμα της ΕΕ",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Προϊόν",
+      "hazard": "Κίνδυνος και ασφάλεια",
+      "use": "Χρήση και δοσολογία",
+      "ingredients": "Συστατικά",
+      "environment": "Περιβάλλον και συσκευασία",
+      "biocide": "Βιοκτόνο προϊόν",
+      "responsible": "Υπεύθυνος φορέας",
+      "annexVi": "Σύνολο δεδομένων του Παραρτήματος VI",
+      "metadata": "Υποδομή DPP"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Παρασκευαστής",
+      "importer": "Εισαγωγέας",
+      "authorisedRepresentative": "Εξουσιοδοτημένος αντιπρόσωπος στην ΕΕ"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "Κατηγορίες συστατικών σε ποσοστό άνω του 0,2% κατά βάρος",
+      "ecolabel": "Οικολογικό σήμα της ΕΕ",
+      "licenceNumber": "Αριθμός άδειας",
+      "name": "Όνομα",
+      "address": "Διεύθυνση",
+      "email": "Ηλεκτρονικό ταχυδρομείο",
+      "phone": "Τηλέφωνο",
+      "dppServiceProvider": "Πάροχος υπηρεσιών DPP",
+      "dppVersion": "Έκδοση DPP",
+      "lastUpdated": "Τελευταία ενημέρωση",
+      "status": "Κατάσταση"
     },
     "values": {
-      "published": "Published"
+      "published": "Δημοσιευμένο"
     }
   }
 }

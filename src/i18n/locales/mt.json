@@ -2892,54 +2892,54 @@
       "text": "Ir-Regolament (EU) 2026/405 dwar id-deterġenti u s-surfactants japplika mit-23 ta’ Settembru 2029. Ir-regoli tiegħu dwar il-passaport diġitali tal-prodott, id-drittijiet ta’ aċċess u d-dettalji tat-trasportatur tad-data għad iridu jiġu stabbiliti b’att ta’ implimentazzjoni, u sa dak iż-żmien japplika r-Regolament (EC) No 648/2004. Din l-għodda tiġbor l-informazzjoni dwar il-prodott u tħejji d-data tal-passaport. Mhijiex ċertifikazzjoni jew approvazzjoni u m’għandhiex titqies bħala parir legali finali. Dak kollu li jiġi ssejvjat f’din il-kategorija huwa pubbliku."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Għad ma żdied l-ebda allerġen.",
+      "summary": "{{count}} allerġen(i) iddikjarat(i).",
+      "addButton": "Żid allerġen",
+      "dialogTitle": "Agħżel l-allerġeni tal-fwieħa",
+      "searchPlaceholder": "Fittex bl-isem, bin-numru CAS, KE jew b'numru ieħor...",
+      "clearSearch": "Neħħi t-tfittxija",
+      "noResults": "L-ebda allerġen ma jaqbel ma' \"{{q}}\".",
+      "done": "Lest",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Neħħi {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Deterġenti: Passaport Diġitali tal-Prodott",
+    "notice": "Din il-paġna tagħti informazzjoni dwar il-prodott ippubblikata mill-fornitur. Mhijiex ċertifikazzjoni jew approvazzjoni, u ma tissostitwixxix it-tikketta fuq l-imballaġġ.",
+    "units": "unitajiet",
+    "ecolabelBadge": "Ekotikketta tal-UE",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Prodott",
+      "hazard": "Periklu u sigurtà",
+      "use": "Użu u dożaġġ",
+      "ingredients": "Ingredjenti",
+      "environment": "Ambjent u imballaġġ",
+      "biocide": "Prodott bijoċidali",
+      "responsible": "Min hu responsabbli",
+      "annexVi": "Sett ta' data tal-Anness VI",
+      "metadata": "DPP infrastruttura"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Manifattur",
+      "importer": "Importatur",
+      "authorisedRepresentative": "Rappreżentant awtorizzat tal-UE"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
+      "constituentClasses": "Klassijiet ta' kostitwenti 'l fuq minn 0.2% skont il-piż",
+      "ecolabel": "Ekotikketta tal-UE",
+      "licenceNumber": "Numru tal-liċenzja",
+      "name": "Isem",
+      "address": "Indirizz",
       "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
+      "phone": "Telefown",
+      "dppServiceProvider": "DPP fornitur tas-servizz",
+      "dppVersion": "DPP verżjoni",
+      "lastUpdated": "Aġġornat l-aħħar",
       "status": "Status"
     },
     "values": {
-      "published": "Published"
+      "published": "Ippubblikat"
     }
   }
 }

@@ -2244,16 +2244,16 @@
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "m.sh., 3401234567890"
       },
       "net_content": {
         "label": "Cainníocht ainmniúil le haonad",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "placeholder": "m.sh., 1.5 L, 750 ml, 2 kg"
       },
       "target_markets": {
         "label": "Margaí AE agus teangacha lipéid",
         "help": "Ní mór foclaíocht an lipéid agus na sábháilteachta a bheith ar fáil sa teanga nó sna teangacha a cheanglaítear i ngach margadh.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "placeholder": "m.sh., An Fhrainc (Fraincis), An Ghearmáin (Gearmáinis)"
       },
       "dpp_profile": {
         "label": "Próifíl faisnéise",
@@ -2285,7 +2285,7 @@
       },
       "manufacturer_phone": {
         "label": "Uimhir theileafóin",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "placeholder": "m.sh., +33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
         "label": "An bhfuil an monaróir bunaithe lasmuigh den AE?"
@@ -2339,12 +2339,12 @@
       "hazard_statements": {
         "label": "Ráitis ghuaise",
         "help": "Cuir isteach an fhoclaíocht go díreach mar atá sí ar an lipéad formheasta. Bain úsáid as an gcnaipe aistriúcháin do gach teanga mhargaidh. Ní aistrítear an fhoclaíocht seo go huathoibríoch riamh.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "placeholder": "m.sh., H315 Is cúis le greannú craicinn"
       },
       "precautionary_statements": {
         "label": "Ráitis réamhchúraim",
         "help": "Cuir isteach an fhoclaíocht go díreach mar atá sí ar an lipéad formheasta. Bain úsáid as an gcnaipe aistriúcháin do gach teanga mhargaidh. Ní aistrítear an fhoclaíocht seo go huathoibríoch riamh.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "placeholder": "m.sh., P280 Caith lámhainní cosanta"
       },
       "pcn_applicability": {
         "label": "Fógra d'ionad nimhe (Iarscríbhinn VIII a ghabhann le CLP)",
@@ -2356,7 +2356,7 @@
       "ufi_code": {
         "label": "Aitheantóir uathúil foirmlithe (UFI)",
         "help": "Ceithre ghrúpa de cheithre charachtar. Seiceáiltear an fhormáid, ach ní féidir leis an aip aighneacht chuig ionad nimhe a fhíorú.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "placeholder": "m.sh., N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
         "label": "Aighneachtaí chuig ionad nimhe"
@@ -2371,7 +2371,7 @@
       },
       "sds_languages": {
         "label": "Teangacha na bileoige sonraí sábháilteachta",
-        "placeholder": "e.g., English, French, German"
+        "placeholder": "m.sh., Béarla, Fraincis, Gearmáinis"
       },
       "sds_revision_date": {
         "label": "Dáta athbhreithnithe na bileoige sonraí sábháilteachta",
@@ -2450,7 +2450,7 @@
       "preservatives": {
         "label": "Leasaithigh",
         "help": "Bain úsáid as an ainm INCI más féidir.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "placeholder": "m.sh., Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
         "label": "Ailléirginí cumhráin a cuireadh leis os cionn 0.01% de réir meáchain?",
@@ -2470,7 +2470,7 @@
       },
       "biodegradability_test": {
         "label": "Modh tástála in-bhithdhíghrádaitheachta an dromchlaghníomhaí",
-        "placeholder": "e.g., OECD 301 series"
+        "placeholder": "m.sh., sraith OECD 301"
       },
       "biodegradability_reference": {
         "label": "Tagairt d'fhianaise in-bhithdhíghrádaitheachta",
@@ -2493,15 +2493,15 @@
       },
       "dosage_soft": {
         "label": "Dáileog d'uisce bog (in aghaidh an ualaigh chaighdeánaigh)",
-        "placeholder": "e.g., 60"
+        "placeholder": "m.sh., 60"
       },
       "dosage_medium": {
         "label": "Dáileog d'uisce meánach (in aghaidh an ualaigh chaighdeánaigh)",
-        "placeholder": "e.g., 75"
+        "placeholder": "m.sh., 75"
       },
       "dosage_hard": {
         "label": "Dáileog d'uisce crua (in aghaidh an ualaigh chaighdeánaigh)",
-        "placeholder": "e.g., 90"
+        "placeholder": "m.sh., 90"
       },
       "dosage_two_cycle_note": {
         "label": "Dáileog do phróisis níocháin aontimthrialla agus dhá thimthriall",
@@ -2544,7 +2544,7 @@
       },
       "recycled_packaging_content": {
         "label": "Cion athchúrsáilte sa phacáistíocht (%)",
-        "placeholder": "e.g., 30"
+        "placeholder": "m.sh., 30"
       },
       "refill_available": {
         "label": "Athlíonadh ar fáil?"
@@ -2566,7 +2566,7 @@
       },
       "environmental_claims": {
         "label": "Maímh chomhshaoil a dhéantar ar an táirge nó ar an bpacáistíocht",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "placeholder": "m.sh., \"Buidéal déanta le 30% de phlaisteach athchúrsáilte\""
       },
       "claims_evidence_reference": {
         "label": "Tagairt d'fhianaise an dearbhaithe",
@@ -2892,54 +2892,54 @@
       "text": "Beidh feidhm ag Rialachán (EU) 2026/405 maidir le glantaigh agus dromchlaghníomhaithe ón 23 Meán Fómhair 2029. Tá a rialacha maidir le pas digiteach táirge, cearta rochtana agus sonraí iompróra sonraí fós le socrú le gníomh cur chun feidhme, agus go dtí sin, tá feidhm ag Rialachán (EC) No 648/2004. Bailíonn an uirlis seo faisnéis faoin táirge agus ullmhaíonn sí sonraí pas. Ní deimhniú ná formheas é agus níor cheart caitheamh leis mar chomhairle dlí chríochnaitheach. Tá gach rud a shábháiltear sa chatagóir seo poiblí."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Níor cuireadh aon ailléirginí leis go fóill.",
+      "summary": "{{count}} ailléirgin dearbhaithe.",
+      "addButton": "Cuir ailléirgin leis",
+      "dialogTitle": "Roghnaigh ailléirginí cumhráin",
+      "searchPlaceholder": "Cuardaigh de réir ainm, CAS, EC nó uimhir...",
+      "clearSearch": "Glan an cuardach",
+      "noResults": "Ní mheaitseálann aon ailléirginí \"{{q}}\".",
+      "done": "Déanta",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Bain {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Glantaigh: Pas Digiteach Táirge",
+    "notice": "Tugtar ar an leathanach seo faisnéis faoin táirge arna foilsiú ag an soláthróir. Ní deimhniú ná formheas é, agus ní thagann sé in ionad an lipéid ar an bpacáistíocht.",
+    "units": "aonaid",
+    "ecolabelBadge": "Éicilipéad an AE",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Táirge",
+      "hazard": "Guaise agus sábháilteacht",
+      "use": "Úsáid agus dáileog",
+      "ingredients": "Comhábhair",
+      "environment": "Comhshaol agus pacáistíocht",
+      "biocide": "Táirge bithicídeach",
+      "responsible": "Cé atá freagrach",
+      "annexVi": "Tacar sonraí Iarscríbhinn VI",
+      "metadata": "DPP bonneagar"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Monaróir",
+      "importer": "Allmhaireoir",
+      "authorisedRepresentative": "Ionadaí údaraithe an AE"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "Aicmí comhábhar os cionn 0.2% de réir meáchain",
+      "ecolabel": "Éicilipéad an AE",
+      "licenceNumber": "Uimhir cheadúnais",
+      "name": "Ainm",
+      "address": "Seoladh",
+      "email": "Ríomhphost",
+      "phone": "Teileafón",
+      "dppServiceProvider": "DPP soláthraí seirbhíse",
+      "dppVersion": "DPP leagan",
+      "lastUpdated": "An nuashonrú is déanaí",
+      "status": "Stádas"
     },
     "values": {
-      "published": "Published"
+      "published": "Foilsithe"
     }
   }
 }

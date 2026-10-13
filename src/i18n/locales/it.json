@@ -2892,54 +2892,54 @@
       "text": "Il regolamento (EU) 2026/405 relativo ai detergenti e ai tensioattivi si applica a decorrere dal 23 settembre 2029. Le norme sul passaporto digitale dei prodotti, i diritti di accesso e i dettagli del supporto dati devono ancora essere stabiliti da un atto di esecuzione e, fino ad allora, si applica il regolamento (EC) No 648/2004. Questo strumento raccoglie informazioni sui prodotti e prepara i dati per il passaporto. Non costituisce una certificazione o un'approvazione e non deve essere considerato come una consulenza legale definitiva. Tutto ciò che viene salvato in questa categoria è pubblico."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Nessun allergene ancora aggiunto.",
+      "summary": "{{count}} allergeni dichiarati.",
+      "addButton": "Aggiungi allergene",
+      "dialogTitle": "Seleziona allergeni delle fragranze",
+      "searchPlaceholder": "Cerca per nome, n. CAS, n. CE o numero...",
+      "clearSearch": "Cancella ricerca",
+      "noResults": "Nessun allergene corrisponde a \"{{q}}\".",
+      "done": "Fatto",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Rimuovi {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Detergenti: Passaporto digitale dei prodotti",
+    "notice": "Questa pagina fornisce informazioni sul prodotto pubblicate dal fornitore. Non costituisce una certificazione o un'approvazione e non sostituisce l'etichetta presente sull'imballaggio.",
+    "units": "unità",
+    "ecolabelBadge": "Ecolabel UE",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Prodotto",
+      "hazard": "Pericoli e sicurezza",
+      "use": "Uso e dosaggio",
+      "ingredients": "Ingredienti",
+      "environment": "Ambiente e imballaggio",
+      "biocide": "Prodotto biocida",
+      "responsible": "Soggetto responsabile",
+      "annexVi": "Set di dati dell'allegato VI",
+      "metadata": "DPP infrastruttura"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Fabbricante",
+      "importer": "Importatore",
+      "authorisedRepresentative": "Rappresentante autorizzato UE"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
+      "constituentClasses": "Classi di costituenti in quantitativo superiore allo 0,2% in peso",
+      "ecolabel": "Ecolabel UE",
+      "licenceNumber": "Numero di licenza",
+      "name": "Nome",
+      "address": "Indirizzo",
       "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "phone": "Telefono",
+      "dppServiceProvider": "DPP fornitore di servizi",
+      "dppVersion": "DPP versione",
+      "lastUpdated": "Ultimo aggiornamento",
+      "status": "Stato"
     },
     "values": {
-      "published": "Published"
+      "published": "Pubblicato"
     }
   }
 }

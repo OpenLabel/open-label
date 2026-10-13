@@ -2892,54 +2892,54 @@
       "text": "Uredba (EU) 2026/405 o deterdžentima i tenzidima primjenjuje se od 23. rujna 2029. Njezina pravila o digitalnoj putovnici proizvoda, pravima pristupa i podacima o nosaču podataka tek se trebaju utvrditi provedbenim aktom, a do tada se primjenjuje Uredba (EC) No 648/2004. Ovaj alat prikuplja informacije o proizvodu i priprema podatke za putovnicu. On nije certifikacija ni odobrenje i ne treba ga smatrati konačnim pravnim savjetom. Sve što je spremljeno u ovoj kategoriji javno je."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Još nisu dodani alergeni.",
+      "summary": "Naveden(o) je {{count}} alergen(a).",
+      "addButton": "Dodaj alergen",
+      "dialogTitle": "Odaberite mirisne alergene",
+      "searchPlaceholder": "Pretražite po nazivu, CAS, EC ili broju...",
+      "clearSearch": "Očisti pretragu",
+      "noResults": "Nijedan alergen ne odgovara pojmu „{{q}}”.",
+      "done": "Gotovo",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Ukloni {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Deterdženti: Digitalna putovnica proizvoda",
+    "notice": "Ova stranica pruža informacije o proizvodu koje je objavio dobavljač. To nije certifikacija ni odobrenje i ne zamjenjuje oznaku na ambalaži.",
+    "units": "jedinice",
+    "ecolabelBadge": "Znak za okoliš EU",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Proizvod",
+      "hazard": "Opasnost i sigurnost",
+      "use": "Uporaba i doziranje",
+      "ingredients": "Sastojci",
+      "environment": "Okoliš i ambalaža",
+      "biocide": "Biocidni proizvod",
+      "responsible": "Tko je odgovoran",
+      "annexVi": "Skup podataka iz Priloga VI.",
+      "metadata": "DPP infrastruktura"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Proizvođač",
+      "importer": "Uvoznik",
+      "authorisedRepresentative": "Ovlašteni predstavnik u EU"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
+      "constituentClasses": "Kategorije sastojaka s masenim udjelom većim od 0,2 %",
+      "ecolabel": "Znak za okoliš EU",
+      "licenceNumber": "Broj licence",
+      "name": "Naziv",
+      "address": "Adresa",
+      "email": "E-pošta",
+      "phone": "Telefon",
+      "dppServiceProvider": "DPP pružatelj usluge",
+      "dppVersion": "DPP verzija",
+      "lastUpdated": "Zadnje ažurirano",
       "status": "Status"
     },
     "values": {
-      "published": "Published"
+      "published": "Objavljeno"
     }
   }
 }

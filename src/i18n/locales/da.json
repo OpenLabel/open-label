@@ -2892,54 +2892,54 @@
       "text": "Forordning (EU) 2026/405 om vaskemidler og overfladeaktive stoffer finder anvendelse fra den 23. september 2029. Dens regler om digitalt produktpas, adgangsrettigheder og databæreroplysninger skal stadig fastsættes ved en gennemførelsesretsakt, og indtil da gælder forordning (EC) No 648/2004. Dette værktøj indsamler produktoplysninger og forbereder pasdata. Det er ikke en certificering eller en godkendelse og bør ikke betragtes som endelig juridisk rådgivning. Alt, hvad der gemmes i denne kategori, er offentligt."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Ingen allergener tilføjet endnu.",
+      "summary": "{{count}} allergen(er) angivet.",
+      "addButton": "Tilføj allergen",
+      "dialogTitle": "Vælg duftallergener",
+      "searchPlaceholder": "Søg efter navn, CAS, EC eller nummer...",
+      "clearSearch": "Ryd søgning",
+      "noResults": "Ingen allergener matcher \"{{q}}\".",
+      "done": "Færdig",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Fjern {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Vaskemidler: Digitalt produktpas",
+    "notice": "Denne side indeholder produktinformation offentliggjort af leverandøren. Den er ikke en certificering eller en godkendelse og erstatter ikke etiketten på emballagen.",
+    "units": "enheder",
+    "ecolabelBadge": "EU-miljømærket",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Produkt",
+      "hazard": "Fare og sikkerhed",
+      "use": "Anvendelse og dosering",
+      "ingredients": "Ingredienser",
+      "environment": "Miljø og emballage",
+      "biocide": "Biocidholdigt produkt",
+      "responsible": "Hvem er ansvarlig",
+      "annexVi": "Bilag VI-datasæt",
+      "metadata": "DPP-infrastruktur"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Fabrikant",
+      "importer": "Importør",
+      "authorisedRepresentative": "Autoriseret EU-repræsentant"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
+      "constituentClasses": "Bestanddelsklasser over 0,2 vægtprocent",
+      "ecolabel": "EU-miljømærket",
+      "licenceNumber": "Licensnummer",
+      "name": "Navn",
+      "address": "Adresse",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "dppServiceProvider": "DPP-tjenesteudbyder",
+      "dppVersion": "DPP-version",
+      "lastUpdated": "Senest opdateret",
       "status": "Status"
     },
     "values": {
-      "published": "Published"
+      "published": "Offentliggjort"
     }
   }
 }

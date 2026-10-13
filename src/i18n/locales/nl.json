@@ -2892,54 +2892,54 @@
       "text": "Verordening (EU) 2026/405 betreffende was- en reinigingsmiddelen en oppervlakteactieve stoffen is van toepassing vanaf 23 september 2029. De regels voor het digitale productpaspoort, de toegangsrechten en de details van de datadrager moeten nog worden vastgesteld door een uitvoeringshandeling, en tot die tijd is Verordening (EC) No 648/2004 van toepassing. Deze tool verzamelt productinformatie en bereidt paspoortgegevens voor. Het is geen certificering of goedkeuring en mag niet worden beschouwd als definitief juridisch advies. Alles wat in deze categorie wordt opgeslagen, is openbaar."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Nog geen allergenen toegevoegd.",
+      "summary": "{{count}} allergeen(en) vermeld.",
+      "addButton": "Allergeen toevoegen",
+      "dialogTitle": "Geurallergenen selecteren",
+      "searchPlaceholder": "Zoeken op naam, CAS, EC of nummer...",
+      "clearSearch": "Zoekopdracht wissen",
+      "noResults": "Geen allergenen komen overeen met \"{{q}}\".",
+      "done": "Klaar",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "{{name}} verwijderen"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Detergentia: Digitaal productpaspoort",
+    "notice": "Deze pagina bevat productinformatie die door de leverancier is gepubliceerd. Het is geen certificering of goedkeuring en vervangt niet het etiket op de verpakking.",
+    "units": "eenheden",
+    "ecolabelBadge": "EU-milieukeur",
     "sections": {
       "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "hazard": "Gevaar en veiligheid",
+      "use": "Gebruik en dosering",
+      "ingredients": "Ingrediënten",
+      "environment": "Milieu en verpakking",
+      "biocide": "Biocide",
+      "responsible": "Wie is verantwoordelijk",
+      "annexVi": "Dataset van bijlage VI",
+      "metadata": "DPP-infrastructuur"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Fabrikant",
+      "importer": "Importeur",
+      "authorisedRepresentative": "Gemachtigde in de EU"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
+      "constituentClasses": "Klassen van bestanddelen boven 0,2 gewichtsprocent",
+      "ecolabel": "EU-milieukeur",
+      "licenceNumber": "Licentienummer",
+      "name": "Naam",
+      "address": "Adres",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "dppServiceProvider": "DPP-dienstverlener",
+      "dppVersion": "DPP-versie",
+      "lastUpdated": "Laatst bijgewerkt",
       "status": "Status"
     },
     "values": {
-      "published": "Published"
+      "published": "Gepubliceerd"
     }
   }
 }

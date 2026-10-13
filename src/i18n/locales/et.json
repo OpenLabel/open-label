@@ -2892,54 +2892,54 @@
       "text": "Määrust (EU) 2026/405 pesuainete ja pindaktiivsete ainete kohta kohaldatakse alates 23. septembrist 2029. Selle digitaalse tootepassi eeskirjad, juurdepääsuõigused ja andmekandja üksikasjad kehtestatakse alles rakendusaktiga ning seni kohaldatakse määrust (EC) No 648/2004. See tööriist kogub tooteinfot ja valmistab ette passi andmeid. See ei ole sertifitseerimine ega heakskiit ning seda ei tohiks käsitleda lõpliku õigusnõuandena. Kõik sellesse kategooriasse salvestatu on avalik."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Allergeene pole veel lisatud.",
+      "summary": "Deklareeritud on {{count}} allergeen(i).",
+      "addButton": "Lisa allergeen",
+      "dialogTitle": "Valige lõhnaallergeenid",
+      "searchPlaceholder": "Otsige nime, CAS-, EÜ- või numbri järgi...",
+      "clearSearch": "Tühjenda otsing",
+      "noResults": "Otsingule \"{{q}}\" ei vasta ükski allergeen.",
+      "done": "Valmis",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Eemalda {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Pesuained: digitaalne tootepass",
+    "notice": "See leht sisaldab tarnija avaldatud tooteteavet. See ei ole sertifikaat ega heakskiit ning see ei asenda pakendil olevat märgistust.",
+    "units": "ühikut",
+    "ecolabelBadge": "ELi ökomärgis",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Toode",
+      "hazard": "Oht ja ohutus",
+      "use": "Kasutamine ja doseerimine",
+      "ingredients": "Koostisosad",
+      "environment": "Keskkond ja pakend",
+      "biocide": "Biotsiidtoode",
+      "responsible": "Vastutav isik",
+      "annexVi": "VI lisa andmestik",
+      "metadata": "DPP taristu"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Tootja",
+      "importer": "Importija",
+      "authorisedRepresentative": "ELi volitatud esindaja"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "Koostisosade klassid massiprotsendiga üle 0,2%",
+      "ecolabel": "ELi ökomärgis",
+      "licenceNumber": "Litsentsi number",
+      "name": "Nimi",
+      "address": "Aadress",
+      "email": "E-post",
+      "phone": "Telefon",
+      "dppServiceProvider": "DPP teenusepakkuja",
+      "dppVersion": "DPP versioon",
+      "lastUpdated": "Viimati uuendatud",
+      "status": "Olek"
     },
     "values": {
-      "published": "Published"
+      "published": "Avaldatud"
     }
   }
 }

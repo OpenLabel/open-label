@@ -2736,7 +2736,7 @@
         "powder": "Por",
         "tablet": "Tabletta",
         "capsule": "Kapszula vagy párna",
-        "spray": "Spray",
+        "spray": "Permet",
         "wipe": "Törlőkendő",
         "paste": "Paszt",
         "other": "Egyéb"
@@ -2892,54 +2892,54 @@
       "text": "A mosószerekről és a felületaktív anyagokról szóló (EU) 2026/405 rendelet 2029. szeptember 23-tól alkalmazandó. A digitális termékútlevélre, a hozzáférési jogokra és az adathordozó részleteire vonatkozó szabályokat egy végrehajtási jogi aktus fogja megállapítani, és addig a (EC) No 648/2004 rendelet alkalmazandó. Ez az eszköz termékinformációkat gyűjt és útlevéladatokat készít elő. Ez nem tanúsítás vagy jóváhagyás, és nem tekinthető végleges jogi tanácsadásnak. Minden, ami ebben a kategóriában mentésre kerül, nyilvános."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Még nem adott hozzá allergéneket.",
+      "summary": "{{count}} allergén feltüntetve.",
+      "addButton": "Allergén hozzáadása",
+      "dialogTitle": "Illatallergének kiválasztása",
+      "searchPlaceholder": "Keresés név, CAS-, EC- vagy egyéb szám alapján...",
+      "clearSearch": "Keresés törlése",
+      "noResults": "Nincs a(z) \"{{q}}\" keresésnek megfelelő allergén.",
+      "done": "Kész",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "{{name}} eltávolítása"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Tisztítószerek: Digitális termékútlevél",
+    "notice": "Ez az oldal a szállító által közzétett termékinformációkat tartalmazza. Ez nem tanúsítás vagy jóváhagyás, és nem helyettesíti a csomagoláson található címkét.",
+    "units": "egységek",
+    "ecolabelBadge": "EU ökocímke",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Termék",
+      "hazard": "Veszély és biztonság",
+      "use": "Használat és adagolás",
+      "ingredients": "Összetevők",
+      "environment": "Környezet és csomagolás",
+      "biocide": "Biocid termék",
+      "responsible": "Felelősök",
+      "annexVi": "VI. melléklet adatkészlete",
+      "metadata": "DPP infrastruktúra"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Gyártó",
+      "importer": "Importőr",
+      "authorisedRepresentative": "EU-meghatalmazott képviselő"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "0,2 tömegszázalékot meghaladó koncentrációjú összetevőcsoportok",
+      "ecolabel": "EU ökocímke",
+      "licenceNumber": "Engedélyszám",
+      "name": "Név",
+      "address": "Cím",
+      "email": "E-mail",
+      "phone": "Telefonszám",
+      "dppServiceProvider": "DPP szolgáltató",
+      "dppVersion": "DPP verzió",
+      "lastUpdated": "Utoljára frissítve",
+      "status": "Állapot"
     },
     "values": {
-      "published": "Published"
+      "published": "Közzétéve"
     }
   }
 }

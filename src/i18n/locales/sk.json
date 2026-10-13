@@ -2892,54 +2892,54 @@
       "text": "Nariadenie (EU) 2026/405 o detergentoch a povrchovo aktívnych látkach sa uplatňuje od 23. septembra 2029. Jeho pravidlá týkajúce sa digitálneho pasu výrobku, prístupových práv a podrobností o nosiči údajov sa ešte len majú stanoviť vykonávacím aktom, a dovtedy sa uplatňuje nariadenie (EC) No 648/2004. Tento nástroj zhromažďuje informácie o výrobku a pripravuje údaje pre pas. Nie je to certifikácia ani schválenie a nemalo by sa považovať za konečné právne poradenstvo. Všetko uložené v tejto kategórii je verejné."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Zatiaľ neboli pridané žiadne alergény.",
+      "summary": "Deklarovaných alergénov: {{count}}",
+      "addButton": "Pridať alergén",
+      "dialogTitle": "Vyberte vonné alergény",
+      "searchPlaceholder": "Hľadať podľa názvu, čísla CAS, ES alebo iného čísla...",
+      "clearSearch": "Vymazať vyhľadávanie",
+      "noResults": "Žiadne alergény nezodpovedajú výrazu „{{q}}“.",
+      "done": "Hotovo",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Odstrániť {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Detergenty: Digitálny pas výrobku",
+    "notice": "Táto stránka poskytuje informácie o výrobku zverejnené dodávateľom. Nie je certifikáciou ani schválením a nenahrádza označenie na obale.",
+    "units": "jednotky",
+    "ecolabelBadge": "Environmentálna značka EÚ",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Výrobok",
+      "hazard": "Nebezpečenstvo a bezpečnosť",
+      "use": "Použitie a dávkovanie",
+      "ingredients": "Zložky",
+      "environment": "Životné prostredie a obal",
+      "biocide": "Biocídny výrobok",
+      "responsible": "Kto je zodpovedný",
+      "annexVi": "Súbor údajov podľa prílohy VI",
+      "metadata": "DPP infraštruktúra"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Výrobca",
+      "importer": "Dovozca",
+      "authorisedRepresentative": "Splnomocnený zástupca v EÚ"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "Triedy zložiek s hmotnosťou nad 0,2 %",
+      "ecolabel": "Environmentálna značka EÚ",
+      "licenceNumber": "Číslo licencie",
+      "name": "Názov",
+      "address": "Adresa",
+      "email": "E-mail",
+      "phone": "Telefón",
+      "dppServiceProvider": "Poskytovateľ služieb DPP",
+      "dppVersion": "Verzia DPP",
+      "lastUpdated": "Posledná aktualizácia",
+      "status": "Stav"
     },
     "values": {
-      "published": "Published"
+      "published": "Zverejnené"
     }
   }
 }

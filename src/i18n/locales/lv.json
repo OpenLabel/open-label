@@ -2892,54 +2892,54 @@
       "text": "Regula (EU) 2026/405 par mazgāšanas līdzekļiem un virsmaktīvajām vielām ir piemērojama no 2029. gada 23. septembra. Tās noteikumi par digitālo produktu pasi, piekļuves tiesībām un datu nesēja informāciju vēl ir jānosaka ar īstenošanas aktu, un līdz tam laikam piemēro Regulu (EC) No 648/2004. Šis rīks apkopo informāciju par produktu un sagatavo pases datus. Tas nav sertifikāts vai apstiprinājums, un to nedrīkst uzskatīt par galīgu juridisku padomu. Viss, kas saglabāts šajā kategorijā, ir publisks."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Alergēni vēl nav pievienoti.",
+      "summary": "Norādīts(-i) {{count}} alergēns(-i).",
+      "addButton": "Pievienot alergēnu",
+      "dialogTitle": "Atlasīt smaržvielu alergēnus",
+      "searchPlaceholder": "Meklēt pēc nosaukuma, CAS, EK vai numura...",
+      "clearSearch": "Notīrīt meklēšanu",
+      "noResults": "Nav atrasts neviens alergēns, kas atbilstu \"{{q}}\".",
+      "done": "Gatavs",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Noņemt {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Mazgāšanas līdzekļi: digitālā produkta pase",
+    "notice": "Šajā lapā ir sniegta produkta informācija, ko publicējis piegādātājs. Tā nav sertifikācija vai apstiprinājums, un tā neaizstāj marķējumu uz iepakojuma.",
+    "units": "vienības",
+    "ecolabelBadge": "ES ekomarķējums",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Produkts",
+      "hazard": "Bīstamība un drošība",
+      "use": "Lietošana un dozēšana",
+      "ingredients": "Sastāvdaļas",
+      "environment": "Vide un iepakojums",
+      "biocide": "Biocīds",
+      "responsible": "Atbildīgā persona",
+      "annexVi": "VI pielikuma datu kopa",
+      "metadata": "DPP infrastruktūra"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Ražotājs",
+      "importer": "Importētājs",
+      "authorisedRepresentative": "ES pilnvarotais pārstāvis"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "Sastāvdaļu grupas, kuru masas daļa pārsniedz 0,2 %",
+      "ecolabel": "ES ekomarķējums",
+      "licenceNumber": "Licences numurs",
+      "name": "Nosaukums",
+      "address": "Adrese",
+      "email": "E-pasts",
+      "phone": "Tālrunis",
+      "dppServiceProvider": "DPP pakalpojumu sniedzējs",
+      "dppVersion": "DPP versija",
+      "lastUpdated": "Pēdējo reizi atjaunināts",
+      "status": "Statuss"
     },
     "values": {
-      "published": "Published"
+      "published": "Publicēts"
     }
   }
 }

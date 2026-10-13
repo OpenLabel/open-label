@@ -2892,54 +2892,54 @@
       "text": "Regulamentul (EU) 2026/405 privind detergenții și surfactanții se aplică de la 23 septembrie 2029. Normele sale privind pașaportul digital al produsului, drepturile de acces și detaliile purtătorului de date urmează să fie stabilite printr-un act de punere în aplicare, iar până atunci se aplică Regulamentul (EC) No 648/2004. Acest instrument colectează informații despre produs și pregătește datele pentru pașaport. Nu reprezintă o certificare sau o aprobare și nu trebuie tratat ca un aviz juridic final. Toate informațiile salvate în această categorie sunt publice."
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "Niciun alergen adăugat încă.",
+      "summary": "{{count}} alergen(i) declarat(i).",
+      "addButton": "Adaugă alergen",
+      "dialogTitle": "Selectați alergenii din parfumuri",
+      "searchPlaceholder": "Căutați după denumire, CAS, CE sau număr...",
+      "clearSearch": "Golește căutarea",
+      "noResults": "Niciun alergen nu corespunde cu \"{{q}}\".",
+      "done": "Gata",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "Elimină {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "Detergenți: Pașaport digital de produs",
+    "notice": "Această pagină oferă informații despre produs publicate de furnizor. Nu reprezintă o certificare sau o aprobare și nu înlocuiește eticheta de pe ambalaj.",
+    "units": "unități",
+    "ecolabelBadge": "Eticheta ecologică a UE",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "Produs",
+      "hazard": "Pericol și siguranță",
+      "use": "Utilizare și dozaj",
+      "ingredients": "Ingrediente",
+      "environment": "Mediu și ambalaj",
+      "biocide": "Produs biocid",
+      "responsible": "Cine este responsabil",
+      "annexVi": "Set de date din anexa VI",
+      "metadata": "Infrastructură DPP"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "Fabricant",
+      "importer": "Importator",
+      "authorisedRepresentative": "Reprezentant autorizat în UE"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "Clase de constituenți în concentrație de peste 0,2 % din greutate",
+      "ecolabel": "Eticheta ecologică a UE",
+      "licenceNumber": "Număr de licență",
+      "name": "Nume",
+      "address": "Adresă",
+      "email": "E-mail",
+      "phone": "Telefon",
+      "dppServiceProvider": "Furnizor de servicii DPP",
+      "dppVersion": "Versiunea DPP",
+      "lastUpdated": "Ultima actualizare",
+      "status": "Stare"
     },
     "values": {
-      "published": "Published"
+      "published": "Publicat"
     }
   }
 }

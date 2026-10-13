@@ -2892,54 +2892,54 @@
       "text": "关于洗涤剂和表面活性剂的法规 (EU) 2026/405 将于 2029 年 9 月 23 日起适用。其数字产品通行证规则、访问权限和数据载体详情仍有待实施法案确定，在此之前，法规 (EC) No 648/2004 仍然适用。本工具用于收集产品信息并准备通行证数据。它不是认证或批准，不应被视为最终的法律建议。保存在此类别中的所有内容都是公开的。"
     },
     "allergenPicker": {
-      "empty": "No allergens added yet.",
-      "summary": "{{count}} allergen(s) declared.",
-      "addButton": "Add allergen",
-      "dialogTitle": "Select fragrance allergens",
-      "searchPlaceholder": "Search by name, CAS, EC or number...",
-      "clearSearch": "Clear search",
-      "noResults": "No allergens match \"{{q}}\".",
-      "done": "Done",
+      "empty": "尚未添加致敏物。",
+      "summary": "已申报 {{count}} 种致敏物。",
+      "addButton": "添加致敏物",
+      "dialogTitle": "选择香料致敏物",
+      "searchPlaceholder": "按名称、CAS、EC 或编号搜索...",
+      "clearSearch": "清除搜索",
+      "noResults": "没有与“{{q}}”匹配的致敏物。",
+      "done": "完成",
       "cas": "CAS",
-      "removeAria": "Remove {{name}}"
+      "removeAria": "移除 {{name}}"
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergents: Digital Product Passport",
-    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
-    "units": "units",
-    "ecolabelBadge": "EU Ecolabel",
+    "headerBadge": "清洁剂：数字产品护照",
+    "notice": "本页面提供由供应商发布的产品信息。它不是认证或批准，也不能取代包装上的标签。",
+    "units": "单位",
+    "ecolabelBadge": "欧盟生态标签",
     "sections": {
-      "product": "Product",
-      "hazard": "Hazard and safety",
-      "use": "Use and dosage",
-      "ingredients": "Ingredients",
-      "environment": "Environment and packaging",
-      "biocide": "Biocidal product",
-      "responsible": "Who is responsible",
-      "annexVi": "Annex VI dataset",
-      "metadata": "DPP infrastructure"
+      "product": "产品",
+      "hazard": "危险和安全",
+      "use": "使用和剂量",
+      "ingredients": "成分",
+      "environment": "环境和包装",
+      "biocide": "杀生物产品",
+      "responsible": "责任方",
+      "annexVi": "附件VI数据集",
+      "metadata": "DPP 基础设施"
     },
     "subsections": {
-      "manufacturer": "Manufacturer",
-      "importer": "Importer",
-      "authorisedRepresentative": "EU authorised representative"
+      "manufacturer": "制造商",
+      "importer": "进口商",
+      "authorisedRepresentative": "欧盟授权代表"
     },
     "rows": {
-      "constituentClasses": "Constituent classes above 0.2% by weight",
-      "ecolabel": "EU Ecolabel",
-      "licenceNumber": "Licence number",
-      "name": "Name",
-      "address": "Address",
-      "email": "Email",
-      "phone": "Telephone",
-      "dppServiceProvider": "DPP service provider",
-      "dppVersion": "DPP version",
-      "lastUpdated": "Last updated",
-      "status": "Status"
+      "constituentClasses": "重量超过0.2%的组分类别",
+      "ecolabel": "欧盟生态标签",
+      "licenceNumber": "许可证号",
+      "name": "名称",
+      "address": "地址",
+      "email": "电子邮件",
+      "phone": "电话",
+      "dppServiceProvider": "DPP 服务提供商",
+      "dppVersion": "DPP 版本",
+      "lastUpdated": "最后更新",
+      "status": "状态"
     },
     "values": {
-      "published": "Published"
+      "published": "已发布"
     }
   }
 }
