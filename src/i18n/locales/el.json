@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "Ταυτότητα προϊόντος",
+        "description": "Προϊόν, μοντέλο και ιχνηλασιμότητα"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "Υπεύθυνοι φορείς",
+        "description": "Παρασκευαστής, εισαγωγέας και εξουσιοδοτημένος αντιπρόσωπος στην ΕΕ, ως χωριστοί φορείς"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "Ταξινόμηση επικινδυνότητας και πληροφορίες ασφάλειας",
+        "description": "Ταξινόμηση CLP, πληροφορίες επικινδυνότητας της ετικέτας, κέντρο δηλητηριάσεων και δελτίο δεδομένων ασφαλείας"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "Συστατικά και πληροφορίες ετικέτας",
+        "description": "Περιεχόμενο ετικέτας σύμφωνα με το παράρτημα V του κανονισμού (EU) 2026/405 και τους ισχύοντες κανόνες"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "Ασφαλής χρήση και δοσολογία",
+        "description": "Πληροφορίες δοσολογίας και χρήσης σύμφωνα με το παράρτημα V μέρος Β"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "Συσκευασία και ανακύκλωση",
+        "description": "Συσκευασία, ανακυκλωσιμότητα και ανταλλακτικά επαναπλήρωσης"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "Αξιολόγηση βιοκτόνου προϊόντος",
+        "description": "Εφαρμόζεται όταν διατυπώνονται ισχυρισμοί απολύμανσης ή αντιμικροβιακοί ισχυρισμοί"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "Περιβαλλοντικοί ισχυρισμοί",
+        "description": "Υποστηρίζει την οδηγία (EU) 2024/825, η οποία εφαρμόζεται από τις 27 Σεπτεμβρίου 2026"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "Επισκόπηση προμηθευτή και προετοιμασία διαβατηρίου",
+        "description": "Έλεγχοι που συμπληρώνει ο προμηθευτής. Η εφαρμογή δεν μπορεί να τους επαληθεύσει."
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "Παράρτημα VI: ταυτότητα προϊόντος και δήλωση παρασκευαστή",
+        "description": "Προετοιμασία για το ψηφιακό διαβατήριο προϊόντος που απαιτείται από τις 23 Σεπτεμβρίου 2029. Ένα πλήρες σύνολο δεδομένων δεν αποτελεί πιστοποίηση, επαληθευμένο αναγνωριστικό στοιχείο ή υποβολή σε μητρώο."
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "Παράρτημα VI: ουσίες",
+        "description": "Πλήρης κατάλογος των σκοπίμως προστιθέμενων ουσιών (παράρτημα VI μέρος Α σημείο η))"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "Παράρτημα VI: μικροοργανισμοί",
+        "description": "Όλοι οι σκοπίμως προστιθέμενοι μικροοργανισμοί (παράρτημα VI μέρος Α σημείο θ))"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Εμπορική επωνυμία"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "Τύπος προϊόντος"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "Τύπος προϊόντος (προσδιορίστε)"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "Μορφή προϊόντος"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "Προορίζεται το προϊόν για καθαρισμό, μούλιασμα, ξέβγαλμα ή λεύκανση υφασμάτων, πιάτων ή επιφανειών;",
+        "help": "Βλέπε άρθρο 2 παράγραφος 1 του κανονισμού (EU) 2026/405. Χρώματα, κόλλες, διαλύτες και προϊόντα που δεν καθαρίζουν εξαιρούνται από αυτή την κατηγορία."
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "Λόγος για τον οποίο το προϊόν δεν εμπίπτει στον ορισμό του απορρυπαντικού"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "Σε ποιον απευθύνεται το προϊόν;",
+        "help": "Βιομηχανική και επαγγελματική/βιομηχανική χρήση σημαίνει χρήση μόνο εκτός της οικιακής σφαίρας από εξειδικευμένο προσωπικό."
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "Αναγνωριστικό μοντέλου προϊόντος",
+        "help": "Ένα διαβατήριο καλύπτει ένα μοντέλο. Μια αλλαγή στη σύνθεση ή στην παραγωγή που αλλάζει την ετικέτα μπορεί να το καταστήσει νέο μοντέλο."
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "Αναφορά τύπου, παρτίδας ή σειράς",
+        "help": "Η ετικέτα χρειάζεται αριθμό τύπου, αριθμό παρτίδας ή άλλο στοιχείο ιχνηλασιμότητας."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "π.χ., 3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "label": "Ονομαστική ποσότητα με μονάδα μέτρησης",
+        "placeholder": "π.χ., 1.5 L, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "label": "Αγορές της ΕΕ και γλώσσες ετικέτας",
+        "help": "Η διατύπωση της ετικέτας και των πληροφοριών ασφάλειας πρέπει να είναι διαθέσιμη στη γλώσσα ή τις γλώσσες που απαιτούνται σε κάθε αγορά.",
+        "placeholder": "π.χ., Γαλλία (Γαλλικά), Γερμανία (Γερμανικά)"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "Προφίλ πληροφοριών",
+        "help": "Ο κανονισμός (EU) 2026/405 εφαρμόζεται από τις 23 Σεπτεμβρίου 2029. Επιλέξτε το σύνολο δεδομένων του παραρτήματος VI για να προετοιμάσετε τα μελλοντικά δεδομένα του διαβατηρίου. Η συμπλήρωσή του δεν καθιστά το διαβατήριο συμμορφούμενο ή πιστοποιημένο."
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "Βιοκτόνοι ή απολυμαντικοί ισχυρισμοί;",
+        "help": "Οι απολυμαντικοί ή αντιμικροβιακοί ισχυρισμοί απαιτούν άδεια κυκλοφορίας βιοκτόνου προϊόντος βάσει του κανονισμού (EU) No 528/2012."
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "Νόμιμη επωνυμία παρασκευαστή",
+        "help": "Η ετικέτα αναγράφει την επωνυμία, την ταχυδρομική διεύθυνση, την ηλεκτρονική διεύθυνση και τον αριθμό τηλεφώνου του παρασκευαστή. Η ταχυδρομική διεύθυνση πρέπει να είναι ένα μοναδικό σημείο εντός της Ένωσης."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Οδός και αριθμός"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Ταχυδρομικός κώδικας"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Πόλη"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Χώρα"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Ηλεκτρονική διεύθυνση (email)",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "label": "Αριθμός τηλεφώνου",
+        "placeholder": "π.χ., +30 210 1234567"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Είναι ο παρασκευαστής εγκατεστημένος εκτός της ΕΕ;"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "Νόμιμη επωνυμία εισαγωγέα",
+        "help": "Όταν ο παρασκευαστής είναι εγκατεστημένος εκτός της ΕΕ, απαιτούνται επίσης τα στοιχεία επικοινωνίας του εισαγωγέα."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Οδός και αριθμός"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Ταχυδρομικός κώδικας"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Πόλη"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Χώρα"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Ηλεκτρονική διεύθυνση (email)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "Εξουσιοδοτημένος αντιπρόσωπος στην ΕΕ: νόμιμη επωνυμία",
+        "help": "Ο παρασκευαστής που είναι εγκατεστημένος εκτός της ΕΕ πρέπει να ορίσει εξουσιοδοτημένο αντιπρόσωπο (άρθρο 9 του κανονισμού (EU) 2026/405)."
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Εξουσιοδοτημένος αντιπρόσωπος στην ΕΕ: διεύθυνση",
+        "placeholder": "Καταστατική έδρα εντός της Ευρωπαϊκής Ένωσης"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "Εξουσιοδοτημένος αντιπρόσωπος στην ΕΕ: ηλεκτρονική διεύθυνση (email)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "Αξιολόγηση ταξινόμησης CLP",
+        "help": "Χρησιμοποιήστε την ταξινόμηση που έχει όντως αξιολογηθεί για αυτό το μείγμα βάσει του κανονισμού (EC) No 1272/2008. Μην τη συνάγετε από το pH ή τα εικονογράμματα."
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "Συμπληρωματικές δηλώσεις ετικέτας",
+        "help": "Για παράδειγμα EUH208, όπου εφαρμόζεται."
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "Προειδοποιητική λέξη"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "Εικονογράμματα GHS"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "label": "Δηλώσεις επικινδυνότητας",
+        "help": "Εισαγάγετε τη διατύπωση ακριβώς όπως στην εγκεκριμένη ετικέτα. Χρησιμοποιήστε το κουμπί μετάφρασης για κάθε γλώσσα αγοράς. Αυτή η διατύπωση δεν μεταφράζεται ποτέ αυτόματα.",
+        "placeholder": "π.χ., H315 Προκαλεί ερεθισμό του δέρματος"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "label": "Δηλώσεις προφύλαξης",
+        "help": "Εισαγάγετε τη διατύπωση ακριβώς όπως στην εγκεκριμένη ετικέτα. Χρησιμοποιήστε το κουμπί μετάφρασης για κάθε γλώσσα αγοράς. Αυτή η διατύπωση δεν μεταφράζεται ποτέ αυτόματα.",
+        "placeholder": "π.χ., P280 Να φοράτε προστατευτικά γάντια"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "Κοινοποίηση στα κέντρα δηλητηριάσεων (Παράρτημα VIII του CLP)",
+        "help": "Η υποχρέωση UFI και η κοινοποίηση εξαρτώνται από τους κινδύνους για την υγεία ή τους φυσικούς κινδύνους και τις ισχύουσες εξαιρέσεις. Οι περιβαλλοντικοί κίνδυνοι από μόνοι τους δεν συνεπάγονται υποχρέωση κοινοποίησης."
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "Λόγος και νομική βάση για την εξαίρεση"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Μοναδικός αναγνωριστικός κωδικός τύπου (UFI)",
+        "help": "Τέσσερις ομάδες τεσσάρων χαρακτήρων. Η μορφή ελέγχεται, αλλά η εφαρμογή δεν μπορεί να επαληθεύσει την υποβολή σε κέντρο δηλητηριάσεων.",
+        "placeholder": "π.χ., N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "Υποβολές σε κέντρα δηλητηριάσεων"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "Απαίτηση παροχής δελτίου δεδομένων ασφαλείας",
+        "help": "Ένας διαδικτυακός σύνδεσμος δεν εκπληρώνει από μόνος του την υποχρέωση παροχής δελτίου δεδομένων ασφαλείας σύμφωνα με το άρθρο 31 του REACH."
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "Δημόσιος σύνδεσμος (URL) δελτίου δεδομένων ασφαλείας",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
-        "placeholder": "e.g., English, French, German"
+        "label": "Γλώσσες δελτίου δεδομένων ασφαλείας",
+        "placeholder": "π.χ., Αγγλικά, Γαλλικά, Γερμανικά"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "Ημερομηνία αναθεώρησης δελτίου δεδομένων ασφαλείας",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "Επικοινωνία έκτακτης ανάγκης (κέντρο δηλητηριάσεων ή 24ωρος αριθμός)",
+        "placeholder": "Τηλεφωνικός αριθμός για περιπτώσεις έκτακτης ανάγκης"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "Κατηγορίες συστατικών που προστίθενται σε ποσοστό άνω του 0,2% κατά βάρος",
+        "help": "Επιλέξτε κάθε κατηγορία που προστίθεται σε ποσοστό άνω του 0,2% κατά βάρος και, στη συνέχεια, επιλέξτε την κλάση περιεκτικότητάς της κατά βάρος παρακάτω (παράρτημα V μέρος Α σημείο 1 στοιχείο η) υποπερίπτωση i))."
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "Φωσφορικές ενώσεις: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "Φωσφονικές ενώσεις: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "Ανιονικές επιφανειοδραστικές ουσίες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "Κατιονικές επιφανειοδραστικές ουσίες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "Αμφοτερικές επιφανειοδραστικές ουσίες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "Μη ιονικές επιφανειοδραστικές ουσίες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "Λευκαντικοί παράγοντες με βάση το οξυγόνο: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "Λευκαντικοί παράγοντες με βάση το χλώριο: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA και τα άλατά του: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA και τα άλατά του: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "Φαινόλες και αλογονωμένες φαινόλες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "Παραδιχλωροβενζόλιο: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "Αρωματικοί υδρογονάνθρακες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "Αλειφατικοί υδρογονάνθρακες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "Αλογονωμένοι υδρογονάνθρακες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "Σάπωνες: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "Ζεόλιθοι: κλάση περιεκτικότητας κατά βάρος"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "Πολυκαρβοξυλικές ενώσεις: κλάση περιεκτικότητας κατά βάρος"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "Κατηγορίες συστατικών που προστίθενται σε οποιαδήποτε συγκέντρωση",
+        "help": "Παράρτημα V μέρος Α σημείο 1 στοιχείο η) υποπερίπτωση ii). Τα απολυμαντικά περιλαμβάνονται στον κατάλογο σύμφωνα με τους ισχύοντες κανόνες και παύουν να αποτελούν κατηγορία του καταλόγου από τις 23 Σεπτεμβρίου 2029."
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "Περιέχονται συντηρητικά;",
+        "help": "Τα συντηρητικά περιλαμβάνονται στον κατάλογο σύμφωνα με το παράρτημα V μέρος Α σημείο 1 στοιχείο η) υποπερίπτωση iii), εκτός εάν φέρουν ήδη επισήμανση σύμφωνα με το άρθρο 18 παράγραφος 3 στοιχείο β) του CLP ή το άρθρο 58 του κανονισμού για τα βιοκτόνα προϊόντα."
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "label": "Συντηρητικά",
+        "help": "Χρησιμοποιήστε την ονομασία INCI όπου είναι δυνατόν.",
+        "placeholder": "π.χ., Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "Αλλεργιογόνες αρωματικές ουσίες που προστίθενται σε ποσοστό άνω του 0,01% κατά βάρος;",
+        "help": "Οι αλλεργιογόνες ουσίες από τον κατάλογο του παραρτήματος V μέρος Δ που προστίθενται σκοπίμως σε ποσοστό άνω του 0,01% κατά βάρος αναγράφονται ονομαστικά στην ετικέτα, εκτός εάν φέρουν ήδη επισήμανση σύμφωνα με τον κανονισμό CLP."
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "Περιεχόμενες αλλεργιογόνες αρωματικές ουσίες",
+        "help": "Επιλέξτε κάθε αλλεργιογόνο από τον επίσημο κατάλογο των 105 καταχωρίσεων."
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "Δημόσια ιστοσελίδα συστατικών",
+        "help": "Οι ισχύοντες κανόνες (κανονισμός (EC) No 648/2004, παράρτημα VII μέρος Δ) απαιτούν τη διατήρηση δημόσιου καταλόγου συστατικών για τα καταναλωτικά προϊόντα. Δεν απαιτεί κλάσεις ποσοστών ή αριθμούς CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "Ισοδύναμες πληροφορίες για τα συστατικά που παρέχονται σε επαγγελματίες χρήστες"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
-        "placeholder": "e.g., OECD 301 series"
+        "label": "Μέθοδος δοκιμής βιοδιασπασιμότητας επιφανειοδραστικών ουσιών",
+        "placeholder": "π.χ., σειρά OECD 301"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "Αναφορά αποδεικτικών στοιχείων βιοδιασπασιμότητας",
+        "help": "Αναφέρετε την έκθεση δοκιμής ή τη δήλωση του προμηθευτή. Μην ανεβάζετε ή επικολλάτε εμπιστευτικά αρχεία."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "Περιέχει σκοπίμως προστιθέμενα μικροσωματίδια συνθετικών πολυμερών;",
+        "help": "Ο κανονισμός (EU) 2023/2055 τα περιορίζει βάσει της καταχώρισης 78 του παραρτήματος XVII του REACH. Τα απορρυπαντικά επηρεάζονται από τις 17 Οκτωβρίου 2028."
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "Οδηγίες χρήσης και ειδικές προφυλάξεις",
+        "help": "Μέθοδος, κατάλληλα υφάσματα ή επιφάνειες και τυχόν ειδικές προφυλάξεις."
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "Τύπος απορρυπαντικού πλυντηρίου ρούχων",
+        "help": "Καθορίζει το τυπικό φορτίο: 4,5 kg στεγνών ρούχων για απορρυπαντικά υψηλής απόδοσης, 2,5 kg για απορρυπαντικά υψηλής απόδοσης για σύντομους κύκλους και για απορρυπαντικά για ευαίσθητα."
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "Μονάδα δοσολογίας"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
-        "placeholder": "e.g., 60"
+        "label": "Δόση για μαλακό νερό (ανά τυπικό φορτίο)",
+        "placeholder": "π.χ., 60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
-        "placeholder": "e.g., 75"
+        "label": "Δόση για μέτριας σκληρότητας νερό (ανά τυπικό φορτίο)",
+        "placeholder": "π.χ., 75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
-        "placeholder": "e.g., 90"
+        "label": "Δόση για σκληρό νερό (ανά τυπικό φορτίο)",
+        "placeholder": "π.χ., 90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "Δοσολογία για διαδικασίες πλύσης ενός και δύο κύκλων",
+        "help": "Το παράρτημα V μέρος Β σημείο 1 στοιχείο α) απαιτεί δοσολογία για διαδικασίες πλύσης ενός ή δύο κύκλων."
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "Τυπικά φορτία ανά συσκευασία (μέτριας σκληρότητας νερό, 2,5 millimoles CaCO3 ανά λίτρο)",
+        "help": "Για τα ανταλλακτικά επαναπλήρωσης, αναφέρετε τον αριθμό των φορτίων ανά 1 λίτρο ή 1 kg προϊόντος. Δεν απαιτείται για ανταλλακτικά επαναπλήρωσης σε μονάδες."
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "Χωρητικότητα δοσομετρητή",
+        "help": "Χωρητικότητα τυχόν παρεχόμενου δοσομετρητή, με σαφείς ενδείξεις για τις δόσεις για μαλακό, μέτριας σκληρότητας και σκληρό νερό."
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "Τυπική δόση για τον κύριο κύκλο",
+        "help": "Για κανονικά λερωμένα σερβίτσια σε πλήρως φορτωμένο πλυντήριο πιάτων 12 σερβίτσιων."
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "Προσαρμογή της δόσης ανάλογα με τη σκληρότητα του νερού"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "Συνιστώμενη αραίωση και ποσότητα ανά επιφάνεια",
+        "help": "Παράρτημα V μέρος Β σημείο 4: αναφέρετε τη συνιστώμενη αραίωση και ποσότητα ανά επιφάνεια, ή άλλες οδηγίες χρήσης, ώστε το προϊόν να μην χρησιμοποιείται σε υπερβολική ποσότητα."
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "Ολικός φώσφορος στη συνιστώμενη δόση (γραμμάρια)",
+        "help": "Όρια παραρτήματος III: κάτω από 0,5 g ανά τυπικό φορτίο πλυντηρίου ρούχων σε σκληρό νερό και κάτω από 0,3 g ανά τυπική δόση πλυντηρίου πιάτων."
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "Αποθήκευση και απόρριψη"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "Υλικό πρωτογενούς συσκευασίας"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "Ανακυκλώσιμη συσκευασία;"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "Οδηγίες ανακύκλωσης"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
-        "placeholder": "e.g., 30"
+        "label": "Ανακυκλωμένο περιεχόμενο στη συσκευασία (%)",
+        "placeholder": "π.χ., 30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "Διατίθεται ανταλλακτικό επαναπλήρωσης;"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "Πωλείται μέσω σταθμού επαναπλήρωσης;",
+        "help": "Τα σημεία επαναπλήρωσης έχουν τη δική τους υποχρέωση για φορέα δεδομένων σύμφωνα με το άρθρο 21 παράγραφος 4 του κανονισμού (EU) 2026/405."
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "Καταχώριση διευρυμένης ευθύνης του παραγωγού για τη συσκευασία ανά αγορά",
+        "help": "Μία γραμμή ανά αγορά.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "Ισχύουσα άδεια ή νόμιμη μεταβατική βάση"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "Δραστικές ουσίες και εγκεκριμένες χρήσεις"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "label": "Περιβαλλοντικοί ισχυρισμοί που διατυπώνονται στο προϊόν ή στη συσκευασία",
+        "placeholder": "π.χ., «Φιάλη κατασκευασμένη με 30% ανακυκλωμένο πλαστικό»"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Αναφορά αποδεικτικών στοιχείων τεκμηρίωσης",
+        "placeholder": "Αναφορά μελέτης, πιστοποιητικού ή φορέα επαλήθευσης για κάθε ισχυρισμό"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "Οι ισχυρισμοί αποφεύγουν γενικούς περιβαλλοντικούς όρους;",
+        "help": "Γενικοί ισχυρισμοί όπως «φιλικό προς το περιβάλλον» ή «βιοδιασπώμενο» περιορίζονται από τις 27 Σεπτεμβρίου 2026 βάσει της οδηγίας (EU) 2024/825."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "Αριθμός άδειας οικολογικού σήματος της ΕΕ",
+        "help": "Εισαγάγετε τον αριθμό μητρώου της άδειας μόνο εάν το προϊόν κατέχει άδεια οικολογικού σήματος της ΕΕ. Το σήμα εμφανίζεται στο δημόσιο διαβατήριο μόνο όταν έχει εισαχθεί αριθμός."
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "Αξιολόγηση περιορισμών και υποχρεώσεων του REACH",
+        "help": "Ελέγξτε τους περιορισμούς του παραρτήματος XVII και τις υποχρεώσεις που ισχύουν για τις ουσίες-συστατικά."
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "Έχω ελέγξει τη φυσική ετικέτα και τις παρεχόμενες πληροφορίες ασφάλειας"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "Η ετικέτα αναφέρει ότι το προϊόν προορίζεται μόνο για επαγγελματική χρήση"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "Σύνδεσμος προς το προηγούμενο διαβατήριο, όταν αυτή η καταχώριση αντικαθιστά κάποια άλλη",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "Ημερομηνία επισκόπησης πληροφοριών προϊόντος",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "Αναφορά αποδεικτικών στοιχείων συμμόρφωσης του παρασκευαστή"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "Αναφορά αναθεώρησης περιεχομένου προϊόντος"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "Αναφορά αναθεώρησης διαδικασίας παρασκευής"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "Μόνιμο αναγνωριστικό προϊόντος",
+        "help": "Εισαγάγετε το πραγματικό αναγνωριστικό. Ένα εσωτερικό αναγνωριστικό καταχώρισης δεν αποτελεί αναγνωριστικό που έχει εκδοθεί σύμφωνα με τα πρότυπα που αναφέρονται στον ESPR."
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "Σύστημα αναγνωριστικού και εκδότης"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "Μοναδικό αναγνωριστικό φορέα του παρασκευαστή"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "Πάροχος υπηρεσιών διαβατηρίου που κατέχει το εφεδρικό αντίγραφο (URL)",
+        "help": "Αναφέρετε έναν πάροχο με τον οποίο έχετε όντως συνάψει συμφωνία. Η εφαρμογή δεν δημιουργεί υπηρεσία εφεδρικού αντιγράφου.",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "Αναφορά συμφωνίας υπηρεσίας εφεδρικού αντιγράφου"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "Κωδικός εμπορευμάτων τελωνείου"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "Κωδικός εμπορεύματος (κανονισμός (EEC) No 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "Λόγος για τον οποίο δεν ισχύει κωδικός εμπορεύματος"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "Ο παρασκευαστής εκδίδει αυτό το διαβατήριο με αποκλειστική του ευθύνη"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "Δήλωση ότι έχει αποδειχθεί η συμμόρφωση με τον κανονισμό (EU) 2026/405",
+        "help": "Συμπληρώστε το μόνο μετά την ολοκλήρωση της αξιολόγησης από τον ίδιο τον παρασκευαστή. Η εφαρμογή δεν δημιουργεί ποτέ δήλωση συμμόρφωσης."
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "Άλλη ενωσιακή νομοθεσία που ισχύει για το προϊόν"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "Τελευταία ημερομηνία διάθεσης του μοντέλου στην αγορά",
+        "help": "Το σημείο εκκίνησης για τη δεκαετή υποχρέωση διαθεσιμότητας.",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "Πού τοποθετείται ο φορέας δεδομένων",
+        "help": "Άρθρο 21 παράγραφος 4: φυσικά παρών, ανεξίτηλος, μηχανικώς αναγνώσιμος και ορατός πριν από την αγορά, με τη δήλωση «Σαρώστε για πιο αναλυτικές πληροφορίες σχετικά με το προϊόν». Απαιτείται επίσης σε σταθμούς επαναπλήρωσης και σε εξ αποστάσεως πωλήσεις."
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "Ο φορέας δεδομένων πληροί αυτές τις απαιτήσεις"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "Η διατύπωση της ετικέτας και των πληροφοριών ασφάλειας έχει ελεγχθεί σε κάθε γλώσσα της αγοράς-στόχου"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "Τρόπος γνωστοποίησης ουσιών",
+        "help": "Η εξαίρεση ισχύει μόνο για απορρυπαντικά και επιφανειοδραστικές ουσίες για βιομηχανική και επαγγελματική/βιομηχανική χρήση, όπου οι πληροφορίες παρέχονται μέσω ισοδύναμου δελτίου δεδομένων ασφαλείας σύμφωνα με το άρθρο 31 του REACH."
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "Όλες οι σκοπίμως προστιθέμενες ουσίες και τα υπολειμματικά συντηρητικά που απαιτείται να αναγράφονται στην ετικέτα",
+        "help": "Προσδιορίστε τις ουσίες όπως απαιτείται από το άρθρο 18 παράγραφος 3 του κανονισμού (EC) No 1272/2008. Μην εισάγετε συγκεντρώσεις ή εμπιστευτικά δεδομένα σύνθεσης. Ό,τι αποθηκεύεται σε αυτή την κατηγορία είναι δημόσιο."
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "Βάση για την απουσία ουσιών προς καταχώριση"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "Ο κατάλογος είναι πλήρης, περιλαμβάνει τα υπολειμματικά συντηρητικά που πληρούν τις προϋποθέσεις και χρησιμοποιεί ταυτότητες που έχουν αξιολογηθεί σύμφωνα με το άρθρο 18 παράγραφος 3 του CLP"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "Χρησιμοποιείται μόνο εκτός της οικιακής σφαίρας από εξειδικευμένο προσωπικό"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "Ισοδύναμες πληροφορίες για τις ουσίες έχουν όντως παρασχεθεί σε δελτίο δεδομένων ασφαλείας σύμφωνα με το άρθρο 31 του REACH"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "URL ισοδύναμου δελτίου δεδομένων ασφαλείας",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "Γλώσσες ισοδύναμου δελτίου δεδομένων ασφαλείας"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "Ημερομηνία αναθεώρησης ισοδύναμου δελτίου δεδομένων ασφαλείας",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "Προστίθενται σκοπίμως μικροοργανισμοί;",
+        "help": "Η οδός του ισοδύναμου δελτίου δεδομένων ασφαλείας δεν καταργεί ποτέ τον κατάλογο μικροοργανισμών."
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "Όλοι οι σκοπίμως προστιθέμενοι μικροοργανισμοί",
+        "help": "Αναφέρετε το γένος, το είδος και το όνομα ή τον κωδικό του στελέχους για κάθε μικροοργανισμό."
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "Αναφορά αξιολόγησης ασφάλειας (Παράρτημα II)"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "Διάρκεια ζωής και συνθήκες αποθήκευσης",
+        "help": "Η ετικέτα ενός απορρυπαντικού που περιέχει μικροοργανισμούς αναγράφει τη διάρκεια ζωής."
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "Προορίζεται για χρήση σε επιφάνειες που έρχονται σε επαφή με τρόφιμα;",
+        "help": "Εκτός εάν το προϊόν έχει αξιολογηθεί ως ασφαλές για αυτή τη χρήση, η ετικέτα αναφέρει ότι δεν πρέπει να χρησιμοποιείται σε επιφάνειες που έρχονται σε επαφή με τρόφιμα."
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "Προφυλάξεις και οδηγίες για επιφάνειες που έρχονται σε επαφή με τρόφιμα"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "Απορρυπαντικό πλυντηρίου ρούχων",
+        "laundry_additive": "Πρόσθετο πλυντηρίου ρούχων ή πρόπλυσης",
+        "machine_dishwashing": "Απορρυπαντικό πλυντηρίου πιάτων",
+        "dishwasher_additive": "Λαμπρυντικό ή πρόσθετο πλυντηρίου πιάτων",
+        "hand_dishwashing": "Απορρυπαντικό για πλύσιμο στο χέρι",
+        "all_purpose": "Καθαριστικό γενικής χρήσης ή επιφανειών",
+        "kitchen": "Καθαριστικό κουζίνας",
+        "bathroom": "Καθαριστικό μπάνιου",
+        "toilet": "Καθαριστικό τουαλέτας",
+        "glass": "Καθαριστικό τζαμιών",
+        "floor": "Καθαριστικό δαπέδου",
+        "descaler": "Αφαλατωτικό",
+        "bleach": "Λευκαντικό",
+        "other": "Άλλο απορρυπαντικό"
       },
       "productForm": {
-        "liquid": "Liquid",
-        "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
-        "spray": "Spray",
-        "wipe": "Wipe",
-        "paste": "Paste",
-        "other": "Other"
+        "liquid": "Υγρό",
+        "gel": "Τζελ",
+        "powder": "Σκόνη",
+        "tablet": "Ταμπλέτα",
+        "capsule": "Κάψουλα ή αμπούλα",
+        "spray": "Σπρέι",
+        "wipe": "Μαντηλάκι",
+        "paste": "Πάστα",
+        "other": "Άλλο"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "Ναι",
+        "no": "Όχι",
+        "review": "Απαιτείται αξιολόγηση"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "Καταναλωτές, συμπεριλαμβανομένης της μικτής καταναλωτικής και επαγγελματικής χρήσης",
+        "professional": "Μόνο για επαγγελματική χρήση",
+        "industrial": "Μόνο για βιομηχανική και επαγγελματική/βιομηχανική χρήση"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "Τρέχουσες πληροφορίες προϊόντος",
+        "annex_vi": "Πλήρες σύνολο δεδομένων του παραρτήματος VI για τους κανόνες του 2029"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ναι",
+        "no": "Όχι"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "Δεν ταξινομείται ως επικίνδυνο",
+        "environment": "Μόνο περιβαλλοντικοί κίνδυνοι",
+        "health_physical": "Κίνδυνοι για την υγεία ή φυσικοί κίνδυνοι, με ή χωρίς περιβαλλοντικούς κινδύνους",
+        "review": "Απαιτείται αξιολόγηση"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "Κίνδυνος",
+        "warning": "Προσοχή",
+        "not_applicable": "Δεν εφαρμόζεται μετά από αξιολόγηση"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 Εκρηγνυόμενη βόμβα",
+        "ghs02": "GHS02 Φλόγα",
+        "ghs03": "GHS03 Φλόγα πάνω από κύκλο",
+        "ghs04": "GHS04 Φιάλη αερίου",
+        "ghs05": "GHS05 Διάβρωση",
+        "ghs06": "GHS06 Νεκροκεφαλή και χιαστά οστά",
+        "ghs07": "GHS07 Θαυμαστικό",
+        "ghs08": "GHS08 Κίνδυνος για την υγεία",
+        "ghs09": "GHS09 Περιβάλλον",
+        "none": "Δεν εφαρμόζεται εικονόγραμμα"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "Απαιτείται κοινοποίηση",
+        "exempt": "Τεκμηριωμένη εξαίρεση",
+        "review": "Απαιτείται αξιολόγηση"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "Υποβλήθηκε για τις σχετικές αγορές",
+        "pending": "Σε εκκρεμότητα"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "Πρέπει να παρέχεται",
+        "on_request": "Πρέπει να διατίθεται κατόπιν αιτήματος",
+        "not_required": "Δεν απαιτείται κατόπιν αξιολόγησης",
+        "review": "Απαιτείται αξιολόγηση"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "Φωσφορικές ενώσεις",
+        "phosphonates": "Φωσφονικές ενώσεις",
+        "anionic_surfactants": "Ανιονικές επιφανειοδραστικές ουσίες",
+        "cationic_surfactants": "Κατιονικές επιφανειοδραστικές ουσίες",
+        "amphoteric_surfactants": "Αμφοτερικές επιφανειοδραστικές ουσίες",
+        "nonionic_surfactants": "Μη ιονικές επιφανειοδραστικές ουσίες",
+        "oxygen_bleach": "Λευκαντικοί παράγοντες με βάση το οξυγόνο",
+        "chlorine_bleach": "Λευκαντικοί παράγοντες με βάση το χλώριο",
+        "edta": "EDTA και τα άλατά του",
+        "nta": "NTA και τα άλατά του",
+        "phenols": "Φαινόλες και αλογονωμένες φαινόλες",
+        "paradichlorobenzene": "Παραδιχλωροβενζόλιο",
+        "aromatic_hydrocarbons": "Αρωματικοί υδρογονάνθρακες",
+        "aliphatic_hydrocarbons": "Αλειφατικοί υδρογονάνθρακες",
+        "halogenated_hydrocarbons": "Αλογονωμένοι υδρογονάνθρακες",
+        "soap": "Σάπωνες",
+        "zeolites": "Ζεόλιθοι",
+        "polycarboxylates": "Πολυκαρβοξυλικές ενώσεις"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "Κάτω του 5%",
+        "5to15": "5% ή περισσότερο αλλά κάτω του 15%",
+        "15to30": "15% ή περισσότερο αλλά κάτω του 30%",
+        "gte30": "30% και άνω"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "Ένζυμα",
+        "micro_organisms": "Μικροοργανισμοί",
+        "optical_brighteners": "Οπτικοί λευκαντικοί παράγοντες",
+        "perfumes": "Αρωματικές ουσίες",
+        "disinfectants": "Απολυμαντικά (ισχύοντες κανόνες έως τις 23 Σεπτεμβρίου 2029)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ναι",
+        "no": "Όχι",
+        "unknown": "Άγνωστο"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "Υψηλής απόδοσης",
+        "heavy_duty_short": "Υψηλής απόδοσης για σύντομους κύκλους",
+        "light_duty": "Χαμηλής απόδοσης ή για ευαίσθητα υφάσματα"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "Χιλιοστόλιτρα",
+        "g": "Γραμμάρια",
+        "units": "Μονάδες (ταμπλέτες, κάψουλες ή φακελίσκοι)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
-        "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "other_plastic": "Άλλο πλαστικό",
+        "metal": "Μέταλλο",
+        "glass": "Γυαλί",
+        "paper_cardboard": "Χαρτί ή χαρτόνι",
+        "composite": "Σύνθετο υλικό",
+        "water_soluble_film": "Υδατοδιαλυτό φιλμ",
+        "other": "Άλλο"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "Εξετάστηκε από τον προμηθευτή",
+        "review": "Απαιτείται αξιολόγηση"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "Εφαρμοστέο",
+        "not_applicable": "Μη εφαρμοστέο κατόπιν αξιολόγησης"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "Πλήρης κατάλογος ουσιών",
+        "equivalent_sds": "Ισοδύναμο δελτίο δεδομένων ασφαλείας (μόνο για βιομηχανική και επαγγελματική χρήση)",
+        "no_added_substances": "Καμία ουσία προς καταχώριση κατόπιν αξιολόγησης"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "Αυτό το προϊόν ενδέχεται να μην εμπίπτει στον ορισμό του απορρυπαντικού του άρθρου 2 παράγραφος 1 του κανονισμού (EU) 2026/405. Ελέγξτε το πεδίο εφαρμογής πριν χρησιμοποιήσετε αυτήν την κατηγορία.",
+      "biocidal": "Οι ισχυρισμοί περί απολύμανσης ή αντιμικροβιακής δράσης απαιτούν άδεια βιοκτόνου προϊόντος βάσει του κανονισμού (EU) No 528/2012.",
+      "assessmentNeeded": "Αυτή η αξιολόγηση δεν έχει ολοκληρωθεί. Διευθετήστε το ζήτημα πριν βασιστείτε στο διαβατήριο.",
+      "microparticles": "Ελέγξτε τον κανονισμό (EU) 2023/2055 σχετικά με τα μικροσωματίδια συνθετικών πολυμερών πριν από τη διάθεση του προϊόντος στην αγορά. Μια απάντηση «Άγνωστο» πρέπει να διευθετηθεί με τον προμηθευτή.",
+      "phosphorusLaundry": "Η ολική περιεκτικότητα σε φωσφόρο {{value}} g δεν είναι κάτω από το όριο των 0,5 g για απορρυπαντικό πλυντηρίου ρούχων για οικιακή χρήση σε σκληρό νερό (Παράρτημα III του κανονισμού (EU) 2026/405).",
+      "phosphorusDishwasher": "Η ολική περιεκτικότητα σε φωσφόρο {{value}} g δεν είναι κάτω από το όριο των 0,3 g για απορρυπαντικό αυτόματου πλυντηρίου πιάτων για οικιακή χρήση (Παράρτημα III του κανονισμού (EU) 2026/405).",
+      "percentageRange": "Το ποσοστό πρέπει να είναι μεταξύ 0 και 100. Εισαγάγατε {{value}}.",
+      "positiveNumber": "Εισαγάγετε έναν αριθμό μεγαλύτερο του μηδενός. Εισαγάγατε {{value}}.",
+      "allergensMissing": "Απαντήσατε ναι, αλλά δεν έχει επιλεγεί κανένα αλλεργιογόνο. Επιλέξτε κάθε αλλεργιογόνο από τον επίσημο κατάλογο.",
+      "ufiFormat": "Ένας κωδικός UFI αποτελείται από τέσσερις ομάδες τεσσάρων χαρακτήρων, για παράδειγμα N1QV-R02N-J00M-WQD5. Η μορφή ελέγχεται, αλλά δεν ελέγχεται η υποβολή στο κέντρο δηλητηριάσεων.",
+      "urlFormat": "Χρησιμοποιήστε μια πλήρη διεύθυνση ιστού που να ξεκινά με http:// ή https://.",
+      "emailFormat": "Εισαγάγετε μια έγκυρη διεύθυνση ηλεκτρονικού ταχυδρομείου.",
+      "dateFormat": "Χρησιμοποιήστε μια έγκυρη ημερομηνία σε μορφή YYYY-MM-DD.",
+      "microorganismSafety": "Έχουν προστεθεί μικροοργανισμοί, αλλά δεν έχει εισαχθεί καμία αναφορά αξιολόγησης της ασφάλειας."
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "Απορρυπαντικά DPP: δήλωση αποποίησης ευθύνης σχετικά με τη συμμόρφωση",
+      "text": "Ο κανονισμός (EU) 2026/405 για τα απορρυπαντικά και τις επιφανειοδραστικές ουσίες εφαρμόζεται από τις 23 Σεπτεμβρίου 2029. Οι κανόνες για το ψηφιακό διαβατήριο προϊόντος, τα δικαιώματα πρόσβασης και τα στοιχεία του φορέα δεδομένων δεν έχουν ακόμη καθοριστεί με εκτελεστική πράξη και, μέχρι τότε, εφαρμόζεται ο κανονισμός (EC) No 648/2004. Αυτό το εργαλείο συλλέγει πληροφορίες για το προϊόν και προετοιμάζει δεδομένα για το διαβατήριο. Δεν αποτελεί πιστοποίηση ή έγκριση και δεν πρέπει να εκλαμβάνεται ως τελική νομική συμβουλή. Όλα όσα αποθηκεύονται σε αυτήν την κατηγορία είναι δημόσια."
     }
   }
 }
