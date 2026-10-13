@@ -2158,5 +2158,738 @@
       "scannerTitle": "Rõivasildi skanner",
       "scannerDescription": "Pildista või laadi üles sisseõmmeldud hooldussilt, tooteetikett või tehnilise kirjelduse PDF — tehisintellekt loeb kiukoostise, hooldussümbolid, päritoluriigi, sertifikaadid ja stiiliviited."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "Toote identsus",
+        "description": "Toode, mudel ja jälgitavus"
+      },
+      "responsible_operators": {
+        "title": "Kes vastutab",
+        "description": "Tootja, importija ja ELi volitatud esindaja, eraldi osapooltena"
+      },
+      "classification": {
+        "title": "Ohtlikkuse klassifikatsioon ja ohutusteave",
+        "description": "CLP klassifikatsioon, märgistuse ohuteave, mürgistusteabekeskus ja ohutuskaart"
+      },
+      "ingredients": {
+        "title": "Koostisosad ja märgistusteave",
+        "description": "Märgistuse sisu vastavalt määruse (EU) 2026/405 V lisale ja kehtivatele eeskirjadele"
+      },
+      "use": {
+        "title": "Ohutu kasutamine ja doseerimine",
+        "description": "Doseerimis- ja kasutusteave vastavalt V lisa B osale"
+      },
+      "packaging": {
+        "title": "Pakendamine ja ringlussevõtt",
+        "description": "Pakend, ringlussevõetavus ja täitepakendid"
+      },
+      "biocide": {
+        "title": "Biotsiidi hindamine",
+        "description": "Kohaldatakse desinfitseerivate või antimikroobsete väidete esitamisel"
+      },
+      "green_claims": {
+        "title": "Keskkonnaalased väited",
+        "description": "Toetab direktiivi (EU) 2024/825, mida kohaldatakse alates 27. septembrist 2026"
+      },
+      "review": {
+        "title": "Tarnija ülevaatus ja passi koostamine",
+        "description": "Kontrollid, mille tarnija teeb. Rakendus ei saa neid kontrollida."
+      },
+      "annex_identity": {
+        "title": "VI lisa: toote identsus ja tootja avaldus",
+        "description": "Ettevalmistus digitaalseks tootepassiks, mis on nõutav alates 23. septembrist 2029. Täielik andmekogum ei ole sertifikaat, kontrollitud identifikaator ega registrisse esitamine."
+      },
+      "annex_substances": {
+        "title": "VI lisa: ained",
+        "description": "Tahtlikult lisatud ainete täielik loetelu (VI lisa A osa punkt h)"
+      },
+      "annex_microorganisms": {
+        "title": "VI lisa: mikroorganismid",
+        "description": "Kõik tahtlikult lisatud mikroorganismid (VI lisa A osa punkt i)"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Kaubamärgi nimi"
+      },
+      "product_type": {
+        "label": "Toote tüüp"
+      },
+      "product_type_other": {
+        "label": "Toote tüüp (täpsustage)"
+      },
+      "product_form": {
+        "label": "Toote vorm"
+      },
+      "detergent_scope": {
+        "label": "Kas toode on ette nähtud tekstiilide, nõude või pindade puhastamiseks, leotamiseks, loputamiseks või pleegitamiseks?",
+        "help": "Vt määruse (EU) 2026/405 artikli 2 lõiget 1. Värvid, liimid, lahustid ja tooted, mis ei puhasta, ei kuulu sellesse kategooriasse."
+      },
+      "scope_reason": {
+        "label": "Põhjus, miks toode ei vasta pesuaine määratlusele"
+      },
+      "use_sector": {
+        "label": "Kellele on toode ette nähtud?",
+        "help": "Tööstuslik ja institutsionaalne tähendab kasutamist ainult väljaspool kodumajapidamist erialatöötajate poolt."
+      },
+      "model_identifier": {
+        "label": "Tootemudeli identifikaator",
+        "help": "Üks pass hõlmab ühte mudelit. Koostise või tootmise muudatus, mis muudab märgistust, võib muuta selle uueks mudeliks."
+      },
+      "batch_identifier": {
+        "label": "Tüübi-, partii- või seerianumber",
+        "help": "Märgistusel peab olema tüübinumber, partiinumber või muu jälgitavuselement."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "nt 3401234567890"
+      },
+      "net_content": {
+        "label": "Nimikogus koos ühikuga",
+        "placeholder": "nt 1,5 l, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "ELi turud ja märgistuskeeled",
+        "help": "Märgistus ja ohutusalane sõnastus peavad olema kättesaadavad igal turul nõutavas keeles või keeltes.",
+        "placeholder": "nt Prantsusmaa (prantsuse), Saksamaa (saksa)"
+      },
+      "dpp_profile": {
+        "label": "Teabeprofiil",
+        "help": "Määrust (EU) 2026/405 kohaldatakse alates 23. septembrist 2029. Valige VI lisa andmekogum, et valmistada ette tulevasi passi andmeid. Selle täitmine ei muuda passi nõuetele vastavaks ega sertifitseerituks."
+      },
+      "biocidal_claims": {
+        "label": "Biotsiidsed või desinfitseerivad väited?",
+        "help": "Desinfitseerivad või antimikroobsed väited nõuavad biotsiidiloa olemasolu vastavalt määrusele (EU) No 528/2012."
+      },
+      "manufacturer_legal_name": {
+        "label": "Tootja juriidiline nimi",
+        "help": "Märgistusel on tootja nimi, postiaadress, elektronposti aadress ja telefoninumber. Postiaadress peab olema üksainus kontaktpunkt liidus."
+      },
+      "manufacturer_street": {
+        "label": "Tänava aadress"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postiindeks"
+      },
+      "manufacturer_city": {
+        "label": "Linn"
+      },
+      "manufacturer_country": {
+        "label": "Riik"
+      },
+      "manufacturer_email": {
+        "label": "Elektronposti aadress (e-post)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Telefoninumber",
+        "placeholder": "nt +33 1 23 45 67 89"
+      },
+      "manufacturer_non_eu": {
+        "label": "Kas tootja asub väljaspool ELi?"
+      },
+      "importer_legal_name": {
+        "label": "Importija juriidiline nimi",
+        "help": "Kui tootja asub väljaspool ELi, on nõutavad ka importija kontaktandmed."
+      },
+      "importer_street": {
+        "label": "Tänava aadress"
+      },
+      "importer_postal_code": {
+        "label": "Postiindeks"
+      },
+      "importer_city": {
+        "label": "Linn"
+      },
+      "importer_country": {
+        "label": "Riik"
+      },
+      "importer_email": {
+        "label": "Elektronposti aadress (e-post)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "ELi volitatud esindaja: juriidiline nimi",
+        "help": "Väljaspool ELi asuv tootja peab määrama volitatud esindaja (määruse (EU) 2026/405 artikkel 9)."
+      },
+      "eu_operator_address": {
+        "label": "ELi volitatud esindaja: aadress",
+        "placeholder": "Registreeritud aadress Euroopa Liidus"
+      },
+      "eu_operator_email": {
+        "label": "ELi volitatud esindaja: elektronposti aadress (e-post)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "CLP klassifikatsiooni hindamine",
+        "help": "Kasutage selle segu tegelikku klassifikatsiooni, mis on hinnatud vastavalt määrusele (EC) No 1272/2008. Ärge tuletage seda pH-st ega piktogrammidest."
+      },
+      "supplemental_statements": {
+        "label": "Täiendavad märgistuslaused",
+        "help": "Näiteks EUH208, kui see on kohaldatav."
+      },
+      "signal_word": {
+        "label": "Tunnussõna"
+      },
+      "pictograms": {
+        "label": "GHS piktogrammid"
+      },
+      "hazard_statements": {
+        "label": "Ohulaused",
+        "help": "Sisestage sõnastus täpselt nii, nagu see on heakskiidetud märgistusel. Kasutage iga turukeele jaoks tõlkenuppu. Seda sõnastust ei tõlgita kunagi automaatselt.",
+        "placeholder": "nt H315 Põhjustab nahaärritust"
+      },
+      "precautionary_statements": {
+        "label": "Hoiatuslaused",
+        "help": "Sisestage sõnastus täpselt nii, nagu see on heakskiidetud märgistusel. Kasutage iga turukeele jaoks tõlkenuppu. Seda sõnastust ei tõlgita kunagi automaatselt.",
+        "placeholder": "nt P280 Kanda kaitsekindaid"
+      },
+      "pcn_applicability": {
+        "label": "Mürgistusteabekeskusele teatamine (CLP VIII lisa)",
+        "help": "UFI ja teatamine sõltuvad tervise- või füüsikalistest ohtudest ning kohaldatavatest eranditest. Ainult keskkonnaohud ei tingi teatamiskohustust."
+      },
+      "pcn_exemption_reason": {
+        "label": "Erandi põhjus ja õiguslik alus"
+      },
+      "ufi_code": {
+        "label": "Kordumatu koostise identifikaator (UFI)",
+        "help": "Neli neljast märgist koosnevat rühma. Vormingut kontrollitakse, kuid rakendus ei saa mürgistusteabekeskusele esitamist kontrollida.",
+        "placeholder": "nt N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Mürgistusteabekeskusele esitamised"
+      },
+      "sds_requirement": {
+        "label": "Ohutuskaardi esitamise nõue",
+        "help": "Veebilink iseenesest ei täida ohutuskaardi esitamise kohustust vastavalt REACH artiklile 31."
+      },
+      "sds_url": {
+        "label": "Avaliku ohutuskaardi URL",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "Ohutuskaardi keeled",
+        "placeholder": "nt inglise, prantsuse, saksa"
+      },
+      "sds_revision_date": {
+        "label": "Ohutuskaardi läbivaatamise kuupäev",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Hädaabikontakt (mürgistusteabekeskus või 24-tunnine number)",
+        "placeholder": "Telefoninumber hädaolukordadeks"
+      },
+      "constituent_classes": {
+        "label": "Koostisosade klassid, mida on lisatud üle 0,2% massist",
+        "help": "Märkige iga klass, mida on lisatud üle 0,2% massist, seejärel valige allpool selle massivahemik (V lisa A osa punkt 1 alapunkt h alapunkt i)."
+      },
+      "band_phosphates": {
+        "label": "Fosfaadid: massivahemik"
+      },
+      "band_phosphonates": {
+        "label": "Fosfonaadid: massivahemik"
+      },
+      "band_anionic_surfactants": {
+        "label": "Anioonsed pindaktiivsed ained: massivahemik"
+      },
+      "band_cationic_surfactants": {
+        "label": "Katioonsed pindaktiivsed ained: massivahemik"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfoteersed pindaktiivsed ained: massivahemik"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Mitteioonsed pindaktiivsed ained: massivahemik"
+      },
+      "band_oxygen_bleach": {
+        "label": "Hapnikupõhised pleegitusained: massivahemik"
+      },
+      "band_chlorine_bleach": {
+        "label": "Klooripõhised pleegitusained: massivahemik"
+      },
+      "band_edta": {
+        "label": "EDTA ja selle soolad: massivahemik"
+      },
+      "band_nta": {
+        "label": "NTA ja selle soolad: massivahemik"
+      },
+      "band_phenols": {
+        "label": "Fenoolid ja halogeenitud fenoolid: massivahemik"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradichlorobenzene: massivahemik"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromaatsed süsivesinikud: massivahemik"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifaatsed süsivesinikud: massivahemik"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Halogeenitud süsivesinikud: massivahemik"
+      },
+      "band_soap": {
+        "label": "Seep: massivahemik"
+      },
+      "band_zeolites": {
+        "label": "Tseoliidid: massivahemik"
+      },
+      "band_polycarboxylates": {
+        "label": "Polükarboksülaadid: massivahemik"
+      },
+      "listed_constituents": {
+        "label": "Mis tahes kontsentratsioonis lisatud koostisosade klassid",
+        "help": "V lisa A osa punkt 1 alapunkt h alapunkt ii. Desinfektsioonivahendid on loetletud kehtivate eeskirjade kohaselt ja alates 23. septembrist 2029 ei ole need enam loetletud klass."
+      },
+      "preservatives_present": {
+        "label": "Kas toode sisaldab säilitusaineid?",
+        "help": "Säilitusained on loetletud V lisa A osa punkti 1 alapunkti h alapunktis iii, välja arvatud juhul, kui need on juba märgistatud vastavalt CLP artikli 18 lõike 3 punktile b või biotsiidimääruse artiklile 58."
+      },
+      "preservatives": {
+        "label": "Säilitusained",
+        "help": "Võimaluse korral kasutage INCI nimetust.",
+        "placeholder": "nt Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "Kas lõhnaaine allergeene on lisatud üle 0,01% massist?",
+        "help": "V lisa D osas loetletud allergeenid, mida on tahtlikult lisatud üle 0,01% massist, nimetatakse märgistusel, välja arvatud juhul, kui need on juba märgistatud vastavalt määrusele CLP."
+      },
+      "fragrance_allergens": {
+        "label": "Sisaldab lõhnaaine allergeene",
+        "help": "Valige iga allergeen 105 kirjest koosnevast ametlikust loetelust."
+      },
+      "ingredients_url": {
+        "label": "Avalik koostisosade veebileht",
+        "help": "Kehtivad eeskirjad (määrus (EC) No 648/2004, VII lisa D osa) nõuavad tarbekaupade jaoks ajakohastatud avalikku koostisosade loetelu. See ei pea sisaldama protsendivahemikke ega CAS-numbreid.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "Kutselistele kasutajatele esitatud samaväärne teave koostisosade kohta"
+      },
+      "biodegradability_test": {
+        "label": "Pindaktiivse aine biolagundatavuse katsemeetod",
+        "placeholder": "nt OECD 301 seeria"
+      },
+      "biodegradability_reference": {
+        "label": "Biolagundatavuse tõendite viide",
+        "help": "Nimetage katsearuanne või tarnija deklaratsioon. Ärge laadige üles ega kleepige konfidentsiaalseid faile."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Kas sisaldab tahtlikult lisatud sünteetilise polümeeri mikroosakesi?",
+        "help": "Määrus (EU) 2023/2055 piirab neid vastavalt REACH XVII lisa kande 78 alusel. Pesuainete suhtes kohaldatakse seda alates 17. oktoobrist 2028."
+      },
+      "use_instructions": {
+        "label": "Kasutusjuhend ja erilised ettevaatusabinõud",
+        "help": "Meetod, sobivad tekstiilid või pinnad ja kõik erilised ettevaatusabinõud."
+      },
+      "laundry_type": {
+        "label": "Pesupesemisvahendi tüüp",
+        "help": "Määrab standardkoguse: 4,5 kg kuiva pesu tugevatoimeliste pesuainete puhul, 2,5 kg lühikese tsükliga tugevatoimeliste ja õrnpesuainete puhul."
+      },
+      "dosage_unit": {
+        "label": "Doseerimisühik"
+      },
+      "dosage_soft": {
+        "label": "Annus pehme vee jaoks (standardkoguse kohta)",
+        "placeholder": "nt 60"
+      },
+      "dosage_medium": {
+        "label": "Annus keskmise karedusega vee jaoks (standardkoguse kohta)",
+        "placeholder": "nt 75"
+      },
+      "dosage_hard": {
+        "label": "Annus kareda vee jaoks (standardkoguse kohta)",
+        "placeholder": "nt 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Doseerimine ühe- ja kahetsükliliste pesuprotsesside jaoks",
+        "help": "V lisa B osa punkt 1 alapunkt a nõuab doseerimist ühe- või kahetsükliliste pesuprotsesside jaoks."
+      },
+      "loads_per_pack": {
+        "label": "Standardkoguseid pakendi kohta (keskmise karedusega vesi, 2,5 millimooli CaCO3 per litre)",
+        "help": "Täitepakendite puhul märkige pesukordade arv 1 liitri või 1 kg toote kohta. Ei ole vajalik ühikutes täitepakendite puhul."
+      },
+      "measuring_cup_ml": {
+        "label": "Mõõtetopsi maht",
+        "help": "Kaasasoleva mõõtetopsi maht koos selgete märgistustega pehme, keskmise karedusega ja kareda vee annuste jaoks."
+      },
+      "dishwasher_dose": {
+        "label": "Standardannus põhitsükli jaoks",
+        "help": "Tavaliselt määrdunud lauanõude jaoks täislaetud 12-kohalises nõudepesumasinas."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Annuse kohandamine vastavalt vee karedusele"
+      },
+      "surface_dilution": {
+        "label": "Soovitatav lahjendus ja kogus pinnaühiku kohta",
+        "help": "V lisa B osa punkt 4: märkige soovitatav lahjendus ja kogus pinnaühiku kohta või muud kasutusjuhised, et toodet ei kasutataks liigselt."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Fosfori üldkogus soovitatavas annuses (grammides)",
+        "help": "III lisa piirnormid: alla 0,5 g standardse pesukoguse kohta karedas vees ja alla 0,3 g standardse nõudepesumasina annuse kohta."
+      },
+      "storage_disposal": {
+        "label": "Säilitamine ja kõrvaldamine"
+      },
+      "packaging_material": {
+        "label": "Esmane pakkematerjal"
+      },
+      "packaging_recyclable": {
+        "label": "Kas pakend on ringlussevõetav?"
+      },
+      "recycling_instructions": {
+        "label": "Ringlussevõtu juhised"
+      },
+      "recycled_packaging_content": {
+        "label": "Ringlussevõetud materjali sisaldus pakendis (%)",
+        "placeholder": "nt 30"
+      },
+      "refill_available": {
+        "label": "Kas täitepakend on saadaval?"
+      },
+      "refill_station": {
+        "label": "Kas müüakse täitejaama kaudu?",
+        "help": "Täitepunktidel on oma andmekandja kohustus vastavalt määruse (EU) 2026/405 artikli 21 lõikele 4."
+      },
+      "epr_registration": {
+        "label": "Pakendi tootjavastutuse registreerimine turu kohta",
+        "help": "Üks rida turu kohta.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Kohaldatav luba või seaduslik üleminekualus"
+      },
+      "biocidal_actives": {
+        "label": "Toimeained ja lubatud kasutusalad"
+      },
+      "environmental_claims": {
+        "label": "Tootel või pakendil esitatud keskkonnaalased väited",
+        "placeholder": "nt „Pudel on valmistatud 30% ulatuses ringlussevõetud plastist“"
+      },
+      "claims_evidence_reference": {
+        "label": "Põhjendavate tõendite viide",
+        "placeholder": "Uuringu, sertifikaadi või kontrolliasutuse viide iga väite kohta"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Kas väidetes välditakse üldisi keskkonnaalaseid termineid?",
+        "help": "Üldised väited, nagu „keskkonnasõbralik“ või „biolagunev“, on alates 27. septembrist 2026 piiratud vastavalt direktiivile (EU) 2024/825."
+      },
+      "ecolabel_licence_number": {
+        "label": "ELi ökomärgise litsentsi number",
+        "help": "Sisestage litsentsi registreerimisnumber ainult siis, kui tootel on ELi ökomärgise litsents. Märgis kuvatakse avalikul passil ainult siis, kui number on sisestatud."
+      },
+      "reach_review": {
+        "label": "REACH piirangute ja kohustuste hindamine",
+        "help": "Vaadake üle XVII lisas sätestatud piirangud ja koostisosadele kohalduvad kohustused."
+      },
+      "physical_label_reviewed": {
+        "label": "Olen kontrollinud füüsilist märgistust ja esitatud ohutusteavet"
+      },
+      "label_professional_indicator": {
+        "label": "Märgistusel on märgitud, et toode on mõeldud ainult kutseliseks kasutamiseks"
+      },
+      "previous_passport_url": {
+        "label": "Link eelmisele passile, kui see kirje asendab mõnda teist",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "Tooteteabe läbivaatamise kuupäev",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "Tootja vastavustõendite viide"
+      },
+      "model_content_reference": {
+        "label": "Toote sisu läbivaatamise viide"
+      },
+      "manufacturing_process_reference": {
+        "label": "Tootmisprotsessi läbivaatamise viide"
+      },
+      "persistent_product_id": {
+        "label": "Püsiv tooteidentifikaator",
+        "help": "Sisestage tegelik identifikaator. Sisemine kirje ID ei ole ESPR viidatud standardite kohaselt välja antud identifikaator."
+      },
+      "identifier_scheme": {
+        "label": "Identifikaatoriskeem ja väljaandja"
+      },
+      "manufacturer_operator_id": {
+        "label": "Tootja kordumatu ettevõtja identifikaator"
+      },
+      "backup_provider_url": {
+        "label": "Varukoopiat hoidev passiteenuse pakkuja (URL)",
+        "help": "Nimetage pakkuja, kellega olete tegelikult kokku leppinud. Rakendus ei loo varundusteenust.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "Varundusteenuse lepingu viide"
+      },
+      "commodity_code_status": {
+        "label": "Tollikaubakood"
+      },
+      "commodity_code": {
+        "label": "Kaubakood (määrus (EEC) No 2658/87)"
+      },
+      "commodity_code_reason": {
+        "label": "Põhjus, miks kaubakoodi ei kohaldata"
+      },
+      "manufacturer_responsibility": {
+        "label": "Tootja väljastab selle passi ainuvastutusel"
+      },
+      "compliance_statement": {
+        "label": "Avaldus, et määrusega (EU) 2026/405 vastavus on tõendatud",
+        "help": "Täitke see alles pärast tootja enda hindamist. Rakendus ei genereeri kunagi vastavusavaldust."
+      },
+      "applicable_union_law": {
+        "label": "Muu liidu õigus, mida tootele kohaldatakse"
+      },
+      "last_placed_on_market_date": {
+        "label": "Viimane kuupäev, mil mudel turule lasti",
+        "help": "Kümneaastase kättesaadavuskohustuse alguspunkt.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Kuhu andmekandja on paigutatud",
+        "help": "Artikli 21 lõige 4: füüsiliselt olemas, kustumatu, masinloetav ja nähtav enne ostu sooritamist koos avaldusega „Toote kohta põhjalikuma teabe saamiseks skannige“. Nõutav ka täitejaamades ja kaugmüügi puhul."
+      },
+      "carrier_reviewed": {
+        "label": "Andmekandja vastab nendele nõuetele"
+      },
+      "market_language_reviewed": {
+        "label": "Märgistus ja ohutusalane sõnastus on üle vaadatud igas sihtturu keeles"
+      },
+      "substance_list_route": {
+        "label": "Ainete avalikustamise viis",
+        "help": "Erand kehtib ainult tööstuslikele ja institutsionaalsetele pesuainetele ja pindaktiivsetele ainetele, mille puhul teave esitatakse samaväärse ohutuskaardiga vastavalt REACH artiklile 31."
+      },
+      "substances": {
+        "label": "Kõik tahtlikult lisatud ained ja märgistusel nõutavad ülekanduvad säilitusained",
+        "help": "Tuvastage ained vastavalt määruse (EC) No 1272/2008 artikli 18 lõikele 3. Ärge sisestage kontsentratsioone ega konfidentsiaalseid koostise andmeid. Kõik sellesse kategooriasse salvestatu on avalik."
+      },
+      "no_substances_reason": {
+        "label": "Loetellu kantavate ainete puudumise alus"
+      },
+      "substance_list_complete": {
+        "label": "Loetelu on täielik, sisaldab kvalifitseeruvaid ülekanduvaid säilitusaineid ja kasutab CLP artikli 18 lõike 3 kohaselt hinnatud identiteete"
+      },
+      "industrial_institutional_use": {
+        "label": "Kasutatakse ainult väljaspool kodumajapidamist erialatöötajate poolt"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Samaväärne teave ainete kohta on tegelikult esitatud ohutuskaardil vastavalt REACH artiklile 31"
+      },
+      "annex_sds_url": {
+        "label": "Samaväärse ohutuskaardi URL",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Samaväärse ohutuskaardi keeled"
+      },
+      "annex_sds_revision_date": {
+        "label": "Samaväärse ohutuskaardi läbivaatamise kuupäev",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Kas mikroorganisme on tahtlikult lisatud?",
+        "help": "Samaväärse ohutuskaardi kasutamine ei eemalda kunagi mikroorganismide loetelu."
+      },
+      "microorganisms": {
+        "label": "Kõik tahtlikult lisatud mikroorganismid",
+        "help": "Märkige iga mikroorganismi perekond, liik ja tüve nimi või kood."
+      },
+      "microorganism_safety_reference": {
+        "label": "Ohutushinnangu viide (II lisa)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Säilivusaeg ja säilitamistingimused",
+        "help": "Mikroorganisme sisaldava pesuaine märgistusel on näidatud säilivusaeg."
+      },
+      "food_contact_use": {
+        "label": "Kas on ette nähtud kasutamiseks toiduga kokkupuutuvatel pindadel?",
+        "help": "Kui toote ohutust selleks kasutuseks ei ole riskihinnanguga kinnitatud, on märgistusel kirjas, et seda ei tohi kasutada toiduga kokkupuutuvatel pindadel."
+      },
+      "food_contact_instructions": {
+        "label": "Ettevaatusabinõud ja juhised toiduga kokkupuutuvate pindade jaoks"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Pesupesemisvahend",
+        "laundry_additive": "Pesulisand või eelpesuaine",
+        "machine_dishwashing": "Nõudepesumasina pesuaine",
+        "dishwasher_additive": "Loputusvahend või nõudepesumasina lisand",
+        "hand_dishwashing": "Käsitsinõudepesuvahend",
+        "all_purpose": "Üld- või pinnapuhastusvahend",
+        "kitchen": "Köögipuhastusvahend",
+        "bathroom": "Vannitoapuhastusvahend",
+        "toilet": "WC-puhastusvahend",
+        "glass": "Klaasipuhastusvahend",
+        "floor": "Põrandapuhastusvahend",
+        "descaler": "Katlakivieemaldi",
+        "bleach": "Pleegitusaine",
+        "other": "Muu pesuaine"
+      },
+      "productForm": {
+        "liquid": "Vedelik",
+        "gel": "Geel",
+        "powder": "Pulber",
+        "tablet": "Tablett",
+        "capsule": "Kapsel või padjake",
+        "spray": "Pihusti",
+        "wipe": "Lapp",
+        "paste": "Pasta",
+        "other": "Muu"
+      },
+      "yesNoReview": {
+        "yes": "Jah",
+        "no": "Ei",
+        "review": "Vajab hindamist"
+      },
+      "useSector": {
+        "consumer": "Tarbijad, sealhulgas sega- ja kutseline kasutus",
+        "professional": "Ainult kutseliseks kasutamiseks",
+        "industrial": "Ainult tööstuslikuks ja institutsionaalseks kasutamiseks"
+      },
+      "dppProfile": {
+        "current": "Praegune tooteteave",
+        "annex_vi": "Täielik VI lisa andmekogum 2029. aasta eeskirjade jaoks"
+      },
+      "manufacturerNonEu": {
+        "yes": "Jah",
+        "no": "Ei"
+      },
+      "clpClassification": {
+        "none": "Ei ole klassifitseeritud ohtlikuks",
+        "environment": "Ainult keskkonnaohud",
+        "health_physical": "Tervise- või füüsikalised ohud, koos keskkonnaohtudega või ilma",
+        "review": "Vajab hindamist"
+      },
+      "signalWord": {
+        "danger": "Ohtlik",
+        "warning": "Hoiatus",
+        "not_applicable": "Pärast hindamist ei kohaldata"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Plahvatav pomm",
+        "ghs02": "GHS02 Leek",
+        "ghs03": "GHS03 Leek ringi kohal",
+        "ghs04": "GHS04 Gaasiballoon",
+        "ghs05": "GHS05 Söövitav",
+        "ghs06": "GHS06 Surnupealuu ja ristatud säärekondid",
+        "ghs07": "GHS07 Hüüumärk",
+        "ghs08": "GHS08 Terviseoht",
+        "ghs09": "GHS09 Keskkond",
+        "none": "Piktogramm ei ole kohaldatav"
+      },
+      "pcnApplicability": {
+        "required": "Teavitamine on nõutav",
+        "exempt": "Dokumenteeritud erand",
+        "review": "Vajalik on hindamine"
+      },
+      "pcnStatus": {
+        "submitted": "Esitatud asjaomastele turgudele",
+        "pending": "Ootel"
+      },
+      "sdsRequirement": {
+        "required": "Tuleb esitada",
+        "on_request": "Peab olema taotluse korral kättesaadav",
+        "not_required": "Pärast hindamist ei ole nõutav",
+        "review": "Vajalik on hindamine"
+      },
+      "constituentClass": {
+        "phosphates": "Fosfaadid",
+        "phosphonates": "Fosfonaadid",
+        "anionic_surfactants": "Anioonsed pindaktiivsed ained",
+        "cationic_surfactants": "Katioonsed pindaktiivsed ained",
+        "amphoteric_surfactants": "Amfoteersed pindaktiivsed ained",
+        "nonionic_surfactants": "Mitteioonsed pindaktiivsed ained",
+        "oxygen_bleach": "Hapnikupõhised pleegitusained",
+        "chlorine_bleach": "Klooripõhised pleegitusained",
+        "edta": "EDTA ja selle soolad",
+        "nta": "NTA ja selle soolad",
+        "phenols": "Fenoolid ja halogeenitud fenoolid",
+        "paradichlorobenzene": "Paradiklorobenseen",
+        "aromatic_hydrocarbons": "Aromaatsed süsivesinikud",
+        "aliphatic_hydrocarbons": "Alifaatsed süsivesinikud",
+        "halogenated_hydrocarbons": "Halogeenitud süsivesinikud",
+        "soap": "Seep",
+        "zeolites": "Tseoliidid",
+        "polycarboxylates": "Polükarboksülaadid"
+      },
+      "weightBand": {
+        "lt5": "Alla 5%",
+        "5to15": "5% või rohkem, kuid alla 15%",
+        "15to30": "15% või rohkem, kuid alla 30%",
+        "gte30": "30% või rohkem"
+      },
+      "listedConstituent": {
+        "enzymes": "Ensüümid",
+        "micro_organisms": "Mikroorganismid",
+        "optical_brighteners": "Optilised valgendid",
+        "perfumes": "Lõhnaained",
+        "disinfectants": "Desinfektsioonivahendid (kehtivad eeskirjad kuni 23. septembrini 2029)"
+      },
+      "yesNoUnknown": {
+        "yes": "Jah",
+        "no": "Ei",
+        "unknown": "Teadmata"
+      },
+      "laundryType": {
+        "heavy_duty": "Tugevatoimeline",
+        "heavy_duty_short": "Tugevatoimeline lühikeste pesutsüklite jaoks",
+        "light_duty": "Õrnatoimeline või õrnade kangaste jaoks"
+      },
+      "dosageUnit": {
+        "ml": "Milliliitrid",
+        "g": "Grammid",
+        "units": "Ühikud (tabletid, kapslid või padjakesed)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Muu plast",
+        "metal": "Metall",
+        "glass": "Klaas",
+        "paper_cardboard": "Paber või kartong",
+        "composite": "Komposiitmaterjal",
+        "water_soluble_film": "Vees lahustuv kile",
+        "other": "Muu"
+      },
+      "reachReview": {
+        "reviewed": "Tarnija poolt läbi vaadatud",
+        "review": "Vajalik on hindamine"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Kohaldatav",
+        "not_applicable": "Pärast hindamist ei ole kohaldatav"
+      },
+      "substanceListRoute": {
+        "full_list": "Ainete täielik loetelu",
+        "equivalent_sds": "Samaväärne ohutuskaart (ainult tööstuslikuks ja kutseliseks kasutamiseks)",
+        "no_added_substances": "Pärast hindamist ei ole loetellu kantavaid aineid"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "See toode ei pruugi vastata pesuaine määratlusele määruse (EU) 2026/405 artikli 2 lõikes 1. Enne selle kategooria kasutamist kontrollige kohaldamisala.",
+      "biocidal": "Desinfitseerivad või antimikroobsed väited nõuavad biotsiidiluba vastavalt määrusele (EU) No 528/2012.",
+      "assessmentNeeded": "See hindamine ei ole lõpule viidud. Viige see lõpule, enne kui passis esitatud andmetele tuginete.",
+      "microparticles": "Enne toote turule laskmist kontrollige määrust (EU) 2023/2055 sünteetiliste polümeeride mikroosakeste kohta. Teadmata vastuse küsimus tuleb tarnijaga lahendada.",
+      "phosphorusLaundry": "Üldfosforisisaldus {{value}} g ei ole alla 0,5 g piirnormi, mis on kehtestatud tarbijale mõeldud pesupesemisvahendile karedas vees (määruse (EU) 2026/405 III lisa).",
+      "phosphorusDishwasher": "Üldfosforisisaldus {{value}} g ei ole alla 0,3 g piirnormi, mis on kehtestatud tarbijale mõeldud automaatse nõudepesumasina pesuainele (määruse (EU) 2026/405 III lisa).",
+      "percentageRange": "Protsent peab olema vahemikus 0 kuni 100. Teie sisestasite {{value}}.",
+      "positiveNumber": "Sisestage nullist suurem arv. Teie sisestasite {{value}}.",
+      "allergensMissing": "Vastasite jah, kuid ühtegi allergeeni ei ole valitud. Valige iga allergeen ametlikust loetelust.",
+      "ufiFormat": "UFI koosneb neljast nelja märgiga rühmast, näiteks N1QV-R02N-J00M-WQD5. Vormingut kontrollitakse, kuid mürgistusteabekeskusele esitamist mitte.",
+      "urlFormat": "Kasutage täielikku veebiaadressi, mis algab http:// või https://.",
+      "emailFormat": "Sisestage kehtiv e-posti aadress.",
+      "dateFormat": "Kasutage kehtivat kuupäeva vormingus YYYY-MM-DD.",
+      "microorganismSafety": "Mikroorganismid on lisatud, kuid ohutushinnangu viidet ei ole sisestatud."
+    },
+    "disclaimer": {
+      "title": "Pesuained DPP: vastavusest lahtiütlus",
+      "text": "Määrust (EU) 2026/405 pesuainete ja pindaktiivsete ainete kohta kohaldatakse alates 23. septembrist 2029. Selle digitaalse tootepassi eeskirjad, juurdepääsuõigused ja andmekandja üksikasjad kehtestatakse alles rakendusaktiga ning seni kohaldatakse määrust (EC) No 648/2004. See tööriist kogub tooteinfot ja valmistab ette passi andmeid. See ei ole sertifitseerimine ega heakskiit ning seda ei tohiks käsitleda lõpliku õigusnõuandena. Kõik sellesse kategooriasse salvestatu on avalik."
+    }
   }
 }

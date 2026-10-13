@@ -2158,5 +2158,738 @@
       "scannerTitle": "Apģērba etiķešu skeneris",
       "scannerDescription": "Nofotografējiet vai augšupielādējiet iešūto kopšanas etiķeti, piekaramo birku vai tehniskās specifikācijas PDF — mākslīgais intelekts nolasīs šķiedru sastāvu, kopšanas simbolus, izcelsmes valsti, sertifikātus un stila atsauces."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "Produkta identitāte",
+        "description": "Produkts, modelis un izsekojamība"
+      },
+      "responsible_operators": {
+        "title": "Atbildīgās personas",
+        "description": "Ražotājs, importētājs un ES pilnvarotais pārstāvis, norādīti kā atsevišķas puses"
+      },
+      "classification": {
+        "title": "Bīstamības klasifikācija un drošības informācija",
+        "description": "CLP klasifikācija, marķējuma bīstamības informācija, saindēšanās informācijas centrs un drošības datu lapa"
+      },
+      "ingredients": {
+        "title": "Sastāvdaļas un marķējuma informācija",
+        "description": "Marķējuma saturs saskaņā ar Regulas (EU) 2026/405 V pielikumu un spēkā esošajiem noteikumiem"
+      },
+      "use": {
+        "title": "Droša lietošana un dozēšana",
+        "description": "Dozēšanas un lietošanas informācija saskaņā ar V pielikuma B daļu"
+      },
+      "packaging": {
+        "title": "Iepakojums un pārstrāde",
+        "description": "Iepakojums, pārstrādājamība un atkārtota uzpildīšana"
+      },
+      "biocide": {
+        "title": "Biocīda novērtējums",
+        "description": "Piemēro, ja tiek izteikti apgalvojumi par dezinficējošām vai pretmikrobu īpašībām"
+      },
+      "green_claims": {
+        "title": "Apgalvojumi par ietekmi uz vidi",
+        "description": "Atbalsta Direktīvu (EU) 2024/825, ko piemēro no 2026. gada 27. septembra"
+      },
+      "review": {
+        "title": "Piegādātāja pārskats un pases sagatavošana",
+        "description": "Pārbaudes, ko veic piegādātājs. Lietotne tās nevar verificēt."
+      },
+      "annex_identity": {
+        "title": "VI pielikums: produkta identitāte un ražotāja paziņojums",
+        "description": "Sagatavošanās digitālajai produkta pasei, kas nepieciešama no 2029. gada 23. septembra. Pilnīga datu kopa nav sertifikācija, verificēts identifikators vai iesniegums reģistrā."
+      },
+      "annex_substances": {
+        "title": "VI pielikums: vielas",
+        "description": "Pilns tīši pievienoto vielu saraksts (VI pielikuma A daļas h) punkts)"
+      },
+      "annex_microorganisms": {
+        "title": "VI pielikums: mikroorganismi",
+        "description": "Visi tīši pievienotie mikroorganismi (VI pielikuma A daļas i) punkts)"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Zīmola nosaukums"
+      },
+      "product_type": {
+        "label": "Produkta veids"
+      },
+      "product_type_other": {
+        "label": "Produkta veids (norādīt)"
+      },
+      "product_form": {
+        "label": "Produkta forma"
+      },
+      "detergent_scope": {
+        "label": "Vai produkts ir paredzēts audumu, trauku vai virsmu tīrīšanai, mērcēšanai, skalošanai vai balināšanai?",
+        "help": "Skatīt Regulas (EU) 2026/405 2. panta 1. punktu. Krāsas, līmes, šķīdinātāji un produkti, kas netīra, neietilpst šajā kategorijā."
+      },
+      "scope_reason": {
+        "label": "Iemesls, kāpēc produkts neatbilst mazgāšanas līdzekļa definīcijai"
+      },
+      "use_sector": {
+        "label": "Kam produkts ir paredzēts?",
+        "help": "Rūpnieciskai un iestāžu lietošanai nozīmē, ka to ārpus mājsaimniecības lieto tikai specializēts personāls."
+      },
+      "model_identifier": {
+        "label": "Produkta modeļa identifikators",
+        "help": "Viena pase attiecas uz vienu modeli. Sastāva vai ražošanas izmaiņas, kas maina marķējumu, var to padarīt par jaunu modeli."
+      },
+      "batch_identifier": {
+        "label": "Tipa, partijas vai sērijas atsauce",
+        "help": "Marķējumā ir nepieciešams tipa numurs, partijas numurs vai cits izsekojamības elements."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "piem., 3401234567890"
+      },
+      "net_content": {
+        "label": "Nominālais daudzums ar mērvienību",
+        "placeholder": "piem., 1.5 L, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "ES tirgi un marķējuma valodas",
+        "help": "Marķējuma un drošības informācijas tekstam jābūt pieejamam valodā vai valodās, kas noteiktas katrā tirgū.",
+        "placeholder": "piem., Francija (franču), Vācija (vācu)"
+      },
+      "dpp_profile": {
+        "label": "Informācijas profils",
+        "help": "Regulu (EU) 2026/405 piemēro no 2029. gada 23. septembra. Izvēlieties VI pielikuma datu kopu, lai sagatavotu nākotnes pases datus. Tās aizpildīšana nepadara pasi atbilstošu vai sertificētu."
+      },
+      "biocidal_claims": {
+        "label": "Apgalvojumi par biocīdām vai dezinficējošām īpašībām?",
+        "help": "Apgalvojumiem par dezinficējošām vai pretmikrobu īpašībām ir nepieciešama biocīda atļauja saskaņā ar Regulu (EU) No 528/2012."
+      },
+      "manufacturer_legal_name": {
+        "label": "Ražotāja juridiskais nosaukums",
+        "help": "Marķējumā norāda ražotāja nosaukumu, pasta adresi, elektronisko adresi un tālruņa numuru. Pasta adresei ir jābūt vienam kontaktpunktam Savienībā."
+      },
+      "manufacturer_street": {
+        "label": "Ielas adrese"
+      },
+      "manufacturer_postal_code": {
+        "label": "Pasta indekss"
+      },
+      "manufacturer_city": {
+        "label": "Pilsēta"
+      },
+      "manufacturer_country": {
+        "label": "Valsts"
+      },
+      "manufacturer_email": {
+        "label": "Elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Tālruņa numurs",
+        "placeholder": "piem., +33 1 23 45 67 89"
+      },
+      "manufacturer_non_eu": {
+        "label": "Vai ražotājs ir reģistrēts ārpus ES?"
+      },
+      "importer_legal_name": {
+        "label": "Importētāja juridiskais nosaukums",
+        "help": "Ja ražotājs ir reģistrēts ārpus ES, ir nepieciešama arī importētāja kontaktinformācija."
+      },
+      "importer_street": {
+        "label": "Ielas adrese"
+      },
+      "importer_postal_code": {
+        "label": "Pasta indekss"
+      },
+      "importer_city": {
+        "label": "Pilsēta"
+      },
+      "importer_country": {
+        "label": "Valsts"
+      },
+      "importer_email": {
+        "label": "Elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "ES pilnvarotais pārstāvis: juridiskais nosaukums",
+        "help": "Ražotājam, kas reģistrēts ārpus ES, ir jāieceļ pilnvarotais pārstāvis (Regulas (EU) 2026/405 9. pants)."
+      },
+      "eu_operator_address": {
+        "label": "ES pilnvarotais pārstāvis: adrese",
+        "placeholder": "Juridiskā adrese Eiropas Savienībā"
+      },
+      "eu_operator_email": {
+        "label": "ES pilnvarotais pārstāvis: elektroniskā adrese (e-pasts)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "CLP klasifikācijas novērtējums",
+        "help": "Izmantojiet klasifikāciju, kas šim maisījumam faktiski novērtēta saskaņā ar Regulu (EC) No 1272/2008. Neatvasiniet to no pH vai piktogrammām."
+      },
+      "supplemental_statements": {
+        "label": "Papildu marķējuma apzīmējumi",
+        "help": "Piemēram, EUH208, ja piemērojams."
+      },
+      "signal_word": {
+        "label": "Signālvārds"
+      },
+      "pictograms": {
+        "label": "GHS piktogrammas"
+      },
+      "hazard_statements": {
+        "label": "Bīstamības apzīmējumi",
+        "help": "Ievadiet tekstu tieši tā, kā tas ir apstiprinātajā marķējumā. Izmantojiet tulkošanas pogu katrai tirgus valodai. Šis teksts nekad netiek tulkots automātiski.",
+        "placeholder": "piem., H315 Izraisa ādas kairinājumu"
+      },
+      "precautionary_statements": {
+        "label": "Piesardzības apzīmējumi",
+        "help": "Ievadiet tekstu tieši tā, kā tas ir apstiprinātajā marķējumā. Izmantojiet tulkošanas pogu katrai tirgus valodai. Šis teksts nekad netiek tulkots automātiski.",
+        "placeholder": "piem., P280 Izmantot aizsargcimdus"
+      },
+      "pcn_applicability": {
+        "label": "Paziņošana saindēšanās informācijas centriem (CLP VIII pielikums)",
+        "help": "UFI un paziņošana ir atkarīga no bīstamības veselībai vai fizikālās bīstamības un piemērojamiem atbrīvojumiem. Bīstamība videi viena pati neprasa paziņošanu."
+      },
+      "pcn_exemption_reason": {
+        "label": "Atbrīvojuma iemesls un juridiskais pamats"
+      },
+      "ufi_code": {
+        "label": "Unikālais formulas identifikators (UFI)",
+        "help": "Četras grupas pa četrām rakstzīmēm. Formāts tiek pārbaudīts, bet lietotne nevar verificēt iesniegumu saindēšanās informācijas centram.",
+        "placeholder": "piem., N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Iesniegumi saindēšanās informācijas centriem"
+      },
+      "sds_requirement": {
+        "label": "Prasība par drošības datu lapas piegādi",
+        "help": "Tīmekļa saite pati par sevi neizpilda pienākumu piegādāt drošības datu lapu saskaņā ar REACH 31. pantu."
+      },
+      "sds_url": {
+        "label": "Publiskās drošības datu lapas URL",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "Drošības datu lapas valodas",
+        "placeholder": "piem., angļu, franču, vācu"
+      },
+      "sds_revision_date": {
+        "label": "Drošības datu lapas pārskatīšanas datums",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Neatliekamās palīdzības kontaktinformācija (saindēšanās informācijas centrs vai diennakts tālruņa numurs)",
+        "placeholder": "Tālruņa numurs ārkārtas situācijām"
+      },
+      "constituent_classes": {
+        "label": "Sastāvdaļu klases, kas pievienotas vairāk nekā 0,2 % no masas",
+        "help": "Atzīmējiet katru klasi, kas pievienota vairāk nekā 0,2 % no masas, pēc tam zemāk izvēlieties tās masas diapazonu (V pielikuma A daļas 1. punkta h) apakšpunkta i) punkts)."
+      },
+      "band_phosphates": {
+        "label": "Fosfāti: masas diapazons"
+      },
+      "band_phosphonates": {
+        "label": "Fosfonāti: masas diapazons"
+      },
+      "band_anionic_surfactants": {
+        "label": "Anjonu virsmaktīvās vielas: masas diapazons"
+      },
+      "band_cationic_surfactants": {
+        "label": "Katjonu virsmaktīvās vielas: masas diapazons"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfotērās virsmaktīvās vielas: masas diapazons"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Nejonu virsmaktīvās vielas: masas diapazons"
+      },
+      "band_oxygen_bleach": {
+        "label": "Balinātāji uz skābekļa bāzes: masas diapazons"
+      },
+      "band_chlorine_bleach": {
+        "label": "Balinātāji uz hlora bāzes: masas diapazons"
+      },
+      "band_edta": {
+        "label": "EDTA un tās sāļi: masas diapazons"
+      },
+      "band_nta": {
+        "label": "NTA un tās sāļi: masas diapazons"
+      },
+      "band_phenols": {
+        "label": "Fenoli un halogenētie fenoli: masas diapazons"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradihlorbenzols: masas diapazons"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromātiskie ogļūdeņraži: masas diapazons"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifātiskie ogļūdeņraži: masas diapazons"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Halogenētie ogļūdeņraži: masas diapazons"
+      },
+      "band_soap": {
+        "label": "Ziepes: masas diapazons"
+      },
+      "band_zeolites": {
+        "label": "Ceolīti: masas diapazons"
+      },
+      "band_polycarboxylates": {
+        "label": "Polikarboksilāti: masas diapazons"
+      },
+      "listed_constituents": {
+        "label": "Sastāvdaļu klases, kas pievienotas jebkādā koncentrācijā",
+        "help": "V pielikuma A daļas 1. punkta h) apakšpunkta ii) punkts. Dezinfekcijas līdzekļi ir uzskaitīti saskaņā ar spēkā esošajiem noteikumiem un no 2029. gada 23. septembra vairs nav uzskaitāma klase."
+      },
+      "preservatives_present": {
+        "label": "Vai satur konservantus?",
+        "help": "Konservanti ir uzskaitīti saskaņā ar V pielikuma A daļas 1. punkta h) apakšpunkta iii) punktu, ja vien tie jau nav marķēti saskaņā ar CLP 18. panta 3. punkta b) apakšpunktu vai Biocīdu regulas 58. pantu."
+      },
+      "preservatives": {
+        "label": "Konservanti",
+        "help": "Ja iespējams, izmantojiet INCI nosaukumu.",
+        "placeholder": "piem., Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "Vai ir pievienoti smaržu alergēni vairāk nekā 0,01 % no masas?",
+        "help": "Alergēni no V pielikuma D daļas saraksta, kas tīši pievienoti vairāk nekā 0,01 % no masas, tiek norādīti marķējumā, ja vien tie jau nav marķēti saskaņā ar CLP."
+      },
+      "fragrance_allergens": {
+        "label": "Satur smaržu alergēnus",
+        "help": "Izvēlieties katru alergēnu no oficiālā saraksta ar 105 ierakstiem."
+      },
+      "ingredients_url": {
+        "label": "Publiska sastāvdaļu tīmekļa lapa",
+        "help": "Spēkā esošie noteikumi (Regulas (EC) No 648/2004 VII pielikuma D daļa) patēriņa precēm prasa uzturēt publisku sastāvdaļu sarakstu. Tam nav nepieciešami procentuālie diapazoni vai CAS numuri.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "Līdzvērtīga informācija par sastāvdaļām, kas sniegta profesionāliem lietotājiem"
+      },
+      "biodegradability_test": {
+        "label": "Virsmaktīvo vielu bioloģiskās noārdīšanās testa metode",
+        "placeholder": "piem., OECD 301 sērija"
+      },
+      "biodegradability_reference": {
+        "label": "Bioloģiskās noārdīšanās pierādījumu atsauce",
+        "help": "Nosauciet testa pārskatu vai piegādātāja deklarāciju. Neaugšupielādējiet un neielīmējiet konfidenciālus failus."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Vai satur tīši pievienotas sintētisko polimēru mikrodaļiņas?",
+        "help": "Regula (EU) 2023/2055 tās ierobežo saskaņā ar REACH XVII pielikuma 78. ierakstu. Mazgāšanas līdzekļiem to piemēro no 2028. gada 17. oktobra."
+      },
+      "use_instructions": {
+        "label": "Lietošanas instrukcijas un īpaši piesardzības pasākumi",
+        "help": "Metode, piemēroti audumi vai virsmas un jebkādi īpaši piesardzības pasākumi."
+      },
+      "laundry_type": {
+        "label": "Veļas mazgāšanas līdzekļa veids",
+        "help": "Nosaka standarta ielādi: 4,5 kg sausa auduma lielas slodzes mazgāšanas līdzekļiem, 2,5 kg īsa cikla lielas slodzes un vieglas slodzes mazgāšanas līdzekļiem."
+      },
+      "dosage_unit": {
+        "label": "Dozēšanas mērvienība"
+      },
+      "dosage_soft": {
+        "label": "Deva mīkstam ūdenim (uz standarta ielādi)",
+        "placeholder": "piem., 60"
+      },
+      "dosage_medium": {
+        "label": "Deva vidēji cietam ūdenim (uz standarta ielādi)",
+        "placeholder": "piem., 75"
+      },
+      "dosage_hard": {
+        "label": "Deva cietam ūdenim (uz standarta ielādi)",
+        "placeholder": "piem., 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Dozēšana viena cikla un divu ciklu mazgāšanas procesiem",
+        "help": "V pielikuma B daļas 1. punkta a) apakšpunkts prasa norādīt dozēšanu viena vai divu ciklu mazgāšanas procesiem."
+      },
+      "loads_per_pack": {
+        "label": "Standarta ielāžu skaits iepakojumā (vidēji cietam ūdenim, 2,5 milimoli CaCO3 litrā)",
+        "help": "Atkārtoti uzpildāmiem iepakojumiem norādiet ielāžu skaitu uz 1 litru vai 1 kg produkta. Nav nepieciešams atkārtoti uzpildāmiem iepakojumiem, kas tiek pārdoti pa vienībām."
+      },
+      "measuring_cup_ml": {
+        "label": "Mērtrauka tilpums",
+        "help": "Jebkura pievienotā mērtrauka tilpums ar skaidrām atzīmēm mīksta, vidēji cieta un cieta ūdens devām."
+      },
+      "dishwasher_dose": {
+        "label": "Standarta deva galvenajam ciklam",
+        "help": "Normāli netīriem traukiem pilnībā piekrautas 12 personu trauku mazgājamās mašīnas gadījumā."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Devas pielāgošana ūdens cietībai"
+      },
+      "surface_dilution": {
+        "label": "Ieteicamais atšķaidījums un daudzums uz virsmas laukuma vienību",
+        "help": "V pielikuma B daļas 4. punkts: norādiet ieteicamo atšķaidījumu un daudzumu uz virsmas laukuma vienību vai citas lietošanas instrukcijas, lai produktu nelietotu pārmērīgi."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Kopējais fosfora daudzums ieteicamajā devā (gramos)",
+        "help": "III pielikuma ierobežojumi: mazāk par 0,5 g uz standarta veļas ielādi cietā ūdenī un mazāk par 0,3 g uz standarta trauku mazgājamās mašīnas devu."
+      },
+      "storage_disposal": {
+        "label": "Uzglabāšana un apglabāšana"
+      },
+      "packaging_material": {
+        "label": "Primārā iepakojuma materiāls"
+      },
+      "packaging_recyclable": {
+        "label": "Vai iepakojums ir pārstrādājams?"
+      },
+      "recycling_instructions": {
+        "label": "Pārstrādes instrukcijas"
+      },
+      "recycled_packaging_content": {
+        "label": "Pārstrādāta materiāla saturs iepakojumā (%)",
+        "placeholder": "piem., 30"
+      },
+      "refill_available": {
+        "label": "Vai ir pieejama atkārtota uzpildīšana?"
+      },
+      "refill_station": {
+        "label": "Vai tiek pārdots uzpildes stacijā?",
+        "help": "Uzpildes punktiem ir savs datu nesēja pienākums saskaņā ar Regulas (EU) 2026/405 21. panta 4. punktu."
+      },
+      "epr_registration": {
+        "label": "Iepakojuma ražotāja atbildības reģistrācija katrā tirgū",
+        "help": "Viena rinda katram tirgum.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Piemērojamā atļauja vai likumīgs pārejas pamats"
+      },
+      "biocidal_actives": {
+        "label": "Aktīvās vielas un atļautie lietojumi"
+      },
+      "environmental_claims": {
+        "label": "Apgalvojumi par ietekmi uz vidi, kas izteikti uz produkta vai iepakojuma",
+        "placeholder": "piem., \"Pudele izgatavota no 30% pārstrādātas plastmasas\""
+      },
+      "claims_evidence_reference": {
+        "label": "Pamatojuma pierādījumu atsauce",
+        "placeholder": "Pētījuma, sertifikāta vai verifikācijas iestādes atsauce katram apgalvojumam"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Vai apgalvojumos tiek izvairīties no vispārīgiem terminiem par ietekmi uz vidi?",
+        "help": "Vispārīgi apgalvojumi, piemēram, \"videi draudzīgs\" vai \"bioloģiski noārdāms\", ir ierobežoti no 2026. gada 27. septembra saskaņā ar Direktīvu (EU) 2024/825."
+      },
+      "ecolabel_licence_number": {
+        "label": "ES ekomarķējuma licences numurs",
+        "help": "Ievadiet licences reģistrācijas numuru tikai tad, ja produktam ir ES ekomarķējuma licence. Emblēma publiskajā pasē tiek rādīta tikai tad, ja ir ievadīts numurs."
+      },
+      "reach_review": {
+        "label": "REACH ierobežojumu un pienākumu novērtējums",
+        "help": "Pārskatiet XVII pielikuma ierobežojumus un pienākumus, kas attiecas uz sastāvā esošajām vielām."
+      },
+      "physical_label_reviewed": {
+        "label": "Esmu pārbaudījis fizisko marķējumu un sniegto drošības informāciju"
+      },
+      "label_professional_indicator": {
+        "label": "Marķējumā ir norādīts, ka produkts paredzēts tikai profesionālai lietošanai"
+      },
+      "previous_passport_url": {
+        "label": "Saite uz iepriekšējo pasi, ja šis ieraksts aizstāj kādu citu",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "Produkta informācijas pārskatīšanas datums",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "Ražotāja atbilstības pierādījumu atsauce"
+      },
+      "model_content_reference": {
+        "label": "Produkta satura pārskatīšanas atsauce"
+      },
+      "manufacturing_process_reference": {
+        "label": "Ražošanas procesa pārskatīšanas atsauce"
+      },
+      "persistent_product_id": {
+        "label": "Pastāvīgais produkta identifikators",
+        "help": "Ievadiet reālo identifikatoru. Iekšējais ieraksta ID nav identifikators, kas izsniegts saskaņā ar standartiem, uz kuriem atsaucas ESPR."
+      },
+      "identifier_scheme": {
+        "label": "Identifikatora shēma un izdevējs"
+      },
+      "manufacturer_operator_id": {
+        "label": "Ražotāja unikālais operatora identifikators"
+      },
+      "backup_provider_url": {
+        "label": "Pases pakalpojumu sniedzējs, kurš glabā rezerves kopiju (URL)",
+        "help": "Norādiet pakalpojumu sniedzēju, ar kuru esat faktiski vienojies. Lietotne neveido rezerves kopēšanas pakalpojumu.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "Rezerves kopēšanas pakalpojuma līguma atsauce"
+      },
+      "commodity_code_status": {
+        "label": "Muitas preču kods"
+      },
+      "commodity_code": {
+        "label": "Preču kods (Regula (EEC) No 2658/87)"
+      },
+      "commodity_code_reason": {
+        "label": "Iemesls, kāpēc preču kods nav piemērojams"
+      },
+      "manufacturer_responsibility": {
+        "label": "Ražotājs izdod šo pasi, uzņemoties par to pilnu atbildību"
+      },
+      "compliance_statement": {
+        "label": "Paziņojums, ka ir pierādīta atbilstība Regulai (EU) 2026/405",
+        "help": "Aizpildiet tikai pēc ražotāja paša veiktā novērtējuma. Lietotne nekad neģenerē atbilstības deklarāciju."
+      },
+      "applicable_union_law": {
+        "label": "Citi Savienības tiesību akti, kas attiecas uz produktu"
+      },
+      "last_placed_on_market_date": {
+        "label": "Pēdējais datums, kad modelis tika laists tirgū",
+        "help": "Sākumpunkts desmit gadu pieejamības pienākumam.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Kur ir novietots datu nesējs",
+        "help": "21. panta 4. punkts: fiziski klātesošs, neizdzēšams, mašīnlasāms un redzams pirms pirkuma, ar paziņojumu \"Lūdzu, skenējiet, lai iegūtu plašāku informāciju par produktu\". Nepieciešams arī uzpildes stacijās un distances tirdzniecībā."
+      },
+      "carrier_reviewed": {
+        "label": "Datu nesējs atbilst šīm prasībām"
+      },
+      "market_language_reviewed": {
+        "label": "Marķējuma un drošības informācijas teksts ir pārskatīts katrā mērķa tirgus valodā"
+      },
+      "substance_list_route": {
+        "label": "Vielu informācijas atklāšanas veids",
+        "help": "Atbrīvojums attiecas tikai uz rūpnieciskiem un iestāžu mazgāšanas līdzekļiem un virsmaktīvajām vielām, ja līdzvērtīga drošības datu lapa saskaņā ar REACH 31. pantu sniedz šo informāciju."
+      },
+      "substances": {
+        "label": "Visas tīši pievienotās vielas un marķējumā norādāmie pārnestie konservanti",
+        "help": "Identificējiet vielas, kā to prasa Regulas (EC) No 1272/2008 18. panta 3. punkts. Neievadiet koncentrācijas vai konfidenciālus sastāva datus. Viss, kas saglabāts šajā kategorijā, ir publisks."
+      },
+      "no_substances_reason": {
+        "label": "Pamatojums, kāpēc nav uzskaitāmu vielu"
+      },
+      "substance_list_complete": {
+        "label": "Saraksts ir pilnīgs, ietver kvalificējošos pārnestos konservantus un izmanto identitātes, kas novērtētas saskaņā ar CLP 18. panta 3. punktu"
+      },
+      "industrial_institutional_use": {
+        "label": "Lieto tikai ārpus mājsaimniecības specializēts personāls"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Līdzvērtīga informācija par vielām ir faktiski sniegta drošības datu lapā saskaņā ar REACH 31. pantu"
+      },
+      "annex_sds_url": {
+        "label": "Līdzvērtīgas drošības datu lapas URL",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Līdzvērtīgas drošības datu lapas valodas"
+      },
+      "annex_sds_revision_date": {
+        "label": "Līdzvērtīgas drošības datu lapas pārskatīšanas datums",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Vai ir tīši pievienoti mikroorganismi?",
+        "help": "Līdzvērtīgas drošības datu lapas izmantošana nekad neatceļ mikroorganismu saraksta prasību."
+      },
+      "microorganisms": {
+        "label": "Visi tīši pievienotie mikroorganismi",
+        "help": "Norādiet katra mikroorganisma ģinti, sugu un celma nosaukumu vai kodu."
+      },
+      "microorganism_safety_reference": {
+        "label": "Drošības novērtējuma atsauce (II pielikums)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Derīguma termiņš un uzglabāšanas nosacījumi",
+        "help": "Mazgāšanas līdzekļa, kas satur mikroorganismus, marķējumā norāda derīguma termiņu."
+      },
+      "food_contact_use": {
+        "label": "Paredzēts lietošanai uz virsmām, kas saskaras ar pārtiku?",
+        "help": "Ja vien produktam nav veikts riska novērtējums, kas apliecina tā drošumu šādai lietošanai, marķējumā norāda, ka to nedrīkst lietot uz virsmām, kas saskaras ar pārtiku."
+      },
+      "food_contact_instructions": {
+        "label": "Piesardzības pasākumi un instrukcijas virsmām, kas saskaras ar pārtiku"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Veļas mazgāšanas līdzeklis",
+        "laundry_additive": "Veļas mazgāšanas piedeva vai priekšmazgāšanas līdzeklis",
+        "machine_dishwashing": "Trauku mazgājamās mašīnas mazgāšanas līdzeklis",
+        "dishwasher_additive": "Skalošanas līdzeklis vai trauku mazgājamās mašīnas piedeva",
+        "hand_dishwashing": "Trauku mazgāšanas līdzeklis ar rokām",
+        "all_purpose": "Universāls vai virsmu tīrīšanas līdzeklis",
+        "kitchen": "Virtuves tīrīšanas līdzeklis",
+        "bathroom": "Vannas istabas tīrīšanas līdzeklis",
+        "toilet": "Tualetes tīrīšanas līdzeklis",
+        "glass": "Stikla tīrīšanas līdzeklis",
+        "floor": "Grīdas tīrīšanas līdzeklis",
+        "descaler": "Atkaļķotājs",
+        "bleach": "Balinātājs",
+        "other": "Cits mazgāšanas līdzeklis"
+      },
+      "productForm": {
+        "liquid": "Šķidrums",
+        "gel": "Želeja",
+        "powder": "Pulveris",
+        "tablet": "Tablete",
+        "capsule": "Kapsula vai spilventiņš",
+        "spray": "Aerosols",
+        "wipe": "Salvetes",
+        "paste": "Pasta",
+        "other": "Cits"
+      },
+      "yesNoReview": {
+        "yes": "Jā",
+        "no": "Nē",
+        "review": "Nepieciešams novērtējums"
+      },
+      "useSector": {
+        "consumer": "Patērētāji, ieskaitot jauktu patērētāju un profesionālu lietošanu",
+        "professional": "Tikai profesionālai lietošanai",
+        "industrial": "Tikai rūpnieciskai un iestāžu lietošanai"
+      },
+      "dppProfile": {
+        "current": "Pašreizējā produkta informācija",
+        "annex_vi": "Pilna VI pielikuma datu kopa 2029. gada noteikumiem"
+      },
+      "manufacturerNonEu": {
+        "yes": "Jā",
+        "no": "Nē"
+      },
+      "clpClassification": {
+        "none": "Nav klasificēts kā bīstams",
+        "environment": "Tikai bīstamība videi",
+        "health_physical": "Bīstamība veselībai vai fizikāla bīstamība, ar vai bez bīstamības videi",
+        "review": "Nepieciešams novērtējums"
+      },
+      "signalWord": {
+        "danger": "Bīstami",
+        "warning": "Brīdinājums",
+        "not_applicable": "Nav piemērojams pēc novērtēšanas"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Sprāgstoša bumba",
+        "ghs02": "GHS02 Liesma",
+        "ghs03": "GHS03 Liesma virs apļa",
+        "ghs04": "GHS04 Gāzes balons",
+        "ghs05": "GHS05 Korozija",
+        "ghs06": "GHS06 Galvaskauss un sakrustoti kauli",
+        "ghs07": "GHS07 Izsaukuma zīme",
+        "ghs08": "GHS08 Bīstams veselībai",
+        "ghs09": "GHS09 Bīstams videi",
+        "none": "Nav piemērojamas piktogrammas"
+      },
+      "pcnApplicability": {
+        "required": "Nepieciešams paziņojums",
+        "exempt": "Dokumentēts atbrīvojums",
+        "review": "Nepieciešams novērtējums"
+      },
+      "pcnStatus": {
+        "submitted": "Iesniegts attiecīgajiem tirgiem",
+        "pending": "Gaida izskatīšanu"
+      },
+      "sdsRequirement": {
+        "required": "Jānodrošina",
+        "on_request": "Jābūt pieejamai pēc pieprasījuma",
+        "not_required": "Pēc novērtējuma nav nepieciešama",
+        "review": "Nepieciešams novērtējums"
+      },
+      "constituentClass": {
+        "phosphates": "Fosfāti",
+        "phosphonates": "Fosfonāti",
+        "anionic_surfactants": "Anjonu virsmaktīvās vielas",
+        "cationic_surfactants": "Katjonu virsmaktīvās vielas",
+        "amphoteric_surfactants": "Amfoterās virsmaktīvās vielas",
+        "nonionic_surfactants": "Nejonu virsmaktīvās vielas",
+        "oxygen_bleach": "Balinātāji uz skābekļa bāzes",
+        "chlorine_bleach": "Balinātāji uz hlora bāzes",
+        "edta": "EDTA un tās sāļi",
+        "nta": "NTA un tās sāļi",
+        "phenols": "Fenoli un halogenēti fenoli",
+        "paradichlorobenzene": "Paradihlorbenzols",
+        "aromatic_hydrocarbons": "Aromātiskie ogļūdeņraži",
+        "aliphatic_hydrocarbons": "Alifātiskie ogļūdeņraži",
+        "halogenated_hydrocarbons": "Halogenētie ogļūdeņraži",
+        "soap": "Ziepes",
+        "zeolites": "Ceolīti",
+        "polycarboxylates": "Polikarboksilāti"
+      },
+      "weightBand": {
+        "lt5": "mazāk par 5 %",
+        "5to15": "5 % vai vairāk, bet mazāk par 15 %",
+        "15to30": "15 % vai vairāk, bet mazāk par 30 %",
+        "gte30": "30 % un vairāk"
+      },
+      "listedConstituent": {
+        "enzymes": "Fermenti",
+        "micro_organisms": "Mikroorganismi",
+        "optical_brighteners": "Optiskie balinātāji",
+        "perfumes": "Smaržvielas",
+        "disinfectants": "Dezinfekcijas līdzekļi (pašreizējie noteikumi spēkā līdz 2029. gada 23. septembrim)"
+      },
+      "yesNoUnknown": {
+        "yes": "Jā",
+        "no": "Nē",
+        "unknown": "Nezināms"
+      },
+      "laundryType": {
+        "heavy_duty": "Lielas slodzes",
+        "heavy_duty_short": "Lielas slodzes īsiem cikliem",
+        "light_duty": "Mazai slodzei vai smalkiem audumiem"
+      },
+      "dosageUnit": {
+        "ml": "Mililitri",
+        "g": "Grami",
+        "units": "Vienības (tabletes, kapsulas vai pākstis)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Cita plastmasa",
+        "metal": "Metāls",
+        "glass": "Stikls",
+        "paper_cardboard": "Papīrs vai kartons",
+        "composite": "Kompozītmateriāls",
+        "water_soluble_film": "Ūdenī šķīstoša plēve",
+        "other": "Cits"
+      },
+      "reachReview": {
+        "reviewed": "Pārskatījis piegādātājs",
+        "review": "Nepieciešams novērtējums"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Piemērojams",
+        "not_applicable": "Pēc novērtējuma nav piemērojams"
+      },
+      "substanceListRoute": {
+        "full_list": "Pilns vielu saraksts",
+        "equivalent_sds": "Ekvivalenta drošības datu lapa (tikai rūpnieciskai un iestāžu lietošanai)",
+        "no_added_substances": "Pēc novērtējuma nav norādāmu vielu"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "Šis produkts var neatbilst mazgāšanas līdzekļa definīcijai Regulas (EU) 2026/405 2. panta 1. punktā. Pirms šīs kategorijas izmantošanas pārbaudiet darbības jomu.",
+      "biocidal": "Apgalvojumiem par dezinficējošu vai pretmikrobu iedarbību ir nepieciešama biocīda atļauja saskaņā ar Regulu (EU) No 528/2012.",
+      "assessmentNeeded": "Šis novērtējums nav pabeigts. Pabeidziet to, pirms paļaujaties uz šo pasi.",
+      "microparticles": "Pirms šī produkta laišanas tirgū pārbaudiet Regulu (EU) 2023/2055 par sintētisko polimēru mikrodaļiņām. Atbilde “nezināms” ir jānoskaidro ar piegādātāju.",
+      "phosphorusLaundry": "Kopējais fosfora saturs {{value}} g nav mazāks par 0,5 g limitu patērētājiem paredzētam veļas mazgāšanas līdzeklim cietā ūdenī (Regulas (EU) 2026/405 III pielikums).",
+      "phosphorusDishwasher": "Kopējais fosfora saturs {{value}} g nav mazāks par 0,3 g limitu patērētājiem paredzētam automātisko trauku mazgājamo mašīnu mazgāšanas līdzeklim (Regulas (EU) 2026/405 III pielikums).",
+      "percentageRange": "Procentuālajai vērtībai jābūt no 0 līdz 100. Jūs ievadījāt {{value}}.",
+      "positiveNumber": "Ievadiet skaitli, kas lielāks par nulli. Jūs ievadījāt {{value}}.",
+      "allergensMissing": "Jūs atbildējāt “jā”, bet nav atlasīts neviens alergēns. Atlasiet katru alergēnu no oficiālā saraksta.",
+      "ufiFormat": "UFI sastāv no četrām četru rakstzīmju grupām, piemēram, N1QV-R02N-J00M-WQD5. Tiek pārbaudīts formāts, bet ne iesniegums saindēšanās informācijas centram.",
+      "urlFormat": "Izmantojiet pilnu tīmekļa adresi, kas sākas ar http:// vai https://.",
+      "emailFormat": "Ievadiet derīgu e-pasta adresi.",
+      "dateFormat": "Izmantojiet derīgu datumu YYYY-MM-DD formātā.",
+      "microorganismSafety": "Ir pievienoti mikroorganismi, bet nav ievadīta atsauce uz drošuma novērtējumu."
+    },
+    "disclaimer": {
+      "title": "Mazgāšanas līdzekļi DPP: atruna par atbilstību",
+      "text": "Regula (EU) 2026/405 par mazgāšanas līdzekļiem un virsmaktīvajām vielām ir piemērojama no 2029. gada 23. septembra. Tās noteikumi par digitālo produktu pasi, piekļuves tiesībām un datu nesēja informāciju vēl ir jānosaka ar īstenošanas aktu, un līdz tam laikam piemēro Regulu (EC) No 648/2004. Šis rīks apkopo informāciju par produktu un sagatavo pases datus. Tas nav sertifikāts vai apstiprinājums, un to nedrīkst uzskatīt par galīgu juridisku padomu. Viss, kas saglabāts šajā kategorijā, ir publisks."
+    }
   }
 }

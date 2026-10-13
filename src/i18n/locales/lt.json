@@ -2158,5 +2158,738 @@
       "scannerTitle": "Drabužių etikečių skaitytuvas",
       "scannerDescription": "Nufotografuokite arba įkelkite įsiūtą priežiūros etiketę, pakabinamą etiketę arba techninės specifikacijos PDF — dirbtinis intelektas nuskaitys pluošto sudėtį, priežiūros simbolius, pagaminimo šalį, sertifikatus ir stiliaus nuorodas."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "Produkto tapatybė",
+        "description": "Produktas, modelis ir atsekamumas"
+      },
+      "responsible_operators": {
+        "title": "Kas yra atsakingas",
+        "description": "Gamintojas, importuotojas ir ES įgaliotasis atstovas, nurodomi kaip atskiros šalys"
+      },
+      "classification": {
+        "title": "Klasifikavimas pagal pavojingumą ir saugos informacija",
+        "description": "CLP klasifikavimas, etiketėje nurodoma informacija apie pavojingumą, apsinuodijimų informacijos biuras ir saugos duomenų lapas"
+      },
+      "ingredients": {
+        "title": "Sudedamosios dalys ir etiketėje nurodoma informacija",
+        "description": "Etiketės turinys pagal Reglamento (EU) 2026/405 V priedą ir galiojančias taisykles"
+      },
+      "use": {
+        "title": "Saugus naudojimas ir dozavimas",
+        "description": "Dozavimo ir naudojimo informacija pagal V priedo B dalį"
+      },
+      "packaging": {
+        "title": "Pakuotė ir perdirbimas",
+        "description": "Pakuotė, perdirbamumas ir papildymai"
+      },
+      "biocide": {
+        "title": "Biocidinio produkto vertinimas",
+        "description": "Taikoma, kai teikiami teiginiai apie dezinfekavimą ar antimikrobines savybes"
+      },
+      "green_claims": {
+        "title": "Ekologiniai teiginiai",
+        "description": "Palaiko Direktyvą (EU) 2024/825, kuri taikoma nuo 2026 m. rugsėjo 27 d."
+      },
+      "review": {
+        "title": "Tiekėjo peržiūra ir paso rengimas",
+        "description": "Patikros, kurias atlieka tiekėjas. Programėlė negali jų patikrinti."
+      },
+      "annex_identity": {
+        "title": "VI priedas: produkto tapatybė ir gamintojo pareiškimas",
+        "description": "Pasirengimas skaitmeniniam produkto pasui, kuris bus privalomas nuo 2029 m. rugsėjo 23 d. Išsamus duomenų rinkinys nėra sertifikavimas, patvirtintas identifikatorius ar pateikimas registrui."
+      },
+      "annex_substances": {
+        "title": "VI priedas: medžiagos",
+        "description": "Visas tyčia pridėtų medžiagų sąrašas (VI priedo A dalies h punktas)"
+      },
+      "annex_microorganisms": {
+        "title": "VI priedas: mikroorganizmai",
+        "description": "Visi tyčia pridėti mikroorganizmai (VI priedo A dalies i punktas)"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Prekės ženklas"
+      },
+      "product_type": {
+        "label": "Produkto tipas"
+      },
+      "product_type_other": {
+        "label": "Produkto tipas (patikslinkite)"
+      },
+      "product_form": {
+        "label": "Produkto forma"
+      },
+      "detergent_scope": {
+        "label": "Ar produktas skirtas audiniams, indams ar paviršiams valyti, mirkyti, skalauti ar balinti?",
+        "help": "Žr. Reglamento (EU) 2026/405 2 straipsnio 1 dalį. Dažai, klijai, tirpikliai ir produktai, kurie nevalo, nepatenka į šią kategoriją."
+      },
+      "scope_reason": {
+        "label": "Priežastis, kodėl produktas neatitinka ploviklio apibrėžties"
+      },
+      "use_sector": {
+        "label": "Kam skirtas produktas?",
+        "help": "Pramoninis ir institucinis naudojimas reiškia, kad produktą naudoja tik specializuoti darbuotojai ne buityje."
+      },
+      "model_identifier": {
+        "label": "Produkto modelio identifikatorius",
+        "help": "Vienas pasas apima vieną modelį. Sudėties ar gamybos pakeitimas, dėl kurio keičiasi etiketė, gali reikšti, kad tai naujas modelis."
+      },
+      "batch_identifier": {
+        "label": "Tipo, partijos ar siuntos nuoroda",
+        "help": "Etiketėje turi būti nurodytas tipo numeris, partijos numeris ar kitas atsekamumo elementas."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "pvz., 3401234567890"
+      },
+      "net_content": {
+        "label": "Nominalusis kiekis su vienetu",
+        "placeholder": "pvz., 1,5 l, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "ES rinkos ir etikečių kalbos",
+        "help": "Etiketės ir saugos formuluotės turi būti pateiktos kiekvienoje rinkoje reikalaujama kalba ar kalbomis.",
+        "placeholder": "pvz., Prancūzija (prancūzų k.), Vokietija (vokiečių k.)"
+      },
+      "dpp_profile": {
+        "label": "Informacijos profilis",
+        "help": "Reglamentas (EU) 2026/405 taikomas nuo 2029 m. rugsėjo 23 d. Pasirinkite VI priedo duomenų rinkinį, kad parengtumėte būsimo paso duomenis. Jo užpildymas nereiškia, kad pasas yra atitinkantis reikalavimus ar sertifikuotas."
+      },
+      "biocidal_claims": {
+        "label": "Teiginiai apie biocidines ar dezinfekuojančias savybes?",
+        "help": "Teiginiams apie dezinfekuojančias ar antimikrobines savybes reikalingas biocidinio produkto autorizacijos liudijimas pagal Reglamentą (EU) No 528/2012."
+      },
+      "manufacturer_legal_name": {
+        "label": "Gamintojo juridinis pavadinimas",
+        "help": "Etiketėje nurodomas gamintojo pavadinimas, pašto adresas, elektroninis adresas ir telefono numeris. Pašto adresas turi būti vienas kontaktinis punktas Sąjungoje."
+      },
+      "manufacturer_street": {
+        "label": "Gatvės adresas"
+      },
+      "manufacturer_postal_code": {
+        "label": "Pašto kodas"
+      },
+      "manufacturer_city": {
+        "label": "Miestas"
+      },
+      "manufacturer_country": {
+        "label": "Šalis"
+      },
+      "manufacturer_email": {
+        "label": "Elektroninis adresas (el. paštas)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Telefono numeris",
+        "placeholder": "pvz., +33 1 23 45 67 89"
+      },
+      "manufacturer_non_eu": {
+        "label": "Ar gamintojas įsisteigęs ne ES?"
+      },
+      "importer_legal_name": {
+        "label": "Importuotojo juridinis pavadinimas",
+        "help": "Kai gamintojas yra įsisteigęs ne ES, taip pat reikalaujama nurodyti importuotojo kontaktinius duomenis."
+      },
+      "importer_street": {
+        "label": "Gatvės adresas"
+      },
+      "importer_postal_code": {
+        "label": "Pašto kodas"
+      },
+      "importer_city": {
+        "label": "Miestas"
+      },
+      "importer_country": {
+        "label": "Šalis"
+      },
+      "importer_email": {
+        "label": "Elektroninis adresas (el. paštas)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "ES įgaliotasis atstovas: juridinis pavadinimas",
+        "help": "Ne ES įsisteigęs gamintojas privalo paskirti įgaliotąjį atstovą (Reglamento (EU) 2026/405 9 straipsnis)."
+      },
+      "eu_operator_address": {
+        "label": "ES įgaliotasis atstovas: adresas",
+        "placeholder": "Registruotas adresas Europos Sąjungoje"
+      },
+      "eu_operator_email": {
+        "label": "ES įgaliotasis atstovas: elektroninis adresas (el. paštas)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "CLP klasifikavimo vertinimas",
+        "help": "Naudokite klasifikavimą, kuris faktiškai įvertintas šiam mišiniui pagal Reglamentą (EC) No 1272/2008. Nenustatinėkite jo pagal pH ar piktogramas."
+      },
+      "supplemental_statements": {
+        "label": "Papildomos etiketėje nurodomos frazės",
+        "help": "Pavyzdžiui, EUH208, kai taikoma."
+      },
+      "signal_word": {
+        "label": "Signalinis žodis"
+      },
+      "pictograms": {
+        "label": "GHS piktogramos"
+      },
+      "hazard_statements": {
+        "label": "Pavojingumo frazės",
+        "help": "Įveskite formuluotę tiksliai taip, kaip nurodyta patvirtintoje etiketėje. Kiekvienos rinkos kalbai naudokite vertimo mygtuką. Ši formuluotė niekada neverčiama automatiškai.",
+        "placeholder": "pvz., H315 Dirgina odą"
+      },
+      "precautionary_statements": {
+        "label": "Atsargumo frazės",
+        "help": "Įveskite formuluotę tiksliai taip, kaip nurodyta patvirtintoje etiketėje. Kiekvienos rinkos kalbai naudokite vertimo mygtuką. Ši formuluotė niekada neverčiama automatiškai.",
+        "placeholder": "pvz., P280 Mūvėti apsaugines pirštines"
+      },
+      "pcn_applicability": {
+        "label": "Pranešimas apsinuodijimų informacijos biurui (CLP VIII priedas)",
+        "help": "UFI ir pranešimo prievolė priklauso nuo pavojaus sveikatai ar fizinio pavojaus bei taikomų išimčių. Vien tik pavojus aplinkai pranešimo prievolės nesukelia."
+      },
+      "pcn_exemption_reason": {
+        "label": "Išimties taikymo priežastis ir teisinis pagrindas"
+      },
+      "ufi_code": {
+        "label": "Unikalus formulės identifikatorius (UFI)",
+        "help": "Keturios grupės po keturis simbolius. Formatas tikrinamas, tačiau programėlė negali patikrinti pateikimo apsinuodijimų informacijos biurui.",
+        "placeholder": "pvz., N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Pateikimai apsinuodijimų informacijos biurui"
+      },
+      "sds_requirement": {
+        "label": "Reikalavimas pateikti saugos duomenų lapą",
+        "help": "Vien tik interneto nuoroda neįvykdo pareigos pateikti saugos duomenų lapą pagal REACH 31 straipsnį."
+      },
+      "sds_url": {
+        "label": "Viešos prieigos saugos duomenų lapo URL",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "Saugos duomenų lapo kalbos",
+        "placeholder": "pvz., anglų k., prancūzų k., vokiečių k."
+      },
+      "sds_revision_date": {
+        "label": "Saugos duomenų lapo peržiūros data",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Skubios pagalbos kontaktas (apsinuodijimų informacijos biuras arba visą parą veikiantis numeris)",
+        "placeholder": "Telefono numeris skubios pagalbos atveju"
+      },
+      "constituent_classes": {
+        "label": "Sudedamųjų dalių klasės, kurių pridėta daugiau kaip 0,2 % masės",
+        "help": "Pažymėkite kiekvieną klasę, kurios pridėta daugiau kaip 0,2 % masės, tada žemiau pasirinkite jos svorio intervalą (V priedo A dalies 1 punkto h papunkčio i dalis)."
+      },
+      "band_phosphates": {
+        "label": "Fosfatai: svorio intervalas"
+      },
+      "band_phosphonates": {
+        "label": "Fosfonatai: svorio intervalas"
+      },
+      "band_anionic_surfactants": {
+        "label": "Anijoninės paviršinio aktyvumo medžiagos: svorio intervalas"
+      },
+      "band_cationic_surfactants": {
+        "label": "Katijoninės paviršinio aktyvumo medžiagos: svorio intervalas"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfoterinės paviršinio aktyvumo medžiagos: svorio intervalas"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Nejoninės paviršinio aktyvumo medžiagos: svorio intervalas"
+      },
+      "band_oxygen_bleach": {
+        "label": "Balinimo priemonės deguonies pagrindu: svorio intervalas"
+      },
+      "band_chlorine_bleach": {
+        "label": "Balinimo priemonės chloro pagrindu: svorio intervalas"
+      },
+      "band_edta": {
+        "label": "EDTA ir jos druskos: svorio intervalas"
+      },
+      "band_nta": {
+        "label": "NTA ir jos druskos: svorio intervalas"
+      },
+      "band_phenols": {
+        "label": "Fenoliai ir halogeninti fenoliai: svorio intervalas"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradichlorbenzenas: svorio intervalas"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromatiniai angliavandeniliai: svorio intervalas"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifatiniai angliavandeniliai: svorio intervalas"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Halogeninti angliavandeniliai: svorio intervalas"
+      },
+      "band_soap": {
+        "label": "Muilas: svorio intervalas"
+      },
+      "band_zeolites": {
+        "label": "Ceolitai: svorio intervalas"
+      },
+      "band_polycarboxylates": {
+        "label": "Polikarboksilatai: svorio intervalas"
+      },
+      "listed_constituents": {
+        "label": "Bet kokios koncentracijos pridėtų sudedamųjų dalių klasės",
+        "help": "V priedo A dalies 1 punkto h papunkčio ii dalis. Dezinfekavimo priemonės nurodomos pagal galiojančias taisykles ir nuo 2029 m. rugsėjo 23 d. nebebus nurodoma klasė."
+      },
+      "preservatives_present": {
+        "label": "Ar yra konservantų?",
+        "help": "Konservantai nurodomi pagal V priedo A dalies 1 punkto h papunkčio iii dalį, nebent jie jau paženklinti pagal CLP 18 straipsnio 3 dalies b punktą arba Biocidinių produktų reglamento 58 straipsnį."
+      },
+      "preservatives": {
+        "label": "Konservantai",
+        "help": "Jei įmanoma, naudokite INCI pavadinimą.",
+        "placeholder": "pvz., Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "Ar pridėta kvapiųjų medžiagų alergenų, kurių masė didesnė kaip 0,01 %?",
+        "help": "Alergenai iš V priedo D dalyje pateikto sąrašo, kurių tyčia pridėta daugiau kaip 0,01 % masės, nurodomi etiketėje, nebent jie jau paženklinti pagal CLP."
+      },
+      "fragrance_allergens": {
+        "label": "Esantys kvapiųjų medžiagų alergenai",
+        "help": "Pasirinkite kiekvieną alergeną iš oficialaus 105 įrašų sąrašo."
+      },
+      "ingredients_url": {
+        "label": "Viešas sudedamųjų dalių tinklalapis",
+        "help": "Pagal galiojančias taisykles (Reglamento (EC) No 648/2004 VII priedo D dalis) reikalaujama, kad vartojimo produktams būtų tvarkomas viešas sudedamųjų dalių sąrašas. Jame nereikia nurodyti procentinių intervalų ar CAS numerių.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "Lygiavertė informacija apie sudedamąsias dalis, teikiama profesionaliems naudotojams"
+      },
+      "biodegradability_test": {
+        "label": "Paviršinio aktyvumo medžiagos biologinio skaidumo tyrimo metodas",
+        "placeholder": "pvz., OECD 301 serija"
+      },
+      "biodegradability_reference": {
+        "label": "Biologinio skaidumo įrodymų nuoroda",
+        "help": "Nurodykite tyrimo ataskaitos arba tiekėjo deklaracijos pavadinimą. Neįkelkite ir neklijuokite konfidencialių failų."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Ar yra tyčia pridėtų sintetinių polimerų mikrodalelių?",
+        "help": "Reglamentas (EU) 2023/2055 riboja jų naudojimą pagal REACH XVII priedo 78 įrašą. Plovikliams apribojimas taikomas nuo 2028 m. spalio 17 d."
+      },
+      "use_instructions": {
+        "label": "Naudojimo instrukcijos ir specialiosios atsargumo priemonės",
+        "help": "Metodas, tinkami audiniai ar paviršiai ir visos specialiosios atsargumo priemonės."
+      },
+      "laundry_type": {
+        "label": "Skalbimo ploviklio tipas",
+        "help": "Nustato standartinę įkrovą: 4,5 kg sausų skalbinių didelio našumo plovikliams, 2,5 kg trumpo ciklo didelio našumo ir mažo našumo plovikliams."
+      },
+      "dosage_unit": {
+        "label": "Dozavimo vienetas"
+      },
+      "dosage_soft": {
+        "label": "Dozė minkštam vandeniui (standartinei įkrovai)",
+        "placeholder": "pvz., 60"
+      },
+      "dosage_medium": {
+        "label": "Dozė vidutinio kietumo vandeniui (standartinei įkrovai)",
+        "placeholder": "pvz., 75"
+      },
+      "dosage_hard": {
+        "label": "Dozė kietam vandeniui (standartinei įkrovai)",
+        "placeholder": "pvz., 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Dozavimas vieno ir dviejų ciklų skalbimo procesams",
+        "help": "V priedo B dalies 1 punkto a papunktyje reikalaujama nurodyti dozavimą vieno ar dviejų ciklų skalbimo procesams."
+      },
+      "loads_per_pack": {
+        "label": "Standartinių įkrovų skaičius pakuotėje (vidutinio kietumo vanduo, 2,5 milimolio CaCO3 litre)",
+        "help": "Papildymams nurodykite įkrovų skaičių 1 litrui arba 1 kg produkto. Nereikia nurodyti papildymams vienetais."
+      },
+      "measuring_cup_ml": {
+        "label": "Dozavimo indo talpa",
+        "help": "Bet kokio pridedamo dozavimo indo talpa su aiškiais žymenimis minkšto, vidutinio kietumo ir kieto vandens dozėms."
+      },
+      "dishwasher_dose": {
+        "label": "Standartinė dozė pagrindiniam ciklui",
+        "help": "Normaliai suteptiems stalo indams pilnai pakrautoje 12 komplektų indaplovėje."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Dozės koregavimas pagal vandens kietumą"
+      },
+      "surface_dilution": {
+        "label": "Rekomenduojamas skiedimas ir kiekis paviršiaus plotui",
+        "help": "V priedo B dalies 4 punkte reikalaujama nurodyti rekomenduojamą skiedimą ir kiekį paviršiaus plotui arba kitas naudojimo instrukcijas, kad produktas nebūtų naudojamas per gausiai."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Bendras fosforo kiekis rekomenduojamoje dozėje (gramais)",
+        "help": "III priedo ribos: mažiau kaip 0,5 g standartinei skalbinių įkrovai kietame vandenyje ir mažiau kaip 0,3 g standartinei indaplovės dozei."
+      },
+      "storage_disposal": {
+        "label": "Laikymas ir šalinimas"
+      },
+      "packaging_material": {
+        "label": "Pirminės pakuotės medžiaga"
+      },
+      "packaging_recyclable": {
+        "label": "Ar pakuotė perdirbama?"
+      },
+      "recycling_instructions": {
+        "label": "Perdirbimo instrukcijos"
+      },
+      "recycled_packaging_content": {
+        "label": "Perdirbtų medžiagų kiekis pakuotėje (%)",
+        "placeholder": "pvz., 30"
+      },
+      "refill_available": {
+        "label": "Ar yra papildymų?"
+      },
+      "refill_station": {
+        "label": "Parduodama per papildymo stotelę?",
+        "help": "Papildymo punktams taikoma atskira pareiga dėl duomenų laikmenos pagal Reglamento (EU) 2026/405 21 straipsnio 4 dalį."
+      },
+      "epr_registration": {
+        "label": "Pakuočių gamintojo atsakomybės registracija kiekvienoje rinkoje",
+        "help": "Viena eilutė kiekvienai rinkai.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Taikomas autorizacijos liudijimas arba teisėtas pereinamojo laikotarpio pagrindas"
+      },
+      "biocidal_actives": {
+        "label": "Veikliosios medžiagos ir autorizuoti naudojimo būdai"
+      },
+      "environmental_claims": {
+        "label": "Ekologiniai teiginiai, pateikiami ant produkto ar pakuotės",
+        "placeholder": "pvz., „Butelis pagamintas iš 30 % perdirbto plastiko“"
+      },
+      "claims_evidence_reference": {
+        "label": "Teiginių pagrindimo įrodymų nuoroda",
+        "placeholder": "Tyrimo, sertifikato ar patikros įstaigos nuoroda kiekvienam teiginiui"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Ar teiginiuose vengiama bendrinių ekologinių terminų?",
+        "help": "Bendriniai teiginiai, tokie kaip „ekologiškas“ ar „biologiškai skaidus“, yra ribojami nuo 2026 m. rugsėjo 27 d. pagal Direktyvą (EU) 2024/825."
+      },
+      "ecolabel_licence_number": {
+        "label": "ES ekologinio ženklo licencijos numeris",
+        "help": "Įveskite licencijos registracijos numerį tik tuo atveju, jei produktas turi ES ekologinio ženklo licenciją. Ženklelis viešame pase rodomas tik įvedus numerį."
+      },
+      "reach_review": {
+        "label": "REACH apribojimų ir pareigų vertinimas",
+        "help": "Peržiūrėkite XVII priede nustatytus apribojimus ir pareigas, taikomas sudedamosioms medžiagoms."
+      },
+      "physical_label_reviewed": {
+        "label": "Patikrinau fizinę etiketę ir pateiktą saugos informaciją"
+      },
+      "label_professional_indicator": {
+        "label": "Etiketėje nurodyta, kad produktas skirtas tik profesionaliam naudojimui"
+      },
+      "previous_passport_url": {
+        "label": "Nuoroda į ankstesnį pasą, kai šis įrašas jį pakeičia",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "Produkto informacijos peržiūros data",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "Gamintojo atitikties įrodymų nuoroda"
+      },
+      "model_content_reference": {
+        "label": "Produkto turinio peržiūros nuoroda"
+      },
+      "manufacturing_process_reference": {
+        "label": "Gamybos proceso peržiūros nuoroda"
+      },
+      "persistent_product_id": {
+        "label": "Nuolatinis produkto identifikatorius",
+        "help": "Įveskite tikrąjį identifikatorių. Vidinis įrašo ID nėra identifikatorius, išduotas pagal ESPR nurodytus standartus."
+      },
+      "identifier_scheme": {
+        "label": "Identifikatoriaus schema ir išdavėjas"
+      },
+      "manufacturer_operator_id": {
+        "label": "Gamintojo unikalus veiklos vykdytojo identifikatorius"
+      },
+      "backup_provider_url": {
+        "label": "Paso paslaugų teikėjas, saugantis atsarginę kopiją (URL)",
+        "help": "Nurodykite teikėją, su kuriuo faktiškai susitarėte. Programėlė nesukuria atsarginės kopijos paslaugos.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "Atsarginės kopijos paslaugos sutarties nuoroda"
+      },
+      "commodity_code_status": {
+        "label": "Muitinės prekės kodas"
+      },
+      "commodity_code": {
+        "label": "Prekės kodas (Reglamentas (EEC) No 2658/87)"
+      },
+      "commodity_code_reason": {
+        "label": "Priežastis, kodėl prekės kodas netaikomas"
+      },
+      "manufacturer_responsibility": {
+        "label": "Gamintojas išduoda šį pasą prisiimdamas visą atsakomybę"
+      },
+      "compliance_statement": {
+        "label": "Pareiškimas, kad atitiktis Reglamentui (EU) 2026/405 buvo įrodyta",
+        "help": "Užpildykite tik po gamintojo atlikto vertinimo. Programėlė niekada negeneruoja atitikties pareiškimo."
+      },
+      "applicable_union_law": {
+        "label": "Kiti Sąjungos teisės aktai, taikomi produktui"
+      },
+      "last_placed_on_market_date": {
+        "label": "Paskutinė data, kada modelis buvo pateiktas rinkai",
+        "help": "Pradinis taškas dešimties metų prieinamumo pareigai.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Kur yra patalpinta duomenų laikmena",
+        "help": "21 straipsnio 4 dalis: fiziškai esanti, neištrinama, mašininio nuskaitymo ir matoma prieš perkant, su pareiškimu „Nuskaitykite, kad gautumėte išsamesnę informaciją apie produktą“. Taip pat reikalaujama papildymo stotelėse ir nuotolinėje prekyboje."
+      },
+      "carrier_reviewed": {
+        "label": "Duomenų laikmena atitinka šiuos reikalavimus"
+      },
+      "market_language_reviewed": {
+        "label": "Etiketės ir saugos formuluotės peržiūrėtos kiekvienos tikslinės rinkos kalba"
+      },
+      "substance_list_route": {
+        "label": "Medžiagų atskleidimo būdas",
+        "help": "Išimtis taikoma tik pramoniniams ir instituciniams plovikliams bei paviršinio aktyvumo medžiagoms, kai lygiavertė informacija pateikiama saugos duomenų lape pagal REACH 31 straipsnį."
+      },
+      "substances": {
+        "label": "Visos tyčia pridėtos medžiagos ir etiketėje privalomi nurodyti pernešti konservantai",
+        "help": "Nurodykite medžiagas, kaip reikalaujama Reglamento (EC) No 1272/2008 18 straipsnio 3 dalyje. Neįveskite koncentracijų ar konfidencialių sudėties duomenų. Viskas, kas išsaugota šioje kategorijoje, yra vieša."
+      },
+      "no_substances_reason": {
+        "label": "Pagrindas, kodėl nėra nurodytinų medžiagų"
+      },
+      "substance_list_complete": {
+        "label": "Sąrašas yra išsamus, apima reikalavimus atitinkančius perneštus konservantus ir naudoja tapatybes, įvertintas pagal CLP 18 straipsnio 3 dalį"
+      },
+      "industrial_institutional_use": {
+        "label": "Naudojama tik ne buityje, specializuotų darbuotojų"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Lygiavertė informacija apie medžiagas faktiškai pateikta saugos duomenų lape pagal REACH 31 straipsnį"
+      },
+      "annex_sds_url": {
+        "label": "Lygiaverčio saugos duomenų lapo URL",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Lygiaverčio saugos duomenų lapo kalbos"
+      },
+      "annex_sds_revision_date": {
+        "label": "Lygiaverčio saugos duomenų lapo peržiūros data",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Ar tyčia pridėta mikroorganizmų?",
+        "help": "Lygiaverčio saugos duomenų lapo naudojimas niekada nepanaikina pareigos pateikti mikroorganizmų sąrašą."
+      },
+      "microorganisms": {
+        "label": "Visi tyčia pridėti mikroorganizmai",
+        "help": "Nurodykite kiekvieno mikroorganizmo gentį, rūšį ir padermės pavadinimą arba kodą."
+      },
+      "microorganism_safety_reference": {
+        "label": "Saugos vertinimo nuoroda (II priedas)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Tinkamumo laikas ir laikymo sąlygos",
+        "help": "Ploviklio, kuriame yra mikroorganizmų, etiketėje nurodomas tinkamumo laikas."
+      },
+      "food_contact_use": {
+        "label": "Skirta naudoti ant paviršių, kurie liečiasi su maistu?",
+        "help": "Jei nebuvo atliktas rizikos vertinimas, patvirtinantis, kad produktas yra saugus šiam naudojimui, etiketėje nurodoma, kad jo negalima naudoti ant su maistu besiliečiančių paviršių."
+      },
+      "food_contact_instructions": {
+        "label": "Atsargumo priemonės ir instrukcijos, skirtos su maistu besiliečiantiems paviršiams"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Skalbimo ploviklis",
+        "laundry_additive": "Skalbimo priedas arba pirminio skalbimo priemonė",
+        "machine_dishwashing": "Indaplovių ploviklis",
+        "dishwasher_additive": "Skalavimo skystis arba indaplovės priedas",
+        "hand_dishwashing": "Ploviklis indams plauti rankomis",
+        "all_purpose": "Universalus arba paviršių valiklis",
+        "kitchen": "Virtuvės valiklis",
+        "bathroom": "Vonios kambario valiklis",
+        "toilet": "Tualeto valiklis",
+        "glass": "Stiklo valiklis",
+        "floor": "Grindų valiklis",
+        "descaler": "Kalkių šalinimo priemonė",
+        "bleach": "Baliklis",
+        "other": "Kitas ploviklis"
+      },
+      "productForm": {
+        "liquid": "Skystis",
+        "gel": "Gelis",
+        "powder": "Milteliai",
+        "tablet": "Tabletė",
+        "capsule": "Kapsulė",
+        "spray": "Purškalas",
+        "wipe": "Servetėlė",
+        "paste": "Pasta",
+        "other": "Kita"
+      },
+      "yesNoReview": {
+        "yes": "Taip",
+        "no": "Ne",
+        "review": "Reikalingas vertinimas"
+      },
+      "useSector": {
+        "consumer": "Vartotojai, įskaitant mišrų vartotojų ir profesionalų naudojimą",
+        "professional": "Tik profesionaliam naudojimui",
+        "industrial": "Tik pramoniniam ir instituciniam naudojimui"
+      },
+      "dppProfile": {
+        "current": "Dabartinė produkto informacija",
+        "annex_vi": "Visas VI priedo duomenų rinkinys pagal 2029 m. taisykles"
+      },
+      "manufacturerNonEu": {
+        "yes": "Taip",
+        "no": "Ne"
+      },
+      "clpClassification": {
+        "none": "Neklasifikuojamas kaip pavojingas",
+        "environment": "Tik pavojus aplinkai",
+        "health_physical": "Pavojus sveikatai arba fizinis pavojus, su pavojumi aplinkai arba be jo",
+        "review": "Reikalingas vertinimas"
+      },
+      "signalWord": {
+        "danger": "Pavojinga",
+        "warning": "Atsargiai",
+        "not_applicable": "Netaikoma po vertinimo"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Sprogstanti bomba",
+        "ghs02": "GHS02 Liepsna",
+        "ghs03": "GHS03 Liepsna virš apskritimo",
+        "ghs04": "GHS04 Dujų balionas",
+        "ghs05": "GHS05 Korozija",
+        "ghs06": "GHS06 Kaukolė ir sukryžiuoti kaulai",
+        "ghs07": "GHS07 Šauktukas",
+        "ghs08": "GHS08 Pavojus sveikatai",
+        "ghs09": "GHS09 Pavojus aplinkai",
+        "none": "Netaikoma jokia piktograma"
+      },
+      "pcnApplicability": {
+        "required": "Būtina pateikti pranešimą",
+        "exempt": "Dokumentais pagrįsta išimtis",
+        "review": "Reikalingas įvertinimas"
+      },
+      "pcnStatus": {
+        "submitted": "Pateikta atitinkamoms rinkoms",
+        "pending": "Laukiama"
+      },
+      "sdsRequirement": {
+        "required": "Privaloma pateikti",
+        "on_request": "Privaloma pateikti paprašius",
+        "not_required": "Atlikus įvertinimą, neprivaloma",
+        "review": "Reikalingas įvertinimas"
+      },
+      "constituentClass": {
+        "phosphates": "Fosfatai",
+        "phosphonates": "Fosfonatai",
+        "anionic_surfactants": "Anijoninės paviršinio aktyvumo medžiagos",
+        "cationic_surfactants": "Katijoninės paviršinio aktyvumo medžiagos",
+        "amphoteric_surfactants": "Amfoterinės paviršinio aktyvumo medžiagos",
+        "nonionic_surfactants": "Nejoninės paviršinio aktyvumo medžiagos",
+        "oxygen_bleach": "Balikliai deguonies pagrindu",
+        "chlorine_bleach": "Balikliai chloro pagrindu",
+        "edta": "EDTA ir jos druskos",
+        "nta": "NTA ir jos druskos",
+        "phenols": "Fenoliai ir halogeninti fenoliai",
+        "paradichlorobenzene": "Paradichlorbenzenas",
+        "aromatic_hydrocarbons": "Aromatiniai angliavandeniliai",
+        "aliphatic_hydrocarbons": "Alifatiniai angliavandeniliai",
+        "halogenated_hydrocarbons": "Halogeninti angliavandeniliai",
+        "soap": "Muilas",
+        "zeolites": "Ceolitai",
+        "polycarboxylates": "Polikarboksilatai"
+      },
+      "weightBand": {
+        "lt5": "Mažiau kaip 5 %",
+        "5to15": "5 % arba daugiau, bet mažiau kaip 15 %",
+        "15to30": "15 % arba daugiau, bet mažiau kaip 30 %",
+        "gte30": "30 % ir daugiau"
+      },
+      "listedConstituent": {
+        "enzymes": "Fermentai",
+        "micro_organisms": "Mikroorganizmai",
+        "optical_brighteners": "Optiniai balikliai",
+        "perfumes": "Kvapai",
+        "disinfectants": "Dezinfekavimo priemonės (dabartinės taisyklės galioja iki 2029 m. rugsėjo 23 d.)"
+      },
+      "yesNoUnknown": {
+        "yes": "Taip",
+        "no": "Ne",
+        "unknown": "Nežinoma"
+      },
+      "laundryType": {
+        "heavy_duty": "Skirtas visų tipų skalbiniams",
+        "heavy_duty_short": "Skirtas visų tipų skalbiniams, trumpiems ciklams",
+        "light_duty": "Skirtas jautriems arba gležniems audiniams"
+      },
+      "dosageUnit": {
+        "ml": "Mililitrai",
+        "g": "Gramai",
+        "units": "Vienetai (tabletės, kapsulės arba pagalvėlės)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Kitas plastikas",
+        "metal": "Metalas",
+        "glass": "Stiklas",
+        "paper_cardboard": "Popierius arba kartonas",
+        "composite": "Kompozicinė medžiaga",
+        "water_soluble_film": "Vandenyje tirpi plėvelė",
+        "other": "Kita"
+      },
+      "reachReview": {
+        "reviewed": "Peržiūrėta tiekėjo",
+        "review": "Reikalingas įvertinimas"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Taikoma",
+        "not_applicable": "Atlikus įvertinimą, netaikoma"
+      },
+      "substanceListRoute": {
+        "full_list": "Visas medžiagų sąrašas",
+        "equivalent_sds": "Atitinkamas saugos duomenų lapas (tik pramoniniam ir instituciniam naudojimui)",
+        "no_added_substances": "Atlikus įvertinimą, nėra nurodytinų medžiagų"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "Šis produktas gali neatitikti ploviklio apibrėžties, pateiktos Reglamento (EU) 2026/405 2 straipsnio 1 dalyje. Prieš naudodami šią kategoriją, patikrinkite taikymo sritį.",
+      "biocidal": "Teiginiams apie dezinfekavimą ar antimikrobinį poveikį reikalingas biocidinio produkto autorizacijos liudijimas pagal Reglamentą (EU) No 528/2012.",
+      "assessmentNeeded": "Šis įvertinimas nebaigtas. Išspręskite šį klausimą prieš pasikliaudami pasu.",
+      "microparticles": "Prieš pateikdami šį produktą rinkai, patikrinkite Reglamentą (EU) 2023/2055 dėl sintetinių polimerų mikrodalelių. Jei atsakymas „Nežinoma“, šį klausimą reikia išsiaiškinti su tiekėju.",
+      "phosphorusLaundry": "Bendras fosforo kiekis {{value}} g nėra mažesnis už 0,5 g ribą, nustatytą buitiniams skalbimo plovikliams kietame vandenyje (Reglamento (EU) 2026/405 III priedas).",
+      "phosphorusDishwasher": "Bendras fosforo kiekis {{value}} g nėra mažesnis už 0,3 g ribą, nustatytą buitiniams automatinių indaplovių plovikliams (Reglamento (EU) 2026/405 III priedas).",
+      "percentageRange": "Procentinė išraiška turi būti nuo 0 iki 100. Jūs įvedėte {{value}}.",
+      "positiveNumber": "Įveskite skaičių, didesnį už nulį. Jūs įvedėte {{value}}.",
+      "allergensMissing": "Atsakėte „taip“, bet nepasirinkote jokio alergeno. Pasirinkite kiekvieną alergeną iš oficialaus sąrašo.",
+      "ufiFormat": "UFI sudaro keturios keturių simbolių grupės, pavyzdžiui, N1QV-R02N-J00M-WQD5. Formatas patikrinamas, tačiau pranešimo pateikimas apsinuodijimų informacijos biurui netikrinamas.",
+      "urlFormat": "Naudokite visą tinklalapio adresą, prasidedantį http:// arba https://.",
+      "emailFormat": "Įveskite galiojantį el. pašto adresą.",
+      "dateFormat": "Naudokite galiojančią datą YYYY-MM-DD formatu.",
+      "microorganismSafety": "Pridėta mikroorganizmų, bet neįvesta nuoroda į saugos įvertinimą."
+    },
+    "disclaimer": {
+      "title": "Plovikliai DPP: atitikties atsakomybės apribojimas",
+      "text": "Reglamentas (EU) 2026/405 dėl ploviklių ir paviršinio aktyvumo medžiagų taikomas nuo 2029 m. rugsėjo 23 d. Jo skaitmeninio produkto paso taisyklės, prieigos teisės ir duomenų laikmenos informacija dar turi būti nustatyta įgyvendinimo aktu, o iki tol taikomas Reglamentas (EC) No 648/2004. Šis įrankis renka produkto informaciją ir rengia paso duomenis. Tai nėra sertifikavimas ar patvirtinimas ir neturėtų būti laikoma galutine teisine konsultacija. Viskas, kas išsaugota šioje kategorijoje, yra vieša."
+    }
   }
 }

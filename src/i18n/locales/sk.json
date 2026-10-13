@@ -2158,5 +2158,738 @@
       "scannerTitle": "Skener odevných etikiet",
       "scannerDescription": "Odfotografujte alebo nahrajte všitú etiketu s pokynmi na ošetrovanie, visačku alebo technickú dokumentáciu vo formáte PDF — umelá inteligencia načíta zloženie vlákien, symboly ošetrovania, krajinu pôvodu, certifikácie a referencie štýlu."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "Identita výrobku",
+        "description": "Výrobok, model a vysledovateľnosť"
+      },
+      "responsible_operators": {
+        "title": "Kto je zodpovedný",
+        "description": "Výrobca, dovozca a splnomocnený zástupca v EÚ, vedení ako samostatné strany"
+      },
+      "classification": {
+        "title": "Klasifikácia nebezpečnosti a bezpečnostné informácie",
+        "description": "Klasifikácia podľa nariadenia CLP, informácie o nebezpečnosti na etikete, toxikologické informačné centrum a karta bezpečnostných údajov"
+      },
+      "ingredients": {
+        "title": "Zložky a informácie na etikete",
+        "description": "Obsah etikety podľa prílohy V k nariadeniu (EU) 2026/405 a platných pravidiel"
+      },
+      "use": {
+        "title": "Bezpečné používanie a dávkovanie",
+        "description": "Informácie o dávkovaní a používaní podľa prílohy V časti B"
+      },
+      "packaging": {
+        "title": "Obal a recyklácia",
+        "description": "Obal, recyklovateľnosť a náhradné náplne"
+      },
+      "biocide": {
+        "title": "Posúdenie biocídneho výrobku",
+        "description": "Uplatňuje sa v prípade dezinfekčných alebo antimikrobiálnych tvrdení"
+      },
+      "green_claims": {
+        "title": "Environmentálne tvrdenia",
+        "description": "Podporuje smernicu (EU) 2024/825, ktorá sa uplatňuje od 27. septembra 2026"
+      },
+      "review": {
+        "title": "Kontrola dodávateľa a príprava pasu",
+        "description": "Kontroly, ktoré vykonáva dodávateľ. Aplikácia ich nemôže overiť."
+      },
+      "annex_identity": {
+        "title": "Príloha VI: identita výrobku a vyhlásenie výrobcu",
+        "description": "Príprava na digitálny pas výrobku požadovaný od 23. septembra 2029. Úplný súbor údajov nie je certifikáciou, overeným identifikátorom ani podaním do registra."
+      },
+      "annex_substances": {
+        "title": "Príloha VI: látky",
+        "description": "Úplný zoznam zámerne pridaných látok (príloha VI časť A bod h))"
+      },
+      "annex_microorganisms": {
+        "title": "Príloha VI: mikroorganizmy",
+        "description": "Všetky zámerne pridané mikroorganizmy (príloha VI časť A bod i))"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Názov značky"
+      },
+      "product_type": {
+        "label": "Typ výrobku"
+      },
+      "product_type_other": {
+        "label": "Typ výrobku (špecifikujte)"
+      },
+      "product_form": {
+        "label": "Forma výrobku"
+      },
+      "detergent_scope": {
+        "label": "Je výrobok určený na čistenie, namáčanie, pláchanie alebo bielenie textílií, riadu alebo povrchov?",
+        "help": "Pozri článok 2 ods. 1 nariadenia (EU) 2026/405. Farby, lepidlá, rozpúšťadlá a výrobky, ktoré nečistia, nepatria do tejto kategórie."
+      },
+      "scope_reason": {
+        "label": "Dôvod, prečo výrobok nespadá pod definíciu detergentu"
+      },
+      "use_sector": {
+        "label": "Pre koho je výrobok určený?",
+        "help": "Priemyselné a inštitucionálne použitie znamená použitie výlučne mimo domácností špecializovaným personálom."
+      },
+      "model_identifier": {
+        "label": "Identifikátor modelu výrobku",
+        "help": "Jeden pas sa vzťahuje na jeden model. Zmena zloženia alebo výroby, ktorá mení etiketu, môže znamenať nový model."
+      },
+      "batch_identifier": {
+        "label": "Referenčné číslo typu, šarže alebo dávky",
+        "help": "Etiketa musí obsahovať číslo typu, číslo šarže alebo iný prvok vysledovateľnosti."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "napr. 3401234567890"
+      },
+      "net_content": {
+        "label": "Nominálne množstvo s jednotkou",
+        "placeholder": "napr. 1,5 l, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "Trhy EÚ a jazyky etikety",
+        "help": "Znenie etikety a bezpečnostné upozornenia musia byť dostupné v jazyku alebo jazykoch požadovaných na každom trhu.",
+        "placeholder": "napr. Francúzsko (francúzština), Nemecko (nemčina)"
+      },
+      "dpp_profile": {
+        "label": "Informačný profil",
+        "help": "Nariadenie (EU) 2026/405 sa uplatňuje od 23. septembra 2029. Zvoľte súbor údajov podľa prílohy VI na prípravu budúcich údajov pasu. Jeho vyplnenie neznamená, že pas je v súlade s predpismi alebo certifikovaný."
+      },
+      "biocidal_claims": {
+        "label": "Biocídne alebo dezinfekčné tvrdenia?",
+        "help": "Dezinfekčné alebo antimikrobiálne tvrdenia si vyžadujú autorizáciu biocídneho výrobku podľa nariadenia (EU) No 528/2012."
+      },
+      "manufacturer_legal_name": {
+        "label": "Obchodné meno výrobcu",
+        "help": "Na etikete sa uvádza meno, poštová adresa, elektronická adresa a telefónne číslo výrobcu. Poštová adresa musí byť jedným miestom v Únii."
+      },
+      "manufacturer_street": {
+        "label": "Ulica a číslo"
+      },
+      "manufacturer_postal_code": {
+        "label": "Poštové smerovacie číslo"
+      },
+      "manufacturer_city": {
+        "label": "Mesto"
+      },
+      "manufacturer_country": {
+        "label": "Krajina"
+      },
+      "manufacturer_email": {
+        "label": "Elektronická adresa (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Telefónne číslo",
+        "placeholder": "napr. +33 1 23 45 67 89"
+      },
+      "manufacturer_non_eu": {
+        "label": "Je výrobca usadený mimo EÚ?"
+      },
+      "importer_legal_name": {
+        "label": "Obchodné meno dovozcu",
+        "help": "Ak je výrobca usadený mimo EÚ, vyžadujú sa aj kontaktné údaje dovozcu."
+      },
+      "importer_street": {
+        "label": "Ulica a číslo"
+      },
+      "importer_postal_code": {
+        "label": "Poštové smerovacie číslo"
+      },
+      "importer_city": {
+        "label": "Mesto"
+      },
+      "importer_country": {
+        "label": "Krajina"
+      },
+      "importer_email": {
+        "label": "Elektronická adresa (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "Splnomocnený zástupca v EÚ: obchodné meno",
+        "help": "Výrobca usadený mimo EÚ musí vymenovať splnomocneného zástupcu (článok 9 nariadenia (EU) 2026/405)."
+      },
+      "eu_operator_address": {
+        "label": "Splnomocnený zástupca v EÚ: adresa",
+        "placeholder": "Sídlo v rámci Európskej únie"
+      },
+      "eu_operator_email": {
+        "label": "Splnomocnený zástupca v EÚ: elektronická adresa (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "Posúdenie klasifikácie podľa nariadenia CLP",
+        "help": "Použite klasifikáciu, ktorá bola pre túto zmes skutočne posúdená podľa nariadenia (EC) No 1272/2008. Neodvodzujte ju od pH alebo piktogramov."
+      },
+      "supplemental_statements": {
+        "label": "Doplňujúce informácie na etikete",
+        "help": "Napríklad EUH208, ak sa uplatňuje."
+      },
+      "signal_word": {
+        "label": "Výstražné slovo"
+      },
+      "pictograms": {
+        "label": "GHS piktogramy"
+      },
+      "hazard_statements": {
+        "label": "Výstražné upozornenia",
+        "help": "Zadajte znenie presne tak, ako je na schválenej etikete. Použite tlačidlo prekladu pre každý jazyk trhu. Toto znenie sa nikdy neprekladá automaticky.",
+        "placeholder": "napr. H315 Dráždi kožu"
+      },
+      "precautionary_statements": {
+        "label": "Bezpečnostné upozornenia",
+        "help": "Zadajte znenie presne tak, ako je na schválenej etikete. Použite tlačidlo prekladu pre každý jazyk trhu. Toto znenie sa nikdy neprekladá automaticky.",
+        "placeholder": "napr. P280 Noste ochranné rukavice"
+      },
+      "pcn_applicability": {
+        "label": "Notifikácia pre toxikologické informačné centrá (príloha VIII k nariadeniu CLP)",
+        "help": "Povinnosť uvádzať UFI a notifikovať závisí od nebezpečnosti pre zdravie alebo fyzikálnej nebezpečnosti a od uplatniteľných výnimiek. Samotná nebezpečnosť pre životné prostredie notifikačnú povinnosť nespúšťa."
+      },
+      "pcn_exemption_reason": {
+        "label": "Dôvod a právny základ pre výnimku"
+      },
+      "ufi_code": {
+        "label": "Jedinečný identifikátor zloženia (UFI)",
+        "help": "Štyri skupiny po štyroch znakoch. Formát sa kontroluje, ale aplikácia nemôže overiť podanie pre toxikologické informačné centrum.",
+        "placeholder": "napr. N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Podania pre toxikologické informačné centrá"
+      },
+      "sds_requirement": {
+        "label": "Požiadavka na poskytovanie karty bezpečnostných údajov",
+        "help": "Samotný webový odkaz nespĺňa povinnosť poskytnúť kartu bezpečnostných údajov podľa článku 31 nariadenia REACH."
+      },
+      "sds_url": {
+        "label": "URL verejnej karty bezpečnostných údajov",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "Jazyky karty bezpečnostných údajov",
+        "placeholder": "napr. angličtina, francúzština, nemčina"
+      },
+      "sds_revision_date": {
+        "label": "Dátum revízie karty bezpečnostných údajov",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Núdzový kontakt (toxikologické informačné centrum alebo 24-hodinové číslo)",
+        "placeholder": "Telefónne číslo pre núdzové situácie"
+      },
+      "constituent_classes": {
+        "label": "Triedy zložiek pridané v množstve nad 0,2 % hmotnosti",
+        "help": "Zaškrtnite každú triedu, ktorá je pridaná v množstve nad 0,2 % hmotnosti, a potom nižšie zvoľte jej hmotnostný rozsah (príloha V časť A bod 1 písm. h) bod i))."
+      },
+      "band_phosphates": {
+        "label": "Fosforečnany: hmotnostný rozsah"
+      },
+      "band_phosphonates": {
+        "label": "Fosfonáty: hmotnostný rozsah"
+      },
+      "band_anionic_surfactants": {
+        "label": "Aniónové povrchovo aktívne látky: hmotnostný rozsah"
+      },
+      "band_cationic_surfactants": {
+        "label": "Katiónové povrchovo aktívne látky: hmotnostný rozsah"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfotérne povrchovo aktívne látky: hmotnostný rozsah"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Neiónové povrchovo aktívne látky: hmotnostný rozsah"
+      },
+      "band_oxygen_bleach": {
+        "label": "Bieliace činidlá na báze kyslíka: hmotnostný rozsah"
+      },
+      "band_chlorine_bleach": {
+        "label": "Bieliace činidlá na báze chlóru: hmotnostný rozsah"
+      },
+      "band_edta": {
+        "label": "EDTA a jej soli: hmotnostný rozsah"
+      },
+      "band_nta": {
+        "label": "NTA a jej soli: hmotnostný rozsah"
+      },
+      "band_phenols": {
+        "label": "Fenoly a halogénované fenoly: hmotnostný rozsah"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradichlórbenzén: hmotnostný rozsah"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromatické uhľovodíky: hmotnostný rozsah"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifatické uhľovodíky: hmotnostný rozsah"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Halogénované uhľovodíky: hmotnostný rozsah"
+      },
+      "band_soap": {
+        "label": "Mydlo: hmotnostný rozsah"
+      },
+      "band_zeolites": {
+        "label": "Zeolity: hmotnostný rozsah"
+      },
+      "band_polycarboxylates": {
+        "label": "Polykarboxyláty: hmotnostný rozsah"
+      },
+      "listed_constituents": {
+        "label": "Triedy zložiek pridané v akejkoľvek koncentrácii",
+        "help": "Príloha V časť A bod 1 písm. h) bod ii). Dezinfekčné prostriedky sa uvádzajú podľa platných pravidiel a od 23. septembra 2029 už nebudú uvádzanou triedou."
+      },
+      "preservatives_present": {
+        "label": "Sú prítomné konzervačné látky?",
+        "help": "Konzervačné látky sa uvádzajú podľa prílohy V časti A bodu 1 písm. h) bodu iii), pokiaľ už nie sú označené podľa článku 18 ods. 3 písm. b) nariadenia CLP alebo článku 58 nariadenia o biocídnych výrobkoch."
+      },
+      "preservatives": {
+        "label": "Konzervačné látky",
+        "help": "Ak je to možné, použite názov INCI.",
+        "placeholder": "napr. Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "Alergénne vonné látky pridané v množstve nad 0,01 % hmotnosti?",
+        "help": "Alergény zo zoznamu v prílohe V časti D, ktoré sú zámerne pridané v množstve nad 0,01 % hmotnosti, sa uvádzajú na etikete, pokiaľ už nie sú označené podľa nariadenia CLP."
+      },
+      "fragrance_allergens": {
+        "label": "Prítomné alergénne vonné látky",
+        "help": "Vyberte každý alergén z oficiálneho zoznamu 105 položiek."
+      },
+      "ingredients_url": {
+        "label": "Verejná webová stránka so zoznamom zložiek",
+        "help": "Platné pravidlá (nariadenie (EC) No 648/2004, príloha VII časť D) vyžadujú udržiavaný verejný zoznam zložiek pre spotrebiteľské výrobky. Nevyžaduje percentuálne rozsahy ani čísla CAS.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "Ekvivalentné informácie o zložkách poskytnuté profesionálnym používateľom"
+      },
+      "biodegradability_test": {
+        "label": "Skúšobná metóda biologickej odbúrateľnosti povrchovo aktívnej látky",
+        "placeholder": "napr. séria OECD 301"
+      },
+      "biodegradability_reference": {
+        "label": "Referenčné označenie dôkazu o biologickej odbúrateľnosti",
+        "help": "Uveďte názov protokolu o skúške alebo vyhlásenia dodávateľa. Nenahrávajte ani nevkladajte dôverné súbory."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Obsahuje zámerne pridané mikročastice syntetického polyméru?",
+        "help": "Nariadenie (EU) 2023/2055 ich obmedzuje podľa položky 78 prílohy XVII k nariadeniu REACH. Na detergenty sa obmedzenie vzťahuje od 17. októbra 2028."
+      },
+      "use_instructions": {
+        "label": "Návod na použitie a osobitné bezpečnostné opatrenia",
+        "help": "Metóda, vhodné textílie alebo povrchy a akékoľvek osobitné bezpečnostné opatrenia."
+      },
+      "laundry_type": {
+        "label": "Typ pracieho prostriedku",
+        "help": "Určuje štandardnú náplň: 4,5 kg suchej bielizne pre vysokovýkonné pracie prostriedky, 2,5 kg pre vysokovýkonné pracie prostriedky s krátkym cyklom a pre prostriedky na jemnú bielizeň."
+      },
+      "dosage_unit": {
+        "label": "Jednotka dávkovania"
+      },
+      "dosage_soft": {
+        "label": "Dávka pre mäkkú vodu (na štandardnú náplň)",
+        "placeholder": "napr. 60"
+      },
+      "dosage_medium": {
+        "label": "Dávka pre stredne tvrdú vodu (na štandardnú náplň)",
+        "placeholder": "napr. 75"
+      },
+      "dosage_hard": {
+        "label": "Dávka pre tvrdú vodu (na štandardnú náplň)",
+        "placeholder": "napr. 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Dávkovanie pre jednofázové a dvojfázové pracie procesy",
+        "help": "Príloha V časť B bod 1 písm. a) vyžaduje dávkovanie pre jednofázové alebo dvojfázové pracie procesy."
+      },
+      "loads_per_pack": {
+        "label": "Počet štandardných náplní na balenie (stredne tvrdá voda, 2,5 milimólu CaCO3 na liter)",
+        "help": "V prípade náhradných náplní uveďte počet náplní na 1 liter alebo 1 kg výrobku. Nevyžaduje sa pre náhradné náplne v kusových baleniach."
+      },
+      "measuring_cup_ml": {
+        "label": "Objem odmerky",
+        "help": "Objem akejkoľvek dodanej odmerky s jasným označením dávok pre mäkkú, stredne tvrdú a tvrdú vodu."
+      },
+      "dishwasher_dose": {
+        "label": "Štandardná dávka pre hlavný cyklus",
+        "help": "Pre bežne znečistený riad v plne naloženej umývačke riadu na 12 súprav."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Úprava dávky podľa tvrdosti vody"
+      },
+      "surface_dilution": {
+        "label": "Odporúčané riedenie a množstvo na plochu",
+        "help": "Príloha V časť B bod 4: uveďte odporúčané riedenie a množstvo na plochu alebo iné pokyny na použitie, aby sa výrobok nepoužíval v nadmernom množstve."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Celkový obsah fosforu v odporúčanej dávke (v gramoch)",
+        "help": "Limity podľa prílohy III: menej ako 0,5 g na štandardnú náplň bielizne v tvrdej vode a menej ako 0,3 g na štandardnú dávku do umývačky riadu."
+      },
+      "storage_disposal": {
+        "label": "Skladovanie a zneškodňovanie"
+      },
+      "packaging_material": {
+        "label": "Materiál primárneho obalu"
+      },
+      "packaging_recyclable": {
+        "label": "Je obal recyklovateľný?"
+      },
+      "recycling_instructions": {
+        "label": "Pokyny na recykláciu"
+      },
+      "recycled_packaging_content": {
+        "label": "Obsah recyklovaného materiálu v obale (%)",
+        "placeholder": "napr. 30"
+      },
+      "refill_available": {
+        "label": "Je dostupná náhradná náplň?"
+      },
+      "refill_station": {
+        "label": "Predáva sa prostredníctvom plniacej stanice?",
+        "help": "Na plniace miesta sa vzťahuje vlastná povinnosť týkajúca sa nosiča údajov podľa článku 21 ods. 4 nariadenia (EU) 2026/405."
+      },
+      "epr_registration": {
+        "label": "Registrácia v rámci rozšírenej zodpovednosti výrobcov za obaly pre každý trh",
+        "help": "Jeden riadok na každý trh.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Uplatniteľná autorizácia alebo zákonný prechodný základ"
+      },
+      "biocidal_actives": {
+        "label": "Účinné látky a autorizované použitia"
+      },
+      "environmental_claims": {
+        "label": "Environmentálne tvrdenia uvedené na výrobku alebo obale",
+        "placeholder": "napr. „Fľaša vyrobená z 30 % recyklovaného plastu“"
+      },
+      "claims_evidence_reference": {
+        "label": "Referenčné označenie dôkazu na odôvodnenie tvrdení",
+        "placeholder": "Referenčné označenie štúdie, certifikátu alebo overovacieho orgánu pre každé tvrdenie"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Vyhýbajú sa tvrdenia všeobecným environmentálnym pojmom?",
+        "help": "Všeobecné tvrdenia ako „ekologický“ alebo „biologicky odbúrateľný“ sú od 27. septembra 2026 obmedzené podľa smernice (EU) 2024/825."
+      },
+      "ecolabel_licence_number": {
+        "label": "Licenčné číslo environmentálnej značky EÚ",
+        "help": "Zadajte registračné číslo licencie, len ak je výrobok držiteľom licencie environmentálnej značky EÚ. Značka sa na verejnom pase zobrazí, len ak je zadané číslo."
+      },
+      "reach_review": {
+        "label": "Posúdené obmedzenia a povinnosti podľa nariadenia REACH",
+        "help": "Preskúmajte obmedzenia v prílohe XVII a povinnosti, ktoré sa vzťahujú na zložky."
+      },
+      "physical_label_reviewed": {
+        "label": "Skontroloval(-a) som fyzickú etiketu a poskytnuté bezpečnostné informácie"
+      },
+      "label_professional_indicator": {
+        "label": "Na etikete je uvedené, že výrobok je určený len na profesionálne použitie"
+      },
+      "previous_passport_url": {
+        "label": "Odkaz na predchádzajúci pas, ak tento záznam nahrádza iný",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "Dátum kontroly informácií o výrobku",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "Referenčné označenie dôkazu o zhode od výrobcu"
+      },
+      "model_content_reference": {
+        "label": "Referenčné označenie revízie obsahu modelu"
+      },
+      "manufacturing_process_reference": {
+        "label": "Referenčné označenie revízie výrobného procesu"
+      },
+      "persistent_product_id": {
+        "label": "Trvalý identifikátor výrobku",
+        "help": "Zadajte skutočný identifikátor. Interné ID záznamu nie je identifikátor vydaný podľa noriem uvedených v ESPR."
+      },
+      "identifier_scheme": {
+        "label": "Schéma identifikátora a vydavateľ"
+      },
+      "manufacturer_operator_id": {
+        "label": "Jedinečný identifikátor hospodárskeho subjektu výrobcu"
+      },
+      "backup_provider_url": {
+        "label": "Poskytovateľ pasových služieb uchovávajúci záložnú kópiu (URL)",
+        "help": "Uveďte poskytovateľa, s ktorým ste sa skutočne dohodli. Aplikácia nevytvára záložnú službu.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "Referenčné označenie zmluvy o záložnej službe"
+      },
+      "commodity_code_status": {
+        "label": "Colný kód tovaru"
+      },
+      "commodity_code": {
+        "label": "Kód tovaru (nariadenie (EEC) No 2658/87)"
+      },
+      "commodity_code_reason": {
+        "label": "Dôvod, prečo sa kód tovaru neuplatňuje"
+      },
+      "manufacturer_responsibility": {
+        "label": "Výrobca vydáva tento pas na svoju výhradnú zodpovednosť"
+      },
+      "compliance_statement": {
+        "label": "Vyhlásenie, že bol preukázaný súlad s nariadením (EU) 2026/405",
+        "help": "Vyplňte až po vlastnom posúdení výrobcom. Aplikácia nikdy negeneruje vyhlásenie o zhode."
+      },
+      "applicable_union_law": {
+        "label": "Iné právne predpisy Únie, ktoré sa vzťahujú na výrobok"
+      },
+      "last_placed_on_market_date": {
+        "label": "Posledný dátum uvedenia modelu na trh",
+        "help": "Východiskový bod pre desaťročnú povinnosť dostupnosti.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Kde je umiestnený nosič údajov",
+        "help": "Článok 21 ods. 4: fyzicky prítomný, nezmazateľný, strojovo čitateľný a viditeľný pred kúpou, s vyhlásením „Naskenujte pre komplexnejšie informácie o výrobku“. Vyžaduje sa aj na plniacich staniciach a pri predaji na diaľku."
+      },
+      "carrier_reviewed": {
+        "label": "Nosič údajov spĺňa tieto požiadavky"
+      },
+      "market_language_reviewed": {
+        "label": "Znenie etikety a bezpečnostné upozornenia sú skontrolované v každom jazyku cieľového trhu"
+      },
+      "substance_list_route": {
+        "label": "Spôsob zverejnenia zoznamu látok",
+        "help": "Výnimka sa vzťahuje len na priemyselné a inštitucionálne detergenty a povrchovo aktívne látky, ak sa ekvivalentné informácie poskytujú v karte bezpečnostných údajov podľa článku 31 nariadenia REACH."
+      },
+      "substances": {
+        "label": "Všetky zámerne pridané látky a prenesené konzervačné látky, ktorých uvedenie na etikete sa vyžaduje",
+        "help": "Identifikujte látky podľa požiadaviek článku 18 ods. 3 nariadenia (EC) No 1272/2008. Nezadávajte koncentrácie ani dôverné údaje o zložení. Všetko uložené v tejto kategórii je verejné."
+      },
+      "no_substances_reason": {
+        "label": "Základ pre neexistenciu látok na uvedenie v zozname"
+      },
+      "substance_list_complete": {
+        "label": "Zoznam je úplný, zahŕňa kvalifikované prenesené konzervačné látky a používa identity posúdené podľa článku 18 ods. 3 nariadenia CLP"
+      },
+      "industrial_institutional_use": {
+        "label": "Používa sa výlučne mimo domácností špecializovaným personálom"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Ekvivalentné informácie o látkach boli skutočne poskytnuté v karte bezpečnostných údajov podľa článku 31 nariadenia REACH"
+      },
+      "annex_sds_url": {
+        "label": "URL ekvivalentnej karty bezpečnostných údajov",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Jazyky ekvivalentnej karty bezpečnostných údajov"
+      },
+      "annex_sds_revision_date": {
+        "label": "Dátum revízie ekvivalentnej karty bezpečnostných údajov",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Sú mikroorganizmy zámerne pridané?",
+        "help": "Spôsob zverejnenia prostredníctvom ekvivalentnej karty bezpečnostných údajov nikdy neodstraňuje povinnosť uviesť zoznam mikroorganizmov."
+      },
+      "microorganisms": {
+        "label": "Všetky zámerne pridané mikroorganizmy",
+        "help": "Pre každý mikroorganizmus uveďte rod, druh a názov alebo kód kmeňa."
+      },
+      "microorganism_safety_reference": {
+        "label": "Referenčné označenie posúdenia bezpečnosti (príloha II)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Čas použiteľnosti a podmienky skladovania",
+        "help": "Na etikete detergentu obsahujúceho mikroorganizmy sa uvádza čas použiteľnosti."
+      },
+      "food_contact_use": {
+        "label": "Určené na použitie na povrchoch prichádzajúcich do styku s potravinami?",
+        "help": "Pokiaľ nebolo v rámci posúdenia rizika stanovené, že výrobok je pre toto použitie bezpečný, na etikete sa uvádza, že sa nemá používať na povrchoch prichádzajúcich do styku s potravinami."
+      },
+      "food_contact_instructions": {
+        "label": "Bezpečnostné opatrenia a pokyny pre povrchy prichádzajúce do styku s potravinami"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Prací prostriedok",
+        "laundry_additive": "Prísada do prania alebo prostriedok na predpieranie",
+        "machine_dishwashing": "Prostriedok do umývačky riadu",
+        "dishwasher_additive": "Leštidlo alebo prísada do umývačky riadu",
+        "hand_dishwashing": "Prostriedok na ručné umývanie riadu",
+        "all_purpose": "Univerzálny alebo povrchový čistič",
+        "kitchen": "Kuchynský čistič",
+        "bathroom": "Kúpeľňový čistič",
+        "toilet": "WC čistič",
+        "glass": "Čistič na sklo",
+        "floor": "Čistič na podlahy",
+        "descaler": "Odstraňovač vodného kameňa",
+        "bleach": "Bielidlo",
+        "other": "Iný detergent"
+      },
+      "productForm": {
+        "liquid": "Tekutina",
+        "gel": "Gél",
+        "powder": "Prášok",
+        "tablet": "Tableta",
+        "capsule": "Kapsula alebo vankúšik",
+        "spray": "Sprej",
+        "wipe": "Utierka",
+        "paste": "Pasta",
+        "other": "Iné"
+      },
+      "yesNoReview": {
+        "yes": "Áno",
+        "no": "Nie",
+        "review": "Vyžaduje sa posúdenie"
+      },
+      "useSector": {
+        "consumer": "Spotrebitelia vrátane zmiešaného spotrebiteľského a profesionálneho použitia",
+        "professional": "Len na profesionálne použitie",
+        "industrial": "Len na priemyselné a inštitucionálne použitie"
+      },
+      "dppProfile": {
+        "current": "Aktuálne informácie o výrobku",
+        "annex_vi": "Úplný súbor údajov podľa prílohy VI pre pravidlá od roku 2029"
+      },
+      "manufacturerNonEu": {
+        "yes": "Áno",
+        "no": "Nie"
+      },
+      "clpClassification": {
+        "none": "Neklasifikovaný ako nebezpečný",
+        "environment": "Len nebezpečnosť pre životné prostredie",
+        "health_physical": "Nebezpečnosť pre zdravie alebo fyzikálna nebezpečnosť, s nebezpečnosťou pre životné prostredie alebo bez nej",
+        "review": "Vyžaduje sa posúdenie"
+      },
+      "signalWord": {
+        "danger": "Nebezpečenstvo",
+        "warning": "Varovanie",
+        "not_applicable": "Neuplatňuje sa po posúdení"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Vybuchujúca bomba",
+        "ghs02": "GHS02 Plameň",
+        "ghs03": "GHS03 Plameň nad kruhom",
+        "ghs04": "GHS04 Plynová fľaša",
+        "ghs05": "GHS05 Korózia",
+        "ghs06": "GHS06 Lebka s prekríženými hnátmi",
+        "ghs07": "GHS07 Výkričník",
+        "ghs08": "GHS08 Nebezpečenstvo pre zdravie",
+        "ghs09": "GHS09 Životné prostredie",
+        "none": "Neuplatňuje sa žiadny piktogram"
+      },
+      "pcnApplicability": {
+        "required": "Vyžaduje sa oznámenie",
+        "exempt": "Zdokumentovaná výnimka",
+        "review": "Vyžaduje sa posúdenie"
+      },
+      "pcnStatus": {
+        "submitted": "Oznámené pre príslušné trhy",
+        "pending": "Čaká sa na vybavenie"
+      },
+      "sdsRequirement": {
+        "required": "Musí sa poskytnúť",
+        "on_request": "Musí byť k dispozícii na požiadanie",
+        "not_required": "Po posúdení sa nevyžaduje",
+        "review": "Vyžaduje sa posúdenie"
+      },
+      "constituentClass": {
+        "phosphates": "Fosforečnany",
+        "phosphonates": "Fosfonáty",
+        "anionic_surfactants": "Aniónové povrchovo aktívne látky",
+        "cationic_surfactants": "Katiónové povrchovo aktívne látky",
+        "amphoteric_surfactants": "Amfotérne povrchovo aktívne látky",
+        "nonionic_surfactants": "Neiónové povrchovo aktívne látky",
+        "oxygen_bleach": "Bieliace činidlá na báze kyslíka",
+        "chlorine_bleach": "Bieliace činidlá na báze chlóru",
+        "edta": "EDTA a jeho soli",
+        "nta": "NTA a jeho soli",
+        "phenols": "Fenoly a halogénované fenoly",
+        "paradichlorobenzene": "Paradichlórbenzén",
+        "aromatic_hydrocarbons": "Aromatické uhľovodíky",
+        "aliphatic_hydrocarbons": "Alifatické uhľovodíky",
+        "halogenated_hydrocarbons": "Halogénované uhľovodíky",
+        "soap": "Mydlo",
+        "zeolites": "Zeolity",
+        "polycarboxylates": "Polykarboxyláty"
+      },
+      "weightBand": {
+        "lt5": "Menej ako 5 %",
+        "5to15": "5 % alebo viac, ale menej ako 15 %",
+        "15to30": "15 % alebo viac, ale menej ako 30 %",
+        "gte30": "30 % a viac"
+      },
+      "listedConstituent": {
+        "enzymes": "Enzýmy",
+        "micro_organisms": "Mikroorganizmy",
+        "optical_brighteners": "Optické zjasňovače",
+        "perfumes": "Parfumy",
+        "disinfectants": "Dezinfekčné prostriedky (súčasné pravidlá do 23. septembra 2029)"
+      },
+      "yesNoUnknown": {
+        "yes": "Áno",
+        "no": "Nie",
+        "unknown": "Neznáme"
+      },
+      "laundryType": {
+        "heavy_duty": "Vysokoúčinný",
+        "heavy_duty_short": "Vysokoúčinný na krátke cykly",
+        "light_duty": "Na jemné alebo chúlostivé tkaniny"
+      },
+      "dosageUnit": {
+        "ml": "Mililitre",
+        "g": "Gramy",
+        "units": "Jednotky (tablety, kapsuly alebo pody)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Iný plast",
+        "metal": "Kov",
+        "glass": "Sklo",
+        "paper_cardboard": "Papier alebo lepenka",
+        "composite": "Kompozitný materiál",
+        "water_soluble_film": "Vo vode rozpustná fólia",
+        "other": "Iné"
+      },
+      "reachReview": {
+        "reviewed": "Skontrolované dodávateľom",
+        "review": "Vyžaduje sa posúdenie"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Uplatniteľné",
+        "not_applicable": "Po posúdení neuplatniteľné"
+      },
+      "substanceListRoute": {
+        "full_list": "Úplný zoznam látok",
+        "equivalent_sds": "Ekvivalentná karta bezpečnostných údajov (len na priemyselné a profesionálne použitie)",
+        "no_added_substances": "Po posúdení nie sú žiadne látky na uvedenie v zozname"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "Tento výrobok nemusí spadať pod definíciu detergentu v článku 2 ods. 1 nariadenia (EU) 2026/405. Pred použitím tejto kategórie skontrolujte rozsah pôsobnosti.",
+      "biocidal": "Tvrdenia o dezinfekčných alebo antimikrobiálnych vlastnostiach vyžadujú autorizáciu biocídneho výrobku podľa nariadenia (EU) No 528/2012.",
+      "assessmentNeeded": "Toto posúdenie nie je dokončené. Vyriešte to predtým, ako sa budete spoliehať na tento pas.",
+      "microparticles": "Skontrolujte nariadenie (EU) 2023/2055 o mikročasticiach syntetických polymérov pred uvedením tohto výrobku na trh. Odpoveď „neznáme“ sa musí vyriešiť s dodávateľom.",
+      "phosphorusLaundry": "Celkový obsah fosforu {{value}} g nie je pod limitom 0,5 g pre spotrebiteľský prací detergent v tvrdej vode (príloha III k nariadeniu (EU) 2026/405).",
+      "phosphorusDishwasher": "Celkový obsah fosforu {{value}} g nie je pod limitom 0,3 g pre spotrebiteľský detergent pre automatické umývačky riadu (príloha III k nariadeniu (EU) 2026/405).",
+      "percentageRange": "Percentuálna hodnota musí byť v rozsahu od 0 do 100. Zadali ste {{value}}.",
+      "positiveNumber": "Zadajte číslo väčšie ako nula. Zadali ste {{value}}.",
+      "allergensMissing": "Odpovedali ste áno, ale nie je vybratý žiadny alergén. Vyberte každý alergén z oficiálneho zoznamu.",
+      "ufiFormat": "UFI sa skladá zo štyroch skupín po štyroch znakoch, napríklad N1QV-R02N-J00M-WQD5. Formát sa kontroluje, ale oznámenie toxikologickému centru nie.",
+      "urlFormat": "Použite úplnú webovú adresu začínajúcu sa reťazcom http:// alebo https://.",
+      "emailFormat": "Zadajte platnú e-mailovú adresu.",
+      "dateFormat": "Použite platný dátum vo formáte YYYY-MM-DD.",
+      "microorganismSafety": "Mikroorganizmy sú pridané, ale nie je zadaný žiadny odkaz na posúdenie bezpečnosti."
+    },
+    "disclaimer": {
+      "title": "Detergenty DPP: vyhlásenie o odmietnutí zodpovednosti za súlad",
+      "text": "Nariadenie (EU) 2026/405 o detergentoch a povrchovo aktívnych látkach sa uplatňuje od 23. septembra 2029. Jeho pravidlá týkajúce sa digitálneho pasu výrobku, prístupových práv a podrobností o nosiči údajov sa ešte len majú stanoviť vykonávacím aktom, a dovtedy sa uplatňuje nariadenie (EC) No 648/2004. Tento nástroj zhromažďuje informácie o výrobku a pripravuje údaje pre pas. Nie je to certifikácia ani schválenie a nemalo by sa považovať za konečné právne poradenstvo. Všetko uložené v tejto kategórii je verejné."
+    }
   }
 }

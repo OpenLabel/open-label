@@ -587,8 +587,408 @@ const COGNATES: Record<string, readonly string[]> = {
   ],
 };
 
+/**
+ * Detergents (2026-10-13): identifier system names (GTIN / EAN) that must not be translated.
+ */
+const DETERGENTS_PROTECTED_TERMS: Record<string, readonly string[]> = {
+  'bg': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'cs': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'da': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'de': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'el': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'es': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'et': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'fi': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'fr': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'ga': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'hr': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'hu': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'it': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'lt': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'lv': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'mt': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'nl': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'pl': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'pt': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'ro': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'sk': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'sl': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'sv': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+  'zh-CN': [
+    'detergents.fields.gtin.label', // "GTIN / EAN"
+  ],
+};
+
+/**
+ * Detergents (2026-10-13): technical notation kept verbatim: ISO date format YYYY-MM-DD, resin codes HDPE (02) / PET (01) / PP (05), the country-code EPR example "FR: ... / DE: ...", the GHS05 pictogram code with its official French name, and the French unit name "Millilitres".
+ */
+const DETERGENTS_TECHNICAL_NOTATION: Record<string, readonly string[]> = {
+  'bg': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'cs': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'da': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'de': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'el': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'es': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'et': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'fi': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'fr': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.pictograms.ghs05', // "GHS05 Corrosion"
+    'detergents.options.dosageUnit.ml', // "Millilitres"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'ga': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'hr': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'hu': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'it': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'lt': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'lv': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'mt': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'nl': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'pl': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'pt': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'ro': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'sk': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'sl': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'sv': [
+    'detergents.fields.sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.fields.data_review_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.last_placed_on_market_date.placeholder', // "YYYY-MM-DD"
+    'detergents.fields.annex_sds_revision_date.placeholder', // "YYYY-MM-DD"
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+  'zh-CN': [
+    'detergents.fields.epr_registration.placeholder', // "FR: ...\nDE: ..."
+    'detergents.options.packagingMaterial.hdpe', // "HDPE (02)"
+    'detergents.options.packagingMaterial.pet', // "PET (01)"
+    'detergents.options.packagingMaterial.pp', // "PP (05)"
+  ],
+};
+
+/**
+ * Detergents (2026-10-13): words spelled identically in the target language (Gel, Spray, Tablet, Paste, Metal, Perfumes, and French Danger, Phosphates, Phosphonates, Polycarboxylates, Enzymes, Applicable).
+ */
+const DETERGENTS_COGNATES: Record<string, readonly string[]> = {
+  'cs': [
+    'detergents.options.productForm.gel', // "Gel"
+  ],
+  'da': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.productForm.tablet', // "Tablet"
+    'detergents.options.productForm.spray', // "Spray"
+    'detergents.options.packagingMaterial.metal', // "Metal"
+  ],
+  'de': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.productForm.spray', // "Spray"
+    'detergents.options.productForm.paste', // "Paste"
+  ],
+  'es': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.listedConstituent.perfumes', // "Perfumes"
+    'detergents.options.packagingMaterial.metal', // "Metal"
+  ],
+  'fr': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.productForm.spray', // "Spray"
+    'detergents.options.signalWord.danger', // "Danger"
+    'detergents.options.constituentClass.phosphates', // "Phosphates"
+    'detergents.options.constituentClass.phosphonates', // "Phosphonates"
+    'detergents.options.constituentClass.polycarboxylates', // "Polycarboxylates"
+    'detergents.options.listedConstituent.enzymes', // "Enzymes"
+    'detergents.options.commodityCodeStatus.applicable', // "Applicable"
+  ],
+  'hr': [
+    'detergents.options.productForm.gel', // "Gel"
+  ],
+  'hu': [
+    'detergents.options.productForm.spray', // "Spray"
+  ],
+  'it': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.productForm.spray', // "Spray"
+  ],
+  'nl': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.productForm.tablet', // "Tablet"
+    'detergents.options.productForm.spray', // "Spray"
+  ],
+  'pl': [
+    'detergents.options.productForm.spray', // "Spray"
+    'detergents.options.packagingMaterial.metal', // "Metal"
+  ],
+  'pt': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.productForm.spray', // "Spray"
+    'detergents.options.listedConstituent.perfumes', // "Perfumes"
+    'detergents.options.packagingMaterial.metal', // "Metal"
+  ],
+  'ro': [
+    'detergents.options.productForm.gel', // "Gel"
+    'detergents.options.productForm.spray', // "Spray"
+    'detergents.options.packagingMaterial.metal', // "Metal"
+  ],
+  'sl': [
+    'detergents.options.productForm.gel', // "Gel"
+  ],
+  'sv': [
+    'detergents.options.productForm.gel', // "Gel"
+  ],
+};
+
 const ALLOWED = new Set<string>(
-  [PROTECTED_TERMS, TECHNICAL_NOTATION, COGNATES].flatMap((group) =>
+  [
+    PROTECTED_TERMS,
+    TECHNICAL_NOTATION,
+    COGNATES,
+    DETERGENTS_PROTECTED_TERMS,
+    DETERGENTS_TECHNICAL_NOTATION,
+    DETERGENTS_COGNATES,
+  ].flatMap((group) =>
     Object.entries(group).flatMap(([locale, keys]) => keys.map((k) => `${locale}::${k}`)),
   ),
 );

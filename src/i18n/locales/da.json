@@ -2158,5 +2158,738 @@
       "scannerTitle": "Mærkescanner til tøj",
       "scannerDescription": "Fotografér eller overfør det isyede vaskemærke, hængemærket eller en tech pack PDF — AI'en læser fibersammensætningen, vaskesymbolerne, oprindelsesland, certificeringer og stilreferencer."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "Produktidentitet",
+        "description": "Produkt, model og sporbarhed"
+      },
+      "responsible_operators": {
+        "title": "Hvem er ansvarlig",
+        "description": "Fabrikant, importør og bemyndiget EU-repræsentant, opbevaret som separate parter"
+      },
+      "classification": {
+        "title": "Fareklassificering og sikkerhedsinformation",
+        "description": "CLP-klassificering, mærkningens fareinformation, giftinformation og sikkerhedsdatablad"
+      },
+      "ingredients": {
+        "title": "Ingredienser og mærkningsoplysninger",
+        "description": "Mærkningsindhold i henhold til bilag V til forordning (EU) 2026/405 og de gældende regler"
+      },
+      "use": {
+        "title": "Sikker anvendelse og dosering",
+        "description": "Doserings- og anvendelsesoplysninger i henhold til bilag V, del B"
+      },
+      "packaging": {
+        "title": "Emballage og genanvendelse",
+        "description": "Emballage, genanvendelighed og genopfyldninger"
+      },
+      "biocide": {
+        "title": "Vurdering af biocidholdigt produkt",
+        "description": "Gælder, når der fremsættes desinficerende eller antimikrobielle anprisninger"
+      },
+      "green_claims": {
+        "title": "Miljøanprisninger",
+        "description": "Understøtter direktiv (EU) 2024/825, som finder anvendelse fra den 27. september 2026"
+      },
+      "review": {
+        "title": "Leverandørgennemgang og udarbejdelse af pas",
+        "description": "Kontroller, som leverandøren gennemfører. Appen kan ikke verificere dem."
+      },
+      "annex_identity": {
+        "title": "Bilag VI: produktidentitet og fabrikanterklæring",
+        "description": "Forberedelse til det digitale produktpas, der kræves fra den 23. september 2029. Et fuldstændigt datasæt er ikke en certificering, en verificeret identifikator eller en indberetning til et register."
+      },
+      "annex_substances": {
+        "title": "Bilag VI: stoffer",
+        "description": "Fuldstændig liste over bevidst tilsatte stoffer (bilag VI, del A, litra h))"
+      },
+      "annex_microorganisms": {
+        "title": "Bilag VI: mikroorganismer",
+        "description": "Alle bevidst tilsatte mikroorganismer (bilag VI, del A, litra i))"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Mærkenavn"
+      },
+      "product_type": {
+        "label": "Produkttype"
+      },
+      "product_type_other": {
+        "label": "Produkttype (angiv)"
+      },
+      "product_form": {
+        "label": "Produktform"
+      },
+      "detergent_scope": {
+        "label": "Er produktet beregnet til rengøring, iblødsætning, skylning eller blegning af tekstiler, service eller overflader?",
+        "help": "Se artikel 2, stk. 1, i forordning (EU) 2026/405. Maling, klæbemidler, opløsningsmidler og produkter, der ikke rengør, falder uden for denne kategori."
+      },
+      "scope_reason": {
+        "label": "Begrundelse for, at produktet falder uden for definitionen af vaske- og rengøringsmidler"
+      },
+      "use_sector": {
+        "label": "Hvem er produktet beregnet til?",
+        "help": "Industriel og institutionel betyder, at det kun anvendes uden for den private husholdning af specialiseret personale."
+      },
+      "model_identifier": {
+        "label": "Produktmodelidentifikator",
+        "help": "Ét pas dækker én model. En ændring i formulering eller produktion, der ændrer mærkningen, kan gøre det til en ny model."
+      },
+      "batch_identifier": {
+        "label": "Type-, batch- eller partinummer",
+        "help": "Mærkningen skal indeholde et typenummer, batchnummer eller et andet sporbarhedselement."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "f.eks. 3401234567890"
+      },
+      "net_content": {
+        "label": "Nominel mængde med enhed",
+        "placeholder": "f.eks. 1,5 l, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "EU-markeder og mærkningssprog",
+        "help": "Mærknings- og sikkerhedsformuleringer skal være tilgængelige på det eller de sprog, der kræves på hvert marked.",
+        "placeholder": "f.eks. Frankrig (fransk), Tyskland (tysk)"
+      },
+      "dpp_profile": {
+        "label": "Informationsprofil",
+        "help": "Forordning (EU) 2026/405 finder anvendelse fra den 23. september 2029. Vælg datasættet i bilag VI for at forberede de fremtidige pasdata. Udfyldelse heraf gør ikke et pas overensstemmende eller certificeret."
+      },
+      "biocidal_claims": {
+        "label": "Biocid- eller desinfektionsanprisninger?",
+        "help": "Desinficerende eller antimikrobielle anprisninger kræver en godkendelse som biocidholdigt produkt i henhold til forordning (EU) No 528/2012."
+      },
+      "manufacturer_legal_name": {
+        "label": "Fabrikantens juridiske navn",
+        "help": "Mærkningen angiver fabrikantens navn, postadresse, elektroniske adresse og telefonnummer. Postadressen skal være et enkelt kontaktpunkt i Unionen."
+      },
+      "manufacturer_street": {
+        "label": "Gadeadresse"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postnummer"
+      },
+      "manufacturer_city": {
+        "label": "By"
+      },
+      "manufacturer_country": {
+        "label": "Land"
+      },
+      "manufacturer_email": {
+        "label": "Elektronisk adresse (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Telefonnummer",
+        "placeholder": "f.eks. +33 1 23 45 67 89"
+      },
+      "manufacturer_non_eu": {
+        "label": "Er fabrikanten etableret uden for EU?"
+      },
+      "importer_legal_name": {
+        "label": "Importørens juridiske navn",
+        "help": "Når fabrikanten er etableret uden for EU, kræves importørens kontaktoplysninger også."
+      },
+      "importer_street": {
+        "label": "Gadeadresse"
+      },
+      "importer_postal_code": {
+        "label": "Postnummer"
+      },
+      "importer_city": {
+        "label": "By"
+      },
+      "importer_country": {
+        "label": "Land"
+      },
+      "importer_email": {
+        "label": "Elektronisk adresse (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "Bemyndiget EU-repræsentant: juridisk navn",
+        "help": "En fabrikant, der er etableret uden for EU, skal udpege en bemyndiget repræsentant (artikel 9 i forordning (EU) 2026/405)."
+      },
+      "eu_operator_address": {
+        "label": "Bemyndiget EU-repræsentant: adresse",
+        "placeholder": "Registreret adresse i Den Europæiske Union"
+      },
+      "eu_operator_email": {
+        "label": "Bemyndiget EU-repræsentant: elektronisk adresse (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "CLP-klassificeringsvurdering",
+        "help": "Anvend den klassificering, der rent faktisk er vurderet for denne blanding i henhold til forordning (EC) No 1272/2008. Udled den ikke fra pH-værdien eller piktogrammerne."
+      },
+      "supplemental_statements": {
+        "label": "Supplerende mærkningsoplysninger",
+        "help": "For eksempel EUH208, hvor det er relevant."
+      },
+      "signal_word": {
+        "label": "Signalord"
+      },
+      "pictograms": {
+        "label": "GHS-piktogrammer"
+      },
+      "hazard_statements": {
+        "label": "Faresætninger",
+        "help": "Indtast ordlyden nøjagtigt som på den godkendte mærkning. Brug oversættelsesknappen for hvert markedssprog. Denne ordlyd oversættes aldrig automatisk.",
+        "placeholder": "f.eks. H315 Forårsager hudirritation"
+      },
+      "precautionary_statements": {
+        "label": "Sikkerhedssætninger",
+        "help": "Indtast ordlyden nøjagtigt som på den godkendte mærkning. Brug oversættelsesknappen for hvert markedssprog. Denne ordlyd oversættes aldrig automatisk.",
+        "placeholder": "f.eks. P280 Bær beskyttelseshandsker"
+      },
+      "pcn_applicability": {
+        "label": "Anmeldelse til giftinformation (CLP, bilag VIII)",
+        "help": "UFI og anmeldelse afhænger af sundhedsfarer eller fysiske farer og de gældende undtagelser. Miljøfarer alene udløser ikke anmeldelsespligt."
+      },
+      "pcn_exemption_reason": {
+        "label": "Begrundelse og retsgrundlag for undtagelsen"
+      },
+      "ufi_code": {
+        "label": "Unik formelidentifikator (UFI)",
+        "help": "Fire grupper af fire tegn. Formatet kontrolleres, men appen kan ikke verificere en indberetning til giftinformationen.",
+        "placeholder": "f.eks. N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Indberetninger til giftinformation"
+      },
+      "sds_requirement": {
+        "label": "Krav om levering af sikkerhedsdatablad",
+        "help": "Et weblink opfylder ikke i sig selv pligten til at levere et sikkerhedsdatablad i henhold til artikel 31 i REACH."
+      },
+      "sds_url": {
+        "label": "URL til offentligt sikkerhedsdatablad",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "Sprog for sikkerhedsdatablad",
+        "placeholder": "f.eks. engelsk, fransk, tysk"
+      },
+      "sds_revision_date": {
+        "label": "Revisionsdato for sikkerhedsdatablad",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Nødkontakt (giftinformation eller døgnbemandet nummer)",
+        "placeholder": "Telefonnummer til nødsituationer"
+      },
+      "constituent_classes": {
+        "label": "Bestanddelsklasser tilsat i mængder over 0,2 vægtprocent",
+        "help": "Afkryds hver klasse, der er tilsat i mængder over 0,2 vægtprocent, og vælg derefter dens vægtinterval nedenfor (bilag V, del A, punkt 1, litra h), i))."
+      },
+      "band_phosphates": {
+        "label": "Fosfater: vægtinterval"
+      },
+      "band_phosphonates": {
+        "label": "Fosfonater: vægtinterval"
+      },
+      "band_anionic_surfactants": {
+        "label": "Anioniske overfladeaktive stoffer: vægtinterval"
+      },
+      "band_cationic_surfactants": {
+        "label": "Kationiske overfladeaktive stoffer: vægtinterval"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfotere overfladeaktive stoffer: vægtinterval"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Nonioniske overfladeaktive stoffer: vægtinterval"
+      },
+      "band_oxygen_bleach": {
+        "label": "Oxygenbaserede blegemidler: vægtinterval"
+      },
+      "band_chlorine_bleach": {
+        "label": "Klorbaserede blegemidler: vægtinterval"
+      },
+      "band_edta": {
+        "label": "EDTA og salte heraf: vægtinterval"
+      },
+      "band_nta": {
+        "label": "NTA og salte heraf: vægtinterval"
+      },
+      "band_phenols": {
+        "label": "Phenoler og halogenerede phenoler: vægtinterval"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradichlorbenzen: vægtinterval"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromatiske carbonhydrider: vægtinterval"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifatiske carbonhydrider: vægtinterval"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Halogenerede carbonhydrider: vægtinterval"
+      },
+      "band_soap": {
+        "label": "Sæbe: vægtinterval"
+      },
+      "band_zeolites": {
+        "label": "Zeolitter: vægtinterval"
+      },
+      "band_polycarboxylates": {
+        "label": "Polycarboxylater: vægtinterval"
+      },
+      "listed_constituents": {
+        "label": "Bestanddelsklasser tilsat i enhver koncentration",
+        "help": "Bilag V, del A, punkt 1, litra h), ii). Desinfektionsmidler er opført i henhold til de nuværende regler og er ikke længere en opført klasse fra den 23. september 2029."
+      },
+      "preservatives_present": {
+        "label": "Er der konserveringsmidler til stede?",
+        "help": "Konserveringsmidler er opført i henhold til bilag V, del A, punkt 1, litra h), iii), medmindre de allerede er mærket i henhold til artikel 18, stk. 3, litra b), i CLP eller artikel 58 i forordningen om biocidholdige produkter."
+      },
+      "preservatives": {
+        "label": "Konserveringsmidler",
+        "help": "Anvend INCI-navnet, hvor det er muligt.",
+        "placeholder": "f.eks. Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "Parfumeallergener tilsat i mængder over 0,01 vægtprocent?",
+        "help": "Allergener fra listen i bilag V, del D, der bevidst er tilsat i mængder over 0,01 vægtprocent, skal angives på mærkningen, medmindre de allerede er mærket i henhold til CLP."
+      },
+      "fragrance_allergens": {
+        "label": "Tilstedeværende parfumeallergener",
+        "help": "Vælg hvert allergen fra den officielle liste med 105 poster."
+      },
+      "ingredients_url": {
+        "label": "Offentlig webside med ingredienser",
+        "help": "De nuværende regler (forordning (EC) No 648/2004, bilag VII, del D) kræver en vedligeholdt offentlig ingrediensliste for forbrugerprodukter. Den behøver ingen procentintervaller eller CAS-numre.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "Tilsvarende ingrediensoplysninger leveret til professionelle brugere"
+      },
+      "biodegradability_test": {
+        "label": "Testmetode for overfladeaktive stoffers bionedbrydelighed",
+        "placeholder": "f.eks. OECD 301-serien"
+      },
+      "biodegradability_reference": {
+        "label": "Reference til dokumentation for bionedbrydelighed",
+        "help": "Angiv navnet på testrapporten eller leverandørerklæringen. Upload eller indsæt ikke fortrolige filer."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Indeholder bevidst tilsatte syntetiske polymermikropartikler?",
+        "help": "Forordning (EU) 2023/2055 begrænser disse i henhold til post 78 i bilag XVII til REACH. Vaske- og rengøringsmidler er omfattet fra den 17. oktober 2028."
+      },
+      "use_instructions": {
+        "label": "Brugsanvisning og særlige forholdsregler",
+        "help": "Metode, egnede tekstiler eller overflader og eventuelle særlige forholdsregler."
+      },
+      "laundry_type": {
+        "label": "Type af vaskemiddel til tekstiler",
+        "help": "Afgør standardvaskemængden: 4,5 kg tørt tøj for vaskemidler til kulørt/kogevask, 2,5 kg for vaskemidler til kulørt/kogevask med kort cyklus og for finvaskemidler."
+      },
+      "dosage_unit": {
+        "label": "Doseringsenhed"
+      },
+      "dosage_soft": {
+        "label": "Dosis til blødt vand (pr. standardvaskemængde)",
+        "placeholder": "f.eks. 60"
+      },
+      "dosage_medium": {
+        "label": "Dosis til middelhårdt vand (pr. standardvaskemængde)",
+        "placeholder": "f.eks. 75"
+      },
+      "dosage_hard": {
+        "label": "Dosis til hårdt vand (pr. standardvaskemængde)",
+        "placeholder": "f.eks. 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Dosering til vaskeprocesser med én og to cyklusser",
+        "help": "Bilag V, del B, punkt 1, litra a), kræver dosering til vaskeprocesser med én eller to cyklusser."
+      },
+      "loads_per_pack": {
+        "label": "Standardvaskemængder pr. pakning (middelhårdt vand, 2,5 millimol CaCO3 pr. liter)",
+        "help": "For genopfyldninger angives antallet af vaskemængder pr. 1 liter eller 1 kg produkt. Ikke nødvendigt for genopfyldninger i enheder."
+      },
+      "measuring_cup_ml": {
+        "label": "Målebægerets kapacitet",
+        "help": "Kapacitet af ethvert medfølgende målebæger med tydelige markeringer for doser til blødt, middelhårdt og hårdt vand."
+      },
+      "dishwasher_dose": {
+        "label": "Standarddosis til hovedcyklussen",
+        "help": "Til normalt snavset service i en fuldt lastet opvaskemaskine med 12 kuverter."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Justering af dosis efter vandets hårdhed"
+      },
+      "surface_dilution": {
+        "label": "Anbefalet fortynding og mængde pr. overfladeareal",
+        "help": "Bilag V, del B, punkt 4: Angiv den anbefalede fortynding og mængde pr. overfladeareal eller andre brugsanvisninger, så produktet ikke overdoseres."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Samlet fosforindhold i den anbefalede dosis (gram)",
+        "help": "Grænser i bilag III: under 0,5 g pr. standardvaskemængde i hårdt vand og under 0,3 g pr. standarddosis til opvaskemaskine."
+      },
+      "storage_disposal": {
+        "label": "Opbevaring og bortskaffelse"
+      },
+      "packaging_material": {
+        "label": "Primært emballagemateriale"
+      },
+      "packaging_recyclable": {
+        "label": "Er emballagen genanvendelig?"
+      },
+      "recycling_instructions": {
+        "label": "Genanvendelsesanvisninger"
+      },
+      "recycled_packaging_content": {
+        "label": "Genanvendt indhold i emballage (%)",
+        "placeholder": "f.eks. 30"
+      },
+      "refill_available": {
+        "label": "Kan genopfyldes?"
+      },
+      "refill_station": {
+        "label": "Sælges via en genopfyldningsstation?",
+        "help": "Genopfyldningssteder har deres egen pligt til at have en databærer i henhold til artikel 21, stk. 4, i forordning (EU) 2026/405."
+      },
+      "epr_registration": {
+        "label": "Registrering af emballageproducentansvar pr. marked",
+        "help": "Én linje pr. marked.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Gældende godkendelse eller lovligt overgangsgrundlag"
+      },
+      "biocidal_actives": {
+        "label": "Aktivstoffer og godkendte anvendelser"
+      },
+      "environmental_claims": {
+        "label": "Miljøanprisninger på produktet eller emballagen",
+        "placeholder": "f.eks. \"Flaske fremstillet af 30 % genanvendt plast\""
+      },
+      "claims_evidence_reference": {
+        "label": "Reference til dokumentation for anprisninger",
+        "placeholder": "Reference til undersøgelse, certifikat eller verifikationsorgan for hver anprisning"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Undgår anprisninger generiske miljøbetegnelser?",
+        "help": "Generiske anprisninger som \"miljøvenlig\" eller \"bionedbrydelig\" er begrænset fra den 27. september 2026 i henhold til direktiv (EU) 2024/825."
+      },
+      "ecolabel_licence_number": {
+        "label": "Licensnummer for EU-miljømærket",
+        "help": "Indtast kun licensregistreringsnummeret, hvis produktet har en licens til EU-miljømærket. Mærket vises kun på det offentlige pas, når et nummer er indtastet."
+      },
+      "reach_review": {
+        "label": "REACH-restriktioner og -forpligtelser vurderet",
+        "help": "Gennemgå restriktionerne i bilag XVII og de forpligtelser, der gælder for de indgående stoffer."
+      },
+      "physical_label_reviewed": {
+        "label": "Jeg har kontrolleret den fysiske mærkning og de medfølgende sikkerhedsoplysninger"
+      },
+      "label_professional_indicator": {
+        "label": "Mærkningen angiver, at produktet kun er til professionel brug"
+      },
+      "previous_passport_url": {
+        "label": "Link til det foregående pas, når denne post erstatter en",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "Dato for gennemgang af produktinformation",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "Reference til fabrikantens overensstemmelsesdokumentation"
+      },
+      "model_content_reference": {
+        "label": "Revisionsreference for produktindhold"
+      },
+      "manufacturing_process_reference": {
+        "label": "Revisionsreference for fremstillingsproces"
+      },
+      "persistent_product_id": {
+        "label": "Persistent produktidentifikator",
+        "help": "Indtast den reelle identifikator. Et internt post-ID er ikke en identifikator udstedt i henhold til de standarder, der henvises til i ESPR."
+      },
+      "identifier_scheme": {
+        "label": "Identifikatorsystem og udsteder"
+      },
+      "manufacturer_operator_id": {
+        "label": "Fabrikantens unikke operatøridentifikator"
+      },
+      "backup_provider_url": {
+        "label": "Pas-tjenesteudbyder, der opbevarer sikkerhedskopien (URL)",
+        "help": "Angiv en udbyder, du rent faktisk har en aftale med. Appen opretter ikke en sikkerhedskopieringstjeneste.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "Reference til aftale om sikkerhedskopieringstjeneste"
+      },
+      "commodity_code_status": {
+        "label": "Toldvarekode"
+      },
+      "commodity_code": {
+        "label": "Varekode (forordning (EEC) No 2658/87)"
+      },
+      "commodity_code_reason": {
+        "label": "Begrundelse for, at der ikke gælder nogen varekode"
+      },
+      "manufacturer_responsibility": {
+        "label": "Fabrikanten udsteder dette pas på eget ansvar"
+      },
+      "compliance_statement": {
+        "label": "Erklæring om, at overensstemmelse med forordning (EU) 2026/405 er blevet påvist",
+        "help": "Udfyld kun dette efter fabrikantens egen vurdering. Appen genererer aldrig en overensstemmelseserklæring."
+      },
+      "applicable_union_law": {
+        "label": "Anden EU-lovgivning, der gælder for produktet"
+      },
+      "last_placed_on_market_date": {
+        "label": "Seneste dato, hvor modellen blev bragt i omsætning",
+        "help": "Udgangspunktet for den tiårige tilgængelighedspligt.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Hvor databæreren er placeret",
+        "help": "Artikel 21, stk. 4: fysisk til stede, permanent, maskinlæsbar og synlig før køb med erklæringen \"Scan for at få mere omfattende information om produktet\". Kræves også på genopfyldningsstationer og ved fjernsalg."
+      },
+      "carrier_reviewed": {
+        "label": "Databæreren opfylder disse krav"
+      },
+      "market_language_reviewed": {
+        "label": "Mærknings- og sikkerhedsformuleringer er gennemgået på alle målmarkedets sprog"
+      },
+      "substance_list_route": {
+        "label": "Metode til offentliggørelse af stoffer",
+        "help": "Undtagelsen gælder kun for industrielle og institutionelle vaske- og rengøringsmidler og overfladeaktive stoffer, hvor et tilsvarende sikkerhedsdatablad i henhold til artikel 31 i REACH giver oplysningerne."
+      },
+      "substances": {
+        "label": "Alle bevidst tilsatte stoffer og mærkningspligtige overførte konserveringsmidler",
+        "help": "Identificer stoffer som krævet i artikel 18, stk. 3, i forordning (EC) No 1272/2008. Indtast ikke koncentrationer eller fortrolige formuleringsdata. Alt, der gemmes i denne kategori, er offentligt."
+      },
+      "no_substances_reason": {
+        "label": "Grundlag for fraværet af stoffer, der skal opføres"
+      },
+      "substance_list_complete": {
+        "label": "Listen er fuldstændig, inkluderer kvalificerende overførte konserveringsmidler og anvender identiteter vurderet i henhold til artikel 18, stk. 3, i CLP"
+      },
+      "industrial_institutional_use": {
+        "label": "Anvendes kun uden for den private husholdning af specialiseret personale"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Tilsvarende stofinformation er rent faktisk blevet leveret i et sikkerhedsdatablad i henhold til artikel 31 i REACH"
+      },
+      "annex_sds_url": {
+        "label": "URL til tilsvarende sikkerhedsdatablad",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Sprog for tilsvarende sikkerhedsdatablad"
+      },
+      "annex_sds_revision_date": {
+        "label": "Revisionsdato for tilsvarende sikkerhedsdatablad",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Er der bevidst tilsat mikroorganismer?",
+        "help": "Metoden med tilsvarende sikkerhedsdatablad fjerner aldrig listen over mikroorganismer."
+      },
+      "microorganisms": {
+        "label": "Alle bevidst tilsatte mikroorganismer",
+        "help": "Angiv slægt, art og stammenavn eller -kode for hver mikroorganisme."
+      },
+      "microorganism_safety_reference": {
+        "label": "Reference til sikkerhedsvurdering (bilag II)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Holdbarhed og opbevaringsbetingelser",
+        "help": "Mærkningen af et vaske- og rengøringsmiddel, der indeholder mikroorganismer, skal angive holdbarheden."
+      },
+      "food_contact_use": {
+        "label": "Beregnet til brug på overflader i kontakt med fødevarer?",
+        "help": "Medmindre produktet er risikovurderet som sikkert til denne anvendelse, skal mærkningen angive, at det ikke må anvendes på overflader i kontakt med fødevarer."
+      },
+      "food_contact_instructions": {
+        "label": "Forholdsregler og anvisninger for overflader i kontakt med fødevarer"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Vaskemiddel til tekstiler",
+        "laundry_additive": "Vaskeforstærker eller forvaskemiddel",
+        "machine_dishwashing": "Maskinopvaskemiddel",
+        "dishwasher_additive": "Afspændingsmiddel eller maskinopvaskemiddel-tilsætning",
+        "hand_dishwashing": "Håndopvaskemiddel",
+        "all_purpose": "Universal- eller overfladerengøringsmiddel",
+        "kitchen": "Køkkenrengøringsmiddel",
+        "bathroom": "Badeværelsesrengøringsmiddel",
+        "toilet": "Toiletrensemiddel",
+        "glass": "Glasrensemiddel",
+        "floor": "Gulvrengøringsmiddel",
+        "descaler": "Afkalkningsmiddel",
+        "bleach": "Blegemiddel",
+        "other": "Andet vaske- og rengøringsmiddel"
+      },
+      "productForm": {
+        "liquid": "Flydende",
+        "gel": "Gel",
+        "powder": "Pulver",
+        "tablet": "Tablet",
+        "capsule": "Kapsel eller pod",
+        "spray": "Spray",
+        "wipe": "Serviet",
+        "paste": "Pasta",
+        "other": "Andet"
+      },
+      "yesNoReview": {
+        "yes": "Ja",
+        "no": "Nej",
+        "review": "Vurdering påkrævet"
+      },
+      "useSector": {
+        "consumer": "Forbrugere, herunder blandet forbruger- og professionel brug",
+        "professional": "Kun til professionel brug",
+        "industrial": "Kun til industriel og institutionel brug"
+      },
+      "dppProfile": {
+        "current": "Nuværende produktinformation",
+        "annex_vi": "Fuldstændigt datasæt i bilag VI for reglerne fra 2029"
+      },
+      "manufacturerNonEu": {
+        "yes": "Ja",
+        "no": "Nej"
+      },
+      "clpClassification": {
+        "none": "Ikke klassificeret som farlig",
+        "environment": "Kun miljøfarer",
+        "health_physical": "Sundhedsfarer eller fysiske farer, med eller uden miljøfarer",
+        "review": "Vurdering påkrævet"
+      },
+      "signalWord": {
+        "danger": "Fare",
+        "warning": "Advarsel",
+        "not_applicable": "Ikke relevant efter vurdering"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Eksploderende bombe",
+        "ghs02": "GHS02 Flamme",
+        "ghs03": "GHS03 Flamme over cirkel",
+        "ghs04": "GHS04 Gasflaske",
+        "ghs05": "GHS05 Ætsning",
+        "ghs06": "GHS06 Dødningehoved med korslagte knogler",
+        "ghs07": "GHS07 Udråbstegn",
+        "ghs08": "GHS08 Sundhedsfare",
+        "ghs09": "GHS09 Miljø",
+        "none": "Intet piktogram er relevant"
+      },
+      "pcnApplicability": {
+        "required": "Anmeldelse påkrævet",
+        "exempt": "Dokumenteret undtagelse",
+        "review": "Vurdering påkrævet"
+      },
+      "pcnStatus": {
+        "submitted": "Indsendt for de relevante markeder",
+        "pending": "Afventer"
+      },
+      "sdsRequirement": {
+        "required": "Skal leveres",
+        "on_request": "Skal stilles til rådighed efter anmodning",
+        "not_required": "Ikke påkrævet efter vurdering",
+        "review": "Vurdering påkrævet"
+      },
+      "constituentClass": {
+        "phosphates": "Fosfater",
+        "phosphonates": "Fosfonater",
+        "anionic_surfactants": "Anioniske overfladeaktive stoffer",
+        "cationic_surfactants": "Kationiske overfladeaktive stoffer",
+        "amphoteric_surfactants": "Amfotere overfladeaktive stoffer",
+        "nonionic_surfactants": "Nonioniske overfladeaktive stoffer",
+        "oxygen_bleach": "Oxygenbaserede blegemidler",
+        "chlorine_bleach": "Klorbaserede blegemidler",
+        "edta": "EDTA og salte deraf",
+        "nta": "NTA og salte deraf",
+        "phenols": "Phenoler og halogenerede phenoler",
+        "paradichlorobenzene": "Paradichlorbenzen",
+        "aromatic_hydrocarbons": "Aromatiske carbonhydrider",
+        "aliphatic_hydrocarbons": "Alifatiske carbonhydrider",
+        "halogenated_hydrocarbons": "Halogenerede carbonhydrider",
+        "soap": "Sæbe",
+        "zeolites": "Zeolitter",
+        "polycarboxylates": "Polycarboxylater"
+      },
+      "weightBand": {
+        "lt5": "Mindre end 5 %",
+        "5to15": "5 % eller derover, men under 15 %",
+        "15to30": "15 % eller derover, men under 30 %",
+        "gte30": "30 % og derover"
+      },
+      "listedConstituent": {
+        "enzymes": "Enzymer",
+        "micro_organisms": "Mikroorganismer",
+        "optical_brighteners": "Optisk hvidt",
+        "perfumes": "Parfume",
+        "disinfectants": "Desinfektionsmidler (nuværende regler indtil 23. september 2029)"
+      },
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Ukendt"
+      },
+      "laundryType": {
+        "heavy_duty": "Til grovvask",
+        "heavy_duty_short": "Til grovvask ved korte vaskecyklusser",
+        "light_duty": "Til finvask eller sarte tekstiler"
+      },
+      "dosageUnit": {
+        "ml": "Milliliter",
+        "g": "Gram",
+        "units": "Enheder (tabletter, kapsler eller pods)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Anden plast",
+        "metal": "Metal",
+        "glass": "Glas",
+        "paper_cardboard": "Papir eller pap",
+        "composite": "Kompositmateriale",
+        "water_soluble_film": "Vandopløselig film",
+        "other": "Andet"
+      },
+      "reachReview": {
+        "reviewed": "Gennemgået af leverandøren",
+        "review": "Vurdering påkrævet"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Relevant",
+        "not_applicable": "Ikke relevant efter vurdering"
+      },
+      "substanceListRoute": {
+        "full_list": "Fuldstændig liste over stoffer",
+        "equivalent_sds": "Tilsvarende sikkerhedsdatablad (kun til industriel og institutionel brug)",
+        "no_added_substances": "Ingen stoffer at anføre efter vurdering"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "Dette produkt falder muligvis uden for definitionen af et vaskemiddel i artikel 2, stk. 1, i forordning (EU) 2026/405. Kontrollér anvendelsesområdet, før du bruger denne kategori.",
+      "biocidal": "Desinficerende eller antimikrobielle anprisninger kræver en godkendelse som biocidholdigt produkt i henhold til forordning (EU) No 528/2012.",
+      "assessmentNeeded": "Denne vurdering er ikke afsluttet. Færdiggør den, før du stoler på passet.",
+      "microparticles": "Kontrollér forordning (EU) 2023/2055 om syntetiske polymermikropartikler, før dette produkt bringes i omsætning. Et ukendt svar skal afklares med leverandøren.",
+      "phosphorusLaundry": "Et samlet fosforindhold på {{value}} g er ikke under grænsen på 0,5 g for et vaskemiddel til husholdningsbrug i hårdt vand (bilag III til forordning (EU) 2026/405).",
+      "phosphorusDishwasher": "Et samlet fosforindhold på {{value}} g er ikke under grænsen på 0,3 g for et maskinopvaskemiddel til husholdningsbrug (bilag III til forordning (EU) 2026/405).",
+      "percentageRange": "En procentdel skal være mellem 0 og 100. Du indtastede {{value}}.",
+      "positiveNumber": "Indtast et tal større end nul. Du indtastede {{value}}.",
+      "allergensMissing": "Du svarede ja, men der er ikke valgt noget allergen. Vælg hvert allergen fra den officielle liste.",
+      "ufiFormat": "En UFI består af fire grupper med fire tegn, f.eks. N1QV-R02N-J00M-WQD5. Formatet kontrolleres, men en indsendelse til et giftinformationscenter gør ikke.",
+      "urlFormat": "Brug en fuldstændig webadresse, der starter med http:// eller https://.",
+      "emailFormat": "Indtast en gyldig e-mailadresse.",
+      "dateFormat": "Brug en gyldig dato i formatet YYYY-MM-DD.",
+      "microorganismSafety": "Der er tilsat mikroorganismer, men der er ikke indtastet nogen reference til en sikkerhedsvurdering."
+    },
+    "disclaimer": {
+      "title": "Vaskemidler DPP: ansvarsfraskrivelse vedrørende overholdelse",
+      "text": "Forordning (EU) 2026/405 om vaskemidler og overfladeaktive stoffer finder anvendelse fra den 23. september 2029. Dens regler om digitalt produktpas, adgangsrettigheder og databæreroplysninger skal stadig fastsættes ved en gennemførelsesretsakt, og indtil da gælder forordning (EC) No 648/2004. Dette værktøj indsamler produktoplysninger og forbereder pasdata. Det er ikke en certificering eller en godkendelse og bør ikke betragtes som endelig juridisk rådgivning. Alt, hvad der gemmes i denne kategori, er offentligt."
+    }
   }
 }

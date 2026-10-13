@@ -2158,5 +2158,738 @@
       "scannerTitle": "Skener etiket na oblačilih",
       "scannerDescription": "Fotografirajte ali naložite všito etiketo z navodili za vzdrževanje, visečo etiketo ali tehnično dokumentacijo v formatu PDF — umetna inteligenca bo prebrala sestavo vlaken, simbole za vzdrževanje, državo izvora, certifikate in stilske reference."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "Identiteta izdelka",
+        "description": "Izdelek, model in sledljivost"
+      },
+      "responsible_operators": {
+        "title": "Kdo je odgovoren",
+        "description": "Proizvajalec, uvoznik in pooblaščeni zastopnik v EU, vodeni kot ločene stranke"
+      },
+      "classification": {
+        "title": "Razvrstitev glede na nevarnost in varnostne informacije",
+        "description": "Razvrstitev v skladu z uredbo CLP, informacije o nevarnosti na etiketi, center za zastrupitve in varnostni list"
+      },
+      "ingredients": {
+        "title": "Sestavine in informacije na etiketi",
+        "description": "Vsebina etikete v skladu s Prilogo V k Uredbi (EU) 2026/405 in veljavnimi pravili"
+      },
+      "use": {
+        "title": "Varna uporaba in odmerjanje",
+        "description": "Informacije o odmerjanju in uporabi v skladu z delom B Priloge V"
+      },
+      "packaging": {
+        "title": "Embalaža in recikliranje",
+        "description": "Embalaža, možnost recikliranja in ponovna polnjenja"
+      },
+      "biocide": {
+        "title": "Ocena biocidnega proizvoda",
+        "description": "Uporablja se, kadar se navajajo trditve o dezinfekcijskem ali protimikrobnem delovanju"
+      },
+      "green_claims": {
+        "title": "Okoljske trditve",
+        "description": "Podpira Direktivo (EU) 2024/825, ki se uporablja od 27. septembra 2026"
+      },
+      "review": {
+        "title": "Pregled dobavitelja in priprava potnega lista",
+        "description": "Preverjanja, ki jih izpolni dobavitelj. Aplikacija jih ne more preveriti."
+      },
+      "annex_identity": {
+        "title": "Priloga VI: identiteta izdelka in izjava proizvajalca",
+        "description": "Priprava na digitalni potni list za proizvod, ki se zahteva od 23. septembra 2029. Popoln nabor podatkov ni certifikat, preverjen identifikator ali vloga za vpis v register."
+      },
+      "annex_substances": {
+        "title": "Priloga VI: snovi",
+        "description": "Celoten seznam namerno dodanih snovi (točka (h) dela A Priloge VI)"
+      },
+      "annex_microorganisms": {
+        "title": "Priloga VI: mikroorganizmi",
+        "description": "Vsi namerno dodani mikroorganizmi (točka (i) dela A Priloge VI)"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Blagovna znamka"
+      },
+      "product_type": {
+        "label": "Vrsta izdelka"
+      },
+      "product_type_other": {
+        "label": "Vrsta izdelka (navedite)"
+      },
+      "product_form": {
+        "label": "Oblika izdelka"
+      },
+      "detergent_scope": {
+        "label": "Ali je izdelek namenjen za čiščenje, namakanje, izpiranje ali beljenje tkanin, posode ali površin?",
+        "help": "Glejte člen 2(1) Uredbe (EU) 2026/405. Barve, lepila, topila in izdelki, ki ne čistijo, ne spadajo v to kategorijo."
+      },
+      "scope_reason": {
+        "label": "Razlog, zakaj izdelek ne ustreza opredelitvi detergenta"
+      },
+      "use_sector": {
+        "label": "Komu je izdelek namenjen?",
+        "help": "Industrijska in institucionalna uporaba pomeni uporabo izključno zunaj gospodinjstev s strani specializiranega osebja."
+      },
+      "model_identifier": {
+        "label": "Identifikator modela izdelka",
+        "help": "En potni list zajema en model. Sprememba formulacije ali proizvodnje, ki vpliva na etiketo, lahko pomeni nov model."
+      },
+      "batch_identifier": {
+        "label": "Referenca za tip, serijo ali lot",
+        "help": "Etiketa mora vsebovati številko tipa, številko serije ali drug element za sledljivost."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "npr. 3401234567890"
+      },
+      "net_content": {
+        "label": "Nazivna količina z enoto",
+        "placeholder": "npr. 1,5 L, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "Trgi EU in jeziki na etiketi",
+        "help": "Besedilo na etiketi in varnostna opozorila morajo biti na voljo v jeziku ali jezikih, ki se zahtevajo na posameznem trgu.",
+        "placeholder": "npr. Francija (francoščina), Nemčija (nemščina)"
+      },
+      "dpp_profile": {
+        "label": "Informacijski profil",
+        "help": "Uredba (EU) 2026/405 se uporablja od 23. septembra 2029. Izberite nabor podatkov iz Priloge VI za pripravo prihodnjih podatkov za potni list. Izpolnitev ne pomeni, da je potni list skladen ali certificiran."
+      },
+      "biocidal_claims": {
+        "label": "Biocidne ali dezinfekcijske trditve?",
+        "help": "Dezinfekcijske ali protimikrobne trditve zahtevajo dovoljenje za biocidni proizvod v skladu z Uredbo (EU) No 528/2012."
+      },
+      "manufacturer_legal_name": {
+        "label": "Pravno ime proizvajalca",
+        "help": "Na etiketi so navedeni ime, poštni naslov, elektronski naslov in telefonska številka proizvajalca. Poštni naslov mora biti enotna točka v Uniji."
+      },
+      "manufacturer_street": {
+        "label": "Ulica in hišna številka"
+      },
+      "manufacturer_postal_code": {
+        "label": "Poštna številka"
+      },
+      "manufacturer_city": {
+        "label": "Mesto"
+      },
+      "manufacturer_country": {
+        "label": "Država"
+      },
+      "manufacturer_email": {
+        "label": "Elektronski naslov (e-pošta)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Telefonska številka",
+        "placeholder": "npr. +33 1 23 45 67 89"
+      },
+      "manufacturer_non_eu": {
+        "label": "Ali ima proizvajalec sedež zunaj EU?"
+      },
+      "importer_legal_name": {
+        "label": "Pravno ime uvoznika",
+        "help": "Kadar ima proizvajalec sedež zunaj EU, se zahtevajo tudi kontaktni podatki uvoznika."
+      },
+      "importer_street": {
+        "label": "Ulica in hišna številka"
+      },
+      "importer_postal_code": {
+        "label": "Poštna številka"
+      },
+      "importer_city": {
+        "label": "Mesto"
+      },
+      "importer_country": {
+        "label": "Država"
+      },
+      "importer_email": {
+        "label": "Elektronski naslov (e-pošta)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "Pooblaščeni zastopnik v EU: pravno ime",
+        "help": "Proizvajalec s sedežem zunaj EU mora imenovati pooblaščenega zastopnika (člen 9 Uredbe (EU) 2026/405)."
+      },
+      "eu_operator_address": {
+        "label": "Pooblaščeni zastopnik v EU: naslov",
+        "placeholder": "Registriran naslov v Evropski uniji"
+      },
+      "eu_operator_email": {
+        "label": "Pooblaščeni zastopnik v EU: elektronski naslov (e-pošta)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "Ocena razvrstitve v skladu z uredbo CLP",
+        "help": "Uporabite razvrstitev, ki je bila dejansko ocenjena za to zmes v skladu z Uredbo (EC) No 1272/2008. Ne sklepajte o njej na podlagi pH-vrednosti ali piktogramov."
+      },
+      "supplemental_statements": {
+        "label": "Dodatne izjave na etiketi",
+        "help": "Na primer EUH208, kadar je to primerno."
+      },
+      "signal_word": {
+        "label": "Opozorilna beseda"
+      },
+      "pictograms": {
+        "label": "Piktogrami GHS"
+      },
+      "hazard_statements": {
+        "label": "Stavki o nevarnosti",
+        "help": "Vnesite besedilo natančno tako, kot je na odobreni etiketi. Uporabite gumb za prevajanje za vsak jezik trga. To besedilo se nikoli ne prevaja samodejno.",
+        "placeholder": "npr. H315 Povzroča draženje kože"
+      },
+      "precautionary_statements": {
+        "label": "Previdnostni stavki",
+        "help": "Vnesite besedilo natančno tako, kot je na odobreni etiketi. Uporabite gumb za prevajanje za vsak jezik trga. To besedilo se nikoli ne prevaja samodejno.",
+        "placeholder": "npr. P280 Nositi zaščitne rokavice"
+      },
+      "pcn_applicability": {
+        "label": "Obvestilo za center za zastrupitve (Priloga VIII k uredbi CLP)",
+        "help": "Obveznost predložitve UFI in obvestila je odvisna od nevarnosti za zdravje ali fizikalnih nevarnosti ter veljavnih izjem. Samo nevarnosti za okolje ne sprožijo obveznosti obveščanja."
+      },
+      "pcn_exemption_reason": {
+        "label": "Razlog in pravna podlaga za izjemo"
+      },
+      "ufi_code": {
+        "label": "Edinstveni identifikator formulacije (UFI)",
+        "help": "Štiri skupine po štiri znake. Oblika se preverja, vendar aplikacija ne more preveriti predložitve centru za zastrupitve.",
+        "placeholder": "npr. N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Predložitve centru za zastrupitve"
+      },
+      "sds_requirement": {
+        "label": "Zahteva za dobavo varnostnega lista",
+        "help": "Spletna povezava sama po sebi ne izpolnjuje obveznosti dobave varnostnega lista v skladu s členom 31 uredbe REACH."
+      },
+      "sds_url": {
+        "label": "Javna URL-povezava do varnostnega lista",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "Jeziki varnostnega lista",
+        "placeholder": "npr. angleščina, francoščina, nemščina"
+      },
+      "sds_revision_date": {
+        "label": "Datum revizije varnostnega lista",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Kontakt v sili (center za zastrupitve ali 24-urna številka)",
+        "placeholder": "Telefonska številka za nujne primere"
+      },
+      "constituent_classes": {
+        "label": "Razredi sestavin, dodani v masnem deležu nad 0,2 %",
+        "help": "Označite vsak razred, ki je dodan v masnem deležu nad 0,2 %, nato spodaj izberite njegovo masno območje (točka 1(h)(i) dela A Priloge V)."
+      },
+      "band_phosphates": {
+        "label": "Fosfati: masno območje"
+      },
+      "band_phosphonates": {
+        "label": "Fosfonati: masno območje"
+      },
+      "band_anionic_surfactants": {
+        "label": "Anionske površinsko aktivne snovi: masno območje"
+      },
+      "band_cationic_surfactants": {
+        "label": "Kationske površinsko aktivne snovi: masno območje"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfoterne površinsko aktivne snovi: masno območje"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Neionske površinsko aktivne snovi: masno območje"
+      },
+      "band_oxygen_bleach": {
+        "label": "Belilna sredstva na osnovi kisika: masno območje"
+      },
+      "band_chlorine_bleach": {
+        "label": "Belilna sredstva na osnovi klora: masno območje"
+      },
+      "band_edta": {
+        "label": "EDTA in njene soli: masno območje"
+      },
+      "band_nta": {
+        "label": "NTA in njene soli: masno območje"
+      },
+      "band_phenols": {
+        "label": "Fenoli in halogenirani fenoli: masno območje"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradiklorobenzen: masno območje"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromatski ogljikovodiki: masno območje"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifatski ogljikovodiki: masno območje"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Halogenirani ogljikovodiki: masno območje"
+      },
+      "band_soap": {
+        "label": "Milo: masno območje"
+      },
+      "band_zeolites": {
+        "label": "Zeoliti: masno območje"
+      },
+      "band_polycarboxylates": {
+        "label": "Polikarboksilati: masno območje"
+      },
+      "listed_constituents": {
+        "label": "Razredi sestavin, dodani v poljubni koncentraciji",
+        "help": "Točka 1(h)(ii) dela A Priloge V. Dezinfekcijska sredstva so navedena v skladu z veljavnimi pravili in od 23. septembra 2029 ne bodo več razred, ki se navaja."
+      },
+      "preservatives_present": {
+        "label": "Ali so prisotni konzervansi?",
+        "help": "Konzervansi se navajajo v skladu s točko 1(h)(iii) dela A Priloge V, razen če so že označeni v skladu s členom 18(3)(b) uredbe CLP ali členom 58 Uredbe o biocidnih proizvodih."
+      },
+      "preservatives": {
+        "label": "Konzervansi",
+        "help": "Kjer je mogoče, uporabite ime INCI.",
+        "placeholder": "npr. Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "Ali so dodani alergeni v dišavah v masnem deležu nad 0,01 %?",
+        "help": "Alergeni s seznama v delu D Priloge V, ki so namerno dodani v masnem deležu nad 0,01 %, se navedejo na etiketi, razen če so že označeni v skladu z uredbo CLP."
+      },
+      "fragrance_allergens": {
+        "label": "Prisotni alergeni v dišavah",
+        "help": "Izberite vsak alergen z uradnega seznama 105 vnosov."
+      },
+      "ingredients_url": {
+        "label": "Javna spletna stran s sestavinami",
+        "help": "Veljavna pravila (Uredba (EC) No 648/2004, del D Priloge VII) zahtevajo vzdrževan javni seznam sestavin za potrošniške izdelke. Ne zahteva masnih območij ali številk CAS.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "Enakovredne informacije o sestavinah, ki se zagotovijo poklicnim uporabnikom"
+      },
+      "biodegradability_test": {
+        "label": "Preskusna metoda za biorazgradljivost površinsko aktivnih snovi",
+        "placeholder": "npr. serija OECD 301"
+      },
+      "biodegradability_reference": {
+        "label": "Referenca dokazila o biorazgradljivosti",
+        "help": "Navedite ime poročila o preskusu ali izjave dobavitelja. Ne nalagajte ali lepite zaupnih datotek."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Ali vsebuje namerno dodane mikodelce sintetičnih polimerov?",
+        "help": "Uredba (EU) 2023/2055 jih omejuje v skladu z vnosom 78 v Prilogi XVII k uredbi REACH. Za detergente se omejitev uporablja od 17. oktobra 2028."
+      },
+      "use_instructions": {
+        "label": "Navodila za uporabo in posebni previdnostni ukrepi",
+        "help": "Metoda, primerne tkanine ali površine in morebitni posebni previdnostni ukrepi."
+      },
+      "laundry_type": {
+        "label": "Vrsta detergenta za pranje perila",
+        "help": "Določa standardno polnjenje: 4,5 kg suhega perila za detergente za močno umazano perilo, 2,5 kg za detergente za močno umazano perilo s kratkim ciklom in za detergente za občutljivo perilo."
+      },
+      "dosage_unit": {
+        "label": "Enota za odmerjanje"
+      },
+      "dosage_soft": {
+        "label": "Odmerek za mehko vodo (na standardno polnjenje)",
+        "placeholder": "npr. 60"
+      },
+      "dosage_medium": {
+        "label": "Odmerek za srednje trdo vodo (na standardno polnjenje)",
+        "placeholder": "npr. 75"
+      },
+      "dosage_hard": {
+        "label": "Odmerek za trdo vodo (na standardno polnjenje)",
+        "placeholder": "npr. 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Odmerjanje za enociklične in dvociklične postopke pranja",
+        "help": "Točka 1(a) dela B Priloge V zahteva odmerjanje za eno- ali dvociklične postopke pranja."
+      },
+      "loads_per_pack": {
+        "label": "Število standardnih polnjenj na pakiranje (srednje trda voda, 2,5 milimola CaCO3 na liter)",
+        "help": "Za ponovna polnjenja navedite število polnjenj na 1 liter ali 1 kg izdelka. Ni potrebno za ponovna polnjenja v enotah."
+      },
+      "measuring_cup_ml": {
+        "label": "Prostornina merilne posodice",
+        "help": "Prostornina morebitne priložene merilne posodice z jasnimi oznakami za odmerke za mehko, srednje trdo in trdo vodo."
+      },
+      "dishwasher_dose": {
+        "label": "Standardni odmerek za glavni cikel",
+        "help": "Za normalno umazano posodo v polno naloženem pomivalnem stroju za 12 pogrinjkov."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Prilagoditev odmerka glede na trdoto vode"
+      },
+      "surface_dilution": {
+        "label": "Priporočeno redčenje in količina na površino",
+        "help": "Točka 4 dela B Priloge V: navedite priporočeno redčenje in količino na površino ali druga navodila za uporabo, da se izdelek ne uporablja v prevelikih količinah."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Skupni fosfor v priporočenem odmerku (grami)",
+        "help": "Omejitve iz Priloge III: pod 0,5 g na standardno polnjenje perila v trdi vodi in pod 0,3 g na standardni odmerek za pomivalni stroj."
+      },
+      "storage_disposal": {
+        "label": "Shranjevanje in odstranjevanje"
+      },
+      "packaging_material": {
+        "label": "Material primarne embalaže"
+      },
+      "packaging_recyclable": {
+        "label": "Ali je embalaža primerna za recikliranje?"
+      },
+      "recycling_instructions": {
+        "label": "Navodila za recikliranje"
+      },
+      "recycled_packaging_content": {
+        "label": "Delež reciklirane vsebine v embalaži (%)",
+        "placeholder": "npr. 30"
+      },
+      "refill_available": {
+        "label": "Ali je na voljo ponovno polnjenje?"
+      },
+      "refill_station": {
+        "label": "Ali se prodaja na polnilni postaji?",
+        "help": "Za polnilna mesta velja lastna obveznost glede nosilca podatkov v skladu s členom 21(4) Uredbe (EU) 2026/405."
+      },
+      "epr_registration": {
+        "label": "Registracija razširjene odgovornosti proizvajalca za embalažo na trg",
+        "help": "Ena vrstica na trg.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Veljavno dovoljenje ali zakonita prehodna podlaga"
+      },
+      "biocidal_actives": {
+        "label": "Aktivne snovi in dovoljene uporabe"
+      },
+      "environmental_claims": {
+        "label": "Okoljske trditve na izdelku ali embalaži",
+        "placeholder": "npr. \"Plastenka, izdelana iz 30 % reciklirane plastike\""
+      },
+      "claims_evidence_reference": {
+        "label": "Referenca dokazila za utemeljitev",
+        "placeholder": "Referenca študije, certifikata ali organa za preverjanje za vsako trditev"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Ali se trditve izogibajo splošnim okoljskim izrazom?",
+        "help": "Splošne trditve, kot sta okolju prijazno ali biorazgradljivo, so omejene od 27. septembra 2026 v skladu z Direktivo (EU) 2024/825."
+      },
+      "ecolabel_licence_number": {
+        "label": "Licenčna številka znaka za okolje EU",
+        "help": "Vnesite registrsko številko licence samo, če ima izdelek licenco za znak za okolje EU. Znak se na javnem potnem listu prikaže le, če je vnesena številka."
+      },
+      "reach_review": {
+        "label": "Ocenjene omejitve in obveznosti iz uredbe REACH",
+        "help": "Preglejte omejitve iz Priloge XVII in obveznosti, ki veljajo za sestavine."
+      },
+      "physical_label_reviewed": {
+        "label": "Preveril sem fizično etiketo in predložene varnostne informacije"
+      },
+      "label_professional_indicator": {
+        "label": "Na etiketi je navedeno, da je izdelek samo za poklicno uporabo"
+      },
+      "previous_passport_url": {
+        "label": "Povezava do predhodnega potnega lista, kadar ta zapis nadomešča drugega",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "Datum pregleda informacij o izdelku",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "Referenca dokazila o skladnosti proizvajalca"
+      },
+      "model_content_reference": {
+        "label": "Referenca revizije vsebine izdelka"
+      },
+      "manufacturing_process_reference": {
+        "label": "Referenca revizije proizvodnega procesa"
+      },
+      "persistent_product_id": {
+        "label": "Trajni identifikator izdelka",
+        "help": "Vnesite dejanski identifikator. Interna ID številka zapisa ni identifikator, izdan v skladu s standardi iz uredbe ESPR."
+      },
+      "identifier_scheme": {
+        "label": "Shema identifikatorja in izdajatelj"
+      },
+      "manufacturer_operator_id": {
+        "label": "Edinstveni identifikator gospodarskega subjekta proizvajalca"
+      },
+      "backup_provider_url": {
+        "label": "Ponudnik storitev potnega lista, ki hrani varnostno kopijo (URL)",
+        "help": "Navedite ponudnika, s katerim ste se dejansko dogovorili. Aplikacija ne ustvarja storitve varnostnega kopiranja.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "Referenca pogodbe o storitvi varnostnega kopiranja"
+      },
+      "commodity_code_status": {
+        "label": "Carinska tarifna oznaka"
+      },
+      "commodity_code": {
+        "label": "Tarifna oznaka (Uredba (EEC) No 2658/87)"
+      },
+      "commodity_code_reason": {
+        "label": "Razlog, zakaj se tarifna oznaka ne uporablja"
+      },
+      "manufacturer_responsibility": {
+        "label": "Proizvajalec izdaja ta potni list na lastno odgovornost"
+      },
+      "compliance_statement": {
+        "label": "Izjava, da je bila skladnost z Uredbo (EU) 2026/405 dokazana",
+        "help": "Izpolnite šele po lastni oceni proizvajalca. Aplikacija nikoli ne ustvari izjave o skladnosti."
+      },
+      "applicable_union_law": {
+        "label": "Druga zakonodaja Unije, ki se uporablja za izdelek"
+      },
+      "last_placed_on_market_date": {
+        "label": "Zadnji datum, ko je bil model dan na trg",
+        "help": "Izhodišče za desetletno obveznost razpoložljivosti.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Kje je nameščen nosilec podatkov",
+        "help": "Člen 21(4): fizično prisoten, neizbrisen, strojno berljiv in viden pred nakupom, z izjavo \"Za podrobnejše informacije o izdelku skenirajte\". Zahteva se tudi na polnilnih postajah in pri prodaji na daljavo."
+      },
+      "carrier_reviewed": {
+        "label": "Nosilec podatkov izpolnjuje te zahteve"
+      },
+      "market_language_reviewed": {
+        "label": "Besedilo na etiketi in varnostna opozorila so pregledana v vsakem jeziku ciljnega trga"
+      },
+      "substance_list_route": {
+        "label": "Način razkritja snovi",
+        "help": "Izjema velja samo za industrijske in institucionalne detergente in površinsko aktivne snovi, kadar so enakovredne informacije zagotovljene v varnostnem listu v skladu s členom 31 uredbe REACH."
+      },
+      "substances": {
+        "label": "Vse namerno dodane snovi in konzervansi, ki se prenašajo in jih je treba označiti",
+        "help": "Opredelite snovi, kot to zahteva člen 18(3) Uredbe (EC) No 1272/2008. Ne vnašajte koncentracij ali zaupnih podatkov o formulaciji. Vse, kar je shranjeno v tej kategoriji, je javno."
+      },
+      "no_substances_reason": {
+        "label": "Podlaga za neobstoj snovi za navedbo"
+      },
+      "substance_list_complete": {
+        "label": "Seznam je popoln, vključuje kvalificirane prenesene konzervanse in uporablja identitete, ocenjene v skladu s členom 18(3) uredbe CLP"
+      },
+      "industrial_institutional_use": {
+        "label": "Uporablja se izključno zunaj gospodinjstev s strani specializiranega osebja"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Enakovredne informacije o snoveh so bile dejansko zagotovljene v varnostnem listu v skladu s členom 31 uredbe REACH"
+      },
+      "annex_sds_url": {
+        "label": "URL enakovrednega varnostnega lista",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Jeziki enakovrednega varnostnega lista"
+      },
+      "annex_sds_revision_date": {
+        "label": "Datum revizije enakovrednega varnostnega lista",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Ali so mikroorganizmi namerno dodani?",
+        "help": "Možnost enakovrednega varnostnega lista nikoli ne odpravi seznama mikroorganizmov."
+      },
+      "microorganisms": {
+        "label": "Vsi namerno dodani mikroorganizmi",
+        "help": "Za vsak mikroorganizem navedite rod, vrsto in ime ali kodo seva."
+      },
+      "microorganism_safety_reference": {
+        "label": "Referenca ocene varnosti (Priloga II)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Rok uporabnosti in pogoji shranjevanja",
+        "help": "Na etiketi detergenta, ki vsebuje mikroorganizme, je naveden rok uporabnosti."
+      },
+      "food_contact_use": {
+        "label": "Namenjeno za uporabo na površinah v stiku z živili?",
+        "help": "Če za izdelek ni bila ocenjena varnost za to uporabo, je na etiketi navedeno, da se ne sme uporabljati na površinah, ki prihajajo v stik z živili."
+      },
+      "food_contact_instructions": {
+        "label": "Previdnostni ukrepi in navodila za površine v stiku z živili"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Detergent za pranje perila",
+        "laundry_additive": "Dodatek za pranje perila ali predpranje",
+        "machine_dishwashing": "Detergent za strojno pomivanje posode",
+        "dishwasher_additive": "Sredstvo za lesk ali dodatek za pomivalni stroj",
+        "hand_dishwashing": "Detergent za ročno pomivanje posode",
+        "all_purpose": "Večnamensko čistilo ali čistilo za površine",
+        "kitchen": "Čistilo za kuhinjo",
+        "bathroom": "Čistilo za kopalnico",
+        "toilet": "Čistilo za stranišča",
+        "glass": "Čistilo za steklo",
+        "floor": "Čistilo za tla",
+        "descaler": "Sredstvo za odstranjevanje vodnega kamna",
+        "bleach": "Belilo",
+        "other": "Drug detergent"
+      },
+      "productForm": {
+        "liquid": "Tekočina",
+        "gel": "Gel",
+        "powder": "Prah",
+        "tablet": "Tableta",
+        "capsule": "Kapsula ali blazinica",
+        "spray": "Razpršilo",
+        "wipe": "Robček",
+        "paste": "Pasta",
+        "other": "Drugo"
+      },
+      "yesNoReview": {
+        "yes": "Da",
+        "no": "Ne",
+        "review": "Potrebna ocena"
+      },
+      "useSector": {
+        "consumer": "Potrošniki, vključno z mešano potrošniško in poklicno uporabo",
+        "professional": "Samo za poklicno uporabo",
+        "industrial": "Samo za industrijsko in institucionalno uporabo"
+      },
+      "dppProfile": {
+        "current": "Trenutne informacije o izdelku",
+        "annex_vi": "Celoten nabor podatkov iz Priloge VI za pravila iz leta 2029"
+      },
+      "manufacturerNonEu": {
+        "yes": "Da",
+        "no": "Ne"
+      },
+      "clpClassification": {
+        "none": "Ni razvrščen kot nevaren",
+        "environment": "Samo nevarnosti za okolje",
+        "health_physical": "Nevarnosti za zdravje ali fizikalne nevarnosti, z ali brez nevarnosti za okolje",
+        "review": "Potrebna ocena"
+      },
+      "signalWord": {
+        "danger": "Nevarno",
+        "warning": "Pozor",
+        "not_applicable": "Ne uporablja se po oceni"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Eksplodirajoča bomba",
+        "ghs02": "GHS02 Plamen",
+        "ghs03": "GHS03 Plamen nad krogom",
+        "ghs04": "GHS04 Plinska jeklenka",
+        "ghs05": "GHS05 Korozija",
+        "ghs06": "GHS06 Lobanja in prekrižani kosti",
+        "ghs07": "GHS07 Klicaj",
+        "ghs08": "GHS08 Nevarnost za zdravje",
+        "ghs09": "GHS09 Okolje",
+        "none": "Piktogram ni potreben"
+      },
+      "pcnApplicability": {
+        "required": "Zahtevana prijava",
+        "exempt": "Dokumentirana izjema",
+        "review": "Potrebna ocena"
+      },
+      "pcnStatus": {
+        "submitted": "Predloženo za zadevne trge",
+        "pending": "V teku"
+      },
+      "sdsRequirement": {
+        "required": "Mora se zagotoviti",
+        "on_request": "Na voljo na zahtevo",
+        "not_required": "Po oceni ni potreben",
+        "review": "Potrebna ocena"
+      },
+      "constituentClass": {
+        "phosphates": "Fosfati",
+        "phosphonates": "Fosfonati",
+        "anionic_surfactants": "Anionske površinsko aktivne snovi",
+        "cationic_surfactants": "Kationske površinsko aktivne snovi",
+        "amphoteric_surfactants": "Amfoterne površinsko aktivne snovi",
+        "nonionic_surfactants": "Neionske površinsko aktivne snovi",
+        "oxygen_bleach": "Belilna sredstva na osnovi kisika",
+        "chlorine_bleach": "Belilna sredstva na osnovi klora",
+        "edta": "EDTA in njene soli",
+        "nta": "NTA in njene soli",
+        "phenols": "Fenoli in halogenirani fenoli",
+        "paradichlorobenzene": "Paradiklorobenzen",
+        "aromatic_hydrocarbons": "Aromatski ogljikovodiki",
+        "aliphatic_hydrocarbons": "Alifatski ogljikovodiki",
+        "halogenated_hydrocarbons": "Halogenirani ogljikovodiki",
+        "soap": "Milo",
+        "zeolites": "Zeoliti",
+        "polycarboxylates": "Polikarboksilati"
+      },
+      "weightBand": {
+        "lt5": "manj kot 5 %",
+        "5to15": "5 % ali več, vendar manj kot 15 %",
+        "15to30": "15 % ali več, vendar manj kot 30 %",
+        "gte30": "30 % in več"
+      },
+      "listedConstituent": {
+        "enzymes": "Encimi",
+        "micro_organisms": "Mikroorganizmi",
+        "optical_brighteners": "Optična belila",
+        "perfumes": "Parfumi",
+        "disinfectants": "Dezinfekcijska sredstva (veljavna pravila do 23. septembra 2029)"
+      },
+      "yesNoUnknown": {
+        "yes": "Da",
+        "no": "Ne",
+        "unknown": "Neznano"
+      },
+      "laundryType": {
+        "heavy_duty": "Za močno umazano perilo",
+        "heavy_duty_short": "Za močno umazano perilo za kratke cikle",
+        "light_duty": "Za rahlo umazano perilo ali občutljive tkanine"
+      },
+      "dosageUnit": {
+        "ml": "Mililitri",
+        "g": "Grami",
+        "units": "Enote (tablete, kapsule ali podi)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Druga plastika",
+        "metal": "Kovina",
+        "glass": "Steklo",
+        "paper_cardboard": "Papir ali karton",
+        "composite": "Kompozitni material",
+        "water_soluble_film": "Vodna topna folija",
+        "other": "Drugo"
+      },
+      "reachReview": {
+        "reviewed": "Pregledal dobavitelj",
+        "review": "Potrebna ocena"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Se uporablja",
+        "not_applicable": "Po oceni se ne uporablja"
+      },
+      "substanceListRoute": {
+        "full_list": "Celoten seznam snovi",
+        "equivalent_sds": "Enakovreden varnostni list (samo za industrijsko in institucionalno uporabo)",
+        "no_added_substances": "Po oceni ni snovi za navedbo"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "Ta izdelek morda ne spada pod opredelitev detergenta iz člena 2(1) Uredbe (EU) 2026/405. Pred uporabo te kategorije preverite področje uporabe.",
+      "biocidal": "Trditve o dezinfekcijskem ali protimikrobnem delovanju zahtevajo avtorizacijo za biocidni proizvod v skladu z Uredbo (EU) No 528/2012.",
+      "assessmentNeeded": "Ta ocena ni končana. Dokončajte jo, preden se zanesete na potni list.",
+      "microparticles": "Pred dajanjem tega izdelka na trg preverite Uredbo (EU) 2023/2055 o mikrodelcih sintetičnih polimerov. Neznan odgovor je treba razrešiti z dobaviteljem.",
+      "phosphorusLaundry": "Skupna vsebnost fosforja {{value}} g ni pod mejo 0,5 g za detergent za pranje perila za potrošnike v trdi vodi (Priloga III k Uredbi (EU) 2026/405).",
+      "phosphorusDishwasher": "Skupna vsebnost fosforja {{value}} g ni pod mejo 0,3 g za detergent za strojno pomivanje posode za potrošnike (Priloga III k Uredbi (EU) 2026/405).",
+      "percentageRange": "Odstotek mora biti med 0 in 100. Vnesli ste {{value}}.",
+      "positiveNumber": "Vnesite število, večje od nič. Vnesli ste {{value}}.",
+      "allergensMissing": "Odgovorili ste z da, vendar niste izbrali nobenega alergena. Izberite vsak alergen z uradnega seznama.",
+      "ufiFormat": "UFI je sestavljen iz štirih skupin po štiri znake, na primer N1QV-R02N-J00M-WQD5. Oblika se preveri, predložitev centru za zastrupitve pa ne.",
+      "urlFormat": "Uporabite celoten spletni naslov, ki se začne s http:// ali https://.",
+      "emailFormat": "Vnesite veljaven e-poštni naslov.",
+      "dateFormat": "Uporabite veljaven datum v obliki YYYY-MM-DD.",
+      "microorganismSafety": "Dodani so mikroorganizmi, vendar ni vnesena nobena referenca ocene varnosti."
+    },
+    "disclaimer": {
+      "title": "Detergenti DPP: izjava o omejitvi odgovornosti glede skladnosti",
+      "text": "Uredba (EU) 2026/405 o detergentih in površinsko aktivnih snoveh se uporablja od 23. septembra 2029. Njena pravila o digitalnem potnem listu za proizvod, pravice dostopa in podrobnosti o nosilcu podatkov se morajo še določiti z izvedbenim aktom, do takrat pa se uporablja Uredba (EC) No 648/2004. To orodje zbira informacije o izdelku in pripravlja podatke za potni list. Ne predstavlja certificiranja ali odobritve in se ne sme obravnavati kot končni pravni nasvet. Vse, kar je shranjeno v tej kategoriji, je javno."
+    }
   }
 }

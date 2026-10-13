@@ -2158,5 +2158,738 @@
       "scannerTitle": "Kledinglabelscanner",
       "scannerDescription": "Fotografeer of upload het ingenaaide waslabel, het aangehechte kaartje of een tech pack-PDF — de AI leest de vezelsamenstelling, wassymbolen, het land van herkomst, certificeringen en stijlreferenties."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "Productidentiteit",
+        "description": "Product, model en traceerbaarheid"
+      },
+      "responsible_operators": {
+        "title": "Wie is verantwoordelijk",
+        "description": "Fabrikant, importeur en gemachtigde in de EU, als afzonderlijke partijen"
+      },
+      "classification": {
+        "title": "Gevarenindeling en veiligheidsinformatie",
+        "description": "CLP-indeling, gevareninformatie op het etiket, antigifcentrum en veiligheidsinformatieblad"
+      },
+      "ingredients": {
+        "title": "Ingrediënten en etiketinformatie",
+        "description": "Etiketinhoud overeenkomstig bijlage V van Verordening (EU) 2026/405 en de huidige voorschriften"
+      },
+      "use": {
+        "title": "Veilig gebruik en dosering",
+        "description": "Doserings- en gebruiksinformatie overeenkomstig bijlage V, deel B"
+      },
+      "packaging": {
+        "title": "Verpakking en recycling",
+        "description": "Verpakking, recycleerbaarheid en navullingen"
+      },
+      "biocide": {
+        "title": "Beoordeling als biocide",
+        "description": "Van toepassing wanneer desinfecterende of antimicrobiële claims worden gemaakt"
+      },
+      "green_claims": {
+        "title": "Milieuclaims",
+        "description": "Ondersteunt Richtlijn (EU) 2024/825, die van toepassing is vanaf 27 september 2026"
+      },
+      "review": {
+        "title": "Beoordeling door leverancier en voorbereiding van het paspoort",
+        "description": "Controles die de leverancier uitvoert. De app kan deze niet verifiëren."
+      },
+      "annex_identity": {
+        "title": "Bijlage VI: productidentiteit en verklaring van de fabrikant",
+        "description": "Voorbereiding voor het digitale productpaspoort dat verplicht is vanaf 23 september 2029. Een volledige dataset is geen certificering, geverifieerde identificatiecode of indiening bij een register."
+      },
+      "annex_substances": {
+        "title": "Bijlage VI: stoffen",
+        "description": "Volledige lijst van opzettelijk toegevoegde stoffen (bijlage VI, deel A, punt h))"
+      },
+      "annex_microorganisms": {
+        "title": "Bijlage VI: micro-organismen",
+        "description": "Alle opzettelijk toegevoegde micro-organismen (bijlage VI, deel A, punt i))"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Merknaam"
+      },
+      "product_type": {
+        "label": "Producttype"
+      },
+      "product_type_other": {
+        "label": "Producttype (specificeren)"
+      },
+      "product_form": {
+        "label": "Productvorm"
+      },
+      "detergent_scope": {
+        "label": "Is het product bestemd voor het reinigen, weken, spoelen of bleken van textiel, vaat of oppervlakken?",
+        "help": "Zie artikel 2, lid 1, van Verordening (EU) 2026/405. Verven, kleefstoffen, oplosmiddelen en producten die niet reinigen, vallen buiten deze categorie."
+      },
+      "scope_reason": {
+        "label": "Reden waarom het product buiten de definitie van detergent valt"
+      },
+      "use_sector": {
+        "label": "Voor wie is het product bestemd?",
+        "help": "Industrieel en institutioneel betekent uitsluitend gebruikt buiten de huishoudelijke sfeer door gespecialiseerd personeel."
+      },
+      "model_identifier": {
+        "label": "Productmodelidentificatiecode",
+        "help": "Eén paspoort dekt één model. Een wijziging in de formulering of productie die het etiket verandert, kan het tot een nieuw model maken."
+      },
+      "batch_identifier": {
+        "label": "Type-, batch- of partijreferentie",
+        "help": "Het etiket moet een typenummer, batchnummer of ander traceerbaarheidselement bevatten."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "bv. 3401234567890"
+      },
+      "net_content": {
+        "label": "Nominale hoeveelheid met eenheid",
+        "placeholder": "bv. 1,5 L, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "EU-markten en etikettalen",
+        "help": "Etiket- en veiligheidsformuleringen moeten beschikbaar zijn in de taal of talen die in elke markt vereist zijn.",
+        "placeholder": "bv. Frankrijk (Frans), Duitsland (Duits)"
+      },
+      "dpp_profile": {
+        "label": "Informatieprofiel",
+        "help": "Verordening (EU) 2026/405 is van toepassing vanaf 23 september 2029. Kies de dataset van bijlage VI om de toekomstige paspoortgegevens voor te bereiden. Het invullen ervan maakt een paspoort niet conform of gecertificeerd."
+      },
+      "biocidal_claims": {
+        "label": "Biocide of desinfecterende claims?",
+        "help": "Voor desinfecterende of antimicrobiële claims is een toelating als biocide vereist krachtens Verordening (EU) No 528/2012."
+      },
+      "manufacturer_legal_name": {
+        "label": "Wettelijke naam van de fabrikant",
+        "help": "Het etiket vermeldt de naam, het postadres, het elektronische adres en het telefoonnummer van de fabrikant. Het postadres moet één enkel punt in de Unie zijn."
+      },
+      "manufacturer_street": {
+        "label": "Straat en huisnummer"
+      },
+      "manufacturer_postal_code": {
+        "label": "Postcode"
+      },
+      "manufacturer_city": {
+        "label": "Plaats"
+      },
+      "manufacturer_country": {
+        "label": "Land"
+      },
+      "manufacturer_email": {
+        "label": "Elektronisch adres (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Telefoonnummer",
+        "placeholder": "bv. +31 20 123 45 67"
+      },
+      "manufacturer_non_eu": {
+        "label": "Is de fabrikant buiten de EU gevestigd?"
+      },
+      "importer_legal_name": {
+        "label": "Wettelijke naam van de importeur",
+        "help": "Wanneer de fabrikant buiten de EU is gevestigd, zijn ook de contactgegevens van de importeur vereist."
+      },
+      "importer_street": {
+        "label": "Straat en huisnummer"
+      },
+      "importer_postal_code": {
+        "label": "Postcode"
+      },
+      "importer_city": {
+        "label": "Plaats"
+      },
+      "importer_country": {
+        "label": "Land"
+      },
+      "importer_email": {
+        "label": "Elektronisch adres (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "Gemachtigde in de EU: wettelijke naam",
+        "help": "Een fabrikant die buiten de EU is gevestigd, moet een gemachtigde aanwijzen (artikel 9 van Verordening (EU) 2026/405)."
+      },
+      "eu_operator_address": {
+        "label": "Gemachtigde in de EU: adres",
+        "placeholder": "Geregistreerd adres binnen de Europese Unie"
+      },
+      "eu_operator_email": {
+        "label": "Gemachtigde in de EU: elektronisch adres (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "CLP-indelingsbeoordeling",
+        "help": "Gebruik de indeling die daadwerkelijk voor dit mengsel is beoordeeld krachtens Verordening (EC) No 1272/2008. Leid deze niet af uit de pH-waarde of de pictogrammen."
+      },
+      "supplemental_statements": {
+        "label": "Aanvullende etiketteringsvoorschriften",
+        "help": "Bijvoorbeeld EUH208, waar van toepassing."
+      },
+      "signal_word": {
+        "label": "Signaalwoord"
+      },
+      "pictograms": {
+        "label": "GHS-pictogrammen"
+      },
+      "hazard_statements": {
+        "label": "Gevarenaanduidingen",
+        "help": "Voer de bewoordingen exact in zoals op het goedgekeurde etiket. Gebruik de vertaalknop voor elke markttaal. Deze bewoordingen worden nooit automatisch vertaald.",
+        "placeholder": "bv. H315 Veroorzaakt huidirritatie"
+      },
+      "precautionary_statements": {
+        "label": "Veiligheidsaanbevelingen",
+        "help": "Voer de bewoordingen exact in zoals op het goedgekeurde etiket. Gebruik de vertaalknop voor elke markttaal. Deze bewoordingen worden nooit automatisch vertaald.",
+        "placeholder": "bv. P280 Beschermende handschoenen dragen"
+      },
+      "pcn_applicability": {
+        "label": "Kennisgeving aan antigifcentra (CLP, bijlage VIII)",
+        "help": "UFI en kennisgeving zijn afhankelijk van gezondheids- of fysische gevaren en de toepasselijke vrijstellingen. Milieugevaren alleen leiden niet tot een kennisgevingsplicht."
+      },
+      "pcn_exemption_reason": {
+        "label": "Reden en rechtsgrond voor de vrijstelling"
+      },
+      "ufi_code": {
+        "label": "Unieke formule-identificatiecode (UFI)",
+        "help": "Vier groepen van vier tekens. Het formaat wordt gecontroleerd, maar de app kan een indiening bij een antigifcentrum niet verifiëren.",
+        "placeholder": "bv. N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Indieningen bij antigifcentra"
+      },
+      "sds_requirement": {
+        "label": "Verplichting tot verstrekking van een veiligheidsinformatieblad",
+        "help": "Een weblink alleen volstaat niet om te voldoen aan de plicht om een veiligheidsinformatieblad te verstrekken krachtens artikel 31 van REACH."
+      },
+      "sds_url": {
+        "label": "URL van openbaar veiligheidsinformatieblad",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "Talen van het veiligheidsinformatieblad",
+        "placeholder": "bv. Engels, Frans, Duits"
+      },
+      "sds_revision_date": {
+        "label": "Revisiedatum van het veiligheidsinformatieblad",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Contact voor noodgevallen (antigifcentrum of 24-uursnummer)",
+        "placeholder": "Telefoonnummer voor noodgevallen"
+      },
+      "constituent_classes": {
+        "label": "Klassen van bestanddelen toegevoegd boven 0,2 gewichtsprocent",
+        "help": "Vink elke klasse aan die boven 0,2 gewichtsprocent is toegevoegd en kies vervolgens hieronder het gewichtspercentage (bijlage V, deel A, punt 1, onder h), i))."
+      },
+      "band_phosphates": {
+        "label": "Fosfaten: gewichtspercentage"
+      },
+      "band_phosphonates": {
+        "label": "Fosfonaten: gewichtspercentage"
+      },
+      "band_anionic_surfactants": {
+        "label": "Anionogene oppervlakteactieve stoffen: gewichtspercentage"
+      },
+      "band_cationic_surfactants": {
+        "label": "Kationogene oppervlakteactieve stoffen: gewichtspercentage"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfotere oppervlakteactieve stoffen: gewichtspercentage"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Niet-ionogene oppervlakteactieve stoffen: gewichtspercentage"
+      },
+      "band_oxygen_bleach": {
+        "label": "Bleekmiddelen op basis van zuurstof: gewichtspercentage"
+      },
+      "band_chlorine_bleach": {
+        "label": "Bleekmiddelen op basis van chloor: gewichtspercentage"
+      },
+      "band_edta": {
+        "label": "EDTA en zouten daarvan: gewichtspercentage"
+      },
+      "band_nta": {
+        "label": "NTA en zouten daarvan: gewichtspercentage"
+      },
+      "band_phenols": {
+        "label": "Fenolen en gehalogeneerde fenolen: gewichtspercentage"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradichloorbenzeen: gewichtspercentage"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromatische koolwaterstoffen: gewichtspercentage"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifatische koolwaterstoffen: gewichtspercentage"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Gehalogeneerde koolwaterstoffen: gewichtspercentage"
+      },
+      "band_soap": {
+        "label": "Zeep: gewichtspercentage"
+      },
+      "band_zeolites": {
+        "label": "Zeolieten: gewichtspercentage"
+      },
+      "band_polycarboxylates": {
+        "label": "Polycarboxylaten: gewichtspercentage"
+      },
+      "listed_constituents": {
+        "label": "Klassen van bestanddelen toegevoegd in elke concentratie",
+        "help": "Bijlage V, deel A, punt 1, onder h), ii). Desinfecteermiddelen worden vermeld onder de huidige voorschriften en zijn vanaf 23 september 2029 geen vermelde klasse meer."
+      },
+      "preservatives_present": {
+        "label": "Zijn er conserveermiddelen aanwezig?",
+        "help": "Conserveermiddelen worden vermeld overeenkomstig bijlage V, deel A, punt 1, onder h), iii), tenzij ze al zijn geëtiketteerd krachtens artikel 18, lid 3, onder b), van CLP of artikel 58 van de biocidenverordening."
+      },
+      "preservatives": {
+        "label": "Conserveermiddelen",
+        "help": "Gebruik waar mogelijk de INCI-naam.",
+        "placeholder": "bv. Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "Parfumallergenen toegevoegd boven 0,01 gewichtsprocent?",
+        "help": "Allergenen uit de lijst in bijlage V, deel D, die opzettelijk zijn toegevoegd in een concentratie van meer dan 0,01 gewichtsprocent, worden op het etiket vermeld, tenzij ze al zijn geëtiketteerd krachtens CLP."
+      },
+      "fragrance_allergens": {
+        "label": "Aanwezige parfumallergenen",
+        "help": "Kies elk allergeen uit de officiële lijst van 105 vermeldingen."
+      },
+      "ingredients_url": {
+        "label": "Openbare webpagina met ingrediënten",
+        "help": "De huidige voorschriften (Verordening (EC) No 648/2004, bijlage VII, deel D) vereisen een bijgehouden openbare ingrediëntenlijst voor consumentenproducten. Deze hoeft geen percentages of CAS-nummers te bevatten.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "Equivalente ingrediënteninformatie verstrekt aan professionele gebruikers"
+      },
+      "biodegradability_test": {
+        "label": "Testmethode voor de biologische afbreekbaarheid van oppervlakteactieve stoffen",
+        "placeholder": "bv. OECD 301-reeks"
+      },
+      "biodegradability_reference": {
+        "label": "Referentie van bewijs voor biologische afbreekbaarheid",
+        "help": "Vermeld het testrapport of de leveranciersverklaring. Upload of plak geen vertrouwelijke bestanden."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Bevat opzettelijk toegevoegde synthetische polymeermicrodeeltjes?",
+        "help": "Verordening (EU) 2023/2055 beperkt deze krachtens REACH, bijlage XVII, post 78. Detergenten vallen hieronder vanaf 17 oktober 2028."
+      },
+      "use_instructions": {
+        "label": "Gebruiksaanwijzing en speciale voorzorgsmaatregelen",
+        "help": "Methode, geschikte textielsoorten of oppervlakken, en eventuele speciale voorzorgsmaatregelen."
+      },
+      "laundry_type": {
+        "label": "Type wasmiddel",
+        "help": "Bepaalt de standaardwaslading: 4,5 kg droog wasgoed voor totaalwasmiddelen, 2,5 kg voor totaalwasmiddelen voor korte wascycli en voor fijnwasmiddelen."
+      },
+      "dosage_unit": {
+        "label": "Doseringseenheid"
+      },
+      "dosage_soft": {
+        "label": "Dosis voor zacht water (per standaardwaslading)",
+        "placeholder": "bv. 60"
+      },
+      "dosage_medium": {
+        "label": "Dosis voor middelhard water (per standaardwaslading)",
+        "placeholder": "bv. 75"
+      },
+      "dosage_hard": {
+        "label": "Dosis voor hard water (per standaardwaslading)",
+        "placeholder": "bv. 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Dosering voor wasprocessen met één en twee cycli",
+        "help": "Bijlage V, deel B, punt 1, onder a), vraagt om dosering voor wasprocessen met één of twee cycli."
+      },
+      "loads_per_pack": {
+        "label": "Standaardwasladingen per verpakking (middelhard water, 2,5 millimol CaCO3 per liter)",
+        "help": "Geef voor navullingen het aantal wasladingen per 1 liter of 1 kg product op. Niet nodig voor navullingen in eenheden."
+      },
+      "measuring_cup_ml": {
+        "label": "Inhoud van de maatbeker",
+        "help": "Inhoud van een eventueel meegeleverde maatbeker, met duidelijke markeringen voor doses voor zacht, middelhard en hard water."
+      },
+      "dishwasher_dose": {
+        "label": "Standaarddosis voor de hoofdcyclus",
+        "help": "Voor normaal bevuild vaatwerk in een volgeladen vaatwasmachine voor 12 couverts."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Aanpassing van de dosis voor waterhardheid"
+      },
+      "surface_dilution": {
+        "label": "Aanbevolen verdunning en hoeveelheid per oppervlakte",
+        "help": "Bijlage V, deel B, punt 4: geef de aanbevolen verdunning en hoeveelheid per oppervlakte, of andere gebruiksaanwijzingen, zodat het product niet overmatig wordt gebruikt."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Totaal fosfor in de aanbevolen dosis (gram)",
+        "help": "Limieten van bijlage III: minder dan 0,5 g per standaardwaslading in hard water, en minder dan 0,3 g per standaard vaatwasmachinedosis."
+      },
+      "storage_disposal": {
+        "label": "Opslag en verwijdering"
+      },
+      "packaging_material": {
+        "label": "Primair verpakkingsmateriaal"
+      },
+      "packaging_recyclable": {
+        "label": "Verpakking recycleerbaar?"
+      },
+      "recycling_instructions": {
+        "label": "Recyclinginstructies"
+      },
+      "recycled_packaging_content": {
+        "label": "Gerecycled gehalte in verpakking (%)",
+        "placeholder": "bv. 30"
+      },
+      "refill_available": {
+        "label": "Navulling beschikbaar?"
+      },
+      "refill_station": {
+        "label": "Verkocht via een navulstation?",
+        "help": "Navulpunten hebben hun eigen verplichting inzake gegevensdragers krachtens artikel 21, lid 4, van Verordening (EU) 2026/405."
+      },
+      "epr_registration": {
+        "label": "Registratie voor uitgebreide producentenverantwoordelijkheid voor verpakkingen per markt",
+        "help": "Eén regel per markt.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Toepasselijke toelating of wettige overgangsbasis"
+      },
+      "biocidal_actives": {
+        "label": "Werkzame stoffen en toegelaten gebruik"
+      },
+      "environmental_claims": {
+        "label": "Milieuclaims op het product of de verpakking",
+        "placeholder": "bv. \"Fles gemaakt met 30% gerecycled plastic\""
+      },
+      "claims_evidence_reference": {
+        "label": "Referentie van bewijs voor onderbouwing",
+        "placeholder": "Referentie van studie, certificaat of verificatie-instantie voor elke claim"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Vermijden claims generieke milieutermen?",
+        "help": "Generieke claims zoals 'milieuvriendelijk' of 'biologisch afbreekbaar' zijn beperkt vanaf 27 september 2026 krachtens Richtlijn (EU) 2024/825."
+      },
+      "ecolabel_licence_number": {
+        "label": "EU Ecolabel-licentienummer",
+        "help": "Voer het licentieregistratienummer alleen in als het product een EU Ecolabel-licentie heeft. De badge wordt alleen op het openbare paspoort getoond als er een nummer is ingevoerd."
+      },
+      "reach_review": {
+        "label": "REACH-beperkingen en -verplichtingen beoordeeld",
+        "help": "Beoordeel de beperkingen in bijlage XVII en de verplichtingen die van toepassing zijn op de samenstellende stoffen."
+      },
+      "physical_label_reviewed": {
+        "label": "Ik heb het fysieke etiket en de verstrekte veiligheidsinformatie gecontroleerd"
+      },
+      "label_professional_indicator": {
+        "label": "Het etiket vermeldt dat het product uitsluitend voor professioneel gebruik is"
+      },
+      "previous_passport_url": {
+        "label": "Link naar het vorige paspoort, wanneer dit record er een vervangt",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "Revisiedatum productinformatie",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "Referentie van conformiteitsbewijs van de fabrikant"
+      },
+      "model_content_reference": {
+        "label": "Revisiereferentie productinhoud"
+      },
+      "manufacturing_process_reference": {
+        "label": "Revisiereferentie productieproces"
+      },
+      "persistent_product_id": {
+        "label": "Permanente productidentificatiecode",
+        "help": "Voer de echte identificatiecode in. Een interne record-ID is geen identificatiecode die is afgegeven volgens de normen waarnaar in de ESPR wordt verwezen."
+      },
+      "identifier_scheme": {
+        "label": "Identificatieschema en uitgevende instantie"
+      },
+      "manufacturer_operator_id": {
+        "label": "Unieke exploitantidentificatiecode van de fabrikant"
+      },
+      "backup_provider_url": {
+        "label": "Paspoortdienstverlener die de back-upkopie bewaart (URL)",
+        "help": "Noem een dienstverlener waarmee u daadwerkelijk een afspraak hebt gemaakt. De app creëert geen back-updienst.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "Referentie van de back-updienstovereenkomst"
+      },
+      "commodity_code_status": {
+        "label": "Goederencode douane"
+      },
+      "commodity_code": {
+        "label": "Goederencode (Verordening (EEC) No 2658/87)"
+      },
+      "commodity_code_reason": {
+        "label": "Reden waarom geen goederencode van toepassing is"
+      },
+      "manufacturer_responsibility": {
+        "label": "De fabrikant geeft dit paspoort af onder zijn uitsluitende verantwoordelijkheid"
+      },
+      "compliance_statement": {
+        "label": "Verklaring dat de conformiteit met Verordening (EU) 2026/405 is aangetoond",
+        "help": "Vul dit alleen in na de eigen beoordeling van de fabrikant. De app genereert nooit een conformiteitsverklaring."
+      },
+      "applicable_union_law": {
+        "label": "Andere Uniewetgeving die op het product van toepassing is"
+      },
+      "last_placed_on_market_date": {
+        "label": "Laatste datum waarop het model op de markt is gebracht",
+        "help": "Het startpunt voor de tienjarige beschikbaarheidsplicht.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Waar de gegevensdrager is geplaatst",
+        "help": "Artikel 21, lid 4: fysiek aanwezig, onuitwisbaar, machineleesbaar en zichtbaar vóór aankoop, met de vermelding \"Scan voor uitgebreidere informatie over het product\". Ook vereist bij navulstations en bij verkoop op afstand."
+      },
+      "carrier_reviewed": {
+        "label": "De gegevensdrager voldoet aan deze eisen"
+      },
+      "market_language_reviewed": {
+        "label": "Etiket- en veiligheidsformuleringen zijn beoordeeld in elke doeltaal van de markt"
+      },
+      "substance_list_route": {
+        "label": "Route voor openbaarmaking van stoffen",
+        "help": "De vrijstelling geldt alleen voor industriële en institutionele detergenten en oppervlakteactieve stoffen waarvoor een equivalent veiligheidsinformatieblad krachtens artikel 31 van REACH de informatie verstrekt."
+      },
+      "substances": {
+        "label": "Alle opzettelijk toegevoegde stoffen en op het etiket vereiste overgedragen conserveermiddelen",
+        "help": "Identificeer stoffen zoals vereist door artikel 18, lid 3, van Verordening (EC) No 1272/2008. Voer geen concentraties of vertrouwelijke formuleringsgegevens in. Alles wat in deze categorie wordt opgeslagen, is openbaar."
+      },
+      "no_substances_reason": {
+        "label": "Grondslag voor de afwezigheid van te vermelden stoffen"
+      },
+      "substance_list_complete": {
+        "label": "De lijst is volledig, bevat in aanmerking komende overgedragen conserveermiddelen en gebruikt identiteiten die zijn beoordeeld krachtens artikel 18, lid 3, van CLP"
+      },
+      "industrial_institutional_use": {
+        "label": "Uitsluitend gebruikt buiten de huishoudelijke sfeer door gespecialiseerd personeel"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Equivalente stofinformatie is daadwerkelijk verstrekt in een veiligheidsinformatieblad krachtens artikel 31 van REACH"
+      },
+      "annex_sds_url": {
+        "label": "URL van equivalent veiligheidsinformatieblad",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Talen van het equivalente veiligheidsinformatieblad"
+      },
+      "annex_sds_revision_date": {
+        "label": "Revisiedatum van het equivalente veiligheidsinformatieblad",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Zijn er opzettelijk micro-organismen toegevoegd?",
+        "help": "De route via het equivalente veiligheidsinformatieblad verwijdert nooit de lijst van micro-organismen."
+      },
+      "microorganisms": {
+        "label": "Alle opzettelijk toegevoegde micro-organismen",
+        "help": "Geef voor elk micro-organisme de naam of code van het geslacht, de soort en de stam op."
+      },
+      "microorganism_safety_reference": {
+        "label": "Referentie van de veiligheidsbeoordeling (bijlage II)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Houdbaarheid en opslagcondities",
+        "help": "Het etiket van een detergent dat micro-organismen bevat, vermeldt de houdbaarheid."
+      },
+      "food_contact_use": {
+        "label": "Bestemd voor gebruik op oppervlakken die met levensmiddelen in contact komen?",
+        "help": "Tenzij het product als veilig voor dit gebruik is beoordeeld, vermeldt het etiket dat het niet mag worden gebruikt op oppervlakken die met levensmiddelen in contact komen."
+      },
+      "food_contact_instructions": {
+        "label": "Voorzorgsmaatregelen en instructies voor oppervlakken die met levensmiddelen in contact komen"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Wasmiddel",
+        "laundry_additive": "Wasadditief of voorwasmiddel",
+        "machine_dishwashing": "Machinewas-afwasmiddel",
+        "dishwasher_additive": "Glansspoelmiddel of vaatwasadditief",
+        "hand_dishwashing": "Handafwasmiddel",
+        "all_purpose": "Allesreiniger of oppervlaktereiniger",
+        "kitchen": "Keukenreiniger",
+        "bathroom": "Badkamerreiniger",
+        "toilet": "Toiletreiniger",
+        "glass": "Glasreiniger",
+        "floor": "Vloerreiniger",
+        "descaler": "Ontkalker",
+        "bleach": "Bleekmiddel",
+        "other": "Ander detergent"
+      },
+      "productForm": {
+        "liquid": "Vloeistof",
+        "gel": "Gel",
+        "powder": "Poeder",
+        "tablet": "Tablet",
+        "capsule": "Capsule of pod",
+        "spray": "Spray",
+        "wipe": "Doekje",
+        "paste": "Pasta",
+        "other": "Andere"
+      },
+      "yesNoReview": {
+        "yes": "Ja",
+        "no": "Nee",
+        "review": "Beoordeling nodig"
+      },
+      "useSector": {
+        "consumer": "Consumenten, inclusief gemengd consumenten- en professioneel gebruik",
+        "professional": "Uitsluitend professioneel gebruik",
+        "industrial": "Uitsluitend industrieel en institutioneel gebruik"
+      },
+      "dppProfile": {
+        "current": "Huidige productinformatie",
+        "annex_vi": "Volledige dataset van bijlage VI voor de voorschriften van 2029"
+      },
+      "manufacturerNonEu": {
+        "yes": "Ja",
+        "no": "Nee"
+      },
+      "clpClassification": {
+        "none": "Niet ingedeeld als gevaarlijk",
+        "environment": "Uitsluitend milieugevaren",
+        "health_physical": "Gezondheids- of fysische gevaren, met of zonder milieugevaren",
+        "review": "Beoordeling nodig"
+      },
+      "signalWord": {
+        "danger": "Gevaar",
+        "warning": "Waarschuwing",
+        "not_applicable": "Niet van toepassing na beoordeling"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Ontploffende bom",
+        "ghs02": "GHS02 Vlam",
+        "ghs03": "GHS03 Vlam boven cirkel",
+        "ghs04": "GHS04 Gascilinder",
+        "ghs05": "GHS05 Corrosie",
+        "ghs06": "GHS06 Doodshoofd met gekruiste beenderen",
+        "ghs07": "GHS07 Uitroepteken",
+        "ghs08": "GHS08 Gezondheidsgevaar",
+        "ghs09": "GHS09 Milieu",
+        "none": "Geen pictogram van toepassing"
+      },
+      "pcnApplicability": {
+        "required": "Kennisgeving vereist",
+        "exempt": "Gedocumenteerde vrijstelling",
+        "review": "Beoordeling nodig"
+      },
+      "pcnStatus": {
+        "submitted": "Ingediend voor de relevante markten",
+        "pending": "In behandeling"
+      },
+      "sdsRequirement": {
+        "required": "Moet worden verstrekt",
+        "on_request": "Moet op verzoek beschikbaar zijn",
+        "not_required": "Niet vereist na beoordeling",
+        "review": "Beoordeling nodig"
+      },
+      "constituentClass": {
+        "phosphates": "Fosfaten",
+        "phosphonates": "Fosfonaten",
+        "anionic_surfactants": "Anionogene oppervlakteactieve stoffen",
+        "cationic_surfactants": "Kationogene oppervlakteactieve stoffen",
+        "amphoteric_surfactants": "Amfotere oppervlakteactieve stoffen",
+        "nonionic_surfactants": "Niet-ionogene oppervlakteactieve stoffen",
+        "oxygen_bleach": "Zuurstofbleekmiddelen",
+        "chlorine_bleach": "Chloorbleekmiddelen",
+        "edta": "EDTA en zouten daarvan",
+        "nta": "NTA en zouten daarvan",
+        "phenols": "Fenolen en gehalogeneerde fenolen",
+        "paradichlorobenzene": "Paradichloorbenzeen",
+        "aromatic_hydrocarbons": "Aromatische koolwaterstoffen",
+        "aliphatic_hydrocarbons": "Alifatische koolwaterstoffen",
+        "halogenated_hydrocarbons": "Gehalogeneerde koolwaterstoffen",
+        "soap": "Zeep",
+        "zeolites": "Zeolieten",
+        "polycarboxylates": "Polycarboxylaten"
+      },
+      "weightBand": {
+        "lt5": "Minder dan 5%",
+        "5to15": "5% of meer, maar minder dan 15%",
+        "15to30": "15% of meer, maar minder dan 30%",
+        "gte30": "30% en meer"
+      },
+      "listedConstituent": {
+        "enzymes": "Enzymen",
+        "micro_organisms": "Micro-organismen",
+        "optical_brighteners": "Optische witmiddelen",
+        "perfumes": "Parfums",
+        "disinfectants": "Desinfecterende middelen (huidige regels tot 23 september 2029)"
+      },
+      "yesNoUnknown": {
+        "yes": "Ja",
+        "no": "Nee",
+        "unknown": "Onbekend"
+      },
+      "laundryType": {
+        "heavy_duty": "Voor de hoofdwas",
+        "heavy_duty_short": "Voor de hoofdwas voor korte wasprogramma's",
+        "light_duty": "Voor de fijne was of delicate stoffen"
+      },
+      "dosageUnit": {
+        "ml": "Milliliter",
+        "g": "Gram",
+        "units": "Eenheden (tabletten, capsules of pods)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Ander plastic",
+        "metal": "Metaal",
+        "glass": "Glas",
+        "paper_cardboard": "Papier of karton",
+        "composite": "Composietmateriaal",
+        "water_soluble_film": "Wateroplosbare folie",
+        "other": "Andere"
+      },
+      "reachReview": {
+        "reviewed": "Beoordeeld door de leverancier",
+        "review": "Beoordeling nodig"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Van toepassing",
+        "not_applicable": "Niet van toepassing na beoordeling"
+      },
+      "substanceListRoute": {
+        "full_list": "Volledige lijst van stoffen",
+        "equivalent_sds": "Equivalent veiligheidsinformatieblad (alleen voor industrieel en institutioneel gebruik)",
+        "no_added_substances": "Geen te vermelden stoffen na beoordeling"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "Dit product valt mogelijk buiten de definitie van een was- of reinigingsmiddel in artikel 2, lid 1, van Verordening (EU) 2026/405. Controleer het toepassingsgebied voordat u deze categorie gebruikt.",
+      "biocidal": "Voor desinfecterende of antimicrobiële claims is een toelating als biocide vereist krachtens Verordening (EU) No 528/2012.",
+      "assessmentNeeded": "Deze beoordeling is niet voltooid. Voltooi de beoordeling voordat u op het paspoort vertrouwt.",
+      "microparticles": "Controleer Verordening (EU) 2023/2055 betreffende synthetische polymeermicrodeeltjes voordat u dit product in de handel brengt. Een onbekend antwoord moet met de leverancier worden opgelost.",
+      "phosphorusLaundry": "Een totaal fosforgehalte van {{value}} g ligt niet onder de limiet van 0,5 g voor een wasmiddel voor consumenten in hard water (bijlage III van Verordening (EU) 2026/405).",
+      "phosphorusDishwasher": "Een totaal fosforgehalte van {{value}} g ligt niet onder de limiet van 0,3 g voor een machinaal vaatwasmiddel voor consumenten (bijlage III van Verordening (EU) 2026/405).",
+      "percentageRange": "Een percentage moet tussen 0 en 100 liggen. U heeft {{value}} ingevoerd.",
+      "positiveNumber": "Voer een getal groter dan nul in. U heeft {{value}} ingevoerd.",
+      "allergensMissing": "U heeft ja geantwoord, maar er is geen allergeen geselecteerd. Selecteer elk allergeen uit de officiële lijst.",
+      "ufiFormat": "Een UFI bestaat uit vier groepen van vier tekens, bijvoorbeeld N1QV-R02N-J00M-WQD5. Het formaat wordt gecontroleerd, maar een indiening bij een antigifcentrum niet.",
+      "urlFormat": "Gebruik een volledig webadres dat begint met http:// of https://.",
+      "emailFormat": "Voer een geldig e-mailadres in.",
+      "dateFormat": "Gebruik een geldige datum in YYYY-MM-DD-formaat.",
+      "microorganismSafety": "Er zijn micro-organismen toegevoegd, maar er is geen referentie naar een veiligheidsbeoordeling ingevoerd."
+    },
+    "disclaimer": {
+      "title": "Was- en reinigingsmiddelen DPP: conformiteitsdisclaimer",
+      "text": "Verordening (EU) 2026/405 betreffende was- en reinigingsmiddelen en oppervlakteactieve stoffen is van toepassing vanaf 23 september 2029. De regels voor het digitale productpaspoort, de toegangsrechten en de details van de datadrager moeten nog worden vastgesteld door een uitvoeringshandeling, en tot die tijd is Verordening (EC) No 648/2004 van toepassing. Deze tool verzamelt productinformatie en bereidt paspoortgegevens voor. Het is geen certificering of goedkeuring en mag niet worden beschouwd als definitief juridisch advies. Alles wat in deze categorie wordt opgeslagen, is openbaar."
+    }
   }
 }

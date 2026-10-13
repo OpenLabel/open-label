@@ -2158,5 +2158,738 @@
       "scannerTitle": "Ruházati címke szkenner",
       "scannerDescription": "Fényképezze le vagy töltse fel a bevarrt kezelési útmutató címkét, a függőcímkét vagy egy tech pack PDF-et – a mesterséges intelligencia beolvassa a szálösszetételt, a kezelési szimbólumokat, a származási országot, a tanúsítványokat és a stílusreferenciákat."
     }
+  },
+  "detergents": {
+    "sections": {
+      "identity": {
+        "title": "A termék azonosítása",
+        "description": "Termék, modell és nyomonkövethetőség"
+      },
+      "responsible_operators": {
+        "title": "Felelős gazdasági szereplők",
+        "description": "Gyártó, importőr és uniós meghatalmazott képviselő, különálló felekként kezelve"
+      },
+      "classification": {
+        "title": "Veszélyességi osztályozás és biztonsági információk",
+        "description": "CLP szerinti osztályozás, címkén szereplő veszélyességi információk, toxikológiai központ és biztonsági adatlap"
+      },
+      "ingredients": {
+        "title": "Összetevők és címkeinformációk",
+        "description": "A címke tartalma a (EU) 2026/405 rendelet V. melléklete és a hatályos szabályok szerint"
+      },
+      "use": {
+        "title": "Biztonságos használat és adagolás",
+        "description": "Adagolási és használati információk az V. melléklet B. része szerint"
+      },
+      "packaging": {
+        "title": "Csomagolás és újrahasznosítás",
+        "description": "Csomagolás, újrahasznosíthatóság és utántöltők"
+      },
+      "biocide": {
+        "title": "Biocid termék értékelése",
+        "description": "Akkor alkalmazandó, ha a termékkel kapcsolatban fertőtlenítő vagy antimikrobiális hatásra vonatkozó állításokat tesznek"
+      },
+      "green_claims": {
+        "title": "Környezetvédelmi állítások",
+        "description": "A (EU) 2024/825 irányelvet támogatja, amely 2026. szeptember 27-től alkalmazandó"
+      },
+      "review": {
+        "title": "Beszállítói felülvizsgálat és útlevél-előkészítés",
+        "description": "A beszállító által elvégzett ellenőrzések. Az alkalmazás ezeket nem tudja ellenőrizni."
+      },
+      "annex_identity": {
+        "title": "VI. melléklet: a termék azonosítása és a gyártó nyilatkozata",
+        "description": "Felkészülés a 2029. szeptember 23-tól kötelező digitális termékútlevélre. A teljes adatkészlet nem minősül tanúsításnak, ellenőrzött azonosítónak vagy nyilvántartásba vételnek."
+      },
+      "annex_substances": {
+        "title": "VI. melléklet: anyagok",
+        "description": "A szándékosan hozzáadott anyagok teljes listája (VI. melléklet A. rész h) pont)"
+      },
+      "annex_microorganisms": {
+        "title": "VI. melléklet: mikroorganizmusok",
+        "description": "Minden szándékosan hozzáadott mikroorganizmus (VI. melléklet A. rész i) pont)"
+      }
+    },
+    "fields": {
+      "brand_name": {
+        "label": "Márkanév"
+      },
+      "product_type": {
+        "label": "Terméktípus"
+      },
+      "product_type_other": {
+        "label": "Terméktípus (kérjük, részletezze)"
+      },
+      "product_form": {
+        "label": "A termék formája"
+      },
+      "detergent_scope": {
+        "label": "A termék textíliák, edények vagy felületek tisztítására, áztatására, öblítésére vagy fehérítésére szolgál?",
+        "help": "Lásd a (EU) 2026/405 rendelet 2. cikkének (1) bekezdését. A festékek, ragasztók, oldószerek és a nem tisztításra szolgáló termékek nem tartoznak ebbe a kategóriába."
+      },
+      "scope_reason": {
+        "label": "A termék miért nem tartozik a detergens fogalommeghatározása alá"
+      },
+      "use_sector": {
+        "label": "Kinek szánják a terméket?",
+        "help": "Az ipari és intézményi felhasználás azt jelenti, hogy a terméket kizárólag a háztartási szférán kívül, szakképzett személyzet használja."
+      },
+      "model_identifier": {
+        "label": "Termékmodell-azonosító",
+        "help": "Egy útlevél egy modellre vonatkozik. Az összetétel vagy a gyártás olyan megváltoztatása, amely a címke módosításával jár, új modellt eredményezhet."
+      },
+      "batch_identifier": {
+        "label": "Típus-, tétel- vagy gyártási szám",
+        "help": "A címkén fel kell tüntetni egy típus-, tétel- vagy egyéb nyomonkövethetőségi elemet."
+      },
+      "gtin": {
+        "label": "GTIN / EAN",
+        "placeholder": "pl. 3401234567890"
+      },
+      "net_content": {
+        "label": "Névleges mennyiség mértékegységgel",
+        "placeholder": "pl. 1,5 L, 750 ml, 2 kg"
+      },
+      "target_markets": {
+        "label": "Uniós piacok és a címke nyelvei",
+        "help": "A címkének és a biztonsági szövegezésnek minden piacon az előírt nyelven vagy nyelveken kell rendelkezésre állnia.",
+        "placeholder": "pl. Franciaország (francia), Németország (német)"
+      },
+      "dpp_profile": {
+        "label": "Információs profil",
+        "help": "A (EU) 2026/405 rendelet 2029. szeptember 23-tól alkalmazandó. Válassza a VI. melléklet szerinti adatkészletet a jövőbeli útlevéladatok előkészítéséhez. A kitöltés nem teszi a termékútlevelet megfelelővé vagy tanúsítottá."
+      },
+      "biocidal_claims": {
+        "label": "Biocid vagy fertőtlenítő hatásra vonatkozó állítások?",
+        "help": "A fertőtlenítő vagy antimikrobiális hatásra vonatkozó állításokhoz a (EU) No 528/2012 rendelet szerinti biocidtermék-engedély szükséges."
+      },
+      "manufacturer_legal_name": {
+        "label": "A gyártó hivatalos neve",
+        "help": "A címkén fel kell tüntetni a gyártó nevét, postacímét, elektronikus címét és telefonszámát. A postacímnek egyetlen unión belüli pontnak kell lennie."
+      },
+      "manufacturer_street": {
+        "label": "Utca, házszám"
+      },
+      "manufacturer_postal_code": {
+        "label": "Irányítószám"
+      },
+      "manufacturer_city": {
+        "label": "Város"
+      },
+      "manufacturer_country": {
+        "label": "Ország"
+      },
+      "manufacturer_email": {
+        "label": "Elektronikus cím (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "manufacturer_phone": {
+        "label": "Telefonszám",
+        "placeholder": "pl. +36 1 234 5678"
+      },
+      "manufacturer_non_eu": {
+        "label": "A gyártó az EU-n kívül letelepedett?"
+      },
+      "importer_legal_name": {
+        "label": "Az importőr hivatalos neve",
+        "help": "Ha a gyártó az EU-n kívül letelepedett, az importőr elérhetőségeit is meg kell adni."
+      },
+      "importer_street": {
+        "label": "Utca, házszám"
+      },
+      "importer_postal_code": {
+        "label": "Irányítószám"
+      },
+      "importer_city": {
+        "label": "Város"
+      },
+      "importer_country": {
+        "label": "Ország"
+      },
+      "importer_email": {
+        "label": "Elektronikus cím (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "eu_operator_name": {
+        "label": "EU-s meghatalmazott képviselő: hivatalos név",
+        "help": "Az EU-n kívül letelepedett gyártónak meghatalmazott képviselőt kell kijelölnie (a (EU) 2026/405 rendelet 9. cikke)."
+      },
+      "eu_operator_address": {
+        "label": "EU-s meghatalmazott képviselő: cím",
+        "placeholder": "Bejegyzett cím az Európai Unión belül"
+      },
+      "eu_operator_email": {
+        "label": "EU-s meghatalmazott képviselő: elektronikus cím (e-mail)",
+        "placeholder": "name@company.com"
+      },
+      "clp_classification": {
+        "label": "CLP szerinti osztályozás értékelése",
+        "help": "A (EC) No 1272/2008 rendelet szerint erre a keverékre ténylegesen értékelt osztályozást használja. Ne következtessen rá a pH-értékből vagy a piktogramokból."
+      },
+      "supplemental_statements": {
+        "label": "Kiegészítő címkén feltüntetendő mondatok",
+        "help": "Például EUH208, ahol alkalmazandó."
+      },
+      "signal_word": {
+        "label": "Figyelmeztetés"
+      },
+      "pictograms": {
+        "label": "GHS-piktogramok"
+      },
+      "hazard_statements": {
+        "label": "Figyelmeztető mondatok",
+        "help": "A szöveget pontosan a jóváhagyott címkének megfelelően adja meg. Használja a fordítás gombot minden egyes piaci nyelvhez. Ez a szöveg soha nem kerül automatikusan lefordításra.",
+        "placeholder": "pl. H315 Bőrirritáló hatású"
+      },
+      "precautionary_statements": {
+        "label": "Óvintézkedésre vonatkozó mondatok",
+        "help": "A szöveget pontosan a jóváhagyott címkének megfelelően adja meg. Használja a fordítás gombot minden egyes piaci nyelvhez. Ez a szöveg soha nem kerül automatikusan lefordításra.",
+        "placeholder": "pl. P280 Védőkesztyű használata kötelező"
+      },
+      "pcn_applicability": {
+        "label": "Toxikológiai központnak történő bejelentés (CLP VIII. melléklet)",
+        "help": "A UFI és a bejelentési kötelezettség az egészségi vagy fizikai veszélyektől és az alkalmazandó mentességektől függ. A környezeti veszélyek önmagukban nem teszik szükségessé a bejelentést."
+      },
+      "pcn_exemption_reason": {
+        "label": "A mentesség oka és jogalapja"
+      },
+      "ufi_code": {
+        "label": "Egyedi formulaazonosító (UFI)",
+        "help": "Négy darab négy karakterből álló csoport. A formátum ellenőrzésre kerül, de az alkalmazás nem tudja ellenőrizni a toxikológiai központnak történő bejelentést.",
+        "placeholder": "pl. N1QV-R02N-J00M-WQD5"
+      },
+      "pcn_status": {
+        "label": "Toxikológiai központnak tett bejelentések"
+      },
+      "sds_requirement": {
+        "label": "Biztonsági adatlap rendelkezésre bocsátásának kötelezettsége",
+        "help": "Egy webes hivatkozás önmagában nem teljesíti a biztonsági adatlap rendelkezésre bocsátására vonatkozó kötelezettséget a REACH 31. cikke szerint."
+      },
+      "sds_url": {
+        "label": "Nyilvános biztonsági adatlap URL-címe",
+        "placeholder": "https://..."
+      },
+      "sds_languages": {
+        "label": "A biztonsági adatlap nyelvei",
+        "placeholder": "pl. angol, francia, német"
+      },
+      "sds_revision_date": {
+        "label": "A biztonsági adatlap felülvizsgálatának dátuma",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "emergency_contact": {
+        "label": "Vészhelyzeti kapcsolattartó (toxikológiai központ vagy 24 órás telefonszám)",
+        "placeholder": "Telefonszám vészhelyzet esetére"
+      },
+      "constituent_classes": {
+        "label": "0,2 tömegszázalék felett hozzáadott összetevő-kategóriák",
+        "help": "Jelölje be minden olyan kategóriát, amelyet 0,2 tömegszázalék felett adtak hozzá, majd válassza ki alább a tömegszázalék-tartományát (V. melléklet A. rész 1. pont h) alpont i))."
+      },
+      "band_phosphates": {
+        "label": "Foszfátok: tömegszázalék-tartomány"
+      },
+      "band_phosphonates": {
+        "label": "Foszfonátok: tömegszázalék-tartomány"
+      },
+      "band_anionic_surfactants": {
+        "label": "Anionos felületaktív anyagok: tömegszázalék-tartomány"
+      },
+      "band_cationic_surfactants": {
+        "label": "Kationos felületaktív anyagok: tömegszázalék-tartomány"
+      },
+      "band_amphoteric_surfactants": {
+        "label": "Amfoter felületaktív anyagok: tömegszázalék-tartomány"
+      },
+      "band_nonionic_surfactants": {
+        "label": "Nemionos felületaktív anyagok: tömegszázalék-tartomány"
+      },
+      "band_oxygen_bleach": {
+        "label": "Oxigénalapú fehérítőszerek: tömegszázalék-tartomány"
+      },
+      "band_chlorine_bleach": {
+        "label": "Klóralapú fehérítőszerek: tömegszázalék-tartomány"
+      },
+      "band_edta": {
+        "label": "EDTA és sói: tömegszázalék-tartomány"
+      },
+      "band_nta": {
+        "label": "NTA és sói: tömegszázalék-tartomány"
+      },
+      "band_phenols": {
+        "label": "Fenolok és halogénezett fenolok: tömegszázalék-tartomány"
+      },
+      "band_paradichlorobenzene": {
+        "label": "Paradiklórbenzol: tömegszázalék-tartomány"
+      },
+      "band_aromatic_hydrocarbons": {
+        "label": "Aromás szénhidrogének: tömegszázalék-tartomány"
+      },
+      "band_aliphatic_hydrocarbons": {
+        "label": "Alifás szénhidrogének: tömegszázalék-tartomány"
+      },
+      "band_halogenated_hydrocarbons": {
+        "label": "Halogénezett szénhidrogének: tömegszázalék-tartomány"
+      },
+      "band_soap": {
+        "label": "Szappan: tömegszázalék-tartomány"
+      },
+      "band_zeolites": {
+        "label": "Zeolitok: tömegszázalék-tartomány"
+      },
+      "band_polycarboxylates": {
+        "label": "Polikarboxilátok: tömegszázalék-tartomány"
+      },
+      "listed_constituents": {
+        "label": "Bármilyen koncentrációban hozzáadott összetevő-kategóriák",
+        "help": "V. melléklet A. rész 1. pont h) alpont ii). A fertőtlenítőszereket a hatályos szabályok szerint kell feltüntetni, és 2029. szeptember 23-tól már nem minősülnek feltüntetendő kategóriának."
+      },
+      "preservatives_present": {
+        "label": "Tartalmaz tartósítószereket?",
+        "help": "A tartósítószereket az V. melléklet A. rész 1. pont h) alpont iii) szerint kell feltüntetni, kivéve, ha már a CLP 18. cikk (3) bekezdés b) pontja vagy a biocid termékekről szóló rendelet 58. cikke szerint címkézték őket."
+      },
+      "preservatives": {
+        "label": "Tartósítószerek",
+        "help": "Ahol lehetséges, használja az INCI szerinti nevet.",
+        "placeholder": "pl. Phenoxyethanol, Methylisothiazolinone"
+      },
+      "allergens_above_threshold": {
+        "label": "0,01 tömegszázalék felett hozzáadott illatallergének?",
+        "help": "Az V. melléklet D. részében szereplő listán található, 0,01 tömegszázalék felett szándékosan hozzáadott allergéneket fel kell tüntetni a címkén, kivéve, ha már a CLP szerint címkézték őket."
+      },
+      "fragrance_allergens": {
+        "label": "Jelen lévő illatallergének",
+        "help": "Válassza ki az allergéneket a 105 tételből álló hivatalos listáról."
+      },
+      "ingredients_url": {
+        "label": "Összetevőket tartalmazó nyilvános weboldal",
+        "help": "A hatályos szabályok ((EC) No 648/2004 rendelet, VII. melléklet D. rész) a lakossági termékek esetében egy karbantartott, nyilvános összetevő-listát írnak elő. Ehhez nincs szükség százalékos tartományok vagy CAS-számok megadására.",
+        "placeholder": "https://..."
+      },
+      "professional_ingredient_info": {
+        "label": "A foglalkozásszerű felhasználóknak nyújtott egyenértékű tájékoztatás az összetevőkről"
+      },
+      "biodegradability_test": {
+        "label": "A felületaktív anyag biológiai lebonthatóságának vizsgálati módszere",
+        "placeholder": "pl. OECD 301 sorozat"
+      },
+      "biodegradability_reference": {
+        "label": "A biológiai lebonthatóságot igazoló dokumentum hivatkozása",
+        "help": "Nevezze meg a vizsgálati jegyzőkönyvet vagy a beszállítói nyilatkozatot. Ne töltsön fel és ne illesszen be bizalmas fájlokat."
+      },
+      "synthetic_polymer_microparticles": {
+        "label": "Tartalmaz szándékosan hozzáadott szintetikus polimer mikrorészecskéket?",
+        "help": "A (EU) 2023/2055 rendelet korlátozza ezeket a REACH XVII. mellékletének 78. bejegyzése alapján. A detergensekre 2028. október 17-től vonatkozik."
+      },
+      "use_instructions": {
+        "label": "Használati utasítás és különleges óvintézkedések",
+        "help": "Módszer, megfelelő textíliák vagy felületek, és bármilyen különleges óvintézkedés."
+      },
+      "laundry_type": {
+        "label": "Mosószer típusa",
+        "help": "Ez határozza meg a standard töltetet: 4,5 kg száraz textília az erős mosóhatású, 2,5 kg a rövid ciklusú erős mosóhatású és a kímélő mosószerek esetében."
+      },
+      "dosage_unit": {
+        "label": "Adagolási egység"
+      },
+      "dosage_soft": {
+        "label": "Adag lágy vízhez (standard töltetenként)",
+        "placeholder": "pl. 60"
+      },
+      "dosage_medium": {
+        "label": "Adag közepesen kemény vízhez (standard töltetenként)",
+        "placeholder": "pl. 75"
+      },
+      "dosage_hard": {
+        "label": "Adag kemény vízhez (standard töltetenként)",
+        "placeholder": "pl. 90"
+      },
+      "dosage_two_cycle_note": {
+        "label": "Adagolás egy- és kétciklusos mosási eljárásokhoz",
+        "help": "Az V. melléklet B. részének 1. pontjának a) alpontja előírja az egy- vagy kétciklusos mosási eljárásokhoz való adagolás megadását."
+      },
+      "loads_per_pack": {
+        "label": "Standard töltetek száma csomagonként (közepesen kemény víz, 2,5 millimól CaCO3 literenként)",
+        "help": "Utántöltők esetében adja meg a töltetek számát 1 liter vagy 1 kg termékre vetítve. Egységekben forgalmazott utántöltők esetében nem szükséges."
+      },
+      "measuring_cup_ml": {
+        "label": "A mérőpohár űrtartalma",
+        "help": "A mellékelt mérőpohár űrtartalma, a lágy, közepesen kemény és kemény vízhez való adagok egyértelmű jelölésével."
+      },
+      "dishwasher_dose": {
+        "label": "Standard adag a fő ciklushoz",
+        "help": "Normál szennyezettségű edényekhez, egy teljesen megrakott, 12 terítékes mosogatógépben."
+      },
+      "dishwasher_dose_hardness_note": {
+        "label": "Az adag módosítása a víz keménységének megfelelően"
+      },
+      "surface_dilution": {
+        "label": "Javasolt hígítás és mennyiség felületenként",
+        "help": "V. melléklet B. rész 4. pont: adja meg a javasolt hígítást és mennyiséget felületenként, vagy egyéb használati utasítást, hogy a terméket ne használják túlzott mértékben."
+      },
+      "phosphorus_per_dose_g": {
+        "label": "Teljes foszfortartalom a javasolt adagban (gramm)",
+        "help": "III. melléklet szerinti határértékek: kevesebb, mint 0,5 g standard mosási töltetenként kemény vízben, és kevesebb, mint 0,3 g standard mosogatógép-adagonként."
+      },
+      "storage_disposal": {
+        "label": "Tárolás és ártalmatlanítás"
+      },
+      "packaging_material": {
+        "label": "Elsődleges csomagolóanyag"
+      },
+      "packaging_recyclable": {
+        "label": "A csomagolás újrahasznosítható?"
+      },
+      "recycling_instructions": {
+        "label": "Újrahasznosítási útmutató"
+      },
+      "recycled_packaging_content": {
+        "label": "Újrahasznosított tartalom a csomagolásban (%)",
+        "placeholder": "pl. 30"
+      },
+      "refill_available": {
+        "label": "Utántöltő kapható?"
+      },
+      "refill_station": {
+        "label": "Utántöltő állomáson keresztül értékesítik?",
+        "help": "Az utántöltő pontokra a (EU) 2026/405 rendelet 21. cikkének (4) bekezdése szerinti adathordozó-kötelezettség vonatkozik."
+      },
+      "epr_registration": {
+        "label": "Csomagolási kiterjesztett gyártói felelősségi nyilvántartás piaconként",
+        "help": "Piaconként egy sor.",
+        "placeholder": "FR: ...\nDE: ..."
+      },
+      "biocidal_authorisation": {
+        "label": "Alkalmazandó engedély vagy jogszerű átmeneti alap"
+      },
+      "biocidal_actives": {
+        "label": "Hatóanyagok és engedélyezett felhasználások"
+      },
+      "environmental_claims": {
+        "label": "A terméken vagy a csomagoláson tett környezetvédelmi állítások",
+        "placeholder": "pl. „A flakon 30%-ban újrahasznosított műanyagból készült”"
+      },
+      "claims_evidence_reference": {
+        "label": "Az állításokat alátámasztó bizonyíték hivatkozása",
+        "placeholder": "Tanulmány, tanúsítvány vagy ellenőrző szerv hivatkozása minden egyes állításhoz"
+      },
+      "claims_avoid_generic_terms": {
+        "label": "Az állítások kerülik az általános környezetvédelmi kifejezéseket?",
+        "help": "Az olyan általános állítások, mint a „környezetbarát” vagy a „biológiailag lebomló”, 2026. szeptember 27-től korlátozottak a (EU) 2024/825 irányelv alapján."
+      },
+      "ecolabel_licence_number": {
+        "label": "EU ökocímke engedélyszáma",
+        "help": "Csak akkor adja meg az engedély nyilvántartási számát, ha a termék rendelkezik EU ökocímke engedéllyel. A jelvény csak akkor jelenik meg a nyilvános útlevélen, ha számot adtak meg."
+      },
+      "reach_review": {
+        "label": "REACH korlátozások és kötelezettségek értékelése",
+        "help": "Vizsgálja felül a XVII. mellékletben szereplő korlátozásokat és az összetevő anyagokra vonatkozó kötelezettségeket."
+      },
+      "physical_label_reviewed": {
+        "label": "Ellenőriztem a fizikai címkét és a mellékelt biztonsági információkat"
+      },
+      "label_professional_indicator": {
+        "label": "A címke jelzi, hogy a termék kizárólag foglalkozásszerű felhasználásra szolgál"
+      },
+      "previous_passport_url": {
+        "label": "Hivatkozás az előző útlevélre, ha ez a bejegyzés egy másikat helyettesít",
+        "placeholder": "https://..."
+      },
+      "data_review_date": {
+        "label": "A termékinformációk felülvizsgálatának dátuma",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "conformity_reference": {
+        "label": "A gyártói megfelelőséget igazoló dokumentum hivatkozása"
+      },
+      "model_content_reference": {
+        "label": "A termék tartalmának felülvizsgálati hivatkozása"
+      },
+      "manufacturing_process_reference": {
+        "label": "A gyártási folyamat felülvizsgálati hivatkozása"
+      },
+      "persistent_product_id": {
+        "label": "Tartós termékazonosító",
+        "help": "Adja meg a valódi azonosítót. A belső nyilvántartási azonosító nem a ESPR rendeletben hivatkozott szabványok szerint kiadott azonosító."
+      },
+      "identifier_scheme": {
+        "label": "Azonosító rendszer és kibocsátó"
+      },
+      "manufacturer_operator_id": {
+        "label": "A gyártó egyedi gazdasági szereplői azonosítója"
+      },
+      "backup_provider_url": {
+        "label": "A biztonsági másolatot tároló útlevél-szolgáltató (URL)",
+        "help": "Olyan szolgáltatót nevezzen meg, amellyel ténylegesen megállapodott. Az alkalmazás nem hoz létre biztonsági mentési szolgáltatást.",
+        "placeholder": "https://..."
+      },
+      "backup_reference": {
+        "label": "A biztonsági mentési szolgáltatásra vonatkozó megállapodás hivatkozása"
+      },
+      "commodity_code_status": {
+        "label": "Vámtarifaszám"
+      },
+      "commodity_code": {
+        "label": "Vámtarifaszám (a (EEC) No 2658/87 rendelet szerint)"
+      },
+      "commodity_code_reason": {
+        "label": "Ok, amiért nem alkalmazandó vámtarifaszám"
+      },
+      "manufacturer_responsibility": {
+        "label": "A gyártó ezt az útlevelet kizárólagos felelősségére adja ki"
+      },
+      "compliance_statement": {
+        "label": "Nyilatkozat arról, hogy a (EU) 2026/405 rendeletnek való megfelelés igazolásra került",
+        "help": "Csak a gyártó saját értékelése után töltse ki. Az alkalmazás soha nem generál megfelelőségi nyilatkozatot."
+      },
+      "applicable_union_law": {
+        "label": "A termékre vonatkozó egyéb uniós jogszabályok"
+      },
+      "last_placed_on_market_date": {
+        "label": "A modell forgalomba hozatalának legutolsó dátuma",
+        "help": "A tízéves rendelkezésre állási kötelezettség kezdőpontja.",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "carrier_placement": {
+        "label": "Az adathordozó elhelyezése",
+        "help": "21. cikk (4) bekezdés: fizikailag jelen lévő, eltávolíthatatlan, géppel olvasható és a vásárlás előtt látható, a következő nyilatkozattal: „A termékkel kapcsolatos átfogóbb információkért kérjük, olvassa be”. Utántöltő állomásokon és távértékesítés esetén is kötelező."
+      },
+      "carrier_reviewed": {
+        "label": "Az adathordozó megfelel ezeknek a követelményeknek"
+      },
+      "market_language_reviewed": {
+        "label": "A címke és a biztonsági szövegezés minden célpiaci nyelven felülvizsgálatra került"
+      },
+      "substance_list_route": {
+        "label": "Az anyagok közzétételének módja",
+        "help": "A mentesség csak azokra az ipari és intézményi detergensekre és felületaktív anyagokra vonatkozik, amelyek esetében a REACH 31. cikke szerinti egyenértékű biztonsági adatlap szolgáltatja az információt."
+      },
+      "substances": {
+        "label": "Minden szándékosan hozzáadott anyag és a címkén feltüntetendő áthozott tartósítószer",
+        "help": "Azonosítsa az anyagokat a (EC) No 1272/2008 rendelet 18. cikkének (3) bekezdése szerint. Ne adjon meg koncentrációkat vagy bizalmas összetételi adatokat. Minden, ami ebben a kategóriában mentésre kerül, nyilvános."
+      },
+      "no_substances_reason": {
+        "label": "A feltüntetendő anyagok hiányának alapja"
+      },
+      "substance_list_complete": {
+        "label": "A lista teljes, tartalmazza a minősített áthozott tartósítószereket, és a CLP rendelet 18. cikkének (3) bekezdése szerint értékelt azonosítókat használja"
+      },
+      "industrial_institutional_use": {
+        "label": "Kizárólag a háztartási szférán kívül, szakképzett személyzet használja"
+      },
+      "equivalent_sds_supplied": {
+        "label": "Egyenértékű tájékoztatás az anyagokról ténylegesen rendelkezésre bocsátásra került a REACH 31. cikke szerinti biztonsági adatlapon"
+      },
+      "annex_sds_url": {
+        "label": "Egyenértékű biztonsági adatlap URL-címe",
+        "placeholder": "https://..."
+      },
+      "annex_sds_languages": {
+        "label": "Az egyenértékű biztonsági adatlap nyelvei"
+      },
+      "annex_sds_revision_date": {
+        "label": "Az egyenértékű biztonsági adatlap felülvizsgálatának dátuma",
+        "placeholder": "YYYY-MM-DD"
+      },
+      "microorganisms_added": {
+        "label": "Szándékosan adtak hozzá mikroorganizmusokat?",
+        "help": "Az egyenértékű biztonsági adatlap útvonala soha nem helyettesíti a mikroorganizmusok listáját."
+      },
+      "microorganisms": {
+        "label": "Minden szándékosan hozzáadott mikroorganizmus",
+        "help": "Adja meg minden mikroorganizmus nemzetségét, faját és törzsének nevét vagy kódját."
+      },
+      "microorganism_safety_reference": {
+        "label": "Biztonsági értékelés hivatkozása (II. melléklet)"
+      },
+      "microorganism_shelf_life": {
+        "label": "Eltarthatósági idő és tárolási feltételek",
+        "help": "A mikroorganizmusokat tartalmazó detergens címkéjén fel kell tüntetni az eltarthatósági időt."
+      },
+      "food_contact_use": {
+        "label": "Élelmiszerrel érintkező felületeken való használatra szánták?",
+        "help": "Hacsak a termék kockázatértékelése nem igazolta, hogy biztonságos erre a felhasználásra, a címkén fel kell tüntetni, hogy nem használható élelmiszerrel érintkező felületeken."
+      },
+      "food_contact_instructions": {
+        "label": "Óvintézkedések és utasítások élelmiszerrel érintkező felületekhez"
+      }
+    },
+    "options": {
+      "productType": {
+        "laundry": "Mosószer",
+        "laundry_additive": "Mosási adalékanyag vagy előmosószer",
+        "machine_dishwashing": "Gépi mosogatószer",
+        "dishwasher_additive": "Öblítőszer vagy mosogatógép-adalék",
+        "hand_dishwashing": "Kézi mosogatószer",
+        "all_purpose": "Általános vagy felülettisztító",
+        "kitchen": "Konyhai tisztítószer",
+        "bathroom": "Fürdőszobai tisztítószer",
+        "toilet": "WC-tisztító",
+        "glass": "Üvegtisztító",
+        "floor": "Padlótisztító",
+        "descaler": "Vízkőoldó",
+        "bleach": "Fehérítő",
+        "other": "Egyéb detergens"
+      },
+      "productForm": {
+        "liquid": "Folyadék",
+        "gel": "Gél",
+        "powder": "Por",
+        "tablet": "Tabletta",
+        "capsule": "Kapszula vagy párna",
+        "spray": "Spray",
+        "wipe": "Törlőkendő",
+        "paste": "Paszt",
+        "other": "Egyéb"
+      },
+      "yesNoReview": {
+        "yes": "Igen",
+        "no": "Nem",
+        "review": "Értékelés szükséges"
+      },
+      "useSector": {
+        "consumer": "Lakossági felhasználók, beleértve a vegyes lakossági és foglalkozásszerű felhasználást",
+        "professional": "Kizárólag foglalkozásszerű felhasználásra",
+        "industrial": "Kizárólag ipari és intézményi felhasználásra"
+      },
+      "dppProfile": {
+        "current": "Jelenlegi termékinformációk",
+        "annex_vi": "Teljes VI. melléklet szerinti adatkészlet a 2029-es szabályokhoz"
+      },
+      "manufacturerNonEu": {
+        "yes": "Igen",
+        "no": "Nem"
+      },
+      "clpClassification": {
+        "none": "Nem veszélyesként osztályozott",
+        "environment": "Csak környezeti veszélyek",
+        "health_physical": "Egészségi vagy fizikai veszélyek, környezeti veszélyekkel vagy anélkül",
+        "review": "Értékelés szükséges"
+      },
+      "signalWord": {
+        "danger": "Veszély",
+        "warning": "Figyelem",
+        "not_applicable": "Értékelés után nem alkalmazandó"
+      },
+      "pictograms": {
+        "ghs01": "GHS01 Robbanó bomba",
+        "ghs02": "GHS02 Láng",
+        "ghs03": "GHS03 Láng kör felett",
+        "ghs04": "GHS04 Gázpalack",
+        "ghs05": "GHS05 Korrózió",
+        "ghs06": "GHS06 Halálfej",
+        "ghs07": "GHS07 Felkiáltójel",
+        "ghs08": "GHS08 Egészségi veszély",
+        "ghs09": "GHS09 Környezet",
+        "none": "Nincs alkalmazandó piktogram"
+      },
+      "pcnApplicability": {
+        "required": "Bejelentés szükséges",
+        "exempt": "Dokumentált mentesség",
+        "review": "Értékelés szükséges"
+      },
+      "pcnStatus": {
+        "submitted": "Benyújtva az érintett piacokra",
+        "pending": "Függőben"
+      },
+      "sdsRequirement": {
+        "required": "Biztosítani kell",
+        "on_request": "Kérésre rendelkezésre kell bocsátani",
+        "not_required": "Értékelés után nem szükséges",
+        "review": "Értékelés szükséges"
+      },
+      "constituentClass": {
+        "phosphates": "Foszfátok",
+        "phosphonates": "Foszfonátok",
+        "anionic_surfactants": "Anionos felületaktív anyagok",
+        "cationic_surfactants": "Kationos felületaktív anyagok",
+        "amphoteric_surfactants": "Amfoter felületaktív anyagok",
+        "nonionic_surfactants": "Nemionos felületaktív anyagok",
+        "oxygen_bleach": "Oxigénalapú fehérítőszerek",
+        "chlorine_bleach": "Klóralapú fehérítőszerek",
+        "edta": "EDTA és sói",
+        "nta": "NTA és sói",
+        "phenols": "Fenolok és halogénezett fenolok",
+        "paradichlorobenzene": "Paradiklórbenzol",
+        "aromatic_hydrocarbons": "Aromás szénhidrogének",
+        "aliphatic_hydrocarbons": "Alifás szénhidrogének",
+        "halogenated_hydrocarbons": "Halogénezett szénhidrogének",
+        "soap": "Szappan",
+        "zeolites": "Zeolitok",
+        "polycarboxylates": "Polikarboxilátok"
+      },
+      "weightBand": {
+        "lt5": "Kevesebb mint 5%",
+        "5to15": "5% vagy annál több, de kevesebb mint 15%",
+        "15to30": "15% vagy annál több, de kevesebb mint 30%",
+        "gte30": "30% vagy annál több"
+      },
+      "listedConstituent": {
+        "enzymes": "Enzimek",
+        "micro_organisms": "Mikroorganizmusok",
+        "optical_brighteners": "Optikai fehérítők",
+        "perfumes": "Illatanyagok",
+        "disinfectants": "Fertőtlenítőszerek (a jelenlegi szabályok 2029. szeptember 23-ig érvényesek)"
+      },
+      "yesNoUnknown": {
+        "yes": "Igen",
+        "no": "Nem",
+        "unknown": "Ismeretlen"
+      },
+      "laundryType": {
+        "heavy_duty": "Nagy igénybevételre",
+        "heavy_duty_short": "Nagy igénybevételre, rövid ciklusokhoz",
+        "light_duty": "Kímélő mosáshoz vagy kényes textíliákhoz"
+      },
+      "dosageUnit": {
+        "ml": "Milliliter",
+        "g": "Gramm",
+        "units": "Egység (tabletta, kapszula vagy pod)"
+      },
+      "packagingMaterial": {
+        "hdpe": "HDPE (02)",
+        "pet": "PET (01)",
+        "pp": "PP (05)",
+        "other_plastic": "Egyéb műanyag",
+        "metal": "Fém",
+        "glass": "Üveg",
+        "paper_cardboard": "Papír vagy karton",
+        "composite": "Társított anyag",
+        "water_soluble_film": "Vízben oldódó film",
+        "other": "Egyéb"
+      },
+      "reachReview": {
+        "reviewed": "A szállító által felülvizsgálva",
+        "review": "Értékelés szükséges"
+      },
+      "commodityCodeStatus": {
+        "applicable": "Alkalmazandó",
+        "not_applicable": "Értékelés után nem alkalmazandó"
+      },
+      "substanceListRoute": {
+        "full_list": "Anyagok teljes listája",
+        "equivalent_sds": "Egyenértékű biztonsági adatlap (csak ipari és intézményi felhasználásra)",
+        "no_added_substances": "Értékelés után nincsenek listázandó anyagok"
+      }
+    },
+    "warnings": {
+      "scopeOutside": "Ez a termék a (EU) 2026/405 rendelet 2. cikkének (1) bekezdésében meghatározott mosószer fogalmán kívül eshet. Ellenőrizze a hatályt a kategória használata előtt.",
+      "biocidal": "A fertőtlenítő vagy antimikrobiális hatásra vonatkozó állításokhoz a (EU) No 528/2012 rendelet szerinti biocid termékengedély szükséges.",
+      "assessmentNeeded": "Ez az értékelés még nem fejeződött be. Véglegesítse, mielőtt az útlevélre támaszkodna.",
+      "microparticles": "A termék forgalomba hozatala előtt ellenőrizze a szintetikus polimer mikrorészecskékről szóló (EU) 2023/2055 rendeletet. Az „ismeretlen” választ tisztázni kell a szállítóval.",
+      "phosphorusLaundry": "A(z) {{value}} g összfofszfor-tartalom nem marad a (EU) 2026/405 rendelet III. mellékletében a lakossági mosószerekre kemény vízben megállapított 0,5 g-os határérték alatt.",
+      "phosphorusDishwasher": "A(z) {{value}} g összfofszfor-tartalom nem marad a (EU) 2026/405 rendelet III. mellékletében a lakossági gépi mosogatószerekre megállapított 0,3 g-os határérték alatt.",
+      "percentageRange": "A százalékos értéknek 0 és 100 között kell lennie. Az Ön által megadott érték: {{value}}.",
+      "positiveNumber": "Adjon meg nullánál nagyobb számot. Az Ön által megadott érték: {{value}}.",
+      "allergensMissing": "Igennel válaszolt, de nem választott ki allergént. Válassza ki az összes allergént a hivatalos listáról.",
+      "ufiFormat": "A(z) UFI kód négy darab négy karakterből álló csoportból áll, például: N1QV-R02N-J00M-WQD5. A formátum ellenőrzése megtörténik, de a toxikológiai központhoz való benyújtásé nem.",
+      "urlFormat": "Adjon meg egy teljes webcímet, amely http:// vagy https:// karakterekkel kezdődik.",
+      "emailFormat": "Adjon meg egy érvényes e-mail címet.",
+      "dateFormat": "Adjon meg egy érvényes dátumot YYYY-MM-DD formátumban.",
+      "microorganismSafety": "Mikroorganizmusokat adtak hozzá, de nem adtak meg biztonsági értékelési hivatkozást."
+    },
+    "disclaimer": {
+      "title": "Mosószerek DPP: megfelelőségi nyilatkozat",
+      "text": "A mosószerekről és a felületaktív anyagokról szóló (EU) 2026/405 rendelet 2029. szeptember 23-tól alkalmazandó. A digitális termékútlevélre, a hozzáférési jogokra és az adathordozó részleteire vonatkozó szabályokat egy végrehajtási jogi aktus fogja megállapítani, és addig a (EC) No 648/2004 rendelet alkalmazandó. Ez az eszköz termékinformációkat gyűjt és útlevéladatokat készít elő. Ez nem tanúsítás vagy jóváhagyás, és nem tekinthető végleges jogi tanácsadásnak. Minden, ami ebben a kategóriában mentésre kerül, nyilvános."
+    }
   }
 }

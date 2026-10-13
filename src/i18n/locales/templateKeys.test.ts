@@ -10,6 +10,7 @@ import { describe, it, expect } from "vitest";
 import type { CategoryTemplate } from "@/templates/base";
 import { toysTemplate } from "@/templates/toys";
 import { textilesTemplate } from "@/templates/textiles";
+import { detergentsTemplate, DETERGENTS_WARNING_MESSAGES } from "@/templates/detergents";
 
 import enLocale from "./en.json";
 import bgLocale from "./bg.json";
@@ -121,9 +122,17 @@ const textilesKeys = [
   ...collectTemplateKeys(textilesTemplate),
 ].sort();
 
+const detergentsKeys = [
+  "detergents.disclaimer.title",
+  "detergents.disclaimer.text",
+  ...Object.keys(DETERGENTS_WARNING_MESSAGES).map((name) => `detergents.warnings.${name}`),
+  ...collectTemplateKeys(detergentsTemplate),
+].sort();
+
 const templates: { name: string; keys: string[] }[] = [
   { name: "Toys", keys: toysKeys },
   { name: "Apparel", keys: textilesKeys },
+  { name: "Detergents", keys: detergentsKeys },
 ];
 
 describe.each(templates)("$name template i18n key coverage", ({ name, keys: required }) => {
