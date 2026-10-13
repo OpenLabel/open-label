@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "洗涤剂 DPP：合规性免责声明",
       "text": "关于洗涤剂和表面活性剂的法规 (EU) 2026/405 将于 2029 年 9 月 23 日起适用。其数字产品通行证规则、访问权限和数据载体详情仍有待实施法案确定，在此之前，法规 (EC) No 648/2004 仍然适用。本工具用于收集产品信息并准备通行证数据。它不是认证或批准，不应被视为最终的法律建议。保存在此类别中的所有内容都是公开的。"
+    },
+    "allergenPicker": {
+      "empty": "No allergens added yet.",
+      "summary": "{{count}} allergen(s) declared.",
+      "addButton": "Add allergen",
+      "dialogTitle": "Select fragrance allergens",
+      "searchPlaceholder": "Search by name, CAS, EC or number...",
+      "clearSearch": "Clear search",
+      "noResults": "No allergens match \"{{q}}\".",
+      "done": "Done",
+      "cas": "CAS",
+      "removeAria": "Remove {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergents: Digital Product Passport",
+    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
+    "units": "units",
+    "ecolabelBadge": "EU Ecolabel",
+    "sections": {
+      "product": "Product",
+      "hazard": "Hazard and safety",
+      "use": "Use and dosage",
+      "ingredients": "Ingredients",
+      "environment": "Environment and packaging",
+      "biocide": "Biocidal product",
+      "responsible": "Who is responsible",
+      "annexVi": "Annex VI dataset",
+      "metadata": "DPP infrastructure"
+    },
+    "subsections": {
+      "manufacturer": "Manufacturer",
+      "importer": "Importer",
+      "authorisedRepresentative": "EU authorised representative"
+    },
+    "rows": {
+      "constituentClasses": "Constituent classes above 0.2% by weight",
+      "ecolabel": "EU Ecolabel",
+      "licenceNumber": "Licence number",
+      "name": "Name",
+      "address": "Address",
+      "email": "Email",
+      "phone": "Telephone",
+      "dppServiceProvider": "DPP service provider",
+      "dppVersion": "DPP version",
+      "lastUpdated": "Last updated",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Published"
     }
   }
 }

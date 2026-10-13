@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Mosószerek DPP: megfelelőségi nyilatkozat",
       "text": "A mosószerekről és a felületaktív anyagokról szóló (EU) 2026/405 rendelet 2029. szeptember 23-tól alkalmazandó. A digitális termékútlevélre, a hozzáférési jogokra és az adathordozó részleteire vonatkozó szabályokat egy végrehajtási jogi aktus fogja megállapítani, és addig a (EC) No 648/2004 rendelet alkalmazandó. Ez az eszköz termékinformációkat gyűjt és útlevéladatokat készít elő. Ez nem tanúsítás vagy jóváhagyás, és nem tekinthető végleges jogi tanácsadásnak. Minden, ami ebben a kategóriában mentésre kerül, nyilvános."
+    },
+    "allergenPicker": {
+      "empty": "No allergens added yet.",
+      "summary": "{{count}} allergen(s) declared.",
+      "addButton": "Add allergen",
+      "dialogTitle": "Select fragrance allergens",
+      "searchPlaceholder": "Search by name, CAS, EC or number...",
+      "clearSearch": "Clear search",
+      "noResults": "No allergens match \"{{q}}\".",
+      "done": "Done",
+      "cas": "CAS",
+      "removeAria": "Remove {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergents: Digital Product Passport",
+    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
+    "units": "units",
+    "ecolabelBadge": "EU Ecolabel",
+    "sections": {
+      "product": "Product",
+      "hazard": "Hazard and safety",
+      "use": "Use and dosage",
+      "ingredients": "Ingredients",
+      "environment": "Environment and packaging",
+      "biocide": "Biocidal product",
+      "responsible": "Who is responsible",
+      "annexVi": "Annex VI dataset",
+      "metadata": "DPP infrastructure"
+    },
+    "subsections": {
+      "manufacturer": "Manufacturer",
+      "importer": "Importer",
+      "authorisedRepresentative": "EU authorised representative"
+    },
+    "rows": {
+      "constituentClasses": "Constituent classes above 0.2% by weight",
+      "ecolabel": "EU Ecolabel",
+      "licenceNumber": "Licence number",
+      "name": "Name",
+      "address": "Address",
+      "email": "Email",
+      "phone": "Telephone",
+      "dppServiceProvider": "DPP service provider",
+      "dppVersion": "DPP version",
+      "lastUpdated": "Last updated",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Published"
     }
   }
 }

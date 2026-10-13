@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Detergenti DPP: izjava o omejitvi odgovornosti glede skladnosti",
       "text": "Uredba (EU) 2026/405 o detergentih in površinsko aktivnih snoveh se uporablja od 23. septembra 2029. Njena pravila o digitalnem potnem listu za proizvod, pravice dostopa in podrobnosti o nosilcu podatkov se morajo še določiti z izvedbenim aktom, do takrat pa se uporablja Uredba (EC) No 648/2004. To orodje zbira informacije o izdelku in pripravlja podatke za potni list. Ne predstavlja certificiranja ali odobritve in se ne sme obravnavati kot končni pravni nasvet. Vse, kar je shranjeno v tej kategoriji, je javno."
+    },
+    "allergenPicker": {
+      "empty": "No allergens added yet.",
+      "summary": "{{count}} allergen(s) declared.",
+      "addButton": "Add allergen",
+      "dialogTitle": "Select fragrance allergens",
+      "searchPlaceholder": "Search by name, CAS, EC or number...",
+      "clearSearch": "Clear search",
+      "noResults": "No allergens match \"{{q}}\".",
+      "done": "Done",
+      "cas": "CAS",
+      "removeAria": "Remove {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergents: Digital Product Passport",
+    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
+    "units": "units",
+    "ecolabelBadge": "EU Ecolabel",
+    "sections": {
+      "product": "Product",
+      "hazard": "Hazard and safety",
+      "use": "Use and dosage",
+      "ingredients": "Ingredients",
+      "environment": "Environment and packaging",
+      "biocide": "Biocidal product",
+      "responsible": "Who is responsible",
+      "annexVi": "Annex VI dataset",
+      "metadata": "DPP infrastructure"
+    },
+    "subsections": {
+      "manufacturer": "Manufacturer",
+      "importer": "Importer",
+      "authorisedRepresentative": "EU authorised representative"
+    },
+    "rows": {
+      "constituentClasses": "Constituent classes above 0.2% by weight",
+      "ecolabel": "EU Ecolabel",
+      "licenceNumber": "Licence number",
+      "name": "Name",
+      "address": "Address",
+      "email": "Email",
+      "phone": "Telephone",
+      "dppServiceProvider": "DPP service provider",
+      "dppVersion": "DPP version",
+      "lastUpdated": "Last updated",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Published"
     }
   }
 }

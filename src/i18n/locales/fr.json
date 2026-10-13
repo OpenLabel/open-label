@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Détergents DPP : clause de non-responsabilité en matière de conformité",
       "text": "Le règlement (EU) 2026/405 relatif aux détergents et aux agents de surface s'applique à partir du 23 septembre 2029. Ses règles relatives au passeport numérique de produit, aux droits d'accès et aux détails du support de données doivent encore être définies par un acte d'exécution, et jusqu'alors, le règlement (EC) No 648/2004 s'applique. Cet outil collecte des informations sur les produits et prépare les données du passeport. Il ne s'agit pas d'une certification ou d'une approbation et ne doit pas être considéré comme un avis juridique définitif. Tout ce qui est enregistré dans cette catégorie est public."
+    },
+    "allergenPicker": {
+      "empty": "No allergens added yet.",
+      "summary": "{{count}} allergen(s) declared.",
+      "addButton": "Add allergen",
+      "dialogTitle": "Select fragrance allergens",
+      "searchPlaceholder": "Search by name, CAS, EC or number...",
+      "clearSearch": "Clear search",
+      "noResults": "No allergens match \"{{q}}\".",
+      "done": "Done",
+      "cas": "CAS",
+      "removeAria": "Remove {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergents: Digital Product Passport",
+    "notice": "This page gives product information published by the supplier. It is not a certification or an approval, and it does not replace the label on the packaging.",
+    "units": "units",
+    "ecolabelBadge": "EU Ecolabel",
+    "sections": {
+      "product": "Product",
+      "hazard": "Hazard and safety",
+      "use": "Use and dosage",
+      "ingredients": "Ingredients",
+      "environment": "Environment and packaging",
+      "biocide": "Biocidal product",
+      "responsible": "Who is responsible",
+      "annexVi": "Annex VI dataset",
+      "metadata": "DPP infrastructure"
+    },
+    "subsections": {
+      "manufacturer": "Manufacturer",
+      "importer": "Importer",
+      "authorisedRepresentative": "EU authorised representative"
+    },
+    "rows": {
+      "constituentClasses": "Constituent classes above 0.2% by weight",
+      "ecolabel": "EU Ecolabel",
+      "licenceNumber": "Licence number",
+      "name": "Name",
+      "address": "Address",
+      "email": "Email",
+      "phone": "Telephone",
+      "dppServiceProvider": "DPP service provider",
+      "dppVersion": "DPP version",
+      "lastUpdated": "Last updated",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Published"
     }
   }
 }
