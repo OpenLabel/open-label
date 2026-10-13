@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "Identitatea produsului",
+        "description": "Produs, model și trasabilitate"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "Cine este responsabil",
+        "description": "Producător, importator și reprezentant autorizat în UE, păstrați ca părți separate"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "Clasificarea pericolelor și informații de securitate",
+        "description": "Clasificare CLP, informații privind pericolele de pe etichetă, centru pentru informare toxicologică și fișă cu date de securitate"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "Ingrediente și informații de pe etichetă",
+        "description": "Conținutul etichetei în conformitate cu anexa V la Regulamentul (EU) 2026/405 și cu normele actuale"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "Utilizare sigură și dozaj",
+        "description": "Informații privind dozajul și utilizarea în conformitate cu anexa V partea B"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "Ambalare și reciclare",
+        "description": "Ambalaje, reciclabilitate și rezerve"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "Evaluarea produsului biocid",
+        "description": "Se aplică atunci când se fac mențiuni de dezinfectare sau antimicrobiene"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "Mențiuni ecologice",
+        "description": "Sprijină Directiva (EU) 2024/825, care se aplică de la 27 septembrie 2026"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "Revizuirea de către furnizor și pregătirea pașaportului",
+        "description": "Verificări pe care le efectuează furnizorul. Aplicația nu le poate verifica."
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "Anexa VI: identitatea produsului și declarația producătorului",
+        "description": "Pregătirea pentru pașaportul digital de produs, obligatoriu de la 23 septembrie 2029. Un set de date complet nu reprezintă o certificare, un identificator verificat sau o înregistrare într-un registru."
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "Anexa VI: substanțe",
+        "description": "Lista completă a substanțelor adăugate în mod intenționat (anexa VI partea A punctul (h))"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "Anexa VI: microorganisme",
+        "description": "Toate microorganismele adăugate în mod intenționat (anexa VI partea A punctul (i))"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Nume de marcă"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "Tip de produs"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "Tip de produs (specificați)"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "Forma produsului"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "Produsul este destinat curățării, înmuierii, clătirii sau albirii țesăturilor, vaselor sau suprafețelor?",
+        "help": "A se vedea articolul 2 alineatul (1) din Regulamentul (EU) 2026/405. Vopselele, adezivii, solvenții și produsele care nu curăță nu intră în această categorie."
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "Motivul pentru care produsul nu se încadrează în definiția detergentului"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "Cui îi este destinat produsul?",
+        "help": "Industrial și instituțional înseamnă utilizat numai în afara sferei casnice de către personal specializat."
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "Identificator de model de produs",
+        "help": "Un pașaport acoperă un singur model. O modificare a formulei sau a producției care schimbă eticheta îl poate transforma într-un model nou."
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "Referință de tip, lot sau serie",
+        "help": "Eticheta necesită un număr de tip, un număr de lot sau un alt element de trasabilitate."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "de ex., 3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "label": "Cantitate nominală cu unitate de măsură",
+        "placeholder": "de ex., 1.5 L, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "label": "Piețe din UE și limbi de etichetare",
+        "help": "Textul de pe etichetă și cel privind siguranța trebuie să fie disponibile în limba sau limbile solicitate pe fiecare piață.",
+        "placeholder": "de ex., Franța (franceză), Germania (germană)"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "Profil de informații",
+        "help": "Regulamentul (EU) 2026/405 se aplică de la 23 septembrie 2029. Alegeți setul de date din anexa VI pentru a pregăti datele viitoare ale pașaportului. Completarea acestuia nu face ca un pașaport să fie conform sau certificat."
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "Mențiuni biocide sau de dezinfectare?",
+        "help": "Mențiunile de dezinfectare sau antimicrobiene necesită o autorizație pentru produse biocide în temeiul Regulamentului (EU) No 528/2012."
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "Denumirea juridică a producătorului",
+        "help": "Eticheta indică denumirea, adresa poștală, adresa electronică și numărul de telefon ale producătorului. Adresa poștală trebuie să fie un punct unic în Uniune."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Adresa (strada)"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Cod poștal"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Localitate"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Țară"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Adresă electronică (e-mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "label": "Număr de telefon",
+        "placeholder": "de ex., +33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Producătorul este stabilit în afara UE?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "Denumirea juridică a importatorului",
+        "help": "Atunci când producătorul este stabilit în afara UE, sunt necesare și datele de contact ale importatorului."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Adresa (strada)"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Cod poștal"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Localitate"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Țară"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Adresă electronică (e-mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "Reprezentant autorizat în UE: denumire juridică",
+        "help": "Un producător stabilit în afara UE trebuie să desemneze un reprezentant autorizat (articolul 9 din Regulamentul (EU) 2026/405)."
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Reprezentant autorizat în UE: adresă",
+        "placeholder": "Adresă înregistrată în Uniunea Europeană"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "Reprezentant autorizat în UE: adresă electronică (e-mail)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "Evaluarea clasificării CLP",
+        "help": "Utilizați clasificarea evaluată efectiv pentru acest amestec în temeiul Regulamentului (EC) No 1272/2008. Nu o deduceți din pH sau din pictograme."
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "Fraze suplimentare pe etichetă",
+        "help": "De exemplu, EUH208, dacă este cazul."
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "Cuvânt de avertizare"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "Pictograme GHS"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "label": "Fraze de pericol",
+        "help": "Introduceți textul exact așa cum apare pe eticheta aprobată. Utilizați butonul de traducere pentru fiecare limbă de pe piață. Acest text nu este tradus niciodată automat.",
+        "placeholder": "de ex., H315 Provoacă iritarea pielii"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "label": "Fraze de precauție",
+        "help": "Introduceți textul exact așa cum apare pe eticheta aprobată. Utilizați butonul de traducere pentru fiecare limbă de pe piață. Acest text nu este tradus niciodată automat.",
+        "placeholder": "de ex., P280 Purtați mănuși de protecție"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "Notificare la centrul pentru informare toxicologică (CLP anexa VIII)",
+        "help": "UFI și notificarea depind de pericolele pentru sănătate sau fizice și de derogările aplicabile. Pericolele pentru mediu nu declanșează singure notificarea."
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "Motivul și temeiul juridic al derogării"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Identificator unic de formulă (UFI)",
+        "help": "Patru grupe de patru caractere. Formatul este verificat, dar aplicația nu poate verifica o transmitere la centrul pentru informare toxicologică.",
+        "placeholder": "de ex., N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "Transmiteri la centrul pentru informare toxicologică"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "Cerința de furnizare a fișei cu date de securitate",
+        "help": "Un link web nu îndeplinește în sine obligația de a furniza o fișă cu date de securitate în temeiul articolului 31 din REACH."
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "URL-ul public al fișei cu date de securitate",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
-        "placeholder": "e.g., English, French, German"
+        "label": "Limbile fișei cu date de securitate",
+        "placeholder": "de ex., engleză, franceză, germană"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "Data revizuirii fișei cu date de securitate",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "Contact de urgență (centru pentru informare toxicologică sau număr de telefon disponibil 24 de ore)",
+        "placeholder": "Număr de telefon pentru urgențe"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "Clase de constituenți adăugate peste 0,2 % din greutate",
+        "help": "Bifați fiecare clasă care este adăugată peste 0,2 % din greutate, apoi alegeți intervalul său de greutate de mai jos (anexa V partea A punctul 1(h)(i))."
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "Fosfați: interval de greutate"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "Fosfonați: interval de greutate"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "Agenți tensioactivi anionici: interval de greutate"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "Agenți tensioactivi cationici: interval de greutate"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "Agenți tensioactivi amfoteri: interval de greutate"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "Agenți tensioactivi neionici: interval de greutate"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "Agenți de albire pe bază de oxigen: interval de greutate"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "Agenți de albire pe bază de clor: interval de greutate"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA și sărurile acestuia: interval de greutate"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA și sărurile acestuia: interval de greutate"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "Fenoli și fenoli halogenați: interval de greutate"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "Paradichlorobenzen: interval de greutate"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "Hidrocarburi aromatice: interval de greutate"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "Hidrocarburi alifatice: interval de greutate"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "Hidrocarburi halogenate: interval de greutate"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "Săpun: interval de greutate"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "Zeoliți: interval de greutate"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "Policarboxilați: interval de greutate"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "Clase de constituenți adăugate în orice concentrație",
+        "help": "Anexa V partea A punctul 1(h)(ii). Dezinfectanții sunt enumerați în conformitate cu normele actuale și nu mai reprezintă o clasă enumerată începând cu 23 septembrie 2029."
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "Sunt prezenți conservanți?",
+        "help": "Conservanții sunt enumerați în anexa V partea A punctul 1(h)(iii), cu excepția cazului în care sunt deja etichetați în temeiul articolului 18 alineatul (3) litera (b) din CLP sau al articolului 58 din Regulamentul privind produsele biocide."
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "label": "Conservanți",
+        "help": "Utilizați denumirea INCI acolo unde este posibil.",
+        "placeholder": "de ex., Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "Alergeni din parfumuri adăugați peste 0,01 % din greutate?",
+        "help": "Alergenii din lista din anexa V partea D care sunt adăugați în mod intenționat peste 0,01 % din greutate sunt menționați pe etichetă, cu excepția cazului în care sunt deja etichetați în temeiul CLP."
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "Alergeni din parfumuri prezenți",
+        "help": "Alegeți fiecare alergen din lista oficială de 105 intrări."
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "Pagină web publică cu ingrediente",
+        "help": "Normele actuale (Regulamentul (EC) No 648/2004, anexa VII partea D) impun o listă publică de ingrediente, actualizată, pentru produsele de consum. Aceasta nu necesită intervale procentuale sau numere CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "Informații echivalente despre ingrediente furnizate utilizatorilor profesionali"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
-        "placeholder": "e.g., OECD 301 series"
+        "label": "Metoda de testare a biodegradabilității agenților tensioactivi",
+        "placeholder": "de ex., seria OECD 301"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "Referința dovezii de biodegradabilitate",
+        "help": "Denumiți raportul de testare sau declarația furnizorului. Nu încărcați și nu lipiți fișiere confidențiale."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "Conține microparticule de polimeri sintetici adăugate în mod intenționat?",
+        "help": "Regulamentul (EU) 2023/2055 le restricționează în temeiul REACH anexa XVII rubrica 78. Detergenții sunt vizați începând cu 17 octombrie 2028."
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "Instrucțiuni de utilizare și precauții speciale",
+        "help": "Metoda, țesăturile sau suprafețele adecvate și orice precauții speciale."
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "Tip de detergent pentru rufe",
+        "help": "Stabilește încărcătura standard: 4,5 kg de țesătură uscată pentru detergenții pentru rufe grele, 2,5 kg pentru detergenții pentru rufe grele cu ciclu scurt și pentru detergenții pentru rufe delicate."
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "Unitate de dozaj"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
-        "placeholder": "e.g., 60"
+        "label": "Doză pentru apă dedurizată (per încărcătură standard)",
+        "placeholder": "de ex., 60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
-        "placeholder": "e.g., 75"
+        "label": "Doză pentru apă cu duritate medie (per încărcătură standard)",
+        "placeholder": "de ex., 75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
-        "placeholder": "e.g., 90"
+        "label": "Doză pentru apă dură (per încărcătură standard)",
+        "placeholder": "de ex., 90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "Dozaj pentru procesele de spălare cu unul și două cicluri",
+        "help": "Anexa V partea B punctul 1(a) solicită dozajul pentru procesele de spălare cu unul sau două cicluri."
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "Încărcături standard per pachet (apă cu duritate medie, 2,5 milimoli CaCO3 per litru)",
+        "help": "Pentru rezerve, indicați numărul de încărcături la 1 litru sau 1 kg de produs. Nu este necesar pentru rezervele în unități."
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "Capacitatea paharului de măsurare",
+        "help": "Capacitatea oricărui pahar de măsurare furnizat, cu marcaje clare pentru dozele de apă dedurizată, cu duritate medie și dură."
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "Doză standard pentru ciclul principal",
+        "help": "Pentru veselă cu grad normal de murdărie, într-o mașină de spălat vase de 12 seturi complet încărcată."
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "Ajustarea dozei în funcție de duritatea apei"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "Diluția și cantitatea recomandate pe unitate de suprafață",
+        "help": "Anexa V partea B punctul 4: indicați diluția și cantitatea recomandate pe unitate de suprafață sau alte instrucțiuni de utilizare, astfel încât produsul să nu fie utilizat în exces."
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "Fosfor total în doza recomandată (grame)",
+        "help": "Limite din anexa III: sub 0,5 g per încărcătură standard de rufe în apă dură și sub 0,3 g per doză standard pentru mașina de spălat vase."
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "Depozitare și eliminare"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "Materialul ambalajului primar"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "Ambalaj reciclabil?"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "Instrucțiuni de reciclare"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
-        "placeholder": "e.g., 30"
+        "label": "Conținut reciclat în ambalaj (%)",
+        "placeholder": "de ex., 30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "Rezervă disponibilă?"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "Vândut printr-o stație de reîncărcare?",
+        "help": "Punctele de reîncărcare au propria obligație privind suportul de date în temeiul articolului 21 alineatul (4) din Regulamentul (EU) 2026/405."
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "Înregistrarea responsabilității producătorului de ambalaje pe piață",
+        "help": "O linie pe piață.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "Autorizație aplicabilă sau bază tranzitorie legală"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "Substanțe active și utilizări autorizate"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "label": "Mențiuni ecologice făcute pe produs sau ambalaj",
+        "placeholder": "de ex., „Sticlă fabricată cu 30 % plastic reciclat”"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referința dovezilor de justificare",
+        "placeholder": "Referința studiului, certificatului sau organismului de verificare pentru fiecare mențiune"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "Mențiunile evită termenii ecologici generici?",
+        "help": "Mențiunile generice, cum ar fi „ecologic” sau „biodegradabil”, sunt restricționate începând cu 27 septembrie 2026 în temeiul Directivei (EU) 2024/825."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "Numărul de licență EU Ecolabel",
+        "help": "Introduceți numărul de înregistrare a licenței numai dacă produsul deține o licență EU Ecolabel. Emblema este afișată pe pașaportul public numai atunci când este introdus un număr."
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "Restricțiile și obligațiile REACH evaluate",
+        "help": "Examinați restricțiile din anexa XVII și obligațiile care se aplică substanțelor constituente."
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "Am verificat eticheta fizică și informațiile de securitate furnizate"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "Eticheta specifică faptul că produsul este destinat exclusiv utilizării profesionale"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "Link către pașaportul precedent, atunci când această înregistrare înlocuiește una",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "Data revizuirii informațiilor despre produs",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "Referința dovezii de conformitate a producătorului"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "Referința revizuirii conținutului modelului"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "Referința revizuirii procesului de fabricație"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "Identificator de produs persistent",
+        "help": "Introduceți identificatorul real. Un ID de înregistrare intern nu este un identificator emis în conformitate cu standardele menționate în ESPR."
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "Schema de identificare și emitentul"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "Identificator unic de operator al producătorului"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "Furnizorul de servicii de pașaport care deține copia de rezervă (URL)",
+        "help": "Numiți un furnizor cu care ați încheiat efectiv un acord. Aplicația nu creează un serviciu de rezervă.",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "Referința acordului de servicii de rezervă"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "Cod de marfă vamal"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "Cod de marfă (Regulamentul (EEC) No 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "Motivul pentru care nu se aplică niciun cod de marfă"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "Producătorul emite acest pașaport pe propria sa răspundere"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "Declarație conform căreia a fost demonstrată conformitatea cu Regulamentul (EU) 2026/405",
+        "help": "Completați acest câmp numai după evaluarea proprie a producătorului. Aplicația nu generează niciodată o declarație de conformitate."
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "Alte acte legislative ale Uniunii care se aplică produsului"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "Cea mai recentă dată la care modelul a fost introdus pe piață",
+        "help": "Punctul de plecare pentru obligația de disponibilitate de zece ani.",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "Unde este plasat suportul de date",
+        "help": "Articolul 21 alineatul (4): prezent fizic, de neșters, lizibil automat și vizibil înainte de cumpărare, cu mențiunea „Vă rugăm să scanați pentru informații mai complete despre produs”. Necesar și la stațiile de reîncărcare și în vânzările la distanță."
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "Suportul de date îndeplinește aceste cerințe"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "Textul de pe etichetă și cel privind siguranța sunt revizuite în fiecare limbă a pieței țintă"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "Calea de divulgare a substanțelor",
+        "help": "Derogarea se aplică numai detergenților și agenților tensioactivi industriali și instituționali în cazul în care o fișă cu date de securitate echivalentă în temeiul articolului 31 din REACH furnizează informațiile."
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "Toate substanțele adăugate în mod intenționat și conservanții reziduali care trebuie etichetați",
+        "help": "Identificați substanțele conform cerințelor articolului 18 alineatul (3) din Regulamentul (EC) No 1272/2008. Nu introduceți concentrații sau date confidențiale privind formula. Tot ce este salvat în această categorie este public."
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "Baza pentru absența substanțelor de enumerat"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "Lista este completă, include conservanții reziduali calificați și utilizează identități evaluate în temeiul articolului 18 alineatul (3) din CLP"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "Utilizat numai în afara sferei casnice de către personal specializat"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "Informații echivalente despre substanțe au fost efectiv furnizate într-o fișă cu date de securitate în temeiul articolului 31 din REACH"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "URL-ul fișei cu date de securitate echivalente",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "Limbile fișei cu date de securitate echivalente"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "Data revizuirii fișei cu date de securitate echivalente",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "Sunt adăugate microorganisme în mod intenționat?",
+        "help": "Calea fișei cu date de securitate echivalente nu elimină niciodată lista de microorganisme."
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "Toate microorganismele adăugate în mod intenționat",
+        "help": "Indicați genul, specia și numele sau codul tulpinii pentru fiecare microorganism."
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "Referința evaluării siguranței (anexa II)"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "Termen de valabilitate și condiții de depozitare",
+        "help": "Eticheta unui detergent care conține microorganisme indică termenul de valabilitate."
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "Destinat utilizării pe suprafețe care intră în contact cu alimentele?",
+        "help": "Cu excepția cazului în care produsul a fost evaluat din punctul de vedere al riscurilor ca fiind sigur pentru această utilizare, eticheta indică faptul că nu trebuie utilizat pe suprafețe care intră în contact cu alimentele."
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "Precauții și instrucțiuni pentru suprafețele care intră în contact cu alimentele"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "Detergent pentru rufe",
+        "laundry_additive": "Aditiv pentru rufe sau prespălare",
+        "machine_dishwashing": "Detergent pentru mașina de spălat vase",
+        "dishwasher_additive": "Agent de clătire sau aditiv pentru mașina de spălat vase",
+        "hand_dishwashing": "Detergent pentru spălarea manuală a vaselor",
+        "all_purpose": "Detergent universal sau pentru suprafețe",
+        "kitchen": "Detergent de bucătărie",
+        "bathroom": "Detergent de baie",
+        "toilet": "Detergent de toaletă",
+        "glass": "Detergent de geamuri",
+        "floor": "Detergent de podele",
+        "descaler": "Detartrant",
+        "bleach": "Înălbitor",
+        "other": "Alt detergent"
       },
       "productForm": {
-        "liquid": "Liquid",
+        "liquid": "Lichid",
         "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
+        "powder": "Pudră",
+        "tablet": "Tabletă",
+        "capsule": "Capsulă sau pod",
         "spray": "Spray",
-        "wipe": "Wipe",
-        "paste": "Paste",
-        "other": "Other"
+        "wipe": "Șervețel",
+        "paste": "Pastă",
+        "other": "Altă formă"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "Da",
+        "no": "Nu",
+        "review": "Necesită evaluare"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "Consumatori, inclusiv uz mixt de consum și profesional",
+        "professional": "Numai pentru uz profesional",
+        "industrial": "Numai pentru uz industrial și instituțional"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "Informații actuale despre produs",
+        "annex_vi": "Set complet de date din anexa VI pentru normele din 2029"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Da",
+        "no": "Nu"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "Nu este clasificat ca periculos",
+        "environment": "Numai pericole pentru mediu",
+        "health_physical": "Pericole pentru sănătate sau fizice, cu sau fără pericole pentru mediu",
+        "review": "Necesită evaluare"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "Pericol",
+        "warning": "Atenție",
+        "not_applicable": "Nu se aplică după evaluare"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 Bombă care explodează",
+        "ghs02": "GHS02 Flacără",
+        "ghs03": "GHS03 Flacără peste un cerc",
+        "ghs04": "GHS04 Butelie de gaz",
+        "ghs05": "GHS05 Coroziune",
+        "ghs06": "GHS06 Cap de mort",
+        "ghs07": "GHS07 Semn de exclamare",
+        "ghs08": "GHS08 Pericol pentru sănătate",
+        "ghs09": "GHS09 Pericol pentru mediu",
+        "none": "Nu se aplică nicio pictogramă"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "Notificare obligatorie",
+        "exempt": "Scutire documentată",
+        "review": "Necesită evaluare"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "Transmisă pentru piețele relevante",
+        "pending": "În așteptare"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "Trebuie furnizată",
+        "on_request": "Trebuie să fie disponibilă la cerere",
+        "not_required": "Nu este necesară în urma evaluării",
+        "review": "Necesită evaluare"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "Fosfați",
+        "phosphonates": "Fosfonați",
+        "anionic_surfactants": "Surfactanți anionici",
+        "cationic_surfactants": "Surfactanți cationici",
+        "amphoteric_surfactants": "Surfactanți amfoteri",
+        "nonionic_surfactants": "Surfactanți neionici",
+        "oxygen_bleach": "Agenți de înălbire pe bază de oxigen",
+        "chlorine_bleach": "Agenți de înălbire pe bază de clor",
+        "edta": "EDTA și sărurile acestuia",
+        "nta": "NTA și sărurile acestuia",
+        "phenols": "Fenoli și fenoli halogenați",
+        "paradichlorobenzene": "Paradichlorbenzen",
+        "aromatic_hydrocarbons": "Hidrocarburi aromatice",
+        "aliphatic_hydrocarbons": "Hidrocarburi alifatice",
+        "halogenated_hydrocarbons": "Hidrocarburi halogenate",
+        "soap": "Săpun",
+        "zeolites": "Zeoliți",
+        "polycarboxylates": "Policarboxilați"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "Mai puțin de 5%",
+        "5to15": "5% sau mai mult, dar mai puțin de 15%",
+        "15to30": "15% sau mai mult, dar mai puțin de 30%",
+        "gte30": "30% sau mai mult"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "Enzime",
+        "micro_organisms": "Microorganisme",
+        "optical_brighteners": "Înălbitori optici",
+        "perfumes": "Parfumuri",
+        "disinfectants": "Dezinfectanți (norme actuale până la 23 septembrie 2029)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Da",
+        "no": "Nu",
+        "unknown": "Necunoscut"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "Pentru rufe foarte murdare",
+        "heavy_duty_short": "Pentru rufe foarte murdare, cicluri scurte",
+        "light_duty": "Pentru rufe puțin murdare sau țesături delicate"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "Mililitri",
+        "g": "Grame",
+        "units": "Unități (tablete, capsule sau doze)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
+        "other_plastic": "Alt material plastic",
         "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "glass": "Sticlă",
+        "paper_cardboard": "Hârtie sau carton",
+        "composite": "Material compozit",
+        "water_soluble_film": "Film hidrosolubil",
+        "other": "Altele"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "Revizuit de către furnizor",
+        "review": "Necesită evaluare"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "Aplicabil",
+        "not_applicable": "Nu se aplică în urma evaluării"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "Lista completă a substanțelor",
+        "equivalent_sds": "Fișă cu date de securitate echivalentă (numai pentru uz industrial și instituțional)",
+        "no_added_substances": "Nicio substanță de listat în urma evaluării"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "Acest produs poate să nu se încadreze în definiția detergentului de la articolul 2 alineatul (1) din Regulamentul (EU) 2026/405. Verificați domeniul de aplicare înainte de a utiliza această categorie.",
+      "biocidal": "Mențiunile privind dezinfectarea sau proprietățile antimicrobiene necesită o autorizație pentru produse biocide în temeiul Regulamentului (EU) No 528/2012.",
+      "assessmentNeeded": "Această evaluare nu este finalizată. Finalizați-o înainte de a vă baza pe pașaport.",
+      "microparticles": "Consultați Regulamentul (EU) 2023/2055 privind microparticulele de polimeri sintetici înainte de a introduce acest produs pe piață. Un răspuns de tip „necunoscut” trebuie clarificat cu furnizorul.",
+      "phosphorusLaundry": "Un conținut total de fosfor de {{value}} g nu este sub limita de 0,5 g pentru un detergent de rufe de uz casnic în apă dură (anexa III la Regulamentul (EU) 2026/405).",
+      "phosphorusDishwasher": "Un conținut total de fosfor de {{value}} g nu este sub limita de 0,3 g pentru un detergent pentru mașini de spălat vase automate de uz casnic (anexa III la Regulamentul (EU) 2026/405).",
+      "percentageRange": "Un procent trebuie să fie între 0 și 100. Ați introdus {{value}}.",
+      "positiveNumber": "Introduceți un număr mai mare decât zero. Ați introdus {{value}}.",
+      "allergensMissing": "Ați răspuns da, dar nu este selectat niciun alergen. Selectați fiecare alergen din lista oficială.",
+      "ufiFormat": "Un UFI are patru grupe de câte patru caractere, de exemplu N1QV-R02N-J00M-WQD5. Formatul este verificat, dar nu și transmiterea la centrul de informare toxicologică.",
+      "urlFormat": "Utilizați o adresă web completă care începe cu http:// sau https://.",
+      "emailFormat": "Introduceți o adresă de e-mail validă.",
+      "dateFormat": "Utilizați o dată validă în formatul YYYY-MM-DD.",
+      "microorganismSafety": "S-au adăugat microorganisme, dar nu s-a introdus nicio referință la evaluarea siguranței."
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "Detergenți DPP: clauză de exonerare privind conformitatea",
+      "text": "Regulamentul (EU) 2026/405 privind detergenții și surfactanții se aplică de la 23 septembrie 2029. Normele sale privind pașaportul digital al produsului, drepturile de acces și detaliile purtătorului de date urmează să fie stabilite printr-un act de punere în aplicare, iar până atunci se aplică Regulamentul (EC) No 648/2004. Acest instrument colectează informații despre produs și pregătește datele pentru pașaport. Nu reprezintă o certificare sau o aprobare și nu trebuie tratat ca un aviz juridic final. Toate informațiile salvate în această categorie sunt publice."
     }
   }
 }

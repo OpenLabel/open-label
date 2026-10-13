@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "产品身份",
+        "description": "产品、型号和可追溯性"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "责任方",
+        "description": "制造商、进口商和欧盟授权代表，作为独立方保存"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "危险分类和安全信息",
+        "description": "CLP 分类、标签危险信息、毒物中心和安全数据表"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "成分和标签信息",
+        "description": "根据法规 (EU) 2026/405 附录 V 和现行规则的标签内容"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "安全使用和剂量",
+        "description": "根据附录 V B 部分的剂量和使用信息"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "包装和回收",
+        "description": "包装、可回收性和补充装"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "杀生物产品评估",
+        "description": "在作出消毒或抗菌声明时适用"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "环境声明",
+        "description": "支持指令 (EU) 2024/825，该指令自 2026 年 9 月 27 日起适用"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "供应商审核和通行证准备",
+        "description": "供应商完成的检查。本应用程序无法验证。"
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "附录 VI：产品身份和制造商声明",
+        "description": "为 2029 年 9 月 23 日起要求的数字产品通行证做准备。完整的数据集不是认证、验证的标识符或注册提交。"
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "附录 VI：物质",
+        "description": "有意添加物质的完整清单（附录 VI A 部分 (h) 点）"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "附录 VI：微生物",
+        "description": "所有有意添加的微生物（附录 VI A 部分 (i) 点）"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "品牌名称"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "产品类型"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "产品类型（请注明）"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "产品形态"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "该产品是否用于清洁、浸泡、漂洗或漂白织物、餐具或表面？",
+        "help": "参见法规 (EU) 2026/405 第 2(1) 条。油漆、粘合剂、溶剂和不具清洁功能的产品不在此类别之列。"
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "产品不属于洗涤剂定义范围的原因"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "产品适用于哪些人群？",
+        "help": "工业和机构用途指仅由专业人员在家庭领域之外使用。"
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "产品型号标识符",
+        "help": "一个通行证对应一个型号。配方或生产的变更导致标签发生变化，可能会使其成为新型号。"
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "类型、批次或批号参考",
+        "help": "标签上需要有类型编号、批号或其他可追溯性要素。"
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "例如：3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "label": "带单位的标称数量",
+        "placeholder": "例如：1.5 L, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "label": "欧盟市场和标签语言",
+        "help": "标签和安全用语必须以每个市场要求的一种或多种语言提供。",
+        "placeholder": "例如：法国（法语），德国（德语）"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "信息概况",
+        "help": "法规 (EU) 2026/405 自 2029 年 9 月 23 日起适用。选择附录 VI 数据集以准备未来的通行证数据。完成此数据集并不意味着通行证合规或已获认证。"
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "是否作出杀生物或消毒声明？",
+        "help": "消毒或抗菌声明需要根据法规 (EU) No 528/2012 获得杀生物产品授权。"
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "制造商法定名称",
+        "help": "标签上显示制造商的名称、邮政地址、电子地址和电话号码。邮政地址必须是欧盟境内的单一地点。"
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "街道地址"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "邮政编码"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "城市"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "国家"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "电子地址（电子邮件）",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "label": "电话号码",
+        "placeholder": "例如：+33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "制造商是否在欧盟境外设立？"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "进口商法定名称",
+        "help": "当制造商在欧盟境外设立时，也需要提供进口商的联系方式。"
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "街道地址"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "邮政编码"
       },
       "importer_city": {
-        "label": "City"
+        "label": "城市"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "国家"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "电子地址（电子邮件）",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "欧盟授权代表：法定名称",
+        "help": "在欧盟境外设立的制造商必须指定一名授权代表（法规 (EU) 2026/405 第 9 条）。"
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "欧盟授权代表：地址",
+        "placeholder": "欧盟境内的注册地址"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "欧盟授权代表：电子地址（电子邮件）",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "CLP 分类评估",
+        "help": "使用根据法规 (EC) No 1272/2008 对该混合物实际评估的分类。请勿从 pH 值或象形图推断。"
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "补充标签说明",
+        "help": "例如，在适用的情况下使用 EUH208。"
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "信号词"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "GHS 象形图"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "label": "危险说明",
+        "help": "输入与批准标签上完全一致的措辞。对每种市场语言使用翻译按钮。此措辞绝不会自动翻译。",
+        "placeholder": "例如：H315 造成皮肤刺激"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "label": "防范说明",
+        "help": "输入与批准标签上完全一致的措辞。对每种市场语言使用翻译按钮。此措辞绝不会自动翻译。",
+        "placeholder": "例如：P280 戴防护手套"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "毒物中心通报（CLP 附录 VIII）",
+        "help": "UFI 和通报取决于健康或物理危险以及适用的豁免。仅有环境危险不会触发通报。"
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "豁免的原因和法律依据"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "唯一配方标识符（UFI）",
+        "help": "四组四个字符。格式会经过检查，但本应用程序无法验证毒物中心的提交。",
+        "placeholder": "例如：N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "毒物中心提交"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "安全数据表提供要求",
+        "help": "仅提供网页链接本身并不满足根据 REACH 第 31 条提供安全数据表的义务。"
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "公开的安全数据表 URL",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
-        "placeholder": "e.g., English, French, German"
+        "label": "安全数据表语言",
+        "placeholder": "例如：英语、法语、德语"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "安全数据表修订日期",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "紧急联系方式（毒物中心或 24 小时电话）",
+        "placeholder": "紧急情况下的电话号码"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "按重量计添加量超过 0.2% 的组分类别",
+        "help": "勾选按重量计添加量超过 0.2% 的每个类别，然后在下方选择其重量范围（附录 V A 部分 1(h)(i) 点）。"
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "磷酸盐：重量范围"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "膦酸盐：重量范围"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "阴离子表面活性剂：重量范围"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "阳离子表面活性剂：重量范围"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "两性表面活性剂：重量范围"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "非离子表面活性剂：重量范围"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "氧基漂白剂：重量范围"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "氯基漂白剂：重量范围"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA 及其盐类：重量范围"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA 及其盐类：重量范围"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "酚类和卤代酚类：重量范围"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "对二氯苯：重量范围"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "芳香烃：重量范围"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "脂肪烃：重量范围"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "卤代烃：重量范围"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "皂类：重量范围"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "沸石：重量范围"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "聚羧酸盐：重量范围"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "以任何浓度添加的组分类别",
+        "help": "附录 V A 部分 1(h)(ii) 点。消毒剂根据现行规则列出，自 2029 年 9 月 23 日起不再是列出的类别。"
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "是否含有防腐剂？",
+        "help": "防腐剂根据附录 V A 部分 1(h)(iii) 点列出，除非已根据 CLP 第 18(3)(b) 条或《杀生物产品法规》第 58 条进行标注。"
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "label": "防腐剂",
+        "help": "尽可能使用 INCI 名称。",
+        "placeholder": "例如：Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "按重量计添加量是否超过 0.01% 的香料致敏物？",
+        "help": "附录 V D 部分清单中，按重量计有意添加量超过 0.01% 的致敏物需在标签上标明，除非已根据 CLP 进行标注。"
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "含有的香料致敏物",
+        "help": "从包含 105 个条目的官方清单中选择每种致敏物。"
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "公开的成分网页",
+        "help": "现行规则（法规 (EC) No 648/2004，附录 VII D 部分）要求为消费品维护一个公开的成分清单。该清单无需百分比范围或 CAS 编号。",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "提供给专业用户的等效成分信息"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
-        "placeholder": "e.g., OECD 301 series"
+        "label": "表面活性剂生物降解性测试方法",
+        "placeholder": "例如：OECD 301 系列"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "生物降解性证据参考",
+        "help": "命名测试报告或供应商声明。请勿上传或粘贴机密文件。"
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "是否含有有意添加的合成聚合物微粒？",
+        "help": "法规 (EU) 2023/2055 根据 REACH 附录 XVII 第 78 条对此进行限制。洗涤剂自 2028 年 10 月 17 日起受此限制。"
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "使用说明和特别防范措施",
+        "help": "方法、适用的织物或表面，以及任何特别防范措施。"
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "洗衣洗涤剂类型",
+        "help": "决定标准负载：重垢洗涤剂为 4.5 公斤干织物，短周期重垢和轻垢洗涤剂为 2.5 公斤。"
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "剂量单位"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
-        "placeholder": "e.g., 60"
+        "label": "软水用量（每标准负载）",
+        "placeholder": "例如：60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
-        "placeholder": "e.g., 75"
+        "label": "中等硬度水用量（每标准负载）",
+        "placeholder": "例如：75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
-        "placeholder": "e.g., 90"
+        "label": "硬水用量（每标准负载）",
+        "placeholder": "例如：90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "单周期和双周期洗涤过程的用量",
+        "help": "附录 V B 部分 1(a) 点要求提供单周期或双周期洗涤过程的用量。"
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "每包装标准负载数（中等硬度水，每升 2.5 毫摩尔 CaCO3）",
+        "help": "对于补充装，请给出每 1 升或 1 公斤产品的负载数。对于以单位计的补充装则不需要。"
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "量杯容量",
+        "help": "随附量杯的容量，并带有软水、中等硬度水和硬水用量的清晰标记。"
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "主洗涤周期的标准用量",
+        "help": "适用于满载 12 套餐具、正常脏污程度的洗碗机。"
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "根据水硬度调整用量"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "推荐稀释比例和每单位表面积用量",
+        "help": "附录 V B 部分 4 点：给出推荐的稀释比例和每单位表面积用量，或其他使用说明，以避免过量使用产品。"
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "推荐剂量中的总磷含量（克）",
+        "help": "附录 III 限制：硬水中每次标准洗衣负载低于 0.5 克，每次标准洗碗机剂量低于 0.3 克。"
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "储存和处置"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "主要包装材料"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "包装是否可回收？"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "回收说明"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
-        "placeholder": "e.g., 30"
+        "label": "包装中的回收成分（%）",
+        "placeholder": "例如：30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "是否有补充装？"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "是否通过补充站销售？",
+        "help": "根据法规 (EU) 2026/405 第 21(4) 条，补充点自身承担数据载体义务。"
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "各市场的包装生产者责任登记",
+        "help": "每个市场一行。",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "适用的授权或许可的过渡依据"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "活性物质和授权用途"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "label": "在产品或包装上作出的环境声明",
+        "placeholder": "例如：“瓶身由 30% 的回收塑料制成”"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "证实证据参考",
+        "placeholder": "每项声明的研究、证书或验证机构参考"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "声明是否避免使用通用环境术语？",
+        "help": "根据指令 (EU) 2024/825，自 2026 年 9 月 27 日起，限制使用“生态友好”或“可生物降解”等通用声明。"
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "欧盟生态标签许可证号",
+        "help": "仅当产品持有欧盟生态标签许可证时才输入许可证注册号。只有在输入编号后，徽章才会显示在公开通行证上。"
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "REACH 限制和义务评估",
+        "help": "审查附录 XVII 中的限制以及适用于组分物质的义务。"
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "我已检查实体标签和所提供的安全信息"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "标签上注明该产品仅供专业使用"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "当此记录替换旧记录时，链接到前一个通行证",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "产品信息审核日期",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "制造商符合性证据参考"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "产品内容修订参考"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "制造过程修订参考"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "持久性产品标识符",
+        "help": "输入真实的标识符。内部记录 ID 不是根据 ESPR 中引用的标准签发的标识符。"
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "标识符方案和签发者"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "制造商唯一经营者标识符"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "持有备份副本的通行证服务提供商 (URL)",
+        "help": "指定您实际安排的提供商。本应用程序不创建备份服务。",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "备份服务协议参考"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "海关商品编码"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "商品编码（法规 (EEC) No 2658/87）"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "不适用商品编码的原因"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "制造商自行负责签发此通行证"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "关于已证明符合法规 (EU) 2026/405 的声明",
+        "help": "仅在制造商自行评估后填写。本应用程序绝不生成符合性声明。"
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "适用于该产品的其他欧盟法律"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "该型号最后投放市场的日期",
+        "help": "十年可用性义务的起始点。",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "数据载体的放置位置",
+        "help": "第 21(4) 条：实体存在、不可磨灭、机器可读且在购买前可见，并附有声明“请扫描以获取更全面的产品信息”。在补充站和远程销售中也需要。"
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "数据载体符合这些要求"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "标签和安全用语已在每个目标市场语言中审核"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "物质披露途径",
+        "help": "豁免仅适用于工业和机构用洗涤剂及表面活性剂，前提是根据 REACH 第 31 条提供的等效安全数据表已提供该信息。"
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "所有有意添加的物质和标签要求的残留防腐剂",
+        "help": "根据法规 (EC) No 1272/2008 第 18(3) 条的要求识别物质。请勿输入浓度或机密配方数据。在此类别中保存的所有内容都是公开的。"
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "未列出物质的依据"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "该清单是完整的，包括符合条件的残留防腐剂，并使用根据 CLP 第 18(3) 条评估的身份"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "仅由专业人员在家庭领域之外使用"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "已根据 REACH 第 31 条在安全数据表中实际提供了等效的物质信息"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "等效安全数据表 URL",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "等效安全数据表语言"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "等效安全数据表修订日期",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "是否有意添加微生物？",
+        "help": "等效安全数据表途径绝不会移除微生物清单。"
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "所有有意添加的微生物",
+        "help": "为每种微生物提供属、种和菌株名称或代码。"
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "安全评估参考（附录 II）"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "保质期和储存条件",
+        "help": "含有微生物的洗涤剂标签上显示保质期。"
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "是否拟用于与食品接触的表面？",
+        "help": "除非产品经风险评估可安全用于此用途，否则标签上会注明不得用于与食品接触的表面。"
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "用于食品接触表面的防范措施和说明"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "洗衣洗涤剂",
+        "laundry_additive": "洗衣添加剂或预洗剂",
+        "machine_dishwashing": "机洗餐具洗涤剂",
+        "dishwasher_additive": "漂洗助剂或洗碗机添加剂",
+        "hand_dishwashing": "手洗餐具洗涤剂",
+        "all_purpose": "通用或表面清洁剂",
+        "kitchen": "厨房清洁剂",
+        "bathroom": "浴室清洁剂",
+        "toilet": "厕所清洁剂",
+        "glass": "玻璃清洁剂",
+        "floor": "地板清洁剂",
+        "descaler": "除垢剂",
+        "bleach": "漂白剂",
+        "other": "其他洗涤剂"
       },
       "productForm": {
-        "liquid": "Liquid",
-        "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
-        "spray": "Spray",
-        "wipe": "Wipe",
-        "paste": "Paste",
-        "other": "Other"
+        "liquid": "液体",
+        "gel": "凝胶",
+        "powder": "粉末",
+        "tablet": "块状",
+        "capsule": "胶囊或洗涤凝珠",
+        "spray": "喷雾",
+        "wipe": "湿巾",
+        "paste": "膏状",
+        "other": "其他"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "是",
+        "no": "否",
+        "review": "需要评估"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "消费者，包括消费者和专业混合使用",
+        "professional": "仅限专业使用",
+        "industrial": "仅限工业和机构使用"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "当前产品信息",
+        "annex_vi": "适用于 2029 年规则的完整附录 VI 数据集"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "是",
+        "no": "否"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "未分类为危险品",
+        "environment": "仅有环境危险",
+        "health_physical": "健康或物理危险，有或无环境危险",
+        "review": "需要评估"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "危险",
+        "warning": "警告",
+        "not_applicable": "评估后不适用"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 爆炸的炸弹",
+        "ghs02": "GHS02 火焰",
+        "ghs03": "GHS03 圆圈上方火焰",
+        "ghs04": "GHS04 气体钢瓶",
+        "ghs05": "GHS05 腐蚀",
+        "ghs06": "GHS06 骷髅和交叉骨",
+        "ghs07": "GHS07 感叹号",
+        "ghs08": "GHS08 健康危害",
+        "ghs09": "GHS09 环境",
+        "none": "无适用的象形图"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "需要通报",
+        "exempt": "有文件记录的豁免",
+        "review": "需要评估"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "已为相关市场提交",
+        "pending": "待定"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "必须提供",
+        "on_request": "必须应要求提供",
+        "not_required": "经评估后无需提供",
+        "review": "需要评估"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "磷酸盐",
+        "phosphonates": "膦酸盐",
+        "anionic_surfactants": "阴离子表面活性剂",
+        "cationic_surfactants": "阳离子表面活性剂",
+        "amphoteric_surfactants": "两性表面活性剂",
+        "nonionic_surfactants": "非离子表面活性剂",
+        "oxygen_bleach": "氧基漂白剂",
+        "chlorine_bleach": "氯基漂白剂",
+        "edta": "EDTA 及其盐",
+        "nta": "NTA 及其盐",
+        "phenols": "酚和卤代酚",
+        "paradichlorobenzene": "对二氯苯",
+        "aromatic_hydrocarbons": "芳香烃",
+        "aliphatic_hydrocarbons": "脂肪烃",
+        "halogenated_hydrocarbons": "卤代烃",
+        "soap": "皂类",
+        "zeolites": "沸石",
+        "polycarboxylates": "聚羧酸盐"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "低于 5%",
+        "5to15": "5% 或以上但低于 15%",
+        "15to30": "15% 或以上但低于 30%",
+        "gte30": "30% 及以上"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "酶",
+        "micro_organisms": "微生物",
+        "optical_brighteners": "荧光增白剂",
+        "perfumes": "香料",
+        "disinfectants": "消毒剂 (现行规定有效期至 2029 年 9 月 23 日)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "是",
+        "no": "否",
+        "unknown": "未知"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "重垢型",
+        "heavy_duty_short": "适用于短周期的重垢型",
+        "light_duty": "轻垢型或精细织物用"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "毫升",
+        "g": "克",
+        "units": "单位 (片剂、胶囊或包)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
-        "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "other_plastic": "其他塑料",
+        "metal": "金属",
+        "glass": "玻璃",
+        "paper_cardboard": "纸或纸板",
+        "composite": "复合材料",
+        "water_soluble_film": "水溶性薄膜",
+        "other": "其他"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "已由供应商审核",
+        "review": "需要评估"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "适用",
+        "not_applicable": "经评估后不适用"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "完整的物质清单",
+        "equivalent_sds": "等效的安全数据表 (仅限工业和公共机构使用)",
+        "no_added_substances": "经评估后无需要列出的物质"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "本产品可能不属于法规 (EU) 2026/405 第 2(1) 条中洗涤剂的定义范围。在使用此类别前，请检查其适用范围。",
+      "biocidal": "消毒或抗菌声明需要根据法规 (EU) No 528/2012 获得生物杀灭产品授权。",
+      "assessmentNeeded": "此评估尚未完成。在依赖此通行证之前，请先完成评估。",
+      "microparticles": "将本产品投放市场前，请查阅关于合成聚合物微粒的法规 (EU) 2023/2055。对于未知的答案，必须与供应商一同解决。",
+      "phosphorusLaundry": "总磷含量为 {{value}} 克，未低于法规 (EU) 2026/405 附件 III 中规定的家用洗衣洗涤剂在硬水中的 0.5 克限值。",
+      "phosphorusDishwasher": "总磷含量为 {{value}} 克，未低于法规 (EU) 2026/405 附件 III 中规定的家用自动洗碗机用洗涤剂的 0.3 克限值。",
+      "percentageRange": "百分比必须介于 0 和 100 之间。您输入了 {{value}}。",
+      "positiveNumber": "请输入一个大于零的数字。您输入了 {{value}}。",
+      "allergensMissing": "您回答了“是”，但未选择任何过敏原。请从官方列表中选择每种过敏原。",
+      "ufiFormat": "一个 UFI 由四组各四个字符组成，例如 N1QV-R02N-J00M-WQD5。格式会经过检查，但不会检查是否已向毒物中心提交。",
+      "urlFormat": "请使用以 http:// 或 https:// 开头的完整网址。",
+      "emailFormat": "请输入有效的电子邮件地址。",
+      "dateFormat": "请使用 YYYY-MM-DD 格式的有效日期。",
+      "microorganismSafety": "已添加微生物，但未输入安全评估参考信息。"
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "洗涤剂 DPP：合规性免责声明",
+      "text": "关于洗涤剂和表面活性剂的法规 (EU) 2026/405 将于 2029 年 9 月 23 日起适用。其数字产品通行证规则、访问权限和数据载体详情仍有待实施法案确定，在此之前，法规 (EC) No 648/2004 仍然适用。本工具用于收集产品信息并准备通行证数据。它不是认证或批准，不应被视为最终的法律建议。保存在此类别中的所有内容都是公开的。"
     }
   }
 }

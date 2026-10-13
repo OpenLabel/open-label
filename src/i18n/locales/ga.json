@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "Céannacht an táirge",
+        "description": "Táirge, samhail agus inrianaitheacht"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "Cé atá freagrach",
+        "description": "Monaróir, allmhaireoir agus ionadaí údaraithe AE, coinnithe mar pháirtithe ar leith"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "Aicmiú guaise agus faisnéis sábháilteachta",
+        "description": "Aicmiú CLP, faisnéis ghuaise an lipéid, ionad nimhe agus bileog sonraí sábháilteachta"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "Comhábhair agus faisnéis lipéid",
+        "description": "Ábhar an lipéid faoi Iarscríbhinn V de Rialachán (EU) 2026/405 agus na rialacha reatha"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "Úsáid shábháilte agus dáileog",
+        "description": "Faisnéis faoi dháileog agus úsáid faoi Iarscríbhinn V Cuid B"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "Pacáistíocht agus athchúrsáil",
+        "description": "Pacáistíocht, in-athchúrsáilteacht agus athlíonta"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "Measúnú ar tháirge bithicídeach",
+        "description": "I bhfeidhm nuair a dhéantar maímh dhíghalraithe nó fhrithmhiocróbacha"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "Maímh chomhshaoil",
+        "description": "Tacaíonn sé le Treoir (EU) 2024/825, atá i bhfeidhm ón 27 Meán Fómhair 2026"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "Athbhreithniú an tsoláthraí agus ullmhú an phas",
+        "description": "Seiceálacha a chomhlánaíonn an soláthraí. Ní féidir leis an aip iad a fhíorú."
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "Iarscríbhinn VI: céannacht an táirge agus ráiteas an mhonaróra",
+        "description": "Ullmhúchán don phas táirge digiteach a cheanglaítear ón 23 Meán Fómhair 2029. Ní deimhniú, aitheantóir fíoraithe ná aighneacht clárlainne é tacar sonraí iomlán."
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "Iarscríbhinn VI: substaintí",
+        "description": "Liosta iomlán de shubstaintí a cuireadh leis d'aon ghnó (Iarscríbhinn VI Cuid A pointe (h))"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "Iarscríbhinn VI: miocrorgánaigh",
+        "description": "Gach miocrorgánach a cuireadh leis d'aon ghnó (Iarscríbhinn VI Cuid A pointe (i))"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Branda"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "Cineál táirge"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "Cineál táirge (sonraigh)"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "Foirm an táirge"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "An bhfuil an táirge ceaptha chun fabraicí, soithí nó dromchlaí a ghlanadh, a mhaothú, a shruthlú nó a thuaradh?",
+        "help": "Féach Airteagal 2(1) de Rialachán (EU) 2026/405. Tá péinteanna, greamacháin, tuaslagóirí agus táirgí nach nglanann lasmuigh den chatagóir seo."
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "An fáth a bhfuil an táirge lasmuigh de shainmhíniú an ghlantaigh"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "Cé dó a bhfuil an táirge ceaptha?",
+        "help": "Ciallaíonn tionsclaíoch agus institiúideach go n-úsáideann pearsanra speisialaithe é lasmuigh de réimse an teaghlaigh amháin."
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "Aitheantóir samhla an táirge",
+        "help": "Clúdaíonn pas amháin samhail amháin. D'fhéadfadh athrú ar fhoirmliú nó ar tháirgeadh a athraíonn an lipéad samhail nua a dhéanamh de."
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "Tagairt chineáil, baisce nó luchtóige",
+        "help": "Teastaíonn uimhir chineáil, uimhir baisce nó eilimint inrianaitheachta eile ar an lipéad."
       },
       "gtin": {
         "label": "GTIN / EAN",
         "placeholder": "e.g., 3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
+        "label": "Cainníocht ainmniúil le haonad",
         "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
+        "label": "Margaí AE agus teangacha lipéid",
+        "help": "Ní mór foclaíocht an lipéid agus na sábháilteachta a bheith ar fáil sa teanga nó sna teangacha a cheanglaítear i ngach margadh.",
         "placeholder": "e.g., France (French), Germany (German)"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "Próifíl faisnéise",
+        "help": "Tá Rialachán (EU) 2026/405 i bhfeidhm ón 23 Meán Fómhair 2029. Roghnaigh tacar sonraí Iarscríbhinn VI chun sonraí an phas a bheidh ann amach anseo a ullmhú. Ní fhágann a chomhlánú go bhfuil pas comhlíontach nó deimhnithe."
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "Maímh bhithicídeacha nó dhíghalraithe?",
+        "help": "Teastaíonn údarú táirge bithicídigh faoi Rialachán (EU) No 528/2012 le haghaidh maímh dhíghalraithe nó fhrithmhiocróbacha."
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "Ainm dlíthiúil an mhonaróra",
+        "help": "Taispeánann an lipéad ainm, seoladh poist, seoladh leictreonach agus uimhir theileafóin an mhonaróra. Ní mór don seoladh poist a bheith ina phointe aonair san Aontas."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Seoladh sráide"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Cód poist"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Cathair"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Tír"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Seoladh leictreonach (ríomhphost)",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
+        "label": "Uimhir theileafóin",
         "placeholder": "e.g., +33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "An bhfuil an monaróir bunaithe lasmuigh den AE?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "Ainm dlíthiúil an allmhaireora",
+        "help": "Nuair a bhíonn an monaróir bunaithe lasmuigh den AE, teastaíonn sonraí teagmhála an allmhaireora freisin."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Seoladh sráide"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Cód poist"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Cathair"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Tír"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Seoladh leictreonach (ríomhphost)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "Ionadaí údaraithe AE: ainm dlíthiúil",
+        "help": "Ní mór do mhonaróir atá bunaithe lasmuigh den AE ionadaí údaraithe a cheapadh (Airteagal 9 de Rialachán (EU) 2026/405)."
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Ionadaí údaraithe AE: seoladh",
+        "placeholder": "Seoladh cláraithe laistigh den Aontas Eorpach"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "Ionadaí údaraithe AE: seoladh leictreonach (ríomhphost)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "Measúnú ar aicmiú CLP",
+        "help": "Bain úsáid as an aicmiú a measúnaíodh iarbhír don mheascán seo faoi Rialachán (EC) No 1272/2008. Ná bain de thátal as an pH ná as na picteagraim é."
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "Ráitis fhorlíontacha lipéid",
+        "help": "Mar shampla EUH208, i gcás inarb infheidhme."
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "Focal comhartha"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "Picteagraim GHS"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
+        "label": "Ráitis ghuaise",
+        "help": "Cuir isteach an fhoclaíocht go díreach mar atá sí ar an lipéad formheasta. Bain úsáid as an gcnaipe aistriúcháin do gach teanga mhargaidh. Ní aistrítear an fhoclaíocht seo go huathoibríoch riamh.",
         "placeholder": "e.g., H315 Causes skin irritation"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
+        "label": "Ráitis réamhchúraim",
+        "help": "Cuir isteach an fhoclaíocht go díreach mar atá sí ar an lipéad formheasta. Bain úsáid as an gcnaipe aistriúcháin do gach teanga mhargaidh. Ní aistrítear an fhoclaíocht seo go huathoibríoch riamh.",
         "placeholder": "e.g., P280 Wear protective gloves"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "Fógra d'ionad nimhe (Iarscríbhinn VIII a ghabhann le CLP)",
+        "help": "Braitheann UFI agus an fógra ar ghuaiseacha sláinte nó fisiceacha agus ar na díolúintí is infheidhme. Ní spreagann guaiseacha comhshaoil amháin fógra."
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "An fáth agus an bunús dlí atá leis an díolúine"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
+        "label": "Aitheantóir uathúil foirmlithe (UFI)",
+        "help": "Ceithre ghrúpa de cheithre charachtar. Seiceáiltear an fhormáid, ach ní féidir leis an aip aighneacht chuig ionad nimhe a fhíorú.",
         "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "Aighneachtaí chuig ionad nimhe"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "Ceanglas maidir le bileog sonraí sábháilteachta a sholáthar",
+        "help": "Ní chomhlíonann nasc gréasáin ann féin an dualgas bileog sonraí sábháilteachta a sholáthar faoi Airteagal 31 de REACH."
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "URL na bileoige sonraí sábháilteachta poiblí",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
+        "label": "Teangacha na bileoige sonraí sábháilteachta",
         "placeholder": "e.g., English, French, German"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "Dáta athbhreithnithe na bileoige sonraí sábháilteachta",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "Teagmháil éigeandála (ionad nimhe nó uimhir 24 uair an chloig)",
+        "placeholder": "Uimhir theileafóin le haghaidh éigeandálaí"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "Aicmí comhábhar a cuireadh leis os cionn 0.2% de réir meáchain",
+        "help": "Ticeáil gach aicme a chuirtear leis os cionn 0.2% de réir meáchain, ansin roghnaigh a raon meáchain thíos (Iarscríbhinn V Cuid A pointe 1(h)(i))."
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "Fosfáití: raon meáchain"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "Fosfónáití: raon meáchain"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "Dromchlaghníomhaithe aniónacha: raon meáchain"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "Dromchlaghníomhaithe cataiónacha: raon meáchain"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "Dromchlaghníomhaithe aimfitéireacha: raon meáchain"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "Dromchlaghníomhaithe neamh-ianacha: raon meáchain"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "Oibreáin tuartha ocsaigin-bhunaithe: raon meáchain"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "Oibreáin tuartha clóirín-bhunaithe: raon meáchain"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA agus a shalainn: raon meáchain"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA agus a shalainn: raon meáchain"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "Feanóil agus feanóil halaiginithe: raon meáchain"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "Paradichlorobenzene: raon meáchain"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "Hidreacarbóin aramatacha: raon meáchain"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "Hidreacarbóin alafatacha: raon meáchain"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "Hidreacarbóin halaiginithe: raon meáchain"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "Gallúnach: raon meáchain"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "Séailítí: raon meáchain"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "Polacarbocsaláití: raon meáchain"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "Aicmí comhábhar a cuireadh leis ag tiúchan ar bith",
+        "help": "Iarscríbhinn V Cuid A pointe 1(h)(ii). Tá dífhabhtáin liostaithe faoi na rialacha reatha agus ní bheidh siad ina n-aicme liostaithe a thuilleadh ón 23 Meán Fómhair 2029."
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "An bhfuil leasaithigh i láthair?",
+        "help": "Liostaítear leasaithigh faoi Iarscríbhinn V Cuid A pointe 1(h)(iii) mura bhfuil siad lipéadaithe cheana féin faoi Airteagal 18(3)(b) de CLP nó Airteagal 58 den Rialachán maidir le Táirgí Bithicídeacha."
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
+        "label": "Leasaithigh",
+        "help": "Bain úsáid as an ainm INCI más féidir.",
         "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "Ailléirginí cumhráin a cuireadh leis os cionn 0.01% de réir meáchain?",
+        "help": "Ainmnítear ailléirginí ón liosta in Iarscríbhinn V Cuid D a chuirtear leis d'aon ghnó os cionn 0.01% de réir meáchain ar an lipéad, mura bhfuil siad lipéadaithe cheana féin faoi CLP."
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "Ailléirginí cumhráin i láthair",
+        "help": "Roghnaigh gach ailléirgin ón liosta oifigiúil de 105 iontráil."
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "Leathanach gréasáin poiblí na gcomhábhar",
+        "help": "Ceanglaíonn na rialacha reatha (Rialachán (EC) No 648/2004, Iarscríbhinn VII cuid D) liosta comhábhar poiblí a chothabháil do tháirgí tomhaltóra. Ní theastaíonn raonta céatadáin ná uimhreacha CAS uaidh.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "Faisnéis choibhéiseach faoi chomhábhair a sholáthraítear d'úsáideoirí gairmiúla"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
+        "label": "Modh tástála in-bhithdhíghrádaitheachta an dromchlaghníomhaí",
         "placeholder": "e.g., OECD 301 series"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "Tagairt d'fhianaise in-bhithdhíghrádaitheachta",
+        "help": "Ainmnigh an tuarascáil tástála nó dearbhú an tsoláthraí. Ná huaslódáil ná greamaigh comhaid rúnda."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "An bhfuil micreacáithníní polaiméire sintéiseacha a cuireadh leis d'aon ghnó ann?",
+        "help": "Srianann Rialachán (EU) 2023/2055 iad seo faoi iontráil 78 d'Iarscríbhinn XVII a ghabhann le REACH. Sroichtear glantaigh ón 17 Deireadh Fómhair 2028."
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "Treoracha úsáide agus réamhchúraimí speisialta",
+        "help": "Modh, fabraicí nó dromchlaí oiriúnacha, agus aon réamhchúraimí speisialta."
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "Cineál glantaigh níocháin",
+        "help": "Cinneann sé an t-ualach caighdeánach: 4.5 kg d'fhabraic thirim do ghlantaigh tromshaothair, 2.5 kg do ghlantaigh tromshaothair gearrthimthrialla agus do ghlantaigh éadromshaothair."
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "Aonad dáileoige"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
+        "label": "Dáileog d'uisce bog (in aghaidh an ualaigh chaighdeánaigh)",
         "placeholder": "e.g., 60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
+        "label": "Dáileog d'uisce meánach (in aghaidh an ualaigh chaighdeánaigh)",
         "placeholder": "e.g., 75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
+        "label": "Dáileog d'uisce crua (in aghaidh an ualaigh chaighdeánaigh)",
         "placeholder": "e.g., 90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "Dáileog do phróisis níocháin aontimthrialla agus dhá thimthriall",
+        "help": "Iarrann Iarscríbhinn V Cuid B pointe 1(a) dáileog do phróisis níocháin aontimthrialla nó dhá thimthriall."
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "Ualaí caighdeánacha in aghaidh an phacáiste (uisce meánach, 2.5 milleamól CaCO3 an lítear)",
+        "help": "I gcás athlíonta, tabhair líon na n-ualach in aghaidh 1 lítear nó 1 kg den táirge. Níl gá leis le haghaidh athlíonta in aonaid."
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "Toilleadh an chupáin tomhais",
+        "help": "Toilleadh aon chupáin tomhais a sholáthraítear, le marcálacha soiléire do dháileoga uisce bhog, mheánaigh agus chrua."
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "Dáileog chaighdeánach don phríomh-thimthriall",
+        "help": "Le haghaidh earraí boird atá salaithe go hiondúil i miasniteoir 12 socrú áite atá lánluchtaithe."
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "Coigeartú na dáileoige do chruas an uisce"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "Caolú molta agus cainníocht in aghaidh an aonaid achair dromchla",
+        "help": "Iarscríbhinn V Cuid B pointe 4: tabhair an caolú molta agus an chainníocht in aghaidh an aonaid achair dromchla, nó treoracha úsáide eile, ionas nach n-úsáidfear an táirge go hiomarcach."
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "Fosfar iomlán sa dáileog mholta (graim)",
+        "help": "Teorainneacha Iarscríbhinn III: faoi bhun 0.5 g in aghaidh an ualaigh níocháin chaighdeánaigh in uisce crua, agus faoi bhun 0.3 g in aghaidh na dáileoige caighdeánaí miasniteora."
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "Stóráil agus diúscairt"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "Ábhar pacáistíochta príomhúil"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "Pacáistíocht in-athchúrsáilte?"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "Treoracha athchúrsála"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
+        "label": "Cion athchúrsáilte sa phacáistíocht (%)",
         "placeholder": "e.g., 30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "Athlíonadh ar fáil?"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "Díolta trí stáisiún athlíonta?",
+        "help": "Tá a ndualgas iompróra sonraí féin ag pointí athlíonta faoi Airteagal 21(4) de Rialachán (EU) 2026/405."
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "Clárú freagrachta táirgeora pacáistíochta in aghaidh an mhargaidh",
+        "help": "Líne amháin in aghaidh an mhargaidh.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "Údarú is infheidhme nó bunús dlíthiúil idirthréimhseach"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "Substaintí gníomhacha agus úsáidí údaraithe"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
+        "label": "Maímh chomhshaoil a dhéantar ar an táirge nó ar an bpacáistíocht",
         "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Tagairt d'fhianaise an dearbhaithe",
+        "placeholder": "Tagairt staidéir, deimhnithe nó comhlachta fíorúcháin do gach maíomh"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "An seachnaíonn maímh téarmaí cineálacha comhshaoil?",
+        "help": "Tá maímh chineálacha amhail éiceabhách nó in-bhithdhíghrádaithe srianta ón 27 Meán Fómhair 2026 faoi Threoir (EU) 2024/825."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "Uimhir cheadúnais Éicilipéad an AE",
+        "help": "Cuir isteach uimhir chlárúcháin an cheadúnais ach amháin má tá ceadúnas Éicilipéad an AE ag an táirge. Ní thaispeántar an suaitheantas ar an bpas poiblí ach amháin nuair a chuirtear uimhir isteach."
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "Measúnú déanta ar shrianta agus ar dhualgais REACH",
+        "help": "Déan athbhreithniú ar na srianta in Iarscríbhinn XVII agus ar na dualgais a bhaineann leis na substaintí comhábhair."
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "Tá an lipéad fisiceach agus an fhaisnéis sábháilteachta a soláthraíodh seiceáilte agam"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "Sonraíonn an lipéad go bhfuil an táirge le haghaidh úsáide gairmiúla amháin"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "Nasc chuig an bpas roimhe seo, nuair a thagann an taifead seo in ionad ceann eile",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "Dáta athbhreithnithe faisnéise an táirge",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "Tagairt d'fhianaise comhréireachta an mhonaróra"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "Tagairt d'athbhreithniú ar ábhar na samhla"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "Tagairt d'athbhreithniú ar an bpróiseas monaraíochta"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "Aitheantóir táirge leanúnach",
+        "help": "Cuir isteach an t-aitheantóir iarbhír. Ní aitheantóir é ID taifid inmheánach a eisítear faoi na caighdeáin dá dtagraítear in ESPR."
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "Scéim aitheantóra agus eisitheoir"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "Aitheantóir oibreora uathúil an mhonaróra"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "Soláthraí seirbhíse pas a bhfuil an cúltaca aige (URL)",
+        "help": "Ainmnigh soláthraí atá socraithe agat i ndáiríre. Ní chruthaíonn an aip seirbhís chúltaca.",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "Tagairt do chomhaontú seirbhíse cúltaca"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "Cód tráchtearraí custaim"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "Cód tráchtearraí (Rialachán (EEC) No 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "An fáth nach bhfuil feidhm ag aon chód tráchtearraí"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "Eisíonn an monaróir an pas seo faoina fhreagracht aonair"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "Ráiteas gur léiríodh comhlíonadh Rialachán (EU) 2026/405",
+        "help": "Ná comhlánaigh é seo ach amháin tar éis mheasúnú an mhonaróra féin. Ní ghineann an aip ráiteas comhréireachta riamh."
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "Dlí eile de chuid an Aontais a bhfuil feidhm aige maidir leis an táirge"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "An dáta is déanaí a cuireadh an tsamhail ar an margadh",
+        "help": "An túsphointe don dualgas infhaighteachta deich mbliana.",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "An áit a gcuirtear an t-iompróir sonraí",
+        "help": "Airteagal 21(4): i láthair go fisiceach, doscriosta, meaisín-inléite agus infheicthe roimh an gceannach, leis an ráiteas \"Scan, le do thoil, le haghaidh faisnéis níos cuimsithí ar an táirge\". Riachtanach freisin ag stáisiúin athlíonta agus i gcian díolacháin."
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "Comhlíonann an t-iompróir sonraí na ceanglais seo"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "Déantar athbhreithniú ar fhoclaíocht an lipéid agus na sábháilteachta i ngach teanga den spriocmhargadh"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "Bealach nochta substaintí",
+        "help": "Níl feidhm ag an díolúine ach amháin maidir le glantaigh agus dromchlaghníomhaithe tionsclaíocha agus institiúideacha i gcás ina soláthraíonn bileog sonraí sábháilteachta choibhéiseach faoi Airteagal 31 de REACH an fhaisnéis."
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "Gach substaint a cuireadh leis d'aon ghnó agus leasaithigh iarmharacha a cheanglaítear ar an lipéad",
+        "help": "Sainaithin substaintí mar a cheanglaítear le hAirteagal 18(3) de Rialachán (EC) No 1272/2008. Ná cuir isteach tiúchain ná sonraí foirmlithe rúnda. Tá gach a shábháiltear sa chatagóir seo poiblí."
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "Bunús le heaspa substaintí le liostú"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "Tá an liosta iomlán, folaíonn sé leasaithigh iarmharacha cháilitheacha agus úsáideann sé céannachtaí a measúnaíodh faoi Airteagal 18(3) de CLP"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "Úsáidte lasmuigh de réimse an teaghlaigh ag pearsanra speisialaithe amháin"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "Tá faisnéis choibhéiseach faoi shubstaintí soláthraithe iarbhír i mbileog sonraí sábháilteachta faoi Airteagal 31 de REACH"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "URL na bileoige sonraí sábháilteachta coibhéisí",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "Teangacha na bileoige sonraí sábháilteachta coibhéisí"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "Dáta athbhreithnithe na bileoige sonraí sábháilteachta coibhéisí",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "An gcuirtear miocrorgánaigh leis d'aon ghnó?",
+        "help": "Ní bhaineann bealach na bileoige sonraí sábháilteachta coibhéisí liosta na miocrorgánach riamh."
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "Gach miocrorgánach a cuireadh leis d'aon ghnó",
+        "help": "Tabhair ainm nó cód géinis, speicis agus tréithchineáil do gach miocrorgánach."
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "Tagairt do mheasúnú sábháilteachta (Iarscríbhinn II)"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "Seilfré agus coinníollacha stórála",
+        "help": "Taispeánann lipéad glantaigh ina bhfuil miocrorgánaigh an tseilfré."
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "Ceaptha le húsáid ar dhromchlaí i dteagmháil le bia?",
+        "help": "Mura bhfuil measúnú riosca déanta ar an táirge mar tháirge atá sábháilte don úsáid seo, deir an lipéad nár cheart é a úsáid ar dhromchlaí a bhíonn i dteagmháil le bia."
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "Réamhchúraimí agus treoracha do dhromchlaí a bhíonn i dteagmháil le bia"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "Glantach níocháin",
+        "laundry_additive": "Breiseán níocháin nó réamh-niteachán",
+        "machine_dishwashing": "Glantach miasniteora",
+        "dishwasher_additive": "Cúnamh sruthlaithe nó breiseán miasniteora",
+        "hand_dishwashing": "Glantach níocháin soithí láimhe",
+        "all_purpose": "Glanadh uilechuspóireach nó glantóir dromchla",
+        "kitchen": "Glantóir cistine",
+        "bathroom": "Glantóir seomra folctha",
+        "toilet": "Glantóir leithris",
+        "glass": "Glantóir gloine",
+        "floor": "Glantóir urláir",
+        "descaler": "Díscálaitheoir",
+        "bleach": "Tuar",
+        "other": "Glantach eile"
       },
       "productForm": {
-        "liquid": "Liquid",
-        "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
-        "spray": "Spray",
-        "wipe": "Wipe",
-        "paste": "Paste",
-        "other": "Other"
+        "liquid": "Leacht",
+        "gel": "Glóthach",
+        "powder": "Púdar",
+        "tablet": "Táibléad",
+        "capsule": "Capsúl nó cochán",
+        "spray": "Sprae",
+        "wipe": "Snaois",
+        "paste": "Taos",
+        "other": "Eile"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "Tá",
+        "no": "Níl",
+        "review": "Measúnú ag teastáil"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "Tomhaltóirí, lena n-áirítear úsáid mheasctha tomhaltóra agus ghairmiúil",
+        "professional": "Úsáid ghairmiúil amháin",
+        "industrial": "Úsáid thionsclaíoch agus institiúideach amháin"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "Faisnéis reatha an táirge",
+        "annex_vi": "Tacar sonraí iomlán Iarscríbhinn VI do rialacha 2029"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Tá",
+        "no": "Níl"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "Neamh-aicmithe mar ghuaiseach",
+        "environment": "Guaiseacha comhshaoil amháin",
+        "health_physical": "Guaiseacha sláinte nó fisiceacha, le guaiseacha comhshaoil nó gan iad",
+        "review": "Measúnú ag teastáil"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "Dainséar",
+        "warning": "Rabhadh",
+        "not_applicable": "Neamhbhainteach tar éis measúnaithe"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 Buama ag pléascadh",
+        "ghs02": "GHS02 Lasair",
+        "ghs03": "GHS03 Lasair os cionn ciorcail",
+        "ghs04": "GHS04 Sorcóir gáis",
+        "ghs05": "GHS05 Creimeadh",
+        "ghs06": "GHS06 Cloigeann agus croschnámha",
+        "ghs07": "GHS07 Pointe exclamation",
+        "ghs08": "GHS08 Guais sláinte",
+        "ghs09": "GHS09 Comhshaol",
+        "none": "Níl feidhm ag aon phicteagram"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "Fógra ag teastáil",
+        "exempt": "Díolúine dhoiciméadaithe",
+        "review": "Measúnú ag teastáil"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "Tíolactha do na margaí ábhartha",
+        "pending": "Ar feitheamh"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "Ní mór í a sholáthar",
+        "on_request": "Ní mór í a bheith ar fáil ach í a iarraidh",
+        "not_required": "Ní theastaíonn tar éis measúnaithe",
+        "review": "Measúnú ag teastáil"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "Fosfáití",
+        "phosphonates": "Fosfónáití",
+        "anionic_surfactants": "Dromchlaghníomhaithe aniónacha",
+        "cationic_surfactants": "Dromchlaghníomhaithe cataiónacha",
+        "amphoteric_surfactants": "Dromchlaghníomhaithe amfaiteireacha",
+        "nonionic_surfactants": "Dromchlaghníomhaithe neamh-ianacha",
+        "oxygen_bleach": "Oibreáin tuartha ocsaigin-bhunaithe",
+        "chlorine_bleach": "Oibreáin tuartha clóirín-bhunaithe",
+        "edta": "EDTA agus a shalainn",
+        "nta": "NTA agus a shalainn",
+        "phenols": "Feanóil agus feanóil halaiginithe",
+        "paradichlorobenzene": "Paradéchlóraibeinséin",
+        "aromatic_hydrocarbons": "Hidreacarbóin aramatacha",
+        "aliphatic_hydrocarbons": "Hidreacarbóin alafatacha",
+        "halogenated_hydrocarbons": "Hidreacarbóin halaiginithe",
+        "soap": "Gallúnach",
+        "zeolites": "Séailítí",
+        "polycarboxylates": "Polacarbocsaláití"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "Níos lú ná 5%",
+        "5to15": "5% nó níos mó ach níos lú ná 15%",
+        "15to30": "15% nó níos mó ach níos lú ná 30%",
+        "gte30": "30% agus níos mó"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "Einsímí",
+        "micro_organisms": "Miocrorgánaigh",
+        "optical_brighteners": "Gileádóirí optúla",
+        "perfumes": "Cumhráin",
+        "disinfectants": "Dífhabhtáin (rialacha reatha go dtí 23 Meán Fómhair 2029)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Tá",
+        "no": "Níl",
+        "unknown": "Anaithnid"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "Oll-lasta",
+        "heavy_duty_short": "Oll-lasta do thimthriallta gearra",
+        "light_duty": "Éadl-lasta nó fabraicí mínáireacha"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "MilliLíotair",
+        "g": "Gram",
+        "units": "Aonaid (táibléid, capsúil nó cochaill)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
-        "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "other_plastic": "Plaisteach eile",
+        "metal": "Miotal",
+        "glass": "Gloine",
+        "paper_cardboard": "Páipéar nó cairtchlár",
+        "composite": "Ábhar ilchodach",
+        "water_soluble_film": "Scannán uisce-thuasslagtha",
+        "other": "Eile"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "Athbhreithnithe ag an soláthraí",
+        "review": "Measúnú ag teastáil"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "Infheidhme",
+        "not_applicable": "Neamh-infheidhme tar éis measúnaithe"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "Liosta iomlán na substaintí",
+        "equivalent_sds": "Bileog sonraí sábháilteachta choibhéiseach (úsáid thionsclaíoch agus institiúideach amháin)",
+        "no_added_substances": "Gan aon substaintí le liostú tar éis measúnaithe"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "D'fhéadfadh an táirge seo a bheith lasmuigh de shainmhíniú an ghlantaigh in Airteagal 2(1) de Rialachán (EU) 2026/405. Seiceáil an raon feidhme sula n-úsáideann tú an chatagóir seo.",
+      "biocidal": "Maidir le maímh dhífhabhtúcháin nó fhrithmhiocróbacha, teastaíonn údarú táirge bithicídeach faoi Rialachán (EU) No 528/2012.",
+      "assessmentNeeded": "Níl an measúnú seo críochnaithe. Réitigh é sula mbeidh tú ag brath ar an bpas.",
+      "microparticles": "Seiceáil Rialachán (EU) 2023/2055 maidir le micreacáithníní polaiméire sintéiseacha sula gcuirtear an táirge seo ar an margadh. Ní mór freagra ‘anaithnid’ a réiteach leis an soláthraí.",
+      "phosphorusLaundry": "Níl cion iomlán fosfair de {{value}} g faoi bhun na teorann 0.5 g do ghlantach níocháin do thomhaltóirí in uisce crua (Iarscríbhinn III de Rialachán (EU) 2026/405).",
+      "phosphorusDishwasher": "Níl cion iomlán fosfair de {{value}} g faoi bhun na teorann 0.3 g do ghlantach miasniteoirí uathoibríocha do thomhaltóirí (Iarscríbhinn III de Rialachán (EU) 2026/405).",
+      "percentageRange": "Ní mór do chéatadán a bheith idir 0 agus 100. D'iontráil tú {{value}}.",
+      "positiveNumber": "Iontráil uimhir is mó ná nialas. D'iontráil tú {{value}}.",
+      "allergensMissing": "D'fhreagair tú ‘Tá’, ach níl aon ailléirgin roghnaithe. Roghnaigh gach ailléirgin ón liosta oifigiúil.",
+      "ufiFormat": "Tá ceithre ghrúpa de cheithre charachtar in UFI, mar shampla N1QV-R02N-J00M-WQD5. Seiceáiltear an fhormáid, ach ní sheiceáiltear tíolacadh chuig ionad nimhe.",
+      "urlFormat": "Úsáid seoladh gréasáin iomlán a thosaíonn le http:// nó https://.",
+      "emailFormat": "Iontráil seoladh ríomhphoist bailí.",
+      "dateFormat": "Úsáid dáta bailí i bhformáid YYYY-MM-DD.",
+      "microorganismSafety": "Cuirtear miocrorgánaigh leis, ach ní iontráiltear aon tagairt do mheasúnú sábháilteachta."
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "Glantaigh DPP: séanadh comhlíontachta",
+      "text": "Beidh feidhm ag Rialachán (EU) 2026/405 maidir le glantaigh agus dromchlaghníomhaithe ón 23 Meán Fómhair 2029. Tá a rialacha maidir le pas digiteach táirge, cearta rochtana agus sonraí iompróra sonraí fós le socrú le gníomh cur chun feidhme, agus go dtí sin, tá feidhm ag Rialachán (EC) No 648/2004. Bailíonn an uirlis seo faisnéis faoin táirge agus ullmhaíonn sí sonraí pas. Ní deimhniú ná formheas é agus níor cheart caitheamh leis mar chomhairle dlí chríochnaitheach. Tá gach rud a shábháiltear sa chatagóir seo poiblí."
     }
   }
 }

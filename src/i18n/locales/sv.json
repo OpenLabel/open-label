@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "Produktens identitet",
+        "description": "Produkt, modell och spårbarhet"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "Vem som är ansvarig",
+        "description": "Tillverkare, importör och befullmäktigad EU-representant, som separata parter"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "Faroklassificering och säkerhetsinformation",
+        "description": "CLP-klassificering, märkningens faroinformation, giftinformationscentral och säkerhetsdatablad"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "Ingredienser och märkningsinformation",
+        "description": "Märkningsinnehåll enligt bilaga V till förordning (EU) 2026/405 och gällande regler"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "Säker användning och dosering",
+        "description": "Doserings- och användningsinformation enligt bilaga V del B"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "Förpackning och återvinning",
+        "description": "Förpackning, återvinningsbarhet och påfyllningar"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "Bedömning av biocidprodukt",
+        "description": "Gäller när desinficerande eller antimikrobiella påståenden görs"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "Miljöpåståenden",
+        "description": "Stöder direktiv (EU) 2024/825, som gäller från och med den 27 september 2026"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "Leverantörsgranskning och förberedelse av pass",
+        "description": "Kontroller som leverantören genomför. Appen kan inte verifiera dem."
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "Bilaga VI: produktens identitet och tillverkarförsäkran",
+        "description": "Förberedelse för det digitala produktpass som krävs från och med den 23 september 2029. En fullständig datauppsättning är inte en certifiering, en verifierad identifierare eller en anmälan till ett register."
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "Bilaga VI: ämnen",
+        "description": "Fullständig förteckning över avsiktligt tillsatta ämnen (bilaga VI del A punkt h)"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "Bilaga VI: mikroorganismer",
+        "description": "Alla avsiktligt tillsatta mikroorganismer (bilaga VI del A punkt i)"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Varumärke"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "Produkttyp"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "Produkttyp (specificera)"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "Produktform"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "Är produkten avsedd för rengöring, blötläggning, sköljning eller blekning av textilier, disk eller ytor?",
+        "help": "Se artikel 2.1 i förordning (EU) 2026/405. Färger, lim, lösningsmedel och produkter som inte rengör faller utanför denna kategori."
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "Anledning till att produkten faller utanför definitionen av tvätt- och rengöringsmedel"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "Vem är produkten avsedd för?",
+        "help": "Industriell och institutionell användning innebär att produkten endast används utanför privathushåll av specialiserad personal."
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "Produktmodellidentifierare",
+        "help": "Ett pass omfattar en modell. En ändring av formulering eller produktion som medför en ändring av märkningen kan göra det till en ny modell."
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "Typ-, parti- eller satsnummer",
+        "help": "Märkningen måste innehålla ett typnummer, partinummer eller annat spårbarhetselement."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "t.ex. 3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "label": "Nominell mängd med enhet",
+        "placeholder": "t.ex. 1,5 L, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "label": "EU-marknader och märkningsspråk",
+        "help": "Märknings- och säkerhetsinformation måste finnas på det eller de språk som krävs på varje marknad.",
+        "placeholder": "t.ex. Frankrike (franska), Tyskland (tyska)"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "Informationsprofil",
+        "help": "Förordning (EU) 2026/405 gäller från och med den 23 september 2029. Välj datauppsättningen i bilaga VI för att förbereda framtida passdata. Att fylla i den gör inte ett pass förenligt med kraven eller certifierat."
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "Biocid- eller desinficeringspåståenden?",
+        "help": "Desinficerande eller antimikrobiella påståenden kräver ett godkännande som biocidprodukt enligt förordning (EU) No 528/2012."
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "Tillverkarens juridiska namn",
+        "help": "Märkningen visar tillverkarens namn, postadress, elektroniska adress och telefonnummer. Postadressen måste vara en enda kontaktpunkt inom unionen."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Gatuadress"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postnummer"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Ort"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisk adress (e-post)",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "label": "Telefonnummer",
+        "placeholder": "t.ex. +33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Är tillverkaren etablerad utanför EU?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "Importörens juridiska namn",
+        "help": "När tillverkaren är etablerad utanför EU krävs även importörens kontaktuppgifter."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Gatuadress"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postnummer"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Ort"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronisk adress (e-post)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "Befullmäktigad EU-representant: juridiskt namn",
+        "help": "En tillverkare som är etablerad utanför EU måste utse en befullmäktigad representant (artikel 9 i förordning (EU) 2026/405)."
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Befullmäktigad EU-representant: adress",
+        "placeholder": "Registrerad adress inom Europeiska unionen"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "Befullmäktigad EU-representant: elektronisk adress (e-post)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "Bedömning av CLP-klassificering",
+        "help": "Använd den klassificering som faktiskt har bedömts för denna blandning enligt förordning (EC) No 1272/2008. Härled den inte från pH-värdet eller piktogrammen."
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "Kompletterande märkningsuppgifter",
+        "help": "Till exempel EUH208, där det är tillämpligt."
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "Signalord"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "GHS-piktogram"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "label": "Faroangivelser",
+        "help": "Ange lydelsen exakt som på den godkända märkningen. Använd översättningsknappen för varje marknadsspråk. Denna lydelse översätts aldrig automatiskt.",
+        "placeholder": "t.ex. H315 Orsakar hudirritation"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "label": "Skyddsangivelser",
+        "help": "Ange lydelsen exakt som på den godkända märkningen. Använd översättningsknappen för varje marknadsspråk. Denna lydelse översätts aldrig automatiskt.",
+        "placeholder": "t.ex. P280 Använd skyddshandskar"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "Anmälan till giftinformationscentral (CLP bilaga VIII)",
+        "help": "UFI och anmälan beror på hälso- eller fysikaliska faror och tillämpliga undantag. Enbart miljöfaror utlöser inte anmälningsplikt."
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "Skäl och rättslig grund för undantaget"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Unik formuleringsidentifierare (UFI)",
+        "help": "Fyra grupper med fyra tecken. Formatet kontrolleras, men appen kan inte verifiera en anmälan till en giftinformationscentral.",
+        "placeholder": "t.ex. N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "Anmälningar till giftinformationscentral"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "Krav på tillhandahållande av säkerhetsdatablad",
+        "help": "En webblänk uppfyller inte i sig skyldigheten att tillhandahålla ett säkerhetsdatablad enligt artikel 31 i REACH."
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "URL till offentligt säkerhetsdatablad",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
-        "placeholder": "e.g., English, French, German"
+        "label": "Språk för säkerhetsdatablad",
+        "placeholder": "t.ex. engelska, franska, tyska"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "Revisionsdatum för säkerhetsdatablad",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "Nödkontakt (giftinformationscentral eller dygnetruntnummer)",
+        "placeholder": "Telefonnummer för nödsituationer"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "Beståndsdelar som tillsatts i en koncentration över 0,2 viktprocent",
+        "help": "Markera varje klass som tillsatts i en koncentration över 0,2 viktprocent och välj sedan dess viktintervall nedan (bilaga V del A punkt 1 h i)."
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "Fosfater: viktintervall"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "Fosfonater: viktintervall"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "Anjoniska tensider: viktintervall"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "Katoniska tensider: viktintervall"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "Amfotera tensider: viktintervall"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "Nonjoniska tensider: viktintervall"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "Syrebaserade blekmedel: viktintervall"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "Klorbaserade blekmedel: viktintervall"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA och salter därav: viktintervall"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA och salter därav: viktintervall"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "Fenoler och halogenerade fenoler: viktintervall"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "Paradichlorobenzene: viktintervall"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "Aromatiska kolväten: viktintervall"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "Alifatiska kolväten: viktintervall"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "Halogenerade kolväten: viktintervall"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "Tvål: viktintervall"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "Zeoliter: viktintervall"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "Polykarboxylater: viktintervall"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "Beståndsdelar som tillsatts oavsett koncentration",
+        "help": "Bilaga V del A punkt 1 h ii. Desinfektionsmedel förtecknas enligt gällande regler och är inte längre en förtecknad klass från och med den 23 september 2029."
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "Innehåller produkten konserveringsmedel?",
+        "help": "Konserveringsmedel förtecknas enligt bilaga V del A punkt 1 h iii, om de inte redan är märkta enligt artikel 18.3 b i CLP eller artikel 58 i biocidförordningen."
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "label": "Konserveringsmedel",
+        "help": "Använd INCI-namnet där det är möjligt.",
+        "placeholder": "t.ex. Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "Doftämnesallergener tillsatta i en koncentration över 0,01 viktprocent?",
+        "help": "Allergener från förteckningen i bilaga V del D som avsiktligt tillsätts i en koncentration över 0,01 viktprocent ska anges på märkningen, om de inte redan är märkta enligt CLP."
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "Innehåller doftämnesallergener",
+        "help": "Välj varje allergen från den officiella förteckningen med 105 poster."
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "Offentlig webbsida med ingrediensförteckning",
+        "help": "Gällande regler (förordning (EC) No 648/2004, bilaga VII del D) kräver en uppdaterad offentlig ingrediensförteckning för konsumentprodukter. Den behöver inga procentintervall eller CAS-nummer.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "Motsvarande ingrediensinformation som tillhandahålls yrkesmässiga användare"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
-        "placeholder": "e.g., OECD 301 series"
+        "label": "Testmetod för tensiders bionedbrytbarhet",
+        "placeholder": "t.ex. OECD 301-serien"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "Referens till bevis för bionedbrytbarhet",
+        "help": "Ange namnet på testrapporten eller leverantörsdeklarationen. Ladda inte upp eller klistra in konfidentiella filer."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "Innehåller avsiktligt tillsatta syntetiska polymermikropartiklar?",
+        "help": "Förordning (EU) 2023/2055 begränsar dessa enligt post 78 i bilaga XVII till REACH. Tvätt- och rengöringsmedel omfattas från och med den 17 oktober 2028."
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "Bruksanvisning och särskilda försiktighetsåtgärder",
+        "help": "Metod, lämpliga textilier eller ytor och eventuella särskilda försiktighetsåtgärder."
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "Typ av tvättmedel",
+        "help": "Avgör standardtvättmängden: 4,5 kg torr tvätt för kulörtvättmedel, 2,5 kg för kulörtvättmedel för korta tvättprogram och för fintvättmedel."
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "Doseringsenhet"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
-        "placeholder": "e.g., 60"
+        "label": "Dosering för mjukt vatten (per standardtvättmängd)",
+        "placeholder": "t.ex. 60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
-        "placeholder": "e.g., 75"
+        "label": "Dosering för medelhårt vatten (per standardtvättmängd)",
+        "placeholder": "t.ex. 75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
-        "placeholder": "e.g., 90"
+        "label": "Dosering för hårt vatten (per standardtvättmängd)",
+        "placeholder": "t.ex. 90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "Dosering för tvättprocesser med en eller två cykler",
+        "help": "Bilaga V del B punkt 1 a kräver dosering för tvättprocesser med en eller två cykler."
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "Antal standardtvättmängder per förpackning (medelhårt vatten, 2,5 millimol CaCO3 per liter)",
+        "help": "För påfyllningar, ange antalet tvättmängder per 1 liter eller 1 kg produkt. Behövs inte för påfyllningar i enheter."
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "Mätkoppens kapacitet",
+        "help": "Kapacitet för eventuell medföljande mätkopp, med tydliga markeringar för doser för mjukt, medelhårt och hårt vatten."
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "Standarddosering för huvudprogrammet",
+        "help": "För normalt smutsad disk i en fullastad diskmaskin med 12 kuvert."
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "Anpassning av dosen efter vattenhårdhet"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "Rekommenderad spädning och mängd per ytenhet",
+        "help": "Bilaga V del B punkt 4: ange rekommenderad spädning och mängd per ytenhet, eller andra bruksanvisningar, så att produkten inte överanvänds."
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "Totalfosfor i den rekommenderade dosen (gram)",
+        "help": "Gränsvärden i bilaga III: under 0,5 g per standardtvättmängd i hårt vatten och under 0,3 g per standarddiskmaskinsdos."
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "Förvaring och avfallshantering"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "Primärförpackningens material"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "Är förpackningen återvinningsbar?"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "Återvinningsanvisningar"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
-        "placeholder": "e.g., 30"
+        "label": "Återvunnet innehåll i förpackningen (%)",
+        "placeholder": "t.ex. 30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "Finns påfyllning?"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "Säljs via påfyllningsstation?",
+        "help": "Påfyllningsstationer har sin egen skyldighet att tillhandahålla en databärare enligt artikel 21.4 i förordning (EU) 2026/405."
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "Registrering för förpackningsproducentansvar per marknad",
+        "help": "En rad per marknad.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "Tillämpligt godkännande eller laglig övergångsgrund"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "Verksamma ämnen och godkända användningsområden"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "label": "Miljöpåståenden på produkten eller förpackningen",
+        "placeholder": "t.ex. \"Flaska tillverkad av 30 % återvunnen plast\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referens till bevis som styrker påståenden",
+        "placeholder": "Referens till studie, certifikat eller verifieringsorgan för varje påstående"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "Undviker påståendena generella miljötermer?",
+        "help": "Generella påståenden som \"miljövänlig\" eller \"biologiskt nedbrytbar\" är begränsade från och med den 27 september 2026 enligt direktiv (EU) 2024/825."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "Licensnummer för EU-miljömärket",
+        "help": "Ange endast licensens registreringsnummer om produkten innehar en licens för EU-miljömärket. Märket visas på det offentliga passet endast när ett nummer har angetts."
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "Bedömning av REACH-begränsningar och -skyldigheter",
+        "help": "Granska begränsningarna i bilaga XVII och de skyldigheter som gäller för de ingående ämnena."
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "Jag har kontrollerat den fysiska märkningen och den medföljande säkerhetsinformationen"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "Märkningen anger att produkten endast är för yrkesmässig användning"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "Länk till föregående pass, när denna post ersätter en annan",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "Granskningsdatum för produktinformation",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "Referens till tillverkarens bevis på överensstämmelse"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "Revisionsreferens för produktinnehåll"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "Revisionsreferens för tillverkningsprocess"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "Beständig produktidentifierare",
+        "help": "Ange den verkliga identifieraren. Ett internt post-ID är inte en identifierare som utfärdats enligt de standarder som avses i ESPR."
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "Identifieringssystem och utfärdare"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "Tillverkarens unika operatörsidentifierare"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "Leverantör av passtjänst som innehar säkerhetskopian (URL)",
+        "help": "Ange en leverantör som du faktiskt har avtal med. Appen skapar inte en säkerhetskopieringstjänst.",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "Referens till avtal om säkerhetskopieringstjänst"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "Tullkod"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "Varukod (förordning (EEC) No 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "Anledning till att ingen varukod är tillämplig"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "Tillverkaren utfärdar detta pass på eget ansvar"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "Försäkran om att överensstämmelse med förordning (EU) 2026/405 har visats",
+        "help": "Fyll i detta först efter tillverkarens egen bedömning. Appen genererar aldrig en försäkran om överensstämmelse."
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "Annan unionslagstiftning som är tillämplig på produkten"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "Senaste datum då modellen släpptes ut på marknaden",
+        "help": "Startpunkten för den tioåriga tillgänglighetsskyldigheten.",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "Var databäraren är placerad",
+        "help": "Artikel 21.4: fysiskt närvarande, outplånlig, maskinläsbar och synlig före köp, med texten \"Skanna för mer omfattande information om produkten\". Krävs även på påfyllningsstationer och vid distansförsäljning."
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "Databäraren uppfyller dessa krav"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "Märknings- och säkerhetsinformation har granskats på varje målmarknads språk"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "Metod för att redovisa ämnen",
+        "help": "Undantaget gäller endast för industriella och institutionella tvätt- och rengöringsmedel och tensider där motsvarande information tillhandahålls i ett säkerhetsdatablad enligt artikel 31 i REACH."
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "Alla avsiktligt tillsatta ämnen och märkningspliktiga överförda konserveringsmedel",
+        "help": "Identifiera ämnen enligt kraven i artikel 18.3 i förordning (EC) No 1272/2008. Ange inte koncentrationer eller konfidentiella formuleringsdata. Allt som sparas i denna kategori är offentligt."
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "Grund för att inga ämnen behöver förtecknas"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "Förteckningen är fullständig, inkluderar kvalificerande överförda konserveringsmedel och använder identiteter som bedömts enligt artikel 18.3 i CLP"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "Används endast utanför privathushåll av specialiserad personal"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "Motsvarande ämnesinformation har faktiskt tillhandahållits i ett säkerhetsdatablad enligt artikel 31 i REACH"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "URL till motsvarande säkerhetsdatablad",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "Språk för motsvarande säkerhetsdatablad"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "Revisionsdatum för motsvarande säkerhetsdatablad",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "Är mikroorganismer avsiktligt tillsatta?",
+        "help": "Metoden med motsvarande säkerhetsdatablad tar aldrig bort förteckningen över mikroorganismer."
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "Alla avsiktligt tillsatta mikroorganismer",
+        "help": "Ange släkte, art och stamnamn eller kod för varje mikroorganism."
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "Referens till säkerhetsbedömning (bilaga II)"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "Hållbarhetstid och förvaringsförhållanden",
+        "help": "Märkningen på ett tvätt- och rengöringsmedel som innehåller mikroorganismer ska ange hållbarhetstiden."
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "Avsedd för användning på ytor som kommer i kontakt med livsmedel?",
+        "help": "Om produkten inte har riskbedömts som säker för denna användning ska märkningen ange att den inte ska användas på ytor som kommer i kontakt med livsmedel."
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "Försiktighetsåtgärder och anvisningar för ytor som kommer i kontakt med livsmedel"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "Tvättmedel",
+        "laundry_additive": "Tvättmedelstillsats eller förtvättmedel",
+        "machine_dishwashing": "Maskindiskmedel",
+        "dishwasher_additive": "Sköljmedel eller diskmedelstillsats",
+        "hand_dishwashing": "Handdiskmedel",
+        "all_purpose": "Allrengöringsmedel eller ytrengöringsmedel",
+        "kitchen": "Köksrengöringsmedel",
+        "bathroom": "Badrumsrengöringsmedel",
+        "toilet": "Toalettrengöringsmedel",
+        "glass": "Glasrengöringsmedel",
+        "floor": "Golvrengöringsmedel",
+        "descaler": "Avkalkningsmedel",
+        "bleach": "Blekmedel",
+        "other": "Annat tvätt- och rengöringsmedel"
       },
       "productForm": {
-        "liquid": "Liquid",
+        "liquid": "Flytande",
         "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
-        "spray": "Spray",
-        "wipe": "Wipe",
-        "paste": "Paste",
-        "other": "Other"
+        "powder": "Pulver",
+        "tablet": "Tablett",
+        "capsule": "Kapsel eller pod",
+        "spray": "Sprej",
+        "wipe": "Våtservett",
+        "paste": "Pasta",
+        "other": "Annan"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "Ja",
+        "no": "Nej",
+        "review": "Bedömning krävs"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "Konsumenter, inklusive blandad konsument- och yrkesmässig användning",
+        "professional": "Endast för yrkesmässig användning",
+        "industrial": "Endast för industriell och institutionell användning"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "Aktuell produktinformation",
+        "annex_vi": "Fullständig datauppsättning enligt bilaga VI för 2029 års regler"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ja",
+        "no": "Nej"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "Ej klassificerad som farlig",
+        "environment": "Endast miljöfaror",
+        "health_physical": "Hälso- eller fysikaliska faror, med eller utan miljöfaror",
+        "review": "Bedömning krävs"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "Fara",
+        "warning": "Varning",
+        "not_applicable": "Ej tillämpligt efter bedömning"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 Exploderande bomb",
+        "ghs02": "GHS02 Flamma",
+        "ghs03": "GHS03 Flamma över cirkel",
+        "ghs04": "GHS04 Gasflaska",
+        "ghs05": "GHS05 Frätande",
+        "ghs06": "GHS06 Dödskalle med korslagda ben",
+        "ghs07": "GHS07 Utropstecken",
+        "ghs08": "GHS08 Hälsofara",
+        "ghs09": "GHS09 Miljöfarlig",
+        "none": "Inget piktogram är tillämpligt"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "Anmälan krävs",
+        "exempt": "Dokumenterat undantag",
+        "review": "Bedömning krävs"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "Inlämnad för de relevanta marknaderna",
+        "pending": "Pågående"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "Ska tillhandahållas",
+        "on_request": "Ska finnas tillgängligt på begäran",
+        "not_required": "Krävs inte efter bedömning",
+        "review": "Bedömning krävs"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "Fosfater",
+        "phosphonates": "Fosfonater",
+        "anionic_surfactants": "Anjoniska tensider",
+        "cationic_surfactants": "Katjoniska tensider",
+        "amphoteric_surfactants": "Amfotera tensider",
+        "nonionic_surfactants": "Nonjoniska tensider",
+        "oxygen_bleach": "Syrebaserade blekmedel",
+        "chlorine_bleach": "Klorbaserade blekmedel",
+        "edta": "EDTA och salter därav",
+        "nta": "NTA och salter därav",
+        "phenols": "Fenoler och halogenerade fenoler",
+        "paradichlorobenzene": "Paradichlorbenzen",
+        "aromatic_hydrocarbons": "Aromatiska kolväten",
+        "aliphatic_hydrocarbons": "Alifatiska kolväten",
+        "halogenated_hydrocarbons": "Halogenerade kolväten",
+        "soap": "Tvål",
+        "zeolites": "Zeoliter",
+        "polycarboxylates": "Polykarboxylater"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "Mindre än 5 %",
+        "5to15": "5 % eller mer men mindre än 15 %",
+        "15to30": "15 % eller mer men mindre än 30 %",
+        "gte30": "30 % och mer"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "Enzymer",
+        "micro_organisms": "Mikroorganismer",
+        "optical_brighteners": "Optiska vitmedel",
+        "perfumes": "Parfymer",
+        "disinfectants": "Desinfektionsmedel (nuvarande regler till och med den 23 september 2029)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ja",
+        "no": "Nej",
+        "unknown": "Okänt"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "Kultvätt",
+        "heavy_duty_short": "Kultvätt för korta program",
+        "light_duty": "Fintvätt eller ömtåliga textilier"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "Milliliter",
+        "g": "Gram",
+        "units": "Enheter (tabletter, kapslar eller poder)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
-        "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "other_plastic": "Annan plast",
+        "metal": "Metall",
+        "glass": "Glas",
+        "paper_cardboard": "Papper eller kartong",
+        "composite": "Kompositmaterial",
+        "water_soluble_film": "Vattenlöslig film",
+        "other": "Annat"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "Granskad av leverantören",
+        "review": "Bedömning krävs"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "Tillämplig",
+        "not_applicable": "Ej tillämplig efter bedömning"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "Fullständig förteckning över ämnen",
+        "equivalent_sds": "Motsvarande säkerhetsdatablad (endast för industriell och institutionell användning)",
+        "no_added_substances": "Inga ämnen att förteckna efter bedömning"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "Denna produkt faller eventuellt utanför definitionen av tvätt- och rengöringsmedel i artikel 2.1 i förordning (EU) 2026/405. Kontrollera tillämpningsområdet innan du använder denna kategori.",
+      "biocidal": "Desinficerande eller antimikrobiella påståenden kräver ett godkännande som biocidprodukt enligt förordning (EU) No 528/2012.",
+      "assessmentNeeded": "Denna bedömning är inte slutförd. Slutför den innan du förlitar dig på passet.",
+      "microparticles": "Kontrollera förordning (EU) 2023/2055 om syntetiska polymermikropartiklar innan produkten släpps ut på marknaden. Ett okänt svar måste klaras ut med leverantören.",
+      "phosphorusLaundry": "En total fosforhalt på {{value}} g understiger inte gränsvärdet på 0,5 g för ett konsumenttvättmedel i hårt vatten (bilaga III i förordning (EU) 2026/405).",
+      "phosphorusDishwasher": "En total fosforhalt på {{value}} g understiger inte gränsvärdet på 0,3 g för ett maskindiskmedel för konsumentbruk (bilaga III i förordning (EU) 2026/405).",
+      "percentageRange": "En procentsats måste vara mellan 0 och 100. Du angav {{value}}.",
+      "positiveNumber": "Ange ett tal större än noll. Du angav {{value}}.",
+      "allergensMissing": "Du svarade ja, men inget allergen har valts. Välj varje allergen från den officiella förteckningen.",
+      "ufiFormat": "En UFI består av fyra grupper med fyra tecken, till exempel N1QV-R02N-J00M-WQD5. Formatet kontrolleras, men inte huruvida en anmälan till giftinformationscentralen har gjorts.",
+      "urlFormat": "Använd en fullständig webbadress som börjar med http:// eller https://.",
+      "emailFormat": "Ange en giltig e-postadress.",
+      "dateFormat": "Använd ett giltigt datum i formatet YYYY-MM-DD.",
+      "microorganismSafety": "Mikroorganismer har tillsatts, men ingen referens till säkerhetsbedömning har angetts."
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "Tvätt- och rengöringsmedel DPP: friskrivning avseende regelefterlevnad",
+      "text": "Förordning (EU) 2026/405 om tvätt- och rengöringsmedel och tensider ska tillämpas från och med den 23 september 2029. Dess regler om digitalt produktpass, åtkomsträttigheter och uppgifter om databärare ska ännu fastställas genom en genomförandeakt, och till dess gäller förordning (EC) No 648/2004. Detta verktyg samlar in produktinformation och förbereder passdata. Det är inte en certifiering eller ett godkännande och ska inte betraktas som slutgiltig juridisk rådgivning. Allt som sparas i denna kategori är offentligt."
     }
   }
 }

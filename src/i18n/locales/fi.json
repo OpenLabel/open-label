@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "Tuotteen yksilöinti",
+        "description": "Tuote, malli ja jäljitettävyys"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "Vastuulliset toimijat",
+        "description": "Valmistaja, maahantuoja ja EU:n valtuutettu edustaja erillisinä osapuolina"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "Vaaraluokitus ja turvallisuustiedot",
+        "description": "CLP-luokitus, merkinnän vaaratiedot, myrkytystietokeskus ja käyttöturvallisuustiedote"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "Ainesosat ja merkintätiedot",
+        "description": "Merkinnän sisältö asetuksen (EU) 2026/405 liitteen V ja nykyisten sääntöjen mukaisesti"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "Turvallinen käyttö ja annostelu",
+        "description": "Annostelu- ja käyttöohjeet liitteen V B osan mukaisesti"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "Pakkaus ja kierrätys",
+        "description": "Pakkaus, kierrätettävyys ja täyttöpakkaukset"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "Biosidivalmisteen arviointi",
+        "description": "Sovelletaan, kun esitetään desinfioivia tai antimikrobisia väittämiä"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "Ympäristöväittämät",
+        "description": "Tukee direktiiviä (EU) 2024/825, jota sovelletaan 27. syyskuuta 2026 alkaen"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "Toimittajan tarkistus ja passin valmistelu",
+        "description": "Toimittajan tekemät tarkistukset. Sovellus ei voi varmentaa niitä."
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "Liite VI: tuotteen yksilöinti ja valmistajan ilmoitus",
+        "description": "Valmistautuminen digitaaliseen tuotepassiin, jota edellytetään 23. syyskuuta 2029 alkaen. Täydellinen tietokokonaisuus ei ole sertifiointi, varmennettu tunniste tai rekisteri-ilmoitus."
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "Liite VI: aineet",
+        "description": "Täydellinen luettelo tahallisesti lisätyistä aineista (liitteen VI A osan h alakohta)"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "Liite VI: mikro-organismit",
+        "description": "Kaikki tahallisesti lisätyt mikro-organismit (liitteen VI A osan i alakohta)"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Tuotemerkki"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "Tuotetyyppi"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "Tuotetyyppi (täsmennä)"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "Tuotteen muoto"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "Onko tuote tarkoitettu tekstiilien, astioiden tai pintojen puhdistukseen, liotukseen, huuhteluun tai valkaisuun?",
+        "help": "Katso asetuksen (EU) 2026/405 2 artiklan 1 kohta. Maalit, liimat, liuottimet ja tuotteet, jotka eivät puhdista, eivät kuulu tähän luokkaan."
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "Syy, miksi tuote ei kuulu pesuaineen määritelmän soveltamisalaan"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "Kenelle tuote on tarkoitettu?",
+        "help": "Teollisuus- ja laitoskäyttö tarkoittaa käyttöä ainoastaan kotitalouksien ulkopuolella erikoistuneen henkilöstön toimesta."
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "Tuotemallin tunniste",
+        "help": "Yksi passi kattaa yhden mallin. Koostumuksen tai tuotannon muutos, joka muuttaa merkintöjä, voi tehdä siitä uuden mallin."
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "Tyyppi-, erä- tai sarjaviite",
+        "help": "Merkinnässä on oltava tyyppinumero, eränumero tai muu jäljitettävyyselementti."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "esim. 3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "label": "Nimellismäärä yksikön kanssa",
+        "placeholder": "esim. 1.5 L, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "label": "EU-markkinat ja merkintöjen kielet",
+        "help": "Merkintöjen ja turvallisuustekstien on oltava saatavilla kullakin markkina-alueella vaaditulla kielellä tai kielillä.",
+        "placeholder": "esim. Ranska (ranska), Saksa (saksa)"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "Tietoprofiili",
+        "help": "Asetusta (EU) 2026/405 sovelletaan 23. syyskuuta 2029 alkaen. Valitse liitteen VI tietokokonaisuus valmistellaksesi tulevan passin tietoja. Sen täyttäminen ei tee passista vaatimustenmukaista tai sertifioitua."
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "Biosidisiä tai desinfioivia väittämiä?",
+        "help": "Desinfioivat tai antimikrobiset väittämät edellyttävät biosidivalmistelupaa asetuksen (EU) No 528/2012 mukaisesti."
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "Valmistajan virallinen nimi",
+        "help": "Merkinnässä on ilmoitettava valmistajan nimi, postiosoite, sähköinen osoite ja puhelinnumero. Postiosoitteen on oltava yksi ainoa yhteyspiste unionissa."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Katuosoite"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postinumero"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Kaupunki"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Maa"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Sähköinen osoite (sähköposti)",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "label": "Puhelinnumero",
+        "placeholder": "esim. +33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Onko valmistaja sijoittautunut EU:n ulkopuolelle?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "Maahantuojan virallinen nimi",
+        "help": "Kun valmistaja on sijoittautunut EU:n ulkopuolelle, vaaditaan myös maahantuojan yhteystiedot."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Katuosoite"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postinumero"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Kaupunki"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Maa"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Sähköinen osoite (sähköposti)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "EU:n valtuutettu edustaja: virallinen nimi",
+        "help": "EU:n ulkopuolelle sijoittautuneen valmistajan on nimitettävä valtuutettu edustaja (asetuksen (EU) 2026/405 9 artikla)."
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "EU:n valtuutettu edustaja: osoite",
+        "placeholder": "Virallinen osoite Euroopan unionin sisällä"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "EU:n valtuutettu edustaja: sähköinen osoite (sähköposti)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "CLP-luokituksen arviointi",
+        "help": "Käytä tälle seokselle asetuksen (EC) No 1272/2008 mukaisesti tehtyä todellista luokitusta. Älä johda sitä pH-arvosta tai varoitusmerkeistä."
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "Täydentävät merkintälausekkeet",
+        "help": "Esimerkiksi EUH208, soveltuvin osin."
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "Huomiosana"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "GHS-varoitusmerkit"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "label": "Vaaralausekkeet",
+        "help": "Syötä sanamuoto täsmälleen hyväksytyn merkinnän mukaisesti. Käytä käännöspainiketta kutakin markkinakieltä varten. Tätä sanamuotoa ei koskaan käännetä automaattisesti.",
+        "placeholder": "esim. H315 Ärsyttää ihoa"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "label": "Turvalausekkeet",
+        "help": "Syötä sanamuoto täsmälleen hyväksytyn merkinnän mukaisesti. Käytä käännöspainiketta kutakin markkinakieltä varten. Tätä sanamuotoa ei koskaan käännetä automaattisesti.",
+        "placeholder": "esim. P280 Käytä suojakäsineitä"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "Myrkytystietokeskukselle tehtävä ilmoitus (CLP liite VIII)",
+        "help": "UFI ja ilmoitusvelvollisuus riippuvat terveys- tai fysikaalisista vaaroista ja sovellettavista poikkeuksista. Ympäristövaarat yksinään eivät edellytä ilmoitusta."
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "Poikkeuksen syy ja oikeusperusta"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Yksilöllinen koostumustunniste (UFI)",
+        "help": "Neljä neljän merkin ryhmää. Muoto tarkistetaan, mutta sovellus ei voi varmentaa myrkytystietokeskukselle tehtyä ilmoitusta.",
+        "placeholder": "esim. N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "Myrkytystietokeskukselle tehdyt ilmoitukset"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "Käyttöturvallisuustiedotteen toimitusvaatimus",
+        "help": "Verkkolinkki ei yksinään täytä velvollisuutta toimittaa käyttöturvallisuustiedotetta REACH 31 artiklan mukaisesti."
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "Julkisen käyttöturvallisuustiedotteen URL-osoite",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
-        "placeholder": "e.g., English, French, German"
+        "label": "Käyttöturvallisuustiedotteen kielet",
+        "placeholder": "esim. englanti, ranska, saksa"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "Käyttöturvallisuustiedotteen tarkistuspäivämäärä",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "Hätäyhteystieto (myrkytystietokeskus tai 24 h -numero)",
+        "placeholder": "Puhelinnumero hätätilanteita varten"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "Ainesosaluokat, joita on lisätty yli 0,2 painoprosenttia",
+        "help": "Valitse jokainen luokka, jota on lisätty yli 0,2 painoprosenttia, ja valitse sitten sen painoalue alta (liitteen V A osan 1 kohdan h alakohdan i alakohta)."
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "Fosfaatit: painoalue"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "Fosfonaatit: painoalue"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "Anioniset pinta-aktiiviset aineet: painoalue"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "Kationiset pinta-aktiiviset aineet: painoalue"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "Amfoteeriset pinta-aktiiviset aineet: painoalue"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "Ionittomat pinta-aktiiviset aineet: painoalue"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "Happipohjaiset valkaisuaineet: painoalue"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "Klooripohjaiset valkaisuaineet: painoalue"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA ja sen suolat: painoalue"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA ja sen suolat: painoalue"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "Fenolit ja halogenoidut fenolit: painoalue"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "Paradiklooribentseeni: painoalue"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "Aromaattiset hiilivedyt: painoalue"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "Alifaattiset hiilivedyt: painoalue"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "Halogenoidut hiilivedyt: painoalue"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "Saippua: painoalue"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "Zeoliitit: painoalue"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "Polykarboksylaatit: painoalue"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "Ainesosaluokat, joita on lisätty missä tahansa pitoisuudessa",
+        "help": "Liitteen V A osan 1 kohdan h alakohdan ii alakohta. Desinfiointiaineet luetellaan nykyisten sääntöjen mukaisesti, eivätkä ne enää ole lueteltu luokka 23. syyskuuta 2029 alkaen."
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "Onko tuotteessa säilöntäaineita?",
+        "help": "Säilöntäaineet luetellaan liitteen V A osan 1 kohdan h alakohdan iii alakohdan mukaisesti, ellei niitä ole jo merkitty CLP 18 artiklan 3 kohdan b alakohdan tai biosidivalmisteasetuksen 58 artiklan mukaisesti."
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "label": "Säilöntäaineet",
+        "help": "Käytä INCI-nimeä, jos mahdollista.",
+        "placeholder": "esim. Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "Hajusteallergeeneja lisätty yli 0,01 painoprosenttia?",
+        "help": "Liitteen V D osan luettelossa olevat allergeenit, joita on tahallisesti lisätty yli 0,01 painoprosenttia, nimetään merkinnässä, ellei niitä ole jo merkitty CLP mukaisesti."
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "Tuotteessa olevat hajusteallergeenit",
+        "help": "Valitse jokainen allergeeni virallisesta 105 nimikkeen luettelosta."
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "Julkinen ainesosaluettelon verkkosivu",
+        "help": "Nykyiset säännöt (asetus (EC) No 648/2004, liitteen VII D osa) edellyttävät ylläpidettyä julkista ainesosaluetteloa kuluttajatuotteille. Se ei vaadi pitoisuusalueita tai CAS-numeroita.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "Ammattikäyttäjille toimitetut vastaavat ainesosatiedot"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
-        "placeholder": "e.g., OECD 301 series"
+        "label": "Pinta-aktiivisen aineen biohajoavuuden testimenetelmä",
+        "placeholder": "esim. OECD 301 series"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "Biohajoavuuden todisteen viite",
+        "help": "Nimeä testiraportti tai toimittajan vakuutus. Älä lataa tai liitä luottamuksellisia tiedostoja."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "Sisältääkö tahallisesti lisättyjä synteettisiä polymeerimikropartikkeleita?",
+        "help": "Asetus (EU) 2023/2055 rajoittaa näitä REACH-asetuksen liitteen XVII nimikkeessä 78. Pesuaineita rajoitus koskee 17. lokakuuta 2028 alkaen."
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "Käyttöohjeet ja erityiset varotoimet",
+        "help": "Menetelmä, sopivat kankaat tai pinnat ja mahdolliset erityiset varotoimet."
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "Pyykinpesuaineen tyyppi",
+        "help": "Määrittää standarditäytön: 4.5 kg kuivaa pyykkiä valkopesuaineille, 2.5 kg lyhyen pesuohjelman valkopesuaineille ja hienopesuaineille."
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "Annosteluyksikkö"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
-        "placeholder": "e.g., 60"
+        "label": "Annostus pehmeälle vedelle (standarditäyttöä kohti)",
+        "placeholder": "esim. 60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
-        "placeholder": "e.g., 75"
+        "label": "Annostus keskikovalle vedelle (standarditäyttöä kohti)",
+        "placeholder": "esim. 75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
-        "placeholder": "e.g., 90"
+        "label": "Annostus kovalle vedelle (standarditäyttöä kohti)",
+        "placeholder": "esim. 90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "Annostus yksi- ja kaksivaiheisille pesuprosesseille",
+        "help": "Liitteen V B osan 1 kohdan a alakohta edellyttää annostusta yksi- tai kaksivaiheisille pesuprosesseille."
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "Standarditäyttöjen määrä pakkauksessa (keskikova vesi, 2.5 millimoolia CaCO3 litrassa)",
+        "help": "Täyttöpakkauksille ilmoita täyttöjen määrä 1 litraa tai 1 kg tuotetta kohti. Ei tarvita yksikkömuotoisille täyttöpakkauksille."
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "Mittakupin tilavuus",
+        "help": "Mahdollisen mukana toimitetun mittakupin tilavuus, jossa on selkeät merkinnät pehmeän, keskikovan ja kovan veden annoksille."
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "Standardiannos pääpesuohjelmalle",
+        "help": "Normaalilikaisille astioille täyteen lastatussa 12 hengen astiastolle tarkoitetussa astianpesukoneessa."
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "Annostuksen mukauttaminen veden kovuuden mukaan"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "Suositeltu laimennus ja määrä pinta-alayksikköä kohti",
+        "help": "Liitteen V B osan 4 kohta: ilmoita suositeltu laimennus ja määrä pinta-alayksikköä kohti tai muut käyttöohjeet, jotta tuotetta ei käytetä liikaa."
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "Fosforin kokonaismäärä suositellussa annoksessa (grammoina)",
+        "help": "Liitteen III rajoitukset: alle 0,5 g pyykinpesun standarditäyttöä kohti kovassa vedessä ja alle 0,3 g astianpesun standardiannosta kohti."
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "Varastointi ja hävittäminen"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "Ensisijainen pakkausmateriaali"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "Onko pakkaus kierrätettävä?"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "Kierrätysohjeet"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
-        "placeholder": "e.g., 30"
+        "label": "Kierrätetyn materiaalin osuus pakkauksessa (%)",
+        "placeholder": "esim. 30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "Onko täyttöpakkausta saatavilla?"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "Myydäänkö täyttöasemalla?",
+        "help": "Täyttöpisteillä on oma tiedonkantajaa koskeva velvollisuutensa asetuksen (EU) 2026/405 21 artiklan 4 kohdan mukaisesti."
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "Pakkauksen tuottajavastuun rekisteröinti markkinoittain",
+        "help": "Yksi rivi per markkina-alue.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "Sovellettava lupa tai laillinen siirtymäkauden peruste"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "Tehoaineet ja hyväksytyt käyttötarkoitukset"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "label": "Tuotteessa tai pakkauksessa esitetyt ympäristöväittämät",
+        "placeholder": "esim. \"Pullo valmistettu 30 % kierrätysmuovista\""
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Väittämien perustelujen viite",
+        "placeholder": "Tutkimuksen, sertifikaatin tai todentamiselimen viite kullekin väittämälle"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "Vältetäänkö väittämissä yleisluontoisia ympäristötermejä?",
+        "help": "Yleisluontoisia väittämiä, kuten ympäristöystävällinen tai biohajoava, rajoitetaan 27. syyskuuta 2026 alkaen direktiivin (EU) 2024/825 nojalla."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "EU-ympäristömerkin lisenssinumero",
+        "help": "Syötä lisenssin rekisteröintinumero vain, jos tuotteella on EU-ympäristömerkin käyttöoikeus. Merkki näytetään julkisessa passissa vain, kun numero on syötetty."
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "REACH-rajoitukset ja -velvoitteet arvioitu",
+        "help": "Tarkista liitteen XVII rajoitukset ja ainesosina oleviin aineisiin sovellettavat velvoitteet."
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "Olen tarkistanut fyysisen merkinnän ja toimitetut turvallisuustiedot"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "Merkinnässä todetaan, että tuote on tarkoitettu vain ammattikäyttöön"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "Linkki edelliseen passiin, kun tämä tietue korvaa aiemman",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "Tuotetietojen tarkistuspäivämäärä",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "Valmistajan vaatimustenmukaisuuden todisteen viite"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "Tuotteen sisällön versiotunnus"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "Valmistusprosessin versiotunnus"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "Pysyvä tuotetunniste",
+        "help": "Syötä todellinen tunniste. Sisäinen tietuetunnus ei ole ESPR-asetuksessa tarkoitettujen standardien mukaisesti myönnetty tunniste."
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "Tunnistejärjestelmä ja myöntäjä"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "Valmistajan yksilöllinen toimijatunniste"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "Varmuuskopiota säilyttävän passipalvelun tarjoajan URL-osoite",
+        "help": "Nimeä palveluntarjoaja, jonka kanssa olet tehnyt sopimuksen. Sovellus ei luo varmuuskopiointipalvelua.",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "Varmuuskopiointipalvelusopimuksen viite"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "Tullinimike"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "Tullinimike (asetus (EEC) No 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "Syy, miksi tullinimikettä ei sovelleta"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "Valmistaja antaa tämän passin yksinomaisella vastuullaan"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "Ilmoitus siitä, että vaatimustenmukaisuus asetuksen (EU) 2026/405 kanssa on osoitettu",
+        "help": "Täytä tämä vasta valmistajan oman arvioinnin jälkeen. Sovellus ei koskaan laadi vaatimustenmukaisuusvakuutusta."
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "Muu tuotteeseen sovellettava unionin lainsäädäntö"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "Viimeisin päivämäärä, jona malli on saatettu markkinoille",
+        "help": "Kymmenen vuoden saatavuusvelvoitteen alkamispäivä.",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "Tiedonkantajan sijainti",
+        "help": "21 artiklan 4 kohta: fyysisesti läsnä, pysyvä, koneellisesti luettava ja näkyvissä ennen ostoa, sekä lauseke \"Lue kattavammat tuotetiedot skannaamalla\". Vaaditaan myös täyttöasemilla ja etämyynnissä."
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "Tiedonkantaja täyttää nämä vaatimukset"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "Merkintöjen ja turvallisuustekstien sanamuodot on tarkistettu jokaisella kohdemarkkinan kielellä"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "Aineita koskevien tietojen ilmoitustapa",
+        "help": "Poikkeus koskee ainoastaan teollisuus- ja laitoskäyttöön tarkoitettuja pesuaineita ja pinta-aktiivisia aineita, jos vastaavat tiedot toimitetaan REACH 31 artiklan mukaisessa käyttöturvallisuustiedotteessa."
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "Kaikki tahallisesti lisätyt aineet ja merkinnöissä vaaditut mukana kulkeutuvat säilöntäaineet",
+        "help": "Tunnista aineet asetuksen (EC) No 1272/2008 18 artiklan 3 kohdan mukaisesti. Älä syötä pitoisuuksia tai luottamuksellisia koostumustietoja. Kaikki tähän luokkaan tallennettu on julkista."
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "Peruste sille, miksi lueteltavia aineita ei ole"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "Luettelo on täydellinen, sisältää vaatimukset täyttävät mukana kulkeutuvat säilöntäaineet ja käyttää CLP 18 artiklan 3 kohdan mukaisesti arvioituja tunnisteita"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "Käytetään ainoastaan kotitalouksien ulkopuolella erikoistuneen henkilöstön toimesta"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "Vastaavat ainetiedot on tosiasiallisesti toimitettu REACH 31 artiklan mukaisessa käyttöturvallisuustiedotteessa"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "Vastaavan käyttöturvallisuustiedotteen URL-osoite",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "Vastaavan käyttöturvallisuustiedotteen kielet"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "Vastaavan käyttöturvallisuustiedotteen tarkistuspäivämäärä",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "Onko mikro-organismeja lisätty tahallisesti?",
+        "help": "Vastaavan käyttöturvallisuustiedotteen käyttäminen ei koskaan poista mikro-organismiluetteloa."
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "Kaikki tahallisesti lisätyt mikro-organismit",
+        "help": "Ilmoita kunkin mikro-organismin suku, laji ja kannan nimi tai koodi."
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "Turvallisuusarvioinnin viite (liite II)"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "Säilyvyysaika ja säilytysolosuhteet",
+        "help": "Mikro-organismeja sisältävän pesuaineen merkinnässä ilmoitetaan säilyvyysaika."
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "Tarkoitettu käytettäväksi elintarvikkeiden kanssa kosketuksiin joutuvilla pinnoilla?",
+        "help": "Ellei tuotteen riskinarvioinnissa ole todettu sen olevan turvallinen tähän käyttöön, merkinnässä on ilmoitettava, ettei sitä saa käyttää elintarvikkeiden kanssa kosketuksiin joutuvilla pinnoilla."
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "Varotoimet ja ohjeet elintarvikkeiden kanssa kosketuksiin joutuville pinnoille"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "Pyykinpesuaine",
+        "laundry_additive": "Pyykinpesun lisäaine tai esipesuaine",
+        "machine_dishwashing": "Koneastianpesuaine",
+        "dishwasher_additive": "Huuhtelukirkaste tai koneastianpesun lisäaine",
+        "hand_dishwashing": "Käsiastianpesuaine",
+        "all_purpose": "Yleispuhdistusaine tai pintojen puhdistusaine",
+        "kitchen": "Keittiön puhdistusaine",
+        "bathroom": "Kylpyhuoneen puhdistusaine",
+        "toilet": "WC-puhdistusaine",
+        "glass": "Lasinpesuaine",
+        "floor": "Lattianpesuaine",
+        "descaler": "Kalkinpoistoaine",
+        "bleach": "Valkaisuaine",
+        "other": "Muu pesuaine"
       },
       "productForm": {
-        "liquid": "Liquid",
-        "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
-        "spray": "Spray",
-        "wipe": "Wipe",
-        "paste": "Paste",
-        "other": "Other"
+        "liquid": "Neste",
+        "gel": "Geeli",
+        "powder": "Jauhe",
+        "tablet": "Tabletti",
+        "capsule": "Kapseli tai pussi",
+        "spray": "Suihke",
+        "wipe": "Pyyhe",
+        "paste": "Tahna",
+        "other": "Muu"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "Kyllä",
+        "no": "Ei",
+        "review": "Arviointi tarvitaan"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "Kuluttajat, mukaan lukien sekoitettu kuluttaja- ja ammattikäyttö",
+        "professional": "Vain ammattikäyttöön",
+        "industrial": "Vain teollisuus- ja laitoskäyttöön"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "Nykyiset tuotetiedot",
+        "annex_vi": "Täydellinen liitteen VI tietokokonaisuus vuoden 2029 sääntöjä varten"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Kyllä",
+        "no": "Ei"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "Ei luokiteltu vaaralliseksi",
+        "environment": "Vain ympäristövaarat",
+        "health_physical": "Terveys- tai fysikaaliset vaarat, ympäristövaarojen kanssa tai ilman",
+        "review": "Arviointi tarvitaan"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "Vaara",
+        "warning": "Varoitus",
+        "not_applicable": "Ei sovellu arvioinnin jälkeen"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 Räjähtävä pommi",
+        "ghs02": "GHS02 Liekki",
+        "ghs03": "GHS03 Liekki ympyrän päällä",
+        "ghs04": "GHS04 Kaasupullo",
+        "ghs05": "GHS05 Syövyttävä",
+        "ghs06": "GHS06 Pääkallo ja sääriluut",
+        "ghs07": "GHS07 Huutomerkki",
+        "ghs08": "GHS08 Terveysvaara",
+        "ghs09": "GHS09 Ympäristö",
+        "none": "Varoitusmerkkiä ei sovelleta"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "Ilmoitus vaaditaan",
+        "exempt": "Dokumentoitu poikkeus",
+        "review": "Arviointi tarvitaan"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "Toimitettu asiaankuuluville markkinoille",
+        "pending": "Vireillä"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "Toimitettava",
+        "on_request": "Toimitettava pyynnöstä",
+        "not_required": "Ei vaadita arvioinnin jälkeen",
+        "review": "Arviointi tarvitaan"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "Fosfaatit",
+        "phosphonates": "Fosfonaatit",
+        "anionic_surfactants": "Anioniset pinta-aktiiviset aineet",
+        "cationic_surfactants": "Kationiset pinta-aktiiviset aineet",
+        "amphoteric_surfactants": "Amfoteeriset pinta-aktiiviset aineet",
+        "nonionic_surfactants": "Ionittomat pinta-aktiiviset aineet",
+        "oxygen_bleach": "Happipohjaiset valkaisuaineet",
+        "chlorine_bleach": "Klooripohjaiset valkaisuaineet",
+        "edta": "EDTA ja sen suolat",
+        "nta": "NTA ja sen suolat",
+        "phenols": "Fenolit ja halogenoidut fenolit",
+        "paradichlorobenzene": "Paradiklooribentseeni",
+        "aromatic_hydrocarbons": "Aromaattiset hiilivedyt",
+        "aliphatic_hydrocarbons": "Alifaattiset hiilivedyt",
+        "halogenated_hydrocarbons": "Halogenoidut hiilivedyt",
+        "soap": "Saippua",
+        "zeolites": "Zeoliitit",
+        "polycarboxylates": "Polykarboksylaatit"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "Alle 5 %",
+        "5to15": "5 % tai enemmän mutta alle 15 %",
+        "15to30": "15 % tai enemmän mutta alle 30 %",
+        "gte30": "30 % tai enemmän"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "Entsyymit",
+        "micro_organisms": "Mikro-organismit",
+        "optical_brighteners": "Optiset kirkasteet",
+        "perfumes": "Hajusteet",
+        "disinfectants": "Desinfiointiaineet (nykyiset säännöt voimassa 23. syyskuuta 2029 asti)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Kyllä",
+        "no": "Ei",
+        "unknown": "Ei tiedossa"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "Valko- ja kirjopesuaine",
+        "heavy_duty_short": "Valko- ja kirjopesuaine lyhytohjelmille",
+        "light_duty": "Hienopesuaine tai arat tekstiilit"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "Millilitraa",
+        "g": "Grammaa",
+        "units": "Yksikköä (tabletit, kapselit tai annospakkaukset)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
-        "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "other_plastic": "Muu muovi",
+        "metal": "Metalli",
+        "glass": "Lasi",
+        "paper_cardboard": "Paperi tai kartonki",
+        "composite": "Yhdistelmämateriaali",
+        "water_soluble_film": "Vesiliukoinen kalvo",
+        "other": "Muu"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "Toimittajan tarkastama",
+        "review": "Arviointi tarvitaan"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "Sovelletaan",
+        "not_applicable": "Ei sovelleta arvioinnin jälkeen"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "Täydellinen ainesosaluettelo",
+        "equivalent_sds": "Vastaava käyttöturvallisuustiedote (vain teollisuus- ja ammattikäyttöön)",
+        "no_added_substances": "Ei lueteltavia aineita arvioinnin jälkeen"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "Tämä tuote ei välttämättä kuulu pesuaineen määritelmän soveltamisalaan asetuksen (EU) 2026/405 2 artiklan 1 kohdan mukaisesti. Tarkista soveltamisala ennen tämän luokan käyttämistä.",
+      "biocidal": "Desinfioivia tai antimikrobisia ominaisuuksia koskevat väittämät edellyttävät biosidivalmisteelle myönnettyä lupaa asetuksen (EU) No 528/2012 mukaisesti.",
+      "assessmentNeeded": "Tämä arviointi on kesken. Vie se päätökseen, ennen kuin luotat passin tietoihin.",
+      "microparticles": "Tarkista synteettisiä polymeerimikropartikkeleita koskeva asetus (EU) 2023/2055 ennen tämän tuotteen saattamista markkinoille. Tuntematon vastaus on selvitettävä toimittajan kanssa.",
+      "phosphorusLaundry": "Fosforin kokonaispitoisuus {{value}} g ei alita 0,5 g:n raja-arvoa kuluttajille tarkoitetulle pyykinpesuaineelle kovassa vedessä (asetuksen (EU) 2026/405 liite III).",
+      "phosphorusDishwasher": "Fosforin kokonaispitoisuus {{value}} g ei alita 0,3 g:n raja-arvoa kuluttajille tarkoitetulle koneastianpesuaineelle (asetuksen (EU) 2026/405 liite III).",
+      "percentageRange": "Prosenttiosuuden on oltava 0 ja 100 välillä. Annoit arvon {{value}}.",
+      "positiveNumber": "Anna nollaa suurempi luku. Annoit arvon {{value}}.",
+      "allergensMissing": "Vastasit kyllä, mutta et valinnut allergeeneja. Valitse jokainen allergeeni virallisesta luettelosta.",
+      "ufiFormat": "UFI-tunniste koostuu neljästä neljän merkin ryhmästä, esimerkiksi N1QV-R02N-J00M-WQD5. Muoto tarkistetaan, mutta myrkytystietokeskukselle tehtyä ilmoitusta ei.",
+      "urlFormat": "Käytä täydellistä verkko-osoitetta, joka alkaa http:// tai https://.",
+      "emailFormat": "Anna kelvollinen sähköpostiosoite.",
+      "dateFormat": "Käytä kelvollista päivämäärää muodossa YYYY-MM-DD.",
+      "microorganismSafety": "Mikro-organismeja on lisätty, mutta turvallisuusarvioinnin viitettä ei ole annettu."
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "Pesuaineet DPP: vastuuvapauslauseke vaatimustenmukaisuudesta",
+      "text": "Pesuaineista ja pinta-aktiivisista aineista annettua asetusta (EU) 2026/405 sovelletaan 23. syyskuuta 2029 alkaen. Sen digitaalista tuotepassia, käyttöoikeuksia ja datansiirtovälineen tietoja koskevat säännöt vahvistetaan myöhemmin täytäntöönpanosäädöksellä, ja siihen asti sovelletaan asetusta (EC) No 648/2004. Tämä työkalu kerää tuotetietoja ja valmistelee passin tietoja. Se ei ole sertifiointi tai hyväksyntä, eikä sitä tule pitää lopullisena oikeudellisena neuvona. Kaikki tähän luokkaan tallennetut tiedot ovat julkisia."
     }
   }
 }

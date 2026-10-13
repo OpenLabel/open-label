@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "Identita výrobku",
+        "description": "Výrobek, model a sledovatelnost"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "Kdo je odpovědný",
+        "description": "Výrobce, dovozce a zplnomocněný zástupce v EU, vedení jako samostatné strany"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "Klasifikace nebezpečnosti a bezpečnostní informace",
+        "description": "Klasifikace podle nařízení CLP, informace o nebezpečnosti na štítku, toxikologické informační středisko a bezpečnostní list"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "Složky a informace na štítku",
+        "description": "Obsah štítku podle přílohy V nařízení (EU) 2026/405 a platných pravidel"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "Bezpečné použití a dávkování",
+        "description": "Informace o dávkování a použití podle přílohy V části B"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "Obaly a recyklace",
+        "description": "Obaly, recyklovatelnost a náhradní náplně"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "Posouzení biocidního přípravku",
+        "description": "Použije se, pokud jsou uváděna dezinfekční nebo antimikrobiální tvrzení"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "Environmentální tvrzení",
+        "description": "Podporuje směrnici (EU) 2024/825, která se použije od 27. září 2026"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "Kontrola dodavatele a příprava pasu",
+        "description": "Kontroly, které provádí dodavatel. Aplikace je nemůže ověřit."
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "Příloha VI: identita výrobku a prohlášení výrobce",
+        "description": "Příprava na digitální pas výrobku požadovaný od 23. září 2029. Úplný datový soubor není certifikací, ověřeným identifikátorem ani podáním do rejstříku."
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "Příloha VI: látky",
+        "description": "Úplný seznam záměrně přidaných látek (příloha VI část A bod h))"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "Příloha VI: mikroorganismy",
+        "description": "Všechny záměrně přidané mikroorganismy (příloha VI část A bod i))"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Obchodní značka"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "Typ výrobku"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "Typ výrobku (upřesněte)"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "Forma výrobku"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "Je výrobek určen k čištění, namáčení, oplachování nebo bělení textilií, nádobí nebo povrchů?",
+        "help": "Viz čl. 2 odst. 1 nařízení (EU) 2026/405. Barvy, lepidla, rozpouštědla a výrobky, které nečistí, do této kategorie nespadají."
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "Důvod, proč výrobek nespadá pod definici detergentu"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "Pro koho je výrobek určen?",
+        "help": "Průmyslové a institucionální použití znamená použití pouze mimo domácnost specializovaným personálem."
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "Identifikátor modelu výrobku",
+        "help": "Jeden pas se vztahuje na jeden model. Změna složení nebo výroby, která mění štítek, může znamenat nový model."
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "Odkaz na typ, šarži nebo partii",
+        "help": "Štítek musí obsahovat číslo typu, číslo šarže nebo jiný prvek pro sledovatelnost."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "např. 3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "label": "Jmenovité množství s jednotkou",
+        "placeholder": "např. 1,5 l, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "label": "Trhy EU a jazyky na štítku",
+        "help": "Text na štítku a bezpečnostní texty musí být k dispozici v jazyce nebo jazycích požadovaných na každém trhu.",
+        "placeholder": "např. Francie (francouzština), Německo (němčina)"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "Informační profil",
+        "help": "Nařízení (EU) 2026/405 se použije od 23. září 2029. Zvolte datový soubor podle přílohy VI pro přípravu budoucích údajů pasu. Jeho vyplnění neznamená, že je pas v souladu s předpisy nebo certifikovaný."
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "Biocidní nebo dezinfekční tvrzení?",
+        "help": "Dezinfekční nebo antimikrobiální tvrzení vyžadují povolení pro biocidní přípravek podle nařízení (EU) No 528/2012."
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "Obchodní firma výrobce",
+        "help": "Na štítku se uvádí jméno/název, poštovní adresa, elektronická adresa a telefonní číslo výrobce. Poštovní adresa musí být jediným místem v Unii."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Ulice a číslo popisné"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Poštovní směrovací číslo"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Město"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Země"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronická adresa (e-mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "label": "Telefonní číslo",
+        "placeholder": "např. +33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Je výrobce usazen mimo EU?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "Obchodní firma dovozce",
+        "help": "Pokud je výrobce usazen mimo EU, vyžadují se také kontaktní údaje dovozce."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Ulice a číslo popisné"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Poštovní směrovací číslo"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Město"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Země"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronická adresa (e-mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "Zplnomocněný zástupce v EU: obchodní firma",
+        "help": "Výrobce usazený mimo EU musí jmenovat zplnomocněného zástupce (článek 9 nařízení (EU) 2026/405)."
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "Zplnomocněný zástupce v EU: adresa",
+        "placeholder": "Sídlo v Evropské unii"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "Zplnomocněný zástupce v EU: elektronická adresa (e-mail)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "Posouzení klasifikace podle nařízení CLP",
+        "help": "Použijte klasifikaci skutečně posouzenou pro tuto směs podle nařízení (EC) No 1272/2008. Neodvozujte ji z pH ani z piktogramů."
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "Doplňující informace na štítku",
+        "help": "Například EUH208, pokud se použije."
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "Signální slovo"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "Výstražné piktogramy GHS"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "label": "Standardní věty o nebezpečnosti",
+        "help": "Zadejte znění přesně tak, jak je uvedeno na schváleném štítku. Pro každý jazyk trhu použijte tlačítko překladu. Toto znění se nikdy nepřekládá automaticky.",
+        "placeholder": "např. H315 Dráždí kůži"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "label": "Pokyny pro bezpečné zacházení",
+        "help": "Zadejte znění přesně tak, jak je uvedeno na schváleném štítku. Pro každý jazyk trhu použijte tlačítko překladu. Toto znění se nikdy nepřekládá automaticky.",
+        "placeholder": "např. P280 Používejte ochranné rukavice"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "Oznámení toxikologickým informačním střediskům (příloha VIII nařízení CLP)",
+        "help": "Povinnost UFI a oznámení závisí na nebezpečnosti pro zdraví nebo fyzikální nebezpečnosti a na příslušných výjimkách. Samotná nebezpečnost pro životní prostředí oznamovací povinnost nezakládá."
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "Důvod a právní základ pro výjimku"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Jedinečný identifikátor složení (UFI)",
+        "help": "Čtyři skupiny po čtyřech znacích. Formát je kontrolován, ale aplikace nemůže ověřit podání oznámení toxikologickému informačnímu středisku.",
+        "placeholder": "např. N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "Oznámení toxikologickým informačním střediskům"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "Povinnost poskytnout bezpečnostní list",
+        "help": "Samotný internetový odkaz nesplňuje povinnost poskytnout bezpečnostní list podle článku 31 nařízení REACH."
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "URL veřejného bezpečnostního listu",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
-        "placeholder": "e.g., English, French, German"
+        "label": "Jazyky bezpečnostního listu",
+        "placeholder": "např. angličtina, francouzština, němčina"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "Datum revize bezpečnostního listu",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "Nouzový kontakt (toxikologické informační středisko nebo nepřetržitá linka)",
+        "placeholder": "Telefonní číslo pro naléhavé případy"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "Třídy složek přidané v množství nad 0,2 % hmotnostních",
+        "help": "Zaškrtněte každou třídu, která je přidána v množství nad 0,2 % hmotnostních, a poté níže zvolte její hmotnostní rozmezí (příloha V část A bod 1 písm. h) bod i))."
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "Fosforečnany: hmotnostní rozmezí"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "Fosfonáty: hmotnostní rozmezí"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "Aniontové povrchově aktivní látky: hmotnostní rozmezí"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "Kationtové povrchově aktivní látky: hmotnostní rozmezí"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "Amfoterní povrchově aktivní látky: hmotnostní rozmezí"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "Neiontové povrchově aktivní látky: hmotnostní rozmezí"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "Bělicí činidla na bázi kyslíku: hmotnostní rozmezí"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "Bělicí činidla na bázi chloru: hmotnostní rozmezí"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA a její soli: hmotnostní rozmezí"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA a její soli: hmotnostní rozmezí"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "Fenoly a halogenované fenoly: hmotnostní rozmezí"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "Paradichlorbenzen: hmotnostní rozmezí"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "Aromatické uhlovodíky: hmotnostní rozmezí"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "Alifatické uhlovodíky: hmotnostní rozmezí"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "Halogenované uhlovodíky: hmotnostní rozmezí"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "Mýdlo: hmotnostní rozmezí"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "Zeolity: hmotnostní rozmezí"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "Polykarboxyláty: hmotnostní rozmezí"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "Třídy složek přidané v jakékoli koncentraci",
+        "help": "Příloha V část A bod 1 písm. h) bod ii). Dezinfekční prostředky se uvádějí podle platných pravidel a od 23. září 2029 již nebudou uvedenou třídou."
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "Jsou přítomny konzervační přísady?",
+        "help": "Konzervační přísady se uvádějí podle přílohy V části A bodu 1 písm. h) bodu iii), pokud již nejsou označeny podle čl. 18 odst. 3 písm. b) nařízení CLP nebo článku 58 nařízení o biocidních přípravcích."
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "label": "Konzervační přísady",
+        "help": "Pokud je to možné, použijte název INCI.",
+        "placeholder": "např. Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "Alergenní vonné látky přidané v množství nad 0,01 % hmotnostních?",
+        "help": "Alergeny ze seznamu v příloze V části D, které jsou záměrně přidány v množství nad 0,01 % hmotnostních, se uvádějí na štítku, pokud již nejsou označeny podle nařízení CLP."
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "Přítomné alergenní vonné látky",
+        "help": "Vyberte každý alergen z oficiálního seznamu 105 položek."
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "Veřejná webová stránka se složením",
+        "help": "Platná pravidla (nařízení (EC) No 648/2004, příloha VII část D) vyžadují pro spotřebitelské výrobky udržovaný veřejný seznam složek. Nevyžaduje procentuální rozmezí ani čísla CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "Ekvivalentní informace o složení poskytnuté profesionálním uživatelům"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
-        "placeholder": "e.g., OECD 301 series"
+        "label": "Zkušební metoda biologické rozložitelnosti povrchově aktivních látek",
+        "placeholder": "např. řada OECD 301"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "Odkaz na doklad o biologické rozložitelnosti",
+        "help": "Uveďte název zkušebního protokolu nebo prohlášení dodavatele. Nenahrávejte ani nevkládejte důvěrné soubory."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "Obsahuje záměrně přidané mikročástice syntetických polymerů?",
+        "help": "Nařízení (EU) 2023/2055 je omezuje podle položky 78 přílohy XVII nařízení REACH. Na detergenty se omezení vztahuje od 17. října 2028."
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "Návod k použití a zvláštní bezpečnostní opatření",
+        "help": "Metoda, vhodné textilie nebo povrchy a veškerá zvláštní bezpečnostní opatření."
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "Typ pracího prostředku",
+        "help": "Určuje standardní náplň: 4,5 kg suché tkaniny pro vysoce účinné prací prostředky, 2,5 kg pro vysoce účinné prací prostředky pro krátké cykly a pro prací prostředky pro jemné prádlo."
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "Jednotka dávkování"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
-        "placeholder": "e.g., 60"
+        "label": "Dávka pro měkkou vodu (na standardní náplň)",
+        "placeholder": "např. 60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
-        "placeholder": "e.g., 75"
+        "label": "Dávka pro středně tvrdou vodu (na standardní náplň)",
+        "placeholder": "např. 75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
-        "placeholder": "e.g., 90"
+        "label": "Dávka pro tvrdou vodu (na standardní náplň)",
+        "placeholder": "např. 90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "Dávkování pro jednofázové a dvoufázové prací procesy",
+        "help": "Příloha V část B bod 1 písm. a) požaduje dávkování pro jednofázové nebo dvoufázové prací procesy."
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "Počet standardních náplní na balení (středně tvrdá voda, 2,5 milimolu CaCO3 na litr)",
+        "help": "U náhradních náplní uveďte počet náplní na 1 litr nebo 1 kg výrobku. Není nutné pro náhradní náplně v kusech."
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "Objem odměrky",
+        "help": "Objem jakékoli dodané odměrky s jasným označením dávek pro měkkou, středně tvrdou a tvrdou vodu."
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "Standardní dávka pro hlavní cyklus",
+        "help": "Pro normálně znečištěné nádobí v plně naložené myčce na 12 sad nádobí."
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "Úprava dávky podle tvrdosti vody"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "Doporučené ředění a množství na plochu",
+        "help": "Příloha V část B bod 4: uveďte doporučené ředění a množství na plochu nebo jiné pokyny k použití, aby se výrobek nepoužíval v nadměrném množství."
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "Celkový obsah fosforu v doporučené dávce (v gramech)",
+        "help": "Limity podle přílohy III: méně než 0,5 g na standardní náplň prádla v tvrdé vodě a méně než 0,3 g na standardní dávku do myčky nádobí."
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "Skladování a likvidace"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "Materiál primárního obalu"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "Je obal recyklovatelný?"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "Pokyny k recyklaci"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
-        "placeholder": "e.g., 30"
+        "label": "Obsah recyklovaného materiálu v obalu (%)",
+        "placeholder": "např. 30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "Je k dispozici náhradní náplň?"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "Prodává se prostřednictvím plnicí stanice?",
+        "help": "Na plnicí místa se vztahuje vlastní povinnost týkající se nosiče údajů podle čl. 21 odst. 4 nařízení (EU) 2026/405."
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "Registrace v systému rozšířené odpovědnosti výrobce za obaly pro jednotlivé trhy",
+        "help": "Jeden řádek na trh.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "Platné povolení nebo zákonný přechodný základ"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "Účinné látky a povolená použití"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "label": "Environmentální tvrzení uvedená na výrobku nebo obalu",
+        "placeholder": "např. „Láhev vyrobena z 30 % z recyklovaného plastu“"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Odkaz na podklady pro doložení tvrzení",
+        "placeholder": "Odkaz na studii, certifikát nebo ověřovací orgán pro každé tvrzení"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "Tvrzení se vyhýbají obecným environmentálním pojmům?",
+        "help": "Obecná tvrzení jako „ekologický“ nebo „biologicky rozložitelný“ jsou od 27. září 2026 omezena podle směrnice (EU) 2024/825."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "Číslo licence ekoznačky EU",
+        "help": "Zadejte registrační číslo licence pouze v případě, že je výrobek držitelem licence ekoznačky EU. Odznak se na veřejném pasu zobrazí pouze po zadání čísla."
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "Posouzena omezení a povinnosti podle nařízení REACH",
+        "help": "Zkontrolujte omezení v příloze XVII a povinnosti, které se vztahují na obsažené látky."
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "Zkontroloval(a) jsem fyzický štítek a dodané bezpečnostní informace"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "Na štítku je uvedeno, že výrobek je určen pouze pro profesionální použití"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "Odkaz na předchozí pas, pokud tento záznam nahrazuje jiný",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "Datum kontroly informací o výrobku",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "Odkaz na doklad o shodě výrobce"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "Odkaz na revizi obsahu výrobku"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "Odkaz na revizi výrobního procesu"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "Trvalý identifikátor výrobku",
+        "help": "Zadejte skutečný identifikátor. Interní ID záznamu není identifikátorem vydaným podle norem uvedených v nařízení ESPR."
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "Systém identifikátorů a vydavatel"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "Jedinečný identifikátor hospodářského subjektu výrobce"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "Poskytovatel služby pasu uchovávající záložní kopii (URL)",
+        "help": "Uveďte poskytovatele, se kterým jste se skutečně dohodli. Aplikace nevytváří záložní službu.",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "Odkaz na smlouvu o záložní službě"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "Kód celní nomenklatury"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "Kód zboží (nařízení (EEC) No 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "Důvod, proč se kód zboží nepoužije"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "Výrobce vydává tento pas na svou výhradní odpovědnost"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "Prohlášení, že byl prokázán soulad s nařízením (EU) 2026/405",
+        "help": "Vyplňte pouze po vlastním posouzení výrobcem. Aplikace nikdy negeneruje prohlášení o shodě."
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "Další právní předpisy Unie, které se na výrobek vztahují"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "Poslední datum, kdy byl model uveden na trh",
+        "help": "Výchozí bod pro desetiletou povinnost dostupnosti.",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "Kde je umístěn nosič údajů",
+        "help": "Článek 21 odst. 4: fyzicky přítomen, nesmazatelný, strojově čitelný a viditelný před nákupem, s prohlášením „Naskenujte pro podrobnější informace o výrobku“. Vyžaduje se také na plnicích stanicích a při prodeji na dálku."
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "Nosič údajů splňuje tyto požadavky"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "Text na štítku a bezpečnostní texty jsou zkontrolovány v jazyce každého cílového trhu"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "Způsob zveřejnění seznamu látek",
+        "help": "Výjimka se vztahuje pouze na průmyslové a institucionální detergenty a povrchově aktivní látky, pokud jsou informace poskytnuty v rovnocenném bezpečnostním listu podle článku 31 nařízení REACH."
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "Všechny záměrně přidané látky a přenesené konzervační přísady, jejichž uvedení na štítku je povinné",
+        "help": "Identifikujte látky, jak je požadováno v čl. 18 odst. 3 nařízení (EC) No 1272/2008. Nezadávejte koncentrace ani důvěrné údaje o složení. Vše, co je uloženo v této kategorii, je veřejné."
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "Důvod pro neuvedení látek v seznamu"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "Seznam je úplný, zahrnuje kvalifikované přenesené konzervační přísady a používá identity posouzené podle čl. 18 odst. 3 nařízení CLP"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "Používá se pouze mimo domácnost specializovaným personálem"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "Ekvivalentní informace o látkách byly skutečně poskytnuty v bezpečnostním listu podle článku 31 nařízení REACH"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "URL rovnocenného bezpečnostního listu",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "Jazyky rovnocenného bezpečnostního listu"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "Datum revize rovnocenného bezpečnostního listu",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "Jsou záměrně přidány mikroorganismy?",
+        "help": "Způsob poskytnutí informací prostřednictvím rovnocenného bezpečnostního listu nikdy neruší povinnost uvést seznam mikroorganismů."
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "Všechny záměrně přidané mikroorganismy",
+        "help": "U každého mikroorganismu uveďte rod, druh a název nebo kód kmene."
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "Odkaz na posouzení bezpečnosti (příloha II)"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "Doba použitelnosti a podmínky skladování",
+        "help": "Na štítku detergentu obsahujícího mikroorganismy se uvádí doba použitelnosti."
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "Určeno pro použití na površích přicházejících do styku s potravinami?",
+        "help": "Pokud nebylo u výrobku posouzeno riziko jako bezpečné pro toto použití, na štítku se uvádí, že se nesmí používat na površích přicházejících do styku s potravinami."
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "Bezpečnostní opatření a pokyny pro povrchy přicházející do styku s potravinami"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "Prací prostředek",
+        "laundry_additive": "Prací přísada nebo prostředek pro předpírku",
+        "machine_dishwashing": "Prostředek do myčky nádobí",
+        "dishwasher_additive": "Leštidlo nebo přísada do myčky nádobí",
+        "hand_dishwashing": "Prostředek na ruční mytí nádobí",
+        "all_purpose": "Univerzální nebo povrchový čistič",
+        "kitchen": "Kuchyňský čistič",
+        "bathroom": "Koupelnový čistič",
+        "toilet": "WC čistič",
+        "glass": "Čistič skla",
+        "floor": "Čistič podlah",
+        "descaler": "Odvápňovač",
+        "bleach": "Bělicí prostředek",
+        "other": "Jiný detergent"
       },
       "productForm": {
-        "liquid": "Liquid",
+        "liquid": "Tekutý",
         "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
-        "spray": "Spray",
-        "wipe": "Wipe",
-        "paste": "Paste",
-        "other": "Other"
+        "powder": "Prášek",
+        "tablet": "Tableta",
+        "capsule": "Kapsle nebo polštářek",
+        "spray": "Sprej",
+        "wipe": "Ubrousek",
+        "paste": "Pasta",
+        "other": "Jiná"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "Ano",
+        "no": "Ne",
+        "review": "Vyžaduje posouzení"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "Spotřebitelé, včetně smíšeného spotřebitelského a profesionálního použití",
+        "professional": "Pouze pro profesionální použití",
+        "industrial": "Pouze pro průmyslové a institucionální použití"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "Aktuální informace o výrobku",
+        "annex_vi": "Úplný datový soubor podle přílohy VI pro pravidla platná od roku 2029"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ano",
+        "no": "Ne"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "Není klasifikován jako nebezpečný",
+        "environment": "Pouze nebezpečnost pro životní prostředí",
+        "health_physical": "Nebezpečnost pro zdraví nebo fyzikální nebezpečnost, s nebezpečností nebo bez nebezpečnosti pro životní prostředí",
+        "review": "Vyžaduje posouzení"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "Nebezpečí",
+        "warning": "Varování",
+        "not_applicable": "Nepoužije se po posouzení"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 Vybuchující bomba",
+        "ghs02": "GHS02 Plamen",
+        "ghs03": "GHS03 Plamen nad kruhem",
+        "ghs04": "GHS04 Plynová láhev",
+        "ghs05": "GHS05 Koroze",
+        "ghs06": "GHS06 Lebka se zkříženými hnáty",
+        "ghs07": "GHS07 Vykřičník",
+        "ghs08": "GHS08 Nebezpečnost pro zdraví",
+        "ghs09": "GHS09 Nebezpečnost pro životní prostředí",
+        "none": "Nevztahuje se žádný výstražný symbol"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "Vyžaduje se oznámení",
+        "exempt": "Doložená výjimka",
+        "review": "Je třeba posoudit"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "Oznámeno pro příslušné trhy",
+        "pending": "Čeká na vyřízení"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "Musí být poskytnut",
+        "on_request": "Musí být k dispozici na vyžádání",
+        "not_required": "Po posouzení se nevyžaduje",
+        "review": "Je třeba posoudit"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "Fosforečnany",
+        "phosphonates": "Fosfonáty",
+        "anionic_surfactants": "Aniontové povrchově aktivní látky",
+        "cationic_surfactants": "Kationtové povrchově aktivní látky",
+        "amphoteric_surfactants": "Amfoterní povrchově aktivní látky",
+        "nonionic_surfactants": "Neiontové povrchově aktivní látky",
+        "oxygen_bleach": "Bělicí činidla na bázi kyslíku",
+        "chlorine_bleach": "Bělicí činidla na bázi chloru",
+        "edta": "EDTA a její soli",
+        "nta": "NTA a její soli",
+        "phenols": "Fenoly a halogenované fenoly",
+        "paradichlorobenzene": "Paradichlorbenzen",
+        "aromatic_hydrocarbons": "Aromatické uhlovodíky",
+        "aliphatic_hydrocarbons": "Alifatické uhlovodíky",
+        "halogenated_hydrocarbons": "Halogenované uhlovodíky",
+        "soap": "Mýdlo",
+        "zeolites": "Zeolity",
+        "polycarboxylates": "Polykarboxyláty"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "méně než 5 %",
+        "5to15": "5 % nebo více, avšak méně než 15 %",
+        "15to30": "15 % nebo více, avšak méně než 30 %",
+        "gte30": "30 % a více"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "Enzymy",
+        "micro_organisms": "Mikroorganismy",
+        "optical_brighteners": "Optické zjasňovače",
+        "perfumes": "Parfémy",
+        "disinfectants": "Dezinfekční prostředky (současná pravidla platí do 23. září 2029)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ano",
+        "no": "Ne",
+        "unknown": "Neznámé"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "Pro silně znečištěné prádlo",
+        "heavy_duty_short": "Pro silně znečištěné prádlo na krátké cykly",
+        "light_duty": "Pro jemné praní nebo choulostivé tkaniny"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "Mililitry",
+        "g": "Gramy",
+        "units": "Jednotky (tablety, kapsle nebo pody)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
-        "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "other_plastic": "Jiný plast",
+        "metal": "Kov",
+        "glass": "Sklo",
+        "paper_cardboard": "Papír nebo lepenka",
+        "composite": "Kompozitní materiál",
+        "water_soluble_film": "Vodorozpustná fólie",
+        "other": "Jiný"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "Zkontrolováno dodavatelem",
+        "review": "Je třeba posoudit"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "Použitelné",
+        "not_applicable": "Po posouzení se nepoužije"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "Úplný seznam látek",
+        "equivalent_sds": "Ekvivalentní bezpečnostní list (pouze pro průmyslové a profesionální použití)",
+        "no_added_substances": "Po posouzení nejsou k uvedení žádné látky"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "Tento výrobek nemusí spadat do definice čisticího prostředku podle čl. 2 odst. 1 nařízení (EU) 2026/405. Před použitím této kategorie zkontrolujte oblast působnosti.",
+      "biocidal": "Tvrzení o dezinfekčních nebo antimikrobiálních vlastnostech vyžadují povolení pro biocidní přípravek podle nařízení (EU) No 528/2012.",
+      "assessmentNeeded": "Toto posouzení není dokončeno. Dokončete jej, než se na pas budete spoléhat.",
+      "microparticles": "Před uvedením tohoto výrobku na trh zkontrolujte nařízení (EU) 2023/2055 o mikročásticích syntetických polymerů. Neznámá odpověď musí být vyřešena s dodavatelem.",
+      "phosphorusLaundry": "Celkový obsah fosforu {{value}} g není pod limitem 0,5 g stanoveným pro spotřebitelský prací prostředek v tvrdé vodě (příloha III nařízení (EU) 2026/405).",
+      "phosphorusDishwasher": "Celkový obsah fosforu {{value}} g není pod limitem 0,3 g stanoveným pro spotřebitelský prostředek do automatických myček nádobí (příloha III nařízení (EU) 2026/405).",
+      "percentageRange": "Procentuální hodnota musí být mezi 0 a 100. Zadaná hodnota je {{value}}.",
+      "positiveNumber": "Zadejte číslo větší než nula. Zadaná hodnota je {{value}}.",
+      "allergensMissing": "Odpověděli jste ano, ale není vybrán žádný alergen. Vyberte každý alergen z úředního seznamu.",
+      "ufiFormat": "Kód UFI se skládá ze čtyř skupin po čtyřech znacích, například N1QV-R02N-J00M-WQD5. Formát je zkontrolován, ale oznámení toxikologickému informačnímu středisku nikoli.",
+      "urlFormat": "Použijte úplnou webovou adresu začínající http:// nebo https://.",
+      "emailFormat": "Zadejte platnou e-mailovou adresu.",
+      "dateFormat": "Použijte platné datum ve formátu YYYY-MM-DD.",
+      "microorganismSafety": "Jsou přidány mikroorganismy, ale není zadán žádný odkaz na posouzení bezpečnosti."
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "Čisticí prostředky DPP: prohlášení o souladu",
+      "text": "Nařízení (EU) 2026/405 o čisticích prostředcích a povrchově aktivních látkách se použije od 23. září 2029. Pravidla pro jeho digitální pas výrobku, přístupová práva a podrobnosti o nosiči dat musí být teprve stanoveny prováděcím aktem, a do té doby se použije nařízení (EC) No 648/2004. Tento nástroj shromažďuje informace o výrobku a připravuje data pro pas. Nejedná se o certifikaci ani schválení a neměl by být považován za konečné právní poradenství. Vše, co je v této kategorii uloženo, je veřejné."
     }
   }
 }

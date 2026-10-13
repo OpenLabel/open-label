@@ -2162,734 +2162,734 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "Product identity",
-        "description": "Product, model and traceability"
+        "title": "Produktidentität",
+        "description": "Produkt, Modell und Rückverfolgbarkeit"
       },
       "responsible_operators": {
-        "title": "Who is responsible",
-        "description": "Manufacturer, importer and EU authorised representative, kept as separate parties"
+        "title": "Wer ist verantwortlich",
+        "description": "Hersteller, Importeur und EU-Bevollmächtigter, als getrennte Parteien geführt"
       },
       "classification": {
-        "title": "Hazard classification and safety information",
-        "description": "CLP classification, label hazard information, poison centre and safety data sheet"
+        "title": "Gefahreneinstufung und Sicherheitsinformationen",
+        "description": "CLP-Einstufung, Gefahreninformationen auf dem Etikett, Giftinformationszentrum und Sicherheitsdatenblatt"
       },
       "ingredients": {
-        "title": "Ingredients and label information",
-        "description": "Label content under Annex V of Regulation (EU) 2026/405 and the current rules"
+        "title": "Inhaltsstoffe und Etiketteninformationen",
+        "description": "Etiketteninhalt gemäß Anhang V der Verordnung (EU) 2026/405 und den geltenden Vorschriften"
       },
       "use": {
-        "title": "Safe use and dosage",
-        "description": "Dosage and use information under Annex V Part B"
+        "title": "Sichere Verwendung und Dosierung",
+        "description": "Dosierungs- und Anwendungsinformationen gemäß Anhang V Teil B"
       },
       "packaging": {
-        "title": "Packaging and recycling",
-        "description": "Packaging, recyclability and refills"
+        "title": "Verpackung und Recycling",
+        "description": "Verpackung, Recyclingfähigkeit und Nachfüllpackungen"
       },
       "biocide": {
-        "title": "Biocidal product assessment",
-        "description": "Applies when disinfecting or antimicrobial claims are made"
+        "title": "Bewertung als Biozidprodukt",
+        "description": "Gilt, wenn desinfizierende oder antimikrobielle Angaben gemacht werden"
       },
       "green_claims": {
-        "title": "Environmental claims",
-        "description": "Supports Directive (EU) 2024/825, which applies since 27 September 2026"
+        "title": "Umweltbezogene Angaben",
+        "description": "Unterstützt die Richtlinie (EU) 2024/825, die ab dem 27. September 2026 gilt"
       },
       "review": {
-        "title": "Supplier review and passport preparation",
-        "description": "Checks the supplier completes. The app cannot verify them."
+        "title": "Überprüfung durch den Lieferanten und Vorbereitung des Passes",
+        "description": "Prüfungen, die der Lieferant durchführt. Die App kann diese nicht verifizieren."
       },
       "annex_identity": {
-        "title": "Annex VI: product identity and manufacturer statement",
-        "description": "Preparation for the digital product passport required from 23 September 2029. A complete dataset is not a certification, a verified identifier or a registry submission."
+        "title": "Anhang VI: Produktidentität und Erklärung des Herstellers",
+        "description": "Vorbereitung für den digitalen Produktpass, der ab dem 23. September 2029 erforderlich ist. Ein vollständiger Datensatz ist keine Zertifizierung, keine verifizierte Kennung und keine Einreichung bei einem Register."
       },
       "annex_substances": {
-        "title": "Annex VI: substances",
-        "description": "Full list of intentionally added substances (Annex VI Part A point (h))"
+        "title": "Anhang VI: Stoffe",
+        "description": "Vollständige Liste der absichtlich zugesetzten Stoffe (Anhang VI Teil A Buchstabe h)"
       },
       "annex_microorganisms": {
-        "title": "Annex VI: micro-organisms",
-        "description": "All intentionally added micro-organisms (Annex VI Part A point (i))"
+        "title": "Anhang VI: Mikroorganismen",
+        "description": "Alle absichtlich zugesetzten Mikroorganismen (Anhang VI Teil A Buchstabe i)"
       }
     },
     "fields": {
       "brand_name": {
-        "label": "Brand Name"
+        "label": "Markenname"
       },
       "product_type": {
-        "label": "Product type"
+        "label": "Produkttyp"
       },
       "product_type_other": {
-        "label": "Product type (specify)"
+        "label": "Produkttyp (bitte angeben)"
       },
       "product_form": {
-        "label": "Product form"
+        "label": "Produktform"
       },
       "detergent_scope": {
-        "label": "Is the product intended to clean, soak, rinse or bleach fabrics, dishes or surfaces?",
-        "help": "See Article 2(1) of Regulation (EU) 2026/405. Paints, adhesives, solvents and products that do not clean are outside this category."
+        "label": "Ist das Produkt zum Reinigen, Einweichen, Spülen oder Bleichen von Textilien, Geschirr oder Oberflächen bestimmt?",
+        "help": "Siehe Artikel 2 Absatz 1 der Verordnung (EU) 2026/405. Farben, Klebstoffe, Lösungsmittel und Produkte, die nicht reinigen, fallen nicht in diese Kategorie."
       },
       "scope_reason": {
-        "label": "Reason the product is outside the detergent definition"
+        "label": "Grund, warum das Produkt nicht unter die Definition eines Wasch- und Reinigungsmittels fällt"
       },
       "use_sector": {
-        "label": "Who is the product intended for?",
-        "help": "Industrial and institutional means used only outside the domestic sphere by specialised personnel."
+        "label": "Für wen ist das Produkt bestimmt?",
+        "help": "Industriell und institutionell bedeutet, dass es nur außerhalb des häuslichen Bereichs von Fachpersonal verwendet wird."
       },
       "model_identifier": {
-        "label": "Product model identifier",
-        "help": "One passport covers one model. A change of formulation or production that changes the label can make it a new model."
+        "label": "Produktmodellkennung",
+        "help": "Ein Pass gilt für ein Modell. Eine Änderung der Rezeptur oder der Herstellung, die eine Änderung des Etiketts zur Folge hat, kann es zu einem neuen Modell machen."
       },
       "batch_identifier": {
-        "label": "Type, batch or lot reference",
-        "help": "The label needs a type number, batch number or other traceability element."
+        "label": "Typen-, Chargen- oder Losnummer",
+        "help": "Das Etikett muss eine Typennummer, Chargennummer oder ein anderes Element zur Rückverfolgbarkeit aufweisen."
       },
       "gtin": {
         "label": "GTIN / EAN",
-        "placeholder": "e.g., 3401234567890"
+        "placeholder": "z. B. 3401234567890"
       },
       "net_content": {
-        "label": "Nominal quantity with unit",
-        "placeholder": "e.g., 1.5 L, 750 ml, 2 kg"
+        "label": "Nennmenge mit Einheit",
+        "placeholder": "z. B. 1,5 L, 750 ml, 2 kg"
       },
       "target_markets": {
-        "label": "EU markets and label languages",
-        "help": "Label and safety wording must be available in the language or languages required in each market.",
-        "placeholder": "e.g., France (French), Germany (German)"
+        "label": "EU-Märkte und Etikettensprachen",
+        "help": "Etiketten- und Sicherheitstexte müssen in der/den auf dem jeweiligen Markt erforderlichen Sprache(n) verfügbar sein.",
+        "placeholder": "z. B. Frankreich (Französisch), Deutschland (Deutsch)"
       },
       "dpp_profile": {
-        "label": "Information profile",
-        "help": "Regulation (EU) 2026/405 applies from 23 September 2029. Choose the Annex VI dataset to prepare the future passport data. Completing it does not make a passport compliant or certified."
+        "label": "Informationsprofil",
+        "help": "Die Verordnung (EU) 2026/405 gilt ab dem 23. September 2029. Wählen Sie den Datensatz nach Anhang VI, um die zukünftigen Passdaten vorzubereiten. Das Ausfüllen macht einen Pass nicht konform oder zertifiziert."
       },
       "biocidal_claims": {
-        "label": "Biocidal or disinfecting claims?",
-        "help": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012."
+        "label": "Biozide oder desinfizierende Angaben?",
+        "help": "Desinfizierende oder antimikrobielle Angaben erfordern eine Zulassung als Biozidprodukt gemäß der Verordnung (EU) No 528/2012."
       },
       "manufacturer_legal_name": {
-        "label": "Manufacturer legal name",
-        "help": "The label shows the name, postal address, electronic address and telephone number of the manufacturer. The postal address must be a single point in the Union."
+        "label": "Gesetzlicher Name des Herstellers",
+        "help": "Das Etikett zeigt den Namen, die Postanschrift, die elektronische Adresse und die Telefonnummer des Herstellers. Die Postanschrift muss eine einzige Anlaufstelle in der Union sein."
       },
       "manufacturer_street": {
-        "label": "Street address"
+        "label": "Straße und Hausnummer"
       },
       "manufacturer_postal_code": {
-        "label": "Postal code"
+        "label": "Postleitzahl"
       },
       "manufacturer_city": {
-        "label": "City"
+        "label": "Stadt"
       },
       "manufacturer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "manufacturer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronische Adresse (E-Mail)",
         "placeholder": "name@company.com"
       },
       "manufacturer_phone": {
-        "label": "Telephone number",
-        "placeholder": "e.g., +33 1 23 45 67 89"
+        "label": "Telefonnummer",
+        "placeholder": "z. B. +33 1 23 45 67 89"
       },
       "manufacturer_non_eu": {
-        "label": "Is the manufacturer established outside the EU?"
+        "label": "Ist der Hersteller außerhalb der EU ansässig?"
       },
       "importer_legal_name": {
-        "label": "Importer legal name",
-        "help": "When the manufacturer is established outside the EU, the importer's contact details are also required."
+        "label": "Gesetzlicher Name des Importeurs",
+        "help": "Wenn der Hersteller außerhalb der EU ansässig ist, sind auch die Kontaktdaten des Importeurs erforderlich."
       },
       "importer_street": {
-        "label": "Street address"
+        "label": "Straße und Hausnummer"
       },
       "importer_postal_code": {
-        "label": "Postal code"
+        "label": "Postleitzahl"
       },
       "importer_city": {
-        "label": "City"
+        "label": "Stadt"
       },
       "importer_country": {
-        "label": "Country"
+        "label": "Land"
       },
       "importer_email": {
-        "label": "Electronic address (email)",
+        "label": "Elektronische Adresse (E-Mail)",
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU authorised representative: legal name",
-        "help": "A manufacturer established outside the EU must appoint an authorised representative (Article 9 of Regulation (EU) 2026/405)."
+        "label": "EU-Bevollmächtigter: Gesetzlicher Name",
+        "help": "Ein außerhalb der EU ansässiger Hersteller muss einen Bevollmächtigten benennen (Artikel 9 der Verordnung (EU) 2026/405)."
       },
       "eu_operator_address": {
-        "label": "EU authorised representative: address",
-        "placeholder": "Registered address inside the European Union"
+        "label": "EU-Bevollmächtigter: Anschrift",
+        "placeholder": "Eingetragene Anschrift innerhalb der Europäischen Union"
       },
       "eu_operator_email": {
-        "label": "EU authorised representative: electronic address (email)",
+        "label": "EU-Bevollmächtigter: Elektronische Adresse (E-Mail)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
-        "label": "CLP classification assessment",
-        "help": "Use the classification actually assessed for this mixture under Regulation (EC) No 1272/2008. Do not infer it from the pH or the pictograms."
+        "label": "CLP-Einstufungsbewertung",
+        "help": "Verwenden Sie die für dieses Gemisch tatsächlich gemäß der Verordnung (EC) No 1272/2008 bewertete Einstufung. Leiten Sie sie nicht aus dem pH-Wert oder den Piktogrammen ab."
       },
       "supplemental_statements": {
-        "label": "Supplemental label statements",
-        "help": "For example EUH208, where it applies."
+        "label": "Ergänzende Kennzeichnungsaussagen",
+        "help": "Zum Beispiel EUH208, wo dies zutrifft."
       },
       "signal_word": {
-        "label": "Signal word"
+        "label": "Signalwort"
       },
       "pictograms": {
-        "label": "GHS pictograms"
+        "label": "GHS-Piktogramme"
       },
       "hazard_statements": {
-        "label": "Hazard statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., H315 Causes skin irritation"
+        "label": "Gefahrenhinweise",
+        "help": "Geben Sie den Wortlaut genau wie auf dem genehmigten Etikett an. Verwenden Sie die Übersetzungsschaltfläche für jede Marktsprache. Dieser Wortlaut wird niemals automatisch übersetzt.",
+        "placeholder": "z. B. H315 Verursacht Hautreizungen"
       },
       "precautionary_statements": {
-        "label": "Precautionary statements",
-        "help": "Enter the wording exactly as on the approved label. Use the translation button for each market language. This wording is never translated automatically.",
-        "placeholder": "e.g., P280 Wear protective gloves"
+        "label": "Sicherheitshinweise",
+        "help": "Geben Sie den Wortlaut genau wie auf dem genehmigten Etikett an. Verwenden Sie die Übersetzungsschaltfläche für jede Marktsprache. Dieser Wortlaut wird niemals automatisch übersetzt.",
+        "placeholder": "z. B. P280 Schutzhandschuhe tragen"
       },
       "pcn_applicability": {
-        "label": "Poison centre notification (CLP Annex VIII)",
-        "help": "UFI and notification depend on health or physical hazards and the applicable exemptions. Environmental hazards alone do not trigger notification."
+        "label": "Mitteilung an Giftinformationszentren (CLP Anhang VIII)",
+        "help": "UFI und die Mitteilungspflicht hängen von gesundheitlichen oder physikalischen Gefahren und den geltenden Ausnahmen ab. Umweltgefahren allein lösen keine Mitteilungspflicht aus."
       },
       "pcn_exemption_reason": {
-        "label": "Reason and legal basis for the exemption"
+        "label": "Grund und Rechtsgrundlage für die Ausnahme"
       },
       "ufi_code": {
-        "label": "Unique formula identifier (UFI)",
-        "help": "Four groups of four characters. The format is checked, but the app cannot verify a poison centre submission.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Eindeutiger Rezepturidentifikator (UFI)",
+        "help": "Vier Gruppen von vier Zeichen. Das Format wird geprüft, aber die App kann eine Einreichung bei einem Giftinformationszentrum nicht verifizieren.",
+        "placeholder": "z. B. N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Poison centre submissions"
+        "label": "Einreichungen bei Giftinformationszentren"
       },
       "sds_requirement": {
-        "label": "Safety data sheet supply requirement",
-        "help": "A web link does not by itself fulfil the duty to supply a safety data sheet under REACH Article 31."
+        "label": "Pflicht zur Bereitstellung eines Sicherheitsdatenblatts",
+        "help": "Ein Weblink allein erfüllt nicht die Pflicht zur Bereitstellung eines Sicherheitsdatenblatts gemäß Artikel 31 von REACH."
       },
       "sds_url": {
-        "label": "Public safety data sheet URL",
+        "label": "URL des öffentlichen Sicherheitsdatenblatts",
         "placeholder": "https://..."
       },
       "sds_languages": {
-        "label": "Safety data sheet languages",
-        "placeholder": "e.g., English, French, German"
+        "label": "Sprachen des Sicherheitsdatenblatts",
+        "placeholder": "z. B. Englisch, Französisch, Deutsch"
       },
       "sds_revision_date": {
-        "label": "Safety data sheet revision date",
+        "label": "Revisionsdatum des Sicherheitsdatenblatts",
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Emergency contact (poison centre or 24-hour number)",
-        "placeholder": "Phone number for emergencies"
+        "label": "Notfallkontakt (Giftinformationszentrum oder 24-Stunden-Nummer)",
+        "placeholder": "Telefonnummer für Notfälle"
       },
       "constituent_classes": {
-        "label": "Constituent classes added above 0.2% by weight",
-        "help": "Tick each class that is added above 0.2% by weight, then choose its weight range below (Annex V Part A point 1(h)(i))."
+        "label": "Inhaltsstoffklassen, die mit mehr als 0,2 Gewichtsprozent zugesetzt werden",
+        "help": "Kreuzen Sie jede Klasse an, die mit mehr als 0,2 Gewichtsprozent zugesetzt wird, und wählen Sie dann unten ihren Gewichtsbereich (Anhang V Teil A Ziffer 1 Buchstabe h Ziffer i))."
       },
       "band_phosphates": {
-        "label": "Phosphates: weight range"
+        "label": "Phosphate: Gewichtsbereich"
       },
       "band_phosphonates": {
-        "label": "Phosphonates: weight range"
+        "label": "Phosphonate: Gewichtsbereich"
       },
       "band_anionic_surfactants": {
-        "label": "Anionic surfactants: weight range"
+        "label": "Anionische Tenside: Gewichtsbereich"
       },
       "band_cationic_surfactants": {
-        "label": "Cationic surfactants: weight range"
+        "label": "Kationische Tenside: Gewichtsbereich"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amphoteric surfactants: weight range"
+        "label": "Amphotere Tenside: Gewichtsbereich"
       },
       "band_nonionic_surfactants": {
-        "label": "Non-ionic surfactants: weight range"
+        "label": "Nichtionische Tenside: Gewichtsbereich"
       },
       "band_oxygen_bleach": {
-        "label": "Oxygen-based bleaching agents: weight range"
+        "label": "Bleichmittel auf Sauerstoffbasis: Gewichtsbereich"
       },
       "band_chlorine_bleach": {
-        "label": "Chlorine-based bleaching agents: weight range"
+        "label": "Bleichmittel auf Chlorbasis: Gewichtsbereich"
       },
       "band_edta": {
-        "label": "EDTA and salts thereof: weight range"
+        "label": "EDTA und dessen Salze: Gewichtsbereich"
       },
       "band_nta": {
-        "label": "NTA and salts thereof: weight range"
+        "label": "NTA und dessen Salze: Gewichtsbereich"
       },
       "band_phenols": {
-        "label": "Phenols and halogenated phenols: weight range"
+        "label": "Phenole und halogenierte Phenole: Gewichtsbereich"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: weight range"
+        "label": "Paradichlorbenzol: Gewichtsbereich"
       },
       "band_aromatic_hydrocarbons": {
-        "label": "Aromatic hydrocarbons: weight range"
+        "label": "Aromatische Kohlenwasserstoffe: Gewichtsbereich"
       },
       "band_aliphatic_hydrocarbons": {
-        "label": "Aliphatic hydrocarbons: weight range"
+        "label": "Aliphatische Kohlenwasserstoffe: Gewichtsbereich"
       },
       "band_halogenated_hydrocarbons": {
-        "label": "Halogenated hydrocarbons: weight range"
+        "label": "Halogenierte Kohlenwasserstoffe: Gewichtsbereich"
       },
       "band_soap": {
-        "label": "Soap: weight range"
+        "label": "Seife: Gewichtsbereich"
       },
       "band_zeolites": {
-        "label": "Zeolites: weight range"
+        "label": "Zeolithe: Gewichtsbereich"
       },
       "band_polycarboxylates": {
-        "label": "Polycarboxylates: weight range"
+        "label": "Polycarboxylate: Gewichtsbereich"
       },
       "listed_constituents": {
-        "label": "Constituent classes added at any concentration",
-        "help": "Annex V Part A point 1(h)(ii). Disinfectants are listed under the current rules and are no longer a listed class from 23 September 2029."
+        "label": "Inhaltsstoffklassen, die in beliebiger Konzentration zugesetzt werden",
+        "help": "Anhang V Teil A Ziffer 1 Buchstabe h Ziffer ii. Desinfektionsmittel werden nach den geltenden Vorschriften aufgeführt und sind ab dem 23. September 2029 keine aufzuführende Klasse mehr."
       },
       "preservatives_present": {
-        "label": "Are preservatives present?",
-        "help": "Preservatives are listed under Annex V Part A point 1(h)(iii) unless already labelled under CLP Article 18(3)(b) or Biocidal Products Regulation Article 58."
+        "label": "Sind Konservierungsstoffe enthalten?",
+        "help": "Konservierungsstoffe werden gemäß Anhang V Teil A Ziffer 1 Buchstabe h Ziffer iii aufgeführt, es sei denn, sie sind bereits gemäß Artikel 18 Absatz 3 Buchstabe b von CLP oder Artikel 58 der Biozidprodukteverordnung gekennzeichnet."
       },
       "preservatives": {
-        "label": "Preservatives",
-        "help": "Use the INCI name where possible.",
-        "placeholder": "e.g., Phenoxyethanol, Methylisothiazolinone"
+        "label": "Konservierungsstoffe",
+        "help": "Verwenden Sie nach Möglichkeit den INCI-Namen.",
+        "placeholder": "z. B. Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Fragrance allergens added above 0.01% by weight?",
-        "help": "Allergens from the list in Annex V Part D that are intentionally added above 0.01% by weight are named on the label, unless already labelled under CLP."
+        "label": "Duftstoffallergene mit mehr als 0,01 Gewichtsprozent zugesetzt?",
+        "help": "Allergene aus der Liste in Anhang V Teil D, die absichtlich mit mehr als 0,01 Gewichtsprozent zugesetzt werden, werden auf dem Etikett namentlich aufgeführt, es sei denn, sie sind bereits gemäß CLP gekennzeichnet."
       },
       "fragrance_allergens": {
-        "label": "Fragrance allergens present",
-        "help": "Pick each allergen from the official list of 105 entries."
+        "label": "Enthaltene Duftstoffallergene",
+        "help": "Wählen Sie jedes Allergen aus der offiziellen Liste mit 105 Einträgen aus."
       },
       "ingredients_url": {
-        "label": "Public ingredients web page",
-        "help": "The current rules (Regulation (EC) No 648/2004, Annex VII part D) require a maintained public ingredient list for consumer products. It needs no percentage ranges or CAS numbers.",
+        "label": "Öffentliche Webseite mit Inhaltsstoffen",
+        "help": "Die geltenden Vorschriften (Verordnung (EC) No 648/2004, Anhang VII Teil D) erfordern eine gepflegte öffentliche Liste der Inhaltsstoffe für Verbraucherprodukte. Sie benötigt keine Prozentbereiche oder CAS-Nummern.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
-        "label": "Equivalent ingredient information supplied to professional users"
+        "label": "Gleichwertige Informationen zu Inhaltsstoffen, die für berufsmäßige Verwender bereitgestellt werden"
       },
       "biodegradability_test": {
-        "label": "Surfactant biodegradability test method",
-        "placeholder": "e.g., OECD 301 series"
+        "label": "Prüfverfahren für die biologische Abbaubarkeit von Tensiden",
+        "placeholder": "z. B. OECD 301-Reihe"
       },
       "biodegradability_reference": {
-        "label": "Biodegradability evidence reference",
-        "help": "Name the test report or supplier declaration. Do not upload or paste confidential files."
+        "label": "Referenz für den Nachweis der biologischen Abbaubarkeit",
+        "help": "Nennen Sie den Prüfbericht oder die Lieferantenerklärung. Laden Sie keine vertraulichen Dateien hoch oder fügen Sie sie ein."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Contains intentionally added synthetic polymer microparticles?",
-        "help": "Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028."
+        "label": "Enthält absichtlich zugesetzte synthetische Polymermikropartikel?",
+        "help": "Die Verordnung (EU) 2023/2055 beschränkt diese gemäß REACH Anhang XVII Eintrag 78. Wasch- und Reinigungsmittel sind ab dem 17. Oktober 2028 betroffen."
       },
       "use_instructions": {
-        "label": "Instructions for use and special precautions",
-        "help": "Method, suitable fabrics or surfaces, and any special precautions."
+        "label": "Gebrauchsanweisung und besondere Vorsichtsmaßnahmen",
+        "help": "Verfahren, geeignete Textilien oder Oberflächen und besondere Vorsichtsmaßnahmen."
       },
       "laundry_type": {
-        "label": "Laundry detergent type",
-        "help": "Decides the standard load: 4.5 kg of dry fabric for heavy-duty, 2.5 kg for short-cycle heavy-duty and for light-duty detergents."
+        "label": "Art des Waschmittels",
+        "help": "Bestimmt die Standardbeladung: 4,5 kg trockene Wäsche für Vollwaschmittel, 2,5 kg für Kurzwaschgang-Vollwaschmittel und für Feinwaschmittel."
       },
       "dosage_unit": {
-        "label": "Dosage unit"
+        "label": "Dosiereinheit"
       },
       "dosage_soft": {
-        "label": "Dose for soft water (per standard load)",
-        "placeholder": "e.g., 60"
+        "label": "Dosis für weiches Wasser (pro Standardbeladung)",
+        "placeholder": "z. B. 60"
       },
       "dosage_medium": {
-        "label": "Dose for medium water (per standard load)",
-        "placeholder": "e.g., 75"
+        "label": "Dosis für mittelhartes Wasser (pro Standardbeladung)",
+        "placeholder": "z. B. 75"
       },
       "dosage_hard": {
-        "label": "Dose for hard water (per standard load)",
-        "placeholder": "e.g., 90"
+        "label": "Dosis für hartes Wasser (pro Standardbeladung)",
+        "placeholder": "z. B. 90"
       },
       "dosage_two_cycle_note": {
-        "label": "Dosage for one-cycle and two-cycle wash processes",
-        "help": "Annex V Part B point 1(a) asks for dosage for one or two cycle washing processes."
+        "label": "Dosierung für ein- und zweistufige Waschverfahren",
+        "help": "Anhang V Teil B Ziffer 1 Buchstabe a verlangt die Angabe der Dosierung für ein- oder zweistufige Waschverfahren."
       },
       "loads_per_pack": {
-        "label": "Standard loads per pack (medium water, 2.5 millimoles CaCO3 per litre)",
-        "help": "For refills, give the number of loads per 1 litre or 1 kg of product. Not needed for refills in units."
+        "label": "Standardbeladungen pro Packung (mittelhartes Wasser, 2,5 Millimol CaCO3 pro Liter)",
+        "help": "Bei Nachfüllpackungen die Anzahl der Beladungen pro 1 Liter oder 1 kg Produkt angeben. Nicht erforderlich für Nachfüllpackungen in Einheiten."
       },
       "measuring_cup_ml": {
-        "label": "Measuring cup capacity",
-        "help": "Capacity of any measuring cup supplied, with clear markings for soft, medium and hard water doses."
+        "label": "Fassungsvermögen des Messbechers",
+        "help": "Fassungsvermögen eines mitgelieferten Messbechers mit deutlichen Markierungen für die Dosierung bei weichem, mittelhartem und hartem Wasser."
       },
       "dishwasher_dose": {
-        "label": "Standard dose for the main cycle",
-        "help": "For normally soiled tableware in a fully loaded 12 place-setting dishwasher."
+        "label": "Standarddosis für den Hauptspülgang",
+        "help": "Für normal verschmutztes Geschirr in einer voll beladenen Geschirrspülmaschine mit 12 Maßgedecken."
       },
       "dishwasher_dose_hardness_note": {
-        "label": "Adjustment of the dose for water hardness"
+        "label": "Anpassung der Dosis an die Wasserhärte"
       },
       "surface_dilution": {
-        "label": "Recommended dilution and quantity per surface area",
-        "help": "Annex V Part B point 4: give the recommended dilution and quantity per surface area, or other use instructions, so the product is not used in excess."
+        "label": "Empfohlene Verdünnung und Menge pro Flächeneinheit",
+        "help": "Anhang V Teil B Ziffer 4: Geben Sie die empfohlene Verdünnung und Menge pro Flächeneinheit oder andere Gebrauchsanweisungen an, damit das Produkt nicht übermäßig verwendet wird."
       },
       "phosphorus_per_dose_g": {
-        "label": "Total phosphorus in the recommended dose (grams)",
-        "help": "Annex III limits: below 0.5 g per standard laundry load in hard water, and below 0.3 g per standard dishwasher dose."
+        "label": "Gesamtphosphor in der empfohlenen Dosis (Gramm)",
+        "help": "Grenzwerte nach Anhang III: unter 0,5 g pro Standard-Wäscheladung in hartem Wasser und unter 0,3 g pro Standard-Geschirrspüldosis."
       },
       "storage_disposal": {
-        "label": "Storage and disposal"
+        "label": "Lagerung und Entsorgung"
       },
       "packaging_material": {
-        "label": "Primary packaging material"
+        "label": "Primärverpackungsmaterial"
       },
       "packaging_recyclable": {
-        "label": "Packaging recyclable?"
+        "label": "Verpackung recycelbar?"
       },
       "recycling_instructions": {
-        "label": "Recycling instructions"
+        "label": "Recyclinganweisungen"
       },
       "recycled_packaging_content": {
-        "label": "Recycled content in packaging (%)",
-        "placeholder": "e.g., 30"
+        "label": "Recyclinganteil in der Verpackung (%)",
+        "placeholder": "z. B. 30"
       },
       "refill_available": {
-        "label": "Refill available?"
+        "label": "Nachfüllpackung erhältlich?"
       },
       "refill_station": {
-        "label": "Sold through a refill station?",
-        "help": "Refill points carry their own data carrier duty under Article 21(4) of Regulation (EU) 2026/405."
+        "label": "Verkauf über eine Nachfüllstation?",
+        "help": "Nachfüllstationen unterliegen gemäß Artikel 21 Absatz 4 der Verordnung (EU) 2026/405 einer eigenen Pflicht bezüglich des Datenträgers."
       },
       "epr_registration": {
-        "label": "Packaging producer responsibility registration per market",
-        "help": "One line per market.",
+        "label": "Registrierung für die erweiterte Herstellerverantwortung für Verpackungen pro Markt",
+        "help": "Eine Zeile pro Markt.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "Applicable authorisation or lawful transitional basis"
+        "label": "Anwendbare Zulassung oder rechtmäßige Übergangsregelung"
       },
       "biocidal_actives": {
-        "label": "Active substances and authorised uses"
+        "label": "Wirkstoffe und zugelassene Verwendungen"
       },
       "environmental_claims": {
-        "label": "Environmental claims made on the product or packaging",
-        "placeholder": "e.g., \"Bottle made with 30% recycled plastic\""
+        "label": "Umweltbezogene Angaben auf dem Produkt oder der Verpackung",
+        "placeholder": "z. B. „Flasche aus 30 % recyceltem Kunststoff“"
       },
       "claims_evidence_reference": {
-        "label": "Substantiation evidence reference",
-        "placeholder": "Study, certificate or verification body reference for each claim"
+        "label": "Referenz für den Nachweis der Angaben",
+        "placeholder": "Referenz der Studie, des Zertifikats oder der Prüfstelle für jede Angabe"
       },
       "claims_avoid_generic_terms": {
-        "label": "Claims avoid generic environmental terms?",
-        "help": "Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825."
+        "label": "Werden bei den Angaben allgemeine umweltbezogene Begriffe vermieden?",
+        "help": "Allgemeine Angaben wie „umweltfreundlich“ oder „biologisch abbaubar“ sind ab dem 27. September 2026 gemäß der Richtlinie (EU) 2024/825 beschränkt."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel licence number",
-        "help": "Enter the licence registration number only if the product holds an EU Ecolabel licence. The badge is shown on the public passport only when a number is entered."
+        "label": "Lizenznummer des EU-Umweltzeichens",
+        "help": "Geben Sie die Lizenzregistrierungsnummer nur an, wenn das Produkt eine Lizenz für das EU-Umweltzeichen besitzt. Das Logo wird im öffentlichen Pass nur angezeigt, wenn eine Nummer eingegeben wird."
       },
       "reach_review": {
-        "label": "REACH restrictions and duties assessed",
-        "help": "Review the restrictions in Annex XVII and the duties that apply to the constituent substances."
+        "label": "REACH-Beschränkungen und -Pflichten bewertet",
+        "help": "Überprüfen Sie die Beschränkungen in Anhang XVII und die Pflichten, die für die Inhaltsstoffe gelten."
       },
       "physical_label_reviewed": {
-        "label": "I have checked the physical label and the supplied safety information"
+        "label": "Ich habe das physische Etikett und die bereitgestellten Sicherheitsinformationen geprüft"
       },
       "label_professional_indicator": {
-        "label": "The label states that the product is for professional use only"
+        "label": "Das Etikett gibt an, dass das Produkt nur für den berufsmäßigen Gebrauch bestimmt ist"
       },
       "previous_passport_url": {
-        "label": "Link to the preceding passport, when this record replaces one",
+        "label": "Link zum vorherigen Pass, wenn dieser Datensatz einen ersetzt",
         "placeholder": "https://..."
       },
       "data_review_date": {
-        "label": "Product information review date",
+        "label": "Datum der Überprüfung der Produktinformationen",
         "placeholder": "YYYY-MM-DD"
       },
       "conformity_reference": {
-        "label": "Manufacturer conformity evidence reference"
+        "label": "Referenz für den Konformitätsnachweis des Herstellers"
       },
       "model_content_reference": {
-        "label": "Product content revision reference"
+        "label": "Referenz der Revision des Produktinhalts"
       },
       "manufacturing_process_reference": {
-        "label": "Manufacturing process revision reference"
+        "label": "Referenz der Revision des Herstellungsprozesses"
       },
       "persistent_product_id": {
-        "label": "Persistent product identifier",
-        "help": "Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR."
+        "label": "Dauerhafte Produktkennung",
+        "help": "Geben Sie die echte Kennung ein. Eine interne Datensatz-ID ist keine Kennung, die gemäß den in der ESPR genannten Normen ausgestellt wurde."
       },
       "identifier_scheme": {
-        "label": "Identifier scheme and issuer"
+        "label": "Kennungsschema und Aussteller"
       },
       "manufacturer_operator_id": {
-        "label": "Manufacturer unique operator identifier"
+        "label": "Eindeutige Betreiberkennung des Herstellers"
       },
       "backup_provider_url": {
-        "label": "Passport service provider holding the backup copy (URL)",
-        "help": "Name a provider you have actually arranged. The app does not create a backup service.",
+        "label": "Pass-Dienstleister, der die Sicherungskopie vorhält (URL)",
+        "help": "Nennen Sie einen Anbieter, mit dem Sie tatsächlich eine Vereinbarung getroffen haben. Die App erstellt keinen Sicherungsdienst.",
         "placeholder": "https://..."
       },
       "backup_reference": {
-        "label": "Backup service agreement reference"
+        "label": "Referenz der Vereinbarung über den Sicherungsdienst"
       },
       "commodity_code_status": {
-        "label": "Customs commodity code"
+        "label": "Warennummer des Zolls"
       },
       "commodity_code": {
-        "label": "Commodity code (Regulation (EEC) No 2658/87)"
+        "label": "Warennummer (Verordnung (EEC) No 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Reason no commodity code applies"
+        "label": "Grund, warum keine Warennummer zutrifft"
       },
       "manufacturer_responsibility": {
-        "label": "The manufacturer issues this passport under its sole responsibility"
+        "label": "Der Hersteller stellt diesen Pass in alleiniger Verantwortung aus"
       },
       "compliance_statement": {
-        "label": "Statement that compliance with Regulation (EU) 2026/405 has been demonstrated",
-        "help": "Complete this only after the manufacturer's own assessment. The app never generates a conformity statement."
+        "label": "Erklärung, dass die Einhaltung der Verordnung (EU) 2026/405 nachgewiesen wurde",
+        "help": "Füllen Sie dies erst nach der eigenen Bewertung des Herstellers aus. Die App generiert niemals eine Konformitätserklärung."
       },
       "applicable_union_law": {
-        "label": "Other Union law that applies to the product"
+        "label": "Sonstiges für das Produkt geltendes Unionsrecht"
       },
       "last_placed_on_market_date": {
-        "label": "Latest date the model was placed on the market",
-        "help": "The starting point for the ten-year availability duty.",
+        "label": "Letztes Datum, an dem das Modell auf den Markt gebracht wurde",
+        "help": "Der Ausgangspunkt für die zehnjährige Bereitstellungspflicht.",
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Where the data carrier is placed",
-        "help": "Article 21(4): physically present, indelible, machine-readable and visible before purchase, with the statement \"Please scan for more comprehensive information on the product\". Also required at refill stations and in distance sales."
+        "label": "Wo der Datenträger angebracht ist",
+        "help": "Artikel 21 Absatz 4: physisch vorhanden, unauslöschlich, maschinenlesbar und vor dem Kauf sichtbar, mit der Angabe „Bitte scannen für umfassendere Informationen zum Produkt“. Auch an Nachfüllstationen und im Fernabsatz erforderlich."
       },
       "carrier_reviewed": {
-        "label": "The data carrier meets these requirements"
+        "label": "Der Datenträger erfüllt diese Anforderungen"
       },
       "market_language_reviewed": {
-        "label": "Label and safety wording are reviewed in every target market language"
+        "label": "Etiketten- und Sicherheitstexte sind in jeder Zielsprache des Marktes überprüft"
       },
       "substance_list_route": {
-        "label": "Substance disclosure route",
-        "help": "The exemption applies only to industrial and institutional detergents and surfactants where an equivalent safety data sheet under REACH Article 31 supplies the information."
+        "label": "Weg der Offenlegung von Stoffen",
+        "help": "Die Ausnahme gilt nur für industrielle und institutionelle Wasch- und Reinigungsmittel und Tenside, bei denen ein gleichwertiges Sicherheitsdatenblatt gemäß Artikel 31 von REACH die Informationen liefert."
       },
       "substances": {
-        "label": "All intentionally added substances and label-required carry-over preservatives",
-        "help": "Identify substances as required by Article 18(3) of Regulation (EC) No 1272/2008. Do not enter concentrations or confidential formulation data. Everything saved in this category is public."
+        "label": "Alle absichtlich zugesetzten Stoffe und kennzeichnungspflichtige übertragene Konservierungsstoffe",
+        "help": "Identifizieren Sie Stoffe gemäß Artikel 18 Absatz 3 der Verordnung (EC) No 1272/2008. Geben Sie keine Konzentrationen oder vertrauliche Rezepturdaten ein. Alles, was in dieser Kategorie gespeichert wird, ist öffentlich."
       },
       "no_substances_reason": {
-        "label": "Basis for the absence of substances to list"
+        "label": "Grundlage für das Fehlen aufzuführender Stoffe"
       },
       "substance_list_complete": {
-        "label": "The list is complete, includes qualifying carry-over preservatives and uses identities assessed under CLP Article 18(3)"
+        "label": "Die Liste ist vollständig, enthält qualifizierende übertragene Konservierungsstoffe und verwendet Identitäten, die gemäß Artikel 18 Absatz 3 von CLP bewertet wurden"
       },
       "industrial_institutional_use": {
-        "label": "Used only outside the domestic sphere by specialised personnel"
+        "label": "Wird nur außerhalb des häuslichen Bereichs von Fachpersonal verwendet"
       },
       "equivalent_sds_supplied": {
-        "label": "Equivalent substance information has actually been supplied in a safety data sheet under REACH Article 31"
+        "label": "Gleichwertige Stoffinformationen wurden tatsächlich in einem Sicherheitsdatenblatt gemäß Artikel 31 von REACH bereitgestellt"
       },
       "annex_sds_url": {
-        "label": "Equivalent safety data sheet URL",
+        "label": "URL des gleichwertigen Sicherheitsdatenblatts",
         "placeholder": "https://..."
       },
       "annex_sds_languages": {
-        "label": "Equivalent safety data sheet languages"
+        "label": "Sprachen des gleichwertigen Sicherheitsdatenblatts"
       },
       "annex_sds_revision_date": {
-        "label": "Equivalent safety data sheet revision date",
+        "label": "Revisionsdatum des gleichwertigen Sicherheitsdatenblatts",
         "placeholder": "YYYY-MM-DD"
       },
       "microorganisms_added": {
-        "label": "Are micro-organisms intentionally added?",
-        "help": "The equivalent safety data sheet route never removes the micro-organism list."
+        "label": "Werden Mikroorganismen absichtlich zugesetzt?",
+        "help": "Der Weg über das gleichwertige Sicherheitsdatenblatt entbindet niemals von der Pflicht zur Auflistung der Mikroorganismen."
       },
       "microorganisms": {
-        "label": "All intentionally added micro-organisms",
-        "help": "Give genus, species and strain name or code for each micro-organism."
+        "label": "Alle absichtlich zugesetzten Mikroorganismen",
+        "help": "Geben Sie für jeden Mikroorganismus Gattung, Art und Stammbezeichnung oder -code an."
       },
       "microorganism_safety_reference": {
-        "label": "Safety assessment reference (Annex II)"
+        "label": "Referenz der Sicherheitsbewertung (Anhang II)"
       },
       "microorganism_shelf_life": {
-        "label": "Shelf life and storage conditions",
-        "help": "The label of a detergent containing micro-organisms shows the shelf life."
+        "label": "Haltbarkeit und Lagerbedingungen",
+        "help": "Das Etikett eines Wasch- und Reinigungsmittels, das Mikroorganismen enthält, gibt die Haltbarkeit an."
       },
       "food_contact_use": {
-        "label": "Intended for use on surfaces in contact with food?",
-        "help": "Unless the product has been risk-assessed as safe for this use, the label says it is not to be used on food-contact surfaces."
+        "label": "Zur Verwendung auf Oberflächen mit Lebensmittelkontakt bestimmt?",
+        "help": "Sofern für das Produkt keine Risikobewertung vorliegt, die seine Sicherheit für diese Verwendung bestätigt, ist auf dem Etikett anzugeben, dass es nicht auf Oberflächen mit Lebensmittelkontakt zu verwenden ist."
       },
       "food_contact_instructions": {
-        "label": "Precautions and instructions for food-contact surfaces"
+        "label": "Vorsichtsmaßnahmen und Anweisungen für Oberflächen mit Lebensmittelkontakt"
       }
     },
     "options": {
       "productType": {
-        "laundry": "Laundry detergent",
-        "laundry_additive": "Laundry additive or pre-wash",
-        "machine_dishwashing": "Machine dishwashing detergent",
-        "dishwasher_additive": "Rinse aid or dishwasher additive",
-        "hand_dishwashing": "Hand dishwashing detergent",
-        "all_purpose": "All-purpose or surface cleaner",
-        "kitchen": "Kitchen cleaner",
-        "bathroom": "Bathroom cleaner",
-        "toilet": "Toilet cleaner",
-        "glass": "Glass cleaner",
-        "floor": "Floor cleaner",
-        "descaler": "Descaler",
-        "bleach": "Bleach",
-        "other": "Other detergent"
+        "laundry": "Waschmittel",
+        "laundry_additive": "Waschhilfsmittel oder Vorwaschmittel",
+        "machine_dishwashing": "Maschinengeschirrspülmittel",
+        "dishwasher_additive": "Klarspüler oder Geschirrspülhilfsmittel",
+        "hand_dishwashing": "Handgeschirrspülmittel",
+        "all_purpose": "Allzweck- oder Oberflächenreiniger",
+        "kitchen": "Küchenreiniger",
+        "bathroom": "Badreiniger",
+        "toilet": "Toilettenreiniger",
+        "glass": "Glasreiniger",
+        "floor": "Bodenreiniger",
+        "descaler": "Entkalker",
+        "bleach": "Bleichmittel",
+        "other": "Anderes Wasch- und Reinigungsmittel"
       },
       "productForm": {
-        "liquid": "Liquid",
+        "liquid": "Flüssig",
         "gel": "Gel",
-        "powder": "Powder",
-        "tablet": "Tablet",
-        "capsule": "Capsule or pod",
+        "powder": "Pulver",
+        "tablet": "Tablette",
+        "capsule": "Kapsel oder Pod",
         "spray": "Spray",
-        "wipe": "Wipe",
+        "wipe": "Tuch",
         "paste": "Paste",
-        "other": "Other"
+        "other": "Andere"
       },
       "yesNoReview": {
-        "yes": "Yes",
-        "no": "No",
-        "review": "Assessment needed"
+        "yes": "Ja",
+        "no": "Nein",
+        "review": "Bewertung erforderlich"
       },
       "useSector": {
-        "consumer": "Consumers, including mixed consumer and professional use",
-        "professional": "Professional use only",
-        "industrial": "Industrial and institutional use only"
+        "consumer": "Verbraucher, einschließlich gemischter Verwendung durch Verbraucher und berufsmäßige Verwender",
+        "professional": "Nur für berufsmäßige Verwendung",
+        "industrial": "Nur für industrielle und institutionelle Verwendung"
       },
       "dppProfile": {
-        "current": "Current product information",
-        "annex_vi": "Full Annex VI dataset for the 2029 rules"
+        "current": "Aktuelle Produktinformationen",
+        "annex_vi": "Vollständiger Datensatz nach Anhang VI für die Vorschriften von 2029"
       },
       "manufacturerNonEu": {
-        "yes": "Yes",
-        "no": "No"
+        "yes": "Ja",
+        "no": "Nein"
       },
       "clpClassification": {
-        "none": "Not classified as hazardous",
-        "environment": "Environmental hazards only",
-        "health_physical": "Health or physical hazards, with or without environmental hazards",
-        "review": "Assessment needed"
+        "none": "Nicht als gefährlich eingestuft",
+        "environment": "Nur Umweltgefahren",
+        "health_physical": "Gesundheits- oder physikalische Gefahren, mit oder ohne Umweltgefahren",
+        "review": "Bewertung erforderlich"
       },
       "signalWord": {
-        "danger": "Danger",
-        "warning": "Warning",
-        "not_applicable": "Not applicable after assessment"
+        "danger": "Gefahr",
+        "warning": "Achtung",
+        "not_applicable": "Nach Bewertung nicht anwendbar"
       },
       "pictograms": {
-        "ghs01": "GHS01 Exploding bomb",
-        "ghs02": "GHS02 Flame",
-        "ghs03": "GHS03 Flame over circle",
-        "ghs04": "GHS04 Gas cylinder",
-        "ghs05": "GHS05 Corrosion",
-        "ghs06": "GHS06 Skull and crossbones",
-        "ghs07": "GHS07 Exclamation mark",
-        "ghs08": "GHS08 Health hazard",
-        "ghs09": "GHS09 Environment",
-        "none": "No pictogram applies"
+        "ghs01": "GHS01 Explodierende Bombe",
+        "ghs02": "GHS02 Flamme",
+        "ghs03": "GHS03 Flamme über einem Kreis",
+        "ghs04": "GHS04 Gasflasche",
+        "ghs05": "GHS05 Ätzwirkung",
+        "ghs06": "GHS06 Totenkopf mit gekreuzten Knochen",
+        "ghs07": "GHS07 Ausrufezeichen",
+        "ghs08": "GHS08 Gesundheitsgefahr",
+        "ghs09": "GHS09 Umwelt",
+        "none": "Kein Piktogramm anwendbar"
       },
       "pcnApplicability": {
-        "required": "Notification required",
-        "exempt": "Documented exemption",
-        "review": "Assessment needed"
+        "required": "Meldung erforderlich",
+        "exempt": "Dokumentierte Ausnahme",
+        "review": "Bewertung erforderlich"
       },
       "pcnStatus": {
-        "submitted": "Submitted for the relevant markets",
-        "pending": "Pending"
+        "submitted": "Für die relevanten Märkte übermittelt",
+        "pending": "Ausstehend"
       },
       "sdsRequirement": {
-        "required": "Must be supplied",
-        "on_request": "Must be available on request",
-        "not_required": "Not required after assessment",
-        "review": "Assessment needed"
+        "required": "Muss mitgeliefert werden",
+        "on_request": "Muss auf Anfrage erhältlich sein",
+        "not_required": "Nach Bewertung nicht erforderlich",
+        "review": "Bewertung erforderlich"
       },
       "constituentClass": {
-        "phosphates": "Phosphates",
-        "phosphonates": "Phosphonates",
-        "anionic_surfactants": "Anionic surfactants",
-        "cationic_surfactants": "Cationic surfactants",
-        "amphoteric_surfactants": "Amphoteric surfactants",
-        "nonionic_surfactants": "Non-ionic surfactants",
-        "oxygen_bleach": "Oxygen-based bleaching agents",
-        "chlorine_bleach": "Chlorine-based bleaching agents",
-        "edta": "EDTA and salts thereof",
-        "nta": "NTA and salts thereof",
-        "phenols": "Phenols and halogenated phenols",
-        "paradichlorobenzene": "Paradichlorobenzene",
-        "aromatic_hydrocarbons": "Aromatic hydrocarbons",
-        "aliphatic_hydrocarbons": "Aliphatic hydrocarbons",
-        "halogenated_hydrocarbons": "Halogenated hydrocarbons",
-        "soap": "Soap",
-        "zeolites": "Zeolites",
-        "polycarboxylates": "Polycarboxylates"
+        "phosphates": "Phosphate",
+        "phosphonates": "Phosphonate",
+        "anionic_surfactants": "Anionische Tenside",
+        "cationic_surfactants": "Kationische Tenside",
+        "amphoteric_surfactants": "Amphotere Tenside",
+        "nonionic_surfactants": "Nichtionische Tenside",
+        "oxygen_bleach": "Bleichmittel auf Sauerstoffbasis",
+        "chlorine_bleach": "Bleichmittel auf Chlorbasis",
+        "edta": "EDTA und dessen Salze",
+        "nta": "NTA und dessen Salze",
+        "phenols": "Phenole und halogenierte Phenole",
+        "paradichlorobenzene": "Paradichlorbenzol",
+        "aromatic_hydrocarbons": "Aromatische Kohlenwasserstoffe",
+        "aliphatic_hydrocarbons": "Aliphatische Kohlenwasserstoffe",
+        "halogenated_hydrocarbons": "Halogenierte Kohlenwasserstoffe",
+        "soap": "Seife",
+        "zeolites": "Zeolithe",
+        "polycarboxylates": "Polycarboxylate"
       },
       "weightBand": {
-        "lt5": "Less than 5%",
-        "5to15": "5% or over but less than 15%",
-        "15to30": "15% or over but less than 30%",
-        "gte30": "30% and more"
+        "lt5": "Weniger als 5 %",
+        "5to15": "5 % oder mehr, aber weniger als 15 %",
+        "15to30": "15 % oder mehr, aber weniger als 30 %",
+        "gte30": "30 % und mehr"
       },
       "listedConstituent": {
-        "enzymes": "Enzymes",
-        "micro_organisms": "Micro-organisms",
-        "optical_brighteners": "Optical brighteners",
-        "perfumes": "Perfumes",
-        "disinfectants": "Disinfectants (current rules until 23 September 2029)"
+        "enzymes": "Enzyme",
+        "micro_organisms": "Mikroorganismen",
+        "optical_brighteners": "Optische Aufheller",
+        "perfumes": "Duftstoffe",
+        "disinfectants": "Desinfektionsmittel (geltende Vorschriften bis 23. September 2029)"
       },
       "yesNoUnknown": {
-        "yes": "Yes",
-        "no": "No",
-        "unknown": "Unknown"
+        "yes": "Ja",
+        "no": "Nein",
+        "unknown": "Unbekannt"
       },
       "laundryType": {
-        "heavy_duty": "Heavy-duty",
-        "heavy_duty_short": "Heavy-duty for short cycles",
-        "light_duty": "Light-duty or delicate fabrics"
+        "heavy_duty": "Vollwaschmittel",
+        "heavy_duty_short": "Vollwaschmittel für Kurzwaschgänge",
+        "light_duty": "Feinwaschmittel oder für empfindliche Textilien"
       },
       "dosageUnit": {
-        "ml": "Millilitres",
-        "g": "Grams",
-        "units": "Units (tablets, capsules or pods)"
+        "ml": "Milliliter",
+        "g": "Gramm",
+        "units": "Einheiten (Tabletten, Kapseln oder Pods)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
         "pet": "PET (01)",
         "pp": "PP (05)",
-        "other_plastic": "Other plastic",
-        "metal": "Metal",
-        "glass": "Glass",
-        "paper_cardboard": "Paper or cardboard",
-        "composite": "Composite material",
-        "water_soluble_film": "Water-soluble film",
-        "other": "Other"
+        "other_plastic": "Anderer Kunststoff",
+        "metal": "Metall",
+        "glass": "Glas",
+        "paper_cardboard": "Papier oder Pappe",
+        "composite": "Verbundwerkstoff",
+        "water_soluble_film": "Wasserlösliche Folie",
+        "other": "Anderes"
       },
       "reachReview": {
-        "reviewed": "Reviewed by the supplier",
-        "review": "Assessment needed"
+        "reviewed": "Vom Lieferanten überprüft",
+        "review": "Bewertung erforderlich"
       },
       "commodityCodeStatus": {
-        "applicable": "Applicable",
-        "not_applicable": "Not applicable after assessment"
+        "applicable": "Anwendbar",
+        "not_applicable": "Nach Bewertung nicht anwendbar"
       },
       "substanceListRoute": {
-        "full_list": "Full list of substances",
-        "equivalent_sds": "Equivalent safety data sheet (industrial and institutional use only)",
-        "no_added_substances": "No substances to list after assessment"
+        "full_list": "Vollständige Liste der Stoffe",
+        "equivalent_sds": "Gleichwertiges Sicherheitsdatenblatt (nur für die industrielle und gewerbliche Verwendung)",
+        "no_added_substances": "Nach Bewertung keine aufzuführenden Stoffe"
       }
     },
     "warnings": {
-      "scopeOutside": "This product may fall outside the definition of a detergent in Article 2(1) of Regulation (EU) 2026/405. Check the scope before using this category.",
-      "biocidal": "Disinfecting or antimicrobial claims need a biocidal product authorisation under Regulation (EU) No 528/2012.",
-      "assessmentNeeded": "This assessment is not finished. Resolve it before relying on the passport.",
-      "microparticles": "Check Regulation (EU) 2023/2055 on synthetic polymer microparticles before placing this product on the market. An unknown answer must be resolved with the supplier.",
-      "phosphorusLaundry": "A total phosphorus content of {{value}} g is not below the 0.5 g limit for a consumer laundry detergent in hard water (Annex III of Regulation (EU) 2026/405).",
-      "phosphorusDishwasher": "A total phosphorus content of {{value}} g is not below the 0.3 g limit for a consumer automatic dishwasher detergent (Annex III of Regulation (EU) 2026/405).",
-      "percentageRange": "A percentage must be between 0 and 100. You entered {{value}}.",
-      "positiveNumber": "Enter a number greater than zero. You entered {{value}}.",
-      "allergensMissing": "You answered yes, but no allergen is selected. Select each allergen from the official list.",
-      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.",
-      "urlFormat": "Use a complete web address starting with http:// or https://.",
-      "emailFormat": "Enter a valid email address.",
-      "dateFormat": "Use a valid date in YYYY-MM-DD format.",
-      "microorganismSafety": "Micro-organisms are added, but no safety assessment reference is entered."
+      "scopeOutside": "Dieses Produkt fällt möglicherweise nicht unter die Definition eines Wasch- und Reinigungsmittels gemäß Artikel 2 Absatz 1 der Verordnung (EU) 2026/405. Überprüfen Sie den Anwendungsbereich, bevor Sie diese Kategorie verwenden.",
+      "biocidal": "Desinfizierende oder antimikrobielle Angaben erfordern eine Biozidproduktzulassung gemäß der Verordnung (EU) No 528/2012.",
+      "assessmentNeeded": "Diese Bewertung ist nicht abgeschlossen. Schließen Sie sie ab, bevor Sie sich auf den Pass verlassen.",
+      "microparticles": "Überprüfen Sie die Verordnung (EU) 2023/2055 über synthetische Polymermikropartikel, bevor Sie dieses Produkt in Verkehr bringen. Eine unbekannte Antwort muss mit dem Lieferanten geklärt werden.",
+      "phosphorusLaundry": "Ein Gesamtphosphorgehalt von {{value}} g liegt nicht unter dem Grenzwert von 0,5 g für ein Haushaltswaschmittel in hartem Wasser (Anhang III der Verordnung (EU) 2026/405).",
+      "phosphorusDishwasher": "Ein Gesamtphosphorgehalt von {{value}} g liegt nicht unter dem Grenzwert von 0,3 g für ein Haushaltsmaschinengeschirrspülmittel (Anhang III der Verordnung (EU) 2026/405).",
+      "percentageRange": "Ein Prozentsatz muss zwischen 0 und 100 liegen. Sie haben {{value}} eingegeben.",
+      "positiveNumber": "Geben Sie eine Zahl größer als null ein. Sie haben {{value}} eingegeben.",
+      "allergensMissing": "Sie haben mit Ja geantwortet, aber kein Allergen ausgewählt. Wählen Sie jedes Allergen aus der offiziellen Liste aus.",
+      "ufiFormat": "Ein UFI besteht aus vier Gruppen von vier Zeichen, zum Beispiel N1QV-R02N-J00M-WQD5. Das Format wird geprüft, eine Meldung an ein Giftinformationszentrum jedoch nicht.",
+      "urlFormat": "Verwenden Sie eine vollständige Webadresse, die mit http:// oder https:// beginnt.",
+      "emailFormat": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "dateFormat": "Verwenden Sie ein gültiges Datum im Format YYYY-MM-DD.",
+      "microorganismSafety": "Mikroorganismen werden zugegeben, aber es wurde kein Verweis auf eine Sicherheitsbewertung eingegeben."
     },
     "disclaimer": {
-      "title": "Detergents DPP: compliance disclaimer",
-      "text": "Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public."
+      "title": "Wasch- und Reinigungsmittel DPP: Konformitätshinweis",
+      "text": "Die Verordnung (EU) 2026/405 über Wasch- und Reinigungsmittel und Tenside gilt ab dem 23. September 2029. Ihre Vorschriften zum digitalen Produktpass, die Zugriffsrechte und die Einzelheiten zum Datenträger müssen noch durch einen Durchführungsrechtsakt festgelegt werden, und bis dahin gilt die Verordnung (EC) No 648/2004. Dieses Tool sammelt Produktinformationen und bereitet Passdaten vor. Es handelt sich nicht um eine Zertifizierung oder eine Genehmigung und sollte nicht als endgültige Rechtsberatung betrachtet werden. Alles, was in dieser Kategorie gespeichert wird, ist öffentlich."
     }
   }
 }
