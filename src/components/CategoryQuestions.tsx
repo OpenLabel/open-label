@@ -39,6 +39,8 @@ import {
   type SelectedFragrance,
 } from '@/data/toyFragrances';
 import { FragrancePicker } from '@/components/toys/FragrancePicker';
+import { DetergentAllergenPicker } from '@/components/detergents/DetergentAllergenPicker';
+import type { SelectedDetergentFragrance } from '@/data/detergentFragrances';
 import { TranslatableField } from '@/components/TranslatableField';
 import { supabase } from '@/integrations/supabase/client';
 import { useAuth } from '@/hooks/useAuth';
@@ -316,6 +318,7 @@ export function CategoryQuestions({
   const { t } = useTranslation();
   const template = getTemplate(category);
   const isToys = category === 'toys';
+  const isDetergents = category === 'detergents';
   const isTextiles = category === 'textiles';
   const isCarCleaning = category === 'car_cleaning';
   const carIssues = isCarCleaning ? validateCarCleaning(data) : [];
@@ -479,6 +482,16 @@ export function CategoryQuestions({
   const renderQuestion = (question: TemplateQuestion) => {
     const value = data[question.id];
     const validationAttributes = carCleaningValidationAttributes(carIssues, question.id);
+
+    // Special-cased: detergent fragrance allergen picker (Annex V Part D)
+    if (isDetergents && question.id === 'fragrance_allergens') {
+      return (
+        <DetergentAllergenPicker
+          selected={Array.isArray(value) ? (value as SelectedDetergentFragrance[]) : []}
+          onChange={(next) => handleChange(question.id, next)}
+        />
+      );
+    }
 
     // Special-cased: toy fragrance picker
     if (isToys && question.id === 'allergenic_fragrances') {
@@ -765,6 +778,22 @@ export function CategoryQuestions({
         </Alert>
       )}
 
+      {/* Detergents disclaimer */}
+      {isDetergents && (
+        <Alert>
+          <Info className="h-4 w-4" />
+          <AlertTitle>
+            {t('detergents.disclaimer.title', 'Detergents DPP: compliance disclaimer')}
+          </AlertTitle>
+          <AlertDescription className="text-sm">
+            {t(
+              'detergents.disclaimer.text',
+              'Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public.',
+            )}
+          </AlertDescription>
+        </Alert>
+      )}
+
       {/* Missing mandatory fields summary — non-blocking */}
       {!isCarCleaning && missingRequired.length > 0 && (
         <Alert
@@ -797,7 +826,7 @@ export function CategoryQuestions({
       )}
 
       {/* Alpha warning for non-wine, non-toys categories */}
-      {category !== 'wine' && category !== 'toys' && category !== 'textiles' && !isCarCleaning && (
+      {category !== 'wine' && category !== 'toys' && category !== 'textiles' && !isCarCleaning && !isDetergents && (
         <Alert
           variant="destructive"
           className="bg-destructive/10 border-destructive/30"

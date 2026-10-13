@@ -11,6 +11,8 @@ import type { CategoryTemplate } from "@/templates/base";
 import { toysTemplate } from "@/templates/toys";
 import { textilesTemplate } from "@/templates/textiles";
 import { detergentsTemplate, DETERGENTS_WARNING_MESSAGES } from "@/templates/detergents";
+import { DETERGENT_ALLERGEN_PICKER_COPY } from "@/data/detergentFragrances";
+import { DETERGENTS_PUBLIC_COPY } from "@/components/detergents/publicCopy";
 
 import enLocale from "./en.json";
 import bgLocale from "./bg.json";
@@ -126,6 +128,8 @@ const detergentsKeys = [
   "detergents.disclaimer.title",
   "detergents.disclaimer.text",
   ...Object.keys(DETERGENTS_WARNING_MESSAGES).map((name) => `detergents.warnings.${name}`),
+  ...Object.keys(DETERGENT_ALLERGEN_PICKER_COPY).map((name) => `detergents.allergenPicker.${name}`),
+  ...Object.keys(DETERGENTS_PUBLIC_COPY).map((name) => `detergentsPublic.${name}`),
   ...collectTemplateKeys(detergentsTemplate),
 ].sort();
 

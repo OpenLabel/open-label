@@ -151,3 +151,20 @@ export interface SelectedDetergentFragrance {
 export function getDetergentFragranceById(id: string): DetergentFragrance | undefined {
   return DETERGENT_FRAGRANCES.find((f) => f.id === id);
 }
+
+/**
+ * English text of the allergen picker (src/components/detergents/DetergentAllergenPicker.tsx).
+ * The translation keys are `detergents.allergenPicker.<name>`; the locale seed script reads this.
+ */
+export const DETERGENT_ALLERGEN_PICKER_COPY = {
+  empty: 'No allergens added yet.',
+  summary: '{{count}} allergen(s) declared.',
+  addButton: 'Add allergen',
+  dialogTitle: 'Select fragrance allergens',
+  searchPlaceholder: 'Search by name, CAS, EC or number...',
+  clearSearch: 'Clear search',
+  noResults: 'No allergens match "{{q}}".',
+  done: 'Done',
+  cas: 'CAS',
+  removeAria: 'Remove {{name}}',
+} as const;

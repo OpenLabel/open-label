@@ -9,7 +9,7 @@
 
 // Step 1 of 2 for Detergents translations.
 //
-// Walks the Detergents template and seeds the `detergents.*` i18n subtree into
+// Walks the Detergents template and seeds the `detergents.*` and `detergentsPublic.*` i18n subtrees into
 // EVERY locale file using the inline ENGLISH text as the value. No translation
 // happens here. Step 2 is scripts/translate-detergents-i18n.ts.
 //
@@ -24,6 +24,8 @@ import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
 import { detergentsTemplate, DETERGENTS_WARNING_MESSAGES } from '../src/templates/detergents';
+import { DETERGENT_ALLERGEN_PICKER_COPY } from '../src/data/detergentFragrances';
+import { DETERGENTS_PUBLIC_COPY } from '../src/components/detergents/publicCopy';
 
 const LOCALES_DIR = resolve(import.meta.dir, '../src/i18n/locales');
 
@@ -54,7 +56,8 @@ export function buildDetergentsTree(): Record<string, any> {
   const tree: Record<string, any> = {};
   const add = (key: string | undefined, value: string | undefined) => {
     if (!key || !value) return;
-    if (!key.startsWith('detergents.')) return; // never touch shared keys
+    // Only the two Detergents subtrees are written. Shared keys are never touched.
+    if (!key.startsWith('detergents.') && !key.startsWith('detergentsPublic.')) return;
     setPath(tree, key, value);
   };
 
@@ -74,6 +77,12 @@ export function buildDetergentsTree(): Record<string, any> {
   }
   for (const [name, message] of Object.entries(DETERGENTS_WARNING_MESSAGES)) {
     add(`detergents.warnings.${name}`, message);
+  }
+  for (const [name, text] of Object.entries(DETERGENT_ALLERGEN_PICKER_COPY)) {
+    add(`detergents.allergenPicker.${name}`, text);
+  }
+  for (const [name, text] of Object.entries(DETERGENTS_PUBLIC_COPY)) {
+    add(`detergentsPublic.${name}`, text);
   }
   add('detergents.disclaimer.title', DETERGENTS_DISCLAIMER.title);
   add('detergents.disclaimer.text', DETERGENTS_DISCLAIMER.text);
@@ -110,12 +119,14 @@ function main() {
   for (const code of LOCALES) {
     const path = resolve(LOCALES_DIR, `${code}.json`);
     const data = JSON.parse(readFileSync(path, 'utf-8'));
-    // Only the `detergents` subtree is merged. Everything else is left untouched.
-    data.detergents = deepMerge(data.detergents ?? {}, tree.detergents, code === 'en');
+    // Only the `detergents` and `detergentsPublic` subtrees are merged. Everything else is left untouched.
+    for (const root of ['detergents', 'detergentsPublic'] as const) {
+      data[root] = deepMerge(data[root] ?? {}, tree[root] ?? {}, code === 'en');
+    }
     writeFileSync(path, JSON.stringify(data, null, 2) + '\n', 'utf-8');
   }
 
-  console.log(`Seeded ${totalKeys} detergents.* keys into ${LOCALES.length} locales.`);
+  console.log(`Seeded ${totalKeys} detergents.* and detergentsPublic.* keys into ${LOCALES.length} locales.`);
 }
 
 if (import.meta.main) main();

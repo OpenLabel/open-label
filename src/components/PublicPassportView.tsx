@@ -19,6 +19,7 @@ import { ToyPublicPassport } from '@/components/toys/ToyPublicPassport';
 import { GenericPublicPassport } from '@/components/GenericPublicPassport';
 import { GarmentPublicPassport } from '@/components/apparel/GarmentPublicPassport';
 import { CarCleaningPublicPassport } from '@/components/car-cleaning/CarCleaningPublicPassport';
+import { DetergentPublicPassport } from '@/components/detergents/DetergentPublicPassport';
 import type { CarCleaningHistoryData, ProductCategory } from '@/types/passport';
 
 export interface PublicPassportViewProps {
@@ -49,6 +50,16 @@ export function PublicPassportView({ category, passport, isPreview, previewLangu
   }
   if (category === 'car_cleaning') {
     return <CarCleaningPublicPassport passport={passport} />;
+  }
+  if (category === 'detergents') {
+    return (
+      <DetergentPublicPassport
+        passport={passport}
+        isPreview={isPreview}
+        previewLanguage={previewLanguage}
+        onPreviewLanguageChange={onPreviewLanguageChange}
+      />
+    );
   }
   if (category === 'textiles') {
     return (
