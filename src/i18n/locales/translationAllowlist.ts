@@ -980,6 +980,39 @@ const DETERGENTS_COGNATES: Record<string, readonly string[]> = {
   ],
 };
 
+/**
+ * Detergents public page (2026-10-13): words spelled identically in the target
+ * language (Status, Name, Product, Importer, DPP version).
+ */
+const DETERGENTS_PUBLIC_COGNATES: Record<string, readonly string[]> = {
+  'da': [
+    'detergentsPublic.rows.status', // "Status"
+  ],
+  'de': [
+    'detergentsPublic.rows.name', // "Name"
+  ],
+  'hr': [
+    'detergentsPublic.rows.status', // "Status"
+  ],
+  'mt': [
+    'detergentsPublic.rows.status', // "Status"
+  ],
+  'nl': [
+    'detergentsPublic.sections.product', // "Product"
+    'detergentsPublic.rows.status', // "Status"
+  ],
+  'pl': [
+    'detergentsPublic.subsections.importer', // "Importer"
+    'detergentsPublic.rows.status', // "Status"
+  ],
+  'sl': [
+    'detergentsPublic.rows.status', // "Status"
+  ],
+  'sv': [
+    'detergentsPublic.rows.dppVersion', // "DPP version"
+  ],
+};
+
 const ALLOWED = new Set<string>(
   [
     PROTECTED_TERMS,
@@ -988,6 +1021,7 @@ const ALLOWED = new Set<string>(
     DETERGENTS_PROTECTED_TERMS,
     DETERGENTS_TECHNICAL_NOTATION,
     DETERGENTS_COGNATES,
+    DETERGENTS_PUBLIC_COGNATES,
   ].flatMap((group) =>
     Object.entries(group).flatMap(([locale, keys]) => keys.map((k) => `${locale}::${k}`)),
   ),

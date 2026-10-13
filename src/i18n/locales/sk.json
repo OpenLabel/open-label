@@ -255,7 +255,7 @@
     "cosmetics": "Kozmetika",
     "furniture": "Nábytok a matrace",
     "tires": "Pneumatiky",
-    "detergents": "Čistiace prostriedky a chemikálie",
+    "detergents": "Detergenty",
     "other": "Všetky ostatné produkty",
     "car_cleaning": "Prípravky na čistenie automobilov"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Zoznam INCI, nanomateriály, recyklovateľnosť obalov",
     "furniture": "Pôvod dreva podľa EUDR, náhradné diely, PFAS",
     "tires": "Miera opotrebovania, história protektorovania, mikroplasty",
-    "detergents": "Digitálny BL, biologická rozložiteľnosť, optimalizácia dávkovania",
+    "detergents": "Zloženie výrobku, informácie o nebezpečnosti a používaní a príprava na európsky pas detergentov od 23. septembra 2029.",
     "other": "Všeobecná šablóna DPP pre akýkoľvek typ produktu",
     "car_cleaning": "Informácie o chemickej bezpečnosti a príprava na pas detergentov EÚ od 23. septembra 2029."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Detergenty DPP: vyhlásenie o odmietnutí zodpovednosti za súlad",
       "text": "Nariadenie (EU) 2026/405 o detergentoch a povrchovo aktívnych látkach sa uplatňuje od 23. septembra 2029. Jeho pravidlá týkajúce sa digitálneho pasu výrobku, prístupových práv a podrobností o nosiči údajov sa ešte len majú stanoviť vykonávacím aktom, a dovtedy sa uplatňuje nariadenie (EC) No 648/2004. Tento nástroj zhromažďuje informácie o výrobku a pripravuje údaje pre pas. Nie je to certifikácia ani schválenie a nemalo by sa považovať za konečné právne poradenstvo. Všetko uložené v tejto kategórii je verejné."
+    },
+    "allergenPicker": {
+      "empty": "Zatiaľ neboli pridané žiadne alergény.",
+      "summary": "Deklarovaných alergénov: {{count}}",
+      "addButton": "Pridať alergén",
+      "dialogTitle": "Vyberte vonné alergény",
+      "searchPlaceholder": "Hľadať podľa názvu, čísla CAS, ES alebo iného čísla...",
+      "clearSearch": "Vymazať vyhľadávanie",
+      "noResults": "Žiadne alergény nezodpovedajú výrazu „{{q}}“.",
+      "done": "Hotovo",
+      "cas": "CAS",
+      "removeAria": "Odstrániť {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergenty: Digitálny pas výrobku",
+    "notice": "Táto stránka poskytuje informácie o výrobku zverejnené dodávateľom. Nie je certifikáciou ani schválením a nenahrádza označenie na obale.",
+    "units": "jednotky",
+    "ecolabelBadge": "Environmentálna značka EÚ",
+    "sections": {
+      "product": "Výrobok",
+      "hazard": "Nebezpečenstvo a bezpečnosť",
+      "use": "Použitie a dávkovanie",
+      "ingredients": "Zložky",
+      "environment": "Životné prostredie a obal",
+      "biocide": "Biocídny výrobok",
+      "responsible": "Kto je zodpovedný",
+      "annexVi": "Súbor údajov podľa prílohy VI",
+      "metadata": "DPP infraštruktúra"
+    },
+    "subsections": {
+      "manufacturer": "Výrobca",
+      "importer": "Dovozca",
+      "authorisedRepresentative": "Splnomocnený zástupca v EÚ"
+    },
+    "rows": {
+      "constituentClasses": "Triedy zložiek s hmotnosťou nad 0,2 %",
+      "ecolabel": "Environmentálna značka EÚ",
+      "licenceNumber": "Číslo licencie",
+      "name": "Názov",
+      "address": "Adresa",
+      "email": "E-mail",
+      "phone": "Telefón",
+      "dppServiceProvider": "Poskytovateľ služieb DPP",
+      "dppVersion": "Verzia DPP",
+      "lastUpdated": "Posledná aktualizácia",
+      "status": "Stav"
+    },
+    "values": {
+      "published": "Zverejnené"
     }
   }
 }

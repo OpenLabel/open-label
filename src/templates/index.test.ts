@@ -88,8 +88,8 @@ describe("templates", () => {
   });
 
   describe("categoryList", () => {
-    it("has visible product categories (wine, toys, textiles, car cleaning, and other)", () => {
-      expect(categoryList.map(c => c.value)).toEqual(["wine", "toys", "textiles", "car_cleaning", "other"]);
+    it("has visible product categories (wine, toys, textiles, car cleaning, detergents, and other)", () => {
+      expect(categoryList.map(c => c.value)).toEqual(["wine", "toys", "textiles", "car_cleaning", "detergents", "other"]);
     });
 
     it("each category has required properties", () => {
@@ -128,12 +128,20 @@ describe("templates", () => {
       expect(toys?.regulation).toContain("2025/2509");
     });
 
+    it("includes detergents with correct regulation", () => {
+      const detergents = categoryList.find((c) => c.value === "detergents");
+      expect(detergents).toBeDefined();
+      expect(detergents?.label).toBe("Detergents");
+      expect(detergents?.regulation).toContain("2026/405");
+    });
+
     it("values match ProductCategory type", () => {
       const validCategories: ProductCategory[] = [
         "wine",
         "toys",
         "textiles",
         "car_cleaning",
+        "detergents",
         "other",
       ];
 

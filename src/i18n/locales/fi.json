@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetiikka",
     "furniture": "Huonekalut ja patjat",
     "tires": "Renkaat",
-    "detergents": "Pesuaineet ja kemikaalit",
+    "detergents": "Pesuaineet",
     "other": "Kaikki muut tuotteet",
     "car_cleaning": "Autonpuhdistusaineet"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI-luettelo, nanomateriaalit, pakkauksen kierrätettävyys",
     "furniture": "Puun alkuperä EUDR:n mukaan, varaosat, PFAS",
     "tires": "Kulumisnopeus, pinnoitushistoria, mikromuovit",
-    "detergents": "Digitaalinen KTT, biohajoavuus, annostelun optimointi",
+    "detergents": "Tuotteen koostumus, vaara- ja käyttötiedot sekä valmistautuminen EU:n pesuaineiden passiin 23. syyskuuta 2029 alkaen.",
     "other": "Yleinen DPP-malli mille tahansa tuotetyypille",
     "car_cleaning": "Kemikaaliturvallisuustiedot ja valmistautuminen EU:n pesuainepassiin 23. syyskuuta 2029 alkaen."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Pesuaineet DPP: vastuuvapauslauseke vaatimustenmukaisuudesta",
       "text": "Pesuaineista ja pinta-aktiivisista aineista annettua asetusta (EU) 2026/405 sovelletaan 23. syyskuuta 2029 alkaen. Sen digitaalista tuotepassia, käyttöoikeuksia ja datansiirtovälineen tietoja koskevat säännöt vahvistetaan myöhemmin täytäntöönpanosäädöksellä, ja siihen asti sovelletaan asetusta (EC) No 648/2004. Tämä työkalu kerää tuotetietoja ja valmistelee passin tietoja. Se ei ole sertifiointi tai hyväksyntä, eikä sitä tule pitää lopullisena oikeudellisena neuvona. Kaikki tähän luokkaan tallennetut tiedot ovat julkisia."
+    },
+    "allergenPicker": {
+      "empty": "Allergeeneja ei ole vielä lisätty.",
+      "summary": "{{count}} allergeeni(a) ilmoitettu.",
+      "addButton": "Lisää allergeeni",
+      "dialogTitle": "Valitse hajusteallergeenit",
+      "searchPlaceholder": "Hae nimen, CAS-, EC- tai numeron perusteella...",
+      "clearSearch": "Tyhjennä haku",
+      "noResults": "Hakusanalla \"{{q}}\" ei löytynyt allergeeneja.",
+      "done": "Valmis",
+      "cas": "CAS",
+      "removeAria": "Poista {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Pesuaineet: Digitaalinen tuotepassi",
+    "notice": "Tämä sivu sisältää toimittajan julkaisemia tuotetietoja. Se ei ole sertifiointi tai hyväksyntä, eikä se korvaa pakkauksessa olevaa merkintää.",
+    "units": "yksikköä",
+    "ecolabelBadge": "EU-ympäristömerkki",
+    "sections": {
+      "product": "Tuote",
+      "hazard": "Vaara ja turvallisuus",
+      "use": "Käyttö ja annostelu",
+      "ingredients": "Ainesosat",
+      "environment": "Ympäristö ja pakkaus",
+      "biocide": "Biosidivalmiste",
+      "responsible": "Vastuussa oleva taho",
+      "annexVi": "Liitteen VI aineisto",
+      "metadata": "DPP-infrastruktuuri"
+    },
+    "subsections": {
+      "manufacturer": "Valmistaja",
+      "importer": "Maahantuoja",
+      "authorisedRepresentative": "EU:n valtuutettu edustaja"
+    },
+    "rows": {
+      "constituentClasses": "Ainesosien ryhmät, joiden pitoisuus on yli 0,2 painoprosenttia",
+      "ecolabel": "EU-ympäristömerkki",
+      "licenceNumber": "Lisenssinumero",
+      "name": "Nimi",
+      "address": "Osoite",
+      "email": "Sähköposti",
+      "phone": "Puhelin",
+      "dppServiceProvider": "DPP-palveluntarjoaja",
+      "dppVersion": "DPP-versio",
+      "lastUpdated": "Päivitetty viimeksi",
+      "status": "Tila"
+    },
+    "values": {
+      "published": "Julkaistu"
     }
   }
 }

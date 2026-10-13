@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetiċi",
     "furniture": "Għamara u friex",
     "tires": "Tajers",
-    "detergents": "Deterġenti u kimiċi",
+    "detergents": "Deterġenti",
     "other": "Prodotti oħra kollha",
     "car_cleaning": "Prodotti għat-tindif tal-karozzi"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Lista INCI, nanomaterjali, riċiklabilità tal-ippakkjar",
     "furniture": "Oriġini tal-injam EUDR, spare parts, PFAS",
     "tires": "Rata ta' abrażjoni, storja tar-retreading, mikroplastiċi",
-    "detergents": "SDS diġitali, bijodegradibbiltà, ottimizzazzjoni tad-dożaġġ",
+    "detergents": "Kompożizzjoni tal-prodott, informazzjoni dwar perikli u użu, u tħejjija għall-passaport tal-UE tad-deterġenti mit-23 ta’ Settembru 2029.",
     "other": "Mudell DPP ġeneriku għal kwalunkwe tip ta' prodott",
     "car_cleaning": "Informazzjoni dwar is-sigurtà kimika u tħejjija għall-passaport tal-UE għad-deterġenti mit-23 ta’ Settembru 2029."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Deterġenti DPP: dikjarazzjoni ta’ nonresponsabbiltà dwar il-konformità",
       "text": "Ir-Regolament (EU) 2026/405 dwar id-deterġenti u s-surfactants japplika mit-23 ta’ Settembru 2029. Ir-regoli tiegħu dwar il-passaport diġitali tal-prodott, id-drittijiet ta’ aċċess u d-dettalji tat-trasportatur tad-data għad iridu jiġu stabbiliti b’att ta’ implimentazzjoni, u sa dak iż-żmien japplika r-Regolament (EC) No 648/2004. Din l-għodda tiġbor l-informazzjoni dwar il-prodott u tħejji d-data tal-passaport. Mhijiex ċertifikazzjoni jew approvazzjoni u m’għandhiex titqies bħala parir legali finali. Dak kollu li jiġi ssejvjat f’din il-kategorija huwa pubbliku."
+    },
+    "allergenPicker": {
+      "empty": "Għad ma żdied l-ebda allerġen.",
+      "summary": "{{count}} allerġen(i) iddikjarat(i).",
+      "addButton": "Żid allerġen",
+      "dialogTitle": "Agħżel l-allerġeni tal-fwieħa",
+      "searchPlaceholder": "Fittex bl-isem, bin-numru CAS, KE jew b'numru ieħor...",
+      "clearSearch": "Neħħi t-tfittxija",
+      "noResults": "L-ebda allerġen ma jaqbel ma' \"{{q}}\".",
+      "done": "Lest",
+      "cas": "CAS",
+      "removeAria": "Neħħi {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Deterġenti: Passaport Diġitali tal-Prodott",
+    "notice": "Din il-paġna tagħti informazzjoni dwar il-prodott ippubblikata mill-fornitur. Mhijiex ċertifikazzjoni jew approvazzjoni, u ma tissostitwixxix it-tikketta fuq l-imballaġġ.",
+    "units": "unitajiet",
+    "ecolabelBadge": "Ekotikketta tal-UE",
+    "sections": {
+      "product": "Prodott",
+      "hazard": "Periklu u sigurtà",
+      "use": "Użu u dożaġġ",
+      "ingredients": "Ingredjenti",
+      "environment": "Ambjent u imballaġġ",
+      "biocide": "Prodott bijoċidali",
+      "responsible": "Min hu responsabbli",
+      "annexVi": "Sett ta' data tal-Anness VI",
+      "metadata": "DPP infrastruttura"
+    },
+    "subsections": {
+      "manufacturer": "Manifattur",
+      "importer": "Importatur",
+      "authorisedRepresentative": "Rappreżentant awtorizzat tal-UE"
+    },
+    "rows": {
+      "constituentClasses": "Klassijiet ta' kostitwenti 'l fuq minn 0.2% skont il-piż",
+      "ecolabel": "Ekotikketta tal-UE",
+      "licenceNumber": "Numru tal-liċenzja",
+      "name": "Isem",
+      "address": "Indirizz",
+      "email": "Email",
+      "phone": "Telefown",
+      "dppServiceProvider": "DPP fornitur tas-servizz",
+      "dppVersion": "DPP verżjoni",
+      "lastUpdated": "Aġġornat l-aħħar",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Ippubblikat"
     }
   }
 }

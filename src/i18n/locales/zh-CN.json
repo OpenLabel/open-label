@@ -263,7 +263,7 @@
     "cosmetics": "化妆品",
     "furniture": "家具和床垫",
     "tires": "轮胎",
-    "detergents": "洗涤剂和化学品",
+    "detergents": "洗涤剂",
     "other": "所有其他产品",
     "car_cleaning": "汽车清洁产品"
   },
@@ -279,7 +279,7 @@
     "cosmetics": "INCI列表、纳米材料、包装可回收性",
     "furniture": "EUDR木材来源、备件、PFAS",
     "tires": "磨损率、翻新历史、微塑料",
-    "detergents": "数字SDS、生物降解性、剂量优化",
+    "detergents": "产品成分、危害与使用信息，以及为自2029年9月23日起适用的欧盟洗涤剂护照要求做好准备。",
     "other": "适用于任何产品类型的通用DPP模板",
     "car_cleaning": "化学品安全信息，以及为自2029年9月23日起适用的欧盟洗涤剂护照要求做好准备。"
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "洗涤剂 DPP：合规性免责声明",
       "text": "关于洗涤剂和表面活性剂的法规 (EU) 2026/405 将于 2029 年 9 月 23 日起适用。其数字产品通行证规则、访问权限和数据载体详情仍有待实施法案确定，在此之前，法规 (EC) No 648/2004 仍然适用。本工具用于收集产品信息并准备通行证数据。它不是认证或批准，不应被视为最终的法律建议。保存在此类别中的所有内容都是公开的。"
+    },
+    "allergenPicker": {
+      "empty": "尚未添加致敏物。",
+      "summary": "已申报 {{count}} 种致敏物。",
+      "addButton": "添加致敏物",
+      "dialogTitle": "选择香料致敏物",
+      "searchPlaceholder": "按名称、CAS、EC 或编号搜索...",
+      "clearSearch": "清除搜索",
+      "noResults": "没有与“{{q}}”匹配的致敏物。",
+      "done": "完成",
+      "cas": "CAS",
+      "removeAria": "移除 {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "清洁剂：数字产品护照",
+    "notice": "本页面提供由供应商发布的产品信息。它不是认证或批准，也不能取代包装上的标签。",
+    "units": "单位",
+    "ecolabelBadge": "欧盟生态标签",
+    "sections": {
+      "product": "产品",
+      "hazard": "危险和安全",
+      "use": "使用和剂量",
+      "ingredients": "成分",
+      "environment": "环境和包装",
+      "biocide": "杀生物产品",
+      "responsible": "责任方",
+      "annexVi": "附件VI数据集",
+      "metadata": "DPP 基础设施"
+    },
+    "subsections": {
+      "manufacturer": "制造商",
+      "importer": "进口商",
+      "authorisedRepresentative": "欧盟授权代表"
+    },
+    "rows": {
+      "constituentClasses": "重量超过0.2%的组分类别",
+      "ecolabel": "欧盟生态标签",
+      "licenceNumber": "许可证号",
+      "name": "名称",
+      "address": "地址",
+      "email": "电子邮件",
+      "phone": "电话",
+      "dppServiceProvider": "DPP 服务提供商",
+      "dppVersion": "DPP 版本",
+      "lastUpdated": "最后更新",
+      "status": "状态"
+    },
+    "values": {
+      "published": "已发布"
     }
   }
 }

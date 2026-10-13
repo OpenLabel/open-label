@@ -263,7 +263,7 @@
     "cosmetics": "Cosmetica",
     "furniture": "Meubels & Matrassen",
     "tires": "Banden",
-    "detergents": "Wasmiddelen & Chemicaliën",
+    "detergents": "Detergenten",
     "other": "Alle Andere Producten",
     "car_cleaning": "Autoreinigingsproducten"
   },
@@ -279,7 +279,7 @@
     "cosmetics": "INCI-lijst, nanomaterialen, recycleerbaarheid verpakking",
     "furniture": "EUDR houtherkomst, reserveonderdelen, PFAS",
     "tires": "Slijtagepercentage, loopvlakvernieuwingsgeschiedenis, microplastics",
-    "detergents": "Digitale SDS, biologische afbreekbaarheid, doseeroptimalisatie",
+    "detergents": "Productsamenstelling, informatie over gevaren en gebruik en voorbereiding op het EU-detergentenpaspoort vanaf 23 september 2029.",
     "other": "Generieke DPP sjabloon voor elk producttype",
     "car_cleaning": "Informatie over chemische veiligheid en voorbereiding op het EU-detergentenpaspoort vanaf 23 september 2029."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Was- en reinigingsmiddelen DPP: conformiteitsdisclaimer",
       "text": "Verordening (EU) 2026/405 betreffende was- en reinigingsmiddelen en oppervlakteactieve stoffen is van toepassing vanaf 23 september 2029. De regels voor het digitale productpaspoort, de toegangsrechten en de details van de datadrager moeten nog worden vastgesteld door een uitvoeringshandeling, en tot die tijd is Verordening (EC) No 648/2004 van toepassing. Deze tool verzamelt productinformatie en bereidt paspoortgegevens voor. Het is geen certificering of goedkeuring en mag niet worden beschouwd als definitief juridisch advies. Alles wat in deze categorie wordt opgeslagen, is openbaar."
+    },
+    "allergenPicker": {
+      "empty": "Nog geen allergenen toegevoegd.",
+      "summary": "{{count}} allergeen(en) vermeld.",
+      "addButton": "Allergeen toevoegen",
+      "dialogTitle": "Geurallergenen selecteren",
+      "searchPlaceholder": "Zoeken op naam, CAS, EC of nummer...",
+      "clearSearch": "Zoekopdracht wissen",
+      "noResults": "Geen allergenen komen overeen met \"{{q}}\".",
+      "done": "Klaar",
+      "cas": "CAS",
+      "removeAria": "{{name}} verwijderen"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergentia: Digitaal productpaspoort",
+    "notice": "Deze pagina bevat productinformatie die door de leverancier is gepubliceerd. Het is geen certificering of goedkeuring en vervangt niet het etiket op de verpakking.",
+    "units": "eenheden",
+    "ecolabelBadge": "EU-milieukeur",
+    "sections": {
+      "product": "Product",
+      "hazard": "Gevaar en veiligheid",
+      "use": "Gebruik en dosering",
+      "ingredients": "Ingrediënten",
+      "environment": "Milieu en verpakking",
+      "biocide": "Biocide",
+      "responsible": "Wie is verantwoordelijk",
+      "annexVi": "Dataset van bijlage VI",
+      "metadata": "DPP-infrastructuur"
+    },
+    "subsections": {
+      "manufacturer": "Fabrikant",
+      "importer": "Importeur",
+      "authorisedRepresentative": "Gemachtigde in de EU"
+    },
+    "rows": {
+      "constituentClasses": "Klassen van bestanddelen boven 0,2 gewichtsprocent",
+      "ecolabel": "EU-milieukeur",
+      "licenceNumber": "Licentienummer",
+      "name": "Naam",
+      "address": "Adres",
+      "email": "E-mail",
+      "phone": "Telefoon",
+      "dppServiceProvider": "DPP-dienstverlener",
+      "dppVersion": "DPP-versie",
+      "lastUpdated": "Laatst bijgewerkt",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Gepubliceerd"
     }
   }
 }

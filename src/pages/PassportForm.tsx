@@ -122,7 +122,7 @@ export default function PassportForm() {
     sourceLanguage: currentLanguage,
     existingTranslations: productNameTranslations,
     onTranslationsGenerated: handleProductNameTranslations,
-    enabled: isNonWine && formData.category !== 'textiles' && !!productNameValue.trim(),
+    enabled: isNonWine && formData.category !== 'textiles' && formData.category !== 'detergents' && !!productNameValue.trim(),
   });
 
   // Auto-translate description (for non-wine categories)
@@ -585,7 +585,7 @@ export default function PassportForm() {
               {formData.category !== 'wine' && (
                 <>
                   {/* Product Name with translations */}
-                  {formData.category !== 'textiles' && <Card>
+                  {formData.category !== 'textiles' && formData.category !== 'detergents' && <Card>
                     <CardHeader>
                       <CardTitle>{t('passport.productName')}</CardTitle>
                     </CardHeader>

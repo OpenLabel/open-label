@@ -255,7 +255,7 @@
     "cosmetics": "Cosmetici",
     "furniture": "Mobili e Materassi",
     "tires": "Pneumatici",
-    "detergents": "Detergenti e Prodotti Chimici",
+    "detergents": "Detergenti",
     "other": "Tutti gli altri prodotti",
     "car_cleaning": "Prodotti per la pulizia dell’auto"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Lista INCI, nanomateriali, riciclabilità imballaggi",
     "furniture": "Origine legno EUDR, parti di ricambio, PFAS",
     "tires": "Tasso di abrasione, storico ricostruzione, microplastiche",
-    "detergents": "SDS digitale, biodegradabilità, ottimizzazione dosaggio",
+    "detergents": "Composizione del prodotto, informazioni su pericoli e uso, e preparazione al passaporto UE dei detergenti dal 23 settembre 2029.",
     "other": "Template DPP generico per qualsiasi tipo di prodotto",
     "car_cleaning": "Informazioni sulla sicurezza chimica e preparazione al passaporto UE dei detergenti dal 23 settembre 2029."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Detergenti DPP: clausola di esclusione della responsabilità sulla conformità",
       "text": "Il regolamento (EU) 2026/405 relativo ai detergenti e ai tensioattivi si applica a decorrere dal 23 settembre 2029. Le norme sul passaporto digitale dei prodotti, i diritti di accesso e i dettagli del supporto dati devono ancora essere stabiliti da un atto di esecuzione e, fino ad allora, si applica il regolamento (EC) No 648/2004. Questo strumento raccoglie informazioni sui prodotti e prepara i dati per il passaporto. Non costituisce una certificazione o un'approvazione e non deve essere considerato come una consulenza legale definitiva. Tutto ciò che viene salvato in questa categoria è pubblico."
+    },
+    "allergenPicker": {
+      "empty": "Nessun allergene ancora aggiunto.",
+      "summary": "{{count}} allergeni dichiarati.",
+      "addButton": "Aggiungi allergene",
+      "dialogTitle": "Seleziona allergeni delle fragranze",
+      "searchPlaceholder": "Cerca per nome, n. CAS, n. CE o numero...",
+      "clearSearch": "Cancella ricerca",
+      "noResults": "Nessun allergene corrisponde a \"{{q}}\".",
+      "done": "Fatto",
+      "cas": "CAS",
+      "removeAria": "Rimuovi {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergenti: Passaporto digitale dei prodotti",
+    "notice": "Questa pagina fornisce informazioni sul prodotto pubblicate dal fornitore. Non costituisce una certificazione o un'approvazione e non sostituisce l'etichetta presente sull'imballaggio.",
+    "units": "unità",
+    "ecolabelBadge": "Ecolabel UE",
+    "sections": {
+      "product": "Prodotto",
+      "hazard": "Pericoli e sicurezza",
+      "use": "Uso e dosaggio",
+      "ingredients": "Ingredienti",
+      "environment": "Ambiente e imballaggio",
+      "biocide": "Prodotto biocida",
+      "responsible": "Soggetto responsabile",
+      "annexVi": "Set di dati dell'allegato VI",
+      "metadata": "DPP infrastruttura"
+    },
+    "subsections": {
+      "manufacturer": "Fabbricante",
+      "importer": "Importatore",
+      "authorisedRepresentative": "Rappresentante autorizzato UE"
+    },
+    "rows": {
+      "constituentClasses": "Classi di costituenti in quantitativo superiore allo 0,2% in peso",
+      "ecolabel": "Ecolabel UE",
+      "licenceNumber": "Numero di licenza",
+      "name": "Nome",
+      "address": "Indirizzo",
+      "email": "Email",
+      "phone": "Telefono",
+      "dppServiceProvider": "DPP fornitore di servizi",
+      "dppVersion": "DPP versione",
+      "lastUpdated": "Ultimo aggiornamento",
+      "status": "Stato"
+    },
+    "values": {
+      "published": "Pubblicato"
     }
   }
 }

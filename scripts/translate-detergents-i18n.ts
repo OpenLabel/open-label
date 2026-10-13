@@ -8,7 +8,8 @@
  */
 
 // One-off, resumable translator for the Detergents `detergents.*` locale subtree.
-// Usage: bun run scripts/translate-detergents-i18n.ts [--section=detergents] [fr de ...]
+// Usage: bun run scripts/translate-detergents-i18n.ts [--section=detergents|detergentsPublic] [fr de ...]
+// Without --section both subtrees are translated, one after the other.
 // Only values byte-identical to English are sent, so a re-run resumes where it stopped.
 
 import { readFileSync, writeFileSync } from 'node:fs';
@@ -40,7 +41,7 @@ const PROTECTED = [
 ] as const;
 
 const CHUNK_SIZE = 288;
-const SECTIONS = ['detergents'] as const;
+const SECTIONS = ['detergents', 'detergentsPublic'] as const;
 let SECTION: string = 'detergents';
 
 type Tree = Record<string, any>;
@@ -195,18 +196,23 @@ async function translateLocale(code: string, english: Record<string, string>): P
 
 async function main(): Promise<void> {
   const sectionArg = process.argv.find((arg) => arg.startsWith('--section='));
-  if (sectionArg) SECTION = sectionArg.slice('--section='.length);
-  if (!SECTIONS.includes(SECTION as (typeof SECTIONS)[number])) throw new Error(`Unsupported section: ${SECTION}`);
+  const sectionsToRun: string[] = sectionArg ? [sectionArg.slice('--section='.length)] : [...SECTIONS];
+  for (const section of sectionsToRun) {
+    if (!SECTIONS.includes(section as (typeof SECTIONS)[number])) throw new Error(`Unsupported section: ${section}`);
+  }
   const requested = process.argv.slice(2).filter((arg) => !arg.startsWith('-'));
   const targets = requested.length ? requested : [...TARGETS];
   for (const code of targets) {
     if (!TARGETS.includes(code as (typeof TARGETS)[number])) throw new Error(`Unsupported locale: ${code}`);
   }
-  const english = flatten(load('en')[SECTION] ?? {});
-  if (Object.keys(english).length === 0) throw new Error(`No English values found for section ${SECTION}`);
-  const batchSize = 4;
-  for (let i = 0; i < targets.length; i += batchSize) {
-    await Promise.all(targets.slice(i, i + batchSize).map((code) => translateLocale(code, english)));
+  for (const section of sectionsToRun) {
+    SECTION = section;
+    const english = flatten(load('en')[SECTION] ?? {});
+    if (Object.keys(english).length === 0) throw new Error(`No English values found for section ${SECTION}`);
+    const batchSize = 4;
+    for (let i = 0; i < targets.length; i += batchSize) {
+      await Promise.all(targets.slice(i, i + batchSize).map((code) => translateLocale(code, english)));
+    }
   }
 }
 

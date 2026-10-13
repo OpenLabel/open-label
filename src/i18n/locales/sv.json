@@ -263,7 +263,7 @@
     "cosmetics": "Kosmetika",
     "furniture": "Möbler och madrasser",
     "tires": "Däck",
-    "detergents": "Tvättmedel och kemikalier",
+    "detergents": "Tvätt- och rengöringsmedel",
     "other": "Alla andra produkter",
     "car_cleaning": "Bilrengöringsprodukter"
   },
@@ -279,7 +279,7 @@
     "cosmetics": "INCI-lista, nanomaterial, förpackningsåtervinning",
     "furniture": "EUDR-ursprung trä, reservdelar, PFAS",
     "tires": "Slitagehastighet, regummering, mikroplast",
-    "detergents": "Digitalt SDS, biologisk nedbrytbarhet, doseringsoptimering",
+    "detergents": "Produktens sammansättning, information om faror och användning samt förberedelse för EU:s pass för tvätt- och rengöringsmedel från och med den 23 september 2029.",
     "other": "Generisk DPP-mall för alla produkttyper",
     "car_cleaning": "Information om kemikaliesäkerhet och förberedelse för EU:s tvätt- och rengöringsmedelspass från den 23 september 2029."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Tvätt- och rengöringsmedel DPP: friskrivning avseende regelefterlevnad",
       "text": "Förordning (EU) 2026/405 om tvätt- och rengöringsmedel och tensider ska tillämpas från och med den 23 september 2029. Dess regler om digitalt produktpass, åtkomsträttigheter och uppgifter om databärare ska ännu fastställas genom en genomförandeakt, och till dess gäller förordning (EC) No 648/2004. Detta verktyg samlar in produktinformation och förbereder passdata. Det är inte en certifiering eller ett godkännande och ska inte betraktas som slutgiltig juridisk rådgivning. Allt som sparas i denna kategori är offentligt."
+    },
+    "allergenPicker": {
+      "empty": "Inga allergener har lagts till än.",
+      "summary": "{{count}} allergen(er) har deklarerats.",
+      "addButton": "Lägg till allergen",
+      "dialogTitle": "Välj doftallergener",
+      "searchPlaceholder": "Sök på namn, CAS, EC eller nummer...",
+      "clearSearch": "Rensa sökning",
+      "noResults": "Inga allergener matchar \"{{q}}\".",
+      "done": "Klar",
+      "cas": "CAS",
+      "removeAria": "Ta bort {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Tvätt- och rengöringsmedel: Digitalt produktpass",
+    "notice": "Denna sida innehåller produktinformation som publicerats av leverantören. Den är inte en certifiering eller ett godkännande och ersätter inte märkningen på förpackningen.",
+    "units": "enheter",
+    "ecolabelBadge": "EU-miljömärket",
+    "sections": {
+      "product": "Produkt",
+      "hazard": "Fara och säkerhet",
+      "use": "Användning och dosering",
+      "ingredients": "Beståndsdelar",
+      "environment": "Miljö och förpackning",
+      "biocide": "Biocidprodukt",
+      "responsible": "Ansvarig aktör",
+      "annexVi": "Dataset enligt bilaga VI",
+      "metadata": "DPP infrastruktur"
+    },
+    "subsections": {
+      "manufacturer": "Tillverkare",
+      "importer": "Importör",
+      "authorisedRepresentative": "Auktoriserad representant i EU"
+    },
+    "rows": {
+      "constituentClasses": "Klasser av beståndsdelar över 0,2 viktprocent",
+      "ecolabel": "EU-miljömärket",
+      "licenceNumber": "Licensnummer",
+      "name": "Namn",
+      "address": "Adress",
+      "email": "E-post",
+      "phone": "Telefon",
+      "dppServiceProvider": "DPP tjänsteleverantör",
+      "dppVersion": "DPP version",
+      "lastUpdated": "Senast uppdaterad",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Publicerad"
     }
   }
 }

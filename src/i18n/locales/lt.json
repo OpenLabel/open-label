@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetika",
     "furniture": "Baldai ir čiužiniai",
     "tires": "Padangos",
-    "detergents": "Plovikliai ir cheminės medžiagos",
+    "detergents": "Plovikliai",
     "other": "Visi kiti produktai",
     "car_cleaning": "Automobilių valymo priemonės"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI sąrašas, nanomedžiagos, pakuotės perdirbamumas",
     "furniture": "Medienos kilmė pagal EUDR, atsarginės dalys, PFAS",
     "tires": "Dilimo norma, protektoriavimo istorija, mikroplastikas",
-    "detergents": "Skaitmeninis SDS, biologinis skaidumas, dozavimo optimizavimas",
+    "detergents": "Produkto sudėtis, informacija apie pavojus ir naudojimą bei pasirengimas ES ploviklių pasui nuo 2029 m. rugsėjo 23 d.",
     "other": "Bendras DPP šablonas bet kokiam produkto tipui",
     "car_cleaning": "Cheminės saugos informacija ir pasirengimas ES ploviklių pasui nuo 2029 m. rugsėjo 23 d."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Plovikliai DPP: atitikties atsakomybės apribojimas",
       "text": "Reglamentas (EU) 2026/405 dėl ploviklių ir paviršinio aktyvumo medžiagų taikomas nuo 2029 m. rugsėjo 23 d. Jo skaitmeninio produkto paso taisyklės, prieigos teisės ir duomenų laikmenos informacija dar turi būti nustatyta įgyvendinimo aktu, o iki tol taikomas Reglamentas (EC) No 648/2004. Šis įrankis renka produkto informaciją ir rengia paso duomenis. Tai nėra sertifikavimas ar patvirtinimas ir neturėtų būti laikoma galutine teisine konsultacija. Viskas, kas išsaugota šioje kategorijoje, yra vieša."
+    },
+    "allergenPicker": {
+      "empty": "Alergenų dar nepridėta.",
+      "summary": "Deklaruoti alergenai: {{count}}",
+      "addButton": "Pridėti alergeną",
+      "dialogTitle": "Pasirinkite kvapiųjų medžiagų alergenus",
+      "searchPlaceholder": "Paieška pagal pavadinimą, CAS, EB ar numerį...",
+      "clearSearch": "Išvalyti paiešką",
+      "noResults": "Pagal „{{q}}“ alergenų nerasta.",
+      "done": "Atlikta",
+      "cas": "CAS",
+      "removeAria": "Pašalinti {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Plovikliai: skaitmeninis gaminio pasas",
+    "notice": "Šiame puslapyje pateikiama tiekėjo paskelbta informacija apie gaminį. Tai nėra sertifikavimas ar patvirtinimas ir tai nepakeičia etiketės ant pakuotės.",
+    "units": "vienetai",
+    "ecolabelBadge": "ES ekologinis ženklas",
+    "sections": {
+      "product": "Gaminys",
+      "hazard": "Pavojus ir sauga",
+      "use": "Naudojimas ir dozavimas",
+      "ingredients": "Sudedamosios dalys",
+      "environment": "Poveikis aplinkai ir pakuotė",
+      "biocide": "Biocidinis produktas",
+      "responsible": "Kas yra atsakingas",
+      "annexVi": "VI priedo duomenų rinkinys",
+      "metadata": "DPP infrastruktūra"
+    },
+    "subsections": {
+      "manufacturer": "Gamintojas",
+      "importer": "Importuotojas",
+      "authorisedRepresentative": "ES įgaliotasis atstovas"
+    },
+    "rows": {
+      "constituentClasses": "Sudedamųjų dalių klasės, kurių masė didesnė kaip 0,2 %",
+      "ecolabel": "ES ekologinis ženklas",
+      "licenceNumber": "Licencijos numeris",
+      "name": "Pavadinimas",
+      "address": "Adresas",
+      "email": "El. paštas",
+      "phone": "Telefonas",
+      "dppServiceProvider": "DPP paslaugų teikėjas",
+      "dppVersion": "DPP versija",
+      "lastUpdated": "Paskutinį kartą atnaujinta",
+      "status": "Būsena"
+    },
+    "values": {
+      "published": "Paskelbta"
     }
   }
 }

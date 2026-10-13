@@ -263,7 +263,7 @@
     "cosmetics": "Kosmetik",
     "furniture": "Möbel & Matratzen",
     "tires": "Reifen",
-    "detergents": "Reinigungsmittel & Chemikalien",
+    "detergents": "Detergenzien",
     "other": "Alle anderen Produkte",
     "car_cleaning": "Autoreinigungsprodukte"
   },
@@ -279,7 +279,7 @@
     "cosmetics": "INCI-Liste, Nanomaterialien, Verpackungsrecycling",
     "furniture": "EUDR-Holzherkunft, Ersatzteile, PFAS",
     "tires": "Abriebrate, Runderneuerungshistorie, Mikroplastik",
-    "detergents": "Digitales SDS, Biologische Abbaubarkeit, Dosierungsoptimierung",
+    "detergents": "Produktzusammensetzung, Gefahren- und Anwendungsinformationen sowie Vorbereitung auf den EU-Detergenzienpass ab dem 23. September 2029.",
     "other": "Generische DPP-Vorlage für jeden Produkttyp",
     "car_cleaning": "Informationen zur Chemikaliensicherheit und Vorbereitung auf den EU-Detergenzienpass ab dem 23. September 2029."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Wasch- und Reinigungsmittel DPP: Konformitätshinweis",
       "text": "Die Verordnung (EU) 2026/405 über Wasch- und Reinigungsmittel und Tenside gilt ab dem 23. September 2029. Ihre Vorschriften zum digitalen Produktpass, die Zugriffsrechte und die Einzelheiten zum Datenträger müssen noch durch einen Durchführungsrechtsakt festgelegt werden, und bis dahin gilt die Verordnung (EC) No 648/2004. Dieses Tool sammelt Produktinformationen und bereitet Passdaten vor. Es handelt sich nicht um eine Zertifizierung oder eine Genehmigung und sollte nicht als endgültige Rechtsberatung betrachtet werden. Alles, was in dieser Kategorie gespeichert wird, ist öffentlich."
+    },
+    "allergenPicker": {
+      "empty": "Noch keine Allergene hinzugefügt.",
+      "summary": "{{count}} Allergen(e) deklariert.",
+      "addButton": "Allergen hinzufügen",
+      "dialogTitle": "Duftstoffallergene auswählen",
+      "searchPlaceholder": "Suche nach Name, CAS-, EC- oder Nummer...",
+      "clearSearch": "Suche löschen",
+      "noResults": "Keine Allergene entsprechen \"{{q}}\".",
+      "done": "Fertig",
+      "cas": "CAS",
+      "removeAria": "{{name}} entfernen"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Wasch- und Reinigungsmittel: Digitaler Produktpass",
+    "notice": "Diese Seite enthält vom Lieferanten veröffentlichte Produktinformationen. Sie stellt keine Zertifizierung oder Genehmigung dar und ersetzt nicht die Kennzeichnung auf der Verpackung.",
+    "units": "Einheiten",
+    "ecolabelBadge": "EU-Umweltzeichen",
+    "sections": {
+      "product": "Produkt",
+      "hazard": "Gefahr und Sicherheit",
+      "use": "Anwendung und Dosierung",
+      "ingredients": "Inhaltsstoffe",
+      "environment": "Umwelt und Verpackung",
+      "biocide": "Biozidprodukt",
+      "responsible": "Verantwortlicher",
+      "annexVi": "Datensatz gemäß Anhang VI",
+      "metadata": "DPP-Infrastruktur"
+    },
+    "subsections": {
+      "manufacturer": "Hersteller",
+      "importer": "Importeur",
+      "authorisedRepresentative": "Bevollmächtigter in der EU"
+    },
+    "rows": {
+      "constituentClasses": "Inhaltsstoffklassen über 0,2 Gewichtsprozent",
+      "ecolabel": "EU-Umweltzeichen",
+      "licenceNumber": "Lizenznummer",
+      "name": "Name",
+      "address": "Anschrift",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "dppServiceProvider": "DPP-Dienstanbieter",
+      "dppVersion": "DPP-Version",
+      "lastUpdated": "Zuletzt aktualisiert",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Veröffentlicht"
     }
   }
 }

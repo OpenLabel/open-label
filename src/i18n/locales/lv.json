@@ -255,7 +255,7 @@
     "cosmetics": "Kosmētika",
     "furniture": "Mēbeles un matrači",
     "tires": "Riepas",
-    "detergents": "Mazgāšanas līdzekļi un ķīmiskās vielas",
+    "detergents": "Mazgāšanas līdzekļi",
     "other": "Visi pārējie produkti",
     "car_cleaning": "Automašīnu tīrīšanas līdzekļi"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI saraksts, nanomateriāli, iepakojuma pārstrādājamība",
     "furniture": "EUDR koksnes izcelsme, rezerves daļas, PFAS",
     "tires": "Nodiluma ātrums, atjaunošanas vēsture, mikroplastmasa",
-    "detergents": "Digitālā DDL, bionoārdāmība, dozēšanas optimizācija",
+    "detergents": "Produkta sastāvs, informācija par bīstamību un lietošanu un sagatavošanās ES mazgāšanas līdzekļu pasei no 2029. gada 23. septembra.",
     "other": "Vispārīga DPP veidne jebkuram produkta tipam",
     "car_cleaning": "Ķīmiskās drošības informācija un sagatavošanās ES mazgāšanas līdzekļu pasei no 2029. gada 23. septembra."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Mazgāšanas līdzekļi DPP: atruna par atbilstību",
       "text": "Regula (EU) 2026/405 par mazgāšanas līdzekļiem un virsmaktīvajām vielām ir piemērojama no 2029. gada 23. septembra. Tās noteikumi par digitālo produktu pasi, piekļuves tiesībām un datu nesēja informāciju vēl ir jānosaka ar īstenošanas aktu, un līdz tam laikam piemēro Regulu (EC) No 648/2004. Šis rīks apkopo informāciju par produktu un sagatavo pases datus. Tas nav sertifikāts vai apstiprinājums, un to nedrīkst uzskatīt par galīgu juridisku padomu. Viss, kas saglabāts šajā kategorijā, ir publisks."
+    },
+    "allergenPicker": {
+      "empty": "Alergēni vēl nav pievienoti.",
+      "summary": "Norādīts(-i) {{count}} alergēns(-i).",
+      "addButton": "Pievienot alergēnu",
+      "dialogTitle": "Atlasīt smaržvielu alergēnus",
+      "searchPlaceholder": "Meklēt pēc nosaukuma, CAS, EK vai numura...",
+      "clearSearch": "Notīrīt meklēšanu",
+      "noResults": "Nav atrasts neviens alergēns, kas atbilstu \"{{q}}\".",
+      "done": "Gatavs",
+      "cas": "CAS",
+      "removeAria": "Noņemt {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Mazgāšanas līdzekļi: digitālā produkta pase",
+    "notice": "Šajā lapā ir sniegta produkta informācija, ko publicējis piegādātājs. Tā nav sertifikācija vai apstiprinājums, un tā neaizstāj marķējumu uz iepakojuma.",
+    "units": "vienības",
+    "ecolabelBadge": "ES ekomarķējums",
+    "sections": {
+      "product": "Produkts",
+      "hazard": "Bīstamība un drošība",
+      "use": "Lietošana un dozēšana",
+      "ingredients": "Sastāvdaļas",
+      "environment": "Vide un iepakojums",
+      "biocide": "Biocīds",
+      "responsible": "Atbildīgā persona",
+      "annexVi": "VI pielikuma datu kopa",
+      "metadata": "DPP infrastruktūra"
+    },
+    "subsections": {
+      "manufacturer": "Ražotājs",
+      "importer": "Importētājs",
+      "authorisedRepresentative": "ES pilnvarotais pārstāvis"
+    },
+    "rows": {
+      "constituentClasses": "Sastāvdaļu grupas, kuru masas daļa pārsniedz 0,2 %",
+      "ecolabel": "ES ekomarķējums",
+      "licenceNumber": "Licences numurs",
+      "name": "Nosaukums",
+      "address": "Adrese",
+      "email": "E-pasts",
+      "phone": "Tālrunis",
+      "dppServiceProvider": "DPP pakalpojumu sniedzējs",
+      "dppVersion": "DPP versija",
+      "lastUpdated": "Pēdējo reizi atjaunināts",
+      "status": "Statuss"
+    },
+    "values": {
+      "published": "Publicēts"
     }
   }
 }

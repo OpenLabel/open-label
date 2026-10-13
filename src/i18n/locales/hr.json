@@ -255,7 +255,7 @@
     "cosmetics": "Kozmetika",
     "furniture": "Namještaj i madraci",
     "tires": "Gume",
-    "detergents": "Deterdženti i kemikalije",
+    "detergents": "Deterdženti",
     "other": "Svi ostali proizvodi",
     "car_cleaning": "Proizvodi za čišćenje automobila"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Popis INCI, nanomaterijali, mogućnost recikliranja ambalaže",
     "furniture": "Podrijetlo drva prema EUDR, rezervni dijelovi, PFAS",
     "tires": "Stopa trošenja, povijest protektiranja, mikroplastika",
-    "detergents": "Digitalni SL, biorazgradivost, optimizacija doziranja",
+    "detergents": "Sastav proizvoda, informacije o opasnostima i uporabi te priprema za europsku putovnicu deterdženata od 23. rujna 2029.",
     "other": "Opći DPP predložak za bilo koji tip proizvoda",
     "car_cleaning": "Informacije o kemijskoj sigurnosti i priprema za putovnicu EU-a za deterdžente od 23. rujna 2029."
   },
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Deterdženti DPP: izjava o odricanju od odgovornosti u vezi sukladnosti",
       "text": "Uredba (EU) 2026/405 o deterdžentima i tenzidima primjenjuje se od 23. rujna 2029. Njezina pravila o digitalnoj putovnici proizvoda, pravima pristupa i podacima o nosaču podataka tek se trebaju utvrditi provedbenim aktom, a do tada se primjenjuje Uredba (EC) No 648/2004. Ovaj alat prikuplja informacije o proizvodu i priprema podatke za putovnicu. On nije certifikacija ni odobrenje i ne treba ga smatrati konačnim pravnim savjetom. Sve što je spremljeno u ovoj kategoriji javno je."
+    },
+    "allergenPicker": {
+      "empty": "Još nisu dodani alergeni.",
+      "summary": "Naveden(o) je {{count}} alergen(a).",
+      "addButton": "Dodaj alergen",
+      "dialogTitle": "Odaberite mirisne alergene",
+      "searchPlaceholder": "Pretražite po nazivu, CAS, EC ili broju...",
+      "clearSearch": "Očisti pretragu",
+      "noResults": "Nijedan alergen ne odgovara pojmu „{{q}}”.",
+      "done": "Gotovo",
+      "cas": "CAS",
+      "removeAria": "Ukloni {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Deterdženti: Digitalna putovnica proizvoda",
+    "notice": "Ova stranica pruža informacije o proizvodu koje je objavio dobavljač. To nije certifikacija ni odobrenje i ne zamjenjuje oznaku na ambalaži.",
+    "units": "jedinice",
+    "ecolabelBadge": "Znak za okoliš EU",
+    "sections": {
+      "product": "Proizvod",
+      "hazard": "Opasnost i sigurnost",
+      "use": "Uporaba i doziranje",
+      "ingredients": "Sastojci",
+      "environment": "Okoliš i ambalaža",
+      "biocide": "Biocidni proizvod",
+      "responsible": "Tko je odgovoran",
+      "annexVi": "Skup podataka iz Priloga VI.",
+      "metadata": "DPP infrastruktura"
+    },
+    "subsections": {
+      "manufacturer": "Proizvođač",
+      "importer": "Uvoznik",
+      "authorisedRepresentative": "Ovlašteni predstavnik u EU"
+    },
+    "rows": {
+      "constituentClasses": "Kategorije sastojaka s masenim udjelom većim od 0,2 %",
+      "ecolabel": "Znak za okoliš EU",
+      "licenceNumber": "Broj licence",
+      "name": "Naziv",
+      "address": "Adresa",
+      "email": "E-pošta",
+      "phone": "Telefon",
+      "dppServiceProvider": "DPP pružatelj usluge",
+      "dppVersion": "DPP verzija",
+      "lastUpdated": "Zadnje ažurirano",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Objavljeno"
     }
   }
 }

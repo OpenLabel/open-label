@@ -218,6 +218,7 @@ export const PREFILL_IDENTITY_KEYS = [
   'manufacturer_city',
   'manufacturer_country',
   'manufacturer_email',
+  'manufacturer_phone',
   'manufacturer_website',
   'manufacturer_operator_id',
   'manufacturer_operator_id_type',

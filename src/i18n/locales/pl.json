@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetyki",
     "furniture": "Meble i Materace",
     "tires": "Opony",
-    "detergents": "Detergenty i Chemikalia",
+    "detergents": "Detergenty",
     "other": "Wszystkie Inne Produkty",
     "car_cleaning": "Środki do czyszczenia samochodów"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Lista INCI, nanomateriały, możliwość recyklingu opakowań",
     "furniture": "Pochodzenie drewna EUDR, części zamienne, PFAS",
     "tires": "Wskaźnik ścierania, historia bieżnikowania, mikroplastiki",
-    "detergents": "Cyfrowa SDS, biodegradowalność, optymalizacja dozowania",
+    "detergents": "Skład produktu, informacje o zagrożeniach i stosowaniu oraz przygotowanie do unijnego paszportu detergentów od 23 września 2029 r.",
     "other": "Ogólny szablon DPP dla dowolnego typu produktu",
     "car_cleaning": "Informacje o bezpieczeństwie chemicznym i przygotowanie do unijnego paszportu detergentów od 23 września 2029 r."
   },
@@ -2736,7 +2736,7 @@
         "powder": "Proszek",
         "tablet": "Tabletka",
         "capsule": "Kapsułka",
-        "spray": "Spray",
+        "spray": "Aerozol",
         "wipe": "Chusteczka",
         "paste": "Pasta",
         "other": "Inna"
@@ -2890,6 +2890,56 @@
     "disclaimer": {
       "title": "Detergenty DPP: oświadczenie o zgodności",
       "text": "Rozporządzenie (EU) 2026/405 w sprawie detergentów i środków powierzchniowo czynnych ma zastosowanie od 23 września 2029 r. Jego przepisy dotyczące cyfrowego paszportu produktu, praw dostępu i szczegółów nośnika danych zostaną dopiero określone w akcie wykonawczym, a do tego czasu zastosowanie ma rozporządzenie (EC) No 648/2004. To narzędzie gromadzi informacje o produkcie i przygotowuje dane do paszportu. Nie jest to certyfikacja ani zatwierdzenie i nie należy go traktować jako ostatecznej porady prawnej. Wszystkie informacje zapisane w tej kategorii są publiczne."
+    },
+    "allergenPicker": {
+      "empty": "Nie dodano jeszcze żadnych alergenów.",
+      "summary": "Zadeklarowano {{count}} alergen(ów).",
+      "addButton": "Dodaj alergen",
+      "dialogTitle": "Wybierz alergeny zapachowe",
+      "searchPlaceholder": "Wyszukaj według nazwy, CAS, WE lub numeru...",
+      "clearSearch": "Wyczyść wyszukiwanie",
+      "noResults": "Brak alergenów pasujących do \"{{q}}\".",
+      "done": "Gotowe",
+      "cas": "CAS",
+      "removeAria": "Usuń {{name}}"
+    }
+  },
+  "detergentsPublic": {
+    "headerBadge": "Detergenty: Cyfrowy paszport produktu",
+    "notice": "Ta strona zawiera informacje o produkcie opublikowane przez dostawcę. Nie stanowi ona certyfikacji ani zatwierdzenia i nie zastępuje etykiety na opakowaniu.",
+    "units": "jednostki",
+    "ecolabelBadge": "Oznakowanie ekologiczne UE",
+    "sections": {
+      "product": "Produkt",
+      "hazard": "Zagrożenia i bezpieczeństwo",
+      "use": "Stosowanie i dozowanie",
+      "ingredients": "Składniki",
+      "environment": "Środowisko i opakowanie",
+      "biocide": "Produkt biobójczy",
+      "responsible": "Podmiot odpowiedzialny",
+      "annexVi": "Zestaw danych z załącznika VI",
+      "metadata": "Infrastruktura DPP"
+    },
+    "subsections": {
+      "manufacturer": "Producent",
+      "importer": "Importer",
+      "authorisedRepresentative": "Autoryzowany przedstawiciel w UE"
+    },
+    "rows": {
+      "constituentClasses": "Klasy składników w stężeniu powyżej 0,2% wagowo",
+      "ecolabel": "Oznakowanie ekologiczne UE",
+      "licenceNumber": "Numer licencji",
+      "name": "Nazwa",
+      "address": "Adres",
+      "email": "Adres e-mail",
+      "phone": "Telefon",
+      "dppServiceProvider": "Dostawca usług DPP",
+      "dppVersion": "Wersja DPP",
+      "lastUpdated": "Ostatnia aktualizacja",
+      "status": "Status"
+    },
+    "values": {
+      "published": "Opublikowano"
     }
   }
 }
