@@ -42,7 +42,7 @@ describe('detergentFragrances', () => {
     const byRef = (n: number) => DETERGENT_FRAGRANCES.find((f) => f.ref === n)!;
     expect(byRef(1)).toMatchObject({ chemical_name: 'Benzyl alcohol', cas: '100-51-6', ec: '202-859-9' });
     expect(byRef(3)).toMatchObject({ name: 'Amyl cinnamal', cas: '122-40-7' });
-    expect(byRef(19).cas).toBe('106-22-9; 26489-01-0');
+    expect(byRef(19).cas).toBe('106-22-9; 26489-01-0; 1117-61-9; 7540-51-4');
     expect(byRef(102).cas).toBe('51414-25-6; 31906-04-4');
     expect(byRef(103)).toMatchObject({ cas: '526-37-4', ec: '' });
     expect(byRef(105)).toMatchObject({ cas: '80-54-6', ec: '201-289-8' });
