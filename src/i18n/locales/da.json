@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetik",
     "furniture": "Møbler og madrasser",
     "tires": "Dæk",
-    "detergents": "Rengøringsmidler og kemikalier",
+    "detergents": "Vaske- og rengøringsmidler",
     "other": "Alle andre produkter",
     "car_cleaning": "Bilrengøringsprodukter"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI-liste, nanomaterialer, emballage-genanvendelighed",
     "furniture": "EUDR træoprindelse, reservedele, PFAS",
     "tires": "Slidhastighed, regummeringshistorik, mikroplast",
-    "detergents": "Digitalt SDS, bionedbrydning, doseringsoptimering",
+    "detergents": "Produktets sammensætning, oplysninger om fare og brug samt forberedelse til EU’s pas for vaske- og rengøringsmidler fra den 23. september 2029.",
     "other": "Generisk DPP-skabelon til enhver produkttype",
     "car_cleaning": "Oplysninger om kemikaliesikkerhed og forberedelse til EU-passet for vaske- og rengøringsmidler fra 23. september 2029."
   },

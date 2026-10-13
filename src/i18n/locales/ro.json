@@ -255,7 +255,7 @@
     "cosmetics": "Cosmetice",
     "furniture": "Mobilier și saltele",
     "tires": "Anvelope",
-    "detergents": "Detergenți și substanțe chimice",
+    "detergents": "Detergenți",
     "other": "Toate celelalte produse",
     "car_cleaning": "Produse pentru curățarea automobilelor"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Lista INCI, nanomateriale, reciclabilitate ambalaj",
     "furniture": "Origine lemn EUDR, piese de schimb, PFAS",
     "tires": "Rată de abraziune, istoric re-anvelopare, microplastice",
-    "detergents": "FDS digital, biodegradabilitate, optimizare dozare",
+    "detergents": "Compoziția produsului, informații privind pericolele și utilizarea și pregătirea pentru pașaportul UE al detergenților de la 23 septembrie 2029.",
     "other": "Șablon DPP generic pentru orice tip de produs",
     "car_cleaning": "Informații privind siguranța chimică și pregătirea pentru pașaportul UE al detergenților de la 23 septembrie 2029."
   },

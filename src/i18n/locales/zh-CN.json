@@ -263,7 +263,7 @@
     "cosmetics": "化妆品",
     "furniture": "家具和床垫",
     "tires": "轮胎",
-    "detergents": "洗涤剂和化学品",
+    "detergents": "洗涤剂",
     "other": "所有其他产品",
     "car_cleaning": "汽车清洁产品"
   },
@@ -279,7 +279,7 @@
     "cosmetics": "INCI列表、纳米材料、包装可回收性",
     "furniture": "EUDR木材来源、备件、PFAS",
     "tires": "磨损率、翻新历史、微塑料",
-    "detergents": "数字SDS、生物降解性、剂量优化",
+    "detergents": "产品成分、危害与使用信息，以及为自2029年9月23日起适用的欧盟洗涤剂护照要求做好准备。",
     "other": "适用于任何产品类型的通用DPP模板",
     "car_cleaning": "化学品安全信息，以及为自2029年9月23日起适用的欧盟洗涤剂护照要求做好准备。"
   },

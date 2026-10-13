@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetika",
     "furniture": "Baldai ir čiužiniai",
     "tires": "Padangos",
-    "detergents": "Plovikliai ir cheminės medžiagos",
+    "detergents": "Plovikliai",
     "other": "Visi kiti produktai",
     "car_cleaning": "Automobilių valymo priemonės"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI sąrašas, nanomedžiagos, pakuotės perdirbamumas",
     "furniture": "Medienos kilmė pagal EUDR, atsarginės dalys, PFAS",
     "tires": "Dilimo norma, protektoriavimo istorija, mikroplastikas",
-    "detergents": "Skaitmeninis SDS, biologinis skaidumas, dozavimo optimizavimas",
+    "detergents": "Produkto sudėtis, informacija apie pavojus ir naudojimą bei pasirengimas ES ploviklių pasui nuo 2029 m. rugsėjo 23 d.",
     "other": "Bendras DPP šablonas bet kokiam produkto tipui",
     "car_cleaning": "Cheminės saugos informacija ir pasirengimas ES ploviklių pasui nuo 2029 m. rugsėjo 23 d."
   },

@@ -255,7 +255,7 @@
     "cosmetics": "Kosmētika",
     "furniture": "Mēbeles un matrači",
     "tires": "Riepas",
-    "detergents": "Mazgāšanas līdzekļi un ķīmiskās vielas",
+    "detergents": "Mazgāšanas līdzekļi",
     "other": "Visi pārējie produkti",
     "car_cleaning": "Automašīnu tīrīšanas līdzekļi"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI saraksts, nanomateriāli, iepakojuma pārstrādājamība",
     "furniture": "EUDR koksnes izcelsme, rezerves daļas, PFAS",
     "tires": "Nodiluma ātrums, atjaunošanas vēsture, mikroplastmasa",
-    "detergents": "Digitālā DDL, bionoārdāmība, dozēšanas optimizācija",
+    "detergents": "Produkta sastāvs, informācija par bīstamību un lietošanu un sagatavošanās ES mazgāšanas līdzekļu pasei no 2029. gada 23. septembra.",
     "other": "Vispārīga DPP veidne jebkuram produkta tipam",
     "car_cleaning": "Ķīmiskās drošības informācija un sagatavošanās ES mazgāšanas līdzekļu pasei no 2029. gada 23. septembra."
   },

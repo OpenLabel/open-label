@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetika",
     "furniture": "Nábytek a matrace",
     "tires": "Pneumatiky",
-    "detergents": "Čisticí prostředky a chemikálie",
+    "detergents": "Detergenty",
     "other": "Všechny ostatní produkty",
     "car_cleaning": "Přípravky na čištění automobilů"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Seznam INCI, nanomateriály, recyklovatelnost obalů",
     "furniture": "Původ dřeva dle EUDR, náhradní díly, PFAS",
     "tires": "Míra opotřebení, historie protektorování, mikroplasty",
-    "detergents": "Digitální BL, biologická rozložitelnost, optimalizace dávkování",
+    "detergents": "Složení výrobku, informace o nebezpečnosti a použití a příprava na evropský pas detergentů od 23. září 2029.",
     "other": "Obecná šablona DPP pro jakýkoli typ produktu",
     "car_cleaning": "Informace o chemické bezpečnosti a příprava na pas detergentů EU od 23. září 2029."
   },

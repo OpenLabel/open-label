@@ -263,7 +263,7 @@
     "cosmetics": "Cosmetica",
     "furniture": "Meubels & Matrassen",
     "tires": "Banden",
-    "detergents": "Wasmiddelen & Chemicaliën",
+    "detergents": "Detergenten",
     "other": "Alle Andere Producten",
     "car_cleaning": "Autoreinigingsproducten"
   },
@@ -279,7 +279,7 @@
     "cosmetics": "INCI-lijst, nanomaterialen, recycleerbaarheid verpakking",
     "furniture": "EUDR houtherkomst, reserveonderdelen, PFAS",
     "tires": "Slijtagepercentage, loopvlakvernieuwingsgeschiedenis, microplastics",
-    "detergents": "Digitale SDS, biologische afbreekbaarheid, doseeroptimalisatie",
+    "detergents": "Productsamenstelling, informatie over gevaren en gebruik en voorbereiding op het EU-detergentenpaspoort vanaf 23 september 2029.",
     "other": "Generieke DPP sjabloon voor elk producttype",
     "car_cleaning": "Informatie over chemische veiligheid en voorbereiding op het EU-detergentenpaspoort vanaf 23 september 2029."
   },

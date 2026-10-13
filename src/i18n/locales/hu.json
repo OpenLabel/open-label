@@ -255,7 +255,7 @@
     "cosmetics": "Kozmetikumok",
     "furniture": "Bútorok és matracok",
     "tires": "Gumiabroncsok",
-    "detergents": "Mosószerek és vegyszerek",
+    "detergents": "Mosó- és tisztítószerek",
     "other": "Minden egyéb termék",
     "car_cleaning": "Autótisztító termékek"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI lista, nananyagok, csomagolás újrahasznosíthatósága",
     "furniture": "Fa eredete az EUDR szerint, alkatrészek, PFAS",
     "tires": "Kopási arány, futózás-felújítási előzmények, mikroműanyagok",
-    "detergents": "Digitális BA, biológiai lebonthatóság, adagolás optimalizálás",
+    "detergents": "A termék összetétele, a veszélyekkel és a használattal kapcsolatos információk, valamint felkészülés az uniós mosó- és tisztítószer-útlevélre 2029. szeptember 23-tól.",
     "other": "Általános DPP sablon bármilyen terméktípushoz",
     "car_cleaning": "Kémiai biztonsági információk és felkészülés az uniós mosószerútlevélre 2029. szeptember 23-tól."
   },

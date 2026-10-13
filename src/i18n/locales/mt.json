@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetiċi",
     "furniture": "Għamara u friex",
     "tires": "Tajers",
-    "detergents": "Deterġenti u kimiċi",
+    "detergents": "Deterġenti",
     "other": "Prodotti oħra kollha",
     "car_cleaning": "Prodotti għat-tindif tal-karozzi"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Lista INCI, nanomaterjali, riċiklabilità tal-ippakkjar",
     "furniture": "Oriġini tal-injam EUDR, spare parts, PFAS",
     "tires": "Rata ta' abrażjoni, storja tar-retreading, mikroplastiċi",
-    "detergents": "SDS diġitali, bijodegradibbiltà, ottimizzazzjoni tad-dożaġġ",
+    "detergents": "Kompożizzjoni tal-prodott, informazzjoni dwar perikli u użu, u tħejjija għall-passaport tal-UE tad-deterġenti mit-23 ta’ Settembru 2029.",
     "other": "Mudell DPP ġeneriku għal kwalunkwe tip ta' prodott",
     "car_cleaning": "Informazzjoni dwar is-sigurtà kimika u tħejjija għall-passaport tal-UE għad-deterġenti mit-23 ta’ Settembru 2029."
   },

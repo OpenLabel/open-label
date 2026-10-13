@@ -255,7 +255,7 @@
     "cosmetics": "Kosmeetika",
     "furniture": "Mööbel ja madratsid",
     "tires": "Rehvid",
-    "detergents": "Pesuained ja kemikaalid",
+    "detergents": "Detergendid",
     "other": "Kõik muud tooted",
     "car_cleaning": "Autopuhastustooted"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI nimekiri, nanomaterjalid, pakendi taaskasutatavus",
     "furniture": "Puidu päritolu EUDR järgi, varuosad, PFAS",
     "tires": "Kulumismäär, protekteerimise ajalugu, mikroplastik",
-    "detergents": "Digitaalne OKT, biolagunevus, doseerimise optimeerimine",
+    "detergents": "Toote koostis, teave ohtude ja kasutamise kohta ning ettevalmistus ELi detergentide passiks alates 23. septembrist 2029.",
     "other": "Üldine DPP mall mis tahes tootetüübile",
     "car_cleaning": "Kemikaaliohutuse teave ja ettevalmistus ELi detergentide passiks alates 23. septembrist 2029."
   },

@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetiikka",
     "furniture": "Huonekalut ja patjat",
     "tires": "Renkaat",
-    "detergents": "Pesuaineet ja kemikaalit",
+    "detergents": "Pesuaineet",
     "other": "Kaikki muut tuotteet",
     "car_cleaning": "Autonpuhdistusaineet"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "INCI-luettelo, nanomateriaalit, pakkauksen kierrätettävyys",
     "furniture": "Puun alkuperä EUDR:n mukaan, varaosat, PFAS",
     "tires": "Kulumisnopeus, pinnoitushistoria, mikromuovit",
-    "detergents": "Digitaalinen KTT, biohajoavuus, annostelun optimointi",
+    "detergents": "Tuotteen koostumus, vaara- ja käyttötiedot sekä valmistautuminen EU:n pesuaineiden passiin 23. syyskuuta 2029 alkaen.",
     "other": "Yleinen DPP-malli mille tahansa tuotetyypille",
     "car_cleaning": "Kemikaaliturvallisuustiedot ja valmistautuminen EU:n pesuainepassiin 23. syyskuuta 2029 alkaen."
   },

@@ -255,7 +255,7 @@
     "cosmetics": "Kozmetika",
     "furniture": "Pohištvo in vzmetnice",
     "tires": "Pnevmatike",
-    "detergents": "Detergenti in kemikalije",
+    "detergents": "Detergenti",
     "other": "Vsi ostali izdelki",
     "car_cleaning": "Izdelki za čiščenje avtomobilov"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Seznam INCI, nanomateriali, možnost recikliranja embalaže",
     "furniture": "Izvor lesa po EUDR, nadomestni deli, PFAS",
     "tires": "Stopnja obrabe, zgodovina obnavljanja, mikroplastika",
-    "detergents": "Digitalni VL, biorazgradljivost, optimizacija doziranja",
+    "detergents": "Sestava izdelka, informacije o nevarnostih in uporabi ter priprava na evropski potni list za detergente od 23. septembra 2029.",
     "other": "Splošna predloga DPP za katero koli vrsto izdelka",
     "car_cleaning": "Informacije o kemijski varnosti in priprava na potni list EU za detergente od 23. septembra 2029."
   },

@@ -255,7 +255,7 @@
     "cosmetics": "Kosmetyki",
     "furniture": "Meble i Materace",
     "tires": "Opony",
-    "detergents": "Detergenty i Chemikalia",
+    "detergents": "Detergenty",
     "other": "Wszystkie Inne Produkty",
     "car_cleaning": "Środki do czyszczenia samochodów"
   },
@@ -271,7 +271,7 @@
     "cosmetics": "Lista INCI, nanomateriały, możliwość recyklingu opakowań",
     "furniture": "Pochodzenie drewna EUDR, części zamienne, PFAS",
     "tires": "Wskaźnik ścierania, historia bieżnikowania, mikroplastiki",
-    "detergents": "Cyfrowa SDS, biodegradowalność, optymalizacja dozowania",
+    "detergents": "Skład produktu, informacje o zagrożeniach i stosowaniu oraz przygotowanie do unijnego paszportu detergentów od 23 września 2029 r.",
     "other": "Ogólny szablon DPP dla dowolnego typu produktu",
     "car_cleaning": "Informacje o bezpieczeństwie chemicznym i przygotowanie do unijnego paszportu detergentów od 23 września 2029 r."
   },

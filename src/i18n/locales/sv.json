@@ -263,7 +263,7 @@
     "cosmetics": "Kosmetika",
     "furniture": "Möbler och madrasser",
     "tires": "Däck",
-    "detergents": "Tvättmedel och kemikalier",
+    "detergents": "Tvätt- och rengöringsmedel",
     "other": "Alla andra produkter",
     "car_cleaning": "Bilrengöringsprodukter"
   },
@@ -279,7 +279,7 @@
     "cosmetics": "INCI-lista, nanomaterial, förpackningsåtervinning",
     "furniture": "EUDR-ursprung trä, reservdelar, PFAS",
     "tires": "Slitagehastighet, regummering, mikroplast",
-    "detergents": "Digitalt SDS, biologisk nedbrytbarhet, doseringsoptimering",
+    "detergents": "Produktens sammansättning, information om faror och användning samt förberedelse för EU:s pass för tvätt- och rengöringsmedel från och med den 23 september 2029.",
     "other": "Generisk DPP-mall för alla produkttyper",
     "car_cleaning": "Information om kemikaliesäkerhet och förberedelse för EU:s tvätt- och rengöringsmedelspass från den 23 september 2029."
   },
