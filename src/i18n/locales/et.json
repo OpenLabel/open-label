@@ -2905,7 +2905,7 @@
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Pesuained: digitaalne tootepass",
+    "headerBadge": "Detergendid: digitaalne tootepass",
     "notice": "See leht sisaldab tarnija avaldatud tooteteavet. See ei ole sertifikaat ega heakskiit ning see ei asenda pakendil olevat märgistust.",
     "units": "ühikut",
     "ecolabelBadge": "ELi ökomärgis",
