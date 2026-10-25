@@ -1,12 +1,15 @@
 import { describe, it, expect, vi, afterEach } from 'vitest';
 import { render, screen, fireEvent, within } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { MemoryRouter, Routes, Route } from 'react-router-dom';
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import type { Passport } from '@/types/passport';
 
 const mockSignOut = vi.fn();
 const mockDuplicateAsync = vi.fn();
 const mockDeleteAsync = vi.fn();
 const mockReorderMutate = vi.fn();
+const mockCreateAsync = vi.fn();
 
 // Stable reference — returning a new [] on every render would infinite-loop
 // against the sync-effect in Dashboard.tsx (BUG-14 regression).
@@ -32,7 +35,7 @@ vi.mock('@/hooks/usePassports', () => ({
     passports: mockPassports,
     isLoading: false,
     error: null,
-    createPassport: { mutateAsync: vi.fn(), isPending: false },
+    createPassport: { mutateAsync: mockCreateAsync, isPending: false },
     duplicatePassport: { mutateAsync: mockDuplicateAsync },
     deletePassport: { mutateAsync: mockDeleteAsync },
     reorderPassports: { mutate: mockReorderMutate },
@@ -192,5 +195,45 @@ describe('Car cleaning QR export privacy', () => {
     expect(screen.getByTestId('qr-product-name')).toHaveAttribute('data-energy', 'E 100ml : 100 kJ / 24 kcal');
     expect(screen.getByTestId('qr-product-name')).toHaveAttribute('data-seal', 'true');
     expect(screen.queryByRole('button', { name: 'carCleaning.carrier.download' })).not.toBeInTheDocument();
+  });
+});
+
+describe('Create sample menu', () => {
+  const openMenu = () => {
+    const trigger = screen.getByRole('button', { name: /dashboard.createSample/ });
+    fireEvent.pointerDown(trigger, { button: 0, ctrlKey: false, pointerType: 'mouse' });
+  };
+
+  it('lists every active category with a registered sample', async () => {
+    render(<MemoryRouter><Dashboard /></MemoryRouter>);
+    openMenu();
+    const items = (await screen.findAllByRole('menuitem')).map(i => i.textContent);
+    expect(items).toEqual(['🍷categories.wine', '🧸categories.toys', '👕categories.textiles', '🚗categories.car_cleaning', '🧴categories.detergents']);
+  });
+
+  it('creates the chosen sample and navigates to its editor', async () => {
+    mockCreateAsync.mockResolvedValueOnce({ id: 'new-sample' });
+    render(
+      <MemoryRouter initialEntries={['/dashboard']}>
+        <Routes>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/passport/:id/edit" element={<div>editor-page</div>} />
+        </Routes>
+      </MemoryRouter>,
+    );
+    openMenu();
+    fireEvent.click(await screen.findByRole('menuitem', { name: /categories.detergents/ }));
+    expect(await screen.findByText('editor-page')).toBeInTheDocument();
+    expect(mockCreateAsync).toHaveBeenCalledWith(expect.objectContaining({ category: 'detergents' }));
+  });
+
+  it('no longer has the toy-only keys in any locale', () => {
+    for (const lang of ['en', 'fr', 'de', 'zh-CN', 'mt']) {
+      const json = JSON.parse(readFileSync(resolve(__dirname, `../i18n/locales/${lang}.json`), 'utf8'));
+      expect(json.dashboard.createSampleToy).toBeUndefined();
+      expect(json.dashboard.sampleToyCreated).toBeUndefined();
+      expect(json.dashboard.createSample).toBeTruthy();
+      expect(json.dashboard.sampleCreated).toContain('{{category}}');
+    }
   });
 });
