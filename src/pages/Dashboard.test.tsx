@@ -201,7 +201,8 @@ describe('Car cleaning QR export privacy', () => {
 describe('Create sample menu', () => {
   const openMenu = () => {
     const trigger = screen.getByRole('button', { name: /dashboard.createSample/ });
-    fireEvent.pointerDown(trigger, { button: 0, ctrlKey: false, pointerType: 'mouse' });
+    trigger.focus();
+    fireEvent.keyDown(trigger, { key: 'Enter' });
   };
 
   it('lists every active category with a registered sample', async () => {
