@@ -203,8 +203,8 @@
     "deleted": "Paspoort verwijderd",
     "confirmDelete": "Weet u zeker dat u dit paspoort wilt verwijderen?",
     "dragToReorder": "Slepen om te herordenen",
-    "createSampleToy": "Voorbeeldspeelgoed maken",
-    "sampleToyCreated": "Voorbeeldspeelgoedpaspoort gemaakt"
+    "createSample": "Voorbeeld maken",
+    "sampleCreated": "Voorbeeldpaspoort {{category}} aangemaakt"
   },
   "passport": {
     "createTitle": "Nieuw Paspoort Maken",

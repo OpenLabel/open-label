@@ -203,8 +203,8 @@
     "deleted": "Paszport usunięty",
     "confirmDelete": "Czy na pewno chcesz usunąć ten paszport?",
     "dragToReorder": "Przeciągnij, aby zmienić kolejność",
-    "createSampleToy": "Utwórz przykładową zabawkę",
-    "sampleToyCreated": "Utworzono przykładowy paszport zabawki"
+    "createSample": "Utwórz przykład",
+    "sampleCreated": "Utworzono przykładowy paszport: {{category}}"
   },
   "passport": {
     "createTitle": "Utwórz Nowy Paszport",

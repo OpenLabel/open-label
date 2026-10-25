@@ -203,8 +203,8 @@
     "deleted": "Pass raderat",
     "confirmDelete": "Är du säker på att du vill radera detta pass?",
     "dragToReorder": "Dra för att ändra ordning",
-    "createSampleToy": "Skapa exempelleksak",
-    "sampleToyCreated": "Exempelleksakspass skapat"
+    "createSample": "Skapa exempel",
+    "sampleCreated": "Exempelpass för {{category}} skapat"
   },
   "passport": {
     "createTitle": "Skapa nytt pass",

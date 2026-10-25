@@ -203,8 +203,8 @@
     "deleted": "Pass kustutatud",
     "confirmDelete": "Kas oled kindel, et soovid selle passi kustutada?",
     "dragToReorder": "Lohistage järjestamiseks",
-    "createSampleToy": "Loo näidismänguasi",
-    "sampleToyCreated": "Näidismänguasja pass loodud"
+    "createSample": "Loo näidis",
+    "sampleCreated": "Näidispass loodud: {{category}}"
   },
   "passport": {
     "createTitle": "Loo uus pass",

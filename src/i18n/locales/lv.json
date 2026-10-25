@@ -203,8 +203,8 @@
     "deleted": "Pase dzēsta",
     "confirmDelete": "Vai tiešām vēlaties dzēst šo pasi?",
     "dragToReorder": "Velciet, lai pārkārtotu",
-    "createSampleToy": "Izveidot rotaļlietas paraugu",
-    "sampleToyCreated": "Rotaļlietas parauga pase izveidota"
+    "createSample": "Izveidot paraugu",
+    "sampleCreated": "Parauga pase izveidota: {{category}}"
   },
   "passport": {
     "createTitle": "Izveidot jaunu pasi",

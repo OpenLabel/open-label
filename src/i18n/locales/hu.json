@@ -203,8 +203,8 @@
     "deleted": "Útlevél törölve",
     "confirmDelete": "Biztosan törölni szeretné ezt az útlevelet?",
     "dragToReorder": "Húzza az átrendezéshez",
-    "createSampleToy": "Mintajáték létrehozása",
-    "sampleToyCreated": "Mintajáték útlevél létrehozva"
+    "createSample": "Minta létrehozása",
+    "sampleCreated": "Minta útlevél létrehozva: {{category}}"
   },
   "passport": {
     "createTitle": "Új útlevél létrehozása",

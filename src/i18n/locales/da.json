@@ -203,8 +203,8 @@
     "deleted": "Pas slettet",
     "confirmDelete": "Er du sikker på, at du vil slette dette pas?",
     "dragToReorder": "Træk for at ændre rækkefølge",
-    "createSampleToy": "Opret eksempellegetøj",
-    "sampleToyCreated": "Eksempelpas for legetøj oprettet"
+    "createSample": "Opret eksempel",
+    "sampleCreated": "Eksempelpas for {{category}} oprettet"
   },
   "passport": {
     "createTitle": "Opret nyt pas",

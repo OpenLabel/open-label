@@ -203,8 +203,8 @@
     "deleted": "产品护照已删除",
     "confirmDelete": "您确定要删除此产品护照吗？",
     "dragToReorder": "拖动以重新排序",
-    "createSampleToy": "创建示例玩具",
-    "sampleToyCreated": "示例玩具产品护照已创建"
+    "createSample": "创建示例",
+    "sampleCreated": "已创建{{category}}示例护照"
   },
   "passport": {
     "createTitle": "创建新产品护照",

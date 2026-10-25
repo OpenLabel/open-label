@@ -203,8 +203,8 @@
     "deleted": "Potni list izbrisan",
     "confirmDelete": "Ali ste prepričani, da želite izbrisati ta potni list?",
     "dragToReorder": "Povlecite za prerazporeditev",
-    "createSampleToy": "Ustvari vzorčno igračo",
-    "sampleToyCreated": "Ustvarjen potni list vzorčne igrače"
+    "createSample": "Ustvari primer",
+    "sampleCreated": "Vzorčni potni list {{category}} je ustvarjen"
   },
   "passport": {
     "createTitle": "Ustvari nov potni list",

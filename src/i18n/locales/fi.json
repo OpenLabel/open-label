@@ -203,8 +203,8 @@
     "deleted": "Passi poistettu",
     "confirmDelete": "Haluatko varmasti poistaa tämän passin?",
     "dragToReorder": "Vedä järjestääksesi",
-    "createSampleToy": "Luo mallilelu",
-    "sampleToyCreated": "Mallileluasiakirja luotu"
+    "createSample": "Luo esimerkki",
+    "sampleCreated": "Esimerkkipassi luotu: {{category}}"
   },
   "passport": {
     "createTitle": "Luo uusi passi",
