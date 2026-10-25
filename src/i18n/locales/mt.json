@@ -203,8 +203,8 @@
     "deleted": "Il-passaport tħassar",
     "confirmDelete": "Int ċert li trid tħassar dan il-passaport?",
     "dragToReorder": "Iġbed biex tirranġa",
-    "createSampleToy": "Oħloq ġugarell ta’ kampjun",
-    "sampleToyCreated": "Passaport tal-ġugarell ta’ kampjun maħluq"
+    "createSample": "Oħloq kampjun",
+    "sampleCreated": "Inħoloq passaport kampjun: {{category}}"
   },
   "passport": {
     "createTitle": "Oħloq passaport ġdid",

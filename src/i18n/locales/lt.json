@@ -203,8 +203,8 @@
     "deleted": "Pasas ištrintas",
     "confirmDelete": "Ar tikrai norite ištrinti šį pasą?",
     "dragToReorder": "Vilkite norėdami pertvarkyti",
-    "createSampleToy": "Sukurti pavyzdinį žaislą",
-    "sampleToyCreated": "Pavyzdinis žaislo pasas sukurtas"
+    "createSample": "Sukurti pavyzdį",
+    "sampleCreated": "Sukurtas pavyzdinis pasas: {{category}}"
   },
   "passport": {
     "createTitle": "Sukurti naują pasą",

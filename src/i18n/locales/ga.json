@@ -203,8 +203,8 @@
     "deleted": "Pas scriosta",
     "confirmDelete": "An bhfuil tú cinnte gur mhaith leat an pas seo a scriosadh?",
     "dragToReorder": "Tarraing chun athordú",
-    "createSampleToy": "Cruthaigh bréagán samplach",
-    "sampleToyCreated": "Pas bréagáin samplach cruthaithe"
+    "createSample": "Cruthaigh sampla",
+    "sampleCreated": "Cruthaíodh pas samplach: {{category}}"
   },
   "passport": {
     "createTitle": "Cruthaigh Pas Nua",

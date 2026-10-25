@@ -203,8 +203,8 @@
     "deleted": "Putovnica obrisana",
     "confirmDelete": "Jeste li sigurni da želite obrisati ovu putovnicu?",
     "dragToReorder": "Povucite za promjenu redoslijeda",
-    "createSampleToy": "Stvori uzorak igračke",
-    "sampleToyCreated": "Stvorena putovnica uzorka igračke"
+    "createSample": "Izradi primjer",
+    "sampleCreated": "Izrađena je ogledna putovnica: {{category}}"
   },
   "passport": {
     "createTitle": "Stvori novu putovnicu",

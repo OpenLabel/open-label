@@ -34,7 +34,13 @@ import { SavedCarCleaningCarrier } from '@/components/car-cleaning/SavedCarClean
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
 import { SortablePassportCard } from '@/components/SortablePassportCard';
-import { buildSampleToyPassport } from '@/data/sampleToyPassport';
+import { SAMPLE_PASSPORTS } from '@/data/samples';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components/ui/dropdown-menu';
+
+/** Active categories that have a registered demo sample. */
+export const SAMPLE_CATEGORIES = categoryList.filter(
+  c => c.status === 'active' && SAMPLE_PASSPORTS[c.value] !== undefined,
+);
 
 import {
   DndContext,
@@ -128,10 +134,14 @@ export default function Dashboard() {
     }
   };
 
-  const handleCreateSampleToy = async () => {
+  // createPassport routes car_cleaning through the validated write gateway
+  // (writeCarCleaningPassport), so every registered sample can use it.
+  const handleCreateSample = async (category: Passport['category']) => {
+    const build = SAMPLE_PASSPORTS[category];
+    if (!build) return;
     try {
-      const created = await createPassport.mutateAsync(buildSampleToyPassport());
-      toast({ title: t('dashboard.sampleToyCreated') });
+      const created = await createPassport.mutateAsync(build());
+      toast({ title: t('dashboard.sampleCreated', { category: t(`categories.${category}`) }) });
       navigate(`/passport/${created.id}/edit`);
     } catch (error: unknown) {
       toast({ title: t('common.error'), description: error instanceof Error ? error.message : String(error), variant: 'destructive' });
@@ -216,9 +226,20 @@ export default function Dashboard() {
         <div className="flex justify-between items-center mb-6 gap-2 flex-wrap">
           <h2 className="text-2xl font-bold">{t('dashboard.title')}</h2>
           <div className="flex items-center gap-2 flex-wrap">
-            <Button variant="outline" onClick={handleCreateSampleToy} disabled={createPassport.isPending}>
-              <Sparkles className="h-4 w-4 mr-2" /> {t('dashboard.createSampleToy')}
-            </Button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant="outline" disabled={createPassport.isPending}>
+                  <Sparkles className="h-4 w-4 mr-2" /> {t('dashboard.createSample')}
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                {SAMPLE_CATEGORIES.map(cat => (
+                  <DropdownMenuItem key={cat.value} onSelect={() => handleCreateSample(cat.value)}>
+                    <span className="mr-2">{cat.icon}</span>{t(`categories.${cat.value}`)}
+                  </DropdownMenuItem>
+                ))}
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Button asChild>
               <Link to="/passport/new"><Plus className="h-4 w-4 mr-2" /> {t('nav.createNew')}</Link>
             </Button>

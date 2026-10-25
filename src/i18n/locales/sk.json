@@ -203,8 +203,8 @@
     "deleted": "Pas vymazaný",
     "confirmDelete": "Naozaj chcete vymazať tento pas?",
     "dragToReorder": "Potiahnite na zmenu poradia",
-    "createSampleToy": "Vytvoriť ukážkovú hračku",
-    "sampleToyCreated": "Ukážkový pas hračky vytvorený"
+    "createSample": "Vytvoriť ukážku",
+    "sampleCreated": "Ukážkový pas {{category}} bol vytvorený"
   },
   "passport": {
     "createTitle": "Vytvoriť nový pas",
