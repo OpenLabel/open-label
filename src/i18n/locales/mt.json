@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Fih mikropartiċelli polimeriċi sintetiċi miżjuda intenzjonalment?",
-        "help": "Ir-Regolament (EU) 2023/2055 jirrestrinġihom skont l-entrata 78 tal-Anness XVII ta’ REACH. Id-deterġenti jintlaħqu mis-17 ta’ Ottubru 2028."
+        "help": "Ir-Regolament (EU) 2023/2055 jirrestringi dawn skont REACH l-Anness XVII l-entrata 78. Id-deterġenti huma kkonċernati mis-17 ta' Ottubru 2028, b'żewġ eċċezzjonijiet: il-mikrobeli użati bħala abrażivi ilhom ipprojbiti mis-17 ta' Ottubru 2023, u fwejjaħ inkapsulati jistgħu jintużaw sas-17 ta' Ottubru 2029."
       },
       "use_instructions": {
         "label": "Istruzzjonijiet għall-użu u prekawzjonijiet speċjali",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Id-dikjarazzjonijiet jevitaw termini ambjentali ġeneriċi?",
-        "help": "Dikjarazzjonijiet ġeneriċi bħal ekoloġiku jew bijodegradabbli huma ristretti mis-27 ta’ Settembru 2026 skont id-Direttiva (EU) 2024/825."
+        "help": "L-asserzjonijiet ambjentali ġeneriċi bħal favur l-ambjent, ekoloġiku jew naturali huma pprojbiti mis-27 ta' Settembru 2026 taħt id-Direttiva (EU) 2024/825, sakemm il-prodott ma jkollux l-Ekotikketta tal-UE jew tikketta rikonoxxuta ekwivalenti. \"Bijodegradabbli\" waħedha tgħodd bħala asserzjoni ġenerika."
       },
       "ecolabel_licence_number": {
         "label": "Numru tal-liċenzja tal-Ekotikketta tal-UE",
@@ -2713,27 +2713,27 @@
         "label": "Prekawzjonijiet u struzzjonijiet għal uċuħ f’kuntatt mal-ikel"
       },
       "importer_phone": {
-        "label": "Importer telephone number",
-        "help": "Annex VI point (b) of Regulation (EU) 2026/405 lists the telephone number of the importer, where applicable, in the digital product passport.",
+        "label": "Numru tat-telefon tal-importatur",
+        "help": "Il-punt (b) tal-Anness VI tar-Regolament (EU) 2026/405 jelenka n-numru tat-telefon tal-importatur, fejn applikabbli, fil-passaport diġitali tal-prodott.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
-        "label": "EU authorised representative: telephone number",
+        "label": "Rappreżentant awtorizzat tal-UE: numru tat-telefon",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_mandate_reference": {
-        "label": "EU authorised representative: written mandate reference",
-        "help": "Reference of the written mandate by which the manufacturer appoints the representative (Article 2(18) of Regulation (EU) 2026/405). Enter a reference only. The mandate itself is not uploaded and the reference is not shown on the public passport.",
-        "placeholder": "e.g., Mandate 2026-07, signed 1 July 2026"
+        "label": "Rappreżentant awtorizzat tal-UE: referenza tal-mandat bil-miktub",
+        "help": "Referenza tal-mandat bil-miktub li bih il-manifattur jaħtar ir-rappreżentant (l-Artikolu 2(18) tar-Regolament (EU) 2026/405). Daħħal referenza biss. Il-mandat innifsu ma jittellax u r-referenza ma tintweriex fuq il-passaport pubbliku.",
+        "placeholder": "eż., Mandat 2026-07, iffirmat l-1 ta' Lulju 2026"
       },
       "registry_upload_confirmed": {
-        "label": "The product and operator identifiers have been uploaded to the EU digital product passport registry",
-        "help": "The identifiers are uploaded to the registry set up under the ESPR before the product is placed on the market. The app cannot verify the upload, and this answer is not shown on the public passport."
+        "label": "L-identifikaturi tal-prodott u tal-operatur ġew imtellgħin fir-reġistru tal-passaport diġitali tal-prodott tal-UE",
+        "help": "L-identifikaturi jittellgħu fir-reġistru stabbilit skont il-ESPR qabel ma l-prodott jitqiegħed fis-suq. L-applikazzjoni ma tistax tivverifika t-tlugħ, u din it-tweġiba ma tintweriex fuq il-passaport pubbliku."
       },
       "future_ufi_code": {
-        "label": "Unique formula identifier (UFI) on the label",
-        "help": "From 23 September 2029 the label of every detergent carries the UFI preceded by 'UFI:' (Annex V Part A point 1(b) of Regulation (EU) 2026/405), whether or not the product is classified as hazardous. Four groups of four characters. Enter the same code as the poison centre UFI when one exists.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Identifikatur uniku tal-formula (UFI) fuq it-tikketta",
+        "help": "Mit-23 ta' Settembru 2029 it-tikketta ta' kull deterġent ikollha l-UFI ippreċedut minn 'UFI:' (il-punt 1(b) tal-Parti A tal-Anness V tar-Regolament (EU) 2026/405), sew jekk il-prodott ikun ikklassifikat bħala perikoluż u sew jekk le. Erba' gruppi ta' erba' karattri. Daħħal l-istess kodiċi bħall-UFI taċ-ċentru tal-veleni meta jeżisti wieħed.",
+        "placeholder": "eż., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2927,8 +2927,8 @@
       "removeAria": "Neħħi {{name}}"
     },
     "form": {
-      "packagingImageLabel": "Colour image of the packaging or label",
-      "packagingImageHelp": "Annex VI point (a) of Regulation (EU) 2026/405 requires a colour image of the packaging or the label, clear enough to identify the model. Mandatory on the Annex VI profile."
+      "packagingImageLabel": "Immaġni bil-kulur tal-imballaġġ jew tat-tikketta",
+      "packagingImageHelp": "Il-punt (a) tal-Anness VI tar-Regolament (EU) 2026/405 jirrikjedi immaġni bil-kulur tal-imballaġġ jew tat-tikketta, ċara biżżejjed biex tidentifika l-mudell. Obbligatorju fuq il-profil tal-Anness VI."
     }
   },
   "detergentsPublic": {
@@ -2958,12 +2958,12 @@
       "licenceNumber": "Numru tal-liċenzja",
       "name": "Isem",
       "address": "Indirizz",
-      "email": "Email",
+      "email": "Posta elettronika",
       "phone": "Telefown",
       "dppServiceProvider": "DPP fornitur tas-servizz",
       "dppVersion": "DPP verżjoni",
       "lastUpdated": "Aġġornat l-aħħar",
-      "status": "Status"
+      "status": "Stat"
     },
     "values": {
       "published": "Ippubblikat"

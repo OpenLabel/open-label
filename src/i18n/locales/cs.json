@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Obsahuje záměrně přidané mikročástice syntetických polymerů?",
-        "help": "Nařízení (EU) 2023/2055 je omezuje podle položky 78 přílohy XVII nařízení REACH. Na detergenty se omezení vztahuje od 17. října 2028."
+        "help": "Nařízení (EU) 2023/2055 je omezuje podle položky 78 přílohy XVII nařízení REACH. Na detergenty se omezení vztahuje od 17. října 2028, a to se dvěma výjimkami: mikroperly používané jako abraziva jsou zakázány od 17. října 2023 a zapouzdřené vonné látky lze používat do 17. října 2029."
       },
       "use_instructions": {
         "label": "Návod k použití a zvláštní bezpečnostní opatření",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Tvrzení se vyhýbají obecným environmentálním pojmům?",
-        "help": "Obecná tvrzení jako „ekologický“ nebo „biologicky rozložitelný“ jsou od 27. září 2026 omezena podle směrnice (EU) 2024/825."
+        "help": "Obecná environmentální tvrzení jako ekologický, zelený nebo přírodní jsou od 27. září 2026 podle směrnice (EU) 2024/825 zakázána, pokud produkt nezískal ekoznačku EU nebo rovnocennou uznanou značku. Samotné tvrzení „biologicky rozložitelný“ se považuje za obecné tvrzení."
       },
       "ecolabel_licence_number": {
         "label": "Číslo licence ekoznačky EU",
@@ -2713,27 +2713,27 @@
         "label": "Bezpečnostní opatření a pokyny pro povrchy přicházející do styku s potravinami"
       },
       "importer_phone": {
-        "label": "Importer telephone number",
-        "help": "Annex VI point (b) of Regulation (EU) 2026/405 lists the telephone number of the importer, where applicable, in the digital product passport.",
+        "label": "Telefonní číslo dovozce",
+        "help": "Příloha VI bod b) nařízení (EU) 2026/405 uvádí v digitálním pasu produktu telefonní číslo dovozce, je-li to relevantní.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
-        "label": "EU authorised representative: telephone number",
+        "label": "Zplnomocněný zástupce v EU: telefonní číslo",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_mandate_reference": {
-        "label": "EU authorised representative: written mandate reference",
-        "help": "Reference of the written mandate by which the manufacturer appoints the representative (Article 2(18) of Regulation (EU) 2026/405). Enter a reference only. The mandate itself is not uploaded and the reference is not shown on the public passport.",
-        "placeholder": "e.g., Mandate 2026-07, signed 1 July 2026"
+        "label": "Zplnomocněný zástupce v EU: odkaz na písemné pověření",
+        "help": "Odkaz na písemné pověření, kterým výrobce jmenuje zástupce (čl. 2 odst. 18 nařízení (EU) 2026/405). Zadejte pouze odkaz. Samotné pověření se nenahrává a odkaz se ve veřejném pasu nezobrazuje.",
+        "placeholder": "např. Pověření 2026-07, podepsáno 1. července 2026"
       },
       "registry_upload_confirmed": {
-        "label": "The product and operator identifiers have been uploaded to the EU digital product passport registry",
-        "help": "The identifiers are uploaded to the registry set up under the ESPR before the product is placed on the market. The app cannot verify the upload, and this answer is not shown on the public passport."
+        "label": "Identifikátory produktu a hospodářského subjektu byly nahrány do registru digitálních pasů produktů EU",
+        "help": "Identifikátory se nahrávají do registru zřízeného podle ESPR před uvedením produktu na trh. Aplikace nemůže nahrání ověřit a tato odpověď se ve veřejném pasu nezobrazuje."
       },
       "future_ufi_code": {
-        "label": "Unique formula identifier (UFI) on the label",
-        "help": "From 23 September 2029 the label of every detergent carries the UFI preceded by 'UFI:' (Annex V Part A point 1(b) of Regulation (EU) 2026/405), whether or not the product is classified as hazardous. Four groups of four characters. Enter the same code as the poison centre UFI when one exists.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Jedinečný identifikátor složení (UFI) na štítku",
+        "help": "Od 23. září 2029 musí štítek každého detergentu obsahovat UFI, kterému předchází ‚UFI:‘ (příloha V část A bod 1 písm. b) nařízení (EU) 2026/405), bez ohledu na to, zda je produkt klasifikován jako nebezpečný. Čtyři skupiny po čtyřech znacích. Zadejte stejný kód jako UFI pro toxikologické středisko, pokud existuje.",
+        "placeholder": "např. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2927,8 +2927,8 @@
       "removeAria": "Odebrat {{name}}"
     },
     "form": {
-      "packagingImageLabel": "Colour image of the packaging or label",
-      "packagingImageHelp": "Annex VI point (a) of Regulation (EU) 2026/405 requires a colour image of the packaging or the label, clear enough to identify the model. Mandatory on the Annex VI profile."
+      "packagingImageLabel": "Barevné vyobrazení obalu nebo štítku",
+      "packagingImageHelp": "Příloha VI bod a) nařízení (EU) 2026/405 vyžaduje barevné vyobrazení obalu nebo štítku, které je dostatečně zřetelné pro identifikaci modelu. Povinné v profilu přílohy VI."
     }
   },
   "detergentsPublic": {

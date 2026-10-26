@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Vai satur tīši pievienotas sintētisko polimēru mikrodaļiņas?",
-        "help": "Regula (EU) 2023/2055 tās ierobežo saskaņā ar REACH XVII pielikuma 78. ierakstu. Mazgāšanas līdzekļiem to piemēro no 2028. gada 17. oktobra."
+        "help": "Ar Regulu (EU) 2023/2055 tie ir ierobežoti saskaņā ar REACH XVII pielikuma 78. ierakstu. Mazgāšanas līdzekļiem prasība ir piemērojama no 2028. gada 17. oktobra, ar diviem izņēmumiem: kā abrazīvi izmantotās mikrogranulas ir aizliegtas kopš 2023. gada 17. oktobra, un iekapsulētas smaržvielas drīkst izmantot līdz 2029. gada 17. oktobrim."
       },
       "use_instructions": {
         "label": "Lietošanas instrukcijas un īpaši piesardzības pasākumi",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vai apgalvojumos tiek izvairīties no vispārīgiem terminiem par ietekmi uz vidi?",
-        "help": "Vispārīgi apgalvojumi, piemēram, \"videi draudzīgs\" vai \"bioloģiski noārdāms\", ir ierobežoti no 2026. gada 27. septembra saskaņā ar Direktīvu (EU) 2024/825."
+        "help": "Vispārīgas vides norādes, piemēram, \"videi draudzīgs\", \"zaļš\" vai \"dabisks\", saskaņā ar Direktīvu (EU) 2024/825 ir aizliegtas no 2026. gada 27. septembra, ja vien produktam nav piešķirts ES ekomarķējums vai līdzvērtīgs atzīts marķējums. Apzīmējums \"bioloģiski noārdāms\" pats par sevi tiek uzskatīts par vispārīgu norādi."
       },
       "ecolabel_licence_number": {
         "label": "ES ekomarķējuma licences numurs",
@@ -2713,27 +2713,27 @@
         "label": "Piesardzības pasākumi un instrukcijas virsmām, kas saskaras ar pārtiku"
       },
       "importer_phone": {
-        "label": "Importer telephone number",
-        "help": "Annex VI point (b) of Regulation (EU) 2026/405 lists the telephone number of the importer, where applicable, in the digital product passport.",
+        "label": "Importētāja tālruņa numurs",
+        "help": "Regulas (EU) 2026/405 VI pielikuma b) punktā ir noteikts, ka digitālajā produkta pasē vajadzības gadījumā iekļauj importētāja tālruņa numuru.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
-        "label": "EU authorised representative: telephone number",
+        "label": "ES pilnvarotais pārstāvis: tālruņa numurs",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_mandate_reference": {
-        "label": "EU authorised representative: written mandate reference",
-        "help": "Reference of the written mandate by which the manufacturer appoints the representative (Article 2(18) of Regulation (EU) 2026/405). Enter a reference only. The mandate itself is not uploaded and the reference is not shown on the public passport.",
-        "placeholder": "e.g., Mandate 2026-07, signed 1 July 2026"
+        "label": "ES pilnvarotais pārstāvis: rakstiskā pilnvarojuma atsauce",
+        "help": "Atsauce uz rakstisko pilnvarojumu, ar kuru ražotājs ieceļ pārstāvi (Regulas (EU) 2026/405 2. panta 18. punkts). Ievadiet tikai atsauci. Pats pilnvarojums netiek augšupielādēts, un atsauce netiek rādīta publiskajā pasē.",
+        "placeholder": "piem., Pilnvarojums 2026-07, parakstīts 2026. gada 1. jūlijā"
       },
       "registry_upload_confirmed": {
-        "label": "The product and operator identifiers have been uploaded to the EU digital product passport registry",
-        "help": "The identifiers are uploaded to the registry set up under the ESPR before the product is placed on the market. The app cannot verify the upload, and this answer is not shown on the public passport."
+        "label": "Produkta un uzņēmēja identifikatori ir augšupielādēti ES digitālo produktu pasu reģistrā",
+        "help": "Identifikatori tiek augšupielādēti reģistrā, kas izveidots saskaņā ar ESPR, pirms produkts tiek laists tirgū. Lietotne nevar pārbaudīt augšupielādi, un šī atbilde netiek rādīta publiskajā pasē."
       },
       "future_ufi_code": {
-        "label": "Unique formula identifier (UFI) on the label",
-        "help": "From 23 September 2029 the label of every detergent carries the UFI preceded by 'UFI:' (Annex V Part A point 1(b) of Regulation (EU) 2026/405), whether or not the product is classified as hazardous. Four groups of four characters. Enter the same code as the poison centre UFI when one exists.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Unikālais formulas identifikators (UFI) marķējumā",
+        "help": "No 2029. gada 23. septembra katra mazgāšanas līdzekļa marķējumā ir norādīts UFI, pirms kura ir 'UFI:' (Regulas (EU) 2026/405 V pielikuma A daļas 1. punkta b) apakšpunkts), neatkarīgi no tā, vai produkts ir klasificēts kā bīstams. Četras grupas pa četrām rakstzīmēm. Ja tāds pastāv, ievadiet to pašu kodu, kas norādīts saindēšanās informācijas centra UFI.",
+        "placeholder": "piem., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2927,8 +2927,8 @@
       "removeAria": "Noņemt {{name}}"
     },
     "form": {
-      "packagingImageLabel": "Colour image of the packaging or label",
-      "packagingImageHelp": "Annex VI point (a) of Regulation (EU) 2026/405 requires a colour image of the packaging or the label, clear enough to identify the model. Mandatory on the Annex VI profile."
+      "packagingImageLabel": "Iepakojuma vai marķējuma krāsains attēls",
+      "packagingImageHelp": "Regulas (EU) 2026/405 VI pielikuma a) punktā ir prasīts iepakojuma vai marķējuma krāsains attēls, kas ir pietiekami skaidrs, lai identificētu modeli. Obligāts VI pielikuma profilā."
     }
   },
   "detergentsPublic": {

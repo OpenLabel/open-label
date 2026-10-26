@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Contient des microparticules de polymères synthétiques ajoutées intentionnellement ?",
-        "help": "Le règlement (EU) 2023/2055 les restreint en vertu de l'entrée 78 de l'annexe XVII du REACH. Les détergents sont concernés à partir du 17 octobre 2028."
+        "help": "Le règlement (EU) 2023/2055 les restreint au titre de l'annexe XVII, entrée 78, de REACH. Les détergents sont concernés à compter du 17 octobre 2028, à deux exceptions près : les microbilles utilisées comme abrasifs sont interdites depuis le 17 octobre 2023, et les parfums encapsulés peuvent être utilisés jusqu'au 17 octobre 2029."
       },
       "use_instructions": {
         "label": "Instructions d'utilisation et précautions particulières",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Les allégations évitent-elles les termes environnementaux génériques ?",
-        "help": "Les allégations génériques telles que « écologique » ou « biodégradable » sont restreintes à partir du 27 septembre 2026 en vertu de la directive (EU) 2024/825."
+        "help": "Les allégations environnementales génériques telles que « respectueux de l'environnement », « vert » ou « naturel » sont interdites à compter du 27 septembre 2026 en vertu de la directive (EU) 2024/825, à moins que le produit ne bénéficie du label écologique de l'UE ou d'un label équivalent reconnu. La mention « biodégradable » employée seule constitue une allégation générique."
       },
       "ecolabel_licence_number": {
         "label": "Numéro de licence de l'écolabel de l'UE",
@@ -2713,27 +2713,27 @@
         "label": "Précautions et instructions pour les surfaces en contact avec des denrées alimentaires"
       },
       "importer_phone": {
-        "label": "Importer telephone number",
-        "help": "Annex VI point (b) of Regulation (EU) 2026/405 lists the telephone number of the importer, where applicable, in the digital product passport.",
+        "label": "Numéro de téléphone de l'importateur",
+        "help": "L'annexe VI, point b), du règlement (EU) 2026/405 mentionne le numéro de téléphone de l'importateur, le cas échéant, dans le passeport numérique de produit.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
-        "label": "EU authorised representative: telephone number",
+        "label": "Mandataire dans l'UE : numéro de téléphone",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_mandate_reference": {
-        "label": "EU authorised representative: written mandate reference",
-        "help": "Reference of the written mandate by which the manufacturer appoints the representative (Article 2(18) of Regulation (EU) 2026/405). Enter a reference only. The mandate itself is not uploaded and the reference is not shown on the public passport.",
-        "placeholder": "e.g., Mandate 2026-07, signed 1 July 2026"
+        "label": "Mandataire dans l'UE : référence du mandat écrit",
+        "help": "Référence du mandat écrit par lequel le fabricant désigne le mandataire (article 2, paragraphe 18, du règlement (EU) 2026/405). Saisissez uniquement une référence. Le mandat lui-même n'est pas téléversé et la référence n'apparaît pas sur le passeport public.",
+        "placeholder": "par ex. Mandat 2026-07, signé le 1er juillet 2026"
       },
       "registry_upload_confirmed": {
-        "label": "The product and operator identifiers have been uploaded to the EU digital product passport registry",
-        "help": "The identifiers are uploaded to the registry set up under the ESPR before the product is placed on the market. The app cannot verify the upload, and this answer is not shown on the public passport."
+        "label": "Les identifiants du produit et des opérateurs ont été téléversés dans le registre des passeports numériques de produits de l'UE",
+        "help": "Les identifiants sont téléversés dans le registre établi au titre de ESPR avant la mise sur le marché du produit. L'application ne peut pas vérifier le téléversement, et cette réponse n'apparaît pas sur le passeport public."
       },
       "future_ufi_code": {
-        "label": "Unique formula identifier (UFI) on the label",
-        "help": "From 23 September 2029 the label of every detergent carries the UFI preceded by 'UFI:' (Annex V Part A point 1(b) of Regulation (EU) 2026/405), whether or not the product is classified as hazardous. Four groups of four characters. Enter the same code as the poison centre UFI when one exists.",
-        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
+        "label": "Identifiant unique de formulation (UFI) sur l'étiquette",
+        "help": "À compter du 23 septembre 2029, l'étiquette de chaque détergent comporte l'UFI précédé de « UFI: » (annexe V, partie A, point 1, b), du règlement (EU) 2026/405), que le produit soit ou non classé comme dangereux. Quatre groupes de quatre caractères. Saisissez le même code que l'UFI des centres antipoison lorsqu'il en existe un.",
+        "placeholder": "par ex. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2927,8 +2927,8 @@
       "removeAria": "Supprimer {{name}}"
     },
     "form": {
-      "packagingImageLabel": "Colour image of the packaging or label",
-      "packagingImageHelp": "Annex VI point (a) of Regulation (EU) 2026/405 requires a colour image of the packaging or the label, clear enough to identify the model. Mandatory on the Annex VI profile."
+      "packagingImageLabel": "Image en couleur de l'emballage ou de l'étiquette",
+      "packagingImageHelp": "L'annexe VI, point a), du règlement (EU) 2026/405 exige une image en couleur de l'emballage ou de l'étiquette, suffisamment claire pour identifier le modèle. Obligatoire sur le profil de l'annexe VI."
     }
   },
   "detergentsPublic": {
