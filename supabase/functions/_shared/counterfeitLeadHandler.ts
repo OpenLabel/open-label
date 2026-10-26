@@ -74,6 +74,7 @@ const json = (status: number, body: unknown) =>
 export function sanitizeSlackValue(value: unknown, max: number): string {
   let v = String(value ?? "")
     // deno-lint-ignore no-control-regex
+    // eslint-disable-next-line no-control-regex
     .replace(/[\u0000-\u001f\u007f\u2028\u2029]+/g, " ")
     .replace(/[*_`~]/g, " ")
     .replace(/@(channel|here|everyone)\b/gi, "@\u2060$1")
@@ -115,6 +116,7 @@ const escapeHtml = (str: string) =>
   str.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&#039;");
 const oneLine = (v: string, max: number) => {
   // deno-lint-ignore no-control-regex
+    // eslint-disable-next-line no-control-regex
   const t = v.replace(/[\u0000-\u001f\u007f]+/g, " ").replace(/\s+/g, " ").trim();
   return t.length > max ? t.slice(0, max - 1) + "\u2026" : t;
 };
