@@ -273,6 +273,9 @@ export async function handleCounterfeitLead(req: Request, deps: CounterfeitLeadD
         : await sendSlack(deps, fields);
       const recorded = await deps.ledger.finish(passport.id, channel, claim.token, ok);
       deliveries[channel] = ok && recorded ? "sent" : "failed";
+      // The Slack lead states that an email was sent, so never post it
+      // unless the email is recorded as sent.
+      if (channel === "email" && deliveries.email !== "sent") break;
     }
 
     if (deliveries.email === "sent" && deliveries.slack === "sent") return json(200, { success: true, deliveries });
