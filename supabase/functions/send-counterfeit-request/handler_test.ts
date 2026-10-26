@@ -103,7 +103,7 @@ function setup(opts: {
     log: (m) => logs.push(m),
     fetch: async (input, init = {}) => {
       const url = String(input);
-      const call = { url, init, body: JSON.parse(String(init.body ?? "{}")) };
+      const call = { url, init, body: JSON.parse(String((init as { body?: unknown }).body ?? "{}")) };
       calls.push(call);
       if (url.startsWith("https://api.resend.com")) return opts.resend ? await opts.resend(call) : new Response('{"id":"e1"}', { status: 200 });
       if (url.startsWith("https://slack.com")) return opts.slack ? await opts.slack(call) : new Response('{"ok":true}', { status: 200 });
