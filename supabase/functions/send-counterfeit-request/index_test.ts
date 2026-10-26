@@ -25,7 +25,7 @@ Deno.test("rejects invalid JSON body", async () => {
     headers: { ...headers, "Content-Type": "application/json" },
     body: "not json",
   });
-  assertEquals(res.status, 400);
+  assertEquals(res.status, 401); // anon key is not a user session: auth is checked before input
   const data = await res.json();
   assert(data.error);
 });
@@ -39,7 +39,7 @@ Deno.test("rejects missing email", async () => {
       passportUrl: "https://example.com/p/abc123",
     }),
   });
-  assertEquals(res.status, 400);
+  assertEquals(res.status, 401); // anon key is not a user session: auth is checked before input
   await res.text();
 });
 
@@ -53,7 +53,7 @@ Deno.test("rejects invalid email format", async () => {
       passportUrl: "https://example.com/p/abc123",
     }),
   });
-  assertEquals(res.status, 400);
+  assertEquals(res.status, 401); // anon key is not a user session: auth is checked before input
   await res.text();
 });
 
@@ -67,7 +67,7 @@ Deno.test("rejects empty passport name", async () => {
       passportUrl: "https://example.com/p/abc123",
     }),
   });
-  assertEquals(res.status, 400);
+  assertEquals(res.status, 401); // anon key is not a user session: auth is checked before input
   await res.text();
 });
 
@@ -81,6 +81,6 @@ Deno.test("rejects invalid URL format", async () => {
       passportUrl: "not-a-url",
     }),
   });
-  assertEquals(res.status, 400);
+  assertEquals(res.status, 401); // anon key is not a user session: auth is checked before input
   await res.text();
 });
