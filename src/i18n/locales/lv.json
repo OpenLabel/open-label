@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Vai satur tīši pievienotas sintētisko polimēru mikrodaļiņas?",
-        "help": "Regula (EU) 2023/2055 tās ierobežo saskaņā ar REACH XVII pielikuma 78. ierakstu. Mazgāšanas līdzekļiem to piemēro no 2028. gada 17. oktobra."
+        "help": "Ar Regulu (EU) 2023/2055 tie ir ierobežoti saskaņā ar REACH XVII pielikuma 78. ierakstu. Mazgāšanas līdzekļiem prasība ir piemērojama no 2028. gada 17. oktobra, ar diviem izņēmumiem: kā abrazīvi izmantotās mikrogranulas ir aizliegtas kopš 2023. gada 17. oktobra, un iekapsulētas smaržvielas drīkst izmantot līdz 2029. gada 17. oktobrim."
       },
       "use_instructions": {
         "label": "Lietošanas instrukcijas un īpaši piesardzības pasākumi",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vai apgalvojumos tiek izvairīties no vispārīgiem terminiem par ietekmi uz vidi?",
-        "help": "Vispārīgi apgalvojumi, piemēram, \"videi draudzīgs\" vai \"bioloģiski noārdāms\", ir ierobežoti no 2026. gada 27. septembra saskaņā ar Direktīvu (EU) 2024/825."
+        "help": "Vispārīgas vides norādes, piemēram, \"videi draudzīgs\", \"zaļš\" vai \"dabisks\", saskaņā ar Direktīvu (EU) 2024/825 ir aizliegtas no 2026. gada 27. septembra, ja vien produktam nav piešķirts ES ekomarķējums vai līdzvērtīgs atzīts marķējums. Apzīmējums \"bioloģiski noārdāms\" pats par sevi tiek uzskatīts par vispārīgu norādi."
       },
       "ecolabel_licence_number": {
         "label": "ES ekomarķējuma licences numurs",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Piesardzības pasākumi un instrukcijas virsmām, kas saskaras ar pārtiku"
+      },
+      "importer_phone": {
+        "label": "Importētāja tālruņa numurs",
+        "help": "Regulas (EU) 2026/405 VI pielikuma b) punktā ir noteikts, ka digitālajā produkta pasē vajadzības gadījumā iekļauj importētāja tālruņa numuru.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "ES pilnvarotais pārstāvis: tālruņa numurs",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "ES pilnvarotais pārstāvis: rakstiskā pilnvarojuma atsauce",
+        "help": "Atsauce uz rakstisko pilnvarojumu, ar kuru ražotājs ieceļ pārstāvi (Regulas (EU) 2026/405 2. panta 18. punkts). Ievadiet tikai atsauci. Pats pilnvarojums netiek augšupielādēts, un atsauce netiek rādīta publiskajā pasē.",
+        "placeholder": "piem., Pilnvarojums 2026-07, parakstīts 2026. gada 1. jūlijā"
+      },
+      "registry_upload_confirmed": {
+        "label": "Produkta un uzņēmēja identifikatori ir augšupielādēti ES digitālo produktu pasu reģistrā",
+        "help": "Identifikatori tiek augšupielādēti reģistrā, kas izveidots saskaņā ar ESPR, pirms produkts tiek laists tirgū. Lietotne nevar pārbaudīt augšupielādi, un šī atbilde netiek rādīta publiskajā pasē."
+      },
+      "future_ufi_code": {
+        "label": "Unikālais formulas identifikators (UFI) marķējumā",
+        "help": "No 2029. gada 23. septembra katra mazgāšanas līdzekļa marķējumā ir norādīts UFI, pirms kura ir 'UFI:' (Regulas (EU) 2026/405 V pielikuma A daļas 1. punkta b) apakšpunkts), neatkarīgi no tā, vai produkts ir klasificēts kā bīstams. Četras grupas pa četrām rakstzīmēm. Ja tāds pastāv, ievadiet to pašu kodu, kas norādīts saindēšanās informācijas centra UFI.",
+        "placeholder": "piem., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Gatavs",
       "cas": "CAS",
       "removeAria": "Noņemt {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Iepakojuma vai marķējuma krāsains attēls",
+      "packagingImageHelp": "Regulas (EU) 2026/405 VI pielikuma a) punktā ir prasīts iepakojuma vai marķējuma krāsains attēls, kas ir pietiekami skaidrs, lai identificētu modeli. Obligāts VI pielikuma profilā."
     }
   },
   "detergentsPublic": {

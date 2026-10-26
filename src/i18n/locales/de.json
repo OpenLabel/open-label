@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Enthält absichtlich zugesetzte synthetische Polymermikropartikel?",
-        "help": "Die Verordnung (EU) 2023/2055 beschränkt diese gemäß REACH Anhang XVII Eintrag 78. Wasch- und Reinigungsmittel sind ab dem 17. Oktober 2028 betroffen."
+        "help": "Die Verordnung (EU) 2023/2055 beschränkt diese gemäß Anhang XVII Eintrag 78 der REACH. Wasch- und Reinigungsmittel sind ab dem 17. Oktober 2028 betroffen, mit zwei Ausnahmen: Als Abrasivstoffe verwendete Mikroperlen sind seit dem 17. Oktober 2023 verboten, und verkapselte Duftstoffe dürfen bis zum 17. Oktober 2029 verwendet werden."
       },
       "use_instructions": {
         "label": "Gebrauchsanweisung und besondere Vorsichtsmaßnahmen",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Werden bei den Angaben allgemeine umweltbezogene Begriffe vermieden?",
-        "help": "Allgemeine Angaben wie „umweltfreundlich“ oder „biologisch abbaubar“ sind ab dem 27. September 2026 gemäß der Richtlinie (EU) 2024/825 beschränkt."
+        "help": "Allgemeine Umweltaussagen wie „umweltfreundlich“, „grün“ oder „natürlich“ sind ab dem 27. September 2026 gemäß der Richtlinie (EU) 2024/825 verboten, es sei denn, das Produkt trägt das EU-Umweltzeichen oder ein gleichwertiges anerkanntes Zeichen. „Biologisch abbaubar“ allein gilt als allgemeine Umweltaussage."
       },
       "ecolabel_licence_number": {
         "label": "Lizenznummer des EU-Umweltzeichens",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Vorsichtsmaßnahmen und Anweisungen für Oberflächen mit Lebensmittelkontakt"
+      },
+      "importer_phone": {
+        "label": "Telefonnummer des Einführers",
+        "help": "Anhang VI Buchstabe b der Verordnung (EU) 2026/405 führt im digitalen Produktpass gegebenenfalls die Telefonnummer des Einführers auf.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "EU-Bevollmächtigter: Telefonnummer",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "EU-Bevollmächtigter: Referenz des schriftlichen Mandats",
+        "help": "Referenz des schriftlichen Mandats, mit dem der Hersteller den Bevollmächtigten benennt (Artikel 2 Absatz 18 der Verordnung (EU) 2026/405). Geben Sie nur eine Referenz an. Das Mandat selbst wird nicht hochgeladen und die Referenz wird im öffentlichen Pass nicht angezeigt.",
+        "placeholder": "z. B. Mandat 2026-07, unterzeichnet am 1. Juli 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Die Produkt- und Wirtschaftsakteurskennungen wurden in das EU-Register für digitale Produktpässe hochgeladen",
+        "help": "Die Kennungen werden vor dem Inverkehrbringen des Produkts in das gemäß der ESPR eingerichtete Register hochgeladen. Die Anwendung kann das Hochladen nicht überprüfen, und diese Angabe wird im öffentlichen Pass nicht angezeigt."
+      },
+      "future_ufi_code": {
+        "label": "Eindeutiger Rezepturidentifikator (UFI) auf dem Kennzeichnungsetikett",
+        "help": "Ab dem 23. September 2029 muss das Kennzeichnungsetikett jedes Wasch- und Reinigungsmittels den UFI mit vorangestelltem „UFI: “ tragen (Anhang V Teil A Nummer 1 Buchstabe b der Verordnung (EU) 2026/405), unabhängig davon, ob das Produkt als gefährlich eingestuft ist oder nicht. Vier Gruppen von jeweils vier Zeichen. Geben Sie denselben Code wie für den Giftnotruf-UFI an, sofern vorhanden.",
+        "placeholder": "z. B. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Fertig",
       "cas": "CAS",
       "removeAria": "{{name}} entfernen"
+    },
+    "form": {
+      "packagingImageLabel": "Farbbild der Verpackung oder des Kennzeichnungsetiketts",
+      "packagingImageHelp": "Anhang VI Buchstabe a der Verordnung (EU) 2026/405 verlangt ein Farbbild der Verpackung oder des Kennzeichnungsetiketts, das klar genug ist, um das Modell zu identifizieren. Obligatorisch für das Profil gemäß Anhang VI."
     }
   },
   "detergentsPublic": {

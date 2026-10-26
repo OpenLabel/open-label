@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Conține microparticule de polimeri sintetici adăugate în mod intenționat?",
-        "help": "Regulamentul (EU) 2023/2055 le restricționează în temeiul REACH anexa XVII rubrica 78. Detergenții sunt vizați începând cu 17 octombrie 2028."
+        "help": "Regulamentul (EU) 2023/2055 le restricționează în temeiul anexei XVII rubrica 78 din REACH. Detergenții sunt vizați începând cu 17 octombrie 2028, cu două excepții: microperlele utilizate ca abrazivi sunt interzise de la 17 octombrie 2023, iar parfumurile încapsulate pot fi utilizate până la 17 octombrie 2029."
       },
       "use_instructions": {
         "label": "Instrucțiuni de utilizare și precauții speciale",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Mențiunile evită termenii ecologici generici?",
-        "help": "Mențiunile generice, cum ar fi „ecologic” sau „biodegradabil”, sunt restricționate începând cu 27 septembrie 2026 în temeiul Directivei (EU) 2024/825."
+        "help": "Mențiunile de mediu generice, cum ar fi ecologic, verde sau natural, sunt interzise începând cu 27 septembrie 2026 în temeiul Directivei (EU) 2024/825, cu excepția cazului în care produsul deține eticheta UE ecologică sau o etichetă recunoscută echivalentă. „Biodegradabil” de unul singur este considerat o mențiune generică."
       },
       "ecolabel_licence_number": {
         "label": "Numărul de licență EU Ecolabel",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Precauții și instrucțiuni pentru suprafețele care intră în contact cu alimentele"
+      },
+      "importer_phone": {
+        "label": "Număr de telefon al importatorului",
+        "help": "Anexa VI punctul (b) din Regulamentul (EU) 2026/405 menționează numărul de telefon al importatorului, dacă este cazul, în pașaportul digital al produsului.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Reprezentant autorizat în UE: număr de telefon",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Reprezentant autorizat în UE: referința mandatului scris",
+        "help": "Referința mandatului scris prin care producătorul desemnează reprezentantul [articolul 2 alineatul (18) din Regulamentul (EU) 2026/405]. Introduceți doar o referință. Mandatul în sine nu se încarcă, iar referința nu este afișată în pașaportul public.",
+        "placeholder": "de ex., Mandat 2026-07, semnat la 1 iulie 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Identificatorii de produs și de operator au fost încărcați în registrul pașapoartelor digitale ale produselor din UE",
+        "help": "Identificatorii se încarcă în registrul instituit în temeiul ESPR înainte de introducerea produsului pe piață. Aplicația nu poate verifica încărcarea, iar acest răspuns nu este afișat în pașaportul public."
+      },
+      "future_ufi_code": {
+        "label": "Identificator unic de formulă (UFI) pe etichetă",
+        "help": "De la 23 septembrie 2029, eticheta fiecărui detergent conține codul UFI precedat de „UFI:” [anexa V partea A punctul 1 litera (b) din Regulamentul (EU) 2026/405], indiferent dacă produsul este sau nu clasificat ca periculos. Patru grupuri de patru caractere. Introduceți același cod ca UFI pentru centrele de informare toxicologică, dacă acesta există.",
+        "placeholder": "de ex., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Gata",
       "cas": "CAS",
       "removeAria": "Elimină {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Imagine color a ambalajului sau a etichetei",
+      "packagingImageHelp": "Anexa VI punctul (a) din Regulamentul (EU) 2026/405 impune o imagine color a ambalajului sau a etichetei, suficient de clară pentru identificarea modelului. Obligatoriu pentru profilul din anexa VI."
     }
   },
   "detergentsPublic": {

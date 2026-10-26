@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Contém micropartículas de polímeros sintéticos adicionadas intencionalmente?",
-        "help": "O Regulamento (EU) 2023/2055 restringe-as ao abrigo da entrada 78 do anexo XVII do REACH. Os detergentes são abrangidos a partir de 17 de outubro de 2028."
+        "help": "O Regulamento (EU) 2023/2055 restringe-os ao abrigo da entrada 78 do anexo XVII do REACH. Os detergentes são abrangidos a partir de 17 de outubro de 2028, com duas exceções: as microesferas utilizadas como abrasivos estão proibidas desde 17 de outubro de 2023 e as fragrâncias encapsuladas podem ser utilizadas até 17 de outubro de 2029."
       },
       "use_instructions": {
         "label": "Instruções de utilização e precauções especiais",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "As alegações evitam termos ambientais genéricos?",
-        "help": "Alegações genéricas como \"ecológico\" ou \"biodegradável\" são restringidas a partir de 27 de setembro de 2026 ao abrigo da Diretiva (EU) 2024/825."
+        "help": "As alegações ambientais genéricas, tais como «amigo do ambiente», «verde» ou «natural», são proibidas a partir de 27 de setembro de 2026 nos termos da Diretiva (EU) 2024/825, a menos que o produto detenha o Rótulo Ecológico da UE ou um rótulo reconhecido equivalente. «Biodegradável» isoladamente é considerado uma alegação genérica."
       },
       "ecolabel_licence_number": {
         "label": "Número de licença do Rótulo Ecológico da UE",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Precauções e instruções para superfícies em contacto com alimentos"
+      },
+      "importer_phone": {
+        "label": "Número de telefone do importador",
+        "help": "A alínea b) do anexo VI do Regulamento (EU) 2026/405 enumera o número de telefone do importador, se aplicável, no passaporte digital do produto.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Mandatário da UE: número de telefone",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Mandatário da UE: referência do mandato escrito",
+        "help": "Referência do mandato escrito pelo qual o fabricante designa o mandatário (artigo 2.º, ponto 18, do Regulamento (EU) 2026/405). Introduza apenas uma referência. O mandato em si não é carregado e a referência não é apresentada no passaporte público.",
+        "placeholder": "por exemplo, Mandato 2026-07, assinado a 1 de julho de 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Os identificadores do produto e do operador foram carregados no registo do passaporte digital de produtos da UE",
+        "help": "Os identificadores são carregados no registo estabelecido ao abrigo do ESPR antes da colocação do produto no mercado. A aplicação não pode verificar o carregamento e esta resposta não é apresentada no passaporte público."
+      },
+      "future_ufi_code": {
+        "label": "Identificador único de fórmula (UFI) no rótulo",
+        "help": "A partir de 23 de setembro de 2029, o rótulo de todos os detergentes ostenta o UFI precedido de «UFI:» (anexo V, parte A, ponto 1, alínea b), do Regulamento (EU) 2026/405), quer o produto esteja ou não classificado como perigoso. Quatro grupos de quatro carateres. Introduza o mesmo código que o UFI do centro de informação antivenenos, caso exista.",
+        "placeholder": "por exemplo, N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Concluído",
       "cas": "CAS",
       "removeAria": "Remover {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Imagem a cores da embalagem ou do rótulo",
+      "packagingImageHelp": "A alínea a) do anexo VI do Regulamento (EU) 2026/405 exige uma imagem a cores da embalagem ou do rótulo, suficientemente nítida para identificar o modelo. Obrigatório no perfil do anexo VI."
     }
   },
   "detergentsPublic": {

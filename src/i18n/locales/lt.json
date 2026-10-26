@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Ar yra tyčia pridėtų sintetinių polimerų mikrodalelių?",
-        "help": "Reglamentas (EU) 2023/2055 riboja jų naudojimą pagal REACH XVII priedo 78 įrašą. Plovikliams apribojimas taikomas nuo 2028 m. spalio 17 d."
+        "help": "Reglamentu (EU) 2023/2055 jos ribojamos pagal REACH XVII priedo 78 įrašą. Plovikliams tai taikoma nuo 2028 m. spalio 17 d. su dviem išimtimis: kaip abrazyvai naudojamos mikrogranulės draudžiamos nuo 2023 m. spalio 17 d., o inkapsuliuotus kvapus leidžiama naudoti iki 2029 m. spalio 17 d."
       },
       "use_instructions": {
         "label": "Naudojimo instrukcijos ir specialiosios atsargumo priemonės",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Ar teiginiuose vengiama bendrinių ekologinių terminų?",
-        "help": "Bendriniai teiginiai, tokie kaip „ekologiškas“ ar „biologiškai skaidus“, yra ribojami nuo 2026 m. rugsėjo 27 d. pagal Direktyvą (EU) 2024/825."
+        "help": "Bendro pobūdžio teiginiai apie ekologiškumą, tokie kaip „ekologiškas“, „žalias“ ar „natūralus“, pagal Direktyvą (EU) 2024/825 yra draudžiami nuo 2026 m. rugsėjo 27 d., nebent produktas turi ES ekologinį ženklą arba lygiavertį pripažintą ženklą. Pats vienas teiginys „biologiškai skaidus“ laikomas bendro pobūdžio teiginiu."
       },
       "ecolabel_licence_number": {
         "label": "ES ekologinio ženklo licencijos numeris",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Atsargumo priemonės ir instrukcijos, skirtos su maistu besiliečiantiems paviršiams"
+      },
+      "importer_phone": {
+        "label": "Importuotojo telefono numeris",
+        "help": "Reglamento (EU) 2026/405 VI priedo b punkte nurodyta, kad skaitmeniniame gaminio pase, jei taikoma, pateikiamas importuotojo telefono numeris.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "ES įgaliotasis atstovas: telefono numeris",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "ES įgaliotasis atstovas: rašytinio įgaliojimo nuoroda",
+        "help": "Rašytinio įgaliojimo, kuriuo gamintojas skiria atstovą, nuoroda (Reglamento (EU) 2026/405 2 straipsnio 18 dalis). Įveskite tik nuorodą. Pats įgaliojimas nėra įkeliamas, o nuoroda nėra rodoma viešame pase.",
+        "placeholder": "pvz., Mandatas 2026-07, pasirašytas 2026 m. liepos 1 d."
+      },
+      "registry_upload_confirmed": {
+        "label": "Produkto ir veiklos vykdytojo identifikatoriai įkelti į ES skaitmeninio gaminio paso registrą",
+        "help": "Identifikatoriai įkeliami į registrą, sukurtą pagal ESPR, prieš pateikiant produktą rinkai. Programėlė negali patikrinti įkėlimo, o šis atsakymas nėra rodomas viešame pase."
+      },
+      "future_ufi_code": {
+        "label": "Unikalus mišinio identifikatorius (UFI) etiketėje",
+        "help": "Nuo 2029 m. rugsėjo 23 d. ant kiekvieno ploviklio etiketės turi būti nurodytas UFI, prieš kurį rašoma „UFI: “ (Reglamento (EU) 2026/405 V priedo A dalies 1 punkto b papunktis), neatsižvelgiant į tai, ar produktas klasifikuojamas kaip pavojingas. Keturios keturių simbolių grupės. Įveskite tą patį kodą, kaip ir apsinuodijimų centrui skirtą UFI, jei toks yra.",
+        "placeholder": "pvz., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Atlikta",
       "cas": "CAS",
       "removeAria": "Pašalinti {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Pakuotės arba etiketės spalvotas vaizdas",
+      "packagingImageHelp": "Pagal Reglamento (EU) 2026/405 VI priedo a punktą reikalaujama pateikti spalvotą pakuotės arba etiketės vaizdą, pakankamai aiškų, kad būtų galima identifikuoti modelį. Privaloma VI priedo profilyje."
     }
   },
   "detergentsPublic": {

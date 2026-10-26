@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Contiene microparticelle di polimeri sintetici aggiunte intenzionalmente?",
-        "help": "Il regolamento (EU) 2023/2055 le limita ai sensi della voce 78 dell'allegato XVII del REACH. I detergenti sono interessati a partire dal 17 ottobre 2028."
+        "help": "Il regolamento (EU) 2023/2055 ne limita l'uso a norma dell'allegato XVII, voce 78, di REACH. I detergenti sono interessati a decorrere dal 17 ottobre 2028, con due eccezioni: le microsfere utilizzate come abrasivi sono vietate dal 17 ottobre 2023 e le fragranze incapsulate possono essere utilizzate fino al 17 ottobre 2029."
       },
       "use_instructions": {
         "label": "Istruzioni per l'uso e precauzioni speciali",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Le dichiarazioni evitano termini ambientali generici?",
-        "help": "Le dichiarazioni generiche come \"ecologico\" o \"biodegradabile\" sono soggette a restrizioni a partire dal 27 settembre 2026 ai sensi della direttiva (EU) 2024/825."
+        "help": "Le asserzioni ambientali generiche quali ecologico, verde o naturale sono vietate a decorrere dal 27 settembre 2026 ai sensi della direttiva (EU) 2024/825, a meno che il prodotto non sia provvisto del marchio Ecolabel UE o di un marchio equivalente riconosciuto. «Biodegradabile» da solo è considerato un'asserzione generica."
       },
       "ecolabel_licence_number": {
         "label": "Numero di licenza Ecolabel UE",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Precauzioni e istruzioni per le superfici a contatto con alimenti"
+      },
+      "importer_phone": {
+        "label": "Numero di telefono dell'importatore",
+        "help": "L'allegato VI, punto b), del regolamento (EU) 2026/405 elenca il numero di telefono dell'importatore, se del caso, nel passaporto digitale del prodotto.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Mandatario nell'UE: numero di telefono",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Mandatario nell'UE: riferimento del mandato scritto",
+        "help": "Riferimento del mandato scritto con cui il fabbricante nomina il mandatario (articolo 2, punto 18, del regolamento (EU) 2026/405). Inserire solo un riferimento. Il mandato in sé non viene caricato e il riferimento non compare nel passaporto pubblico.",
+        "placeholder": "ad es., Mandato 2026-07, firmato il 1° luglio 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Gli identificatori del prodotto e dell'operatore sono stati caricati nel registro dei passaporti digitali dei prodotti dell'UE",
+        "help": "Gli identificatori vengono caricati nel registro istituito a norma di ESPR prima dell'immissione del prodotto sul mercato. L'applicazione non può verificare il caricamento e questa risposta non è mostrata nel passaporto pubblico."
+      },
+      "future_ufi_code": {
+        "label": "Identificatore unico di formula (UFI) sull'etichetta",
+        "help": "A decorrere dal 23 settembre 2029 l'etichetta di ogni detergente reca l'UFI preceduto da 'UFI:' (allegato V, parte A, punto 1, lettera b), del regolamento (EU) 2026/405), indipendentemente dal fatto che il prodotto sia classificato come pericoloso o meno. Quattro gruppi di quattro caratteri. Inserire lo stesso codice dell'UFI per i centri antiveleni, ove ne esista uno.",
+        "placeholder": "ad es., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Fatto",
       "cas": "CAS",
       "removeAria": "Rimuovi {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Immagine a colori dell'imballaggio o dell'etichetta",
+      "packagingImageHelp": "L'allegato VI, punto a), del regolamento (EU) 2026/405 prescrive un'immagine a colori dell'imballaggio o dell'etichetta, sufficientemente chiara da consentire l'identificazione del modello. Obbligatoria nel profilo dell'allegato VI."
     }
   },
   "detergentsPublic": {
@@ -2931,7 +2958,7 @@
       "licenceNumber": "Numero di licenza",
       "name": "Nome",
       "address": "Indirizzo",
-      "email": "Email",
+      "email": "E-mail",
       "phone": "Telefono",
       "dppServiceProvider": "DPP fornitore di servizi",
       "dppVersion": "DPP versione",

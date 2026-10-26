@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Sisältääkö tahallisesti lisättyjä synteettisiä polymeerimikropartikkeleita?",
-        "help": "Asetus (EU) 2023/2055 rajoittaa näitä REACH-asetuksen liitteen XVII nimikkeessä 78. Pesuaineita rajoitus koskee 17. lokakuuta 2028 alkaen."
+        "help": "Asetuksella (EU) 2023/2055 rajoitetaan näitä asetuksen REACH liitteen XVII nimikkeen 78 nojalla. Rajoitus koskee pesuaineita 17. lokakuuta 2028 alkaen kahta poikkeusta lukuun ottamatta: hankausaineina käytettävät mikromuovihelmet ovat olleet kiellettyjä 17. lokakuuta 2023 lähtien, ja kapseloituja hajusteita saa käyttää 17. lokakuuta 2029 saakka."
       },
       "use_instructions": {
         "label": "Käyttöohjeet ja erityiset varotoimet",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vältetäänkö väittämissä yleisluontoisia ympäristötermejä?",
-        "help": "Yleisluontoisia väittämiä, kuten ympäristöystävällinen tai biohajoava, rajoitetaan 27. syyskuuta 2026 alkaen direktiivin (EU) 2024/825 nojalla."
+        "help": "Yleiset ympäristöväittämät, kuten ympäristöystävällinen, vihreä tai luonnollinen, ovat kiellettyjä 27. syyskuuta 2026 alkaen direktiivin (EU) 2024/825 nojalla, ellei tuotteella ole EU-ympäristömerkkiä tai vastaavaa virallisesti tunnustettua merkkiä. Pelkkää väittämää ”biohajoava” pidetään yleisenä ympäristöväittämänä."
       },
       "ecolabel_licence_number": {
         "label": "EU-ympäristömerkin lisenssinumero",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Varotoimet ja ohjeet elintarvikkeiden kanssa kosketuksiin joutuville pinnoille"
+      },
+      "importer_phone": {
+        "label": "Maahantuojan puhelinnumero",
+        "help": "Asetuksen (EU) 2026/405 liitteen VI b kohdassa edellytetään tarvittaessa maahantuojan puhelinnumeroa digitaalisessa tuotepassissa.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "EU-valtuutettu edustaja: puhelinnumero",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "EU-valtuutettu edustaja: kirjallisen toimeksiannon viite",
+        "help": "Sen kirjallisen toimeksiannon viite, jolla valmistaja nimeää valtuutetun edustajan (asetuksen (EU) 2026/405 2 artiklan 18 kohta). Ilmoita ainoastaan viite. Itse toimeksiantoa ei ladata, eikä viitettä näytetä julkisessa tuotepassissa.",
+        "placeholder": "esim. Toimeksianto 2026-07, allekirjoitettu 1. heinäkuuta 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Tuote- ja toimijatunnisteet on tallennettu EU:n digitaalisen tuotepassin rekisteriin",
+        "help": "Tunnisteet tallennetaan säädöksen ESPR nojalla perustettuun rekisteriin ennen tuotteen saattamista markkinoille. Sovellus ei voi todentaa tallennusta, eikä tätä vastausta näytetä julkisessa tuotepassissa."
+      },
+      "future_ufi_code": {
+        "label": "Yksilöllinen koostumustunniste (UFI) etiketissä",
+        "help": "Kaikkien pesuaineiden etiketissä on 23. syyskuuta 2029 alkaen oltava UFI, jota edeltää tunnus 'UFI:' (asetuksen (EU) 2026/405 liitteessä V olevan A osan 1 kohdan b alakohta), riippumatta siitä, onko tuote luokiteltu vaaralliseksi. Neljä neljän merkin ryhmää. Anna sama koodi kuin myrkytystietokeskuksen UFI, jos sellainen on olemassa.",
+        "placeholder": "esim. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Valmis",
       "cas": "CAS",
       "removeAria": "Poista {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Värikuva pakkauksesta tai etiketistä",
+      "packagingImageHelp": "Asetuksen (EU) 2026/405 liitteen VI a kohdassa edellytetään värikuvaa pakkauksesta tai etiketistä, ja sen on oltava riittävän selkeä mallin tunnistamiseksi. Pakollinen liitteen VI profiilissa."
     }
   },
   "detergentsPublic": {

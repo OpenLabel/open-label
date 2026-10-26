@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "¿Contiene micropartículas de polímeros sintéticos añadidas intencionadamente?",
-        "help": "El Reglamento (EU) 2023/2055 las restringe en virtud de la entrada 78 del anexo XVII del REACH. Los detergentes se verán afectados a partir del 17 de octubre de 2028."
+        "help": "El Reglamento (EU) 2023/2055 las restringe en virtud de la entrada 78 del anexo XVII de REACH. Los detergentes quedan afectados a partir del 17 de octubre de 2028, con dos excepciones: las microesferas utilizadas como abrasivos están prohibidas desde el 17 de octubre de 2023 y las fragancias encapsuladas pueden utilizarse hasta el 17 de octubre de 2029."
       },
       "use_instructions": {
         "label": "Instrucciones de uso y precauciones especiales",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "¿Se evitan en las declaraciones los términos medioambientales genéricos?",
-        "help": "Las declaraciones genéricas como «ecológico» o «biodegradable» están restringidas a partir del 27 de septiembre de 2026 en virtud de la Directiva (EU) 2024/825."
+        "help": "Las alegaciones medioambientales genéricas como «respetuoso con el medio ambiente», «verde» o «natural» están prohibidas a partir del 27 de septiembre de 2026 con arreglo a la Directiva (EU) 2024/825, salvo que el producto disponga de la etiqueta ecológica de la UE o de un distintivo reconocido equivalente. «Biodegradable» por sí solo se considera una alegación genérica."
       },
       "ecolabel_licence_number": {
         "label": "Número de licencia de la etiqueta ecológica de la UE",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Precauciones e instrucciones para superficies en contacto con alimentos"
+      },
+      "importer_phone": {
+        "label": "Número de teléfono del importador",
+        "help": "El anexo VI, letra b), del Reglamento (EU) 2026/405 enumera el número de teléfono del importador, en su caso, en el pasaporte digital de producto.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Representante autorizado en la UE: número de teléfono",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Representante autorizado en la UE: referencia del mandato por escrito",
+        "help": "Referencia del mandato por escrito mediante el cual el fabricante designa al representante (artículo 2, punto 18, del Reglamento (EU) 2026/405). Introduzca únicamente una referencia. El mandato en sí no se carga y la referencia no se muestra en el pasaporte público.",
+        "placeholder": "p. ej., Mandato 2026-07, firmado el 1 de julio de 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Los identificadores de producto y de operador se han cargado en el registro de pasaportes digitales de productos de la UE",
+        "help": "Los identificadores se cargan en el registro establecido en virtud del ESPR antes de la introducción del producto en el mercado. La aplicación no puede verificar la carga y esta respuesta no se muestra en el pasaporte público."
+      },
+      "future_ufi_code": {
+        "label": "Identificador único de fórmula (UFI) en la etiqueta",
+        "help": "A partir del 23 de septiembre de 2029, la etiqueta de todo detergente llevará el UFI precedido de 'UFI:' (anexo V, parte A, punto 1, letra b), del Reglamento (EU) 2026/405), esté o no clasificado el producto como peligroso. Cuatro grupos de cuatro caracteres. Introduzca el mismo código que el UFI del centro de toxicología cuando exista uno.",
+        "placeholder": "p. ej., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Hecho",
       "cas": "CAS",
       "removeAria": "Eliminar {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Imagen en color del envase o de la etiqueta",
+      "packagingImageHelp": "El anexo VI, letra a), del Reglamento (EU) 2026/405 exige una imagen en color del envase o de la etiqueta, lo suficientemente clara como para identificar el modelo. Obligatorio en el perfil del anexo VI."
     }
   },
   "detergentsPublic": {

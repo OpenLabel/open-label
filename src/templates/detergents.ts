@@ -81,6 +81,16 @@ const YES_NO_UNKNOWN = opts('yesNoUnknown', [
 
 // Annex V Part A, point 1(h)(i): classes labelled by weight band when added
 // above 0.2% by weight. Values are frozen for data compatibility.
+/**
+ * English text used by the shared passport form when the category is Detergents.
+ * Keys are `detergents.form.<name>`; the locale seed script reads this.
+ */
+export const DETERGENTS_FORM_COPY = {
+  packagingImageLabel: 'Colour image of the packaging or label',
+  packagingImageHelp:
+    'Annex VI point (a) of Regulation (EU) 2026/405 requires a colour image of the packaging or the label, clear enough to identify the model. Mandatory on the Annex VI profile.',
+} as const;
+
 export const DETERGENT_CONSTITUENT_CLASSES: readonly { value: string; label: string }[] = [
   { value: 'phosphates', label: 'Phosphates' },
   { value: 'phosphonates', label: 'Phosphonates' },
@@ -408,6 +418,16 @@ export class DetergentsTemplate extends BaseTemplate {
           showWhen: IF_NON_EU,
         }),
         f({
+          id: 'importer_phone',
+          label: 'Importer telephone number',
+          type: 'text',
+          ...REQ,
+          placeholder: '+33 1 00 00 00 00',
+          showWhen: IF_NON_EU,
+          helpText:
+            'Annex VI point (b) of Regulation (EU) 2026/405 lists the telephone number of the importer, where applicable, in the digital product passport.',
+        }),
+        f({
           id: 'eu_operator_name',
           label: 'EU authorised representative: legal name',
           type: 'text',
@@ -431,6 +451,24 @@ export class DetergentsTemplate extends BaseTemplate {
           ...REQ,
           showWhen: IF_NON_EU,
           placeholder: 'name@company.com',
+        }),
+        f({
+          id: 'eu_operator_phone',
+          label: 'EU authorised representative: telephone number',
+          type: 'text',
+          ...REQ,
+          showWhen: IF_NON_EU,
+          placeholder: '+33 1 00 00 00 00',
+        }),
+        f({
+          id: 'eu_operator_mandate_reference',
+          label: 'EU authorised representative: written mandate reference',
+          type: 'text',
+          ...REQ,
+          showWhen: IF_NON_EU,
+          placeholder: 'e.g., Mandate 2026-07, signed 1 July 2026',
+          helpText:
+            'Reference of the written mandate by which the manufacturer appoints the representative (Article 2(18) of Regulation (EU) 2026/405). Enter a reference only. The mandate itself is not uploaded and the reference is not shown on the public passport.',
         }),
       ],
     ),
@@ -738,7 +776,7 @@ export class DetergentsTemplate extends BaseTemplate {
           type: 'select',
           options: YES_NO_UNKNOWN,
           helpText:
-            'Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028.',
+            'Regulation (EU) 2023/2055 restricts these under REACH Annex XVII entry 78. Detergents are reached from 17 October 2028, with two exceptions: microbeads used as abrasives have been banned since 17 October 2023, and encapsulated fragrances may be used until 17 October 2029.',
           warnWhen: {
             equals: ['yes', 'unknown'],
             message: DETERGENTS_WARNING_MESSAGES.microparticles,
@@ -960,7 +998,7 @@ export class DetergentsTemplate extends BaseTemplate {
           label: 'Claims avoid generic environmental terms?',
           type: 'checkbox',
           helpText:
-            'Generic claims such as eco-friendly or biodegradable are restricted from 27 September 2026 under Directive (EU) 2024/825.',
+            'Generic environmental claims such as eco-friendly, green or natural are prohibited from 27 September 2026 under Directive (EU) 2024/825, unless the product holds the EU Ecolabel or an equivalent recognised label. "Biodegradable" on its own counts as a generic claim.',
         }),
         f({
           id: 'ecolabel_licence_number',
@@ -995,6 +1033,15 @@ export class DetergentsTemplate extends BaseTemplate {
           label: 'I have checked the physical label and the supplied safety information',
           type: 'checkbox',
           ...REQ,
+        }),
+        f({
+          id: 'registry_upload_confirmed',
+          label: 'The product and operator identifiers have been uploaded to the EU digital product passport registry',
+          type: 'checkbox',
+          ...REQ,
+          showWhen: IF_ANNEX_VI,
+          helpText:
+            'The identifiers are uploaded to the registry set up under the ESPR before the product is placed on the market. The app cannot verify the upload, and this answer is not shown on the public passport.',
         }),
         f({
           id: 'label_professional_indicator',
@@ -1048,6 +1095,15 @@ export class DetergentsTemplate extends BaseTemplate {
             'Enter the real identifier. An internal record ID is not an identifier issued under the standards referred to in the ESPR.',
         }),
         f({ id: 'identifier_scheme', label: 'Identifier scheme and issuer', type: 'text', ...REQ }),
+        f({
+          id: 'future_ufi_code',
+          label: 'Unique formula identifier (UFI) on the label',
+          type: 'text',
+          ...REQ,
+          placeholder: 'e.g., N1QV-R02N-J00M-WQD5',
+          helpText:
+            "From 23 September 2029 the label of every detergent carries the UFI preceded by 'UFI:' (Annex V Part A point 1(b) of Regulation (EU) 2026/405), whether or not the product is classified as hazardous. Four groups of four characters. Enter the same code as the poison centre UFI when one exists.",
+        }),
         f({
           id: 'manufacturer_operator_id',
           label: 'Manufacturer unique operator identifier',
@@ -1376,9 +1432,11 @@ export class DetergentsTemplate extends BaseTemplate {
     }
 
     // Format checks (non-blocking)
-    const ufi = text(data.ufi_code);
-    if (ufi && !/^[0-9A-HJKMNP-TV-Y]{4}(?:-[0-9A-HJKMNP-TV-Y]{4}){3}$/.test(ufi)) {
-      push('ufi_code', 'ufiFormat');
+    for (const id of ['ufi_code', 'future_ufi_code']) {
+      const ufi = text(data[id]);
+      if (ufi && !/^[0-9A-HJKMNP-TV-Y]{4}(?:-[0-9A-HJKMNP-TV-Y]{4}){3}$/.test(ufi)) {
+        push(id, 'ufiFormat');
+      }
     }
     for (const id of [
       'ingredients_url',

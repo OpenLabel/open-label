@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Sadrži li namjerno dodane mikročestice sintetičkog polimera?",
-        "help": "Uredba (EU) 2023/2055 ograničava ih u skladu s unosom 78. Priloga XVII. Uredbi REACH. Ograničenje za deterdžente stupa na snagu 17. listopada 2028."
+        "help": "Uredba (EU) 2023/2055 ograničava ih u okviru Priloga XVII. unosa 78. Uredbe REACH. Deterdženti su obuhvaćeni od 17. listopada 2028., uz dvije iznimke: mikrokuglice koje se koriste kao abrazivi zabranjene su od 17. listopada 2023., a kapsulirani mirisi smiju se koristiti do 17. listopada 2029."
       },
       "use_instructions": {
         "label": "Upute za uporabu i posebne mjere opreza",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Izbjegavaju li se u tvrdnjama općeniti ekološki pojmovi?",
-        "help": "Općenite tvrdnje poput „ekološki prihvatljivo” ili „biorazgradivo” ograničene su od 27. rujna 2026. u skladu s Direktivom (EU) 2024/825."
+        "help": "Generičke tvrdnje o prihvatljivosti za okoliš kao što su ekološki prihvatljivo, zeleno ili prirodno zabranjene su od 27. rujna 2026. na temelju Direktive (EU) 2024/825, osim ako proizvod ima znak za okoliš EU-a (EU Ecolabel) ili jednakovrijedan priznati znak. Sam pojam „biorazgradivo” smatra se generičkom tvrdnjom."
       },
       "ecolabel_licence_number": {
         "label": "Broj licence za znak za okoliš EU Ecolabel",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Mjere opreza i upute za površine koje dolaze u dodir s hranom"
+      },
+      "importer_phone": {
+        "label": "Telefonski broj uvoznika",
+        "help": "Prilog VI. točka (b) Uredbe (EU) 2026/405 navodi telefonski broj uvoznika, ako je primjenjivo, u digitalnoj putovnici za proizvode.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Ovlašteni zastupnik u EU-u: telefonski broj",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Ovlašteni zastupnik u EU-u: referentna oznaka pisanog ovlaštenja",
+        "help": "Referentna oznaka pisanog ovlaštenja kojim proizvođač imenuje zastupnika (članak 2. točka 18. Uredbe (EU) 2026/405). Unesite samo referentnu oznaku. Samo ovlaštenje se ne učitava, a referentna oznaka nije prikazana na javnoj putovnici.",
+        "placeholder": "npr., Ovlaštenje 2026-07, potpisano 1. srpnja 2026."
+      },
+      "registry_upload_confirmed": {
+        "label": "Identifikacijske oznake proizvoda i gospodarskog subjekta učitane su u registar digitalnih putovnica za proizvode EU-a",
+        "help": "Identifikacijske oznake učitavaju se u registar uspostavljen na temelju ESPR prije stavljanja proizvoda na tržište. Aplikacija ne može provjeriti učitavanje, a ovaj odgovor nije prikazan na javnoj putovnici."
+      },
+      "future_ufi_code": {
+        "label": "Jedinstveni identifikator formule (UFI) na oznaci",
+        "help": "Od 23. rujna 2029. na oznaci svakog deterdženta nalazi se UFI ispred kojeg stoji „UFI:” (Prilog V. dio A točka 1. podtočka (b) Uredbe (EU) 2026/405), bez obzira na to je li proizvod razvrstan kao opasan ili nije. Četiri skupine od po četiri znaka. Unesite isti kod kao i za UFI za centar za kontrolu otrovanja kada takav postoji.",
+        "placeholder": "npr. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Gotovo",
       "cas": "CAS",
       "removeAria": "Ukloni {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Slika ambalaže ili oznake u boji",
+      "packagingImageHelp": "Prilog VI. točka (a) Uredbe (EU) 2026/405 zahtijeva sliku ambalaže ili oznake u boji, dovoljno jasnu za identifikaciju modela. Obvezno na profilu iz Priloga VI."
     }
   },
   "detergentsPublic": {

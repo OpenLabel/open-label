@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Ali vsebuje namerno dodane mikodelce sintetičnih polimerov?",
-        "help": "Uredba (EU) 2023/2055 jih omejuje v skladu z vnosom 78 v Prilogi XVII k uredbi REACH. Za detergente se omejitev uporablja od 17. oktobra 2028."
+        "help": "Uredba (EU) 2023/2055 jih omejuje v vnosu 78 Priloge XVII k REACH. Za detergente se začne uporabljati 17. oktobra 2028 z dvema izjemama: mikrokroglice, ki se uporabljajo kot abrazivi, so prepovedane od 17. oktobra 2023, kapsulirane dišave pa se lahko uporabljajo do 17. oktobra 2029."
       },
       "use_instructions": {
         "label": "Navodila za uporabo in posebni previdnostni ukrepi",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Ali se trditve izogibajo splošnim okoljskim izrazom?",
-        "help": "Splošne trditve, kot sta okolju prijazno ali biorazgradljivo, so omejene od 27. septembra 2026 v skladu z Direktivo (EU) 2024/825."
+        "help": "Splošne okoljske trditve, kot so okolju prijazno, zeleno ali naravno, so od 27. septembra 2026 prepovedane v skladu z Direktivo (EU) 2024/825, razen če ima izdelek znak za okolje EU ali enakovreden priznan znak. »Biorazgradljivo« samo po sebi velja za splošno trditev."
       },
       "ecolabel_licence_number": {
         "label": "Licenčna številka znaka za okolje EU",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Previdnostni ukrepi in navodila za površine v stiku z živili"
+      },
+      "importer_phone": {
+        "label": "Telefonska številka uvoznika",
+        "help": "Točka (b) Priloge VI k Uredbi (EU) 2026/405 določa navedbo telefonske številke uvoznika, kadar je to primerno, v digitalnem potnem listu izdelka.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Pooblaščeni zastopnik v EU: telefonska številka",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Pooblaščeni zastopnik v EU: sklic na pisno pooblastilo",
+        "help": "Sklic na pisno pooblastilo, s katerim proizvajalec imenuje zastopnika (člen 2(18) Uredbe (EU) 2026/405). Vnesite samo sklic. Pooblastilo se ne naloži in sklic ni prikazan v javnem potnem listu.",
+        "placeholder": "npr. Pooblastilo 2026-07, podpisano 1. julija 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Identifikatorji izdelka in gospodarskega subjekta so bili naloženi v register digitalnih potnih listov izdelkov EU",
+        "help": "Identifikatorji se naložijo v register, vzpostavljen v skladu z ESPR, preden se izdelek da na trg. Aplikacija ne more preveriti nalaganja in ta odgovor ni prikazan v javnem potnem listu."
+      },
+      "future_ufi_code": {
+        "label": "Edinstveni identifikator sestave (UFI) na etiketi",
+        "help": "Od 23. septembra 2029 je na etiketi vsakega detergenta naveden UFI, pred katerim je navedeno »UFI:« (točka 1(b) dela A Priloge V k Uredbi (EU) 2026/405), ne glede na to, ali je izdelek razvrščen kot nevaren ali ne. Štiri skupine po štiri znake. Vnesite enako kodo kot za UFI za center za zastrupitve, kadar ta obstaja.",
+        "placeholder": "npr. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Končano",
       "cas": "CAS",
       "removeAria": "Odstrani {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Barvna slika embalaže ali etikete",
+      "packagingImageHelp": "Točka (a) Priloge VI k Uredbi (EU) 2026/405 zahteva barvno sliko embalaže ali etikete, ki je dovolj jasna za identifikacijo modela. Obvezno za profil iz Priloge VI."
     }
   },
   "detergentsPublic": {

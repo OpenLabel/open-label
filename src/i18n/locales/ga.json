@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "An bhfuil micreacáithníní polaiméire sintéiseacha a cuireadh leis d'aon ghnó ann?",
-        "help": "Srianann Rialachán (EU) 2023/2055 iad seo faoi iontráil 78 d'Iarscríbhinn XVII a ghabhann le REACH. Sroichtear glantaigh ón 17 Deireadh Fómhair 2028."
+        "help": "Cuireann Rialachán (EU) 2023/2055 srian orthu seo faoi Iarscríbhinn XVII iontráil 78 de REACH. Baineann sé le glantaigh ón 17 Deireadh Fómhair 2028, le dhá eisceacht: tá cosc ar mhicreaphéarlaí a úsáidtear mar scríobaigh ón 17 Deireadh Fómhair 2023, agus féadfar cumhráin chochallaithe a úsáid go dtí an 17 Deireadh Fómhair 2029."
       },
       "use_instructions": {
         "label": "Treoracha úsáide agus réamhchúraimí speisialta",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "An seachnaíonn maímh téarmaí cineálacha comhshaoil?",
-        "help": "Tá maímh chineálacha amhail éiceabhách nó in-bhithdhíghrádaithe srianta ón 27 Meán Fómhair 2026 faoi Threoir (EU) 2024/825."
+        "help": "Tá toirmeasc ar mhaímh ghinearálta chomhshaoil amhail éiceabhách, glas nó nádúrtha ón 27 Meán Fómhair 2026 faoi Threoir (EU) 2024/825, mura bhfuil Éicilipéad an AE nó lipéad aitheanta coibhéiseach ag an táirge. Áirítear \"In-bhithmhillte\" leis féin mar mhaíomh ginearálta."
       },
       "ecolabel_licence_number": {
         "label": "Uimhir cheadúnais Éicilipéad an AE",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Réamhchúraimí agus treoracha do dhromchlaí a bhíonn i dteagmháil le bia"
+      },
+      "importer_phone": {
+        "label": "Uimhir theileafóin an allmhaireora",
+        "help": "Liostaítear le pointe (b) d'Iarscríbhinn VI a ghabhann le Rialachán (EU) 2026/405 uimhir theileafóin an allmhaireora, i gcás inarb infheidhme, sa phas digiteach táirge.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Ionadaí údaraithe an AE: uimhir theileafóin",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Ionadaí údaraithe an AE: tagairt don sainordú i scríbhinn",
+        "help": "Tagairt don sainordú i scríbhinn lena gceapann an monaróir an t-ionadaí (Airteagal 2(18) de Rialachán (EU) 2026/405). Ná cuir isteach ach tagairt. Ní dhéantar an sainordú féin a uaslódáil agus ní thaispeántar an tagairt ar an bpas poiblí.",
+        "placeholder": "e.g., Sainordú 2026-07, sínithe an 1 Iúil 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Uaslódáladh aitheantóirí an táirge agus an oibreora chuig clárlann an AE um phasanna digiteacha táirge",
+        "help": "Uaslódáiltear na haitheantóirí chuig an gclárlann a bunaíodh faoi ESPR sula gcuirtear an táirge ar an margadh. Ní féidir leis an aip an t-uaslódáil a fhíorú, agus ní thaispeántar an freagra seo ar an bpas poiblí."
+      },
+      "future_ufi_code": {
+        "label": "Aaitheantóir foirmele uathúil (UFI) ar an lipéad",
+        "help": "Ón 23 Meán Fómhair 2029 amach, bíonn an UFI agus 'UFI:' roimhe ar lipéad gach glantaigh (Iarscríbhinn V Cuid A pointe 1(b) de Rialachán (EU) 2026/405), cibé acu a aicmítear an táirge mar tháirge guaiseach nó nach n-aicmítear. Ceithre ghrúpa de cheithre charachtar. Cuir isteach an cód céanna le UFI an ionaid nimhe nuair atá ceann ann.",
+        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Déanta",
       "cas": "CAS",
       "removeAria": "Bain {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Íomhá dhaite den phacáistíocht nó den lipéad",
+      "packagingImageHelp": "Éilítear le pointe (a) d'Iarscríbhinn VI a ghabhann le Rialachán (EU) 2026/405 íomhá dhaite den phacáistíocht nó den lipéad, atá sách soiléir chun an tsamhail a shainaithint. Éigeantach ar phróifíl Iarscríbhinn VI."
     }
   },
   "detergentsPublic": {

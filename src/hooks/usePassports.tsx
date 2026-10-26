@@ -244,12 +244,14 @@ export const PREFILL_IDENTITY_KEYS = [
   'eu_operator_name',
   'eu_operator_address',
   'eu_operator_email',
+  'eu_operator_phone',
   'importer_legal_name',
   'importer_street',
   'importer_postal_code',
   'importer_city',
   'importer_country',
   'importer_email',
+  'importer_phone',
 ] as const;
 
 export function useLatestPassportDefaults(category: ProductCategory | undefined) {

@@ -23,7 +23,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
-import { detergentsTemplate, DETERGENTS_WARNING_MESSAGES } from '../src/templates/detergents';
+import { detergentsTemplate, DETERGENTS_WARNING_MESSAGES, DETERGENTS_FORM_COPY } from '../src/templates/detergents';
 import { DETERGENT_ALLERGEN_PICKER_COPY } from '../src/data/detergentFragrances';
 import { DETERGENTS_PUBLIC_COPY } from '../src/components/detergents/publicCopy';
 
@@ -77,6 +77,9 @@ export function buildDetergentsTree(): Record<string, any> {
   }
   for (const [name, message] of Object.entries(DETERGENTS_WARNING_MESSAGES)) {
     add(`detergents.warnings.${name}`, message);
+  }
+  for (const [name, text] of Object.entries(DETERGENTS_FORM_COPY)) {
+    add(`detergents.form.${name}`, text);
   }
   for (const [name, text] of Object.entries(DETERGENT_ALLERGEN_PICKER_COPY)) {
     add(`detergents.allergenPicker.${name}`, text);

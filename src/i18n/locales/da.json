@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Indeholder bevidst tilsatte syntetiske polymermikropartikler?",
-        "help": "Forordning (EU) 2023/2055 begrænser disse i henhold til post 78 i bilag XVII til REACH. Vaske- og rengøringsmidler er omfattet fra den 17. oktober 2028."
+        "help": "Forordning (EU) 2023/2055 begrænser disse i henhold til REACH bilag XVII, post 78. Vaske- og rengøringsmidler omfattes fra den 17. oktober 2028 med to undtagelser: mikroperler anvendt som slibemidler har været forbudt siden den 17. oktober 2023, og indkapslede duftstoffer må anvendes indtil den 17. oktober 2029."
       },
       "use_instructions": {
         "label": "Brugsanvisning og særlige forholdsregler",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Undgår anprisninger generiske miljøbetegnelser?",
-        "help": "Generiske anprisninger som \"miljøvenlig\" eller \"bionedbrydelig\" er begrænset fra den 27. september 2026 i henhold til direktiv (EU) 2024/825."
+        "help": "Generiske miljøanprisninger såsom miljøvenlig, grøn eller naturlig er forbudt fra den 27. september 2026 i henhold til direktiv (EU) 2024/825, medmindre produktet er tildelt EU-miljømærket eller et tilsvarende anerkendt mærke. \"Bionedbrydelig\" alene betragtes som en generisk anprisning."
       },
       "ecolabel_licence_number": {
         "label": "Licensnummer for EU-miljømærket",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Forholdsregler og anvisninger for overflader i kontakt med fødevarer"
+      },
+      "importer_phone": {
+        "label": "Importørens telefonnummer",
+        "help": "Bilag VI, litra b), til forordning (EU) 2026/405 angiver importørens telefonnummer, hvor det er relevant, i det digitale produktpas.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "Bemyndiget repræsentant i EU: telefonnummer",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "Bemyndiget repræsentant i EU: reference til skriftlig fuldmagt",
+        "help": "Reference til den skriftlige fuldmagt, hvormed fabrikanten udpeger repræsentanten (artikel 2, nr. 18), i forordning (EU) 2026/405). Angiv kun en reference. Selve fuldmagten uploades ikke, og referencen vises ikke i det offentlige pas.",
+        "placeholder": "f.eks. Fuldmagt 2026-07, underskrevet 1. juli 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "Produkt- og operatøridentifikatorerne er uploadet til EU-registret for digitale produktpas",
+        "help": "Identifikatorerne uploades til det register, der er oprettet i henhold til ESPR, inden produktet bringes i omsætning. Appen kan ikke verificere uploaden, og dette svar vises ikke i det offentlige pas."
+      },
+      "future_ufi_code": {
+        "label": "Unik formelidentifikator (UFI) på etiketten",
+        "help": "Fra den 23. september 2029 skal etiketten på ethvert vaske- og rengøringsmiddel være forsynet med UFI forudgået af 'UFI:' (bilag V, del A, punkt 1, litra b), til forordning (EU) 2026/405), uanset om produktet er klassificeret som farligt eller ej. Fire grupper på fire tegn. Angiv den samme kode som giftinformationens UFI, hvis der findes en.",
+        "placeholder": "f.eks. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Færdig",
       "cas": "CAS",
       "removeAria": "Fjern {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "Farvebillede af emballagen eller etiketten",
+      "packagingImageHelp": "Bilag VI, litra a), til forordning (EU) 2026/405 kræver et farvebillede af emballagen eller etiketten, der er tilstrækkelig klart til at identificere modellen. Obligatorisk for profilen i bilag VI."
     }
   },
   "detergentsPublic": {

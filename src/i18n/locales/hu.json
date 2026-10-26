@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Tartalmaz szándékosan hozzáadott szintetikus polimer mikrorészecskéket?",
-        "help": "A (EU) 2023/2055 rendelet korlátozza ezeket a REACH XVII. mellékletének 78. bejegyzése alapján. A detergensekre 2028. október 17-től vonatkozik."
+        "help": "A(z) (EU) 2023/2055 rendelet a(z) REACH XVII. mellékletének 78. bejegyzése alapján korlátozza ezeket. A mosó- és tisztítószerekre 2028. október 17-től vonatkozik, két kivétellel: a csiszolóanyagként használt mikrogyöngyök 2023. október 17. óta be vannak tiltva, a kapszulázott illatanyagok pedig 2029. október 17-ig használhatók."
       },
       "use_instructions": {
         "label": "Használati utasítás és különleges óvintézkedések",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Az állítások kerülik az általános környezetvédelmi kifejezéseket?",
-        "help": "Az olyan általános állítások, mint a „környezetbarát” vagy a „biológiailag lebomló”, 2026. szeptember 27-től korlátozottak a (EU) 2024/825 irányelv alapján."
+        "help": "Az olyan általános környezetbarát jellegre vonatkozó állítások, mint a környezetbarát, zöld vagy természetes, a(z) (EU) 2024/825 irányelv értelmében 2026. szeptember 27-től tilosak, kivéve, ha a termék rendelkezik az uniós ökocímkével vagy egy azzal egyenértékű, elismert címkével. A „biológiailag lebomló” megjelölés önmagában általános állításnak minősül."
       },
       "ecolabel_licence_number": {
         "label": "EU ökocímke engedélyszáma",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "Óvintézkedések és utasítások élelmiszerrel érintkező felületekhez"
+      },
+      "importer_phone": {
+        "label": "Az importőr telefonszáma",
+        "help": "A(z) (EU) 2026/405 rendelet VI. mellékletének b) pontja előírja – adott esetben – az importőr telefonszámának feltüntetését a digitális termékútlevélben.",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "EU-s meghatalmazott képviselő: telefonszám",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "EU-s meghatalmazott képviselő: írásbeli meghatalmazás hivatkozási száma",
+        "help": "Annak az írásbeli meghatalmazásnak a hivatkozási száma, amellyel a gyártó kijelöli a képviselőt (a(z) (EU) 2026/405 rendelet 2. cikkének (18) bekezdése). Csak hivatkozási számot adjon meg. Maga a meghatalmazás nem kerül feltöltésre, és a hivatkozási szám nem jelenik meg a nyilvános útlevélben.",
+        "placeholder": "pl. 2026-07. sz. meghatalmazás, aláírva: 2026. július 1."
+      },
+      "registry_upload_confirmed": {
+        "label": "A termék- és gazdasági szereplő azonosítók feltöltésre kerültek az EU digitális termékútlevél-nyilvántartásába",
+        "help": "Az azonosítókat a termék forgalomba hozatala előtt fel kell tölteni a(z) ESPR alapján létrehozott nyilvántartásba. Az alkalmazás nem tudja ellenőrizni a feltöltést, és ez a válasz nem jelenik meg a nyilvános útlevélben."
+      },
+      "future_ufi_code": {
+        "label": "Egyedi formulaazonosító (UFI) a címkén",
+        "help": "2029. szeptember 23-tól minden mosó- és tisztítószer címkéjén szerepel a(z) 'UFI:' előtaggal ellátott UFI (a(z) (EU) 2026/405 rendelet V. melléklete A. része 1. pontjának b) alpontja), függetlenül attól, hogy a termék veszélyesként van-e besorolva. Négy darab négy karakterből álló csoport. Ha létezik, adja meg a toxikológiai központhoz tartozó UFI kóddal megegyező kódot.",
+        "placeholder": "pl. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "Kész",
       "cas": "CAS",
       "removeAria": "{{name}} eltávolítása"
+    },
+    "form": {
+      "packagingImageLabel": "A csomagolás vagy a címke színes képe",
+      "packagingImageHelp": "A(z) (EU) 2026/405 rendelet VI. mellékletének a) pontja a csomagolásról vagy a címkéről olyan színes képet ír elő, amely kellően tiszta a modell azonosításához. A VI. melléklet szerinti profil esetében kötelező."
     }
   },
   "detergentsPublic": {

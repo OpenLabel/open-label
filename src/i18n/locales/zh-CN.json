@@ -2478,7 +2478,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "是否含有有意添加的合成聚合物微粒？",
-        "help": "法规 (EU) 2023/2055 根据 REACH 附录 XVII 第 78 条对此进行限制。洗涤剂自 2028 年 10 月 17 日起受此限制。"
+        "help": "法规 (EU) 2023/2055 根据 REACH 附录 XVII 第 78 项对此进行了限制。洗涤剂自 2028 年 10 月 17 日起适用此限制，但有两项例外：用作研磨剂的微珠自 2023 年 10 月 17 日起已被禁止，微胶囊香精可使用至 2029 年 10 月 17 日。"
       },
       "use_instructions": {
         "label": "使用说明和特别防范措施",
@@ -2574,7 +2574,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "声明是否避免使用通用环境术语？",
-        "help": "根据指令 (EU) 2024/825，自 2026 年 9 月 27 日起，限制使用“生态友好”或“可生物降解”等通用声明。"
+        "help": "根据指令 (EU) 2024/825，自 2026 年 9 月 27 日起，禁止使用诸如环保、绿色或天然等通用环境声明，除非产品持有欧盟生态标签（EU Ecolabel）或同等认可标签。单独使用“可生物降解”亦属于通用声明。"
       },
       "ecolabel_licence_number": {
         "label": "欧盟生态标签许可证号",
@@ -2711,6 +2711,29 @@
       },
       "food_contact_instructions": {
         "label": "用于食品接触表面的防范措施和说明"
+      },
+      "importer_phone": {
+        "label": "进口商电话号码",
+        "help": "法规 (EU) 2026/405 附录 VI 第 (b) 点列明，如适用，应在数字产品护照中包含进口商的电话号码。",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_phone": {
+        "label": "欧盟授权代表：电话号码",
+        "placeholder": "+33 1 00 00 00 00"
+      },
+      "eu_operator_mandate_reference": {
+        "label": "欧盟授权代表：书面授权书参考编号",
+        "help": "制造商指定代表的书面授权书参考编号（法规 (EU) 2026/405 第 2(18) 条）。仅输入参考编号。授权书本身无需上传，且该参考编号不会显示在公开护照上。",
+        "placeholder": "例如：Mandate 2026-07, signed 1 July 2026"
+      },
+      "registry_upload_confirmed": {
+        "label": "产品和运营者标识符已上传至欧盟数字产品护照注册库",
+        "help": "在产品投放市场之前，标识符须上传至根据 ESPR 设立的注册库。本应用程序无法验证上传情况，且此答复不会显示在公开护照上。"
+      },
+      "future_ufi_code": {
+        "label": "标签上的唯一配方标识符（UFI）",
+        "help": "自 2029 年 9 月 23 日起，无论产品是否被分类为危险品，所有洗涤剂的标签均须带有前缀为“UFI: ”的 UFI（法规 (EU) 2026/405 附录 V 第 A 部分第 1(b) 点）。由四组各四个字符组成。如已存在毒物中心 UFI，请输入相同的代码。",
+        "placeholder": "例如：N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -2902,6 +2925,10 @@
       "done": "完成",
       "cas": "CAS",
       "removeAria": "移除 {{name}}"
+    },
+    "form": {
+      "packagingImageLabel": "包装或标签的彩色图像",
+      "packagingImageHelp": "法规 (EU) 2026/405 附录 VI 第 (a) 点要求提供包装或标签的彩色图像，其清晰度须足以识别型号。在附录 VI 配置文件中为必填项。"
     }
   },
   "detergentsPublic": {
