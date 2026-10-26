@@ -239,6 +239,7 @@ Deno.test("missing Resend key fails email without leaking", async () => {
   assertEquals(res.status, 502);
   assertNoSecrets(await res.text() + a.logs.join("\n"));
   assertEquals(resendCalls(a.calls).length, 0);
+  assertEquals(slackCalls(a.calls).length, 0);
 });
 
 Deno.test("provider non-2xx, Slack ok:false and timeouts are failures with no raw errors", async () => {
