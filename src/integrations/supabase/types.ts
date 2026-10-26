@@ -107,6 +107,54 @@ export type Database = {
         }
         Relationships: []
       }
+      counterfeit_lead_deliveries: {
+        Row: {
+          created_at: string
+          email_claim: string | null
+          email_claimed_at: string | null
+          email_sent_at: string | null
+          email_status: string
+          passport_id: string
+          requested_at: string
+          slack_claim: string | null
+          slack_claimed_at: string | null
+          slack_sent_at: string | null
+          slack_status: string
+          updated_at: string
+          user_id: string
+        }
+        Insert: {
+          created_at?: string
+          email_claim?: string | null
+          email_claimed_at?: string | null
+          email_sent_at?: string | null
+          email_status?: string
+          passport_id: string
+          requested_at?: string
+          slack_claim?: string | null
+          slack_claimed_at?: string | null
+          slack_sent_at?: string | null
+          slack_status?: string
+          updated_at?: string
+          user_id: string
+        }
+        Update: {
+          created_at?: string
+          email_claim?: string | null
+          email_claimed_at?: string | null
+          email_sent_at?: string | null
+          email_status?: string
+          passport_id?: string
+          requested_at?: string
+          slack_claim?: string | null
+          slack_claimed_at?: string | null
+          slack_sent_at?: string | null
+          slack_status?: string
+          updated_at?: string
+          user_id?: string
+        }
+        Relationships: []
+      }
       passports: {
         Row: {
           category: Database["public"]["Enums"]["product_category"]
@@ -230,6 +278,24 @@ export type Database = {
       car_cleaning_retention_floor: {
         Args: { data: Json; saved_at: string }
         Returns: string
+      }
+      claim_counterfeit_lead_delivery: {
+        Args: {
+          p_channel: string
+          p_passport_id: string
+          p_stale?: string
+          p_user_id: string
+        }
+        Returns: Json
+      }
+      finish_counterfeit_lead_delivery: {
+        Args: {
+          p_channel: string
+          p_ok: boolean
+          p_passport_id: string
+          p_token: string
+        }
+        Returns: boolean
       }
       increment_api_usage: {
         Args: { p_function_name: string; p_limit?: number; p_user_id: string }
