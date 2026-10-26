@@ -239,6 +239,7 @@ Deno.test("missing Resend key fails email without leaking", async () => {
   assertEquals(res.status, 502);
   assertNoSecrets(await res.text() + a.logs.join("\n"));
   assertEquals(resendCalls(a.calls).length, 0);
+  assertEquals(slackCalls(a.calls).length, 0);
 });
 
 Deno.test("provider non-2xx, Slack ok:false and timeouts are failures with no raw errors", async () => {
@@ -272,17 +273,52 @@ Deno.test("retry after email success and Slack failure retries Slack only", asyn
   assertEquals(slackCalls(a.calls).length, 2);
 });
 
-Deno.test("retry after Slack success and email failure retries email only", async () => {
+Deno.test("email failure never posts Slack; retry sends email first then Slack", async () => {
   const ledger = makeLedger();
   let mailOk = false;
   const a = setup({ ledger, resend: () => mailOk ? new Response("{}") : new Response("x", { status: 503 }) });
   const first = await handleCounterfeitLead(req(), a.deps);
   assertEquals(first.status, 502);
-  assertEquals((await first.json()).deliveries, { email: "failed", slack: "sent" });
+  assertEquals((await first.json()).deliveries, { email: "failed", slack: "skipped" });
+  assertEquals(slackCalls(a.calls).length, 0);
+  assertEquals(ledger.rows.get(passport().id)!.slack.status, "none");
   mailOk = true;
   assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 200);
   assertEquals(resendCalls(a.calls).length, 2);
   assertEquals(slackCalls(a.calls).length, 1);
+  // Slack was posted only after the email was recorded sent, so its follow-up line is true.
+  const lastResend = a.calls.findLastIndex((c) => c.url.startsWith("https://api.resend.com"));
+  const slackIdx = a.calls.findIndex((c) => c.url.startsWith("https://slack.com"));
+  assert(slackIdx > lastResend);
+  assert(String(slackCalls(a.calls)[0].body.text).includes("Email Follow-up: An email was sent to contact@cypheme.com"));
+});
+
+Deno.test("busy email claim never claims or posts Slack", async () => {
+  const ledger = makeLedger();
+  ledger.rows.set(passport().id, {
+    userId: "user-1", requestedAt: NOW,
+    email: { status: "pending", token: "other", claimedAt: Date.parse(NOW) },
+    slack: { status: "none", claimedAt: 0 },
+  });
+  const a = setup({ ledger });
+  assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 409);
+  assertEquals(a.calls.length, 0);
+  assertEquals(ledger.rows.get(passport().id)!.slack.status, "none");
+});
+
+Deno.test("inconsistent row with Slack sent and email failed retries email only", async () => {
+  const ledger = makeLedger();
+  ledger.rows.set(passport().id, {
+    userId: "user-1", requestedAt: NOW,
+    email: { status: "failed", claimedAt: 0 },
+    slack: { status: "sent", claimedAt: 0 },
+  });
+  const a = setup({ ledger });
+  const res = await handleCounterfeitLead(req(), a.deps);
+  assertEquals(res.status, 200);
+  assertEquals((await res.json()).deliveries, { email: "sent", slack: "sent" });
+  assertEquals(resendCalls(a.calls).length, 1);
+  assertEquals(slackCalls(a.calls).length, 0);
 });
 
 Deno.test("repeated save after full success sends nothing again", async () => {
