@@ -59,6 +59,7 @@ import { toDppLanguage } from '@/lib/dppLanguage';
 import { validateCarCleaning } from '@/lib/carCleaning';
 import { carCleaningValidationAttributes } from '@/lib/carCleaningAccessibility';
 import { CAR_CLEANING_COPY } from '@/templates/carCleaning';
+import { DETERGENTS_FORM_COPY } from '@/templates/detergents';
 
 interface FormData {
   name: string;
@@ -559,7 +560,16 @@ export default function PassportForm() {
               {/* Product Image - right after basic information */}
               <Card>
                 <CardHeader>
-                  <CardTitle>{t('passport.productImage')}</CardTitle>
+                  <CardTitle>
+                    {formData.category === 'detergents'
+                      ? t('detergents.form.packagingImageLabel', DETERGENTS_FORM_COPY.packagingImageLabel)
+                      : t('passport.productImage')}
+                  </CardTitle>
+                  {formData.category === 'detergents' && (
+                    <p className="text-xs text-muted-foreground">
+                      {t('detergents.form.packagingImageHelp', DETERGENTS_FORM_COPY.packagingImageHelp)}
+                    </p>
+                  )}
                 </CardHeader>
                 <CardContent>
                   <ImageUpload
@@ -663,7 +673,18 @@ export default function PassportForm() {
                       const extras: { section: string; label: string }[] = [];
                       const productSection = t('passport.productInfo', 'Product information');
                       if (!formData.name.trim()) {
-                        extras.push({ section: productSection, label: t('passport.productName', 'Product Name') });
+                        // The internal DPP name, listed under its own label so it is not
+                        // confused with a template's public Product Name question.
+                        extras.push({ section: productSection, label: t('passport.dppName', 'DPP Name (internal only)') });
+                      }
+                      if (formData.category === 'detergents' && !formData.image_url) {
+                        const cd = (formData.category_data as Record<string, unknown>) || {};
+                        if (cd.dpp_profile === 'annex_vi' && cd.detergent_scope === 'yes') {
+                          extras.push({
+                            section: t('detergents.sections.annex_identity.title', 'Annex VI: product identity and manufacturer statement'),
+                            label: t('detergents.form.packagingImageLabel', DETERGENTS_FORM_COPY.packagingImageLabel),
+                          });
+                        }
                       }
                       if (formData.category === 'toys') {
                         if (!formData.image_url) {

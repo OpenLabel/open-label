@@ -109,4 +109,10 @@ describe('PassportForm for Detergents', () => {
     expect(screen.getByTestId('preview')).toBeInTheDocument();
     expect(screen.getByTestId('rich-editor')).toBeInTheDocument();
   });
+  it('labels the shared image upload as the colour image of the packaging or label', () => {
+    renderForm();
+    expect(screen.getByText('detergents.form.packagingImageLabel')).toBeInTheDocument();
+    expect(screen.getByText('detergents.form.packagingImageHelp')).toBeInTheDocument();
+    expect(screen.queryByText('passport.productImage')).not.toBeInTheDocument();
+  });
 });

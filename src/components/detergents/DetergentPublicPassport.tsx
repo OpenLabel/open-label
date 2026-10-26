@@ -66,6 +66,8 @@ export const SUPPLIER_REVIEW_FIELD_IDS = [
   'sds_requirement',
   'reach_review',
   'physical_label_reviewed',
+  'registry_upload_confirmed',
+  'eu_operator_mandate_reference',
   'carrier_reviewed',
   'market_language_reviewed',
   'substance_list_complete',
@@ -289,10 +291,15 @@ export function DetergentPublicPassport({
     phone: 'manufacturer_phone',
   });
   const nonEu = d.manufacturer_non_eu === 'yes';
-  const importer = operatorRows('importer', { name: 'importer_legal_name', email: 'importer_email' });
+  const importer = operatorRows('importer', {
+    name: 'importer_legal_name',
+    email: 'importer_email',
+    phone: 'importer_phone',
+  });
   const representative = operatorRows('eu_operator', {
     name: 'eu_operator_name',
     email: 'eu_operator_email',
+    phone: 'eu_operator_phone',
     address: 'eu_operator_address',
   });
 

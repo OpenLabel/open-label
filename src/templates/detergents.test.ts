@@ -4,6 +4,7 @@ import {
   detergentsTemplate,
   DETERGENT_CONSTITUENT_CLASSES,
   DETERGENTS_WARNING_MESSAGES,
+  DETERGENTS_FORM_COPY,
 } from './detergents';
 import { evaluateShowWhen, type ShowWhenCondition } from './base';
 
@@ -143,7 +144,8 @@ describe('DetergentsTemplate', () => {
     it('shows importer and authorised representative only for a non-EU manufacturer, and requires them then', () => {
       const ids = [
         'importer_legal_name', 'importer_street', 'importer_postal_code', 'importer_city',
-        'importer_country', 'importer_email', 'eu_operator_name', 'eu_operator_address', 'eu_operator_email',
+        'importer_country', 'importer_email', 'importer_phone', 'eu_operator_name', 'eu_operator_address',
+        'eu_operator_email', 'eu_operator_phone', 'eu_operator_mandate_reference',
       ];
       for (const id of ids) {
         const q = find(id)!;
@@ -380,6 +382,8 @@ describe('DetergentsTemplate', () => {
     });
 
     it('checks the UFI format, URLs, emails and dates without blocking', () => {
+      expect(names({ future_ufi_code: 'N1QV-R02N-J00M' })).toEqual(['ufiFormat']);
+      expect(names({ future_ufi_code: 'N1QV-R02N-J00M-WQD5' })).toEqual([]);
       expect(names({ ufi_code: 'N1QV-R02N-J00M' })).toEqual(['ufiFormat']);
       expect(names({ ufi_code: 'N1QV-R02N-J00M-WQDU' })).toEqual(['ufiFormat']);
       expect(names({ ingredients_url: 'example.com/ingredients' })).toEqual(['urlFormat']);
@@ -411,6 +415,37 @@ describe('DetergentsTemplate', () => {
         const name = w.messageKey.replace('detergents.warnings.', '') as keyof typeof DETERGENTS_WARNING_MESSAGES;
         expect(DETERGENTS_WARNING_MESSAGES[name]).toBeDefined();
       }
+    });
+  });
+
+  describe('client review batch (October 2026)', () => {
+    const q = (id: string) => detergentsTemplate.sections.flatMap((s) => s.questions).find((x) => x.id === id);
+    const sectionOf = (id: string) => detergentsTemplate.sections.find((s) => s.questions.some((x) => x.id === id))?.id;
+
+    it('asks for the label UFI on the Annex VI profile, independent of the poison centre question', () => {
+      const f = q('future_ufi_code')!;
+      expect(sectionOf('future_ufi_code')).toBe('annex_identity');
+      expect(f.required).toBe(true);
+      expect(f.showWhen).toBeUndefined();
+      expect(f.helpText).toContain('Annex V Part A point 1(b)');
+    });
+
+    it('keeps the registry confirmation in the supplier review section, only on the Annex VI profile', () => {
+      const f = q('registry_upload_confirmed')!;
+      expect(sectionOf('registry_upload_confirmed')).toBe('review');
+      expect(f.type).toBe('checkbox');
+      expect(f.showWhen).toEqual({ field: 'dpp_profile', equals: 'annex_vi', and: [{ field: 'detergent_scope', equals: 'yes' }] });
+    });
+
+    it('states the two microplastics exceptions and the Ecolabel condition for generic claims', () => {
+      expect(q('synthetic_polymer_microparticles')!.helpText).toContain('17 October 2023');
+      expect(q('synthetic_polymer_microparticles')!.helpText).toContain('17 October 2029');
+      expect(q('claims_avoid_generic_terms')!.helpText).toContain('EU Ecolabel');
+      expect(q('claims_avoid_generic_terms')!.helpText).toContain('"Biodegradable" on its own');
+    });
+
+    it('exposes the packaging image wording for the shared form', () => {
+      expect(DETERGENTS_FORM_COPY.packagingImageLabel).toBe('Colour image of the packaging or label');
     });
   });
 });
