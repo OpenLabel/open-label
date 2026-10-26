@@ -15,6 +15,13 @@
       "when": 1789837534644,
       "tag": "0001_require_car_cleaning_save_gateway",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1793037733254,
+      "tag": "0002_counterfeit_lead_deliveries",
+      "breakpoints": true
     }
   ]
 }
