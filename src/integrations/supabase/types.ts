@@ -288,6 +288,10 @@ export type Database = {
         }
         Returns: Json
       }
+      claim_counterfeit_slack_lead: {
+        Args: { p_passport_id: string; p_stale?: string; p_user_id: string }
+        Returns: Json
+      }
       finish_counterfeit_lead_delivery: {
         Args: {
           p_channel: string
@@ -295,6 +299,10 @@ export type Database = {
           p_passport_id: string
           p_token: string
         }
+        Returns: boolean
+      }
+      finish_counterfeit_slack_lead: {
+        Args: { p_ok: boolean; p_passport_id: string; p_token: string }
         Returns: boolean
       }
       increment_api_usage: {
