@@ -50,27 +50,21 @@ const deps: CounterfeitLeadDeps = {
     const { data } = await admin.from("profiles").select("company_name").eq("user_id", userId).maybeSingle();
     return (data?.company_name as string | null) ?? null;
   },
-  async siteConfig() {
-    const { data } = await admin.from("site_config").select("key, value").in("key", ["sender_email", "company_name", "site_url"]);
-    const c: Record<string, string | null> = {};
-    data?.forEach((r: { key: string; value: string | null }) => { c[r.key] = r.value; });
-    return { senderEmail: c.sender_email ?? null, senderName: c.company_name ?? null, siteUrl: c.site_url ?? null };
+  async siteUrl() {
+    const { data } = await admin.from("site_config").select("value").eq("key", "site_url").maybeSingle();
+    return (data?.value as string | null) ?? null;
   },
   ledger: {
-    async claim(passportId, userId, channel) {
-      const { data, error } = await admin.rpc("claim_counterfeit_lead_delivery", {
-        p_passport_id: passportId, p_user_id: userId, p_channel: channel,
-      });
+    async claim(passportId, userId) {
+      const { data, error } = await admin.rpc("claim_counterfeit_slack_lead", { p_passport_id: passportId, p_user_id: userId });
       if (error || !data) throw new Error("ledger claim failed");
-      const d = data as { outcome: string; token?: string; requested_at?: string };
-      if (d.outcome === "claimed") return { outcome: "claimed", token: d.token!, requestedAt: new Date(d.requested_at!).toISOString() };
-      if (d.outcome === "sent") return { outcome: "sent", requestedAt: new Date(d.requested_at!).toISOString() };
+      const d = data as { outcome: string; token?: string };
+      if (d.outcome === "claimed" && d.token) return { outcome: "claimed", token: d.token };
+      if (d.outcome === "sent") return { outcome: "sent" };
       return { outcome: d.outcome === "forbidden" ? "forbidden" : "busy" } as ClaimResult;
     },
-    async finish(passportId, channel, token, ok) {
-      const { data, error } = await admin.rpc("finish_counterfeit_lead_delivery", {
-        p_passport_id: passportId, p_channel: channel, p_token: token, p_ok: ok,
-      });
+    async finish(passportId, token, ok) {
+      const { data, error } = await admin.rpc("finish_counterfeit_slack_lead", { p_passport_id: passportId, p_token: token, p_ok: ok });
       if (error) return false;
       return data === true;
     },

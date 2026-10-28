@@ -14,64 +14,56 @@
  * See LICENSE and NOTICE files for details.
  */
 
-import { assert, assertEquals, assertFalse } from "https://deno.land/std@0.224.0/assert/mod.ts";
+import { assert, assertEquals, assertFalse, assertThrows } from "https://deno.land/std@0.224.0/assert/mod.ts";
 import {
+  buildDppLine,
   buildSlackLeadText,
   handleCounterfeitLead,
   sanitizeSlackValue,
-  type Channel,
+  validateWebhookUrl,
   type CounterfeitLeadDeps,
   type LeadPassport,
 } from "../_shared/counterfeitLeadHandler.ts";
 
-// Fake secret values. They exist only to prove nothing echoes them back.
-const RESEND = "re_FAKE_resend_secret_value_123";
-const SLACK = "xoxb-FAKE-slack-secret-value-456";
-const CHANNEL = "C015DN0V1TL";
+// Fake webhook value. It exists only to prove nothing echoes it back.
+const WEBHOOK = "https://hooks.slack.com/services/TFAKE/BFAKE/fakeSecretPart123";
 const SLUG = "0123456789abcdef";
-const NOW = "2026-10-26T17:57:00.000Z";
+const NOW = "2026-10-28T10:03:00.000Z";
+const PID = "11111111-2222-3333-4444-555555555555";
 
-type Row = { status: "none" | "pending" | "sent" | "failed"; token?: string; claimedAt: number };
+type Row = { userId: string; status: "none" | "pending" | "sent" | "failed"; token?: string; claimedAt: number };
 
 function makeLedger() {
-  const rows = new Map<string, { userId: string; requestedAt: string; email: Row; slack: Row }>();
+  const rows = new Map<string, Row>();
   let clock = Date.parse(NOW);
   let n = 0;
   return {
     rows,
     advance(ms: number) { clock += ms; },
-    async claim(passportId: string, userId: string, channel: Channel) {
+    async claim(passportId: string, userId: string) {
       await Promise.resolve();
-      if (!rows.has(passportId)) {
-        rows.set(passportId, { userId, requestedAt: NOW, email: { status: "none", claimedAt: 0 }, slack: { status: "none", claimedAt: 0 } });
-      }
+      if (!rows.has(passportId)) rows.set(passportId, { userId, status: "none", claimedAt: 0 });
       const r = rows.get(passportId)!;
       if (r.userId !== userId) return { outcome: "forbidden" as const };
-      const c = r[channel];
-      if (c.status === "sent") return { outcome: "sent" as const, requestedAt: r.requestedAt };
-      if (c.status === "pending" && clock - c.claimedAt < 120_000) return { outcome: "busy" as const };
+      if (r.status === "sent") return { outcome: "sent" as const };
+      if (r.status === "pending" && clock - r.claimedAt < 120_000) return { outcome: "busy" as const };
       const token = `tok-${++n}`;
-      r[channel] = { status: "pending", token, claimedAt: clock };
-      return { outcome: "claimed" as const, token, requestedAt: r.requestedAt };
+      Object.assign(r, { status: "pending", token, claimedAt: clock });
+      return { outcome: "claimed" as const, token };
     },
-    async finish(passportId: string, channel: Channel, token: string, ok: boolean) {
+    async finish(passportId: string, token: string, ok: boolean) {
       await Promise.resolve();
-      const c = rows.get(passportId)?.[channel];
-      if (!c || c.status !== "pending" || c.token !== token) return false;
-      c.status = ok ? "sent" : "failed";
+      const r = rows.get(passportId);
+      if (!r || r.status !== "pending" || r.token !== token) return false;
+      r.status = ok ? "sent" : "failed";
       return true;
     },
   };
 }
 
 const passport = (over: Partial<LeadPassport> = {}): LeadPassport => ({
-  id: "11111111-2222-3333-4444-555555555555",
-  user_id: "user-1",
-  name: "Chateau Example 2022",
-  category: "wine",
-  public_slug: SLUG,
-  category_data: { counterfeit_protection_enabled: true },
-  ...over,
+  id: PID, user_id: "user-1", name: "Chateau Example 2022", category: "wine",
+  public_slug: SLUG, category_data: { counterfeit_protection_enabled: true }, ...over,
 });
 
 type Call = { url: string; init: RequestInit; body: Record<string, unknown> };
@@ -80,290 +72,191 @@ function setup(opts: {
   passport?: LeadPassport | null;
   email?: string;
   env?: Record<string, string | undefined>;
-  resend?: (call: Call) => Response | Promise<Response>;
   slack?: (call: Call) => Response | Promise<Response>;
   ledger?: ReturnType<typeof makeLedger>;
   company?: string | null;
+  siteUrl?: string | null;
 } = {}) {
   const calls: Call[] = [];
   const logs: string[] = [];
+  const envReads: string[] = [];
   const ledger = opts.ledger ?? makeLedger();
-  const env: Record<string, string | undefined> = {
-    RESEND_API_KEY: RESEND, SLACK_BOT_TOKEN: SLACK, SLACK_LEADS_CHANNEL_ID: CHANNEL, ...(opts.env ?? {}),
-  };
+  const env: Record<string, string | undefined> = { SLACK_OPENLABEL_LEADS_WEBHOOK_URL: WEBHOOK, ...(opts.env ?? {}) };
+  const p = opts.passport === undefined ? passport() : opts.passport;
   const deps: CounterfeitLeadDeps = {
-    authenticate: async (token) => token === "good" ? { id: "user-1", email: opts.email ?? "buyer@example.com" } : null,
-    findPassportBySlug: async (slug) => (opts.passport === undefined ? passport() : opts.passport)?.public_slug === slug
-      ? (opts.passport === undefined ? passport() : opts.passport) : null,
+    authenticate: async (t) => t === "good" ? { id: "user-1", email: opts.email ?? "buyer@example.com" } : null,
+    findPassportBySlug: async (slug) => p?.public_slug === slug ? p : null,
     companyName: async () => opts.company === undefined ? "Acme Wines" : opts.company,
-    siteConfig: async () => ({ senderEmail: "noreply@cypheme.org", senderName: "Open Label .eu", siteUrl: "https://open-label.eu" }),
+    siteUrl: async () => opts.siteUrl === undefined ? "https://open-label.eu" : opts.siteUrl,
     ledger,
-    env: (k) => env[k],
+    env: (k) => { envReads.push(k); return env[k]; },
     now: () => new Date(NOW),
     log: (m) => logs.push(m),
     fetch: async (input, init = {}) => {
       const url = String(input);
       const call = { url, init, body: JSON.parse(String((init as { body?: unknown }).body ?? "{}")) };
       calls.push(call);
-      if (url.startsWith("https://api.resend.com")) return opts.resend ? await opts.resend(call) : new Response('{"id":"e1"}', { status: 200 });
-      if (url.startsWith("https://slack.com")) return opts.slack ? await opts.slack(call) : new Response('{"ok":true}', { status: 200 });
+      if (url === WEBHOOK) return opts.slack ? await opts.slack(call) : new Response("ok", { status: 200 });
       throw new Error("unexpected url");
     },
   };
-  return { deps, calls, logs, ledger };
+  return { deps, calls, logs, ledger, envReads };
 }
 
-const req = (body: unknown = { userEmail: "buyer@example.com", passportName: "browser name", passportUrl: `https://evil.example/p/${SLUG}`, requestedAt: "2000-01-01T00:00:00Z" }, token: string | null = "good") =>
+const req = (body: unknown = { userEmail: "buyer@example.com", passportName: "browser name", passportUrl: `https://evil.example/p/${SLUG}` }, token: string | null = "good") =>
   new Request("http://x/send-counterfeit-request", {
     method: "POST",
     headers: { "Content-Type": "application/json", ...(token ? { Authorization: `Bearer ${token}` } : {}) },
     body: typeof body === "string" ? body : JSON.stringify(body),
   });
 
-const resendCalls = (c: Call[]) => c.filter((x) => x.url.startsWith("https://api.resend.com"));
-const slackCalls = (c: Call[]) => c.filter((x) => x.url.startsWith("https://slack.com"));
+const EXPECTED_DPP = `DPP: <https://open-label.eu/p/${SLUG}|Open Digital Product Passport>`;
 
-function assertNoSecrets(text: string) {
-  for (const s of [RESEND, SLACK, "xoxb-", "re_FAKE"]) assertFalse(text.includes(s), `leaked ${s}`);
-}
-
-Deno.test("rejects missing and invalid auth", async () => {
-  const a = setup();
-  assertEquals((await handleCounterfeitLead(req(undefined, null), a.deps)).status, 401);
-  assertEquals((await handleCounterfeitLead(req(undefined, "bad"), a.deps)).status, 401);
-  assertEquals(a.calls.length, 0);
-});
-
-Deno.test("rejects payload email that does not match the JWT email", async () => {
-  const a = setup();
-  const res = await handleCounterfeitLead(req({ userEmail: "victim@example.com", passportName: "x", passportUrl: `https://x/p/${SLUG}` }), a.deps);
-  assertEquals(res.status, 403);
-  assertEquals(a.calls.length, 0);
-});
-
-Deno.test("rejects passports owned by someone else or unknown", async () => {
-  const other = setup({ passport: passport({ user_id: "user-2" }) });
-  assertEquals((await handleCounterfeitLead(req(), other.deps)).status, 403);
-  assertEquals(other.calls.length, 0);
-  const missing = setup({ passport: null });
-  assertEquals((await handleCounterfeitLead(req(), missing.deps)).status, 403);
-});
-
-Deno.test("rejects when protection is not enabled on the saved passport", async () => {
-  const a = setup({ passport: passport({ category_data: { counterfeit_protection_enabled: "true" } }) });
-  assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 409);
-  assertEquals(a.calls.length, 0);
-});
-
-Deno.test("rejects malformed passport URL", async () => {
-  const a = setup();
-  const res = await handleCounterfeitLead(req({ userEmail: "buyer@example.com", passportName: "x", passportUrl: "https://x/p/nothex" }), a.deps);
-  assertEquals(res.status, 400);
-});
-
-Deno.test("email goes to contact@cypheme.com with Reply-To requester and server data", async () => {
-  const a = setup();
-  const res = await handleCounterfeitLead(req(), a.deps);
+Deno.test("posts one Slack lead with exact field order, clickable DPP line and mrkdwn on", async () => {
+  const t = setup();
+  const res = await handleCounterfeitLead(req(), t.deps);
   assertEquals(res.status, 200);
-  const [mail] = resendCalls(a.calls);
-  assertEquals(mail.body.to, ["contact@cypheme.com"]);
-  assertEquals(mail.body.reply_to, "buyer@example.com");
-  assertEquals(mail.body.cc, undefined);
-  const html = String(mail.body.html);
-  for (const v of ["Acme Wines", "buyer@example.com", "Chateau Example 2022", "wine", `https://open-label.eu/p/${SLUG}`, passport().id, NOW]) {
-    assert(html.includes(v), `email missing ${v}`);
-  }
-  assertFalse(html.includes("browser name"));
-  assertFalse(html.includes("evil.example"));
-  assertFalse(html.includes("2000-01-01"));
-});
-
-Deno.test("Slack lead has the exact field order and safe options", async () => {
-  const a = setup();
-  await handleCounterfeitLead(req(), a.deps);
-  const [s] = slackCalls(a.calls);
-  assertEquals(s.url, "https://slack.com/api/chat.postMessage");
-  assertEquals((s.init.headers as Record<string, string>).Authorization, `Bearer ${SLACK}`);
-  assertEquals(s.body.channel, CHANNEL);
-  assertEquals(s.body.unfurl_links, false);
-  assertEquals(s.body.unfurl_media, false);
-  assertEquals(s.body.mrkdwn, false);
-  assertEquals(s.body.text, [
+  assertEquals(await res.json(), { success: true, delivery: "sent" });
+  assertEquals(t.calls.length, 1);
+  const c = t.calls[0];
+  assertEquals(c.url, WEBHOOK);
+  assertEquals(c.body.mrkdwn, true);
+  assertEquals(c.body.unfurl_links, false);
+  assertEquals(c.body.unfurl_media, false);
+  assertEquals(Object.keys(c.body).sort(), ["mrkdwn", "text", "unfurl_links", "unfurl_media"]);
+  assertEquals(c.body.text, [
     "##SOURCE_OPENLABEL##",
     "Company: Acme Wines",
     "Email: buyer@example.com",
     "Product Name: Chateau Example 2022",
     "Product Category: wine",
-    `Passport URL: https://open-label.eu/p/${SLUG}`,
-    `Passport ID: ${passport().id}`,
+    EXPECTED_DPP,
+    `Passport ID: ${PID}`,
     "Message: Counterfeit protection requested for this Digital Product Passport",
-    "Email Follow-up: An email was sent to contact@cypheme.com with Reply-To set to the requester. Reply to that email to contact the lead directly.",
     `Requested At: ${NOW}`,
   ].join("\n\n"));
+  assertFalse(String(c.body.text).includes("Email Follow-up"));
+  assertFalse(String(c.body.text).includes("evil.example"));
+  assertFalse(String(c.body.text).includes("browser name"));
 });
 
-Deno.test("sanitizes Slack values: one line, length, markup and mentions", () => {
-  const v = sanitizeSlackValue("A\nB\r\nC\tD <!channel> <!here> <@U123> @channel @here @everyone *b* _i_ `c` &", 2000);
-  assertFalse(/[\r\n\t]/.test(v));
-  assertFalse(v.includes("<"));
-  assertFalse(v.includes(">"));
-  assertFalse(/@(channel|here|everyone)\b/i.test(v));
-  assertFalse(/[*_`~]/.test(v));
-  assert(v.includes("&amp;"));
-  assertEquals(sanitizeSlackValue("x".repeat(500), 200).length <= 200, true);
-  assertEquals(sanitizeSlackValue("", 50), "-");
-  const text = buildSlackLeadText({
-    company: "Evil\n\nEmail: fake@x.com <!channel>", email: "buyer@example.com", productName: "@here", category: "wine",
-    passportUrl: "https://open-label.eu/p/x", passportId: "id", requestedAt: NOW,
+Deno.test("never calls Resend and never reads email or bot-token secrets", async () => {
+  const t = setup({ env: { RESEND_API_KEY: "re_x", SLACK_BOT_TOKEN: "xoxb-x", SLACK_LEADS_CHANNEL_ID: "C1" } });
+  await (await handleCounterfeitLead(req(), t.deps)).text();
+  assertEquals(t.calls.filter((c) => c.url.includes("resend")).length, 0);
+  assertEquals(t.calls.filter((c) => c.url.includes("slack.com/api")).length, 0);
+  assertEquals([...new Set(t.envReads)], ["SLACK_OPENLABEL_LEADS_WEBHOOK_URL"]);
+});
+
+Deno.test("DPP line uses trusted origin only and is not escaped", () => {
+  assertEquals(buildDppLine("https://open-label.eu/some/path?x=1", SLUG), EXPECTED_DPP);
+  assertEquals(buildDppLine("http://attacker.example", SLUG), EXPECTED_DPP);
+  assertThrows(() => buildDppLine("https://open-label.eu", "abc|<!channel>"));
+  const text = buildSlackLeadText({ company: "a", email: "b@c.de", productName: "<x>", category: "wine", origin: "https://open-label.eu", slug: SLUG, passportId: PID, requestedAt: NOW });
+  assert(text.includes(EXPECTED_DPP));
+  assertFalse(text.includes("&lt;https"));
+});
+
+Deno.test("sanitizes each user field: one line, bounded, mentions and formatting neutralized", async () => {
+  const t = setup({
+    company: "<!channel> *Bold* _it_ ~s~ `c` | x\nline2 @here",
+    passport: passport({ name: "<https://phish.example|Click> & more\r\n" + "z".repeat(500), category: "wine<@U123>" }),
   });
-  assertEquals(text.split("\n\n").length, 10);
-  assertFalse(text.includes("<!channel>"));
-  assertFalse(/@here\b/.test(text));
+  await (await handleCounterfeitLead(req(), t.deps)).text();
+  const lines = String(t.calls[0].body.text).split("\n\n");
+  assertEquals(lines.length, 9);
+  assertEquals(lines[1], "Company: &lt;!channel&gt; Bold it s c x line2 @\u2060here");
+  assert(lines[3].startsWith("Product Name: &lt;https://phish.example Click&gt; &amp; more"));
+  assert(lines[3].length <= "Product Name: ".length + 300 + 20);
+  assertEquals(lines[4], "Product Category: wine&lt;@U123&gt;");
+  assertEquals(lines[5], EXPECTED_DPP);
+  assertEquals(sanitizeSlackValue("", 10), "-");
 });
 
-Deno.test("invalid Slack channel or token fails without calling Slack or leaking", async () => {
-  for (const env of [{ SLACK_LEADS_CHANNEL_ID: "#general" }, { SLACK_LEADS_CHANNEL_ID: undefined }, { SLACK_BOT_TOKEN: "nope" }, { SLACK_BOT_TOKEN: undefined }]) {
-    const a = setup({ env });
-    const res = await handleCounterfeitLead(req(), a.deps);
-    assertEquals(res.status, 502);
-    const text = await res.text();
-    assertNoSecrets(text + a.logs.join("\n"));
-    assertEquals(slackCalls(a.calls).length, 0);
-    assertEquals(resendCalls(a.calls).length, 1);
+Deno.test("webhook secret validation fails closed with generic error", async () => {
+  const bad = [undefined, "", "not a url", "http://hooks.slack.com/services/T/B/x", "https://hooks.slack.com.evil.example/services/T",
+    "https://evil.example/services/T/B/x", "https://hooks.slack.com/api/x", "https://user:pw@hooks.slack.com/services/T", "https://hooks.slack.com:8443/services/T"];
+  for (const v of bad) {
+    assertEquals(validateWebhookUrl(v), null, String(v));
+    const t = setup({ env: { SLACK_OPENLABEL_LEADS_WEBHOOK_URL: v } });
+    const res = await handleCounterfeitLead(req(), t.deps);
+    assertEquals(res.status, 503);
+    const body = await res.text();
+    assertFalse(body.includes("hooks.slack") || body.includes("SLACK_"));
+    assertEquals(t.calls.length, 0);
+    assertEquals(t.ledger.rows.size, 0);
   }
+  assertEquals(validateWebhookUrl(WEBHOOK), WEBHOOK);
 });
 
-Deno.test("missing Resend key fails email without leaking", async () => {
-  const a = setup({ env: { RESEND_API_KEY: undefined } });
-  const res = await handleCounterfeitLead(req(), a.deps);
-  assertEquals(res.status, 502);
-  assertNoSecrets(await res.text() + a.logs.join("\n"));
-  assertEquals(resendCalls(a.calls).length, 0);
-  assertEquals(slackCalls(a.calls).length, 0);
+Deno.test("authorization: missing/invalid token, email mismatch, other owner, protection off", async () => {
+  let t = setup();
+  assertEquals((await handleCounterfeitLead(req(undefined, null), t.deps)).status, 401);
+  assertEquals((await handleCounterfeitLead(req(undefined, "bad"), t.deps)).status, 401);
+  t = setup({ email: "other@example.com" });
+  assertEquals((await handleCounterfeitLead(req(), t.deps)).status, 403);
+  t = setup({ passport: passport({ user_id: "user-2" }) });
+  assertEquals((await handleCounterfeitLead(req(), t.deps)).status, 403);
+  t = setup({ passport: passport({ category_data: { counterfeit_protection_enabled: false } }) });
+  assertEquals((await handleCounterfeitLead(req(), t.deps)).status, 409);
+  t = setup({ passport: null });
+  assertEquals((await handleCounterfeitLead(req(), t.deps)).status, 403);
+  assertEquals(t.calls.length, 0);
 });
 
-Deno.test("provider non-2xx, Slack ok:false and timeouts are failures with no raw errors", async () => {
-  const cases: Array<Parameters<typeof setup>[0]> = [
-    { resend: () => new Response(`{"message":"bad key ${RESEND}"}`, { status: 401 }) },
-    { slack: () => new Response(`{"ok":false,"error":"invalid_auth ${SLACK}"}`, { status: 200 }) },
-    { slack: () => new Response("boom", { status: 500 }) },
-    { resend: () => { throw new DOMException("timed out", "TimeoutError"); } },
-    { slack: () => { throw new DOMException(`aborted ${SLACK}`, "TimeoutError"); } },
-  ];
-  for (const c of cases) {
-    const a = setup(c);
-    const res = await handleCounterfeitLead(req(), a.deps);
-    assertEquals(res.status, 502);
-    const text = await res.text();
-    assertNoSecrets(text + a.logs.join("\n"));
-    assertFalse(text.includes("invalid_auth"));
-    assertFalse(text.includes("bad key"));
-  }
+Deno.test("repeated and concurrent saves post only one lead", async () => {
+  const t = setup();
+  const results = await Promise.all([1, 2, 3].map(() => handleCounterfeitLead(req(), t.deps)));
+  for (const r of results) await r.text();
+  assertEquals(t.calls.length, 1);
+  const again = await handleCounterfeitLead(req(), t.deps);
+  assertEquals(again.status, 200);
+  await again.text();
+  assertEquals(t.calls.length, 1);
 });
 
-Deno.test("retry after email success and Slack failure retries Slack only", async () => {
+Deno.test("failed delivery is not marked sent and retries", async () => {
+  let fail = true;
+  const t = setup({ slack: () => fail ? new Response("invalid_payload", { status: 400 }) : new Response("ok") });
+  const r1 = await handleCounterfeitLead(req(), t.deps);
+  assertEquals(r1.status, 502);
+  await r1.text();
+  assertEquals(t.ledger.rows.get(PID)!.status, "failed");
+  fail = false;
+  const r2 = await handleCounterfeitLead(req(), t.deps);
+  assertEquals(r2.status, 200);
+  await r2.text();
+  assertEquals(t.calls.length, 2);
+  assertEquals(t.ledger.rows.get(PID)!.status, "sent");
+});
+
+Deno.test("network error and non-ok 200 body do not mark sent", async () => {
+  const t = setup({ slack: () => { throw new TypeError("net"); } });
+  assertEquals((await handleCounterfeitLead(req(), t.deps)).status, 502);
+  const t2 = setup({ slack: () => new Response("no_service", { status: 200 }) });
+  assertEquals((await handleCounterfeitLead(req(), t2.deps)).status, 502);
+  assertEquals(t2.ledger.rows.get(PID)!.status, "failed");
+});
+
+Deno.test("stale pending claim recovers, fresh one stays busy", async () => {
   const ledger = makeLedger();
-  let slackOk = false;
-  const a = setup({ ledger, slack: () => slackOk ? new Response('{"ok":true}') : new Response("x", { status: 500 }) });
-  assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 502);
-  slackOk = true;
-  const res = await handleCounterfeitLead(req(), a.deps);
-  assertEquals(res.status, 200);
-  assertEquals(resendCalls(a.calls).length, 1);
-  assertEquals(slackCalls(a.calls).length, 2);
-});
-
-Deno.test("email failure never posts Slack; retry sends email first then Slack", async () => {
-  const ledger = makeLedger();
-  let mailOk = false;
-  const a = setup({ ledger, resend: () => mailOk ? new Response("{}") : new Response("x", { status: 503 }) });
-  const first = await handleCounterfeitLead(req(), a.deps);
-  assertEquals(first.status, 502);
-  assertEquals((await first.json()).deliveries, { email: "failed", slack: "skipped" });
-  assertEquals(slackCalls(a.calls).length, 0);
-  assertEquals(ledger.rows.get(passport().id)!.slack.status, "none");
-  mailOk = true;
-  assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 200);
-  assertEquals(resendCalls(a.calls).length, 2);
-  assertEquals(slackCalls(a.calls).length, 1);
-  // Slack was posted only after the email was recorded sent, so its follow-up line is true.
-  const lastResend = a.calls.findLastIndex((c) => c.url.startsWith("https://api.resend.com"));
-  const slackIdx = a.calls.findIndex((c) => c.url.startsWith("https://slack.com"));
-  assert(slackIdx > lastResend);
-  assert(String(slackCalls(a.calls)[0].body.text).includes("Email Follow-up: An email was sent to contact@cypheme.com"));
-});
-
-Deno.test("busy email claim never claims or posts Slack", async () => {
-  const ledger = makeLedger();
-  ledger.rows.set(passport().id, {
-    userId: "user-1", requestedAt: NOW,
-    email: { status: "pending", token: "other", claimedAt: Date.parse(NOW) },
-    slack: { status: "none", claimedAt: 0 },
-  });
-  const a = setup({ ledger });
-  assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 409);
-  assertEquals(a.calls.length, 0);
-  assertEquals(ledger.rows.get(passport().id)!.slack.status, "none");
-});
-
-Deno.test("inconsistent row with Slack sent and email failed retries email only", async () => {
-  const ledger = makeLedger();
-  ledger.rows.set(passport().id, {
-    userId: "user-1", requestedAt: NOW,
-    email: { status: "failed", claimedAt: 0 },
-    slack: { status: "sent", claimedAt: 0 },
-  });
-  const a = setup({ ledger });
-  const res = await handleCounterfeitLead(req(), a.deps);
-  assertEquals(res.status, 200);
-  assertEquals((await res.json()).deliveries, { email: "sent", slack: "sent" });
-  assertEquals(resendCalls(a.calls).length, 1);
-  assertEquals(slackCalls(a.calls).length, 0);
-});
-
-Deno.test("repeated save after full success sends nothing again", async () => {
-  const ledger = makeLedger();
-  const a = setup({ ledger });
-  for (let i = 0; i < 3; i++) assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 200);
-  assertEquals(resendCalls(a.calls).length, 1);
-  assertEquals(slackCalls(a.calls).length, 1);
-});
-
-Deno.test("concurrent saves deliver each channel once", async () => {
-  const ledger = makeLedger();
-  let release!: () => void;
-  const gate = new Promise<void>((r) => release = r);
-  const a = setup({ ledger, resend: async () => { await gate; return new Response("{}"); } });
-  const p = [handleCounterfeitLead(req(), a.deps), handleCounterfeitLead(req(), a.deps), handleCounterfeitLead(req(), a.deps)];
-  await new Promise((r) => setTimeout(r, 10));
-  release();
-  const statuses = (await Promise.all(p)).map((r) => r.status).sort();
-  assertEquals(statuses.filter((s) => s === 200).length, 1);
-  assert(statuses.every((s) => s === 200 || s === 409));
-  assertEquals(resendCalls(a.calls).length, 1);
-  assertEquals(slackCalls(a.calls).length, 1);
-});
-
-Deno.test("stale pending claim is retried", async () => {
-  const ledger = makeLedger();
-  ledger.rows.set(passport().id, {
-    userId: "user-1", requestedAt: NOW,
-    email: { status: "pending", token: "old", claimedAt: Date.parse(NOW) },
-    slack: { status: "sent", claimedAt: 0 },
-  });
-  const a = setup({ ledger });
-  assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 409);
+  ledger.rows.set(PID, { userId: "user-1", status: "pending", token: "old", claimedAt: Date.parse(NOW) });
+  const t = setup({ ledger });
+  const busy = await handleCounterfeitLead(req(), t.deps);
+  assertEquals(busy.status, 409);
+  await busy.text();
+  assertEquals(t.calls.length, 0);
   ledger.advance(121_000);
-  assertEquals((await handleCounterfeitLead(req(), a.deps)).status, 200);
-  assertEquals(resendCalls(a.calls).length, 1);
-  assertEquals(slackCalls(a.calls).length, 0);
+  const ok = await handleCounterfeitLead(req(), t.deps);
+  assertEquals(ok.status, 200);
+  await ok.text();
+  assertEquals(t.calls.length, 1);
+  assertFalse(await ledger.finish(PID, "old", false));
 });
 
-Deno.test("ledger outage returns generic error and sends nothing", async () => {
-  const a = setup();
-  a.deps.ledger.claim = () => Promise.reject(new Error(`db down ${SLACK}`));
-  const res = await handleCounterfeitLead(req(), a.deps);
-  assertEquals(res.status, 500);
-  assertNoSecrets(await res.text() + a.logs.join("\n"));
-  assertEquals(a.calls.length, 0);
+Deno.test("webhook URL never appears in responses or logs", async () => {
+  const t = setup({ slack: () => new Response("x", { status: 500 }) });
+  const body = await (await handleCounterfeitLead(req(), t.deps)).text();
+  assertFalse(body.includes(WEBHOOK) || body.includes("fakeSecretPart"));
+  assertFalse(t.logs.join("\n").includes("fakeSecretPart"));
 });
