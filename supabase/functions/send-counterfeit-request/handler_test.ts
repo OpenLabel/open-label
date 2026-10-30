@@ -124,7 +124,6 @@ const req = (body: unknown = { userEmail: "buyer@example.com", passportName: "br
     body: typeof body === "string" ? body : JSON.stringify(body),
   });
 
-const EXPECTED_DPP = `DPP: <https://open-label.eu/p/${SLUG}|Open Digital Product Passport>`;
 
 const EXPECTED_DPP = `DPP: <https://open-label.eu/p/${SLUG}|Open Digital Product Passport>`;
 const FOLLOW_UP = "Email Follow-up: An email was sent to contact@cypheme.com with Reply-To set to the requester. Reply to that email to contact the lead directly.";
