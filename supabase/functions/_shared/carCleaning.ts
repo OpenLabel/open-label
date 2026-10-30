@@ -176,7 +176,7 @@ function fieldIssue(field: CarCleaningQuestion, value: unknown): CarCleaningIssu
   if (field.options && value === 'review') return 'review';
   if (field.id.endsWith('_url') && !publicHttpUrl(value)) return 'url';
   if (field.id.endsWith('_email') && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value)) return 'email';
-  if ((field.id === 'ufi_code' || field.id === 'future_ufi_code') && !/^[0-9A-HJKMNP-TV-Y]{4}(?:-[0-9A-HJKMNP-TV-Y]{4}){3}$/.test(value)) return 'ufi';
+  if ((field.id === 'ufi_code' || field.id === 'future_ufi_code') && !/^[0-9ACDEFGHJKMNP-Y]{4}(?:-[0-9ACDEFGHJKMNP-Y]{4}){3}$/.test(value)) return 'ufi';
   if (field.id.endsWith('_date')) {
     if (!/^\d{4}-\d{2}-\d{2}$/.test(value)) return 'date';
     const parsed = new Date(value + 'T00:00:00Z');

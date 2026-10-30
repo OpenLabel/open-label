@@ -32,6 +32,9 @@ describe('Car cleaning conditional validation and data boundary', () => {
   it('rejects invalid UFI when Annex VIII applies and allows documented exemptions', () => {
     const hazard = { ...validCleaner, clp_classification: 'health_physical', hazard_statements: 'H315', precautionary_statements: 'P280', signal_word: 'warning', pictograms: 'GHS07' };
     expect(validateCarCleaning({ ...hazard, pcn_applicability: 'required', ufi_code: 'bad', pcn_status: 'submitted' })).toContainEqual({ field: 'ufi_code', code: 'ufi' });
+    const ufiErr = (ufi_code: string) => validateCarCleaning({ ...hazard, pcn_applicability: 'required', ufi_code, pcn_status: 'submitted' }).some(e => e.field === 'ufi_code' && e.code === 'ufi');
+    expect(ufiErr('N1QV-R02N-J00M-WQDU')).toBe(false);
+    for (const bad of ['B', 'I', 'L', 'O', 'Z']) expect(ufiErr(`N1QV-R02N-J00M-WQD${bad}`)).toBe(true);
     expect(validateCarCleaning({ ...hazard, pcn_applicability: 'exempt', pcn_exemption_reason: 'Mixture only for scientific research and development under Annex VIII.' }).some(e => /ufi|pcn/.test(e.field))).toBe(false);
   });
   it('requires applicable SDS access and biocidal authorisation evidence', () => {
