@@ -198,6 +198,25 @@ const YES_NO_UNKNOWN = opts('yesNoUnknown', [
 export const EU_SAFETY_GATE_URL =
   'https://ec.europa.eu/safety-gate-alerts/screen/webReport';
 
+/** Toy categories that may contain a hazardous mixture needing a UFI. */
+export const TOY_UFI_CATEGORIES = ['chemical_set', 'slime', 'arts_crafts'] as const;
+
+/** UFI format: 4 groups of 4, digits plus A C D E F G H J K M N P-Y (no B I L O Z). */
+export const UFI_FORMAT_REGEX = /^[0-9ACDEFGHJKMNP-Y]{4}(?:-[0-9ACDEFGHJKMNP-Y]{4}){3}$/;
+
+export const TOY_UFI_FORMAT_WARNING =
+  'A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not.';
+
+/** True when a saved UFI should be shown (category applies and value present). */
+export function shouldShowToyUfi(data: Record<string, unknown>): boolean {
+  const code = typeof data.ufi_code === 'string' ? data.ufi_code.trim() : '';
+  return (
+    code !== '' &&
+    (TOY_UFI_CATEGORIES as readonly string[]).includes(data.toy_category as string)
+  );
+}
+
+
 // Helper to attach standard labelKey/helpKey/placeholderKey to a question
 type FieldDef = Omit<import('./base').TemplateQuestion, 'labelKey' | 'helpKey' | 'placeholderKey'>;
 function f(q: FieldDef): import('./base').TemplateQuestion {
@@ -308,6 +327,17 @@ export class ToysTemplate extends BaseTemplate {
           helpText:
             'Add the warnings, instructions, and safety information that accompany the toy.',
           showWhen: { field: 'has_instructions_warnings', equals: 'yes' },
+        }),
+        f({
+          id: 'ufi_code',
+          label: 'Unique formula identifier (UFI)',
+          type: 'text',
+          required: false,
+          badge: 'where_applicable',
+          placeholder: 'e.g., N1QV-R02N-J00M-WQD5',
+          helpText:
+            'Only needed when a mixture in this toy, for example a solution in a chemistry set or a slime, is classified as hazardous for health or physical effects under Regulation (EC) No 1272/2008 (CLP). That mixture then needs a poison centre notification and its UFI on its label. Leave empty otherwise.',
+          showWhen: { field: 'toy_category', equals: [...TOY_UFI_CATEGORIES] },
         }),
       ],
     ),
