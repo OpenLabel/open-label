@@ -20,4 +20,4 @@
 ## Car cleaning audience notices
 - [x] Shorten public and supplier notices, translate all 25 locales, document service limits
 - [x] Verify all locale audits, full suite (1,893 passed, 0 failed) and car cleaning demo on desktop/mobile; persisted status pass
-- [ ] Fix UFI character class (detergents + car cleaning) and tests
+- [x] Fix UFI character class (detergents + car cleaning) and tests
