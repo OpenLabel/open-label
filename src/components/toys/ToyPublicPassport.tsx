@@ -30,6 +30,7 @@ import {
   TOY_OPERATOR_ID_TYPES,
   TOY_SAFETY_CHANNELS,
   TOY_STANDARDS,
+  shouldShowToyUfi,
 } from '@/templates/toys';
 import { useSiteConfig } from '@/hooks/useSiteConfig';
 import { isLegacyAllergenDeclaration, type SelectedFragrance } from '@/data/toyFragrances';
@@ -551,6 +552,12 @@ export function ToyPublicPassport({
                 </tbody>
               </table>
             </div>
+          )}
+
+          {shouldShowToyUfi(d) && (
+            <p data-testid="toy-public-ufi">
+              {t('toyPublic.rows.ufi', 'UFI')}: {(d.ufi_code as string).trim()}
+            </p>
           )}
 
           <div>

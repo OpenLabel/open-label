@@ -656,7 +656,8 @@
       "status": "Stato",
       "euDoc": "Dichiarazione di conformità UE",
       "safetyAssessment": "Valutazione della sicurezza",
-      "technicalDocumentation": "Documentazione tecnica"
+      "technicalDocumentation": "Documentazione tecnica",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Marcatura CE apposta",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Sito web / URL del modulo di contatto per segnalazioni di sicurezza",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Identificatore unico di formula (UFI)",
+        "help": "Necessario solo quando una miscela contenuta in questo giocattolo, ad esempio una soluzione di un set di chimica o uno slime, è classificata come pericolosa per i suoi effetti sulla salute o fisici ai sensi del regolamento (CE) n. 1272/2008 (CLP). Tale miscela richiede allora una notifica a un centro antiveleni e il relativo UFI sull'etichetta. Altrimenti lasciare vuoto.",
+        "placeholder": "ad es. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Questo giocattolo è destinato a bambini di età inferiore a 36 mesi. Si applicano restrizioni più severe sulle fragranze allergeniche e le eventuali piccole parti devono essere valutate per il rischio di soffocamento.",
       "mouthContact": "Questo giocattolo è destinato a essere messo in bocca. Si applicano restrizioni più severe sulle fragranze allergeniche e sulla migrazione di sostanze chimiche.",
       "unknownAllergens": "Questo DPP potrebbe essere incompleto perché le informazioni sulle fragranze allergeniche sono obbligatorie, ove applicabile. Sostituire \"Sconosciuto\" con Sì o No prima della pubblicazione.",
-      "suggestLegislation": "In base alla categoria di giocattolo selezionata, considerare anche di spuntare: {{list}}."
+      "suggestLegislation": "In base alla categoria di giocattolo selezionata, considerare anche di spuntare: {{list}}.",
+      "ufiFormat": "Un UFI è composto da quattro gruppi di quattro caratteri, ad esempio N1QV-R02N-J00M-WQD5. Il formato viene verificato, ma non la notifica a un centro antiveleni."
     },
     "disclaimer": {
       "title": "DPP per giocattoli — disclaimer sulla conformità",

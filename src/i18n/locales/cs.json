@@ -656,7 +656,8 @@
       "status": "Stav",
       "euDoc": "EU prohlášení o shodě",
       "safetyAssessment": "Posouzení bezpečnosti",
-      "technicalDocumentation": "Technická dokumentace"
+      "technicalDocumentation": "Technická dokumentace",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Označeno CE",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Webová stránka / URL kontaktního formuláře pro hlášení bezpečnosti",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Jedinečný identifikátor složení (UFI)",
+        "help": "Vyžaduje se pouze tehdy, je-li směs v této hračce, například roztok v chemické soupravě nebo sliz, klasifikována jako nebezpečná z hlediska účinků na zdraví nebo fyzikální nebezpečnosti podle nařízení (ES) č. 1272/2008 (CLP). Pro takovou směs je pak nutné oznámení toxikologickému informačnímu středisku a uvedení jejího UFI na etiketě. V ostatních případech ponechte prázdné.",
+        "placeholder": "např. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Tato hračka je určena pro děti do 36 měsíců. Platí přísnější omezení pro alergenní vonné látky a všechny malé části musí být posouzeny z hlediska nebezpečí udušení.",
       "mouthContact": "Tato hračka je určena k vkládání do úst. Platí přísnější omezení pro alergenní vonné látky a migraci chemických látek.",
       "unknownAllergens": "Tento DPP může být neúplný, protože informace o alergenních vonných látkách jsou v příslušných případech povinné. Před zveřejněním nahraďte „Neznámo“ odpovědí Ano nebo Ne.",
-      "suggestLegislation": "Na základě vybrané kategorie hračky zvažte také zaškrtnutí: {{list}}."
+      "suggestLegislation": "Na základě vybrané kategorie hračky zvažte také zaškrtnutí: {{list}}.",
+      "ufiFormat": "UFI má čtyři skupiny po čtyřech znacích, například N1QV-R02N-J00M-WQD5. Kontroluje se formát, nikoli podání oznámení toxikologickému informačnímu středisku."
     },
     "disclaimer": {
       "title": "DPP pro hračky — prohlášení o vyloučení odpovědnosti za shodu",

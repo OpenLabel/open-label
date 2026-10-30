@@ -656,7 +656,8 @@
       "status": "Status",
       "euDoc": "EU-försäkran om överensstämmelse",
       "safetyAssessment": "Säkerhetsbedömning",
-      "technicalDocumentation": "Teknisk dokumentation"
+      "technicalDocumentation": "Teknisk dokumentation",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "CE-märkt",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Webbplats/kontaktformulär för säkerhetsrapportering (URL)",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Unik formelidentifierare (UFI)",
+        "help": "Behövs endast när en blandning i denna leksak, till exempel en lösning i en kemilåda eller slime, är klassificerad som farlig på grund av hälsoeffekter eller fysikaliska effekter enligt förordning (EG) nr 1272/2008 (CLP). Blandningen ska då anmälas till ett giftinformationscentrum och dess UFI ska anges på etiketten. Lämna annars tomt.",
+        "placeholder": "t.ex. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Denna leksak är avsedd för barn under 36 månader. Strängare restriktioner för allergena doftämnen gäller, och eventuella smådelar måste bedömas med avseende på kvävningsrisk.",
       "mouthContact": "Denna leksak är avsedd att stoppas i munnen. Strängare restriktioner för allergena doftämnen och kemisk migration gäller.",
       "unknownAllergens": "Detta DPP kan vara ofullständigt eftersom information om allergena doftämnen är obligatorisk i tillämpliga fall. Ersätt \"Okänt\" med Ja eller Nej innan publicering.",
-      "suggestLegislation": "Baserat på den valda leksakskategorin, överväg även att kryssa i: {{list}}."
+      "suggestLegislation": "Baserat på den valda leksakskategorin, överväg även att kryssa i: {{list}}.",
+      "ufiFormat": "En UFI består av fyra grupper med fyra tecken, till exempel N1QV-R02N-J00M-WQD5. Formatet kontrolleras, men inte en anmälan till ett giftinformationscentrum."
     },
     "disclaimer": {
       "title": "DPP för leksaker — ansvarsfriskrivning för regelefterlevnad",

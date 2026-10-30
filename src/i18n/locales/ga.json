@@ -656,7 +656,8 @@
       "status": "Stádas",
       "euDoc": "Dearbhú Comhréireachta an AE",
       "safetyAssessment": "Measúnú sábháilteachta",
-      "technicalDocumentation": "Doiciméadacht theicniúil"
+      "technicalDocumentation": "Doiciméadacht theicniúil",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Marcáil CE",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Suíomh gréasáin tuairiscithe sábháilteachta / URL na foirme teagmhála",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Aitheantóir uathúil foirmle (UFI)",
+        "help": "Ní gá é ach amháin nuair a aicmítear meascán sa bhréagán seo, mar shampla tuaslagán i bhfoireann ceimice nó sláim, mar mheascán guaiseach mar gheall ar éifeachtaí sláinte nó fisiceacha faoi Rialachán (CE) Uimh. 1272/2008 (CLP). Ansin ní mór fógra a thabhairt d'ionad nimhe faoin meascán sin agus a UFI a chur ar a lipéad. Fág folamh é ar shlí eile.",
+        "placeholder": "m.sh. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Tá an bréagán seo ceaptha do leanaí faoi 36 mhí d'aois. Tá srianta níos déine ar chumhráin ailléirgineacha i bhfeidhm, agus ní mór measúnú a dhéanamh ar aon pháirteanna beaga i gcoinne guaiseacha tachtaithe.",
       "mouthContact": "Tá an bréagán seo ceaptha le cur sa bhéal. Tá srianta níos déine ar chumhráin ailléirgineacha agus ar imirce cheimiceach i bhfeidhm.",
       "unknownAllergens": "D'fhéadfadh an DPP seo a bheith neamhiomlán toisc go bhfuil faisnéis faoi chumhráin ailléirgineacha éigeantach nuair is infheidhme. Cuir Tá nó Níl in ionad \"Anaithnid\" sula bhfoilsítear é.",
-      "suggestLegislation": "Bunaithe ar an gcatagóir bréagán roghnaithe, smaoinigh freisin ar na nithe seo a leanas a thiceáil: {{list}}."
+      "suggestLegislation": "Bunaithe ar an gcatagóir bréagán roghnaithe, smaoinigh freisin ar na nithe seo a leanas a thiceáil: {{list}}.",
+      "ufiFormat": "Tá ceithre ghrúpa de cheithre charachtar in UFI, mar shampla N1QV-R02N-J00M-WQD5. Seiceáiltear an fhormáid, ach ní sheiceáiltear aighneacht chuig ionad nimhe."
     },
     "disclaimer": {
       "title": "DPP Bréagán — séanadh comhlíonta",

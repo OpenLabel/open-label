@@ -656,7 +656,8 @@
       "status": "Status",
       "euDoc": "EU Declaration of Conformity",
       "safetyAssessment": "Safety assessment",
-      "technicalDocumentation": "Technical documentation"
+      "technicalDocumentation": "Technical documentation",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "CE marked",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Safety reporting website / contact form URL",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Unique formula identifier (UFI)",
+        "help": "Only needed when a mixture in this toy, for example a solution in a chemistry set or a slime, is classified as hazardous for health or physical effects under Regulation (EC) No 1272/2008 (CLP). That mixture then needs a poison centre notification and its UFI on its label. Leave empty otherwise.",
+        "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "This toy is intended for children under 36 months. Stricter allergenic fragrance restrictions apply, and any small parts must be assessed against choking hazards.",
       "mouthContact": "This toy is intended to be placed in the mouth. Stricter allergenic fragrance and chemical migration restrictions apply.",
       "unknownAllergens": "This DPP may be incomplete because allergenic fragrance information is mandatory when applicable. Replace \"Unknown\" with Yes or No before publishing.",
-      "suggestLegislation": "Based on the selected toy category, also consider ticking: {{list}}."
+      "suggestLegislation": "Based on the selected toy category, also consider ticking: {{list}}.",
+      "ufiFormat": "A UFI has four groups of four characters, for example N1QV-R02N-J00M-WQD5. The format is checked, but a poison centre submission is not."
     },
     "disclaimer": {
       "title": "Toys DPP — compliance disclaimer",

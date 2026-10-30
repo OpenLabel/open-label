@@ -656,7 +656,8 @@
       "status": "Stat",
       "euDoc": "Dikjarazzjoni ta' Konformità tal-UE",
       "safetyAssessment": "Valutazzjoni tas-sikurezza",
-      "technicalDocumentation": "Dokumentazzjoni teknika"
+      "technicalDocumentation": "Dokumentazzjoni teknika",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "B'marka CE",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Sit elettroniku / URL tal-formola ta’ kuntatt għar-rappurtar tas-sigurtà",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Identifikatur uniku tal-formula (UFI)",
+        "help": "Meħtieġ biss meta taħlita f'dan il-ġugarell, pereżempju soluzzjoni f'sett tal-kimika jew slime, tkun ikklassifikata bħala perikoluża għall-effetti fuq is-saħħa jew fiżiċi skont ir-Regolament (KE) Nru 1272/2008 (CLP). Dik it-taħlita mbagħad teħtieġ notifika lil ċentru tal-veleni u l-UFI tagħha fuq it-tikketta tagħha. Inkella ħalliha vojta.",
+        "placeholder": "eż. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Dan il-ġugarell huwa maħsub għal tfal taħt is-36 xahar. Japplikaw restrizzjonijiet aktar stretti fuq il-fwejjaħ allerġeniċi, u kwalunkwe parti żgħira trid tiġi vvalutata kontra l-perikli ta’ fgar.",
       "mouthContact": "Dan il-ġugarell huwa maħsub biex jitqiegħed fil-ħalq. Japplikaw restrizzjonijiet aktar stretti fuq il-fwejjaħ allerġeniċi u l-migrazzjoni kimika.",
       "unknownAllergens": "Dan id-DPP jista’ jkun inkomplet minħabba li l-informazzjoni dwar il-fwejjaħ allerġeniċi hija obbligatorja fejn applikabbli. Ibdel \"Mhux magħruf\" b’Iva jew Le qabel ma tippubblika.",
-      "suggestLegislation": "Abbażi tal-kategorija tal-ġugarell magħżula, ikkunsidra wkoll li timmarka: {{list}}."
+      "suggestLegislation": "Abbażi tal-kategorija tal-ġugarell magħżula, ikkunsidra wkoll li timmarka: {{list}}.",
+      "ufiFormat": "UFI għandu erba' gruppi ta' erba' karattri, pereżempju N1QV-R02N-J00M-WQD5. Il-format jiġi ċċekkjat, iżda s-sottomissjoni lil ċentru tal-veleni ma tiġix iċċekkjata."
     },
     "disclaimer": {
       "title": "DPP tal-Ġugarelli — ċaħda ta’ responsabbiltà dwar il-konformità",

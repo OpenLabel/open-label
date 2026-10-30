@@ -656,7 +656,8 @@
       "status": "Állapot",
       "euDoc": "EU-megfelelőségi nyilatkozat",
       "safetyAssessment": "Biztonsági értékelés",
-      "technicalDocumentation": "Műszaki dokumentáció"
+      "technicalDocumentation": "Műszaki dokumentáció",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "CE jelöléssel ellátva",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Biztonsági bejelentések weboldala / kapcsolatfelvételi űrlap URL-je",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Egyedi formulaazonosító (UFI)",
+        "help": "Csak akkor szükséges, ha a játékban lévő keverék, például egy kémiai készlet oldata vagy egy slime, az 1272/2008/EK rendelet (CLP) szerint egészségi vagy fizikai hatásai miatt veszélyesnek minősül. Ilyenkor a keveréket be kell jelenteni a toxikológiai tájékoztató szolgálatnak, és UFI-jét fel kell tüntetni a címkéjén. Egyéb esetben hagyja üresen.",
+        "placeholder": "pl. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Ez a játék 36 hónaposnál fiatalabb gyermekek számára készült. Szigorúbb allergén illatanyag-korlátozások vonatkoznak rá, és minden apró alkatrészt a fulladásveszély szempontjából értékelni kell.",
       "mouthContact": "Ez a játék arra készült, hogy a szájba vegyék. Szigorúbb allergén illatanyag- és vegyianyag-kioldódási korlátozások vonatkoznak rá.",
       "unknownAllergens": "Ez a DPP hiányos lehet, mivel az allergén illatanyagokra vonatkozó információk megadása adott esetben kötelező. A közzététel előtt cserélje ki az „Ismeretlen” értéket „Igen”-re vagy „Nem”-re.",
-      "suggestLegislation": "A kiválasztott játékkategória alapján fontolja meg a következők bejelölését is: {{list}}."
+      "suggestLegislation": "A kiválasztott játékkategória alapján fontolja meg a következők bejelölését is: {{list}}.",
+      "ufiFormat": "Az UFI négy, egyenként négy karakterből álló csoportból áll, például N1QV-R02N-J00M-WQD5. A formátum ellenőrzése megtörténik, a toxikológiai tájékoztató szolgálatnak tett bejelentésé azonban nem."
     },
     "disclaimer": {
       "title": "Játékok DPP – megfelelőségi felelősségkizáró nyilatkozat",
