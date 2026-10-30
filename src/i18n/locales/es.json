@@ -656,7 +656,8 @@
       "status": "Estado",
       "euDoc": "Declaración UE de Conformidad",
       "safetyAssessment": "Evaluación de la seguridad",
-      "technicalDocumentation": "Documentación técnica"
+      "technicalDocumentation": "Documentación técnica",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Con marcado CE",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Sitio web / URL del formulario de contacto para notificaciones de seguridad",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Identificador único de fórmula (UFI)",
+        "help": "Solo es necesario cuando una mezcla de este juguete, por ejemplo una solución de un juego de química o un slime, está clasificada como peligrosa por sus efectos sobre la salud o sus efectos físicos con arreglo al Reglamento (CE) n.º 1272/2008 (CLP). Esa mezcla requiere entonces una notificación a un centro de toxicología y su UFI en la etiqueta. En caso contrario, déjelo vacío.",
+        "placeholder": "p. ej., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Este juguete está destinado a niños menores de 36 meses. Se aplican restricciones más estrictas sobre fragancias alergénicas, y cualquier pieza pequeña debe ser evaluada para detectar riesgos de asfixia.",
       "mouthContact": "Está previsto que este juguete se introduzca en la boca. Se aplican restricciones más estrictas sobre fragancias alergénicas y migración de sustancias químicas.",
       "unknownAllergens": "Este DPP puede estar incompleto porque la información sobre fragancias alergénicas es obligatoria cuando proceda. Reemplace \"Desconocido\" por Sí o No antes de publicar.",
-      "suggestLegislation": "Según la categoría de juguete seleccionada, considere también marcar: {{list}}."
+      "suggestLegislation": "Según la categoría de juguete seleccionada, considere también marcar: {{list}}.",
+      "ufiFormat": "Un UFI tiene cuatro grupos de cuatro caracteres, por ejemplo N1QV-R02N-J00M-WQD5. Se comprueba el formato, pero no la notificación a un centro de toxicología."
     },
     "disclaimer": {
       "title": "DPP para juguetes — descargo de responsabilidad sobre la conformidad",

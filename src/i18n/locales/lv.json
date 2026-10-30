@@ -656,7 +656,8 @@
       "status": "Statuss",
       "euDoc": "ES atbilstības deklarācija",
       "safetyAssessment": "Drošuma novērtējums",
-      "technicalDocumentation": "Tehniskā dokumentācija"
+      "technicalDocumentation": "Tehniskā dokumentācija",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Ar CE marķējumu",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Tīmekļa vietne / saziņas veidlapas URL ziņošanai par drošību",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Unikālais formulas identifikators (UFI)",
+        "help": "Nepieciešams tikai tad, ja šīs rotaļlietas maisījums, piemēram, ķīmijas komplekta šķīdums vai gļotas, saskaņā ar Regulu (EK) Nr. 1272/2008 (CLP) ir klasificēts kā bīstams ietekmes uz veselību vai fizikālās ietekmes dēļ. Par šo maisījumu tad jāpaziņo saindēšanās informācijas centram, un tā UFI jānorāda tā etiķetē. Pretējā gadījumā atstājiet tukšu.",
+        "placeholder": "piem., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Šī rotaļlieta ir paredzēta bērniem līdz 36 mēnešu vecumam. Tiek piemēroti stingrāki alergēno smaržvielu ierobežojumi, un visas sīkās detaļas ir jānovērtē attiecībā uz aizrīšanās risku.",
       "mouthContact": "Šī rotaļlieta ir paredzēta likšanai mutē. Tiek piemēroti stingrāki ierobežojumi attiecībā uz alergēnām smaržvielām un ķīmisko vielu migrāciju.",
       "unknownAllergens": "Šī DPP var būt nepilnīga, jo informācija par alergēnām smaržvielām ir obligāta, ja tā ir piemērojama. Pirms publicēšanas aizstājiet \"Nezināms\" ar \"Jā\" vai \"Nē\".",
-      "suggestLegislation": "Pamatojoties uz izvēlēto rotaļlietu kategoriju, apsveriet arī atzīmēt: {{list}}."
+      "suggestLegislation": "Pamatojoties uz izvēlēto rotaļlietu kategoriju, apsveriet arī atzīmēt: {{list}}.",
+      "ufiFormat": "UFI sastāv no četrām grupām pa četrām rakstzīmēm, piemēram, N1QV-R02N-J00M-WQD5. Tiek pārbaudīts formāts, bet ne paziņojuma iesniegšana saindēšanās informācijas centram."
     },
     "disclaimer": {
       "title": "Rotaļlietu DPP — atruna par atbilstību",

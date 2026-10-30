@@ -656,7 +656,8 @@
       "status": "Statut",
       "euDoc": "Déclaration UE de conformité",
       "safetyAssessment": "Évaluation de la sécurité",
-      "technicalDocumentation": "Documentation technique"
+      "technicalDocumentation": "Documentation technique",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Marqué CE",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Site web / URL du formulaire de contact pour le signalement de sécurité",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Identifiant unique de formulation (UFI)",
+        "help": "Uniquement nécessaire lorsqu'un mélange contenu dans ce jouet, par exemple une solution d'une boîte de chimie ou un slime, est classé comme dangereux en raison de ses effets sur la santé ou de ses effets physiques au titre du règlement (CE) n° 1272/2008 (CLP). Ce mélange doit alors faire l'objet d'une notification à un centre antipoison et porter son UFI sur son étiquette. Sinon, laissez vide.",
+        "placeholder": "p. ex. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Ce jouet est destiné aux enfants de moins de 36 mois. Des restrictions plus strictes sur les parfums allergènes s'appliquent, et toute petite pièce doit être évaluée pour les risques d'étouffement.",
       "mouthContact": "Ce jouet est destiné à être mis en bouche. Des restrictions plus strictes sur les parfums allergènes et la migration des produits chimiques s'appliquent.",
       "unknownAllergens": "Ce DPP peut être incomplet car les informations sur les parfums allergènes sont obligatoires le cas échéant. Remplacez \"Inconnu\" par Oui ou Non avant de publier.",
-      "suggestLegislation": "En fonction de la catégorie de jouet sélectionnée, envisagez également de cocher : {{list}}."
+      "suggestLegislation": "En fonction de la catégorie de jouet sélectionnée, envisagez également de cocher : {{list}}.",
+      "ufiFormat": "Un UFI comporte quatre groupes de quatre caractères, par exemple N1QV-R02N-J00M-WQD5. Le format est vérifié, mais pas la notification à un centre antipoison."
     },
     "disclaimer": {
       "title": "DPP pour jouets — clause de non-responsabilité de conformité",

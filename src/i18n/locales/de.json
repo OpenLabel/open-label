@@ -656,7 +656,8 @@
       "status": "Status",
       "euDoc": "EU-Konformitätserklärung",
       "safetyAssessment": "Sicherheitsbewertung",
-      "technicalDocumentation": "Technische Unterlagen"
+      "technicalDocumentation": "Technische Unterlagen",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "CE-gekennzeichnet",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Webseite / URL des Kontaktformulars für Sicherheitsmeldungen",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Eindeutiger Rezepturidentifikator (UFI)",
+        "help": "Nur erforderlich, wenn ein Gemisch in diesem Spielzeug, zum Beispiel eine Lösung in einem Chemiebaukasten oder ein Schleim, nach der Verordnung (EG) Nr. 1272/2008 (CLP) aufgrund gesundheitlicher oder physikalischer Wirkungen als gefährlich eingestuft ist. Dieses Gemisch muss dann einer Giftinformationszentrale gemeldet werden und seinen UFI auf dem Etikett tragen. Andernfalls leer lassen.",
+        "placeholder": "z. B. N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Dieses Spielzeug ist für Kinder unter 36 Monaten bestimmt. Es gelten strengere Beschränkungen für allergene Duftstoffe, und alle Kleinteile müssen auf Erstickungsgefahr geprüft werden.",
       "mouthContact": "Dieses Spielzeug ist dazu bestimmt, in den Mund genommen zu werden. Es gelten strengere Beschränkungen für allergene Duftstoffe und die Migration von Chemikalien.",
       "unknownAllergens": "Dieser DPP ist möglicherweise unvollständig, da Angaben zu allergenen Duftstoffen, falls zutreffend, obligatorisch sind. Ersetzen Sie „Unbekannt“ vor der Veröffentlichung durch „Ja“ oder „Nein“.",
-      "suggestLegislation": "Basierend auf der ausgewählten Spielzeugkategorie sollten Sie auch Folgendes ankreuzen: {{list}}."
+      "suggestLegislation": "Basierend auf der ausgewählten Spielzeugkategorie sollten Sie auch Folgendes ankreuzen: {{list}}.",
+      "ufiFormat": "Ein UFI besteht aus vier Gruppen zu je vier Zeichen, zum Beispiel N1QV-R02N-J00M-WQD5. Geprüft wird das Format, nicht aber eine Meldung an eine Giftinformationszentrale."
     },
     "disclaimer": {
       "title": "Spielzeug-DPP – Konformitätshinweis",

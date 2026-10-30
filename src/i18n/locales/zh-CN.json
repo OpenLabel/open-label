@@ -656,7 +656,8 @@
       "status": "状态",
       "euDoc": "欧盟符合性声明",
       "safetyAssessment": "安全评估",
-      "technicalDocumentation": "技术文件"
+      "technicalDocumentation": "技术文件",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "已加贴CE标志",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "安全报告网站/联系表单 URL",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "唯一配方标识符 (UFI)",
+        "help": "仅当本玩具中的混合物（例如化学实验套装中的溶液或史莱姆）根据第 1272/2008 号条例 (EC)（CLP）因健康危害或物理危害被归类为危险混合物时才需要填写。此时该混合物须向中毒控制中心提交通报，并在其标签上标注 UFI。否则请留空。",
+        "placeholder": "例如：N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "此玩具适用于 36 个月以下的儿童。适用更严格的致敏香料限制，并且必须评估任何小部件是否存在窒息危险。",
       "mouthContact": "此玩具旨在放入口中。适用更严格的致敏香料和化学迁移限制。",
       "unknownAllergens": "此 DPP 可能不完整，因为在适用情况下，致敏香料信息是强制性的。在发布前将“未知”替换为“是”或“否”。",
-      "suggestLegislation": "根据所选玩具类别，还请考虑勾选：{{list}}。"
+      "suggestLegislation": "根据所选玩具类别，还请考虑勾选：{{list}}。",
+      "ufiFormat": "UFI 由四组、每组四个字符组成，例如 N1QV-R02N-J00M-WQD5。系统仅检查格式，不检查是否已向中毒控制中心提交。"
     },
     "disclaimer": {
       "title": "玩具 DPP — 合规免责声明",

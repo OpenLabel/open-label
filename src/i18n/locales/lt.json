@@ -656,7 +656,8 @@
       "status": "Būsena",
       "euDoc": "ES atitikties deklaracija",
       "safetyAssessment": "Saugos vertinimas",
-      "technicalDocumentation": "Techninė dokumentacija"
+      "technicalDocumentation": "Techninė dokumentacija",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Pažymėtas CE ženklu",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Svetainės / kontaktinės formos URL pranešimams apie saugą",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Unikalusis formulės identifikatorius (UFI)",
+        "help": "Reikalingas tik tada, kai šio žaislo mišinys, pavyzdžiui, chemijos rinkinio tirpalas ar gleivės, pagal Reglamentą (EB) Nr. 1272/2008 (CLP) klasifikuojamas kaip pavojingas dėl poveikio sveikatai arba fizikinio poveikio. Tada apie tą mišinį reikia pranešti apsinuodijimų kontrolės ir informacijos biurui, o jo UFI turi būti nurodytas etiketėje. Kitu atveju palikite tuščią.",
+        "placeholder": "pvz., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Šis žaislas skirtas vaikams iki 36 mėnesių. Taikomi griežtesni alergeninių kvapiųjų medžiagų apribojimai, o visos smulkios detalės turi būti įvertintos dėl užspringimo pavojaus.",
       "mouthContact": "Šis žaislas skirtas dėti į burną. Taikomi griežtesni alergeninių kvapiųjų medžiagų ir cheminių medžiagų migracijos apribojimai.",
       "unknownAllergens": "Šis DPP gali būti nepilnas, nes informacija apie alergenines kvapiąsias medžiagas yra privaloma, kai taikoma. Prieš skelbdami, pakeiskite „Nežinoma“ į „Taip“ arba „Ne“.",
-      "suggestLegislation": "Atsižvelgiant į pasirinktą žaislo kategoriją, taip pat apsvarstykite galimybę pažymėti: {{list}}."
+      "suggestLegislation": "Atsižvelgiant į pasirinktą žaislo kategoriją, taip pat apsvarstykite galimybę pažymėti: {{list}}.",
+      "ufiFormat": "UFI sudaro keturios grupės po keturis ženklus, pavyzdžiui, N1QV-R02N-J00M-WQD5. Tikrinamas formatas, bet ne pranešimo apsinuodijimų kontrolės ir informacijos biurui pateikimas."
     },
     "disclaimer": {
       "title": "Žaislų DPP – atitikties atsakomybės apribojimas",

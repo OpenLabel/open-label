@@ -656,7 +656,8 @@
       "status": "Estado",
       "euDoc": "Declaração UE de Conformidade",
       "safetyAssessment": "Avaliação da segurança",
-      "technicalDocumentation": "Documentação técnica"
+      "technicalDocumentation": "Documentação técnica",
+      "ufi": "UFI"
     },
     "values": {
       "ceMarked": "Marcação CE",
@@ -969,6 +970,11 @@
       "safety_website": {
         "label": "Sítio web / URL do formulário de contacto para comunicação de segurança",
         "placeholder": "https://..."
+      },
+      "ufi_code": {
+        "label": "Identificador único de fórmula (UFI)",
+        "help": "Apenas necessário quando uma mistura contida neste brinquedo, por exemplo uma solução de um conjunto de química ou um slime, está classificada como perigosa devido aos seus efeitos na saúde ou efeitos físicos nos termos do Regulamento (CE) n.º 1272/2008 (CLP). Essa mistura exige então uma notificação a um centro antivenenos e o respetivo UFI no rótulo. Caso contrário, deixe vazio.",
+        "placeholder": "p. ex., N1QV-R02N-J00M-WQD5"
       }
     },
     "options": {
@@ -1125,7 +1131,8 @@
       "youngChild": "Este brinquedo destina-se a crianças com menos de 36 meses. Aplicam-se restrições mais rigorosas a fragrâncias alergénicas, e quaisquer peças pequenas devem ser avaliadas quanto ao risco de asfixia.",
       "mouthContact": "Este brinquedo destina-se a ser colocado na boca. Aplicam-se restrições mais rigorosas a fragrâncias alergénicas e à migração de produtos químicos.",
       "unknownAllergens": "Este DPP pode estar incompleto porque a informação sobre fragrâncias alergénicas é obrigatória quando aplicável. Substitua \"Desconhecido\" por Sim ou Não antes de publicar.",
-      "suggestLegislation": "Com base na categoria de brinquedo selecionada, considere também assinalar: {{list}}."
+      "suggestLegislation": "Com base na categoria de brinquedo selecionada, considere também assinalar: {{list}}.",
+      "ufiFormat": "Um UFI tem quatro grupos de quatro carateres, por exemplo N1QV-R02N-J00M-WQD5. O formato é verificado, mas a notificação a um centro antivenenos não."
     },
     "disclaimer": {
       "title": "DPP para Brinquedos — aviso de isenção de responsabilidade sobre conformidade",
