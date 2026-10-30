@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Unik formelidentifierare (UFI)",
+        "label": "Unik formuleringsidentifierare (UFI)",
         "help": "Behövs endast när en blandning i denna leksak, till exempel en lösning i en kemilåda eller slime, är klassificerad som farlig på grund av hälsoeffekter eller fysikaliska effekter enligt förordning (EG) nr 1272/2008 (CLP). Blandningen ska då anmälas till ett giftinformationscentrum och dess UFI ska anges på etiketten. Lämna annars tomt.",
         "placeholder": "t.ex. N1QV-R02N-J00M-WQD5"
       }

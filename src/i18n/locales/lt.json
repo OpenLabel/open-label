@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Unikalusis formulės identifikatorius (UFI)",
+        "label": "Unikalus mišinio identifikatorius (UFI)",
         "help": "Reikalingas tik tada, kai šio žaislo mišinys, pavyzdžiui, chemijos rinkinio tirpalas ar gleivės, pagal Reglamentą (EB) Nr. 1272/2008 (CLP) klasifikuojamas kaip pavojingas dėl poveikio sveikatai arba fizikinio poveikio. Tada apie tą mišinį reikia pranešti apsinuodijimų kontrolės ir informacijos biurui, o jo UFI turi būti nurodytas etiketėje. Kitu atveju palikite tuščią.",
         "placeholder": "pvz., N1QV-R02N-J00M-WQD5"
       }
@@ -2361,7 +2361,7 @@
         "label": "Išimties taikymo priežastis ir teisinis pagrindas"
       },
       "ufi_code": {
-        "label": "Unikalus formulės identifikatorius (UFI)",
+        "label": "Unikalus mišinio identifikatorius (UFI)",
         "help": "Keturios grupės po keturis simbolius. Formatas tikrinamas, tačiau programėlė negali patikrinti pateikimo apsinuodijimų informacijos biurui.",
         "placeholder": "pvz., N1QV-R02N-J00M-WQD5"
       },

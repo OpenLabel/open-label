@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Entydig formulaidentifikator (UFI)",
+        "label": "Unik formelidentifikator (UFI)",
         "help": "Kun nødvendig, når en blanding i dette legetøj, f.eks. en opløsning i et kemisæt eller slim, er klassificeret som farlig på grund af sundhedsmæssige eller fysiske virkninger i henhold til forordning (EF) nr. 1272/2008 (CLP). Blandingen skal så anmeldes til giftlinjen, og dens UFI skal stå på etiketten. Lad feltet stå tomt i andre tilfælde.",
         "placeholder": "f.eks. N1QV-R02N-J00M-WQD5"
       }
