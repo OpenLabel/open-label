@@ -583,6 +583,24 @@ export class ToysTemplate extends BaseTemplate {
     if (data.ce_declaration_ack || data.ce_marked) logos.push('ce');
     return logos;
   }
+
+  /** Non-blocking UFI format check. Never prevents saving. */
+  getInlineWarnings(data: Record<string, unknown>): {
+    fieldId: string;
+    messageKey: string;
+    message: string;
+  }[] {
+    const code = typeof data.ufi_code === 'string' ? data.ufi_code.trim() : '';
+    if (!code || !shouldShowToyUfi(data)) return [];
+    if (UFI_FORMAT_REGEX.test(code)) return [];
+    return [
+      {
+        fieldId: 'ufi_code',
+        messageKey: 'toys.warnings.ufiFormat',
+        message: TOY_UFI_FORMAT_WARNING,
+      },
+    ];
+  }
 }
 
 export const toysTemplate = new ToysTemplate();

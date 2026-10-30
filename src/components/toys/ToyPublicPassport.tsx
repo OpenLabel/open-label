@@ -553,6 +553,13 @@ export function ToyPublicPassport({
             </div>
           )}
 
+          {shouldShowToyUfi(d) && (
+            <p data-testid="toy-public-ufi">
+              {t('toyPublic.rows.ufi', 'UFI')}: {(d.ufi_code as string).trim()}
+            </p>
+          )}
+
+
           <div>
             <h3 className="text-sm font-semibold mt-4 mb-1">
               {t('toyPublic.subsections.safetyIncidentReporting')}
