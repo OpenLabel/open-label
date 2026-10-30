@@ -72,12 +72,9 @@ describe('Toys UFI field', () => {
   it('never blocks saving: the field is optional and the warning is not a required-field error', () => {
     const data = { toy_category: 'slime', ufi_code: 'BAD' };
     expect(toysTemplate.getInlineWarnings(data)).toHaveLength(1);
-    const missing = toysTemplate.getMissingRequiredFields
-      ? toysTemplate.getMissingRequiredFields(data).map((m: { id?: string } | string) =>
-          typeof m === 'string' ? m : m.id,
-        )
-      : [];
-    expect(missing).not.toContain('ufi_code');
+    // Required-field checks only consider `required: true` questions.
+    expect(ufiQuestion.required).toBe(false);
+    expect(ufiQuestion.badge).not.toBe('required');
   });
 });
 
