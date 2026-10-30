@@ -1,0 +1,10 @@
+GRANT EXECUTE ON FUNCTION public.claim_counterfeit_lead_delivery(uuid, uuid, text, interval) TO service_role;
+GRANT EXECUTE ON FUNCTION public.finish_counterfeit_lead_delivery(uuid, text, uuid, boolean) TO service_role;
+COMMENT ON FUNCTION public.claim_counterfeit_lead_delivery(uuid, uuid, text, interval) IS 'Claims the email or slack delivery of a counterfeit lead (email first, then slack)';
+COMMENT ON FUNCTION public.finish_counterfeit_lead_delivery(uuid, text, uuid, boolean) IS 'Records the result of a claimed counterfeit lead delivery';
+COMMENT ON FUNCTION public.claim_counterfeit_slack_lead(uuid, uuid, interval) IS 'DEPRECATED: replaced by claim_counterfeit_lead_delivery (email and Slack leads)';
+COMMENT ON FUNCTION public.finish_counterfeit_slack_lead(uuid, uuid, boolean) IS 'DEPRECATED: replaced by finish_counterfeit_lead_delivery (email and Slack leads)';
+COMMENT ON COLUMN public.counterfeit_lead_deliveries.email_status IS 'Email delivery state of the counterfeit lead (sent before Slack)';
+COMMENT ON COLUMN public.counterfeit_lead_deliveries.email_claim IS 'Current email delivery claim token';
+COMMENT ON COLUMN public.counterfeit_lead_deliveries.email_claimed_at IS 'When the current email claim was taken (stale after 2 minutes)';
+COMMENT ON COLUMN public.counterfeit_lead_deliveries.email_sent_at IS 'When the lead email was sent';
