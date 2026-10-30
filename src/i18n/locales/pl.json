@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Unikalny identyfikator receptury (UFI)",
+        "label": "Niepowtarzalny identyfikator postaci czynnej (UFI)",
         "help": "Wymagany tylko wtedy, gdy mieszanina w tej zabawce, na przykład roztwór w zestawie chemicznym lub slime, jest sklasyfikowana jako stwarzająca zagrożenie dla zdrowia lub zagrożenie fizyczne zgodnie z rozporządzeniem (WE) nr 1272/2008 (CLP). Taka mieszanina wymaga wówczas zgłoszenia do ośrodka toksykologicznego, a jej UFI musi znajdować się na etykiecie. W przeciwnym razie pozostaw puste.",
         "placeholder": "np. N1QV-R02N-J00M-WQD5"
       }

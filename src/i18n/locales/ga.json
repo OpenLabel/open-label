@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Aitheantóir uathúil foirmle (UFI)",
+        "label": "Aitheantóir foirmle uathúil (UFI)",
         "help": "Ní gá é ach amháin nuair a aicmítear meascán sa bhréagán seo, mar shampla tuaslagán i bhfoireann ceimice nó sláim, mar mheascán guaiseach mar gheall ar éifeachtaí sláinte nó fisiceacha faoi Rialachán (CE) Uimh. 1272/2008 (CLP). Ansin ní mór fógra a thabhairt d'ionad nimhe faoin meascán sin agus a UFI a chur ar a lipéad. Fág folamh é ar shlí eile.",
         "placeholder": "m.sh. N1QV-R02N-J00M-WQD5"
       }
