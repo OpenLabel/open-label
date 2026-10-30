@@ -1434,7 +1434,7 @@ export class DetergentsTemplate extends BaseTemplate {
     // Format checks (non-blocking)
     for (const id of ['ufi_code', 'future_ufi_code']) {
       const ufi = text(data[id]);
-      if (ufi && !/^[0-9A-HJKMNP-TV-Y]{4}(?:-[0-9A-HJKMNP-TV-Y]{4}){3}$/.test(ufi)) {
+      if (ufi && !/^[0-9ACDEFGHJKMNP-Y]{4}(?:-[0-9ACDEFGHJKMNP-Y]{4}){3}$/.test(ufi)) {
         push(id, 'ufiFormat');
       }
     }

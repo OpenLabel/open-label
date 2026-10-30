@@ -385,7 +385,9 @@ describe('DetergentsTemplate', () => {
       expect(names({ future_ufi_code: 'N1QV-R02N-J00M' })).toEqual(['ufiFormat']);
       expect(names({ future_ufi_code: 'N1QV-R02N-J00M-WQD5' })).toEqual([]);
       expect(names({ ufi_code: 'N1QV-R02N-J00M' })).toEqual(['ufiFormat']);
-      expect(names({ ufi_code: 'N1QV-R02N-J00M-WQDU' })).toEqual(['ufiFormat']);
+      expect(names({ ufi_code: 'N1QV-R02N-J00M-WQDU' })).toEqual([]);
+      for (const bad of ['B', 'I', 'L', 'O', 'Z']) expect(names({ ufi_code: `N1QV-R02N-J00M-WQD${bad}` })).toEqual(['ufiFormat']);
+      expect(names({ future_ufi_code: 'N1QV-R02N-J00M-WQDB' })).toEqual(['ufiFormat']);
       expect(names({ ingredients_url: 'example.com/ingredients' })).toEqual(['urlFormat']);
       expect(names({ sds_url: 'javascript:alert(1)' })).toEqual(['urlFormat']);
       expect(names({ manufacturer_email: 'not-an-email' })).toEqual(['emailFormat']);
