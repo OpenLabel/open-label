@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Kordumatu koostisidentifikaator (UFI)",
+        "label": "Unikaalne koostise tähis (UFI)",
         "help": "Vajalik ainult siis, kui selle mänguasja segu, näiteks keemiakomplekti lahus või lima, on määruse (EÜ) nr 1272/2008 (CLP) kohaselt klassifitseeritud terviseohu või füüsikalise ohu tõttu ohtlikuks. Sellest segust tuleb siis teavitada mürgistusteabekeskust ja selle UFI peab olema märgisel. Muul juhul jätke tühjaks.",
         "placeholder": "nt N1QV-R02N-J00M-WQD5"
       }
@@ -2361,7 +2361,7 @@
         "label": "Erandi põhjus ja õiguslik alus"
       },
       "ufi_code": {
-        "label": "Kordumatu koostise identifikaator (UFI)",
+        "label": "Unikaalne koostise tähis (UFI)",
         "help": "Neli neljast märgist koosnevat rühma. Vormingut kontrollitakse, kuid rakendus ei saa mürgistusteabekeskusele esitamist kontrollida.",
         "placeholder": "nt N1QV-R02N-J00M-WQD5"
       },
@@ -2738,7 +2738,7 @@
         "help": "Identifikaatorid laaditakse õigusakti ESPR alusel loodud registrisse üles enne toote turule laskmist. Rakendus ei saa üleslaadimist kontrollida ning seda vastust avalikul passil ei kuvata."
       },
       "future_ufi_code": {
-        "label": "Koostise kordumatu tunnus (UFI) märgistusel",
+        "label": "Unikaalne koostise tähis (UFI) märgistusel",
         "help": "Alates 23. septembrist 2029 peab iga detergendi märgistusel olema UFI, mille ees on 'UFI:' (määruse (EU) 2026/405 V lisa A osa punkti 1 alapunkt b), olenemata sellest, kas toode on klassifitseeritud ohtlikuks või mitte. Neli neljamärgilist rühma. Kui mürgistusteabekeskuse UFI on olemas, sisestage sama kood.",
         "placeholder": "nt N1QV-R02N-J00M-WQD5"
       }
