@@ -29,6 +29,13 @@
       "when": 1793181927302,
       "tag": "0003_counterfeit_lead_slack_only",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1793380577021,
+      "tag": "0004_counterfeit_lead_email_and_slack",
+      "breakpoints": true
     }
   ]
 }
