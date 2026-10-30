@@ -2361,7 +2361,7 @@
         "label": "An fáth agus an bunús dlí atá leis an díolúine"
       },
       "ufi_code": {
-        "label": "Aitheantóir uathúil foirmlithe (UFI)",
+        "label": "Aitheantóir foirmle uathúil (UFI)",
         "help": "Ceithre ghrúpa de cheithre charachtar. Seiceáiltear an fhormáid, ach ní féidir leis an aip aighneacht chuig ionad nimhe a fhíorú.",
         "placeholder": "m.sh., N1QV-R02N-J00M-WQD5"
       },
@@ -2738,7 +2738,7 @@
         "help": "Uaslódáiltear na haitheantóirí chuig an gclárlann a bunaíodh faoi ESPR sula gcuirtear an táirge ar an margadh. Ní féidir leis an aip an t-uaslódáil a fhíorú, agus ní thaispeántar an freagra seo ar an bpas poiblí."
       },
       "future_ufi_code": {
-        "label": "Aaitheantóir foirmele uathúil (UFI) ar an lipéad",
+        "label": "Aitheantóir foirmle uathúil (UFI) ar an lipéad",
         "help": "Ón 23 Meán Fómhair 2029 amach, bíonn an UFI agus 'UFI:' roimhe ar lipéad gach glantaigh (Iarscríbhinn V Cuid A pointe 1(b) de Rialachán (EU) 2026/405), cibé acu a aicmítear an táirge mar tháirge guaiseach nó nach n-aicmítear. Ceithre ghrúpa de cheithre charachtar. Cuir isteach an cód céanna le UFI an ionaid nimhe nuair atá ceann ann.",
         "placeholder": "e.g., N1QV-R02N-J00M-WQD5"
       }
