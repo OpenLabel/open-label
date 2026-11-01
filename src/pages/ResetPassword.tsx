@@ -88,7 +88,7 @@ export default function ResetPassword() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-1.5 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
-            <BrandLogo heightClass="h-8" />
+            <BrandLogo heightClass="h-9 sm:h-10" />
           </Link>
           <LanguageSwitcher />
         </div>

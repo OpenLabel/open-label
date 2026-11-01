@@ -96,7 +96,7 @@ describe('Dashboard page', () => {
 
   it('shows OL branding', () => {
     render(<MemoryRouter><Dashboard /></MemoryRouter>);
-    expect(screen.getByText('OL')).toBeInTheDocument();
+    expect(screen.getAllByAltText('Open Label').length).toBeGreaterThan(0);
   });
 
   it('shows language switcher', () => {
