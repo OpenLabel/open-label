@@ -13,7 +13,7 @@
  *
  * See LICENSE and NOTICE files for details.
  */
-import logoHorizontal from '@/assets/brand/logo-horizontal.svg';
+import logoHorizontal from '@/assets/brand/logo-primary.svg';
 import logoIcon from '@/assets/brand/logo-icon.svg';
 import { cn } from '@/lib/utils';
 
