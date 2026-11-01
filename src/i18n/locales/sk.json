@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Jedinečný identifikátor zloženia (UFI)",
+        "label": "Jednoznačný identifikátor vzorca (UFI)",
         "help": "Vyžaduje sa iba vtedy, ak je zmes v tejto hračke, napríklad roztok v chemickej súprave alebo sliz, klasifikovaná ako nebezpečná z hľadiska účinkov na zdravie alebo fyzikálnej nebezpečnosti podľa nariadenia (ES) č. 1272/2008 (CLP). Pre takúto zmes sa potom vyžaduje oznámenie toxikologickému informačnému centru a jej UFI na etikete. V ostatných prípadoch nechajte prázdne.",
         "placeholder": "napr. N1QV-R02N-J00M-WQD5"
       }
@@ -1969,7 +1969,7 @@
       "pictograms": "Príslušné kódy piktogramov GHS alebo výslovné uvedenie ich neprítomnosti",
       "pcn_applicability": "Oznámenie toxikologickým centrám podľa prílohy VIII CLP",
       "pcn_exemption_reason": "Dôvod a právny základ výnimky",
-      "ufi_code": "Jednoznačný identifikátor zloženia (UFI)",
+      "ufi_code": "Jednoznačný identifikátor vzorca (UFI)",
       "pcn_status": "Príslušné oznámenia toxikologickým centrám",
       "sds_url": "Verejná URL karty bezpečnostných údajov",
       "sds_languages": "Jazyky a trhy KBÚ",
@@ -2361,7 +2361,7 @@
         "label": "Dôvod a právny základ pre výnimku"
       },
       "ufi_code": {
-        "label": "Jedinečný identifikátor zloženia (UFI)",
+        "label": "Jednoznačný identifikátor vzorca (UFI)",
         "help": "Štyri skupiny po štyroch znakoch. Formát sa kontroluje, ale aplikácia nemôže overiť podanie pre toxikologické informačné centrum.",
         "placeholder": "napr. N1QV-R02N-J00M-WQD5"
       },
@@ -2738,7 +2738,7 @@
         "help": "Identifikátory sa nahrávajú do registra zriadeného podľa ESPR pred uvedením výrobku na trh. Aplikácia nemôže nahratie overiť a táto odpoveď sa nezobrazuje vo verejnom pase."
       },
       "future_ufi_code": {
-        "label": "Jednoznačný identifikátor zloženia (UFI) na etikete",
+        "label": "Jednoznačný identifikátor vzorca (UFI) na etikete",
         "help": "Od 23. septembra 2029 sa na etikete každého detergentu uvádza kód UFI s predponou „UFI: “ (príloha V časť A bod 1 písm. b) nariadenia (EU) 2026/405), bez ohľadu na to, či je výrobok klasifikovaný ako nebezpečný. Štyri skupiny po štyroch znakoch. Ak existuje kód UFI pre toxikologické centrum, zadajte rovnaký kód.",
         "placeholder": "napr. N1QV-R02N-J00M-WQD5"
       }
