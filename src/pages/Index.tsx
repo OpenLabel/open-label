@@ -14,6 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
+import { BrandLogo } from '@/components/BrandLogo';
 import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';

@@ -1,3 +1,4 @@
+import { BrandLogo } from '@/components/BrandLogo';
 import { CarCleaningRetained } from '@/components/car-cleaning/CarCleaningRetained';
 import { CAR_CLEANING_HISTORY_COPY } from '../../supabase/functions/_shared/carCleaningPlatformCopy';
 /*
