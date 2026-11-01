@@ -13,8 +13,8 @@
  *
  * See LICENSE and NOTICE files for details.
  */
-import logoHorizontal from '@/assets/brand/01_open-label_primary-horizontal_color.svg';
-import logoIcon from '@/assets/brand/04_open-label_icon_color.svg';
+import logoHorizontal from '@/assets/brand/logo-horizontal.svg';
+import logoIcon from '@/assets/brand/logo-icon.svg';
 import { cn } from '@/lib/utils';
 
 interface BrandLogoProps {
