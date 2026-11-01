@@ -14,6 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
+import { BrandLogo } from '@/components/BrandLogo';
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
@@ -87,9 +88,7 @@ export default function ResetPassword() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="flex items-center gap-1.5 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity">
-            <span className="bg-primary text-primary-foreground px-2 py-0.5 rounded text-sm font-black">OL</span>
-            <span className="hidden sm:inline">Open Label</span>
-            <span className="hidden sm:inline text-primary font-bold">.eu</span>
+            <BrandLogo heightClass="h-9 sm:h-10" />
           </Link>
           <LanguageSwitcher />
         </div>

@@ -52,7 +52,7 @@ describe('Auth page', () => {
 
   it('shows DPP branding link', () => {
     renderAuth();
-    expect(screen.getByText('OL')).toBeInTheDocument();
+    expect(screen.getAllByAltText('Open Label').length).toBeGreaterThan(0);
   });
 
   it('shows subtitle', () => {

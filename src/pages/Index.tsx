@@ -14,6 +14,7 @@
  * See LICENSE and NOTICE files for details.
  */
 
+import { BrandLogo } from '@/components/BrandLogo';
 import { Link } from 'react-router-dom';
 import { useTranslation, Trans } from 'react-i18next';
 import { useAuth } from '@/hooks/useAuth';
@@ -64,10 +65,7 @@ export default function Index() {
       <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b">
         <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 grid grid-cols-[auto_minmax(0,1fr)] sm:flex justify-between items-center gap-2">
           <div className="flex items-center gap-2">
-            <div className="h-8 w-8 rounded-lg bg-primary flex items-center justify-center shrink-0">
-              <span className="text-primary-foreground font-bold text-sm">OL</span>
-            </div>
-            <h1 className="hidden sm:block text-lg font-semibold">Open Label <span className="text-primary font-bold">.eu</span></h1>
+            <h1 className="m-0"><BrandLogo heightClass="h-9 sm:h-11" /></h1>
             <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
           <div className="flex w-full sm:w-auto flex-wrap sm:flex-nowrap justify-end gap-1.5 sm:gap-2 items-center min-w-0">
@@ -495,10 +493,7 @@ export default function Index() {
         <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="flex items-center gap-2">
-              <div className="h-6 w-6 rounded bg-primary flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xs">OL</span>
-              </div>
-              <span className="text-sm font-medium">Open Label <span className="text-primary font-bold">.eu</span></span>
+              <BrandLogo heightClass="h-7" fullFrom="always" />
               <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
               <Badge variant="outline" className="text-xs">
                 {t('common.openSource')}
