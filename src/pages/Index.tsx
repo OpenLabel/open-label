@@ -41,7 +41,19 @@ const productCategories = [
     deadline: 'active'
   },
   { 
+    key: 'textiles',
+    status: 'active' as const,
+    regulation: 'EU 1007/2011 + ESPR',
+    deadline: 'active'
+  },
+  { 
     key: 'car_cleaning',
+    status: 'active' as const,
+    regulation: 'EC 648/2004 · EU 2026/405',
+    deadline: '2029-09-23'
+  },
+  {
+    key: 'detergents',
     status: 'active' as const,
     regulation: 'EC 648/2004 · EU 2026/405',
     deadline: '2029-09-23'
