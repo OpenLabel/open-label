@@ -8,7 +8,14 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs1" />
+     id="defs1">
+    <style>
+      @media (prefers-color-scheme: dark) {
+        #path1 { stroke: #FFFFFF; }
+        #rect1 { fill: #3B82F6 !important; }
+      }
+    </style>
+  </defs>
   <g
      transform="translate(45 45) scale(1.2)"
      id="g1">
