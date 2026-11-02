@@ -46,12 +46,6 @@ const productCategories = [
     regulation: 'EU 1007/2011 + ESPR',
     deadline: 'active'
   },
-  { 
-    key: 'car_cleaning',
-    status: 'active' as const,
-    regulation: 'EC 648/2004 · EU 2026/405',
-    deadline: '2029-09-23'
-  },
   {
     key: 'detergents',
     status: 'active' as const,
@@ -166,7 +160,7 @@ export default function Index() {
               <div className="text-sm text-muted-foreground">{t('landing.stats.free')}</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">2</div>
+              <div className="text-3xl md:text-4xl font-bold text-primary mb-1">4+</div>
               <div className="text-sm text-muted-foreground">{t('landing.stats.categories')}</div>
             </div>
             <div>
