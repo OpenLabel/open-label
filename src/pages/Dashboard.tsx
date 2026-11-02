@@ -201,7 +201,7 @@ export default function Dashboard() {
       <header className="border-b bg-background">
         <div className="container mx-auto px-3 sm:px-4 py-3 sm:py-4 flex justify-between items-center gap-2">
           <div className="flex items-center gap-2 min-w-0">
-            <h1 className="m-0"><BrandLogo heightClass="h-10 md:h-11" fullFrom="md" /></h1>
+            <h1 className="m-0"><BrandLogo heightClass="h-11 md:h-12" fullFrom="md" /></h1>
             <span className="text-[10px] text-muted-foreground/50 font-medium uppercase tracking-wider">beta</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-4 shrink-0">
