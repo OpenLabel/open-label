@@ -41,7 +41,19 @@ const productCategories = [
     deadline: 'active'
   },
   { 
+    key: 'textiles',
+    status: 'active' as const,
+    regulation: 'EU 1007/2011 + ESPR',
+    deadline: 'active'
+  },
+  { 
     key: 'car_cleaning',
+    status: 'active' as const,
+    regulation: 'EC 648/2004 · EU 2026/405',
+    deadline: '2029-09-23'
+  },
+  {
+    key: 'detergents',
     status: 'active' as const,
     regulation: 'EC 648/2004 · EU 2026/405',
     deadline: '2029-09-23'
@@ -344,7 +356,7 @@ export default function Index() {
                   <CardContent className="p-5">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="min-w-0 break-words font-semibold text-sm">{t(`categories.${category.key}`)}</h3>
-                      {category.key !== 'car_cleaning' && (category.status === 'active' ? (
+                      {category.key !== 'car_cleaning' && category.key !== 'detergents' && (category.status === 'active' ? (
                         <Badge className="bg-green-500/10 text-green-600 text-xs border-green-500/20">
                           {t('landing.categories.activeLaw')}
                         </Badge>
