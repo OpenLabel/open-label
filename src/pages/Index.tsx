@@ -356,7 +356,7 @@ export default function Index() {
                   <CardContent className="p-5">
                     <div className="flex items-start justify-between mb-2">
                       <h3 className="min-w-0 break-words font-semibold text-sm">{t(`categories.${category.key}`)}</h3>
-                      {category.key !== 'car_cleaning' && (category.status === 'active' ? (
+                      {category.key !== 'car_cleaning' && category.key !== 'detergents' && (category.status === 'active' ? (
                         <Badge className="bg-green-500/10 text-green-600 text-xs border-green-500/20">
                           {t('landing.categories.activeLaw')}
                         </Badge>
