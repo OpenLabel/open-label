@@ -78,12 +78,15 @@ describe('Index page', () => {
   });
 
 
-  it('presents car cleaning with its preparation date without an active-law badge', () => {
+  it('merges car cleaning into the single detergents card', () => {
     renderIndex();
-    const card = screen.getByRole('link', { name: 'categories.car_cleaning' });
-    expect(within(card).getByText('2029-09-23')).toBeInTheDocument();
-    expect(within(card).getByText('categoryDescriptions.car_cleaning')).toBeInTheDocument();
-    expect(within(card).queryByText('landing.categories.activeLaw')).not.toBeInTheDocument();
+    expect(screen.queryByRole('link', { name: 'categories.car_cleaning' })).not.toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'categories.detergents' })).toBeInTheDocument();
+  });
+
+  it('shows 4+ product categories in the stats', () => {
+    renderIndex();
+    expect(screen.getByText('4+')).toBeInTheDocument();
   });
 
   it('renders apparel and detergents category cards', () => {
