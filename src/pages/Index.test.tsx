@@ -86,6 +86,21 @@ describe('Index page', () => {
     expect(within(card).queryByText('landing.categories.activeLaw')).not.toBeInTheDocument();
   });
 
+  it('renders apparel and detergents category cards', () => {
+    renderIndex();
+    expect(screen.getByRole('link', { name: 'categories.textiles' })).toBeInTheDocument();
+    expect(within(screen.getByRole('link', { name: 'categories.textiles' })).getByText('categoryDescriptions.textiles')).toBeInTheDocument();
+    expect(screen.getByRole('link', { name: 'categories.detergents' })).toBeInTheDocument();
+    expect(within(screen.getByRole('link', { name: 'categories.detergents' })).getByText('categoryDescriptions.detergents')).toBeInTheDocument();
+  });
+
+  it('presents detergents with its preparation date without an active-law badge', () => {
+    renderIndex();
+    const card = screen.getByRole('link', { name: 'categories.detergents' });
+    expect(within(card).getByText('2029-09-23')).toBeInTheDocument();
+    expect(within(card).queryByText('landing.categories.activeLaw')).not.toBeInTheDocument();
+  });
+
   it('renders footer', () => {
     renderIndex();
     expect(screen.getByText('landing.footer.legal')).toBeInTheDocument();
