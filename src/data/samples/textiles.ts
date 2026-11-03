@@ -6,6 +6,7 @@
  */
 
 import type { PassportFormData } from '@/types/passport';
+import { TEXTILES_SAMPLE_TRANSLATIONS } from './sampleTranslations';
 
 /**
  * Fictitious Apparel (textiles) demo passport. Fills every required question
@@ -56,7 +57,7 @@ export function buildSampleTextilesPassport(): PassportFormData {
 
       // Certifications
       certifications_held: ['gots'],
-      certificate_references: 'GOTS — certificate CU 123456 GOTS (scope certificate, issued 2026)',
+      certificate_references: 'GOTS, CU 123456 (2026)',
 
       // Supply chain
       country_spinning_weaving: 'Portugal',
@@ -74,7 +75,7 @@ export function buildSampleTextilesPassport(): PassportFormData {
         'Machine wash at 30°C with similar colours. Do not bleach. Dry flat. Iron at medium temperature.',
       recyclable: true,
       take_back_program: true,
-      take_back_scheme_epr: 'France — EPR textile scheme, Refashion, producer identifier FR123456_01ABCD.',
+      take_back_scheme_epr: 'Refashion (FR), FR123456_01ABCD',
 
       // Disposition
       disposition_status: 'in_stock',
@@ -85,6 +86,7 @@ export function buildSampleTextilesPassport(): PassportFormData {
 
       // Authentication
       authentication_feature_present: false,
+      ...TEXTILES_SAMPLE_TRANSLATIONS,
     },
   };
 }

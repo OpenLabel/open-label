@@ -5,6 +5,7 @@
  */
 
 import type { PassportFormData } from '@/types/passport';
+import { CAR_CLEANING_SAMPLE_TRANSLATIONS } from './sampleTranslations';
 
 /**
  * Fictitious current-profile cleaner for the public demo. Assessment choices
@@ -31,12 +32,12 @@ export function buildSampleCarCleaningPassport(): PassportFormData {
       model_identifier: 'DEMO-CAR-SHAMPOO-001',
       batch_identifier: 'DEMO-BATCH-001',
       net_content: '500 ml',
-      target_markets: 'France; French (fictitious demo market)',
+      target_markets: 'FR (fr)',
 
-      manufacturer_name: 'Example Cleaner (fictitious supplier)',
-      manufacturer_address: '1 Example Lane, Example City, France (fictitious address)',
+      manufacturer_name: 'Example Cleaner',
+      manufacturer_address: '1 Example Lane, Example City, France',
       manufacturer_email: 'contact@example-cleaner.example',
-      manufacturer_phone: '+33 1 00 00 00 00 (fictitious demo contact)',
+      manufacturer_phone: '+33 1 00 00 00 00',
       manufacturer_established_eu: 'yes',
 
       use_instructions:
@@ -48,9 +49,10 @@ export function buildSampleCarCleaningPassport(): PassportFormData {
       preservatives: 'None in this fictitious example',
       ingredients_url: 'https://example-cleaner.example/ingredients',
       biodegradability_reference:
-        'Fictitious reference DEMO-BIO-001; no supplier evidence is provided.',
+        'DEMO-BIO-001',
       reach_review: 'reviewed',
       physical_label_reviewed: true,
+      ...CAR_CLEANING_SAMPLE_TRANSLATIONS,
     },
   };
 }
