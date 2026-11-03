@@ -466,7 +466,7 @@ export const TEXTILES_SAMPLE_TRANSLATIONS: FieldTranslations = {
     "cs": "Vyrobeno s 20 % recyklovaného polyesteru z použitých lahví. Tvrzení je doloženo transakčními certifikáty dodavatele.",
     "da": "Fremstillet med 20 % genanvendt polyester fra brugte flasker. Påstanden er dokumenteret med leverandørens transaktionscertifikater.",
     "de": "Hergestellt mit 20 % recyceltem Polyester aus gebrauchten Flaschen. Die Angabe ist durch Transaktionszertifikate des Lieferanten belegt.",
-    "el": "Κατασκευασμένο με 20 % ανακυκλωμένο πολυεστέρα от χρησιμοποιημένες φιάλες. Ο ισχυρισμός τεκμηριώνεται με πιστοποιητικά συναλλαγής του προμηθευτή.",
+    "el": "Κατασκευασμένο με 20 % ανακυκλωμένο πολυεστέρα από χρησιμοποιημένες φιάλες. Ο ισχυρισμός τεκμηριώνεται με πιστοποιητικά συναλλαγής του προμηθευτή.",
     "es": "Fabricada con un 20 % de poliéster reciclado procedente de botellas usadas. La alegación está respaldada por certificados de transacción del proveedor.",
     "et": "Valmistatud 20 % ringlussevõetud polüestrist, mis on saadud kasutatud pudelitest. Väidet tõendavad tarnija tehingusertifikaadid.",
     "fi": "Valmistettu 20 %:sta kierrätettyä polyesteriä, joka on peräisin käytetyistä pulloista. Väite on todennettu toimittajan transaktiosertifikaateilla.",
