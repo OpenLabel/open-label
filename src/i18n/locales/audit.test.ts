@@ -67,7 +67,7 @@ const perLanguageAllowedValues: Record<string, string[]> = {
   fi: ["Open Source"],
   fr: ["Open Source", "Volume", "Batteries", "Code", "Capsule", "Jute"],
   ga: ["Open Source"],
-  hr: ["Open Source"],
+  hr: ["Open Source", "Metal"],
   hu: ["Open Source"],
   it: ["Open Source", "Email", "Password", "Volume"],
   lt: ["Open Source"],
