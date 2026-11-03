@@ -1,1 +1,1 @@
-{"status":"fail","message":"1 test(s) failed; No coverage summary produced","failedTests":["Translation Audit locale 'hr' MUST have no untranslated English values — AssertionError: 🚨 TRANSLATION ERROR: Locale 'hr' has 1 UNTRANSLATED values that are still in English!\nThese MUST be translated before the build can succeed:\n  - detergents.options.packagingMaterial.m"]}
+{"status":"pass"}
