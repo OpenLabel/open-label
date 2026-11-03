@@ -2182,7 +2182,7 @@
       },
       "ingredients": {
         "title": "Sastāvdaļas un marķējuma informācija",
-        "description": "Marķējuma saturs saskaņā ar Regulas (EU) 2026/405 V pielikumu un spēkā esošajiem noteikumiem"
+        "description": "Marķējuma saturs saskaņā ar Regulas (ES) 2026/405 V pielikumu un spēkā esošajiem noteikumiem"
       },
       "use": {
         "title": "Droša lietošana un dozēšana",
@@ -2198,7 +2198,7 @@
       },
       "green_claims": {
         "title": "Apgalvojumi par ietekmi uz vidi",
-        "description": "Atbalsta Direktīvu (EU) 2024/825, ko piemēro no 2026. gada 27. septembra"
+        "description": "Atbalsta Direktīvu (ES) 2024/825, ko piemēro no 2026. gada 27. septembra"
       },
       "review": {
         "title": "Piegādātāja pārskats un pases sagatavošana",
@@ -2206,7 +2206,7 @@
       },
       "annex_identity": {
         "title": "VI pielikums: produkta identitāte un ražotāja paziņojums",
-        "description": "Sagatavošanās digitālajai produkta pasei, kas nepieciešama no 2029. gada 23. septembra. Pilnīga datu kopa nav sertifikācija, verificēts identifikators vai iesniegums reģistrā."
+        "description": "Sagatavošanās produkta digitālajai pasei, kas nepieciešama no 2029. gada 23. septembra. Pilnīga datu kopa nav sertifikācija, verificēts identifikators vai iesniegums reģistrā."
       },
       "annex_substances": {
         "title": "VI pielikums: vielas",
@@ -2232,14 +2232,14 @@
       },
       "detergent_scope": {
         "label": "Vai produkts ir paredzēts audumu, trauku vai virsmu tīrīšanai, mērcēšanai, skalošanai vai balināšanai?",
-        "help": "Skatīt Regulas (EU) 2026/405 2. panta 1. punktu. Krāsas, līmes, šķīdinātāji un produkti, kas netīra, neietilpst šajā kategorijā."
+        "help": "Skatīt Regulas (ES) 2026/405 2. panta 1. punktu. Krāsas, līmes, šķīdinātāji un produkti, kas netīra, neietilpst šajā kategorijā."
       },
       "scope_reason": {
         "label": "Iemesls, kāpēc produkts neatbilst mazgāšanas līdzekļa definīcijai"
       },
       "use_sector": {
         "label": "Kam produkts ir paredzēts?",
-        "help": "Rūpnieciskai un iestāžu lietošanai nozīmē, ka to ārpus mājsaimniecības lieto tikai specializēts personāls."
+        "help": "Rūpnieciska un iestāžu lietošana nozīmē, ka to ārpus mājsaimniecības lieto tikai specializēts personāls."
       },
       "model_identifier": {
         "label": "Produkta modeļa identifikators",
@@ -2264,11 +2264,11 @@
       },
       "dpp_profile": {
         "label": "Informācijas profils",
-        "help": "Regulu (EU) 2026/405 piemēro no 2029. gada 23. septembra. Izvēlieties VI pielikuma datu kopu, lai sagatavotu nākotnes pases datus. Tās aizpildīšana nepadara pasi atbilstošu vai sertificētu."
+        "help": "Regulu (ES) 2026/405 piemēro no 2029. gada 23. septembra. Izvēlieties VI pielikuma datu kopu, lai sagatavotu nākotnes pases datus. Tās aizpildīšana nepadara pasi atbilstošu vai sertificētu."
       },
       "biocidal_claims": {
         "label": "Apgalvojumi par biocīdām vai dezinficējošām īpašībām?",
-        "help": "Apgalvojumiem par dezinficējošām vai pretmikrobu īpašībām ir nepieciešama biocīda atļauja saskaņā ar Regulu (EU) No 528/2012."
+        "help": "Apgalvojumiem par dezinficējošām vai pretmikrobu īpašībām ir nepieciešama biocīda atļauja saskaņā ar Regulu (ES) Nr. 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Ražotāja juridiskais nosaukums",
@@ -2319,7 +2319,7 @@
       },
       "eu_operator_name": {
         "label": "ES pilnvarotais pārstāvis: juridiskais nosaukums",
-        "help": "Ražotājam, kas reģistrēts ārpus ES, ir jāieceļ pilnvarotais pārstāvis (Regulas (EU) 2026/405 9. pants)."
+        "help": "Ražotājam, kas reģistrēts ārpus ES, ir jāieceļ pilnvarotais pārstāvis (Regulas (ES) 2026/405 9. pants)."
       },
       "eu_operator_address": {
         "label": "ES pilnvarotais pārstāvis: adrese",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "CLP klasifikācijas novērtējums",
-        "help": "Izmantojiet klasifikāciju, kas šim maisījumam faktiski novērtēta saskaņā ar Regulu (EC) No 1272/2008. Neatvasiniet to no pH vai piktogrammām."
+        "help": "Izmantojiet klasifikāciju, kas šim maisījumam faktiski novērtēta saskaņā ar Regulu (EK) Nr. 1272/2008. Neatvasiniet to no pH vai piktogrammām."
       },
       "supplemental_statements": {
         "label": "Papildu marķējuma apzīmējumi",
@@ -2349,7 +2349,7 @@
         "placeholder": "piem., H315 Izraisa ādas kairinājumu"
       },
       "precautionary_statements": {
-        "label": "Piesardzības apzīmējumi",
+        "label": "Drošības prasību apzīmējumi",
         "help": "Ievadiet tekstu tieši tā, kā tas ir apstiprinātajā marķējumā. Izmantojiet tulkošanas pogu katrai tirgus valodai. Šis teksts nekad netiek tulkots automātiski.",
         "placeholder": "piem., P280 Izmantot aizsargcimdus"
       },
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Publiska sastāvdaļu tīmekļa lapa",
-        "help": "Spēkā esošie noteikumi (Regulas (EC) No 648/2004 VII pielikuma D daļa) patēriņa precēm prasa uzturēt publisku sastāvdaļu sarakstu. Tam nav nepieciešami procentuālie diapazoni vai CAS numuri.",
+        "help": "Spēkā esošie noteikumi (Regulas (EK) Nr. 648/2004 VII pielikuma D daļa) patēriņa precēm prasa uzturēt publisku sastāvdaļu sarakstu. Tam nav nepieciešami procentuālie diapazoni vai CAS numuri.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2485,7 +2485,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Vai satur tīši pievienotas sintētisko polimēru mikrodaļiņas?",
-        "help": "Ar Regulu (EU) 2023/2055 tie ir ierobežoti saskaņā ar REACH XVII pielikuma 78. ierakstu. Mazgāšanas līdzekļiem prasība ir piemērojama no 2028. gada 17. oktobra, ar diviem izņēmumiem: kā abrazīvi izmantotās mikrogranulas ir aizliegtas kopš 2023. gada 17. oktobra, un iekapsulētas smaržvielas drīkst izmantot līdz 2029. gada 17. oktobrim."
+        "help": "Ar Regulu (ES) 2023/2055 tie ir ierobežoti saskaņā ar REACH XVII pielikuma 78. ierakstu. Mazgāšanas līdzekļiem prasība ir piemērojama no 2028. gada 17. oktobra, ar diviem izņēmumiem: kā abrazīvi izmantotās mikrogranulas ir aizliegtas kopš 2023. gada 17. oktobra, un iekapsulētas smaržvielas drīkst izmantot līdz 2029. gada 17. oktobrim."
       },
       "use_instructions": {
         "label": "Lietošanas instrukcijas un īpaši piesardzības pasākumi",
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Veļas mazgāšanas līdzekļa veids",
-        "help": "Nosaka standarta ielādi: 4,5 kg sausa auduma lielas slodzes mazgāšanas līdzekļiem, 2,5 kg īsa cikla lielas slodzes un vieglas slodzes mazgāšanas līdzekļiem."
+        "help": "Nosaka standarta ielādi: 4,5 kg sausa auduma universāliem mazgāšanas līdzekļiem, 2,5 kg īsa cikla universāliem un vieglas slodzes mazgāšanas līdzekļiem."
       },
       "dosage_unit": {
         "label": "Dozēšanas mērvienība"
@@ -2558,7 +2558,7 @@
       },
       "refill_station": {
         "label": "Vai tiek pārdots uzpildes stacijā?",
-        "help": "Uzpildes punktiem ir savs datu nesēja pienākums saskaņā ar Regulas (EU) 2026/405 21. panta 4. punktu."
+        "help": "Uzpildes punktiem ir savs datu nesēja pienākums saskaņā ar Regulas (ES) 2026/405 21. panta 4. punktu."
       },
       "epr_registration": {
         "label": "Iepakojuma ražotāja atbildības reģistrācija katrā tirgū",
@@ -2580,8 +2580,8 @@
         "placeholder": "Pētījuma, sertifikāta vai verifikācijas iestādes atsauce katram apgalvojumam"
       },
       "claims_avoid_generic_terms": {
-        "label": "Vai apgalvojumos tiek izvairīties no vispārīgiem terminiem par ietekmi uz vidi?",
-        "help": "Vispārīgas vidiskās norādes, piemēram, \"videi draudzīgs\", \"zaļš\" vai \"ekoloģisks\", saskaņā ar Direktīvu (EU) 2024/825 ir aizliegtas no 2026. gada 27. septembra, ja vien produktam nav piešķirts ES ekomarķējums vai tam līdzvērtīgs atzīts marķējums. Norāde \"bioloģiski noārdāms\" pati par sevi tiek uzskatīta par vispārīgu norādi."
+        "label": "Vai apgalvojumos ir izvairīts no vispārīgiem terminiem par ietekmi uz vidi?",
+        "help": "Vispārīgas vidiskās norādes, piemēram, \"videi draudzīgs\", \"zaļš\" vai \"ekoloģisks\", saskaņā ar Direktīvu (ES) 2024/825 ir aizliegtas no 2026. gada 27. septembra, ja vien produktam nav piešķirts ES ekomarķējums vai tam līdzvērtīgs atzīts marķējums. Norāde \"bioloģiski noārdāms\" pati par sevi tiek uzskatīta par vispārīgu norādi."
       },
       "ecolabel_licence_number": {
         "label": "ES ekomarķējuma licences numurs",
@@ -2636,7 +2636,7 @@
         "label": "Muitas preču kods"
       },
       "commodity_code": {
-        "label": "Preču kods (Regula (EEC) No 2658/87)"
+        "label": "Preču kods (Regula (EEK) Nr. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Iemesls, kāpēc preču kods nav piemērojams"
@@ -2645,7 +2645,7 @@
         "label": "Ražotājs izdod šo pasi, uzņemoties par to pilnu atbildību"
       },
       "compliance_statement": {
-        "label": "Paziņojums, ka ir pierādīta atbilstība Regulai (EU) 2026/405",
+        "label": "Paziņojums, ka ir pierādīta atbilstība Regulai (ES) 2026/405",
         "help": "Aizpildiet tikai pēc ražotāja paša veiktā novērtējuma. Lietotne nekad neģenerē atbilstības deklarāciju."
       },
       "applicable_union_law": {
@@ -2672,7 +2672,7 @@
       },
       "substances": {
         "label": "Visas tīši pievienotās vielas un marķējumā norādāmie pārnestie konservanti",
-        "help": "Identificējiet vielas, kā to prasa Regulas (EC) No 1272/2008 18. panta 3. punkts. Neievadiet koncentrācijas vai konfidenciālus sastāva datus. Viss, kas saglabāts šajā kategorijā, ir publisks."
+        "help": "Identificējiet vielas, kā to prasa Regulas (EK) Nr. 1272/2008 18. panta 3. punkts. Neievadiet koncentrācijas vai konfidenciālus sastāva datus. Viss, kas saglabāts šajā kategorijā, ir publisks."
       },
       "no_substances_reason": {
         "label": "Pamatojums, kāpēc nav uzskaitāmu vielu"
@@ -2721,7 +2721,7 @@
       },
       "importer_phone": {
         "label": "Importētāja tālruņa numurs",
-        "help": "Regulas (EU) 2026/405 VI pielikuma b) punktā ir noteikts, ka digitālajā produkta pasē vajadzības gadījumā iekļauj importētāja tālruņa numuru.",
+        "help": "Regulas (ES) 2026/405 VI pielikuma b) punktā ir noteikts, ka produkta digitālajā pasē vajadzības gadījumā iekļauj importētāja tālruņa numuru.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "ES pilnvarotais pārstāvis: rakstiskā pilnvarojuma atsauce",
-        "help": "Atsauce uz rakstisko pilnvarojumu, ar kuru ražotājs ieceļ pārstāvi (Regulas (EU) 2026/405 2. panta 18. punkts). Ievadiet tikai atsauci. Pats pilnvarojums netiek augšupielādēts, un atsauce netiek rādīta publiskajā pasē.",
+        "help": "Atsauce uz rakstisko pilnvarojumu, ar kuru ražotājs ieceļ pārstāvi (Regulas (ES) 2026/405 2. panta 18. punkts). Ievadiet tikai atsauci. Pats pilnvarojums netiek augšupielādēts, un atsauce netiek rādīta publiskajā pasē.",
         "placeholder": "piem., Pilnvarojums 2026-07, parakstīts 2026. gada 1. jūlijā"
       },
       "registry_upload_confirmed": {
@@ -2739,7 +2739,7 @@
       },
       "future_ufi_code": {
         "label": "Unikālais formulas identifikators (UFI) marķējumā",
-        "help": "No 2029. gada 23. septembra katra mazgāšanas līdzekļa marķējumā ir norādīts UFI, pirms kura ir 'UFI:' (Regulas (EU) 2026/405 V pielikuma A daļas 1. punkta b) apakšpunkts), neatkarīgi no tā, vai produkts ir klasificēts kā bīstams. Četras grupas pa četrām rakstzīmēm. Ja tāds pastāv, ievadiet to pašu kodu, kas norādīts saindēšanās informācijas centra UFI.",
+        "help": "No 2029. gada 23. septembra katra mazgāšanas līdzekļa marķējumā ir norādīts UFI, pirms kura ir 'UFI:' (Regulas (ES) 2026/405 V pielikuma A daļas 1. punkta b) apakšpunkts), neatkarīgi no tā, vai produkts ir klasificēts kā bīstams. Četras grupas pa četrām rakstzīmēm. Ja tāds pastāv, ievadiet to pašu kodu, kas norādīts saindēšanās informācijas centra UFI.",
         "placeholder": "piem., N1QV-R02N-J00M-WQD5"
       }
     },
@@ -2749,7 +2749,7 @@
         "laundry_additive": "Veļas mazgāšanas piedeva vai priekšmazgāšanas līdzeklis",
         "machine_dishwashing": "Trauku mazgājamās mašīnas mazgāšanas līdzeklis",
         "dishwasher_additive": "Skalošanas līdzeklis vai trauku mazgājamās mašīnas piedeva",
-        "hand_dishwashing": "Trauku mazgāšanas līdzeklis ar rokām",
+        "hand_dishwashing": "Līdzeklis trauku mazgāšanai ar rokām",
         "all_purpose": "Universāls vai virsmu tīrīšanas līdzeklis",
         "kitchen": "Virtuves tīrīšanas līdzeklis",
         "bathroom": "Vannas istabas tīrīšanas līdzeklis",
@@ -2766,7 +2766,7 @@
         "powder": "Pulveris",
         "tablet": "Tablete",
         "capsule": "Kapsula vai spilventiņš",
-        "spray": "Aerosols",
+        "spray": "Sprejs",
         "wipe": "Salvetes",
         "paste": "Pasta",
         "other": "Cits"
@@ -2797,7 +2797,7 @@
       },
       "signalWord": {
         "danger": "Bīstami",
-        "warning": "Brīdinājums",
+        "warning": "Uzmanību",
         "not_applicable": "Nav piemērojams pēc novērtēšanas"
       },
       "pictograms": {
@@ -2866,14 +2866,14 @@
         "unknown": "Nezināms"
       },
       "laundryType": {
-        "heavy_duty": "Lielas slodzes",
-        "heavy_duty_short": "Lielas slodzes īsiem cikliem",
+        "heavy_duty": "Universāls (pamatmazgāšanai)",
+        "heavy_duty_short": "Universāls (pamatmazgāšanai), īsiem cikliem",
         "light_duty": "Mazai slodzei vai smalkiem audumiem"
       },
       "dosageUnit": {
         "ml": "Mililitri",
         "g": "Grami",
-        "units": "Vienības (tabletes, kapsulas vai pākstis)"
+        "units": "Vienības (tabletes, kapsulas vai spilventiņi)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
@@ -2902,12 +2902,12 @@
       }
     },
     "warnings": {
-      "scopeOutside": "Šis produkts var neatbilst mazgāšanas līdzekļa definīcijai Regulas (EU) 2026/405 2. panta 1. punktā. Pirms šīs kategorijas izmantošanas pārbaudiet darbības jomu.",
-      "biocidal": "Apgalvojumiem par dezinficējošu vai pretmikrobu iedarbību ir nepieciešama biocīda atļauja saskaņā ar Regulu (EU) No 528/2012.",
+      "scopeOutside": "Šis produkts var neatbilst mazgāšanas līdzekļa definīcijai Regulas (ES) 2026/405 2. panta 1. punktā. Pirms šīs kategorijas izmantošanas pārbaudiet darbības jomu.",
+      "biocidal": "Apgalvojumiem par dezinficējošu vai pretmikrobu iedarbību ir nepieciešama biocīda atļauja saskaņā ar Regulu (ES) Nr. 528/2012.",
       "assessmentNeeded": "Šis novērtējums nav pabeigts. Pabeidziet to, pirms paļaujaties uz šo pasi.",
-      "microparticles": "Pirms šī produkta laišanas tirgū pārbaudiet Regulu (EU) 2023/2055 par sintētisko polimēru mikrodaļiņām. Atbilde “nezināms” ir jānoskaidro ar piegādātāju.",
-      "phosphorusLaundry": "Kopējais fosfora saturs {{value}} g nav mazāks par 0,5 g limitu patērētājiem paredzētam veļas mazgāšanas līdzeklim cietā ūdenī (Regulas (EU) 2026/405 III pielikums).",
-      "phosphorusDishwasher": "Kopējais fosfora saturs {{value}} g nav mazāks par 0,3 g limitu patērētājiem paredzētam automātisko trauku mazgājamo mašīnu mazgāšanas līdzeklim (Regulas (EU) 2026/405 III pielikums).",
+      "microparticles": "Pirms šī produkta laišanas tirgū pārbaudiet Regulu (ES) 2023/2055 par sintētisko polimēru mikrodaļiņām. Atbilde “nezināms” ir jānoskaidro ar piegādātāju.",
+      "phosphorusLaundry": "Kopējais fosfora saturs {{value}} g nav mazāks par 0,5 g limitu patērētājiem paredzētam veļas mazgāšanas līdzeklim cietā ūdenī (Regulas (ES) 2026/405 III pielikums).",
+      "phosphorusDishwasher": "Kopējais fosfora saturs {{value}} g nav mazāks par 0,3 g limitu patērētājiem paredzētam automātisko trauku mazgājamo mašīnu mazgāšanas līdzeklim (Regulas (ES) 2026/405 III pielikums).",
       "percentageRange": "Procentuālajai vērtībai jābūt no 0 līdz 100. Jūs ievadījāt {{value}}.",
       "positiveNumber": "Ievadiet skaitli, kas lielāks par nulli. Jūs ievadījāt {{value}}.",
       "allergensMissing": "Jūs atbildējāt “jā”, bet nav atlasīts neviens alergēns. Atlasiet katru alergēnu no oficiālā saraksta.",
@@ -2918,8 +2918,8 @@
       "microorganismSafety": "Ir pievienoti mikroorganismi, bet nav ievadīta atsauce uz drošuma novērtējumu."
     },
     "disclaimer": {
-      "title": "Mazgāšanas līdzekļi DPP: atruna par atbilstību",
-      "text": "Regulu (EU) 2026/405 piemēro no 2029. gada 23. septembra; līdz tam piemēro Regulu (EC) No 648/2004. Šis rīks sagatavo pases datus un nav sertifikācija vai juridiska konsultācija. Viss šeit saglabātais ir publisks."
+      "title": "Mazgāšanas līdzekļu DPP: atruna par atbilstību",
+      "text": "Regulu (ES) 2026/405 piemēro no 2029. gada 23. septembra; līdz tam piemēro Regulu (EK) Nr. 648/2004. Šis rīks sagatavo pases datus un nav sertifikācija vai juridiska konsultācija. Viss šeit saglabātais ir publisks."
     },
     "allergenPicker": {
       "empty": "Alergēni vēl nav pievienoti.",
@@ -2935,11 +2935,11 @@
     },
     "form": {
       "packagingImageLabel": "Iepakojuma vai marķējuma krāsains attēls",
-      "packagingImageHelp": "Regulas (EU) 2026/405 VI pielikuma a) punktā ir prasīts iepakojuma vai marķējuma krāsains attēls, kas ir pietiekami skaidrs, lai identificētu modeli. Obligāts VI pielikuma profilā."
+      "packagingImageHelp": "Regulas (ES) 2026/405 VI pielikuma a) punktā ir prasīts iepakojuma vai marķējuma krāsains attēls, kas ir pietiekami skaidrs, lai identificētu modeli. Obligāts VI pielikuma profilā."
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Mazgāšanas līdzekļi: digitālā produkta pase",
+    "headerBadge": "Mazgāšanas līdzekļi: produkta digitālā pase",
     "notice": "Šajā lapā ir sniegta produkta informācija, ko publicējis piegādātājs. Tā nav sertifikācija vai apstiprinājums, un tā neaizstāj marķējumu uz iepakojuma.",
     "units": "vienības",
     "ecolabelBadge": "ES ekomarķējums",

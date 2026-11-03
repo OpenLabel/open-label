@@ -2174,7 +2174,7 @@
       },
       "responsible_operators": {
         "title": "Vem som är ansvarig",
-        "description": "Tillverkare, importör och befullmäktigad EU-representant, som separata parter"
+        "description": "Tillverkare, importör och tillverkarens representant i EU, som separata parter"
       },
       "classification": {
         "title": "Faroklassificering och säkerhetsinformation",
@@ -2239,7 +2239,7 @@
       },
       "use_sector": {
         "label": "Vem är produkten avsedd för?",
-        "help": "Industriell och institutionell användning innebär att produkten endast används utanför privathushåll av specialiserad personal."
+        "help": "Användning inom industrin och vid institutioner innebär att produkten endast används utanför privathushåll av specialiserad personal."
       },
       "model_identifier": {
         "label": "Produktmodellidentifierare",
@@ -2268,7 +2268,7 @@
       },
       "biocidal_claims": {
         "label": "Biocid- eller desinficeringspåståenden?",
-        "help": "Desinficerande eller antimikrobiella påståenden kräver ett godkännande som biocidprodukt enligt förordning (EU) No 528/2012."
+        "help": "Desinficerande eller antimikrobiella påståenden kräver ett godkännande som biocidprodukt enligt förordning (EU) nr 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Tillverkarens juridiska namn",
@@ -2318,20 +2318,20 @@
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "Befullmäktigad EU-representant: juridiskt namn",
-        "help": "En tillverkare som är etablerad utanför EU måste utse en befullmäktigad representant (artikel 9 i förordning (EU) 2026/405)."
+        "label": "Tillverkarens representant i EU: juridiskt namn",
+        "help": "En tillverkare som är etablerad utanför EU måste utse en tillverkarens representant (artikel 9 i förordning (EU) 2026/405)."
       },
       "eu_operator_address": {
-        "label": "Befullmäktigad EU-representant: adress",
+        "label": "Tillverkarens representant i EU: adress",
         "placeholder": "Registrerad adress inom Europeiska unionen"
       },
       "eu_operator_email": {
-        "label": "Befullmäktigad EU-representant: elektronisk adress (e-post)",
+        "label": "Tillverkarens representant i EU: elektronisk adress (e-post)",
         "placeholder": "name@company.com"
       },
       "clp_classification": {
         "label": "Bedömning av CLP-klassificering",
-        "help": "Använd den klassificering som faktiskt har bedömts för denna blandning enligt förordning (EC) No 1272/2008. Härled den inte från pH-värdet eller piktogrammen."
+        "help": "Använd den klassificering som faktiskt har bedömts för denna blandning enligt förordning (EG) nr 1272/2008. Härled den inte från pH-värdet eller piktogrammen."
       },
       "supplemental_statements": {
         "label": "Kompletterande märkningsuppgifter",
@@ -2402,7 +2402,7 @@
         "label": "Anjoniska tensider: viktintervall"
       },
       "band_cationic_surfactants": {
-        "label": "Katoniska tensider: viktintervall"
+        "label": "Katjoniska tensider: viktintervall"
       },
       "band_amphoteric_surfactants": {
         "label": "Amfotera tensider: viktintervall"
@@ -2426,7 +2426,7 @@
         "label": "Fenoler och halogenerade fenoler: viktintervall"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: viktintervall"
+        "label": "Paradiklorbensen: viktintervall"
       },
       "band_aromatic_hydrocarbons": {
         "label": "Aromatiska kolväten: viktintervall"
@@ -2460,16 +2460,16 @@
         "placeholder": "t.ex. Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Doftämnesallergener tillsatta i en koncentration över 0,01 viktprocent?",
+        "label": "Doftallergener tillsatta i en koncentration över 0,01 viktprocent?",
         "help": "Allergener från förteckningen i bilaga V del D som avsiktligt tillsätts i en koncentration över 0,01 viktprocent ska anges på märkningen, om de inte redan är märkta enligt CLP."
       },
       "fragrance_allergens": {
-        "label": "Innehåller doftämnesallergener",
+        "label": "Innehåller doftallergener",
         "help": "Välj varje allergen från den officiella förteckningen med 105 poster."
       },
       "ingredients_url": {
         "label": "Offentlig webbsida med ingrediensförteckning",
-        "help": "Gällande regler (förordning (EC) No 648/2004, bilaga VII del D) kräver en uppdaterad offentlig ingrediensförteckning för konsumentprodukter. Den behöver inga procentintervall eller CAS-nummer.",
+        "help": "Gällande regler (förordning (EG) nr 648/2004, bilaga VII del D) kräver en uppdaterad offentlig ingrediensförteckning för konsumentprodukter. Den behöver inga procentintervall eller CAS-nummer.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Typ av tvättmedel",
-        "help": "Avgör standardtvättmängden: 4,5 kg torr tvätt för kulörtvättmedel, 2,5 kg för kulörtvättmedel för korta tvättprogram och för fintvättmedel."
+        "help": "Avgör standardtvättmängden: 4,5 kg torr tvätt för fulltvättmedel, 2,5 kg för fulltvättmedel för korta tvättprogram och för fintvättmedel."
       },
       "dosage_unit": {
         "label": "Doseringsenhet"
@@ -2636,7 +2636,7 @@
         "label": "Tullkod"
       },
       "commodity_code": {
-        "label": "Varukod (förordning (EEC) No 2658/87)"
+        "label": "Varukod (förordning (EEG) nr 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Anledning till att ingen varukod är tillämplig"
@@ -2668,11 +2668,11 @@
       },
       "substance_list_route": {
         "label": "Metod för att redovisa ämnen",
-        "help": "Undantaget gäller endast för industriella och institutionella tvätt- och rengöringsmedel och tensider där motsvarande information tillhandahålls i ett säkerhetsdatablad enligt artikel 31 i REACH."
+        "help": "Undantaget gäller endast för tvätt- och rengöringsmedel för användning inom industrin och vid institutioner och för tensider där motsvarande information tillhandahålls i ett säkerhetsdatablad enligt artikel 31 i REACH."
       },
       "substances": {
         "label": "Alla avsiktligt tillsatta ämnen och märkningspliktiga överförda konserveringsmedel",
-        "help": "Identifiera ämnen enligt kraven i artikel 18.3 i förordning (EC) No 1272/2008. Ange inte koncentrationer eller konfidentiella formuleringsdata. Allt som sparas i denna kategori är offentligt."
+        "help": "Identifiera ämnen enligt kraven i artikel 18.3 i förordning (EG) nr 1272/2008. Ange inte koncentrationer eller konfidentiella formuleringsdata. Allt som sparas i denna kategori är offentligt."
       },
       "no_substances_reason": {
         "label": "Grund för att inga ämnen behöver förtecknas"
@@ -2748,7 +2748,7 @@
         "laundry": "Tvättmedel",
         "laundry_additive": "Tvättmedelstillsats eller förtvättmedel",
         "machine_dishwashing": "Maskindiskmedel",
-        "dishwasher_additive": "Sköljmedel eller diskmedelstillsats",
+        "dishwasher_additive": "Spolglans eller tillsats för diskmaskin",
         "hand_dishwashing": "Handdiskmedel",
         "all_purpose": "Allrengöringsmedel eller ytrengöringsmedel",
         "kitchen": "Köksrengöringsmedel",
@@ -2779,7 +2779,7 @@
       "useSector": {
         "consumer": "Konsumenter, inklusive blandad konsument- och yrkesmässig användning",
         "professional": "Endast för yrkesmässig användning",
-        "industrial": "Endast för industriell och institutionell användning"
+        "industrial": "Endast för användning inom industrin och vid institutioner"
       },
       "dppProfile": {
         "current": "Aktuell produktinformation",
@@ -2839,7 +2839,7 @@
         "edta": "EDTA och salter därav",
         "nta": "NTA och salter därav",
         "phenols": "Fenoler och halogenerade fenoler",
-        "paradichlorobenzene": "Paradichlorbenzen",
+        "paradichlorobenzene": "Paradiklorbensen",
         "aromatic_hydrocarbons": "Aromatiska kolväten",
         "aliphatic_hydrocarbons": "Alifatiska kolväten",
         "halogenated_hydrocarbons": "Halogenerade kolväten",
@@ -2866,8 +2866,8 @@
         "unknown": "Okänt"
       },
       "laundryType": {
-        "heavy_duty": "Kultvätt",
-        "heavy_duty_short": "Kultvätt för korta program",
+        "heavy_duty": "Fulltvättmedel",
+        "heavy_duty_short": "Fulltvättmedel för korta program",
         "light_duty": "Fintvätt eller ömtåliga textilier"
       },
       "dosageUnit": {
@@ -2897,13 +2897,13 @@
       },
       "substanceListRoute": {
         "full_list": "Fullständig förteckning över ämnen",
-        "equivalent_sds": "Motsvarande säkerhetsdatablad (endast för industriell och institutionell användning)",
+        "equivalent_sds": "Motsvarande säkerhetsdatablad (endast för användning inom industrin och vid institutioner)",
         "no_added_substances": "Inga ämnen att förteckna efter bedömning"
       }
     },
     "warnings": {
       "scopeOutside": "Denna produkt faller eventuellt utanför definitionen av tvätt- och rengöringsmedel i artikel 2.1 i förordning (EU) 2026/405. Kontrollera tillämpningsområdet innan du använder denna kategori.",
-      "biocidal": "Desinficerande eller antimikrobiella påståenden kräver ett godkännande som biocidprodukt enligt förordning (EU) No 528/2012.",
+      "biocidal": "Desinficerande eller antimikrobiella påståenden kräver ett godkännande som biocidprodukt enligt förordning (EU) nr 528/2012.",
       "assessmentNeeded": "Denna bedömning är inte slutförd. Slutför den innan du förlitar dig på passet.",
       "microparticles": "Kontrollera förordning (EU) 2023/2055 om syntetiska polymermikropartiklar innan produkten släpps ut på marknaden. Ett okänt svar måste klaras ut med leverantören.",
       "phosphorusLaundry": "En total fosforhalt på {{value}} g understiger inte gränsvärdet på 0,5 g för ett konsumenttvättmedel i hårt vatten (bilaga III i förordning (EU) 2026/405).",
@@ -2918,8 +2918,8 @@
       "microorganismSafety": "Mikroorganismer har tillsatts, men ingen referens till säkerhetsbedömning har angetts."
     },
     "disclaimer": {
-      "title": "Tvätt- och rengöringsmedel DPP: friskrivning avseende regelefterlevnad",
-      "text": "Förordning (EU) 2026/405 tillämpas från och med den 23 september 2029; fram till dess tillämpas förordning (EC) No 648/2004. Detta verktyg förbereder passdata och utgör inte en certifiering eller juridisk rådgivning. Allt som sparas här är offentligt."
+      "title": "DPP för tvätt- och rengöringsmedel: friskrivning avseende regelefterlevnad",
+      "text": "Förordning (EU) 2026/405 tillämpas från och med den 23 september 2029; fram till dess tillämpas förordning (EG) nr 648/2004. Detta verktyg förbereder passdata och utgör inte en certifiering eller juridisk rådgivning. Allt som sparas här är offentligt."
     },
     "allergenPicker": {
       "empty": "Inga allergener har lagts till än.",
@@ -2952,12 +2952,12 @@
       "biocide": "Biocidprodukt",
       "responsible": "Ansvarig aktör",
       "annexVi": "Dataset enligt bilaga VI",
-      "metadata": "DPP infrastruktur"
+      "metadata": "DPP-infrastruktur"
     },
     "subsections": {
       "manufacturer": "Tillverkare",
       "importer": "Importör",
-      "authorisedRepresentative": "Auktoriserad representant i EU"
+      "authorisedRepresentative": "Tillverkarens representant i EU"
     },
     "rows": {
       "constituentClasses": "Klasser av beståndsdelar över 0,2 viktprocent",
@@ -2967,8 +2967,8 @@
       "address": "Adress",
       "email": "E-post",
       "phone": "Telefon",
-      "dppServiceProvider": "DPP tjänsteleverantör",
-      "dppVersion": "DPP version",
+      "dppServiceProvider": "DPP-tjänsteleverantör",
+      "dppVersion": "DPP-version",
       "lastUpdated": "Senast uppdaterad",
       "status": "Status"
     },

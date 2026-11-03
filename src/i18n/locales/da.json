@@ -2174,11 +2174,11 @@
       },
       "responsible_operators": {
         "title": "Hvem er ansvarlig",
-        "description": "Fabrikant, importør og bemyndiget EU-repræsentant, opbevaret som separate parter"
+        "description": "Fabrikant, importør og bemyndiget EU-repræsentant, registreret som separate parter"
       },
       "classification": {
         "title": "Fareklassificering og sikkerhedsinformation",
-        "description": "CLP-klassificering, mærkningens fareinformation, giftinformation og sikkerhedsdatablad"
+        "description": "CLP-klassificering, mærkningens fareinformation, giftinformationscentraler og sikkerhedsdatablad"
       },
       "ingredients": {
         "title": "Ingredienser og mærkningsoplysninger",
@@ -2232,14 +2232,14 @@
       },
       "detergent_scope": {
         "label": "Er produktet beregnet til rengøring, iblødsætning, skylning eller blegning af tekstiler, service eller overflader?",
-        "help": "Se artikel 2, stk. 1, i forordning (EU) 2026/405. Maling, klæbemidler, opløsningsmidler og produkter, der ikke rengør, falder uden for denne kategori."
+        "help": "Se artikel 2, nr. 1, i forordning (EU) 2026/405. Maling, klæbemidler, opløsningsmidler og produkter, der ikke rengør, falder uden for denne kategori."
       },
       "scope_reason": {
         "label": "Begrundelse for, at produktet falder uden for definitionen af vaske- og rengøringsmidler"
       },
       "use_sector": {
         "label": "Hvem er produktet beregnet til?",
-        "help": "Industriel og institutionel betyder, at det kun anvendes uden for den private husholdning af specialiseret personale."
+        "help": "Til erhvervsmæssig brug og til brug i institutioner betyder, at det kun anvendes uden for den private husholdning af specialiseret personale."
       },
       "model_identifier": {
         "label": "Produktmodelidentifikator",
@@ -2268,7 +2268,7 @@
       },
       "biocidal_claims": {
         "label": "Biocid- eller desinfektionsanprisninger?",
-        "help": "Desinficerende eller antimikrobielle anprisninger kræver en godkendelse som biocidholdigt produkt i henhold til forordning (EU) No 528/2012."
+        "help": "Desinficerende eller antimikrobielle anprisninger kræver en godkendelse som biocidholdigt produkt i henhold til forordning (EU) nr. 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Fabrikantens juridiske navn",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "CLP-klassificeringsvurdering",
-        "help": "Anvend den klassificering, der rent faktisk er vurderet for denne blanding i henhold til forordning (EC) No 1272/2008. Udled den ikke fra pH-værdien eller piktogrammerne."
+        "help": "Anvend den klassificering, der rent faktisk er vurderet for denne blanding i henhold til forordning (EF) nr. 1272/2008. Udled den ikke fra pH-værdien eller piktogrammerne."
       },
       "supplemental_statements": {
         "label": "Supplerende mærkningsoplysninger",
@@ -2354,7 +2354,7 @@
         "placeholder": "f.eks. P280 Bær beskyttelseshandsker"
       },
       "pcn_applicability": {
-        "label": "Anmeldelse til giftinformation (CLP, bilag VIII)",
+        "label": "Anmeldelse til giftinformationscentraler (CLP, bilag VIII)",
         "help": "UFI og anmeldelse afhænger af sundhedsfarer eller fysiske farer og de gældende undtagelser. Miljøfarer alene udløser ikke anmeldelsespligt."
       },
       "pcn_exemption_reason": {
@@ -2362,11 +2362,11 @@
       },
       "ufi_code": {
         "label": "Unik formelidentifikator (UFI)",
-        "help": "Fire grupper af fire tegn. Formatet kontrolleres, men appen kan ikke verificere en indberetning til giftinformationen.",
+        "help": "Fire grupper af fire tegn. Formatet kontrolleres, men appen kan ikke verificere en indberetning til giftinformationscentralen.",
         "placeholder": "f.eks. N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "Indberetninger til giftinformation"
+        "label": "Indberetninger til giftinformationscentraler"
       },
       "sds_requirement": {
         "label": "Krav om levering af sikkerhedsdatablad",
@@ -2385,7 +2385,7 @@
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "Nødkontakt (giftinformation eller døgnbemandet nummer)",
+        "label": "Nødkontakt (giftinformationscentral eller døgnbemandet nummer)",
         "placeholder": "Telefonnummer til nødsituationer"
       },
       "constituent_classes": {
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Offentlig webside med ingredienser",
-        "help": "De nuværende regler (forordning (EC) No 648/2004, bilag VII, del D) kræver en vedligeholdt offentlig ingrediensliste for forbrugerprodukter. Den behøver ingen procentintervaller eller CAS-numre.",
+        "help": "De nuværende regler (forordning (EF) nr. 648/2004, bilag VII, del D) kræver en vedligeholdt offentlig ingrediensliste for forbrugerprodukter. Den behøver ingen procentintervaller eller CAS-numre.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Type af vaskemiddel til tekstiler",
-        "help": "Afgør standardvaskemængden: 4,5 kg tørt tøj for vaskemidler til kulørt/kogevask, 2,5 kg for vaskemidler til kulørt/kogevask med kort cyklus og for finvaskemidler."
+        "help": "Afgør standardvaskemængden: 4,5 kg tørt tøj for grovvaskemidler, 2,5 kg for grovvaskemidler med kort cyklus og for finvaskemidler."
       },
       "dosage_unit": {
         "label": "Doseringsenhed"
@@ -2636,7 +2636,7 @@
         "label": "Toldvarekode"
       },
       "commodity_code": {
-        "label": "Varekode (forordning (EEC) No 2658/87)"
+        "label": "Varekode (forordning (EØF) nr. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Begrundelse for, at der ikke gælder nogen varekode"
@@ -2672,7 +2672,7 @@
       },
       "substances": {
         "label": "Alle bevidst tilsatte stoffer og mærkningspligtige overførte konserveringsmidler",
-        "help": "Identificer stoffer som krævet i artikel 18, stk. 3, i forordning (EC) No 1272/2008. Indtast ikke koncentrationer eller fortrolige formuleringsdata. Alt, der gemmes i denne kategori, er offentligt."
+        "help": "Identificer stoffer som krævet i artikel 18, stk. 3, i forordning (EF) nr. 1272/2008. Indtast ikke koncentrationer eller fortrolige formuleringsdata. Alt, der gemmes i denne kategori, er offentligt."
       },
       "no_substances_reason": {
         "label": "Grundlag for fraværet af stoffer, der skal opføres"
@@ -2748,7 +2748,7 @@
         "laundry": "Vaskemiddel til tekstiler",
         "laundry_additive": "Vaskeforstærker eller forvaskemiddel",
         "machine_dishwashing": "Maskinopvaskemiddel",
-        "dishwasher_additive": "Afspændingsmiddel eller maskinopvaskemiddel-tilsætning",
+        "dishwasher_additive": "Afspændingsmiddel eller tilsætningsmiddel til opvaskemaskine",
         "hand_dishwashing": "Håndopvaskemiddel",
         "all_purpose": "Universal- eller overfladerengøringsmiddel",
         "kitchen": "Køkkenrengøringsmiddel",
@@ -2779,7 +2779,7 @@
       "useSector": {
         "consumer": "Forbrugere, herunder blandet forbruger- og professionel brug",
         "professional": "Kun til professionel brug",
-        "industrial": "Kun til industriel og institutionel brug"
+        "industrial": "Kun til erhvervsmæssig brug og til brug i institutioner"
       },
       "dppProfile": {
         "current": "Nuværende produktinformation",
@@ -2897,13 +2897,13 @@
       },
       "substanceListRoute": {
         "full_list": "Fuldstændig liste over stoffer",
-        "equivalent_sds": "Tilsvarende sikkerhedsdatablad (kun til industriel og institutionel brug)",
+        "equivalent_sds": "Tilsvarende sikkerhedsdatablad (kun til erhvervsmæssig brug og til brug i institutioner)",
         "no_added_substances": "Ingen stoffer at anføre efter vurdering"
       }
     },
     "warnings": {
-      "scopeOutside": "Dette produkt falder muligvis uden for definitionen af et vaskemiddel i artikel 2, stk. 1, i forordning (EU) 2026/405. Kontrollér anvendelsesområdet, før du bruger denne kategori.",
-      "biocidal": "Desinficerende eller antimikrobielle anprisninger kræver en godkendelse som biocidholdigt produkt i henhold til forordning (EU) No 528/2012.",
+      "scopeOutside": "Dette produkt falder muligvis uden for definitionen af et vaske- og rengøringsmiddel i artikel 2, nr. 1, i forordning (EU) 2026/405. Kontrollér anvendelsesområdet, før du bruger denne kategori.",
+      "biocidal": "Desinficerende eller antimikrobielle anprisninger kræver en godkendelse som biocidholdigt produkt i henhold til forordning (EU) nr. 528/2012.",
       "assessmentNeeded": "Denne vurdering er ikke afsluttet. Færdiggør den, før du stoler på passet.",
       "microparticles": "Kontrollér forordning (EU) 2023/2055 om syntetiske polymermikropartikler, før dette produkt bringes i omsætning. Et ukendt svar skal afklares med leverandøren.",
       "phosphorusLaundry": "Et samlet fosforindhold på {{value}} g er ikke under grænsen på 0,5 g for et vaskemiddel til husholdningsbrug i hårdt vand (bilag III til forordning (EU) 2026/405).",
@@ -2911,22 +2911,22 @@
       "percentageRange": "En procentdel skal være mellem 0 og 100. Du indtastede {{value}}.",
       "positiveNumber": "Indtast et tal større end nul. Du indtastede {{value}}.",
       "allergensMissing": "Du svarede ja, men der er ikke valgt noget allergen. Vælg hvert allergen fra den officielle liste.",
-      "ufiFormat": "En UFI består af fire grupper med fire tegn, f.eks. N1QV-R02N-J00M-WQD5. Formatet kontrolleres, men en indsendelse til et giftinformationscenter gør ikke.",
+      "ufiFormat": "En UFI består af fire grupper med fire tegn, f.eks. N1QV-R02N-J00M-WQD5. Formatet kontrolleres, men en indberetning til giftinformationscentralen kontrolleres ikke.",
       "urlFormat": "Brug en fuldstændig webadresse, der starter med http:// eller https://.",
       "emailFormat": "Indtast en gyldig e-mailadresse.",
       "dateFormat": "Brug en gyldig dato i formatet YYYY-MM-DD.",
       "microorganismSafety": "Der er tilsat mikroorganismer, men der er ikke indtastet nogen reference til en sikkerhedsvurdering."
     },
     "disclaimer": {
-      "title": "Vaskemidler DPP: ansvarsfraskrivelse vedrørende overholdelse",
-      "text": "Forordning (EU) 2026/405 finder anvendelse fra den 23. september 2029; indtil da finder forordning (EC) No 648/2004 anvendelse. Dette værktøj forbereder pasdata og udgør hverken en certificering eller juridisk rådgivning. Alt, der gemmes her, er offentligt tilgængeligt."
+      "title": "DPP for vaske- og rengøringsmidler: ansvarsfraskrivelse vedrørende overholdelse",
+      "text": "Forordning (EU) 2026/405 finder anvendelse fra den 23. september 2029; indtil da finder forordning (EF) nr. 648/2004 anvendelse. Dette værktøj forbereder pasdata og udgør hverken en certificering eller juridisk rådgivning. Alt, der gemmes her, er offentligt tilgængeligt."
     },
     "allergenPicker": {
       "empty": "Ingen allergener tilføjet endnu.",
       "summary": "{{count}} allergen(er) angivet.",
       "addButton": "Tilføj allergen",
       "dialogTitle": "Vælg duftallergener",
-      "searchPlaceholder": "Søg efter navn, CAS, EC eller nummer...",
+      "searchPlaceholder": "Søg efter navn, CAS-, EF- eller andet nummer...",
       "clearSearch": "Ryd søgning",
       "noResults": "Ingen allergener matcher \"{{q}}\".",
       "done": "Færdig",
@@ -2957,7 +2957,7 @@
     "subsections": {
       "manufacturer": "Fabrikant",
       "importer": "Importør",
-      "authorisedRepresentative": "Autoriseret EU-repræsentant"
+      "authorisedRepresentative": "Bemyndiget EU-repræsentant"
     },
     "rows": {
       "constituentClasses": "Bestanddelsklasser over 0,2 vægtprocent",

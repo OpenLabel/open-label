@@ -2232,10 +2232,10 @@
       },
       "detergent_scope": {
         "label": "Ist das Produkt zum Reinigen, Einweichen, Spülen oder Bleichen von Textilien, Geschirr oder Oberflächen bestimmt?",
-        "help": "Siehe Artikel 2 Absatz 1 der Verordnung (EU) 2026/405. Farben, Klebstoffe, Lösungsmittel und Produkte, die nicht reinigen, fallen nicht in diese Kategorie."
+        "help": "Siehe Artikel 2 Nummer 1 der Verordnung (EU) 2026/405. Farben, Klebstoffe, Lösungsmittel und Produkte, die nicht reinigen, fallen nicht in diese Kategorie."
       },
       "scope_reason": {
-        "label": "Grund, warum das Produkt nicht unter die Definition eines Wasch- und Reinigungsmittels fällt"
+        "label": "Grund, warum das Produkt nicht unter die Definition eines Detergens fällt"
       },
       "use_sector": {
         "label": "Für wen ist das Produkt bestimmt?",
@@ -2268,10 +2268,10 @@
       },
       "biocidal_claims": {
         "label": "Biozide oder desinfizierende Angaben?",
-        "help": "Desinfizierende oder antimikrobielle Angaben erfordern eine Zulassung als Biozidprodukt gemäß der Verordnung (EU) No 528/2012."
+        "help": "Desinfizierende oder antimikrobielle Angaben erfordern eine Zulassung als Biozidprodukt gemäß der Verordnung (EU) Nr. 528/2012."
       },
       "manufacturer_legal_name": {
-        "label": "Gesetzlicher Name des Herstellers",
+        "label": "Eingetragener Name des Herstellers",
         "help": "Das Etikett zeigt den Namen, die Postanschrift, die elektronische Adresse und die Telefonnummer des Herstellers. Die Postanschrift muss eine einzige Anlaufstelle in der Union sein."
       },
       "manufacturer_street": {
@@ -2298,7 +2298,7 @@
         "label": "Ist der Hersteller außerhalb der EU ansässig?"
       },
       "importer_legal_name": {
-        "label": "Gesetzlicher Name des Importeurs",
+        "label": "Eingetragener Name des Importeurs",
         "help": "Wenn der Hersteller außerhalb der EU ansässig ist, sind auch die Kontaktdaten des Importeurs erforderlich."
       },
       "importer_street": {
@@ -2318,7 +2318,7 @@
         "placeholder": "name@company.com"
       },
       "eu_operator_name": {
-        "label": "EU-Bevollmächtigter: Gesetzlicher Name",
+        "label": "EU-Bevollmächtigter: eingetragener Name",
         "help": "Ein außerhalb der EU ansässiger Hersteller muss einen Bevollmächtigten benennen (Artikel 9 der Verordnung (EU) 2026/405)."
       },
       "eu_operator_address": {
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "CLP-Einstufungsbewertung",
-        "help": "Verwenden Sie die für dieses Gemisch tatsächlich gemäß der Verordnung (EC) No 1272/2008 bewertete Einstufung. Leiten Sie sie nicht aus dem pH-Wert oder den Piktogrammen ab."
+        "help": "Verwenden Sie die für dieses Gemisch tatsächlich gemäß der Verordnung (EG) Nr. 1272/2008 bewertete Einstufung. Leiten Sie sie nicht aus dem pH-Wert oder den Piktogrammen ab."
       },
       "supplemental_statements": {
         "label": "Ergänzende Kennzeichnungsaussagen",
@@ -2390,7 +2390,7 @@
       },
       "constituent_classes": {
         "label": "Inhaltsstoffklassen, die mit mehr als 0,2 Gewichtsprozent zugesetzt werden",
-        "help": "Kreuzen Sie jede Klasse an, die mit mehr als 0,2 Gewichtsprozent zugesetzt wird, und wählen Sie dann unten ihren Gewichtsbereich (Anhang V Teil A Ziffer 1 Buchstabe h Ziffer i))."
+        "help": "Kreuzen Sie jede Klasse an, die mit mehr als 0,2 Gewichtsprozent zugesetzt wird, und wählen Sie dann unten ihren Gewichtsbereich (Anhang V Teil A Nummer 1 Buchstabe h Ziffer i)."
       },
       "band_phosphates": {
         "label": "Phosphate: Gewichtsbereich"
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Öffentliche Webseite mit Inhaltsstoffen",
-        "help": "Die geltenden Vorschriften (Verordnung (EC) No 648/2004, Anhang VII Teil D) erfordern eine gepflegte öffentliche Liste der Inhaltsstoffe für Verbraucherprodukte. Sie benötigt keine Prozentbereiche oder CAS-Nummern.",
+        "help": "Die geltenden Vorschriften (Verordnung (EG) Nr. 648/2004, Anhang VII Teil D) erfordern eine gepflegte öffentliche Liste der Inhaltsstoffe für Verbraucherprodukte. Sie benötigt keine Prozentbereiche oder CAS-Nummern.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2481,7 +2481,7 @@
       },
       "biodegradability_reference": {
         "label": "Referenz für den Nachweis der biologischen Abbaubarkeit",
-        "help": "Nennen Sie den Prüfbericht oder die Lieferantenerklärung. Laden Sie keine vertraulichen Dateien hoch oder fügen Sie sie ein."
+        "help": "Nennen Sie den Prüfbericht oder die Lieferantenerklärung. Laden Sie keine vertraulichen Dateien hoch und fügen Sie keine ein."
       },
       "synthetic_polymer_microparticles": {
         "label": "Enthält absichtlich zugesetzte synthetische Polymermikropartikel?",
@@ -2633,10 +2633,10 @@
         "label": "Referenz der Vereinbarung über den Sicherungsdienst"
       },
       "commodity_code_status": {
-        "label": "Warennummer des Zolls"
+        "label": "Zolltarifnummer (Warennummer)"
       },
       "commodity_code": {
-        "label": "Warennummer (Verordnung (EEC) No 2658/87)"
+        "label": "Warennummer (Verordnung (EWG) Nr. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Grund, warum keine Warennummer zutrifft"
@@ -2652,7 +2652,7 @@
         "label": "Sonstiges für das Produkt geltendes Unionsrecht"
       },
       "last_placed_on_market_date": {
-        "label": "Letztes Datum, an dem das Modell auf den Markt gebracht wurde",
+        "label": "Letztes Datum, an dem das Modell in Verkehr gebracht wurde",
         "help": "Der Ausgangspunkt für die zehnjährige Bereitstellungspflicht.",
         "placeholder": "YYYY-MM-DD"
       },
@@ -2668,11 +2668,11 @@
       },
       "substance_list_route": {
         "label": "Weg der Offenlegung von Stoffen",
-        "help": "Die Ausnahme gilt nur für industrielle und institutionelle Wasch- und Reinigungsmittel und Tenside, bei denen ein gleichwertiges Sicherheitsdatenblatt gemäß Artikel 31 von REACH die Informationen liefert."
+        "help": "Die Ausnahme gilt nur für Detergenzien für den industriellen und institutionellen Bereich und Tenside, bei denen ein gleichwertiges Sicherheitsdatenblatt gemäß Artikel 31 von REACH die Informationen liefert."
       },
       "substances": {
         "label": "Alle absichtlich zugesetzten Stoffe und kennzeichnungspflichtige übertragene Konservierungsstoffe",
-        "help": "Identifizieren Sie Stoffe gemäß Artikel 18 Absatz 3 der Verordnung (EC) No 1272/2008. Geben Sie keine Konzentrationen oder vertrauliche Rezepturdaten ein. Alles, was in dieser Kategorie gespeichert wird, ist öffentlich."
+        "help": "Identifizieren Sie Stoffe gemäß Artikel 18 Absatz 3 der Verordnung (EG) Nr. 1272/2008. Geben Sie keine Konzentrationen oder vertrauliche Rezepturdaten ein. Alles, was in dieser Kategorie gespeichert wird, ist öffentlich."
       },
       "no_substances_reason": {
         "label": "Grundlage für das Fehlen aufzuführender Stoffe"
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "EU-Bevollmächtigter: Referenz des schriftlichen Mandats",
-        "help": "Referenz des schriftlichen Mandats, mit dem der Hersteller den Bevollmächtigten benennt (Artikel 2 Absatz 18 der Verordnung (EU) 2026/405). Geben Sie nur eine Referenz an. Das Mandat selbst wird nicht hochgeladen und die Referenz wird im öffentlichen Pass nicht angezeigt.",
+        "help": "Referenz des schriftlichen Mandats, mit dem der Hersteller den Bevollmächtigten benennt (Artikel 2 Nummer 18 der Verordnung (EU) 2026/405). Geben Sie nur eine Referenz an. Das Mandat selbst wird nicht hochgeladen und die Referenz wird im öffentlichen Pass nicht angezeigt.",
         "placeholder": "z. B. Mandat 2026-07, unterzeichnet am 1. Juli 2026"
       },
       "registry_upload_confirmed": {
@@ -2822,7 +2822,7 @@
         "pending": "Ausstehend"
       },
       "sdsRequirement": {
-        "required": "Muss mitgeliefert werden",
+        "required": "Muss bereitgestellt werden",
         "on_request": "Muss auf Anfrage erhältlich sein",
         "not_required": "Nach Bewertung nicht erforderlich",
         "review": "Bewertung erforderlich"
@@ -2897,13 +2897,13 @@
       },
       "substanceListRoute": {
         "full_list": "Vollständige Liste der Stoffe",
-        "equivalent_sds": "Gleichwertiges Sicherheitsdatenblatt (nur für die industrielle und gewerbliche Verwendung)",
+        "equivalent_sds": "Gleichwertiges Sicherheitsdatenblatt (nur für den industriellen und institutionellen Bereich)",
         "no_added_substances": "Nach Bewertung keine aufzuführenden Stoffe"
       }
     },
     "warnings": {
-      "scopeOutside": "Dieses Produkt fällt möglicherweise nicht unter die Definition eines Wasch- und Reinigungsmittels gemäß Artikel 2 Absatz 1 der Verordnung (EU) 2026/405. Überprüfen Sie den Anwendungsbereich, bevor Sie diese Kategorie verwenden.",
-      "biocidal": "Desinfizierende oder antimikrobielle Angaben erfordern eine Biozidproduktzulassung gemäß der Verordnung (EU) No 528/2012.",
+      "scopeOutside": "Dieses Produkt fällt möglicherweise nicht unter die Definition eines Detergens gemäß Artikel 2 Nummer 1 der Verordnung (EU) 2026/405. Überprüfen Sie den Anwendungsbereich, bevor Sie diese Kategorie verwenden.",
+      "biocidal": "Desinfizierende oder antimikrobielle Angaben erfordern eine Biozidproduktzulassung gemäß der Verordnung (EU) Nr. 528/2012.",
       "assessmentNeeded": "Diese Bewertung ist nicht abgeschlossen. Schließen Sie sie ab, bevor Sie sich auf den Pass verlassen.",
       "microparticles": "Überprüfen Sie die Verordnung (EU) 2023/2055 über synthetische Polymermikropartikel, bevor Sie dieses Produkt in Verkehr bringen. Eine unbekannte Antwort muss mit dem Lieferanten geklärt werden.",
       "phosphorusLaundry": "Ein Gesamtphosphorgehalt von {{value}} g liegt nicht unter dem Grenzwert von 0,5 g für ein Haushaltswaschmittel in hartem Wasser (Anhang III der Verordnung (EU) 2026/405).",
@@ -2918,15 +2918,15 @@
       "microorganismSafety": "Mikroorganismen werden zugegeben, aber es wurde kein Verweis auf eine Sicherheitsbewertung eingegeben."
     },
     "disclaimer": {
-      "title": "Wasch- und Reinigungsmittel DPP: Haftungsausschluss zur Konformität",
-      "text": "Die Verordnung (EU) 2026/405 gilt ab dem 23. September 2029; bis dahin gilt die Verordnung (EC) No 648/2004. Dieses Tool bereitet Passdaten vor und stellt keine Zertifizierung oder Rechtsberatung dar. Alles hier Gespeicherte ist öffentlich."
+      "title": "DPP für Detergenzien: Haftungsausschluss zur Konformität",
+      "text": "Die Verordnung (EU) 2026/405 gilt ab dem 23. September 2029; bis dahin gilt die Verordnung (EG) Nr. 648/2004. Dieses Tool bereitet Passdaten vor und stellt keine Zertifizierung oder Rechtsberatung dar. Alles hier Gespeicherte ist öffentlich."
     },
     "allergenPicker": {
       "empty": "Noch keine Allergene hinzugefügt.",
       "summary": "{{count}} Allergen(e) deklariert.",
       "addButton": "Allergen hinzufügen",
       "dialogTitle": "Duftstoffallergene auswählen",
-      "searchPlaceholder": "Suche nach Name, CAS-, EC- oder Nummer...",
+      "searchPlaceholder": "Suche nach Name, CAS-Nummer, EG-Nummer oder Nummer...",
       "clearSearch": "Suche löschen",
       "noResults": "Keine Allergene entsprechen \"{{q}}\".",
       "done": "Fertig",

@@ -2232,7 +2232,7 @@
       },
       "detergent_scope": {
         "label": "Is het product bestemd voor het reinigen, weken, spoelen of bleken van textiel, vaat of oppervlakken?",
-        "help": "Zie artikel 2, lid 1, van Verordening (EU) 2026/405. Verven, kleefstoffen, oplosmiddelen en producten die niet reinigen, vallen buiten deze categorie."
+        "help": "Zie artikel 2, punt 1, van Verordening (EU) 2026/405. Verven, kleefstoffen, oplosmiddelen en producten die niet reinigen, vallen buiten deze categorie."
       },
       "scope_reason": {
         "label": "Reden waarom het product buiten de definitie van detergent valt"
@@ -2268,7 +2268,7 @@
       },
       "biocidal_claims": {
         "label": "Biocide of desinfecterende claims?",
-        "help": "Voor desinfecterende of antimicrobiële claims is een toelating als biocide vereist krachtens Verordening (EU) No 528/2012."
+        "help": "Voor desinfecterende of antimicrobiële claims is een toelating als biocide vereist krachtens Verordening (EU) nr. 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Wettelijke naam van de fabrikant",
@@ -2331,10 +2331,10 @@
       },
       "clp_classification": {
         "label": "CLP-indelingsbeoordeling",
-        "help": "Gebruik de indeling die daadwerkelijk voor dit mengsel is beoordeeld krachtens Verordening (EC) No 1272/2008. Leid deze niet af uit de pH-waarde of de pictogrammen."
+        "help": "Gebruik de indeling die daadwerkelijk voor dit mengsel is beoordeeld krachtens Verordening (EG) nr. 1272/2008. Leid deze niet af uit de pH-waarde of de pictogrammen."
       },
       "supplemental_statements": {
-        "label": "Aanvullende etiketteringsvoorschriften",
+        "label": "Aanvullende gevareninformatie (EUH-zinnen)",
         "help": "Bijvoorbeeld EUH208, waar van toepassing."
       },
       "signal_word": {
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Openbare webpagina met ingrediënten",
-        "help": "De huidige voorschriften (Verordening (EC) No 648/2004, bijlage VII, deel D) vereisen een bijgehouden openbare ingrediëntenlijst voor consumentenproducten. Deze hoeft geen percentages of CAS-nummers te bevatten.",
+        "help": "De huidige voorschriften (Verordening (EG) nr. 648/2004, bijlage VII, deel D) vereisen een bijgehouden openbare ingrediëntenlijst voor consumentenproducten. Deze hoeft geen percentages of CAS-nummers te bevatten.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2584,8 +2584,8 @@
         "help": "Generieke milieuclaims zoals milieuvriendelijk, groen of ecologisch zijn vanaf 27 september 2026 verboden op grond van Richtlijn (EU) 2024/825, tenzij het product het EU Ecolabel of een gelijkwaardig erkend keurmerk heeft. \"Biologisch afbreekbaar\" op zichzelf geldt als een generieke claim."
       },
       "ecolabel_licence_number": {
-        "label": "EU Ecolabel-licentienummer",
-        "help": "Voer het licentieregistratienummer alleen in als het product een EU Ecolabel-licentie heeft. De badge wordt alleen op het openbare paspoort getoond als er een nummer is ingevoerd."
+        "label": "Licentienummer EU-milieukeur",
+        "help": "Voer het licentieregistratienummer alleen in als het product een licentie voor de EU-milieukeur heeft. De badge wordt alleen op het openbare paspoort getoond als er een nummer is ingevoerd."
       },
       "reach_review": {
         "label": "REACH-beperkingen en -verplichtingen beoordeeld",
@@ -2636,7 +2636,7 @@
         "label": "Goederencode douane"
       },
       "commodity_code": {
-        "label": "Goederencode (Verordening (EEC) No 2658/87)"
+        "label": "Goederencode (Verordening (EEG) nr. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Reden waarom geen goederencode van toepassing is"
@@ -2672,7 +2672,7 @@
       },
       "substances": {
         "label": "Alle opzettelijk toegevoegde stoffen en op het etiket vereiste overgedragen conserveermiddelen",
-        "help": "Identificeer stoffen zoals vereist door artikel 18, lid 3, van Verordening (EC) No 1272/2008. Voer geen concentraties of vertrouwelijke formuleringsgegevens in. Alles wat in deze categorie wordt opgeslagen, is openbaar."
+        "help": "Identificeer stoffen zoals vereist door artikel 18, lid 3, van Verordening (EG) nr. 1272/2008. Voer geen concentraties of vertrouwelijke formuleringsgegevens in. Alles wat in deze categorie wordt opgeslagen, is openbaar."
       },
       "no_substances_reason": {
         "label": "Grondslag voor de afwezigheid van te vermelden stoffen"
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "Gemachtigde in de EU: referentie van het schriftelijke mandaat",
-        "help": "Referentie van het schriftelijke mandaat waarmee de fabrikant de gemachtigde aanstelt (artikel 2, lid 18, van Verordening (EU) 2026/405). Voer alleen een referentie in. Het mandaat zelf wordt niet geüpload en de referentie wordt niet weergegeven op het openbare paspoort.",
+        "help": "Referentie van het schriftelijke mandaat waarmee de fabrikant de gemachtigde aanstelt (artikel 2, punt 18, van Verordening (EU) 2026/405). Voer alleen een referentie in. Het mandaat zelf wordt niet geüpload en de referentie wordt niet weergegeven op het openbare paspoort.",
         "placeholder": "bijv. Mandaat 2026-07, ondertekend 1 juli 2026"
       },
       "registry_upload_confirmed": {
@@ -2747,7 +2747,7 @@
       "productType": {
         "laundry": "Wasmiddel",
         "laundry_additive": "Wasadditief of voorwasmiddel",
-        "machine_dishwashing": "Machinewas-afwasmiddel",
+        "machine_dishwashing": "Vaatwasmiddel voor de vaatwasmachine",
         "dishwasher_additive": "Glansspoelmiddel of vaatwasadditief",
         "hand_dishwashing": "Handafwasmiddel",
         "all_purpose": "Allesreiniger of oppervlaktereiniger",
@@ -2866,8 +2866,8 @@
         "unknown": "Onbekend"
       },
       "laundryType": {
-        "heavy_duty": "Voor de hoofdwas",
-        "heavy_duty_short": "Voor de hoofdwas voor korte wasprogramma's",
+        "heavy_duty": "Totaalwasmiddel",
+        "heavy_duty_short": "Totaalwasmiddel voor korte wasprogramma's",
         "light_duty": "Voor de fijne was of delicate stoffen"
       },
       "dosageUnit": {
@@ -2902,8 +2902,8 @@
       }
     },
     "warnings": {
-      "scopeOutside": "Dit product valt mogelijk buiten de definitie van een was- of reinigingsmiddel in artikel 2, lid 1, van Verordening (EU) 2026/405. Controleer het toepassingsgebied voordat u deze categorie gebruikt.",
-      "biocidal": "Voor desinfecterende of antimicrobiële claims is een toelating als biocide vereist krachtens Verordening (EU) No 528/2012.",
+      "scopeOutside": "Dit product valt mogelijk buiten de definitie van een detergent in artikel 2, punt 1, van Verordening (EU) 2026/405. Controleer het toepassingsgebied voordat u deze categorie gebruikt.",
+      "biocidal": "Voor desinfecterende of antimicrobiële claims is een toelating als biocide vereist krachtens Verordening (EU) nr. 528/2012.",
       "assessmentNeeded": "Deze beoordeling is niet voltooid. Voltooi de beoordeling voordat u op het paspoort vertrouwt.",
       "microparticles": "Controleer Verordening (EU) 2023/2055 betreffende synthetische polymeermicrodeeltjes voordat u dit product in de handel brengt. Een onbekend antwoord moet met de leverancier worden opgelost.",
       "phosphorusLaundry": "Een totaal fosforgehalte van {{value}} g ligt niet onder de limiet van 0,5 g voor een wasmiddel voor consumenten in hard water (bijlage III van Verordening (EU) 2026/405).",
@@ -2918,8 +2918,8 @@
       "microorganismSafety": "Er zijn micro-organismen toegevoegd, maar er is geen referentie naar een veiligheidsbeoordeling ingevoerd."
     },
     "disclaimer": {
-      "title": "Was- en reinigingsmiddelen DPP: conformiteitsdisclaimer",
-      "text": "Verordening (EU) 2026/405 is van toepassing vanaf 23 september 2029; tot die tijd is Verordening (EC) No 648/2004 van toepassing. Deze tool bereidt paspoortgegevens voor en vormt geen certificering of juridisch advies. Alles wat hier wordt opgeslagen, is openbaar."
+      "title": "DPP voor detergenten: conformiteitsdisclaimer",
+      "text": "Verordening (EU) 2026/405 is van toepassing vanaf 23 september 2029; tot die tijd is Verordening (EG) nr. 648/2004 van toepassing. Deze tool bereidt paspoortgegevens voor en vormt geen certificering of juridisch advies. Alles wat hier wordt opgeslagen, is openbaar."
     },
     "allergenPicker": {
       "empty": "Nog geen allergenen toegevoegd.",

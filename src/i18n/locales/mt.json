@@ -2182,7 +2182,7 @@
       },
       "ingredients": {
         "title": "Ingredjenti u informazzjoni fuq it-tikketta",
-        "description": "Kontenut tat-tikketta skont l-Anness V tar-Regolament (EU) 2026/405 u r-regoli attwali"
+        "description": "Kontenut tat-tikketta skont l-Anness V tar-Regolament (UE) 2026/405 u r-regoli attwali"
       },
       "use": {
         "title": "Użu sigur u dożaġġ",
@@ -2198,7 +2198,7 @@
       },
       "green_claims": {
         "title": "Dikjarazzjonijiet ambjentali",
-        "description": "Tappoġġa d-Direttiva (EU) 2024/825, li tapplika mis-27 ta’ Settembru 2026"
+        "description": "Tappoġġa d-Direttiva (UE) 2024/825, li tapplika mis-27 ta’ Settembru 2026"
       },
       "review": {
         "title": "Reviżjoni tal-fornitur u tħejjija tal-passaport",
@@ -2232,7 +2232,7 @@
       },
       "detergent_scope": {
         "label": "Il-prodott huwa maħsub biex inaddaf, ixxarrab, ilaħlaħ jew jibbliċja drappijiet, platti jew uċuħ?",
-        "help": "Ara l-Artikolu 2(1) tar-Regolament (EU) 2026/405. Żebgħa, adeżivi, solventi u prodotti li ma jnaddfux huma barra minn din il-kategorija."
+        "help": "Ara l-Artikolu 2(1) tar-Regolament (UE) 2026/405. Żebgħa, adeżivi, solventi u prodotti li ma jnaddfux huma barra minn din il-kategorija."
       },
       "scope_reason": {
         "label": "Raġuni għaliex il-prodott huwa barra mid-definizzjoni ta’ deterġent"
@@ -2264,11 +2264,11 @@
       },
       "dpp_profile": {
         "label": "Profil tal-informazzjoni",
-        "help": "Ir-Regolament (EU) 2026/405 japplika mit-23 ta’ Settembru 2029. Agħżel is-sett tad-data tal-Anness VI biex tħejji d-data tal-passaport futur. It-tlestija tiegħu ma tagħmilx passaport konformi jew iċċertifikat."
+        "help": "Ir-Regolament (UE) 2026/405 japplika mit-23 ta’ Settembru 2029. Agħżel is-sett tad-data tal-Anness VI biex tħejji d-data tal-passaport futur. It-tlestija tiegħu ma tagħmilx passaport konformi jew iċċertifikat."
       },
       "biocidal_claims": {
         "label": "Dikjarazzjonijiet bijoċidali jew ta’ diżinfettar?",
-        "help": "Id-dikjarazzjonijiet ta’ diżinfettar jew antimikrobiċi jeħtieġu awtorizzazzjoni ta’ prodott bijoċidali skont ir-Regolament (EU) No 528/2012."
+        "help": "Id-dikjarazzjonijiet ta’ diżinfettar jew antimikrobiċi jeħtieġu awtorizzazzjoni ta’ prodott bijoċidali skont ir-Regolament (UE) Nru 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Isem legali tal-manifattur",
@@ -2319,7 +2319,7 @@
       },
       "eu_operator_name": {
         "label": "Rappreżentant awtorizzat tal-UE: isem legali",
-        "help": "Manifattur stabbilit barra mill-UE jrid jaħtar rappreżentant awtorizzat (l-Artikolu 9 tar-Regolament (EU) 2026/405)."
+        "help": "Manifattur stabbilit barra mill-UE jrid jaħtar rappreżentant awtorizzat (l-Artikolu 9 tar-Regolament (UE) 2026/405)."
       },
       "eu_operator_address": {
         "label": "Rappreżentant awtorizzat tal-UE: indirizz",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "Valutazzjoni tal-klassifikazzjoni CLP",
-        "help": "Uża l-klassifikazzjoni li fil-fatt ġiet ivvalutata għal din it-taħlita skont ir-Regolament (EC) No 1272/2008. Tiddeduċihiex mill-pH jew mill-pittogrammi."
+        "help": "Uża l-klassifikazzjoni li fil-fatt ġiet ivvalutata għal din it-taħlita skont ir-Regolament (KE) Nru 1272/2008. Tiddeduċihiex mill-pH jew mill-pittogrammi."
       },
       "supplemental_statements": {
         "label": "Dikjarazzjonijiet supplimentari fuq it-tikketta",
@@ -2399,16 +2399,16 @@
         "label": "Fosfonati: firxa tal-piż"
       },
       "band_anionic_surfactants": {
-        "label": "Surfactants anjoniċi: firxa tal-piż"
+        "label": "Aġenti tensjoattivi anjoniċi: firxa tal-piż"
       },
       "band_cationic_surfactants": {
-        "label": "Surfactants katjoniċi: firxa tal-piż"
+        "label": "Aġenti tensjoattivi katjoniċi: firxa tal-piż"
       },
       "band_amphoteric_surfactants": {
-        "label": "Surfactants amfoteriċi: firxa tal-piż"
+        "label": "Aġenti tensjoattivi amfoteriċi: firxa tal-piż"
       },
       "band_nonionic_surfactants": {
-        "label": "Surfactants mhux joniċi: firxa tal-piż"
+        "label": "Aġenti tensjoattivi mhux joniċi: firxa tal-piż"
       },
       "band_oxygen_bleach": {
         "label": "Aġenti tal-ibbliċjar ibbażati fuq l-ossiġnu: firxa tal-piż"
@@ -2426,7 +2426,7 @@
         "label": "Fenoli u fenoli aloġenati: firxa tal-piż"
       },
       "band_paradichlorobenzene": {
-        "label": "Paradichlorobenzene: firxa tal-piż"
+        "label": "Paradiklorobenżen: firxa tal-piż"
       },
       "band_aromatic_hydrocarbons": {
         "label": "Idrokarburi aromatiċi: firxa tal-piż"
@@ -2469,14 +2469,14 @@
       },
       "ingredients_url": {
         "label": "Paġna web pubblika tal-ingredjenti",
-        "help": "Ir-regoli attwali (ir-Regolament (EC) No 648/2004, l-Anness VII, il-parti D) jeħtieġu lista pubblika miżmuma tal-ingredjenti għall-prodotti tal-konsumatur. Ma teħtieġx firxiet perċentwali jew numri CAS.",
+        "help": "Ir-regoli attwali (ir-Regolament (KE) Nru 648/2004, l-Anness VII, il-parti D) jeħtieġu lista pubblika miżmuma tal-ingredjenti għall-prodotti tal-konsumatur. Ma teħtieġx firxiet perċentwali jew numri CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
         "label": "Informazzjoni ekwivalenti dwar l-ingredjenti pprovduta lill-utenti professjonali"
       },
       "biodegradability_test": {
-        "label": "Metodu tat-test tal-bijodegradabbiltà tas-surfactant",
+        "label": "Metodu tat-test tal-bijodegradabbiltà tal-aġent tensjoattiv",
         "placeholder": "eż., serje OECD 301"
       },
       "biodegradability_reference": {
@@ -2485,7 +2485,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Fih mikropartiċelli polimeriċi sintetiċi miżjuda intenzjonalment?",
-        "help": "Ir-Regolament (EU) 2023/2055 jirrestringi dawn skont REACH l-Anness XVII l-entrata 78. Id-deterġenti huma kkonċernati mis-17 ta' Ottubru 2028, b'żewġ eċċezzjonijiet: il-mikrobeli użati bħala abrażivi ilhom ipprojbiti mis-17 ta' Ottubru 2023, u fwejjaħ inkapsulati jistgħu jintużaw sas-17 ta' Ottubru 2029."
+        "help": "Ir-Regolament (UE) 2023/2055 jirrestringi dawn skont REACH l-Anness XVII l-entrata 78. Id-deterġenti huma kkonċernati mis-17 ta' Ottubru 2028, b'żewġ eċċezzjonijiet: il-mikrobeli użati bħala abrażivi ilhom ipprojbiti mis-17 ta' Ottubru 2023, u fwejjaħ inkapsulati jistgħu jintużaw sas-17 ta' Ottubru 2029."
       },
       "use_instructions": {
         "label": "Istruzzjonijiet għall-użu u prekawzjonijiet speċjali",
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Tip ta’ deterġent tal-londri",
-        "help": "Jiddeċiedi t-tagħbija standard: 4.5 kg ta’ drapp xott għal deterġenti heavy-duty, 2.5 kg għal deterġenti heavy-duty ta’ ċiklu qasir u għal deterġenti light-duty."
+        "help": "Jiddeċiedi t-tagħbija standard: 4.5 kg ta’ drapp xott għal deterġenti għal ħasil qawwi, 2.5 kg għal deterġenti għal ħasil qawwi ta’ ċiklu qasir u għal deterġenti għal ħasil ħafif."
       },
       "dosage_unit": {
         "label": "Unità tad-dożaġġ"
@@ -2558,7 +2558,7 @@
       },
       "refill_station": {
         "label": "Mibjugħ permezz ta’ stazzjon tal-mili mill-ġdid?",
-        "help": "Il-punti tal-mili mill-ġdid għandhom id-dmir tagħhom stess li jġorru d-data skont l-Artikolu 21(4) tar-Regolament (EU) 2026/405."
+        "help": "Il-punti tal-mili mill-ġdid għandhom dmir separat dwar il-mezz ta' data skont l-Artikolu 21(4) tar-Regolament (UE) 2026/405."
       },
       "epr_registration": {
         "label": "Reġistrazzjoni tar-responsabbiltà tal-produttur tal-imballaġġ għal kull suq",
@@ -2581,11 +2581,11 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Id-dikjarazzjonijiet jevitaw termini ambjentali ġeneriċi?",
-        "help": "Stqarrijiet ambjentali ġeneriċi bħal favur l-ambjent, aħdar jew ekoloġiku huma pprojbiti mis-27 ta' Settembru 2026 skont id-Direttiva (EU) 2024/825, sakemm il-prodott ma jkollux l-Ecolabel tal-UE jew tikketta rikonoxxuta ekwivalenti. \"Bijodegradabbli\" waħedha tgħodd bħala stqarrija ġenerika."
+        "help": "Stqarrijiet ambjentali ġeneriċi bħal favur l-ambjent, aħdar jew ekoloġiku huma pprojbiti mis-27 ta' Settembru 2026 skont id-Direttiva (UE) 2024/825, sakemm il-prodott ma jkollux l-Ecolabel tal-UE jew tikketta rikonoxxuta ekwivalenti. \"Bijodegradabbli\" waħedha tgħodd bħala stqarrija ġenerika."
       },
       "ecolabel_licence_number": {
         "label": "Numru tal-liċenzja tal-Ekotikketta tal-UE",
-        "help": "Daħħal in-numru tar-reġistrazzjoni tal-liċenzja biss jekk il-prodott għandu liċenzja tal-Ekotikketta tal-UE. Il-badge tintwera fuq il-passaport pubbliku biss meta jiddaħħal numru."
+        "help": "Daħħal in-numru tar-reġistrazzjoni tal-liċenzja biss jekk il-prodott għandu liċenzja tal-Ekotikketta tal-UE. Is-simbolu jintwera fuq il-passaport pubbliku biss meta jiddaħħal numru."
       },
       "reach_review": {
         "label": "Restrizzjonijiet u dmirijiet ta’ REACH ivvalutati",
@@ -2616,7 +2616,7 @@
       },
       "persistent_product_id": {
         "label": "Identifikatur persistenti tal-prodott",
-        "help": "Daħħal l-identifikatur reali. ID ta’ rekord intern mhuwiex identifikatur maħruġ skont l-istandards imsemmija fi ESPR."
+        "help": "Daħħal l-identifikatur reali. ID ta’ rekord intern mhuwiex identifikatur maħruġ skont l-istandards imsemmija fl-ESPR."
       },
       "identifier_scheme": {
         "label": "Skema tal-identifikatur u emittent"
@@ -2636,7 +2636,7 @@
         "label": "Kodiċi tal-komodità doganali"
       },
       "commodity_code": {
-        "label": "Kodiċi tal-komodità (ir-Regolament (EEC) No 2658/87)"
+        "label": "Kodiċi tal-komodità (ir-Regolament (KEE) Nru 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Raġuni għaliex ma japplika l-ebda kodiċi tal-komodità"
@@ -2645,7 +2645,7 @@
         "label": "Il-manifattur joħroġ dan il-passaport taħt ir-responsabbiltà unika tiegħu"
       },
       "compliance_statement": {
-        "label": "Dikjarazzjoni li l-konformità mar-Regolament (EU) 2026/405 intweriet",
+        "label": "Dikjarazzjoni li l-konformità mar-Regolament (UE) 2026/405 intweriet",
         "help": "Imla dan biss wara l-valutazzjoni tal-manifattur stess. L-app qatt ma tiġġenera dikjarazzjoni ta’ konformità."
       },
       "applicable_union_law": {
@@ -2657,28 +2657,28 @@
         "placeholder": "YYYY-MM-DD"
       },
       "carrier_placement": {
-        "label": "Fejn jitqiegħed it-trasportatur tad-data",
+        "label": "Fejn jitqiegħed il-mezz ta' data",
         "help": "L-Artikolu 21(4): preżenti fiżikament, li ma jitħassarx, li jista’ jinqara minn magna u viżibbli qabel ix-xiri, bid-dikjarazzjoni \"Jekk jogħġbok skennja għal informazzjoni aktar komprensiva dwar il-prodott\". Meħtieġ ukoll fl-istazzjonijiet tal-mili mill-ġdid u fil-bejgħ mill-bogħod."
       },
       "carrier_reviewed": {
-        "label": "It-trasportatur tad-data jissodisfa dawn ir-rekwiżiti"
+        "label": "Il-mezz ta' data jissodisfa dawn ir-rekwiżiti"
       },
       "market_language_reviewed": {
         "label": "Il-kliem tat-tikketta u tas-sigurtà huma riveduti f’kull lingwa tas-suq fil-mira"
       },
       "substance_list_route": {
         "label": "Rotta tad-divulgazzjoni tas-sustanzi",
-        "help": "L-eżenzjoni tapplika biss għal deterġenti u surfactants industrijali u istituzzjonali fejn skeda tad-data dwar is-sigurtà ekwivalenti skont l-Artikolu 31 ta’ REACH tipprovdi l-informazzjoni."
+        "help": "L-eżenzjoni tapplika biss għal deterġenti industrijali u istituzzjonali u aġenti tensjoattivi fejn skeda tad-data dwar is-sigurtà ekwivalenti skont l-Artikolu 31 ta’ REACH tipprovdi l-informazzjoni."
       },
       "substances": {
-        "label": "Is-sustanzi kollha miżjuda intenzjonalment u l-preservattivi li jifdal li jeħtieġu tikketta",
-        "help": "Identifika s-sustanzi kif meħtieġ mill-Artikolu 18(3) tar-Regolament (EC) No 1272/2008. Tdaħħalx konċentrazzjonijiet jew data kunfidenzjali tal-formulazzjoni. Dak kollu li jiġi ssejvjat f’din il-kategorija huwa pubbliku."
+        "label": "Is-sustanzi kollha miżjuda intenzjonalment u l-preservattivi ta' trasferiment li jeħtieġu tikketta",
+        "help": "Identifika s-sustanzi kif meħtieġ mill-Artikolu 18(3) tar-Regolament (KE) Nru 1272/2008. Tdaħħalx konċentrazzjonijiet jew data kunfidenzjali tal-formulazzjoni. Dak kollu li jiġi ssejvjat f’din il-kategorija huwa pubbliku."
       },
       "no_substances_reason": {
         "label": "Bażi għan-nuqqas ta’ sustanzi li għandhom jiġu elenkati"
       },
       "substance_list_complete": {
-        "label": "Il-lista hija kompluta, tinkludi preservattivi li jifdal li jikkwalifikaw u tuża identitajiet ivvalutati skont l-Artikolu 18(3) ta’ CLP"
+        "label": "Il-lista hija kompluta, tinkludi preservattivi ta' trasferiment li jikkwalifikaw u tuża identitajiet ivvalutati skont l-Artikolu 18(3) ta’ CLP"
       },
       "industrial_institutional_use": {
         "label": "Użat biss barra mill-isfera domestika minn persunal speċjalizzat"
@@ -2709,7 +2709,7 @@
         "label": "Referenza tal-valutazzjoni tas-sigurtà (l-Anness II)"
       },
       "microorganism_shelf_life": {
-        "label": "Żmien kemm idum tajjeb il-prodott fuq l-ixkaffa u kundizzjonijiet tal-ħażna",
+        "label": "Ħajja fuq l-ixkaffa u kundizzjonijiet tal-ħażna",
         "help": "It-tikketta ta’ deterġent li fih mikroorganiżmi turi ż-żmien kemm idum tajjeb il-prodott fuq l-ixkaffa."
       },
       "food_contact_use": {
@@ -2721,7 +2721,7 @@
       },
       "importer_phone": {
         "label": "Numru tat-telefon tal-importatur",
-        "help": "Il-punt (b) tal-Anness VI tar-Regolament (EU) 2026/405 jelenka n-numru tat-telefon tal-importatur, fejn applikabbli, fil-passaport diġitali tal-prodott.",
+        "help": "Il-punt (b) tal-Anness VI tar-Regolament (UE) 2026/405 jelenka n-numru tat-telefon tal-importatur, fejn applikabbli, fil-passaport diġitali tal-prodott.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "Rappreżentant awtorizzat tal-UE: referenza tal-mandat bil-miktub",
-        "help": "Referenza tal-mandat bil-miktub li bih il-manifattur jaħtar ir-rappreżentant (l-Artikolu 2(18) tar-Regolament (EU) 2026/405). Daħħal referenza biss. Il-mandat innifsu ma jittellax u r-referenza ma tintweriex fuq il-passaport pubbliku.",
+        "help": "Referenza tal-mandat bil-miktub li bih il-manifattur jaħtar ir-rappreżentant (l-Artikolu 2(18) tar-Regolament (UE) 2026/405). Daħħal referenza biss. Il-mandat innifsu ma jittellax u r-referenza ma tintweriex fuq il-passaport pubbliku.",
         "placeholder": "eż., Mandat 2026-07, iffirmat l-1 ta' Lulju 2026"
       },
       "registry_upload_confirmed": {
@@ -2739,7 +2739,7 @@
       },
       "future_ufi_code": {
         "label": "Identifikatur uniku tal-formula (UFI) fuq it-tikketta",
-        "help": "Mit-23 ta' Settembru 2029 it-tikketta ta' kull deterġent ikollha l-UFI ippreċedut minn 'UFI:' (il-punt 1(b) tal-Parti A tal-Anness V tar-Regolament (EU) 2026/405), sew jekk il-prodott ikun ikklassifikat bħala perikoluż u sew jekk le. Erba' gruppi ta' erba' karattri. Daħħal l-istess kodiċi bħall-UFI taċ-ċentru tal-veleni meta jeżisti wieħed.",
+        "help": "Mit-23 ta' Settembru 2029 it-tikketta ta' kull deterġent ikollha l-UFI ippreċedut minn 'UFI:' (il-punt 1(b) tal-Parti A tal-Anness V tar-Regolament (UE) 2026/405), sew jekk il-prodott ikun ikklassifikat bħala perikoluż u sew jekk le. Erba' gruppi ta' erba' karattri. Daħħal l-istess kodiċi bħall-UFI taċ-ċentru tal-veleni meta jeżisti wieħed.",
         "placeholder": "eż., N1QV-R02N-J00M-WQD5"
       }
     },
@@ -2750,13 +2750,13 @@
         "machine_dishwashing": "Deterġent tal-magni tal-ħasil tal-platti",
         "dishwasher_additive": "Għajnuna għat-tlaħliħ jew addittiv tal-magni tal-ħasil tal-platti",
         "hand_dishwashing": "Deterġent tal-ħasil tal-platti bl-idejn",
-        "all_purpose": "Tindif għal kull skop jew tal-uċuħ",
-        "kitchen": "Tindif tal-kċina",
-        "bathroom": "Tindif tal-kamra tal-banju",
-        "toilet": "Tindif tat-tojlit",
-        "glass": "Tindif tal-ħġieġ",
-        "floor": "Tindif tal-art",
-        "descaler": "Tneħħija tal-ġebla",
+        "all_purpose": "Prodott tat-tindif għal kull użu jew għall-uċuħ",
+        "kitchen": "Prodott tat-tindif tal-kċina",
+        "bathroom": "Prodott tat-tindif tal-kamra tal-banju",
+        "toilet": "Prodott tat-tindif tat-tojlit",
+        "glass": "Prodott tat-tindif tal-ħġieġ",
+        "floor": "Prodott tat-tindif tal-art",
+        "descaler": "Prodott kontra l-ġebla",
         "bleach": "Bliċ",
         "other": "Deterġent ieħor"
       },
@@ -2764,7 +2764,7 @@
         "liquid": "Likwidu",
         "gel": "Ġell",
         "powder": "Trab",
-        "tablet": "Pillola",
+        "tablet": "Pastilja",
         "capsule": "Kapsula jew pod",
         "spray": "Sprej",
         "wipe": "Wajp",
@@ -2830,10 +2830,10 @@
       "constituentClass": {
         "phosphates": "Fosfati",
         "phosphonates": "Fosfonati",
-        "anionic_surfactants": "Surfactants anjoniċi",
-        "cationic_surfactants": "Surfactants katjoniċi",
-        "amphoteric_surfactants": "Surfactants amfoteriċi",
-        "nonionic_surfactants": "Surfactants mhux joniċi",
+        "anionic_surfactants": "Aġenti tensjoattivi anjoniċi",
+        "cationic_surfactants": "Aġenti tensjoattivi katjoniċi",
+        "amphoteric_surfactants": "Aġenti tensjoattivi amfoteriċi",
+        "nonionic_surfactants": "Aġenti tensjoattivi mhux joniċi",
         "oxygen_bleach": "Aġenti tal-ibbliċjar ibbażati fuq l-ossiġnu",
         "chlorine_bleach": "Aġenti tal-ibbliċjar ibbażati fuq il-kloru",
         "edta": "EDTA u l-melħ tiegħu",
@@ -2873,7 +2873,7 @@
       "dosageUnit": {
         "ml": "Millilitri",
         "g": "Grammi",
-        "units": "Unitajiet (pilloli, kapsuli jew pods)"
+        "units": "Unitajiet (pastilji, kapsuli jew pods)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
@@ -2902,24 +2902,24 @@
       }
     },
     "warnings": {
-      "scopeOutside": "Dan il-prodott jista’ jaqa’ barra mid-definizzjoni ta’ deterġent fl-Artikolu 2(1) tar-Regolament (EU) 2026/405. Iċċekkja l-kamp ta’ applikazzjoni qabel tuża din il-kategorija.",
-      "biocidal": "L-affermazzjonijiet diżinfettanti jew antimikrobiċi jeħtieġu awtorizzazzjoni tal-prodott bijoċidali skont ir-Regolament (EU) No 528/2012.",
+      "scopeOutside": "Dan il-prodott jista’ jaqa’ barra mid-definizzjoni ta’ deterġent fl-Artikolu 2(1) tar-Regolament (UE) 2026/405. Iċċekkja l-kamp ta’ applikazzjoni qabel tuża din il-kategorija.",
+      "biocidal": "L-affermazzjonijiet diżinfettanti jew antimikrobiċi jeħtieġu awtorizzazzjoni tal-prodott bijoċidali skont ir-Regolament (UE) Nru 528/2012.",
       "assessmentNeeded": "Din il-valutazzjoni mhijiex lesta. Irranġaha qabel ma tiddependi fuq il-passaport.",
-      "microparticles": "Iċċekkja r-Regolament (EU) 2023/2055 dwar il-mikropartiċelli polimeriċi sintetiċi qabel ma tqiegħed dan il-prodott fis-suq. Risposta mhux magħrufa trid tiġi solvuta mal-fornitur.",
-      "phosphorusLaundry": "Kontenut totali ta’ fosfru ta’ {{value}} g mhuwiex taħt il-limitu ta’ 0.5 g għal deterġent tal-londri għall-konsumatur f’ilma iebes (Anness III tar-Regolament (EU) 2026/405).",
-      "phosphorusDishwasher": "Kontenut totali ta’ fosfru ta’ {{value}} g mhuwiex taħt il-limitu ta’ 0.3 g għal deterġent għall-magni tal-ħasil tal-platti awtomatiċi għall-konsumatur (Anness III tar-Regolament (EU) 2026/405).",
+      "microparticles": "Iċċekkja r-Regolament (UE) 2023/2055 dwar il-mikropartiċelli polimeriċi sintetiċi qabel ma tqiegħed dan il-prodott fis-suq. Risposta mhux magħrufa trid tiġi solvuta mal-fornitur.",
+      "phosphorusLaundry": "Kontenut totali ta’ fosfru ta’ {{value}} g mhuwiex taħt il-limitu ta’ 0.5 g għal deterġent tal-londri għall-konsumatur f’ilma iebes (Anness III tar-Regolament (UE) 2026/405).",
+      "phosphorusDishwasher": "Kontenut totali ta’ fosfru ta’ {{value}} g mhuwiex taħt il-limitu ta’ 0.3 g għal deterġent għall-magni tal-ħasil tal-platti awtomatiċi għall-konsumatur (Anness III tar-Regolament (UE) 2026/405).",
       "percentageRange": "Perċentwal irid ikun bejn 0 u 100. Int daħħalt {{value}}.",
       "positiveNumber": "Daħħal numru akbar minn żero. Int daħħalt {{value}}.",
       "allergensMissing": "Inti weġibt iva, iżda ma ntgħażel l-ebda allerġen. Agħżel kull allerġen mil-lista uffiċjali.",
-      "ufiFormat": "UFI għandu erba’ gruppi ta’ erba’ karattri, pereżempju N1QV-R02N-J00M-WQD5. Il-format jiġi ċċekkjat, iżda s-sottomissjoni liċ-ċentru tal-avvelenament ma tiġix.",
+      "ufiFormat": "UFI għandu erba’ gruppi ta’ erba’ karattri, pereżempju N1QV-R02N-J00M-WQD5. Il-format jiġi ċċekkjat, iżda s-sottomissjoni liċ-ċentru tal-veleni ma tiġix.",
       "urlFormat": "Uża indirizz tal-web sħiħ li jibda bi http:// jew https://.",
       "emailFormat": "Daħħal indirizz tal-email validu.",
       "dateFormat": "Uża data valida fil-format YYYY-MM-DD.",
       "microorganismSafety": "Ġew miżjuda mikroorganiżmi, iżda ma ddaħħlet l-ebda referenza għall-valutazzjoni tas-sigurtà."
     },
     "disclaimer": {
-      "title": "Deterġenti DPP: dikjarazzjoni ta’ nonresponsabbiltà dwar il-konformità",
-      "text": "Ir-Regolament (EU) 2026/405 japplika mit-23 ta' Settembru 2029; sa dakinhar japplika r-Regolament (EC) No 648/2004. Din l-għodda tħejji d-data tal-passaport u mhijiex ċertifikazzjoni jew parir legali. Kulma jiġi ssejvjat hawnhekk huwa pubbliku."
+      "title": "DPP tad-deterġenti: dikjarazzjoni ta’ nonresponsabbiltà dwar il-konformità",
+      "text": "Ir-Regolament (UE) 2026/405 japplika mit-23 ta' Settembru 2029; sa dakinhar japplika r-Regolament (KE) Nru 648/2004. Din l-għodda tħejji d-data tal-passaport u mhijiex ċertifikazzjoni jew parir legali. Kulma jiġi ssejvjat hawnhekk huwa pubbliku."
     },
     "allergenPicker": {
       "empty": "Għad ma żdied l-ebda allerġen.",
@@ -2935,7 +2935,7 @@
     },
     "form": {
       "packagingImageLabel": "Immaġni bil-kulur tal-imballaġġ jew tat-tikketta",
-      "packagingImageHelp": "Il-punt (a) tal-Anness VI tar-Regolament (EU) 2026/405 jirrikjedi immaġni bil-kulur tal-imballaġġ jew tat-tikketta, ċara biżżejjed biex tidentifika l-mudell. Obbligatorju fuq il-profil tal-Anness VI."
+      "packagingImageHelp": "Il-punt (a) tal-Anness VI tar-Regolament (UE) 2026/405 jirrikjedi immaġni bil-kulur tal-imballaġġ jew tat-tikketta, ċara biżżejjed biex tidentifika l-mudell. Obbligatorju fuq il-profil tal-Anness VI."
     }
   },
   "detergentsPublic": {
@@ -2952,7 +2952,7 @@
       "biocide": "Prodott bijoċidali",
       "responsible": "Min hu responsabbli",
       "annexVi": "Sett ta' data tal-Anness VI",
-      "metadata": "DPP infrastruttura"
+      "metadata": "Infrastruttura tad-DPP"
     },
     "subsections": {
       "manufacturer": "Manifattur",
@@ -2967,8 +2967,8 @@
       "address": "Indirizz",
       "email": "Posta elettronika",
       "phone": "Telefown",
-      "dppServiceProvider": "DPP fornitur tas-servizz",
-      "dppVersion": "DPP verżjoni",
+      "dppServiceProvider": "Fornitur tas-servizz tad-DPP",
+      "dppVersion": "Verżjoni tad-DPP",
       "lastUpdated": "Aġġornat l-aħħar",
       "status": "Stat"
     },

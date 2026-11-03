@@ -2206,7 +2206,7 @@
       },
       "annex_identity": {
         "title": "Prilog VI.: identitet proizvoda i izjava proizvođača",
-        "description": "Priprema za digitalnu putovnicu proizvoda koja se zahtijeva od 23. rujna 2029. Potpun skup podataka nije certifikacija, provjereni identifikator ili podnesak za registar."
+        "description": "Priprema za digitalnu putovnicu za proizvode koja se zahtijeva od 23. rujna 2029. Potpun skup podataka nije certifikacija, provjereni identifikator ili podnesak za registar."
       },
       "annex_substances": {
         "title": "Prilog VI.: tvari",
@@ -2239,7 +2239,7 @@
       },
       "use_sector": {
         "label": "Kome je proizvod namijenjen?",
-        "help": "Industrijska i institucionalna uporaba znači uporabu isključivo izvan kućanstva od strane specijaliziranog osoblja."
+        "help": "Industrijska i profesionalna uporaba znači uporabu isključivo izvan kućanstva od strane specijaliziranog osoblja."
       },
       "model_identifier": {
         "label": "Identifikator modela proizvoda",
@@ -2268,7 +2268,7 @@
       },
       "biocidal_claims": {
         "label": "Tvrdnje o biocidnim ili dezinfekcijskim svojstvima?",
-        "help": "Za tvrdnje o dezinfekcijskim ili antimikrobnim svojstvima potrebno je odobrenje za biocidni proizvod u skladu s Uredbom (EU) No 528/2012."
+        "help": "Za tvrdnje o dezinfekcijskim ili antimikrobnim svojstvima potrebno je odobrenje za biocidni proizvod u skladu s Uredbom (EU) br. 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Puni pravni naziv proizvođača",
@@ -2331,20 +2331,20 @@
       },
       "clp_classification": {
         "label": "Procjena razvrstavanja prema Uredbi CLP",
-        "help": "Koristite razvrstavanje koje je stvarno procijenjeno za ovu smjesu u skladu s Uredbom (EC) No 1272/2008. Nemojte ga zaključivati na temelju pH vrijednosti ili piktograma."
+        "help": "Koristite razvrstavanje koje je stvarno procijenjeno za ovu smjesu u skladu s Uredbom (EZ) br. 1272/2008. Nemojte ga zaključivati na temelju pH vrijednosti ili piktograma."
       },
       "supplemental_statements": {
         "label": "Dodatne izjave na oznaci",
         "help": "Na primjer EUH208, gdje je primjenjivo."
       },
       "signal_word": {
-        "label": "Signalna riječ"
+        "label": "Riječ upozorenja"
       },
       "pictograms": {
         "label": "GHS piktogrami"
       },
       "hazard_statements": {
-        "label": "Oznake opasnosti",
+        "label": "Oznake upozorenja",
         "help": "Unesite tekst točno onako kako je naveden na odobrenoj oznaci. Koristite gumb za prijevod za svaki jezik tržišta. Ovaj se tekst nikada ne prevodi automatski.",
         "placeholder": "npr. H315 Nadražuje kožu"
       },
@@ -2355,7 +2355,7 @@
       },
       "pcn_applicability": {
         "label": "Obavijest centru za kontrolu otrovanja (Prilog VIII. Uredbi CLP)",
-        "help": "UFI i obavijest ovise o opasnostima za zdravlje ili fizikalnim opasnostima te primjenjivim izuzećima. Samo opasnosti za okoliš ne pokreću obvezu obavješćivanja."
+        "help": "UFI i obavijest ovise o opasnostima za zdravlje ili fizikalnim opasnostima te primjenjivim izuzećima. Opasnosti za okoliš same po sebi ne pokreću obvezu obavješćivanja."
       },
       "pcn_exemption_reason": {
         "label": "Razlog i pravna osnova za izuzeće"
@@ -2399,16 +2399,16 @@
         "label": "Fosfonati: raspon masenog udjela"
       },
       "band_anionic_surfactants": {
-        "label": "Anionski tenzidi: raspon masenog udjela"
+        "label": "Anionske površinski aktivne tvari: raspon masenog udjela"
       },
       "band_cationic_surfactants": {
-        "label": "Kationski tenzidi: raspon masenog udjela"
+        "label": "Kationske površinski aktivne tvari: raspon masenog udjela"
       },
       "band_amphoteric_surfactants": {
-        "label": "Amfoterni tenzidi: raspon masenog udjela"
+        "label": "Amfoterne površinski aktivne tvari: raspon masenog udjela"
       },
       "band_nonionic_surfactants": {
-        "label": "Neionski tenzidi: raspon masenog udjela"
+        "label": "Neionske površinski aktivne tvari: raspon masenog udjela"
       },
       "band_oxygen_bleach": {
         "label": "Sredstva za bijeljenje na bazi kisika: raspon masenog udjela"
@@ -2469,14 +2469,14 @@
       },
       "ingredients_url": {
         "label": "Javna internetska stranica sa sastojcima",
-        "help": "Važeća pravila (Uredba (EC) No 648/2004, Prilog VII. dio D) zahtijevaju održavani javni popis sastojaka za potrošačke proizvode. Nije potrebno navoditi raspone postotaka ili CAS brojeve.",
+        "help": "Važeća pravila (Uredba (EZ) br. 648/2004, Prilog VII. dio D) zahtijevaju održavani javni popis sastojaka za potrošačke proizvode. Nije potrebno navoditi raspone postotaka ili CAS brojeve.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
         "label": "Ekvivalentne informacije o sastojcima dostavljene profesionalnim korisnicima"
       },
       "biodegradability_test": {
-        "label": "Metoda ispitivanja biorazgradivosti tenzida",
+        "label": "Metoda ispitivanja biorazgradivosti površinski aktivnih tvari",
         "placeholder": "npr. serija OECD 301"
       },
       "biodegradability_reference": {
@@ -2636,7 +2636,7 @@
         "label": "Carinska tarifna oznaka"
       },
       "commodity_code": {
-        "label": "Tarifna oznaka (Uredba (EEC) No 2658/87)"
+        "label": "Tarifna oznaka (Uredba (EEZ) br. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Razlog zašto se ne primjenjuje tarifna oznaka"
@@ -2668,11 +2668,11 @@
       },
       "substance_list_route": {
         "label": "Način objave popisa tvari",
-        "help": "Izuzeće se primjenjuje samo na industrijske i institucionalne deterdžente i tenzide za koje se informacije dostavljaju putem ekvivalentnog sigurnosno-tehničkog lista u skladu s člankom 31. Uredbe REACH."
+        "help": "Izuzeće se primjenjuje samo na industrijske deterdžente i deterdžente za profesionalnu upotrebu te na površinski aktivne tvari za koje se informacije dostavljaju putem ekvivalentnog sigurnosno-tehničkog lista u skladu s člankom 31. Uredbe REACH."
       },
       "substances": {
         "label": "Sve namjerno dodane tvari i preneseni konzervansi koji se moraju navesti na oznaci",
-        "help": "Identificirajte tvari kako se zahtijeva člankom 18. stavkom 3. Uredbe (EC) No 1272/2008. Ne unosite koncentracije ili povjerljive podatke o formulaciji. Sve spremljeno u ovoj kategoriji je javno."
+        "help": "Identificirajte tvari kako se zahtijeva člankom 18. stavkom 3. Uredbe (EZ) br. 1272/2008. Ne unosite koncentracije ili povjerljive podatke o formulaciji. Sve spremljeno u ovoj kategoriji je javno."
       },
       "no_substances_reason": {
         "label": "Osnova za nepostojanje tvari za popis"
@@ -2779,7 +2779,7 @@
       "useSector": {
         "consumer": "Potrošači, uključujući mješovitu potrošačku i profesionalnu uporabu",
         "professional": "Isključivo za profesionalnu uporabu",
-        "industrial": "Isključivo za industrijsku i institucionalnu uporabu"
+        "industrial": "Isključivo za industrijsku i profesionalnu uporabu"
       },
       "dppProfile": {
         "current": "Trenutne informacije o proizvodu",
@@ -2830,20 +2830,20 @@
       "constituentClass": {
         "phosphates": "Fosfati",
         "phosphonates": "Fosfonati",
-        "anionic_surfactants": "Anionski tenzidi",
-        "cationic_surfactants": "Kationski tenzidi",
-        "amphoteric_surfactants": "Amfoterni tenzidi",
-        "nonionic_surfactants": "Neionski tenzidi",
+        "anionic_surfactants": "Anionske površinski aktivne tvari",
+        "cationic_surfactants": "Kationske površinski aktivne tvari",
+        "amphoteric_surfactants": "Amfoterne površinski aktivne tvari",
+        "nonionic_surfactants": "Neionske površinski aktivne tvari",
         "oxygen_bleach": "Izbjeljivači na bazi kisika",
         "chlorine_bleach": "Izbjeljivači na bazi klora",
         "edta": "EDTA i njegove soli",
         "nta": "NTA i njegove soli",
         "phenols": "Fenoli i halogenirani fenoli",
-        "paradichlorobenzene": "Paradichlorbenzen",
+        "paradichlorobenzene": "Paradiklorbenzen",
         "aromatic_hydrocarbons": "Aromatski ugljikovodici",
         "aliphatic_hydrocarbons": "Alifatski ugljikovodici",
         "halogenated_hydrocarbons": "Halogenirani ugljikovodici",
-        "soap": "Sapuni",
+        "soap": "Sapun",
         "zeolites": "Zeoliti",
         "polycarboxylates": "Polikarboksilati"
       },
@@ -2880,7 +2880,7 @@
         "pet": "PET (01)",
         "pp": "PP (05)",
         "other_plastic": "Ostala plastika",
-        "metal": "Metali",
+        "metal": "Metal",
         "glass": "Staklo",
         "paper_cardboard": "Papir ili karton",
         "composite": "Kompozitni materijal",
@@ -2902,8 +2902,8 @@
       }
     },
     "warnings": {
-      "scopeOutside": "Ovaj proizvod možda ne potpada pod definiciju deterdženta iz članka 2. stavka 1. Uredbe (EU) 2026/405. Provjerite područje primjene prije uporabe ove kategorije.",
-      "biocidal": "Za tvrdnje o dezinfekcijskom ili antimikrobnom djelovanju potrebno je odobrenje za biocidni proizvod u skladu s Uredbom (EU) No 528/2012.",
+      "scopeOutside": "Ovaj proizvod možda ne potpada pod definiciju deterdženta iz članka 2. točke 1. Uredbe (EU) 2026/405. Provjerite područje primjene prije uporabe ove kategorije.",
+      "biocidal": "Za tvrdnje o dezinfekcijskom ili antimikrobnom djelovanju potrebno je odobrenje za biocidni proizvod u skladu s Uredbom (EU) br. 528/2012.",
       "assessmentNeeded": "Ova procjena nije dovršena. Dovršite je prije nego što se oslonite na putovnicu.",
       "microparticles": "Provjerite Uredbu (EU) 2023/2055 o mikročesticama sintetičkih polimera prije stavljanja ovog proizvoda na tržište. Nepoznati odgovor mora se riješiti s dobavljačem.",
       "phosphorusLaundry": "Ukupni sadržaj fosfora od {{value}} g nije ispod ograničenja od 0,5 g za deterdžent za pranje rublja za široku potrošnju u tvrdoj vodi (Prilog III. Uredbe (EU) 2026/405).",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Deterdženti DPP: izjava o odricanju od odgovornosti u vezi sukladnosti",
-      "text": "Uredba (EU) 2026/405 primjenjuje se od 23. rujna 2029.; do tada se primjenjuje Uredba (EC) No 648/2004. Ovaj alat priprema podatke za putovnicu i ne predstavlja certificiranje niti pravni savjet. Sve što je ovdje spremljeno javno je."
+      "text": "Uredba (EU) 2026/405 primjenjuje se od 23. rujna 2029.; do tada se primjenjuje Uredba (EZ) br. 648/2004. Ovaj alat priprema podatke za putovnicu i ne predstavlja certificiranje niti pravni savjet. Sve što je ovdje spremljeno javno je."
     },
     "allergenPicker": {
       "empty": "Još nisu dodani alergeni.",
@@ -2939,10 +2939,10 @@
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Deterdženti: Digitalna putovnica proizvoda",
+    "headerBadge": "Deterdženti: Digitalna putovnica za proizvode",
     "notice": "Ova stranica pruža informacije o proizvodu koje je objavio dobavljač. To nije certifikacija ni odobrenje i ne zamjenjuje oznaku na ambalaži.",
     "units": "jedinice",
-    "ecolabelBadge": "Znak za okoliš EU",
+    "ecolabelBadge": "Znak za okoliš EU-a",
     "sections": {
       "product": "Proizvod",
       "hazard": "Opasnost i sigurnost",
@@ -2957,11 +2957,11 @@
     "subsections": {
       "manufacturer": "Proizvođač",
       "importer": "Uvoznik",
-      "authorisedRepresentative": "Ovlašteni predstavnik u EU"
+      "authorisedRepresentative": "Ovlašteni zastupnik u EU-u"
     },
     "rows": {
-      "constituentClasses": "Kategorije sastojaka s masenim udjelom većim od 0,2 %",
-      "ecolabel": "Znak za okoliš EU",
+      "constituentClasses": "Klase sastojaka s masenim udjelom većim od 0,2 %",
+      "ecolabel": "Znak za okoliš EU-a",
       "licenceNumber": "Broj licence",
       "name": "Naziv",
       "address": "Adresa",

@@ -2182,7 +2182,7 @@
       },
       "ingredients": {
         "title": "Ingrediente și informații de pe etichetă",
-        "description": "Conținutul etichetei în conformitate cu anexa V la Regulamentul (EU) 2026/405 și cu normele actuale"
+        "description": "Conținutul etichetei în conformitate cu anexa V la Regulamentul (UE) 2026/405 și cu normele actuale"
       },
       "use": {
         "title": "Utilizare sigură și dozaj",
@@ -2198,7 +2198,7 @@
       },
       "green_claims": {
         "title": "Mențiuni ecologice",
-        "description": "Sprijină Directiva (EU) 2024/825, care se aplică de la 27 septembrie 2026"
+        "description": "Sprijină Directiva (UE) 2024/825, care se aplică de la 27 septembrie 2026"
       },
       "review": {
         "title": "Revizuirea de către furnizor și pregătirea pașaportului",
@@ -2232,7 +2232,7 @@
       },
       "detergent_scope": {
         "label": "Produsul este destinat curățării, înmuierii, clătirii sau albirii țesăturilor, vaselor sau suprafețelor?",
-        "help": "A se vedea articolul 2 alineatul (1) din Regulamentul (EU) 2026/405. Vopselele, adezivii, solvenții și produsele care nu curăță nu intră în această categorie."
+        "help": "A se vedea articolul 2 punctul 1 din Regulamentul (UE) 2026/405. Vopselele, adezivii, solvenții și produsele care nu curăță nu intră în această categorie."
       },
       "scope_reason": {
         "label": "Motivul pentru care produsul nu se încadrează în definiția detergentului"
@@ -2264,11 +2264,11 @@
       },
       "dpp_profile": {
         "label": "Profil de informații",
-        "help": "Regulamentul (EU) 2026/405 se aplică de la 23 septembrie 2029. Alegeți setul de date din anexa VI pentru a pregăti datele viitoare ale pașaportului. Completarea acestuia nu face ca un pașaport să fie conform sau certificat."
+        "help": "Regulamentul (UE) 2026/405 se aplică de la 23 septembrie 2029. Alegeți setul de date din anexa VI pentru a pregăti datele viitoare ale pașaportului. Completarea acestuia nu face ca un pașaport să fie conform sau certificat."
       },
       "biocidal_claims": {
         "label": "Mențiuni biocide sau de dezinfectare?",
-        "help": "Mențiunile de dezinfectare sau antimicrobiene necesită o autorizație pentru produse biocide în temeiul Regulamentului (EU) No 528/2012."
+        "help": "Mențiunile de dezinfectare sau antimicrobiene necesită o autorizație pentru produse biocide în temeiul Regulamentului (UE) nr. 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Denumirea juridică a producătorului",
@@ -2319,7 +2319,7 @@
       },
       "eu_operator_name": {
         "label": "Reprezentant autorizat în UE: denumire juridică",
-        "help": "Un producător stabilit în afara UE trebuie să desemneze un reprezentant autorizat (articolul 9 din Regulamentul (EU) 2026/405)."
+        "help": "Un producător stabilit în afara UE trebuie să desemneze un reprezentant autorizat (articolul 9 din Regulamentul (UE) 2026/405)."
       },
       "eu_operator_address": {
         "label": "Reprezentant autorizat în UE: adresă",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "Evaluarea clasificării CLP",
-        "help": "Utilizați clasificarea evaluată efectiv pentru acest amestec în temeiul Regulamentului (EC) No 1272/2008. Nu o deduceți din pH sau din pictograme."
+        "help": "Utilizați clasificarea evaluată efectiv pentru acest amestec în temeiul Regulamentului (CE) nr. 1272/2008. Nu o deduceți din pH sau din pictograme."
       },
       "supplemental_statements": {
         "label": "Fraze suplimentare pe etichetă",
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Pagină web publică cu ingrediente",
-        "help": "Normele actuale (Regulamentul (EC) No 648/2004, anexa VII partea D) impun o listă publică de ingrediente, actualizată, pentru produsele de consum. Aceasta nu necesită intervale procentuale sau numere CAS.",
+        "help": "Normele actuale (Regulamentul (CE) nr. 648/2004, anexa VII partea D) impun o listă publică de ingrediente, actualizată, pentru produsele de consum. Aceasta nu necesită intervale procentuale sau numere CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2485,7 +2485,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Conține microparticule de polimeri sintetici adăugate în mod intenționat?",
-        "help": "Regulamentul (EU) 2023/2055 le restricționează în temeiul anexei XVII rubrica 78 din REACH. Detergenții sunt vizați începând cu 17 octombrie 2028, cu două excepții: microperlele utilizate ca abrazivi sunt interzise de la 17 octombrie 2023, iar parfumurile încapsulate pot fi utilizate până la 17 octombrie 2029."
+        "help": "Regulamentul (UE) 2023/2055 le restricționează în temeiul anexei XVII rubrica 78 din REACH. Detergenții sunt vizați începând cu 17 octombrie 2028, cu două excepții: microperlele utilizate ca abrazivi sunt interzise de la 17 octombrie 2023, iar parfumurile încapsulate pot fi utilizate până la 17 octombrie 2029."
       },
       "use_instructions": {
         "label": "Instrucțiuni de utilizare și precauții speciale",
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Tip de detergent pentru rufe",
-        "help": "Stabilește încărcătura standard: 4,5 kg de țesătură uscată pentru detergenții pentru rufe grele, 2,5 kg pentru detergenții pentru rufe grele cu ciclu scurt și pentru detergenții pentru rufe delicate."
+        "help": "Stabilește încărcătura standard: 4,5 kg de țesătură uscată pentru detergenții pentru rufe foarte murdare, 2,5 kg pentru detergenții pentru rufe foarte murdare cu ciclu scurt și pentru detergenții pentru rufe delicate."
       },
       "dosage_unit": {
         "label": "Unitate de dozaj"
@@ -2558,11 +2558,11 @@
       },
       "refill_station": {
         "label": "Vândut printr-o stație de reîncărcare?",
-        "help": "Punctele de reîncărcare au propria obligație privind suportul de date în temeiul articolului 21 alineatul (4) din Regulamentul (EU) 2026/405."
+        "help": "Punctele de reîncărcare au propria obligație privind suportul de date în temeiul articolului 21 alineatul (4) din Regulamentul (UE) 2026/405."
       },
       "epr_registration": {
-        "label": "Înregistrarea responsabilității producătorului de ambalaje pe piață",
-        "help": "O linie pe piață.",
+        "label": "Înregistrarea responsabilității producătorului de ambalaje pentru fiecare piață",
+        "help": "O linie pentru fiecare piață.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
@@ -2581,11 +2581,11 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Mențiunile evită termenii ecologici generici?",
-        "help": "Afirmațiile generice de mediu, cum ar fi „prietenos cu mediul”, „verde” sau „ecologic”, sunt interzise începând cu 27 septembrie 2026 în temeiul Directivei (EU) 2024/825, cu excepția cazului în care produsul deține eticheta ecologică a UE sau o etichetă recunoscută echivalentă. „Biodegradabil” utilizat singur este considerat o afirmație generică."
+        "help": "Afirmațiile generice de mediu, cum ar fi „prietenos cu mediul”, „verde” sau „ecologic”, sunt interzise începând cu 27 septembrie 2026 în temeiul Directivei (UE) 2024/825, cu excepția cazului în care produsul deține eticheta ecologică a UE sau o etichetă recunoscută echivalentă. „Biodegradabil” utilizat singur este considerat o afirmație generică."
       },
       "ecolabel_licence_number": {
-        "label": "Numărul de licență EU Ecolabel",
-        "help": "Introduceți numărul de înregistrare a licenței numai dacă produsul deține o licență EU Ecolabel. Emblema este afișată pe pașaportul public numai atunci când este introdus un număr."
+        "label": "Numărul licenței pentru eticheta ecologică a UE",
+        "help": "Introduceți numărul de înregistrare a licenței numai dacă produsul deține o licență pentru eticheta ecologică a UE. Emblema este afișată pe pașaportul public numai atunci când este introdus un număr."
       },
       "reach_review": {
         "label": "Restricțiile și obligațiile REACH evaluate",
@@ -2636,7 +2636,7 @@
         "label": "Cod de marfă vamal"
       },
       "commodity_code": {
-        "label": "Cod de marfă (Regulamentul (EEC) No 2658/87)"
+        "label": "Cod de marfă (Regulamentul (CEE) nr. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Motivul pentru care nu se aplică niciun cod de marfă"
@@ -2645,7 +2645,7 @@
         "label": "Producătorul emite acest pașaport pe propria sa răspundere"
       },
       "compliance_statement": {
-        "label": "Declarație conform căreia a fost demonstrată conformitatea cu Regulamentul (EU) 2026/405",
+        "label": "Declarație conform căreia a fost demonstrată conformitatea cu Regulamentul (UE) 2026/405",
         "help": "Completați acest câmp numai după evaluarea proprie a producătorului. Aplicația nu generează niciodată o declarație de conformitate."
       },
       "applicable_union_law": {
@@ -2672,7 +2672,7 @@
       },
       "substances": {
         "label": "Toate substanțele adăugate în mod intenționat și conservanții reziduali care trebuie etichetați",
-        "help": "Identificați substanțele conform cerințelor articolului 18 alineatul (3) din Regulamentul (EC) No 1272/2008. Nu introduceți concentrații sau date confidențiale privind formula. Tot ce este salvat în această categorie este public."
+        "help": "Identificați substanțele conform cerințelor articolului 18 alineatul (3) din Regulamentul (CE) nr. 1272/2008. Nu introduceți concentrații sau date confidențiale privind formula. Tot ce este salvat în această categorie este public."
       },
       "no_substances_reason": {
         "label": "Baza pentru absența substanțelor de enumerat"
@@ -2721,7 +2721,7 @@
       },
       "importer_phone": {
         "label": "Număr de telefon al importatorului",
-        "help": "Anexa VI punctul (b) din Regulamentul (EU) 2026/405 menționează numărul de telefon al importatorului, dacă este cazul, în pașaportul digital al produsului.",
+        "help": "Anexa VI punctul (b) din Regulamentul (UE) 2026/405 menționează numărul de telefon al importatorului, dacă este cazul, în pașaportul digital al produsului.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "Reprezentant autorizat în UE: referința mandatului scris",
-        "help": "Referința mandatului scris prin care producătorul desemnează reprezentantul [articolul 2 alineatul (18) din Regulamentul (EU) 2026/405]. Introduceți doar o referință. Mandatul în sine nu se încarcă, iar referința nu este afișată în pașaportul public.",
+        "help": "Referința mandatului scris prin care producătorul desemnează reprezentantul [articolul 2 punctul 18 din Regulamentul (UE) 2026/405]. Introduceți doar o referință. Mandatul în sine nu se încarcă, iar referința nu este afișată în pașaportul public.",
         "placeholder": "de ex., Mandat 2026-07, semnat la 1 iulie 2026"
       },
       "registry_upload_confirmed": {
@@ -2739,7 +2739,7 @@
       },
       "future_ufi_code": {
         "label": "Identificator unic de formulă (UFI) pe etichetă",
-        "help": "De la 23 septembrie 2029, eticheta fiecărui detergent conține codul UFI precedat de „UFI:” [anexa V partea A punctul 1 litera (b) din Regulamentul (EU) 2026/405], indiferent dacă produsul este sau nu clasificat ca periculos. Patru grupuri de patru caractere. Introduceți același cod ca UFI pentru centrele de informare toxicologică, dacă acesta există.",
+        "help": "De la 23 septembrie 2029, eticheta fiecărui detergent conține codul UFI precedat de „UFI:” [anexa V partea A punctul 1 litera (b) din Regulamentul (UE) 2026/405], indiferent dacă produsul este sau nu clasificat ca periculos. Patru grupuri de patru caractere. Introduceți același cod ca UFI pentru centrele de informare toxicologică, dacă acesta există.",
         "placeholder": "de ex., N1QV-R02N-J00M-WQD5"
       }
     },
@@ -2765,7 +2765,7 @@
         "gel": "Gel",
         "powder": "Pudră",
         "tablet": "Tabletă",
-        "capsule": "Capsulă sau pod",
+        "capsule": "Capsulă sau doză",
         "spray": "Spray",
         "wipe": "Șervețel",
         "paste": "Pastă",
@@ -2814,7 +2814,7 @@
       },
       "pcnApplicability": {
         "required": "Notificare obligatorie",
-        "exempt": "Scutire documentată",
+        "exempt": "Derogare documentată",
         "review": "Necesită evaluare"
       },
       "pcnStatus": {
@@ -2830,10 +2830,10 @@
       "constituentClass": {
         "phosphates": "Fosfați",
         "phosphonates": "Fosfonați",
-        "anionic_surfactants": "Surfactanți anionici",
-        "cationic_surfactants": "Surfactanți cationici",
-        "amphoteric_surfactants": "Surfactanți amfoteri",
-        "nonionic_surfactants": "Surfactanți neionici",
+        "anionic_surfactants": "Agenți tensioactivi anionici",
+        "cationic_surfactants": "Agenți tensioactivi cationici",
+        "amphoteric_surfactants": "Agenți tensioactivi amfoteri",
+        "nonionic_surfactants": "Agenți tensioactivi neionici",
         "oxygen_bleach": "Agenți de înălbire pe bază de oxigen",
         "chlorine_bleach": "Agenți de înălbire pe bază de clor",
         "edta": "EDTA și sărurile acestuia",
@@ -2902,12 +2902,12 @@
       }
     },
     "warnings": {
-      "scopeOutside": "Acest produs poate să nu se încadreze în definiția detergentului de la articolul 2 alineatul (1) din Regulamentul (EU) 2026/405. Verificați domeniul de aplicare înainte de a utiliza această categorie.",
-      "biocidal": "Mențiunile privind dezinfectarea sau proprietățile antimicrobiene necesită o autorizație pentru produse biocide în temeiul Regulamentului (EU) No 528/2012.",
+      "scopeOutside": "Acest produs poate să nu se încadreze în definiția detergentului de la articolul 2 punctul 1 din Regulamentul (UE) 2026/405. Verificați domeniul de aplicare înainte de a utiliza această categorie.",
+      "biocidal": "Mențiunile privind dezinfectarea sau proprietățile antimicrobiene necesită o autorizație pentru produse biocide în temeiul Regulamentului (UE) nr. 528/2012.",
       "assessmentNeeded": "Această evaluare nu este finalizată. Finalizați-o înainte de a vă baza pe pașaport.",
-      "microparticles": "Consultați Regulamentul (EU) 2023/2055 privind microparticulele de polimeri sintetici înainte de a introduce acest produs pe piață. Un răspuns de tip „necunoscut” trebuie clarificat cu furnizorul.",
-      "phosphorusLaundry": "Un conținut total de fosfor de {{value}} g nu este sub limita de 0,5 g pentru un detergent de rufe de uz casnic în apă dură (anexa III la Regulamentul (EU) 2026/405).",
-      "phosphorusDishwasher": "Un conținut total de fosfor de {{value}} g nu este sub limita de 0,3 g pentru un detergent pentru mașini de spălat vase automate de uz casnic (anexa III la Regulamentul (EU) 2026/405).",
+      "microparticles": "Consultați Regulamentul (UE) 2023/2055 privind microparticulele de polimeri sintetici înainte de a introduce acest produs pe piață. Un răspuns de tip „necunoscut” trebuie clarificat cu furnizorul.",
+      "phosphorusLaundry": "Un conținut total de fosfor de {{value}} g nu este sub limita de 0,5 g pentru un detergent de rufe de uz casnic în apă dură (anexa III la Regulamentul (UE) 2026/405).",
+      "phosphorusDishwasher": "Un conținut total de fosfor de {{value}} g nu este sub limita de 0,3 g pentru un detergent pentru mașini de spălat vase automate de uz casnic (anexa III la Regulamentul (UE) 2026/405).",
       "percentageRange": "Un procent trebuie să fie între 0 și 100. Ați introdus {{value}}.",
       "positiveNumber": "Introduceți un număr mai mare decât zero. Ați introdus {{value}}.",
       "allergensMissing": "Ați răspuns da, dar nu este selectat niciun alergen. Selectați fiecare alergen din lista oficială.",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Detergenți DPP: clauză de exonerare privind conformitatea",
-      "text": "Regulamentul (EU) 2026/405 se aplică de la 23 septembrie 2029; până atunci se aplică Regulamentul (EC) No 648/2004. Acest instrument pregătește datele pentru pașaport și nu constituie o certificare sau consultanță juridică. Tot ceea ce este salvat aici este public."
+      "text": "Regulamentul (UE) 2026/405 se aplică de la 23 septembrie 2029; până atunci se aplică Regulamentul (CE) nr. 648/2004. Acest instrument pregătește datele pentru pașaport și nu constituie o certificare sau consultanță juridică. Tot ceea ce este salvat aici este public."
     },
     "allergenPicker": {
       "empty": "Niciun alergen adăugat încă.",
@@ -2935,7 +2935,7 @@
     },
     "form": {
       "packagingImageLabel": "Imagine color a ambalajului sau a etichetei",
-      "packagingImageHelp": "Anexa VI punctul (a) din Regulamentul (EU) 2026/405 impune o imagine color a ambalajului sau a etichetei, suficient de clară pentru identificarea modelului. Obligatoriu pentru profilul din anexa VI."
+      "packagingImageHelp": "Anexa VI punctul (a) din Regulamentul (UE) 2026/405 impune o imagine color a ambalajului sau a etichetei, suficient de clară pentru identificarea modelului. Obligatoriu pentru profilul din anexa VI."
     }
   },
   "detergentsPublic": {
@@ -2955,7 +2955,7 @@
       "metadata": "Infrastructură DPP"
     },
     "subsections": {
-      "manufacturer": "Fabricant",
+      "manufacturer": "Producător",
       "importer": "Importator",
       "authorisedRepresentative": "Reprezentant autorizat în UE"
     },
