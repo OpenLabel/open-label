@@ -14,11 +14,13 @@ import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { MemoryRouter, Route, Routes, useLocation } from 'react-router-dom';
 
+const languageState = vi.hoisted(() => ({ language: 'en' }));
+
 vi.mock('react-i18next', () => ({
   useTranslation: () => ({
     t: (k: string, fallback?: string) => (typeof fallback === 'string' ? fallback : k),
     i18n: {
-      language: 'en',
+      language: languageState.language,
       changeLanguage: vi.fn(),
       getFixedT: () => (k: string, fallback?: string) =>
         typeof fallback === 'string' ? fallback : k,
@@ -70,7 +72,24 @@ function renderDemo(path: string) {
 }
 
 describe('Demo page', () => {
-  beforeEach(() => vi.clearAllMocks());
+  beforeEach(() => {
+    vi.clearAllMocks();
+    languageState.language = 'en';
+  });
+
+  it('renders the French Detergents sample name and description', () => {
+    languageState.language = 'fr';
+    renderDemo('/demo/detergents');
+    expect(screen.getByRole('heading', { name: 'Lessive liquide exemple', level: 1 })).toBeInTheDocument();
+    expect(screen.getByText('Passeport de démonstration pour une lessive fictive. Toutes les données affichées sont fictives et servent uniquement d’aperçu. Il ne s’agit ni d’une certification, ni d’une approbation, ni d’un passeport réglementaire complet.')).toBeInTheDocument();
+    expect(screen.queryByText(/A demonstration passport for a fictitious laundry detergent/)).not.toBeInTheDocument();
+  });
+
+  it('renders the German Toys sample name', () => {
+    languageState.language = 'de';
+    renderDemo('/demo/toys');
+    expect(screen.getByRole('heading', { name: 'Beispiel-Plüschbär', level: 1 })).toBeInTheDocument();
+  });
 
   it('renders one tab per sampled active category', () => {
     renderDemo('/demo/wine');
