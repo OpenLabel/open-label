@@ -163,7 +163,7 @@ export function ToyPublicPassport({
               🧸 {t('toyPublic.headerBadge')}
             </Badge>
             <h1 className="text-2xl sm:text-3xl font-bold leading-tight">
-              {passport.name}
+              {tr('product_name') || passport.name}
             </h1>
             {Boolean(d.brand_name) && (
               <p className="text-sm text-muted-foreground mt-1">
@@ -198,7 +198,9 @@ export function ToyPublicPassport({
           <div
             className="prose prose-sm max-w-none mt-6"
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(passport.description),
+              __html: DOMPurify.sanitize(
+                (d.description_translations as Record<string, string> | undefined)?.[displayLanguage] || passport.description,
+              ),
             }}
           />
         )}

@@ -6,6 +6,7 @@
  */
 
 import type { PassportFormData } from '@/types/passport';
+import { DETERGENTS_SAMPLE_TRANSLATIONS } from './sampleTranslations';
 
 /**
  * Fictitious Detergents demo passport on the current information profile. It
@@ -50,17 +51,17 @@ export function buildSampleDetergentsPassport(): PassportFormData {
       clp_classification: 'health_physical',
       signal_word: 'warning',
       pictograms: ['ghs07'],
-      hazard_statements: 'H319 Causes serious eye irritation. (Fictitious sample wording.)',
+      hazard_statements: 'H319 Causes serious eye irritation.',
       precautionary_statements:
-        'P264 Wash hands thoroughly after handling. P280 Wear eye protection. (Fictitious sample wording.)',
+        'P264 Wash hands thoroughly after handling. P280 Wear eye protection.',
       pcn_applicability: 'required',
       ufi_code: 'N1QV-R02N-J00M-WQD5',
       pcn_status: 'submitted',
       sds_requirement: 'on_request',
       sds_url: 'https://example-clean.example/sds',
-      sds_languages: 'English, French, German',
+      sds_languages: 'EN, FR, DE',
       sds_revision_date: '2026-09-01',
-      emergency_contact: 'Poison centre +33 1 00 00 00 01',
+      emergency_contact: '+33 1 00 00 00 01',
 
       // Ingredients and label information
       constituent_classes: ['anionic_surfactants', 'nonionic_surfactants', 'soap'],
@@ -103,6 +104,7 @@ export function buildSampleDetergentsPassport(): PassportFormData {
       reach_review: 'reviewed',
       physical_label_reviewed: true,
       data_review_date: '2026-10-01',
+      ...DETERGENTS_SAMPLE_TRANSLATIONS,
     },
   };
 }

@@ -6,6 +6,7 @@
  */
 
 import type { PassportFormData } from '@/types/passport';
+import { TOYS_SAMPLE_TRANSLATIONS } from './sampleTranslations';
 
 /**
  * Fake but realistic data for a sample Toy DPP. Used by the dashboard
@@ -79,6 +80,7 @@ export function buildSampleToyPassport(): PassportFormData {
       safety_channels: ['email', 'website'],
       safety_email: 'safety@acme-toys.example',
       safety_website: 'https://acme-toys.example/safety',
+      ...TOYS_SAMPLE_TRANSLATIONS,
     },
   };
 }

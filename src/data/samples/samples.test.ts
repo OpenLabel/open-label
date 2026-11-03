@@ -19,6 +19,7 @@ import { materialCompositions, packagingMaterialTypes } from '@/data/wineRecycli
 import { calculateWineNutrition } from '@/lib/wineCalculations';
 import { validateCarCleaning, publicCarCleaningData } from '@/lib/carCleaning';
 import type { ProductCategory } from '@/types/passport';
+import { supportedLanguages } from '@/i18n/config';
 
 const activeSampledCategories = categoryList.filter(
   (c) => c.status === 'active' && c.value !== 'other',
@@ -149,6 +150,26 @@ describe('(c) wine sample integrity', () => {
 });
 
 describe('sample hygiene', () => {
+  for (const [category, build] of Object.entries(SAMPLE_PASSPORTS)) {
+    it(`${category} translation maps cover every non-English app language`, () => {
+      if (!build) throw new Error(`Missing sample builder for ${category}`);
+      const languages = supportedLanguages.filter((language) => language.code !== 'en').map((language) => language.code);
+      expect(languages).toHaveLength(24);
+      const data = build().category_data as Record<string, unknown>;
+      const maps = Object.entries(data).filter(([key]) => key.endsWith('_translations'));
+      if (category !== 'wine') expect(maps.length).toBeGreaterThan(0);
+      for (const [key, value] of maps) {
+        expect(value, `${category}.${key}`).toBeTypeOf('object');
+        expect(value).not.toBeNull();
+        const map = value as Record<string, unknown>;
+        for (const language of languages) {
+          expect(map[language], `${category}.${key}.${language}`).toBeTypeOf('string');
+          expect((map[language] as string).trim().length, `${category}.${key}.${language}`).toBeGreaterThan(0);
+        }
+      }
+    });
+  }
+
   it('uses only .example domains and states the data is fictitious', () => {
     for (const [category, build] of Object.entries(SAMPLE_PASSPORTS)) {
       const sample = build!();
