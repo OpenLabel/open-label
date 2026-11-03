@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vyhýbajú sa tvrdenia všeobecným environmentálnym pojmom?",
-        "help": "Všeobecné environmentálne tvrdenia ako „ekologický“, „zelený“ alebo „prírodný“ sú od 27. septembra 2026 podľa smernice (EU) 2024/825 zakázané, pokiaľ výrobok nie je držiteľom environmentálnej značky EÚ (EU Ecolabel) alebo rovnocennej uznanej značky. Samotné označenie „biologicky odbúrateľný“ sa považuje za všeobecné tvrdenie."
+        "help": "Všeobecné environmentálne tvrdenia, ako napríklad „šetrný k životnému prostrediu“, „zelený“ alebo „ekologický“, sú od 27. septembra 2026 podľa smernice (EU) 2024/825 zakázané, pokiaľ výrobok nie je držiteľom environmentálnej značky EÚ alebo rovnocennej uznanej značky. Samotné označenie „biologicky rozložiteľný“ sa považuje za všeobecné tvrdenie."
       },
       "ecolabel_licence_number": {
         "label": "Licenčné číslo environmentálnej značky EÚ",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Detergenty DPP: vyhlásenie o odmietnutí zodpovednosti za súlad",
-      "text": "Nariadenie (EU) 2026/405 o detergentoch a povrchovo aktívnych látkach sa uplatňuje od 23. septembra 2029. Jeho pravidlá týkajúce sa digitálneho pasu výrobku, prístupových práv a podrobností o nosiči údajov sa ešte len majú stanoviť vykonávacím aktom, a dovtedy sa uplatňuje nariadenie (EC) No 648/2004. Tento nástroj zhromažďuje informácie o výrobku a pripravuje údaje pre pas. Nie je to certifikácia ani schválenie a nemalo by sa považovať za konečné právne poradenstvo. Všetko uložené v tejto kategórii je verejné."
+      "text": "Nariadenie (EU) 2026/405 sa uplatňuje od 23. septembra 2029; dovtedy sa uplatňuje nariadenie (EC) No 648/2004. Tento nástroj pripravuje údaje pasu a nepredstavuje certifikáciu ani právne poradenstvo. Všetko, čo je tu uložené, je verejné."
     },
     "allergenPicker": {
       "empty": "Zatiaľ neboli pridané žiadne alergény.",

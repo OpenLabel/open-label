@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Undgår anprisninger generiske miljøbetegnelser?",
-        "help": "Generiske miljøanprisninger såsom miljøvenlig, grøn eller naturlig er forbudt fra den 27. september 2026 i henhold til direktiv (EU) 2024/825, medmindre produktet er tildelt EU-miljømærket eller et tilsvarende anerkendt mærke. \"Bionedbrydelig\" alene betragtes som en generisk anprisning."
+        "help": "Generelle miljøanprisninger såsom miljøvenlig, grøn eller økologisk er forbudt fra den 27. september 2026 i henhold til direktiv (EU) 2024/825, medmindre produktet er tildelt EU-miljømærket eller et tilsvarende anerkendt mærke. \"Bionedbrydelig\" alene betragtes som en generel anprisning."
       },
       "ecolabel_licence_number": {
         "label": "Licensnummer for EU-miljømærket",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Vaskemidler DPP: ansvarsfraskrivelse vedrørende overholdelse",
-      "text": "Forordning (EU) 2026/405 om vaskemidler og overfladeaktive stoffer finder anvendelse fra den 23. september 2029. Dens regler om digitalt produktpas, adgangsrettigheder og databæreroplysninger skal stadig fastsættes ved en gennemførelsesretsakt, og indtil da gælder forordning (EC) No 648/2004. Dette værktøj indsamler produktoplysninger og forbereder pasdata. Det er ikke en certificering eller en godkendelse og bør ikke betragtes som endelig juridisk rådgivning. Alt, hvad der gemmes i denne kategori, er offentligt."
+      "text": "Forordning (EU) 2026/405 finder anvendelse fra den 23. september 2029; indtil da finder forordning (EC) No 648/2004 anvendelse. Dette værktøj forbereder pasdata og udgør hverken en certificering eller juridisk rådgivning. Alt, der gemmes her, er offentligt tilgængeligt."
     },
     "allergenPicker": {
       "empty": "Ingen allergener tilføjet endnu.",

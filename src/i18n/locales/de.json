@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Werden bei den Angaben allgemeine umweltbezogene Begriffe vermieden?",
-        "help": "Allgemeine Umweltaussagen wie „umweltfreundlich“, „grün“ oder „natürlich“ sind ab dem 27. September 2026 gemäß der Richtlinie (EU) 2024/825 verboten, es sei denn, das Produkt trägt das EU-Umweltzeichen oder ein gleichwertiges anerkanntes Zeichen. „Biologisch abbaubar“ allein gilt als allgemeine Umweltaussage."
+        "help": "Allgemeine Umweltaussagen wie „umweltfreundlich“, „grün“ oder „ökologisch“ sind ab dem 27. September 2026 gemäß der Richtlinie (EU) 2024/825 verboten, es sei denn, das Produkt trägt das EU-Umweltzeichen oder ein gleichwertiges anerkanntes Label. „Biologisch abbaubar“ allein gilt als allgemeine Umweltaussage."
       },
       "ecolabel_licence_number": {
         "label": "Lizenznummer des EU-Umweltzeichens",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Wasch- und Reinigungsmittel DPP: Konformitätshinweis",
-      "text": "Die Verordnung (EU) 2026/405 über Wasch- und Reinigungsmittel und Tenside gilt ab dem 23. September 2029. Ihre Vorschriften zum digitalen Produktpass, die Zugriffsrechte und die Einzelheiten zum Datenträger müssen noch durch einen Durchführungsrechtsakt festgelegt werden, und bis dahin gilt die Verordnung (EC) No 648/2004. Dieses Tool sammelt Produktinformationen und bereitet Passdaten vor. Es handelt sich nicht um eine Zertifizierung oder eine Genehmigung und sollte nicht als endgültige Rechtsberatung betrachtet werden. Alles, was in dieser Kategorie gespeichert wird, ist öffentlich."
+      "text": "Die Verordnung (EU) 2026/405 gilt ab dem 23. September 2029; bis dahin gilt die Verordnung (EC) No 648/2004. Dieses Tool bereitet Passdaten vor und stellt keine Zertifizierung oder Rechtsberatung dar. Alles hier Gespeicherte ist öffentlich."
     },
     "allergenPicker": {
       "empty": "Noch keine Allergene hinzugefügt.",

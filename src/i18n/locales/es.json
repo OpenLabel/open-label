@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "¿Se evitan en las declaraciones los términos medioambientales genéricos?",
-        "help": "Las alegaciones medioambientales genéricas como «respetuoso con el medio ambiente», «verde» o «natural» están prohibidas a partir del 27 de septiembre de 2026 con arreglo a la Directiva (EU) 2024/825, salvo que el producto disponga de la etiqueta ecológica de la UE o de un distintivo reconocido equivalente. «Biodegradable» por sí solo se considera una alegación genérica."
+        "help": "Las alegaciones medioambientales genéricas como respetuoso con el medio ambiente, verde o ecológico están prohibidas a partir del 27 de septiembre de 2026 en virtud de la Directiva (EU) 2024/825, a menos que el producto cuente con la etiqueta ecológica de la UE o una etiqueta reconocida equivalente. «Biodegradable» por sí solo se considera una alegación genérica."
       },
       "ecolabel_licence_number": {
         "label": "Número de licencia de la etiqueta ecológica de la UE",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Detergentes DPP: descargo de responsabilidad sobre el cumplimiento",
-      "text": "El Reglamento (EU) 2026/405 sobre detergentes y tensioactivos se aplicará a partir del 23 de septiembre de 2029. Sus normas sobre el pasaporte digital de productos, los derechos de acceso y los datos del soporte de datos aún deben establecerse mediante un acto de ejecución y, hasta entonces, se aplica el Reglamento (EC) No 648/2004. Esta herramienta recopila información sobre el producto y prepara los datos del pasaporte. No es una certificación ni una aprobación y no debe tratarse como un asesoramiento jurídico definitivo. Todo lo que se guarde en esta categoría es público."
+      "text": "El Reglamento (EU) 2026/405 es aplicable a partir del 23 de septiembre de 2029; hasta entonces es de aplicación el Reglamento (EC) No 648/2004. Esta herramienta prepara datos para el pasaporte y no constituye una certificación ni asesoramiento jurídico. Todo lo que se guarde aquí es público."
     },
     "allergenPicker": {
       "empty": "Aún no se han añadido alérgenos.",

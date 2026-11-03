@@ -34,7 +34,7 @@ describe('CategoryQuestions for Detergents', () => {
   it('shows the Detergents disclaimer instead of the generic alpha warning', () => {
     renderDetergents();
     expect(screen.getByText('Detergents DPP: compliance disclaimer')).toBeInTheDocument();
-    expect(screen.getByText(/Everything saved in this category is public/)).toBeInTheDocument();
+    expect(screen.getByText(/Everything saved here is public/)).toBeInTheDocument();
     expect(screen.queryByText('passport.earlyAlpha')).not.toBeInTheDocument();
   });
 

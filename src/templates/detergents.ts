@@ -998,7 +998,7 @@ export class DetergentsTemplate extends BaseTemplate {
           label: 'Claims avoid generic environmental terms?',
           type: 'checkbox',
           helpText:
-            'Generic environmental claims such as eco-friendly, green or natural are prohibited from 27 September 2026 under Directive (EU) 2024/825, unless the product holds the EU Ecolabel or an equivalent recognised label. "Biodegradable" on its own counts as a generic claim.',
+            'Generic environmental claims such as eco-friendly, green or ecological are prohibited from 27 September 2026 under Directive (EU) 2024/825, unless the product holds the EU Ecolabel or an equivalent recognised label. "Biodegradable" on its own counts as a generic claim.',
         }),
         f({
           id: 'ecolabel_licence_number',

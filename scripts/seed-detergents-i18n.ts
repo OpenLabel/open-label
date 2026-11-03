@@ -38,7 +38,7 @@ const LOCALES = [
 /** Text shown by the Detergents compliance disclaimer in the form. */
 export const DETERGENTS_DISCLAIMER = {
   title: 'Detergents DPP: compliance disclaimer',
-  text: 'Regulation (EU) 2026/405 on detergents and surfactants applies from 23 September 2029. Its digital product passport rules, access rights and data carrier details are still to be set by an implementing act, and until then Regulation (EC) No 648/2004 applies. This tool collects product information and prepares passport data. It is not a certification or an approval and should not be treated as final legal advice. Everything saved in this category is public.',
+  text: 'Regulation (EU) 2026/405 applies from 23 September 2029; until then Regulation (EC) No 648/2004 applies. This tool prepares passport data and is not a certification or legal advice. Everything saved here is public.',
 } as const;
 
 function setPath(tree: Record<string, any>, path: string, value: string) {

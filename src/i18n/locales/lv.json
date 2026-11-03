@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vai apgalvojumos tiek izvairīties no vispārīgiem terminiem par ietekmi uz vidi?",
-        "help": "Vispārīgas vides norādes, piemēram, \"videi draudzīgs\", \"zaļš\" vai \"dabisks\", saskaņā ar Direktīvu (EU) 2024/825 ir aizliegtas no 2026. gada 27. septembra, ja vien produktam nav piešķirts ES ekomarķējums vai līdzvērtīgs atzīts marķējums. Apzīmējums \"bioloģiski noārdāms\" pats par sevi tiek uzskatīts par vispārīgu norādi."
+        "help": "Vispārīgas vidiskās norādes, piemēram, \"videi draudzīgs\", \"zaļš\" vai \"ekoloģisks\", saskaņā ar Direktīvu (EU) 2024/825 ir aizliegtas no 2026. gada 27. septembra, ja vien produktam nav piešķirts ES ekomarķējums vai tam līdzvērtīgs atzīts marķējums. Norāde \"bioloģiski noārdāms\" pati par sevi tiek uzskatīta par vispārīgu norādi."
       },
       "ecolabel_licence_number": {
         "label": "ES ekomarķējuma licences numurs",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Mazgāšanas līdzekļi DPP: atruna par atbilstību",
-      "text": "Regula (EU) 2026/405 par mazgāšanas līdzekļiem un virsmaktīvajām vielām ir piemērojama no 2029. gada 23. septembra. Tās noteikumi par digitālo produktu pasi, piekļuves tiesībām un datu nesēja informāciju vēl ir jānosaka ar īstenošanas aktu, un līdz tam laikam piemēro Regulu (EC) No 648/2004. Šis rīks apkopo informāciju par produktu un sagatavo pases datus. Tas nav sertifikāts vai apstiprinājums, un to nedrīkst uzskatīt par galīgu juridisku padomu. Viss, kas saglabāts šajā kategorijā, ir publisks."
+      "text": "Regulu (EU) 2026/405 piemēro no 2029. gada 23. septembra; līdz tam piemēro Regulu (EC) No 648/2004. Šis rīks sagatavo pases datus un nav sertifikācija vai juridiska konsultācija. Viss šeit saglabātais ir publisks."
     },
     "allergenPicker": {
       "empty": "Alergēni vēl nav pievienoti.",

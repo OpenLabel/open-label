@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Id-dikjarazzjonijiet jevitaw termini ambjentali ġeneriċi?",
-        "help": "L-asserzjonijiet ambjentali ġeneriċi bħal favur l-ambjent, ekoloġiku jew naturali huma pprojbiti mis-27 ta' Settembru 2026 taħt id-Direttiva (EU) 2024/825, sakemm il-prodott ma jkollux l-Ekotikketta tal-UE jew tikketta rikonoxxuta ekwivalenti. \"Bijodegradabbli\" waħedha tgħodd bħala asserzjoni ġenerika."
+        "help": "Stqarrijiet ambjentali ġeneriċi bħal favur l-ambjent, aħdar jew ekoloġiku huma pprojbiti mis-27 ta' Settembru 2026 skont id-Direttiva (EU) 2024/825, sakemm il-prodott ma jkollux l-Ecolabel tal-UE jew tikketta rikonoxxuta ekwivalenti. \"Bijodegradabbli\" waħedha tgħodd bħala stqarrija ġenerika."
       },
       "ecolabel_licence_number": {
         "label": "Numru tal-liċenzja tal-Ekotikketta tal-UE",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Deterġenti DPP: dikjarazzjoni ta’ nonresponsabbiltà dwar il-konformità",
-      "text": "Ir-Regolament (EU) 2026/405 dwar id-deterġenti u s-surfactants japplika mit-23 ta’ Settembru 2029. Ir-regoli tiegħu dwar il-passaport diġitali tal-prodott, id-drittijiet ta’ aċċess u d-dettalji tat-trasportatur tad-data għad iridu jiġu stabbiliti b’att ta’ implimentazzjoni, u sa dak iż-żmien japplika r-Regolament (EC) No 648/2004. Din l-għodda tiġbor l-informazzjoni dwar il-prodott u tħejji d-data tal-passaport. Mhijiex ċertifikazzjoni jew approvazzjoni u m’għandhiex titqies bħala parir legali finali. Dak kollu li jiġi ssejvjat f’din il-kategorija huwa pubbliku."
+      "text": "Ir-Regolament (EU) 2026/405 japplika mit-23 ta' Settembru 2029; sa dakinhar japplika r-Regolament (EC) No 648/2004. Din l-għodda tħejji d-data tal-passaport u mhijiex ċertifikazzjoni jew parir legali. Kulma jiġi ssejvjat hawnhekk huwa pubbliku."
     },
     "allergenPicker": {
       "empty": "Għad ma żdied l-ebda allerġen.",
