@@ -547,7 +547,7 @@ export const CAR_CLEANING_SAMPLE_TRANSLATIONS: FieldTranslations = {
     "cs": "Pouze smyšlený příklad: při ředění a oplachování se řiďte etiketou skutečného výrobku. Tuto ukázku nepoužívejte jako bezpečnostní pokyny.",
     "da": "Kun et fiktivt eksempel: følg det rigtige produkts etiket for fortynding og skylning. Brug ikke denne demo som sikkerhedsrådgivning.",
     "de": "Nur ein fiktives Beispiel: Für Verdünnung und Abspülen das Etikett des echten Produkts beachten. Diese Demo nicht als Sicherheitshinweis verwenden.",
-    "el": "Μόνο φανταστικό παράδειγμα: για την αραίωση και το ξέβγαλμα ακολουθήστε την ετικέτα του πραγματικού προϊόντος. Μην χρησιμοποιείτε αυτή την επίδειξη като συμβουλή ασφάλειας.",
+    "el": "Μόνο φανταστικό παράδειγμα: για την αραίωση και το ξέβγαλμα ακολουθήστε την ετικέτα του πραγματικού προϊόντος. Μην χρησιμοποιείτε αυτή την επίδειξη ως συμβουλή ασφάλειας.",
     "es": "Solo un ejemplo ficticio: para la dilución y el aclarado, siga la etiqueta del producto real. No utilice esta demostración como consejo de seguridad.",
     "et": "Ainult väljamõeldud näide: lahjendamisel ja loputamisel järgige päris toote etiketti. Ärge kasutage seda näidet ohutusnõuandena.",
     "fi": "Vain kuvitteellinen esimerkki: noudata laimennuksessa ja huuhtelussa todellisen tuotteen pakkausmerkintöjä. Älä käytä tätä esittelyä turvallisuusohjeena.",
