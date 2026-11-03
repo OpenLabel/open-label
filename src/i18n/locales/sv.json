@@ -2968,7 +2968,7 @@
       "email": "E-post",
       "phone": "Telefon",
       "dppServiceProvider": "DPP tjänsteleverantör",
-      "dppVersion": "DPP-version",
+      "dppVersion": "DPP version",
       "lastUpdated": "Senast uppdaterad",
       "status": "Status"
     },
