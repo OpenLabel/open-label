@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Undviker påståendena generella miljötermer?",
-        "help": "Allmänna miljöpåståenden som miljövänlig, grön eller naturlig är förbjudna från och med den 27 september 2026 enligt direktiv (EU) 2024/825, såvida inte produkten har EU-miljömärket eller en likvärdig erkänd märkning. Enbart ”biologiskt nedbrytbar” räknas som ett allmänt påstående."
+        "help": "Allmänna miljöpåståenden såsom miljövänlig, grön eller ekologisk är förbjudna från och med den 27 september 2026 enligt direktiv (EU) 2024/825, såvida inte produkten har EU-miljömärket eller en likvärdig erkänd märkning. \"Biologiskt nedbrytbar\" i sig räknas som ett allmänt påstående."
       },
       "ecolabel_licence_number": {
         "label": "Licensnummer för EU-miljömärket",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Tvätt- och rengöringsmedel DPP: friskrivning avseende regelefterlevnad",
-      "text": "Förordning (EU) 2026/405 om tvätt- och rengöringsmedel och tensider ska tillämpas från och med den 23 september 2029. Dess regler om digitalt produktpass, åtkomsträttigheter och uppgifter om databärare ska ännu fastställas genom en genomförandeakt, och till dess gäller förordning (EC) No 648/2004. Detta verktyg samlar in produktinformation och förbereder passdata. Det är inte en certifiering eller ett godkännande och ska inte betraktas som slutgiltig juridisk rådgivning. Allt som sparas i denna kategori är offentligt."
+      "text": "Förordning (EU) 2026/405 tillämpas från och med den 23 september 2029; fram till dess tillämpas förordning (EC) No 648/2004. Detta verktyg förbereder passdata och utgör inte en certifiering eller juridisk rådgivning. Allt som sparas här är offentligt."
     },
     "allergenPicker": {
       "empty": "Inga allergener har lagts till än.",
@@ -2968,7 +2968,7 @@
       "email": "E-post",
       "phone": "Telefon",
       "dppServiceProvider": "DPP tjänsteleverantör",
-      "dppVersion": "DPP version",
+      "dppVersion": "DPP-version",
       "lastUpdated": "Senast uppdaterad",
       "status": "Status"
     },

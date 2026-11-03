@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Czy w oświadczeniach unika się ogólnych terminów środowiskowych?",
-        "help": "Ogólne twierdzenia dotyczące ochrony środowiska, takie jak „przyjazny dla środowiska”, „zielony” lub „naturalny”, są zabronione od dnia 27 września 2026 r. na mocy dyrektywy (EU) 2024/825, chyba że produkt posiada oznakowanie ekologiczne UE (EU Ecolabel) lub równoważne uznane oznakowanie. Samo określenie „biodegradowalny” stanowi twierdzenie ogólne."
+        "help": "Ogólne twierdzenia dotyczące ekologiczności, takie jak „przyjazny dla środowiska”, „zielony” lub „ekologiczny”, są zabronione od 27 września 2026 r. na mocy dyrektywy (EU) 2024/825, chyba że produkt posiada oznakowanie ekologiczne UE lub równoważne uznane oznakowanie. Samo określenie „biodegradowalny” uznaje się za twierdzenie ogólne."
       },
       "ecolabel_licence_number": {
         "label": "Numer licencji EU Ecolabel",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Detergenty DPP: oświadczenie o zgodności",
-      "text": "Rozporządzenie (EU) 2026/405 w sprawie detergentów i środków powierzchniowo czynnych ma zastosowanie od 23 września 2029 r. Jego przepisy dotyczące cyfrowego paszportu produktu, praw dostępu i szczegółów nośnika danych zostaną dopiero określone w akcie wykonawczym, a do tego czasu zastosowanie ma rozporządzenie (EC) No 648/2004. To narzędzie gromadzi informacje o produkcie i przygotowuje dane do paszportu. Nie jest to certyfikacja ani zatwierdzenie i nie należy go traktować jako ostatecznej porady prawnej. Wszystkie informacje zapisane w tej kategorii są publiczne."
+      "text": "Rozporządzenie (EU) 2026/405 stosuje się od 23 września 2029 r.; do tego czasu stosuje się rozporządzenie (EC) No 648/2004. Narzędzie to przygotowuje dane paszportowe i nie stanowi certyfikacji ani porady prawnej. Wszystkie zapisane tutaj informacje są publiczne."
     },
     "allergenPicker": {
       "empty": "Nie dodano jeszcze żadnych alergenów.",

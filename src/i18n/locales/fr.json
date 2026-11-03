@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Les allégations évitent-elles les termes environnementaux génériques ?",
-        "help": "Les allégations environnementales génériques telles que « respectueux de l'environnement », « vert » ou « naturel » sont interdites à compter du 27 septembre 2026 en vertu de la directive (EU) 2024/825, à moins que le produit ne bénéficie du label écologique de l'UE ou d'un label équivalent reconnu. La mention « biodégradable » employée seule constitue une allégation générique."
+        "help": "Les allégations environnementales génériques telles que « respectueux de l’environnement », « vert » ou « écologique » sont interdites à compter du 27 septembre 2026 en vertu de la directive (EU) 2024/825, sauf si le produit est porteur du label écologique de l'UE ou d'un label équivalent reconnu. La mention « biodégradable » utilisée seule est considérée comme une allégation générique."
       },
       "ecolabel_licence_number": {
         "label": "Numéro de licence de l'écolabel de l'UE",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Détergents DPP : clause de non-responsabilité en matière de conformité",
-      "text": "Le règlement (EU) 2026/405 relatif aux détergents et aux agents de surface s'applique à partir du 23 septembre 2029. Ses règles relatives au passeport numérique de produit, aux droits d'accès et aux détails du support de données doivent encore être définies par un acte d'exécution, et jusqu'alors, le règlement (EC) No 648/2004 s'applique. Cet outil collecte des informations sur les produits et prépare les données du passeport. Il ne s'agit pas d'une certification ou d'une approbation et ne doit pas être considéré comme un avis juridique définitif. Tout ce qui est enregistré dans cette catégorie est public."
+      "text": "Le règlement (EU) 2026/405 s'applique à compter du 23 septembre 2029 ; jusque-là, le règlement (EC) No 648/2004 s'applique. Cet outil prépare les données du passeport et ne constitue pas une certification ni un conseil juridique. Tout ce qui est enregistré ici est public."
     },
     "allergenPicker": {
       "empty": "Aucun allergène ajouté pour le moment.",

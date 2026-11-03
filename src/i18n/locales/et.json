@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Kas väidetes välditakse üldisi keskkonnaalaseid termineid?",
-        "help": "Üldised keskkonnaväited, nagu „keskkonnahoidlik“, „roheline“ või „looduslik“, on direktiivi (EU) 2024/825 kohaselt keelatud alates 27. septembrist 2026, välja arvatud juhul, kui tootele on antud ELi ökomärgis või samaväärne tunnustatud märgis. Üksinda esitatud väidet „biolagunev“ loetakse üldiseks väiteks."
+        "help": "Üldised keskkonnaväited, nagu keskkonnasõbralik, roheline või ökoloogiline, on direktiivi (EU) 2024/825 kohaselt alates 27. septembrist 2026 keelatud, välja arvatud juhul, kui tootel on ELi ökomärgis või samaväärne tunnustatud märgis. Eraldiseisvat väidet „biolagunev“ käsitatakse üldise väitena."
       },
       "ecolabel_licence_number": {
         "label": "ELi ökomärgise litsentsi number",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Pesuained DPP: vastavusest lahtiütlus",
-      "text": "Määrust (EU) 2026/405 pesuainete ja pindaktiivsete ainete kohta kohaldatakse alates 23. septembrist 2029. Selle digitaalse tootepassi eeskirjad, juurdepääsuõigused ja andmekandja üksikasjad kehtestatakse alles rakendusaktiga ning seni kohaldatakse määrust (EC) No 648/2004. See tööriist kogub tooteinfot ja valmistab ette passi andmeid. See ei ole sertifitseerimine ega heakskiit ning seda ei tohiks käsitleda lõpliku õigusnõuandena. Kõik sellesse kategooriasse salvestatu on avalik."
+      "text": "Määrust (EU) 2026/405 kohaldatakse alates 23. septembrist 2029; seni kohaldatakse määrust (EC) No 648/2004. See tööriist valmistab ette passi andmeid ega kujuta endast sertifitseerimist ega õigusnõustamist. Kõik siia salvestatu on avalik."
     },
     "allergenPicker": {
       "empty": "Allergeene pole veel lisatud.",

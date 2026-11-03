@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Mențiunile evită termenii ecologici generici?",
-        "help": "Mențiunile de mediu generice, cum ar fi ecologic, verde sau natural, sunt interzise începând cu 27 septembrie 2026 în temeiul Directivei (EU) 2024/825, cu excepția cazului în care produsul deține eticheta UE ecologică sau o etichetă recunoscută echivalentă. „Biodegradabil” de unul singur este considerat o mențiune generică."
+        "help": "Afirmațiile generice de mediu, cum ar fi „prietenos cu mediul”, „verde” sau „ecologic”, sunt interzise începând cu 27 septembrie 2026 în temeiul Directivei (EU) 2024/825, cu excepția cazului în care produsul deține eticheta ecologică a UE sau o etichetă recunoscută echivalentă. „Biodegradabil” utilizat singur este considerat o afirmație generică."
       },
       "ecolabel_licence_number": {
         "label": "Numărul de licență EU Ecolabel",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Detergenți DPP: clauză de exonerare privind conformitatea",
-      "text": "Regulamentul (EU) 2026/405 privind detergenții și surfactanții se aplică de la 23 septembrie 2029. Normele sale privind pașaportul digital al produsului, drepturile de acces și detaliile purtătorului de date urmează să fie stabilite printr-un act de punere în aplicare, iar până atunci se aplică Regulamentul (EC) No 648/2004. Acest instrument colectează informații despre produs și pregătește datele pentru pașaport. Nu reprezintă o certificare sau o aprobare și nu trebuie tratat ca un aviz juridic final. Toate informațiile salvate în această categorie sunt publice."
+      "text": "Regulamentul (EU) 2026/405 se aplică de la 23 septembrie 2029; până atunci se aplică Regulamentul (EC) No 648/2004. Acest instrument pregătește datele pentru pașaport și nu constituie o certificare sau consultanță juridică. Tot ceea ce este salvat aici este public."
     },
     "allergenPicker": {
       "empty": "Niciun alergen adăugat încă.",

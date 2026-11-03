@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Vermijden claims generieke milieutermen?",
-        "help": "Generieke milieuclaims zoals milieuvriendelijk, groen of natuurlijk zijn vanaf 27 september 2026 verboden krachtens Richtlijn (EU) 2024/825, tenzij het product de EU-milieukeur of een gelijkwaardig erkend keurmerk heeft. Alleen \"biologisch afbreekbaar\" geldt als een generieke claim."
+        "help": "Generieke milieuclaims zoals milieuvriendelijk, groen of ecologisch zijn vanaf 27 september 2026 verboden op grond van Richtlijn (EU) 2024/825, tenzij het product het EU Ecolabel of een gelijkwaardig erkend keurmerk heeft. \"Biologisch afbreekbaar\" op zichzelf geldt als een generieke claim."
       },
       "ecolabel_licence_number": {
         "label": "EU Ecolabel-licentienummer",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Was- en reinigingsmiddelen DPP: conformiteitsdisclaimer",
-      "text": "Verordening (EU) 2026/405 betreffende was- en reinigingsmiddelen en oppervlakteactieve stoffen is van toepassing vanaf 23 september 2029. De regels voor het digitale productpaspoort, de toegangsrechten en de details van de datadrager moeten nog worden vastgesteld door een uitvoeringshandeling, en tot die tijd is Verordening (EC) No 648/2004 van toepassing. Deze tool verzamelt productinformatie en bereidt paspoortgegevens voor. Het is geen certificering of goedkeuring en mag niet worden beschouwd als definitief juridisch advies. Alles wat in deze categorie wordt opgeslagen, is openbaar."
+      "text": "Verordening (EU) 2026/405 is van toepassing vanaf 23 september 2029; tot die tijd is Verordening (EC) No 648/2004 van toepassing. Deze tool bereidt paspoortgegevens voor en vormt geen certificering of juridisch advies. Alles wat hier wordt opgeslagen, is openbaar."
     },
     "allergenPicker": {
       "empty": "Nog geen allergenen toegevoegd.",

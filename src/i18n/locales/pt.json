@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "As alegações evitam termos ambientais genéricos?",
-        "help": "As alegações ambientais genéricas, tais como «amigo do ambiente», «verde» ou «natural», são proibidas a partir de 27 de setembro de 2026 nos termos da Diretiva (EU) 2024/825, a menos que o produto detenha o Rótulo Ecológico da UE ou um rótulo reconhecido equivalente. «Biodegradável» isoladamente é considerado uma alegação genérica."
+        "help": "As alegações ambientais genéricas, como «amigo do ambiente», «verde» ou «ecológico», são proibidas a partir de 27 de setembro de 2026 nos termos da Diretiva (EU) 2024/825, a menos que o produto ostente o Rótulo Ecológico da UE ou um rótulo equivalente reconhecido. «Biodegradável», por si só, é considerado uma alegação genérica."
       },
       "ecolabel_licence_number": {
         "label": "Número de licença do Rótulo Ecológico da UE",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Detergentes DPP: declaração de exoneração de responsabilidade em matéria de conformidade",
-      "text": "O Regulamento (EU) 2026/405 relativo aos detergentes e tensioativos é aplicável a partir de 23 de setembro de 2029. As suas regras relativas ao passaporte digital de produto, os direitos de acesso e os dados do suporte de dados ainda não foram estabelecidos por um ato de execução e, até lá, aplica-se o Regulamento (EC) No 648/2004. Esta ferramenta recolhe informações sobre o produto e prepara os dados do passaporte. Não constitui uma certificação ou aprovação e não deve ser considerada como aconselhamento jurídico final. Tudo o que for guardado nesta categoria é público."
+      "text": "O Regulamento (EU) 2026/405 é aplicável a partir de 23 de setembro de 2029; até essa data, é aplicável o Regulamento (EC) No 648/2004. Esta ferramenta prepara dados do passaporte e não constitui uma certificação nem aconselhamento jurídico. Todos os dados guardados aqui são públicos."
     },
     "allergenPicker": {
       "empty": "Ainda não foram adicionados alergénios.",

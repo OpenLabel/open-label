@@ -2581,7 +2581,7 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Izbjegavaju li se u tvrdnjama općeniti ekološki pojmovi?",
-        "help": "Generičke tvrdnje o prihvatljivosti za okoliš kao što su ekološki prihvatljivo, zeleno ili prirodno zabranjene su od 27. rujna 2026. na temelju Direktive (EU) 2024/825, osim ako proizvod ima znak za okoliš EU-a (EU Ecolabel) ili jednakovrijedan priznati znak. Sam pojam „biorazgradivo” smatra se generičkom tvrdnjom."
+        "help": "Općenite tvrdnje o prihvatljivosti za okoliš kao što su ekološki prihvatljivo, zeleno ili ekološko zabranjene su od 27. rujna 2026. na temelju Direktive (EU) 2024/825, osim ako proizvod ima znak za okoliš EU-a ili jednakovrijednu priznatu oznaku. „Biorazgradivo” samo po sebi smatra se općenitom tvrdnjom."
       },
       "ecolabel_licence_number": {
         "label": "Broj licence za znak za okoliš EU Ecolabel",
@@ -2919,7 +2919,7 @@
     },
     "disclaimer": {
       "title": "Deterdženti DPP: izjava o odricanju od odgovornosti u vezi sukladnosti",
-      "text": "Uredba (EU) 2026/405 o deterdžentima i tenzidima primjenjuje se od 23. rujna 2029. Njezina pravila o digitalnoj putovnici proizvoda, pravima pristupa i podacima o nosaču podataka tek se trebaju utvrditi provedbenim aktom, a do tada se primjenjuje Uredba (EC) No 648/2004. Ovaj alat prikuplja informacije o proizvodu i priprema podatke za putovnicu. On nije certifikacija ni odobrenje i ne treba ga smatrati konačnim pravnim savjetom. Sve što je spremljeno u ovoj kategoriji javno je."
+      "text": "Uredba (EU) 2026/405 primjenjuje se od 23. rujna 2029.; do tada se primjenjuje Uredba (EC) No 648/2004. Ovaj alat priprema podatke za putovnicu i ne predstavlja certificiranje niti pravni savjet. Sve što je ovdje spremljeno javno je."
     },
     "allergenPicker": {
       "empty": "Još nisu dodani alergeni.",
