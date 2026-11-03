@@ -2182,7 +2182,7 @@
       },
       "ingredients": {
         "title": "Składniki i informacje na etykiecie",
-        "description": "Treść etykiety zgodnie z załącznikiem V do rozporządzenia (EU) 2026/405 i obowiązującymi przepisami"
+        "description": "Treść etykiety zgodnie z załącznikiem V do rozporządzenia (UE) 2026/405 i obowiązującymi przepisami"
       },
       "use": {
         "title": "Bezpieczne stosowanie i dozowanie",
@@ -2198,7 +2198,7 @@
       },
       "green_claims": {
         "title": "Oświadczenia środowiskowe",
-        "description": "Wspiera dyrektywę (EU) 2024/825, która ma zastosowanie od 27 września 2026 r."
+        "description": "Wspiera dyrektywę (UE) 2024/825, która ma zastosowanie od 27 września 2026 r."
       },
       "review": {
         "title": "Weryfikacja dostawcy i przygotowanie paszportu",
@@ -2232,7 +2232,7 @@
       },
       "detergent_scope": {
         "label": "Czy produkt jest przeznaczony do czyszczenia, namaczania, płukania lub wybielania tkanin, naczyń lub powierzchni?",
-        "help": "Zob. art. 2 ust. 1 rozporządzenia (EU) 2026/405. Farby, kleje, rozpuszczalniki i produkty, które nie czyszczą, nie należą do tej kategorii."
+        "help": "Zob. art. 2 pkt 1 rozporządzenia (UE) 2026/405. Farby, kleje, rozpuszczalniki i produkty, które nie czyszczą, nie należą do tej kategorii."
       },
       "scope_reason": {
         "label": "Powód, dla którego produkt nie jest objęty definicją detergentu"
@@ -2264,11 +2264,11 @@
       },
       "dpp_profile": {
         "label": "Profil informacyjny",
-        "help": "Rozporządzenie (EU) 2026/405 ma zastosowanie od 23 września 2029 r. Wybierz zbiór danych z załącznika VI, aby przygotować przyszłe dane paszportu. Jego uzupełnienie nie oznacza, że paszport jest zgodny z przepisami lub certyfikowany."
+        "help": "Rozporządzenie (UE) 2026/405 ma zastosowanie od 23 września 2029 r. Wybierz zbiór danych z załącznika VI, aby przygotować przyszłe dane paszportu. Jego uzupełnienie nie oznacza, że paszport jest zgodny z przepisami lub certyfikowany."
       },
       "biocidal_claims": {
         "label": "Oświadczenia o właściwościach biobójczych lub dezynfekujących?",
-        "help": "Oświadczenia o właściwościach dezynfekujących lub przeciwdrobnoustrojowych wymagają pozwolenia na produkt biobójczy zgodnie z rozporządzeniem (EU) No 528/2012."
+        "help": "Oświadczenia o właściwościach dezynfekujących lub przeciwdrobnoustrojowych wymagają pozwolenia na produkt biobójczy zgodnie z rozporządzeniem (UE) nr 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Nazwa prawna producenta",
@@ -2319,7 +2319,7 @@
       },
       "eu_operator_name": {
         "label": "Upoważniony przedstawiciel w UE: nazwa prawna",
-        "help": "Producent mający siedzibę poza UE musi wyznaczyć upoważnionego przedstawiciela (art. 9 rozporządzenia (EU) 2026/405)."
+        "help": "Producent mający siedzibę poza UE musi wyznaczyć upoważnionego przedstawiciela (art. 9 rozporządzenia (UE) 2026/405)."
       },
       "eu_operator_address": {
         "label": "Upoważniony przedstawiciel w UE: adres",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "Ocena klasyfikacji CLP",
-        "help": "Należy zastosować klasyfikację faktycznie ocenioną dla tej mieszaniny zgodnie z rozporządzeniem (EC) No 1272/2008. Nie należy jej wywnioskować na podstawie pH ani piktogramów."
+        "help": "Należy zastosować klasyfikację faktycznie ocenioną dla tej mieszaniny zgodnie z rozporządzeniem (WE) nr 1272/2008. Nie należy jej wywnioskować na podstawie pH ani piktogramów."
       },
       "supplemental_statements": {
         "label": "Uzupełniające zwroty na etykiecie",
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Publiczna strona internetowa ze składnikami",
-        "help": "Obecne przepisy (rozporządzenie (EC) No 648/2004, załącznik VII część D) wymagają prowadzenia publicznego wykazu składników dla produktów konsumenckich. Nie wymaga on podawania przedziałów procentowych ani numerów CAS.",
+        "help": "Obecne przepisy (rozporządzenie (WE) nr 648/2004, załącznik VII część D) wymagają prowadzenia publicznego wykazu składników dla produktów konsumenckich. Nie wymaga on podawania przedziałów procentowych ani numerów CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2485,7 +2485,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Czy zawiera celowo dodane mikrodrobiny polimerów syntetycznych?",
-        "help": "Rozporządzenie (EU) 2023/2055 ogranicza je na mocy pozycji 78 załącznika XVII do REACH. Detergenty zostaną objęte przepisami od dnia 17 października 2028 r., z dwoma wyjątkami: mikrogranulki stosowane jako materiały ścierne są zakazane od dnia 17 października 2023 r., a mikrokapsułkowane substancje zapachowe mogą być stosowane do dnia 17 października 2029 r."
+        "help": "Rozporządzenie (UE) 2023/2055 ogranicza je na mocy pozycji 78 załącznika XVII do REACH. Detergenty zostaną objęte przepisami od dnia 17 października 2028 r., z dwoma wyjątkami: mikrogranulki stosowane jako materiały ścierne są zakazane od dnia 17 października 2023 r., a mikrokapsułkowane substancje zapachowe mogą być stosowane do dnia 17 października 2029 r."
       },
       "use_instructions": {
         "label": "Instrukcje użytkowania i specjalne środki ostrożności",
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Rodzaj detergentu do prania",
-        "help": "Określa standardowy wsad: 4,5 kg suchej tkaniny dla detergentów do prania w pełnym cyklu, 2,5 kg dla detergentów do prania w krótkim cyklu i do prania tkanin delikatnych."
+        "help": "Określa standardowy wsad: 4,5 kg suchej tkaniny dla detergentów do prania tkanin mocno zabrudzonych, 2,5 kg dla detergentów do prania tkanin mocno zabrudzonych w krótkich cyklach i do prania tkanin delikatnych."
       },
       "dosage_unit": {
         "label": "Jednostka dozowania"
@@ -2558,7 +2558,7 @@
       },
       "refill_station": {
         "label": "Sprzedawane w stacji uzupełniania?",
-        "help": "Punkty uzupełniania podlegają własnemu obowiązkowi dotyczącemu nośnika danych zgodnie z art. 21 ust. 4 rozporządzenia (EU) 2026/405."
+        "help": "Punkty uzupełniania podlegają własnemu obowiązkowi dotyczącemu nośnika danych zgodnie z art. 21 ust. 4 rozporządzenia (UE) 2026/405."
       },
       "epr_registration": {
         "label": "Rejestracja w ramach rozszerzonej odpowiedzialności producenta za opakowania na poszczególnych rynkach",
@@ -2581,11 +2581,11 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Czy w oświadczeniach unika się ogólnych terminów środowiskowych?",
-        "help": "Ogólne twierdzenia dotyczące ekologiczności, takie jak „przyjazny dla środowiska”, „zielony” lub „ekologiczny”, są zabronione od 27 września 2026 r. na mocy dyrektywy (EU) 2024/825, chyba że produkt posiada oznakowanie ekologiczne UE lub równoważne uznane oznakowanie. Samo określenie „biodegradowalny” uznaje się za twierdzenie ogólne."
+        "help": "Ogólne twierdzenia dotyczące ekologiczności, takie jak „przyjazny dla środowiska”, „zielony” lub „ekologiczny”, są zabronione od 27 września 2026 r. na mocy dyrektywy (UE) 2024/825, chyba że produkt posiada oznakowanie ekologiczne UE lub równoważne uznane oznakowanie. Samo określenie „biodegradowalny” uznaje się za twierdzenie ogólne."
       },
       "ecolabel_licence_number": {
-        "label": "Numer licencji EU Ecolabel",
-        "help": "Wprowadź numer rejestracyjny licencji tylko wtedy, gdy produkt posiada licencję EU Ecolabel. Oznakowanie jest wyświetlane w publicznym paszporcie tylko po wprowadzeniu numeru."
+        "label": "Numer licencji na oznakowanie ekologiczne UE",
+        "help": "Wprowadź numer rejestracyjny licencji tylko wtedy, gdy produkt posiada licencję na oznakowanie ekologiczne UE. Oznakowanie jest wyświetlane w publicznym paszporcie tylko po wprowadzeniu numeru."
       },
       "reach_review": {
         "label": "Oceniono ograniczenia i obowiązki wynikające z REACH",
@@ -2636,7 +2636,7 @@
         "label": "Kod taryfy celnej"
       },
       "commodity_code": {
-        "label": "Kod towaru (rozporządzenie (EEC) No 2658/87)"
+        "label": "Kod towaru (rozporządzenie (EWG) nr 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Powód, dla którego kod towaru nie ma zastosowania"
@@ -2645,7 +2645,7 @@
         "label": "Producent wydaje niniejszy paszport na swoją wyłączną odpowiedzialność"
       },
       "compliance_statement": {
-        "label": "Oświadczenie, że wykazano zgodność z rozporządzeniem (EU) 2026/405",
+        "label": "Oświadczenie, że wykazano zgodność z rozporządzeniem (UE) 2026/405",
         "help": "Wypełnij dopiero po dokonaniu własnej oceny przez producenta. Aplikacja nigdy nie generuje oświadczenia o zgodności."
       },
       "applicable_union_law": {
@@ -2672,7 +2672,7 @@
       },
       "substances": {
         "label": "Wszystkie celowo dodane substancje i wymagane na etykiecie przeniesione konserwanty",
-        "help": "Zidentyfikuj substancje zgodnie z wymogami art. 18 ust. 3 rozporządzenia (EC) No 1272/2008. Nie wprowadzaj stężeń ani poufnych danych dotyczących składu. Wszystkie informacje zapisane w tej kategorii są publiczne."
+        "help": "Zidentyfikuj substancje zgodnie z wymogami art. 18 ust. 3 rozporządzenia (WE) nr 1272/2008. Nie wprowadzaj stężeń ani poufnych danych dotyczących składu. Wszystkie informacje zapisane w tej kategorii są publiczne."
       },
       "no_substances_reason": {
         "label": "Podstawa braku substancji do umieszczenia w wykazie"
@@ -2721,7 +2721,7 @@
       },
       "importer_phone": {
         "label": "Numer telefonu importera",
-        "help": "Załącznik VI lit. b) do rozporządzenia (EU) 2026/405 wymienia numer telefonu importera, w stosownych przypadkach, w cyfrowym paszporcie produktu.",
+        "help": "Załącznik VI lit. b) do rozporządzenia (UE) 2026/405 wymienia numer telefonu importera, w stosownych przypadkach, w cyfrowym paszporcie produktu.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "Upoważniony przedstawiciel w UE: numer referencyjny pisemnego pełnomocnictwa",
-        "help": "Numer referencyjny pisemnego pełnomocnictwa, na mocy którego producent wyznacza przedstawiciela (art. 2 pkt 18 rozporządzenia (EU) 2026/405). Należy podać wyłącznie numer referencyjny. Samo pełnomocnictwo nie jest przesyłane, a numer referencyjny nie jest widoczny w publicznym paszporcie.",
+        "help": "Numer referencyjny pisemnego pełnomocnictwa, na mocy którego producent wyznacza przedstawiciela (art. 2 pkt 18 rozporządzenia (UE) 2026/405). Należy podać wyłącznie numer referencyjny. Samo pełnomocnictwo nie jest przesyłane, a numer referencyjny nie jest widoczny w publicznym paszporcie.",
         "placeholder": "np. Pełnomocnictwo 2026-07, podpisane 1 lipca 2026 r."
       },
       "registry_upload_confirmed": {
@@ -2739,7 +2739,7 @@
       },
       "future_ufi_code": {
         "label": "Niepowtarzalny identyfikator postaci czynnej (UFI) na etykiecie",
-        "help": "Od dnia 23 września 2029 r. etykieta każdego detergentu musi zawierać kod UFI poprzedzony „UFI: ” (załącznik V część A pkt 1 lit. b) do rozporządzenia (EU) 2026/405), niezależnie od tego, czy produkt został zaklasyfikowany jako stwarzający zagrożenie. Cztery grupy po cztery znaki. Jeżeli kod UFI zgłoszony do ośrodka zatruć istnieje, należy wprowadzić ten sam kod.",
+        "help": "Od dnia 23 września 2029 r. etykieta każdego detergentu musi zawierać kod UFI poprzedzony „UFI: ” (załącznik V część A pkt 1 lit. b) do rozporządzenia (UE) 2026/405), niezależnie od tego, czy produkt został zaklasyfikowany jako stwarzający zagrożenie. Cztery grupy po cztery znaki. Jeżeli kod UFI zgłoszony do ośrodka zatruć istnieje, należy wprowadzić ten sam kod.",
         "placeholder": "np. N1QV-R02N-J00M-WQD5"
       }
     },
@@ -2855,7 +2855,7 @@
       },
       "listedConstituent": {
         "enzymes": "Enzymy",
-        "micro_organisms": "Drobnoustroje",
+        "micro_organisms": "Mikroorganizmy",
         "optical_brighteners": "Rozjaśniacze optyczne",
         "perfumes": "Kompozycje zapachowe",
         "disinfectants": "Środki dezynfekujące (obowiązujące przepisy do 23 września 2029 r.)"
@@ -2902,12 +2902,12 @@
       }
     },
     "warnings": {
-      "scopeOutside": "Ten produkt może nie być objęty definicją detergentu zawartą w art. 2 ust. 1 rozporządzenia (EU) 2026/405. Przed użyciem tej kategorii należy sprawdzić zakres stosowania.",
-      "biocidal": "Oświadczenia o właściwościach dezynfekujących lub przeciwdrobnoustrojowych wymagają pozwolenia na produkt biobójczy zgodnie z rozporządzeniem (EU) No 528/2012.",
+      "scopeOutside": "Ten produkt może nie być objęty definicją detergentu zawartą w art. 2 pkt 1 rozporządzenia (UE) 2026/405. Przed użyciem tej kategorii należy sprawdzić zakres stosowania.",
+      "biocidal": "Oświadczenia o właściwościach dezynfekujących lub przeciwdrobnoustrojowych wymagają pozwolenia na produkt biobójczy zgodnie z rozporządzeniem (UE) nr 528/2012.",
       "assessmentNeeded": "Ta ocena nie jest zakończona. Należy ją zakończyć przed skorzystaniem z paszportu.",
-      "microparticles": "Przed wprowadzeniem tego produktu do obrotu należy sprawdzić rozporządzenie (EU) 2023/2055 w sprawie mikrodrobin polimerów syntetycznych. Odpowiedź „nieznany” musi zostać wyjaśniona z dostawcą.",
-      "phosphorusLaundry": "Całkowita zawartość fosforu wynosząca {{value}} g nie jest niższa od limitu 0,5 g dla detergentu do prania przeznaczonego dla konsumentów w twardej wodzie (załącznik III do rozporządzenia (EU) 2026/405).",
-      "phosphorusDishwasher": "Całkowita zawartość fosforu wynosząca {{value}} g nie jest niższa od limitu 0,3 g dla detergentu do zmywarek automatycznych przeznaczonego dla konsumentów (załącznik III do rozporządzenia (EU) 2026/405).",
+      "microparticles": "Przed wprowadzeniem tego produktu do obrotu należy sprawdzić rozporządzenie (UE) 2023/2055 w sprawie mikrodrobin polimerów syntetycznych. Odpowiedź „nieznany” musi zostać wyjaśniona z dostawcą.",
+      "phosphorusLaundry": "Całkowita zawartość fosforu wynosząca {{value}} g nie jest niższa od limitu 0,5 g dla detergentu do prania przeznaczonego dla konsumentów w twardej wodzie (załącznik III do rozporządzenia (UE) 2026/405).",
+      "phosphorusDishwasher": "Całkowita zawartość fosforu wynosząca {{value}} g nie jest niższa od limitu 0,3 g dla detergentu do zmywarek automatycznych przeznaczonego dla konsumentów (załącznik III do rozporządzenia (UE) 2026/405).",
       "percentageRange": "Wartość procentowa musi mieścić się w przedziale od 0 do 100. Wprowadzono {{value}}.",
       "positiveNumber": "Wprowadź liczbę większą od zera. Wprowadzono {{value}}.",
       "allergensMissing": "Odpowiedziano „tak”, ale nie wybrano żadnego alergenu. Należy wybrać każdy alergen z oficjalnego wykazu.",
@@ -2918,8 +2918,8 @@
       "microorganismSafety": "Dodano drobnoustroje, ale nie wprowadzono odniesienia do oceny bezpieczeństwa."
     },
     "disclaimer": {
-      "title": "Detergenty DPP: wyłączenie odpowiedzialności w zakresie zgodności",
-      "text": "Rozporządzenie (EU) 2026/405 stosuje się od 23 września 2029 r.; do tego czasu stosuje się rozporządzenie (EC) No 648/2004. Narzędzie to przygotowuje dane paszportowe i nie stanowi certyfikacji ani porady prawnej. Wszystkie zapisane tutaj informacje są publiczne."
+      "title": "DPP dla detergentów: wyłączenie odpowiedzialności w zakresie zgodności",
+      "text": "Rozporządzenie (UE) 2026/405 stosuje się od 23 września 2029 r.; do tego czasu stosuje się rozporządzenie (WE) nr 648/2004. Narzędzie to przygotowuje dane paszportowe i nie stanowi certyfikacji ani porady prawnej. Wszystkie zapisane tutaj informacje są publiczne."
     },
     "allergenPicker": {
       "empty": "Nie dodano jeszcze żadnych alergenów.",
@@ -2935,7 +2935,7 @@
     },
     "form": {
       "packagingImageLabel": "Kolorowe zdjęcie opakowania lub etykiety",
-      "packagingImageHelp": "Załącznik VI lit. a) do rozporządzenia (EU) 2026/405 wymaga kolorowego zdjęcia opakowania lub etykiety, na tyle wyraźnego, aby umożliwić identyfikację modelu. Obowiązkowe w profilu załącznika VI."
+      "packagingImageHelp": "Załącznik VI lit. a) do rozporządzenia (UE) 2026/405 wymaga kolorowego zdjęcia opakowania lub etykiety, na tyle wyraźnego, aby umożliwić identyfikację modelu. Obowiązkowe w profilu załącznika VI."
     }
   },
   "detergentsPublic": {
@@ -2957,7 +2957,7 @@
     "subsections": {
       "manufacturer": "Producent",
       "importer": "Importer",
-      "authorisedRepresentative": "Autoryzowany przedstawiciel w UE"
+      "authorisedRepresentative": "Upoważniony przedstawiciel w UE"
     },
     "rows": {
       "constituentClasses": "Klasy składników w stężeniu powyżej 0,2% wagowo",

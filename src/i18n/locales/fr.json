@@ -2182,7 +2182,7 @@
       },
       "ingredients": {
         "title": "Ingrédients et informations sur l'étiquette",
-        "description": "Contenu de l'étiquette au titre de l'annexe V du règlement (EU) 2026/405 et des règles actuelles"
+        "description": "Contenu de l'étiquette au titre de l'annexe V du règlement (UE) 2026/405 et des règles actuelles"
       },
       "use": {
         "title": "Utilisation sûre et dosage",
@@ -2198,7 +2198,7 @@
       },
       "green_claims": {
         "title": "Allégations environnementales",
-        "description": "Soutient la directive (EU) 2024/825, qui s'applique depuis le 27 septembre 2026"
+        "description": "Soutient la directive (UE) 2024/825, qui s'applique depuis le 27 septembre 2026"
       },
       "review": {
         "title": "Examen par le fournisseur et préparation du passeport",
@@ -2232,7 +2232,7 @@
       },
       "detergent_scope": {
         "label": "Le produit est-il destiné à nettoyer, tremper, rincer ou blanchir des textiles, de la vaisselle ou des surfaces ?",
-        "help": "Voir l'article 2, paragraphe 1, du règlement (EU) 2026/405. Les peintures, adhésifs, solvants et produits qui ne nettoient pas sont exclus de cette catégorie."
+        "help": "Voir l'article 2, point 1, du règlement (UE) 2026/405. Les peintures, adhésifs, solvants et produits qui ne nettoient pas sont exclus de cette catégorie."
       },
       "scope_reason": {
         "label": "Raison pour laquelle le produit ne relève pas de la définition d'un détergent"
@@ -2264,11 +2264,11 @@
       },
       "dpp_profile": {
         "label": "Profil d'information",
-        "help": "Le règlement (EU) 2026/405 s'applique à partir du 23 septembre 2029. Choisissez l'ensemble de données de l'annexe VI pour préparer les futures données du passeport. Le fait de le compléter ne rend pas un passeport conforme ou certifié."
+        "help": "Le règlement (UE) 2026/405 s'applique à partir du 23 septembre 2029. Choisissez l'ensemble de données de l'annexe VI pour préparer les futures données du passeport. Le fait de le compléter ne rend pas un passeport conforme ou certifié."
       },
       "biocidal_claims": {
         "label": "Allégations biocides ou de désinfection ?",
-        "help": "Les allégations de désinfection ou antimicrobiennes nécessitent une autorisation de produit biocide en vertu du règlement (EU) No 528/2012."
+        "help": "Les allégations de désinfection ou antimicrobiennes nécessitent une autorisation de produit biocide en vertu du règlement (UE) n° 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Dénomination sociale du fabricant",
@@ -2319,7 +2319,7 @@
       },
       "eu_operator_name": {
         "label": "Mandataire dans l'UE : dénomination sociale",
-        "help": "Un fabricant établi en dehors de l'UE doit désigner un mandataire (article 9 du règlement (EU) 2026/405)."
+        "help": "Un fabricant établi en dehors de l'UE doit désigner un mandataire (article 9 du règlement (UE) 2026/405)."
       },
       "eu_operator_address": {
         "label": "Mandataire dans l'UE : adresse",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "Évaluation de la classification CLP",
-        "help": "Utiliser la classification réellement évaluée pour ce mélange en vertu du règlement (EC) No 1272/2008. Ne pas la déduire du pH ou des pictogrammes."
+        "help": "Utiliser la classification réellement évaluée pour ce mélange en vertu du règlement (CE) n° 1272/2008. Ne pas la déduire du pH ou des pictogrammes."
       },
       "supplemental_statements": {
         "label": "Mentions d'étiquetage supplémentaires",
@@ -2355,7 +2355,7 @@
       },
       "pcn_applicability": {
         "label": "Notification aux centres antipoison (annexe VIII du CLP)",
-        "help": "Le UFI et la notification dépendent des dangers pour la santé ou des dangers physiques et des exemptions applicables. Les dangers pour l'environnement ne déclenchent pas à eux seuls la notification."
+        "help": "L'UFI et la notification dépendent des dangers pour la santé ou des dangers physiques et des exemptions applicables. Les dangers pour l'environnement ne déclenchent pas à eux seuls la notification."
       },
       "pcn_exemption_reason": {
         "label": "Motif et base juridique de l'exemption"
@@ -2411,10 +2411,10 @@
         "label": "Agents de surface non ioniques : fourchette de poids"
       },
       "band_oxygen_bleach": {
-        "label": "Agents de blanchiment oxygénés : fourchette de poids"
+        "label": "Agents de blanchiment à base d'oxygène : fourchette de poids"
       },
       "band_chlorine_bleach": {
-        "label": "Agents de blanchiment chlorés : fourchette de poids"
+        "label": "Agents de blanchiment à base de chlore : fourchette de poids"
       },
       "band_edta": {
         "label": "EDTA et ses sels : fourchette de poids"
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Page web publique des ingrédients",
-        "help": "Les règles actuelles (règlement (EC) No 648/2004, annexe VII, partie D) exigent une liste publique d'ingrédients tenue à jour pour les produits de consommation. Elle ne nécessite ni fourchettes de pourcentage ni numéros CAS.",
+        "help": "Les règles actuelles (règlement (CE) n° 648/2004, annexe VII, partie D) exigent une liste publique d'ingrédients tenue à jour pour les produits de consommation. Elle ne nécessite ni fourchettes de pourcentage ni numéros CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2485,7 +2485,7 @@
       },
       "synthetic_polymer_microparticles": {
         "label": "Contient des microparticules de polymères synthétiques ajoutées intentionnellement ?",
-        "help": "Le règlement (EU) 2023/2055 les restreint au titre de l'annexe XVII, entrée 78, de REACH. Les détergents sont concernés à compter du 17 octobre 2028, à deux exceptions près : les microbilles utilisées comme abrasifs sont interdites depuis le 17 octobre 2023, et les parfums encapsulés peuvent être utilisés jusqu'au 17 octobre 2029."
+        "help": "Le règlement (UE) 2023/2055 les restreint au titre de l'annexe XVII, entrée 78, de REACH. Les détergents sont concernés à compter du 17 octobre 2028, à deux exceptions près : les microbilles utilisées comme abrasifs sont interdites depuis le 17 octobre 2023, et les parfums encapsulés peuvent être utilisés jusqu'au 17 octobre 2029."
       },
       "use_instructions": {
         "label": "Instructions d'utilisation et précautions particulières",
@@ -2558,7 +2558,7 @@
       },
       "refill_station": {
         "label": "Vendu via une station de recharge ?",
-        "help": "Les points de recharge ont leur propre obligation de support de données en vertu de l'article 21, paragraphe 4, du règlement (EU) 2026/405."
+        "help": "Les points de recharge ont leur propre obligation de support de données en vertu de l'article 21, paragraphe 4, du règlement (UE) 2026/405."
       },
       "epr_registration": {
         "label": "Enregistrement de la responsabilité du producteur d'emballages par marché",
@@ -2581,11 +2581,11 @@
       },
       "claims_avoid_generic_terms": {
         "label": "Les allégations évitent-elles les termes environnementaux génériques ?",
-        "help": "Les allégations environnementales génériques telles que « respectueux de l’environnement », « vert » ou « écologique » sont interdites à compter du 27 septembre 2026 en vertu de la directive (EU) 2024/825, sauf si le produit est porteur du label écologique de l'UE ou d'un label équivalent reconnu. La mention « biodégradable » utilisée seule est considérée comme une allégation générique."
+        "help": "Les allégations environnementales génériques telles que « respectueux de l’environnement », « vert » ou « écologique » sont interdites à compter du 27 septembre 2026 en vertu de la directive (UE) 2024/825, sauf si le produit est porteur du label écologique de l'UE ou d'un label équivalent reconnu. La mention « biodégradable » utilisée seule est considérée comme une allégation générique."
       },
       "ecolabel_licence_number": {
-        "label": "Numéro de licence de l'écolabel de l'UE",
-        "help": "Saisir le numéro d'enregistrement de la licence uniquement si le produit détient une licence d'écolabel de l'UE. Le badge n'est affiché sur le passeport public que si un numéro est saisi."
+        "label": "Numéro de licence du label écologique de l'UE",
+        "help": "Saisir le numéro d'enregistrement de la licence uniquement si le produit détient une licence de label écologique de l'UE. Le badge n'est affiché sur le passeport public que si un numéro est saisi."
       },
       "reach_review": {
         "label": "Restrictions et obligations REACH évaluées",
@@ -2616,7 +2616,7 @@
       },
       "persistent_product_id": {
         "label": "Identifiant de produit persistant",
-        "help": "Saisir l'identifiant réel. Un ID d'enregistrement interne n'est pas un identifiant délivré selon les normes visées dans le ESPR."
+        "help": "Saisir l'identifiant réel. Un ID d'enregistrement interne n'est pas un identifiant délivré selon les normes visées dans l'ESPR."
       },
       "identifier_scheme": {
         "label": "Schéma d'identifiant et émetteur"
@@ -2636,7 +2636,7 @@
         "label": "Code de marchandise douanier"
       },
       "commodity_code": {
-        "label": "Code de marchandise (règlement (EEC) No 2658/87)"
+        "label": "Code de marchandise (règlement (CEE) n° 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Raison pour laquelle aucun code de marchandise ne s'applique"
@@ -2645,7 +2645,7 @@
         "label": "Le fabricant délivre ce passeport sous sa seule responsabilité"
       },
       "compliance_statement": {
-        "label": "Déclaration selon laquelle la conformité avec le règlement (EU) 2026/405 a été démontrée",
+        "label": "Déclaration selon laquelle la conformité avec le règlement (UE) 2026/405 a été démontrée",
         "help": "À compléter uniquement après l'évaluation propre du fabricant. L'application ne génère jamais de déclaration de conformité."
       },
       "applicable_union_law": {
@@ -2672,7 +2672,7 @@
       },
       "substances": {
         "label": "Toutes les substances ajoutées intentionnellement et les conservateurs résiduels dont l'étiquetage est requis",
-        "help": "Identifier les substances comme requis par l'article 18, paragraphe 3, du règlement (EC) No 1272/2008. Ne pas saisir de concentrations ou de données de formulation confidentielles. Tout ce qui est enregistré dans cette catégorie est public."
+        "help": "Identifier les substances comme requis par l'article 18, paragraphe 3, du règlement (CE) n° 1272/2008. Ne pas saisir de concentrations ou de données de formulation confidentielles. Tout ce qui est enregistré dans cette catégorie est public."
       },
       "no_substances_reason": {
         "label": "Base de l'absence de substances à lister"
@@ -2721,7 +2721,7 @@
       },
       "importer_phone": {
         "label": "Numéro de téléphone de l'importateur",
-        "help": "L'annexe VI, point b), du règlement (EU) 2026/405 mentionne le numéro de téléphone de l'importateur, le cas échéant, dans le passeport numérique de produit.",
+        "help": "L'annexe VI, point b), du règlement (UE) 2026/405 mentionne le numéro de téléphone de l'importateur, le cas échéant, dans le passeport numérique de produit.",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "Mandataire dans l'UE : référence du mandat écrit",
-        "help": "Référence du mandat écrit par lequel le fabricant désigne le mandataire (article 2, paragraphe 18, du règlement (EU) 2026/405). Saisissez uniquement une référence. Le mandat lui-même n'est pas téléversé et la référence n'apparaît pas sur le passeport public.",
+        "help": "Référence du mandat écrit par lequel le fabricant désigne le mandataire (article 2, point 18, du règlement (UE) 2026/405). Saisissez uniquement une référence. Le mandat lui-même n'est pas téléversé et la référence n'apparaît pas sur le passeport public.",
         "placeholder": "par ex. Mandat 2026-07, signé le 1er juillet 2026"
       },
       "registry_upload_confirmed": {
@@ -2739,7 +2739,7 @@
       },
       "future_ufi_code": {
         "label": "Identifiant unique de formulation (UFI) sur l'étiquette",
-        "help": "À compter du 23 septembre 2029, l'étiquette de chaque détergent comporte l'UFI précédé de « UFI: » (annexe V, partie A, point 1, b), du règlement (EU) 2026/405), que le produit soit ou non classé comme dangereux. Quatre groupes de quatre caractères. Saisissez le même code que l'UFI des centres antipoison lorsqu'il en existe un.",
+        "help": "À compter du 23 septembre 2029, l'étiquette de chaque détergent comporte l'UFI précédé de « UFI: » (annexe V, partie A, point 1, b), du règlement (UE) 2026/405), que le produit soit ou non classé comme dangereux. Quatre groupes de quatre caractères. Saisissez le même code que l'UFI des centres antipoison lorsqu'il en existe un.",
         "placeholder": "par ex. N1QV-R02N-J00M-WQD5"
       }
     },
@@ -2750,7 +2750,7 @@
         "machine_dishwashing": "Détergent pour lave-vaisselle",
         "dishwasher_additive": "Produit de rinçage ou additif pour lave-vaisselle",
         "hand_dishwashing": "Détergent pour lavage de la vaisselle à la main",
-        "all_purpose": "Nettoyant tout usage ou de surface",
+        "all_purpose": "Nettoyant multi-usages ou nettoyant pour surfaces",
         "kitchen": "Nettoyant pour la cuisine",
         "bathroom": "Nettoyant pour la salle de bain",
         "toilet": "Nettoyant pour les toilettes",
@@ -2803,7 +2803,7 @@
       "pictograms": {
         "ghs01": "GHS01 Bombe explosant",
         "ghs02": "GHS02 Flamme",
-        "ghs03": "GHS03 Flamme sur un cercle",
+        "ghs03": "GHS03 Flamme au-dessus d'un cercle",
         "ghs04": "GHS04 Bouteille à gaz",
         "ghs05": "GHS05 Corrosion",
         "ghs06": "GHS06 Tête de mort sur deux tibias",
@@ -2834,8 +2834,8 @@
         "cationic_surfactants": "Agents de surface cationiques",
         "amphoteric_surfactants": "Agents de surface amphotères",
         "nonionic_surfactants": "Agents de surface non ioniques",
-        "oxygen_bleach": "Agents de blanchiment oxygénés",
-        "chlorine_bleach": "Agents de blanchiment chlorés",
+        "oxygen_bleach": "Agents de blanchiment à base d'oxygène",
+        "chlorine_bleach": "Agents de blanchiment à base de chlore",
         "edta": "EDTA et ses sels",
         "nta": "NTA et ses sels",
         "phenols": "Phénols et phénols halogénés",
@@ -2866,9 +2866,9 @@
         "unknown": "Inconnu"
       },
       "laundryType": {
-        "heavy_duty": "Haute performance",
-        "heavy_duty_short": "Haute performance pour cycles courts",
-        "light_duty": "Basse performance ou textiles délicats"
+        "heavy_duty": "Pour textiles très sales",
+        "heavy_duty_short": "Pour textiles très sales, cycles courts",
+        "light_duty": "Pour textiles peu sales ou délicats"
       },
       "dosageUnit": {
         "ml": "Millilitres",
@@ -2902,12 +2902,12 @@
       }
     },
     "warnings": {
-      "scopeOutside": "Ce produit pourrait ne pas relever de la définition d'un détergent au sens de l'article 2, paragraphe 1, du règlement (EU) 2026/405. Vérifiez le champ d'application avant d'utiliser cette catégorie.",
-      "biocidal": "Les allégations de désinfection ou antimicrobiennes nécessitent une autorisation de produit biocide en vertu du règlement (EU) No 528/2012.",
+      "scopeOutside": "Ce produit pourrait ne pas relever de la définition d'un détergent au sens de l'article 2, point 1, du règlement (UE) 2026/405. Vérifiez le champ d'application avant d'utiliser cette catégorie.",
+      "biocidal": "Les allégations de désinfection ou antimicrobiennes nécessitent une autorisation de produit biocide en vertu du règlement (UE) n° 528/2012.",
       "assessmentNeeded": "Cette évaluation n'est pas terminée. Veuillez la finaliser avant de vous fier au passeport.",
-      "microparticles": "Veuillez consulter le règlement (EU) 2023/2055 sur les microparticules de polymères synthétiques avant de mettre ce produit sur le marché. Toute réponse « Inconnu » doit être clarifiée avec le fournisseur.",
-      "phosphorusLaundry": "Une teneur totale en phosphore de {{value}} g n'est pas inférieure à la limite de 0,5 g pour un détergent lessiviel grand public en eau dure (annexe III du règlement (EU) 2026/405).",
-      "phosphorusDishwasher": "Une teneur totale en phosphore de {{value}} g n'est pas inférieure à la limite de 0,3 g pour un détergent grand public pour lave-vaisselle automatiques (annexe III du règlement (EU) 2026/405).",
+      "microparticles": "Veuillez consulter le règlement (UE) 2023/2055 sur les microparticules de polymères synthétiques avant de mettre ce produit sur le marché. Toute réponse « Inconnu » doit être clarifiée avec le fournisseur.",
+      "phosphorusLaundry": "Une teneur totale en phosphore de {{value}} g n'est pas inférieure à la limite de 0,5 g pour un détergent lessiviel grand public en eau dure (annexe III du règlement (UE) 2026/405).",
+      "phosphorusDishwasher": "Une teneur totale en phosphore de {{value}} g n'est pas inférieure à la limite de 0,3 g pour un détergent grand public pour lave-vaisselle automatiques (annexe III du règlement (UE) 2026/405).",
       "percentageRange": "Un pourcentage doit être compris entre 0 et 100. Vous avez saisi {{value}}.",
       "positiveNumber": "Saisissez un nombre supérieur à zéro. Vous avez saisi {{value}}.",
       "allergensMissing": "Vous avez répondu oui, mais aucun allergène n'est sélectionné. Sélectionnez chaque allergène dans la liste officielle.",
@@ -2918,8 +2918,8 @@
       "microorganismSafety": "Des micro-organismes sont ajoutés, mais aucune référence d'évaluation de la sécurité n'est saisie."
     },
     "disclaimer": {
-      "title": "Détergents DPP : clause de non-responsabilité en matière de conformité",
-      "text": "Le règlement (EU) 2026/405 s'applique à compter du 23 septembre 2029 ; jusque-là, le règlement (EC) No 648/2004 s'applique. Cet outil prépare les données du passeport et ne constitue pas une certification ni un conseil juridique. Tout ce qui est enregistré ici est public."
+      "title": "DPP des détergents : clause de non-responsabilité en matière de conformité",
+      "text": "Le règlement (UE) 2026/405 s'applique à compter du 23 septembre 2029 ; jusque-là, le règlement (CE) n° 648/2004 s'applique. Cet outil prépare les données du passeport et ne constitue pas une certification ni un conseil juridique. Tout ce qui est enregistré ici est public."
     },
     "allergenPicker": {
       "empty": "Aucun allergène ajouté pour le moment.",
@@ -2935,14 +2935,14 @@
     },
     "form": {
       "packagingImageLabel": "Image en couleur de l'emballage ou de l'étiquette",
-      "packagingImageHelp": "L'annexe VI, point a), du règlement (EU) 2026/405 exige une image en couleur de l'emballage ou de l'étiquette, suffisamment claire pour identifier le modèle. Obligatoire sur le profil de l'annexe VI."
+      "packagingImageHelp": "L'annexe VI, point a), du règlement (UE) 2026/405 exige une image en couleur de l'emballage ou de l'étiquette, suffisamment claire pour identifier le modèle. Obligatoire sur le profil de l'annexe VI."
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Détergents: Passeport numérique de produit",
+    "headerBadge": "Détergents : passeport numérique de produit",
     "notice": "Cette page fournit des informations sur le produit publiées par le fournisseur. Il ne s'agit pas d'une certification ou d'une approbation, et elle ne remplace pas l'étiquette figurant sur l'emballage.",
     "units": "unités",
-    "ecolabelBadge": "Écolabel de l'UE",
+    "ecolabelBadge": "Label écologique de l'UE",
     "sections": {
       "product": "Produit",
       "hazard": "Danger et sécurité",
@@ -2950,7 +2950,7 @@
       "ingredients": "Ingrédients",
       "environment": "Environnement et emballage",
       "biocide": "Produit biocide",
-      "responsible": "Personne responsable",
+      "responsible": "Opérateurs responsables",
       "annexVi": "Ensemble de données de l'annexe VI",
       "metadata": "Infrastructure DPP"
     },
@@ -2961,7 +2961,7 @@
     },
     "rows": {
       "constituentClasses": "Classes de constituants présentes à une concentration supérieure à 0,2 % en poids",
-      "ecolabel": "Écolabel de l'UE",
+      "ecolabel": "Label écologique de l'UE",
       "licenceNumber": "Numéro de licence",
       "name": "Nom",
       "address": "Adresse",

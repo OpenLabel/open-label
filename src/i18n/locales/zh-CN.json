@@ -2169,7 +2169,7 @@
   "detergents": {
     "sections": {
       "identity": {
-        "title": "产品身份",
+        "title": "产品标识",
         "description": "产品、型号和可追溯性"
       },
       "responsible_operators": {
@@ -2178,15 +2178,15 @@
       },
       "classification": {
         "title": "危险分类和安全信息",
-        "description": "CLP 分类、标签危险信息、毒物中心和安全数据表"
+        "description": "CLP 分类、标签危险信息、中毒控制中心和安全数据表"
       },
       "ingredients": {
         "title": "成分和标签信息",
-        "description": "根据法规 (EU) 2026/405 附录 V 和现行规则的标签内容"
+        "description": "根据法规 (EU) 2026/405 附件 V 和现行规则的标签内容"
       },
       "use": {
         "title": "安全使用和剂量",
-        "description": "根据附录 V B 部分的剂量和使用信息"
+        "description": "根据附件 V B 部分的剂量和使用信息"
       },
       "packaging": {
         "title": "包装和回收",
@@ -2201,20 +2201,20 @@
         "description": "支持指令 (EU) 2024/825，该指令自 2026 年 9 月 27 日起适用"
       },
       "review": {
-        "title": "供应商审核和通行证准备",
+        "title": "供应商审核和护照准备",
         "description": "供应商完成的检查。本应用程序无法验证。"
       },
       "annex_identity": {
-        "title": "附录 VI：产品身份和制造商声明",
-        "description": "为 2029 年 9 月 23 日起要求的数字产品通行证做准备。完整的数据集不是认证、验证的标识符或注册提交。"
+        "title": "附件 VI：产品标识和制造商声明",
+        "description": "为 2029 年 9 月 23 日起要求的数字产品护照做准备。完整的数据集不是认证、验证的标识符或注册提交。"
       },
       "annex_substances": {
-        "title": "附录 VI：物质",
-        "description": "有意添加物质的完整清单（附录 VI A 部分 (h) 点）"
+        "title": "附件 VI：物质",
+        "description": "有意添加物质的完整清单（附件 VI A 部分 (h) 点）"
       },
       "annex_microorganisms": {
-        "title": "附录 VI：微生物",
-        "description": "所有有意添加的微生物（附录 VI A 部分 (i) 点）"
+        "title": "附件 VI：微生物",
+        "description": "所有有意添加的微生物（附件 VI A 部分 (i) 点）"
       }
     },
     "fields": {
@@ -2243,7 +2243,7 @@
       },
       "model_identifier": {
         "label": "产品型号标识符",
-        "help": "一个通行证对应一个型号。配方或生产的变更导致标签发生变化，可能会使其成为新型号。"
+        "help": "一个护照对应一个型号。配方或生产的变更导致标签发生变化，可能会使其成为新型号。"
       },
       "batch_identifier": {
         "label": "类型、批次或批号参考",
@@ -2264,7 +2264,7 @@
       },
       "dpp_profile": {
         "label": "信息概况",
-        "help": "法规 (EU) 2026/405 自 2029 年 9 月 23 日起适用。选择附录 VI 数据集以准备未来的通行证数据。完成此数据集并不意味着通行证合规或已获认证。"
+        "help": "法规 (EU) 2026/405 自 2029 年 9 月 23 日起适用。选择附件 VI 数据集以准备未来的护照数据。完成此数据集并不意味着护照合规或已获认证。"
       },
       "biocidal_claims": {
         "label": "是否作出杀生物或消毒声明？",
@@ -2354,7 +2354,7 @@
         "placeholder": "例如：P280 戴防护手套"
       },
       "pcn_applicability": {
-        "label": "毒物中心通报（CLP 附录 VIII）",
+        "label": "中毒控制中心通报（CLP 附件 VIII）",
         "help": "UFI 和通报取决于健康或物理危险以及适用的豁免。仅有环境危险不会触发通报。"
       },
       "pcn_exemption_reason": {
@@ -2362,11 +2362,11 @@
       },
       "ufi_code": {
         "label": "唯一配方标识符（UFI）",
-        "help": "四组四个字符。格式会经过检查，但本应用程序无法验证毒物中心的提交。",
+        "help": "四组四个字符。格式会经过检查，但本应用程序无法验证中毒控制中心的提交。",
         "placeholder": "例如：N1QV-R02N-J00M-WQD5"
       },
       "pcn_status": {
-        "label": "毒物中心提交"
+        "label": "中毒控制中心提交"
       },
       "sds_requirement": {
         "label": "安全数据表提供要求",
@@ -2385,12 +2385,12 @@
         "placeholder": "YYYY-MM-DD"
       },
       "emergency_contact": {
-        "label": "紧急联系方式（毒物中心或 24 小时电话）",
+        "label": "紧急联系方式（中毒控制中心或 24 小时电话）",
         "placeholder": "紧急情况下的电话号码"
       },
       "constituent_classes": {
         "label": "按重量计添加量超过 0.2% 的组分类别",
-        "help": "勾选按重量计添加量超过 0.2% 的每个类别，然后在下方选择其重量范围（附录 V A 部分 1(h)(i) 点）。"
+        "help": "勾选按重量计添加量超过 0.2% 的每个类别，然后在下方选择其重量范围（附件 V A 部分 1(h)(i) 点）。"
       },
       "band_phosphates": {
         "label": "磷酸盐：重量范围"
@@ -2448,11 +2448,11 @@
       },
       "listed_constituents": {
         "label": "以任何浓度添加的组分类别",
-        "help": "附录 V A 部分 1(h)(ii) 点。消毒剂根据现行规则列出，自 2029 年 9 月 23 日起不再是列出的类别。"
+        "help": "附件 V A 部分 1(h)(ii) 点。消毒剂根据现行规则列出，自 2029 年 9 月 23 日起不再是列出的类别。"
       },
       "preservatives_present": {
         "label": "是否含有防腐剂？",
-        "help": "防腐剂根据附录 V A 部分 1(h)(iii) 点列出，除非已根据 CLP 第 18(3)(b) 条或《杀生物产品法规》第 58 条进行标注。"
+        "help": "防腐剂根据附件 V A 部分 1(h)(iii) 点列出，除非已根据 CLP 第 18(3)(b) 条或《杀生物产品法规》第 58 条进行标注。"
       },
       "preservatives": {
         "label": "防腐剂",
@@ -2460,16 +2460,16 @@
         "placeholder": "例如：Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "按重量计添加量是否超过 0.01% 的香料致敏物？",
-        "help": "附录 V D 部分清单中，按重量计有意添加量超过 0.01% 的致敏物需在标签上标明，除非已根据 CLP 进行标注。"
+        "label": "是否添加了按重量计超过 0.01% 的香精致敏原？",
+        "help": "附件 V D 部分清单中，按重量计有意添加量超过 0.01% 的致敏物需在标签上标明，除非已根据 CLP 进行标注。"
       },
       "fragrance_allergens": {
-        "label": "含有的香料致敏物",
+        "label": "含有的香精致敏原",
         "help": "从包含 105 个条目的官方清单中选择每种致敏物。"
       },
       "ingredients_url": {
         "label": "公开的成分网页",
-        "help": "现行规则（法规 (EC) No 648/2004，附录 VII D 部分）要求为消费品维护一个公开的成分清单。该清单无需百分比范围或 CAS 编号。",
+        "help": "现行规则（法规 (EC) No 648/2004，附件 VII D 部分）要求为消费品维护一个公开的成分清单。该清单无需百分比范围或 CAS 编号。",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2481,11 +2481,11 @@
       },
       "biodegradability_reference": {
         "label": "生物降解性证据参考",
-        "help": "命名测试报告或供应商声明。请勿上传或粘贴机密文件。"
+        "help": "注明测试报告或供应商声明的名称。请勿上传或粘贴机密文件。"
       },
       "synthetic_polymer_microparticles": {
         "label": "是否含有有意添加的合成聚合物微粒？",
-        "help": "法规 (EU) 2023/2055 根据 REACH 附录 XVII 第 78 项对此进行了限制。洗涤剂自 2028 年 10 月 17 日起适用此限制，但有两项例外：用作研磨剂的微珠自 2023 年 10 月 17 日起已被禁止，微胶囊香精可使用至 2029 年 10 月 17 日。"
+        "help": "法规 (EU) 2023/2055 根据 REACH 附件 XVII 第 78 项对此进行了限制。洗涤剂自 2028 年 10 月 17 日起适用此限制，但有两项例外：用作研磨剂的微珠自 2023 年 10 月 17 日起已被禁止，微胶囊香精可使用至 2029 年 10 月 17 日。"
       },
       "use_instructions": {
         "label": "使用说明和特别防范措施",
@@ -2512,7 +2512,7 @@
       },
       "dosage_two_cycle_note": {
         "label": "单周期和双周期洗涤过程的用量",
-        "help": "附录 V B 部分 1(a) 点要求提供单周期或双周期洗涤过程的用量。"
+        "help": "附件 V B 部分 1(a) 点要求提供单周期或双周期洗涤过程的用量。"
       },
       "loads_per_pack": {
         "label": "每包装标准负载数（中等硬度水，每升 2.5 毫摩尔 CaCO3）",
@@ -2524,18 +2524,18 @@
       },
       "dishwasher_dose": {
         "label": "主洗涤周期的标准用量",
-        "help": "适用于满载 12 套餐具、正常脏污程度的洗碗机。"
+        "help": "适用于满载 12 套餐具的洗碗机中正常脏污程度的餐具。"
       },
       "dishwasher_dose_hardness_note": {
         "label": "根据水硬度调整用量"
       },
       "surface_dilution": {
         "label": "推荐稀释比例和每单位表面积用量",
-        "help": "附录 V B 部分 4 点：给出推荐的稀释比例和每单位表面积用量，或其他使用说明，以避免过量使用产品。"
+        "help": "附件 V B 部分 4 点：给出推荐的稀释比例和每单位表面积用量，或其他使用说明，以避免过量使用产品。"
       },
       "phosphorus_per_dose_g": {
         "label": "推荐剂量中的总磷含量（克）",
-        "help": "附录 III 限制：硬水中每次标准洗衣负载低于 0.5 克，每次标准洗碗机剂量低于 0.3 克。"
+        "help": "附件 III 限制：硬水中每次标准洗衣负载低于 0.5 克，每次标准洗碗机剂量低于 0.3 克。"
       },
       "storage_disposal": {
         "label": "储存和处置"
@@ -2566,7 +2566,7 @@
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
-        "label": "适用的授权或许可的过渡依据"
+        "label": "适用的授权或合法的过渡依据"
       },
       "biocidal_actives": {
         "label": "活性物质和授权用途"
@@ -2585,11 +2585,11 @@
       },
       "ecolabel_licence_number": {
         "label": "欧盟生态标签许可证号",
-        "help": "仅当产品持有欧盟生态标签许可证时才输入许可证注册号。只有在输入编号后，徽章才会显示在公开通行证上。"
+        "help": "仅当产品持有欧盟生态标签许可证时才输入许可证注册号。只有在输入编号后，徽章才会显示在公开护照上。"
       },
       "reach_review": {
         "label": "REACH 限制和义务评估",
-        "help": "审查附录 XVII 中的限制以及适用于组分物质的义务。"
+        "help": "审查附件 XVII 中的限制以及适用于组分物质的义务。"
       },
       "physical_label_reviewed": {
         "label": "我已检查实体标签和所提供的安全信息"
@@ -2598,7 +2598,7 @@
         "label": "标签上注明该产品仅供专业使用"
       },
       "previous_passport_url": {
-        "label": "当此记录替换旧记录时，链接到前一个通行证",
+        "label": "当此记录替换旧记录时，链接到前一个护照",
         "placeholder": "https://..."
       },
       "data_review_date": {
@@ -2625,7 +2625,7 @@
         "label": "制造商唯一经营者标识符"
       },
       "backup_provider_url": {
-        "label": "持有备份副本的通行证服务提供商 (URL)",
+        "label": "持有备份副本的护照服务提供商 (URL)",
         "help": "指定您实际安排的提供商。本应用程序不创建备份服务。",
         "placeholder": "https://..."
       },
@@ -2642,7 +2642,7 @@
         "label": "不适用商品编码的原因"
       },
       "manufacturer_responsibility": {
-        "label": "制造商自行负责签发此通行证"
+        "label": "制造商自行负责签发此护照"
       },
       "compliance_statement": {
         "label": "关于已证明符合法规 (EU) 2026/405 的声明",
@@ -2671,14 +2671,14 @@
         "help": "豁免仅适用于工业和机构用洗涤剂及表面活性剂，前提是根据 REACH 第 31 条提供的等效安全数据表已提供该信息。"
       },
       "substances": {
-        "label": "所有有意添加的物质和标签要求的残留防腐剂",
+        "label": "所有有意添加的物质和标签要求的带入的防腐剂",
         "help": "根据法规 (EC) No 1272/2008 第 18(3) 条的要求识别物质。请勿输入浓度或机密配方数据。在此类别中保存的所有内容都是公开的。"
       },
       "no_substances_reason": {
         "label": "未列出物质的依据"
       },
       "substance_list_complete": {
-        "label": "该清单是完整的，包括符合条件的残留防腐剂，并使用根据 CLP 第 18(3) 条评估的身份"
+        "label": "该清单是完整的，包括符合条件的带入的防腐剂，并使用根据 CLP 第 18(3) 条评估的身份"
       },
       "industrial_institutional_use": {
         "label": "仅由专业人员在家庭领域之外使用"
@@ -2706,7 +2706,7 @@
         "help": "为每种微生物提供属、种和菌株名称或代码。"
       },
       "microorganism_safety_reference": {
-        "label": "安全评估参考（附录 II）"
+        "label": "安全评估参考（附件 II）"
       },
       "microorganism_shelf_life": {
         "label": "保质期和储存条件",
@@ -2721,7 +2721,7 @@
       },
       "importer_phone": {
         "label": "进口商电话号码",
-        "help": "法规 (EU) 2026/405 附录 VI 第 (b) 点列明，如适用，应在数字产品护照中包含进口商的电话号码。",
+        "help": "法规 (EU) 2026/405 附件 VI 第 (b) 点列明，如适用，应在数字产品护照中包含进口商的电话号码。",
         "placeholder": "+33 1 00 00 00 00"
       },
       "eu_operator_phone": {
@@ -2739,7 +2739,7 @@
       },
       "future_ufi_code": {
         "label": "标签上的唯一配方标识符（UFI）",
-        "help": "自 2029 年 9 月 23 日起，无论产品是否被分类为危险品，所有洗涤剂的标签均须带有前缀为“UFI: ”的 UFI（法规 (EU) 2026/405 附录 V 第 A 部分第 1(b) 点）。由四组各四个字符组成。如已存在毒物中心 UFI，请输入相同的代码。",
+        "help": "自 2029 年 9 月 23 日起，无论产品是否被分类为危险品，所有洗涤剂的标签均须带有前缀为“UFI: ”的 UFI（法规 (EU) 2026/405 附件 V 第 A 部分第 1(b) 点）。由四组各四个字符组成。如已存在中毒控制中心 UFI，请输入相同的代码。",
         "placeholder": "例如：N1QV-R02N-J00M-WQD5"
       }
     },
@@ -2783,7 +2783,7 @@
       },
       "dppProfile": {
         "current": "当前产品信息",
-        "annex_vi": "适用于 2029 年规则的完整附录 VI 数据集"
+        "annex_vi": "适用于 2029 年规则的完整附件 VI 数据集"
       },
       "manufacturerNonEu": {
         "yes": "是",
@@ -2873,7 +2873,7 @@
       "dosageUnit": {
         "ml": "毫升",
         "g": "克",
-        "units": "单位 (片剂、胶囊或包)"
+        "units": "单位 (片剂、胶囊或凝珠)"
       },
       "packagingMaterial": {
         "hdpe": "HDPE (02)",
@@ -2897,21 +2897,21 @@
       },
       "substanceListRoute": {
         "full_list": "完整的物质清单",
-        "equivalent_sds": "等效的安全数据表 (仅限工业和公共机构使用)",
+        "equivalent_sds": "等效的安全数据表 (仅限工业和机构使用)",
         "no_added_substances": "经评估后无需要列出的物质"
       }
     },
     "warnings": {
       "scopeOutside": "本产品可能不属于法规 (EU) 2026/405 第 2(1) 条中洗涤剂的定义范围。在使用此类别前，请检查其适用范围。",
-      "biocidal": "消毒或抗菌声明需要根据法规 (EU) No 528/2012 获得生物杀灭产品授权。",
-      "assessmentNeeded": "此评估尚未完成。在依赖此通行证之前，请先完成评估。",
+      "biocidal": "消毒或抗菌声明需要根据法规 (EU) No 528/2012 获得杀生物产品授权。",
+      "assessmentNeeded": "此评估尚未完成。在依赖此护照之前，请先完成评估。",
       "microparticles": "将本产品投放市场前，请查阅关于合成聚合物微粒的法规 (EU) 2023/2055。对于未知的答案，必须与供应商一同解决。",
       "phosphorusLaundry": "总磷含量为 {{value}} 克，未低于法规 (EU) 2026/405 附件 III 中规定的家用洗衣洗涤剂在硬水中的 0.5 克限值。",
       "phosphorusDishwasher": "总磷含量为 {{value}} 克，未低于法规 (EU) 2026/405 附件 III 中规定的家用自动洗碗机用洗涤剂的 0.3 克限值。",
       "percentageRange": "百分比必须介于 0 和 100 之间。您输入了 {{value}}。",
       "positiveNumber": "请输入一个大于零的数字。您输入了 {{value}}。",
-      "allergensMissing": "您回答了“是”，但未选择任何过敏原。请从官方列表中选择每种过敏原。",
-      "ufiFormat": "一个 UFI 由四组各四个字符组成，例如 N1QV-R02N-J00M-WQD5。格式会经过检查，但不会检查是否已向毒物中心提交。",
+      "allergensMissing": "您回答了“是”，但未选择任何香精致敏原。请从官方列表中选择每种香精致敏原。",
+      "ufiFormat": "一个 UFI 由四组各四个字符组成，例如 N1QV-R02N-J00M-WQD5。格式会经过检查，但不会检查是否已向中毒控制中心提交。",
       "urlFormat": "请使用以 http:// 或 https:// 开头的完整网址。",
       "emailFormat": "请输入有效的电子邮件地址。",
       "dateFormat": "请使用 YYYY-MM-DD 格式的有效日期。",
@@ -2925,7 +2925,7 @@
       "empty": "尚未添加致敏物。",
       "summary": "已申报 {{count}} 种致敏物。",
       "addButton": "添加致敏物",
-      "dialogTitle": "选择香料致敏物",
+      "dialogTitle": "选择香精致敏原",
       "searchPlaceholder": "按名称、CAS、EC 或编号搜索...",
       "clearSearch": "清除搜索",
       "noResults": "没有与“{{q}}”匹配的致敏物。",
@@ -2935,7 +2935,7 @@
     },
     "form": {
       "packagingImageLabel": "包装或标签的彩色图像",
-      "packagingImageHelp": "法规 (EU) 2026/405 附录 VI 第 (a) 点要求提供包装或标签的彩色图像，其清晰度须足以识别型号。在附录 VI 配置文件中为必填项。"
+      "packagingImageHelp": "法规 (EU) 2026/405 附件 VI 第 (a) 点要求提供包装或标签的彩色图像，其清晰度须足以识别型号。在附件 VI 配置文件中为必填项。"
     }
   },
   "detergentsPublic": {

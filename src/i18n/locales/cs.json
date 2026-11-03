@@ -2232,14 +2232,14 @@
       },
       "detergent_scope": {
         "label": "Je výrobek určen k čištění, namáčení, oplachování nebo bělení textilií, nádobí nebo povrchů?",
-        "help": "Viz čl. 2 odst. 1 nařízení (EU) 2026/405. Barvy, lepidla, rozpouštědla a výrobky, které nečistí, do této kategorie nespadají."
+        "help": "Viz čl. 2 bod 1 nařízení (EU) 2026/405. Barvy, lepidla, rozpouštědla a výrobky, které nečistí, do této kategorie nespadají."
       },
       "scope_reason": {
         "label": "Důvod, proč výrobek nespadá pod definici detergentu"
       },
       "use_sector": {
         "label": "Pro koho je výrobek určen?",
-        "help": "Průmyslové a institucionální použití znamená použití pouze mimo domácnost specializovaným personálem."
+        "help": "Použití v průmyslu a institucích znamená použití pouze mimo domácnost specializovaným personálem."
       },
       "model_identifier": {
         "label": "Identifikátor modelu výrobku",
@@ -2268,7 +2268,7 @@
       },
       "biocidal_claims": {
         "label": "Biocidní nebo dezinfekční tvrzení?",
-        "help": "Dezinfekční nebo antimikrobiální tvrzení vyžadují povolení pro biocidní přípravek podle nařízení (EU) No 528/2012."
+        "help": "Dezinfekční nebo antimikrobiální tvrzení vyžadují povolení pro biocidní přípravek podle nařízení (EU) č. 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Obchodní firma výrobce",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "Posouzení klasifikace podle nařízení CLP",
-        "help": "Použijte klasifikaci skutečně posouzenou pro tuto směs podle nařízení (EC) No 1272/2008. Neodvozujte ji z pH ani z piktogramů."
+        "help": "Použijte klasifikaci skutečně posouzenou pro tuto směs podle nařízení (ES) č. 1272/2008. Neodvozujte ji z pH ani z piktogramů."
       },
       "supplemental_statements": {
         "label": "Doplňující informace na štítku",
@@ -2469,7 +2469,7 @@
       },
       "ingredients_url": {
         "label": "Veřejná webová stránka se složením",
-        "help": "Platná pravidla (nařízení (EC) No 648/2004, příloha VII část D) vyžadují pro spotřebitelské výrobky udržovaný veřejný seznam složek. Nevyžaduje procentuální rozmezí ani čísla CAS.",
+        "help": "Platná pravidla (nařízení (ES) č. 648/2004, příloha VII část D) vyžadují pro spotřebitelské výrobky udržovaný veřejný seznam složek. Nevyžaduje procentuální rozmezí ani čísla CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Typ pracího prostředku",
-        "help": "Určuje standardní náplň: 4,5 kg suché tkaniny pro vysoce účinné prací prostředky, 2,5 kg pro vysoce účinné prací prostředky pro krátké cykly a pro prací prostředky pro jemné prádlo."
+        "help": "Určuje standardní náplň: 4,5 kg suché tkaniny pro prací prostředky na silně znečištěné prádlo, 2,5 kg pro prací prostředky na silně znečištěné prádlo pro krátké cykly a pro prací prostředky pro jemné prádlo."
       },
       "dosage_unit": {
         "label": "Jednotka dávkování"
@@ -2636,7 +2636,7 @@
         "label": "Kód celní nomenklatury"
       },
       "commodity_code": {
-        "label": "Kód zboží (nařízení (EEC) No 2658/87)"
+        "label": "Kód zboží (nařízení (EHS) č. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Důvod, proč se kód zboží nepoužije"
@@ -2672,7 +2672,7 @@
       },
       "substances": {
         "label": "Všechny záměrně přidané látky a přenesené konzervační přísady, jejichž uvedení na štítku je povinné",
-        "help": "Identifikujte látky, jak je požadováno v čl. 18 odst. 3 nařízení (EC) No 1272/2008. Nezadávejte koncentrace ani důvěrné údaje o složení. Vše, co je uloženo v této kategorii, je veřejné."
+        "help": "Identifikujte látky, jak je požadováno v čl. 18 odst. 3 nařízení (ES) č. 1272/2008. Nezadávejte koncentrace ani důvěrné údaje o složení. Vše, co je uloženo v této kategorii, je veřejné."
       },
       "no_substances_reason": {
         "label": "Důvod pro neuvedení látek v seznamu"
@@ -2714,7 +2714,7 @@
       },
       "food_contact_use": {
         "label": "Určeno pro použití na površích přicházejících do styku s potravinami?",
-        "help": "Pokud nebylo u výrobku posouzeno riziko jako bezpečné pro toto použití, na štítku se uvádí, že se nesmí používat na površích přicházejících do styku s potravinami."
+        "help": "Pokud výrobek nebyl na základě posouzení rizik shledán bezpečným pro toto použití, na štítku se uvádí, že se nesmí používat na površích přicházejících do styku s potravinami."
       },
       "food_contact_instructions": {
         "label": "Bezpečnostní opatření a pokyny pro povrchy přicházející do styku s potravinami"
@@ -2730,7 +2730,7 @@
       },
       "eu_operator_mandate_reference": {
         "label": "Zplnomocněný zástupce v EU: odkaz na písemné pověření",
-        "help": "Odkaz na písemné pověření, kterým výrobce jmenuje zástupce (čl. 2 odst. 18 nařízení (EU) 2026/405). Zadejte pouze odkaz. Samotné pověření se nenahrává a odkaz se ve veřejném pasu nezobrazuje.",
+        "help": "Odkaz na písemné pověření, kterým výrobce jmenuje zástupce (čl. 2 bod 18 nařízení (EU) 2026/405). Zadejte pouze odkaz. Samotné pověření se nenahrává a odkaz se ve veřejném pasu nezobrazuje.",
         "placeholder": "např. Pověření 2026-07, podepsáno 1. července 2026"
       },
       "registry_upload_confirmed": {
@@ -2750,7 +2750,7 @@
         "machine_dishwashing": "Prostředek do myčky nádobí",
         "dishwasher_additive": "Leštidlo nebo přísada do myčky nádobí",
         "hand_dishwashing": "Prostředek na ruční mytí nádobí",
-        "all_purpose": "Univerzální nebo povrchový čistič",
+        "all_purpose": "Univerzální čistič nebo čistič povrchů",
         "kitchen": "Kuchyňský čistič",
         "bathroom": "Koupelnový čistič",
         "toilet": "WC čistič",
@@ -2761,7 +2761,7 @@
         "other": "Jiný detergent"
       },
       "productForm": {
-        "liquid": "Tekutý",
+        "liquid": "Kapalina",
         "gel": "Gel",
         "powder": "Prášek",
         "tablet": "Tableta",
@@ -2779,7 +2779,7 @@
       "useSector": {
         "consumer": "Spotřebitelé, včetně smíšeného spotřebitelského a profesionálního použití",
         "professional": "Pouze pro profesionální použití",
-        "industrial": "Pouze pro průmyslové a institucionální použití"
+        "industrial": "Pouze pro použití v průmyslu a institucích"
       },
       "dppProfile": {
         "current": "Aktuální informace o výrobku",
@@ -2897,13 +2897,13 @@
       },
       "substanceListRoute": {
         "full_list": "Úplný seznam látek",
-        "equivalent_sds": "Ekvivalentní bezpečnostní list (pouze pro průmyslové a profesionální použití)",
+        "equivalent_sds": "Ekvivalentní bezpečnostní list (pouze pro použití v průmyslu a institucích)",
         "no_added_substances": "Po posouzení nejsou k uvedení žádné látky"
       }
     },
     "warnings": {
-      "scopeOutside": "Tento výrobek nemusí spadat do definice čisticího prostředku podle čl. 2 odst. 1 nařízení (EU) 2026/405. Před použitím této kategorie zkontrolujte oblast působnosti.",
-      "biocidal": "Tvrzení o dezinfekčních nebo antimikrobiálních vlastnostech vyžadují povolení pro biocidní přípravek podle nařízení (EU) No 528/2012.",
+      "scopeOutside": "Tento výrobek nemusí spadat do definice detergentu podle čl. 2 bodu 1 nařízení (EU) 2026/405. Před použitím této kategorie zkontrolujte oblast působnosti.",
+      "biocidal": "Tvrzení o dezinfekčních nebo antimikrobiálních vlastnostech vyžadují povolení pro biocidní přípravek podle nařízení (EU) č. 528/2012.",
       "assessmentNeeded": "Toto posouzení není dokončeno. Dokončete jej, než se na pas budete spoléhat.",
       "microparticles": "Před uvedením tohoto výrobku na trh zkontrolujte nařízení (EU) 2023/2055 o mikročásticích syntetických polymerů. Neznámá odpověď musí být vyřešena s dodavatelem.",
       "phosphorusLaundry": "Celkový obsah fosforu {{value}} g není pod limitem 0,5 g stanoveným pro spotřebitelský prací prostředek v tvrdé vodě (příloha III nařízení (EU) 2026/405).",
@@ -2918,8 +2918,8 @@
       "microorganismSafety": "Jsou přidány mikroorganismy, ale není zadán žádný odkaz na posouzení bezpečnosti."
     },
     "disclaimer": {
-      "title": "Čisticí prostředky DPP: vyloučení odpovědnosti ohledně souladu s předpisy",
-      "text": "Nařízení (EU) 2026/405 se použije od 23. září 2029; do té doby se použije nařízení (EC) No 648/2004. Tento nástroj připravuje údaje pasu a nepředstavuje certifikaci ani právní poradenství. Vše, co je zde uloženo, je veřejné."
+      "title": "DPP pro detergenty: vyloučení odpovědnosti ohledně souladu s předpisy",
+      "text": "Nařízení (EU) 2026/405 se použije od 23. září 2029; do té doby se použije nařízení (ES) č. 648/2004. Tento nástroj připravuje údaje pasu a nepředstavuje certifikaci ani právní poradenství. Vše, co je zde uloženo, je veřejné."
     },
     "allergenPicker": {
       "empty": "Zatím nebyly přidány žádné alergeny.",
@@ -2952,7 +2952,7 @@
       "biocide": "Biocidní přípravek",
       "responsible": "Odpovědná osoba",
       "annexVi": "Datový soubor podle přílohy VI",
-      "metadata": "DPP infrastruktura"
+      "metadata": "Infrastruktura DPP"
     },
     "subsections": {
       "manufacturer": "Výrobce",
@@ -2967,8 +2967,8 @@
       "address": "Adresa",
       "email": "E-mail",
       "phone": "Telefon",
-      "dppServiceProvider": "DPP poskytovatel služeb",
-      "dppVersion": "DPP verze",
+      "dppServiceProvider": "Poskytovatel služeb DPP",
+      "dppVersion": "Verze DPP",
       "lastUpdated": "Poslední aktualizace",
       "status": "Stav"
     },

@@ -2206,7 +2206,7 @@
       },
       "annex_identity": {
         "title": "Priloga VI: identiteta izdelka in izjava proizvajalca",
-        "description": "Priprava na digitalni potni list za proizvod, ki se zahteva od 23. septembra 2029. Popoln nabor podatkov ni certifikat, preverjen identifikator ali vloga za vpis v register."
+        "description": "Priprava na digitalni potni list izdelka, ki se zahteva od 23. septembra 2029. Popoln nabor podatkov ni certifikat, preverjen identifikator ali vloga za vpis v register."
       },
       "annex_substances": {
         "title": "Priloga VI: snovi",
@@ -2239,7 +2239,7 @@
       },
       "use_sector": {
         "label": "Komu je izdelek namenjen?",
-        "help": "Industrijska in institucionalna uporaba pomeni uporabo izključno zunaj gospodinjstev s strani specializiranega osebja."
+        "help": "Uporaba v industriji in ustanovah pomeni uporabo izključno zunaj gospodinjstev s strani specializiranega osebja."
       },
       "model_identifier": {
         "label": "Identifikator modela izdelka",
@@ -2268,7 +2268,7 @@
       },
       "biocidal_claims": {
         "label": "Biocidne ali dezinfekcijske trditve?",
-        "help": "Dezinfekcijske ali protimikrobne trditve zahtevajo dovoljenje za biocidni proizvod v skladu z Uredbo (EU) No 528/2012."
+        "help": "Dezinfekcijske ali protimikrobne trditve zahtevajo dovoljenje za biocidni proizvod v skladu z Uredbo (EU) št. 528/2012."
       },
       "manufacturer_legal_name": {
         "label": "Pravno ime proizvajalca",
@@ -2331,7 +2331,7 @@
       },
       "clp_classification": {
         "label": "Ocena razvrstitve v skladu z uredbo CLP",
-        "help": "Uporabite razvrstitev, ki je bila dejansko ocenjena za to zmes v skladu z Uredbo (EC) No 1272/2008. Ne sklepajte o njej na podlagi pH-vrednosti ali piktogramov."
+        "help": "Uporabite razvrstitev, ki je bila dejansko ocenjena za to zmes v skladu z Uredbo (ES) št. 1272/2008. Ne sklepajte o njej na podlagi pH-vrednosti ali piktogramov."
       },
       "supplemental_statements": {
         "label": "Dodatne izjave na etiketi",
@@ -2460,16 +2460,16 @@
         "placeholder": "npr. Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Ali so dodani alergeni v dišavah v masnem deležu nad 0,01 %?",
+        "label": "Ali so dodani dišavni alergeni v masnem deležu nad 0,01 %?",
         "help": "Alergeni s seznama v delu D Priloge V, ki so namerno dodani v masnem deležu nad 0,01 %, se navedejo na etiketi, razen če so že označeni v skladu z uredbo CLP."
       },
       "fragrance_allergens": {
-        "label": "Prisotni alergeni v dišavah",
+        "label": "Prisotni dišavni alergeni",
         "help": "Izberite vsak alergen z uradnega seznama 105 vnosov."
       },
       "ingredients_url": {
         "label": "Javna spletna stran s sestavinami",
-        "help": "Veljavna pravila (Uredba (EC) No 648/2004, del D Priloge VII) zahtevajo vzdrževan javni seznam sestavin za potrošniške izdelke. Ne zahteva masnih območij ali številk CAS.",
+        "help": "Veljavna pravila (Uredba (ES) št. 648/2004, del D Priloge VII) zahtevajo vzdrževan javni seznam sestavin za potrošniške izdelke. Ne zahteva masnih območij ali številk CAS.",
         "placeholder": "https://..."
       },
       "professional_ingredient_info": {
@@ -2484,7 +2484,7 @@
         "help": "Navedite ime poročila o preskusu ali izjave dobavitelja. Ne nalagajte ali lepite zaupnih datotek."
       },
       "synthetic_polymer_microparticles": {
-        "label": "Ali vsebuje namerno dodane mikodelce sintetičnih polimerov?",
+        "label": "Ali vsebuje namerno dodane mikrodelce sintetičnih polimerov?",
         "help": "Uredba (EU) 2023/2055 jih omejuje v vnosu 78 Priloge XVII k REACH. Za detergente se začne uporabljati 17. oktobra 2028 z dvema izjemama: mikrokroglice, ki se uporabljajo kot abrazivi, so prepovedane od 17. oktobra 2023, kapsulirane dišave pa se lahko uporabljajo do 17. oktobra 2029."
       },
       "use_instructions": {
@@ -2561,8 +2561,8 @@
         "help": "Za polnilna mesta velja lastna obveznost glede nosilca podatkov v skladu s členom 21(4) Uredbe (EU) 2026/405."
       },
       "epr_registration": {
-        "label": "Registracija razširjene odgovornosti proizvajalca za embalažo na trg",
-        "help": "Ena vrstica na trg.",
+        "label": "Registracija razširjene odgovornosti proizvajalca za embalažo po posameznih trgih",
+        "help": "Ena vrstica za vsak trg.",
         "placeholder": "FR: ...\nDE: ..."
       },
       "biocidal_authorisation": {
@@ -2636,7 +2636,7 @@
         "label": "Carinska tarifna oznaka"
       },
       "commodity_code": {
-        "label": "Tarifna oznaka (Uredba (EEC) No 2658/87)"
+        "label": "Tarifna oznaka (Uredba (EGS) št. 2658/87)"
       },
       "commodity_code_reason": {
         "label": "Razlog, zakaj se tarifna oznaka ne uporablja"
@@ -2668,11 +2668,11 @@
       },
       "substance_list_route": {
         "label": "Način razkritja snovi",
-        "help": "Izjema velja samo za industrijske in institucionalne detergente in površinsko aktivne snovi, kadar so enakovredne informacije zagotovljene v varnostnem listu v skladu s členom 31 uredbe REACH."
+        "help": "Izjema velja samo za detergente za uporabo v industriji in ustanovah in površinsko aktivne snovi, kadar so enakovredne informacije zagotovljene v varnostnem listu v skladu s členom 31 uredbe REACH."
       },
       "substances": {
         "label": "Vse namerno dodane snovi in konzervansi, ki se prenašajo in jih je treba označiti",
-        "help": "Opredelite snovi, kot to zahteva člen 18(3) Uredbe (EC) No 1272/2008. Ne vnašajte koncentracij ali zaupnih podatkov o formulaciji. Vse, kar je shranjeno v tej kategoriji, je javno."
+        "help": "Opredelite snovi, kot to zahteva člen 18(3) Uredbe (ES) št. 1272/2008. Ne vnašajte koncentracij ali zaupnih podatkov o formulaciji. Vse, kar je shranjeno v tej kategoriji, je javno."
       },
       "no_substances_reason": {
         "label": "Podlaga za neobstoj snovi za navedbo"
@@ -2779,7 +2779,7 @@
       "useSector": {
         "consumer": "Potrošniki, vključno z mešano potrošniško in poklicno uporabo",
         "professional": "Samo za poklicno uporabo",
-        "industrial": "Samo za industrijsko in institucionalno uporabo"
+        "industrial": "Samo za uporabo v industriji in ustanovah"
       },
       "dppProfile": {
         "current": "Trenutne informacije o izdelku",
@@ -2806,7 +2806,7 @@
         "ghs03": "GHS03 Plamen nad krogom",
         "ghs04": "GHS04 Plinska jeklenka",
         "ghs05": "GHS05 Korozija",
-        "ghs06": "GHS06 Lobanja in prekrižani kosti",
+        "ghs06": "GHS06 Lobanja in prekrižane kosti",
         "ghs07": "GHS07 Klicaj",
         "ghs08": "GHS08 Nevarnost za zdravje",
         "ghs09": "GHS09 Okolje",
@@ -2823,7 +2823,7 @@
       },
       "sdsRequirement": {
         "required": "Mora se zagotoviti",
-        "on_request": "Na voljo na zahtevo",
+        "on_request": "Mora biti na voljo na zahtevo",
         "not_required": "Po oceni ni potreben",
         "review": "Potrebna ocena"
       },
@@ -2848,7 +2848,7 @@
         "polycarboxylates": "Polikarboksilati"
       },
       "weightBand": {
-        "lt5": "manj kot 5 %",
+        "lt5": "Manj kot 5 %",
         "5to15": "5 % ali več, vendar manj kot 15 %",
         "15to30": "15 % ali več, vendar manj kot 30 %",
         "gte30": "30 % in več"
@@ -2884,7 +2884,7 @@
         "glass": "Steklo",
         "paper_cardboard": "Papir ali karton",
         "composite": "Kompozitni material",
-        "water_soluble_film": "Vodna topna folija",
+        "water_soluble_film": "Vodotopna folija",
         "other": "Drugo"
       },
       "reachReview": {
@@ -2897,13 +2897,13 @@
       },
       "substanceListRoute": {
         "full_list": "Celoten seznam snovi",
-        "equivalent_sds": "Enakovreden varnostni list (samo za industrijsko in institucionalno uporabo)",
+        "equivalent_sds": "Enakovreden varnostni list (samo za uporabo v industriji in ustanovah)",
         "no_added_substances": "Po oceni ni snovi za navedbo"
       }
     },
     "warnings": {
       "scopeOutside": "Ta izdelek morda ne spada pod opredelitev detergenta iz člena 2(1) Uredbe (EU) 2026/405. Pred uporabo te kategorije preverite področje uporabe.",
-      "biocidal": "Trditve o dezinfekcijskem ali protimikrobnem delovanju zahtevajo avtorizacijo za biocidni proizvod v skladu z Uredbo (EU) No 528/2012.",
+      "biocidal": "Trditve o dezinfekcijskem ali protimikrobnem delovanju zahtevajo dovoljenje za biocidni proizvod v skladu z Uredbo (EU) št. 528/2012.",
       "assessmentNeeded": "Ta ocena ni končana. Dokončajte jo, preden se zanesete na potni list.",
       "microparticles": "Pred dajanjem tega izdelka na trg preverite Uredbo (EU) 2023/2055 o mikrodelcih sintetičnih polimerov. Neznan odgovor je treba razrešiti z dobaviteljem.",
       "phosphorusLaundry": "Skupna vsebnost fosforja {{value}} g ni pod mejo 0,5 g za detergent za pranje perila za potrošnike v trdi vodi (Priloga III k Uredbi (EU) 2026/405).",
@@ -2918,8 +2918,8 @@
       "microorganismSafety": "Dodani so mikroorganizmi, vendar ni vnesena nobena referenca ocene varnosti."
     },
     "disclaimer": {
-      "title": "Detergenti DPP: izjava o omejitvi odgovornosti glede skladnosti",
-      "text": "Uredba (EU) 2026/405 se uporablja od 23. septembra 2029; do takrat se uporablja Uredba (EC) No 648/2004. To orodje pripravlja podatke za potni list in ne pomeni certificiranja ali pravnega svetovanja. Vse, kar je shranjeno tukaj, je javno."
+      "title": "DPP za detergente: izjava o omejitvi odgovornosti glede skladnosti",
+      "text": "Uredba (EU) 2026/405 se uporablja od 23. septembra 2029; do takrat se uporablja Uredba (ES) št. 648/2004. To orodje pripravlja podatke za potni list in ne pomeni certificiranja ali pravnega svetovanja. Vse, kar je shranjeno tukaj, je javno."
     },
     "allergenPicker": {
       "empty": "Alergeni še niso dodani.",
@@ -2939,7 +2939,7 @@
     }
   },
   "detergentsPublic": {
-    "headerBadge": "Detergenti: Digitalni potni list za proizvode",
+    "headerBadge": "Detergenti: Digitalni potni list izdelka",
     "notice": "Ta stran vsebuje informacije o proizvodu, ki jih je objavil dobavitelj. Ne predstavlja certificiranja ali odobritve in ne nadomešča etikete na embalaži.",
     "units": "enote",
     "ecolabelBadge": "Znak EU za okolje",
@@ -2950,9 +2950,9 @@
       "ingredients": "Sestavine",
       "environment": "Okolje in embalaža",
       "biocide": "Biocidni proizvod",
-      "responsible": "Odgovorna oseba",
+      "responsible": "Kdo je odgovoren",
       "annexVi": "Nabor podatkov iz Priloge VI",
-      "metadata": "DPP infrastruktura"
+      "metadata": "Infrastruktura DPP"
     },
     "subsections": {
       "manufacturer": "Proizvajalec",
@@ -2967,8 +2967,8 @@
       "address": "Naslov",
       "email": "E-pošta",
       "phone": "Telefon",
-      "dppServiceProvider": "DPP ponudnik storitev",
-      "dppVersion": "DPP različica",
+      "dppServiceProvider": "Ponudnik storitev DPP",
+      "dppVersion": "Različica DPP",
       "lastUpdated": "Nazadnje posodobljeno",
       "status": "Status"
     },
