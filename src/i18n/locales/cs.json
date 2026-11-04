@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Typ pracího prostředku",
-        "help": "Určuje standardní náplň: 4,5 kg suché tkaniny pro prací prostředky na silně znečištěné prádlo, 2,5 kg pro prací prostředky na silně znečištěné prádlo pro krátké cykly a pro prací prostředky pro jemné prádlo."
+        "help": "Určuje standardní náplň pračky: 4,5 kg suché tkaniny pro prací prostředky s vysokou účinností, 2,5 kg pro prací prostředky s vysokou účinností pro krátké cykly a pro prací prostředky s nízkou účinností."
       },
       "dosage_unit": {
         "label": "Jednotka dávkování"
@@ -2866,9 +2866,9 @@
         "unknown": "Neznámé"
       },
       "laundryType": {
-        "heavy_duty": "Pro silně znečištěné prádlo",
-        "heavy_duty_short": "Pro silně znečištěné prádlo na krátké cykly",
-        "light_duty": "Pro jemné praní nebo choulostivé tkaniny"
+        "heavy_duty": "Prací prostředek s vysokou účinností",
+        "heavy_duty_short": "Prací prostředek s vysokou účinností pro krátké cykly",
+        "light_duty": "Prací prostředek s nízkou účinností nebo pro jemné tkaniny"
       },
       "dosageUnit": {
         "ml": "Mililitry",

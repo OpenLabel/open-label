@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Rodzaj detergentu do prania",
-        "help": "Określa standardowy wsad: 4,5 kg suchej tkaniny dla detergentów do prania tkanin mocno zabrudzonych, 2,5 kg dla detergentów do prania tkanin mocno zabrudzonych w krótkich cyklach i do prania tkanin delikatnych."
+        "help": "Określa standardowy wsad pralki: 4,5 kg suchych tkanin dla detergentów do prania intensywnego, 2,5 kg dla detergentów do prania intensywnego w krótkich cyklach oraz dla detergentów do prania delikatnego."
       },
       "dosage_unit": {
         "label": "Jednostka dozowania"
@@ -2866,9 +2866,9 @@
         "unknown": "Nieznany"
       },
       "laundryType": {
-        "heavy_duty": "Do prania tkanin mocno zabrudzonych",
-        "heavy_duty_short": "Do prania tkanin mocno zabrudzonych w krótkich cyklach",
-        "light_duty": "Do prania tkanin lekko zabrudzonych lub delikatnych"
+        "heavy_duty": "Detergent do prania intensywnego",
+        "heavy_duty_short": "Detergent do prania intensywnego w krótkich cyklach",
+        "light_duty": "Detergent do prania delikatnego"
       },
       "dosageUnit": {
         "ml": "Mililitry",

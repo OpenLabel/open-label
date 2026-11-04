@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Typ pracieho prostriedku",
-        "help": "Určuje štandardnú náplň: 4,5 kg suchej bielizne pre vysokoúčinné pracie prostriedky, 2,5 kg pre vysokoúčinné pracie prostriedky s krátkym cyklom a pre prostriedky na jemnú bielizeň."
+        "help": "Určuje štandardnú náplň práčky: 4,5 kg suchých textílií pre detergenty s vysokou účinnosťou, 2,5 kg pre detergenty s vysokou účinnosťou pre krátke cykly a pre detergenty s nízkou účinnosťou."
       },
       "dosage_unit": {
         "label": "Jednotka dávkovania"
@@ -2866,9 +2866,9 @@
         "unknown": "Neznáme"
       },
       "laundryType": {
-        "heavy_duty": "Vysokoúčinný",
-        "heavy_duty_short": "Vysokoúčinný na krátke cykly",
-        "light_duty": "Na jemné alebo chúlostivé tkaniny"
+        "heavy_duty": "Detergent s vysokou účinnosťou",
+        "heavy_duty_short": "Detergent s vysokou účinnosťou pre krátke cykly",
+        "light_duty": "Detergent s nízkou účinnosťou alebo pre jemné textílie"
       },
       "dosageUnit": {
         "ml": "Mililitre",

@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Tipo di detersivo per bucato",
-        "help": "Determina il carico standard: 4,5 kg di tessuto asciutto per i detersivi per tessuti molto sporchi, 2,5 kg per i detersivi per tessuti molto sporchi a ciclo breve e per i detersivi per capi delicati."
+        "help": "Determina il carico standard delle lavatrici: 4,5 kg di indumenti asciutti per i detergenti normali, 2,5 kg per i detergenti normali con ciclo breve e per i detergenti per tessuti delicati."
       },
       "dosage_unit": {
         "label": "Unità di dosaggio"
@@ -2866,9 +2866,9 @@
         "unknown": "Sconosciuto"
       },
       "laundryType": {
-        "heavy_duty": "Per tessuti molto sporchi",
-        "heavy_duty_short": "Per tessuti molto sporchi, cicli brevi",
-        "light_duty": "Per bucato fine o tessuti delicati"
+        "heavy_duty": "Detergente normale",
+        "heavy_duty_short": "Detergente normale con ciclo breve",
+        "light_duty": "Detergente per tessuti delicati"
       },
       "dosageUnit": {
         "ml": "Millilitri",

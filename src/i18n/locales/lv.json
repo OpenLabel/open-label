@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Veļas mazgāšanas līdzekļa veids",
-        "help": "Nosaka standarta ielādi: 4,5 kg sausa auduma universāliem mazgāšanas līdzekļiem, 2,5 kg īsa cikla universāliem un vieglas slodzes mazgāšanas līdzekļiem."
+        "help": "Nosaka veļas mazgājamās mašīnas standartslodzi: 4,5 kg sausu audumu, ja izmanto augstas efektivitātes mazgāšanas līdzekļus, 2,5 kg sausu audumu, ja izmanto augstas efektivitātes mazgāšanas līdzekļus īsos ciklos, un 2,5 kg sausu audumu, ja izmanto zemas efektivitātes mazgāšanas līdzekļus."
       },
       "dosage_unit": {
         "label": "Dozēšanas mērvienība"
@@ -2866,9 +2866,9 @@
         "unknown": "Nezināms"
       },
       "laundryType": {
-        "heavy_duty": "Universāls (pamatmazgāšanai)",
-        "heavy_duty_short": "Universāls (pamatmazgāšanai), īsiem cikliem",
-        "light_duty": "Mazai slodzei vai smalkiem audumiem"
+        "heavy_duty": "Augstas efektivitātes mazgāšanas līdzeklis",
+        "heavy_duty_short": "Augstas efektivitātes mazgāšanas līdzeklis lietošanai īsos ciklos",
+        "light_duty": "Zemas efektivitātes mazgāšanas līdzeklis vai līdzeklis smalkiem audumiem"
       },
       "dosageUnit": {
         "ml": "Mililitri",
