@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Cineál glantaigh níocháin",
-        "help": "Cinneann sé an t-ualach caighdeánach: 4.5 kg d'fhabraic thirim do ghlantaigh tromshaothair, 2.5 kg do ghlantaigh tromshaothair gearrthimthrialla agus do ghlantaigh éadromshaothair."
+        "help": "Cinneann sé an gnáthualach: 4,5 kg d'fhabraic thirim do ghlantaigh tromshaothair, 2,5 kg do ghlantaigh tromshaothair le haghaidh timthriallta gairide agus do ghlantaigh éadroma."
       },
       "dosage_unit": {
         "label": "Aonad dáileoige"
@@ -2867,8 +2867,8 @@
       },
       "laundryType": {
         "heavy_duty": "Glantach tromshaothair",
-        "heavy_duty_short": "Glantach tromshaothair do thimthriallta gearra",
-        "light_duty": "Glantach éadromshaothair nó d'fhabraicí míne"
+        "heavy_duty_short": "Glantach tromshaothair le haghaidh timthriallta gairide",
+        "light_duty": "Glantach éadrom nó d'fhabraicí míne"
       },
       "dosageUnit": {
         "ml": "Millilítir",

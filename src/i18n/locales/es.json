@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Tipo de detergente para ropa",
-        "help": "Determina la carga estándar: 4,5 kg de tejido seco para detergentes para ropa muy sucia, 2,5 kg para detergentes para ropa muy sucia de ciclo corto y para detergentes para ropa poco sucia."
+        "help": "Determina la carga de referencia: 4,5 kg de ropa seca para los detergentes de gran potencia, 2,5 kg para los detergentes de gran potencia para ciclos cortos y para los detergentes de potencia normal."
       },
       "dosage_unit": {
         "label": "Unidad de dosificación"
@@ -2866,9 +2866,9 @@
         "unknown": "Se desconoce"
       },
       "laundryType": {
-        "heavy_duty": "Para ropa muy sucia",
-        "heavy_duty_short": "Para ropa muy sucia en ciclos cortos",
-        "light_duty": "Para ropa poco sucia o tejidos delicados"
+        "heavy_duty": "Detergente de gran potencia",
+        "heavy_duty_short": "Detergente de gran potencia para ciclos cortos",
+        "light_duty": "Detergente de potencia normal o para tejidos delicados"
       },
       "dosageUnit": {
         "ml": "Mililitros",
