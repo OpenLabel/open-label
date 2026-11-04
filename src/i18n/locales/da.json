@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Type af vaskemiddel til tekstiler",
-        "help": "Afgør standardvaskemængden: 4,5 kg tørt tøj for grovvaskemidler, 2,5 kg for grovvaskemidler med kort cyklus og for finvaskemidler."
+        "help": "Afgør, hvad en standardvaskemaskinfuld er: 4,5 kg tørt tøj for kogevaskemidler, 2,5 kg for kogevaskemidler til korte programmer og for finvaskemidler."
       },
       "dosage_unit": {
         "label": "Doseringsenhed"
@@ -2866,9 +2866,9 @@
         "unknown": "Ukendt"
       },
       "laundryType": {
-        "heavy_duty": "Til grovvask",
-        "heavy_duty_short": "Til grovvask ved korte vaskecyklusser",
-        "light_duty": "Til finvask eller sarte tekstiler"
+        "heavy_duty": "Kogevaskemiddel",
+        "heavy_duty_short": "Kogevaskemiddel til korte programmer",
+        "light_duty": "Finvaskemiddel eller vaskemiddel til sarte stoffer"
       },
       "dosageUnit": {
         "ml": "Milliliter",

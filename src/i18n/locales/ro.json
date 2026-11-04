@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Tip de detergent pentru rufe",
-        "help": "Stabilește încărcătura standard: 4,5 kg de țesătură uscată pentru detergenții pentru rufe foarte murdare, 2,5 kg pentru detergenții pentru rufe foarte murdare cu ciclu scurt și pentru detergenții pentru rufe delicate."
+        "help": "Stabilește încărcarea standard a mașinii de spălat rufe: 4,5 kg de rufe uscate pentru detergenții cu putere mare, 2,5 kg pentru detergenții cu putere mare în cicluri scurte și pentru detergenții cu putere mică."
       },
       "dosage_unit": {
         "label": "Unitate de dozaj"
@@ -2866,9 +2866,9 @@
         "unknown": "Necunoscut"
       },
       "laundryType": {
-        "heavy_duty": "Pentru rufe foarte murdare",
-        "heavy_duty_short": "Pentru rufe foarte murdare, cicluri scurte",
-        "light_duty": "Pentru rufe puțin murdare sau țesături delicate"
+        "heavy_duty": "Detergent cu putere mare",
+        "heavy_duty_short": "Detergent cu putere mare pentru cicluri scurte",
+        "light_duty": "Detergent cu putere mică sau pentru rufe delicate"
       },
       "dosageUnit": {
         "ml": "Mililitri",

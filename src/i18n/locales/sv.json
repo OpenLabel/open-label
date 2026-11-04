@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Typ av tvättmedel",
-        "help": "Avgör standardtvättmängden: 4,5 kg torr tvätt för fulltvättmedel, 2,5 kg för fulltvättmedel för korta tvättprogram och för fintvättmedel."
+        "help": "Avgör vad som är en tvätt med normal last: 4,5 kg torra textilier för fulltvättmedel, 2,5 kg för fulltvättmedel för korta cykler och för lätta tvättmedel."
       },
       "dosage_unit": {
         "label": "Doseringsenhet"
@@ -2867,8 +2867,8 @@
       },
       "laundryType": {
         "heavy_duty": "Fulltvättmedel",
-        "heavy_duty_short": "Fulltvättmedel för korta program",
-        "light_duty": "Fintvätt eller ömtåliga textilier"
+        "heavy_duty_short": "Fulltvättmedel för korta cykler",
+        "light_duty": "Lätt tvättmedel eller tvättmedel för ömtåliga textilier"
       },
       "dosageUnit": {
         "ml": "Milliliter",

@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Skalbimo ploviklio tipas",
-        "help": "Nustato standartinę įkrovą: 4,5 kg sausų skalbinių didelio našumo plovikliams, 2,5 kg trumpo ciklo didelio našumo ir mažo našumo plovikliams."
+        "help": "Nustato standartinę skalbyklės įkrovą: 4,5 kg sausų skalbinių, kai naudojami stiprūs plovikliai, 2,5 kg sausų skalbinių, kai naudojami stiprūs plovikliai trumpiems ciklams, ir 2,5 kg sausų skalbinių, kai naudojami silpni plovikliai."
       },
       "dosage_unit": {
         "label": "Dozavimo vienetas"
@@ -2866,9 +2866,9 @@
         "unknown": "Nežinoma"
       },
       "laundryType": {
-        "heavy_duty": "Didelio našumo",
-        "heavy_duty_short": "Didelio našumo, trumpiems ciklams",
-        "light_duty": "Skirtas jautriems arba gležniems audiniams"
+        "heavy_duty": "Stiprus ploviklis",
+        "heavy_duty_short": "Stiprus ploviklis trumpiems ciklams",
+        "light_duty": "Silpnas ploviklis arba ploviklis gležniems audiniams"
       },
       "dosageUnit": {
         "ml": "Mililitrai",

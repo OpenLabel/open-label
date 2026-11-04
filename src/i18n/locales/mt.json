@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Tip ta’ deterġent tal-londri",
-        "help": "Jiddeċiedi t-tagħbija standard: 4.5 kg ta’ drapp xott għal deterġenti għal ħasil qawwi, 2.5 kg għal deterġenti għal ħasil qawwi ta’ ċiklu qasir u għal deterġenti għal ħasil ħafif."
+        "help": "Jiddeċiedi t-tagħbija standard: 4,5 kg ta’ drapp niexef għal deterġenti qawwija, 2,5 kg għal deterġenti qawwija għal ċikli qosra u għal deterġenti ħfief."
       },
       "dosage_unit": {
         "label": "Unità tad-dożaġġ"
@@ -2866,9 +2866,9 @@
         "unknown": "Mhux magħruf"
       },
       "laundryType": {
-        "heavy_duty": "Għal ħasil qawwi",
-        "heavy_duty_short": "Għal ħasil qawwi f'ċikli qosra",
-        "light_duty": "Għal ħasil ħafif jew drappijiet delikati"
+        "heavy_duty": "Deterġent qawwi",
+        "heavy_duty_short": "Deterġent qawwi għal ċikli qosra",
+        "light_duty": "Deterġent ħafif jew għal drapp delikat"
       },
       "dosageUnit": {
         "ml": "Millilitri",
