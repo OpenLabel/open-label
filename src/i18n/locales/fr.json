@@ -1989,8 +1989,8 @@
       "dpp_profile": "Profil d’information",
       "identifier_scheme": "Système d’identification, émetteur et preuves de vérification",
       "backup_reference": "Référence réelle du contrat de service de sauvegarde",
-      "commodity_code_status": "Applicabilité du code de marchandise douanier",
-      "commodity_code_reason": "Motif de l’absence de code de marchandise applicable",
+      "commodity_code_status": "Applicabilité du code des marchandises",
+      "commodity_code_reason": "Motif de l’absence de code des marchandises applicable",
       "manufacturer_responsibility": "Le fabricant établit ce passeport sous sa seule responsabilité",
       "compliance_statement": "Déclaration du fabricant attestant que la conformité a été démontrée",
       "applicable_union_law": "Législation de l’Union applicable identifiée dans l’évaluation du fabricant",
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Type de détergent pour le linge",
-        "help": "Détermine la charge normale : 4,5 kg de textile sec pour les détergents pour textiles très sales, 2,5 kg pour les détergents pour textiles très sales à cycle court et pour les détergents pour textiles peu sales."
+        "help": "Détermine la charge normale : 4,5 kg de textiles secs pour les détergents « classiques », 2,5 kg pour les détergents « classiques » en cycles courts et pour les détergents « spécifiques »."
       },
       "dosage_unit": {
         "label": "Unité de dosage"
@@ -2633,13 +2633,13 @@
         "label": "Référence de l'accord de service de sauvegarde"
       },
       "commodity_code_status": {
-        "label": "Code de marchandise douanier"
+        "label": "Code des marchandises"
       },
       "commodity_code": {
-        "label": "Code de marchandise (règlement (CEE) n° 2658/87)"
+        "label": "Code des marchandises (règlement (CEE) n° 2658/87)"
       },
       "commodity_code_reason": {
-        "label": "Raison pour laquelle aucun code de marchandise ne s'applique"
+        "label": "Raison pour laquelle aucun code des marchandises ne s'applique"
       },
       "manufacturer_responsibility": {
         "label": "Le fabricant délivre ce passeport sous sa seule responsabilité"
@@ -2866,9 +2866,9 @@
         "unknown": "Inconnu"
       },
       "laundryType": {
-        "heavy_duty": "Pour textiles très sales",
-        "heavy_duty_short": "Pour textiles très sales, cycles courts",
-        "light_duty": "Pour textiles peu sales ou délicats"
+        "heavy_duty": "Détergent « classique »",
+        "heavy_duty_short": "Détergent « classique » en cycles courts",
+        "light_duty": "Détergent « spécifique » (textiles délicats)"
       },
       "dosageUnit": {
         "ml": "Millilitres",

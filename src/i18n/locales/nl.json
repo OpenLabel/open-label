@@ -972,7 +972,7 @@
         "placeholder": "https://..."
       },
       "ufi_code": {
-        "label": "Unieke formule-identificatiecode (UFI)",
+        "label": "Unieke formule-identificatie (UFI)",
         "help": "Alleen nodig wanneer een mengsel in dit speelgoed, bijvoorbeeld een oplossing in een scheikundedoos of slijm, op grond van Verordening (EG) nr. 1272/2008 (CLP) als gevaarlijk is ingedeeld vanwege effecten op de gezondheid of fysische effecten. Voor dat mengsel is dan een melding bij een antigifcentrum nodig en moet de UFI op het etiket staan. Laat anders leeg.",
         "placeholder": "bijv. N1QV-R02N-J00M-WQD5"
       }
@@ -1903,7 +1903,7 @@
     "scopeHelp": "Beoordeel de beoogde functie en samenstelling. Was, polijstmiddel of smeermiddel kan buiten de detergentenregels vallen als het niet reinigt. Reinigings- en desinfectieclaims kunnen overlappende verplichtingen voor detergentia en biociden meebrengen.",
     "publicNotice": "Deze pagina geeft productinformatie die door de leverancier is gepubliceerd. Dit is niet het digitale EU-productpaspoort dat vanaf 2029 verplicht is op grond van Verordening (EU) 2026/405 en vervangt niet het etiket op de verpakking.",
     "operatorHelp": "Vermeld de relevante EU-marktdeelnemer. De rollen hangen af van de toeleveringsketen en het toepasselijke recht; twee vertegenwoordigers zijn niet altijd vereist. Een fabrikant van buiten de EU moet ook de verplichting inzake een gemachtigde beoordelen op grond van artikel 9 van Verordening (EU) 2026/405 zodra die van toepassing is.",
-    "ingredientsHelp": "Huidige detergentetiketten en openbare ingrediëntenlijsten volgen artikel 11 en bijlage VII van Verordening (EG) nr. 648/2004. Te vermelden geurstofallergenen boven 0.01% moeten worden beoordeeld. Voor uitsluitend professionele producten kan gelijkwaardige technische informatie worden gebruikt. Een openbare samenvatting vervangt niet het ingrediënteninformatieblad voor medisch personeel of de volledige gegevensset van bijlage VI in het toekomstige profiel.",
+    "ingredientsHelp": "Huidige detergentetiketten en openbare ingrediëntenlijsten volgen artikel 11 en bijlage VII van Verordening (EG) nr. 648/2004. Te vermelden allergene geurstoffen boven 0.01% moeten worden beoordeeld. Voor uitsluitend professionele producten kan gelijkwaardige technische informatie worden gebruikt. Een openbare samenvatting vervangt niet het ingrediënteninformatieblad voor medisch personeel of de volledige gegevensset van bijlage VI in het toekomstige profiel.",
     "pcnHelp": "Volgens de huidige CLP-regels hangen UFI en kennisgeving aan antigifcentra af van het toepassingsgebied van bijlage VIII, waaronder gezondheids- of fysische gevaren en toepasselijke vrijstellingen. Alleen milieugevaren leiden niet automatisch tot een kennisgevingsplicht. Uitsluitend industrieel gebruik en vrijstellingen moeten worden beoordeeld. De detergentenregels van 2029 bevatten aanvullende bepalingen over UFI-etikettering.",
     "sdsHelp": "Een websitekoppeling voldoet op zichzelf niet aan de plicht om een VIB te verstrekken. Beoordeel REACH-artikel 31, inclusief verstrekking op verzoek en uitzonderingen voor consumenten, en verstrek ontvangers de vereiste taalversies.",
     "translationHelp": "Controleer de veiligheidsformuleringen aan de hand van het goedgekeurde etiket en het VIB in elke taal van de doelmarkten. Vertalingen zijn inhoud van de leverancier, geen gevalideerde juridische vertalingen.",
@@ -1959,7 +1959,7 @@
       "recycled_content": "Gerecycled materiaal in de verpakking (%)",
       "ingredient_classes": "Ingrediëntcategorieën op het etiket en concentratiebereiken",
       "preservatives": "Conserveermiddelen of uitdrukkelijke afwezigheid",
-      "fragrance_allergens": "Te vermelden geurstofallergenen of uitdrukkelijke afwezigheid",
+      "fragrance_allergens": "Te vermelden allergene geurstoffen of uitdrukkelijke afwezigheid",
       "ingredients_url": "URL van de openbare ingrediëntenlijst van het detergens",
       "professional_ingredient_info": "Gelijkwaardige ingrediënteninformatie voor professionele gebruikers",
       "biodegradability_reference": "Verwijzing naar bewijs van biologische afbreekbaarheid van oppervlakteactieve stoffen",
@@ -1969,7 +1969,7 @@
       "pictograms": "Toepasselijke GHS-pictogramcodes of uitdrukkelijke afwezigheid",
       "pcn_applicability": "Kennisgeving aan antigifcentra volgens CLP-bijlage VIII",
       "pcn_exemption_reason": "Reden en rechtsgrond voor de vrijstelling",
-      "ufi_code": "Unieke formule-identificatiecode (UFI)",
+      "ufi_code": "Unieke formule-identificatie (UFI)",
       "pcn_status": "Toepasselijke kennisgevingen aan antigifcentra",
       "sds_url": "Openbare URL van het veiligheidsinformatieblad",
       "sds_languages": "VIB-talen en markten",
@@ -2030,7 +2030,7 @@
       "authorised_representative_applicable": "Is er een gemachtigde aangesteld?",
       "future_label_ingredients": "Ingrediëntklassen, concentratiebanden en toegevoegde bestanddelen volgens bijlage V, of gelijkwaardige informatie in een verstrekt veiligheidsinformatieblad",
       "future_label_preservatives": "Namen van conserveermiddelen volgens bijlage V, of beoordeelde grond voor weglating",
-      "future_label_allergens": "Geurstofallergenen volgens bijlage V, deel D, of beoordeelde afwezigheid"
+      "future_label_allergens": "Allergene geurstoffen volgens bijlage V, deel D, of beoordeelde afwezigheid"
     },
     "sections": {
       "scope": "Product en toepasselijke regelgeving",
@@ -2361,7 +2361,7 @@
         "label": "Reden en rechtsgrond voor de vrijstelling"
       },
       "ufi_code": {
-        "label": "Unieke formule-identificatiecode (UFI)",
+        "label": "Unieke formule-identificatie (UFI)",
         "help": "Vier groepen van vier tekens. Het formaat wordt gecontroleerd, maar de app kan een indiening bij een antigifcentrum niet verifiëren.",
         "placeholder": "bv. N1QV-R02N-J00M-WQD5"
       },
@@ -2460,11 +2460,11 @@
         "placeholder": "bv. Phenoxyethanol, Methylisothiazolinone"
       },
       "allergens_above_threshold": {
-        "label": "Parfumallergenen toegevoegd boven 0,01 gewichtsprocent?",
+        "label": "Allergene geurstoffen toegevoegd boven 0,01 gewichtsprocent?",
         "help": "Allergenen uit de lijst in bijlage V, deel D, die opzettelijk zijn toegevoegd in een concentratie van meer dan 0,01 gewichtsprocent, worden op het etiket vermeld, tenzij ze al zijn geëtiketteerd krachtens CLP."
       },
       "fragrance_allergens": {
-        "label": "Aanwezige parfumallergenen",
+        "label": "Aanwezige allergene geurstoffen",
         "help": "Kies elk allergeen uit de officiële lijst van 105 vermeldingen."
       },
       "ingredients_url": {
@@ -2493,7 +2493,7 @@
       },
       "laundry_type": {
         "label": "Type wasmiddel",
-        "help": "Bepaalt de standaardwaslading: 4,5 kg droog wasgoed voor totaalwasmiddelen, 2,5 kg voor totaalwasmiddelen voor korte wascycli en voor fijnwasmiddelen."
+        "help": "Bepaalt de standaardwasmachinelading: 4,5 kg droog wasgoed voor wasmiddelen voor witte was, 2,5 kg voor wasmiddelen voor witte was in een korte cyclus en voor wasmiddelen voor fijne was."
       },
       "dosage_unit": {
         "label": "Doseringseenheid"
@@ -2738,7 +2738,7 @@
         "help": "De identificatoren worden geüpload naar het register dat is ingesteld krachtens de ESPR voordat het product in de handel wordt gebracht. De app kan de upload niet verifiëren en dit antwoord wordt niet weergegeven op het openbare paspoort."
       },
       "future_ufi_code": {
-        "label": "Unieke formule-identificator (UFI) op het etiket",
+        "label": "Unieke formule-identificatie (UFI) op het etiket",
         "help": "Vanaf 23 september 2029 bevat het etiket van elk detergent de UFI voorafgegaan door 'UFI:' (bijlage V, deel A, punt 1, onder b), van Verordening (EU) 2026/405), ongeacht of het product als gevaarlijk is ingedeeld. Vier groepen van vier tekens. Voer dezelfde code in als de UFI voor het antigifcentrum wanneer deze bestaat.",
         "placeholder": "bijv. N1QV-R02N-J00M-WQD5"
       }
@@ -2866,9 +2866,9 @@
         "unknown": "Onbekend"
       },
       "laundryType": {
-        "heavy_duty": "Totaalwasmiddel",
-        "heavy_duty_short": "Totaalwasmiddel voor korte wasprogramma's",
-        "light_duty": "Voor de fijne was of delicate stoffen"
+        "heavy_duty": "Wasmiddel voor witte was",
+        "heavy_duty_short": "Wasmiddel voor witte was, korte cyclus",
+        "light_duty": "Wasmiddel voor fijne was of delicate stoffen"
       },
       "dosageUnit": {
         "ml": "Milliliter",
@@ -2925,7 +2925,7 @@
       "empty": "Nog geen allergenen toegevoegd.",
       "summary": "{{count}} allergeen(en) vermeld.",
       "addButton": "Allergeen toevoegen",
-      "dialogTitle": "Geurallergenen selecteren",
+      "dialogTitle": "Allergene geurstoffen selecteren",
       "searchPlaceholder": "Zoeken op naam, CAS, EC of nummer...",
       "clearSearch": "Zoekopdracht wissen",
       "noResults": "Geen allergenen komen overeen met \"{{q}}\".",
