@@ -1,9 +1,10 @@
 /** Public product access must not initialize an account or advertising session. */
 export function isPublicPassportPath(path: string): boolean {
+  // `/clean` is the printed-QR short link that redirects to `/demo/car_cleaning`.
   try {
-    return /^\/(?:p|demo)(?:\/|$)/i.test(decodeURIComponent(path.split(/[?#]/, 1)[0]));
+    return /^\/(?:(?:p|demo)(?:\/|$)|clean\/?$)/i.test(decodeURIComponent(path.split(/[?#]/, 1)[0]));
   } catch {
-    return /^\/(?:p|demo)(?:\/|[?#]|$)/i.test(path);
+    return /^\/(?:(?:p|demo)(?:\/|[?#]|$)|clean\/?(?:[?#]|$))/i.test(path);
   }
 }
 

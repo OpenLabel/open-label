@@ -82,6 +82,12 @@ function MarketingTools() {
   );
 }
 
+/** Printed-QR short link: `/clean` lands on the Car Cleaning demo, keeping any query string. */
+function CleanRedirect() {
+  const { search, hash } = useLocation();
+  return <Navigate to={{ pathname: "/demo/car_cleaning", search, hash }} replace />;
+}
+
 function AppRoutes() {
   const { loading, isSetupRequired } = useSiteConfig();
 
@@ -105,6 +111,7 @@ function AppRoutes() {
         <Route path="/p/:slug" element={<PublicPassport />} />
         <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
         <Route path="/demo/:category" element={<Demo />} />
+        <Route path="/clean" element={<CleanRedirect />} />
         <Route path="/referral/:code" element={<ReferralStats />} />
         <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
         <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />
@@ -128,6 +135,7 @@ function AppRoutes() {
       <Route path="/p/:slug" element={<PublicPassport />} />
       <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
       <Route path="/demo/:category" element={<Demo />} />
+      <Route path="/clean" element={<CleanRedirect />} />
       <Route path="/referral/:code" element={<ReferralStats />} />
       <Route path="/referral-leaderboard" element={<ReferralLeaderboard />} />
       <Route path="/admin-leaderboard" element={<AdminLeaderboard />} />
@@ -161,6 +169,7 @@ function DocumentSurface() {
         <Route path="/p/:slug" element={<PublicPassport />} />
         <Route path="/demo" element={<Navigate to="/demo/wine" replace />} />
         <Route path="/demo/:category" element={<Demo />} />
+        <Route path="/clean" element={<CleanRedirect />} />
       </Routes>
     );
   }

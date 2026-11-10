@@ -32,6 +32,15 @@ describe('isTrackingExemptPath', () => {
     expect(isTrackingExemptPath('/%70/abcdef01')).toBe(true);
   });
 
+  it('exempts the /clean printed-QR short link to the Car Cleaning demo', () => {
+    expect(isTrackingExemptPath('/clean')).toBe(true);
+    expect(isTrackingExemptPath('/clean/')).toBe(true);
+    expect(isTrackingExemptPath('/CLEAN')).toBe(true);
+    expect(isTrackingExemptPath('/clean?utm_source=packaging')).toBe(true);
+    expect(isTrackingExemptPath('/cleaning')).toBe(false);
+    expect(isTrackingExemptPath('/clean/other')).toBe(false);
+  });
+
   it('does not exempt other routes', () => {
     for (const path of ['/', '/auth', '/dashboard', '/cypheme/passport', '/privacy-policy', '/passport/new']) {
       expect(isTrackingExemptPath(path)).toBe(false);

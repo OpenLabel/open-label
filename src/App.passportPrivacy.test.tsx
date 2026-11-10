@@ -47,7 +47,15 @@ beforeEach(() => {
 afterEach(() => { window.history.replaceState({}, '', '/'); vi.restoreAllMocks(); });
 
 describe('Public passport marketing privacy', () => {
-  it.each(['/p/aabbccdd?ref=PRIVATE', '/P/aabbccdd', '/demo/car_cleaning'])('does not load advertising, geo-consent or referral capture on cold public route %s', async path => {
+  it('redirects the /clean printed-QR short link to /demo/car_cleaning, keeping the query string', async () => {
+    window.history.replaceState({}, '', '/clean?utm_source=packaging');
+    await act(async () => { render(<App />); });
+    expect(window.location.pathname).toBe('/demo/car_cleaning');
+    expect(window.location.search).toBe('?utm_source=packaging');
+    expect(screen.getByText('Public product information')).toBeInTheDocument();
+  });
+
+  it.each(['/p/aabbccdd?ref=PRIVATE', '/P/aabbccdd', '/demo/car_cleaning', '/clean', '/clean?utm_source=packaging'])('does not load advertising, geo-consent or referral capture on cold public route %s', async path => {
     window.history.replaceState({}, '', path);
     await act(async () => { render(<App />); });
     expect(screen.getByText('Public product information')).toBeInTheDocument();
