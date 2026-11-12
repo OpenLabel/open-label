@@ -104,26 +104,26 @@ describe('CategoryQuestions', () => {
   it('calls onChange when typing in a number input', async () => {
     const onChange = vi.fn();
     render(<CategoryQuestions category="battery" data={{}} onChange={onChange} />);
-    const input = document.getElementById('capacity_kwh') as HTMLInputElement;
+    const input = document.getElementById('rated_capacity_ah') as HTMLInputElement;
     await userEvent.type(input, '5');
-    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ capacity_kwh: 5 }));
+    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ rated_capacity_ah: 5 }));
   });
 
   it('calls onChange when clicking a checkbox', async () => {
     const onChange = vi.fn();
     render(<CategoryQuestions category="battery" data={{}} onChange={onChange} />);
     // Checkbox label is rendered alongside the checkbox
-    const checkbox = screen.getByText('Has carbon footprint been calculated and declared?');
+    const checkbox = screen.getByText('Battery marked with the separate collection symbol');
     await userEvent.click(checkbox);
-    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ carbon_footprint_declared: true }));
+    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ separate_collection_symbol: true }));
   });
 
   it('calls onChange when typing in a textarea', async () => {
     const onChange = vi.fn();
     render(<CategoryQuestions category="battery" data={{}} onChange={onChange} />);
-    const textarea = document.getElementById('recycling_instructions') as HTMLTextAreaElement;
+    const textarea = document.getElementById('manufacturer_address') as HTMLTextAreaElement;
     await userEvent.type(textarea, 'R');
-    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ recycling_instructions: 'R' }));
+    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ manufacturer_address: 'R' }));
   });
 
   it('shows alpha warning for non-wine categories', () => {
@@ -148,18 +148,18 @@ describe('CategoryQuestions', () => {
 
   // BUG-19: stored 0 must render in the number input (not blank).
   it('renders a stored 0 in a number input (BUG-19)', () => {
-    render(<CategoryQuestions category="battery" data={{ capacity_kwh: 0 }} onChange={vi.fn()} />);
-    const input = document.getElementById('capacity_kwh') as HTMLInputElement;
+    render(<CategoryQuestions category="battery" data={{ rated_capacity_ah: 0 }} onChange={vi.fn()} />);
+    const input = document.getElementById('rated_capacity_ah') as HTMLInputElement;
     expect(input.value).toBe('0');
   });
 
   // BUG-19: clearing a number input stores null (not '').
   it('clearing a number input stores null (BUG-19)', () => {
     const onChange = vi.fn();
-    render(<CategoryQuestions category="battery" data={{ capacity_kwh: 5 }} onChange={onChange} />);
-    const input = document.getElementById('capacity_kwh') as HTMLInputElement;
+    render(<CategoryQuestions category="battery" data={{ rated_capacity_ah: 5 }} onChange={onChange} />);
+    const input = document.getElementById('rated_capacity_ah') as HTMLInputElement;
     fireEvent.change(input, { target: { value: '' } });
-    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ capacity_kwh: null }));
+    expect(onChange).toHaveBeenCalledWith(expect.objectContaining({ rated_capacity_ah: null }));
   });
 
   // Cross-field inline warnings are opt-in: a template without

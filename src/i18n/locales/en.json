@@ -268,7 +268,7 @@
     "car_cleaning": "Car cleaning products"
   },
   "categoryDescriptions": {
-    "battery": "Carbon footprint, recycling, supply chain due diligence",
+    "battery": "Battery passport for EV, LMT and industrial batteries above 2 kWh (Regulation (EU) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, fire resistance",
     "textiles": "Fiber composition, durability, PFAS declaration",
     "wine": "Ingredients, nutrition, geographic indication",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Published"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Battery passport scope",
+        "description": "From 18 February 2027 a battery passport is required for each LMT battery, each industrial battery with a capacity above 2 kWh and each electric vehicle battery placed on the market or put into service (Article 77(1) of Regulation (EU) 2023/1542)."
+      },
+      "identity": {
+        "title": "Battery identification",
+        "description": "Information on the battery set out in Part A of Annex VI (Annex XIII point 1(a))."
+      },
+      "operators": {
+        "title": "Manufacturer and economic operators",
+        "description": "Name, registered trade name or registered trade mark, postal address indicating a single contact point and, if available, web and email address (Articles 38(7) and 41(3))."
+      },
+      "composition": {
+        "title": "Material composition",
+        "description": "Chemistry, hazardous substances and critical raw materials (Annex XIII point 1(b) and Annex VI Part A)."
+      },
+      "performance": {
+        "title": "Performance and durability",
+        "description": "Electrochemical performance and durability values for the battery model (Annex XIII point 1)."
+      },
+      "sustainability": {
+        "title": "Carbon footprint, responsible sourcing and recycled content",
+        "description": "These items start to apply on later dates set by the Regulation and its delegated acts. Leave them empty until they apply to your battery."
+      },
+      "labelling": {
+        "title": "Labelling and conformity",
+        "description": "Labelling requirements of Article 13(4) and (5) and the EU declaration of conformity (Annex XIII point 1(q) and (r))."
+      },
+      "end_of_life": {
+        "title": "Waste prevention and management",
+        "description": "Information for end-users on the prevention and management of waste batteries (Article 74(1))."
+      },
+      "restricted_model": {
+        "title": "Restricted: persons with a legitimate interest",
+        "description": "Never shown on the public passport. Annex XIII point 2: accessible only to persons with a legitimate interest, notified bodies, market surveillance authorities and the Commission (Article 77(2))."
+      },
+      "restricted_authorities": {
+        "title": "Restricted: authorities only",
+        "description": "Never shown on the public passport. Annex XIII point 3: accessible only to notified bodies, market surveillance authorities and the Commission (Article 77(2))."
+      },
+      "individual": {
+        "title": "Restricted: this individual battery",
+        "description": "Never shown on the public passport. Annex XIII point 4: information on this specific battery, updated during its life, accessible only to persons with a legitimate interest (Article 77(2))."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Battery category",
+        "help": "Portable batteries and SLI (starting, lighting and ignition) batteries do not need a battery passport."
+      },
+      "product_name": {
+        "label": "Product name",
+        "placeholder": "e.g., PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Battery model identifier",
+        "help": "Information identifying the battery (Annex VI Part A point 2).",
+        "placeholder": "e.g., PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Unique identifier of this battery",
+        "help": "The unique identifier assigned to this individual battery by the economic operator placing it on the market, conforming to ISO/IEC 15459 or an equivalent standard. The QR code on the battery gives access to its passport (Articles 13(6) and 77(3)).",
+        "placeholder": "e.g., serial number or GS1 identifier"
+      },
+      "manufacture_place": {
+        "label": "Place of manufacture",
+        "help": "The geographical location of the manufacturing facility.",
+        "placeholder": "e.g., Lyon, France"
+      },
+      "manufacture_date": {
+        "label": "Date of manufacture (month and year)",
+        "placeholder": "e.g., 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Weight (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Passport of the original battery (where applicable)",
+        "help": "For batteries prepared for re-use or repurposing, repurposed or remanufactured: link to the passport of the original battery or batteries (Article 77(7)).",
+        "placeholder": "e.g., https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Manufacturer name"
+      },
+      "manufacturer_trade_name": {
+        "label": "Registered trade name or registered trade mark"
+      },
+      "manufacturer_address": {
+        "label": "Postal address (single contact point)"
+      },
+      "manufacturer_website": {
+        "label": "Web address (if available)",
+        "placeholder": "e.g., https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "Email address (if available)",
+        "help": "Also shown as the contact for requests to access restricted passport information."
+      },
+      "authorised_representative": {
+        "label": "Authorised representative (where applicable)",
+        "help": "Name and contact details of the authorised representative, where one is appointed."
+      },
+      "importer": {
+        "label": "Importer (where applicable)",
+        "help": "Name, registered trade name or registered trade mark, postal address and, if available, web and email address of the importer (Article 41(3))."
+      },
+      "battery_chemistry": {
+        "label": "Battery chemistry"
+      },
+      "battery_chemistry_other": {
+        "label": "Chemistry (details)"
+      },
+      "hazardous_substances": {
+        "label": "Hazardous substances (other than mercury, cadmium or lead)",
+        "help": "Hazardous substances present in the battery other than mercury, cadmium or lead. Enter \"None\" if there are none."
+      },
+      "critical_raw_materials": {
+        "label": "Critical raw materials above 0.1 % weight by weight",
+        "help": "Critical raw materials present in the battery in a concentration of more than 0.1 % weight by weight."
+      },
+      "critical_raw_materials_other": {
+        "label": "Other critical raw materials"
+      },
+      "extinguishing_agent": {
+        "label": "Usable extinguishing agent"
+      },
+      "renewable_content_share": {
+        "label": "Share of renewable content (%)",
+        "help": "Annex XIII point 1(f)."
+      },
+      "rated_capacity_ah": {
+        "label": "Rated capacity (Ah)"
+      },
+      "voltage_min": {
+        "label": "Minimum voltage (V)"
+      },
+      "voltage_nominal": {
+        "label": "Nominal voltage (V)"
+      },
+      "voltage_max": {
+        "label": "Maximum voltage (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Temperature range for the voltage values (where relevant)",
+        "placeholder": "e.g., -20 to 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Original power capability (W)"
+      },
+      "power_capability_limits": {
+        "label": "Power capability limits and temperature range (where relevant)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Expected battery lifetime (cycles)"
+      },
+      "lifetime_reference_test": {
+        "label": "Reference test used for the expected lifetime"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Capacity threshold for exhaustion (%)",
+        "help": "Only for electric vehicle batteries."
+      },
+      "idle_temperature_range": {
+        "label": "Temperature range the battery can withstand when not in use",
+        "help": "Include the reference test.",
+        "placeholder": "e.g., -30 to 60 °C (reference test)"
+      },
+      "calendar_life_warranty": {
+        "label": "Commercial warranty period for the calendar life",
+        "placeholder": "e.g., 8 years"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Initial round trip energy efficiency (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Round trip energy efficiency at 50 % of cycle life (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Internal battery cell resistance (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Internal battery pack resistance (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "C-rate of the relevant cycle-life test",
+        "placeholder": "e.g., 0.5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Carbon footprint declaration",
+        "help": "Article 7. The obligation starts only once the Commission delegated act on the calculation method applies."
+      },
+      "carbon_footprint_value": {
+        "label": "Carbon footprint (kg CO2e per kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Carbon footprint performance class"
+      },
+      "carbon_footprint_study": {
+        "label": "Web link to the public carbon footprint study",
+        "placeholder": "e.g., https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Due diligence policy report (responsible sourcing)",
+        "help": "Information on responsible sourcing as indicated in the report on the battery due diligence policy (Article 52(3)). The due diligence obligations apply from 18 August 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Recycled content: cobalt (%)",
+        "help": "Recycled content information as indicated in the documentation referred to in Article 8."
+      },
+      "recycled_lithium": {
+        "label": "Recycled content: lithium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Recycled content: nickel (%)"
+      },
+      "recycled_lead": {
+        "label": "Recycled content: lead (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Battery marked with the separate collection symbol",
+        "help": "Article 13(4) and Annex VI Part B."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Cadmium or lead chemical symbol",
+        "help": "Batteries containing more than 0.002 % cadmium or more than 0.004 % lead are marked with Cd or Pb below the separate collection symbol (Article 13(5))."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "EU declaration of conformity",
+        "help": "Link to or reference of the EU declaration of conformity (Article 18).",
+        "placeholder": "e.g., https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Information on waste prevention, collection and recycling",
+        "help": "Article 74(1)(a) to (f): how end-users can prevent waste and extend battery life, their role in separate collection, the take-back and collection points, safety instructions for handling waste batteries (including lithium batteries), the meaning of the symbols, and the effects of the substances on health and the environment."
+      },
+      "collection_point_link": {
+        "label": "Web link to collection information",
+        "placeholder": "e.g., https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Detailed composition (cathode, anode, electrolyte)",
+        "help": "Including materials used in the cathode, anode and electrolyte."
+      },
+      "battery_spare_parts": {
+        "label": "Part numbers for components and contact details for replacement spare parts"
+      },
+      "battery_dismantling_information": {
+        "label": "Dismantling information",
+        "help": "Exploded diagrams showing the location of the cells, disassembly sequences, type and number of fastening techniques, tools required, warnings on risks of damaging parts, and the number and layout of cells. Links to documents are fine."
+      },
+      "battery_safety_measures": {
+        "label": "Safety measures"
+      },
+      "battery_test_reports": {
+        "label": "Test reports proving compliance",
+        "help": "Results of test reports proving compliance with the Regulation and its implementing and delegated acts. References or links to the reports."
+      },
+      "battery_status": {
+        "label": "Battery status"
+      },
+      "battery_state_of_health": {
+        "label": "State of health (%)",
+        "help": "Article 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Date of the state of health value",
+        "placeholder": "e.g., 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Usage information",
+        "help": "Number of charging and discharging cycles, negative events such as accidents, and operating conditions such as temperature and state of charge."
+      },
+      "battery_status_change_values": {
+        "label": "Performance and durability values at a change of status",
+        "help": "Values of the performance and durability parameters referred to in Article 10(1) when the battery was placed on the market and when its status changed."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Electric vehicle battery",
+        "lmt": "LMT battery (light means of transport)",
+        "industrial": "Industrial battery with a capacity above 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Lithium-ion, NMC (nickel manganese cobalt)",
+        "li_nca": "Lithium-ion, NCA (nickel cobalt aluminium)",
+        "li_lfp": "Lithium-ion, LFP (lithium iron phosphate)",
+        "li_lmfp": "Lithium-ion, LMFP (lithium manganese iron phosphate)",
+        "li_lmo": "Lithium-ion, LMO (lithium manganese oxide)",
+        "li_lto": "Lithium-ion, LTO (lithium titanate anode)",
+        "sodium_ion": "Sodium-ion",
+        "nimh": "Nickel-metal hydride",
+        "lead_acid": "Lead-acid",
+        "other": "Other"
+      },
+      "crm": {
+        "cobalt": "Cobalt",
+        "lithium": "Lithium",
+        "natural_graphite": "Natural graphite",
+        "nickel": "Nickel",
+        "manganese": "Manganese",
+        "copper": "Copper",
+        "aluminium": "Aluminium",
+        "phosphorus": "Phosphorus",
+        "other": "Other"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Not yet applicable (delegated act under Article 7 not adopted)",
+        "declared": "Carbon footprint declared"
+      },
+      "heavyMetal": {
+        "none": "No Cd or Pb symbol required",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd and Pb"
+      },
+      "status": {
+        "original": "Original",
+        "repurposed": "Repurposed",
+        "reused": "Re-used",
+        "remanufactured": "Remanufactured",
+        "waste": "Waste"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Restricted battery information",
+      "body": "Detailed composition, dismantling information, test reports and data on this individual battery are available only to persons with a legitimate interest and to authorities (Article 77 and Annex XIII of Regulation (EU) 2023/1542). To request access, contact {{contact}}.",
+      "bodyNoContact": "Detailed composition, dismantling information, test reports and data on this individual battery are available only to persons with a legitimate interest and to authorities (Article 77 and Annex XIII of Regulation (EU) 2023/1542). To request access, contact the manufacturer."
     }
   }
 }

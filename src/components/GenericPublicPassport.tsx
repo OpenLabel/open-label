@@ -194,6 +194,27 @@ export function GenericPublicPassport({ category, passport, isPreview, previewLa
             </div>
           )}
 
+          {/* Restricted information notice (e.g. battery passport Annex XIII points 2 to 4) */}
+          {template.restrictedAccessNotice && (() => {
+            const notice = template.restrictedAccessNotice;
+            const rawContact = notice.contactFieldId ? categoryData[notice.contactFieldId] : undefined;
+            const contact = typeof rawContact === 'string' ? rawContact.trim() : '';
+            return (
+              <Card data-testid="restricted-access-notice">
+                <CardHeader>
+                  <CardTitle className="text-lg">{t(notice.titleKey, notice.title)}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-sm text-muted-foreground">
+                    {contact
+                      ? t(notice.bodyKey, { defaultValue: notice.body, contact, interpolation: { escapeValue: false } })
+                      : t(notice.bodyNoContactKey, notice.bodyNoContact)}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })()}
+
           {/* Promotional Footer */}
           <div className="bg-primary/5 border border-primary/20 rounded-lg p-4 text-center mt-6">
             <p className="text-sm text-foreground">
