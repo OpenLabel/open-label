@@ -88,8 +88,8 @@ describe("templates", () => {
   });
 
   describe("categoryList", () => {
-    it("has visible product categories (wine, toys, textiles, car cleaning, detergents, and other)", () => {
-      expect(categoryList.map(c => c.value)).toEqual(["wine", "toys", "textiles", "car_cleaning", "detergents", "other"]);
+    it("has visible product categories (wine, toys, textiles, car cleaning, detergents, batteries, and other)", () => {
+      expect(categoryList.map(c => c.value)).toEqual(["wine", "toys", "textiles", "car_cleaning", "detergents", "battery", "other"]);
     });
 
     it("each category has required properties", () => {
@@ -142,6 +142,7 @@ describe("templates", () => {
         "textiles",
         "car_cleaning",
         "detergents",
+        "battery",
         "other",
       ];
 

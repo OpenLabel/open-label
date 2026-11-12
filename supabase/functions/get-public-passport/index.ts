@@ -39,13 +39,26 @@ const SlugSchema = z.object({
 // Security-only rate state expires automatically and contains no raw IP addresses.
 const rateLimiter = createEphemeralRateLimiter();
 
-// Apparel (textiles) internal documents, in scope, stripped from the public response.
+// Internal fields stripped from the public response: Apparel (textiles) internal
+// documents and the restricted battery passport data.
 // Kept in sync with src/templates/* by src/lib/internalFieldIds.test.ts.
 const INTERNAL_FIELD_IDS = [
   "audit_certificate_file",
   "lca_report_file",
   "test_report_file",
   "claims_evidence_file",
+  // Battery passport data reserved to persons with a legitimate interest and to
+  // authorities (Regulation (EU) 2023/1542, Annex XIII points 2 to 4).
+  "battery_detailed_composition",
+  "battery_spare_parts",
+  "battery_dismantling_information",
+  "battery_safety_measures",
+  "battery_test_reports",
+  "battery_status",
+  "battery_state_of_health",
+  "battery_state_of_health_date",
+  "battery_usage_information",
+  "battery_status_change_values",
 ];
 
 // Known internal fields in OTHER categories that are currently still returned in

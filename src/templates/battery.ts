@@ -14,235 +14,187 @@
  * See LICENSE and NOTICE files for details.
  */
 
-import { BaseTemplate, TemplateSection } from './base';
+// Battery passport, Regulation (EU) 2023/1542 (Article 77 and Annex XIII).
+// The English fallback texts come from the `battery` namespace of en.json, so
+// every label, help text, option and section title has an i18n key and the
+// wording lives in one place.
+
+import en from '@/i18n/locales/en.json';
+import { BaseTemplate, QuestionBadge, ShowWhenCondition, TemplateQuestion, TemplateSection } from './base';
+
+type FieldStrings = { label: string; help?: string; placeholder?: string };
+const T = en.battery as unknown as {
+  sections: Record<string, { title: string; description: string }>;
+  fields: Record<string, FieldStrings>;
+  options: Record<string, Record<string, string>>;
+  restrictedNotice: { title: string; body: string; bodyNoContact: string };
+};
+
+interface FieldOpts {
+  options?: string;
+  required?: boolean;
+  badge?: QuestionBadge;
+  showWhen?: ShowWhenCondition;
+  translatable?: boolean;
+  internal?: boolean;
+}
+
+function q(id: string, type: TemplateQuestion['type'], opts: FieldOpts = {}): TemplateQuestion {
+  const s = T.fields[id];
+  const k = `battery.fields.${id}`;
+  const out: TemplateQuestion = { id, type, label: s.label, labelKey: `${k}.label` };
+  if (s.help) { out.helpText = s.help; out.helpKey = `${k}.help`; }
+  if (s.placeholder) { out.placeholder = s.placeholder; out.placeholderKey = `${k}.placeholder`; }
+  if (opts.options) {
+    const group = opts.options;
+    out.options = Object.entries(T.options[group]).map(([value, label]) => ({
+      value, label, labelKey: `battery.options.${group}.${value}`,
+    }));
+  }
+  if (opts.required) out.required = true;
+  if (opts.badge) out.badge = opts.badge;
+  if (opts.showWhen) out.showWhen = opts.showWhen;
+  if (opts.translatable) out.translatable = true;
+  if (opts.internal) out.internal = true;
+  return out;
+}
+
+function section(id: string, questions: TemplateQuestion[]): TemplateSection {
+  return {
+    id,
+    title: T.sections[id].title,
+    titleKey: `battery.sections.${id}.title`,
+    description: T.sections[id].description,
+    descriptionKey: `battery.sections.${id}.description`,
+    questions,
+  };
+}
+
+const REQ: FieldOpts = { required: true, badge: 'required' };
+
+export const BATTERY_RESTRICTED_FIELD_IDS = [
+  "battery_detailed_composition",
+  "battery_spare_parts",
+  "battery_dismantling_information",
+  "battery_safety_measures",
+  "battery_test_reports",
+  "battery_status",
+  "battery_state_of_health",
+  "battery_state_of_health_date",
+  "battery_usage_information",
+  "battery_status_change_values",
+] as const;
+
+export const BATTERY_RESTRICTED_NOTICE = {
+  title: T.restrictedNotice.title,
+  titleKey: 'battery.restrictedNotice.title',
+  body: T.restrictedNotice.body,
+  bodyKey: 'battery.restrictedNotice.body',
+  bodyNoContact: T.restrictedNotice.bodyNoContact,
+  bodyNoContactKey: 'battery.restrictedNotice.bodyNoContact',
+  contactFieldId: 'manufacturer_email',
+};
+
+const sections: TemplateSection[] = [
+  section("scope", [
+    q("battery_category", "select", { ...REQ, options: "category" }),
+  ]),
+  section("identity", [
+    q("product_name", "text", { ...REQ, translatable: true }),
+    q("battery_model", "text", { ...REQ }),
+    q("battery_unique_identifier", "text", { ...REQ }),
+    q("manufacture_place", "text", { ...REQ }),
+    q("manufacture_date", "text", { ...REQ }),
+    q("battery_weight_kg", "number", { ...REQ }),
+    q("original_battery_passport", "text", { badge: "where_applicable" }),
+  ]),
+  section("operators", [
+    q("manufacturer_name", "text", { ...REQ }),
+    q("manufacturer_trade_name", "text"),
+    q("manufacturer_address", "textarea", { ...REQ }),
+    q("manufacturer_website", "text", { badge: "where_applicable" }),
+    q("manufacturer_email", "text", { badge: "where_applicable" }),
+    q("authorised_representative", "textarea", { badge: "where_applicable" }),
+    q("importer", "textarea", { badge: "where_applicable" }),
+  ]),
+  section("composition", [
+    q("battery_chemistry", "select", { ...REQ, options: "chemistry" }),
+    q("battery_chemistry_other", "text", { showWhen: { field: "battery_chemistry", equals: "other" } }),
+    q("hazardous_substances", "textarea", { ...REQ, translatable: true }),
+    q("critical_raw_materials", "multi_select", { options: "crm", badge: "required" }),
+    q("critical_raw_materials_other", "text", { showWhen: { field: "critical_raw_materials", equals: "other", includes: true } }),
+    q("extinguishing_agent", "text", { ...REQ, translatable: true }),
+    q("renewable_content_share", "number", { badge: "where_applicable" }),
+  ]),
+  section("performance", [
+    q("rated_capacity_ah", "number", { ...REQ }),
+    q("voltage_min", "number", { ...REQ }),
+    q("voltage_nominal", "number", { ...REQ }),
+    q("voltage_max", "number", { ...REQ }),
+    q("voltage_temperature_range", "text", { badge: "where_applicable" }),
+    q("original_power_capability_w", "number", { ...REQ }),
+    q("power_capability_limits", "text", { badge: "where_applicable" }),
+    q("expected_lifetime_cycles", "number", { ...REQ }),
+    q("lifetime_reference_test", "text", { ...REQ }),
+    q("capacity_threshold_exhaustion", "number", { badge: "required", showWhen: { field: "battery_category", equals: "ev" } }),
+    q("idle_temperature_range", "text", { ...REQ }),
+    q("calendar_life_warranty", "text", { badge: "where_applicable" }),
+    q("round_trip_efficiency_initial", "number", { ...REQ }),
+    q("round_trip_efficiency_50", "number", { ...REQ }),
+    q("internal_resistance_cell", "number", { ...REQ }),
+    q("internal_resistance_pack", "number", { ...REQ }),
+    q("cycle_life_c_rate", "text", { ...REQ }),
+  ]),
+  section("sustainability", [
+    q("carbon_footprint_status", "select", { options: "carbonStatus", badge: "tbd" }),
+    q("carbon_footprint_value", "number", { showWhen: { field: "carbon_footprint_status", equals: "declared" } }),
+    q("carbon_footprint_class", "text", { showWhen: { field: "carbon_footprint_status", equals: "declared" } }),
+    q("carbon_footprint_study", "text", { showWhen: { field: "carbon_footprint_status", equals: "declared" } }),
+    q("due_diligence_report", "textarea", { badge: "tbd" }),
+    q("recycled_cobalt", "number", { badge: "tbd" }),
+    q("recycled_lithium", "number", { badge: "tbd" }),
+    q("recycled_nickel", "number", { badge: "tbd" }),
+    q("recycled_lead", "number", { badge: "tbd" }),
+  ]),
+  section("labelling", [
+    q("separate_collection_symbol", "checkbox", { badge: "required" }),
+    q("cadmium_lead_symbol", "select", { ...REQ, options: "heavyMetal" }),
+    q("eu_declaration_of_conformity", "text", { ...REQ }),
+  ]),
+  section("end_of_life", [
+    q("waste_battery_information", "textarea", { ...REQ, translatable: true }),
+    q("collection_point_link", "text"),
+  ]),
+  section("restricted_model", [
+    q("battery_detailed_composition", "textarea", { internal: true }),
+    q("battery_spare_parts", "textarea", { internal: true }),
+    q("battery_dismantling_information", "textarea", { internal: true }),
+    q("battery_safety_measures", "textarea", { internal: true }),
+  ]),
+  section("restricted_authorities", [
+    q("battery_test_reports", "textarea", { internal: true }),
+  ]),
+  section("individual", [
+    q("battery_status", "select", { options: "status", internal: true }),
+    q("battery_state_of_health", "number", { internal: true }),
+    q("battery_state_of_health_date", "text", { internal: true }),
+    q("battery_usage_information", "textarea", { internal: true }),
+    q("battery_status_change_values", "textarea", { internal: true }),
+  ]),
+];
 
 export class BatteryTemplate extends BaseTemplate {
   id = 'battery';
-  name = 'Battery';
-  description = 'Digital Product Passport for batteries per EU Battery Regulation 2023/1542';
+  name = 'Batteries';
+  description = "Battery passport for EV, LMT and industrial batteries above 2 kWh (Regulation (EU) 2023/1542)";
   icon = '🔋';
-  
-  sections: TemplateSection[] = [
-    {
-      title: 'Battery Identification',
-      description: 'Basic battery identification per EU Battery Regulation',
-      questions: [
-        {
-          id: 'battery_unique_identifier',
-          label: 'Unique Battery Identifier',
-          type: 'text',
-          required: true,
-          placeholder: 'Serial number / GS1 unique ID',
-          helpText: 'Persistent unique identifier per Annex VI of Regulation (EU) 2023/1542.',
-        },
+  sections: TemplateSection[] = sections;
+  restrictedAccessNotice = BATTERY_RESTRICTED_NOTICE;
 
-        {
-          id: 'battery_type',
-          label: 'Battery Type',
-          type: 'select',
-          required: true,
-          options: [
-            { value: 'lmt', label: 'Light Means of Transport (LMT) Battery' },
-            { value: 'ev', label: 'Electric Vehicle (EV) Battery' },
-            { value: 'industrial', label: 'Industrial Battery (>2kWh)' },
-            { value: 'portable', label: 'Portable Battery' },
-            { value: 'starting', label: 'Starting, Lighting, Ignition (SLI) Battery' }
-          ]
-        },
-        {
-          id: 'battery_chemistry',
-          label: 'Battery Chemistry',
-          type: 'select',
-          required: true,
-          options: [
-            { value: 'li-ion', label: 'Lithium-ion' },
-            { value: 'li-po', label: 'Lithium Polymer' },
-            { value: 'lfp', label: 'Lithium Iron Phosphate (LFP)' },
-            { value: 'nmc', label: 'Nickel Manganese Cobalt (NMC)' },
-            { value: 'lead-acid', label: 'Lead-acid' },
-            { value: 'nimh', label: 'Nickel-Metal Hydride' },
-            { value: 'other', label: 'Other' }
-          ]
-        },
-        {
-          id: 'capacity_kwh',
-          label: 'Rated Capacity (kWh)',
-          type: 'number',
-          required: true,
-          placeholder: 'e.g., 50'
-        },
-        {
-          id: 'voltage',
-          label: 'Nominal Voltage (V)',
-          type: 'number',
-          placeholder: 'e.g., 400'
-        }
-      ]
-    },
-    {
-      title: 'Carbon Footprint & Sustainability',
-      description: 'Environmental impact information required by EU regulation',
-      questions: [
-        {
-          id: 'carbon_footprint_declared',
-          label: 'Has carbon footprint been calculated and declared?',
-          type: 'checkbox',
-          helpText: 'Mandatory for EV and industrial batteries from 2025'
-        },
-        {
-          id: 'carbon_footprint_value',
-          label: 'Carbon Footprint (kg CO2e/kWh)',
-          type: 'number',
-          placeholder: 'e.g., 75'
-        },
-        {
-          id: 'carbon_footprint_class',
-          label: 'Carbon Footprint Performance Class',
-          type: 'select',
-          options: [
-            { value: 'A', label: 'Class A (Best)' },
-            { value: 'B', label: 'Class B' },
-            { value: 'C', label: 'Class C' },
-            { value: 'D', label: 'Class D' },
-            { value: 'E', label: 'Class E (Worst)' }
-          ]
-        },
-        {
-          id: 'recycled_content_cobalt',
-          label: 'Recycled Cobalt Content (%)',
-          type: 'number',
-          placeholder: 'Minimum 16% required from 2031'
-        },
-        {
-          id: 'recycled_content_lithium',
-          label: 'Recycled Lithium Content (%)',
-          type: 'number',
-          placeholder: 'Minimum 6% required from 2031'
-        },
-        {
-          id: 'recycled_content_nickel',
-          label: 'Recycled Nickel Content (%)',
-          type: 'number',
-          placeholder: 'Minimum 6% required from 2031'
-        },
-        {
-          id: 'recycled_content_lead',
-          label: 'Recycled Lead Content (%)',
-          type: 'number',
-          placeholder: 'Minimum 85% required for lead-acid batteries',
-          helpText: 'Applies to lead-acid chemistries per Annex XII.',
-          showWhen: { field: 'battery_chemistry', equals: 'lead-acid' },
-        }
-      ]
-    },
-
-    {
-      title: 'Performance & Durability',
-      description: 'Battery performance and expected lifespan information',
-      questions: [
-        {
-          id: 'cycle_life',
-          label: 'Expected Cycle Life',
-          type: 'number',
-          placeholder: 'Number of charge cycles',
-          helpText: 'e.g., 1500 cycles at 80% DoD'
-        },
-        {
-          id: 'state_of_health',
-          label: 'Minimum State of Health at end of life (%)',
-          type: 'number',
-          placeholder: 'e.g., 80'
-        },
-        {
-          id: 'warranty_years',
-          label: 'Warranty Period (years)',
-          type: 'number',
-          placeholder: 'e.g., 8'
-        },
-        {
-          id: 'warranty_cycles',
-          label: 'Warranty Cycles',
-          type: 'number',
-          placeholder: 'e.g., 160000 km or 1500 cycles'
-        }
-      ]
-    },
-    {
-      title: 'Supply Chain Due Diligence',
-      description: 'Responsible sourcing information',
-      questions: [
-        {
-          id: 'due_diligence_policy',
-          label: 'Supply chain due diligence policy in place?',
-          type: 'checkbox',
-          helpText: 'Required for all battery manufacturers'
-        },
-        {
-          id: 'cobalt_source_verified',
-          label: 'Cobalt sourcing verified for responsible mining?',
-          type: 'checkbox'
-        },
-        {
-          id: 'conflict_minerals_compliant',
-          label: 'Compliant with conflict minerals regulation?',
-          type: 'checkbox'
-        }
-      ]
-    },
-    {
-      title: 'Recycling & End-of-Life',
-      description: 'Information for battery recycling and disposal',
-      questions: [
-        {
-          id: 'collection_scheme',
-          label: 'Part of extended producer responsibility scheme?',
-          type: 'checkbox',
-          required: true
-        },
-        {
-          id: 'recycling_instructions',
-          label: 'Recycling Instructions',
-          type: 'textarea',
-          placeholder: 'Instructions for proper disposal and recycling'
-        },
-        {
-          id: 'separate_collection_required',
-          label: 'Requires separate collection (crossed-out bin symbol)?',
-          type: 'checkbox'
-        }
-      ]
-    },
-    {
-      title: 'Manufacturer Information',
-      description: 'Producer and importer details',
-      questions: [
-        {
-          id: 'manufacturer_name',
-          label: 'Manufacturer Name',
-          type: 'text',
-          required: true
-        },
-        {
-          id: 'manufacturer_address',
-          label: 'Manufacturer Address',
-          type: 'textarea'
-        },
-        {
-          id: 'eu_responsible_person',
-          label: 'EU Responsible Person (if non-EU manufacturer)',
-          type: 'text'
-        }
-      ]
-    }
-  ];
-
-  getRequiredLogos(data: Record<string, unknown>): string[] {
-    const logos: string[] = [];
-    
-    if (data.separate_collection_required) logos.push('battery-crossed-bin');
-    if (data.carbon_footprint_class) logos.push('carbon-class');
-    
-    return logos;
+  // No logos are added automatically: the separate collection symbol and the
+  // CE marking belong on the battery itself, not on a self-declared badge.
+  getRequiredLogos(): string[] {
+    return [];
   }
 }
 
