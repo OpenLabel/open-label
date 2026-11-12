@@ -244,7 +244,7 @@
     "description": "Cur síos"
   },
   "categories": {
-    "battery": "Cadhnraí",
+    "battery": "Ceallraí",
     "construction": "Táirgí Tógála",
     "textiles": "Éadaí",
     "wine": "Fíon & Biotáillí",
@@ -260,7 +260,7 @@
     "car_cleaning": "Táirgí glantacháin carranna"
   },
   "categoryDescriptions": {
-    "battery": "Lorg carbóin, athchúrsáil, dícheall cuí slabhra soláthair",
+    "battery": "Pas ceallra do cheallraí feithiclí leictreacha, ceallraí LMT agus ceallraí tionsclaíocha ag a bhfuil toilleadh níos mó ná 2 kWh (Rialachán (AE) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, friotaíocht dóiteáin",
     "textiles": "Comhdhéanamh snáithíní, marthanacht, dearbhú PFAS",
     "wine": "Comhábhair, cothú, léiriú geografach",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Foilsithe"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Raon feidhme an phas ceallra",
+        "description": "Ón 18 Feabhra 2027, tá pas ceallra ag teastáil do gach ceallra LMT, do gach ceallra tionsclaíoch ag a bhfuil toilleadh níos mó ná 2 kWh agus do gach ceallra feithiclí leictreacha a chuirtear ar an margadh nó a chuirtear i seirbhís (Airteagal 77(1) de Rialachán (AE) 2023/1542)."
+      },
+      "identity": {
+        "title": "Sainaithint an cheallra",
+        "description": "Faisnéis maidir leis an gceallra a leagtar amach i gCuid A d'Iarscríbhinn VI (pointe 1(a) d'Iarscríbhinn XIII)."
+      },
+      "operators": {
+        "title": "Monaróir agus oibreoirí eacnamaíocha",
+        "description": "Ainm, trádainm cláraithe nó trádmharc cláraithe, seoladh poist lena léirítear pointe teagmhála aonair agus, más ann dóibh, seoltaí gréasáin agus ríomhphoist (Airteagail 38(7) agus 41(3))."
+      },
+      "composition": {
+        "title": "Comhdhéanamh ábhair",
+        "description": "Ceimic, substaintí guaiseacha agus amhábhair chriticiúla (pointe 1(b) d'Iarscríbhinn XIII agus Cuid A d'Iarscríbhinn VI)."
+      },
+      "performance": {
+        "title": "Feidhmíocht agus marthanacht",
+        "description": "Luachanna feidhmíochta leictriceimicí agus marthanachta don tsamhail cheallra (pointe 1 d'Iarscríbhinn XIII)."
+      },
+      "sustainability": {
+        "title": "Lorg carbóin, foinsiú freagrach agus ábhar athchúrsáilte",
+        "description": "Tosóidh na míreanna seo ag feidhmiú ar dhátaí níos déanaí a leagann an Rialachán agus a ghníomhartha tarmligthe síos. Fág folamh iad go dtí go mbeidh feidhm acu maidir le do cheallra."
+      },
+      "labelling": {
+        "title": "Lipéadú agus comhréireacht",
+        "description": "Ceanglais lipéadaithe Airteagal 13(4) agus (5) agus an dearbhú comhréireachta AE (pointe 1(q) agus (r) d'Iarscríbhinn XIII)."
+      },
+      "end_of_life": {
+        "title": "Dramhaíl a chosc agus a bhainistiú",
+        "description": "Faisnéis d'úsáideoirí deiridh maidir le ceallraí dramhaíola a chosc agus a bhainistiú (Airteagal 74(1))."
+      },
+      "restricted_model": {
+        "title": "Srianta: daoine a bhfuil leas dlisteanach acu",
+        "description": "Ní thaispeántar riamh é ar an bpas poiblí. Pointe 2 d'Iarscríbhinn XIII: inrochtana amháin ag daoine a bhfuil leas dlisteanach acu, ag comhlachtaí faoina dtugtar fógra, ag údaráis faireachais margaidh agus ag an gCoimisiún (Airteagal 77(2))."
+      },
+      "restricted_authorities": {
+        "title": "Srianta: údaráis amháin",
+        "description": "Ní thaispeántar riamh é ar an bpas poiblí. Pointe 3 d'Iarscríbhinn XIII: inrochtana amháin ag comhlachtaí faoina dtugtar fógra, ag údaráis faireachais margaidh agus ag an gCoimisiún (Airteagal 77(2))."
+      },
+      "individual": {
+        "title": "Srianta: an ceallra aonair seo",
+        "description": "Ní thaispeántar riamh é ar an bpas poiblí. Pointe 4 d'Iarscríbhinn XIII: faisnéis maidir leis an gceallra aonair seo, a nuashonraítear le linn a shaolré, inrochtana amháin ag daoine a bhfuil leas dlisteanach acu (Airteagal 77(2))."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Catagóir an cheallra",
+        "help": "Níl pas ceallra ag teastáil do cheallraí inaistrithe ná do cheallraí SLI (ceallraí dúiseachta, soilsithe agus adhainte)."
+      },
+      "product_name": {
+        "label": "Ainm an táirge",
+        "placeholder": "m.sh., PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Aitheantóir samhla an cheallra",
+        "help": "Faisnéis lena sainaithnítear an ceallra (pointe 2 de Chuid A d'Iarscríbhinn VI).",
+        "placeholder": "m.sh., PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Aitheantóir uathúil an cheallra seo",
+        "help": "An t-aitheantóir uathúil a shann an t-oibreoir eacnamaíoch a chuireann ar an margadh é don cheallra aonair seo, i gcomhréir le ISO/IEC 15459 nó le caighdeán coibhéiseach. Tugann an cód QR ar an gceallra rochtain ar a phas (Airteagail 13(6) agus 77(3)).",
+        "placeholder": "m.sh., sraithuimhir nó aitheantóir GS1"
+      },
+      "manufacture_place": {
+        "label": "Áit mhonaraíochta",
+        "help": "Suíomh geografach na monarchan monaraíochta.",
+        "placeholder": "m.sh., Corcaigh, Éire"
+      },
+      "manufacture_date": {
+        "label": "Dáta monaraíochta (mí agus bliain)",
+        "placeholder": "m.sh., 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Meáchan (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Pas an cheallra bhunaidh (i gcás inarb infheidhme)",
+        "help": "Maidir le ceallraí a ullmhaíodh le haghaidh athúsáide nó athrú cuspóra, ar athraíodh a gcuspóir nó a athmhonaraíodh: nasc chuig pas ceallra nó pasanna an cheallra bunaidh nó na gceallraí bunaidh (Airteagal 77(7)).",
+        "placeholder": "m.sh., https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Ainm an mhonaróra"
+      },
+      "manufacturer_trade_name": {
+        "label": "Trádainm cláraithe nó trádmharc cláraithe"
+      },
+      "manufacturer_address": {
+        "label": "Seoladh poist (pointe teagmhála aonair)"
+      },
+      "manufacturer_website": {
+        "label": "Seoladh gréasáin (más ann dó)",
+        "placeholder": "m.sh., https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "Seoladh ríomhphoist (más ann dó)",
+        "help": "Taispeántar é freisin mar theagmháil d'iarrataí ar rochtain ar fhaisnéis shrianta an phas."
+      },
+      "authorised_representative": {
+        "label": "Ionadaí údaraithe (i gcás inarb infheidhme)",
+        "help": "Ainm agus sonraí teagmhála an ionadaí údaraithe, i gcás ina gceaptar ionadaí."
+      },
+      "importer": {
+        "label": "Allmhaireoir (i gcás inarb infheidhme)",
+        "help": "Ainm, trádainm cláraithe nó trádmharc cláraithe, seoladh poist agus, más ann dóibh, seoltaí gréasáin agus ríomhphoist an allmhaireora (Airteagal 41(3))."
+      },
+      "battery_chemistry": {
+        "label": "Ceimic an cheallra"
+      },
+      "battery_chemistry_other": {
+        "label": "Ceimic (sonraí)"
+      },
+      "hazardous_substances": {
+        "label": "Substaintí guaiseacha (seachas mearcair, caidmiam nó luaidhe)",
+        "help": "Substaintí guaiseacha atá sa cheallra, seachas mearcair, caidmiam nó luaidhe. Iontráil \"Níl aon cheann\" mura bhfuil aon cheann ann."
+      },
+      "critical_raw_materials": {
+        "label": "Amhábhair chriticiúla i dtiúchan atá corradh le 0,1 % meáchain de réir meáchain",
+        "help": "Amhábhair chriticiúla atá sa cheallra i dtiúchan atá corradh le 0,1 % meáchain de réir meáchain."
+      },
+      "critical_raw_materials_other": {
+        "label": "Amhábhair chriticiúla eile"
+      },
+      "extinguishing_agent": {
+        "label": "Oibreán múchta inúsáidte"
+      },
+      "renewable_content_share": {
+        "label": "Sciar an ábhair in-athnuaite (%)",
+        "help": "Pointe 1(f) d'Iarscríbhinn XIII."
+      },
+      "rated_capacity_ah": {
+        "label": "Toilleadh rátaithe (Ah)"
+      },
+      "voltage_min": {
+        "label": "Voltas íosta (V)"
+      },
+      "voltage_nominal": {
+        "label": "Voltas ainmniúil (V)"
+      },
+      "voltage_max": {
+        "label": "Voltas uasta (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Raon teochta do na luachanna voltais (nuair is ábhartha)",
+        "placeholder": "m.sh., -20 go 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Toilleadh cumhachta bunaidh (W)"
+      },
+      "power_capability_limits": {
+        "label": "Teorainneacha an toillte cumhachta agus raon teochta (nuair is ábhartha)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Saolré ionchasach an cheallra (timthriallta)"
+      },
+      "lifetime_reference_test": {
+        "label": "An tástáil tagartha a úsáideadh don saolré ionchasach"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Tairseach toillte i gcomhair tnáitheadh (%)",
+        "help": "I gcás ceallraí feithiclí leictreacha amháin."
+      },
+      "idle_temperature_range": {
+        "label": "An raon teochta is féidir leis an gceallra a sheasamh nuair nach mbíonn sé in úsáid",
+        "help": "Cuir an tástáil tagartha san áireamh.",
+        "placeholder": "m.sh., -30 go 60 °C (tástáil tagartha)"
+      },
+      "calendar_life_warranty": {
+        "label": "An tréimhse lena mbaineann an baránta tráchtála saoil féilire",
+        "placeholder": "m.sh., 8 mbliana"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Éifeachtúlacht fuinnimh dé-aistir tosaigh (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Éifeachtúlacht fuinnimh dé-aistir ag 50 % den tsaolré (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Friotaíocht inmheánach na cille ceallra (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Friotaíocht inmheánach an phacáiste ceallraí (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "C-ráta na tástála saolré ábhartha",
+        "placeholder": "m.sh., 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Dearbhú maidir le lorg carbóin",
+        "help": "Airteagal 7. Ní thosaíonn an oibleagáid ach a luaithe a bheidh feidhm ag gníomh tarmligthe an Choimisiúin maidir leis an modh ríofa."
+      },
+      "carbon_footprint_value": {
+        "label": "Lorg carbóin (kg CO2e in aghaidh an kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Aicme feidhmíochta an loirg carbóin"
+      },
+      "carbon_footprint_study": {
+        "label": "Nasc gréasáin chuig an staidéar poiblí ar lorg carbóin",
+        "placeholder": "m.sh., https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Tuarascáil maidir le beartas díchill chuí maidir le ceallraí (foinsiú freagrach)",
+        "help": "Faisnéis maidir le foinsiú freagrach mar a léirítear sa tuarascáil maidir le beartais díchill chuí maidir le ceallraí (Airteagal 52(3)). Tá feidhm ag na hoibleagáidí díchill chuí ón 18 Lúnasa 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Ábhar athchúrsáilte: cóbalt (%)",
+        "help": "Faisnéis maidir le hábhar athchúrsáilte mar atá sa doiciméadacht dá dtagraítear in Airteagal 8."
+      },
+      "recycled_lithium": {
+        "label": "Ábhar athchúrsáilte: litiam (%)"
+      },
+      "recycled_nickel": {
+        "label": "Ábhar athchúrsáilte: nicil (%)"
+      },
+      "recycled_lead": {
+        "label": "Ábhar athchúrsáilte: luaidhe (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Ceallra marcáilte leis an tsiombail bailiú ar leithligh",
+        "help": "Airteagal 13(4) agus Cuid B d'Iarscríbhinn VI."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Siombail ceimiceáin do chaidmiam nó do luaidhe",
+        "help": "Marcáiltear ceallraí ina bhfuil níos mó ná 0,002 % caidmiam nó níos mó ná 0,004 % luaidhe le Cd nó Pb faoi bhun na siombaile bailiú ar leithligh (Airteagal 13(5))."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "Dearbhú comhréireachta AE",
+        "help": "Nasc chuig an dearbhú comhréireachta AE nó tagairt dó (Airteagal 18).",
+        "placeholder": "m.sh., https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Faisnéis maidir le cosc dramhaíola, bailiú agus athchúrsáil",
+        "help": "Airteagal 74(1), pointí (a) go (f): conas is féidir le húsáideoirí deiridh dramhaíl a chosc agus síneadh a chur le céim úsáide an cheallra, a ról sa bhailiú ar leithligh, na pointí aisghlactha agus bailithe, na treoracha sábháilteachta chun ceallraí dramhaíola a láimhseáil (lena n-áirítear ceallraí litiam), ciall na siombailí, agus tionchar na substaintí ar an tsláinte agus ar an gcomhshaol."
+      },
+      "collection_point_link": {
+        "label": "Nasc gréasáin chuig faisnéis faoi bhailiú",
+        "placeholder": "m.sh., https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Comhdhéanamh mionsonraithe (catóid, anóid, leictrilít)",
+        "help": "Lena n-áirítear na hábhair a úsáidtear sa chatóid, san anóid agus sa leictrilít."
+      },
+      "battery_spare_parts": {
+        "label": "Uimhreacha páirte comhpháirteanna agus sonraí teagmhála na bhfoinsí le haghaidh páirteanna spártha athsholáthair"
+      },
+      "battery_dismantling_information": {
+        "label": "Faisnéis díchóimeála",
+        "help": "Scar-léaráidí lena dtaispeántar suíomh na gceall, seichimh dhíchóimeála, cineál agus líon na dteicnící ceangail a bheidh le díghlasáil, na huirlisí a theastóidh, rabhaidh má tá baol go ndéanfar damáiste do pháirteanna, agus méid na gceall a úsáideadh agus leagan amach. Is leor naisc chuig doiciméid."
+      },
+      "battery_safety_measures": {
+        "label": "Bearta sábháilteachta"
+      },
+      "battery_test_reports": {
+        "label": "Tuarascálacha tástála ina gcruthaítear comhlíonadh",
+        "help": "Torthaí na dtuarascálacha tástála ina gcruthaítear go gcomhlíontar an Rialachán agus a ghníomhartha cur chun feidhme agus tarmligthe. Tagairtí nó naisc chuig na tuarascálacha."
+      },
+      "battery_status": {
+        "label": "Stádas an cheallra"
+      },
+      "battery_state_of_health": {
+        "label": "Staid sláinte (%)",
+        "help": "Airteagal 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Dáta luach na staide sláinte",
+        "placeholder": "m.sh., 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Faisnéis úsáide",
+        "help": "Líon na dtimthriallta luchtaithe agus scaoilte, teagmhais dhiúltacha amhail tionóiscí, agus dálaí oibriúcháin amhail an teocht agus an staid muirir."
+      },
+      "battery_status_change_values": {
+        "label": "Luachanna feidhmíochta agus marthanachta ag athrú stádais",
+        "help": "Na luachanna le haghaidh paraiméadair feidhmíochta agus mharthanachta dá dtagraítear in Airteagal 10(1) nuair a cuireadh an ceallra ar an margadh agus nuair a athraíodh a stádas."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Ceallra feithiclí leictreacha",
+        "lmt": "Ceallra LMT (ceallra modhanna éadroma iompair)",
+        "industrial": "Ceallra tionsclaíoch ag a bhfuil toilleadh níos mó ná 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Litiam-ian, NMC (nicil, mangainéis, cóbalt)",
+        "li_nca": "Litiam-ian, NCA (nicil, cóbalt, alúmanam)",
+        "li_lfp": "Litiam-ian, LFP (fosfáit iarainn litiam)",
+        "li_lmfp": "Litiam-ian, LMFP (fosfáit iarainn mangainéise litiam)",
+        "li_lmo": "Litiam-ian, LMO (ocsaíd mhangainéise litiam)",
+        "li_lto": "Litiam-ian, LTO (anóid tíotanáite litiam)",
+        "sodium_ion": "Sóidiam-ian",
+        "nimh": "Hidríd nicil-mhiotail",
+        "lead_acid": "Luaidhe-aigéad",
+        "other": "Eile"
+      },
+      "crm": {
+        "cobalt": "Cóbalt",
+        "lithium": "Litiam",
+        "natural_graphite": "Graifít nádúrtha",
+        "nickel": "Nicil",
+        "manganese": "Mangainéis",
+        "copper": "Copar",
+        "aluminium": "Alúmanam",
+        "phosphorus": "Fosfar",
+        "other": "Eile"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Níl feidhm leis fós (níor glacadh an gníomh tarmligthe faoi Airteagal 7)",
+        "declared": "Lorg carbóin dearbhaithe"
+      },
+      "heavyMetal": {
+        "none": "Níl siombail Cd ná Pb ag teastáil",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd agus Pb"
+      },
+      "status": {
+        "original": "Bunaidh",
+        "repurposed": "A chuspóir athraithe",
+        "reused": "Athúsáidte",
+        "remanufactured": "Athmhonaraithe",
+        "waste": "Dramhaíl"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Faisnéis shrianta faoin gceallra",
+      "body": "Níl an comhdhéanamh mionsonraithe, an fhaisnéis díchóimeála, na tuarascálacha tástála ná na sonraí faoin gceallra aonair seo ar fáil ach do dhaoine a bhfuil leas dlisteanach acu agus d'údaráis (Airteagal 77 agus Iarscríbhinn XIII de Rialachán (AE) 2023/1542). Chun rochtain a iarraidh, déan teagmháil le {{contact}}.",
+      "bodyNoContact": "Níl an comhdhéanamh mionsonraithe, an fhaisnéis díchóimeála, na tuarascálacha tástála ná na sonraí faoin gceallra aonair seo ar fáil ach do dhaoine a bhfuil leas dlisteanach acu agus d'údaráis (Airteagal 77 agus Iarscríbhinn XIII de Rialachán (AE) 2023/1542). Chun rochtain a iarraidh, déan teagmháil leis an monaróir."
     }
   }
 }
