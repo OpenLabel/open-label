@@ -260,7 +260,7 @@
     "car_cleaning": "Autopuhastustooted"
   },
   "categoryDescriptions": {
-    "battery": "Süsiniku jalajälg, taaskasutus, tarneahela hoolsuskohustus",
+    "battery": "Akupass elektrisõidukiakudele, kergtranspordivahendite akudele ja üle 2 kWh mahutavusega tööstuslikele akudele (määrus (EL) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, tulekindlus",
     "textiles": "Kiudude koostis, vastupidavus, PFAS deklaratsioon",
     "wine": "Koostisosad, toiteväärtus, geograafiline tähis",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Avaldatud"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Akupassi kohaldamisala",
+        "description": "Alates 18. veebruarist 2027 on akupass nõutav iga turule lastava või kasutusele võetava kergtranspordivahendi aku, iga üle 2 kWh mahutavusega tööstusliku aku ja iga elektrisõidukiaku puhul (määruse (EL) 2023/1542 artikli 77 lõige 1)."
+      },
+      "identity": {
+        "title": "Aku identifitseerimine",
+        "description": "VI lisa A osas sätestatud teave aku kohta (XIII lisa punkti 1 alapunkt a)."
+      },
+      "operators": {
+        "title": "Valmistaja ja ettevõtjad",
+        "description": "Nimi, registreeritud kaubanimi või registreeritud kaubamärk, postiaadress, märkides ära ühtse kontaktpunkti, ning interneti- ja e-posti aadress, kui see on olemas (artikli 38 lõige 7 ja artikli 41 lõige 3)."
+      },
+      "composition": {
+        "title": "Koostismaterjalid",
+        "description": "Keemiline koostis, ohtlikud ained ja kriitilised toorained (XIII lisa punkti 1 alapunkt b ja VI lisa A osa)."
+      },
+      "performance": {
+        "title": "Jõudlus ja vastupidavus",
+        "description": "Akumudeli elektrokeemilise jõudluse ja vastupidavuse väärtused (XIII lisa punkt 1)."
+      },
+      "sustainability": {
+        "title": "Süsinikujalajälg, tooraine vastutustundlik hankimine ja ringlussevõetud materjali sisaldus",
+        "description": "Neid andmeid hakatakse kohaldama hilisematel kuupäevadel, mis on kindlaks määratud määruses ja selle alusel vastu võetud delegeeritud õigusaktides. Jätke need tühjaks, kuni need teie aku suhtes kehtima hakkavad."
+      },
+      "labelling": {
+        "title": "Märgistus ja vastavus",
+        "description": "Artikli 13 lõigetes 4 ja 5 sätestatud märgistusnõuded ja ELi vastavusdeklaratsioon (XIII lisa punkti 1 alapunktid q ja r)."
+      },
+      "end_of_life": {
+        "title": "Patarei- ja akujäätmete vältimine ja käitlemine",
+        "description": "Teave lõppkasutajatele patarei- ja akujäätmete vältimise ja käitlemise kohta (artikli 74 lõige 1)."
+      },
+      "restricted_model": {
+        "title": "Piiratud: õigustatud huviga isikud",
+        "description": "Avalikus passis ei kuvata kunagi. XIII lisa punkt 2: kättesaadav ainult õigustatud huviga isikutele, teada antud asutustele, turujärelevalveasutustele ja komisjonile (artikli 77 lõige 2)."
+      },
+      "restricted_authorities": {
+        "title": "Piiratud: ainult asutustele",
+        "description": "Avalikus passis ei kuvata kunagi. XIII lisa punkt 3: kättesaadav ainult teada antud asutustele, turujärelevalveasutustele ja komisjonile (artikli 77 lõige 2)."
+      },
+      "individual": {
+        "title": "Piiratud: see konkreetne aku",
+        "description": "Avalikus passis ei kuvata kunagi. XIII lisa punkt 4: teave selle konkreetse aku kohta, mida ajakohastatakse selle kasutusea jooksul, kättesaadav ainult õigustatud huviga isikutele (artikli 77 lõige 2)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Aku kategooria",
+        "help": "Kantavad patareid ja akud ning käivitus-, valgustus- või süüteakud (mootorsõidukiakud) ei vaja akupassi."
+      },
+      "product_name": {
+        "label": "Toote nimi",
+        "placeholder": "nt PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Akumudeli mudelitähis",
+        "help": "Aku identifitseerimist võimaldav teave (VI lisa A osa punkt 2).",
+        "placeholder": "nt PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Selle aku kordumatu tunnus",
+        "help": "Kordumatu tunnus, mille aku turule laskev ettevõtja on sellele konkreetsele akule andnud kooskõlas standardiga ISO/IEC 15459 või samaväärse standardiga. Akul olev ruutkood võimaldab juurdepääsu selle passile (artikli 13 lõige 6 ja artikli 77 lõige 3).",
+        "placeholder": "nt seerianumber või GS1-tunnus"
+      },
+      "manufacture_place": {
+        "label": "Valmistamise koht",
+        "help": "Aku valmistanud tehase geograafiline asukoht.",
+        "placeholder": "nt Lyon, Prantsusmaa"
+      },
+      "manufacture_date": {
+        "label": "Valmistamiskuupäev (kuu ja aasta)",
+        "placeholder": "nt 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Kaal (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Algse aku pass (kui see on asjakohane)",
+        "help": "Korduskasutamiseks ette valmistatud, kasutusotstarbe muutmiseks ette valmistatud, kasutusotstarbe muutmise läbinud või taastatud akude puhul: link algse aku või akude akupassile (artikli 77 lõige 7).",
+        "placeholder": "nt https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Valmistaja nimi"
+      },
+      "manufacturer_trade_name": {
+        "label": "Registreeritud kaubanimi või registreeritud kaubamärk"
+      },
+      "manufacturer_address": {
+        "label": "Postiaadress (ühtne kontaktpunkt)"
+      },
+      "manufacturer_website": {
+        "label": "Interneti-aadress (kui see on olemas)",
+        "placeholder": "nt https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "E-posti aadress (kui see on olemas)",
+        "help": "Kuvatakse ka kontaktina taotlustele, mis käsitlevad juurdepääsu passi piiratud teabele."
+      },
+      "authorised_representative": {
+        "label": "Volitatud esindaja (kui see on asjakohane)",
+        "help": "Volitatud esindaja nimi ja kontaktandmed, kui see on määratud."
+      },
+      "importer": {
+        "label": "Importija (kui see on asjakohane)",
+        "help": "Importija nimi, registreeritud kaubanimi või registreeritud kaubamärk, postiaadress ning interneti- ja e-posti aadress, kui see on olemas (artikli 41 lõige 3)."
+      },
+      "battery_chemistry": {
+        "label": "Akukeemia"
+      },
+      "battery_chemistry_other": {
+        "label": "Keemiline koostis (üksikasjad)"
+      },
+      "hazardous_substances": {
+        "label": "Muud ohtlikud ained kui elavhõbe, kaadmium ja plii",
+        "help": "Muud akus sisalduvad ohtlikud ained kui elavhõbe, kaadmium ja plii. Kui neid ei ole, sisestage \"Puuduvad\"."
+      },
+      "critical_raw_materials": {
+        "label": "Kriitilise tähtsusega toorained üle 0,1 massiprotsendi",
+        "help": "Akus sisalduvad kriitilise tähtsusega toorained, mille kontsentratsioon on üle 0,1 massiprotsendi."
+      },
+      "critical_raw_materials_other": {
+        "label": "Muud kriitilise tähtsusega toorained"
+      },
+      "extinguishing_agent": {
+        "label": "Kasutatav tulekustutusaine"
+      },
+      "renewable_content_share": {
+        "label": "Taastuvatest allikatest pärineva sisu osakaal (%)",
+        "help": "XIII lisa punkti 1 alapunkt f."
+      },
+      "rated_capacity_ah": {
+        "label": "Nimimahutavus (Ah)"
+      },
+      "voltage_min": {
+        "label": "Miinimumpinge (V)"
+      },
+      "voltage_nominal": {
+        "label": "Nimipinge (V)"
+      },
+      "voltage_max": {
+        "label": "Maksimumpinge (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Pingeväärtuste temperatuurivahemik (kui see on asjakohane)",
+        "placeholder": "nt -20 kuni 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Esialgne võimsus (W)"
+      },
+      "power_capability_limits": {
+        "label": "Võimsuse piirväärtused ja temperatuurivahemik (kui see on asjakohane)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Aku eeldatav kasutusiga (tsüklit)"
+      },
+      "lifetime_reference_test": {
+        "label": "Eeldatava kasutusea määramiseks kasutatud võrdluskatse"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Ammendumise piirmahutavus (%)",
+        "help": "Ainult elektrisõidukiakude puhul."
+      },
+      "idle_temperature_range": {
+        "label": "Temperatuurivahemik, mida aku suudab taluda, kui seda ei kasutata",
+        "help": "Märkige võrdluskatse.",
+        "placeholder": "nt -30 kuni 60 °C (võrdluskatse)"
+      },
+      "calendar_life_warranty": {
+        "label": "Kalendrilise kasutusea garantiiaeg",
+        "placeholder": "nt 8 aastat"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Energiatsükli kasutegur kasutuselevõtul (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Energiatsükli kasutegur pärast 50 % laadimis-tühjenemistsüklite läbimist (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Elemendi sisetakistus (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Akupaki sisetakistus (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "Tsüklilise kasutusea asjakohase katse C-määr",
+        "placeholder": "nt 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Süsinikujalajälje deklaratsioon",
+        "help": "Artikkel 7. Kohustus hakkab kehtima alles siis, kui komisjoni delegeeritud õigusakti arvutusmeetodi kohta kohaldatakse."
+      },
+      "carbon_footprint_value": {
+        "label": "Süsinikujalajälg (kg CO2e kWh kohta)"
+      },
+      "carbon_footprint_class": {
+        "label": "Süsinikujalajälje tulemusklass"
+      },
+      "carbon_footprint_study": {
+        "label": "Veebilink süsinikujalajälje väärtusi kinnitava uuringu avalikule versioonile",
+        "placeholder": "nt https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Patareide ja akudega seotud hoolsuskohustuse põhimõtteid käsitlev aruanne (tooraine vastutustundlik hankimine)",
+        "help": "Teave tooraine vastutustundliku hankimise kohta, nagu on märgitud patareide ja akudega seotud hoolsuskohustuse põhimõtteid käsitlevas aruandes (artikli 52 lõige 3). Hoolsuskohustusi kohaldatakse alates 18. augustist 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Ringlussevõetud materjali sisaldus: koobalt (%)",
+        "help": "Teave ringlussevõetud materjali sisalduse kohta, nagu on märgitud artiklis 8 osutatud dokumentides."
+      },
+      "recycled_lithium": {
+        "label": "Ringlussevõetud materjali sisaldus: liitium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Ringlussevõetud materjali sisaldus: nikkel (%)"
+      },
+      "recycled_lead": {
+        "label": "Ringlussevõetud materjali sisaldus: plii (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Aku on märgistatud liigiti kogumise sümboliga",
+        "help": "Artikli 13 lõige 4 ja VI lisa B osa."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Kaadmiumi või plii keemiline sümbol",
+        "help": "Akud, mis sisaldavad kaadmiumi üle 0,002 % või pliid üle 0,004 %, tähistatakse liigiti kogumise sümboli all keemilise sümboliga Cd või Pb (artikli 13 lõige 5)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "ELi vastavusdeklaratsioon",
+        "help": "Link ELi vastavusdeklaratsioonile või selle viide (artikkel 18).",
+        "placeholder": "nt https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Teave jäätmetekke vältimise, kogumise ja ringlussevõtu kohta",
+        "help": "Artikli 74 lõike 1 punktid a–f: kuidas lõppkasutajad saavad vältida jäätmeteket ja pikendada akude kasutusetappi, nende roll liigiti kogumisel, tagasivõtu- ja kogumispunktid, ohutusjuhised patarei- ja akujäätmete (sh liitiumi sisaldavate akude) käitlemiseks, märgiste ja sümbolite tähendus ning ainete mõju keskkonnale ja inimeste tervisele."
+      },
+      "collection_point_link": {
+        "label": "Veebilink kogumist käsitlevale teabele",
+        "placeholder": "nt https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Täpne koostis (katood, anood, elektrolüüt)",
+        "help": "Sealhulgas katoodis, anoodis ja elektrolüüdis kasutatud materjalid."
+      },
+      "battery_spare_parts": {
+        "label": "Komponentide osanumbrid ja varuosade pakkujate kontaktandmed"
+      },
+      "battery_dismantling_information": {
+        "label": "Teave demonteerimise kohta",
+        "help": "Akusüsteemi või -paki laotusjoonised, millel on näidatud elementide asukoht, demonteerimise etapid, avatavate kinnituskohtade liik ja arv, demonteerimiseks vajalikud tööriistad, hoiatused osade kahjustamise ohu kohta ning kasutatud elementide arv ja paigutus. Võib esitada lingid dokumentidele."
+      },
+      "battery_safety_measures": {
+        "label": "Ohutusmeetmed"
+      },
+      "battery_test_reports": {
+        "label": "Vastavust tõendavad katsearuanded",
+        "help": "Katsearuannete tulemused, mis tõendavad vastavust määruses ning selle alusel vastu võetud delegeeritud või rakendusaktides sätestatud nõuetele. Viited või lingid aruannetele."
+      },
+      "battery_status": {
+        "label": "Aku staatus"
+      },
+      "battery_state_of_health": {
+        "label": "Seisukord (%)",
+        "help": "Artikkel 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Seisukorra väärtuse kuupäev",
+        "placeholder": "nt 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Kasutusteave",
+        "help": "Laadimis- ja tühjenemistsüklite arv, negatiivsed sündmused, näiteks õnnetused, ning töökeskkonna tingimused, sealhulgas temperatuur ja laetustase."
+      },
+      "battery_status_change_values": {
+        "label": "Jõudlus- ja vastupidavusparameetrite väärtused staatuse muutumisel",
+        "help": "Artikli 10 lõikes 1 osutatud jõudlus- ja vastupidavusparameetrite väärtused aku turule laskmise ajal ja selle staatuse muutumise ajal."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Elektrisõidukiaku",
+        "lmt": "Kergtranspordivahendi aku",
+        "industrial": "Tööstuslik aku mahutavusega üle 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Liitiumioon, NMC (nikkel-mangaan-koobalt)",
+        "li_nca": "Liitiumioon, NCA (nikkel-koobalt-alumiinium)",
+        "li_lfp": "Liitiumioon, LFP (liitiumraudfosfaat)",
+        "li_lmfp": "Liitiumioon, LMFP (liitiummangaanraudfosfaat)",
+        "li_lmo": "Liitiumioon, LMO (liitiummangaanoksiid)",
+        "li_lto": "Liitiumioon, LTO (liitiumtitanaatanood)",
+        "sodium_ion": "Naatriumioon",
+        "nimh": "Nikkel-metallhüdriid",
+        "lead_acid": "Pliihape",
+        "other": "Muu"
+      },
+      "crm": {
+        "cobalt": "Koobalt (Co)",
+        "lithium": "Liitium (Li)",
+        "natural_graphite": "Looduslik grafiit",
+        "nickel": "Nikkel (Ni)",
+        "manganese": "Mangaan (Mn)",
+        "copper": "Vask (Cu)",
+        "aluminium": "Alumiinium (Al)",
+        "phosphorus": "Fosfor (P)",
+        "other": "Muu"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Veel ei kohaldata (artikli 7 alusel delegeeritud õigusakti ei ole vastu võetud)",
+        "declared": "Süsinikujalajälg deklareeritud"
+      },
+      "heavyMetal": {
+        "none": "Cd- ega Pb-tähist ei nõuta",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd ja Pb"
+      },
+      "status": {
+        "original": "Algne",
+        "repurposed": "Muudetud kasutusotstarbega",
+        "reused": "Korduskasutatud",
+        "remanufactured": "Taastatud",
+        "waste": "Patarei- või akujäätmed"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Piiratud teave aku kohta",
+      "body": "Täpne koostis, teave demonteerimise kohta, katsearuanded ja selle konkreetse aku andmed on kättesaadavad ainult õigustatud huviga isikutele ja asutustele (määruse (EL) 2023/1542 artikkel 77 ja XIII lisa). Juurdepääsu taotlemiseks võtke ühendust: {{contact}}.",
+      "bodyNoContact": "Täpne koostis, teave demonteerimise kohta, katsearuanded ja selle konkreetse aku andmed on kättesaadavad ainult õigustatud huviga isikutele ja asutustele (määruse (EL) 2023/1542 artikkel 77 ja XIII lisa). Juurdepääsu taotlemiseks võtke ühendust valmistajaga."
     }
   }
 }
