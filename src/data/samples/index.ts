@@ -11,6 +11,7 @@ import { buildSampleToyPassport } from './toys';
 import { buildSampleTextilesPassport } from './textiles';
 import { buildSampleCarCleaningPassport } from './carCleaning';
 import { buildSampleDetergentsPassport } from './detergents';
+import { buildSampleBatteryPassport } from './battery';
 
 /**
  * Demo passports that live in code. They render through the exact same public
@@ -25,6 +26,7 @@ export const SAMPLE_PASSPORTS: Partial<Record<ProductCategory, () => PassportFor
   textiles: buildSampleTextilesPassport,
   car_cleaning: buildSampleCarCleaningPassport,
   detergents: buildSampleDetergentsPassport,
+  battery: buildSampleBatteryPassport,
 };
 
 export function getSamplePassport(
@@ -33,4 +35,4 @@ export function getSamplePassport(
   return SAMPLE_PASSPORTS[category];
 }
 
-export { buildSampleWinePassport, buildSampleToyPassport, buildSampleTextilesPassport, buildSampleCarCleaningPassport, buildSampleDetergentsPassport };
+export { buildSampleWinePassport, buildSampleToyPassport, buildSampleTextilesPassport, buildSampleCarCleaningPassport, buildSampleDetergentsPassport, buildSampleBatteryPassport };
