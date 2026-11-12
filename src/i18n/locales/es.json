@@ -3134,7 +3134,7 @@
         "label": "Vida útil prevista de la batería (ciclos)"
       },
       "lifetime_reference_test": {
-        "label": "Prueba de referencia utilizado para la vida útil prevista"
+        "label": "Prueba de referencia utilizada para la vida útil prevista"
       },
       "capacity_threshold_exhaustion": {
         "label": "Límite de capacidad para el agotamiento (%)",
@@ -3142,7 +3142,7 @@
       },
       "idle_temperature_range": {
         "label": "Rango de temperatura que puede soportar la batería cuando no se encuentra en uso",
-        "help": "Incluya el prueba de referencia.",
+        "help": "Incluya la prueba de referencia.",
         "placeholder": "p. ej., -30 a 60 °C (prueba de referencia)"
       },
       "calendar_life_warranty": {
