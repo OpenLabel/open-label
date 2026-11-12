@@ -260,7 +260,7 @@
     "car_cleaning": "Prodotti għat-tindif tal-karozzi"
   },
   "categoryDescriptions": {
-    "battery": "Impronta tal-karbonju, riċiklaġġ, diliġenza dovuta fil-katina tal-provvista",
+    "battery": "Passaport tal-batteriji għall-batteriji tal-vetturi elettriċi, il-batteriji LMT u l-batteriji industrijali b'kapaċità akbar minn 2 kWh (Regolament (UE) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, reżistenza għan-nar",
     "textiles": "Kompożizzjoni tal-fibri, durabilità, dikjarazzjoni PFAS",
     "wine": "Ingredjenti, nutrizzjoni, indikazzjoni ġeografika",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Ippubblikat"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Kamp ta' applikazzjoni tal-passaport tal-batteriji",
+        "description": "Mit-18 ta' Frar 2027, passaport tal-batteriji huwa meħtieġ għal kull batterija LMT, kull batterija industrijali b'kapaċità akbar minn 2 kWh u kull batterija tal-vetturi elettriċi mqiegħda fis-suq jew fis-servizz (l-Artikolu 77(1) tar-Regolament (UE) 2023/1542)."
+      },
+      "identity": {
+        "title": "Identifikazzjoni tal-batterija",
+        "description": "Informazzjoni dwar il-batterija stabbilita fil-Parti A tal-Anness VI (il-punt 1(a) tal-Anness XIII)."
+      },
+      "operators": {
+        "title": "Manifattur u operaturi ekonomiċi",
+        "description": "Isem, isem kummerċjali rreġistrat jew trademark irreġistrata, indirizz postali li jindika punt ta' kuntatt uniku u, jekk disponibbli, l-indirizz tas-sit web u l-indirizz tal-posta elettronika (l-Artikoli 38(7) u 41(3))."
+      },
+      "composition": {
+        "title": "Kompożizzjoni tal-materjal",
+        "description": "Kimika, sustanzi perikolużi u materja prima kritika (il-punt 1(b) tal-Anness XIII u l-Parti A tal-Anness VI)."
+      },
+      "performance": {
+        "title": "Prestazzjoni u durabbiltà",
+        "description": "Valuri tal-prestazzjoni elettrokimika u tad-durabbiltà għall-mudell tal-batterija (il-punt 1 tal-Anness XIII)."
+      },
+      "sustainability": {
+        "title": "Impronta tal-karbonju, akkwist responsabbli u kontenut riċiklat",
+        "description": "Dawn l-elementi jibdew japplikaw f'dati aktar tard stabbiliti mir-Regolament u mill-atti delegati tiegħu. Ħallihom vojta sakemm japplikaw għall-batterija tiegħek."
+      },
+      "labelling": {
+        "title": "Tikkettar u konformità",
+        "description": "Ir-rekwiżiti tat-tikkettar tal-Artikolu 13(4) u (5) u d-dikjarazzjoni ta' konformità tal-UE (il-punt 1(q) u (r) tal-Anness XIII)."
+      },
+      "end_of_life": {
+        "title": "Prevenzjoni u mmaniġġar tal-iskart",
+        "description": "Informazzjoni għall-utenti finali dwar il-prevenzjoni u l-immaniġġar tal-iskart ta' batteriji (l-Artikolu 74(1))."
+      },
+      "restricted_model": {
+        "title": "Ristrett: persuni b'interess leġittimu",
+        "description": "Qatt ma jintwera fuq il-passaport pubbliku. Il-punt 2 tal-Anness XIII: aċċessibbli biss għal persuni b'interess leġittimu, għall-korpi nnotifikati, għall-awtoritajiet tas-sorveljanza tas-suq u għall-Kummissjoni (l-Artikolu 77(2))."
+      },
+      "restricted_authorities": {
+        "title": "Ristrett: awtoritajiet biss",
+        "description": "Qatt ma jintwera fuq il-passaport pubbliku. Il-punt 3 tal-Anness XIII: aċċessibbli biss għall-korpi nnotifikati, għall-awtoritajiet tas-sorveljanza tas-suq u għall-Kummissjoni (l-Artikolu 77(2))."
+      },
+      "individual": {
+        "title": "Ristrett: din il-batterija individwali",
+        "description": "Qatt ma jintwera fuq il-passaport pubbliku. Il-punt 4 tal-Anness XIII: informazzjoni dwar din il-batterija speċifika, aġġornata matul il-ħajja tagħha, aċċessibbli biss għal persuni b'interess leġittimu (l-Artikolu 77(2))."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Kategorija tal-batterija",
+        "help": "Il-batteriji portabbli u l-batteriji SLI (batteriji għall-istartjar, it-tidwil u t-tqabbid) ma għandhomx bżonn passaport tal-batteriji."
+      },
+      "product_name": {
+        "label": "Isem il-prodott",
+        "placeholder": "eż., PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Identifikatur tal-mudell tal-batterija",
+        "help": "Informazzjoni li tidentifika l-batterija (il-punt 2 tal-Parti A tal-Anness VI).",
+        "placeholder": "eż., PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Identifikatur uniku ta' din il-batterija",
+        "help": "L-identifikatur uniku assenjat lil din il-batterija individwali mill-operatur ekonomiku li jqegħidha fis-suq, konformi mal-ISO/IEC 15459 jew ma' standard ekwivalenti. Il-kodiċi QR fuq il-batterija jagħti aċċess għall-passaport tagħha (l-Artikoli 13(6) u 77(3)).",
+        "placeholder": "eż., numru tas-serje jew identifikatur GS1"
+      },
+      "manufacture_place": {
+        "label": "Post tal-manifattura",
+        "help": "Il-pożizzjoni ġeografika tal-impjant tal-manifattura tal-batteriji.",
+        "placeholder": "eż., Ħal Far, Malta"
+      },
+      "manufacture_date": {
+        "label": "Data tal-manifattura (xahar u sena)",
+        "placeholder": "eż., 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Piż (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Passaport tal-batterija oriġinali (fejn applikabbli)",
+        "help": "Għall-batteriji ppreparati għal użu mill-ġdid jew għall-adattament għal skop differenti, adattati għal skop differenti jew manifatturati mill-ġdid: link għall-passaport jew passaporti tal-batterija jew tal-batteriji oriġinali (l-Artikolu 77(7)).",
+        "placeholder": "eż., https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Isem il-manifattur"
+      },
+      "manufacturer_trade_name": {
+        "label": "Isem kummerċjali rreġistrat jew trademark irreġistrata"
+      },
+      "manufacturer_address": {
+        "label": "Indirizz postali (punt ta' kuntatt uniku)"
+      },
+      "manufacturer_website": {
+        "label": "Indirizz tas-sit web (jekk disponibbli)",
+        "placeholder": "eż., https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "Indirizz tal-posta elettronika (jekk disponibbli)",
+        "help": "Jintwera wkoll bħala l-kuntatt għat-talbiet għal aċċess għall-informazzjoni ristretta tal-passaport."
+      },
+      "authorised_representative": {
+        "label": "Rappreżentant awtorizzat (fejn applikabbli)",
+        "help": "Isem u dettalji ta' kuntatt tar-rappreżentant awtorizzat, fejn jinħatar wieħed."
+      },
+      "importer": {
+        "label": "Importatur (fejn applikabbli)",
+        "help": "Isem, isem kummerċjali rreġistrat jew trademark irreġistrata, indirizz postali u, jekk disponibbli, l-indirizz tas-sit web u l-indirizz tal-posta elettronika tal-importatur (l-Artikolu 41(3))."
+      },
+      "battery_chemistry": {
+        "label": "Kimika tal-batterija"
+      },
+      "battery_chemistry_other": {
+        "label": "Kimika (dettalji)"
+      },
+      "hazardous_substances": {
+        "label": "Sustanzi perikolużi (għajr il-merkurju, il-kadmju jew iċ-ċomb)",
+        "help": "Sustanzi perikolużi preżenti fil-batterija, għajr il-merkurju, il-kadmju jew iċ-ċomb. Daħħal \"Xejn\" jekk ma hemm l-ebda waħda."
+      },
+      "critical_raw_materials": {
+        "label": "Materja prima kritika f'konċentrazzjoni ta' aktar minn 0,1 % piż skont il-piż",
+        "help": "Materja prima kritika preżenti fil-batterija f'konċentrazzjoni ta' aktar minn 0,1 % piż skont il-piż."
+      },
+      "critical_raw_materials_other": {
+        "label": "Materja prima kritika oħra"
+      },
+      "extinguishing_agent": {
+        "label": "Aġent tat-tifi tan-nar li jista' jintuża"
+      },
+      "renewable_content_share": {
+        "label": "Sehem tal-kontenut rinnovabbli (%)",
+        "help": "Il-punt 1(f) tal-Anness XIII."
+      },
+      "rated_capacity_ah": {
+        "label": "Kapaċità attribwita (Ah)"
+      },
+      "voltage_min": {
+        "label": "Vultaġġ minimu (V)"
+      },
+      "voltage_nominal": {
+        "label": "Vultaġġ nominali (V)"
+      },
+      "voltage_max": {
+        "label": "Vultaġġ massimu (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Meded tat-temperatura għall-valuri tal-vultaġġ (meta jkunu rilevanti)",
+        "placeholder": "eż., minn -20 sa 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Kapaċità f'termini ta' potenza oriġinali (W)"
+      },
+      "power_capability_limits": {
+        "label": "Limiti tal-kapaċità f'termini ta' potenza u medda ta' temperaturi (meta rilevanti)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Tul tal-ħajja mistenni tal-batterija (ċikli)"
+      },
+      "lifetime_reference_test": {
+        "label": "Test ta' referenza użat għat-tul tal-ħajja mistenni"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Limitu tal-kapaċità għall-eżawriment (%)",
+        "help": "Għall-batteriji tal-vetturi elettriċi biss."
+      },
+      "idle_temperature_range": {
+        "label": "Medda tat-temperaturi li l-batterija tista' tiflaħ meta ma tkunx qed tintuża",
+        "help": "Inkludi t-test ta' referenza.",
+        "placeholder": "eż., minn -30 sa 60 °C (test ta' referenza)"
+      },
+      "calendar_life_warranty": {
+        "label": "Perjodu li għalih tapplika l-garanzija kummerċjali għall-ħajja kalendarja",
+        "placeholder": "eż., 8 snin"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Effiċjenza inizjali taċ-ċiklu sħiħ tal-enerġija (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Effiċjenza taċ-ċiklu sħiħ tal-enerġija b'50 % tal-ħajja taċ-ċiklu (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Reżistenza interna taċ-ċellola tal-batterija (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Reżistenza interna tal-pakkett tal-batterija (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "Rata C tat-test rilevanti tal-ħajja taċ-ċiklu",
+        "placeholder": "eż., 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Dikjarazzjoni tal-impronta tal-karbonju",
+        "help": "L-Artikolu 7. L-obbligu jibda biss ladarba japplika l-att delegat tal-Kummissjoni dwar il-metodu tal-kalkolu."
+      },
+      "carbon_footprint_value": {
+        "label": "Impronta tal-karbonju (kg CO2e għal kull kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Klassi ta' prestazzjoni tal-impronta tal-karbonju"
+      },
+      "carbon_footprint_study": {
+        "label": "Link tal-web għall-istudju pubbliku tal-impronta tal-karbonju",
+        "placeholder": "eż., https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Rapport dwar il-politika tad-diliġenza dovuta (akkwist responsabbli)",
+        "help": "Informazzjoni dwar l-akkwist responsabbli kif indikat fir-rapport dwar il-politika tad-diliġenza dovuta tal-batteriji (l-Artikolu 52(3)). L-obbligi tad-diliġenza dovuta japplikaw mit-18 ta' Awwissu 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Kontenut riċiklat: kobalt (%)",
+        "help": "Informazzjoni dwar il-kontenut irriċiklat kif jinsab fid-dokumentazzjoni msemmija fl-Artikolu 8."
+      },
+      "recycled_lithium": {
+        "label": "Kontenut riċiklat: litju (%)"
+      },
+      "recycled_nickel": {
+        "label": "Kontenut riċiklat: nikil (%)"
+      },
+      "recycled_lead": {
+        "label": "Kontenut riċiklat: ċomb (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Batterija mmarkata bis-simbolu tal-ġbir separat",
+        "help": "L-Artikolu 13(4) u l-Parti B tal-Anness VI."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Simbolu kimiku tal-kadmju jew taċ-ċomb",
+        "help": "Il-batteriji li fihom aktar minn 0,002 % kadmju jew aktar minn 0,004 % ċomb jiġu mmarkati b'Cd jew Pb taħt is-simbolu tal-ġbir separat (l-Artikolu 13(5))."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "Dikjarazzjoni ta' konformità tal-UE",
+        "help": "Link għad-dikjarazzjoni ta' konformità tal-UE jew ir-referenza tagħha (l-Artikolu 18).",
+        "placeholder": "eż., https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Informazzjoni dwar il-prevenzjoni tal-iskart, il-ġbir u r-riċiklaġġ",
+        "help": "L-Artikolu 74(1), il-punti (a) sa (f): kif l-utenti finali jistgħu jipprevjenu l-iskart u jestendu l-fażi tal-użu tal-batteriji, ir-rwol tagħhom fil-ġbir separat, il-punti ta' teħid lura u ġbir, l-istruzzjonijiet ta' sikurezza għall-immaniġġar tal-iskart ta' batteriji (inklużi l-batteriji tal-litju), it-tifsira tas-simboli, u l-impatt tas-sustanzi fuq is-saħħa u l-ambjent."
+      },
+      "collection_point_link": {
+        "label": "Link tal-web għall-informazzjoni dwar il-ġbir",
+        "placeholder": "eż., https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Kompożizzjoni dettaljata (katodu, anodu, elettrolit)",
+        "help": "Inklużi l-materjali użati fil-katodu, fl-anodu u fl-elettrolit."
+      },
+      "battery_spare_parts": {
+        "label": "Numri tal-partijiet għall-komponenti u dettalji ta' kuntatt tas-sorsi għall-partijiet tal-bdil"
+      },
+      "battery_dismantling_information": {
+        "label": "Informazzjoni dwar iż-żarmar",
+        "help": "Dijagrammi li jagħtu dettalji tas-sistema/pakkett tal-batterija li juru fejn jinsabu ċ-ċelluli, sekwenzi taż-żarmar, it-tip u n-numru tat-tekniki ta' twaħħil għall-ftuħ, l-għodod meħtieġa, twissijiet jekk jeżisti riskju ta' ħsara lil partijiet, u l-ammont ta' ċelluli użati u t-tqassim tagħhom. Links għal dokumenti huma aċċettabbli."
+      },
+      "battery_safety_measures": {
+        "label": "Miżuri tas-sikurezza"
+      },
+      "battery_test_reports": {
+        "label": "Rapporti tat-testijiet li jagħtu prova tal-konformità",
+        "help": "Riżultati tar-rapporti tat-testijiet li jagħtu prova tal-konformità mar-Regolament u mal-atti ta' implimentazzjoni u delegati tiegħu. Referenzi jew links għar-rapporti."
+      },
+      "battery_status": {
+        "label": "Status tal-batterija"
+      },
+      "battery_state_of_health": {
+        "label": "Stat tas-saħħa (%)",
+        "help": "L-Artikolu 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Data tal-valur tal-istat tas-saħħa",
+        "placeholder": "eż., 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Informazzjoni dwar l-użu",
+        "help": "L-għadd ta' ċikli tal-iċċarġjar u tal-iskarika, avvenimenti negattivi bħal aċċidenti, u l-kondizzjonijiet tat-tħaddim bħat-temperatura u l-istat ta' ċarġ."
+      },
+      "battery_status_change_values": {
+        "label": "Valuri tal-prestazzjoni u tad-durabbiltà meta jinbidel l-istatus",
+        "help": "Il-valuri għall-parametri tal-prestazzjoni u tad-durabbiltà msemmija fl-Artikolu 10(1) meta l-batterija tqiegħdet fis-suq u meta nbidel l-istatus tagħha."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Batterija ta' vetturi elettriċi",
+        "lmt": "Batterija LMT (batterija ta' mezzi tat-trasport ħfief)",
+        "industrial": "Batterija industrijali b'kapaċità ta' aktar minn 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Joni tal-litju, NMC (nikil, manganiż, kobalt)",
+        "li_nca": "Joni tal-litju, NCA (nikil, kobalt, aluminju)",
+        "li_lfp": "Joni tal-litju, LFP (fosfat tal-ħadid tal-litju)",
+        "li_lmfp": "Joni tal-litju, LMFP (fosfat tal-ħadid tal-manganiż tal-litju)",
+        "li_lmo": "Joni tal-litju, LMO (ossidu tal-manganiż tal-litju)",
+        "li_lto": "Joni tal-litju, LTO (anodu tat-titanat tal-litju)",
+        "sodium_ion": "Joni tas-sodju",
+        "nimh": "Idrur tal-metall tan-nikil",
+        "lead_acid": "Aċidu taċ-ċomb",
+        "other": "Oħra"
+      },
+      "crm": {
+        "cobalt": "Kobalt",
+        "lithium": "Litju",
+        "natural_graphite": "Grafita naturali",
+        "nickel": "Nikil",
+        "manganese": "Manganiż",
+        "copper": "Ram",
+        "aluminium": "Aluminju",
+        "phosphorus": "Fosfru",
+        "other": "Oħra"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Għadu mhux applikabbli (l-att delegat skont l-Artikolu 7 għadu ma ġiex adottat)",
+        "declared": "Impronta tal-karbonju ddikjarata"
+      },
+      "heavyMetal": {
+        "none": "L-ebda simbolu Cd jew Pb mhu meħtieġ",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd u Pb"
+      },
+      "status": {
+        "original": "Oriġinali",
+        "repurposed": "Adattata għal skop differenti",
+        "reused": "Użata mill-ġdid",
+        "remanufactured": "Manifatturata mill-ġdid",
+        "waste": "Skart"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Informazzjoni ristretta dwar il-batterija",
+      "body": "Il-kompożizzjoni dettaljata, l-informazzjoni dwar iż-żarmar, ir-rapporti tat-testijiet u d-data dwar din il-batterija individwali huma disponibbli biss għal persuni b'interess leġittimu u għall-awtoritajiet (l-Artikolu 77 u l-Anness XIII tar-Regolament (UE) 2023/1542). Biex titlob aċċess, ikkuntattja lil {{contact}}.",
+      "bodyNoContact": "Il-kompożizzjoni dettaljata, l-informazzjoni dwar iż-żarmar, ir-rapporti tat-testijiet u d-data dwar din il-batterija individwali huma disponibbli biss għal persuni b'interess leġittimu u għall-awtoritajiet (l-Artikolu 77 u l-Anness XIII tar-Regolament (UE) 2023/1542). Biex titlob aċċess, ikkuntattja lill-manifattur."
     }
   }
 }

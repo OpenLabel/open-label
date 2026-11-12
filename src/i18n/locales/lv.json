@@ -260,7 +260,7 @@
     "car_cleaning": "Automašīnu tīrīšanas līdzekļi"
   },
   "categoryDescriptions": {
-    "battery": "Oglekļa pēda, pārstrāde, piegādes ķēdes pienācīga pārbaude",
+    "battery": "Baterijas pase elektrotransportlīdzekļu baterijām, LMT baterijām un rūpnieciskajām baterijām ar kapacitāti virs 2 kWh (Regula (ES) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, ugunsizturība",
     "textiles": "Šķiedru sastāvs, izturība, PFAS deklarācija",
     "wine": "Sastāvdaļas, uzturvērtība, ģeogrāfiskā norāde",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Publicēts"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Baterijas pases darbības joma",
+        "description": "No 2027. gada 18. februāra baterijas pase ir nepieciešama katrai LMT baterijai, katrai rūpnieciskajai baterijai ar kapacitāti virs 2 kWh un katrai elektrotransportlīdzekļa baterijai, kas laista tirgū vai ekspluatācijā (Regulas (ES) 2023/1542 77. panta 1. punkts)."
+      },
+      "identity": {
+        "title": "Baterijas identifikācija",
+        "description": "Informācija par bateriju, kas noteikta VI pielikuma A daļā (XIII pielikuma 1. punkta a) apakšpunkts)."
+      },
+      "operators": {
+        "title": "Izgatavotājs un ekonomikas operatori",
+        "description": "Nosaukums, reģistrētais tirdzniecības nosaukums vai reģistrētā preču zīme, pasta adrese, norādot vienotu kontaktpunktu, un, ja tāda ir, tīmekļa vietnes adrese un e-pasta adrese (38. panta 7. punkts un 41. panta 3. punkts)."
+      },
+      "composition": {
+        "title": "Materiālu sastāvs",
+        "description": "Ķīmiskais sastāvs, bīstamās vielas un kritiski svarīgie izejmateriāli (XIII pielikuma 1. punkta b) apakšpunkts un VI pielikuma A daļa)."
+      },
+      "performance": {
+        "title": "Sniegums un ilgizturība",
+        "description": "Baterijas modeļa elektroķīmiskā snieguma un ilgizturības vērtības (XIII pielikuma 1. punkts)."
+      },
+      "sustainability": {
+        "title": "Oglekļa pēda, atbildīga ieguve un reciklētais saturs",
+        "description": "Šīs prasības sāk piemērot vēlākos datumos, kas noteikti regulā un tās deleģētajos aktos. Atstājiet tās tukšas, līdz tās attiecas uz jūsu bateriju."
+      },
+      "labelling": {
+        "title": "Marķējums un atbilstība",
+        "description": "13. panta 4. un 5. punkta marķēšanas prasības un ES atbilstības deklarācija (XIII pielikuma 1. punkta q) un r) apakšpunkts)."
+      },
+      "end_of_life": {
+        "title": "Atkritumu rašanās novēršana un apsaimniekošana",
+        "description": "Informācija tiešajiem lietotājiem par bateriju atkritumu rašanās novēršanu un apsaimniekošanu (74. panta 1. punkts)."
+      },
+      "restricted_model": {
+        "title": "Ierobežota piekļuve: personas, kurām ir leģitīmas intereses",
+        "description": "Nekad netiek rādīts publiskajā pasē. XIII pielikuma 2. punkts: pieejams tikai personām, kurām ir leģitīmas intereses, paziņotajām struktūrām, tirgus uzraudzības iestādēm un Komisijai (77. panta 2. punkts)."
+      },
+      "restricted_authorities": {
+        "title": "Ierobežota piekļuve: tikai iestādēm",
+        "description": "Nekad netiek rādīts publiskajā pasē. XIII pielikuma 3. punkts: pieejams tikai paziņotajām struktūrām, tirgus uzraudzības iestādēm un Komisijai (77. panta 2. punkts)."
+      },
+      "individual": {
+        "title": "Ierobežota piekļuve: šī atsevišķā baterija",
+        "description": "Nekad netiek rādīts publiskajā pasē. XIII pielikuma 4. punkts: informācija par šo konkrēto bateriju, ko atjaunina tās darbmūža laikā, pieejama tikai personām, kurām ir leģitīmas intereses (77. panta 2. punkts)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Baterijas kategorija",
+        "help": "Pārnēsājamām baterijām un SLI baterijām (baterijām, kas paredzētas starterim, apgaismes shēmai un aizdedzei) baterijas pase nav nepieciešama."
+      },
+      "product_name": {
+        "label": "Produkta nosaukums",
+        "placeholder": "piem., PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Baterijas modeļa identifikators",
+        "help": "Informācija, kas identificē bateriju (VI pielikuma A daļas 2. punkts).",
+        "placeholder": "piem., PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Šīs baterijas unikālais identifikators",
+        "help": "Unikālais identifikators, ko šai atsevišķajai baterijai piešķīris ekonomikas operators, kas to laiž tirgū, un kas atbilst ISO/IEC 15459 vai līdzvērtīgam standartam. QR kods uz baterijas nodrošina piekļuvi tās pasei (13. panta 6. punkts un 77. panta 3. punkts).",
+        "placeholder": "piem., sērijas numurs vai GS1 identifikators"
+      },
+      "manufacture_place": {
+        "label": "Izgatavošanas vieta",
+        "help": "Bateriju ražotnes ģeogrāfiskā atrašanās vieta.",
+        "placeholder": "piem., Rīga, Latvija"
+      },
+      "manufacture_date": {
+        "label": "Izgatavošanas datums (mēnesis un gads)",
+        "placeholder": "piem., 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Masa (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Sākotnējās baterijas pase (attiecīgā gadījumā)",
+        "help": "Baterijām, kas sagatavotas atkalizmantošanai vai pārprofilēšanai, pārprofilētām vai pārražotām baterijām: saite uz sākotnējās baterijas vai bateriju baterijas pasi vai pasēm (77. panta 7. punkts).",
+        "placeholder": "piem., https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Izgatavotāja nosaukums"
+      },
+      "manufacturer_trade_name": {
+        "label": "Reģistrētais tirdzniecības nosaukums vai reģistrētā preču zīme"
+      },
+      "manufacturer_address": {
+        "label": "Pasta adrese (vienots kontaktpunkts)"
+      },
+      "manufacturer_website": {
+        "label": "Tīmekļa vietnes adrese (ja tāda ir)",
+        "placeholder": "piem., https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "E-pasta adrese (ja tāda ir)",
+        "help": "Tiek rādīta arī kā kontaktinformācija pieprasījumiem piekļūt ierobežotas piekļuves pases informācijai."
+      },
+      "authorised_representative": {
+        "label": "Pilnvarotais pārstāvis (attiecīgā gadījumā)",
+        "help": "Pilnvarotā pārstāvja nosaukums un kontaktinformācija, ja tāds ir iecelts."
+      },
+      "importer": {
+        "label": "Importētājs (attiecīgā gadījumā)",
+        "help": "Importētāja nosaukums, reģistrētais tirdzniecības nosaukums vai reģistrētā preču zīme, pasta adrese un, ja tādas ir, tīmekļa vietnes adrese un e-pasta adrese (41. panta 3. punkts)."
+      },
+      "battery_chemistry": {
+        "label": "Baterijas ķīmiskais sastāvs"
+      },
+      "battery_chemistry_other": {
+        "label": "Ķīmiskais sastāvs (sīkāka informācija)"
+      },
+      "hazardous_substances": {
+        "label": "Bīstamās vielas (kas nav dzīvsudrabs, kadmijs vai svins)",
+        "help": "Baterijā esošās bīstamās vielas, kas nav dzīvsudrabs, kadmijs vai svins. Ja to nav, ievadiet \"Nav\"."
+      },
+      "critical_raw_materials": {
+        "label": "Kritiski svarīgie izejmateriāli, kuru koncentrācija ir lielāka par 0,1 % no masas",
+        "help": "Baterijā esošie kritiski svarīgie izejmateriāli, kuru koncentrācija ir lielāka par 0,1 % no masas."
+      },
+      "critical_raw_materials_other": {
+        "label": "Citi kritiski svarīgie izejmateriāli"
+      },
+      "extinguishing_agent": {
+        "label": "Izmantojamais dzēšanas līdzeklis"
+      },
+      "renewable_content_share": {
+        "label": "Atjaunojamā satura īpatsvars (%)",
+        "help": "XIII pielikuma 1. punkta f) apakšpunkts."
+      },
+      "rated_capacity_ah": {
+        "label": "Nominālā kapacitāte (Ah)"
+      },
+      "voltage_min": {
+        "label": "Minimālais spriegums (V)"
+      },
+      "voltage_nominal": {
+        "label": "Nominālais spriegums (V)"
+      },
+      "voltage_max": {
+        "label": "Maksimālais spriegums (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Sprieguma vērtību temperatūras diapazons (attiecīgā gadījumā)",
+        "placeholder": "piem., no -20 līdz 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Oriģinālā jaudas spēja (W)"
+      },
+      "power_capability_limits": {
+        "label": "Jaudas spējas limiti un temperatūras diapazons (attiecīgā gadījumā)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Paredzamais baterijas darbmūžs (cikli)"
+      },
+      "lifetime_reference_test": {
+        "label": "Paredzamajam darbmūžam izmantotais references tests"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Kapacitātes slieksnis, pie kura baterija ir izsmelta (%)",
+        "help": "Tikai elektrotransportlīdzekļu baterijām."
+      },
+      "idle_temperature_range": {
+        "label": "Temperatūras diapazons, ko baterija spēj izturēt, kad to nelieto",
+        "help": "Norādiet references testu.",
+        "placeholder": "piem., no -30 līdz 60 °C (references tests)"
+      },
+      "calendar_life_warranty": {
+        "label": "Periods, kurā darbojas kalendārajam mūžam piemērojamā komercgarantija",
+        "placeholder": "piem., 8 gadi"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Sākotnējā enerģijas riņķojuma energoefektivitāte (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Enerģijas riņķojuma energoefektivitāte pie 50 % ciklmūža (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Baterijas elementa iekšējā pretestība (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Baterijas paketes iekšējā pretestība (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "Relevantā ciklmūža testa C-reitings",
+        "placeholder": "piem., 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Oglekļa pēdas deklarācija",
+        "help": "7. pants. Pienākumu sāk piemērot tikai tad, kad tiek piemērots Komisijas deleģētais akts par aprēķina metodi."
+      },
+      "carbon_footprint_value": {
+        "label": "Oglekļa pēda (kg CO2e uz kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Oglekļa pēdas snieguma klase"
+      },
+      "carbon_footprint_study": {
+        "label": "Tīmekļa saite uz publisko oglekļa pēdas pētījumu",
+        "placeholder": "piem., https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Ziņojums par bateriju pienācīgas pārbaudes politiku (atbildīga ieguve)",
+        "help": "Informācija par atbildīgu ieguvi, kā norādīts ziņojumā par bateriju pienācīgas pārbaudes politiku (52. panta 3. punkts). Pienācīgas pārbaudes pienākumus piemēro no 2027. gada 18. augusta."
+      },
+      "recycled_cobalt": {
+        "label": "Reciklētais saturs: kobalts (%)",
+        "help": "Informācija par reciklēto materiālu saturu, kā tā ietverta 8. pantā minētajā dokumentācijā."
+      },
+      "recycled_lithium": {
+        "label": "Reciklētais saturs: litijs (%)"
+      },
+      "recycled_nickel": {
+        "label": "Reciklētais saturs: niķelis (%)"
+      },
+      "recycled_lead": {
+        "label": "Reciklētais saturs: svins (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Baterija marķēta ar dalītās savākšanas simbolu",
+        "help": "13. panta 4. punkts un VI pielikuma B daļa."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Kadmija vai svina ķīmiskais simbols",
+        "help": "Baterijas, kas satur vairāk nekā 0,002 % kadmija vai vairāk nekā 0,004 % svina, zem dalītās savākšanas simbola marķē ar Cd vai Pb (13. panta 5. punkts)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "ES atbilstības deklarācija",
+        "help": "Saite uz ES atbilstības deklarāciju vai tās atsauce (18. pants).",
+        "placeholder": "piem., https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Informācija par atkritumu rašanās novēršanu, savākšanu un reciklēšanu",
+        "help": "74. panta 1. punkta a) līdz f) apakšpunkts: kā tiešie lietotāji var novērst atkritumu rašanos un pagarināt bateriju lietošanas posmu, viņu loma dalītajā savākšanā, atpakaļpieņemšanas un savākšanas punkti, drošuma instrukcijas, kā rīkoties ar bateriju atkritumiem (tostarp litija baterijām), simbolu nozīme un vielu ietekme uz veselību un vidi."
+      },
+      "collection_point_link": {
+        "label": "Tīmekļa saite uz informāciju par savākšanu",
+        "placeholder": "piem., https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Detalizēts sastāvs (katods, anods, elektrolīts)",
+        "help": "Tostarp katodā, anodā un elektrolītā izmantotie materiāli."
+      },
+      "battery_spare_parts": {
+        "label": "Komponentu daļu numuri un maināmo rezerves daļu sagādes avotu kontaktinformācija"
+      },
+      "battery_dismantling_information": {
+        "label": "Informācija par demontāžu",
+        "help": "Shēmas klaidskatā, kurās redzama elementu atrašanās vieta, demontāžas secība, atbloķējamo stiprinājumu veids un skaits, demontāžai vajadzīgie darbarīki, brīdinājumi, ja pastāv risks sabojāt detaļas, un izmantoto elementu skaits un izkārtojums. Var norādīt saites uz dokumentiem."
+      },
+      "battery_safety_measures": {
+        "label": "Drošuma pasākumi"
+      },
+      "battery_test_reports": {
+        "label": "Testēšanas pārskati, kas apliecina atbilstību",
+        "help": "Testēšanas pārskatu rezultāti, kas apliecina atbilstību regulai un tās īstenošanas un deleģētajiem aktiem. Atsauces vai saites uz pārskatiem."
+      },
+      "battery_status": {
+        "label": "Baterijas statuss"
+      },
+      "battery_state_of_health": {
+        "label": "Veselības stāvoklis (%)",
+        "help": "14. pants."
+      },
+      "battery_state_of_health_date": {
+        "label": "Veselības stāvokļa vērtības datums",
+        "placeholder": "piem., 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Informācija par lietošanu",
+        "help": "Uzlādes un izlādes ciklu skaits, negatīvi notikumi, piemēram, negadījumi, un ekspluatācijas apstākļi, piemēram, temperatūra un uzlādes stāvoklis."
+      },
+      "battery_status_change_values": {
+        "label": "Snieguma un ilgizturības vērtības statusa maiņas brīdī",
+        "help": "10. panta 1. punktā minētās snieguma un ilgizturības parametru vērtības brīdī, kad baterija tika laista tirgū, un brīdī, kad mainījās tās statuss."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Elektrotransportlīdzekļa baterija",
+        "lmt": "LMT baterija (vieglo pārvietošanās līdzekļu baterija)",
+        "industrial": "Rūpnieciskā baterija, kuras kapacitāte pārsniedz 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Litija jonu, NMC (niķelis, mangāns, kobalts)",
+        "li_nca": "Litija jonu, NCA (niķelis, kobalts, alumīnijs)",
+        "li_lfp": "Litija jonu, LFP (litija dzelzs fosfāts)",
+        "li_lmfp": "Litija jonu, LMFP (litija mangāna dzelzs fosfāts)",
+        "li_lmo": "Litija jonu, LMO (litija mangāna oksīds)",
+        "li_lto": "Litija jonu, LTO (litija titanāta anods)",
+        "sodium_ion": "Nātrija jonu",
+        "nimh": "Niķeļa metālhidrīda",
+        "lead_acid": "Svina-skābes",
+        "other": "Cits"
+      },
+      "crm": {
+        "cobalt": "Kobalts",
+        "lithium": "Litijs",
+        "natural_graphite": "Dabiskais grafīts",
+        "nickel": "Niķelis",
+        "manganese": "Mangāns",
+        "copper": "Varš",
+        "aluminium": "Alumīnijs",
+        "phosphorus": "Fosfors",
+        "other": "Cits"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Vēl nav piemērojams (deleģētais akts saskaņā ar 7. pantu nav pieņemts)",
+        "declared": "Oglekļa pēda deklarēta"
+      },
+      "heavyMetal": {
+        "none": "Cd vai Pb simbols nav nepieciešams",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd un Pb"
+      },
+      "status": {
+        "original": "Oriģināls",
+        "repurposed": "Pārprofilēts",
+        "reused": "Atkārtoti izmantots",
+        "remanufactured": "Pārražots",
+        "waste": "Atkritumi"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Ierobežotas piekļuves informācija par bateriju",
+      "body": "Detalizēts sastāvs, informācija par demontāžu, testēšanas pārskati un dati par šo atsevišķo bateriju ir pieejami tikai personām, kurām ir leģitīmas intereses, un iestādēm (Regulas (ES) 2023/1542 77. pants un XIII pielikums). Lai pieprasītu piekļuvi, sazinieties ar {{contact}}.",
+      "bodyNoContact": "Detalizēts sastāvs, informācija par demontāžu, testēšanas pārskati un dati par šo atsevišķo bateriju ir pieejami tikai personām, kurām ir leģitīmas intereses, un iestādēm (Regulas (ES) 2023/1542 77. pants un XIII pielikums). Lai pieprasītu piekļuvi, sazinieties ar izgatavotāju."
     }
   }
 }
