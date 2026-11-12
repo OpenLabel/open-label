@@ -260,7 +260,7 @@
     "car_cleaning": "Bilrengøringsprodukter"
   },
   "categoryDescriptions": {
-    "battery": "CO₂-fodaftryk, genbrug, forsyningskæde-due diligence",
+    "battery": "Batteripas for elkøretøjsbatterier, LMT-batterier og industribatterier over 2 kWh (forordning (EU) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, brandmodstand",
     "textiles": "Fibersammensætning, holdbarhed, PFAS-erklæring",
     "wine": "Ingredienser, ernæring, geografisk betegnelse",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Offentliggjort"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Batteripassets anvendelsesområde",
+        "description": "Fra den 18. februar 2027 kræves der et batteripas for hvert LMT-batteri, hvert industribatteri med en kapacitet på over 2 kWh og hvert elkøretøjsbatteri, der bringes i omsætning eller ibrugtages (artikel 77, stk. 1, i forordning (EU) 2023/1542)."
+      },
+      "identity": {
+        "title": "Identifikation af batteriet",
+        "description": "Oplysninger om batteriet som fastsat i bilag VI, del A (bilag XIII, punkt 1, litra a))."
+      },
+      "operators": {
+        "title": "Fabrikant og erhvervsdrivende",
+        "description": "Navn, registreret firmanavn eller registreret varemærke, postadresse, der angiver ét enkelt kontaktsted, og, hvis en sådan haves, web- og e-mailadresse (artikel 38, stk. 7, og artikel 41, stk. 3)."
+      },
+      "composition": {
+        "title": "Materialesammensætning",
+        "description": "Kemi, farlige stoffer og kritiske råstoffer (bilag XIII, punkt 1, litra b), og bilag VI, del A)."
+      },
+      "performance": {
+        "title": "Ydeevne og holdbarhed",
+        "description": "Elektrokemiske ydeevne- og holdbarhedsværdier for batterimodellen (bilag XIII, punkt 1)."
+      },
+      "sustainability": {
+        "title": "CO2-fodaftryk, ansvarlig fremskaffelse og genanvendt indhold",
+        "description": "Disse oplysninger finder anvendelse fra senere datoer, der er fastsat i forordningen og de delegerede retsakter hertil. Lad dem stå tomme, indtil de gælder for dit batteri."
+      },
+      "labelling": {
+        "title": "Mærkning og overensstemmelse",
+        "description": "Mærkningskravene i artikel 13, stk. 4 og 5, og EU-overensstemmelseserklæringen (bilag XIII, punkt 1, litra q) og r))."
+      },
+      "end_of_life": {
+        "title": "Affaldsforebyggelse og -håndtering",
+        "description": "Oplysninger til slutbrugere om forebyggelse og håndtering af udtjente batterier (artikel 74, stk. 1)."
+      },
+      "restricted_model": {
+        "title": "Begrænset: personer med en legitim interesse",
+        "description": "Vises aldrig i det offentlige pas. Bilag XIII, punkt 2: kun tilgængeligt for personer med en legitim interesse, bemyndigede organer, markedsovervågningsmyndigheder og Kommissionen (artikel 77, stk. 2)."
+      },
+      "restricted_authorities": {
+        "title": "Begrænset: kun myndigheder",
+        "description": "Vises aldrig i det offentlige pas. Bilag XIII, punkt 3: kun tilgængeligt for bemyndigede organer, markedsovervågningsmyndigheder og Kommissionen (artikel 77, stk. 2)."
+      },
+      "individual": {
+        "title": "Begrænset: dette individuelle batteri",
+        "description": "Vises aldrig i det offentlige pas. Bilag XIII, punkt 4: oplysninger om dette specifikke batteri, opdateret i løbet af dets levetid, kun tilgængeligt for personer med en legitim interesse (artikel 77, stk. 2)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Batterikategori",
+        "help": "Bærbare batterier og startbatterier skal ikke have et batteripas."
+      },
+      "product_name": {
+        "label": "Produktnavn",
+        "placeholder": "f.eks. PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Batterimodellens modelidentifikator",
+        "help": "Oplysninger til identifikation af batteriet (bilag VI, del A, punkt 2).",
+        "placeholder": "f.eks. PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Dette batteris entydige identifikator",
+        "help": "Den entydige identifikator, som den erhvervsdrivende, der bringer batteriet i omsætning, har tildelt dette individuelle batteri i overensstemmelse med ISO/IEC 15459 eller en tilsvarende standard. QR-koden på batteriet giver adgang til dets pas (artikel 13, stk. 6, og artikel 77, stk. 3).",
+        "placeholder": "f.eks. serienummer eller GS1-identifikator"
+      },
+      "manufacture_place": {
+        "label": "Fremstillingssted",
+        "help": "Batteriproduktionsanlæggets geografiske beliggenhed.",
+        "placeholder": "f.eks. Lyon, Frankrig"
+      },
+      "manufacture_date": {
+        "label": "Produktionsdato (måned og år)",
+        "placeholder": "f.eks. 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Vægt (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Det originale batteris pas (hvis relevant)",
+        "help": "For batterier, der har været genstand for forberedelse til genbrug eller forberedelse til formålsændring, formålsændring eller genfremstilling: link til passet for det eller de originale batterier (artikel 77, stk. 7).",
+        "placeholder": "f.eks. https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Fabrikantens navn"
+      },
+      "manufacturer_trade_name": {
+        "label": "Registreret firmanavn eller registreret varemærke"
+      },
+      "manufacturer_address": {
+        "label": "Postadresse (ét enkelt kontaktsted)"
+      },
+      "manufacturer_website": {
+        "label": "Webadresse (hvis en sådan haves)",
+        "placeholder": "f.eks. https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "E-mailadresse (hvis en sådan haves)",
+        "help": "Vises også som kontakt for anmodninger om adgang til begrænsede oplysninger i passet."
+      },
+      "authorised_representative": {
+        "label": "Bemyndiget repræsentant (hvis relevant)",
+        "help": "Navn og kontaktoplysninger for den bemyndigede repræsentant, hvis en sådan er udpeget."
+      },
+      "importer": {
+        "label": "Importør (hvis relevant)",
+        "help": "Importørens navn, registrerede firmanavn eller registrerede varemærke, postadresse og, hvis en sådan haves, web- og e-mailadresse (artikel 41, stk. 3)."
+      },
+      "battery_chemistry": {
+        "label": "Batterikemi"
+      },
+      "battery_chemistry_other": {
+        "label": "Kemi (detaljer)"
+      },
+      "hazardous_substances": {
+        "label": "Andre farlige stoffer end kviksølv, cadmium eller bly",
+        "help": "Andre farlige stoffer i batteriet end kviksølv, cadmium eller bly. Angiv \"Ingen\", hvis der ikke er nogen."
+      },
+      "critical_raw_materials": {
+        "label": "Kritiske råstoffer over 0,1 % vægtprocent",
+        "help": "Kritiske råstoffer i batteriet i en koncentration på over 0,1 % vægtprocent."
+      },
+      "critical_raw_materials_other": {
+        "label": "Andre kritiske råstoffer"
+      },
+      "extinguishing_agent": {
+        "label": "Det brandslukningsmiddel, der skal anvendes"
+      },
+      "renewable_content_share": {
+        "label": "Andelen af vedvarende indhold (%)",
+        "help": "Bilag XIII, punkt 1, litra f)."
+      },
+      "rated_capacity_ah": {
+        "label": "Nominel kapacitet (Ah)"
+      },
+      "voltage_min": {
+        "label": "Mindste spænding (V)"
+      },
+      "voltage_nominal": {
+        "label": "Nominel spænding (V)"
+      },
+      "voltage_max": {
+        "label": "Maksimal spænding (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Temperaturinterval for spændingsværdierne (hvis relevant)",
+        "placeholder": "f.eks. -20 til 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Oprindelig effektkapacitet (W)"
+      },
+      "power_capability_limits": {
+        "label": "Grænseværdier for effektkapacitet og temperaturinterval (hvis relevant)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Batteriets forventede levetid (cyklusser)"
+      },
+      "lifetime_reference_test": {
+        "label": "Anvendt referencetest for den forventede levetid"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Kapacitetstærskel for tømning (%)",
+        "help": "Kun for elkøretøjsbatterier."
+      },
+      "idle_temperature_range": {
+        "label": "Temperaturområde, som batteriet kan modstå, når det ikke er i brug",
+        "help": "Angiv referencetesten.",
+        "placeholder": "f.eks. -30 til 60 °C (referencetest)"
+      },
+      "calendar_life_warranty": {
+        "label": "Periode, i hvilken den handelsmæssige garanti for kalenderlevetiden gælder",
+        "placeholder": "f.eks. 8 år"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Indledende energimæssig rundturseffektivitet (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Energimæssig rundturseffektivitet ved 50 % af livscyklussen (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Intern battericellemodstand (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Intern batteripakkemodstand (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "C-rate for relevant livscyklustest",
+        "placeholder": "f.eks. 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Erklæring om CO2-fodaftryk",
+        "help": "Artikel 7. Forpligtelsen gælder først, når Kommissionens delegerede retsakt om beregningsmetoden finder anvendelse."
+      },
+      "carbon_footprint_value": {
+        "label": "CO2-fodaftryk (kg CO2e pr. kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Ydeevneklasse for CO2-fodaftryk"
+      },
+      "carbon_footprint_study": {
+        "label": "Weblink til en offentlig udgave af undersøgelsen af CO2-fodaftrykket",
+        "placeholder": "f.eks. https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Rapport om due diligence-politik vedrørende batterier (ansvarlig fremskaffelse)",
+        "help": "Oplysninger om ansvarlig fremskaffelse som angivet i rapporten om due diligence-politik vedrørende batterier (artikel 52, stk. 3). Due diligence-forpligtelserne gælder fra den 18. august 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Genanvendt indhold: kobolt (%)",
+        "help": "Oplysninger om genanvendt indhold som anført i den dokumentation, der er omhandlet i artikel 8."
+      },
+      "recycled_lithium": {
+        "label": "Genanvendt indhold: litium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Genanvendt indhold: nikkel (%)"
+      },
+      "recycled_lead": {
+        "label": "Genanvendt indhold: bly (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Batteriet er mærket med symbolet for særskilt indsamling",
+        "help": "Artikel 13, stk. 4, og bilag VI, del B."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Kemisk symbol for cadmium eller bly",
+        "help": "Batterier, der indeholder over 0,002 % cadmium eller over 0,004 % bly, mærkes med Cd eller Pb under symbolet for særskilt indsamling (artikel 13, stk. 5)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "EU-overensstemmelseserklæring",
+        "help": "Link til eller reference for EU-overensstemmelseserklæringen (artikel 18).",
+        "placeholder": "f.eks. https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Oplysninger om affaldsforebyggelse, indsamling og genanvendelse",
+        "help": "Artikel 74, stk. 1, litra a)-f): hvordan slutbrugere kan forebygge affald og forlænge batteriers levetid, deres rolle i særskilt indsamling, tilbagetagnings- og indsamlingssteder, sikkerhedsanvisninger for håndtering af udtjente batterier (herunder batterier, der indeholder litium), betydningen af symbolerne og stoffernes påvirkning af miljøet og menneskers sundhed."
+      },
+      "collection_point_link": {
+        "label": "Weblink til oplysninger om indsamling",
+        "placeholder": "f.eks. https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Detaljeret sammensætning (katode, anode, elektrolyt)",
+        "help": "Herunder materialer anvendt i katoden, anoden og elektrolytten."
+      },
+      "battery_spare_parts": {
+        "label": "Delnumre for komponenter og kontaktoplysninger på kilder til reservedele"
+      },
+      "battery_dismantling_information": {
+        "label": "Oplysninger om demontering",
+        "help": "Sprængbilleder, der viser placeringen af battericeller, demonteringssekvenser, type og antal fastgørelsesteknikker, der skal låses op, nødvendigt værktøj til demontering, advarsler, hvis der er risiko for beskadigelse af dele, samt antal anvendte celler og konfiguration. Links til dokumenter kan anvendes."
+      },
+      "battery_safety_measures": {
+        "label": "Sikkerhedsforanstaltninger"
+      },
+      "battery_test_reports": {
+        "label": "Testrapporter, der dokumenterer, at kravene er opfyldt",
+        "help": "Resultater af testrapporter, der dokumenterer, at kravene i forordningen og de delegerede retsakter og gennemførelsesretsakter hertil er opfyldt. Referencer eller links til rapporterne."
+      },
+      "battery_status": {
+        "label": "Batteriets status"
+      },
+      "battery_state_of_health": {
+        "label": "Sundhedstilstand (%)",
+        "help": "Artikel 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Dato for værdien for sundhedstilstanden",
+        "placeholder": "f.eks. 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Oplysninger om brug",
+        "help": "Antal ladnings- og afladningscyklusser, negative hændelser såsom ulykker og driftsmiljøbetingelser såsom temperatur og ladetilstand."
+      },
+      "battery_status_change_values": {
+        "label": "Ydeevne- og holdbarhedsværdier ved en ændring af status",
+        "help": "Værdierne for de ydeevne- og holdbarhedsparametre, der er omhandlet i artikel 10, stk. 1, da batteriet blev bragt i omsætning, og da dets status ændredes."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Elkøretøjsbatteri",
+        "lmt": "LMT-batteri (batteri til lette transportmidler)",
+        "industrial": "Industribatteri med en kapacitet på over 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Litium-ion, NMC (nikkel-mangan-kobolt)",
+        "li_nca": "Litium-ion, NCA (nikkel-kobolt-aluminium)",
+        "li_lfp": "Litium-ion, LFP (litiumjernfosfat)",
+        "li_lmfp": "Litium-ion, LMFP (litiummanganjernfosfat)",
+        "li_lmo": "Litium-ion, LMO (litiummanganoxid)",
+        "li_lto": "Litium-ion, LTO (litiumtitanatanode)",
+        "sodium_ion": "Natrium-ion",
+        "nimh": "Nikkel-metalhydrid",
+        "lead_acid": "Bly-syre",
+        "other": "Andet"
+      },
+      "crm": {
+        "cobalt": "Kobolt (Co)",
+        "lithium": "Litium (Li)",
+        "natural_graphite": "Naturlig grafit",
+        "nickel": "Nikkel (Ni)",
+        "manganese": "Mangan (Mn)",
+        "copper": "Kobber (Cu)",
+        "aluminium": "Aluminium (Al)",
+        "phosphorus": "Fosfor (P)",
+        "other": "Andet"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Endnu ikke relevant (delegeret retsakt i henhold til artikel 7 ikke vedtaget)",
+        "declared": "CO2-fodaftryk angivet"
+      },
+      "heavyMetal": {
+        "none": "Intet Cd- eller Pb-symbol påkrævet",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd og Pb"
+      },
+      "status": {
+        "original": "Oprindeligt",
+        "repurposed": "Med ændret anvendelse",
+        "reused": "Genbrugt",
+        "remanufactured": "Genfremstillet",
+        "waste": "Udtjent"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Begrænsede batterioplysninger",
+      "body": "Detaljeret sammensætning, oplysninger om demontering, testrapporter og data om dette individuelle batteri er kun tilgængelige for personer med en legitim interesse og for myndigheder (artikel 77 og bilag XIII i forordning (EU) 2023/1542). Kontakt {{contact}} for at anmode om adgang.",
+      "bodyNoContact": "Detaljeret sammensætning, oplysninger om demontering, testrapporter og data om dette individuelle batteri er kun tilgængelige for personer med en legitim interesse og for myndigheder (artikel 77 og bilag XIII i forordning (EU) 2023/1542). Kontakt fabrikanten for at anmode om adgang."
     }
   }
 }

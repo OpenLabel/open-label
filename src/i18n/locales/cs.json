@@ -260,7 +260,7 @@
     "car_cleaning": "Přípravky na čištění automobilů"
   },
   "categoryDescriptions": {
-    "battery": "Uhlíková stopa, recyklace, náležitá péče v dodavatelském řetězci",
+    "battery": "Pas baterie pro baterie elektrických vozidel, baterie lehkých dopravních prostředků a průmyslové baterie s kapacitou vyšší než 2 kWh (nařízení (EU) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, požární odolnost",
     "textiles": "Složení vláken, trvanlivost, deklarace PFAS",
     "wine": "Složky, výživa, zeměpisné označení",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Zveřejněno"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Rozsah pasu baterie",
+        "description": "Od 18. února 2027 je pas baterie vyžadován pro každou baterii lehkého dopravního prostředku, každou průmyslovou baterii s kapacitou vyšší než 2 kWh a každou baterii elektrického vozidla, které jsou uvedeny na trh nebo do provozu (čl. 77 odst. 1 nařízení (EU) 2023/1542)."
+      },
+      "identity": {
+        "title": "Identifikace baterie",
+        "description": "Informace o baterii uvedené v příloze VI části A (příloha XIII bod 1 písm. a))."
+      },
+      "operators": {
+        "title": "Zhotovitel a hospodářské subjekty",
+        "description": "Název, zapsaný obchodní název nebo zapsaná ochranná známka, poštovní adresa a jednotné kontaktní místo, a pokud existují, internetová adresa a e-mailová adresa (čl. 38 odst. 7 a čl. 41 odst. 3)."
+      },
+      "composition": {
+        "title": "Materiálové složení",
+        "description": "Chemické složení, nebezpečné látky a kritické suroviny (příloha XIII bod 1 písm. b) a příloha VI část A)."
+      },
+      "performance": {
+        "title": "Výkonnost a životnost",
+        "description": "Hodnoty elektrochemické výkonnosti a životnosti pro daný model baterie (příloha XIII bod 1)."
+      },
+      "sustainability": {
+        "title": "Uhlíková stopa, odpovědné získávání surovin a obsah recyklovaného materiálu",
+        "description": "Tyto položky se začnou uplatňovat později, ke dnům stanoveným nařízením a jeho akty v přenesené pravomoci. Ponechte je prázdné, dokud se na vaši baterii nevztahují."
+      },
+      "labelling": {
+        "title": "Označování a shoda",
+        "description": "Požadavky na označování podle čl. 13 odst. 4 a 5 a EU prohlášení o shodě (příloha XIII bod 1 písm. q) a r))."
+      },
+      "end_of_life": {
+        "title": "Předcházení vzniku odpadních baterií a nakládání s nimi",
+        "description": "Informace pro konečné uživatele o předcházení vzniku odpadních baterií a nakládání s nimi (čl. 74 odst. 1)."
+      },
+      "restricted_model": {
+        "title": "Omezený přístup: osoby s oprávněným zájmem",
+        "description": "Nikdy se nezobrazuje ve veřejném pasu baterie. Příloha XIII bod 2: přístupné pouze osobám s oprávněným zájmem, oznámeným subjektům, orgánům dozoru nad trhem a Komisi (čl. 77 odst. 2)."
+      },
+      "restricted_authorities": {
+        "title": "Omezený přístup: pouze orgány",
+        "description": "Nikdy se nezobrazuje ve veřejném pasu baterie. Příloha XIII bod 3: přístupné pouze oznámeným subjektům, orgánům dozoru nad trhem a Komisi (čl. 77 odst. 2)."
+      },
+      "individual": {
+        "title": "Omezený přístup: tato jednotlivá baterie",
+        "description": "Nikdy se nezobrazuje ve veřejném pasu baterie. Příloha XIII bod 4: informace o této jednotlivé baterii, aktualizované během její životnosti, přístupné pouze osobám s oprávněným zájmem (čl. 77 odst. 2)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Kategorie baterie",
+        "help": "Přenosné baterie a startovací baterie (pro startování, osvětlení nebo zapalování) pas baterie nepotřebují."
+      },
+      "product_name": {
+        "label": "Název produktu",
+        "placeholder": "např. PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Identifikátor modelu baterie",
+        "help": "Informace identifikující baterii (příloha VI část A bod 2).",
+        "placeholder": "např. PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Jedinečný identifikační kód této baterie",
+        "help": "Jedinečný identifikační kód přiřazený této jednotlivé baterii hospodářským subjektem, který ji uvádí na trh, v souladu s normou ISO/IEC 15459 nebo s rovnocennou normou. Kód QR na baterii umožňuje přístup k jejímu pasu baterie (čl. 13 odst. 6 a čl. 77 odst. 3).",
+        "placeholder": "např. sériové číslo nebo identifikační kód GS1"
+      },
+      "manufacture_place": {
+        "label": "Místo výroby",
+        "help": "Zeměpisná poloha výrobního závodu na výrobu baterií.",
+        "placeholder": "např. Lyon, Francie"
+      },
+      "manufacture_date": {
+        "label": "Datum výroby (měsíc a rok)",
+        "placeholder": "např. 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Hmotnost (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Pas původní baterie (je-li to relevantní)",
+        "help": "U baterií, které byly předmětem přípravy k opětovnému použití, přípravy pro nové využití, nového využití či repase: odkaz na pas nebo pasy původní baterie nebo baterií (čl. 77 odst. 7).",
+        "placeholder": "např. https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Název zhotovitele"
+      },
+      "manufacturer_trade_name": {
+        "label": "Zapsaný obchodní název nebo zapsaná ochranná známka"
+      },
+      "manufacturer_address": {
+        "label": "Poštovní adresa (jednotné kontaktní místo)"
+      },
+      "manufacturer_website": {
+        "label": "Internetová adresa (pokud existuje)",
+        "placeholder": "např. https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "E-mailová adresa (pokud existuje)",
+        "help": "Zobrazuje se také jako kontakt pro žádosti o přístup k informacím v pasu baterie s omezeným přístupem."
+      },
+      "authorised_representative": {
+        "label": "Zplnomocněný zástupce (je-li to relevantní)",
+        "help": "Název a kontaktní údaje zplnomocněného zástupce, pokud je jmenován."
+      },
+      "importer": {
+        "label": "Dovozce (je-li to relevantní)",
+        "help": "Název, zapsaný obchodní název nebo zapsaná ochranná známka, poštovní adresa a internetová adresa a e-mailová adresa dovozce, pokud existují (čl. 41 odst. 3)."
+      },
+      "battery_chemistry": {
+        "label": "Chemické složení baterie"
+      },
+      "battery_chemistry_other": {
+        "label": "Chemické složení (podrobnosti)"
+      },
+      "hazardous_substances": {
+        "label": "Nebezpečné látky (jiné než rtuť, kadmium nebo olovo)",
+        "help": "Nebezpečné látky obsažené v baterii, jiné než rtuť, kadmium nebo olovo. Pokud žádné nejsou, zadejte „Žádné“."
+      },
+      "critical_raw_materials": {
+        "label": "Kritické suroviny nad 0,1 % hmotnostních hmotnosti",
+        "help": "Kritické suroviny obsažené v baterii v koncentraci vyšší než 0,1 % hmotnostních hmotnosti."
+      },
+      "critical_raw_materials_other": {
+        "label": "Jiné kritické suroviny"
+      },
+      "extinguishing_agent": {
+        "label": "Použitelná hasicí látka"
+      },
+      "renewable_content_share": {
+        "label": "Podíl obsahu obnovitelného materiálu (%)",
+        "help": "Příloha XIII bod 1 písm. f)."
+      },
+      "rated_capacity_ah": {
+        "label": "Zaručená kapacita (Ah)"
+      },
+      "voltage_min": {
+        "label": "Minimální napětí (V)"
+      },
+      "voltage_nominal": {
+        "label": "Jmenovité napětí (V)"
+      },
+      "voltage_max": {
+        "label": "Maximální napětí (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Teplotní rozsah pro hodnoty napětí (je-li to relevantní)",
+        "placeholder": "např. -20 až 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Původní výkon (W)"
+      },
+      "power_capability_limits": {
+        "label": "Mezní hodnoty výkonu a teplotní rozsah (je-li to relevantní)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Doba očekávané životnosti baterie (cykly)"
+      },
+      "lifetime_reference_test": {
+        "label": "Referenční zkouška použitá pro dobu očekávané životnosti"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Prahová hodnota kapacity pro vyčerpání (%)",
+        "help": "Pouze u baterií elektrických vozidel."
+      },
+      "idle_temperature_range": {
+        "label": "Teplotní rozsah, který baterie vydrží, když se nepoužívá",
+        "help": "Uveďte referenční zkoušku.",
+        "placeholder": "např. -30 až 60 °C (referenční zkouška)"
+      },
+      "calendar_life_warranty": {
+        "label": "Doba, po kterou platí komerční záruka na kalendářní životnost",
+        "placeholder": "např. 8 let"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Energetická účinnost cyklu na počátku (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Energetická účinnost cyklu při 50 % životnosti (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Vnitřní odpor článku (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Vnitřní odpor sady baterií (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "Rychlost nabíjení a vybíjení při relevantní zkoušce životnosti cyklů",
+        "placeholder": "např. 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Prohlášení o uhlíkové stopě",
+        "help": "Článek 7. Povinnost vzniká až od okamžiku, kdy se začne uplatňovat akt Komise v přenesené pravomoci o metodě výpočtu."
+      },
+      "carbon_footprint_value": {
+        "label": "Uhlíková stopa (kg CO2e na kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Výkonová třída z hlediska uhlíkové stopy"
+      },
+      "carbon_footprint_study": {
+        "label": "Odkaz na internetové stránky s veřejnou verzí studie o uhlíkové stopě",
+        "placeholder": "např. https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Zpráva o politice náležité péče týkající se baterií (odpovědné získávání surovin)",
+        "help": "Informace o odpovědném získávání surovin uvedené ve zprávě o politice náležité péče týkající se baterie (čl. 52 odst. 3). Povinnosti náležité péče se uplatňují od 18. srpna 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Obsah recyklovaného materiálu: kobalt (%)",
+        "help": "Informace o obsahu recyklovaného materiálu uvedené v dokumentaci podle článku 8."
+      },
+      "recycled_lithium": {
+        "label": "Obsah recyklovaného materiálu: lithium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Obsah recyklovaného materiálu: nikl (%)"
+      },
+      "recycled_lead": {
+        "label": "Obsah recyklovaného materiálu: olovo (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Baterie označená symbolem pro tříděný sběr",
+        "help": "Čl. 13 odst. 4 a příloha VI část B."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Chemická značka kadmia nebo olova",
+        "help": "Baterie obsahující více než 0,002 % kadmia nebo více než 0,004 % olova se označují chemickou značkou Cd nebo Pb pod symbolem pro tříděný sběr (čl. 13 odst. 5)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "EU prohlášení o shodě",
+        "help": "Odkaz na EU prohlášení o shodě nebo jeho referenční číslo (článek 18).",
+        "placeholder": "např. https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Informace o předcházení vzniku odpadů, sběru a recyklaci",
+        "help": "Čl. 74 odst. 1 písm. a) až f): jak mohou koneční uživatelé předcházet vzniku odpadů a prodloužit fázi využívání baterie, jejich úloha při tříděném sběru, místa zpětného odběru a sběru, bezpečnostní pokyny pro manipulaci s odpadními bateriemi (včetně baterií obsahujících lithium), význam symbolů a dopad látek na lidské zdraví a životní prostředí."
+      },
+      "collection_point_link": {
+        "label": "Webový odkaz na informace o sběru",
+        "placeholder": "např. https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Podrobné složení (katoda, anoda, elektrolyt)",
+        "help": "Včetně materiálů použitých v katodě, anodě a elektrolytu."
+      },
+      "battery_spare_parts": {
+        "label": "Čísla dílů v případě součástí a kontaktní údaje zdrojů pro náhradní díly"
+      },
+      "battery_dismantling_information": {
+        "label": "Informace pro demontáž",
+        "help": "Diagramy rozloženého bateriového systému/sady baterií, které znázorňují umístění bateriových článků, postup při demontáži, typ a počet způsobů upevnění, nástroje potřebné k demontáži, varování před případným rizikem poškození dílů a počet a rozmístění použitých článků. Lze uvést odkazy na dokumenty."
+      },
+      "battery_safety_measures": {
+        "label": "Bezpečnostní opatření"
+      },
+      "battery_test_reports": {
+        "label": "Protokoly o zkouškách prokazující shodu",
+        "help": "Výsledky protokolů o zkouškách prokazujících soulad s nařízením a jeho prováděcími akty a akty v přenesené pravomoci. Odkazy na protokoly nebo jejich umístění."
+      },
+      "battery_status": {
+        "label": "Status baterie"
+      },
+      "battery_state_of_health": {
+        "label": "Technický stav (%)",
+        "help": "Článek 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Datum hodnoty technického stavu",
+        "placeholder": "např. 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Informace a údaje vyplývající z používání",
+        "help": "Počet cyklů nabití a vybití, nepříznivé události, jako jsou nehody, a provozní podmínky prostředí, jako je teplota a stav nabití."
+      },
+      "battery_status_change_values": {
+        "label": "Hodnoty parametrů výkonnosti a životnosti při změně statusu",
+        "help": "Hodnoty parametrů výkonnosti a životnosti podle čl. 10 odst. 1 při uvedení baterie na trh a v okamžiku změny jejího statusu."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Baterie elektrického vozidla",
+        "lmt": "Baterie lehkého dopravního prostředku",
+        "industrial": "Průmyslová baterie s kapacitou vyšší než 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Lithium-iontová, NMC (nikl, mangan, kobalt)",
+        "li_nca": "Lithium-iontová, NCA (nikl, kobalt, hliník)",
+        "li_lfp": "Lithium-iontová, LFP (lithium-železo-fosfát)",
+        "li_lmfp": "Lithium-iontová, LMFP (lithium-mangan-železo-fosfát)",
+        "li_lmo": "Lithium-iontová, LMO (lithium-mangan-oxid)",
+        "li_lto": "Lithium-iontová, LTO (anoda z titaničitanu lithného)",
+        "sodium_ion": "Sodíko-iontová",
+        "nimh": "Nikl-metal hydridová",
+        "lead_acid": "Olověná",
+        "other": "Jiné"
+      },
+      "crm": {
+        "cobalt": "Kobalt",
+        "lithium": "Lithium (Li)",
+        "natural_graphite": "Přírodní grafit",
+        "nickel": "Nikl",
+        "manganese": "Mangan",
+        "copper": "Měď",
+        "aluminium": "Hliník",
+        "phosphorus": "Fosfor",
+        "other": "Jiné"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Zatím se neuplatňuje (akt v přenesené pravomoci podle článku 7 nebyl přijat)",
+        "declared": "Uhlíková stopa deklarována"
+      },
+      "heavyMetal": {
+        "none": "Značka Cd ani Pb není vyžadována",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd a Pb"
+      },
+      "status": {
+        "original": "Původní",
+        "repurposed": "Nově využitá",
+        "reused": "Opětovně použitá",
+        "remanufactured": "Repasovaná",
+        "waste": "Odpadní"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Informace o baterii s omezeným přístupem",
+      "body": "Podrobné složení, informace pro demontáž, protokoly o zkouškách a údaje o této jednotlivé baterii jsou přístupné pouze osobám s oprávněným zájmem a orgánům (článek 77 a příloha XIII nařízení (EU) 2023/1542). O přístup požádejte: {{contact}}.",
+      "bodyNoContact": "Podrobné složení, informace pro demontáž, protokoly o zkouškách a údaje o této jednotlivé baterii jsou přístupné pouze osobám s oprávněným zájmem a orgánům (článek 77 a příloha XIII nařízení (EU) 2023/1542). O přístup požádejte zhotovitele."
     }
   }
 }
