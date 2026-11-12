@@ -268,7 +268,7 @@
     "car_cleaning": "Autoreinigingsproducten"
   },
   "categoryDescriptions": {
-    "battery": "Koolstofvoetafdruk, recycling, due diligence toeleveringsketen",
+    "battery": "Batterijpaspoort voor batterijen voor elektrische voertuigen, batterijen voor lichte vervoermiddelen en industriële batterijen van meer dan 2 kWh (Verordening (EU) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, brandwerendheid",
     "textiles": "Vezelsamenstelling, duurzaamheid, PFAS verklaring",
     "wine": "Ingrediënten, voeding, geografische aanduiding",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Gepubliceerd"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Toepassingsgebied van het batterijpaspoort",
+        "description": "Vanaf 18 februari 2027 is een batterijpaspoort vereist voor elke batterij voor lichte vervoermiddelen, elke industriële batterij met een capaciteit van meer dan 2 kWh en elke batterij voor elektrische voertuigen die in de handel wordt gebracht of in gebruik wordt genomen (artikel 77, lid 1, van Verordening (EU) 2023/1542)."
+      },
+      "identity": {
+        "title": "Identificatie van de batterij",
+        "description": "Informatie over de batterij zoals vermeld in bijlage VI, deel A (bijlage XIII, punt 1, a))."
+      },
+      "operators": {
+        "title": "Fabrikant en marktdeelnemers",
+        "description": "Naam, geregistreerde handelsnaam of geregistreerd merk, postadres met vermelding van één enkel contactpunt en, indien beschikbaar, webadres en e-mailadres (artikel 38, lid 7, en artikel 41, lid 3)."
+      },
+      "composition": {
+        "title": "Materiaalsamenstelling",
+        "description": "Chemische samenstelling, gevaarlijke stoffen en kritieke grondstoffen (bijlage XIII, punt 1, b), en bijlage VI, deel A)."
+      },
+      "performance": {
+        "title": "Prestaties en duurzaamheid",
+        "description": "Elektrochemische prestatie- en duurzaamheidswaarden voor het batterijmodel (bijlage XIII, punt 1)."
+      },
+      "sustainability": {
+        "title": "Koolstofvoetafdruk, op verantwoorde wijze betrekken van grondstoffen en gehalte aan gerecycled materiaal",
+        "description": "Deze elementen zijn van toepassing vanaf latere data die zijn vastgesteld in de verordening en de gedelegeerde handelingen ervan. Laat ze leeg totdat ze op uw batterij van toepassing zijn."
+      },
+      "labelling": {
+        "title": "Etikettering en conformiteit",
+        "description": "Etiketteringsvoorschriften van artikel 13, leden 4 en 5, en de EU-conformiteitsverklaring (bijlage XIII, punt 1, q) en r))."
+      },
+      "end_of_life": {
+        "title": "Preventie en beheer van afval",
+        "description": "Informatie voor eindgebruikers over de preventie en het beheer van afgedankte batterijen (artikel 74, lid 1)."
+      },
+      "restricted_model": {
+        "title": "Beperkt: personen met een gerechtvaardigd belang",
+        "description": "Nooit getoond in het openbare paspoort. Bijlage XIII, punt 2: uitsluitend toegankelijk voor personen met een gerechtvaardigd belang, aangemelde instanties, markttoezichtautoriteiten en de Commissie (artikel 77, lid 2)."
+      },
+      "restricted_authorities": {
+        "title": "Beperkt: alleen autoriteiten",
+        "description": "Nooit getoond in het openbare paspoort. Bijlage XIII, punt 3: uitsluitend toegankelijk voor aangemelde instanties, markttoezichtautoriteiten en de Commissie (artikel 77, lid 2)."
+      },
+      "individual": {
+        "title": "Beperkt: deze individuele batterij",
+        "description": "Nooit getoond in het openbare paspoort. Bijlage XIII, punt 4: informatie over deze specifieke batterij, bijgewerkt tijdens haar levensduur, uitsluitend toegankelijk voor personen met een gerechtvaardigd belang (artikel 77, lid 2)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Batterijcategorie",
+        "help": "Draagbare batterijen en start-, verlichtings- en ontstekingsbatterijen hebben geen batterijpaspoort nodig."
+      },
+      "product_name": {
+        "label": "Productnaam",
+        "placeholder": "bijv. PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Modelaanduiding van de batterij",
+        "help": "Informatie ter identificatie van de batterij (bijlage VI, deel A, punt 2).",
+        "placeholder": "bijv. PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Unieke identificatiecode van deze batterij",
+        "help": "De unieke identificatiecode die door de marktdeelnemer die de batterij in de handel brengt aan deze individuele batterij is toegekend, overeenkomstig ISO/IEC 15459 of een gelijkwaardige norm. De QR-code op de batterij geeft toegang tot het paspoort ervan (artikel 13, lid 6, en artikel 77, lid 3).",
+        "placeholder": "bijv. serienummer of GS1-identificatiecode"
+      },
+      "manufacture_place": {
+        "label": "Plaats van fabricage",
+        "help": "De geografische locatie van de fabricagefaciliteit van batterijen.",
+        "placeholder": "bijv. Lyon, Frankrijk"
+      },
+      "manufacture_date": {
+        "label": "Datum van fabricage (maand en jaar)",
+        "placeholder": "bijv. 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Gewicht (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Paspoort van de oorspronkelijke batterij (indien van toepassing)",
+        "help": "Voor batterijen die zijn voorbereid voor hergebruik of herbestemming, herbestemd of geherfabriceerd: link naar het paspoort van de oorspronkelijke batterij of batterijen (artikel 77, lid 7).",
+        "placeholder": "bijv. https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Naam van de fabrikant"
+      },
+      "manufacturer_trade_name": {
+        "label": "Geregistreerde handelsnaam of geregistreerd merk"
+      },
+      "manufacturer_address": {
+        "label": "Postadres (één enkel contactpunt)"
+      },
+      "manufacturer_website": {
+        "label": "Webadres (indien beschikbaar)",
+        "placeholder": "bijv. https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "E-mailadres (indien beschikbaar)",
+        "help": "Wordt ook getoond als contact voor verzoeken om toegang tot beperkte paspoortinformatie."
+      },
+      "authorised_representative": {
+        "label": "Gemachtigde (indien van toepassing)",
+        "help": "Naam en contactgegevens van de gemachtigde, indien er een is aangewezen."
+      },
+      "importer": {
+        "label": "Importeur (indien van toepassing)",
+        "help": "Naam, geregistreerde handelsnaam of geregistreerd merk, postadres en, indien beschikbaar, webadres en e-mailadres van de importeur (artikel 41, lid 3)."
+      },
+      "battery_chemistry": {
+        "label": "Chemische samenstelling van de batterij"
+      },
+      "battery_chemistry_other": {
+        "label": "Chemische samenstelling (details)"
+      },
+      "hazardous_substances": {
+        "label": "Andere gevaarlijke stoffen dan kwik, cadmium of lood",
+        "help": "Andere in de batterij aanwezige gevaarlijke stoffen dan kwik, cadmium of lood. Vul \"Geen\" in als er geen zijn."
+      },
+      "critical_raw_materials": {
+        "label": "Kritieke grondstoffen boven 0,1 gewichtsprocent",
+        "help": "In de batterij aanwezige kritieke grondstoffen met een concentratie van meer dan 0,1 gewichtsprocent."
+      },
+      "critical_raw_materials_other": {
+        "label": "Andere kritieke grondstoffen"
+      },
+      "extinguishing_agent": {
+        "label": "Bruikbaar blusmiddel"
+      },
+      "renewable_content_share": {
+        "label": "Aandeel hernieuwbare inhoud (%)",
+        "help": "Bijlage XIII, punt 1, f)."
+      },
+      "rated_capacity_ah": {
+        "label": "Nominale capaciteit (Ah)"
+      },
+      "voltage_min": {
+        "label": "Minimale spanning (V)"
+      },
+      "voltage_nominal": {
+        "label": "Nominale spanning (V)"
+      },
+      "voltage_max": {
+        "label": "Maximale spanning (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Temperatuurbereik voor de spanningswaarden (indien relevant)",
+        "placeholder": "bijv. -20 tot 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Oorspronkelijk vermogen (W)"
+      },
+      "power_capability_limits": {
+        "label": "Grenswaarden van het vermogen en temperatuurbereik (indien relevant)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Verwachte levensduur van de batterij (cycli)"
+      },
+      "lifetime_reference_test": {
+        "label": "Referentietest voor de verwachte levensduur"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Capaciteitsdrempel voor volledige ontlading (%)",
+        "help": "Alleen voor batterijen voor elektrische voertuigen."
+      },
+      "idle_temperature_range": {
+        "label": "Temperaturen waartegen de batterij bestand is wanneer zij niet in gebruik is",
+        "help": "Vermeld de referentietest.",
+        "placeholder": "bijv. -30 tot 60 °C (referentietest)"
+      },
+      "calendar_life_warranty": {
+        "label": "Periode van de commerciële garantie voor de kalenderlevensduur",
+        "placeholder": "bijv. 8 jaar"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Initiële round-tripefficiëntie (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Round-tripefficiëntie bij 50 % van de ontladingscyclus (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Interne weerstand van de batterijcellen (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Interne weerstand van het batterijpak (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "C-rate van de betreffende ontladingscyclustest",
+        "placeholder": "bijv. 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Koolstofvoetafdrukverklaring",
+        "help": "Artikel 7. De verplichting geldt pas zodra de gedelegeerde handeling van de Commissie over de berekeningsmethode van toepassing is."
+      },
+      "carbon_footprint_value": {
+        "label": "Koolstofvoetafdruk (kg CO2e per kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Prestatieklasse van de koolstofvoetafdruk"
+      },
+      "carbon_footprint_study": {
+        "label": "Weblink naar de openbare versie van het onderzoek naar de koolstofvoetafdruk",
+        "placeholder": "bijv. https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Verslag over het beleid van passende zorgvuldigheid inzake batterijen (op verantwoorde wijze betrekken van grondstoffen)",
+        "help": "Informatie over het op verantwoorde wijze betrekken van grondstoffen zoals aangegeven in het verslag over het beleid van passende zorgvuldigheid inzake batterijen (artikel 52, lid 3). De verplichtingen inzake passende zorgvuldigheid gelden vanaf 18 augustus 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Gehalte aan gerecycled materiaal: kobalt (%)",
+        "help": "Informatie over het gehalte aan gerecycled materiaal zoals vervat in de documentatie als bedoeld in artikel 8."
+      },
+      "recycled_lithium": {
+        "label": "Gehalte aan gerecycled materiaal: lithium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Gehalte aan gerecycled materiaal: nikkel (%)"
+      },
+      "recycled_lead": {
+        "label": "Gehalte aan gerecycled materiaal: lood (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Batterij gemarkeerd met het symbool voor gescheiden inzameling",
+        "help": "Artikel 13, lid 4, en bijlage VI, deel B."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Chemisch symbool voor cadmium of lood",
+        "help": "Batterijen die meer dan 0,002 % cadmium of meer dan 0,004 % lood bevatten, worden onder het symbool voor gescheiden inzameling gemarkeerd met Cd of Pb (artikel 13, lid 5)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "EU-conformiteitsverklaring",
+        "help": "Link naar of referentie van de EU-conformiteitsverklaring (artikel 18).",
+        "placeholder": "bijv. https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Informatie over afvalpreventie, inzameling en recycling",
+        "help": "Artikel 74, lid 1, punten a) tot en met f): hoe eindgebruikers afval kunnen voorkomen en de levensduur van batterijen kunnen verlengen, hun rol bij de gescheiden inzameling, de terugname- en inzamelpunten, veiligheidsinstructies voor de omgang met afgedankte batterijen (inclusief lithiumbatterijen), de betekenis van de symbolen en de effecten van de stoffen op de gezondheid en het milieu."
+      },
+      "collection_point_link": {
+        "label": "Weblink naar informatie over inzameling",
+        "placeholder": "bijv. https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Gedetailleerde samenstelling (kathode, anode, elektrolyt)",
+        "help": "Met inbegrip van de in de kathode, de anode en de elektrolyt gebruikte materialen."
+      },
+      "battery_spare_parts": {
+        "label": "Nummers van de onderdelen en contactgegevens voor het verkrijgen van vervangende onderdelen"
+      },
+      "battery_dismantling_information": {
+        "label": "Demontage-informatie",
+        "help": "Explosietekeningen met de locatie van de batterijcellen, demontagevolgorde, soort en aantal ongedaan te maken bevestigingen, voor demontage vereist gereedschap, waarschuwingen indien sprake is van risico op beschadiging van onderdelen, en het aantal gebruikte cellen en de indeling. Links naar documenten zijn toegestaan."
+      },
+      "battery_safety_measures": {
+        "label": "Veiligheidsmaatregelen"
+      },
+      "battery_test_reports": {
+        "label": "Testverslagen waaruit conformiteit blijkt",
+        "help": "Gerapporteerde resultaten van tests waaruit conformiteit blijkt met de vereisten van de verordening en de op grond daarvan vastgestelde gedelegeerde of uitvoeringshandelingen. Referenties of links naar de verslagen."
+      },
+      "battery_status": {
+        "label": "Status van de batterij"
+      },
+      "battery_state_of_health": {
+        "label": "Conditie (%)",
+        "help": "Artikel 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Datum van de waarde van de conditie",
+        "placeholder": "bijv. 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Gebruiksinformatie",
+        "help": "Aantal laad- en ontladingscycli, negatieve gebeurtenissen zoals ongevallen, en omgevingsomstandigheden wat de werking betreft, zoals temperatuur en laadniveau."
+      },
+      "battery_status_change_values": {
+        "label": "Prestatie- en duurzaamheidswaarden bij een statuswijziging",
+        "help": "Waarden van de in artikel 10, lid 1, bedoelde prestatie- en duurzaamheidsparameters op het moment dat de batterij in de handel werd gebracht en op het moment dat haar status wijzigde."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Batterij voor elektrische voertuigen",
+        "lmt": "Batterij voor lichte vervoermiddelen",
+        "industrial": "Industriële batterij met een capaciteit van meer dan 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Lithium-ion, NMC (nikkel-mangaan-kobalt)",
+        "li_nca": "Lithium-ion, NCA (nikkel-kobalt-aluminium)",
+        "li_lfp": "Lithium-ion, LFP (lithium-ijzerfosfaat)",
+        "li_lmfp": "Lithium-ion, LMFP (lithium-mangaan-ijzerfosfaat)",
+        "li_lmo": "Lithium-ion, LMO (lithium-mangaanoxide)",
+        "li_lto": "Lithium-ion, LTO (lithiumtitanaatanode)",
+        "sodium_ion": "Natrium-ion",
+        "nimh": "Nikkel-metaalhydride",
+        "lead_acid": "Loodzuur",
+        "other": "Overige"
+      },
+      "crm": {
+        "cobalt": "Kobalt (Co)",
+        "lithium": "Lithium (Li)",
+        "natural_graphite": "Natuurlijk grafiet",
+        "nickel": "Nikkel (Ni)",
+        "manganese": "Mangaan (Mn)",
+        "copper": "Koper (Cu)",
+        "aluminium": "Aluminium (Al)",
+        "phosphorus": "Fosfor (P)",
+        "other": "Overige"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Nog niet van toepassing (gedelegeerde handeling op grond van artikel 7 niet vastgesteld)",
+        "declared": "Koolstofvoetafdruk aangegeven"
+      },
+      "heavyMetal": {
+        "none": "Geen Cd- of Pb-symbool vereist",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd en Pb"
+      },
+      "status": {
+        "original": "Oorspronkelijk",
+        "repurposed": "Herbestemd",
+        "reused": "Hergebruikt",
+        "remanufactured": "Geherfabriceerd",
+        "waste": "Afgedankt"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Beperkte batterij-informatie",
+      "body": "Gedetailleerde samenstelling, demontage-informatie, testverslagen en gegevens over deze individuele batterij zijn uitsluitend beschikbaar voor personen met een gerechtvaardigd belang en voor autoriteiten (artikel 77 en bijlage XIII van Verordening (EU) 2023/1542). Neem voor toegang contact op met {{contact}}.",
+      "bodyNoContact": "Gedetailleerde samenstelling, demontage-informatie, testverslagen en gegevens over deze individuele batterij zijn uitsluitend beschikbaar voor personen met een gerechtvaardigd belang en voor autoriteiten (artikel 77 en bijlage XIII van Verordening (EU) 2023/1542). Neem voor toegang contact op met de fabrikant."
     }
   }
 }
