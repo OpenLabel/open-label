@@ -260,7 +260,7 @@
     "car_cleaning": "Automobilių valymo priemonės"
   },
   "categoryDescriptions": {
-    "battery": "Anglies pėdsakas, perdirbimas, tiekimo grandinės patikrinimas",
+    "battery": "Baterijos pasas elektrinių transporto priemonių baterijoms, mažųjų transporto priemonių baterijoms ir pramoninėms baterijoms, kurių talpa didesnė nei 2 kWh (Reglamentas (ES) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, atsparumas ugniai",
     "textiles": "Pluošto sudėtis, ilgaamžiškumas, PFAS deklaracija",
     "wine": "Sudedamosios dalys, mityba, geografinė nuoroda",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Paskelbta"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Baterijos paso taikymo sritis",
+        "description": "Nuo 2027 m. vasario 18 d. baterijos pasas privalomas kiekvienai rinkai pateiktai arba pradėtai naudoti mažųjų transporto priemonių baterijai, kiekvienai pramoninei baterijai, kurios talpa didesnė nei 2 kWh, ir kiekvienai elektrinių transporto priemonių baterijai (Reglamento (ES) 2023/1542 77 straipsnio 1 dalis)."
+      },
+      "identity": {
+        "title": "Baterijos identifikavimas",
+        "description": "VI priedo A dalyje nurodyta informacija apie bateriją (XIII priedo 1 punkto a papunktis)."
+      },
+      "operators": {
+        "title": "Fizinis gamintojas ir ekonominės veiklos vykdytojai",
+        "description": "Pavadinimas, registruotas prekybinis pavadinimas ar registruotas prekių ženklas, pašto adresas, nurodant vieną bendrą kontaktinį punktą, ir, jei toks yra, interneto bei el. pašto adresas (38 straipsnio 7 dalis ir 41 straipsnio 3 dalis)."
+      },
+      "composition": {
+        "title": "Medžiagų sudėtis",
+        "description": "Cheminė sudėtis, pavojingosios medžiagos ir svarbiausiosios žaliavos (XIII priedo 1 punkto b papunktis ir VI priedo A dalis)."
+      },
+      "performance": {
+        "title": "Eksploatacinės savybės ir patvarumas",
+        "description": "Baterijos modelio elektrocheminių eksploatacinių savybių ir patvarumo vertės (XIII priedo 1 punktas)."
+      },
+      "sustainability": {
+        "title": "Anglies pėdsakas, atsakingas tiekimo šaltinių pasirinkimas ir perdirbtųjų medžiagų dalis",
+        "description": "Šie duomenys pradedami taikyti vėlesnėmis datomis, nustatytomis reglamente ir jo deleguotuosiuose aktuose. Palikite juos tuščius, kol jie nebus taikomi jūsų baterijai."
+      },
+      "labelling": {
+        "title": "Ženklinimas ir atitiktis",
+        "description": "13 straipsnio 4 ir 5 dalyse nustatyti žymėjimo reikalavimai ir ES atitikties deklaracija (XIII priedo 1 punkto q ir r papunkčiai)."
+      },
+      "end_of_life": {
+        "title": "Atliekų prevencija ir tvarkymas",
+        "description": "Informacija galutiniams naudotojams apie baterijų atliekų prevenciją ir tvarkymą (74 straipsnio 1 dalis)."
+      },
+      "restricted_model": {
+        "title": "Ribota prieiga: teisėtą interesą turintys asmenys",
+        "description": "Niekada nerodoma viešajame pase. XIII priedo 2 punktas: prieinama tik teisėtą interesą turintiems asmenims, notifikuotosioms įstaigoms, rinkos priežiūros institucijoms ir Komisijai (77 straipsnio 2 dalis)."
+      },
+      "restricted_authorities": {
+        "title": "Ribota prieiga: tik institucijos",
+        "description": "Niekada nerodoma viešajame pase. XIII priedo 3 punktas: prieinama tik notifikuotosioms įstaigoms, rinkos priežiūros institucijoms ir Komisijai (77 straipsnio 2 dalis)."
+      },
+      "individual": {
+        "title": "Ribota prieiga: ši konkreti baterija",
+        "description": "Niekada nerodoma viešajame pase. XIII priedo 4 punktas: informacija apie šią konkrečią bateriją, atnaujinama per visą jos tarnavimo laiką, prieinama tik teisėtą interesą turintiems asmenims (77 straipsnio 2 dalis)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Baterijos kategorija",
+        "help": "Nešiojamosioms baterijoms ir automobilių baterijoms (automobilio apšvietimui, starterio ar variklio paleidimui skirtoms baterijoms) baterijos paso nereikia."
+      },
+      "product_name": {
+        "label": "Produkto pavadinimas",
+        "placeholder": "pvz., PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Baterijos modelio identifikatorius",
+        "help": "Bateriją identifikuojanti informacija (VI priedo A dalies 2 punktas).",
+        "placeholder": "pvz., PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Šios baterijos unikalus identifikatorius",
+        "help": "Unikalus identifikatorius, kurį šiai konkrečiai baterijai suteikė ją rinkai pateikiantis ekonominės veiklos vykdytojas pagal ISO/IEC 15459 arba lygiavertį standartą. Ant baterijos esantis QR kodas suteikia prieigą prie jos paso (13 straipsnio 6 dalis ir 77 straipsnio 3 dalis).",
+        "placeholder": "pvz., serijos numeris arba GS1 identifikatorius"
+      },
+      "manufacture_place": {
+        "label": "Pagaminimo vieta",
+        "help": "Baterijų fizinės gamybos gamyklos geografinė vieta.",
+        "placeholder": "pvz., Lionas, Prancūzija"
+      },
+      "manufacture_date": {
+        "label": "Pagaminimo data (mėnuo ir metai)",
+        "placeholder": "pvz., 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Svoris (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Pirminės baterijos pasas (kai taikoma)",
+        "help": "Baterijoms, kurios buvo paruoštos pakartotiniam naudojimui arba paskirties keitimui, kurių paskirtis buvo pakeista arba kurios buvo perdarytos: nuoroda į pirminės baterijos ar baterijų pasą ar pasus (77 straipsnio 7 dalis).",
+        "placeholder": "pvz., https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Fizinio gamintojo pavadinimas"
+      },
+      "manufacturer_trade_name": {
+        "label": "Registruotas prekybinis pavadinimas ar registruotas prekių ženklas"
+      },
+      "manufacturer_address": {
+        "label": "Pašto adresas (vienas bendras kontaktinis punktas)"
+      },
+      "manufacturer_website": {
+        "label": "Interneto adresas (jei toks yra)",
+        "placeholder": "pvz., https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "El. pašto adresas (jei toks yra)",
+        "help": "Taip pat rodomas kaip kontaktas prašymams suteikti prieigą prie ribotos prieigos paso informacijos."
+      },
+      "authorised_representative": {
+        "label": "Įgaliotasis atstovas (kai taikoma)",
+        "help": "Įgaliotojo atstovo pavadinimas ir kontaktiniai duomenys, jei toks paskirtas."
+      },
+      "importer": {
+        "label": "Importuotojas (kai taikoma)",
+        "help": "Importuotojo pavadinimas, registruotas prekybinis pavadinimas ar registruotas prekių ženklas, pašto adresas ir, jei toks yra, interneto bei el. pašto adresas (41 straipsnio 3 dalis)."
+      },
+      "battery_chemistry": {
+        "label": "Baterijos cheminė sudėtis"
+      },
+      "battery_chemistry_other": {
+        "label": "Cheminė sudėtis (išsami informacija)"
+      },
+      "hazardous_substances": {
+        "label": "Pavojingosios medžiagos (išskyrus gyvsidabrį, kadmį ar šviną)",
+        "help": "Baterijoje esančios pavojingosios medžiagos, išskyrus gyvsidabrį, kadmį ar šviną. Jei tokių nėra, įrašykite „Nėra“."
+      },
+      "critical_raw_materials": {
+        "label": "Svarbiausiosios žaliavos, kurių koncentracija yra didesnė nei 0,1 % masės",
+        "help": "Svarbiausiosios baterijoje esančios žaliavos, kurių koncentracija yra didesnė nei 0,1 % masės."
+      },
+      "critical_raw_materials_other": {
+        "label": "Kitos svarbiausiosios žaliavos"
+      },
+      "extinguishing_agent": {
+        "label": "Naudotina gesinamoji medžiaga"
+      },
+      "renewable_content_share": {
+        "label": "Atsinaujinančiųjų medžiagų dalis (%)",
+        "help": "XIII priedo 1 punkto f papunktis."
+      },
+      "rated_capacity_ah": {
+        "label": "Vardinė talpa (Ah)"
+      },
+      "voltage_min": {
+        "label": "Minimali įtampa (V)"
+      },
+      "voltage_nominal": {
+        "label": "Vardinė įtampa (V)"
+      },
+      "voltage_max": {
+        "label": "Maksimali įtampa (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Įtampos verčių temperatūros intervalas (kai aktualu)",
+        "placeholder": "pvz., nuo -20 iki 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Pradinė galia (W)"
+      },
+      "power_capability_limits": {
+        "label": "Galios ribinės vertės ir temperatūros intervalas (kai aktualu)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Numatoma baterijos naudojimo trukmė (ciklai)"
+      },
+      "lifetime_reference_test": {
+        "label": "Numatomai naudojimo trukmei nustatyti atliktas etaloninis bandymas"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Talpos riba iki išeikvojimo (%)",
+        "help": "Tik elektrinių transporto priemonių baterijų atveju."
+      },
+      "idle_temperature_range": {
+        "label": "Nenaudojamai baterijai priimtinos temperatūros intervalas",
+        "help": "Nurodykite ir etaloninį bandymą.",
+        "placeholder": "pvz., nuo -30 iki 60 °C (etaloninis bandymas)"
+      },
+      "calendar_life_warranty": {
+        "label": "Laikotarpis, kurį galioja kalendorinės naudojimo trukmės komercinė garantija",
+        "placeholder": "pvz., 8 metai"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Pradinis energijos apykaitos efektyvumas (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Energijos apykaitos efektyvumas pasiekus 50 % gyvavimo ciklo (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Vidinis baterijos elementų atsparumas (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Vidinis baterijos modulių atsparumas (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "C lygis (srovės lygis) per atitinkamą gyvavimo ciklo bandymą",
+        "placeholder": "pvz., 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Anglies pėdsako deklaracija",
+        "help": "7 straipsnis. Prievolė atsiranda tik tada, kai pradedamas taikyti Komisijos deleguotasis aktas dėl skaičiavimo metodo."
+      },
+      "carbon_footprint_value": {
+        "label": "Anglies pėdsakas (kg CO2e/kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Anglies pėdsako dydžio klasė"
+      },
+      "carbon_footprint_study": {
+        "label": "Interneto nuoroda į viešai paskelbtą anglies pėdsako tyrimo versiją",
+        "placeholder": "pvz., https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Baterijų išsamaus patikrinimo politikos ataskaita (atsakingas tiekimo šaltinių pasirinkimas)",
+        "help": "Informacija apie atsakingą tiekimo šaltinių pasirinkimą, nurodyta baterijų išsamaus patikrinimo politikos ataskaitoje (52 straipsnio 3 dalis). Išsamaus patikrinimo prievolės taikomos nuo 2027 m. rugpjūčio 18 d."
+      },
+      "recycled_cobalt": {
+        "label": "Perdirbtųjų medžiagų dalis: kobaltas (%)",
+        "help": "Informacija apie perdirbtųjų medžiagų dalį, pateikta 8 straipsnyje nurodytuose dokumentuose."
+      },
+      "recycled_lithium": {
+        "label": "Perdirbtųjų medžiagų dalis: litis (%)"
+      },
+      "recycled_nickel": {
+        "label": "Perdirbtųjų medžiagų dalis: nikelis (%)"
+      },
+      "recycled_lead": {
+        "label": "Perdirbtųjų medžiagų dalis: švinas (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Baterija paženklinta atskiro surinkimo simboliu",
+        "help": "13 straipsnio 4 dalis ir VI priedo B dalis."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Kadmio arba švino cheminis simbolis",
+        "help": "Baterijos, kuriose yra daugiau kaip 0,002 % kadmio arba daugiau kaip 0,004 % švino, po atskiro surinkimo simboliu paženklinamos simboliu Cd arba Pb (13 straipsnio 5 dalis)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "ES atitikties deklaracija",
+        "help": "Nuoroda į ES atitikties deklaraciją arba jos numeris (18 straipsnis).",
+        "placeholder": "pvz., https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Informacija apie atliekų prevenciją, surinkimą ir perdirbimą",
+        "help": "74 straipsnio 1 dalies a–f punktai: kaip galutiniai naudotojai gali prisidėti prie atliekų prevencijos ir pratęsti baterijos naudojimo etapą, jų vaidmuo atskirai surenkant baterijų atliekas, priėmimo ir surinkimo punktai, baterijų atliekų tvarkymo saugos nurodymai (įskaitant baterijas, kuriose yra ličio), simbolių reikšmė ir medžiagų poveikis sveikatai ir aplinkai."
+      },
+      "collection_point_link": {
+        "label": "Interneto nuoroda į informaciją apie surinkimą",
+        "placeholder": "pvz., https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Išsami sudėtis (katodas, anodas, elektrolitas)",
+        "help": "Įskaitant katode, anode ir elektrolite naudojamas medžiagas."
+      },
+      "battery_spare_parts": {
+        "label": "Sudedamųjų dalių numeriai ir pakaitinių atsarginių dalių tiekimo šaltinių kontaktiniai duomenys"
+      },
+      "battery_dismantling_information": {
+        "label": "Informacija apie išmontavimą",
+        "help": "Išskleistosios schemos, kuriose parodyta baterijos elementų vieta, išardymo veiksmų sekos, tvirtinimo įtaisų, kuriuos reikia išardyti, tipas ir skaičius, išardymui reikalingi įrankiai, įspėjimai, jei esama rizikos pažeisti kai kurias dalis, taip pat naudojamų elementų kiekis ir išdėstymas. Galima pateikti nuorodas į dokumentus."
+      },
+      "battery_safety_measures": {
+        "label": "Saugos priemonės"
+      },
+      "battery_test_reports": {
+        "label": "Atitiktį įrodančios bandymų ataskaitos",
+        "help": "Bandymų ataskaitų rezultatai, įrodantys atitiktį reglamentui ir jo įgyvendinimo bei deleguotiesiems aktams. Ataskaitų nuorodos arba saitai."
+      },
+      "battery_status": {
+        "label": "Baterijos statusas"
+      },
+      "battery_state_of_health": {
+        "label": "Baterijos būklė (%)",
+        "help": "14 straipsnis."
+      },
+      "battery_state_of_health_date": {
+        "label": "Baterijos būklės vertės data",
+        "placeholder": "pvz., 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Naudojimo informacija",
+        "help": "Įkrovimo ir iškrovimo ciklų skaičius, neigiami įvykiai, pavyzdžiui, nelaimingi atsitikimai, ir veikimo aplinkos sąlygos, pavyzdžiui, temperatūra ir įkrovos būsena."
+      },
+      "battery_status_change_values": {
+        "label": "Eksploatacinių savybių ir patvarumo vertės pakeitus statusą",
+        "help": "10 straipsnio 1 dalyje nurodytų eksploatacinių savybių ir patvarumo parametrų vertės baterijos pateikimo rinkai metu ir pakeitus jos statusą."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Elektrinių transporto priemonių baterija",
+        "lmt": "Mažųjų transporto priemonių baterija",
+        "industrial": "Pramoninė baterija, kurios talpa didesnė nei 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Ličio jonų, NMC (nikelis, manganas, kobaltas)",
+        "li_nca": "Ličio jonų, NCA (nikelis, kobaltas, aliuminis)",
+        "li_lfp": "Ličio jonų, LFP (ličio geležies fosfatas)",
+        "li_lmfp": "Ličio jonų, LMFP (ličio mangano geležies fosfatas)",
+        "li_lmo": "Ličio jonų, LMO (ličio mangano oksidas)",
+        "li_lto": "Ličio jonų, LTO (ličio titanato anodas)",
+        "sodium_ion": "Natrio jonų",
+        "nimh": "Nikelio metalo hidrido",
+        "lead_acid": "Švino rūgšties",
+        "other": "Kita"
+      },
+      "crm": {
+        "cobalt": "Kobaltas",
+        "lithium": "Litis",
+        "natural_graphite": "Gamtinis grafitas",
+        "nickel": "Nikelis",
+        "manganese": "Manganas",
+        "copper": "Varis",
+        "aluminium": "Aliuminis",
+        "phosphorus": "Fosforas",
+        "other": "Kita"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Dar netaikoma (deleguotasis aktas pagal 7 straipsnį nepriimtas)",
+        "declared": "Anglies pėdsakas deklaruotas"
+      },
+      "heavyMetal": {
+        "none": "Cd ar Pb simbolio nereikia",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd ir Pb"
+      },
+      "status": {
+        "original": "Nauja",
+        "repurposed": "Pakeistos paskirties",
+        "reused": "Pakartotinai naudojama",
+        "remanufactured": "Perdaryta",
+        "waste": "Atliekos"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Ribotos prieigos informacija apie bateriją",
+      "body": "Išsami sudėtis, informacija apie išmontavimą, bandymų ataskaitos ir duomenys apie šią konkrečią bateriją prieinami tik teisėtą interesą turintiems asmenims ir institucijoms (Reglamento (ES) 2023/1542 77 straipsnis ir XIII priedas). Norėdami gauti prieigą, kreipkitės: {{contact}}.",
+      "bodyNoContact": "Išsami sudėtis, informacija apie išmontavimą, bandymų ataskaitos ir duomenys apie šią konkrečią bateriją prieinami tik teisėtą interesą turintiems asmenims ir institucijoms (Reglamento (ES) 2023/1542 77 straipsnis ir XIII priedas). Norėdami gauti prieigą, kreipkitės į fizinį gamintoją."
     }
   }
 }
