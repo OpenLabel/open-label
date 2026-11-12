@@ -260,7 +260,7 @@
     "car_cleaning": "Autonpuhdistusaineet"
   },
   "categoryDescriptions": {
-    "battery": "Hiilijalanjälki, kierrätys, toimitusketjun huolellisuusvelvoite",
+    "battery": "Akkupassi sähköajoneuvojen ajovoima-akuille, kevyiden liikkumisvälineiden akuille ja yli 2 kWh:n teollisuusakuille (asetus (EU) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, palonkestävyys",
     "textiles": "Kuitukoostumus, kestävyys, PFAS-ilmoitus",
     "wine": "Ainesosat, ravinto, maantieteellinen merkintä",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Julkaistu"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Akkupassin soveltamisala",
+        "description": "Akkupassi vaaditaan 18 päivästä helmikuuta 2027 alkaen jokaiselta markkinoille saatettavalta tai käyttöön otettavalta kevyen liikkumisvälineen akulta, teollisuusakulta, jonka kapasiteetti on yli 2 kWh, ja sähköajoneuvon ajovoima-akulta (asetuksen (EU) 2023/1542 77 artiklan 1 kohta)."
+      },
+      "identity": {
+        "title": "Akun tunnistetiedot",
+        "description": "Liitteessä VI olevassa A osassa tarkoitetut tiedot akusta (liitteessä XIII olevan 1 kohdan a alakohta)."
+      },
+      "operators": {
+        "title": "Valmistaja ja talouden toimijat",
+        "description": "Nimi, rekisteröity tuotenimi tai rekisteröity tavaramerkki, yhden yhteyspisteen postiosoite sekä internet- ja sähköpostiosoite, jos saatavilla (38 artiklan 7 kohta ja 41 artiklan 3 kohta)."
+      },
+      "composition": {
+        "title": "Koostumus",
+        "description": "Kemiallinen koostumus, vaaralliset aineet ja kriittiset raaka-aineet (liitteessä XIII olevan 1 kohdan b alakohta ja liitteessä VI oleva A osa)."
+      },
+      "performance": {
+        "title": "Suorituskyky ja kesto",
+        "description": "Akkumallin sähkökemialliset suorituskyky- ja kestoarvot (liitteessä XIII oleva 1 kohta)."
+      },
+      "sustainability": {
+        "title": "Hiilijalanjälki, vastuullinen hankinta ja kierrätetty sisältö",
+        "description": "Näitä tietoja aletaan soveltaa myöhempinä päivinä, jotka vahvistetaan asetuksessa ja sen nojalla annetuissa delegoiduissa säädöksissä. Jätä ne tyhjiksi, kunnes ne koskevat akkuasi."
+      },
+      "labelling": {
+        "title": "Merkinnät ja vaatimustenmukaisuus",
+        "description": "13 artiklan 4 ja 5 kohdan merkintävaatimukset sekä EU-vaatimustenmukaisuusvakuutus (liitteessä XIII olevan 1 kohdan q ja r alakohta)."
+      },
+      "end_of_life": {
+        "title": "Akku- ja paristojätteen syntymisen ehkäiseminen ja jätehuolto",
+        "description": "Tietoa loppukäyttäjille akku- ja paristojätteen syntymisen ehkäisemisestä ja jätehuollosta (74 artiklan 1 kohta)."
+      },
+      "restricted_model": {
+        "title": "Rajoitettu: henkilöt, joiden oikeutettua etua asia koskee",
+        "description": "Ei koskaan näytetä julkisessa passissa. Liitteessä XIII oleva 2 kohta: pääsy ainoastaan henkilöillä, joiden oikeutettua etua asia koskee, ilmoitetuilla laitoksilla, markkinavalvontaviranomaisilla ja komissiolla (77 artiklan 2 kohta)."
+      },
+      "restricted_authorities": {
+        "title": "Rajoitettu: vain viranomaiset",
+        "description": "Ei koskaan näytetä julkisessa passissa. Liitteessä XIII oleva 3 kohta: pääsy ainoastaan ilmoitetuilla laitoksilla, markkinavalvontaviranomaisilla ja komissiolla (77 artiklan 2 kohta)."
+      },
+      "individual": {
+        "title": "Rajoitettu: tämä yksittäinen akku",
+        "description": "Ei koskaan näytetä julkisessa passissa. Liitteessä XIII oleva 4 kohta: tätä tiettyä akkua koskevat tiedot, joita päivitetään sen käyttöiän aikana, ja joihin on pääsy ainoastaan henkilöillä, joiden oikeutettua etua asia koskee (77 artiklan 2 kohta)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Akkuluokka",
+        "help": "Kannettavat akut ja paristot sekä käynnistys-, valaistus- ja sytytysakut (ajoneuvoakut) eivät tarvitse akkupassia."
+      },
+      "product_name": {
+        "label": "Tuotteen nimi",
+        "placeholder": "esim. PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Akkumallin mallitunniste",
+        "help": "Akun tunnistamisen mahdollistavat tiedot (liitteessä VI olevan A osan 2 kohta).",
+        "placeholder": "esim. PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Tämän akun yksilöllinen tunniste",
+        "help": "Yksilöllinen tunniste, jonka akun markkinoille saattava talouden toimija on antanut tälle yksittäiselle akulle ISO/IEC 15459 -standardin tai vastaavan standardin mukaisesti. Akussa oleva QR-koodi antaa pääsyn sen passiin (13 artiklan 6 kohta ja 77 artiklan 3 kohta).",
+        "placeholder": "esim. sarjanumero tai GS1-tunniste"
+      },
+      "manufacture_place": {
+        "label": "Valmistuspaikka",
+        "help": "Akun valmistaneen laitoksen maantieteellinen sijainti.",
+        "placeholder": "esim. Lyon, Ranska"
+      },
+      "manufacture_date": {
+        "label": "Valmistuspäivä (kuukausi ja vuosi)",
+        "placeholder": "esim. 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Paino (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Alkuperäisen akun passi (tarvittaessa)",
+        "help": "Akuille, jotka on valmisteltu uudelleenkäyttöön tai käyttötarkoituksen muuttamiseen, joiden käyttötarkoitus on muutettu tai jotka on uudelleenvalmistettu: linkki alkuperäisen akun akkupassiin tai alkuperäisten akkujen akkupasseihin (77 artiklan 7 kohta).",
+        "placeholder": "esim. https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Valmistajan nimi"
+      },
+      "manufacturer_trade_name": {
+        "label": "Rekisteröity tuotenimi tai rekisteröity tavaramerkki"
+      },
+      "manufacturer_address": {
+        "label": "Postiosoite (yksi yhteyspiste)"
+      },
+      "manufacturer_website": {
+        "label": "Internetosoite (jos saatavilla)",
+        "placeholder": "esim. https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "Sähköpostiosoite (jos saatavilla)",
+        "help": "Näytetään myös yhteystietona pyynnöille päästä passin rajoitettuihin tietoihin."
+      },
+      "authorised_representative": {
+        "label": "Valtuutettu edustaja (tarvittaessa)",
+        "help": "Valtuutetun edustajan nimi ja yhteystiedot, jos sellainen on nimetty."
+      },
+      "importer": {
+        "label": "Maahantuoja (tarvittaessa)",
+        "help": "Maahantuojan nimi, rekisteröity tuotenimi tai rekisteröity tavaramerkki, postiosoite sekä internet- ja sähköpostiosoite, jos saatavilla (41 artiklan 3 kohta)."
+      },
+      "battery_chemistry": {
+        "label": "Akun kemiallinen koostumus"
+      },
+      "battery_chemistry_other": {
+        "label": "Kemiallinen koostumus (tiedot)"
+      },
+      "hazardous_substances": {
+        "label": "Vaaralliset aineet (muut kuin elohopea, kadmium ja lyijy)",
+        "help": "Akun sisältämät vaaralliset aineet, muut kuin elohopea, kadmium ja lyijy. Kirjoita \"Ei mitään\", jos niitä ei ole."
+      },
+      "critical_raw_materials": {
+        "label": "Kriittiset raaka-aineet, joiden pitoisuus on yli 0,1 painoprosenttia",
+        "help": "Akun sisältämät kriittiset raaka-aineet, joiden pitoisuus on yli 0,1 painoprosenttia."
+      },
+      "critical_raw_materials_other": {
+        "label": "Muut kriittiset raaka-aineet"
+      },
+      "extinguishing_agent": {
+        "label": "Käytettävä sammutusaine"
+      },
+      "renewable_content_share": {
+        "label": "Uusiutuvan sisällön osuus (%)",
+        "help": "Liitteessä XIII olevan 1 kohdan f alakohta."
+      },
+      "rated_capacity_ah": {
+        "label": "Nimelliskapasiteetti (Ah)"
+      },
+      "voltage_min": {
+        "label": "Vähimmäisjännite (V)"
+      },
+      "voltage_nominal": {
+        "label": "Nimellisjännite (V)"
+      },
+      "voltage_max": {
+        "label": "Enimmäisjännite (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Jännitearvojen lämpötilavälit (tarvittaessa)",
+        "placeholder": "esim. -20...55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Alkuperäinen tehovalmius (W)"
+      },
+      "power_capability_limits": {
+        "label": "Alkuperäiset tehorajat ja lämpötilaväli (tarvittaessa)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Akun odotettu käyttöikä (käyttösykleinä)"
+      },
+      "lifetime_reference_test": {
+        "label": "Odotetun käyttöiän määrittämisessä käytetty vertailutesti"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Kapasiteettiraja tyhjentymiselle (%)",
+        "help": "Vain sähköajoneuvojen ajovoima-akut."
+      },
+      "idle_temperature_range": {
+        "label": "Akun käyttämättömänä kestämä lämpötilaväli",
+        "help": "Ilmoita vertailutesti.",
+        "placeholder": "esim. -30...60 °C (vertailutesti)"
+      },
+      "calendar_life_warranty": {
+        "label": "Kaupallisen takuun voimassaoloaika",
+        "placeholder": "esim. 8 vuotta"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Energian kokonaishyötysuhde (round trip -hyötysuhde) uutena (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Energian kokonaishyötysuhde (round trip -hyötysuhde), kun puolet oletetuista enimmäiskäyttökerroista on käytetty (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Akkukennon sisäinen resistanssi (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Akkuyksikön sisäinen resistanssi (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "Käyttökertatestin C-arvo",
+        "placeholder": "esim. 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Hiilijalanjälki-ilmoitus",
+        "help": "7 artikla. Velvoite alkaa vasta, kun komission laskentamenetelmää koskevaa delegoitua säädöstä sovelletaan."
+      },
+      "carbon_footprint_value": {
+        "label": "Hiilijalanjälki (kg CO2e/kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Hiilijalanjälkiluokka"
+      },
+      "carbon_footprint_study": {
+        "label": "Hiilijalanjälkiarvojen perustana olevan selvityksen julkisen version verkko-osoite",
+        "placeholder": "esim. https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Akkuja ja paristoja koskevan asianmukaisen huolellisuuden toimintapolitiikkoja koskeva raportti (vastuullinen hankinta)",
+        "help": "Tiedot vastuullisesta hankinnasta akkuja ja paristoja koskevan asianmukaisen huolellisuuden toimintapolitiikkoja koskevan raportin mukaisesti (52 artiklan 3 kohta). Asianmukaista huolellisuutta koskevia velvoitteita sovelletaan 18 päivästä elokuuta 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Kierrätetty sisältö: koboltti (%)",
+        "help": "Tiedot kierrätetystä sisällöstä 8 artiklassa tarkoitettujen asiakirjojen mukaisesti."
+      },
+      "recycled_lithium": {
+        "label": "Kierrätetty sisältö: litium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Kierrätetty sisältö: nikkeli (%)"
+      },
+      "recycled_lead": {
+        "label": "Kierrätetty sisältö: lyijy (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Akku on merkitty erilliskeräystunnuksella",
+        "help": "13 artiklan 4 kohta ja liitteessä VI oleva B osa."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Kadmiumin tai lyijyn kemiallinen tunnus",
+        "help": "Akut, joissa on yli 0,002 prosenttia kadmiumia tai yli 0,004 prosenttia lyijyä, merkitään erilliskeräystunnuksen alapuolelle kemiallisella tunnuksella Cd tai Pb (13 artiklan 5 kohta)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "EU-vaatimustenmukaisuusvakuutus",
+        "help": "Linkki EU-vaatimustenmukaisuusvakuutukseen tai sen viite (18 artikla).",
+        "placeholder": "esim. https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Tietoa jätteen syntymisen ehkäisemisestä, keräyksestä ja kierrätyksestä",
+        "help": "74 artiklan 1 kohdan a–f alakohta: miten loppukäyttäjät voivat ehkäistä jätteen syntymistä ja pidentää akkujen käyttövaihetta, heidän roolinsa erilliskeräyksessä, vastaanotto- ja keräyspisteet, turvallisuusohjeet jäteakkujen ja -paristojen käsittelyyn (myös litiumia sisältävät akut), merkintöjen ja tunnusten merkitys sekä aineiden vaikutus ympäristöön ja ihmisten terveyteen."
+      },
+      "collection_point_link": {
+        "label": "Verkkolinkki keräystä koskeviin tietoihin",
+        "placeholder": "esim. https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Tarkka koostumus (katodi, anodi, elektrolyytti)",
+        "help": "Sisältäen myös katodissa, anodissa ja elektrolyytissä käytetyt materiaalit."
+      },
+      "battery_spare_parts": {
+        "label": "Komponenttien osanumerot ja varaosien toimittajien yhteystiedot"
+      },
+      "battery_dismantling_information": {
+        "label": "Purkuohjeet",
+        "help": "Akkujärjestelmän/-yksikön räjäytyskuvat, joista käy ilmi akkukennojen sijainti, purkuvaiheet, avattavien kiinnitysten tyyppi ja määrä, purkamiseen tarvittavat työkalut, varoitukset mahdollisesta osien rikkoutumisriskistä sekä käytettyjen kennojen määrä ja kokoonpanorakenne. Linkit asiakirjoihin käyvät."
+      },
+      "battery_safety_measures": {
+        "label": "Turvallisuustoimenpiteet"
+      },
+      "battery_test_reports": {
+        "label": "Testausraportit, jotka osoittavat vaatimusten täyttyvän",
+        "help": "Tulokset testausraporteista, jotka osoittavat asetuksessa sekä sen perusteella hyväksytyissä delegoiduissa säädöksissä ja täytäntöönpanosäädöksissä vahvistettujen vaatimusten täyttyvän. Viitteet tai linkit raportteihin."
+      },
+      "battery_status": {
+        "label": "Akun luokitus"
+      },
+      "battery_state_of_health": {
+        "label": "Toimintakunto (%)",
+        "help": "14 artikla."
+      },
+      "battery_state_of_health_date": {
+        "label": "Toimintakuntoarvon päivämäärä",
+        "placeholder": "esim. 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Käyttötiedot",
+        "help": "Lataus- ja purkaussyklien lukumäärä, negatiiviset tapahtumat, kuten onnettomuudet, sekä toiminnan ympäristöolosuhteet, kuten lämpötila, ja varaustila."
+      },
+      "battery_status_change_values": {
+        "label": "Suorituskyvyn ja keston muuttujien arvot luokituksen muuttuessa",
+        "help": "10 artiklan 1 kohdassa tarkoitettujen suorituskyvyn ja keston muuttujien arvot silloin, kun akku saatettiin markkinoille, ja silloin, kun sen luokitus muuttui."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Sähköajoneuvon ajovoima-akku",
+        "lmt": "Kevyen liikkumisvälineen akku",
+        "industrial": "Teollisuusakku, jonka kapasiteetti on yli 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Litiumioni, NMC (nikkeli-mangaani-koboltti)",
+        "li_nca": "Litiumioni, NCA (nikkeli-koboltti-alumiini)",
+        "li_lfp": "Litiumioni, LFP (litiumrautafosfaatti)",
+        "li_lmfp": "Litiumioni, LMFP (litiummangaanirautafosfaatti)",
+        "li_lmo": "Litiumioni, LMO (litiummangaanioksidi)",
+        "li_lto": "Litiumioni, LTO (litiumtitanaattianodi)",
+        "sodium_ion": "Natriumioni",
+        "nimh": "Nikkelimetallihydridi",
+        "lead_acid": "Lyijyhappo",
+        "other": "Muu"
+      },
+      "crm": {
+        "cobalt": "Koboltti (Co)",
+        "lithium": "Litium (Li)",
+        "natural_graphite": "Luonnongrafiitti",
+        "nickel": "Nikkeli (Ni)",
+        "manganese": "Mangaani (Mn)",
+        "copper": "Kupari (Cu)",
+        "aluminium": "Alumiini (Al)",
+        "phosphorus": "Fosfori (P)",
+        "other": "Muu"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Ei vielä sovelleta (7 artiklan mukaista delegoitua säädöstä ei ole annettu)",
+        "declared": "Hiilijalanjälki ilmoitettu"
+      },
+      "heavyMetal": {
+        "none": "Cd- tai Pb-merkkiä ei vaadita",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd ja Pb"
+      },
+      "status": {
+        "original": "Alkuperäinen",
+        "repurposed": "Käyttötarkoitus muutettu",
+        "reused": "Uudelleenkäytetty",
+        "remanufactured": "Uudelleenvalmistettu",
+        "waste": "Jäte"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Akkua koskevat rajoitetut tiedot",
+      "body": "Tarkka koostumus, purkuohjeet, testausraportit ja tätä yksittäistä akkua koskevat tiedot ovat ainoastaan niiden henkilöiden, joiden oikeutettua etua asia koskee, ja viranomaisten saatavilla (asetuksen (EU) 2023/1542 77 artikla ja liite XIII). Voit pyytää pääsyä ottamalla yhteyttä: {{contact}}.",
+      "bodyNoContact": "Tarkka koostumus, purkuohjeet, testausraportit ja tätä yksittäistä akkua koskevat tiedot ovat ainoastaan niiden henkilöiden, joiden oikeutettua etua asia koskee, ja viranomaisten saatavilla (asetuksen (EU) 2023/1542 77 artikla ja liite XIII). Voit pyytää pääsyä ottamalla yhteyttä valmistajaan."
     }
   }
 }
