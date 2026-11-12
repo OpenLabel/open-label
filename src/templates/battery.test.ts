@@ -1,67 +1,76 @@
+/*
+ * Open-Label Digital Product Passport Engine
+ * Copyright (C) 2026 Open-Label.eu
+ *
+ * Licensed under the Open-Label Public License (OLPL) v1.0.
+ * See LICENSE and NOTICE files for details.
+ */
+
 import { describe, it, expect } from 'vitest';
-import { BatteryTemplate, batteryTemplate } from './battery';
+import { BatteryTemplate, batteryTemplate, BATTERY_RESTRICTED_FIELD_IDS } from './battery';
+import { categoryList } from './index';
 
-describe('BatteryTemplate', () => {
-  it('has correct properties', () => {
-    expect(batteryTemplate.id).toBe('battery');
-    expect(batteryTemplate.name).toBe('Battery');
-    expect(batteryTemplate.icon).toBe('🔋');
-    expect(batteryTemplate.description).toContain('EU Battery Regulation 2023/1542');
-  });
+const questions = batteryTemplate.sections.flatMap((s) => s.questions);
+const byId = (id: string) => questions.find((q) => q.id === id);
 
-  it('is an instance of BatteryTemplate', () => {
+describe('BatteryTemplate (Regulation (EU) 2023/1542)', () => {
+  it('has the expected identity', () => {
     expect(batteryTemplate).toBeInstanceOf(BatteryTemplate);
+    expect(batteryTemplate.id).toBe('battery');
+    expect(batteryTemplate.icon).toBe('🔋');
+    expect(batteryTemplate.description).toContain('2023/1542');
   });
 
-  it('has 6 sections', () => {
-    expect(batteryTemplate.sections).toHaveLength(6);
+  it('is selectable in the category list', () => {
+    expect(categoryList.find((c) => c.value === 'battery')?.status).toBe('active');
   });
 
-  it('has expected section titles', () => {
-    const titles = batteryTemplate.sections.map(s => s.title);
-    expect(titles).toContain('Battery Identification');
-    expect(titles).toContain('Carbon Footprint & Sustainability');
-    expect(titles).toContain('Performance & Durability');
-    expect(titles).toContain('Supply Chain Due Diligence');
-    expect(titles).toContain('Recycling & End-of-Life');
-    expect(titles).toContain('Manufacturer Information');
+  it('offers only the battery categories that need a passport (Article 77(1))', () => {
+    const values = byId('battery_category')!.options!.map((o) => o.value);
+    expect(values).toEqual(['ev', 'lmt', 'industrial']);
   });
 
-  it('has no duplicate question IDs', () => {
-    const ids = batteryTemplate.sections.flatMap(s => s.questions.map(q => q.id));
+  it('has no duplicate question ids', () => {
+    const ids = questions.map((q) => q.id);
     expect(new Set(ids).size).toBe(ids.length);
   });
 
-  it('all questions have valid types', () => {
-    const validTypes = ['text', 'textarea', 'select', 'checkbox', 'number'];
-    for (const section of batteryTemplate.sections) {
-      for (const q of section.questions) {
-        expect(validTypes).toContain(q.type);
-      }
+  it('is fully key-driven', () => {
+    for (const s of batteryTemplate.sections) {
+      expect(s.titleKey).toMatch(/^battery\.sections\./);
+      if (s.description) expect(s.descriptionKey).toMatch(/^battery\.sections\./);
+    }
+    for (const q of questions) {
+      expect(q.labelKey, q.id).toBe(`battery.fields.${q.id}.label`);
+      if (q.helpText) expect(q.helpKey, q.id).toBe(`battery.fields.${q.id}.help`);
+      if (q.placeholder) expect(q.placeholderKey, q.id).toBe(`battery.fields.${q.id}.placeholder`);
+      for (const o of q.options ?? []) expect(o.labelKey, `${q.id}.${o.value}`).toMatch(/^battery\.options\./);
     }
   });
 
-  it('select questions have options', () => {
-    for (const section of batteryTemplate.sections) {
-      for (const q of section.questions) {
-        if (q.type === 'select') {
-          expect(q.options).toBeDefined();
-          expect(q.options!.length).toBeGreaterThan(0);
-        }
-      }
-    }
+  it('keeps every Annex XIII point 2 to 4 field off the public passport', () => {
+    const restrictedSections = batteryTemplate.sections.filter((s) => s.id?.startsWith('restricted_') || s.id === 'individual');
+    const ids = restrictedSections.flatMap((s) => s.questions.map((q) => q.id));
+    expect(ids.length).toBeGreaterThan(0);
+    for (const s of restrictedSections) for (const q of s.questions) expect(q.internal, q.id).toBe(true);
+    expect([...BATTERY_RESTRICTED_FIELD_IDS].sort()).toEqual(ids.sort());
   });
 
-  it('getRequiredLogos returns battery-crossed-bin when separate_collection_required', () => {
-    expect(batteryTemplate.getRequiredLogos!({ separate_collection_required: true })).toContain('battery-crossed-bin');
+  it('marks no public field as internal', () => {
+    const publicSections = batteryTemplate.sections.filter((s) => !(s.id?.startsWith('restricted_') || s.id === 'individual'));
+    for (const s of publicSections) for (const q of s.questions) expect(q.internal, q.id).toBeFalsy();
   });
 
-
-  it('getRequiredLogos returns carbon-class when carbon_footprint_class set', () => {
-    expect(batteryTemplate.getRequiredLogos!({ carbon_footprint_class: 'A' })).toContain('carbon-class');
+  it('shows the EV-only capacity threshold only for EV batteries', () => {
+    expect(byId('capacity_threshold_exhaustion')!.showWhen).toEqual({ field: 'battery_category', equals: 'ev' });
   });
 
-  it('getRequiredLogos returns empty for no data', () => {
-    expect(batteryTemplate.getRequiredLogos!({})).toEqual([]);
+  it('adds no self-declared logos', () => {
+    expect(batteryTemplate.getRequiredLogos!()).toEqual([]);
+  });
+
+  it('points the restricted-access notice at the manufacturer contact', () => {
+    expect(batteryTemplate.restrictedAccessNotice?.contactFieldId).toBe('manufacturer_email');
+    expect(byId('manufacturer_email')).toBeDefined();
   });
 });

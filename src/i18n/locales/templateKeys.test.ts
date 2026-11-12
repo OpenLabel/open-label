@@ -11,6 +11,7 @@ import type { CategoryTemplate } from "@/templates/base";
 import { toysTemplate } from "@/templates/toys";
 import { textilesTemplate } from "@/templates/textiles";
 import { detergentsTemplate, DETERGENTS_WARNING_MESSAGES, DETERGENTS_FORM_COPY } from "@/templates/detergents";
+import { batteryTemplate, BATTERY_RESTRICTED_NOTICE } from "@/templates/battery";
 import { DETERGENT_ALLERGEN_PICKER_COPY } from "@/data/detergentFragrances";
 import { DETERGENTS_PUBLIC_COPY } from "@/components/detergents/publicCopy";
 
@@ -134,10 +135,20 @@ const detergentsKeys = [
   ...collectTemplateKeys(detergentsTemplate),
 ].sort();
 
+const batteryKeys = [
+  "categories.battery",
+  "categoryDescriptions.battery",
+  BATTERY_RESTRICTED_NOTICE.titleKey,
+  BATTERY_RESTRICTED_NOTICE.bodyKey,
+  BATTERY_RESTRICTED_NOTICE.bodyNoContactKey,
+  ...collectTemplateKeys(batteryTemplate),
+].sort();
+
 const templates: { name: string; keys: string[] }[] = [
   { name: "Toys", keys: toysKeys },
   { name: "Apparel", keys: textilesKeys },
   { name: "Detergents", keys: detergentsKeys },
+  { name: "Batteries", keys: batteryKeys },
 ];
 
 describe.each(templates)("$name template i18n key coverage", ({ name, keys: required }) => {

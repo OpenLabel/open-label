@@ -64,18 +64,18 @@ describe('PassportPreview', () => {
   it('shows required logos when category data triggers them', () => {
     render(
       <PassportPreview formData={{
-        name: 'Test', category: 'battery', image_url: null, description: '',
-        category_data: { separate_collection_required: true },
+        name: 'Test', category: 'electronics', image_url: null, description: '',
+        category_data: { weee_compliant: true },
       }} />
     );
-    expect(screen.getByText('Battery Crossed Bin')).toBeInTheDocument();
+    expect(screen.getByText('Weee')).toBeInTheDocument();
   });
 
   it('renders category-specific data when section has values', () => {
     render(
       <PassportPreview formData={{
         name: 'Test', category: 'battery', image_url: null, description: '',
-        category_data: { manufacturer_name: 'Acme Corp', capacity_kwh: 50 },
+        category_data: { manufacturer_name: 'Acme Corp', rated_capacity_ah: 50 },
       }} />
     );
     expect(screen.getByText('Acme Corp')).toBeInTheDocument();
@@ -85,7 +85,7 @@ describe('PassportPreview', () => {
     render(
       <PassportPreview formData={{
         name: 'Test', category: 'battery', image_url: null, description: '',
-        category_data: { carbon_footprint_declared: true },
+        category_data: { separate_collection_symbol: true },
       }} />
     );
     // checkbox type shows ✓ badge, not text
@@ -99,6 +99,7 @@ describe('PassportPreview', () => {
         category_data: { product_name: 'Custom Product Name' },
       }} />
     );
-    expect(screen.getByText('Custom Product Name')).toBeInTheDocument();
+    // Shown as the heading (and again as the Product name field of the battery template)
+    expect(screen.getAllByText('Custom Product Name').length).toBeGreaterThan(0);
   });
 });

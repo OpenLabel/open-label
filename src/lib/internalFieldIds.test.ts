@@ -2,6 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { readFileSync } from 'fs';
 import { resolve } from 'path';
 import { templates } from '@/templates';
+import { BATTERY_RESTRICTED_FIELD_IDS } from '@/templates/battery';
 import type { TemplateQuestion } from '@/templates/base';
 
 function collectInternalIds(): string[] {
@@ -42,13 +43,14 @@ describe('INTERNAL_FIELD_IDS stays in sync with the templates', () => {
     expect(readEdgeFunctionIds()).toEqual(collectInternalIds());
   });
 
-  it('strips only the in-scope Apparel (textiles) internal documents from the public response', () => {
+  it('strips the Apparel internal documents and the restricted battery data from the public response', () => {
     expect(readEdgeFunctionList('INTERNAL_FIELD_IDS')).toEqual([
       'audit_certificate_file',
+      ...BATTERY_RESTRICTED_FIELD_IDS,
       'claims_evidence_file',
       'lca_report_file',
       'test_report_file',
-    ]);
+    ].sort());
   });
 
   it('records the Toys internal fields as a known, deliberate, out-of-scope gap', () => {

@@ -123,6 +123,22 @@ export interface CategoryTemplate {
   sections: TemplateSection[];
   getRequiredLogos?: (data: Record<string, unknown>) => string[];
   /**
+   * Optional notice shown on the public passport about information that is
+   * collected but kept off the public page (for example the battery passport
+   * data reserved to persons with a legitimate interest and to authorities).
+   */
+  restrictedAccessNotice?: {
+    title: string;
+    titleKey: string;
+    /** Body with a {{contact}} placeholder filled from `contactFieldId`. */
+    body: string;
+    bodyKey: string;
+    /** Body used when the contact field is empty. */
+    bodyNoContact: string;
+    bodyNoContactKey: string;
+    contactFieldId?: string;
+  };
+  /**
    * Cross-field inline warnings that cannot be expressed as a single-question
    * `warnWhen`. Returns one entry per warning, anchored to the field it belongs
    * under. Optional — templates that omit it render no cross-field warnings.

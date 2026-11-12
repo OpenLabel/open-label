@@ -209,7 +209,7 @@ describe('Create sample menu', () => {
     render(<MemoryRouter><Dashboard /></MemoryRouter>);
     openMenu();
     const items = (await screen.findAllByRole('menuitem')).map(i => i.textContent);
-    expect(items).toEqual(['🍷categories.wine', '🧸categories.toys', '👕categories.textiles', '🚗categories.car_cleaning', '🧴categories.detergents']);
+    expect(items).toEqual(['🍷categories.wine', '🧸categories.toys', '👕categories.textiles', '🚗categories.car_cleaning', '🧴categories.detergents', '🔋categories.battery']);
   });
 
   it('creates the chosen sample and navigates to its editor', async () => {
