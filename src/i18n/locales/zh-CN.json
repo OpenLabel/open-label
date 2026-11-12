@@ -268,7 +268,7 @@
     "car_cleaning": "汽车清洁产品"
   },
   "categoryDescriptions": {
-    "battery": "碳足迹、回收、供应链尽职调查",
+    "battery": "适用于电动汽车电池、轻型交通工具电池和 2 kWh 以上工业电池的电池护照（法规 (EU) 2023/1542）",
     "construction": "DoPC、GWP A1-A3、耐火性",
     "textiles": "纤维成分、耐用性、PFAS声明",
     "wine": "成分、营养、地理标志",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "已发布"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "电池护照适用范围",
+        "description": "自 2027 年 2 月 18 日起，每一块投放市场或投入使用的轻型交通工具电池、容量超过 2 kWh 的工业电池以及电动汽车电池均须具备电池护照（法规 (EU) 2023/1542 第 77 条第 1 款）。"
+      },
+      "identity": {
+        "title": "电池标识",
+        "description": "附件 VI A 部分规定的电池信息（附件 XIII 第 1 点 (a) 项）。"
+      },
+      "operators": {
+        "title": "制造商和经济运营者",
+        "description": "名称、注册商号或注册商标、注明单一联系点的邮寄地址，以及网址和电子邮件地址（如有）（第 38 条第 7 款和第 41 条第 3 款）。"
+      },
+      "composition": {
+        "title": "材料成分",
+        "description": "化学体系、有害物质和关键原材料（附件 XIII 第 1 点 (b) 项和附件 VI A 部分）。"
+      },
+      "performance": {
+        "title": "性能和耐久性",
+        "description": "该电池型号的电化学性能和耐久性数值（附件 XIII 第 1 点）。"
+      },
+      "sustainability": {
+        "title": "碳足迹、负责任采购和再生材料含量",
+        "description": "这些项目将在本法规及其授权法案规定的较晚日期开始适用。在适用于您的电池之前，请留空。"
+      },
+      "labelling": {
+        "title": "标签和合规",
+        "description": "第 13 条第 4 款和第 5 款的标签要求以及欧盟符合性声明（附件 XIII 第 1 点 (q) 项和 (r) 项）。"
+      },
+      "end_of_life": {
+        "title": "废物预防和管理",
+        "description": "向终端用户提供的关于废旧电池预防和管理的信息（第 74 条第 1 款）。"
+      },
+      "restricted_model": {
+        "title": "受限：具有合法利益的人员",
+        "description": "绝不在公开护照上显示。附件 XIII 第 2 点：仅供具有合法利益的人员、公告机构、市场监督机构和欧盟委员会访问（第 77 条第 2 款）。"
+      },
+      "restricted_authorities": {
+        "title": "受限：仅限主管机构",
+        "description": "绝不在公开护照上显示。附件 XIII 第 3 点：仅供公告机构、市场监督机构和欧盟委员会访问（第 77 条第 2 款）。"
+      },
+      "individual": {
+        "title": "受限：此单个电池",
+        "description": "绝不在公开护照上显示。附件 XIII 第 4 点：关于该特定电池的信息，在其使用寿命期间更新，仅供具有合法利益的人员访问（第 77 条第 2 款）。"
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "电池类别",
+        "help": "便携式电池和 SLI（启动、照明和点火）电池不需要电池护照。"
+      },
+      "product_name": {
+        "label": "产品名称",
+        "placeholder": "例如：PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "电池型号标识符",
+        "help": "用于识别电池的信息（附件 VI A 部分第 2 点）。",
+        "placeholder": "例如：PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "此电池的唯一标识符",
+        "help": "由将该电池投放市场的经济运营者分配给此单个电池的唯一标识符，符合 ISO/IEC 15459 或同等标准。通过电池上的二维码可访问其护照（第 13 条第 6 款和第 77 条第 3 款）。",
+        "placeholder": "例如：序列号或 GS1 标识符"
+      },
+      "manufacture_place": {
+        "label": "制造地点",
+        "help": "制造设施的地理位置。",
+        "placeholder": "例如：法国里昂"
+      },
+      "manufacture_date": {
+        "label": "制造日期（年和月）",
+        "placeholder": "例如：2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "重量 (kg)"
+      },
+      "original_battery_passport": {
+        "label": "原电池的护照（如适用）",
+        "help": "对于为再利用或改换用途而准备的电池、已改换用途或再制造的电池：链接至原电池的护照（第 77 条第 7 款）。",
+        "placeholder": "例如：https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "制造商名称"
+      },
+      "manufacturer_trade_name": {
+        "label": "注册商号或注册商标"
+      },
+      "manufacturer_address": {
+        "label": "邮寄地址（单一联系点）"
+      },
+      "manufacturer_website": {
+        "label": "网址（如有）",
+        "placeholder": "例如：https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "电子邮件地址（如有）",
+        "help": "同时作为申请访问受限护照信息的联系方式显示。"
+      },
+      "authorised_representative": {
+        "label": "授权代表（如适用）",
+        "help": "授权代表的名称和联系方式（如已指定）。"
+      },
+      "importer": {
+        "label": "进口商（如适用）",
+        "help": "进口商的名称、注册商号或注册商标、邮寄地址，以及网址和电子邮件地址（如有）（第 41 条第 3 款）。"
+      },
+      "battery_chemistry": {
+        "label": "电池化学体系"
+      },
+      "battery_chemistry_other": {
+        "label": "化学体系（详情）"
+      },
+      "hazardous_substances": {
+        "label": "有害物质（汞、镉或铅除外）",
+        "help": "电池中除汞、镉或铅以外的有害物质。如无，请输入“无”。"
+      },
+      "critical_raw_materials": {
+        "label": "含量超过 0.1 %（质量分数）的关键原材料",
+        "help": "电池中浓度超过 0.1 %（质量分数）的关键原材料。"
+      },
+      "critical_raw_materials_other": {
+        "label": "其他关键原材料"
+      },
+      "extinguishing_agent": {
+        "label": "可用灭火剂"
+      },
+      "renewable_content_share": {
+        "label": "可再生成分占比 (%)",
+        "help": "附件 XIII 第 1 点 (f) 项。"
+      },
+      "rated_capacity_ah": {
+        "label": "额定容量 (Ah)"
+      },
+      "voltage_min": {
+        "label": "最低电压 (V)"
+      },
+      "voltage_nominal": {
+        "label": "标称电压 (V)"
+      },
+      "voltage_max": {
+        "label": "最高电压 (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "电压值对应的温度范围（如相关）",
+        "placeholder": "例如：-20 至 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "初始功率能力 (W)"
+      },
+      "power_capability_limits": {
+        "label": "功率能力限值和温度范围（如相关）"
+      },
+      "expected_lifetime_cycles": {
+        "label": "电池预期寿命（循环次数）"
+      },
+      "lifetime_reference_test": {
+        "label": "预期寿命所用的参考测试"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "容量衰竭阈值 (%)",
+        "help": "仅适用于电动汽车电池。"
+      },
+      "idle_temperature_range": {
+        "label": "电池在不使用时可承受的温度范围",
+        "help": "请注明参考测试。",
+        "placeholder": "例如：-30 至 60 °C（参考测试）"
+      },
+      "calendar_life_warranty": {
+        "label": "日历寿命的商业保修期",
+        "placeholder": "例如：8 年"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "初始往返能量效率 (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "循环寿命达 50 % 时的往返能量效率 (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "电池单体内阻 (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "电池包内阻 (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "相关循环寿命测试的 C 倍率",
+        "placeholder": "例如：0.5C"
+      },
+      "carbon_footprint_status": {
+        "label": "碳足迹声明",
+        "help": "第 7 条。该义务仅在欧盟委员会关于计算方法的授权法案适用后才开始。"
+      },
+      "carbon_footprint_value": {
+        "label": "碳足迹（kg CO2e/kWh）"
+      },
+      "carbon_footprint_class": {
+        "label": "碳足迹性能等级"
+      },
+      "carbon_footprint_study": {
+        "label": "公开碳足迹研究的网页链接",
+        "placeholder": "例如：https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "尽职调查政策报告（负责任采购）",
+        "help": "电池尽职调查政策报告中所述的负责任采购信息（第 52 条第 3 款）。尽职调查义务自 2027 年 8 月 18 日起适用。"
+      },
+      "recycled_cobalt": {
+        "label": "再生材料含量：钴 (%)",
+        "help": "第 8 条所述文件中注明的再生材料含量信息。"
+      },
+      "recycled_lithium": {
+        "label": "再生材料含量：锂 (%)"
+      },
+      "recycled_nickel": {
+        "label": "再生材料含量：镍 (%)"
+      },
+      "recycled_lead": {
+        "label": "再生材料含量：铅 (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "电池已标有分类收集标志",
+        "help": "第 13 条第 4 款和附件 VI B 部分。"
+      },
+      "cadmium_lead_symbol": {
+        "label": "镉或铅化学符号",
+        "help": "镉含量超过 0.002 % 或铅含量超过 0.004 % 的电池须在分类收集标志下方标注 Cd 或 Pb（第 13 条第 5 款）。"
+      },
+      "eu_declaration_of_conformity": {
+        "label": "欧盟符合性声明",
+        "help": "欧盟符合性声明的链接或编号（第 18 条）。",
+        "placeholder": "例如：https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "关于废物预防、收集和回收的信息",
+        "help": "第 74 条第 1 款 (a) 至 (f) 项：终端用户如何预防废物并延长电池寿命、其在分类收集中的作用、回收和收集点、处理废旧电池（包括锂电池）的安全说明、标志的含义，以及物质对健康和环境的影响。"
+      },
+      "collection_point_link": {
+        "label": "收集信息的网页链接",
+        "placeholder": "例如：https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "详细成分（正极、负极、电解质）",
+        "help": "包括正极、负极和电解质中使用的材料。"
+      },
+      "battery_spare_parts": {
+        "label": "部件编号及替换备件的联系方式"
+      },
+      "battery_dismantling_information": {
+        "label": "拆解信息",
+        "help": "显示电芯位置的爆炸图、拆卸顺序、紧固技术的类型和数量、所需工具、关于部件损坏风险的警告，以及电芯的数量和布局。可提供文件链接。"
+      },
+      "battery_safety_measures": {
+        "label": "安全措施"
+      },
+      "battery_test_reports": {
+        "label": "证明合规的测试报告",
+        "help": "证明符合本法规及其实施法案和授权法案的测试报告结果。报告的引用或链接。"
+      },
+      "battery_status": {
+        "label": "电池状态"
+      },
+      "battery_state_of_health": {
+        "label": "健康状态 (%)",
+        "help": "第 14 条。"
+      },
+      "battery_state_of_health_date": {
+        "label": "健康状态数值的日期",
+        "placeholder": "例如：2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "使用信息",
+        "help": "充放电循环次数、事故等负面事件，以及温度和荷电状态等运行条件。"
+      },
+      "battery_status_change_values": {
+        "label": "状态变更时的性能和耐久性数值",
+        "help": "电池投放市场时以及其状态变更时，第 10 条第 1 款所述性能和耐久性参数的数值。"
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "电动汽车电池",
+        "lmt": "轻型交通工具电池 (LMT)",
+        "industrial": "容量超过 2 kWh 的工业电池"
+      },
+      "chemistry": {
+        "li_nmc": "锂离子，NMC（镍锰钴）",
+        "li_nca": "锂离子，NCA（镍钴铝）",
+        "li_lfp": "锂离子，LFP（磷酸铁锂）",
+        "li_lmfp": "锂离子，LMFP（磷酸锰铁锂）",
+        "li_lmo": "锂离子，LMO（锰酸锂）",
+        "li_lto": "锂离子，LTO（钛酸锂负极）",
+        "sodium_ion": "钠离子",
+        "nimh": "镍氢",
+        "lead_acid": "铅酸",
+        "other": "其他"
+      },
+      "crm": {
+        "cobalt": "钴",
+        "lithium": "锂",
+        "natural_graphite": "天然石墨",
+        "nickel": "镍",
+        "manganese": "锰",
+        "copper": "铜",
+        "aluminium": "铝",
+        "phosphorus": "磷",
+        "other": "其他"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "尚不适用（第 7 条规定的授权法案尚未通过）",
+        "declared": "已声明碳足迹"
+      },
+      "heavyMetal": {
+        "none": "无需 Cd 或 Pb 标志",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd 和 Pb"
+      },
+      "status": {
+        "original": "原始",
+        "repurposed": "改换用途",
+        "reused": "再利用",
+        "remanufactured": "再制造",
+        "waste": "废旧"
+      }
+    },
+    "restrictedNotice": {
+      "title": "受限电池信息",
+      "body": "此单个电池的详细成分、拆解信息、测试报告和数据仅向具有合法利益的人员和主管机构提供（法规 (EU) 2023/1542 第 77 条和附件 XIII）。如需申请访问，请联系 {{contact}}。",
+      "bodyNoContact": "此单个电池的详细成分、拆解信息、测试报告和数据仅向具有合法利益的人员和主管机构提供（法规 (EU) 2023/1542 第 77 条和附件 XIII）。如需申请访问，请联系制造商。"
     }
   }
 }
