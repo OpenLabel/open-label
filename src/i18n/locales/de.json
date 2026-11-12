@@ -268,7 +268,7 @@
     "car_cleaning": "Autoreinigungsprodukte"
   },
   "categoryDescriptions": {
-    "battery": "CO₂-Fußabdruck, Recycling, Lieferketten-Sorgfalt",
+    "battery": "Batteriepass für Elektrofahrzeug-, LV- und Industriebatterien über 2 kWh (Verordnung (EU) 2023/1542)",
     "construction": "DoPC, GWP A1-A3, Brandwiderstand",
     "textiles": "Faserzusammensetzung, Haltbarkeit, PFAS-Erklärung",
     "wine": "Zutaten, Nährwerte, geografische Angabe",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Veröffentlicht"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Geltungsbereich des Batteriepasses",
+        "description": "Ab dem 18. Februar 2027 ist für jede LV-Batterie, jede Industriebatterie mit einer Kapazität von mehr als 2 kWh und jede Elektrofahrzeugbatterie, die in Verkehr gebracht oder in Betrieb genommen wird, ein Batteriepass erforderlich (Artikel 77 Absatz 1 der Verordnung (EU) 2023/1542)."
+      },
+      "identity": {
+        "title": "Identifizierung der Batterie",
+        "description": "Informationen über die Batterie gemäß Anhang VI Teil A (Anhang XIII Nummer 1 Buchstabe a)."
+      },
+      "operators": {
+        "title": "Erzeuger und Wirtschaftsakteure",
+        "description": "Name, eingetragener Handelsname oder eingetragene Handelsmarke, Postanschrift unter Angabe einer zentralen Kontaktstelle und, sofern vorhanden, Internetadresse und E-Mail-Adresse (Artikel 38 Absatz 7 und Artikel 41 Absatz 3)."
+      },
+      "composition": {
+        "title": "Stoffliche Zusammensetzung",
+        "description": "Chemische Zusammensetzung, gefährliche Stoffe und kritische Rohstoffe (Anhang XIII Nummer 1 Buchstabe b und Anhang VI Teil A)."
+      },
+      "performance": {
+        "title": "Leistung und Haltbarkeit",
+        "description": "Elektrochemische Leistungs- und Haltbarkeitswerte für das Batteriemodell (Anhang XIII Nummer 1)."
+      },
+      "sustainability": {
+        "title": "CO2-Fußabdruck, verantwortungsvolle Beschaffung und Rezyklatgehalt",
+        "description": "Diese Angaben gelten erst ab späteren Zeitpunkten, die in der Verordnung und ihren delegierten Rechtsakten festgelegt sind. Lassen Sie sie leer, bis sie für Ihre Batterie gelten."
+      },
+      "labelling": {
+        "title": "Kennzeichnung und Konformität",
+        "description": "Kennzeichnungsvorschriften nach Artikel 13 Absätze 4 und 5 und die EU-Konformitätserklärung (Anhang XIII Nummer 1 Buchstaben q und r)."
+      },
+      "end_of_life": {
+        "title": "Abfallvermeidung und Abfallbewirtschaftung",
+        "description": "Informationen für Endnutzer über die Vermeidung und Bewirtschaftung von Altbatterien (Artikel 74 Absatz 1)."
+      },
+      "restricted_model": {
+        "title": "Eingeschränkt: Personen mit einem berechtigten Interesse",
+        "description": "Wird nie im öffentlichen Batteriepass angezeigt. Anhang XIII Nummer 2: nur für Personen mit einem berechtigten Interesse, notifizierte Stellen, Marktaufsichtsbehörden und die Kommission zugänglich (Artikel 77 Absatz 2)."
+      },
+      "restricted_authorities": {
+        "title": "Eingeschränkt: nur Behörden",
+        "description": "Wird nie im öffentlichen Batteriepass angezeigt. Anhang XIII Nummer 3: nur für notifizierte Stellen, Marktaufsichtsbehörden und die Kommission zugänglich (Artikel 77 Absatz 2)."
+      },
+      "individual": {
+        "title": "Eingeschränkt: diese einzelne Batterie",
+        "description": "Wird nie im öffentlichen Batteriepass angezeigt. Anhang XIII Nummer 4: Informationen über diese bestimmte Batterie, die während ihrer Lebensdauer aktualisiert werden und nur Personen mit einem berechtigten Interesse zugänglich sind (Artikel 77 Absatz 2)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Batteriekategorie",
+        "help": "Gerätebatterien und Starterbatterien (für Anlasser, Beleuchtung oder Zündung) benötigen keinen Batteriepass."
+      },
+      "product_name": {
+        "label": "Produktname",
+        "placeholder": "z. B. PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Kennung des Batteriemodells",
+        "help": "Informationen zur Identifizierung der Batterie (Anhang VI Teil A Nummer 2).",
+        "placeholder": "z. B. PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Individuelle Kennung dieser Batterie",
+        "help": "Die individuelle Kennung, die dieser einzelnen Batterie von dem Wirtschaftsakteur zugewiesen wird, der sie in Verkehr bringt, gemäß ISO/IEC 15459 oder einer gleichwertigen Norm. Der QR-Code auf der Batterie ermöglicht den Zugang zu ihrem Batteriepass (Artikel 13 Absatz 6 und Artikel 77 Absatz 3).",
+        "placeholder": "z. B. Seriennummer oder GS1-Kennung"
+      },
+      "manufacture_place": {
+        "label": "Ort der Erzeugung",
+        "help": "Der geografische Standort des Betriebs, in dem die Batterie erzeugt wurde.",
+        "placeholder": "z. B. Lyon, Frankreich"
+      },
+      "manufacture_date": {
+        "label": "Datum der Erzeugung (Monat und Jahr)",
+        "placeholder": "z. B. 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Gewicht (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Batteriepass der ursprünglichen Batterie (falls zutreffend)",
+        "help": "Für Batterien, die für die Wiederverwendung oder Umnutzung vorbereitet, umgenutzt oder wiederaufgearbeitet wurden: Link zum Batteriepass der ursprünglichen Batterie oder Batterien (Artikel 77 Absatz 7).",
+        "placeholder": "z. B. https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Name des Erzeugers"
+      },
+      "manufacturer_trade_name": {
+        "label": "Eingetragener Handelsname oder eingetragene Handelsmarke"
+      },
+      "manufacturer_address": {
+        "label": "Postanschrift (zentrale Kontaktstelle)"
+      },
+      "manufacturer_website": {
+        "label": "Internetadresse (sofern vorhanden)",
+        "placeholder": "z. B. https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "E-Mail-Adresse (sofern vorhanden)",
+        "help": "Wird auch als Kontakt für Anfragen auf Zugang zu eingeschränkten Passinformationen angezeigt."
+      },
+      "authorised_representative": {
+        "label": "Bevollmächtigter (falls zutreffend)",
+        "help": "Name und Kontaktdaten des Bevollmächtigten, sofern einer benannt wurde."
+      },
+      "importer": {
+        "label": "Einführer (falls zutreffend)",
+        "help": "Name, eingetragener Handelsname oder eingetragene Handelsmarke, Postanschrift und, sofern vorhanden, Internet- und E-Mail-Adresse des Einführers (Artikel 41 Absatz 3)."
+      },
+      "battery_chemistry": {
+        "label": "Chemische Zusammensetzung der Batterie"
+      },
+      "battery_chemistry_other": {
+        "label": "Chemische Zusammensetzung (Einzelheiten)"
+      },
+      "hazardous_substances": {
+        "label": "Gefährliche Stoffe (außer Quecksilber, Cadmium oder Blei)",
+        "help": "In der Batterie enthaltene gefährliche Stoffe außer Quecksilber, Cadmium oder Blei. Geben Sie „Keine“ ein, wenn keine vorhanden sind."
+      },
+      "critical_raw_materials": {
+        "label": "Kritische Rohstoffe über 0,1 % Massenanteil",
+        "help": "In der Batterie enthaltene kritische Rohstoffe in einer Massenkonzentration von mehr als 0,1 % Massenanteil."
+      },
+      "critical_raw_materials_other": {
+        "label": "Sonstige kritische Rohstoffe"
+      },
+      "extinguishing_agent": {
+        "label": "Zu verwendendes Feuerlöschmittel"
+      },
+      "renewable_content_share": {
+        "label": "Anteil aus erneuerbaren Quellen (%)",
+        "help": "Anhang XIII Nummer 1 Buchstabe f."
+      },
+      "rated_capacity_ah": {
+        "label": "Bemessungskapazität (Ah)"
+      },
+      "voltage_min": {
+        "label": "Minimalspannung (V)"
+      },
+      "voltage_nominal": {
+        "label": "Nennspannung (V)"
+      },
+      "voltage_max": {
+        "label": "Maximalspannung (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "Temperaturbereich für die Spannungswerte (falls relevant)",
+        "placeholder": "z. B. -20 bis 55 °C"
+      },
+      "original_power_capability_w": {
+        "label": "Ursprüngliche Leistungskapazität (W)"
+      },
+      "power_capability_limits": {
+        "label": "Leistungsgrenzen und Temperaturbereich (falls relevant)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Erwartete Lebensdauer der Batterie (Zyklen)"
+      },
+      "lifetime_reference_test": {
+        "label": "Für die erwartete Lebensdauer verwendeter Referenztest"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "Kapazitätsschwelle für die Erschöpfung (%)",
+        "help": "Nur für Elektrofahrzeugbatterien."
+      },
+      "idle_temperature_range": {
+        "label": "Temperaturbereich, dem die Batterie außer Betrieb standhalten kann",
+        "help": "Geben Sie den Referenztest an.",
+        "placeholder": "z. B. -30 bis 60 °C (Referenztest)"
+      },
+      "calendar_life_warranty": {
+        "label": "Zeitraum, in dem die Herstellergarantie für die kalendarische Lebensdauer gilt",
+        "placeholder": "z. B. 8 Jahre"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Round-Trip-Wirkungsgrad am Anfang (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Round-Trip-Wirkungsgrad nach 50 % der Zykluslebensdauer (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Innenwiderstand der Batteriezelle (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Innenwiderstand des Batteriesatzes (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "C-Rate der einschlägigen Prüfung der Zykluslebensdauer",
+        "placeholder": "z. B. 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Erklärung zum CO2-Fußabdruck",
+        "help": "Artikel 7. Die Pflicht beginnt erst, wenn der delegierte Rechtsakt der Kommission zur Berechnungsmethode gilt."
+      },
+      "carbon_footprint_value": {
+        "label": "CO2-Fußabdruck (kg CO2e pro kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Leistungsklasse für den CO2-Fußabdruck"
+      },
+      "carbon_footprint_study": {
+        "label": "Weblink zur öffentlichen Studie zum CO2-Fußabdruck",
+        "placeholder": "z. B. https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Bericht über die Strategie zur Erfüllung der für Batterien geltenden Sorgfaltspflichten (verantwortungsvolle Beschaffung)",
+        "help": "Informationen zur verantwortungsvollen Beschaffung gemäß dem Bericht über die Strategie zur Erfüllung der für Batterien geltenden Sorgfaltspflichten (Artikel 52 Absatz 3). Die für Batterien geltenden Sorgfaltspflichten gelten ab dem 18. August 2027."
+      },
+      "recycled_cobalt": {
+        "label": "Rezyklatgehalt: Kobalt (%)",
+        "help": "Informationen zum Rezyklatgehalt gemäß der in Artikel 8 genannten Dokumentation."
+      },
+      "recycled_lithium": {
+        "label": "Rezyklatgehalt: Lithium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Rezyklatgehalt: Nickel (%)"
+      },
+      "recycled_lead": {
+        "label": "Rezyklatgehalt: Blei (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Batterie mit dem Symbol „getrennte Sammlung“ gekennzeichnet",
+        "help": "Artikel 13 Absatz 4 und Anhang VI Teil B."
+      },
+      "cadmium_lead_symbol": {
+        "label": "Chemisches Zeichen für Cadmium oder Blei",
+        "help": "Batterien, die mehr als 0,002 % Cadmium oder mehr als 0,004 % Blei enthalten, werden unter dem Symbol „getrennte Sammlung“ mit dem chemischen Zeichen Cd oder Pb gekennzeichnet (Artikel 13 Absatz 5)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "EU-Konformitätserklärung",
+        "help": "Link zur EU-Konformitätserklärung oder deren Referenz (Artikel 18).",
+        "placeholder": "z. B. https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Informationen zu Abfallvermeidung, Sammlung und Recycling",
+        "help": "Artikel 74 Absatz 1 Buchstaben a bis f: wie Endnutzer Abfall vermeiden und die Lebensdauer von Batterien verlängern können, ihre Rolle bei der getrennten Sammlung, die Rücknahme- und Sammelstellen, Sicherheitsanweisungen für die Handhabung von Altbatterien (einschließlich Lithiumbatterien), die Bedeutung der Symbole sowie die Auswirkungen der Stoffe auf Gesundheit und Umwelt."
+      },
+      "collection_point_link": {
+        "label": "Weblink zu Informationen über die Sammlung",
+        "placeholder": "z. B. https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Ausführliche Zusammensetzung (Kathode, Anode, Elektrolyt)",
+        "help": "Einschließlich der in Kathode, Anode und Elektrolyt verwendeten Materialien."
+      },
+      "battery_spare_parts": {
+        "label": "Teilenummern von Komponenten und Kontaktdaten der Anbieter von Ersatzteilen"
+      },
+      "battery_dismantling_information": {
+        "label": "Informationen für die Zerlegung",
+        "help": "Explosionsdiagramme mit der Position der Batteriezellen, Abfolge der Demontageschritte, Art und Anzahl der zu lösenden Verbindungstechniken, erforderliches Werkzeug, Warnungen, falls Teile beschädigt zu werden drohen, sowie Zahl und Anordnung der Zellen. Links zu Dokumenten sind zulässig."
+      },
+      "battery_safety_measures": {
+        "label": "Sicherheitsmaßnahmen"
+      },
+      "battery_test_reports": {
+        "label": "Prüfberichte zum Nachweis der Konformität",
+        "help": "Ergebnisse von Prüfberichten, die die Einhaltung der Verordnung und ihrer Durchführungsrechtsakte und delegierten Rechtsakte belegen. Verweise oder Links auf die Berichte."
+      },
+      "battery_status": {
+        "label": "Batteriestatus"
+      },
+      "battery_state_of_health": {
+        "label": "Alterungszustand (%)",
+        "help": "Artikel 14."
+      },
+      "battery_state_of_health_date": {
+        "label": "Datum des Werts zum Alterungszustand",
+        "placeholder": "z. B. 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Nutzungsinformationen",
+        "help": "Anzahl der Lade- und Entladezyklen, negative Ereignisse wie Unfälle und Betriebsbedingungen wie Temperatur und Ladezustand."
+      },
+      "battery_status_change_values": {
+        "label": "Leistungs- und Haltbarkeitswerte bei einer Statusänderung",
+        "help": "Werte der in Artikel 10 Absatz 1 genannten Leistungs- und Haltbarkeitsparameter zum Zeitpunkt des Inverkehrbringens der Batterie und zum Zeitpunkt der Änderung ihres Status."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Elektrofahrzeugbatterie",
+        "lmt": "LV-Batterie (leichte Verkehrsmittel)",
+        "industrial": "Industriebatterie mit einer Kapazität von mehr als 2 kWh"
+      },
+      "chemistry": {
+        "li_nmc": "Lithium-Ionen, NMC (Nickel-Mangan-Kobalt)",
+        "li_nca": "Lithium-Ionen, NCA (Nickel-Kobalt-Aluminium)",
+        "li_lfp": "Lithium-Ionen, LFP (Lithium-Eisenphosphat)",
+        "li_lmfp": "Lithium-Ionen, LMFP (Lithium-Mangan-Eisenphosphat)",
+        "li_lmo": "Lithium-Ionen, LMO (Lithium-Manganoxid)",
+        "li_lto": "Lithium-Ionen, LTO (Lithiumtitanat-Anode)",
+        "sodium_ion": "Natrium-Ionen",
+        "nimh": "Nickel-Metallhydrid",
+        "lead_acid": "Blei-Säure",
+        "other": "Sonstige"
+      },
+      "crm": {
+        "cobalt": "Kobalt (Co)",
+        "lithium": "Lithium (Li)",
+        "natural_graphite": "Naturgraphit (C)",
+        "nickel": "Nickel (Ni)",
+        "manganese": "Mangan (Mn)",
+        "copper": "Kupfer (Cu)",
+        "aluminium": "Aluminium (Al)",
+        "phosphorus": "Phosphor (P)",
+        "other": "Sonstige"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Noch nicht anwendbar (delegierter Rechtsakt nach Artikel 7 nicht erlassen)",
+        "declared": "CO2-Fußabdruck angegeben"
+      },
+      "heavyMetal": {
+        "none": "Kein Cd- oder Pb-Zeichen erforderlich",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd und Pb"
+      },
+      "status": {
+        "original": "Unverändert",
+        "repurposed": "Umgenutzt",
+        "reused": "Wiederverwendet",
+        "remanufactured": "Wiederaufgearbeitet",
+        "waste": "Altbatterie"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Eingeschränkte Batterieinformationen",
+      "body": "Ausführliche Zusammensetzung, Informationen für die Zerlegung, Prüfberichte und Daten zu dieser einzelnen Batterie sind nur für Personen mit einem berechtigten Interesse und für Behörden zugänglich (Artikel 77 und Anhang XIII der Verordnung (EU) 2023/1542). Um Zugang anzufordern, wenden Sie sich an {{contact}}.",
+      "bodyNoContact": "Ausführliche Zusammensetzung, Informationen für die Zerlegung, Prüfberichte und Daten zu dieser einzelnen Batterie sind nur für Personen mit einem berechtigten Interesse und für Behörden zugänglich (Artikel 77 und Anhang XIII der Verordnung (EU) 2023/1542). Um Zugang anzufordern, wenden Sie sich an den Erzeuger."
     }
   }
 }
