@@ -244,7 +244,7 @@
     "description": "Leírás"
   },
   "categories": {
-    "battery": "Akkumulátorok",
+    "battery": "Elemek és akkumulátorok",
     "construction": "Építőipari termékek",
     "textiles": "Ruházat",
     "wine": "Bor és szeszesitalok",
@@ -260,7 +260,7 @@
     "car_cleaning": "Autótisztító termékek"
   },
   "categoryDescriptions": {
-    "battery": "Szénlábnyom, újrahasznosítás, ellátási lánc átvilágítás",
+    "battery": "Elemútlevél elektromosjármű-elemekhez, LMT-elemekhez és 2 kWh-nál nagyobb kapacitású ipari elemekhez ((EU) 2023/1542 rendelet)",
     "construction": "DoPC, GWP A1-A3, tűzállóság",
     "textiles": "Szálösszetétel, tartósság, PFAS nyilatkozat",
     "wine": "Összetevők, tápérték, földrajzi jelzés",
@@ -2974,6 +2974,338 @@
     },
     "values": {
       "published": "Közzétéve"
+    }
+  },
+  "battery": {
+    "sections": {
+      "scope": {
+        "title": "Az elemútlevél hatálya",
+        "description": "2027. február 18-tól minden forgalomba hozott vagy üzembe helyezett LMT-elemnek, 2 kWh-nál nagyobb kapacitású ipari elemnek és elektromosjármű-elemnek elemútlevéllel kell rendelkeznie (az (EU) 2023/1542 rendelet 77. cikkének (1) bekezdése)."
+      },
+      "identity": {
+        "title": "Az elem azonosítása",
+        "description": "A VI. melléklet A. részében meghatározott, az elemre vonatkozó információk (XIII. melléklet 1. pontjának a) alpontja)."
+      },
+      "operators": {
+        "title": "Előállító és gazdasági szereplők",
+        "description": "Név, bejegyzett kereskedelmi név vagy bejegyzett védjegy, postai cím, megjelölve egyetlen kapcsolattartási pontot, és ha rendelkezésre áll, internetes és e-mail-cím (38. cikk (7) bekezdése és 41. cikk (3) bekezdése)."
+      },
+      "composition": {
+        "title": "Anyagösszetétel",
+        "description": "Kémiai jellemzők, veszélyes anyagok és kritikus fontosságú nyersanyagok (XIII. melléklet 1. pontjának b) alpontja és VI. melléklet A. része)."
+      },
+      "performance": {
+        "title": "Teljesítmény és tartósság",
+        "description": "Az elemmodell elektrokémiai teljesítményre és tartósságra vonatkozó értékei (XIII. melléklet 1. pontja)."
+      },
+      "sustainability": {
+        "title": "Karbonlábnyom, felelős beszerzés és újrafeldolgozott tartalom",
+        "description": "Ezek az adatok a rendeletben és a felhatalmazáson alapuló jogi aktusaiban meghatározott későbbi időpontoktól alkalmazandók. Hagyja üresen őket, amíg nem vonatkoznak az Ön elemére."
+      },
+      "labelling": {
+        "title": "Címkézés és megfelelőség",
+        "description": "A 13. cikk (4) és (5) bekezdése szerinti jelölési követelmények és az EU-megfelelőségi nyilatkozat (XIII. melléklet 1. pontjának q) és r) alpontja)."
+      },
+      "end_of_life": {
+        "title": "Hulladékmegelőzés és hulladékgazdálkodás",
+        "description": "Tájékoztatás a végfelhasználók számára a hulladékelemek keletkezésének megelőzéséről és a hulladékelemek kezeléséről (74. cikk (1) bekezdése)."
+      },
+      "restricted_model": {
+        "title": "Korlátozott hozzáférés: jogos érdekkel rendelkező személyek",
+        "description": "A nyilvános útlevélben soha nem jelenik meg. XIII. melléklet 2. pontja: kizárólag a jogos érdekkel rendelkező személyek, a bejelentett szervezetek, a piacfelügyeleti hatóságok és a Bizottság számára hozzáférhető (77. cikk (2) bekezdése)."
+      },
+      "restricted_authorities": {
+        "title": "Korlátozott hozzáférés: kizárólag hatóságok",
+        "description": "A nyilvános útlevélben soha nem jelenik meg. XIII. melléklet 3. pontja: kizárólag a bejelentett szervezetek, a piacfelügyeleti hatóságok és a Bizottság számára hozzáférhető (77. cikk (2) bekezdése)."
+      },
+      "individual": {
+        "title": "Korlátozott hozzáférés: ez az egyedi elem",
+        "description": "A nyilvános útlevélben soha nem jelenik meg. XIII. melléklet 4. pontja: erre a konkrét elemre vonatkozó, az élettartama során frissített információk, amelyek kizárólag a jogos érdekkel rendelkező személyek számára hozzáférhetők (77. cikk (2) bekezdése)."
+      }
+    },
+    "fields": {
+      "battery_category": {
+        "label": "Elemkategória",
+        "help": "A hordozható elemekhez és az SLI-elemekhez (indításhoz, világításhoz és gyújtáshoz használt elemek) nem szükséges elemútlevél."
+      },
+      "product_name": {
+        "label": "Terméknév",
+        "placeholder": "pl. PowerPack 48V 20Ah"
+      },
+      "battery_model": {
+        "label": "Elemmodell-azonosító",
+        "help": "Az elemet azonosító információ (VI. melléklet A. részének 2. pontja).",
+        "placeholder": "pl. PP-48-20"
+      },
+      "battery_unique_identifier": {
+        "label": "Az elem egyedi azonosítója",
+        "help": "Az elemet forgalomba hozó gazdasági szereplő által ehhez az egyedi elemhez hozzárendelt, az ISO/IEC 15459 szabványnak vagy azzal egyenértékű szabványnak megfelelő egyedi azonosító. Az elemen található QR-kód hozzáférést biztosít az elemútlevélhez (13. cikk (6) bekezdése és 77. cikk (3) bekezdése).",
+        "placeholder": "pl. sorozatszám vagy GS1-azonosító"
+      },
+      "manufacture_place": {
+        "label": "Gyártás helye",
+        "help": "Az elemgyártóüzem földrajzi helye.",
+        "placeholder": "pl. Lyon, Franciaország"
+      },
+      "manufacture_date": {
+        "label": "Gyártás időpontja (hónap és év)",
+        "placeholder": "pl. 2027-03"
+      },
+      "battery_weight_kg": {
+        "label": "Tömeg (kg)"
+      },
+      "original_battery_passport": {
+        "label": "Az eredeti elem útlevele (adott esetben)",
+        "help": "Újrahasználatra való előkészítés vagy újrapozícionálásra való előkészítés tárgyát képező, újrapozícionált vagy újragyártott elemek esetében: hivatkozás az eredeti elem vagy elemek útlevelére (77. cikk (7) bekezdése).",
+        "placeholder": "pl. https://www.example.com"
+      },
+      "manufacturer_name": {
+        "label": "Az előállító neve"
+      },
+      "manufacturer_trade_name": {
+        "label": "Bejegyzett kereskedelmi név vagy bejegyzett védjegy"
+      },
+      "manufacturer_address": {
+        "label": "Postai cím (egyetlen kapcsolattartási pont)"
+      },
+      "manufacturer_website": {
+        "label": "Internetes cím (ha rendelkezésre áll)",
+        "placeholder": "pl. https://www.example.com"
+      },
+      "manufacturer_email": {
+        "label": "E-mail-cím (ha rendelkezésre áll)",
+        "help": "A korlátozott hozzáférésű útlevél-információkhoz való hozzáférés iránti kérelmek kapcsolattartási címeként is megjelenik."
+      },
+      "authorised_representative": {
+        "label": "Meghatalmazott képviselő (adott esetben)",
+        "help": "A meghatalmazott képviselő neve és elérhetőségei, ha kijelöltek ilyet."
+      },
+      "importer": {
+        "label": "Importőr (adott esetben)",
+        "help": "Az importőr neve, bejegyzett kereskedelmi neve vagy bejegyzett védjegye, postai címe és, ha rendelkezésre áll, internetes és e-mail-címe (41. cikk (3) bekezdése)."
+      },
+      "battery_chemistry": {
+        "label": "Az elem kémiai jellemzői"
+      },
+      "battery_chemistry_other": {
+        "label": "Kémiai jellemzők (részletek)"
+      },
+      "hazardous_substances": {
+        "label": "Veszélyes anyagok (a higany, a kadmium és az ólom kivételével)",
+        "help": "Az elemben jelen lévő veszélyes anyagok, a higany, a kadmium és az ólom kivételével. Ha nincs ilyen, írja be: „Nincs”."
+      },
+      "critical_raw_materials": {
+        "label": "0,1 tömegszázalékot meghaladó koncentrációban jelen lévő kritikus fontosságú nyersanyagok",
+        "help": "Az elemben 0,1 tömegszázalékot meghaladó koncentrációban jelen lévő kritikus fontosságú nyersanyagok."
+      },
+      "critical_raw_materials_other": {
+        "label": "Egyéb kritikus fontosságú nyersanyagok"
+      },
+      "extinguishing_agent": {
+        "label": "Használható oltóanyag"
+      },
+      "renewable_content_share": {
+        "label": "Megújulóanyag-tartalom aránya (%)",
+        "help": "XIII. melléklet 1. pontjának f) alpontja."
+      },
+      "rated_capacity_ah": {
+        "label": "Névleges kapacitás (Ah)"
+      },
+      "voltage_min": {
+        "label": "Legkisebb feszültség (V)"
+      },
+      "voltage_nominal": {
+        "label": "Névleges feszültség (V)"
+      },
+      "voltage_max": {
+        "label": "Legnagyobb feszültség (V)"
+      },
+      "voltage_temperature_range": {
+        "label": "A feszültségértékekhez tartozó hőmérséklet-tartomány (adott esetben)",
+        "placeholder": "pl. -20 és 55 °C között"
+      },
+      "original_power_capability_w": {
+        "label": "Eredeti teljesítőképesség (W)"
+      },
+      "power_capability_limits": {
+        "label": "A teljesítőképesség határértékei és hőmérséklet-tartománya (adott esetben)"
+      },
+      "expected_lifetime_cycles": {
+        "label": "Az elem várható élettartama (ciklusok)"
+      },
+      "lifetime_reference_test": {
+        "label": "A várható élettartamhoz alkalmazott referenciavizsgálat"
+      },
+      "capacity_threshold_exhaustion": {
+        "label": "A lemerülésre vonatkozó teljesítményküszöb (%)",
+        "help": "Csak elektromosjármű-elemek esetében."
+      },
+      "idle_temperature_range": {
+        "label": "Az a hőmérséklet-tartomány, amelynek az elem használaton kívül képes ellenállni",
+        "help": "Adja meg a referenciavizsgálatot is.",
+        "placeholder": "pl. -30 és 60 °C között (referenciavizsgálat)"
+      },
+      "calendar_life_warranty": {
+        "label": "A naptári élettartamra vonatkozó kereskedelmi jótállás időtartama",
+        "placeholder": "pl. 8 év"
+      },
+      "round_trip_efficiency_initial": {
+        "label": "Kezdeti energiaátalakítási hatásfok (%)"
+      },
+      "round_trip_efficiency_50": {
+        "label": "Energiaátalakítási hatásfok az életciklus 50 %-ánál (%)"
+      },
+      "internal_resistance_cell": {
+        "label": "Az elemcella belső ellenállása (mΩ)"
+      },
+      "internal_resistance_pack": {
+        "label": "Az elemcsomag belső ellenállása (mΩ)"
+      },
+      "cycle_life_c_rate": {
+        "label": "A releváns életciklus-vizsgálat c-rátája",
+        "placeholder": "pl. 0,5C"
+      },
+      "carbon_footprint_status": {
+        "label": "Karbonlábnyom-nyilatkozat",
+        "help": "7. cikk. A kötelezettség csak akkor kezdődik, amikor a számítási módszerről szóló, felhatalmazáson alapuló bizottsági jogi aktus alkalmazandóvá válik."
+      },
+      "carbon_footprint_value": {
+        "label": "Karbonlábnyom (kg CO2e/kWh)"
+      },
+      "carbon_footprint_class": {
+        "label": "Karbonlábnyom-teljesítményosztály"
+      },
+      "carbon_footprint_study": {
+        "label": "Internetes hivatkozás a karbonlábnyomról szóló nyilvános tanulmányra",
+        "placeholder": "pl. https://www.example.com"
+      },
+      "due_diligence_report": {
+        "label": "Jelentés a kellő gondosságra vonatkozó politikáról (felelős beszerzés)",
+        "help": "A felelős beszerzésre vonatkozó információk, az elemekre irányuló kellő gondosságra vonatkozó politikáról szóló jelentésben megjelöltek szerint (52. cikk (3) bekezdése). A kellő gondosságra vonatkozó kötelezettségek 2027. augusztus 18-tól alkalmazandók."
+      },
+      "recycled_cobalt": {
+        "label": "Újrafeldolgozott tartalom: kobalt (%)",
+        "help": "Az újrafeldolgozott tartalomra vonatkozó információk, a 8. cikkben említett dokumentációban foglaltak szerint."
+      },
+      "recycled_lithium": {
+        "label": "Újrafeldolgozott tartalom: lítium (%)"
+      },
+      "recycled_nickel": {
+        "label": "Újrafeldolgozott tartalom: nikkel (%)"
+      },
+      "recycled_lead": {
+        "label": "Újrafeldolgozott tartalom: ólom (%)"
+      },
+      "separate_collection_symbol": {
+        "label": "Az elemen fel van tüntetve az elkülönített gyűjtést jelző ábra",
+        "help": "13. cikk (4) bekezdése és VI. melléklet B. része."
+      },
+      "cadmium_lead_symbol": {
+        "label": "A kadmium vagy az ólom vegyjele",
+        "help": "A 0,002 %-nál több kadmiumot vagy 0,004 %-nál több ólmot tartalmazó elemeken az elkülönített gyűjtést jelző ábra alatt fel kell tüntetni a Cd vagy a Pb vegyjelet (13. cikk (5) bekezdése)."
+      },
+      "eu_declaration_of_conformity": {
+        "label": "EU-megfelelőségi nyilatkozat",
+        "help": "Az EU-megfelelőségi nyilatkozat linkje vagy hivatkozási adata (18. cikk).",
+        "placeholder": "pl. https://www.example.com"
+      },
+      "waste_battery_information": {
+        "label": "Tájékoztatás a hulladékmegelőzésről, a gyűjtésről és az újrafeldolgozásról",
+        "help": "74. cikk (1) bekezdésének a)–f) pontja: hogyan előzhetik meg a végfelhasználók a hulladékkeletkezést és hosszabbíthatják meg az elem élettartamát, milyen szerepük van az elkülönített gyűjtésben, a visszavételi és gyűjtőhelyek, a hulladékelemek (köztük a lítiumot tartalmazó elemek) kezelésére vonatkozó biztonsági utasítások, az ábrák jelentése, valamint az anyagok egészségre és környezetre gyakorolt hatásai."
+      },
+      "collection_point_link": {
+        "label": "Internetes hivatkozás a gyűjtésre vonatkozó információkra",
+        "placeholder": "pl. https://www.example.com"
+      },
+      "battery_detailed_composition": {
+        "label": "Részletes összetétel (katód, anód, elektrolit)",
+        "help": "Beleértve a katódban, az anódban és az elektrolitban használt anyagokat."
+      },
+      "battery_spare_parts": {
+        "label": "Alkatrész-cikkszámok az összetevők esetében és a pótalkatrészek beszerzési forrásainak elérhetőségi adatai"
+      },
+      "battery_dismantling_information": {
+        "label": "Szétszerelésre vonatkozó információk",
+        "help": "Részletes ábrák az elemcellák helyéről, a szétszerelési lépések sorrendje, a feloldandó rögzítési technikák típusa és száma, a szétszereléshez szükséges szerszámok, figyelmeztetések, ha fennáll az alkatrészek károsodásának a kockázata, valamint a használt cellák mennyisége és elrendezése. Dokumentumokra mutató hivatkozások is megadhatók."
+      },
+      "battery_safety_measures": {
+        "label": "Biztonsági intézkedések"
+      },
+      "battery_test_reports": {
+        "label": "A megfelelést igazoló vizsgálati jelentések",
+        "help": "A rendeletben, valamint az annak alapján elfogadott, felhatalmazáson alapuló vagy végrehajtási jogi aktusokban meghatározott követelményeknek való megfelelést igazoló vizsgálati jelentések eredményei. Hivatkozások vagy linkek a jelentésekre."
+      },
+      "battery_status": {
+        "label": "Az elem státusza"
+      },
+      "battery_state_of_health": {
+        "label": "Állapot (%)",
+        "help": "14. cikk."
+      },
+      "battery_state_of_health_date": {
+        "label": "Az állapotérték dátuma",
+        "placeholder": "pl. 2027-06-30"
+      },
+      "battery_usage_information": {
+        "label": "Használati információk",
+        "help": "A töltési és kisülési ciklusok száma, negatív események, például balesetek, valamint a működési környezetben meglévő feltételek, például a hőmérséklet és a töltöttségi szint."
+      },
+      "battery_status_change_values": {
+        "label": "Teljesítmény- és tartóssági értékek a státuszt érintő változáskor",
+        "help": "A 10. cikk (1) bekezdésében említett teljesítmény- és tartóssági paraméterek értékei az elem forgalomba hozatalakor, valamint a státuszát érintő változások esetén."
+      }
+    },
+    "options": {
+      "category": {
+        "ev": "Elektromosjármű-elem",
+        "lmt": "LMT-elem (könnyűszállítóeszköz-elem)",
+        "industrial": "2 kWh-nál nagyobb kapacitású ipari elem"
+      },
+      "chemistry": {
+        "li_nmc": "Lítiumion, NMC (nikkel-mangán-kobalt)",
+        "li_nca": "Lítiumion, NCA (nikkel-kobalt-alumínium)",
+        "li_lfp": "Lítiumion, LFP (lítium-vas-foszfát)",
+        "li_lmfp": "Lítiumion, LMFP (lítium-mangán-vas-foszfát)",
+        "li_lmo": "Lítiumion, LMO (lítium-mangán-oxid)",
+        "li_lto": "Lítiumion, LTO (lítium-titanát anód)",
+        "sodium_ion": "Nátriumion",
+        "nimh": "Nikkel-fémhidrid",
+        "lead_acid": "Ólom-sav",
+        "other": "Egyéb"
+      },
+      "crm": {
+        "cobalt": "Kobalt",
+        "lithium": "Lítium",
+        "natural_graphite": "Természetes grafit",
+        "nickel": "Nikkel",
+        "manganese": "Mangán",
+        "copper": "Réz",
+        "aluminium": "Alumínium",
+        "phosphorus": "Foszfor",
+        "other": "Egyéb"
+      },
+      "carbonStatus": {
+        "not_yet_applicable": "Még nem alkalmazandó (a 7. cikk szerinti, felhatalmazáson alapuló jogi aktust még nem fogadták el)",
+        "declared": "Karbonlábnyom bejelentve"
+      },
+      "heavyMetal": {
+        "none": "Nem szükséges Cd- vagy Pb-jelölés",
+        "cd": "Cd",
+        "pb": "Pb",
+        "cd_pb": "Cd és Pb"
+      },
+      "status": {
+        "original": "Eredeti",
+        "repurposed": "Újrapozícionált",
+        "reused": "Újrahasznált",
+        "remanufactured": "Újragyártott",
+        "waste": "Hulladék"
+      }
+    },
+    "restrictedNotice": {
+      "title": "Korlátozott hozzáférésű információk az elemről",
+      "body": "A részletes összetétel, a szétszerelési információk, a vizsgálati jelentések és az erre az egyedi elemre vonatkozó adatok kizárólag a jogos érdekkel rendelkező személyek és a hatóságok számára hozzáférhetők (az (EU) 2023/1542 rendelet 77. cikke és XIII. melléklete). Hozzáférés kérelmezéséhez forduljon ide: {{contact}}.",
+      "bodyNoContact": "A részletes összetétel, a szétszerelési információk, a vizsgálati jelentések és az erre az egyedi elemre vonatkozó adatok kizárólag a jogos érdekkel rendelkező személyek és a hatóságok számára hozzáférhetők (az (EU) 2023/1542 rendelet 77. cikke és XIII. melléklete). Hozzáférés kérelmezéséhez forduljon az előállítóhoz."
     }
   }
 }
