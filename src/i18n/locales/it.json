@@ -478,17 +478,17 @@
     "title": "Protezione anti-contraffazione",
     "enable": "Attiva",
     "disable": "Disattiva",
-    "description": "Proteggi il tuo prodotto dalla contraffazione con un sigillo di sicurezza del nostro partner.",
+    "description": "Proteggi il tuo prodotto dalla contraffazione con un sigillo di sicurezza.",
     "addProtection": "Aggiungi protezione anti-contraffazione (opzionale)",
     "enabled": "Protezione anti-contraffazione attivata",
-    "enabledDescription": "È stata inviata un'email al nostro partner di protezione anti-contraffazione. Ti contatteranno per consegnare il sigillo di sicurezza.",
+    "enabledDescription": "Richiesta inviata. Il nostro team ti contatterà per discutere della protezione anti-contraffazione di questo prodotto.",
     "requestSent": "Richiesta inviata!",
-    "requestSentDescription": "È stata inviata un'email al nostro partner di protezione anti-contraffazione. Ti contatteranno per consegnare il sigillo di sicurezza.",
+    "requestSentDescription": "Richiesta inviata. Il nostro team ti contatterà per discutere della protezione anti-contraffazione di questo prodotto.",
     "sending": "Invio in corso...",
     "errorNoEmail": "Impossibile inviare la richiesta - email utente non trovata",
     "errorSaveFirst": "Salva prima il passaporto prima di attivare la protezione anti-contraffazione",
     "errorFailed": "Invio della richiesta di protezione anti-contraffazione non riuscito",
-    "pendingSend": "Il partner verrà notificato la prossima volta che salverai questo passaporto."
+    "pendingSend": "Il nostro team riceverà una notifica la prossima volta che salverai questo passaporto."
   },
   "customIngredient": {
     "title": "Definisci un ingrediente personalizzato",

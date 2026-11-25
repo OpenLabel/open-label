@@ -496,17 +496,17 @@
     "title": "Protezzjoni Kontra l-Falsifikazzjoni",
     "enable": "Attiva",
     "disable": "Iddiżattiva",
-    "description": "Ipproteġi l-prodott tiegħek kontra l-falsifikazzjoni b'siġill ta' sigurtà mingħand is-sieħeb tagħna.",
+    "description": "Ipproteġi l-prodott tiegħek kontra l-falsifikazzjoni b'siġill ta' sigurtà.",
     "addProtection": "Żid Protezzjoni Kontra l-Falsifikazzjoni (fakultattiv)",
     "enabled": "Il-protezzjoni kontra l-falsifikazzjoni hija attivata",
-    "enabledDescription": "Email intbagħat lis-sieħeb tagħna. Se jikkuntattjawk biex iwasslu s-siġill ta' sigurtà.",
+    "enabledDescription": "It-talba ntbagħtet. It-tim tagħna se jikkuntattjak biex jiddiskuti l-protezzjoni kontra l-falsifikazzjoni għal dan il-prodott.",
     "requestSent": "It-talba ntbagħtet!",
-    "requestSentDescription": "Email intbagħat lis-sieħeb tagħna tal-protezzjoni kontra l-falsifikazzjoni.",
+    "requestSentDescription": "It-talba ntbagħtet. It-tim tagħna se jikkuntattjak biex jiddiskuti l-protezzjoni kontra l-falsifikazzjoni għal dan il-prodott.",
     "sending": "Qed jintbagħat...",
     "errorNoEmail": "Ma tistax tintbagħat it-talba – l-email tal-utent ma nstabx",
     "errorSaveFirst": "Jekk jogħġbok issejvja l-passaport l-ewwel qabel ma tattiva l-protezzjoni",
     "errorFailed": "Ma rnexxiex tintbagħat it-talba tal-protezzjoni kontra l-falsifikazzjoni",
-    "pendingSend": "Is-sieħeb se jiġi nnotifikat id-darba li jmiss li tissejvja dan il-passaport."
+    "pendingSend": "It-tim tagħna se jiġi nnotifikat id-darba li jmiss li tissejvja dan il-passaport."
   },
   "customIngredient": {
     "title": "Iddefinixxi ingredjent personalizzat",

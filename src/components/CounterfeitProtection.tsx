@@ -75,8 +75,8 @@ export function CounterfeitProtection({
             </h3>
             <p className="text-sm text-green-700 dark:text-green-300 mt-1">
               {emailSent
-                ? t('counterfeit.enabledDescription', 'An email has been sent to our counterfeit protection partner. They will contact you to deliver the security seal.')
-                : t('counterfeit.pendingSend', 'The partner will be notified the next time you save this passport.')}
+                ? t('counterfeit.enabledDescription', 'Request sent. Our team will contact you to discuss counterfeit protection for this product.')
+                : t('counterfeit.pendingSend', 'Our team will be notified the next time you save this passport.')}
             </p>
           </div>
           <Button

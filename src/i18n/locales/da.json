@@ -496,17 +496,17 @@
     "title": "Beskyttelse mod forfalskning",
     "enable": "Aktivér",
     "disable": "Deaktivér",
-    "description": "Beskyt dit produkt mod forfalskning med et sikkerhedssegl fra vores partner.",
+    "description": "Beskyt dit produkt mod forfalskning med et sikkerhedssegl.",
     "addProtection": "Tilføj beskyttelse mod forfalskning (valgfrit)",
     "enabled": "Beskyttelse mod forfalskning aktiveret",
-    "enabledDescription": "En e-mail er sendt til vores partner. De vil kontakte dig for levering af sikkerhedsseglet.",
+    "enabledDescription": "Anmodning sendt. Vores team vil kontakte dig for at drøfte beskyttelse mod forfalskning af dette produkt.",
     "requestSent": "Anmodning sendt!",
-    "requestSentDescription": "En e-mail er sendt til vores partner for beskyttelse mod forfalskning.",
+    "requestSentDescription": "Anmodning sendt. Vores team vil kontakte dig for at drøfte beskyttelse mod forfalskning af dette produkt.",
     "sending": "Sender...",
     "errorNoEmail": "Kan ikke sende anmodning – brugerens e-mail ikke fundet",
     "errorSaveFirst": "Gem venligst passet først, inden du aktiverer beskyttelsen",
     "errorFailed": "Kunne ikke sende anmodning om beskyttelse mod forfalskning",
-    "pendingSend": "Partneren vil blive underrettet næste gang du gemmer dette pas."
+    "pendingSend": "Vores team vil blive underrettet, næste gang du gemmer dette pas."
   },
   "customIngredient": {
     "title": "Definér en brugerdefineret ingrediens",

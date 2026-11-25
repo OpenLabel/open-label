@@ -496,17 +496,17 @@
     "title": "Ochrana proti padělkům",
     "enable": "Aktivovat",
     "disable": "Deaktivovat",
-    "description": "Chraňte svůj produkt proti padělání pomocí bezpečnostní pečeti od našeho partnera.",
+    "description": "Chraňte svůj produkt proti padělání pomocí bezpečnostní pečeti.",
     "addProtection": "Přidat ochranu proti padělkům (volitelné)",
     "enabled": "Ochrana proti padělkům aktivována",
-    "enabledDescription": "E-mail byl odeslán našemu partnerovi. Budou vás kontaktovat ohledně dodání bezpečnostní pečeti.",
+    "enabledDescription": "Požadavek byl odeslán. Náš tým vás bude kontaktovat, aby s vámi probral ochranu tohoto produktu proti padělání.",
     "requestSent": "Požadavek odeslán!",
-    "requestSentDescription": "E-mail byl odeslán našemu partnerovi pro ochranu proti padělkům.",
+    "requestSentDescription": "Požadavek byl odeslán. Náš tým vás bude kontaktovat, aby s vámi probral ochranu tohoto produktu proti padělání.",
     "sending": "Odesílání...",
     "errorNoEmail": "Nelze odeslat požadavek – e-mail uživatele nenalezen",
     "errorSaveFirst": "Nejprve prosím uložte pas před aktivací ochrany",
     "errorFailed": "Nepodařilo se odeslat požadavek na ochranu proti padělkům",
-    "pendingSend": "Partner bude informován při příštím uložení tohoto pasu."
+    "pendingSend": "Náš tým bude informován při příštím uložení tohoto pasu."
   },
   "customIngredient": {
     "title": "Definovat vlastní složku",

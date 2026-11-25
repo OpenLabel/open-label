@@ -504,17 +504,17 @@
     "title": "防伪保护",
     "enable": "启用",
     "disable": "禁用",
-    "description": "使用我们合作伙伴提供的安全封条保护您的产品免受伪造。",
+    "description": "使用安全封条保护您的产品免受伪造。",
     "addProtection": "添加防伪保护（可选）",
     "enabled": "防伪保护已启用",
-    "enabledDescription": "已向我们的防伪保护合作伙伴发送电子邮件。他们将与您联系以提供安全封条。",
+    "enabledDescription": "请求已发送。我们的团队将与您联系，讨论此产品的防伪保护。",
     "requestSent": "请求已发送！",
-    "requestSentDescription": "已向我们的防伪合作伙伴发送电子邮件。他们将与您联系以提供安全封条。",
+    "requestSentDescription": "请求已发送。我们的团队将与您联系，讨论此产品的防伪保护。",
     "sending": "正在发送...",
     "errorNoEmail": "无法发送请求 - 未找到用户电子邮件",
     "errorSaveFirst": "请先保存护照，然后再启用防伪保护",
     "errorFailed": "发送防伪保护请求失败",
-    "pendingSend": "下次保存此护照时将通知合作伙伴。"
+    "pendingSend": "下次保存此护照时，我们的团队将收到通知。"
   },
   "customIngredient": {
     "title": "定义自定义成分",

@@ -486,17 +486,17 @@
     "title": "Vervalsingsbeveiliging",
     "enable": "Inschakelen",
     "disable": "Uitschakelen",
-    "description": "Bescherm uw product tegen vervalsing met een beveiligingszegel van onze partner.",
+    "description": "Bescherm uw product tegen vervalsing met een beveiligingszegel.",
     "addProtection": "Vervalsingsbeveiliging Toevoegen (optioneel)",
     "enabled": "Vervalsingsbeveiliging Ingeschakeld",
-    "enabledDescription": "Er is een e-mail verzonden naar onze vervalsingsbeveiliging partner. Zij zullen contact met u opnemen om het beveiligingszegel te leveren.",
+    "enabledDescription": "Verzoek verzonden. Ons team neemt contact met u op om de bescherming van dit product tegen vervalsing te bespreken.",
     "requestSent": "Verzoek verzonden!",
-    "requestSentDescription": "Er is een e-mail verzonden naar onze vervalsingsbeveiliging partner. Zij zullen contact met u opnemen om het beveiligingszegel te leveren.",
+    "requestSentDescription": "Verzoek verzonden. Ons team neemt contact met u op om de bescherming van dit product tegen vervalsing te bespreken.",
     "sending": "Verzenden...",
     "errorNoEmail": "Kan verzoek niet verzenden - gebruikers-e-mail niet gevonden",
     "errorSaveFirst": "Sla eerst het paspoort op voordat u vervalsingsbeveiliging inschakelt",
     "errorFailed": "Verzenden van vervalsingsbeveiliging verzoek mislukt",
-    "pendingSend": "De partner wordt op de hoogte gesteld wanneer u dit paspoort de volgende keer opslaat."
+    "pendingSend": "Ons team wordt op de hoogte gesteld wanneer u dit paspoort de volgende keer opslaat."
   },
   "qrDialog": {
     "title": "QR Code",

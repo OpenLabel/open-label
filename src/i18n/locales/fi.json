@@ -496,17 +496,17 @@
     "title": "Väärennössuojaus",
     "enable": "Ota käyttöön",
     "disable": "Poista käytöstä",
-    "description": "Suojaa tuotteesi väärennöksiltä kumppanimme turvasinetillä.",
+    "description": "Suojaa tuotteesi väärennöksiltä turvasinetillä.",
     "addProtection": "Lisää väärennössuojaus (valinnainen)",
     "enabled": "Väärennössuojaus käytössä",
-    "enabledDescription": "Sähköposti lähetetty väärennössuojakumppanillemme. He ottavat sinuun yhteyttä turvasinetin toimitusta varten.",
+    "enabledDescription": "Pyyntö lähetetty. Tiimimme ottaa sinuun yhteyttä keskustellakseen tämän tuotteen väärennössuojauksesta.",
     "requestSent": "Pyyntö lähetetty!",
-    "requestSentDescription": "Sähköposti lähetetty väärennössuojakumppanillemme.",
+    "requestSentDescription": "Pyyntö lähetetty. Tiimimme ottaa sinuun yhteyttä keskustellakseen tämän tuotteen väärennössuojauksesta.",
     "sending": "Lähetetään...",
     "errorNoEmail": "Pyyntöä ei voida lähettää – käyttäjän sähköpostia ei löydy",
     "errorSaveFirst": "Tallenna passi ensin ennen suojauksen käyttöönottoa",
     "errorFailed": "Väärennössuojauspyynnön lähettäminen epäonnistui",
-    "pendingSend": "Kumppanille ilmoitetaan, kun tallennat tämän passin seuraavan kerran."
+    "pendingSend": "Tiimillemme ilmoitetaan, kun tallennat tämän passin seuraavan kerran."
   },
   "customIngredient": {
     "title": "Määritä mukautettu ainesosa",

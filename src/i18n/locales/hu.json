@@ -496,17 +496,17 @@
     "title": "Hamisítás elleni védelem",
     "enable": "Engedélyezés",
     "disable": "Letiltás",
-    "description": "Védje termékét a hamisítás ellen partnerünk biztonsági pecsétjével.",
+    "description": "Védje termékét a hamisítás ellen biztonsági pecséttel.",
     "addProtection": "Hamisítás elleni védelem hozzáadása (opcionális)",
     "enabled": "Hamisítás elleni védelem engedélyezve",
-    "enabledDescription": "E-mailt küldtünk hamisítás elleni védelem partnerünknek. Felveszik Önnel a kapcsolatot a biztonsági pecsét szállítása érdekében.",
+    "enabledDescription": "Kérés elküldve. Csapatunk felveszi Önnel a kapcsolatot, hogy megbeszélje a termék hamisítás elleni védelmét.",
     "requestSent": "Kérés elküldve!",
-    "requestSentDescription": "E-mailt küldtünk hamisítás elleni védelem partnerünknek.",
+    "requestSentDescription": "Kérés elküldve. Csapatunk felveszi Önnel a kapcsolatot, hogy megbeszélje a termék hamisítás elleni védelmét.",
     "sending": "Küldés...",
     "errorNoEmail": "Nem sikerült elküldeni a kérést – felhasználói e-mail nem található",
     "errorSaveFirst": "Kérjük, először mentse el az útlevelet a védelem engedélyezése előtt",
     "errorFailed": "Nem sikerült elküldeni a hamisítás elleni védelmi kérést",
-    "pendingSend": "A partner értesítést kap, amikor legközelebb menti ezt az útlevelet."
+    "pendingSend": "Csapatunk értesítést kap, amikor legközelebb menti ezt az útlevelet."
   },
   "customIngredient": {
     "title": "Egyéni összetevő meghatározása",

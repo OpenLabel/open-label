@@ -496,17 +496,17 @@
     "title": "Cosaint Góchumadóireachta",
     "enable": "Cumasaigh",
     "disable": "Díchumasaigh",
-    "description": "Cosain do tháirge i gcoinne góchumadóireachta le séala slándála ónár bpáirtí.",
+    "description": "Cosain do tháirge i gcoinne góchumadóireachta le séala slándála.",
     "addProtection": "Cuir Cosaint Góchumadóireachta leis (roghnach)",
     "enabled": "Cosaint Góchumadóireachta Cumasaithe",
-    "enabledDescription": "Seoladh ríomhphost chuig ár bpáirtí cosanta góchumadóireachta. Rachaidh siad i dteagmháil leat chun an séala slándála a sheachadadh.",
+    "enabledDescription": "Iarratas seolta. Rachaidh ár bhfoireann i dteagmháil leat chun cosaint i gcoinne góchumadóireachta don táirge seo a phlé.",
     "requestSent": "Iarratas seolta!",
-    "requestSentDescription": "Seoladh ríomhphost chuig ár bpáirtí cosanta góchumadóireachta. Rachaidh siad i dteagmháil leat chun an séala slándála a sheachadadh.",
+    "requestSentDescription": "Iarratas seolta. Rachaidh ár bhfoireann i dteagmháil leat chun cosaint i gcoinne góchumadóireachta don táirge seo a phlé.",
     "sending": "Ag seoladh...",
     "errorNoEmail": "Ní féidir iarratas a sheoladh — ríomhphost úsáideora gan aimsiú",
     "errorSaveFirst": "Sábháil an pas ar dtús le do thoil sula gcumasaíonn tú cosaint góchumadóireachta",
     "errorFailed": "Theip ar iarratas cosanta góchumadóireachta a sheoladh",
-    "pendingSend": "Cuirfear an comhpháirtí ar an eolas an chéad uair eile a shábhálann tú an pas seo."
+    "pendingSend": "Cuirfear ár bhfoireann ar an eolas an chéad uair eile a shábhálann tú an pas seo."
   },
   "customIngredient": {
     "title": "Sainmhínigh comhábhar saincheaptha",

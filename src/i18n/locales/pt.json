@@ -478,17 +478,17 @@
     "title": "Proteção Contra Falsificação",
     "enable": "Ativar",
     "disable": "Desativar",
-    "description": "Proteja o seu produto contra falsificação com um selo de segurança do nosso parceiro.",
+    "description": "Proteja o seu produto contra falsificação com um selo de segurança.",
     "addProtection": "Adicionar Proteção Contra Falsificação (opcional)",
     "enabled": "Proteção Contra Falsificação Ativada",
-    "enabledDescription": "Foi enviado um e-mail ao nosso parceiro de proteção contra falsificação. Eles vão contactá-lo para entregar o selo de segurança.",
+    "enabledDescription": "Pedido enviado. A nossa equipa irá contactá-lo para falar sobre a proteção contra falsificação deste produto.",
     "requestSent": "Pedido enviado!",
-    "requestSentDescription": "Foi enviado um e-mail ao nosso parceiro de proteção contra falsificação. Eles vão contactá-lo para entregar o selo de segurança.",
+    "requestSentDescription": "Pedido enviado. A nossa equipa irá contactá-lo para falar sobre a proteção contra falsificação deste produto.",
     "sending": "A enviar...",
     "errorNoEmail": "Não foi possível enviar o pedido - e-mail do utilizador não encontrado",
     "errorSaveFirst": "Por favor guarde o passaporte primeiro antes de ativar a proteção contra falsificação",
     "errorFailed": "Falha ao enviar pedido de proteção contra falsificação",
-    "pendingSend": "O parceiro será notificado na próxima vez que guardar este passaporte."
+    "pendingSend": "A nossa equipa será notificada da próxima vez que guardar este passaporte."
   },
   "customIngredient": {
     "title": "Definir um ingrediente personalizado",

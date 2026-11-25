@@ -496,17 +496,17 @@
     "title": "Ochrana proti falšovaniu",
     "enable": "Aktivovať",
     "disable": "Deaktivovať",
-    "description": "Chráňte svoj produkt proti falšovaniu pomocou bezpečnostnej pečate od nášho partnera.",
+    "description": "Chráňte svoj produkt proti falšovaniu pomocou bezpečnostnej pečate.",
     "addProtection": "Pridať ochranu proti falšovaniu (voliteľné)",
     "enabled": "Ochrana proti falšovaniu aktivovaná",
-    "enabledDescription": "E-mail bol odoslaný nášmu partnerovi. Budú vás kontaktovať ohľadom dodania bezpečnostnej pečate.",
+    "enabledDescription": "Požiadavka bola odoslaná. Náš tím vás bude kontaktovať, aby s vami prediskutoval ochranu tohto produktu proti falšovaniu.",
     "requestSent": "Požiadavka odoslaná!",
-    "requestSentDescription": "E-mail bol odoslaný nášmu partnerovi pre ochranu proti falšovaniu.",
+    "requestSentDescription": "Požiadavka bola odoslaná. Náš tím vás bude kontaktovať, aby s vami prediskutoval ochranu tohto produktu proti falšovaniu.",
     "sending": "Odosielanie...",
     "errorNoEmail": "Nie je možné odoslať požiadavku – e-mail používateľa nenájdený",
     "errorSaveFirst": "Najprv prosím uložte pas pred aktiváciou ochrany",
     "errorFailed": "Nepodarilo sa odoslať požiadavku na ochranu proti falšovaniu",
-    "pendingSend": "Partner bude informovaný pri ďalšom uložení tohto pasu."
+    "pendingSend": "Náš tím bude informovaný pri ďalšom uložení tohto pasu."
   },
   "customIngredient": {
     "title": "Definovať vlastnú zložku",

@@ -504,17 +504,17 @@
     "title": "Förfalskningsskydd",
     "enable": "Aktivera",
     "disable": "Inaktivera",
-    "description": "Skydda din produkt mot förfalskning med en säkerhetsförsegling från vår partner.",
+    "description": "Skydda din produkt mot förfalskning med en säkerhetsförsegling.",
     "addProtection": "Lägg till förfalskningsskydd (valfritt)",
     "enabled": "Förfalskningsskydd aktiverat",
-    "enabledDescription": "Ett e-postmeddelande har skickats till vår partner för förfalskningsskydd. De kommer att kontakta dig för att leverera säkerhetsforseglingen.",
+    "enabledDescription": "Förfrågan skickad. Vårt team kommer att kontakta dig för att diskutera förfalskningsskydd för denna produkt.",
     "requestSent": "Förfrågan skickad!",
-    "requestSentDescription": "Ett e-postmeddelande har skickats till vår partner för förfalskningsskydd. De kommer att kontakta dig för att leverera säkerhetsforseglingen.",
+    "requestSentDescription": "Förfrågan skickad. Vårt team kommer att kontakta dig för att diskutera förfalskningsskydd för denna produkt.",
     "sending": "Skickar...",
     "errorNoEmail": "Kan inte skicka förfrågan — användarens e-post hittades inte",
     "errorSaveFirst": "Spara passet först innan du aktiverar förfalskningsskydd",
     "errorFailed": "Misslyckades med att skicka förfrågan om förfalskningsskydd",
-    "pendingSend": "Partnern kommer att meddelas nästa gång du sparar detta pass."
+    "pendingSend": "Vårt team kommer att meddelas nästa gång du sparar detta pass."
   },
   "customIngredient": {
     "title": "Definiera en anpassad ingrediens",

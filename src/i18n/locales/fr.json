@@ -486,17 +486,17 @@
     "title": "Protection anti-contrefaçon",
     "enable": "Activer",
     "disable": "Désactiver",
-    "description": "Protégez votre produit contre la contrefaçon avec un sceau de sécurité de notre partenaire.",
+    "description": "Protégez votre produit contre la contrefaçon avec un sceau de sécurité.",
     "addProtection": "Ajouter une protection anti-contrefaçon (optionnel)",
     "enabled": "Protection anti-contrefaçon activée",
-    "enabledDescription": "Un e-mail a été envoyé à notre partenaire de protection anti-contrefaçon. Ils vous contacteront pour livrer le sceau de sécurité.",
+    "enabledDescription": "Demande envoyée. Notre équipe vous contactera pour discuter de la protection anti-contrefaçon de ce produit.",
     "requestSent": "Demande envoyée !",
-    "requestSentDescription": "Un e-mail a été envoyé à notre partenaire de protection anti-contrefaçon. Ils vous contacteront pour livrer le sceau de sécurité.",
+    "requestSentDescription": "Demande envoyée. Notre équipe vous contactera pour discuter de la protection anti-contrefaçon de ce produit.",
     "sending": "Envoi en cours...",
     "errorNoEmail": "Impossible d'envoyer la demande - e-mail utilisateur non trouvé",
     "errorSaveFirst": "Veuillez d'abord enregistrer le passeport avant d'activer la protection anti-contrefaçon",
     "errorFailed": "Échec de l'envoi de la demande de protection anti-contrefaçon",
-    "pendingSend": "Le partenaire sera notifié la prochaine fois que vous enregistrerez ce passeport."
+    "pendingSend": "Notre équipe sera informée la prochaine fois que vous enregistrerez ce passeport."
   },
   "customIngredient": {
     "title": "Définir un ingrédient personnalisé",

@@ -496,17 +496,17 @@
     "title": "Protecție anti-contrafacere",
     "enable": "Activează",
     "disable": "Dezactivează",
-    "description": "Protejați-vă produsul împotriva contrafacerii cu un sigiliu de securitate de la partenerul nostru.",
+    "description": "Protejați-vă produsul împotriva contrafacerii cu un sigiliu de securitate.",
     "addProtection": "Adaugă protecție anti-contrafacere (opțional)",
     "enabled": "Protecție anti-contrafacere activată",
-    "enabledDescription": "Un e-mail a fost trimis partenerului nostru. Vă vor contacta pentru livrarea sigiliului de securitate.",
+    "enabledDescription": "Cererea a fost trimisă. Echipa noastră vă va contacta pentru a discuta despre protecția împotriva contrafacerii pentru acest produs.",
     "requestSent": "Cerere trimisă!",
-    "requestSentDescription": "Un e-mail a fost trimis partenerului nostru de protecție anti-contrafacere.",
+    "requestSentDescription": "Cererea a fost trimisă. Echipa noastră vă va contacta pentru a discuta despre protecția împotriva contrafacerii pentru acest produs.",
     "sending": "Se trimite...",
     "errorNoEmail": "Nu se poate trimite cererea – e-mailul utilizatorului nu a fost găsit",
     "errorSaveFirst": "Salvați mai întâi pașaportul înainte de activarea protecției",
     "errorFailed": "Nu s-a putut trimite cererea de protecție anti-contrafacere",
-    "pendingSend": "Partenerul va fi notificat data viitoare când salvați acest pașaport."
+    "pendingSend": "Echipa noastră va fi notificată data viitoare când salvați acest pașaport."
   },
   "customIngredient": {
     "title": "Definește un ingredient personalizat",

@@ -496,17 +496,17 @@
     "title": "Zaštita od krivotvorenja",
     "enable": "Omogući",
     "disable": "Onemogući",
-    "description": "Zaštitite svoj proizvod od krivotvorenja sigurnosnim pečatom našeg partnera.",
+    "description": "Zaštitite svoj proizvod od krivotvorenja sigurnosnim pečatom.",
     "addProtection": "Dodaj zaštitu od krivotvorenja (neobavezno)",
     "enabled": "Zaštita od krivotvorenja omogućena",
-    "enabledDescription": "E-pošta poslana našem partneru. Kontaktirat će vas radi dostave sigurnosnog pečata.",
+    "enabledDescription": "Zahtjev je poslan. Naš tim će vas kontaktirati kako bi s vama razgovarao o zaštiti ovog proizvoda od krivotvorenja.",
     "requestSent": "Zahtjev poslan!",
-    "requestSentDescription": "E-pošta poslana našem partneru za zaštitu od krivotvorenja.",
+    "requestSentDescription": "Zahtjev je poslan. Naš tim će vas kontaktirati kako bi s vama razgovarao o zaštiti ovog proizvoda od krivotvorenja.",
     "sending": "Slanje...",
     "errorNoEmail": "Nije moguće poslati zahtjev – e-pošta korisnika nije pronađena",
     "errorSaveFirst": "Molimo najprije spremite putovnicu prije omogućavanja zaštite",
     "errorFailed": "Slanje zahtjeva za zaštitu od krivotvorenja nije uspjelo",
-    "pendingSend": "Partner će biti obaviješten sljedeći put kada spremite ovu putovnicu."
+    "pendingSend": "Naš tim će biti obaviješten sljedeći put kada spremite ovu putovnicu."
   },
   "customIngredient": {
     "title": "Definirajte prilagođeni sastojak",

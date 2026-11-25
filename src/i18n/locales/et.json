@@ -496,17 +496,17 @@
     "title": "Võltsimiskaitse",
     "enable": "Luba",
     "disable": "Keela",
-    "description": "Kaitse oma toodet võltsimise eest meie partneri turvapitsatiga.",
+    "description": "Kaitse oma toodet võltsimise eest turvapitsatiga.",
     "addProtection": "Lisa võltsimiskaitse (valikuline)",
     "enabled": "Võltsimiskaitse lubatud",
-    "enabledDescription": "E-kiri on saadetud meie võltsimiskaitse partnerile. Nad võtavad teiega ühendust turvapitsati tarnimiseks.",
+    "enabledDescription": "Päring saadetud. Meie meeskond võtab sinuga ühendust, et arutada selle toote kaitset võltsimise eest.",
     "requestSent": "Päring saadetud!",
-    "requestSentDescription": "E-kiri on saadetud meie võltsimiskaitse partnerile.",
+    "requestSentDescription": "Päring saadetud. Meie meeskond võtab sinuga ühendust, et arutada selle toote kaitset võltsimise eest.",
     "sending": "Saatmine...",
     "errorNoEmail": "Päringut ei saa saata – kasutaja e-posti ei leitud",
     "errorSaveFirst": "Palun salvesta pass esmalt enne kaitse lubamist",
     "errorFailed": "Võltsimiskaitse päringu saatmine ebaõnnestus",
-    "pendingSend": "Partnerit teavitatakse selle passi järgmisel salvestamisel."
+    "pendingSend": "Meie meeskonda teavitatakse, kui järgmine kord selle passi salvestad."
   },
   "customIngredient": {
     "title": "Määra kohandatud koostisaine",

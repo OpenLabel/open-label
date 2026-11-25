@@ -486,17 +486,17 @@
     "title": "Fälschungsschutz",
     "enable": "Aktivieren",
     "disable": "Deaktivieren",
-    "description": "Schützen Sie Ihr Produkt mit einem Sicherheitssiegel unseres Partners vor Fälschung.",
+    "description": "Schützen Sie Ihr Produkt mit einem Sicherheitssiegel vor Fälschung.",
     "addProtection": "Fälschungsschutz hinzufügen (optional)",
     "enabled": "Fälschungsschutz aktiviert",
-    "enabledDescription": "Eine E-Mail wurde an unseren Fälschungsschutzpartner gesendet. Sie werden sich mit Ihnen in Verbindung setzen, um das Sicherheitssiegel zu liefern.",
+    "enabledDescription": "Anfrage gesendet. Unser Team wird sich mit Ihnen in Verbindung setzen, um den Fälschungsschutz für dieses Produkt zu besprechen.",
     "requestSent": "Anfrage gesendet!",
-    "requestSentDescription": "Eine E-Mail wurde an unseren Fälschungsschutzpartner gesendet. Sie werden sich mit Ihnen in Verbindung setzen, um das Sicherheitssiegel zu liefern.",
+    "requestSentDescription": "Anfrage gesendet. Unser Team wird sich mit Ihnen in Verbindung setzen, um den Fälschungsschutz für dieses Produkt zu besprechen.",
     "sending": "Wird gesendet...",
     "errorNoEmail": "Anfrage konnte nicht gesendet werden - Benutzer-E-Mail nicht gefunden",
     "errorSaveFirst": "Bitte speichern Sie den Pass zuerst, bevor Sie den Fälschungsschutz aktivieren",
     "errorFailed": "Fälschungsschutzanfrage konnte nicht gesendet werden",
-    "pendingSend": "Der Partner wird benachrichtigt, sobald Sie diesen Pass das nächste Mal speichern."
+    "pendingSend": "Unser Team wird benachrichtigt, sobald Sie diesen Pass das nächste Mal speichern."
   },
   "customIngredient": {
     "title": "Benutzerdefinierte Zutat definieren",

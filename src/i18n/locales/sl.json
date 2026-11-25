@@ -496,17 +496,17 @@
     "title": "Zaščita pred ponarejanjem",
     "enable": "Omogoči",
     "disable": "Onemogoči",
-    "description": "Zaščitite svoj izdelek pred ponarejanjem z varnostnim pečatom našega partnerja.",
+    "description": "Zaščitite svoj izdelek pred ponarejanjem z varnostnim pečatom.",
     "addProtection": "Dodaj zaščito pred ponarejanjem (neobvezno)",
     "enabled": "Zaščita pred ponarejanjem omogočena",
-    "enabledDescription": "E-poštno sporočilo je bilo poslano našemu partnerju. Kontaktirali vas bodo glede dostave varnostnega pečata.",
+    "enabledDescription": "Zahteva je poslana. Naša ekipa bo stopila v stik z vami, da se pogovori o zaščiti tega izdelka pred ponarejanjem.",
     "requestSent": "Zahteva poslana!",
-    "requestSentDescription": "E-poštno sporočilo je bilo poslano našemu partnerju za zaščito pred ponarejanjem.",
+    "requestSentDescription": "Zahteva je poslana. Naša ekipa bo stopila v stik z vami, da se pogovori o zaščiti tega izdelka pred ponarejanjem.",
     "sending": "Pošiljanje...",
     "errorNoEmail": "Ni mogoče poslati zahteve – e-poštni naslov uporabnika ni najden",
     "errorSaveFirst": "Pred aktivacijo zaščite pred ponarejanjem najprej shranite potni list",
     "errorFailed": "Pošiljanje zahteve za zaščito pred ponarejanjem ni uspelo",
-    "pendingSend": "Partner bo obveščen ob naslednjem shranjevanju tega potnega lista."
+    "pendingSend": "Naša ekipa bo obveščena ob naslednjem shranjevanju tega potnega lista."
   },
   "customIngredient": {
     "title": "Določite lastno sestavino",

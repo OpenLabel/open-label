@@ -478,17 +478,17 @@
     "title": "Ochrona Przed Fałszerstwami",
     "enable": "Włącz",
     "disable": "Wyłącz",
-    "description": "Chroń swój produkt przed fałszerstwami za pomocą pieczęci bezpieczeństwa od naszego partnera.",
+    "description": "Chroń swój produkt przed fałszerstwami za pomocą pieczęci bezpieczeństwa.",
     "addProtection": "Dodaj Ochronę Przed Fałszerstwami (opcjonalnie)",
     "enabled": "Ochrona Przed Fałszerstwami Włączona",
-    "enabledDescription": "Wysłano e-mail do naszego partnera ds. ochrony przed fałszerstwami. Skontaktują się z Tobą w celu dostarczenia pieczęci bezpieczeństwa.",
+    "enabledDescription": "Żądanie wysłane. Nasz zespół skontaktuje się z Tobą, aby omówić ochronę tego produktu przed fałszerstwami.",
     "requestSent": "Żądanie wysłane!",
-    "requestSentDescription": "Wysłano e-mail do naszego partnera ds. ochrony przed fałszerstwami. Skontaktują się z Tobą w celu dostarczenia pieczęci bezpieczeństwa.",
+    "requestSentDescription": "Żądanie wysłane. Nasz zespół skontaktuje się z Tobą, aby omówić ochronę tego produktu przed fałszerstwami.",
     "sending": "Wysyłanie...",
     "errorNoEmail": "Nie można wysłać żądania - nie znaleziono e-maila użytkownika",
     "errorSaveFirst": "Proszę najpierw zapisać paszport przed włączeniem ochrony przed fałszerstwami",
     "errorFailed": "Nie udało się wysłać żądania ochrony przed fałszerstwami",
-    "pendingSend": "Partner zostanie powiadomiony przy następnym zapisie tego paszportu."
+    "pendingSend": "Nasz zespół zostanie powiadomiony przy następnym zapisie tego paszportu."
   },
   "qrDialog": {
     "title": "Kod QR",

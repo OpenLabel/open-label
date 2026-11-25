@@ -504,17 +504,17 @@
     "title": "Counterfeit Protection",
     "enable": "Enable",
     "disable": "Disable",
-    "description": "Protect your product against counterfeiting with a security seal from our partner.",
+    "description": "Protect your product against counterfeiting with a security seal.",
     "addProtection": "Add Counterfeit Protection (optional)",
     "enabled": "Counterfeit Protection Enabled",
-    "enabledDescription": "An email has been sent to our counterfeit protection partner. They will contact you to deliver the security seal.",
+    "enabledDescription": "Request sent. Our team will contact you to discuss counterfeit protection for this product.",
     "requestSent": "Request sent!",
-    "requestSentDescription": "An email has been sent to our counterfeit protection partner. They will contact you to deliver the security seal.",
+    "requestSentDescription": "Request sent. Our team will contact you to discuss counterfeit protection for this product.",
     "sending": "Sending...",
     "errorNoEmail": "Unable to send request - user email not found",
     "errorSaveFirst": "Please save the passport first before enabling counterfeit protection",
     "errorFailed": "Failed to send counterfeit protection request",
-    "pendingSend": "The partner will be notified the next time you save this passport."
+    "pendingSend": "Our team will be notified the next time you save this passport."
   },
   "customIngredient": {
     "title": "Define a custom ingredient",

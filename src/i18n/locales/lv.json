@@ -496,17 +496,17 @@
     "title": "Aizsardzība pret viltojumiem",
     "enable": "Iespējot",
     "disable": "Atspējot",
-    "description": "Aizsargājiet savu produktu pret viltošanu ar mūsu partnera drošības plombu.",
+    "description": "Aizsargājiet savu produktu pret viltošanu ar drošības plombu.",
     "addProtection": "Pievienot aizsardzību pret viltojumiem (neobligāti)",
     "enabled": "Aizsardzība pret viltojumiem iespējota",
-    "enabledDescription": "E-pasts nosūtīts mūsu partnerim. Viņi sazināsies ar jums par drošības plombas piegādi.",
+    "enabledDescription": "Pieprasījums nosūtīts. Mūsu komanda sazināsies ar jums, lai apspriestu šī produkta aizsardzību pret viltošanu.",
     "requestSent": "Pieprasījums nosūtīts!",
-    "requestSentDescription": "E-pasts nosūtīts mūsu aizsardzības pret viltojumiem partnerim.",
+    "requestSentDescription": "Pieprasījums nosūtīts. Mūsu komanda sazināsies ar jums, lai apspriestu šī produkta aizsardzību pret viltošanu.",
     "sending": "Sūta...",
     "errorNoEmail": "Nevar nosūtīt pieprasījumu – lietotāja e-pasts nav atrasts",
     "errorSaveFirst": "Lūdzu vispirms saglabājiet pasi pirms aizsardzības iespējošanas",
     "errorFailed": "Neizdevās nosūtīt aizsardzības pieprasījumu",
-    "pendingSend": "Partneris tiks informēts nākamajā reizē, kad saglabāsiet šo pasi."
+    "pendingSend": "Mūsu komanda tiks informēta nākamajā reizē, kad saglabāsiet šo pasi."
   },
   "customIngredient": {
     "title": "Definēt pielāgotu sastāvdaļu",
