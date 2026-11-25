@@ -50,6 +50,14 @@ const deps: CounterfeitLeadDeps = {
     const { data } = await admin.from("profiles").select("company_name").eq("user_id", userId).maybeSingle();
     return (data?.company_name as string | null) ?? null;
   },
+  async accountSnapshot(userId) {
+    const [passports, account] = await Promise.all([
+      admin.from("passports").select("id", { count: "exact", head: true }).eq("user_id", userId),
+      admin.auth.admin.getUserById(userId),
+    ]);
+    if (passports.error || account.error) throw new Error("account snapshot lookup failed");
+    return { passportCount: passports.count, createdAt: account.data.user?.created_at ?? null };
+  },
   async siteConfig() {
     const { data } = await admin.from("site_config").select("key, value").in("key", ["sender_email", "company_name", "site_url"]);
     const c: Record<string, string | null> = {};

@@ -17,6 +17,8 @@
 import { assert, assertEquals, assertFalse, assertThrows } from "https://deno.land/std@0.224.0/assert/mod.ts";
 import {
   buildDppLine,
+  buildPassportSnapshot,
+  PRODUCT_SNAPSHOT_KEYS,
   buildSlackLeadText,
   handleCounterfeitLead,
   sanitizeSlackValue,
@@ -85,10 +87,12 @@ function setup(opts: {
   ledger?: ReturnType<typeof makeLedger>;
   company?: string | null;
   siteUrl?: string | null;
+  account?: { passportCount: number | null; createdAt: string | null };
 } = {}) {
   const calls: Call[] = [];
   const logs: string[] = [];
   const envReads: string[] = [];
+  const accountReads: string[] = [];
   const ledger = opts.ledger ?? makeLedger();
   const env: Record<string, string | undefined> = { SLACK_OPENLABEL_LEADS_WEBHOOK_URL: WEBHOOK, RESEND_API_KEY: "re_fake_key", ...(opts.env ?? {}) };
   const p = opts.passport === undefined ? passport() : opts.passport;
@@ -96,6 +100,10 @@ function setup(opts: {
     authenticate: async (t) => t === "good" ? { id: "user-1", email: opts.email ?? "buyer@example.com" } : null,
     findPassportBySlug: async (slug) => p?.public_slug === slug ? p : null,
     companyName: async () => opts.company === undefined ? "Acme Wines" : opts.company,
+    accountSnapshot: async (userId) => {
+      accountReads.push(userId);
+      return opts.account ?? { passportCount: 3, createdAt: "2026-09-01T08:00:00.000Z" };
+    },
     siteConfig: async () => ({
       senderEmail: opts.senderEmail === undefined ? "noreply@cypheme.org" : opts.senderEmail,
       senderName: "Open Label .eu",
@@ -114,7 +122,7 @@ function setup(opts: {
       throw new Error("unexpected url");
     },
   };
-  return { deps, calls, logs, ledger, envReads };
+  return { deps, calls, logs, ledger, envReads, accountReads };
 }
 
 const req = (body: unknown = { userEmail: "buyer@example.com", passportName: "browser name", passportUrl: `https://evil.example/p/${SLUG}` }, token: string | null = "good") =>
@@ -152,6 +160,9 @@ Deno.test("sends one email then one Slack lead with exact text including Email F
     "Message: Counterfeit protection requested for this Digital Product Passport",
     FOLLOW_UP,
     `Requested At: ${NOW}`,
+    "Fields filled: 0",
+    "Passports in account: 3",
+    "Account created at: 2026-09-01T08:00:00.000Z",
   ].join("\n\n"));
   assertFalse(String(c.body.text).includes("evil.example"));
   assertFalse(String(c.body.text).includes("browser name"));
@@ -194,7 +205,7 @@ Deno.test("sanitizes each user field in Slack and escapes HTML in the email", as
   });
   await (await handleCounterfeitLead(req(), t.deps)).text();
   const lines = String(slackCalls(t)[0].body.text).split("\n\n");
-  assertEquals(lines.length, 10);
+  assertEquals(lines.length, 13);
   assertEquals(lines[1], "Company: &lt;!channel&gt; Bold it s c x line2 @\u2060here");
   assert(lines[3].startsWith("Product Name: &lt;https://phish.example Click&gt; &amp; more"));
   assert(lines[3].length <= "Product Name: ".length + 300 + 20);
@@ -341,4 +352,111 @@ Deno.test("secrets never appear in responses or logs", async () => {
   const body = await (await handleCounterfeitLead(req(), t.deps)).text();
   assertFalse(body.includes("fakeSecretPart") || body.includes("re_fake_key"));
   assertFalse(t.logs.join("\n").includes("fakeSecretPart") || t.logs.join("\n").includes("re_fake_key"));
+});
+
+for (const [category, data, expected] of [
+  ["wine", { brand: "Estate", producer_name: "Winemaker", country: "France", description: "Dry wine", ean: "0012345678905" }, ["Estate", "Winemaker", "France", "Dry wine", "0012345678905"]],
+  ["battery", { manufacturer_trade_name: "Power", manufacturer_name: "Cell maker", country_of_origin: "Germany", product_description: "Rechargeable cell", gtin: "0012345678905" }, ["Power", "Cell maker", "Germany", "Rechargeable cell", "0012345678905"]],
+  ["car_cleaning", { brand_name: "Clean", manufacturer_name: "Cleaner maker", country_of_origin: "Belgium", short_description: "Car shampoo", gtin: "0012345678905" }, ["Clean", "Cleaner maker", "Belgium", "Car shampoo", "0012345678905"]],
+  ["unknown_category", { brand: "Generic", producer_name: "Maker", country_of_origin: "Portugal", description: "Product", ean: "0012345678905" }, ["Generic", "Maker", "Portugal", "Product", "0012345678905"]],
+] as const) {
+  Deno.test(`product snapshot maps ${category} identity fields`, () => {
+    const rows = buildPassportSnapshot(category, { ...data, counterfeit_protection_enabled: true });
+    assertEquals(rows.map((r) => r.label), ["Brand", "Manufacturer / producer", "Country of origin", "Product description", "GTIN/EAN", "Fields filled"]);
+    assertEquals(rows.map((r) => r.value), [...expected, "5"]);
+  });
+}
+
+Deno.test("mapping covers every registered category without substituting operator countries or model IDs", () => {
+  assertEquals(Object.keys(PRODUCT_SNAPSHOT_KEYS).sort(), ["wine", "toys", "textiles", "detergents", "battery", "car_cleaning", "construction", "electronics", "iron_steel", "aluminum", "cosmetics", "furniture", "tires", "other"].sort());
+  for (const category of ["toys", "textiles", "detergents"]) {
+    const rows = buildPassportSnapshot(category, { brand_name: "Brand", manufacturer_legal_name: "Legal maker", manufacturer_country: "Operator country", unique_product_identifier: "MODEL-1" });
+    assertEquals(rows.map((r) => r.value), ["Brand", "Legal maker", "4"]);
+    assertFalse(rows.some((r) => r.label === "Country of origin" || r.label === "GTIN/EAN"));
+  }
+});
+
+Deno.test("empty values are omitted and filled count treats zero and false as filled top-level values", () => {
+  const rows = buildPassportSnapshot("other", {
+    counterfeit_protection_enabled: true, brand: "   ", brand_name: "Fallback brand",
+    manufacturer_name: null, producer_name: "", country_of_origin: undefined,
+    description: [], gtin: {}, emptyList: [null, " "], emptyObject: { empty: "" },
+    zero: 0, no: false, list: ["filled", "more"], object: { nested: "filled" }, invalid: NaN,
+  });
+  assertEquals(rows.map((r) => [r.label, r.value]), [["Brand", "Fallback brand"], ["Fields filled", "5"]]);
+  for (const data of [null, undefined, [], "invalid"]) {
+    assertEquals(buildPassportSnapshot("toString", data).map((r) => r.value), ["0"]);
+  }
+});
+
+Deno.test("email and Slack preserve server-side snapshots even after the passport is removed during delivery", async () => {
+  const data: Record<string, unknown> = {
+    counterfeit_protection_enabled: true, brand: "Estate", producer_name: "Winemaker",
+    country: "France", description: "Dry wine", ean: "0012345678905",
+  };
+  const t = setup({
+    passport: passport({ category_data: data }),
+    resend: () => {
+      // Simulate deletion after the server has taken the snapshot.
+      for (const key of Object.keys(data)) delete data[key];
+      return new Response("{}");
+    },
+  });
+  const res = await handleCounterfeitLead(req({
+    userEmail: "buyer@example.com", passportUrl: `https://open-label.eu/p/${SLUG}`,
+    category_data: { brand: "Forged brand" }, passportCount: 999, createdAt: "Forged date",
+  }), t.deps);
+  assertEquals(res.status, 200);
+  await res.text();
+  assertEquals(t.accountReads, ["user-1"]);
+  const lines = String(slackCalls(t)[0].body.text).split("\n\n");
+  assertEquals(lines.slice(0, 10), [
+    "##SOURCE_OPENLABEL##", "Company: Acme Wines", "Email: buyer@example.com",
+    "Product Name: Chateau Example 2022", "Product Category: wine", EXPECTED_DPP,
+    `Passport ID: ${PID}`, "Message: Counterfeit protection requested for this Digital Product Passport",
+    FOLLOW_UP, `Requested At: ${NOW}`,
+  ]);
+  assertEquals(lines.slice(10), [
+    "Brand: Estate", "Manufacturer / producer: Winemaker", "Country of origin: France",
+    "Product description: Dry wine", "GTIN/EAN: 0012345678905", "Fields filled: 5",
+    "Passports in account: 3", "Account created at: 2026-09-01T08:00:00.000Z",
+  ]);
+  const html = String(emailCalls(t)[0].body.html);
+  assert(html.indexOf("<h3>Passport snapshot</h3>") > html.indexOf("Requested at (UTC)"));
+  assert(html.indexOf("<h3>Account</h3>") > html.indexOf("<h3>Passport snapshot</h3>"));
+  for (const value of ["Estate", "Winemaker", "France", "Dry wine", "0012345678905", "Passports in account", "2026-09-01T08:00:00.000Z"]) assert(html.includes(value), value);
+  assertFalse(html.includes("Forged") || lines.join(" ").includes("Forged"));
+});
+
+Deno.test("new snapshot values are escaped, sanitized, capped, and missing account values are omitted", async () => {
+  const t = setup({
+    passport: passport({ category_data: { counterfeit_protection_enabled: true, brand: '<!channel> "Brand" & <x>', description: "@here\n" + "z".repeat(1000) } }),
+    account: { passportCount: null, createdAt: null },
+  });
+  await (await handleCounterfeitLead(req(), t.deps)).text();
+  const text = String(slackCalls(t)[0].body.text);
+  assert(text.includes('Brand: &lt;!channel&gt; "Brand" &amp; &lt;x&gt;'));
+  const description = text.split("\n\n").find((line) => line.startsWith("Product description:"));
+  assert(description);
+  assertEquals(description, `Product description: ${sanitizeSlackValue("@here\n" + "z".repeat(1000), 300)}`);
+  const html = String(emailCalls(t)[0].body.html);
+  assert(html.includes("&lt;!channel&gt; &quot;Brand&quot; &amp; &lt;x&gt;"));
+  assertFalse(html.includes("<!channel>") || html.includes("z".repeat(301)));
+  for (const label of ["Manufacturer / producer", "Country of origin", "GTIN/EAN", "Passports in account", "Account created at", "Published", "Draft"]) {
+    assertFalse(text.includes(`${label}:`) || html.includes(`>${label}</td>`));
+  }
+  assertFalse(html.includes("<h3>Account</h3>"));
+});
+
+Deno.test("account passport count includes zero and a snapshot lookup failure sends nothing", async () => {
+  const t = setup({ account: { passportCount: 0, createdAt: "" } });
+  await (await handleCounterfeitLead(req(), t.deps)).text();
+  assert(String(slackCalls(t)[0].body.text).includes("Passports in account: 0"));
+  const failed = setup();
+  failed.deps.accountSnapshot = async () => { throw new Error("lookup failed"); };
+  const response = await handleCounterfeitLead(req(), failed.deps);
+  assertEquals(response.status, 500);
+  await response.text();
+  assertEquals(failed.calls.length, 0);
+  assertEquals(failed.ledger.rows.size, 0);
 });

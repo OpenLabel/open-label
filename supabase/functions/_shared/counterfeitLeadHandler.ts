@@ -45,6 +45,7 @@ export type CounterfeitLeadDeps = {
   authenticate(token: string): Promise<{ id: string; email: string } | null>;
   findPassportBySlug(slug: string): Promise<LeadPassport | null>;
   companyName(userId: string): Promise<string | null>;
+  accountSnapshot(userId: string): Promise<{ passportCount: number | null; createdAt: string | null }>;
   siteConfig(): Promise<{ senderEmail: string | null; senderName: string | null; siteUrl: string | null }>;
   ledger: {
     claim(passportId: string, userId: string, channel: Channel): Promise<ClaimResult>;
@@ -126,7 +127,74 @@ export type LeadFields = {
   slug: string;
   passportId: string;
   requestedAt: string;
+  passportSnapshot?: SnapshotRow[];
+  accountSnapshot?: SnapshotRow[];
 };
+
+export type SnapshotRow = { label: string; value: string; max: number };
+type ProductKeys = { brand: string[]; manufacturer: string[]; country: string[]; description: string[]; gtin: string[] };
+
+const COMMON_PRODUCT_KEYS: ProductKeys = {
+  brand: ["brand", "brand_name"],
+  manufacturer: ["manufacturer_name", "producer_name", "manufacturer_legal_name"],
+  country: ["country_of_origin"],
+  description: ["description", "product_description", "short_description"],
+  gtin: ["gtin", "ean", "gtin_ean"],
+};
+
+// Only equivalent identity fields are mapped: operator countries, model IDs,
+// and regulatory contacts must not be mislabelled as origin, GTIN, or producer.
+export const PRODUCT_SNAPSHOT_KEYS: Record<string, ProductKeys> = {
+  wine: { ...COMMON_PRODUCT_KEYS, manufacturer: ["producer_name", "manufacturer_name"], country: ["country", "country_of_origin"] },
+  toys: { ...COMMON_PRODUCT_KEYS, brand: ["brand_name", "brand"], manufacturer: ["manufacturer_legal_name", "manufacturer_name"] },
+  textiles: { ...COMMON_PRODUCT_KEYS, brand: ["brand_name", "brand"], manufacturer: ["manufacturer_legal_name", "manufacturer_name"] },
+  detergents: { ...COMMON_PRODUCT_KEYS, brand: ["brand_name", "brand"], manufacturer: ["manufacturer_legal_name", "manufacturer_name"] },
+  battery: { ...COMMON_PRODUCT_KEYS, brand: ["manufacturer_trade_name", "brand_name", "brand"], manufacturer: ["manufacturer_name", "producer_name"] },
+  car_cleaning: { ...COMMON_PRODUCT_KEYS, brand: ["brand_name", "brand"], manufacturer: ["manufacturer_name", "producer_name"] },
+  construction: COMMON_PRODUCT_KEYS,
+  electronics: COMMON_PRODUCT_KEYS,
+  iron_steel: COMMON_PRODUCT_KEYS,
+  aluminum: { ...COMMON_PRODUCT_KEYS, manufacturer: ["producer_name", "manufacturer_name"] },
+  cosmetics: { ...COMMON_PRODUCT_KEYS, brand: ["brand_name", "brand"] },
+  furniture: { ...COMMON_PRODUCT_KEYS, brand: ["brand_name", "brand"] },
+  tires: COMMON_PRODUCT_KEYS,
+  other: COMMON_PRODUCT_KEYS,
+};
+
+function hasSnapshotValue(value: unknown): boolean {
+  if (typeof value === "string") return value.trim().length > 0;
+  if (typeof value === "number") return Number.isFinite(value);
+  if (typeof value === "boolean") return true;
+  if (Array.isArray(value)) return value.some(hasSnapshotValue);
+  if (value && typeof value === "object") return Object.values(value).some(hasSnapshotValue);
+  return false;
+}
+
+export function buildPassportSnapshot(category: string, categoryData: unknown): SnapshotRow[] {
+  const data = categoryData && typeof categoryData === "object" && !Array.isArray(categoryData)
+    ? categoryData as Record<string, unknown> : {};
+  const keys = Object.hasOwn(PRODUCT_SNAPSHOT_KEYS, category) ? PRODUCT_SNAPSHOT_KEYS[category] : COMMON_PRODUCT_KEYS;
+  const fields: [keyof ProductKeys, string, number][] = [
+    ["brand", "Brand", 200],
+    ["manufacturer", "Manufacturer / producer", 200],
+    ["country", "Country of origin", 100],
+    ["description", "Product description", 300],
+    ["gtin", "GTIN/EAN", 64],
+  ];
+  const rows: SnapshotRow[] = [];
+  for (const [field, label, max] of fields) {
+    for (const key of keys[field]) {
+      const value = data[key];
+      if ((typeof value === "string" || typeof value === "number") && hasSnapshotValue(value)) {
+        rows.push({ label, value: String(value).trim(), max });
+        break;
+      }
+    }
+  }
+  const filled = Object.entries(data).filter(([key, value]) => key !== "counterfeit_protection_enabled" && hasSnapshotValue(value)).length;
+  rows.push({ label: "Fields filled", value: String(filled), max: 20 });
+  return rows;
+}
 
 /** The DPP line is built from a trusted origin and a validated hex slug, never sanitized. */
 export function buildDppLine(origin: string, slug: string): string {
@@ -147,6 +215,9 @@ export function buildSlackLeadText(f: LeadFields): string {
     "Message: Counterfeit protection requested for this Digital Product Passport",
     EMAIL_FOLLOW_UP_LINE,
     `Requested At: ${s(f.requestedAt, 40)}`,
+    ...[...(f.passportSnapshot ?? []), ...(f.accountSnapshot ?? [])]
+      .filter((row) => row.value.trim())
+      .map((row) => `${row.label}: ${s(row.value, row.max)}`),
   ].join("\n\n");
 }
 
@@ -170,6 +241,13 @@ export function buildLeadEmail(f: LeadFields, sender: { email: string; name: str
     `<tr><td style="color:#666;padding:6px 0;font-size:14px;width:140px;">${label}</td><td style="color:#1a1a1a;padding:6px 0;font-size:14px;">${
       link ? `<a href="${escapeHtml(value)}">${escapeHtml(value)}</a>` : escapeHtml(oneLine(value, 300))
     }</td></tr>`;
+  const section = (title: string, rows: SnapshotRow[] | undefined) => {
+    const filled = rows?.filter((r) => r.value.trim()) ?? [];
+    if (!filled.length) return "";
+    return `<h3>${title}</h3>\n<table style="width:100%;border-collapse:collapse;">\n${
+      filled.map((r) => row(r.label, oneLine(r.value, r.max))).join("\n")
+    }\n</table>`;
+  };
   const html = `<div style="font-family:Arial,sans-serif;max-width:600px;margin:0 auto;padding:20px;">
 <h2>Counterfeit Protection Request</h2>
 <p>A user requested counterfeit protection with a security seal for this Digital Product Passport. Reply to this email to contact the requester directly.</p>
@@ -182,6 +260,8 @@ ${row("Passport URL", url, true)}
 ${row("Passport ID", f.passportId)}
 ${row("Requested at (UTC)", f.requestedAt)}
 </table>
+${section("Passport snapshot", f.passportSnapshot)}
+${section("Account", f.accountSnapshot)}
 <p style="color:#999;font-size:12px;">Sent from Open Label .eu</p>
 </div>`;
   const senderName = oneLine(sender.name || "Open Label .eu", 100).replace(/[<>"]/g, "");
@@ -279,6 +359,15 @@ export async function handleCounterfeitLead(req: Request, deps: CounterfeitLeadD
 
     const site = await deps.siteConfig();
     const company = await deps.companyName(user.id);
+    const passportSnapshot = buildPassportSnapshot(passport.category, cd);
+    const account = await deps.accountSnapshot(user.id);
+    const accountSnapshot: SnapshotRow[] = [];
+    if (account.passportCount !== null && Number.isInteger(account.passportCount) && account.passportCount >= 0) {
+      accountSnapshot.push({ label: "Passports in account", value: String(account.passportCount), max: 20 });
+    }
+    if (account.createdAt?.trim()) {
+      accountSnapshot.push({ label: "Account created at", value: account.createdAt, max: 40 });
+    }
     const fields: LeadFields = {
       company: company?.trim() || "Not provided",
       email: user.email,
@@ -288,6 +377,8 @@ export async function handleCounterfeitLead(req: Request, deps: CounterfeitLeadD
       slug: passport.public_slug,
       passportId: passport.id,
       requestedAt: deps.now().toISOString(),
+      passportSnapshot,
+      accountSnapshot,
     };
     const incomplete = () => json(502, { success: false, error: "Lead delivery incomplete, please retry", delivery: "failed" });
 
