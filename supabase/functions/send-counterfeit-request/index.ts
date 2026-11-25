@@ -40,7 +40,7 @@ const deps: CounterfeitLeadDeps = {
   async findPassportBySlug(slug) {
     const { data, error } = await admin
       .from("passports")
-      .select("id, user_id, name, category, public_slug, category_data")
+      .select("id, user_id, name, category, public_slug, category_data, description")
       .eq("public_slug", slug)
       .maybeSingle();
     if (error) throw new Error("lookup failed");

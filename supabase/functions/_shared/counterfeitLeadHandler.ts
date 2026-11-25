@@ -31,6 +31,7 @@ export type LeadPassport = {
   category: string;
   public_slug: string | null;
   category_data: unknown;
+  description?: string | null;
 };
 
 export type Channel = "email" | "slack";
@@ -170,7 +171,7 @@ function hasSnapshotValue(value: unknown): boolean {
   return false;
 }
 
-export function buildPassportSnapshot(category: string, categoryData: unknown): SnapshotRow[] {
+export function buildPassportSnapshot(category: string, categoryData: unknown, description?: string | null): SnapshotRow[] {
   const data = categoryData && typeof categoryData === "object" && !Array.isArray(categoryData)
     ? categoryData as Record<string, unknown> : {};
   const keys = Object.hasOwn(PRODUCT_SNAPSHOT_KEYS, category) ? PRODUCT_SNAPSHOT_KEYS[category] : COMMON_PRODUCT_KEYS;
@@ -189,6 +190,24 @@ export function buildPassportSnapshot(category: string, categoryData: unknown): 
         rows.push({ label, value: String(value).trim(), max });
         break;
       }
+    }
+  }
+  if (!rows.some((row) => row.label === "Product description") && description) {
+    const entities: Record<string, string> = { amp: "&", lt: "<", gt: ">", quot: '"', apos: "'", nbsp: " " };
+    const text = oneLine(description
+      .replace(/<!--[\s\S]*?-->/g, " ")
+      .replace(/<(script|style)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, " ")
+      .replace(/<[^>]*>/g, " ")
+      .replace(/&(#x[0-9a-f]+|#\d+|amp|lt|gt|quot|apos|nbsp);/gi, (entity, code: string) => {
+        if (!code.startsWith("#")) return entities[code.toLowerCase()] ?? entity;
+        const point = code.slice(1).toLowerCase().startsWith("x")
+          ? parseInt(code.slice(2), 16) : parseInt(code.slice(1), 10);
+        return point > 0 && point <= 0x10ffff && !(point >= 0xd800 && point <= 0xdfff)
+          ? String.fromCodePoint(point) : entity;
+      }), 300);
+    if (text) {
+      const gtinIndex = rows.findIndex((row) => row.label === "GTIN/EAN");
+      rows.splice(gtinIndex < 0 ? rows.length : gtinIndex, 0, { label: "Product description", value: text, max: 300 });
     }
   }
   const filled = Object.entries(data).filter(([key, value]) => key !== "counterfeit_protection_enabled" && hasSnapshotValue(value)).length;
@@ -359,14 +378,24 @@ export async function handleCounterfeitLead(req: Request, deps: CounterfeitLeadD
 
     const site = await deps.siteConfig();
     const company = await deps.companyName(user.id);
-    const passportSnapshot = buildPassportSnapshot(passport.category, cd);
-    const account = await deps.accountSnapshot(user.id);
-    const accountSnapshot: SnapshotRow[] = [];
-    if (account.passportCount !== null && Number.isInteger(account.passportCount) && account.passportCount >= 0) {
-      accountSnapshot.push({ label: "Passports in account", value: String(account.passportCount), max: 20 });
+    let passportSnapshot: SnapshotRow[] = [];
+    try {
+      passportSnapshot = buildPassportSnapshot(passport.category, cd, passport.description);
+    } catch {
+      deps.log("counterfeit-lead: passport snapshot unavailable");
     }
-    if (account.createdAt?.trim()) {
-      accountSnapshot.push({ label: "Account created at", value: account.createdAt, max: 40 });
+    let accountSnapshot: SnapshotRow[] = [];
+    try {
+      const account = await deps.accountSnapshot(user.id);
+      if (account.passportCount !== null && Number.isInteger(account.passportCount) && account.passportCount >= 0) {
+        accountSnapshot.push({ label: "Passports in account", value: String(account.passportCount), max: 20 });
+      }
+      if (account.createdAt?.trim()) {
+        accountSnapshot.push({ label: "Account created at", value: account.createdAt, max: 40 });
+      }
+    } catch {
+      accountSnapshot = [];
+      deps.log("counterfeit-lead: account snapshot unavailable");
     }
     const fields: LeadFields = {
       company: company?.trim() || "Not provided",

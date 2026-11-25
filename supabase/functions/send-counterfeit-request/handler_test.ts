@@ -448,15 +448,52 @@ Deno.test("new snapshot values are escaped, sanitized, capped, and missing accou
   assertFalse(html.includes("<h3>Account</h3>"));
 });
 
-Deno.test("account passport count includes zero and a snapshot lookup failure sends nothing", async () => {
+Deno.test("account passport count includes zero and a snapshot lookup failure still delivers without Account rows", async () => {
   const t = setup({ account: { passportCount: 0, createdAt: "" } });
   await (await handleCounterfeitLead(req(), t.deps)).text();
   assert(String(slackCalls(t)[0].body.text).includes("Passports in account: 0"));
   const failed = setup();
-  failed.deps.accountSnapshot = async () => { throw new Error("lookup failed"); };
+  failed.deps.accountSnapshot = async () => { throw new Error("private lookup details buyer@example.com secret"); };
   const response = await handleCounterfeitLead(req(), failed.deps);
-  assertEquals(response.status, 500);
+  assertEquals(response.status, 200);
   await response.text();
-  assertEquals(failed.calls.length, 0);
-  assertEquals(failed.ledger.rows.size, 0);
+  assertEquals(failed.calls.map((c) => c.url), [RESEND, WEBHOOK]);
+  assertFalse(String(emailCalls(failed)[0].body.html).includes("<h3>Account</h3>"));
+  const text = String(slackCalls(failed)[0].body.text);
+  assertFalse(text.includes("Passports in account:") || text.includes("Account created at:"));
+  assert(text.includes("Fields filled: 0"));
+  assertEquals(failed.logs, ["counterfeit-lead: account snapshot unavailable"]);
+});
+
+Deno.test("unexpected passport snapshot errors still deliver without Passport snapshot rows", async () => {
+  const data = { counterfeit_protection_enabled: true, get brand(): string { throw new Error("private product details"); } };
+  const t = setup({ passport: passport({ category_data: data }) });
+  const response = await handleCounterfeitLead(req(), t.deps);
+  assertEquals(response.status, 200);
+  await response.text();
+  assertEquals(t.calls.map((c) => c.url), [RESEND, WEBHOOK]);
+  assertFalse(String(emailCalls(t)[0].body.html).includes("<h3>Passport snapshot</h3>"));
+  const text = String(slackCalls(t)[0].body.text);
+  assertFalse(text.includes("Brand:") || text.includes("Fields filled:"));
+  assert(text.includes("Passports in account: 3"));
+  assertEquals(t.logs, ["counterfeit-lead: passport snapshot unavailable"]);
+});
+
+Deno.test("wine top-level HTML description is a plain-text fallback in email and Slack", async () => {
+  const t = setup({ passport: passport({ description: '<p>Dry &amp; fruity&nbsp;wine.</p><p>Producer&#39;s &quot;reserve&quot; &#x26; more.</p>' }) });
+  const response = await handleCounterfeitLead(req(), t.deps);
+  assertEquals(response.status, 200);
+  await response.text();
+  const plain = 'Dry & fruity wine. Producer\'s "reserve" & more.';
+  assert(String(slackCalls(t)[0].body.text).includes(`Product description: ${sanitizeSlackValue(plain, 300)}`));
+  const html = String(emailCalls(t)[0].body.html);
+  assert(html.includes('Dry &amp; fruity wine. Producer&#39;s &quot;reserve&quot; &amp; more.'));
+  assertFalse(html.includes('<p>Dry'));
+  assert(String(slackCalls(t)[0].body.text).includes("Fields filled: 0"));
+});
+
+Deno.test("description fallback preserves mapped priority, omits empty HTML and caps plain text at 300", () => {
+  assertEquals(buildPassportSnapshot("wine", { description: "Mapped description" }, "<p>Fallback</p>").find((r) => r.label === "Product description")?.value, "Mapped description");
+  assertFalse(buildPassportSnapshot("wine", {}, "<p>&nbsp; </p>").some((r) => r.label === "Product description"));
+  assertEquals(buildPassportSnapshot("wine", {}, `<p>${"z".repeat(400)}</p>`).find((r) => r.label === "Product description")?.value, "z".repeat(299) + "\u2026");
 });
