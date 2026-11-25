@@ -126,7 +126,7 @@ const req = (body: unknown = { userEmail: "buyer@example.com", passportName: "br
 
 
 const EXPECTED_DPP = `DPP: <https://open-label.eu/p/${SLUG}|Open Digital Product Passport>`;
-const FOLLOW_UP = "Email Follow-up: An email was sent to contact@cypheme.com with Reply-To set to the requester. Reply to that email to contact the lead directly.";
+const FOLLOW_UP = "Email Follow-up: An email was sent to contact@cypheme.eu with Reply-To set to the requester. Reply to that email to contact the lead directly.";
 const slackCalls = (t: { calls: Call[] }) => t.calls.filter((c) => c.url === WEBHOOK);
 const emailCalls = (t: { calls: Call[] }) => t.calls.filter((c) => c.url === RESEND);
 
@@ -157,12 +157,12 @@ Deno.test("sends one email then one Slack lead with exact text including Email F
   assertFalse(String(c.body.text).includes("browser name"));
 });
 
-Deno.test("exactly one Resend call with To contact@cypheme.com, Reply-To requester, server-side fields", async () => {
+Deno.test("exactly one Resend call with To contact@cypheme.eu, Reply-To requester, server-side fields", async () => {
   const t = setup();
   await (await handleCounterfeitLead(req(), t.deps)).text();
   const e = emailCalls(t);
   assertEquals(e.length, 1);
-  assertEquals(e[0].body.to, ["contact@cypheme.com"]);
+  assertEquals(e[0].body.to, ["contact@cypheme.eu"]);
   assertEquals(e[0].body.reply_to, "buyer@example.com");
   assertEquals(e[0].body.from, "Open Label .eu <noreply@cypheme.org>");
   assertEquals((e[0].init.headers as Record<string, string>).Authorization, "Bearer re_fake_key");

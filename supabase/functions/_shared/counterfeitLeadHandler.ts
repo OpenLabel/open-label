@@ -15,7 +15,7 @@
  */
 
 // Counterfeit-protection lead delivery: an email through Resend to
-// contact@cypheme.com (Reply-To = requester) FIRST, then a Slack post through
+// contact@cypheme.eu (Reply-To = requester) FIRST, then a Slack post through
 // one dedicated incoming webhook (SLACK_OPENLABEL_LEADS_WEBHOOK_URL). Slack is
 // only posted once the email is recorded as sent, so its "Email Follow-up"
 // line is always truthful. A service-role-only ledger holds one email state
@@ -56,9 +56,9 @@ export type CounterfeitLeadDeps = {
   log(message: string): void;
 };
 
-export const LEAD_EMAIL_TO = "contact@cypheme.com";
+export const LEAD_EMAIL_TO = "contact@cypheme.eu";
 export const EMAIL_FOLLOW_UP_LINE =
-  "Email Follow-up: An email was sent to contact@cypheme.com with Reply-To set to the requester. Reply to that email to contact the lead directly.";
+  `Email Follow-up: An email was sent to ${LEAD_EMAIL_TO} with Reply-To set to the requester. Reply to that email to contact the lead directly.`;
 export const WEBHOOK_SECRET_NAME = "SLACK_OPENLABEL_LEADS_WEBHOOK_URL";
 const DEFAULT_SITE = "https://open-label.eu";
 const PROVIDER_TIMEOUT_MS = 10_000;
